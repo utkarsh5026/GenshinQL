@@ -1,6 +1,10 @@
 import path from "path";
 import fs from "fs";
-import { advancedCharacterSchema, baseCharacterSchema } from "./schema";
+import {
+  advancedCharacterSchema,
+  baseCharacterSchema,
+  characterFilterSchema,
+} from "./schema";
 import { z } from "zod";
 
 const BASE_DIR = path.join(__dirname, "..", "..", "data");
@@ -9,6 +13,7 @@ const WEAPON_DIR = path.join(BASE_DIR, "weapons");
 
 type BaseCharacter = z.infer<typeof baseCharacterSchema>;
 type AdvancedCharacter = z.infer<typeof advancedCharacterSchema>;
+type CharacterFilter = z.infer<typeof characterFilterSchema>;
 
 const characterMap: Record<string, AdvancedCharacter> = {};
 
@@ -67,3 +72,22 @@ export function getCharacter(name: string): AdvancedCharacter | null {
  * An array of all base characters, loaded on module initialization.
  */
 export const characters = loadCharacters();
+
+/**
+ * Filters characters based on the provided filter criteria.
+ * @param filter An object containing filter criteria for character properties.
+ * @returns An array of BaseCharacter objects that match the filter criteria.
+ */
+export function filterCharacters(filter: CharacterFilter): BaseCharacter[] {
+  const parsedFilter = characterFilterSchema.parse(filter);
+  return loadCharacters().filter((character) => {
+    return Object.entries(parsedFilter).every(([key, value]) => {
+      if (!value) return true;
+      const characterValue = character[key as keyof BaseCharacter];
+      return (
+        typeof characterValue === "string" &&
+        characterValue.toLowerCase().includes(value.toLowerCase())
+      );
+    });
+  });
+}

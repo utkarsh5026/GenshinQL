@@ -24,3 +24,11 @@ export const advancedCharacterSchema = baseCharacterSchema.extend({
   talents: z.array(talentSchema),
   constellations: z.array(constellationSchema),
 });
+
+export const characterFilterSchema = z.object({
+  name: z.string().optional(),
+  element: z.string().optional(),
+  rarity: z.string().optional(),
+  weaponType: z.string().optional(),
+  region: z.string().optional(),
+});

@@ -47,10 +47,19 @@ type AdvancedCharacter implements BaseCharacter {
 }
 
 
+input CharacterFilter {
+    name: String,
+    element: String,
+    rarity: String,
+    weaponType: String,
+    region: String,
+}
+
 
 type Query {
     characters: [Character!]
     character(name: String!): AdvancedCharacter!
+    filterCharacters(filter: CharacterFilter!): [Character!]
 }
 `;
 
