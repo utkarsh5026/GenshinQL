@@ -78,7 +78,7 @@ async function scrapeWeapons(
  * @param {string} weaponType - The type of weapon (used for the filename).
  */
 async function saveJson(data: any, weaponType: string) {
-  const basePath = path.join(__dirname, "..", "..", "data");
+  const basePath = path.join(__dirname, "..", "..", "data", "weapons");
   try {
     try {
       await fs.access(basePath);
