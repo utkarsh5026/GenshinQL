@@ -4,622 +4,622 @@
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Sword",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Alhaitham",
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Sword",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Aloy",
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Bow",
-        "model": "None"
+        "region": "None"
     },
     {
         "name": "Amber",
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Bow",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Arataki Itto",
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Claymore",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Arlecchino",
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "model": "Snezhnaya"
+        "region": "Snezhnaya"
     },
     {
         "name": "Baizhu",
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Catalyst",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Barbara",
         "rarity": "4 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Beidou",
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Claymore",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Bennett",
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Sword",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Candace",
         "rarity": "4 Stars",
         "element": "Hydro",
         "weaponType": "Polearm",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Charlotte",
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Catalyst",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Chevreuse",
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Chiori",
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Sword",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Chongyun",
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Claymore",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Clorinde",
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Sword",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Collei",
         "rarity": "4 Stars",
         "element": "Dendro",
         "weaponType": "Bow",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Cyno",
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Polearm",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Dehya",
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Claymore",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Diluc",
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Claymore",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Diona",
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Bow",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Dori",
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Claymore",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Emilie",
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Polearm",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Eula",
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Claymore",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Faruzan",
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Bow",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Fischl",
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Bow",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Freminet",
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Claymore",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Furina",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Sword",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Gaming",
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Claymore",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Ganyu",
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Bow",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Gorou",
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Bow",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Hu Tao",
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Jean",
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Sword",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Kachina",
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Polearm",
-        "model": "Natlan"
+        "region": "Natlan"
     },
     {
         "name": "Kaedehara Kazuha",
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Sword",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Kaeya",
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Sword",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Kamisato Ayaka",
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Sword",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Kamisato Ayato",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Sword",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Kaveh",
         "rarity": "4 Stars",
         "element": "Dendro",
         "weaponType": "Claymore",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Keqing",
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Sword",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Kinich",
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Claymore",
-        "model": "Natlan"
+        "region": "Natlan"
     },
     {
         "name": "Kirara",
         "rarity": "4 Stars",
         "element": "Dendro",
         "weaponType": "Sword",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Klee",
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Catalyst",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Kujou Sara",
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Bow",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Kuki Shinobu",
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Sword",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Layla",
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Sword",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Lisa",
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Catalyst",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Lynette",
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Sword",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Lyney",
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Bow",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Mika",
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Polearm",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Mona",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Mualani",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "model": "Natlan"
+        "region": "Natlan"
     },
     {
         "name": "Nahida",
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Catalyst",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Navia",
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Claymore",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Neuvillette",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Nilou",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Sword",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Ningguang",
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Catalyst",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Noelle",
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Claymore",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Qiqi",
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Sword",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Raiden Shogun",
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Polearm",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Razor",
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Claymore",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Rosaria",
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Polearm",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Sangonomiya Kokomi",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Sayu",
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Claymore",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Sethos",
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Bow",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Shenhe",
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Polearm",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Shikanoin Heizou",
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Catalyst",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Sigewinne",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Bow",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Sucrose",
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Catalyst",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Tartaglia",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Bow",
-        "model": "Snezhnaya"
+        "region": "Snezhnaya"
     },
     {
         "name": "Thoma",
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Tighnari",
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Bow",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Traveler",
         "rarity": "5 Stars",
         "element": "None",
         "weaponType": "Sword",
-        "model": "None"
+        "region": "None"
     },
     {
         "name": "Venti",
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Bow",
-        "model": "Mondstadt"
+        "region": "Mondstadt"
     },
     {
         "name": "Wanderer",
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Catalyst",
-        "model": "Sumeru"
+        "region": "Sumeru"
     },
     {
         "name": "Wriothesley",
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Catalyst",
-        "model": "Fontaine"
+        "region": "Fontaine"
     },
     {
         "name": "Xiangling",
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Xianyun",
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Catalyst",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Xiao",
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Polearm",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Xilonen",
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Sword",
-        "model": "Natlan"
+        "region": "Natlan"
     },
     {
         "name": "Xingqiu",
         "rarity": "4 Stars",
         "element": "Hydro",
         "weaponType": "Sword",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Xinyan",
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Claymore",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Yae Miko",
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Catalyst",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Yanfei",
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Catalyst",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Yaoyao",
         "rarity": "4 Stars",
         "element": "Dendro",
         "weaponType": "Polearm",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Yelan",
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Bow",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Yoimiya",
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Bow",
-        "model": "Inazuma"
+        "region": "Inazuma"
     },
     {
         "name": "Yun Jin",
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Polearm",
-        "model": "Liyue"
+        "region": "Liyue"
     },
     {
         "name": "Zhongli",
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Polearm",
-        "model": "Liyue"
+        "region": "Liyue"
     }
 ]

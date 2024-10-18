@@ -1,0 +1,71 @@
+{
+    "name": "Sethos",
+    "rarity": "4 Stars",
+    "element": "Electro",
+    "weaponType": "Bow",
+    "region": "Sumeru",
+    "talents": [
+        {
+            "name": "Royal Reed Archery",
+            "type": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, the power of Electro will accumulate on the arrowhead before the arrow is fired. Has different effects based on how long the energy has been charged:\nCharge Level 1: Fires off an arrow carrying the power of lightning that deals Electro DMG.\nCharge Level 2: Fires off a Shadowpiercing Shot which can pierce enemies, dealing Electro DMG to enemies along its path. After the Shadowpiercing Shot is fully charged, Sethos cannot move around.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n"
+        },
+        {
+            "name": "Ancient Rite: The Thundering Sands",
+            "type": "Elemental Skill",
+            "description": "Gathers the might of thunder, dealing AoE Electro DMG and quickly retreating. If this attack triggers Electro-Charged, Superconduct, Overloaded, Quicken, Aggravate, or Electro Swirl reactions, Sethos recovers a certain amount of Elemental Energy.\n"
+        },
+        {
+            "name": "Secret Rite: Twilight Shadowpiercer",
+            "type": "Elemental Burst",
+            "description": "Perform a secret rite, entering the \"Twilight Meditation\" state, during which Sethos's Normal Attacks will be converted into enemy-piercing Dusk Bolts: Deal Electro DMG to opponents in its path, with DMG increased based on Sethos's Elemental Mastery.\nSethos cannot perform Aimed Shots while in this state.\nDMG dealt by Dusk Bolts is considered Charged Attack DMG.\nThis effect will be canceled when Sethos leaves the field.\n"
+        },
+        {
+            "name": "Black Kite's Enigma",
+            "type": "1st Ascension Passive",
+            "description": "When Aiming, the charging time is decreased by 0.285s based on each point of Sethos's current Elemental Energy. Charging time can be reduced to a minimum of 0.3s through this method and a maximum of 20 Energy can be tallied. If a Shadowpiercing Shot is fired, consume the tallied amount of Elemental Energy; if it is a Charge Level 1 shot, then consume 50% of the tallied amount of Elemental Energy."
+        },
+        {
+            "name": "The Sand King's Boon",
+            "type": "4th Ascension Passive",
+            "description": "Sethos gains the \"Scorching Sandshade\" effect, increasing the DMG dealt by Shadowpiercing Shots by 700% of Sethos's Elemental Mastery.\nThe Scorching Sandshade effect will be canceled when any of the following conditions are met:\n5s after a Shadowpiercing Shot first hits an opponent.\nAfter 4 Shadowpiercing Shots strike opponents.\n\nWhen a Shadowpiercing Shot affected by Scorching Sandshade first hits an opponent, Sethos will regain Scorching Sandshade after 15s.\n"
+        },
+        {
+            "name": "Thoth's Revelation",
+            "type": "Utility Passive",
+            "description": "Displays the location of nearby resources unique to Sumeru on the mini-map.\n"
+        }
+    ],
+    "constellations": [
+        {
+            "name": "Sealed Shrine's Spiritsong",
+            "level": 1,
+            "description": "The CRIT Rate of Shadowpiercing Shot is increased by 15%."
+        },
+        {
+            "name": "Papyrus Scripture of Silent Secrets",
+            "level": 2,
+            "description": "When any of the following conditions are met, Sethos gains a 15% Electro DMG Bonus for 10s that may stack twice, with each stack duration counted independently:\nConsuming Elemental Energy through Aimed Shots; you must first unlock the Passive Talent \"Black Kite's Enigma\" to trigger this condition.\nRegaining Elemental Energy by triggering Elemental Reactions using Ancient Rite: The Thundering Sands.\nUsing Secret Rite: Twilight Shadowpiercer."
+        },
+        {
+            "name": "Ode to the Moonrise Sage",
+            "level": 3,
+            "description": "Increases the Level of Normal Attack: Royal Reed Archery by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "Beneficent Plumage",
+            "level": 4,
+            "description": "When a Shadowpiercing Shot or Dusk Bolt strikes 2 or more opponents, all nearby party members gain 80 Elemental Mastery for 10s."
+        },
+        {
+            "name": "Record of the Desolate God's Burning Sands",
+            "level": 5,
+            "description": "Increases the Level of Secret Rite: Twilight Shadowpiercer by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "Pylon of the Sojourning Sun Temple",
+            "level": 6,
+            "description": "After Shadowpiercing Shot strikes an opponent, the Elemental Energy consumed by the Passive Talent \"Black Kite's Enigma\" will be returned. This effect can be triggered up to once every 15s. You must first unlock the Passive Talent \"Black Kite's Enigma.\""
+        }
+    ]
+}

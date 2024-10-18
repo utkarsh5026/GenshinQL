@@ -1,0 +1,71 @@
+{
+    "name": "Amber",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Bow",
+    "region": "Mondstadt",
+    "talents": [
+        {
+            "name": "Sharpshooter",
+            "type": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 consecutive shots with a bow.\n\nCharged Attack\nPerform a more precise Aimed Shot with increased DMG.\nWhile aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal Pyro DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n"
+        },
+        {
+            "name": "Explosive Puppet",
+            "type": "Elemental Skill",
+            "description": "The ever-reliable Baron Bunny takes the stage.\n\nBaron Bunny\nContinuously taunts the enemy, drawing their fire.\nBaron Bunny's HP scales with Amber's Max HP.\nWhen destroyed or when its timer expires, Baron Bunny explodes, dealing AoE Pyro DMG.\n\nHold\nAdjusts the throwing direction of Baron Bunny.\nThe longer the button is held, the further the throw.\n"
+        },
+        {
+            "name": "Fiery Rain",
+            "type": "Elemental Burst",
+            "description": "Fires off a shower of arrows, dealing continuous AoE Pyro DMG.\n"
+        },
+        {
+            "name": "Every Arrow Finds Its Target",
+            "type": "1st Ascension Passive",
+            "description": "Increases the CRIT Rate of Fiery Rain by 10% and widens its AoE by 30%."
+        },
+        {
+            "name": "Precise Shot",
+            "type": "4th Ascension Passive",
+            "description": "Aimed Shot hits on weak spots increase ATK by 15% for 10s."
+        },
+        {
+            "name": "Gliding Champion",
+            "type": "Utility Passive",
+            "description": "Decreases gliding Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.\n"
+        }
+    ],
+    "constellations": [
+        {
+            "name": "One Arrow to Rule Them All",
+            "level": 1,
+            "description": "Fires 2 arrows per Aimed Shot. The second arrow deals 20% of the first arrow's DMG.\n"
+        },
+        {
+            "name": "Bunny Triggered",
+            "level": 2,
+            "description": "Baron Bunny, new and improved! Hitting Baron Bunny's foot with a fully-charged Aimed Shot manually detonates it.\nExplosion via manual detonation deals 200% additional DMG.\n"
+        },
+        {
+            "name": "It Burns!",
+            "level": 3,
+            "description": "Increases the Level of Fiery Rain by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "It's Not Just Any Doll...",
+            "level": 4,
+            "description": "Decreases Explosive Puppet's CD by 20%. Adds 1 additional charge."
+        },
+        {
+            "name": "It's Baron Bunny!",
+            "level": 5,
+            "description": "Increases the Level of Explosive Puppet by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "Wildfire",
+            "level": 6,
+            "description": "Fiery Rain increases all party members' Movement SPD by 15% and ATK by 15% for 10s."
+        }
+    ]
+}

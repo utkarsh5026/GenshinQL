@@ -1,0 +1,71 @@
+{
+    "name": "Dori",
+    "rarity": "4 Stars",
+    "element": "Electro",
+    "weaponType": "Claymore",
+    "region": "Sumeru",
+    "talents": [
+        {
+            "name": "Marvelous Sword-Dance (Modified)",
+            "type": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n"
+        },
+        {
+            "name": "Spirit-Warding Lamp: Troubleshooter Cannon",
+            "type": "Elemental Skill",
+            "description": "Directs a Spirit-Warding Lamp to fire off a Troubleshooter Shot at opponents, dealing Electro DMG.\nAfter the Troubleshooter Shot hits, it will create 2 After-Sales Service Rounds that will automatically track nearby opponents and deal Electro DMG.\n"
+        },
+        {
+            "name": "Alcazarzaray's Exactitude",
+            "type": "Elemental Burst",
+            "description": "Summons forth the Jinni within the lamp to give the client various kinds of aid.\n\nJinni\nConnects to a nearby character. The connected character will:\nContinuously restore HP based on Dori's Max HP.\nContinuously regenerate Energy.\nBe affected by Electro.\nWhen the connector between the Jinni and the character touches opponents, it will deal one instance of Electro DMG to them every 0.4s.\n\nOnly one Jinni can exist at one time.\n"
+        },
+        {
+            "name": "An Eye for Gold",
+            "type": "1st Ascension Passive",
+            "description": "After a character connected to the Jinni triggers an Electro-Charged, Superconduct, Overloaded, Quicken, Aggravate, Hyperbloom, or an Electro Swirl or Crystallize reaction, the CD of Spirit-Warding Lamp: Troubleshooter Cannon is decreased by 1s.\nThis effect can be triggered once every 3s."
+        },
+        {
+            "name": "Compound Interest",
+            "type": "4th Ascension Passive",
+            "description": "When the Troubleshooter Shots or After-Sales Service Rounds from Spirit-Warding Lamp: Troubleshooter Cannon hit opponents, Dori will restore 5 Elemental Energy for every 100% Energy Recharge possessed.\nPer Spirit-Warding Lamp: Troubleshooter Cannon, only one instance of Energy restoration can be triggered and a maximum of 15 Energy can be restored this way.\n"
+        },
+        {
+            "name": "Unexpected Order",
+            "type": "Utility Passive",
+            "description": "Has a 25% chance to recover some of the materials used when crafting Character and Weapon Materials.\n"
+        }
+    ],
+    "constellations": [
+        {
+            "name": "Additional Investment",
+            "level": 1,
+            "description": "The number of After-Sales Service Rounds created by Troubleshooter Shots is increased by 1.\n"
+        },
+        {
+            "name": "Special Franchise",
+            "level": 2,
+            "description": "When you are in combat and the Jinni heals the character it is connected to, it will fire a Jinni Toop from that character's position that deals 50% of Dori's ATK DMG.\n"
+        },
+        {
+            "name": "Wonders Never Cease",
+            "level": 3,
+            "description": "Increases the Level of Alcazarzaray's Exactitude by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "Discretionary Supplement",
+            "level": 4,
+            "description": "The character connected to the Jinni will obtain the following buffs based on their current HP and Energy:\nWhen their HP is lower than 50%, they gain 50% Incoming Healing Bonus.\nWhen their Energy is less than 50%, they gain 30% Energy Recharge."
+        },
+        {
+            "name": "Value for Mora",
+            "level": 5,
+            "description": "Increases the Level of Spirit-Warding Lamp: Troubleshooter Cannon by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "Sprinkling Weight",
+            "level": 6,
+            "description": "Dori gains the following effects for 3s after using Spirit-Warding Lamp: Troubleshooter Cannon:\nElectro Infusion.\nWhen Normal Attacks hit opponents, all nearby party members will heal HP equivalent to 4% of Dori's Max HP. This type of healing can occur once every 0.1s.\n"
+        }
+    ]
+}

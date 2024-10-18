@@ -1,0 +1,71 @@
+{
+    "name": "Lyney",
+    "rarity": "5 Stars",
+    "element": "Pyro",
+    "weaponType": "Bow",
+    "region": "Fontaine",
+    "talents": [
+        {
+            "name": "Card Force Translocation",
+            "type": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive shots with a bow.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, flames will run across the arrowhead before being fired. Different effects will occur based on the time spent charging.\nCharge Level 1: Fires off a Pyro-infused arrow, dealing Pyro DMG.\nCharge Level 2: Fires off a Prop Arrow that deals Pyro DMG, and upon hit, it will summon a Grin-Malkin Hat.\nWhen firing the Prop Arrow, and when Lyney has more than 60% HP, he will consume a portion of his HP to obtain 1 Prop Surplus stack. Max 5 stacks. The effect will be removed after the character spends 30s out of combat.\nThe lowest Lyney can drop to through this method is 60% of his Max HP.\n\nGrin-Malkin Hat\nCan taunt nearby opponents and attract their attacks. Each opponent can only be taunted by the Hat once every 5s.\nThe Hat will inherit a percentage of Lyney's Max HP.\nIf destroyed, or if its duration expires, it will fire off a Pyrotechnic Strike at 1 nearby opponent, dealing Pyro DMG.\nOnly 1 Hat can exist at any given time.\n\nArkhe: Pneuma\nAt certain intervals, the Prop Arrow will cause a Spiritbreath Thorn to descend upon its hit location, dealing Pneuma-aligned Pyro DMG.\n"
+        },
+        {
+            "name": "Bewildering Lights",
+            "type": "Elemental Skill",
+            "description": "Lyney does a flourish with his hat, unleashing a firework surprise!\nWhen used, he will clear all current Prop Surplus stacks and deal AoE Pyro DMG to opponents in front of him. DMG will be increased according to the stacks cleared, and this will also regenerate Lyney's HP based on his Max HP.\n\nWhen a Grin-Malkin Hat created by Lyney is on the field, the fireworks will cause it to explode, dealing AoE Pyro DMG equal to that of a Pyrotechnic Strike.\nThe DMG dealt through the Grin-Malkin Hat in this way is considered Charged Attack DMG.\n"
+        },
+        {
+            "name": "Wondrous Trick: Miracle Parade",
+            "type": "Elemental Burst",
+            "description": "Unleashing his magic, Lyney turns himself into a Grin-Malkin Cat that can move around quickly. (Not to be mistaken for the Grin-Malkin Hat. They're two different props!)\nWhen the Grin-Malkin Cat gets close to opponents, it will send flames falling down on them, dealing at most 1 instance of Pyro DMG to each opponent. When the duration ends, he will dismiss the Grin-Malkin Cat and ignite fireworks that deal AoE Pyro DMG, summon 1 Grin-Malkin Hat, and grant himself 1 Prop Surplus stack.\n\nGrin-Malkin Cat can be actively canceled.\n"
+        },
+        {
+            "name": "Perilous Performance",
+            "type": "1st Ascension Passive",
+            "description": "If Lyney consumes HP when firing off a Prop Arrow, the Grin-Malkin hat summoned by the arrow will, upon hitting an opponent, restore 3 Energy to Lyney and increase DMG dealt by 80% of his ATK."
+        },
+        {
+            "name": "Conclusive Ovation",
+            "type": "4th Ascension Passive",
+            "description": "The DMG Lyney deals to opponents affected by Pyro will receive the following buffs:\nIncreases the DMG dealt by 60%.\nEach Pyro party member other than Lyney will cause the DMG dealt to increase by an additional 20%.\nLyney can deal up to 100% increased DMG to opponents affected by Pyro in this way."
+        },
+        {
+            "name": "Trivial Observations",
+            "type": "Utility Passive",
+            "description": "Displays the location of nearby resources unique to Fontaine on the mini-map.\n"
+        }
+    ],
+    "constellations": [
+        {
+            "name": "Whimsical Wonders",
+            "level": 1,
+            "description": "Lyney can have 2 Grin-Malkin Hats present at once.\nAdditionally, Prop Arrows will summon 2 Grin-Malkin Hats and grant Lyney 1 extra stack of Prop Surplus. This effect can occur once every 15s.\n"
+        },
+        {
+            "name": "Loquacious Cajoling",
+            "level": 2,
+            "description": "When Lyney is on the field, he will gain a stack of Crisp Focus every 2s. This will increase his CRIT DMG by 20%. Max 3 stacks. This effect will be canceled when Lyney leaves the field."
+        },
+        {
+            "name": "Prestidigitation",
+            "level": 3,
+            "description": "Increases the Level of Normal Attack: Card Force Translocation by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "Well-Versed, Well-Rehearsed",
+            "level": 4,
+            "description": "After an opponent is hit by Lyney's Pyro Charged Attack, this opponent's Pyro RES will be decreased by 20% for 6s."
+        },
+        {
+            "name": "To Pierce Enigmas",
+            "level": 5,
+            "description": "Increases the Level of Wondrous Trick: Miracle Parade by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "Guarded Smile",
+            "level": 6,
+            "description": "When Lyney fires a Prop Arrow, he will fire a Pyrotechnic Strike: Reprised that will deal 80% of a Pyrotechnic Strike's DMG. This DMG is considered Charged Attack DMG.\n"
+        }
+    ]
+}

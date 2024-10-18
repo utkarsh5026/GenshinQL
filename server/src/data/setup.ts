@@ -16,6 +16,8 @@ export const URL = "https://genshin-impact.fandom.com/wiki";
  */
 export async function setupDriver(): Promise<WebDriver> {
   const options = new chrome.Options();
+  options.addArguments("--ignore-certificate-errors");
+  options.addArguments("--ignore-ssl-errors");
   return new Builder().forBrowser("chrome").setChromeOptions(options).build();
 }
 
@@ -38,5 +40,34 @@ export async function saveJson(data: any, subDir: string, fileName: string) {
     await fs.writeFile(path.join(basePath, `${fileName}.json`), jsonData);
   } catch (error) {
     console.error(`Error saving ${fileName}:`, error);
+  }
+}
+
+export async function loadJsonPath(subDir: string) {
+  try {
+    const filePath = path.join(DATA_PATH, subDir);
+    await fs.access(filePath);
+    return JSON.parse(await fs.readFile(filePath, "utf-8"));
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Lists all directories within a given directory.
+ *
+ * @param dirPath - The path to the directory to list.
+ * @returns A Promise that resolves to an array of directory names.
+ */
+export async function listDirectories(dirPath: string): Promise<string[]> {
+  try {
+    const fullPath = path.join(DATA_PATH, dirPath);
+    const entries = await fs.readdir(fullPath, { withFileTypes: true });
+    return entries
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name);
+  } catch (error) {
+    console.error(`Error listing directories in ${dirPath}:`, error);
+    return [];
   }
 }

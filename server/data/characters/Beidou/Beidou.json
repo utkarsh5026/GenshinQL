@@ -1,0 +1,71 @@
+{
+    "name": "Beidou",
+    "rarity": "4 Stars",
+    "element": "Electro",
+    "weaponType": "Claymore",
+    "region": "Liyue",
+    "talents": [
+        {
+            "name": "Oceanborne",
+            "type": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous slashes.\nAt the end of the sequence, perform a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.\n"
+        },
+        {
+            "name": "Tidecaller",
+            "type": "Elemental Skill",
+            "description": "Nothing to worry about. Should anyone raise a hand against her or her men, she will avenge it ten-fold with sword and thunder.\n\n(Press/Tap)\nAccumulating the power of lightning, Beidou swings her blade forward fiercely, dealing Electro DMG.\n\nHold\nLifts her weapon up as a shield. Max DMG absorbed scales off Beidou's Max HP.\nAttacks using the energy stored within the greatsword upon release or once this ability's duration expires, dealing Electro DMG. DMG dealt scales with the number of times Beidou is attacked in the skill's duration. The greatest DMG Bonus will be attained once this effect is triggered twice.\nThe shield possesses the following properties:\nHas 250% Electro DMG Absorption Efficiency.\nApplies the Electro element to Beidou upon activation.\n"
+        },
+        {
+            "name": "Stormbreaker",
+            "type": "Elemental Burst",
+            "description": "Recalling her slaying of the great beast Haishan, Beidou calls upon that monstrous strength and the lightning to create a Thunderbeast's Targe around herself, dealing Electro DMG to nearby opponents.\n\nThunderbeast's Targe\nWhen Normal and Charged Attacks hit, they create a lightning discharge that can jump between opponents, dealing Electro DMG.\nIncreases the character's resistance to interruption, and decreases DMG taken.\n\nA maximum of 1 lightning discharge can be triggered per second.\n"
+        },
+        {
+            "name": "Retribution",
+            "type": "1st Ascension Passive",
+            "description": "Counterattacking with Tidecaller at the precise moment when the character is hit grants the maximum DMG Bonus."
+        },
+        {
+            "name": "Lightning Storm",
+            "type": "4th Ascension Passive",
+            "description": "Gain the following effects for 10s after unleashing Tidecaller with its maximum DMG Bonus:\nDMG dealt by Normal and Charged Attacks is increased by 15%. ATK SPD of Normal and Charged Attacks is increased by 15%.\nGreatly reduced delay before unleashing Charged Attacks.\n"
+        },
+        {
+            "name": "Conqueror of Tides",
+            "type": "Utility Passive",
+            "description": "Decreases swimming Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.\n"
+        }
+    ],
+    "constellations": [
+        {
+            "name": "Sea Beast's Scourge",
+            "level": 1,
+            "description": "When Stormbreaker is used:\nCreates a shield that absorbs up to 16% of Beidou's Max HP for 15s.\nThis shield absorbs Electro DMG 250% more effectively.\n"
+        },
+        {
+            "name": "Upon the Turbulent Sea, the Thunder Arises",
+            "level": 2,
+            "description": "Stormbreaker's arc lightning can jump to 2 additional targets."
+        },
+        {
+            "name": "Summoner of Storm",
+            "level": 3,
+            "description": "Increases the Level of Tidecaller by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "Stunning Revenge",
+            "level": 4,
+            "description": "Upon being attacked, Beidou's Normal Attacks gain an additional instance of 20% Electro DMG for 10s.\n"
+        },
+        {
+            "name": "Crimson Tidewalker",
+            "level": 5,
+            "description": "Increases the Level of Stormbreaker by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "name": "Bane of Evil",
+            "level": 6,
+            "description": "During the duration of Stormbreaker, the Electro RES of surrounding opponents is decreased by 15%."
+        }
+    ]
+}
