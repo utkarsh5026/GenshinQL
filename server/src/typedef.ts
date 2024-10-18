@@ -19,8 +19,24 @@ type Constellation {
     description: String!,
 }
 
+interface BaseCharacter {
+    name: String!,
+    element: String!,
+    rarity: String!,
+    weaponType: String!,
+    region: String!,
+}
 
-type Character {
+
+type Character implements BaseCharacter {
+    name: String!,
+    element: String!,
+    rarity: String!,
+    weaponType: String!,
+    region: String!,
+}
+
+type AdvancedCharacter implements BaseCharacter {
     name: String!,
     element: String!,
     rarity: String!,
@@ -34,6 +50,7 @@ type Character {
 
 type Query {
     characters: [Character!]
+    character(name: String!): AdvancedCharacter!
 }
 `;
 

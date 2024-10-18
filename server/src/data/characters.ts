@@ -164,8 +164,6 @@ const loadCharacters = async () => {
   return characters;
 };
 
-async function alreadySavedCharacters() {}
-
 async function main() {
   const driver = await setupDriver();
   const characters = await loadCharacters();
