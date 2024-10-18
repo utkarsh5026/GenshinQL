@@ -1,26 +1,10 @@
-import { Builder, until, WebDriver, By } from "selenium-webdriver";
-import chrome from "selenium-webdriver/chrome";
-import fs from "fs/promises";
-import path from "path";
-
-/**
- * URL for the Genshin Impact Fandom wiki.
- */
-const URL = "https://genshin-impact.fandom.com/wiki";
+import { until, WebDriver, By } from "selenium-webdriver";
+import { setupDriver, URL, saveJson } from "./setup";
 
 /**
  * Array of weapon types in Genshin Impact.
  */
 const weapons = ["Sword", "Claymore", "Polearm", "Bow", "Catalyst"] as const;
-
-/**
- * Sets up and returns a Selenium WebDriver for Chrome.
- * @returns {Promise<WebDriver>} A Promise that resolves to a WebDriver instance.
- */
-async function setupDriver(): Promise<WebDriver> {
-  const options = new chrome.Options();
-  return new Builder().forBrowser("chrome").setChromeOptions(options).build();
-}
 
 /**
  * Scrapes weapon data from the Genshin Impact wiki for a specific weapon type.
@@ -73,27 +57,6 @@ async function scrapeWeapons(
 }
 
 /**
- * Saves the scraped weapon data to a JSON file.
- * @param {any} data - The weapon data to save.
- * @param {string} weaponType - The type of weapon (used for the filename).
- */
-async function saveJson(data: any, weaponType: string) {
-  const basePath = path.join(__dirname, "..", "..", "data", "weapons");
-  try {
-    try {
-      await fs.access(basePath);
-    } catch {
-      await fs.mkdir(basePath, { recursive: true });
-      console.log(`Created directory: ${basePath}`);
-    }
-    const jsonData = JSON.stringify(data, null, 4);
-    await fs.writeFile(path.join(basePath, `${weaponType}.json`), jsonData);
-  } catch (error) {
-    console.error(`Error saving ${weaponType}:`, error);
-  }
-}
-
-/**
  * Main function to scrape and save weapon data for all weapon types.
  */
 async function main() {
@@ -115,7 +78,7 @@ async function main() {
       };
     });
 
-    await saveJson(weaponData, weapon);
+    await saveJson(weaponData, "weapons", weapon);
   }
   await driver.quit();
 }
