@@ -32,3 +32,11 @@ export const characterFilterSchema = z.object({
   weaponType: z.string().optional(),
   region: z.string().optional(),
 });
+
+export const weaponTypeSchema = z.union([
+  z.literal("Sword"),
+  z.literal("Claymore"),
+  z.literal("Polearm"),
+  z.literal("Catalyst"),
+  z.literal("Bow"),
+]);
