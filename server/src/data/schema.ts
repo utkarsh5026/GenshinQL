@@ -18,12 +18,17 @@ export const baseCharacterSchema = z.object({
   rarity: z.string(),
   weaponType: z.string(),
   region: z.string(),
+  iconUrl: z.string(),
 });
 
-export const advancedCharacterSchema = baseCharacterSchema.extend({
-  talents: z.array(talentSchema),
-  constellations: z.array(constellationSchema),
-});
+export const advancedCharacterSchema = baseCharacterSchema
+  .omit({
+    iconUrl: true,
+  })
+  .extend({
+    talents: z.array(talentSchema),
+    constellations: z.array(constellationSchema),
+  });
 
 export const characterFilterSchema = z.object({
   name: z.string().optional(),
