@@ -45,6 +45,12 @@ async function scrapeCharacters(
         const cells = await row.findElements(By.css("td"));
         const texts = await Promise.all(cells.map((cell) => cell.getText()));
 
+        const iconUrl = await cells[0]
+          .findElement(By.css("img"))
+          .getAttribute("data-src");
+
+        console.log(iconUrl);
+        texts[0] = iconUrl;
         const rarity = await cells[2]
           .findElement(By.css("img"))
           .getAttribute("alt");
@@ -145,6 +151,7 @@ async function saveCharacters(driver: WebDriver) {
   const characters = await scrapeCharacters(driver);
   const charactersTable = characters?.map((character) => {
     return {
+      iconUrl: character[0],
       name: character[1],
       rarity: character[2],
       element: character[3],
@@ -153,10 +160,14 @@ async function saveCharacters(driver: WebDriver) {
     };
   });
   await saveJson(charactersTable, "characters", "characters");
-
   return charactersTable;
 }
 
+/**
+ * Loads character data from a JSON file.
+ *
+ * @returns {Promise<any>} A promise that resolves to the loaded character data.
+ */
 const loadCharacters = async () => {
   const characters = await loadJsonPath(
     path.join(CHARACTER_DIR_NAME, "characters.json")
@@ -164,8 +175,13 @@ const loadCharacters = async () => {
   return characters;
 };
 
-async function main() {
-  const driver = await setupDriver();
+/**
+ * Scrapes and saves detailed character information for characters that haven't been processed yet.
+ *
+ * @param {WebDriver} driver - The Selenium WebDriver instance.
+ * @returns {Promise<void>} A promise that resolves when all characters have been processed.
+ */
+const scrapeAndSaveDetailedCharacterInfo = async (driver: WebDriver) => {
   const characters = await loadCharacters();
   const savedCharacters = await listDirectories(path.join(CHARACTER_DIR_NAME));
 
@@ -192,6 +208,30 @@ async function main() {
       }
     }
   }
+};
+
+async function main() {
+  const args = process.argv.slice(2);
+  if (
+    args.length === 0 ||
+    !args.includes("--base") ||
+    !args.includes("--detailed")
+  ) {
+    console.dir("No arguments provided", {
+      depth: null,
+      colors: true,
+    });
+
+    console.log("Usage: node characters.js --base --detailed");
+    return;
+  }
+
+  const driver = await setupDriver();
+
+  if (args.includes("--base")) await saveCharacters(driver);
+
+  if (args.includes("--detailed"))
+    await scrapeAndSaveDetailedCharacterInfo(driver);
 
   await driver.quit();
 }
