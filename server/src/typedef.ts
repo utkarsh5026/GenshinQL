@@ -35,6 +35,7 @@ type Character implements BaseCharacter {
     weaponType: String!,
     region: String!,
     iconUrl: String!,
+    elementUrl: String!,
 }
 
 type AdvancedCharacter implements BaseCharacter {

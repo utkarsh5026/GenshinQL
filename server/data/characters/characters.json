@@ -5,7 +5,8 @@
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Sword",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Alhaitham_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215091456",
@@ -13,7 +14,8 @@
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Sword",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Aloy_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215091525",
@@ -21,7 +23,8 @@
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Bow",
-        "region": "None"
+        "region": "None",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Amber_Icon.png/revision/latest/scale-to-width-down/50?cb=20210213161233",
@@ -29,7 +32,8 @@
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Bow",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Arataki_Itto_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215091612",
@@ -37,7 +41,8 @@
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Claymore",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Arlecchino_Icon.png/revision/latest/scale-to-width-down/50?cb=20240424041749",
@@ -45,7 +50,8 @@
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "region": "Snezhnaya"
+        "region": "Snezhnaya",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Baizhu_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215091730",
@@ -53,7 +59,8 @@
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Catalyst",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Barbara_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215091800",
@@ -61,7 +68,8 @@
         "rarity": "4 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Beidou_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215091828",
@@ -69,7 +77,8 @@
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Claymore",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Bennett_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215091856",
@@ -77,7 +86,8 @@
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Sword",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Candace_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092140",
@@ -85,7 +95,8 @@
         "rarity": "4 Stars",
         "element": "Hydro",
         "weaponType": "Polearm",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Charlotte_Icon.png/revision/latest/scale-to-width-down/50?cb=20231108030544",
@@ -93,7 +104,8 @@
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Catalyst",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Chevreuse_Icon.png/revision/latest/scale-to-width-down/50?cb=20231225195348",
@@ -101,7 +113,8 @@
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Chiori_Icon.png/revision/latest/scale-to-width-down/50?cb=20240313015540",
@@ -109,7 +122,8 @@
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Sword",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Chongyun_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092204",
@@ -117,7 +131,8 @@
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Claymore",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Clorinde_Icon.png/revision/latest/scale-to-width-down/50?cb=20240605020849",
@@ -125,7 +140,8 @@
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Sword",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Collei_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092218",
@@ -133,7 +149,8 @@
         "rarity": "4 Stars",
         "element": "Dendro",
         "weaponType": "Bow",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cyno_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092240",
@@ -141,7 +158,8 @@
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Polearm",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Dehya_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092328",
@@ -149,7 +167,8 @@
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Claymore",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Diluc_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092341",
@@ -157,7 +176,8 @@
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Claymore",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Diona_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092355",
@@ -165,7 +185,8 @@
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Bow",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Dori_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092725",
@@ -173,7 +194,8 @@
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Claymore",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Emilie_Icon.png/revision/latest/scale-to-width-down/50?cb=20240806102359",
@@ -181,7 +203,8 @@
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Polearm",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Eula_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092858",
@@ -189,7 +212,8 @@
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Claymore",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Faruzan_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092917",
@@ -197,7 +221,8 @@
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Bow",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Fischl_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215092945",
@@ -205,7 +230,8 @@
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Bow",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Freminet_Icon.png/revision/latest/scale-to-width-down/50?cb=20231215093001",
@@ -213,7 +239,8 @@
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Claymore",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Furina_Icon.png/revision/latest/scale-to-width-down/50?cb=20231108030656",
@@ -221,7 +248,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Sword",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Gaming_Icon.png/revision/latest/scale-to-width-down/50?cb=20240131020313",
@@ -229,7 +257,8 @@
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Claymore",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Ganyu_Icon.png/revision/latest/scale-to-width-down/50?cb=20230519012425",
@@ -237,7 +266,8 @@
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Bow",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Gorou_Icon.png/revision/latest/scale-to-width-down/50?cb=20211126224331",
@@ -245,7 +275,8 @@
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Bow",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Hu_Tao_Icon.png/revision/latest/scale-to-width-down/50?cb=20210228210611",
@@ -253,7 +284,8 @@
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Jean_Icon.png/revision/latest/scale-to-width-down/50?cb=20220602180528",
@@ -261,7 +293,8 @@
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Sword",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Kachina_Icon.png/revision/latest/scale-to-width-down/50?cb=20240828030247",
@@ -269,7 +302,8 @@
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Polearm",
-        "region": "Natlan"
+        "region": "Natlan",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Kaedehara_Kazuha_Icon.png/revision/latest/scale-to-width-down/50?cb=20210623063513",
@@ -277,7 +311,8 @@
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Sword",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kaeya_Icon.png/revision/latest/scale-to-width-down/50?cb=20210214011902",
@@ -285,7 +320,8 @@
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Sword",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Kamisato_Ayaka_Icon.png/revision/latest/scale-to-width-down/50?cb=20211221231648",
@@ -293,7 +329,8 @@
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Sword",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Kamisato_Ayato_Icon.png/revision/latest/scale-to-width-down/50?cb=20220601033710",
@@ -301,7 +338,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Sword",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Kaveh_Icon.png/revision/latest/scale-to-width-down/50?cb=20230502113258",
@@ -309,7 +347,8 @@
         "rarity": "4 Stars",
         "element": "Dendro",
         "weaponType": "Claymore",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png/revision/latest/scale-to-width-down/50?cb=20210213162751",
@@ -317,7 +356,8 @@
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Sword",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Kinich_Icon.png/revision/latest/scale-to-width-down/50?cb=20240917123836",
@@ -325,7 +365,8 @@
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Claymore",
-        "region": "Natlan"
+        "region": "Natlan",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kirara_Icon.png/revision/latest/scale-to-width-down/50?cb=20230718042457",
@@ -333,7 +374,8 @@
         "rarity": "4 Stars",
         "element": "Dendro",
         "weaponType": "Sword",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Klee_Icon.png/revision/latest/scale-to-width-down/50?cb=20210214011911",
@@ -341,7 +383,8 @@
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Catalyst",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Kujou_Sara_Icon.png/revision/latest/scale-to-width-down/50?cb=20220210040844",
@@ -349,7 +392,8 @@
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Bow",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Kuki_Shinobu_Icon.png/revision/latest/scale-to-width-down/50?cb=20220605061801",
@@ -357,7 +401,8 @@
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Sword",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Layla_Icon.png/revision/latest/scale-to-width-down/50?cb=20221118140544",
@@ -365,7 +410,8 @@
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Sword",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lisa_Icon.png/revision/latest/scale-to-width-down/50?cb=20240711205456",
@@ -373,7 +419,8 @@
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Catalyst",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Lynette_Icon.png/revision/latest/scale-to-width-down/50?cb=20230816051019",
@@ -381,7 +428,8 @@
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Sword",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Lyney_Icon.png/revision/latest/scale-to-width-down/50?cb=20230816045203",
@@ -389,7 +437,8 @@
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Bow",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Mika_Icon.png/revision/latest/scale-to-width-down/50?cb=20230321101835",
@@ -397,7 +446,8 @@
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Polearm",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Mona_Icon.png/revision/latest/scale-to-width-down/50?cb=20220601033558",
@@ -405,7 +455,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mualani_Icon.png/revision/latest/scale-to-width-down/50?cb=20240828030235",
@@ -413,7 +464,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "region": "Natlan"
+        "region": "Natlan",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Nahida_Icon.png/revision/latest/scale-to-width-down/50?cb=20221102030809",
@@ -421,7 +473,8 @@
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Catalyst",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Navia_Icon.png/revision/latest/scale-to-width-down/50?cb=20231220022117",
@@ -429,7 +482,8 @@
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Claymore",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Neuvillette_Icon.png/revision/latest/scale-to-width-down/50?cb=20240711205454",
@@ -437,7 +491,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Nilou_Icon.png/revision/latest/scale-to-width-down/50?cb=20221014102540",
@@ -445,7 +500,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Sword",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Ningguang_Icon.png/revision/latest/scale-to-width-down/50?cb=20220210040239",
@@ -453,7 +509,8 @@
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Catalyst",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Noelle_Icon.png/revision/latest/scale-to-width-down/50?cb=20210214011929",
@@ -461,7 +518,8 @@
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Claymore",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Qiqi_Icon.png/revision/latest/scale-to-width-down/50?cb=20220316020612",
@@ -469,7 +527,8 @@
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Sword",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Raiden_Shogun_Icon.png/revision/latest/scale-to-width-down/50?cb=20240717072843",
@@ -477,7 +536,8 @@
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Polearm",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Razor_Icon.png/revision/latest/scale-to-width-down/50?cb=20210214011936",
@@ -485,7 +545,8 @@
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Claymore",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Rosaria_Icon.png/revision/latest/scale-to-width-down/50?cb=20220601032845",
@@ -493,7 +554,8 @@
         "rarity": "4 Stars",
         "element": "Cryo",
         "weaponType": "Polearm",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Sangonomiya_Kokomi_Icon.png/revision/latest/scale-to-width-down/50?cb=20210921103819",
@@ -501,7 +563,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Catalyst",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Sayu_Icon.png/revision/latest/scale-to-width-down/50?cb=20210810101044",
@@ -509,7 +572,8 @@
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Claymore",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Sethos_Icon.png/revision/latest/scale-to-width-down/50?cb=20240605020859",
@@ -517,7 +581,8 @@
         "rarity": "4 Stars",
         "element": "Electro",
         "weaponType": "Bow",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Shenhe_Icon.png/revision/latest/scale-to-width-down/50?cb=20220210034241",
@@ -525,7 +590,8 @@
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Polearm",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Shikanoin_Heizou_Icon.png/revision/latest/scale-to-width-down/50?cb=20240711205453",
@@ -533,7 +599,8 @@
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Catalyst",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Sigewinne_Icon.png/revision/latest/scale-to-width-down/50?cb=20240625101835",
@@ -541,7 +608,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Bow",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sucrose_Icon.png/revision/latest/scale-to-width-down/50?cb=20210213163209",
@@ -549,7 +617,8 @@
         "rarity": "4 Stars",
         "element": "Anemo",
         "weaponType": "Catalyst",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Tartaglia_Icon.png/revision/latest/scale-to-width-down/50?cb=20210213163935",
@@ -557,7 +626,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Bow",
-        "region": "Snezhnaya"
+        "region": "Snezhnaya",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Thoma_Icon.png/revision/latest/scale-to-width-down/50?cb=20211014011046",
@@ -565,7 +635,8 @@
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Tighnari_Icon.png/revision/latest/scale-to-width-down/50?cb=20220824024817",
@@ -573,7 +644,8 @@
         "rarity": "5 Stars",
         "element": "Dendro",
         "weaponType": "Bow",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Traveler_Icon.png/revision/latest/scale-to-width-down/50?cb=20211220013610",
@@ -581,7 +653,8 @@
         "rarity": "5 Stars",
         "element": "None",
         "weaponType": "Sword",
-        "region": "None"
+        "region": "None",
+        "elementUrl": ""
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Venti_Icon.png/revision/latest/scale-to-width-down/50?cb=20210214011949",
@@ -589,7 +662,8 @@
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Bow",
-        "region": "Mondstadt"
+        "region": "Mondstadt",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Wanderer_Icon.png/revision/latest/scale-to-width-down/50?cb=20221207034209",
@@ -597,7 +671,8 @@
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Catalyst",
-        "region": "Sumeru"
+        "region": "Sumeru",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Wriothesley_Icon.png/revision/latest/scale-to-width-down/50?cb=20231017103145",
@@ -605,7 +680,8 @@
         "rarity": "5 Stars",
         "element": "Cryo",
         "weaponType": "Catalyst",
-        "region": "Fontaine"
+        "region": "Fontaine",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png/revision/latest/scale-to-width-down/22?cb=20201116063123"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Xiangling_Icon.png/revision/latest/scale-to-width-down/50?cb=20210214011301",
@@ -613,7 +689,8 @@
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Polearm",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Xianyun_Icon.png/revision/latest/scale-to-width-down/50?cb=20240131020302",
@@ -621,7 +698,8 @@
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Catalyst",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Xiao_Icon.png/revision/latest/scale-to-width-down/50?cb=20210214012045",
@@ -629,7 +707,8 @@
         "rarity": "5 Stars",
         "element": "Anemo",
         "weaponType": "Polearm",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png/revision/latest/scale-to-width-down/22?cb=20201116063017"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Xilonen_Icon.png/revision/latest/scale-to-width-down/50?cb=20241009015637",
@@ -637,7 +716,8 @@
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Sword",
-        "region": "Natlan"
+        "region": "Natlan",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Xingqiu_Icon.png/revision/latest/scale-to-width-down/50?cb=20210214012057",
@@ -645,7 +725,8 @@
         "rarity": "4 Stars",
         "element": "Hydro",
         "weaponType": "Sword",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Xinyan_Icon.png/revision/latest/scale-to-width-down/50?cb=20210213163013",
@@ -653,7 +734,8 @@
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Claymore",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Yae_Miko_Icon.png/revision/latest/scale-to-width-down/50?cb=20220216025931",
@@ -661,7 +743,8 @@
         "rarity": "5 Stars",
         "element": "Electro",
         "weaponType": "Catalyst",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png/revision/latest/scale-to-width-down/22?cb=20201116063049"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Yanfei_Icon.png/revision/latest/scale-to-width-down/50?cb=20210422063525",
@@ -669,7 +752,8 @@
         "rarity": "4 Stars",
         "element": "Pyro",
         "weaponType": "Catalyst",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Yaoyao_Icon.png/revision/latest/scale-to-width-down/50?cb=20230123150446",
@@ -677,7 +761,8 @@
         "rarity": "4 Stars",
         "element": "Dendro",
         "weaponType": "Polearm",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png/revision/latest/scale-to-width-down/22?cb=20201116063058"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png/revision/latest/scale-to-width-down/50?cb=20240711205454",
@@ -685,7 +770,8 @@
         "rarity": "5 Stars",
         "element": "Hydro",
         "weaponType": "Bow",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png/revision/latest/scale-to-width-down/22?cb=20201116063105"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Yoimiya_Icon.png/revision/latest/scale-to-width-down/50?cb=20220214235604",
@@ -693,7 +779,8 @@
         "rarity": "5 Stars",
         "element": "Pyro",
         "weaponType": "Bow",
-        "region": "Inazuma"
+        "region": "Inazuma",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png/revision/latest/scale-to-width-down/22?cb=20201116063114"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Yun_Jin_Icon.png/revision/latest/scale-to-width-down/50?cb=20220316025919",
@@ -701,7 +788,8 @@
         "rarity": "4 Stars",
         "element": "Geo",
         "weaponType": "Polearm",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Zhongli_Icon.png/revision/latest/scale-to-width-down/50?cb=20240711205450",
@@ -709,6 +797,7 @@
         "rarity": "5 Stars",
         "element": "Geo",
         "weaponType": "Polearm",
-        "region": "Liyue"
+        "region": "Liyue",
+        "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png/revision/latest/scale-to-width-down/22?cb=20201116063036"
     }
 ]

@@ -19,6 +19,7 @@ export const baseCharacterSchema = z.object({
   weaponType: z.string(),
   region: z.string(),
   iconUrl: z.string(),
+  elementUrl: z.string(),
 });
 
 export const advancedCharacterSchema = baseCharacterSchema

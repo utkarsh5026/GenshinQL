@@ -7,6 +7,7 @@ import {
   listDirectories,
 } from "./setup";
 import path from "path";
+import { constrainedMemory } from "process";
 
 const CHARACTER_DIR_NAME = "characters";
 
@@ -49,12 +50,21 @@ async function scrapeCharacters(
           .findElement(By.css("img"))
           .getAttribute("data-src");
 
-        console.log(iconUrl);
         texts[0] = iconUrl;
         const rarity = await cells[2]
           .findElement(By.css("img"))
           .getAttribute("alt");
         texts[2] = rarity;
+        try {
+          const elementUrl = await cells[3]
+            .findElement(By.css("img"))
+            .getAttribute("data-src");
+
+          texts.push(elementUrl);
+        } catch (error) {
+          texts.push("");
+        }
+
         return texts;
       })
     );
@@ -149,6 +159,8 @@ async function getConstellations(driver: WebDriver): Promise<Constellation[]> {
  */
 async function saveCharacters(driver: WebDriver) {
   const characters = await scrapeCharacters(driver);
+
+  console.log(characters);
   const charactersTable = characters?.map((character) => {
     return {
       iconUrl: character[0],
@@ -157,8 +169,10 @@ async function saveCharacters(driver: WebDriver) {
       element: character[3],
       weaponType: character[4],
       region: character[5],
+      elementUrl: character[7],
     };
   });
+  console.log(JSON.stringify(charactersTable, null, 2));
   await saveJson(charactersTable, "characters", "characters");
   return charactersTable;
 }
@@ -212,11 +226,7 @@ const scrapeAndSaveDetailedCharacterInfo = async (driver: WebDriver) => {
 
 async function main() {
   const args = process.argv.slice(2);
-  if (
-    args.length === 0 ||
-    !args.includes("--base") ||
-    !args.includes("--detailed")
-  ) {
+  if (args.length === 0) {
     console.dir("No arguments provided", {
       depth: null,
       colors: true,
