@@ -4,11 +4,13 @@ import client from "./graphql/client";
 import { ApolloProvider } from "@apollo/client";
 import App from "./App.tsx";
 import "./index.css";
-
+import { ThemeProvider } from "./components/ui/theme-provider.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ApolloProvider client={client}>
-      <App />
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <App />
+      </ThemeProvider>
     </ApolloProvider>
   </StrictMode>
 );
