@@ -1,14 +1,8 @@
-import { useState } from "react";
 import "./App.css";
+import CharactersTable from "./components/character/CharacterTable";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div className="bg-blue-500 text-white p-4 rounded-lg">
-      This is a Tailwind styled div
-    </div>
-  );
+  return <CharactersTable />;
 }
 
 export default App;
