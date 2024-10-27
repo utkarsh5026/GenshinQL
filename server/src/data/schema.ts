@@ -20,6 +20,8 @@ export const baseCharacterSchema = z.object({
   region: z.string(),
   iconUrl: z.string(),
   elementUrl: z.string(),
+  weaponUrl: z.string(),
+  regionUrl: z.string(),
 });
 
 export const advancedCharacterSchema = baseCharacterSchema

@@ -7,7 +7,6 @@ import {
   listDirectories,
 } from "./setup";
 import path from "path";
-import { constrainedMemory } from "process";
 
 const CHARACTER_DIR_NAME = "characters";
 
@@ -60,10 +59,20 @@ async function scrapeCharacters(
             .findElement(By.css("img"))
             .getAttribute("data-src");
 
-          texts.push(elementUrl);
+          const regionUrl = await cells[5]
+            .findElement(By.css("img"))
+            .getAttribute("data-src");
+
+          texts.push(elementUrl, regionUrl);
         } catch (error) {
-          texts.push("");
+          texts.push("", "");
         }
+
+        const weaponUrl = await cells[4]
+          .findElement(By.css("img"))
+          .getAttribute("data-src");
+
+        texts.push(weaponUrl);
 
         return texts;
       })
@@ -160,18 +169,22 @@ async function getConstellations(driver: WebDriver): Promise<Constellation[]> {
 async function saveCharacters(driver: WebDriver) {
   const characters = await scrapeCharacters(driver);
 
-  console.log(characters);
-  const charactersTable = characters?.map((character) => {
-    return {
-      iconUrl: character[0],
-      name: character[1],
-      rarity: character[2],
-      element: character[3],
-      weaponType: character[4],
-      region: character[5],
-      elementUrl: character[7],
-    };
-  });
+  const parseUrl = (url: string) => url.split("/revision/")[0];
+  const charactersTable = characters
+    ?.map((character) => {
+      return {
+        iconUrl: parseUrl(character[0]),
+        name: character[1],
+        rarity: character[2],
+        element: character[3],
+        weaponType: character[4],
+        region: character[5],
+        elementUrl: parseUrl(character[7]),
+        weaponUrl: parseUrl(character[9]),
+        regionUrl: parseUrl(character[8]),
+      };
+    })
+    .filter((character) => character.name !== "Aloy");
   console.log(JSON.stringify(charactersTable, null, 2));
   await saveJson(charactersTable, "characters", "characters");
   return charactersTable;

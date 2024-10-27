@@ -6,4 +6,6 @@ export type Character = {
   weaponType: string;
   region: string;
   elementUrl: string;
+  weaponUrl: string;
+  regionUrl: string;
 };

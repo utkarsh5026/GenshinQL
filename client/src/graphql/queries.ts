@@ -10,6 +10,8 @@ export const GET_CHARACTERS = gql`
       weaponType
       region
       elementUrl
+      weaponUrl
+      regionUrl
     }
   }
 `;
