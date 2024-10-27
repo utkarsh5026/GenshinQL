@@ -4,13 +4,13 @@ import { GET_CHARACTERS } from "@/graphql/queries";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import { Character } from "@/graphql/types";
+import CharacterSheet from "./CharacterSheet";
 
 const CharactersTable: React.FC = () => {
   const { loading, error, data } = useQuery(GET_CHARACTERS);
@@ -40,7 +40,6 @@ const CharactersTable: React.FC = () => {
 
   return (
     <Table>
-      <TableCaption>A list of characters.</TableCaption>
       <TableHeader>
         <TableRow>
           {columnNames.map((columnName) => (
@@ -52,36 +51,38 @@ const CharactersTable: React.FC = () => {
       </TableHeader>
       <TableBody>
         {characters.map((character: Character) => (
-          <TableRow key={character.name}>
-            <TableCell>
-              <CharacterIcon
-                iconUrl={character.iconUrl}
-                name={character.name}
-              />
-            </TableCell>
-            <TableCell className="text-left font-bold">
-              {character.name}
-            </TableCell>
-            <TableCell className="text-left">
-              <ElementDisplay
-                element={character.element}
-                elementUrl={character.elementUrl}
-              />
-            </TableCell>
-            <TableCell className="text-left">{character.rarity}</TableCell>
-            <TableCell className="text-left">
-              <ElementDisplay
-                element={character.weaponType}
-                elementUrl={character.weaponUrl}
-              />
-            </TableCell>
-            <TableCell className="text-left">
-              <ElementDisplay
-                element={character.region}
-                elementUrl={character.regionUrl}
-              />
-            </TableCell>
-          </TableRow>
+          <CharacterSheet character={character} key={character.name}>
+            <TableRow>
+              <TableCell>
+                <CharacterIcon
+                  iconUrl={character.iconUrl}
+                  name={character.name}
+                />
+              </TableCell>
+              <TableCell className="text-left font-bold">
+                {character.name}
+              </TableCell>
+              <TableCell className="text-left">
+                <ElementDisplay
+                  element={character.element}
+                  elementUrl={character.elementUrl}
+                />
+              </TableCell>
+              <TableCell className="text-left">{character.rarity}</TableCell>
+              <TableCell className="text-left">
+                <ElementDisplay
+                  element={character.weaponType}
+                  elementUrl={character.weaponUrl}
+                />
+              </TableCell>
+              <TableCell className="text-left">
+                <ElementDisplay
+                  element={character.region}
+                  elementUrl={character.regionUrl}
+                />
+              </TableCell>
+            </TableRow>
+          </CharacterSheet>
         ))}
       </TableBody>
     </Table>
