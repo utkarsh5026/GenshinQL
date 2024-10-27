@@ -69,8 +69,18 @@ const CharactersTable: React.FC = () => {
               />
             </TableCell>
             <TableCell className="text-left">{character.rarity}</TableCell>
-            <TableCell className="text-left">{character.weaponType}</TableCell>
-            <TableCell className="text-left">{character.region}</TableCell>
+            <TableCell className="text-left">
+              <ElementDisplay
+                element={character.weaponType}
+                elementUrl={character.weaponUrl}
+              />
+            </TableCell>
+            <TableCell className="text-left">
+              <ElementDisplay
+                element={character.region}
+                elementUrl={character.regionUrl}
+              />
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
