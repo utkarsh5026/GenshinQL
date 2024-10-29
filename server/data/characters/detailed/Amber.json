@@ -1,0 +1,126 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Amber_Icon.png",
+    "name": "Amber",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Bow",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Bow_Pyro.png",
+            "talentName": "Sharpshooter",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 consecutive shots with a bow.\n\nCharged Attack\nPerform a more precise Aimed Shot with increased DMG.\nWhile aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal Pyro DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Sharpshooter_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Sharpshooter_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Sharpshooter_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Talent_Explosive_Puppet.png",
+            "talentName": "Explosive Puppet",
+            "talentType": "Elemental Skill",
+            "description": "The ever-reliable Baron Bunny takes the stage.\n\nBaron Bunny\nContinuously taunts the enemy, drawing their fire.\nBaron Bunny's HP scales with Amber's Max HP.\nWhen destroyed or when its timer expires, Baron Bunny explodes, dealing AoE Pyro DMG.\n\nHold\nAdjusts the throwing direction of Baron Bunny.\nThe longer the button is held, the further the throw.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Explosive_Puppet_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Explosive_Puppet_Hold_Preview.gif",
+                    "caption": "Hold"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Talent_Fiery_Rain.png",
+            "talentName": "Fiery Rain",
+            "talentType": "Elemental Burst",
+            "description": "Fires off a shower of arrows, dealing continuous AoE Pyro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Fiery_Rain_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Talent_Every_Arrow_Finds_Its_Target.png",
+            "talentName": "Every Arrow Finds Its Target",
+            "talentType": "1st Ascension Passive",
+            "description": "Increases the CRIT Rate of Fiery Rain by 10% and widens its AoE by 30%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Precise_Shot.png",
+            "talentName": "Precise Shot",
+            "talentType": "4th Ascension Passive",
+            "description": "Aimed Shot hits on weak spots increase ATK by 15% for 10s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Gliding_Champion.png",
+            "talentName": "Gliding Champion",
+            "talentType": "Utility Passive",
+            "description": "Decreases gliding Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Constellation_One_Arrow_to_Rule_Them_All.png",
+            "name": "One Arrow to Rule Them All",
+            "level": 1,
+            "description": "Fires 2 arrows per Aimed Shot. The second arrow deals 20% of the first arrow's DMG.\n▼Advanced Properties▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Constellation_Bunny_Triggered.png",
+            "name": "Bunny Triggered",
+            "level": 2,
+            "description": "Baron Bunny, new and improved! Hitting Baron Bunny's foot with a fully-charged Aimed Shot manually detonates it.\nExplosion via manual detonation deals 200% additional DMG.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Constellation_It_Burns%21.png",
+            "name": "It Burns!",
+            "level": 3,
+            "description": "Increases the Level of Fiery Rain by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Constellation_It%27s_Not_Just_Any_Doll....png",
+            "name": "It's Not Just Any Doll...",
+            "level": 4,
+            "description": "Decreases Explosive Puppet's CD by 20%. Adds 1 additional charge."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Constellation_It%27s_Baron_Bunny%21.png",
+            "name": "It's Baron Bunny!",
+            "level": 5,
+            "description": "Increases the Level of Explosive Puppet by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Constellation_Wildfire.png",
+            "name": "Wildfire",
+            "level": 6,
+            "description": "Fiery Rain increases all party members' Movement SPD by 15% and ATK by 15% for 10s."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Amber_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Character_Amber_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Character_Amber_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Amber_Bunny.png"
+    }
+}

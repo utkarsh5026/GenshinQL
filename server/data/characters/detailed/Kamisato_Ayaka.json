@@ -1,0 +1,185 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Kamisato_Ayaka_Icon.png",
+    "name": "Kamisato Ayaka",
+    "rarity": "5 Stars",
+    "element": "Cryo",
+    "weaponType": "Sword",
+    "region": "Inazuma",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png",
+            "talentName": "Kamisato Art: Kabuki",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash a flurry of sword ki.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Kamisato_Art_Kabuki_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Kamisato_Art_Kabuki_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Kamisato_Art_Kabuki_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Kamisato_Art_Kabuki_N1_Recovery_Preview.gif",
+                    "caption": "Normal Attack 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Kamisato_Art_Kabuki_N2_Recovery_Preview.gif",
+                    "caption": "Normal Attack 2"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Kamisato_Art_Kabuki_N3_Recovery_Preview.gif",
+                    "caption": "Normal Attack 3"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Kamisato_Art_Kabuki_N4_Recovery_Preview.gif",
+                    "caption": "Normal Attack 4"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Kamisato_Art_Kabuki_N5_Recovery_Preview.gif",
+                    "caption": "Normal Attack 5"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Kamisato_Art_Kabuki_C_Recovery_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Talent_Kamisato_Art_Hyouka.png",
+            "talentName": "Kamisato Art: Hyouka",
+            "talentType": "Elemental Skill",
+            "description": "Summons blooming ice to launch nearby opponents, dealing AoE Cryo DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Kamisato_Art_Hyouka_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Talent_Kamisato_Art_Soumetsu.png",
+            "talentName": "Kamisato Art: Soumetsu",
+            "talentType": "Elemental Burst",
+            "description": "Summons forth a snowstorm with flawless poise, unleashing a Frostflake Seki no To that moves forward continuously.\n\nFrostflake Seki no To\nA storm of whirling icy winds that slashes repeatedly at every enemy it touches, dealing Cryo DMG.\nThe snowstorm explodes after its duration ends, dealing AoE Cryo DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Kamisato_Art_Soumetsu_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Talent_Kamisato_Art_Senho.png",
+            "talentName": "Kamisato Art: Senho",
+            "talentType": "Alternate Sprint",
+            "description": "Alternate Sprint\nAyaka consumes Stamina and cloaks herself in a frozen fog that moves with her.\n\nIn Senho form, she moves swiftly upon water.\nWhen she reappears, the following effects occur:\nAyaka unleashes frigid energy to apply Cryo on nearby opponents.\nColdness condenses around Ayaka's blade, infusing her attacks with Cryo for a brief period.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Kamisato_Art_Senho_Run_Preview.gif",
+                    "caption": "Alternate Sprint"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Kamisato_Art_Senho_Water_Preview.gif",
+                    "caption": "Sprinting above water"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Kamisato_Art_Senho_Infusion_Preview.gif",
+                    "caption": "Attacks infused with Cryo"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Kamisato_Art_Senho_Plunge_Infusion_Preview.gif",
+                    "caption": "Plunging Attack infused with Cryo"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Talent_Amatsumi_Kunitsumi_Sanctification.png",
+            "talentName": "Amatsumi Kunitsumi Sanctification",
+            "talentType": "1st Ascension Passive",
+            "description": "After using Kamisato Art: Hyouka, Kamisato Ayaka's Normal and Charged attacks deal 30% increased DMG for 6s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Amatsumi_Kunitsumi_Sanctification_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Talent_Kanten_Senmyou_Blessing.png",
+            "talentName": "Kanten Senmyou Blessing",
+            "talentType": "4th Ascension Passive",
+            "description": "When the Cryo application at the end of Kamisato Art: Senho hits an opponent, Kamisato Ayaka gains the following effects:\nRestores 10 Stamina\nGains 18% Cryo DMG Bonus for 10s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Kanten_Senmyou_Blessing_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Talent_Fruits_of_Shinsa.png",
+            "talentName": "Fruits of Shinsa",
+            "talentType": "Utility Passive",
+            "description": "When Ayaka crafts Weapon Ascension Materials, she has a 10% chance to receive double the product.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Fruits_of_Shinsa_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Constellation_Snowswept_Sakura.png",
+            "name": "Snowswept Sakura",
+            "level": 1,
+            "description": "When Kamisato Ayaka's Normal or Charged Attacks deal Cryo DMG to opponents, it has a 50% chance of decreasing the CD of Kamisato Art: Hyouka by 0.3s. This effect can occur once every 0.1s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Constellation_Blizzard_Blade_Seki_no_To.png",
+            "name": "Blizzard Blade Seki no To",
+            "level": 2,
+            "description": "When casting Kamisato Art: Soumetsu, unleashes 2 smaller additional Frostflake Seki no To, each dealing 20% of the original storm's DMG.\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Constellation_Frostbloom_Kamifubuki.png",
+            "name": "Frostbloom Kamifubuki",
+            "level": 3,
+            "description": "Increases the Level of Kamisato Art: Soumetsu by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Constellation_Ebb_and_Flow.png",
+            "name": "Ebb and Flow",
+            "level": 4,
+            "description": "Opponents damaged by Kamisato Art: Soumetsu's Frostflake Seki no To will have their DEF decreased by 30% for 6s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Constellation_Blossom_Cloud_Irutsuki.png",
+            "name": "Blossom Cloud Irutsuki",
+            "level": 5,
+            "description": "Increases the Level of Kamisato Art: Hyouka by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Constellation_Dance_of_Suigetsu.png",
+            "name": "Dance of Suigetsu",
+            "level": 6,
+            "description": "Kamisato Ayaka gains Usurahi Butou every 10s, increasing her Charged Attack DMG by 298%. This buff will be cleared 0.5s after Ayaka's Charged ATK hits an opponent, after which the timer for this ability will restart.\n▼Gameplay Notes▼\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Kamisato_Ayaka_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Character_Kamisato_Ayaka_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Character_Kamisato_Ayaka_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Item_Kamisato_Ayaka_Folding_Fan.png"
+    }
+}

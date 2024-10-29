@@ -1,0 +1,131 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Diona_Icon.png",
+    "name": "Diona",
+    "rarity": "4 Stars",
+    "element": "Cryo",
+    "weaponType": "Bow",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Bow_Cryo.png",
+            "talentName": "Kätzlein Style",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, biting frost will accumulate on the arrowhead. A fully charged frost arrow will deal Cryo DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/K%C3%A4tzlein_Style_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/K%C3%A4tzlein_Style_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/K%C3%A4tzlein_Style_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Talent_Icy_Paws.png",
+            "talentName": "Icy Paws",
+            "talentType": "Elemental Skill",
+            "description": "Fires an Icy Paw that deals Cryo DMG to opponents and forms a shield on hit.\nThe shield's DMG Absorption scales based on Diona's Max HP, and its duration scales off the number of Icy Paws that hit their target.\n\n(Press/Tap)\nRapidly fires off 2 Icy Paws.\n\nHold\nDashes back quickly before firing 5 Icy Paws.\nThe shield created by a Hold attack will gain a 75% DMG Absorption Bonus.\n\nThe shield has a 250% Cryo DMG Absorption Bonus, and will cause your active character to become affected by Cryo at the point of formation for a short duration.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Icy_Paws_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Icy_Paws_Hold_Preview.gif",
+                    "caption": "Hold"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Talent_Signature_Mix.png",
+            "talentName": "Signature Mix",
+            "talentType": "Elemental Burst",
+            "description": "Tosses out a special cold brew that deals AoE Cryo DMG and creates a Drunken Mist in an AoE.\n\nDrunken Mist\nDeals continuous Cryo DMG to opponents within the AoE.\nContinuously regenerates the HP of characters within the AoE.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Signature_Mix_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Talent_Cat%27s_Tail_Secret_Menu.png",
+            "talentName": "Cat's Tail Secret Menu",
+            "talentType": "1st Ascension Passive",
+            "description": "Characters shielded by Icy Paws have their Movement SPD increased by 10% and their Stamina Consumption decreased by 10%.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Cat%27s_Tail_Secret_Menu_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Talent_Drunkards%27_Farce.png",
+            "talentName": "Drunkards' Farce",
+            "talentType": "4th Ascension Passive",
+            "description": "Opponents who enter the AoE of Signature Mix have 10% decreased ATK for 15s.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Talent_Complimentary_Bar_Food.png",
+            "talentName": "Complimentary Bar Food",
+            "talentType": "Utility Passive",
+            "description": "When a Perfect Cooking is achieved on a dish with restorative effects, Diona has a 12% chance to obtain double the product.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Constellation_A_Lingering_Flavor.png",
+            "name": "A Lingering Flavor",
+            "level": 1,
+            "description": "Regenerates 15 Energy for Diona after the effects of Signature Mix end.\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Constellation_Shaken%2C_Not_Purred.png",
+            "name": "Shaken, Not Purred",
+            "level": 2,
+            "description": "Increases Icy Paws' DMG by 15%, and increases its shield's DMG Absorption by 15%.\nAdditionally, when paws hit their targets, creates a shield for other nearby characters on the field with 50% of the Icy Paws shield's DMG Absorption for 5s.\n▼Gameplay Notes▼\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Constellation_A%E2%80%94Another_Round%3F.png",
+            "name": "A—Another Round?",
+            "level": 3,
+            "description": "Increases the Level of Signature Mix by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Constellation_Wine_Industry_Slayer.png",
+            "name": "Wine Industry Slayer",
+            "level": 4,
+            "description": "Within the radius of Signature Mix, Diona's charge time for aimed shots is reduced by 60%"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Constellation_Double_Shot%2C_on_the_Rocks.png",
+            "name": "Double Shot, on the Rocks",
+            "level": 5,
+            "description": "Increases the Level of Icy Paws by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Constellation_Cat%27s_Tail_Closing_Time.png",
+            "name": "Cat's Tail Closing Time",
+            "level": 6,
+            "description": "Characters within Signature Mix's radius will gain the following effects based on their HP amounts:\nIncreases Incoming Healing Bonus by 30% when HP falls below or is equal to 50%.\nElemental Mastery increased by 200 when HP is above 50%."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Diona_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Character_Diona_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Character_Diona_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Diona_Meow%21.png"
+    }
+}

@@ -1,0 +1,139 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Noelle_Icon.png",
+    "name": "Noelle",
+    "rarity": "4 Stars",
+    "element": "Geo",
+    "weaponType": "Claymore",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Claymore_Geo.png",
+            "talentName": "Favonius Bladework - Maid",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Favonius_Bladework_-_Maid_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Favonius_Bladework_-_Maid_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Favonius_Bladework_-_Maid_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Breastplate.png",
+            "talentName": "Breastplate",
+            "talentType": "Elemental Skill",
+            "description": "Summons protective stone armor, dealing Geo DMG to surrounding opponents and creating a shield. The shield's DMG Absorption scales based on Noelle's DEF.\nThe shield has the following properties:\nWhen Noelle's Normal and Charged Attacks hit a target, they have a certain chance to regenerate HP for all characters.\nPossesses 150% DMG Absorption efficiency against all Elemental and Physical DMG.\n\nThe amount of HP healed when regeneration is triggered scales based on Noelle's DEF.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Breastplate_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_Sweeping_Time.png",
+            "talentName": "Sweeping Time",
+            "talentType": "Elemental Burst",
+            "description": "Gathering the strength of stone around her weapon, Noelle strikes the opponents surrounding her within a large AoE, dealing Geo DMG.\nAfterwards, Noelle gains the following effects:\nLarger attack AoE.\nConverts attack DMG to Geo DMG that cannot be overridden by any other elemental infusion.\nIncreased ATK that scales based on her DEF.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sweeping_Time_Preview.gif",
+                    "caption": ""
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Sweeping_Time_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Sweeping_Time_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Sweeping_Time_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Talent_Devotion.png",
+            "talentName": "Devotion",
+            "talentType": "1st Ascension Passive",
+            "description": "When Noelle is in the party but not on the field, this ability triggers automatically when your active character's HP falls below 30%:\nCreates a shield for your active character that lasts for 20s and absorbs DMG equal to 400% of Noelle's DEF.\nThe shield has a 150% DMG Absorption effectiveness against all Elemental and Physical DMG.\nThis effect can only occur once every 60s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Devotion_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Talent_Nice_and_Clean.png",
+            "talentName": "Nice and Clean",
+            "talentType": "4th Ascension Passive",
+            "description": "Every 4 Normal or Charged Attack hits will decrease the CD of Breastplate by 1s.\nHitting multiple opponents with a single attack is only counted as 1 hit.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Talent_Maid%27s_Knighthood.png",
+            "talentName": "Maid's Knighthood",
+            "talentType": "Utility Passive",
+            "description": "When a Perfect Cooking is achieved on a DEF-boosting dish, Noelle has a 12% chance to obtain double the product.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Constellation_I_Got_Your_Back.png",
+            "name": "I Got Your Back",
+            "level": 1,
+            "description": "While Sweeping Time and Breastplate are both in effect, the chance of Breastplate's healing effects activating is increased to 100%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Constellation_Combat_Maid.png",
+            "name": "Combat Maid",
+            "level": 2,
+            "description": "Decreases the Stamina Consumption of Noelle's Charged Attacks by 20% and increases her Charged Attack DMG by 15%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Constellation_Invulnerable_Maid.png",
+            "name": "Invulnerable Maid",
+            "level": 3,
+            "description": "Increases the Level of Breastplate by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Constellation_To_Be_Cleaned.png",
+            "name": "To Be Cleaned",
+            "level": 4,
+            "description": "When Breastplate's duration expires or it is destroyed by DMG, it will deal 400% of Noelle's ATK of Geo DMG to surrounding opponents.\n▼Gameplay Notes▼\n▼Advanced Properties▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Constellation_Favonius_Sweeper_Master.png",
+            "name": "Favonius Sweeper Master",
+            "level": 5,
+            "description": "Increases the Level of Sweeping Time by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Constellation_Must_Be_Spotless.png",
+            "name": "Must Be Spotless",
+            "level": 6,
+            "description": "Sweeping Time increases Noelle's ATK by an additional 50% of her DEF.\nAdditionally, every opponent defeated during the skill's duration adds 1s to the duration, up to 10s.\n▼Gameplay Notes▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Noelle_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Character_Noelle_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Character_Noelle_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Noelle_Protector.png"
+    }
+}

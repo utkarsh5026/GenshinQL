@@ -1,0 +1,151 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png",
+    "name": "Keqing",
+    "rarity": "5 Stars",
+    "element": "Electro",
+    "weaponType": "Sword",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Talent_Yunlai_Swordsmanship.png",
+            "talentName": "Yunlai Swordsmanship",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Yunlai_Swordsmanship_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Yunlai_Swordsmanship_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Yunlai_Swordsmanship_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Stellar_Restoration.png",
+            "talentName": "Stellar Restoration",
+            "talentType": "Elemental Skill",
+            "description": "Hurls a Lightning Stiletto that annihilates her opponents like the swift thunder.\nWhen the Stiletto hits its target, it deals Electro DMG to opponents in a small AoE, and places a Stiletto Mark on the spot hit.\n\nHold\nHold to adjust the direction in which the Stiletto shall be thrown.\nStilettos thrown by the Hold attack mode can be suspended in mid-air, allowing Keqing to jump to them when using Stellar Restoration a second time.\n\nLightning Stiletto\nIf Keqing uses Stellar Restoration again or uses a Charged Attack while its duration lasts, it will clear the Stiletto Mark and produce different effects:\nIf she uses Stellar Restoration again, she will blink to the location of the Mark and unleash one slashing attack that deals AoE Electro DMG. When blinking to a Stiletto that was thrown from a Holding attack, Keqing can leap across obstructing terrain.\nIf Keqing uses a Charged Attack, she will ignite a series of thundering cuts at the Mark's location, dealing AoE Electro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Stellar_Restoration_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Stellar_Restoration_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Stellar_Restoration_Slashing_Preview.gif",
+                    "caption": "Teleport"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Stellar_Restoration_Thunderclap_Slash_Preview.gif",
+                    "caption": "Thunderclap Slash"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Stellar_Restoration_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Stellar_Restoration_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Stellar_Restoration_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Starward_Sword.png",
+            "talentName": "Starward Sword",
+            "talentType": "Elemental Burst",
+            "description": "Keqing unleashes the power of lightning, dealing Electro DMG in an AOE.\nShe then blends into the shadow of her blade, striking a series of thunderclap-blows to nearby opponents simultaneously that deal multiple instances of Electro DMG.\nThe final attack deals massive AoE Electro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Starward_Sword_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Talent_Thundering_Penance.png",
+            "talentName": "Thundering Penance",
+            "talentType": "1st Ascension Passive",
+            "description": "After recasting Stellar Restoration while a Lightning Stiletto is present, Keqing's weapon gains an Electro Infusion for 5s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Talent_Aristocratic_Dignity.png",
+            "talentName": "Aristocratic Dignity",
+            "talentType": "4th Ascension Passive",
+            "description": "When casting Starward Sword, Keqing's CRIT Rate is increased by 15%, and her Energy Recharge is increased by 15%. This effect lasts for 8s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Aristocratic_Dignity_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Talent_Land%27s_Overseer.png",
+            "talentName": "Land's Overseer",
+            "talentType": "Utility Passive",
+            "description": "When dispatched on an expedition in Liyue, time consumed is reduced by 25%.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Constellation_Thundering_Might.png",
+            "name": "Thundering Might",
+            "level": 1,
+            "description": "Recasting Stellar Restoration while a Lightning Stiletto is present causes Keqing to deal 50% of her ATK as AoE Electro DMG at the start point and terminus of her Blink.\n▼Gameplay Notes▼\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Constellation_Keen_Extraction.png",
+            "name": "Keen Extraction",
+            "level": 2,
+            "description": "When Keqing's Normal and Charged Attacks hit opponents affected by Electro, they have a 50% chance of producing an Elemental Particle.\nThis effect can only occur once every 5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Constellation_Foreseen_Reformation.png",
+            "name": "Foreseen Reformation",
+            "level": 3,
+            "description": "Increases the Level of Starward Sword by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Constellation_Attunement.png",
+            "name": "Attunement",
+            "level": 4,
+            "description": "For 10s after Keqing triggers an Electro-related Elemental Reaction, her ATK is increased by 25%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Constellation_Beckoning_Stars.png",
+            "name": "Beckoning Stars",
+            "level": 5,
+            "description": "Increases the Level of Stellar Restoration by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Constellation_Tenacious_Star.png",
+            "name": "Tenacious Star",
+            "level": 6,
+            "description": "When initiating a Normal Attack, a Charged Attack, Elemental Skill or Elemental Burst, Keqing gains a 6% Electro DMG Bonus for 8s.\nEffects triggered by Normal Attacks, Charged Attacks, Elemental Skills and Elemental Bursts are considered independent entities."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Keqing_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Character_Keqing_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Character_Keqing_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Keqing_Lightning_Stiletto.png"
+    }
+}

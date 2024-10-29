@@ -1,0 +1,138 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Tartaglia_Icon.png",
+    "name": "Tartaglia",
+    "rarity": "5 Stars",
+    "element": "Hydro",
+    "weaponType": "Bow",
+    "region": "Snezhnaya",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Emblem_Nation_Unknown.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Bow_Hydro.png",
+            "talentName": "Cutting Torrent",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 6 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, the power of Hydro will accumulate on the arrowhead. An arrow fully charged with the torrent will deal Hydro DMG and apply the Riptide status.\n\nRiptide\nOpponents affected by Riptide will suffer from AoE Hydro DMG effects when attacked by Tartaglia in various ways. DMG dealt in this way is considered Normal Attack DMG.\nRiptide Flash: A fully-charged Aimed Shot that hits an opponent affected by Riptide deals consecutive bouts of AoE DMG. Can occur once every 0.7s.\nRiptide Burst: Defeating an opponent affected by Riptide creates a Hydro burst that inflicts the Riptide status on nearby opponents hit.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\nWhen Tartaglia is in Foul Legacy: Raging Tide's Melee Stance, he cannot perform a plunging attack.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Cutting_Torrent_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Cutting_Torrent_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Cutting_Torrent_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Foul_Legacy_Raging_Tide.png",
+            "talentName": "Foul Legacy: Raging Tide",
+            "talentType": "Elemental Skill",
+            "description": "Unleashes a set of weaponry made of pure water, dealing Hydro DMG to surrounding opponents and entering Melee Stance.\nIn this Stance, Tartaglia's Normal and Charged Attacks are converted to Hydro DMG that cannot be overridden by any other elemental infusion and change as follows:\n\nNormal Attack\nPerforms up to 6 consecutive Hydro strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash a cross slash, dealing Hydro DMG.\n\nRiptide Slash\nHitting an opponent affected by Riptide with a melee attack unleashes a Riptide Slash that deals AoE Hydro DMG. DMG dealt in this way is considered Elemental Skill DMG, and can only occur once every 1.5s.\n\nAfter 30s, or when the ability is unleashed again, this skill will end. Tartaglia will return to his Ranged Stance and this ability will enter CD.\nThe longer Tartaglia stays in his Melee Stance, the longer the CD.\nIf the return to a ranged stance occurs automatically after 30s, the CD is even longer.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Foul_Legacy_Raging_Tide_Press_Preview.gif",
+                    "caption": "Enter Melee Stance"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Foul_Legacy_Raging_Tide_Normal_Preview.gif",
+                    "caption": "Normal Attacks in Melee Stance"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Foul_Legacy_Raging_Tide_Charged_Preview.gif",
+                    "caption": "Charged Attacks in Melee Stance"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Foul_Legacy_Raging_Tide_Press_2_Preview.gif",
+                    "caption": "Return to Ranged Stance"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Havoc_Obliteration.png",
+            "talentName": "Havoc: Obliteration",
+            "talentType": "Elemental Burst",
+            "description": "Performs different attacks based on what stance Tartaglia is in when casting.\n\nRanged Stance: Flash of Havoc\nSwiftly fires a Hydro-imbued magic arrow, dealing AoE Hydro DMG and applying the Riptide status.\nReturns a portion of its Energy Cost after use.\n\nMelee Stance: Light of Obliteration\nPerforms a slash with a large AoE, dealing massive Hydro DMG to all surrounding opponents, which triggers Riptide Blast.\n\nRiptide Blast\nWhen the obliterating waters hit an opponent affected by Riptide, it clears their Riptide status and triggers a Hydro Explosion that deals AoE Hydro DMG.\nDMG dealt in this way is considered Elemental Burst DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Havoc_Obliteration_Melee_Preview.gif",
+                    "caption": "Melee Stance"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Havoc_Obliteration_Ranged_Preview.gif",
+                    "caption": "Ranged Stance"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Talent_Never_Ending.png",
+            "talentName": "Never Ending",
+            "talentType": "1st Ascension Passive",
+            "description": "Extends Riptide duration by 8s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Talent_Sword_of_Torrents.png",
+            "talentName": "Sword of Torrents",
+            "talentType": "4th Ascension Passive",
+            "description": "When Tartaglia is in Foul Legacy: Raging Tide's Melee stance, on dealing a CRIT hit, Normal and Charged Attacks apply the Riptide status effects to opponents.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Talent_Master_of_Weaponry.png",
+            "talentName": "Master of Weaponry",
+            "talentType": "Utility Passive",
+            "description": "Increases your own party members' Normal Attack Level by 1.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Constellation_Foul_Legacy_Tide_Withholder.png",
+            "name": "Foul Legacy: Tide Withholder",
+            "level": 1,
+            "description": "Decreases the CD of Foul Legacy: Raging Tide by 20%"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Constellation_Foul_Legacy_Understream.png",
+            "name": "Foul Legacy: Understream",
+            "level": 2,
+            "description": "When opponents affected by Riptide are defeated, Tartaglia regenerates 4 Elemental Energy."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Constellation_Abyssal_Mayhem_Vortex_of_Turmoil.png",
+            "name": "Abyssal Mayhem: Vortex of Turmoil",
+            "level": 3,
+            "description": "Increases the Level of Foul Legacy: Raging Tide by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Constellation_Abyssal_Mayhem_Hydrospout.png",
+            "name": "Abyssal Mayhem: Hydrospout",
+            "level": 4,
+            "description": "If Tartaglia is in Foul Legacy: Raging Tide's Melee Stance, triggers Riptide Slash against opponents on the field affected by Riptide every 4s, otherwise, triggers Riptide Flash.\nRiptide Slashes and Riptide Flashes triggered by this Constellation effect are not subject to the time intervals that would typically apply to these two Riptide effects, nor do they have any effect on those time intervals.\n▼Advanced Properties▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Constellation_Havoc_Formless_Blade.png",
+            "name": "Havoc: Formless Blade",
+            "level": 5,
+            "description": "Increases the Level of Havoc: Obliteration by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Constellation_Havoc_Annihilation.png",
+            "name": "Havoc: Annihilation",
+            "level": 6,
+            "description": "When Havoc: Obliteration is cast in Melee Stance, the CD of Foul Legacy: Raging Tide is reset.\nThis effect will only take place once Tartaglia returns to his Ranged Stance."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Tartaglia_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Character_Tartaglia_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Character_Tartaglia_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Childe_Foul_Legacy.png"
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Barbara_Icon.png",
+    "name": "Barbara",
+    "rarity": "4 Stars",
+    "element": "Hydro",
+    "weaponType": "Catalyst",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png",
+            "talentName": "Whisper of Water",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 water splash attacks that deal Hydro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina to deal AoE Hydro DMG after a short casting time.\n\nPlunging Attack\nGathering the might of Hydro, Barbara plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Hydro DMG upon impact with the ground.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Whisper_of_Water_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Whisper_of_Water_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Whisper_of_Water_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Talent_Let_the_Show_Begin%E2%99%AA.png",
+            "talentName": "Let the Show Begin♪",
+            "talentType": "Elemental Skill",
+            "description": "Summons water droplets resembling musical notes that form a Melody Loop, dealing Hydro DMG to surrounding opponents and applying the Wet status to them.\n\nMelody Loop\nOn hit, Barbara's Normal Attacks heal your own party members and nearby teammates for a certain amount of HP, which scales with Barbara's Max HP.\nOn hit, Barbara's Charged Attack generates 4 times the amount of healing.\nPeriodically regenerates your own active character's HP.\nApplies the Wet status to the character and to opponents who come in contact with them.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Let_the_Show_Begin%E2%99%AA_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Talent_Shining_Miracle%E2%99%AA.png",
+            "talentName": "Shining Miracle♪",
+            "talentType": "Elemental Burst",
+            "description": "Heals your own party members and nearby teammates for a large amount of HP that scales with Barbara's Max HP.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Shining_Miracle%E2%99%AA_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Talent_Glorious_Season.png",
+            "talentName": "Glorious Season",
+            "talentType": "1st Ascension Passive",
+            "description": "The Stamina Consumption of characters within Let the Show Begin♪'s Melody Loop is reduced by 12%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Talent_Encore.png",
+            "talentName": "Encore",
+            "talentType": "4th Ascension Passive",
+            "description": "When your active character gains an Elemental Orb/Particle, the duration of the Melody Loop of Let the Show Begin♪ is extended by 1s.\nThe maximum extension is 5s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Talent_With_My_Whole_Heart%E2%99%AA.png",
+            "talentName": "With My Whole Heart♪",
+            "talentType": "Utility Passive",
+            "description": "When a Perfect Cooking is achieved on a dish with restorative effects, Barbara has a 12% chance to obtain double the product.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Constellation_Gleeful_Songs.png",
+            "name": "Gleeful Songs",
+            "level": 1,
+            "description": "Barbara regenerates 1 Energy every 10s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Constellation_Vitality_Burst.png",
+            "name": "Vitality Burst",
+            "level": 2,
+            "description": "Decreases the CD of Let the Show Begin♪ by 15%.\nDuring the ability's duration, your active character gains a 15% Hydro DMG Bonus.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Constellation_Star_of_Tomorrow.png",
+            "name": "Star of Tomorrow",
+            "level": 3,
+            "description": "Increases the Level of Shining Miracle♪ by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Constellation_Attentiveness_Be_My_Power.png",
+            "name": "Attentiveness Be My Power",
+            "level": 4,
+            "description": "Every opponent Barbara hits with her Charged Attack regenerates 1 Energy for her.\nA maximum of 5 energy can be regenerated in this manner with any one Charged Attack."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Constellation_The_Purest_Companionship.png",
+            "name": "The Purest Companionship",
+            "level": 5,
+            "description": "Increases the Level of Let the Show Begin♪ by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Constellation_Dedicating_Everything_to_You.png",
+            "name": "Dedicating Everything to You",
+            "level": 6,
+            "description": "When Barbara is in the party but not on the field, and one of your own party members falls:\nAutomatically revives the fallen character.\nFully restores the revived character's HP to 100%.\nThis effect can only occur once every 15 mins.\n▼Gameplay Notes▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Barbara_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Character_Barbara_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Character_Barbara_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Barbara_Flow.png"
+    }
+}

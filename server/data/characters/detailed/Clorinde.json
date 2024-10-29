@@ -1,0 +1,142 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Clorinde_Icon.png",
+    "name": "Clorinde",
+    "rarity": "5 Stars",
+    "element": "Electro",
+    "weaponType": "Sword",
+    "region": "Fontaine",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Sword_Electro.png",
+            "talentName": "Oath of Hunting Shadows",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina and fires Suppressing Shots in a fan pattern with her pistolet.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Oath_of_Hunting_Shadows_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Oath_of_Hunting_Shadows_Charged_Preview.gif",
+                    "caption": "Charge Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Oath_of_Hunting_Shadows_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Talent_Hunter%27s_Vigil.png",
+            "talentName": "Hunter's Vigil",
+            "talentType": "Elemental Skill",
+            "description": "Preparing her pistolet, she enters the \"Night Vigil\" state, using steel and shot together. In this state, Clorinde's Normal Attacks will be transformed into \"Swift Hunt\" pistolet attacks, and the DMG dealt is converted into Electro DMG that cannot be overridden by infusions, and she will be unable to use Charged Attacks. Using her Elemental Skill will transform it into \"Impale the Night\": Perform a lunging attack, dealing Electro DMG. The DMG done through the aforementioned method is considered Normal Attack DMG.\n\nSwift Hunt\nWhen her Bond of Life is equal to or greater than 100% of her max HP: Performs a pistolet shot.\nWhen her Bond of Life is less than 100%, firing her pistolet will grant her Bond of Life, with the amount gained based on her max HP. The shots she fires can pierce opponents, and DMG dealt to opponents in their path is increased.\n\nImpale the Night\nThe current percentage value of Clorinde's Bond of Life determines its effect:\nWhen the Bond of Life value is 0%, perform a normal lunging strike;\nWhen the Bond of Life value is less than 100% of her max HP, Clorinde is healed based on the Bond of Life value, and the AoE of the lunging attack and the DMG dealt is increased;\nWhen the value of the Bond of Life is equal to or greater than 100% of her max HP, use Impale the Night: Pact. The healing multiplier is increased, and the AoE and DMG dealt by the lunge is increased even further.\n\nIn addition, when Clorinde is in the Night Vigil state, healing effects other than Impale the Night will not take effect and will instead be converted into a Bond of Life that is a percentage of the healing that would have been received.\n\nClorinde will exit the \"Night Vigil\" state when she leaves the field.\n\nArkhe: Ousia\nPeriodically, when Clorinde's Swift Hunt shots strike opponents, she will summon a Surging Blade at the position hit that deals Ousia-aligned Electro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Hunter%27s_Vigil_Preview.gif",
+                    "caption": "Activation"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Hunter%27s_Vigil_Swift_Hunt_Lv._1_Preview.gif",
+                    "caption": "Swift Hunt Lv. 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Hunter%27s_Vigil_Swift_Hunt_Lv._2_Preview.gif",
+                    "caption": "Swift Hunt Lv. 2"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Hunter%27s_Vigil_Impale_the_Night_Lv._1_Preview.gif",
+                    "caption": "Impale the Night Lv. 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Hunter%27s_Vigil_Impale_the_Night_Lv._2_Preview.gif",
+                    "caption": "Impale the Night Lv. 2"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Hunter%27s_Vigil_Impale_the_Night_Lv._3_Preview.gif",
+                    "caption": "Impale the Night Lv. 3"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Talent_Last_Lightfall.png",
+            "talentName": "Last Lightfall",
+            "talentType": "Elemental Burst",
+            "description": "Grants herself a Bond of Life based upon her own max HP before swiftly evading and striking with saber and sidearm as one, dealing AoE Electro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Last_Lightfall_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Talent_Dark-Shattering_Flame.png",
+            "talentName": "Dark-Shattering Flame",
+            "talentType": "1st Ascension Passive",
+            "description": "After a nearby party member triggers an Electro-related reaction against an opponent, Electro DMG dealt by Clorinde's Normal Attacks and Last Lightfall will be increased by 20% of Clorinde's ATK for 15s. Max 3 stacks. Each stack is counted independently. The Maximum DMG increase achievable this way for the above attacks is 1,800.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Talent_Lawful_Remuneration.png",
+            "talentName": "Lawful Remuneration",
+            "talentType": "4th Ascension Passive",
+            "description": "If Clorinde's Bond of Life is equal to or greater than 100% of her Max HP, her CRIT Rate will increase by 10% for 15s whenever her Bond of Life value increases or decreases. Max 2 stacks. Each stack is counted independently.\nAdditionally, Hunter's Vigil's Night Vigil state is buffed: While it is active, the percent of healing converted to Bond of Life increases to 100%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Talent_Night_Vigil%27s_Harvest.png",
+            "talentName": "Night Vigil's Harvest",
+            "talentType": "Utility Passive",
+            "description": "Displays the location of nearby resources unique to Fontaine on the mini-map.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Constellation_From_This_Day%2C_I_Pass_the_Candle%27s_Shadow-Veil.png",
+            "name": "\"From This Day, I Pass the Candle's Shadow-Veil\"",
+            "level": 1,
+            "description": "While Hunter's Vigil's Night Vigil state is active, when Electro DMG from Clorinde's Normal Attacks hit opponents, they will trigger 2 coordinated attacks from a Nightvigil Shade summoned near the hit opponent, each dealing 30% of Clorinde's ATK as Electro DMG.\nThis effect can occur once every 1.2s. DMG dealt this way is considered Normal Attack DMG.\n▼Gameplay Notes▼\n▼Advanced Properties▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Constellation_Now%2C_As_We_Face_the_Perils_of_the_Long_Night.png",
+            "name": "\"Now, As We Face the Perils of the Long Night\"",
+            "level": 2,
+            "description": "Enhance the Passive Talent \"Dark-Shattering Flame\": After a nearby party member triggers an Electro-related reaction against an opponent, Electro DMG dealt by Clorinde's Normal Attacks and Last Lightfall will be increased by 30% of Clorinde's ATK for 15s. Max 3 stacks. Each stack is counted independently. When you have 3 stacks, Clorinde's interruption resistance will be increased. The Maximum DMG increase achievable this way for the above attacks is 2,700.\nYou must first unlock the Passive Talent \"Dark-Shattering Flame.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Constellation_I_Pledge_to_Remember_the_Oath_of_Daylight.png",
+            "name": "\"I Pledge to Remember the Oath of Daylight\"",
+            "level": 3,
+            "description": "Increases the Level of Hunter's Vigil by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Constellation_To_Enshrine_Tears%2C_Life%2C_and_Love.png",
+            "name": "\"To Enshrine Tears, Life, and Love\"",
+            "level": 4,
+            "description": "When Last Lightfall deals DMG to opponent(s), DMG dealt is increased based on Clorinde's Bond of Life percentage. Every 1% of her current Bond of Life will increase Last Lightfall DMG by 2%. The maximum Last Lightfall DMG increase achievable this way is 200%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Constellation_Holding_Dawn%27s_Coming_as_My_Votive.png",
+            "name": "\"Holding Dawn's Coming as My Votive\"",
+            "level": 5,
+            "description": "Increases the Level of Last Lightfall by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Constellation_And_So_Shall_I_Never_Despair.png",
+            "name": "\"And So Shall I Never Despair\"",
+            "level": 6,
+            "description": "For 12s after Hunter's Vigil is used, Clorinde's CRIT Rate will be increased by 10%, and her CRIT DMG by 70%.\nAdditionally, while Night Vigil is active, a Glimbright Shade will appear under specific circumstances, executing an attack that deals 200% of Clorinde's ATK as Electro DMG. DMG dealt this way is considered Normal Attack DMG.\nThe Glimbright Shade will appear under the following circumstances:\nWhen Clorinde is about to be hit by an attack.\nWhen Clorinde uses Impale the Night: Pact.\n1 Glimbright Shade can be summoned in the aforementioned ways every 1s. 6 Shades can be summoned per single Night Vigil duration.\nIn addition, while Night Vigil is active, the DMG Clorinde receives is decreased by 80% and her interruption resistance is increased. This effect will disappear after the Night Vigil state ends or 1s after she summons 6 Glimbright Shades.\n▼Gameplay Notes▼\n▼Advanced Properties▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Clorinde_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Character_Clorinde_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Character_Clorinde_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Clorinde_Roleplay.png"
+    }
+}

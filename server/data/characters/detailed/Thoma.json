@@ -1,0 +1,145 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Thoma_Icon.png",
+    "name": "Thoma",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "region": "Inazuma",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png",
+            "talentName": "Swiftshatter Spear",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Swiftshatter_Spear_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Swiftshatter_Spear_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Swiftshatter_Spear_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Talent_Blazing_Blessing.png",
+            "talentName": "Blazing Blessing",
+            "talentType": "Elemental Skill",
+            "description": "Thoma vaults forward with his polearm and delivers a flame-filled flying kick that deals AoE Pyro DMG, while also summoning a defensive Blazing Barrier. At the moment of casting, Thoma's Elemental Skill applies Pyro to himself.\nThe DMG Absorption of the Blazing Barrier scales off Thoma's Max HP.\nThe Blazing Barrier has the following traits:\nAbsorbs Pyro DMG 250% more effectively.\nWhen a new Blazing Barrier is obtained, the remaining DMG Absorption of an existing Blazing Barrier will stack and its duration will be refreshed.\n\nThe maximum DMG Absorprtion of the Blazing Barrier will not exceed a certain percentage of Thoma's Max HP.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Blazing_Blessing_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Talent_Crimson_Ooyoroi.png",
+            "talentName": "Crimson Ooyoroi",
+            "talentType": "Elemental Burst",
+            "description": "Thoma spins his polearm, slicing at his foes with roaring flames that deal AoE Pyro DMG and weave themselves into a Scorching Ooyoroi.\n\nScorching Ooyoroi\nWhile Scorching Ooyoroi is in effect, the active character's Normal Attacks will trigger Fiery Collapse, dealing AoE Pyro DMG and summoning a Blazing Barrier.\nFiery Collapse can be triggered once every 1s.\n\nExcept for the amount of DMG they can absorb, the Blazing Barriers created in this way are identical to those created by Thoma's Elemental Skill, Blazing Blessing:\nAbsorbs Pyro DMG 250% more effectively.\nWhen a new Blazing Barrier is obtained, the remaining DMG Absorption of an existing Blazing Barrier will stack and its duration will be refreshed.\n\nThe maximum DMG Absorption of the Blazing Barrier will not exceed a certain percentage of Thoma's Max HP.\n\nIf Thoma falls, the effects of Scorching Ooyoroi will be cleared.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Crimson_Ooyoroi_Preview.gif",
+                    "caption": "Elemental Burst"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Crimson_Ooyoroi_Scorching_Ooyoroi_Preview.gif",
+                    "caption": "Fiery Collapse"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_Imbricated_Armor.png",
+            "talentName": "Imbricated Armor",
+            "talentType": "1st Ascension Passive",
+            "description": "When your current active character obtains or refreshes a Blazing Barrier, this character's Shield Strength will increase by 5% for 6s.\nThis effect can be triggered once every 0.3 seconds. Max 5 stacks.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Imbricated_Armor_1_Preview.gif",
+                    "caption": "Before 1st Ascension"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Imbricated_Armor_2_Preview.gif",
+                    "caption": "After 1st Ascension"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Flaming_Assault.png",
+            "talentName": "Flaming Assault",
+            "talentType": "4th Ascension Passive",
+            "description": "DMG dealt by Crimson Ooyoroi's Fiery Collapse is increased by 2.2% of Thoma's Max HP.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Flaming_Assault_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Snap_and_Swing.png",
+            "talentName": "Snap and Swing",
+            "talentType": "Utility Passive",
+            "description": "When you fish successfully in Inazuma, Thoma's help grants a 20% chance of scoring a double catch.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Snap_and_Swing_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Constellation_A_Comrade%27s_Duty.png",
+            "name": "A Comrade's Duty",
+            "level": 1,
+            "description": "When a character protected by Thoma's own Blazing Barrier (Thoma excluded) is attacked, Thoma's own Blazing Blessing CD is decreased by 3s, while his own Crimson Ooyoroi's CD is decreased by 3s.\nThis effect can be triggered once every 20s.\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Constellation_A_Subordinate%27s_Skills.png",
+            "name": "A Subordinate's Skills",
+            "level": 2,
+            "description": "Crimson Ooyoroi's duration is increased by 3s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Constellation_Fortified_Resolve.png",
+            "name": "Fortified Resolve",
+            "level": 3,
+            "description": "Increases the Level of Blazing Blessing by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Constellation_Long-Term_Planning.png",
+            "name": "Long-Term Planning",
+            "level": 4,
+            "description": "After using Crimson Ooyoroi, 15 Energy will be restored to Thoma."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Constellation_Raging_Wildfire.png",
+            "name": "Raging Wildfire",
+            "level": 5,
+            "description": "Increases the Level of Crimson Ooyoroi by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Constellation_Burning_Heart.png",
+            "name": "Burning Heart",
+            "level": 6,
+            "description": "When a Blazing Barrier is obtained or refreshed, the DMG dealt by all party members' Normal, Charged, and Plunging Attacks is increased by 15% for 6s."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Thoma_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Character_Thoma_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Character_Thoma_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Thoma_Blazing_Guard.png"
+    }
+}

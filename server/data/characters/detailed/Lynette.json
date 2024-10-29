@@ -1,0 +1,126 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Lynette_Icon.png",
+    "name": "Lynette",
+    "rarity": "4 Stars",
+    "element": "Anemo",
+    "weaponType": "Sword",
+    "region": "Fontaine",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png",
+            "talentName": "Rapid Ritesword",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Rapid_Ritesword_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Rapid_Ritesword_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Enigmatic_Feint.png",
+            "talentName": "Enigmatic Feint",
+            "talentType": "Elemental Skill",
+            "description": "Flicks her mantle and executes an Enigma Thrust, dealing Anemo DMG.\nWhen the Enigma Thrust hits an opponent, it will restore Lynette's HP based on her Max HP, and in the 4s afterward, she will lose a certain amount of HP per second.\nBased on whether you (press/tap) or hold this ability, she will use Enigma Thrust differently.\n\n(Press/Tap)\nShe swiftly uses an Enigma Thrust.\n\nHold\nLynette will enter a high-speed Pilfering Shadow state and apply Shadowsign to a nearby opponent. You can control her movement direction during this state, and you can end it prematurely by using this skill again.\nWhen this high-speed state ends, Lynette will unleash her Enigma Thrust. If there is an opponent with Shadowsign applied to them nearby, Lynette will approach them in a flash before using Enigma Thrust.\n\nA maximum of 1 opponent can have Shadowsign at any one time. When this opponent gets too far from Lynette, the Shadowsign will be canceled.\n\nArkhe: Ousia\nAt specific intervals, Lynette will unleash a Surging Blade when she uses Enigma Thrust, dealing Ousia-aligned Anemo DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Enigmatic_Feint_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Enigmatic_Feint_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Enigmatic_Feint_Arkhe_Ousia_Preview.gif",
+                    "caption": "Arkhe: Ousia"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Talent_Magic_Trick_Astonishing_Shift.png",
+            "talentName": "Magic Trick: Astonishing Shift",
+            "talentType": "Elemental Burst",
+            "description": "Lynette raises her mantle high, dealing AoE Anemo DMG, using skillful sleight of hand to make a giant Bogglecat Box appear!\n\nBogglecat Box\nTaunts nearby opponents, attracting their attacks.\nDeals Anemo DMG to nearby opponents at intervals.\nWhen the Bogglecat Box comes into contact with Hydro/Pyro/Cryo/Electro, it will gain the corresponding element and additionally fire Vivid Shots that will deal DMG from that element at intervals.\nElemental Absorption of this kind will only occur once during this ability's duration.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Magic_Trick_Astonishing_Shift_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Talent_Sophisticated_Synergy.png",
+            "talentName": "Sophisticated Synergy",
+            "talentType": "1st Ascension Passive",
+            "description": "Within 10s after using Magic Trick: Astonishing Shift, when there are 1/2/3/4 Elemental Types in the party, all party members' ATK will be increased by 8%/12%/16%/20% respectively.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Talent_Props_Positively_Prepped.png",
+            "talentName": "Props Positively Prepped",
+            "talentType": "4th Ascension Passive",
+            "description": "After the Bogglecat Box summoned by Magic Trick: Astonishing Shift performs Elemental Conversion, Lynette's Elemental Burst will deal 15% more DMG. This effect will persist until the Bogglecat Box's duration ends.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Talent_Loci-Based_Mnemonics.png",
+            "talentName": "Loci-Based Mnemonics",
+            "talentType": "Utility Passive",
+            "description": "Shows the location of nearby Recovery Orbs on the minimap. The Aquatic Stamina and HP gained from touching Orbs will be increased by 25%.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Constellation_A_Cold_Blade_Like_a_Shadow.png",
+            "name": "A Cold Blade Like a Shadow",
+            "level": 1,
+            "description": "When Enigmatic Feint's Enigma Thrust hits an opponent with Shadowsign, a vortex will be created at that opponent's position that will pull nearby opponents in."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Constellation_Endless_Mysteries.png",
+            "name": "Endless Mysteries",
+            "level": 2,
+            "description": "Whenever the Bogglecat Box summoned by Magic Trick: Astonishing Shift fires a Vivid Shot, it will fire an extra Vivid Shot."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Constellation_Cognition-Inverting_Gaze.png",
+            "name": "Cognition-Inverting Gaze",
+            "level": 3,
+            "description": "Increases the Level of Magic Trick: Astonishing Shift by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Constellation_Tacit_Coordination.png",
+            "name": "Tacit Coordination",
+            "level": 4,
+            "description": "Increases Enigmatic Feint's charges by 1."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_Obscuring_Ambiguity.png",
+            "name": "Obscuring Ambiguity",
+            "level": 5,
+            "description": "Increases the Level of Enigmatic Feint by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Constellation_Watchful_Eye.png",
+            "name": "Watchful Eye",
+            "level": 6,
+            "description": "When Lynette uses Enigmatic Feint's Enigma Thrust, she will gain an Anemo Infusion and 20% Anemo DMG Bonus for 6s.\n▼Gameplay Notes▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Lynette_Card_2.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Character_Lynette_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Character_Lynette_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Lynette_Earnestness.png"
+    }
+}

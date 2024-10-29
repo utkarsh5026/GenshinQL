@@ -1,0 +1,130 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Bennett_Icon.png",
+    "name": "Bennett",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Sword",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Sword_Pyro.png",
+            "talentName": "Strike of Fortune",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Strike_of_Fortune_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Strike_of_Fortune_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Strike_of_Fortune_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Passion_Overload.png",
+            "talentName": "Passion Overload",
+            "talentType": "Elemental Skill",
+            "description": "Bennett puts all his fire and passion for adventuring into his sword. Results may vary based on how fired up he is...\n\n(Press/Tap)\nA single, swift flame strike that deals Pyro DMG.\n\nHold (Short)\nCharges up, resulting in different effects when unleashed based on the Charge Level.\nLevel 1: Strikes twice, dealing Pyro DMG and launching opponents.\nLevel 2: Unleashes 3 consecutive attacks that deal impressive Pyro DMG, but the last attack triggers an explosion that launches both Bennett and the enemy.\nBennett takes no damage from being launched.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Passion_Overload_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Passion_Overload_L1_Preview.gif",
+                    "caption": "Level 1 Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Passion_Overload_L2_Preview.gif",
+                    "caption": "Level 2 Hold"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Fantastic_Voyage.png",
+            "talentName": "Fantastic Voyage",
+            "talentType": "Elemental Burst",
+            "description": "Bennett performs a jumping attack that deals Pyro DMG, creating an Inspiration Field.\n\nInspiration Field\nIf the health of a character within the AoE is equal to or falls below 70%, their health will continuously regenerate. The amount of HP restored scales off Bennett's Max HP.\nIf the health of a character within the AoE is higher than 70%, they gain an ATK Bonus that is based on Bennett's Base ATK.\nImbues characters within the AoE with Pyro.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Fantastic_Voyage_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Talent_Rekindle.png",
+            "talentName": "Rekindle",
+            "talentType": "1st Ascension Passive",
+            "description": "Decreases Passion Overload's CD by 20%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Talent_Fearnaught.png",
+            "talentName": "Fearnaught",
+            "talentType": "4th Ascension Passive",
+            "description": "When inside Fantastic Voyage's circle, Passion Overload's CD is decreased by 50% and Bennett cannot be launched by this skill's explosion.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_It_Should_Be_Safe....png",
+            "talentName": "It Should Be Safe...",
+            "talentType": "Utility Passive",
+            "description": "When dispatched on an expedition in Mondstadt, time consumed is reduced by 25%.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Constellation_Grand_Expectation.png",
+            "name": "Grand Expectation",
+            "level": 1,
+            "description": "Fantastic Voyage's ATK increase no longer has an HP restriction, and gains an additional 20% of Bennett's Base ATK."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Constellation_Impasse_Conqueror.png",
+            "name": "Impasse Conqueror",
+            "level": 2,
+            "description": "When Bennett's HP falls below 70%, his Energy Recharge is increased by 30%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Constellation_Unstoppable_Fervor.png",
+            "name": "Unstoppable Fervor",
+            "level": 3,
+            "description": "Increases the Level of Passion Overload by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Constellation_Unexpected_Odyssey.png",
+            "name": "Unexpected Odyssey",
+            "level": 4,
+            "description": "Using a Normal Attack as the second attack of Passion Overload's Charge Level 1 will perform a follow-up attack.\nThis additional attack does 135% of the second attack's DMG.\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Constellation_True_Explorer.png",
+            "name": "True Explorer",
+            "level": 5,
+            "description": "Increases the Level of Fantastic Voyage by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Constellation_Fire_Ventures_With_Me.png",
+            "name": "Fire Ventures With Me",
+            "level": 6,
+            "description": "Sword, Claymore, or Polearm-wielding characters inside Fantastic Voyage's radius gain a 15% Pyro DMG Bonus and their weapons are infused with Pyro.\n▼Gameplay Notes▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Bennett_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Character_Bennett_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Character_Bennett_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Item_Bennett_Recognition.png"
+    }
+}

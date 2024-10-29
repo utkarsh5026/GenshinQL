@@ -1,0 +1,134 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kirara_Icon.png",
+    "name": "Kirara",
+    "rarity": "4 Stars",
+    "element": "Dendro",
+    "weaponType": "Sword",
+    "region": "Inazuma",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Sword_Dendro.png",
+            "talentName": "Boxcutter",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 3 rapid claw strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Boxcutter_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Boxcutter_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Boxcutter_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png",
+            "talentName": "Meow-teor Kick",
+            "talentType": "Elemental Skill",
+            "description": "(Press/Tap)\nLeaps into the air with all the agility of a cat passing through the bushes, and thwacks her foes with a flying kick that deals AoE Dendro DMG while creating a Shield of Safe Transport. This will also briefly apply Dendro to Kirara.\nThe shield will absorb Dendro DMG with 250% effectiveness. The shield's DMG absorption will be based on Kirara's Max HP and will not exceed a certain percentage of that Max HP. The remaining DMG absorption on a Shield of Safe Transport will stack on a new one when it is created, and its duration will reset.\n\nHold\nOut of her desire to \"deliver within half a day,\" Kirara deploys a Shield of Safe Transport identical to the one that can be created by (pressing/tapping) the skill. She will also curl up into a special express delivery box, entering the Urgent Neko Parcel state in order to move and fight more swiftly.\n\nUrgent Neko Parcel\nDeals Dendro DMG to opponents she crashes into. This effect can be triggered once on each opponent every 0.5s.\nWhen in this state, Kirara's movement speed, climbing speed, and jumping power are all increased, and her Stamina Consumption from climbing is increased.\nWhen the duration ends or the skill is used again, a Flipclaw Strike more powerful than the attack in the (Press/Tap) Mode will be unleashed, dealing AoE Dendro DMG.\nThe Urgent Neko Parcel state lasts a maximum of 10s. When the state ends, the skill will enter CD. The longer Kirara spends in this state, the longer the CD will be.\nSprinting or actively canceling climbing will end this state early.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Meow-teor_Kick_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Meow-teor_Kick_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Meow-teor_Kick_Jump_Preview.gif",
+                    "caption": "Hold (Jumping)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Meow-teor_Kick_Climb_Preview.gif",
+                    "caption": "Hold (Climbing)"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Secret_Art_Surprise_Dispatch.png",
+            "talentName": "Secret Art: Surprise Dispatch",
+            "talentType": "Elemental Burst",
+            "description": "Smash opponents with a Special Delivery Package used for punishing parcel thieves, dealing AoE Dendro DMG. After the Special Delivery Package explodes, it will split up into many Cat Grass Cardamoms that will explode either upon contact with opponents or after a period of time, dealing AoE Dendro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Art_Surprise_Dispatch_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Talent_Bewitching%2C_Betwitching_Tails.png",
+            "talentName": "Bewitching, Betwitching Tails",
+            "talentType": "1st Ascension Passive",
+            "description": "When Kirara is in the Urgent Neko Parcel state of Meow-teor Kick, each impact against an opponent will grant her a stack of Reinforced Packaging. This effect can be triggered once for each opponent hit every 0.5s. Max 3 stacks. When the Urgent Neko Parcel state ends, each stack of Reinforced Packaging will create 1 Shield of Safe Transport for Kirara. The shields that are created this way will have 20% of the DMG absorption that the Shield of Safe Transport produced by Meow-teor Kick would have. If Kirara is already protected by a Shield of Safe Transport created by Meow-teor Kick, its DMG absorption will stack with these shields and its duration will reset.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Talent_Pupillary_Variance.png",
+            "talentName": "Pupillary Variance",
+            "talentType": "4th Ascension Passive",
+            "description": "Every 1,000 Max HP Kirara possesses will increase the DMG dealt by Meow-teor Kick by 0.4%, and the DMG dealt by Secret Art: Surprise Dispatch by 0.3%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Cat%27s_Creeping_Carriage.png",
+            "talentName": "Cat's Creeping Carriage",
+            "talentType": "Utility Passive",
+            "description": "When Kirara is in the party, animals who produce Fowl, Raw Meat, or Chilled Meat will not be startled when party members approach them.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Constellation_Material_Circulation.png",
+            "name": "Material Circulation",
+            "level": 1,
+            "description": "Every 8,000 Max HP Kirara possesses will cause her to create 1 extra Cat Grass Cardamom when she uses Secret Art: Surprise Dispatch. A maximum of 4 extra can be created this way."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Constellation_Perfectly_Packaged.png",
+            "name": "Perfectly Packaged",
+            "level": 2,
+            "description": "When Kirara is in the Urgent Neko Parcel state of Meow-teor Kick, she will grant other party members she crashes into Critical Transport Shields.\nThe DMG absorption of Critical Transport Shield is 40% of the maximum absorption Meow-teor Kick's normal Shields of Safe Transport are capable of, and will absorb Dendro DMG with 250% effectiveness.\nCritical Transport Shields last 12s and can be triggered once on each character every 10s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Constellation_Universal_Recognition.png",
+            "name": "Universal Recognition",
+            "level": 3,
+            "description": "Increases the Level of Meow-teor Kick by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Constellation_Steed_of_Skanda.png",
+            "name": "Steed of Skanda",
+            "level": 4,
+            "description": "After active character(s) protected by Shields of Safe Transport or Critical Transport Shields hit opponents with Normal, Charged, or Plunging Attacks, Kirara will perform a coordinated attack with them using Small Cat Grass Cardamoms, dealing 200% of her ATK as Dendro DMG. DMG dealt this way is considered Elemental Burst DMG. This effect can be triggered once every 3.8s. This CD is shared between all party members.\n▼Advanced Properties▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_A_Thousand_Miles_in_a_Day.png",
+            "name": "A Thousand Miles in a Day",
+            "level": 5,
+            "description": "Increases the Level of Secret Art: Surprise Dispatch by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Constellation_Countless_Sights_to_See.png",
+            "name": "Countless Sights to See",
+            "level": 6,
+            "description": "All nearby party members will gain 12% All Elemental DMG Bonus within 15s after Kirara uses her Elemental Skill or Burst."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Kirara_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Character_Kirara_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Character_Kirara_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Kirara_Neko_Box.png"
+    }
+}

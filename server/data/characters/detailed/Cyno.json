@@ -1,0 +1,152 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cyno_Icon.png",
+    "name": "Cyno",
+    "rarity": "5 Stars",
+    "element": "Electro",
+    "weaponType": "Polearm",
+    "region": "Sumeru",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png",
+            "talentName": "Invoker's Spear",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Invoker%27s_Spear_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Invoker%27s_Spear_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Invoker%27s_Spear_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Talent_Secret_Rite_Chasmic_Soulfarer.png",
+            "talentName": "Secret Rite: Chasmic Soulfarer",
+            "talentType": "Elemental Skill",
+            "description": "Performs a swift thrust, dealing Electro DMG to opponents along the path.\n\nWhen Cyno is under the Pathsworn Pathclearer state triggered by Sacred Rite: Wolf's Swiftness, he will instead unleash a Mortuary Rite that deals thunderous AoE Electro DMG and extends the duration of Pathsworn Pathclearer.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Rite_Chasmic_Soulfarer_Preview.gif",
+                    "caption": ""
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
+                    "caption": "Elemental Skill in Pathsworn Pathclearer State"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Sacred_Rite_Wolf%27s_Swiftness.png",
+            "talentName": "Sacred Rite: Wolf's Swiftness",
+            "talentType": "Elemental Burst",
+            "description": "Calls upon a divine spirit to indwell him, morphing into the Pactsworn Pathclearer.\n\nPactsworn Pathclearer\nCyno's Normal, Charged, and Plunging Attacks will be converted to Electro DMG that cannot be overridden.\nCyno's Elemental Mastery and resistance to interruption will increase, and he gains immunity to Electro-Charged DMG.\n\nThis effect will be canceled when Cyno leaves the field and lasts a maximum of 18s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Sacred_Rite_Wolf%27s_Swiftness_Preview.gif",
+                    "caption": "Sacred Rite: Wolf's Swiftness"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Sacred_Rite_Wolf%27s_Swiftness_Normal_Preview.gif",
+                    "caption": "Pactsworn Pathclearer, Normal Attacks"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Sacred_Rite_Wolf%27s_Swiftness_Charged_Preview.gif",
+                    "caption": "Pactsworn Pathclearer, Charged Attacks"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Sacred_Rite_Wolf%27s_Swiftness_Plunging_Preview.gif",
+                    "caption": "Pactsworn Pathclearer, Plunging Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
+                    "caption": "Pactsworn Pathclearer, Elemental Skill"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Featherfall_Judgment.png",
+            "talentName": "Featherfall Judgment",
+            "talentType": "1st Ascension Passive",
+            "description": "When Cyno is in the Pactsworn Pathclearer state activated by Sacred Rite: Wolf's Swiftness, Cyno will enter the Endseer stance at intervals. If he activates Secret Rite: Chasmic Soulfarer while affected by this stance, he will activate the Judication effect, increasing the DMG of this Secret Rite: Chasmic Soulfarer by 35%, and firing off 3 Duststalker Bolts that deal 100% of Cyno's ATK as Electro DMG.\nDuststalker Bolt DMG is considered Elemental Skill DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Featherfall_Judgment_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Talent_Authority_Over_the_Nine_Bows.png",
+            "talentName": "Authority Over the Nine Bows",
+            "talentType": "4th Ascension Passive",
+            "description": "Cyno's DMG values will be increased based on his Elemental Mastery as follows:\nPactsworn Pathclearer's Normal Attack DMG is increased by 150% of his Elemental Mastery.\nDuststalker Bolt DMG from his Passive Talent Featherfall Judgment is increased by 250% of his Elemental Mastery.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_The_Gift_of_Silence.png",
+            "talentName": "The Gift of Silence",
+            "talentType": "Utility Passive",
+            "description": "Gains 25% more rewards when dispatched on a Sumeru Expedition for 20 hours.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/The_Gift_of_Silence_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Constellation_Ordinance_Unceasing_Vigil.png",
+            "name": "Ordinance: Unceasing Vigil",
+            "level": 1,
+            "description": "After using Sacred Rite: Wolf's Swiftness, Cyno's Normal Attack SPD will be increased by 20% for 10s. If the Judication effect of his Passive Talent Featherfall Judgment is triggered during Secret Rite: Chasmic Soulfarer, the duration of this increase will be refreshed.\nYou need to unlock the Passive Talent \"Featherfall Judgement.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Constellation_Ceremony_Homecoming_of_Spirits.png",
+            "name": "Ceremony: Homecoming of Spirits",
+            "level": 2,
+            "description": "When Cyno's Normal Attacks hit opponents, his Electro DMG Bonus will increase by 10% for 4s. This effect can be triggered once every 0.1s. Max 5 stacks."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Constellation_Precept_Lawful_Enforcer.png",
+            "name": "Precept: Lawful Enforcer",
+            "level": 3,
+            "description": "Increases the Level of Sacred Rite: Wolf's Swiftness by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Constellation_Austerity_Forbidding_Guard.png",
+            "name": "Austerity: Forbidding Guard",
+            "level": 4,
+            "description": "When Cyno is in the Pactsworn Pathclearer state triggered by Sacred Rite: Wolf's Swiftness, after he triggers Electro-Charged, Superconduct, Overloaded, Quicken, Aggravate, Hyperbloom, or an Electro Swirl reaction, he will restore 3 Elemental Energy for all nearby party members (except himself.)\nThis effect can occur 5 times within one use of Sacred Rite: Wolf's Swiftness."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Constellation_Funerary_Rite_The_Passing_of_Starlight.png",
+            "name": "Funerary Rite: The Passing of Starlight",
+            "level": 5,
+            "description": "Increases the Level of Secret Rite: Chasmic Soulfarer by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Constellation_Raiment_Just_Scales.png",
+            "name": "Raiment: Just Scales",
+            "level": 6,
+            "description": "After using Sacred Rite: Wolf's Swiftness or triggering the Judication effect of the Passive Talent \"Featherfall Judgment,\" Cyno will gain 4 stacks of the \"Day of the Jackal\" effect. When he hits opponents with Normal Attacks, he will consume 1 stack of \"Day of the Jackal\" to fire off one Duststalker Bolt.\n\"Day of the Jackal\" lasts for 8s. Max 8 stacks. It will be canceled once Pactsworn Pathclearer ends.\nA maximum of 1 Duststalker Bolt can be unleashed this way every 0.4s.\nYou must first unlock the Passive Talent \"Featherfall Judgment.\"\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Cyno_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Character_Cyno_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Character_Cyno_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Cyno_Silence.png"
+    }
+}

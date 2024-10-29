@@ -1,0 +1,170 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Furina_Icon.png",
+    "name": "Furina",
+    "rarity": "5 Stars",
+    "element": "Hydro",
+    "weaponType": "Sword",
+    "region": "Fontaine",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png",
+            "talentName": "Soloist's Solicitation",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash a solo dance, dealing Physical DMG to nearby opponents and changing her Arkhe alignment. If Salon Members or Singer of Many Waters summoned by her Elemental Skill \"Salon Solitaire\" are present, their lineup will switch in response.\n\nArkhe: Seats Sacred and Secular\nAt intervals, when Furina's Normal Attacks hit, a Spiritbreath Thorn or a Surging Blade will descend based on her current alignment, dealing Hydro DMG based on her current alignment.\nWhen Furina takes the field, her starting Arkhe will be Ousia.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Soloist%27s_Solicitation_Normal_Ousia_Preview.gif",
+                    "caption": "Normal Attack (Ousia)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Soloist%27s_Solicitation_Normal_Pneuma_Preview.gif",
+                    "caption": "Normal Attack (Pneuma)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Soloist%27s_Solicitation_Charged_Ousia_Pneuma_Preview.gif",
+                    "caption": "Charged Attack (Ousia to Pneuma)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Soloist%27s_Solicitation_Charged_Pneuma_Ousia_Preview.gif",
+                    "caption": "Charged Attack (Pneuma to Ousia)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Soloist%27s_Solicitation_Plunging_Ousia_Preview.gif",
+                    "caption": "Plunging Attack (Ousia)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Soloist%27s_Solicitation_Plunging_Pneuma_Preview.gif",
+                    "caption": "Plunging Attack (Pneuma)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Salon_Solitaire_Plunging_Water_Preview.gif",
+                    "caption": "Plunging on Water Special Effect"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Talent_Salon_Solitaire.png",
+            "talentName": "Salon Solitaire",
+            "talentType": "Elemental Skill",
+            "description": "Invites the guests of the Salon Solitaire to come forth and aid in Furina's performance. Will summon either the Salon Members or the Singer of Many Waters based on Furina's current Arkhe alignment.\n\nOusia\nFoaming bubbles like celebrants shall dance, dealing AoE Hydro DMG based on Furina's Max HP and summoning 3 Salon Members: the Ball Octopus-shaped Gentilhomme Usher, the Bubbly Seahorse-shaped Surintendante Chevalmarin, and the Armored Crab-shaped Mademoiselle Crabaletta.\nThey will attack nearby opponents at intervals, prioritizing the target of the active character, dealing Hydro DMG based on Max HP.\nWhen they attack, if character(s) with more than 50% HP are nearby, the Members will increase their current attack's power based on the number of such characters, and consume said characters' HP. If the characters who meet these requirements are 1/2/3/4 (or more), the Members' attacks will deal 110%/120%/130%/140% of their original DMG.\n\nPneuma\nSummons the Singer of Many Waters, who will heal nearby active character(s) based on Max HP at intervals.\n\nThe Salon Members and Singer of Many Waters share a duration, and when Furina uses her Charged Attack to change the guest type, the new guests will inherit the initial duration.\nWhile the Salon Members and the Singer of Many Waters are on the field, Furina can move on the water's surface.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Salon_Solitaire_Ousia_Preview.gif",
+                    "caption": "Ousia"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Salon_Solitaire_Pneuma_Preview.gif",
+                    "caption": "Pneuma"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Salon_Solitaire_Salon_Members_Preview.gif",
+                    "caption": "Salon Members"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Salon_Solitaire_Water_Walk_Preview.gif",
+                    "caption": "Walking on Water"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Let_the_People_Rejoice.png",
+            "talentName": "Let the People Rejoice",
+            "talentType": "Elemental Burst",
+            "description": "Rouses the impulse to revel, creating a stage of foam that will deal AoE Hydro DMG based on Furina's Max HP and cause nearby party members to enter the Universal Revelry state: During this time, when nearby party members' HP increases or decreases, 1 Fanfare point will be granted to Furina for each percentage point of their Max HP by which their HP changes.\nAt the same time, Furina will increase the DMG dealt by and Incoming Healing Bonus of all nearby party members based on the amount of Fanfare she has.\nWhen the duration ends, Furina's Fanfare points will be cleared.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Let_the_People_Rejoice_Ousia_Preview.gif",
+                    "caption": "Ousia"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Let_the_People_Rejoice_Pneuma_Preview.gif",
+                    "caption": "Pneuma"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Let_the_People_Rejoice_75_Fanfare_Preview.gif",
+                    "caption": "25% Fanfare Indicator"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Let_the_People_Rejoice_150_Fanfare_Preview.gif",
+                    "caption": "50% Fanfare Indicator"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Let_the_People_Rejoice_225_Fanfare_Preview.gif",
+                    "caption": "75% Fanfare Indicator"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Let_the_People_Rejoice_300_Fanfare_Preview.gif",
+                    "caption": "100% Fanfare Indicator"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Talent_Endless_Waltz.png",
+            "talentName": "Endless Waltz",
+            "talentType": "1st Ascension Passive",
+            "description": "When the active character in your party receives healing, if the source of the healing is not Furina herself and the healing overflows, then Furina will heal nearby party members for 2% of their Max HP once every 2s within the next 4s.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Talent_Unheard_Confession.png",
+            "talentName": "Unheard Confession",
+            "talentType": "4th Ascension Passive",
+            "description": "Every 1,000 points of Furina's Max HP can buff the different Arkhe-aligned Salon Solitaire in the following ways:\nWill increase Salon Member DMG dealt by 0.7%, up to a maximum of 28%.\nWill decrease active character healing interval of the Singer of Many Waters by 0.4%, up to a maximum of 16%.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Talent_The_Sea_Is_My_Stage.png",
+            "talentName": "The Sea Is My Stage",
+            "talentType": "Utility Passive",
+            "description": "Xenochromatic Fontemer Aberrant ability CD decreased by 30%.",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Constellation_Love_Is_a_Rebellious_Bird_That_None_Can_Tame.png",
+            "name": "\"Love Is a Rebellious Bird That None Can Tame\"",
+            "level": 1,
+            "description": "When using Let the People Rejoice, Furina will gain 150 Fanfare.\nAdditionally, Furina's Fanfare limit is increased by 100."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Constellation_A_Woman_Adapts_Like_Duckweed_in_Water.png",
+            "name": "\"A Woman Adapts Like Duckweed in Water\"",
+            "level": 2,
+            "description": "While Let the People Rejoice lasts, Furina's Fanfare gain from increases or decreases in nearby characters' HP is increased by 250%. Each point of Fanfare above the limit will increase Furina's Max HP by 0.35%. Her maximum Max HP increase is 140%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Constellation_My_Secret_Is_Hidden_Within_Me%2C_No_One_Will_Know_My_Name.png",
+            "name": "\"My Secret Is Hidden Within Me, No One Will Know My Name\"",
+            "level": 3,
+            "description": "Increases the Level of Let the People Rejoice by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Constellation_They_Know_Not_Life%2C_Who_Dwelt_in_the_Netherworld_Not%21.png",
+            "name": "\"They Know Not Life, Who Dwelt in the Netherworld Not!\"",
+            "level": 4,
+            "description": "When the Salon Members from Salon Solitaire hit an opponent, or the Singer of Many Waters restores HP to nearby active characters, Furina will restore 4 Energy. This effect can be triggered once every 5s.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Constellation_His_Name_I_Now_Know%2C_It_Is...%21.png",
+            "name": "\"His Name I Now Know, It Is...!\"",
+            "level": 5,
+            "description": "Increases the Level of Salon Solitaire by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Constellation_Hear_Me_%E2%80%94_Let_Us_Raise_the_Chalice_of_Love%21.png",
+            "name": "\"Hear Me — Let Us Raise the Chalice of Love!\"",
+            "level": 6,
+            "description": "When using Salon Solitaire, Furina gains \"Center of Attention\" for 10s.\nThroughout the duration, Furina's Normal Attacks, Charged Attacks, and Plunging Attacks are converted into Hydro DMG which cannot be overridden by any other elemental infusion. DMG is also increased by an amount equivalent to 18% of Furina's max HP.\nThroughout the duration, Furina's Normal Attacks (not including Arkhe: Seats Sacred and Secular Attacks), Charged Attacks, and the impact of Plunging Attacks will cause different effects up to every 0.1s after hitting opponents depending on her current Arkhe alignment:\n\nArkhe: Ousia\nEvery 1s, all nearby characters in the party will be healed by 4% of Furina's max HP, for a duration of 2.9s. Triggering this effect again will extend its duration.\nArkhe: Pneuma\nThis Normal Attack (not including Arkhe: Seats Sacred and Secular Attacks), Charged Attack, or Plunging Attack ground impact DMG will be further increased by an amount equivalent to 25% of Furina's max HP. When any of the attacks mentioned previously hit an opponent, all nearby characters in the party will consume 1% of their current HP.\n\nDuring the duration of each instance of \"Center of Attention,\" the above effects can be triggered up to 6 times. \"Center of Attention\" will end when its effects have triggered 6 times or when the duration expires.\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Furina_Card_2.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Character_Furina_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Character_Furina_Game_%28Ousia%29.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Item_Furina_Banquet.png"
+    }
+}

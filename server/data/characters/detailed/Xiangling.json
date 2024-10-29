@@ -1,0 +1,127 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Xiangling_Icon.png",
+    "name": "Xiangling",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png",
+            "talentName": "Dough-Fu",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to five consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Dough-Fu_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Dough-Fu_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Dough-Fu_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Talent_Guoba_Attack.png",
+            "talentName": "Guoba Attack",
+            "talentType": "Elemental Skill",
+            "description": "Summons Guoba, who will continuously breathe fire at opponents, dealing AoE Pyro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Guoba_Attack_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Talent_Pyronado.png",
+            "talentName": "Pyronado",
+            "talentType": "Elemental Burst",
+            "description": "Displaying her mastery over both fire and polearms, Xiangling sends a Pyronado whirling around her. The Pyronado will move with your character for the ability's duration, dealing Pyro DMG to all opponents in its path.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Pyronado_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Talent_Crossfire.png",
+            "talentName": "Crossfire",
+            "talentType": "1st Ascension Passive",
+            "description": "Increases the flame range of Guoba by 20%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Talent_Beware%2C_It%27s_Super_Hot%21.png",
+            "talentName": "Beware, It's Super Hot!",
+            "talentType": "4th Ascension Passive",
+            "description": "When Guoba Attack's effects end, Guoba leaves a chili pepper on the spot where it disappeared. Picking up a chili pepper increases ATK by 10% for 10s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Beware%2C_It%27s_Super_Hot%21_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Chef_de_Cuisine.png",
+            "talentName": "Chef de Cuisine",
+            "talentType": "Utility Passive",
+            "description": "When Xiangling cooks an ATK-boosting dish perfectly, she has a 12% chance to receive double the product.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Constellation_Crispy_Outside%2C_Tender_Inside.png",
+            "name": "Crispy Outside, Tender Inside",
+            "level": 1,
+            "description": "Opponents hit by Guoba's attacks have their Pyro RES reduced by 15% for 6s.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Constellation_Oil_Meets_Fire.png",
+            "name": "Oil Meets Fire",
+            "level": 2,
+            "description": "The last attack in a Normal Attack sequence applies the Implode status onto the opponent for 2s. An explosion will occur once this duration ends, dealing 75% of Xiangling's ATK as AoE Pyro DMG.\n▼Gameplay Notes▼\n▼Advanced Properties▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Constellation_Deepfry.png",
+            "name": "Deepfry",
+            "level": 3,
+            "description": "Increases the Level of Pyronado by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Constellation_Slowbake.png",
+            "name": "Slowbake",
+            "level": 4,
+            "description": "Pyronado's duration is increased by 40%.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Constellation_Guoba_Mad.png",
+            "name": "Guoba Mad",
+            "level": 5,
+            "description": "Increases the Level of Guoba Attack by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Constellation_Condensed_Pyronado.png",
+            "name": "Condensed Pyronado",
+            "level": 6,
+            "description": "For the duration of Pyronado, all party members receive a 15% Pyro DMG Bonus.\n▼Gameplay Notes▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Xiangling_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Character_Xiangling_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Character_Xiangling_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Xiangling_Fresh_from_the_Pan.png"
+    }
+}

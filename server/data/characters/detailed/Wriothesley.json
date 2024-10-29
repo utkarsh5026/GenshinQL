@@ -1,0 +1,126 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Wriothesley_Icon.png",
+    "name": "Wriothesley",
+    "rarity": "5 Stars",
+    "element": "Cryo",
+    "weaponType": "Catalyst",
+    "region": "Fontaine",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Catalyst_Cryo.png",
+            "talentName": "Forceful Fists of Frost",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nCoalescing frost about his fist, Wriothesley will unleash powerful Repelling Fists, performing up to 5 rapid attacks that deal Cryo DMG.\nApart from this, Normal Attack combo count will not reset for a short time after using Icefang Rush or sprinting.\n\nCharged Attack\nConsumes a fixed amount of Stamina to leap and unleash a Vaulting Fist, dealing AoE Cryo DMG.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE Cryo DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Forceful_Fists_of_Frost_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Forceful_Fists_of_Frost_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Forceful_Fists_of_Frost_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Talent_Icefang_Rush.png",
+            "talentName": "Icefang Rush",
+            "talentType": "Elemental Skill",
+            "description": "Adjusting his breathing, rhythm, and pace, Wriothesley sprints forward a short distance, entering the Chilling Penalty state and unleashing more powerful attacks than before.\n\nChilling Penalty\nIncreases Wriothesley's interruption resistance\nWhen his HP is above 50%, it will enhance the Repelling Fists of Normal Attack: Forceful Fists of Frost and increase its DMG. When such an attack hits, it will consume a fixed amount of Wriothesley's HP. HP can be lost this way once every 0.1s.\nThis effect will be canceled should Wriothesley leave the field.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Icefang_Rush_Preview.gif",
+                    "caption": "Activation"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Icefang_Rush_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Talent_Darkgold_Wolfbite.png",
+            "talentName": "Darkgold Wolfbite",
+            "talentType": "Elemental Burst",
+            "description": "Activating his boxing gloves, Wriothesley strikes out with an icy straight, then uses Icicle Impact to cause multiple instances of AoE Cryo DMG in a frontal area.\n\nArkhe: Ousia\nAfter Icicle Impact ends, a Surging Blade will descend upon the opponent's position, dealing Ousia-aligned Cryo DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Darkgold_Wolfbite_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Talent_There_Shall_Be_a_Plea_for_Justice.png",
+            "talentName": "There Shall Be a Plea for Justice",
+            "talentType": "1st Ascension Passive",
+            "description": "When Wriothesley's HP is less than 60%, he will obtain a Gracious Rebuke. The next Charged Attack of his Normal Attack: Forceful Fists of Frost will be enhanced to become Rebuke: Vaulting Fist. It will not consume Stamina, will deal 50% increased DMG, and after hitting will restore HP for Wriothesley equal to 30% of his Max HP.\nYou can gain a Gracious Rebuke this way once every 5s.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Talent_There_Shall_Be_a_Reckoning_for_Sin.png",
+            "talentName": "There Shall Be a Reckoning for Sin",
+            "talentType": "4th Ascension Passive",
+            "description": "When Wriothesley's current HP increases or decreases, if he is in the Chilling Penalty state conferred by Icefang Rush, Chilling Penalty will gain one stack of Prosecution Edict. Max 5 stacks. Each stack will increase Wriothesley's ATK by 6%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Talent_The_Duke%27s_Grace.png",
+            "talentName": "The Duke's Grace",
+            "talentType": "Utility Passive",
+            "description": "When Wriothesley crafts Weapon Ascension Materials, he has a 10% chance to receive double the product.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Constellation_Terror_for_the_Evildoers.png",
+            "name": "Terror for the Evildoers",
+            "level": 1,
+            "description": "The Gracious Rebuke from the Passive Talent \"There Shall Be a Plea for Justice\" is changed to this:\nWhen Wriothesley's HP is less than 60% or while he is in the Chilling Penalty state caused by Icefang Rush, when the fifth attack of Repelling Fists hits, it will create a Gracious Rebuke. 1 Gracious Rebuke effect can be obtained every 2.5s.\n\nAdditionally, Rebuke: Vaulting Fist will obtain the following enhancement:\nThe DMG Bonus gained will be further increased to 200%.\nWhen it hits while Wriothesley is in the Chilling Penalty state, that state's duration is extended by 4s. 1 such extension can occur per 1 Chilling Penalty duration.\n\nYou must first unlock the Passive Talent \"There Shall Be a Plea for Justice.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Constellation_Shackles_for_the_Arrogant.png",
+            "name": "Shackles for the Arrogant",
+            "level": 2,
+            "description": "When using Darkgold Wolfbite, each Prosecution Edict stack from the Passive Talent \"There Shall Be a Reckoning for Sin\" will increase said ability's DMG dealt by 40%.\nYou must first unlock the Passive Talent \"There Shall Be a Reckoning for Sin.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Constellation_Punishment_for_the_Frauds.png",
+            "name": "Punishment for the Frauds",
+            "level": 3,
+            "description": "Increases the Level of Normal Attack: Forceful Fists of Frost by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Constellation_Redemption_for_the_Suffering.png",
+            "name": "Redemption for the Suffering",
+            "level": 4,
+            "description": "The HP restored to Wriothesley through Rebuke: Vaulting Fist will be increased to 50% of his Max HP. You must first unlock the Passive Talent \"There Shall Be a Plea for Justice.\"\nAdditionally, when Wriothesley is healed, if the amount of healing overflows, the following effects will occur depending on whether he is on the field or not. If he is on the field, his ATK SPD will be increased by 20% for 4s. If he is off-field, all of your own party members' ATK SPD will be increased by 10% for 6s. These two methods of increasing ATK SPD cannot stack."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Constellation_Mercy_for_the_Wronged.png",
+            "name": "Mercy for the Wronged",
+            "level": 5,
+            "description": "Increases the Level of Darkgold Wolfbite by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Constellation_Esteem_for_the_Innocent.png",
+            "name": "Esteem for the Innocent",
+            "level": 6,
+            "description": "The CRIT Rate of Rebuke: Vaulting Fist will be increased by 10%, and its CRIT DMG by 80%. When unleashed, it will also create an additional icicle that deals 100% of Rebuke: Vaulting Fist's Base DMG as Cryo DMG. DMG dealt this way is regarded as Charged Attack DMG.\nYou must first unlock the Passive Talent \"There Shall Be a Plea for Justice.\""
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Wriothesley_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Character_Wriothesley_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Character_Wriothesley_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Wriothesley_Detention.png"
+    }
+}

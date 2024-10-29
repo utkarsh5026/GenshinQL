@@ -1,0 +1,127 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Chiori_Icon.png",
+    "name": "Chiori",
+    "rarity": "5 Stars",
+    "element": "Geo",
+    "weaponType": "Sword",
+    "region": "Inazuma",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Sword_Geo.png",
+            "talentName": "Weaving Blade",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Weaving_Blade_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Weaving_Blade_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Talent_Fluttering_Hasode.png",
+            "talentName": "Fluttering Hasode",
+            "talentType": "Elemental Skill",
+            "description": "Dashes nimbly forward with silken steps. Once this dash ends, Chiori will summon the automaton doll \"Tamoto\" beside her and sweep her blade upward, dealing AoE Geo DMG to nearby opponents based on her ATK and DEF.\nHolding the Skill will cause it to behave differently.\n\nHold\nEnter Aiming Mode to adjust the dash direction.\n\nTamoto\nWill slash at nearby opponents at intervals, dealing AoE Geo DMG based on Chiori's ATK and DEF.\nWhile active, if there are nearby Geo Construct(s) or Geo Construct(s) are created nearby, an additional Tamoto will be summoned next to your active character. Only 1 additional Tamoto can be summoned in this manner, and its duration is independently counted.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Fluttering_Hasode_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Fluttering_Hasode_Hold_Preview.gif",
+                    "caption": "Hold"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Talent_Hiyoku_Twin_Blades.png",
+            "talentName": "Hiyoku: Twin Blades",
+            "talentType": "Elemental Burst",
+            "description": "Twin blades leave their sheaths as Chiori slices with the clean cuts of a master tailor, dealing AoE Geo DMG based on her ATK and DEF.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Hiyoku_Twin_Blades_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Talent_Tailor-Made.png",
+            "talentName": "Tailor-Made",
+            "talentType": "1st Ascension Passive",
+            "description": "Gain different effects depending on the next action you take within a short duration after using Fluttering Hasode's upward sweep. If you (Press/Tap) the Elemental Skill, you will trigger the Tapestry effect. If you (Press/Tap) your Normal Attack, the Tailoring effect will be triggered instead.\n\nTapestry\nSwitches to the next character in your roster.\nGrants all your party members \"Seize the Moment\": When your active party member's Normal Attacks, Charged Attacks, and Plunging Attacks hit a nearby opponent, \"Tamoto\" will execute a coordinated attack, dealing 100% of Fluttering Hasode's upward sweep DMG as AoE Geo DMG at the opponent's location. DMG dealt this way is considered Elemental Skill DMG.\n\"Seize the Moment\" lasts 8s, and 1 of \"Tamoto\"'s coordinated attack can be unleashed every 2s. 2 such coordinated attacks can occur per \"Seize the Moment\" effect duration.\n\nTailoring\nChiori gains Geo infusion for 5s.\n\nWhen on the field, if Chiori does not either (Press/Tap) her Elemental Skill or use a Normal Attack within a short time after using Fluttering Hasode's upward sweep, the Tailoring effect will be triggered by default.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Tailor-Made_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Talent_The_Finishing_Touch.png",
+            "talentName": "The Finishing Touch",
+            "talentType": "4th Ascension Passive",
+            "description": "When a nearby party member creates a Geo Construct, Chiori will gain 20% Geo DMG Bonus for 20s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Talent_Brocaded_Collar%27s_Beauteous_Silhouette.png",
+            "talentName": "Brocaded Collar's Beauteous Silhouette",
+            "talentType": "Utility Passive",
+            "description": "When any party member is wearing an outfit apart from their default outfit, or is wearing a wind glider other than the Wings of First Flight, your party members will obtain the Swift Stride effect: Movement SPD is increased by 10%.\nThis effect does not take effect in Domains, Trounce Domains and the Spiral Abyss. Swift Stride does not stack.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Constellation_Six_Paths_of_Sage_Silkcraft.png",
+            "name": "Six Paths of Sage Silkcraft",
+            "level": 1,
+            "description": "The AoE of the automaton doll \"Tamoto\" summoned by Fluttering Hasode is increased by 50%.\nAdditionally, if there is a Geo party member other than Chiori, Fluttering Hasode will trigger the following after the dash is completed:\nSummon an additional Tamoto. Only one additional Tamoto can exist at the same time, whether summoned by Chiori this way or through the presence of a Geo Construct.\nTriggers the Passive Talent \"The Finishing Touch.\" This effect requires you to first unlock the Passive Talent \"The Finishing Touch.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Constellation_In_Five_Colors_Dyed.png",
+            "name": "In Five Colors Dyed",
+            "level": 2,
+            "description": "For 10s after using Hiyoku: Twin Blades, a simplified automaton doll, \"Kinu,\" will be summoned next to your active character every 3s. Kinu will attack nearby opponents, dealing AoE Geo DMG equivalent to 170% of Tamoto's DMG. DMG dealt this way is considered Elemental Skill DMG.\nKinu will leave the field after 1 attack or after lasting 3s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Constellation_Four_Brocade_Embellishments.png",
+            "name": "Four Brocade Embellishments",
+            "level": 3,
+            "description": "Increases the Level of Fluttering Hasode by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Constellation_A_Tailor%27s_Three_Courtesies.png",
+            "name": "A Tailor's Three Courtesies",
+            "level": 4,
+            "description": "For 8s after triggering either follow-up effect of the Passive Talent \"Tailor-Made,\" when your current active character's Normal, Charged, or Plunging Attacks hit a nearby opponent, a simplified automaton doll, \"Kinu,\" will be summoned near this opponent. You can summon 1 Kinu every 1s in this way, and up to 3 Kinu may be summoned this way during each instance of \"Tailor-Made\"'s Seize the Moment or Tailoring effect. The above effect can be triggered up to once every 15s.\nMust unlock the Passive Talent \"Tailor-Made\" first."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Constellation_Two_Silken_Plumules.png",
+            "name": "Two Silken Plumules",
+            "level": 5,
+            "description": "Increases the Level of Hiyoku: Twin Blades by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Constellation_Sole_Principle_Pursuit.png",
+            "name": "Sole Principle Pursuit",
+            "level": 6,
+            "description": "After triggering a follow-up effect of the Passive Talent \"Tailor-Made,\" Chiori's own Fluttering Hasode's CD is decreased by 12s. Must unlock the Passive \"Tailor-Made\" first.\nIn addition, the DMG dealt by Chiori's own Normal Attacks is increased by an amount equal to 235% of her own DEF."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Chiori_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Character_Chiori_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Character_Chiori_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Chiori_Spectacular_Sleeves.png"
+    }
+}

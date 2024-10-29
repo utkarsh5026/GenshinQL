@@ -1,0 +1,164 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Kamisato_Ayato_Icon.png",
+    "name": "Kamisato Ayato",
+    "rarity": "5 Stars",
+    "element": "Hydro",
+    "weaponType": "Sword",
+    "region": "Inazuma",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png",
+            "talentName": "Kamisato Art: Marobashi",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to dash forward and perform an iai.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Kamisato_Art_Marobashi_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Kamisato_Art_Marobashi_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Kamisato_Art_Marobashi_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Kamisato_Art_Marobashi_N1_Recovery_Preview.gif",
+                    "caption": "Normal Attack 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Kamisato_Art_Marobashi_N2_Recovery_Preview.gif",
+                    "caption": "Normal Attack 2"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Kamisato_Art_Marobashi_N3_Recovery_Preview.gif",
+                    "caption": "Normal Attack 3"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Kamisato_Art_Marobashi_N4_Recovery_Preview.gif",
+                    "caption": "Normal Attack 4"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Kamisato_Art_Marobashi_N5_Recovery_Preview.gif",
+                    "caption": "Normal Attack 5"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Kamisato_Art_Marobashi_C_Recovery_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Kamisato_Art_Kyouka.png",
+            "talentName": "Kamisato Art: Kyouka",
+            "talentType": "Elemental Skill",
+            "description": "Kamisato Ayato shifts positions and enters the Takimeguri Kanka state.\nAfter this shift, he will leave a watery illusion at his original location. After it is formed, the watery illusion will explode if opponents are nearby or after its duration ends, dealing AoE Hydro DMG.\n\nTakimeguri Kanka\nIn this state, Kamisato Ayato uses his Shunsuiken to engage in blindingly fast attacks, causing DMG from his Normal Attacks to be converted into AoE Hydro DMG. This cannot be overridden.\nIt also has the following properties:\nAfter a Shunsuiken attack hits an opponent, it will grant Ayato the Namisen effect, increasing the DMG dealt by Shunsuiken based on Ayato's current Max HP. The initial maximum number of Namisen stacks is 4, and 1 stack can be gained through Shunsuiken every 0.1s. This effect will be dispelled when Takimeguri Kanka ends.\nKamisato Ayato's resistance to interruption is increased.\nUnable to use Charged or Plunging Attacks.\n\nTakimeguri Kanka will be cleared when Ayato leaves the field. Using Kamisato Art: Kyouka again while in the Takimeguri Kanka state will reset and replace the pre-existing state.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Kamisato_Art_Kyouka_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Kamisato_Art_Kyouka_Takimeguri_Kanka_Preview.gif",
+                    "caption": "Takimeguri Kanka"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Kamisato_Art_Kyouka_Watery_Illusion_Preview.gif",
+                    "caption": "Watery Illusion"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Kamisato_Art_Suiyuu.png",
+            "talentName": "Kamisato Art: Suiyuu",
+            "talentType": "Elemental Burst",
+            "description": "Unveils a garden of purity that silences the cacophony within.\nWhile this space exists, Bloomwater Blades will constantly rain down and attack opponents within its AoE, dealing Hydro DMG and increasing the Normal Attack DMG of characters within.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Kamisato_Art_Suiyuu_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Talent_Kamisato_Art_Mine_Wo_Matoishi_Kiyotaki.png",
+            "talentName": "Kamisato Art: Mine Wo Matoishi Kiyotaki",
+            "talentType": "1st Ascension Passive",
+            "description": "Kamisato Art: Kyouka has the following properties:\nAfter it is used, Kamisato Ayato will gain 2 Namisen stacks.\nWhen the water illusion explodes, Ayato will gain a Namisen effect equal to the maximum number of stacks possible.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Kamisato_Art_Mine_Wo_Matoishi_Kiyotaki_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Talent_Kamisato_Art_Michiyuku_Hagetsu.png",
+            "talentName": "Kamisato Art: Michiyuku Hagetsu",
+            "talentType": "4th Ascension Passive",
+            "description": "If Kamisato Ayato is not on the field and his Energy is less than 40, he will regenerate 2 Energy for himself every second.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Talent_Kamisato_Art_Daily_Cooking.png",
+            "talentName": "Kamisato Art: Daily Cooking",
+            "talentType": "Utility Passive",
+            "description": "When Ayato cooks a dish perfectly, he has a 18% chance to receive an additional \"Suspicious\" dish of the same type.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Kamisato_Art_Daily_Cooking_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Constellation_Kyouka_Fuushi.png",
+            "name": "Kyouka Fuushi",
+            "level": 1,
+            "description": "Shunsuiken DMG is increased by 40% against opponents with 50% HP or less."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Constellation_World_Source.png",
+            "name": "World Source",
+            "level": 2,
+            "description": "Namisen's maximum stack count is increased to 5. When Kamisato Ayato has at least 3 Namisen stacks, his Max HP is increased by 50%.\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Constellation_To_Admire_the_Flowers.png",
+            "name": "To Admire the Flowers",
+            "level": 3,
+            "description": "Increases the Level of Kamisato Art: Kyouka by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Constellation_Endless_Flow.png",
+            "name": "Endless Flow",
+            "level": 4,
+            "description": "After using Kamisato Art: Suiyuu, all nearby party members will have 15% increased Normal Attack SPD for 15s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Constellation_Bansui_Ichiro.png",
+            "name": "Bansui Ichiro",
+            "level": 5,
+            "description": "Increases the Level of Kamisato Art: Suiyuu by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Constellation_Boundless_Origin.png",
+            "name": "Boundless Origin",
+            "level": 6,
+            "description": "After using Kamisato Art: Kyouka, Ayato's next Shunsuiken attack will create 2 extra Shunsuiken strikes when they hit opponents, each one dealing 450% of Ayato's ATK as DMG.\nBoth these Shunsuiken attacks will not be affected by Namisen.\n▼Gameplay Notes▼\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Kamisato_Ayato_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Character_Kamisato_Ayato_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Character_Kamisato_Ayato_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Item_Kamisato_Ayato_Ripple.png"
+    }
+}

@@ -1,0 +1,152 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Yae_Miko_Icon.png",
+    "name": "Yae Miko",
+    "rarity": "5 Stars",
+    "element": "Electro",
+    "weaponType": "Catalyst",
+    "region": "Inazuma",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Catalyst_Electro.png",
+            "talentName": "Spiritfox Sin-Eater",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nSummons forth kitsune spirits, initiating a maximum of 3 attacks that deal Electro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina to deal Electro DMG after a short casting time.\n\nPlunging Attack\nPlunges towards the ground from mid-air, damaging all opponents in her path with thunderous might. Deals AoE Electro DMG upon impact with the ground.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Spiritfox_Sin-Eater_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Spiritfox_Sin-Eater_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Spiritfox_Sin-Eater_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Yakan_Evocation_Sesshou_Sakura.png",
+            "talentName": "Yakan Evocation: Sesshou Sakura",
+            "talentType": "Elemental Skill",
+            "description": "To Yae, such dull tasks as can be accomplished by driving spirits out need not be done personally.\nMoves swiftly, leaving a Sesshou Sakura behind.\n\nSesshou Sakura\nHas the following properties:\nPeriodically strikes one nearby opponent with lightning, dealing Electro DMG\nWhen there are other Sesshou Sakura nearby, their level will increase, boosting the DMG dealt by these lightning strikes.\n\nThis skill has three charges.\nA maximum of 3 Sesshou Sakura can exist simultaneously. The initial level of each Sesshou Sakura is 1, and the initial highest level each sakura can reach is 3. If a new Sesshou Sakura is created too close to an existing one, the existing one will be destroyed.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Yakan_Evocation_Sesshou_Sakura_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Yakan_Evocation_Sesshou_Sakura_Press_3_Preview.gif",
+                    "caption": "Press, 3 charges"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Yakan_Evocation_Sesshou_Sakura_Strikes_Preview.gif",
+                    "caption": "Sesshou Sakura Strikes"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Yakan_Evocation_Sesshou_Sakura_Comparison_Preview.gif",
+                    "caption": "Sesshou Sakura, Level 1 vs Level 3"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Yakan_Evocation_Sesshou_Sakura_C0_Preview.gif",
+                    "caption": "Sesshou Sakura's appearance at levels 3, 2, and 1 respectively"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Great_Secret_Art_Tenko_Kenshin.png",
+            "talentName": "Great Secret Art: Tenko Kenshin",
+            "talentType": "Elemental Burst",
+            "description": "Legends of \"kitsunetsuki,\" or the manifestations of a kitsune's might, are common in Inazuma's folktales. One that particularly captures the imagination is that of the Sky Kitsune, said to cause lightning to fall down upon the foes of the Grand Narukami Shrine. Summons a lightning strike, dealing AoE Electro DMG.\nWhen she uses this skill, Yae Miko will unseal nearby Sesshou Sakura, destroying their outer forms and transforming them into Tenko Thunderbolts that descend from the skies, dealing AoE Electro DMG. Each Sesshou Sakura destroyed in this way will create one Tenko Thunderbolt.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Great_Secret_Art_Tenko_Kenshin_Preview.gif",
+                    "caption": "Elemental Burst"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Great_Secret_Art_Tenko_Kenshin_Unseal_Preview.gif",
+                    "caption": "Unsealing nearby Sesshou Sakuras"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Talent_The_Shrine%27s_Sacred_Shade.png",
+            "talentName": "The Shrine's Sacred Shade",
+            "talentType": "1st Ascension Passive",
+            "description": "When casting Great Secret Art: Tenko Kenshin, each Sesshou Sakura destroyed resets the cooldown for 1 charge of Yakan Evocation: Sesshou Sakura.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/The_Shrine%27s_Sacred_Shade_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Talent_Enlightened_Blessing.png",
+            "talentName": "Enlightened Blessing",
+            "talentType": "4th Ascension Passive",
+            "description": "Every point of Elemental Mastery Yae Miko possesses will increase Sesshou Sakura DMG by 0.15%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Talent_Meditations_of_a_Yako.png",
+            "talentName": "Meditations of a Yako",
+            "talentType": "Utility Passive",
+            "description": "Has a 25% chance to get 1 regional Character Talent Material (base material excluded) when crafting. The rarity is that of the base material.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Meditations_of_a_Yako_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Constellation_Yakan_Offering.png",
+            "name": "Yakan Offering",
+            "level": 1,
+            "description": "Each time Great Secret Art: Tenko Kenshin activates a Tenko Thunderbolt, Yae Miko will restore 8 Elemental Energy for herself."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Constellation_Fox%27s_Mooncall.png",
+            "name": "Fox's Mooncall",
+            "level": 2,
+            "description": "Sesshou Sakura start at Level 2 when created, their max level is increased to 4, and their attack range is increased by 60%.\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Constellation_The_Seven_Glamours.png",
+            "name": "The Seven Glamours",
+            "level": 3,
+            "description": "Increases the Level of Yakan Evocation: Sesshou Sakura by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Constellation_Sakura_Channeling.png",
+            "name": "Sakura Channeling",
+            "level": 4,
+            "description": "When Sesshou Sakura lightning hits opponents, the Electro DMG Bonus of all nearby party members is increased by 20% for 5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Constellation_Mischievous_Teasing.png",
+            "name": "Mischievous Teasing",
+            "level": 5,
+            "description": "Increases the Level of Great Secret Art: Tenko Kenshin by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Constellation_Forbidden_Art_Daisesshou.png",
+            "name": "Forbidden Art: Daisesshou",
+            "level": 6,
+            "description": "The Sesshou Sakura's attacks will ignore 60% of the opponent's DEF.\n▼Gameplay Notes▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Yae_Miko_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Character_Yae_Miko_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Character_Yae_Miko_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Yae_Miko_Kitsune_Dreaming.png"
+    }
+}

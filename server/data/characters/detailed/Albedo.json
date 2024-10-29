@@ -1,0 +1,139 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Albedo_Icon.png",
+    "name": "Albedo",
+    "rarity": "5 Stars",
+    "element": "Geo",
+    "weaponType": "Sword",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Sword_Geo.png",
+            "talentName": "Favonius Bladework - Weiss",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Favonius_Bladework_-_Weiss_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Favonius_Bladework_-_Weiss_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Favonius_Bladework_-_Weiss_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_Abiogenesis_Solar_Isotoma.png",
+            "talentName": "Abiogenesis: Solar Isotoma",
+            "talentType": "Elemental Skill",
+            "description": "Albedo creates a Solar Isotoma using alchemy, which deals AoE Geo DMG on appearance.\n\nSolar Isotoma\nhas the following properties:\nWhen opponents within the Solar Isotoma field take DMG, the Solar Isotoma will generate Transient Blossoms which deal AoE Geo DMG. DMG dealt scales off Albedo's DEF.\nTransient Blossoms can only be generated once every 2s.\nWhen a character is located at the locus of the Solar Isotoma, the Solar Isotoma will accumulate Geo power to form a crystallized platform that lifts the character up to a certain height. Only one crystallized platform can exist at a time.\nSolar Isotoma is considered a Geo construct. Only one Solar Isotoma created by Albedo himself can exist at a time.\n\nHold to designate the location of the skill.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Abiogenesis_Solar_Isotoma_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Abiogenesis_Solar_Isotoma_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Abiogenesis_Solar_Isotoma_Platform_Preview.gif",
+                    "caption": "Platform"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Rite_of_Progeniture_Tectonic_Tide.png",
+            "talentName": "Rite of Progeniture: Tectonic Tide",
+            "talentType": "Elemental Burst",
+            "description": "Under Albedo's command, Geo crystals surge and burst forth, dealing AoE Geo DMG in front of him.\nIf a Solar Isotoma created by Albedo himself is on the field, 7 Fatal Blossoms will be generated in the Solar Isotoma field, bursting violently into bloom and dealing AoE Geo DMG.\n\nTectonic Tide DMG and Fatal Blossom DMG will not generate Transient Blossoms.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Rite_of_Progeniture_Tectonic_Tide_Preview.gif",
+                    "caption": "Without Fatal Blossoms"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Rite_of_Progeniture_Tectonic_Tide_Blossom_Preview.gif",
+                    "caption": "With Fatal Blossoms"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Talent_Calcite_Might.png",
+            "talentName": "Calcite Might",
+            "talentType": "1st Ascension Passive",
+            "description": "Transient Blossoms generated by Abiogenesis: Solar Isotoma deal 25% more DMG to opponents whose HP is below 50%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Talent_Homuncular_Nature.png",
+            "talentName": "Homuncular Nature",
+            "talentType": "4th Ascension Passive",
+            "description": "Using Rite of Progeniture: Tectonic Tide increases the Elemental Mastery of nearby party members by 125 for 10s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Homuncular_Nature_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Flash_of_Genius_%28Albedo%29.png",
+            "talentName": "Flash of Genius",
+            "talentType": "Utility Passive",
+            "description": "When Albedo crafts Weapon Ascension Materials, he has a 10% chance to receive double the product.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Constellation_Flower_of_Eden.png",
+            "name": "Flower of Eden",
+            "level": 1,
+            "description": "Transient Blossoms generated by Albedo's Abiogenesis: Solar Isotoma regenerate 1.2 Energy for Albedo."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Constellation_Opening_of_Phanerozoic.png",
+            "name": "Opening of Phanerozoic",
+            "level": 2,
+            "description": "Transient Blossoms generated by Abiogenesis: Solar Isotoma grant Albedo Fatal Reckoning for 30s:\nUnleashing Rite of Progeniture: Tectonic Tide consumes all stacks of Fatal Reckoning. Each stack of Fatal Reckoning consumed increases the DMG dealt by Fatal Blossoms and Rite of Progeniture: Tectonic Tide's burst DMG by 30% of Albedo's DEF.\nThis effect stacks up to 4 times.\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Constellation_Grace_of_Helios.png",
+            "name": "Grace of Helios",
+            "level": 3,
+            "description": "Increases the Level of Abiogenesis: Solar Isotoma by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Constellation_Descent_of_Divinity.png",
+            "name": "Descent of Divinity",
+            "level": 4,
+            "description": "Active party members within the Solar Isotoma field have their Plunging Attack DMG increased by 30%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Constellation_Tide_of_Hadean.png",
+            "name": "Tide of Hadean",
+            "level": 5,
+            "description": "Increases the Level of Rite of Progeniture: Tectonic Tide by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Constellation_Dust_of_Purification.png",
+            "name": "Dust of Purification",
+            "level": 6,
+            "description": "Active party members within the Solar Isotoma field who are protected by a shield created by Crystallize have their DMG increased by 17%."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Albedo_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Character_Albedo_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Character_Albedo_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Item_Albedo_Sun_Blossom.png"
+    }
+}

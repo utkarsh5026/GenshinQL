@@ -1,0 +1,159 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Yun_Jin_Icon.png",
+    "name": "Yun Jin",
+    "rarity": "4 Stars",
+    "element": "Geo",
+    "weaponType": "Polearm",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Polearm_Geo.png",
+            "talentName": "Cloud-Grazing Strike",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Cloud-Grazing_Strike_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Cloud-Grazing_Strike_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Cloud-Grazing_Strike_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Cloud-Grazing_Strike_N1_Recovery_Preview.gif",
+                    "caption": "Normal Attack 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Cloud-Grazing_Strike_N2_Recovery_Preview.gif",
+                    "caption": "Normal Attack 2"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Cloud-Grazing_Strike_N3_Recovery_Preview.gif",
+                    "caption": "Normal Attack 3"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Cloud-Grazing_Strike_N4_Recovery_Preview.gif",
+                    "caption": "Normal Attack 4"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Cloud-Grazing_Strike_N5_Recovery_Preview.gif",
+                    "caption": "Normal Attack 5"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Cloud-Grazing_Strike_C_Recovery_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Talent_Opening_Flourish.png",
+            "talentName": "Opening Flourish",
+            "talentType": "Elemental Skill",
+            "description": "Ms. Yun may just be acting out fights on stage, but her skills with the spear are real enough to defend against her foes.\n\n(Press/Tap)\nFlourishes her polearm in a cloud-grasping stance, dealing Geo DMG.\n\nHold\nTakes up the Opening Flourish stance and charges up, forming a shield. DMG Absorption is based on Yun Jin's Max HP and has 150% effectiveness against all Elemental DMG and Physical DMG. The shield lasts until she finishes unleashing her Elemental Skill.\nWhen the skill is released, when its duration ends, or when the shield breaks, Yun Jin will unleash the charged energy as an attack, dealing Geo DMG.\nBased on the time spent charging, it will either unleash an attack at Charge Level 1 or Level 2.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Opening_Flourish_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Opening_Flourish_Hold_L1_Preview.gif",
+                    "caption": "Hold Level 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Opening_Flourish_Hold_L2_Preview.gif",
+                    "caption": "Hold Level 2"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Cliffbreaker%27s_Banner.png",
+            "talentName": "Cliffbreaker's Banner",
+            "talentType": "Elemental Burst",
+            "description": "Deals AoE Geo DMG and grants all nearby party members a Flying Cloud Flag Formation.\n\nFlying Cloud Flag Formation\nWhen Normal Attack DMG is dealt to opponents, Bonus DMG will be dealt based on Yun Jin's current DEF.\n\nThe effects of this skill will be cleared after a set duration or after being triggered a specific number of times.\nWhen one Normal Attack hits multiple opponents, the effect is triggered multiple times according to the number of opponents hit. The number of times that the effect is triggered is counted independently for each member of the party with Flying Cloud Flag Formation.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Cliffbreaker%27s_Banner_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Talent_True_to_Oneself.png",
+            "talentName": "True to Oneself",
+            "talentType": "1st Ascension Passive",
+            "description": "Using Opening Flourish at the precise moment when Yun Jin is attacked will unleash its Level 2 Charged (Hold) form.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Talent_Breaking_Conventions.png",
+            "talentName": "Breaking Conventions",
+            "talentType": "4th Ascension Passive",
+            "description": "The Normal Attack DMG Bonus granted by Flying Cloud Flag Formation is further increased by 2.5%/5%/7.5%/11.5% of Yun Jin's DEF when the party contains characters of 1/2/3/4 Elemental Types, respectively.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Talent_Light_Nourishment.png",
+            "talentName": "Light Nourishment",
+            "talentType": "Utility Passive",
+            "description": "When Perfect Cooking is achieved on Food with Adventure-related effects, there is a 12% chance to obtain double the product.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Light_Nourishment_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Constellation_Thespian_Gallop.png",
+            "name": "Thespian Gallop",
+            "level": 1,
+            "description": "Opening Flourish's CD is decreased by 18%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Constellation_Myriad_Mise-En-Sc%C3%A8ne.png",
+            "name": "Myriad Mise-En-Scène",
+            "level": 2,
+            "description": "After Cliffbreaker's Banner is unleashed, all nearby party members' Normal Attack DMG is increased by 15% for 12s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Constellation_Seafaring_General.png",
+            "name": "Seafaring General",
+            "level": 3,
+            "description": "Increases the Level of Cliffbreaker's Banner by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Constellation_Flower_and_a_Fighter.png",
+            "name": "Flower and a Fighter",
+            "level": 4,
+            "description": "When Yun Jin triggers the Crystallize Reaction, her DEF is increased by 20% for 12s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Constellation_Famed_Throughout_the_Land.png",
+            "name": "Famed Throughout the Land",
+            "level": 5,
+            "description": "Increases the Level of Opening Flourish by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Constellation_Decorous_Harmony.png",
+            "name": "Decorous Harmony",
+            "level": 6,
+            "description": "Characters under the effects of the Flying Cloud Flag Formation have their Normal ATK SPD increased by 12%."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Yun_Jin_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Character_Yun_Jin_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Character_Yun_Jin_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Item_Yun_Jin_Rhyme.png"
+    }
+}

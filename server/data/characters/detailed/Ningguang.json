@@ -1,0 +1,135 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Ningguang_Icon.png",
+    "name": "Ningguang",
+    "rarity": "4 Stars",
+    "element": "Geo",
+    "weaponType": "Catalyst",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Catalyst_Geo.png",
+            "talentName": "Sparkling Scatter",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nShoots gems that deal Geo DMG.\nUpon hit, this grants Ningguang 1 Star Jade.\n\nCharged Attack\nConsumes a certain amount of stamina to fire off a giant gem that deals Geo DMG.\nIf Ningguang has any Star Jades, unleashing a Charged Attack will cause the Star Jades to be fired at the enemy as well, dealing additional DMG.\n\nPlunging Attack\nGathering the might of Geo, Ningguang plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Geo DMG upon impact with the ground.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Sparkling_Scatter_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Sparkling_Scatter_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Sparkling_Scatter_Star_Jades_Preview.gif",
+                    "caption": "3 Star Jades being fired with a Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Sparkling_Scatter_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Jade_Screen.png",
+            "talentName": "Jade Screen",
+            "talentType": "Elemental Skill",
+            "description": "Ningguang creates a Jade Screen out of gold, obsidian and her great opulence, dealing AoE Geo DMG.\n\nJade Screen\nBlocks opponents' projectiles.\nEndurance scales based on Ningguang's Max HP.\n\nJade Screen is considered a Geo Construct and can be used to block certain attacks, but cannot be climbed. Only one Jade Screen may exist at any one time.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Jade_Screen_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Starshatter.png",
+            "talentName": "Starshatter",
+            "talentType": "Elemental Burst",
+            "description": "Gathering a great number of gems, Ningguang scatters them all at once, sending homing projectiles at her opponents that deal massive Geo DMG.\nIf Starshatter is cast when a Jade Screen is nearby, the Jade Screen will fire additional gem projectiles at the same time.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Starshatter_Preview.gif",
+                    "caption": ""
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Starshatter_Jade_Screen_Preview.gif",
+                    "caption": "With Jade Screen nearby"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Talent_Backup_Plan.png",
+            "talentName": "Backup Plan",
+            "talentType": "1st Ascension Passive",
+            "description": "When Ningguang is in possession of Star Jades, her Charged Attack does not consume Stamina.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Talent_Strategic_Reserve.png",
+            "talentName": "Strategic Reserve",
+            "talentType": "4th Ascension Passive",
+            "description": "A character that passes through the Jade Screen will gain a 12% Geo DMG Bonus for 10s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Strategic_Reserve_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Talent_Trove_of_Marvelous_Treasures.png",
+            "talentName": "Trove of Marvelous Treasures",
+            "talentType": "Utility Passive",
+            "description": "Displays the location of nearby ore veins used in forging on the mini-map.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Constellation_Piercing_Fragments.png",
+            "name": "Piercing Fragments",
+            "level": 1,
+            "description": "When a Normal Attack hits, it deals AoE DMG.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Constellation_Shock_Effect.png",
+            "name": "Shock Effect",
+            "level": 2,
+            "description": "When Jade Screen is shattered, its CD will reset.\nCan occur once every 6s.\n▼Gameplay Notes▼\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_Majesty_Be_the_Array_of_Stars.png",
+            "name": "Majesty Be the Array of Stars",
+            "level": 3,
+            "description": "Increases the Level of Starshatter by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Constellation_Exquisite_be_the_Jade%2C_Outshining_All_Beneath.png",
+            "name": "Exquisite be the Jade, Outshining All Beneath",
+            "level": 4,
+            "description": "Jade Screen increases nearby characters' Elemental RES by 10%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Constellation_Invincible_Be_the_Jade_Screen.png",
+            "name": "Invincible Be the Jade Screen",
+            "level": 5,
+            "description": "Increases the Level of Jade Screen by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Constellation_Grandeur_Be_the_Seven_Stars.png",
+            "name": "Grandeur Be the Seven Stars",
+            "level": 6,
+            "description": "When Starshatter is used, Ningguang gains 7 Star Jades.\n▼Gameplay Notes▼\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Ningguang_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Character_Ningguang_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Character_Ningguang_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Ningguang_Phoenix.png"
+    }
+}

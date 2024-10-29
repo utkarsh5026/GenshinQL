@@ -22,17 +22,6 @@
         "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png"
     },
     {
-        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Aloy_Icon.png",
-        "name": "Aloy",
-        "rarity": "5 Stars",
-        "element": "Cryo",
-        "weaponType": "Bow",
-        "region": "None",
-        "elementUrl": "",
-        "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
-        "regionUrl": ""
-    },
-    {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Amber_Icon.png",
         "name": "Amber",
         "rarity": "4 Stars",
@@ -790,17 +779,6 @@
         "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
         "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
         "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png"
-    },
-    {
-        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Traveler_Icon.png",
-        "name": "Traveler",
-        "rarity": "5 Stars",
-        "element": "None",
-        "weaponType": "Sword",
-        "region": "None",
-        "elementUrl": "",
-        "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
-        "regionUrl": ""
     },
     {
         "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Venti_Icon.png",

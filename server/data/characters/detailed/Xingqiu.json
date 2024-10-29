@@ -1,0 +1,122 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Xingqiu_Icon.png",
+    "name": "Xingqiu",
+    "rarity": "4 Stars",
+    "element": "Hydro",
+    "weaponType": "Sword",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png",
+            "talentName": "Guhua Style",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Guhua_Style_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Guhua_Style_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Guhua_Style_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Guhua_Sword_Fatal_Rainscreen.png",
+            "talentName": "Guhua Sword: Fatal Rainscreen",
+            "talentType": "Elemental Skill",
+            "description": "Xingqiu performs twin strikes with his sword, dealing Hydro DMG. At the same time, this ability creates the maximum number of Rain Swords, which will orbit your active character.\nThe Rain Swords have the following properties:\nWhen a character takes DMG, the Rain Sword will shatter, reducing the amount of DMG taken.\nIncreases the character's resistance to interruption.\n\n20% of Xingqiu's Hydro DMG Bonus will be converted to additional DMG Reduction for the Rain Swords.\n\nThe maximum amount of additional DMG Reduction that can be gained this way is 24%.\nThe initial maximum number of Rain Swords is 3.\nUsing this ability applies the Wet status onto the character.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Guhua_Sword_Fatal_Rainscreen_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Guhua_Sword_Raincutter.png",
+            "talentName": "Guhua Sword: Raincutter",
+            "talentType": "Elemental Burst",
+            "description": "Initiate Rainbow Bladework and fight using an illusory sword rain, while creating the maximum number of Rain Swords.\n\nRainbow Bladework\nYour active character's Normal Attacks will trigger consecutive sword rain attacks, dealing Hydro DMG.\nRain Swords will remain at the maximum number throughout the ability's duration.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Guhua_Sword_Raincutter_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Talent_Hydropathic.png",
+            "talentName": "Hydropathic",
+            "talentType": "1st Ascension Passive",
+            "description": "When a Rain Sword is shattered or when its duration expires, it regenerates the current character's HP based on 6% of Xingqiu's Max HP.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Talent_Blades_Amidst_Raindrops.png",
+            "talentName": "Blades Amidst Raindrops",
+            "talentType": "4th Ascension Passive",
+            "description": "Xingqiu gains a 20% Hydro DMG Bonus.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Talent_Flash_of_Genius_%28Xingqiu%29.png",
+            "talentName": "Flash of Genius",
+            "talentType": "Utility Passive",
+            "description": "When Xingqiu crafts Character Talent Materials, he has a 25% chance to refund a portion of the crafting materials used.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Constellation_The_Scent_Remained.png",
+            "name": "The Scent Remained",
+            "level": 1,
+            "description": "Increases the maximum number of Rain Swords by 1.\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Constellation_Rainbow_Upon_the_Azure_Sky.png",
+            "name": "Rainbow Upon the Azure Sky",
+            "level": 2,
+            "description": "Extends the duration of Guhua Sword: Raincutter by 3s.\nDecreases the Hydro RES of opponents hit by sword rain attacks by 15% for 4s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Constellation_Weaver_of_Verses.png",
+            "name": "Weaver of Verses",
+            "level": 3,
+            "description": "Increases the Level of Guhua Sword: Raincutter by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Constellation_Evilsoother.png",
+            "name": "Evilsoother",
+            "level": 4,
+            "description": "Throughout the duration of Guhua Sword: Raincutter, the DMG dealt by Guhua Sword: Fatal Rainscreen is increased by 50%.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Constellation_Embrace_of_Rain.png",
+            "name": "Embrace of Rain",
+            "level": 5,
+            "description": "Increases the Level of Guhua Sword: Fatal Rainscreen by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Constellation_Hence%2C_Call_Them_My_Own_Verses.png",
+            "name": "Hence, Call Them My Own Verses",
+            "level": 6,
+            "description": "Activating 2 of Guhua Sword: Raincutter's sword rain attacks greatly enhances the third sword rain attack. On hit, the third sword rain attack also regenerates 3 Energy for Xingqiu.\n▼Gameplay Notes▼\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Xingqiu_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Character_Xingqiu_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Character_Xingqiu_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Xingqiu_Rainbow.png"
+    }
+}

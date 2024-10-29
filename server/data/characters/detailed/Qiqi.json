@@ -1,0 +1,122 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Qiqi_Icon.png",
+    "name": "Qiqi",
+    "rarity": "5 Stars",
+    "element": "Cryo",
+    "weaponType": "Sword",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png",
+            "talentName": "Ancient Sword Art",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Ancient_Sword_Art_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Ancient_Sword_Art_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Ancient_Sword_Art_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Talent_Adeptus_Art_Herald_of_Frost.png",
+            "talentName": "Adeptus Art: Herald of Frost",
+            "talentType": "Elemental Skill",
+            "description": "Using the Icevein Talisman, Qiqi brings forth the Herald of Frost, dealing Cryo DMG to surrounding opponents.\n\nHerald of Frost\nOn hit, Qiqi's Normal and Charged Attacks regenerate HP for your own party members and nearby teammates. Healing scales based on Qiqi's ATK.\nPeriodically regenerates your active character's HP.\nFollows the character around, dealing Cryo DMG to opponents in their path.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Adeptus_Art_Herald_of_Frost_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_Adeptus_Art_Preserver_of_Fortune.png",
+            "talentName": "Adeptus Art: Preserver of Fortune",
+            "talentType": "Elemental Burst",
+            "description": "Qiqi releases the adeptus power sealed within her body, marking nearby opponents with a Fortune-Preserving Talisman that deals Cryo DMG.\n\nFortune-Preserving Talisman\nWhen opponents affected by this Talisman take DMG, the character that dealt this DMG regenerates HP.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Adeptus_Art_Preserver_of_Fortune_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Life-Prolonging_Methods.png",
+            "talentName": "Life-Prolonging Methods",
+            "talentType": "1st Ascension Passive",
+            "description": "When a character under the effects of Adeptus Art: Herald of Frost triggers an Elemental Reaction, their Incoming Healing Bonus is increased by 20% for 8s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Talent_A_Glimpse_Into_Arcanum.png",
+            "talentName": "A Glimpse Into Arcanum",
+            "talentType": "4th Ascension Passive",
+            "description": "When Qiqi hits opponents with her Normal and Charged Attacks, she has a 50% chance to apply a Fortune-Preserving Talisman to them for 6s. This effect can only occur once every 30s.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Talent_Former_Life_Memories.png",
+            "talentName": "Former Life Memories",
+            "talentType": "Utility Passive",
+            "description": "Displays the location of nearby resources unique to Liyue on the mini-map.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Constellation_Ascetics_of_Frost.png",
+            "name": "Ascetics of Frost",
+            "level": 1,
+            "description": "When the Herald of Frost hits an opponent marked by a Fortune-Preserving Talisman, Qiqi regenerates 2 Energy."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Constellation_Frozen_to_the_Bone.png",
+            "name": "Frozen to the Bone",
+            "level": 2,
+            "description": "Qiqi's Normal and Charge Attack DMG against opponents affected by Cryo is increased by 15%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Constellation_Ascendant_Praise.png",
+            "name": "Ascendant Praise",
+            "level": 3,
+            "description": "Increases the Level of Adeptus Art: Preserver of Fortune by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Constellation_Divine_Suppression.png",
+            "name": "Divine Suppression",
+            "level": 4,
+            "description": "Targets marked by the Fortune-Preserving Talisman have their ATK decreased by 20%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Constellation_Crimson_Lotus_Bloom.png",
+            "name": "Crimson Lotus Bloom",
+            "level": 5,
+            "description": "Increases the Level of Adeptus Art: Herald of Frost by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Constellation_Rite_of_Resurrection.png",
+            "name": "Rite of Resurrection",
+            "level": 6,
+            "description": "Using Adeptus Art: Preserver of Fortune revives all fallen party members nearby and regenerates 50% of their HP.\nThis effect can only occur once every 15 mins."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Qiqi_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Character_Qiqi_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Character_Qiqi_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Qiqi_Cold_Storage.png"
+    }
+}

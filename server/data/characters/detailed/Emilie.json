@@ -1,0 +1,122 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Emilie_Icon.png",
+    "name": "Emilie",
+    "rarity": "5 Stars",
+    "element": "Dendro",
+    "weaponType": "Polearm",
+    "region": "Fontaine",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Polearm_Dendro.png",
+            "talentName": "Shadow-Hunting Spear (Custom)",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to perform an upward slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Shadow-Hunting_Spear_%28Custom%29_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Shadow-Hunting_Spear_%28Custom%29_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Shadow-Hunting_Spear_%28Custom%29_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Talent_Fragrance_Extraction.png",
+            "talentName": "Fragrance Extraction",
+            "talentType": "Elemental Skill",
+            "description": "Creates a Lumidouce Case that deals AoE Dendro DMG.\n\nLumidouce Case\nFires Puffs of Puredew at nearby opponents at intervals, dealing Dendro DMG.\nWhen nearby opponents are affected by Burning, they will give off Scents at intervals, and 1 Scent can be created this way every 2s. The Lumidouce Case collects nearby Scents. The Lumidouce Case will level up after gathering 2 of them, after which it will fire 1 extra Puff of Puredew when firing, while the DMG dealt by and DMG AoE of the above attack will also be increased.\n1 Lumidouce Case created by Emilie herself can exist at any one time. The Case starts at Level 1 and can go up to Level 2. If the Case does not collect any Scents for 8s while it is on the field, it will go back to Level 1.\n\nArkhe: Pneuma\nAt intervals, after Emilie creates a Lumidouce Case this way, a Spiritbreath Thorn will descend in front of her and pierce her opponent, dealing Pneuma-aligned Dendro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Fragrance_Extraction_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Aromatic_Explication.png",
+            "talentName": "Aromatic Explication",
+            "talentType": "Elemental Burst",
+            "description": "Guiding the fragrances collected within the Case, Emilie converts them into pure Dendro energy, creating a Level 3 Lumidouce Case and stowing existing Cases away.\nWhile it exists, the Level 3 Lumidouce Case will not gather nearby Scents, but it will continuously cause Scented Dew to descend, attacking opponents within range and dealing Dendro DMG. During this time, 1 drop of Scented Dew will descend every 0.3 seconds, and 1 opponent can become the target every 0.7 seconds.\nWhen the duration ends, a Level 1 Lumidouce Case will be recreated. If a Lumidouce Case was stowed away when using Aromatic Explication, then the Case that was stowed away will be deployed instead, and its duration will be reset.\nWhile Aromatic Explication is active, the Elemental Skill \"Fragrance Extraction\" will not create a Lumidouce Case.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Aromatic_Explication_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Lingering_Fragrance.png",
+            "talentName": "Lingering Fragrance",
+            "talentType": "1st Ascension Passive",
+            "description": "Each time it collects 2 Scents, the Level 2 Lumidouce Case will consume Scents and release Cleardew Cologne that deals AoE Dendro DMG equal to 600% of Emilie's ATK to opponents. This DMG is not considered Elemental Skill DMG.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Talent_Rectification.png",
+            "talentName": "Rectification",
+            "talentType": "4th Ascension Passive",
+            "description": "Emilie deals increased DMG to Burning opponents based on her ATK, with every 1,000 ATK increasing DMG dealt by 15%. The maximum DMG bonus that can be gained this way is 36%.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Talent_Headspace_Capture.png",
+            "talentName": "Headspace Capture",
+            "talentType": "Utility Passive",
+            "description": "When the Lumidouce Case created by Emilie is on the field, all party members gain 85% Pyro RES against Burning DMG.",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Constellation_Light_Fragrance_Leaching.png",
+            "name": "Light Fragrance Leaching",
+            "level": 1,
+            "description": "Increases the DMG dealt by Fragrance Extraction and her Passive Talent's Cleardew Cologne \"Lingering Fragrance\" by 20%. The latter requires unlocking said Passive Talent first.\nAdditionally, when nearby party members trigger the Burning reaction on opponents or deal Dendro DMG to Burning opponents, they will generate an additional Scent. This effect can be triggered once every 2.9s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Constellation_Lakelight_Top_Note.png",
+            "name": "Lakelight Top Note",
+            "level": 2,
+            "description": "When Fragrance Extraction, Aromatic Explication, or Cleardew Cologne produced by the Passive Talent \"Lingering Fragrance\" (the last of which requires Passive Talent activation) hits opponents, those opponents' Dendro RES is decreased by 30% for 10s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Constellation_Exquisite_Essence.png",
+            "name": "Exquisite Essence",
+            "level": 3,
+            "description": "Increases the Level of Fragrance Extraction by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Constellation_Lumidouce_Heart_Note.png",
+            "name": "Lumidouce Heart Note",
+            "level": 4,
+            "description": "Aromatic Explication's duration is increased by 2s. The interval between opponents being selected as the target for Scented Dew is decreased by 0.3s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Constellation_Puredew_Aroma.png",
+            "name": "Puredew Aroma",
+            "level": 5,
+            "description": "Increases the Level of Aromatic Explication by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Constellation_Marcotte_Sillage.png",
+            "name": "Marcotte Sillage",
+            "level": 6,
+            "description": "When using Fragrance Extraction or Aromatic Explication, Emilie will gain Abiding Fragrance for 5s.\nWhile this is active, after Emilie uses Normal or Charged Attacks, she will generate 1 Scent, and her Normal and Charged Attack DMG will be converted into Dendro DMG that cannot be overridden, and the DMG dealt will be increased by 300% of Emilie's ATK.\n\nThe Abiding Fragrance effect will be removed after 4 Scents are created this way or after its duration expires. Abiding Fragrance can be triggered once every 12s.\n▼Gameplay Notes▼\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Emilie_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Character_Emilie_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Character_Emilie_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Item_Emilie_Base_Note.png"
+    }
+}

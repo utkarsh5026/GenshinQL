@@ -1,0 +1,130 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Chevreuse_Icon.png",
+    "name": "Chevreuse",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "region": "Fontaine",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png",
+            "talentName": "Line Bayonet Thrust EX",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Line_Bayonet_Thrust_EX_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Line_Bayonet_Thrust_EX_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Line_Bayonet_Thrust_EX_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Talent_Short-Range_Rapid_Interdiction_Fire.png",
+            "talentName": "Short-Range Rapid Interdiction Fire",
+            "talentType": "Elemental Skill",
+            "description": "Chevreuse quickly shoulders her musket and fires at her opponent(s), dealing AoE Pyro DMG.\nFor a short duration after Chevreuse fires a shot, she will continuously restore HP to the active character on the field. The amount healed is based on her Max HP.\nHold to fire in a different fashion.\n\nHold\nEnter Aiming Mode, locking a target in her sights to fire a precise interdiction shot. If Chevreuse has an Overcharged Ball, then she will fire the Overcharged Ball instead, dealing greater Pyro DMG in a larger area.\nChevreuse gains 1 Overcharged Ball every time a nearby character in the party triggers an Overloaded reaction, and can have up to 1 Overcharged Ball at a time.\n\nArkhe: Ousia\nPeriodically, after Chevreuse's Short-Range Rapid Interdiction Fire hits, a Surging Blade will be called forth that deals Ousia-aligned Pyro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Short-Range_Rapid_Interdiction_Fire_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Short-Range_Rapid_Interdiction_Fire_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Short-Range_Rapid_Interdiction_Fire_Overcharged_Ball_Preview.gif",
+                    "caption": "Overcharged Ball"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Ring_of_Bursting_Grenades.png",
+            "talentName": "Ring of Bursting Grenades",
+            "talentType": "Elemental Burst",
+            "description": "Chevreuse fires an explosive grenade at opponents with her musket, dealing AoE Pyro DMG. After the projectile hits, it will split into many secondary explosive shells.\nThe secondary explosive shells will burst after a short interval, dealing Pyro DMG to nearby opponents.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Ring_of_Bursting_Grenades_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Talent_Vanguard%27s_Coordinated_Tactics.png",
+            "talentName": "Vanguard's Coordinated Tactics",
+            "talentType": "1st Ascension Passive",
+            "description": "When all party members are Pyro and Electro characters and there is at least one Pyro and one Electro character each in the party:\nChevreuse grants \"Coordinated Tactics\" to nearby party members: After a character triggers the Overloaded reaction, the Pyro and Electro RES of the opponent(s) affected by this Overloaded reaction will be decreased by 40% for 6s.\nThe \"Coordinated Tactics\" effect will be removed when the Elemental Types of the characters in the party do not meet the basic requirements for the Passive Talent.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Talent_Vertical_Force_Coordination.png",
+            "talentName": "Vertical Force Coordination",
+            "talentType": "4th Ascension Passive",
+            "description": "After Chevreuse fires an Overcharged Ball using Short-Range Rapid Interdiction Fire, nearby Pyro and Electro characters in the party gain 1% increased ATK for every 1,000 Max HP Chevreuse has for 30s. ATK can be increased by up to 40% in this way.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Talent_Double_Time_March.png",
+            "talentName": "Double Time March",
+            "talentType": "Utility Passive",
+            "description": "Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Constellation_Stable_Front_Line%27s_Resolve.png",
+            "name": "Stable Front Line's Resolve",
+            "level": 1,
+            "description": "When the active character with the \"Coordinated Tactics\" status (not including Chevreuse herself) triggers the Overloaded reaction, they will recover 6 Energy. This effect can be triggered once every 10s.\nYou must first unlock the Passive Talent \"Vanguard's Coordinated Tactics.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Constellation_Sniper_Induced_Explosion.png",
+            "name": "Sniper Induced Explosion",
+            "level": 2,
+            "description": "After Holding Short-Range Rapid Interdiction Fire and hitting a target, 2 chain explosions will be triggered near the location where said target is hit. Each explosion deals Pyro DMG equal to 120% of Chevreuse's ATK. This effect can be triggered up to once every 10s, and DMG dealt this way is considered Elemental Skill DMG.\n▼Advanced Properties▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Constellation_Practiced_Field_Stripping_Technique.png",
+            "name": "Practiced Field Stripping Technique",
+            "level": 3,
+            "description": "Increases the Level of Short-Range Rapid Interdiction Fire by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Constellation_The_Secret_to_Rapid-Fire_Multishots.png",
+            "name": "The Secret to Rapid-Fire Multishots",
+            "level": 4,
+            "description": "After using Ring of Bursting Grenades, the Hold mode of Short-Range Rapid Interdiction Fire will not go on cooldown when Chevreuse uses it. This effect is removed after Short-Range Rapid Interdiction Fire has been fired twice using Hold or after 6s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Constellation_Enhanced_Incendiary_Firepower.png",
+            "name": "Enhanced Incendiary Firepower",
+            "level": 5,
+            "description": "Increases the Level of Ring of Bursting Grenades by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Constellation_In_Pursuit_of_Ending_Evil.png",
+            "name": "In Pursuit of Ending Evil",
+            "level": 6,
+            "description": "After 12s of the healing effect from Short-Range Rapid Interdiction Fire, all nearby party members recover HP equivalent to 10% of Chevreuse's Max HP once.\nAfter a party member is healed by Short-Range Rapid Interdiction Fire, they gain a 20% Pyro DMG Bonus and Electro DMG Bonus for 8s. Max 3 stacks. Each stack's duration is counted independently."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Chevreuse_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Character_Chevreuse_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Character_Chevreuse_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Chevreuse_Type_II.png"
+    }
+}

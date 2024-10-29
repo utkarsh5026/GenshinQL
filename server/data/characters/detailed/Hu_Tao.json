@@ -1,0 +1,135 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Hu_Tao_Icon.png",
+    "name": "Hu Tao",
+    "rarity": "5 Stars",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png",
+            "talentName": "Secret Spear of Wangsheng",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 6 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Secret_Spear_of_Wangsheng_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Secret_Spear_of_Wangsheng_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Secret_Spear_of_Wangsheng_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Guide_to_Afterlife.png",
+            "talentName": "Guide to Afterlife",
+            "talentType": "Elemental Skill",
+            "description": "Only an unwavering flame can cleanse the impurities of this world.\nHu Tao consumes a set portion of her HP to knock the surrounding enemies back and enter the Paramita Papilio state.\n\nParamita Papilio\nIncreases Hu Tao's ATK based on her Max HP at the time of entering this state. ATK Bonus gained this way cannot exceed 400% of Hu Tao's Base ATK.\nConverts attack DMG to Pyro DMG, which cannot be overridden by any other elemental infusion.\nCharged Attacks apply the Blood Blossom effect to the enemies hit.\nIncreases Hu Tao's resistance to interruption.\n\nBlood Blossom\nEnemies affected by Blood Blossom will take Pyro DMG every 4s. This DMG is considered Elemental Skill DMG.\nEach enemy can be affected by only one Blood Blossom effect at a time, and its duration may only be refreshed by Hu Tao herself.\n\nParamita Papilio ends when its duration is over, or Hu Tao has left the battlefield or fallen.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Guide_to_Afterlife_Normal_Preview.gif",
+                    "caption": "Normal Attacks in Paramita Papilio State"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Guide_to_Afterlife_Charged_Preview.gif",
+                    "caption": "Charged Attacks in Paramita Papilio State"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Guide_to_Afterlife_Effect_Preview.gif",
+                    "caption": "Blood Blossom Effect"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Talent_Spirit_Soother.png",
+            "talentName": "Spirit Soother",
+            "talentType": "Elemental Burst",
+            "description": "Commands a blazing spirit to attack, dealing Pyro DMG in a large AoE.\nUpon striking the enemy, regenerates a percentage of Hu Tao's Max HP. This effect can be triggered up to 5 times, based on the number of enemies hit.\nIf Hu Tao's HP is below or equal to 50% when the enemy is hit, both the DMG and HP Regeneration are increased.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Spirit_Soother_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Talent_Flutter_By.png",
+            "talentName": "Flutter By",
+            "talentType": "1st Ascension Passive",
+            "description": "When a Paramita Papilio state activated by Guide to Afterlife ends, all allies in the party (excluding Hu Tao herself) will have their CRIT Rate increased by 12% for 8s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Sanguine_Rouge.png",
+            "talentName": "Sanguine Rouge",
+            "talentType": "4th Ascension Passive",
+            "description": "When Hu Tao's HP is equal to or less than 50%, her Pyro DMG Bonus is increased by 33%.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sanguine_Rouge_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Talent_The_More_the_Merrier.png",
+            "talentName": "The More the Merrier",
+            "talentType": "Utility Passive",
+            "description": "When Hu Tao cooks a dish perfectly, she has a 18% chance to receive an additional \"Suspicious\" dish of the same type.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Constellation_Crimson_Bouquet.png",
+            "name": "Crimson Bouquet",
+            "level": 1,
+            "description": "While in a Paramita Papilio state activated by Guide to Afterlife, Hu Tao's Charged Attacks do not consume Stamina."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Constellation_Ominous_Rainfall.png",
+            "name": "Ominous Rainfall",
+            "level": 2,
+            "description": "Increases the Blood Blossom DMG by an amount equal to 10% of Hu Tao's Max HP at the time the effect is applied.\nAdditionally, Spirit Soother will also apply the Blood Blossom effect."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Constellation_Lingering_Carmine.png",
+            "name": "Lingering Carmine",
+            "level": 3,
+            "description": "Increases the Level of Guide to Afterlife by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Constellation_Garden_of_Eternal_Rest.png",
+            "name": "Garden of Eternal Rest",
+            "level": 4,
+            "description": "Upon defeating an enemy affected by a Blood Blossom that Hu Tao applied herself, all nearby allies in the party (excluding Hu Tao herself) will have their CRIT Rate increased by 12% for 15s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Constellation_Floral_Incense.png",
+            "name": "Floral Incense",
+            "level": 5,
+            "description": "Increases the Level of Spirit Soother by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Constellation_Butterfly%27s_Embrace.png",
+            "name": "Butterfly's Embrace",
+            "level": 6,
+            "description": "Triggers when Hu Tao's HP drops below 25%, or when she suffers a lethal strike:\nHu Tao will not fall as a result of the DMG sustained. Additionally, for the next 10s, all of her Elemental and Physical RES is increased by 200%, her CRIT Rate is increased by 100%, and her resistance to interruption is greatly increased.\nThis effect triggers automatically when Hu Tao has 1 HP left.\nCan only occur once every 60s."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Hu_Tao_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Character_Hu_Tao_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Character_Hu_Tao_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Hu_Tao_Spirit_Soother.png"
+    }
+}

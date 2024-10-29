@@ -1,0 +1,126 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lisa_Icon.png",
+    "name": "Lisa",
+    "rarity": "4 Stars",
+    "element": "Electro",
+    "weaponType": "Catalyst",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Catalyst_Electro.png",
+            "talentName": "Lightning Touch",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 lightning attacks that deal Electro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina to deal AoE Electro DMG after a short casting time.\n\nPlunging Attack\nGathering the might of Electro, Lisa plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Electro DMG upon impact with the ground.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Lightning_Touch_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Lightning_Touch_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Lightning_Touch_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Talent_Violet_Arc.png",
+            "talentName": "Violet Arc",
+            "talentType": "Elemental Skill",
+            "description": "Channels the power of lightning to sweep bothersome matters away.\n\n(Press/Tap)\nReleases a homing Lightning Orb.\nOn hit, it deals Electro DMG and applies a stack of the Conductive status (max 3 stacks) to opponents in a small AoE.\n\nHold\nAfter an extended casting time, calls down lightning from the heavens, dealing massive Electro DMG to all nearby opponents.\nDeals great amounts of extra damage to opponents based on the number of Conductive stacks applied to them, and clears their Conductive status.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Violet_Arc_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Violet_Arc_Hold_Preview.gif",
+                    "caption": "Hold"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Talent_Lightning_Rose.png",
+            "talentName": "Lightning Rose",
+            "talentType": "Elemental Burst",
+            "description": "Summons a Lightning Rose that unleashes powerful lightning bolts, launching surrounding opponents and dealing Electro DMG.\nThe Lightning Rose will continuously emit lightning to knock back opponents and deal Electro DMG throughout the ability's duration.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Lightning_Rose_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Induced_Aftershock.png",
+            "talentName": "Induced Aftershock",
+            "talentType": "1st Ascension Passive",
+            "description": "Hits by Charged Attacks apply Violet Arc's Conductive status to opponents.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Talent_Static_Electricity_Field.png",
+            "talentName": "Static Electricity Field",
+            "talentType": "4th Ascension Passive",
+            "description": "Opponents hit by Lightning Rose have their DEF decreased by 15% for 10s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_General_Pharmaceutics.png",
+            "talentName": "General Pharmaceutics",
+            "talentType": "Utility Passive",
+            "description": "When Lisa crafts a potion, she has a 20% chance to refund a portion of the crafting materials used.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Constellation_Infinite_Circuit.png",
+            "name": "Infinite Circuit",
+            "level": 1,
+            "description": "Lisa regenerates 2 Energy for every opponent hit while holding Violet Arc.\nA maximum of 10 Energy can be regenerated in this manner at any one time.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Constellation_Electromagnetic_Field.png",
+            "name": "Electromagnetic Field",
+            "level": 2,
+            "description": "Holding Violet Arc has the following effects:\nIncreases DEF by 25%.\nIncreases Lisa's resistance to interruption."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Constellation_Resonant_Thunder.png",
+            "name": "Resonant Thunder",
+            "level": 3,
+            "description": "Increases the Level of Lightning Rose by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Constellation_Plasma_Eruption.png",
+            "name": "Plasma Eruption",
+            "level": 4,
+            "description": "Lightning Rose now unleashes 1-3 lightning bolts when it attacks.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Constellation_Electrocute.png",
+            "name": "Electrocute",
+            "level": 5,
+            "description": "Increases the Level of Violet Arc by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Constellation_Pulsating_Witch.png",
+            "name": "Pulsating Witch",
+            "level": 6,
+            "description": "When Lisa takes the field, she applies 3 stacks of Violet Arc's Conductive status onto nearby opponents.\nThis effect can only occur once every 5s.\n▼Gameplay Notes▼\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Lisa_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Lisa_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Character_Lisa_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Lisa_Tempus_Fugit.png"
+    }
+}

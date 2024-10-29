@@ -1,0 +1,130 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Sethos_Icon.png",
+    "name": "Sethos",
+    "rarity": "4 Stars",
+    "element": "Electro",
+    "weaponType": "Bow",
+    "region": "Sumeru",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Bow_Electro.png",
+            "talentName": "Royal Reed Archery",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, the power of Electro will accumulate on the arrowhead before the arrow is fired. Has different effects based on how long the energy has been charged:\nCharge Level 1: Fires off an arrow carrying the power of lightning that deals Electro DMG.\nCharge Level 2: Fires off a Shadowpiercing Shot which can pierce enemies, dealing Electro DMG to enemies along its path. After the Shadowpiercing Shot is fully charged, Sethos cannot move around.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Royal_Reed_Archery_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Royal_Reed_Archery_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Royal_Reed_Archery_Shadowpiercing_Shot_Preview.gif",
+                    "caption": "Shadowpiercing Shot"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Royal_Reed_Archery_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Ancient_Rite_The_Thundering_Sands.png",
+            "talentName": "Ancient Rite: The Thundering Sands",
+            "talentType": "Elemental Skill",
+            "description": "Gathers the might of thunder, dealing AoE Electro DMG and quickly retreating. If this attack triggers Electro-Charged, Superconduct, Overloaded, Quicken, Aggravate, or Electro Swirl reactions, Sethos recovers a certain amount of Elemental Energy.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Ancient_Rite_The_Thundering_Sands_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Secret_Rite_Twilight_Shadowpiercer.png",
+            "talentName": "Secret Rite: Twilight Shadowpiercer",
+            "talentType": "Elemental Burst",
+            "description": "Perform a secret rite, entering the \"Twilight Meditation\" state, during which Sethos's Normal Attacks will be converted into enemy-piercing Dusk Bolts: Deal Electro DMG to opponents in its path, with DMG increased based on Sethos's Elemental Mastery.\nSethos cannot perform Aimed Shots while in this state.\nDMG dealt by Dusk Bolts is considered Charged Attack DMG.\nThis effect will be canceled when Sethos leaves the field.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Secret_Rite_Twilight_Shadowpiercer_Preview.gif",
+                    "caption": "Activation"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Secret_Rite_Twilight_Shadowpiercer_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Talent_Black_Kite%27s_Enigma.png",
+            "talentName": "Black Kite's Enigma",
+            "talentType": "1st Ascension Passive",
+            "description": "When Aiming, the charging time is decreased by 0.285s based on each point of Sethos's current Elemental Energy. Charging time can be reduced to a minimum of 0.3s through this method and a maximum of 20 Energy can be tallied. If a Shadowpiercing Shot is fired, consume the tallied amount of Elemental Energy; if it is a Charge Level 1 shot, then consume 50% of the tallied amount of Elemental Energy.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Talent_The_Sand_King%27s_Boon.png",
+            "talentName": "The Sand King's Boon",
+            "talentType": "4th Ascension Passive",
+            "description": "Sethos gains the \"Scorching Sandshade\" effect, increasing the DMG dealt by Shadowpiercing Shots by 700% of Sethos's Elemental Mastery.\nThe Scorching Sandshade effect will be canceled when any of the following conditions are met:\n5s after a Shadowpiercing Shot first hits an opponent.\nAfter 4 Shadowpiercing Shots strike opponents.\n\nWhen a Shadowpiercing Shot affected by Scorching Sandshade first hits an opponent, Sethos will regain Scorching Sandshade after 15s.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Talent_Thoth%27s_Revelation.png",
+            "talentName": "Thoth's Revelation",
+            "talentType": "Utility Passive",
+            "description": "Displays the location of nearby resources unique to Sumeru on the mini-map.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Constellation_Sealed_Shrine%27s_Spiritsong.png",
+            "name": "Sealed Shrine's Spiritsong",
+            "level": 1,
+            "description": "The CRIT Rate of Shadowpiercing Shot is increased by 15%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Constellation_Papyrus_Scripture_of_Silent_Secrets.png",
+            "name": "Papyrus Scripture of Silent Secrets",
+            "level": 2,
+            "description": "When any of the following conditions are met, Sethos gains a 15% Electro DMG Bonus for 10s that may stack twice, with each stack duration counted independently:\nConsuming Elemental Energy through Aimed Shots; you must first unlock the Passive Talent \"Black Kite's Enigma\" to trigger this condition.\nRegaining Elemental Energy by triggering Elemental Reactions using Ancient Rite: The Thundering Sands.\nUsing Secret Rite: Twilight Shadowpiercer."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Constellation_Ode_to_the_Moonrise_Sage.png",
+            "name": "Ode to the Moonrise Sage",
+            "level": 3,
+            "description": "Increases the Level of Normal Attack: Royal Reed Archery by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Constellation_Beneficent_Plumage.png",
+            "name": "Beneficent Plumage",
+            "level": 4,
+            "description": "When a Shadowpiercing Shot or Dusk Bolt strikes 2 or more opponents, all nearby party members gain 80 Elemental Mastery for 10s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Constellation_Record_of_the_Desolate_God%27s_Burning_Sands.png",
+            "name": "Record of the Desolate God's Burning Sands",
+            "level": 5,
+            "description": "Increases the Level of Secret Rite: Twilight Shadowpiercer by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Constellation_Pylon_of_the_Sojourning_Sun_Temple.png",
+            "name": "Pylon of the Sojourning Sun Temple",
+            "level": 6,
+            "description": "After Shadowpiercing Shot strikes an opponent, the Elemental Energy consumed by the Passive Talent \"Black Kite's Enigma\" will be returned. This effect can be triggered up to once every 15s. You must first unlock the Passive Talent \"Black Kite's Enigma.\""
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Sethos_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Character_Sethos_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Character_Sethos_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Sethos_Ba_Fragment.png"
+    }
+}

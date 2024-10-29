@@ -1,0 +1,142 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Venti_Icon.png",
+    "name": "Venti",
+    "rarity": "5 Stars",
+    "element": "Anemo",
+    "weaponType": "Bow",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Bow_Anemo.png",
+            "talentName": "Divine Marksmanship",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 6 consecutive shots with a bow.\n\nCharged Attack\nPerform a more precise Aimed Shot with increased DMG.\nWhile aiming, favorable winds will accumulate on the arrowhead. A fully charged wind arrow will deal Anemo DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Divine_Marksmanship_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Divine_Marksmanship_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Divine_Marksmanship_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Talent_Skyward_Sonnet.png",
+            "talentName": "Skyward Sonnet",
+            "talentType": "Elemental Skill",
+            "description": "O wind upon which all hymns and songs fly, bear these earth-walkers up into the sky!\n\n(Press/Tap)\nSummons a Wind Domain at the opponent's location, dealing AoE Anemo DMG and launching opponents into the air.\n\nHold\nSummons an even larger Wind Domain with Venti as the epicenter, dealing AoE Anemo DMG and launching affected opponents into the air.\nAfter unleashing the Hold version of this ability, Venti rides the wind into the air.\n\nOpponents hit by Skyward Sonnet will fall to the ground slowly.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Skyward_Sonnet_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Skyward_Sonnet_Hold_Preview.gif",
+                    "caption": "Hold"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Wind%27s_Grand_Ode.png",
+            "talentName": "Wind's Grand Ode",
+            "talentType": "Elemental Burst",
+            "description": "Fires off an arrow made of countless coalesced winds, creating a huge Stormeye that sucks in opponents and deals continuous Anemo DMG.\n\nElemental Absorption\nIf the Stormeye comes into contact with Hydro/Pyro/Cryo/Electro, it will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Wind%27s_Grand_Ode_Preview.gif",
+                    "caption": "Without Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Wind%27s_Grand_Ode_Cryo_Preview.gif",
+                    "caption": "Cryo Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Wind%27s_Grand_Ode_Electro_Preview.gif",
+                    "caption": "Electro Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Wind%27s_Grand_Ode_Hydro_Preview.gif",
+                    "caption": "Hydro Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Wind%27s_Grand_Ode_Pyro_Preview.gif",
+                    "caption": "Pyro Elemental Absorption"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Talent_Embrace_of_Winds.png",
+            "talentName": "Embrace of Winds",
+            "talentType": "1st Ascension Passive",
+            "description": "Holding Skyward Sonnet creates an upcurrent that lasts for 20s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Talent_Stormeye.png",
+            "talentName": "Stormeye",
+            "talentType": "4th Ascension Passive",
+            "description": "Regenerates 15 Energy for Venti after the effects of Wind's Grand Ode end. If an Elemental Absorption occurred, this also restores 15 Energy to all characters of that corresponding element in the party.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Talent_Windrider.png",
+            "talentName": "Windrider",
+            "talentType": "Utility Passive",
+            "description": "Decreases gliding Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Constellation_Splitting_Gales.png",
+            "name": "Splitting Gales",
+            "level": 1,
+            "description": "Fires 2 additional arrows per Aimed Shot, each dealing 33% of the original arrow's DMG.\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Constellation_Breeze_of_Reminiscence.png",
+            "name": "Breeze of Reminiscence",
+            "level": 2,
+            "description": "Skyward Sonnet decreases opponents' Anemo RES and Physical RES by 12% for 10s.\nOpponents launched by Skyward Sonnet suffer an additional 12% Anemo RES and Physical RES decrease while airborne."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Constellation_Ode_to_Thousand_Winds.png",
+            "name": "Ode to Thousand Winds",
+            "level": 3,
+            "description": "Increases the Level of Wind's Grand Ode by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Constellation_Hurricane_of_Freedom.png",
+            "name": "Hurricane of Freedom",
+            "level": 4,
+            "description": "When Venti picks up an Elemental Orb or Particle, he receives a 25% Anemo DMG Bonus for 10s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Constellation_Concerto_dal_Cielo.png",
+            "name": "Concerto dal Cielo",
+            "level": 5,
+            "description": "Increases the Level of Skyward Sonnet by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Constellation_Storm_of_Defiance.png",
+            "name": "Storm of Defiance",
+            "level": 6,
+            "description": "Targets who take DMG from Wind's Grand Ode have their Anemo RES decreased by 20%.\nIf an Elemental Absorption occurred, then their RES towards the corresponding Element is also decreased by 20%.\n▼Gameplay Notes▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Venti_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Character_Venti_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Character_Venti_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Item_Venti_Azure_Sky.png"
+    }
+}

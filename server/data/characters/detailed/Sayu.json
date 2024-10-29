@@ -1,0 +1,157 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Sayu_Icon.png",
+    "name": "Sayu",
+    "rarity": "4 Stars",
+    "element": "Anemo",
+    "weaponType": "Claymore",
+    "region": "Inazuma",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Claymore_Anemo.png",
+            "talentName": "Shuumatsuban Ninja Blade",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Shuumatsuban_Ninja_Blade_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Shuumatsuban_Ninja_Blade_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Shuumatsuban_Ninja_Blade_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_Yoohoo_Art_Fuuin_Dash.png",
+            "talentName": "Yoohoo Art: Fuuin Dash",
+            "talentType": "Elemental Skill",
+            "description": "The special technique of the Yoohoo Ninja Arts!\nSayu curls up into a rolling Fuufuu Windwheel and smashes into opponents at high speed, dealing Anemo DMG. When the duration ends, she unleashes a Fuufuu Whirlwind Kick, dealing AoE Anemo DMG.\n\n(Press/Tap)\nEnters the Fuufuu Windwheel state, rolling forward a short distance before using the Fuufuu Whirlwind Kick.\n\nHold\nRolls about continuously in the Fuufuu Windwheel state, increasing Sayu's resistance to interruption while within that state.\nDuring this time, Sayu can control the direction of her roll, and can use the skill again to end her Windwheel state early and unleash a stronger version of the Fuufuu Whirlwind Kick.\nThe Hold version of this skill can trigger Elemental Absorption.\n\nThis skill has a maximum duration of 10s and enters CD once its effects end.\nThe longer Sayu remains in her Windwheel state, the longer the CD.\n\nElemental Absorption\nIf Sayu comes into contact with Hydro/Pyro/Cryo/Electro while in her Windwheel state, she will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use of this skill.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Yoohoo_Art_Fuuin_Dash_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Yoohoo_Art_Fuuin_Dash_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Yoohoo_Art_Fuuin_Dash_Elemental_Absorption_Preview.gif",
+                    "caption": "Elemental Absorption (Pyro)"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Yoohoo_Art_Mujina_Flurry.png",
+            "talentName": "Yoohoo Art: Mujina Flurry",
+            "talentType": "Elemental Burst",
+            "description": "The other super special technique of the Yoohoo Ninja Arts! It summons a pair of helping hands for Sayu.\nDeals Anemo DMG to nearby opponents and heals all nearby party members. The amount of HP restored is based on Sayu's ATK. This skill then summons a Muji-Muji Daruma.\n\nMuji-Muji Daruma\nAt specific intervals, the Daruma will take one of several actions based on the situation around it:\nIf the HP of nearby characters is above 70%, it will attack a nearby opponent, dealing Anemo DMG.\nIf there are active characters with 70% or less HP nearby, it will heal the active character with the lowest percentage HP left. If there are no opponents nearby, it will heal active characters nearby even if they have 70% HP or more.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Yoohoo_Art_Mujina_Flurry_Preview.gif",
+                    "caption": "Healing nearby characters"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Yoohoo_Art_Mujina_Flurry_Muji-Muji_Daruma_Attack_Preview.gif",
+                    "caption": "Muji-Muji Daruma attacking nearby opponents"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Yoohoo_Art_Mujina_Flurry_No_Opponents_Preview.gif",
+                    "caption": "No opponents nearby"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Talent_Someone_More_Capable.png",
+            "talentName": "Someone More Capable",
+            "talentType": "1st Ascension Passive",
+            "description": "When Sayu triggers a Swirl reaction while active, she heals all your characters and nearby allies for 300 HP. She will also heal an additional 1.2 HP for every point of Elemental Mastery she has.\nThis effect can be triggered once every 2s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Someone_More_Capable_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Talent_No_Work_Today%21.png",
+            "talentName": "No Work Today!",
+            "talentType": "4th Ascension Passive",
+            "description": "The Muji-Muji Daruma created by Yoohoo Art: Mujina Flurry gains the following effects:\nWhen healing a character, it will also heal characters near that healed character for 20% the amount of HP.\nIncreases the AoE of its attack against opponents.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/No_Work_Today_Heal_Preview.gif",
+                    "caption": "Healing nearby characters"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/No_Work_Today_Attack_Preview.gif",
+                    "caption": "Increased AoE"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Talent_Yoohoo_Art_Silencer%27s_Secret.png",
+            "talentName": "Yoohoo Art: Silencer's Secret",
+            "talentType": "Utility Passive",
+            "description": "When Sayu is in the party, your characters will not startle Crystalflies and certain other animals when getting near them.\nCheck the \"Other\" sub-category of the \"Living Beings / Wildlife\" section in the Archive for creatures this skill works on.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Yoohoo_Art_Silencer%27s_Secret_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Constellation_Multi-Task_no_Jutsu.png",
+            "name": "Multi-Task no Jutsu",
+            "level": 1,
+            "description": "The Muji-Muji Daruma created by Yoohoo Art: Mujina Flurry will ignore HP limits and can simultaneously attack nearby opponents and heal characters."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_Egress_Prep.png",
+            "name": "Egress Prep",
+            "level": 2,
+            "description": "Yoohoo Art: Fuuin Dash gains the following effects:\nDMG of Fuufuu Whirlwind Kick in (Press/Tapping) Mode increased by 3.3%.\nEvery 0.5s in the Fuufuu Windwheel state will increase the DMG of this Fuufuu Whirlwind Kick by 3.3%. The maximum DMG increase possible through this method is 66%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Constellation_Eh%2C_the_Bunshin_Can_Handle_It.png",
+            "name": "Eh, the Bunshin Can Handle It",
+            "level": 3,
+            "description": "Increases the Level of Yoohoo Art: Mujina Flurry by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Constellation_Skiving_New_and_Improved.png",
+            "name": "Skiving: New and Improved",
+            "level": 4,
+            "description": "Sayu recovers 1.2 Energy when she triggers a Swirl reaction.\nThis effect occurs once every 2s.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Constellation_Speed_Comes_First.png",
+            "name": "Speed Comes First",
+            "level": 5,
+            "description": "Increases the Level of Yoohoo Art: Fuuin Dash by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Constellation_Sleep_O%27Clock.png",
+            "name": "Sleep O'Clock",
+            "level": 6,
+            "description": "The Muji-Muji Daruma created by Sayu's Yoohoo Art: Mujina Flurry will now also benefit from her Elemental Mastery. Each point of Sayu's Elemental Mastery will produce the following effects:\nIncreases the damage dealt by the Muji-Muji Daruma's attacks by 0.2% ATK. A maximum DMG increase of 400% ATK can be gained via this method.\nIncreases the HP restored by the Muji-Muji Daruma by 3. A maximum of 6,000 additional HP can be restored in this manner.\n▼Gameplay Notes▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Sayu_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Character_Sayu_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Character_Sayu_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Item_Sayu_Muji-Muji_Daruma.png"
+    }
+}

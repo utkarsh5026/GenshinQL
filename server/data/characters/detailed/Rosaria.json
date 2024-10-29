@@ -1,0 +1,122 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Rosaria_Icon.png",
+    "name": "Rosaria",
+    "rarity": "4 Stars",
+    "element": "Cryo",
+    "weaponType": "Polearm",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Polearm_Cryo.png",
+            "talentName": "Spear of the Church",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Spear_of_the_Church_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Spear_of_the_Church_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Spear_of_the_Church_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Talent_Ravaging_Confession.png",
+            "talentName": "Ravaging Confession",
+            "talentType": "Elemental Skill",
+            "description": "Rosaria swiftly shifts her position to appear behind her opponent, then stabs and slashes them with her polearm, dealing Cryo DMG.\nThis ability cannot be used to travel behind opponents of a larger build.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Ravaging_Confession_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Talent_Rites_of_Termination.png",
+            "talentName": "Rites of Termination",
+            "talentType": "Elemental Burst",
+            "description": "Rosaria's unique take on this prayer ritual: First, she swings her weapon to slash surrounding opponents; then, she summons a frigid Ice Lance that strikes the ground. Both actions deal Cryo DMG.\nWhile active, the Ice Lance periodically releases a blast of cold air, dealing Cryo DMG to surrounding opponents.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Rites_of_Termination_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Talent_Regina_Probationum.png",
+            "talentName": "Regina Probationum",
+            "talentType": "1st Ascension Passive",
+            "description": "When Rosaria strikes an opponent from behind using Ravaging Confession, Rosaria's CRIT Rate increases by 12% for 5s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Talent_Shadow_Samaritan.png",
+            "talentName": "Shadow Samaritan",
+            "talentType": "4th Ascension Passive",
+            "description": "Casting Rites of Termination increases CRIT Rate of all nearby party members (except Rosaria herself) by 15% of Rosaria's CRIT Rate for 10s.\nCRIT Rate Bonus gained this way cannot exceed 15%.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Talent_Night_Walk.png",
+            "talentName": "Night Walk",
+            "talentType": "Utility Passive",
+            "description": "At night (18:00 – 6:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%.\nDoes not take effect in Domains, Trounce Domains, or Spiral Abyss. Swift Stride does not stack.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Constellation_Unholy_Revelation.png",
+            "name": "Unholy Revelation",
+            "level": 1,
+            "description": "When Rosaria deals a CRIT Hit, her ATK SPD increases by 10% and her Normal Attack DMG increases by 10% for 4s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Constellation_Land_Without_Promise.png",
+            "name": "Land Without Promise",
+            "level": 2,
+            "description": "The duration of the Ice Lance created by Rites of Termination is increased by 4s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_The_Wages_of_Sin.png",
+            "name": "The Wages of Sin",
+            "level": 3,
+            "description": "Increases the Level of Ravaging Confession by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Constellation_Painful_Grace.png",
+            "name": "Painful Grace",
+            "level": 4,
+            "description": "Ravaging Confession's CRIT Hits regenerate 5 Energy for Rosaria.\nCan only be triggered once each time Ravaging Confession is cast."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Constellation_Last_Rites.png",
+            "name": "Last Rites",
+            "level": 5,
+            "description": "Increases the Level of Rites of Termination by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Constellation_Divine_Retribution.png",
+            "name": "Divine Retribution",
+            "level": 6,
+            "description": "Rites of Termination's attack decreases opponents' Physical RES by 20% for 10s."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Rosaria_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Character_Rosaria_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Character_Rosaria_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Item_Rosaria_Indenture.png"
+    }
+}

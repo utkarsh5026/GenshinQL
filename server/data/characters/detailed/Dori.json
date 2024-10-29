@@ -1,0 +1,122 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Dori_Icon.png",
+    "name": "Dori",
+    "rarity": "4 Stars",
+    "element": "Electro",
+    "weaponType": "Claymore",
+    "region": "Sumeru",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Claymore_Electro.png",
+            "talentName": "Marvelous Sword-Dance (Modified)",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Marvelous_Sword-Dance_%28Modified%29_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Marvelous_Sword-Dance_%28Modified%29_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Marvelous_Sword-Dance_%28Modified%29_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Talent_Spirit-Warding_Lamp_Troubleshooter_Cannon.png",
+            "talentName": "Spirit-Warding Lamp: Troubleshooter Cannon",
+            "talentType": "Elemental Skill",
+            "description": "Directs a Spirit-Warding Lamp to fire off a Troubleshooter Shot at opponents, dealing Electro DMG.\nAfter the Troubleshooter Shot hits, it will create 2 After-Sales Service Rounds that will automatically track nearby opponents and deal Electro DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Spirit-Warding_Lamp_Troubleshooter_Cannon_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Talent_Alcazarzaray%27s_Exactitude.png",
+            "talentName": "Alcazarzaray's Exactitude",
+            "talentType": "Elemental Burst",
+            "description": "Summons forth the Jinni within the lamp to give the client various kinds of aid.\n\nJinni\nConnects to a nearby character. The connected character will:\nContinuously restore HP based on Dori's Max HP.\nContinuously regenerate Energy.\nBe affected by Electro.\nWhen the connector between the Jinni and the character touches opponents, it will deal one instance of Electro DMG to them every 0.4s.\n\nOnly one Jinni can exist at one time.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Alcazarzaray%27s_Exactitude_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Talent_An_Eye_for_Gold.png",
+            "talentName": "An Eye for Gold",
+            "talentType": "1st Ascension Passive",
+            "description": "After a character connected to the Jinni triggers an Electro-Charged, Superconduct, Overloaded, Quicken, Aggravate, Hyperbloom, or an Electro Swirl or Crystallize reaction, the CD of Spirit-Warding Lamp: Troubleshooter Cannon is decreased by 1s.\nThis effect can be triggered once every 3s.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Talent_Compound_Interest.png",
+            "talentName": "Compound Interest",
+            "talentType": "4th Ascension Passive",
+            "description": "When the Troubleshooter Shots or After-Sales Service Rounds from Spirit-Warding Lamp: Troubleshooter Cannon hit opponents, Dori will restore 5 Elemental Energy for every 100% Energy Recharge possessed.\nPer Spirit-Warding Lamp: Troubleshooter Cannon, only one instance of Energy restoration can be triggered and a maximum of 15 Energy can be restored this way.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Talent_Unexpected_Order.png",
+            "talentName": "Unexpected Order",
+            "talentType": "Utility Passive",
+            "description": "Has a 25% chance to recover some of the materials used when crafting Character and Weapon Materials.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Constellation_Additional_Investment.png",
+            "name": "Additional Investment",
+            "level": 1,
+            "description": "The number of After-Sales Service Rounds created by Troubleshooter Shots is increased by 1.\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Constellation_Special_Franchise.png",
+            "name": "Special Franchise",
+            "level": 2,
+            "description": "When you are in combat and the Jinni heals the character it is connected to, it will fire a Jinni Toop from that character's position that deals 50% of Dori's ATK DMG.\n▼Gameplay Notes▼\n▼Advanced Properties▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Constellation_Wonders_Never_Cease.png",
+            "name": "Wonders Never Cease",
+            "level": 3,
+            "description": "Increases the Level of Alcazarzaray's Exactitude by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Constellation_Discretionary_Supplement.png",
+            "name": "Discretionary Supplement",
+            "level": 4,
+            "description": "The character connected to the Jinni will obtain the following buffs based on their current HP and Energy:\nWhen their HP is lower than 50%, they gain 50% Incoming Healing Bonus.\nWhen their Energy is less than 50%, they gain 30% Energy Recharge."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Constellation_Value_for_Mora.png",
+            "name": "Value for Mora",
+            "level": 5,
+            "description": "Increases the Level of Spirit-Warding Lamp: Troubleshooter Cannon by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Constellation_Sprinkling_Weight.png",
+            "name": "Sprinkling Weight",
+            "level": 6,
+            "description": "Dori gains the following effects for 3s after using Spirit-Warding Lamp: Troubleshooter Cannon:\nElectro Infusion.\nWhen Normal Attacks hit opponents, all nearby party members will heal HP equivalent to 4% of Dori's Max HP. This type of healing can occur once every 0.1s.\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Dori_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Character_Dori_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Character_Dori_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Dori_Jinni.png"
+    }
+}

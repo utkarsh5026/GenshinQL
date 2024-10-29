@@ -1,0 +1,163 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png",
+    "name": "Yelan",
+    "rarity": "5 Stars",
+    "element": "Hydro",
+    "weaponType": "Bow",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Bow_Hydro.png",
+            "talentName": "Stealthy Bowshot",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive shots with a bow.\n\nCharged Attack\nPerform a more precise Aimed Shot with increased DMG.\nWhile aiming, flowing water will accumulate on the arrowhead. A fully charged torrential arrow will deal Hydro DMG.\n\nBreakthrough\nYelan will enter a \"Breakthrough\" state after spending 5s out of combat, which will cause her next Charged Aimed Shot to have 80% decreased charge time, and once charged, she can fire a \"Breakthrough Barb\" that will deal AoE Hydro DMG based on Yelan's Max HP.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Stealthy_Bowshot_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Stealthy_Bowshot_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Stealthy_Bowshot_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Stealthy_Bowshot_Breakthrough_Preview.gif",
+                    "caption": "Breakthrough"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Stealthy_Bowshot_Breakthrough_Barb_Preview.gif",
+                    "caption": "Breakthrough Barb"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Stealthy_Bowshot_N1_Recovery_Preview.gif",
+                    "caption": "Normal Attack 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Stealthy_Bowshot_N2_Recovery_Preview.gif",
+                    "caption": "Normal Attack 2"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Stealthy_Bowshot_N3_Recovery_Preview.gif",
+                    "caption": "Normal Attack 3"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Stealthy_Bowshot_N4_Recovery_Preview.gif",
+                    "caption": "Normal Attack 4"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Lingering_Lifeline.png",
+            "talentName": "Lingering Lifeline",
+            "talentType": "Elemental Skill",
+            "description": "Fires off a Lifeline that allows her to move rapidly, entangling and marking opponents along its path.\nWhen this rapid movement ends, the Lifeline will explode, dealing Hydro DMG to the marked opponents based on Yelan's Max HP.\n\nTap\nMoves a certain distance forward swiftly.\n\nHold\nEngages in continuous, swift movement, during which Yelan's resistance to interruption is increased.\nDuring this time, Yelan can control this rapid movement and end it by using this Skill again.\n\nAdditionally, each opponent marked by the Lifeline when it explodes grants Yelan a 34% chance to reset her Breakthrough state.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Lingering_Lifeline_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Lingering_Lifeline_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Lingering_Lifeline_Breakthrough_Reset_Preview.gif",
+                    "caption": "Breakthrough Reset"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Talent_Depth-Clarion_Dice.png",
+            "talentName": "Depth-Clarion Dice",
+            "talentType": "Elemental Burst",
+            "description": "Deals AoE Hydro DMG and creates an \"Exquisite Throw,\" which aids her in battle.\n\nExquisite Throw\nFollows the character around and will initiate a coordinated attack under the following circumstances, dealing Hydro DMG based on Yelan's Max HP:\nCan occur once every second when your active character uses a Normal Attack.\nWill occur each time Yelan's Lifeline explodes and hits opponents.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Depth-Clarion_Dice_Preview.gif",
+                    "caption": "Depth-Clarion Dice"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Depth-Clarion_Dice_Exquisite_Throw_Preview.gif",
+                    "caption": "Exquisite Throw"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Talent_Turn_Control.png",
+            "talentName": "Turn Control",
+            "talentType": "1st Ascension Passive",
+            "description": "When the party has 1/2/3/4 Elemental Types, Yelan's Max HP is increased by 6%/12%/18%/30%.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Talent_Adapt_With_Ease.png",
+            "talentName": "Adapt With Ease",
+            "talentType": "4th Ascension Passive",
+            "description": "So long as an Exquisite Throw is in play, your own active character deals 1% more DMG. This increases by a further 3.5% DMG every second. The maximum increase to DMG dealt is 50%.\nThe pre-existing effect will be dispelled if Depth-Clarion Dice is recast during its duration.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Talent_Necessary_Calculation.png",
+            "talentName": "Necessary Calculation",
+            "talentType": "Utility Passive",
+            "description": "Gains 25% more rewards when dispatched on a Liyue Expedition for 20 hours.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Necessary_Calculation_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Constellation_Enter_the_Plotters.png",
+            "name": "Enter the Plotters",
+            "level": 1,
+            "description": "Lingering Lifeline gains 1 additional charge."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Constellation_Taking_All_Comers.png",
+            "name": "Taking All Comers",
+            "level": 2,
+            "description": "When Exquisite Throw conducts a coordinated attack, it will fire an additional water arrow that will deal 14% of Yelan's Max HP as Hydro DMG.\nThis effect can trigger once every 1.8s.\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Constellation_Beware_the_Trickster%27s_Dice.png",
+            "name": "Beware the Trickster's Dice",
+            "level": 3,
+            "description": "Increases the Level of Depth-Clarion Dice by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Constellation_Bait-and-Switch.png",
+            "name": "Bait-and-Switch",
+            "level": 4,
+            "description": "Increases all party members' Max HP by 10% for 25s for every opponent marked by Lifeline when the Lifeline explodes. A maximum increase of 40% Max HP can be attained in this manner.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Constellation_Dealer%27s_Sleight.png",
+            "name": "Dealer's Sleight",
+            "level": 5,
+            "description": "Increases the Level of Lingering Lifeline by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Constellation_Winner_Takes_All.png",
+            "name": "Winner Takes All",
+            "level": 6,
+            "description": "After using Depth-Clarion Dice, Yelan will enter the Mastermind state.\nIn this state, all of Yelan's Normal Attacks will be special Breakthrough Barbs. These Breakthrough Barbs will have similar abilities to normal ones and the DMG dealt will be considered Charged Attack DMG, dealing 156% of a normal Breakthrough Barb's DMG.\n\nThe Mastermind state lasts 20s and will be cleared after Yelan fires 5 arrows.\n▼Gameplay Notes▼\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Yelan_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Character_Yelan_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Character_Yelan_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Item_Yelan_Throw.png"
+    }
+}

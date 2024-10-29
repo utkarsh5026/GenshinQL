@@ -1,0 +1,127 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Chongyun_Icon.png",
+    "name": "Chongyun",
+    "rarity": "4 Stars",
+    "element": "Cryo",
+    "weaponType": "Claymore",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Claymore_Cryo.png",
+            "talentName": "Demonbane",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Demonbane_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Demonbane_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Demonbane_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Talent_Spirit_Blade_Chonghua%27s_Layered_Frost.png",
+            "talentName": "Spirit Blade: Chonghua's Layered Frost",
+            "talentType": "Elemental Skill",
+            "description": "Chongyun strikes the ground with his greatsword, causing a Cryo explosion in a circular AoE in front of him that deals Cryo DMG.\nAfter a short delay, the cold air created by the Cryo explosion will coalesce into a Chonghua Frost Field, within which all Sword, Claymore and Polearm-wielding characters' weapons will be infused with Cryo.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Spirit_Blade_Chonghua%27s_Layered_Frost_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Spirit_Blade_Cloud-Parting_Star.png",
+            "talentName": "Spirit Blade: Cloud-Parting Star",
+            "talentType": "Elemental Burst",
+            "description": "Performing the secret hand seals, Chongyun summons 3 giant spirit blades in mid-air that fall to the earth one by one after a short delay, exploding as they hit the ground.\nWhen the spirit blades explode, they will deal AoE Cryo DMG and launch opponents.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Spirit_Blade_Cloud-Parting_Star_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Talent_Steady_Breathing.png",
+            "talentName": "Steady Breathing",
+            "talentType": "1st Ascension Passive",
+            "description": "Sword, Claymore, or Polearm-wielding characters within the field created by Spirit Blade: Chonghua's Layered Frost have their Normal ATK SPD increased by 8%.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Talent_Rimechaser_Blade.png",
+            "talentName": "Rimechaser Blade",
+            "talentType": "4th Ascension Passive",
+            "description": "When the field created by Spirit Blade: Chonghua's Layered Frost disappears, another spirit blade will be summoned to strike nearby opponents, dealing 100% of Chonghua's Layered Frost's Skill DMG as AoE Cryo DMG.\nOpponents hit by this blade will have their Cryo RES decreased by 10% for 8s.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Rimechaser_Blade_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Talent_Gallant_Journey.png",
+            "talentName": "Gallant Journey",
+            "talentType": "Utility Passive",
+            "description": "When dispatched on an expedition in Liyue, time consumed is reduced by 25%.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Constellation_Ice_Unleashed.png",
+            "name": "Ice Unleashed",
+            "level": 1,
+            "description": "The last attack of Chongyun's Normal Attack combo releases 3 ice blades. Each blade deals 50% of Chongyun's ATK as Cryo DMG to all opponents in its path.\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Constellation_Atmospheric_Revolution.png",
+            "name": "Atmospheric Revolution",
+            "level": 2,
+            "description": "Elemental Skills and Elemental Bursts cast within the Frost Field created by Spirit Blade: Chonghua's Layered Frost have their CD time decreased by 15%.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Constellation_Cloudburst.png",
+            "name": "Cloudburst",
+            "level": 3,
+            "description": "Increases the Level of Spirit Blade: Cloud-Parting Star by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Constellation_Frozen_Skies.png",
+            "name": "Frozen Skies",
+            "level": 4,
+            "description": "Chongyun regenerates 1 Energy every time he hits an opponent affected by Cryo.\nThis effect can only occur once every 2s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Constellation_The_True_Path.png",
+            "name": "The True Path",
+            "level": 5,
+            "description": "Increases the Level of Spirit Blade: Chonghua's Layered Frost by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Constellation_Rally_of_Four_Blades.png",
+            "name": "Rally of Four Blades",
+            "level": 6,
+            "description": "Spirit Blade: Cloud-Parting Star deals 15% more DMG to opponents with a lower percentage of their Max HP remaining than Chongyun.\nThis skill will also summon 1 additional spirit blade.\n▼Advanced Properties▼\n\n\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Chongyun_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Character_Chongyun_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Character_Chongyun_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Chongyun_Spirit_Blade.png"
+    }
+}

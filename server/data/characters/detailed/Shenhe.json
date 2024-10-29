@@ -1,0 +1,135 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Shenhe_Icon.png",
+    "name": "Shenhe",
+    "rarity": "5 Stars",
+    "element": "Cryo",
+    "weaponType": "Polearm",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Polearm_Cryo.png",
+            "talentName": "Dawnstar Piercer",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Dawnstar_Piercer_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Dawnstar_Piercer_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Dawnstar_Piercer_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Talent_Spring_Spirit_Summoning.png",
+            "talentName": "Spring Spirit Summoning",
+            "talentType": "Elemental Skill",
+            "description": "The frosted dew, silvery and dense, shall exorcise all demons.\nGrants all nearby party members the Icy Quill effect and deals Cryo DMG in different ways based on whether it is (pressed/tapped) or held.\n\n(Press/Tap)\nRushes forward together with a Talisman Spirit, dealing Cryo DMG to opponents along the path.\n\nHold\nCommands the Talisman Spirit to deal AoE Cryo DMG.\n\nIcy Quill\nWhen Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts deal Cryo DMG to opponents, the DMG dealt is increased based on Shenhe's current ATK.\n\nThe Icy Quill's effects will be cleared once its duration ends or after being triggered a certain number of times.\nWhen held rather than (pressed/tapped), the Icy Quill's effect lasts longer and can be triggered more times.\nWhen one Cryo DMG instance strikes multiple opponents, the effect is triggered multiple times based on the number of opponents hit. The number of times the effect is triggered is calculated independently for each party member with the Icy Quill.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Spring_Spirit_Summoning_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Spring_Spirit_Summoning_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Spring_Spirit_Summoning_Icy_Quill_Preview.gif",
+                    "caption": "Icy Quill"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Divine_Maiden%27s_Deliverance.png",
+            "talentName": "Divine Maiden's Deliverance",
+            "talentType": "Elemental Burst",
+            "description": "Unleashes the power of the Talisman Spirit, allowing it to roam free in this plane, dealing AoE Cryo DMG.\nThe Talisman Spirit then creates a field that decreases the Cryo RES and Physical RES of opponents within it. It also deals periodic Cryo DMG to opponents within the field.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Divine_Maiden%27s_Deliverance_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Talent_Deific_Embrace.png",
+            "talentName": "Deific Embrace",
+            "talentType": "1st Ascension Passive",
+            "description": "An active character within the field created by Divine Maiden's Deliverance gains 15% Cryo DMG Bonus.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Talent_Spirit_Communion_Seal.png",
+            "talentName": "Spirit Communion Seal",
+            "talentType": "4th Ascension Passive",
+            "description": "After Shenhe uses Spring Spirit Summoning, she will grant all nearby party members the following effects:\n(Press/Tap): Elemental Skill and Elemental Burst DMG increased by 15% for 10s.\nHold: Normal, Charged, and Plunging Attack DMG increased by 15% for 15s.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Talent_Precise_Comings_and_Goings.png",
+            "talentName": "Precise Comings and Goings",
+            "talentType": "Utility Passive",
+            "description": "Gains 25% more rewards when dispatched on a Liyue Expedition for 20 hours.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Precise_Comings_and_Goings_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Constellation_Clarity_of_Heart.png",
+            "name": "Clarity of Heart",
+            "level": 1,
+            "description": "Spring Spirit Summoning can be used 1 more time."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Constellation_Centered_Spirit.png",
+            "name": "Centered Spirit",
+            "level": 2,
+            "description": "Divine Maiden's Deliverance lasts for 6 seconds longer.\nActive characters within the skill's field deal 15% increased Cryo CRIT DMG.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Constellation_Seclusion.png",
+            "name": "Seclusion",
+            "level": 3,
+            "description": "Increases Level of Spring Spirit Summoning by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Constellation_Insight.png",
+            "name": "Insight",
+            "level": 4,
+            "description": "When characters under the effect of Icy Quill applied by Shenhe triggers its DMG Bonus effects, Shenhe will gain a Skyfrost Mantra stack:\nWhen Shenhe uses Spring Spirit Summoning, she will consume all stacks of Skyfrost Mantra, increasing the DMG of that Spring Spirit Summoning by 5% for each stack consumed.\nMax 50 stacks. Stacks last for 60s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Constellation_Divine_Attainment.png",
+            "name": "Divine Attainment",
+            "level": 5,
+            "description": "Increases the Level of Divine Maiden's Deliverance by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Constellation_Mystical_Abandon.png",
+            "name": "Mystical Abandon",
+            "level": 6,
+            "description": "When characters trigger Icy Quill's effects using Normal and Charged Attack DMG, it does not count toward the Trigger Quota."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Shenhe_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Character_Shenhe_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Character_Shenhe_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Item_Shenhe_Comb.png"
+    }
+}

@@ -1,0 +1,134 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mualani_Icon.png",
+    "name": "Mualani",
+    "rarity": "5 Stars",
+    "element": "Hydro",
+    "weaponType": "Catalyst",
+    "region": "Natlan",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png",
+            "talentName": "Cooling Treatment",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 attacks that deal Hydro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina to smack a Pufferball into the air that deals AoE Hydro DMG upon landing.\n\nPlunging Attack\nGathers the power of Hydro and plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Hydro DMG upon impact with the ground.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Cooling_Treatment_Normal_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Surfshark_Wavebreaker.png",
+            "talentName": "Surfshark Wavebreaker",
+            "talentType": "Elemental Skill",
+            "description": "Combining her mastery of speed and the waves and water, Mualani can surf anytime, anywhere.\nAfter using this skill, Mualani will gain 60 Nightsoul points and enter the Nightsoul's Blessing state.\n\nNightsoul's Blessing: Mualani\nContinuously consume Nightsoul points. When they are depleted or when the skill is used again, Mualani's Nightsoul's Blessing will end. The state itself has the following traits:\nMualani mounts her Sharky Surfboard, increasing Mualani's Movement SPD and interruption resistance. Mualani can move on water and Liquid Phlogiston while this state is active, and she will take no DMG from the latter.\nNormal Attacks will be converted to Sharky's Bites, dealing Nightsoul-aligned Hydro DMG based on Mualani's Max HP. Sharky's Bites can be used in mid-air. DMG dealt this way is considered Normal Attack DMG.\nWhen she makes contact with opponents in this state, Mualani applies \"Marked as Prey\" to them and gains 1 Wave Momentum stack. Max 3 stacks. 1 stack can be gained from the same opponent every 0.7s.\n\nWave Momentum and Marked as Prey\nWhen Mualani uses Sharky's Bite, her DMG dealt increases based on Wave Momentum stacks. When she has 3 stacks, a Normal Attack will use Sharky's Surging Bite instead, further increasing her DMG and removing all her stacks afterward.\nWhen Sharky's Bites hit opponents Marked as Prey, that mark is removed, and she will fire Shark Missiles at up to 5 nearby opponents Marked as Prey, dealing DMG to them equal to this Sharky's Bite instance and clearing their Marks. If more than 1 opponent is the target of Sharky's Bite and Shark Missiles, the DMG dealt will decrease, with 28% being the maximum decrease when at least 3 opponents are targeted.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Surfshark_Wavebreaker_Movement_Preview.gif",
+                    "caption": "Movement"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Surfshark_Wavebreaker_Combat_Preview.gif",
+                    "caption": "Combat"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Boomsharka-laka.png",
+            "talentName": "Boomsharka-laka",
+            "talentType": "Elemental Burst",
+            "description": "Fires a Super Shark Missile that can track opponents, dealing Nightsoul-aligned AoE Hydro DMG based on Mualani's Max HP.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Boomsharka-laka_Preview.gif",
+                    "caption": ""
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Heat-Resistant_Freshwater_Floater.png",
+            "talentName": "Heat-Resistant Freshwater Floater",
+            "talentType": "1st Ascension Passive",
+            "description": "When Sharky's Surging Bite hits an opponent, a Puffer will be generated nearby. Mualani will restore 20 Nightsoul points when she picks up a Puffer. Only 2 such Puffers can be created in this way during a single instance of being in Nightsoul's Blessing.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Talent_Natlan%27s_Greatest_Guide.png",
+            "talentName": "Natlan's Greatest Guide",
+            "talentType": "4th Ascension Passive",
+            "description": "When a nearby party member triggers a Nightsoul Burst, Mualani will gain 1 stack of Wavechaser's Exploits, which lasts for 20s. Max 3 stacks. When she uses Boomsharka-laka, Mualani will clear all Wavechaser's Exploits stacks and increase the DMG of this Boomsharka-laka by 15%/30%/45% of her Max HP based on the number of stacks cleared.",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Crests_and_Troughs.png",
+            "talentName": "Crests and Troughs",
+            "talentType": "Night Realm's Gift Passive",
+            "description": "After her Nightsoul points are depleted, Mualani will switch to consuming Phlogiston to maintain her Nightsoul's Blessing.\nWhile in an area with Phlogiston Mechanics within Natlan, she can use Nightsoul Transmission: Mualani. When the active character is currently sprinting, swimming, in a movement mode caused by certain Talents, or at a certain height in the air, the following will trigger when switching to Mualani: Mualani will enter the Nightsoul's Blessing state and gain 40 Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own team.\n\nAdditionally, Mualani's Nightsoul point or Phlogiston consumption while moving on water and Liquid Phlogiston during Nightsoul's Blessing is decreased by 75% while in Natlan, and her Nightsoul point consumption is decreased by 35% while doing the same outside Natlan.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Crests_and_Troughs_Nightsoul_Points_Preview.gif",
+                    "caption": "Nightsoul Points"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Crests_and_Troughs_Nightsoul_Transmission_Preview.gif",
+                    "caption": "Nightsoul Transmission"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Talent_The_Trick_Is_to_Keep_Smiling%21.png",
+            "talentName": "The Trick Is to Keep Smiling!",
+            "talentType": "Utility Passive",
+            "description": "While in an area with Phlogiston Mechanics within Natlan, 15 Phlogiston will be restored when interacting with some harvestable items. Additionally, the location of nearby resources unique to Natlan will appear on your mini-map.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Constellation_The_Leisurely_Meztli....png",
+            "name": "The Leisurely \"Meztli\"...",
+            "level": 1,
+            "description": "The DMG dealt by the first Sharky's Surging Bite after Mualani enters Nightsoul's Blessing and the Shark Missiles it triggers is increased by 66% of Mualani's Max HP. This instance of increased DMG is subject to the diminishing DMG rules of Surfshark Wavebreaker.\nIn addition, while out of combat, Mualani's Nightsoul's Blessing state consumes 30% less Phlogiston and Nightsoul points."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Constellation_Mualani%2C_Going_All_Out%21.png",
+            "name": "Mualani, Going All Out!",
+            "level": 2,
+            "description": "Mualani gains 2 of Surfshark Wavebreaker's Wave Momentum stacks when she enters Nightsoul's Blessing. She will gain 1 stack when obtaining a Puffer.\nIn addition, whenever Mualani obtains 2 Puffers within a single instance of the Nightsoul's Blessing state, she will recover an additional 12 Nightsoul points over 2s. This effect requires the Passive Talent \"Heat-Resistant Freshwater Puffer\" to be unlocked first."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Constellation_Surfing_Atop_Joyous_Seas.png",
+            "name": "Surfing Atop Joyous Seas",
+            "level": 3,
+            "description": "Increases the Level of Surfshark Wavebreaker by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Constellation_Sharky_Eats_Puffies.png",
+            "name": "Sharky Eats Puffies",
+            "level": 4,
+            "description": "Mualani regenerates 8 Energy when obtaining a Puffer. Must first unlock the Passive Talent \"Heat-Resistant Freshwater Puffer.\"\nAdditionally, Boomsharka-laka deals 75% increased DMG."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Constellation_Same_Style_of_Surfboard_on_Sale%21.png",
+            "name": "Same Style of Surfboard on Sale!",
+            "level": 5,
+            "description": "Increases the Level of Boomsharka-laka by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Constellation_Spirit_of_the_Springs%27_People.png",
+            "name": "Spirit of the Springs' People",
+            "level": 6,
+            "description": "The DMG increase from the Constellation \"The Leisurely 'Meztli'...\" is no longer limited to being triggered once every Nightsoul's Blessing."
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Mualani_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Character_Mualani_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Character_Mualani_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Item_Mualani_Sharky.png"
+    }
+}

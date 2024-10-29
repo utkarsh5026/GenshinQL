@@ -1,0 +1,195 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Kaedehara_Kazuha_Icon.png",
+    "name": "Kaedehara Kazuha",
+    "rarity": "5 Stars",
+    "element": "Anemo",
+    "weaponType": "Sword",
+    "region": "Inazuma",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png",
+            "talentName": "Garyuu Bladework",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact. If this Plunging Attack is triggered by Chihayaburu, it will be converted to Plunging Attack: Midare Ranzan.\n\nPlunging Attack: Midare Ranzan\nWhen a Plunging Attack is performed using the effects of the Elemental Skill Chihayaburu, Plunging Attack DMG is converted to Anemo DMG and will create a small wind tunnel via a secret blade technique that pulls in nearby objects and opponents.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Garyuu_Bladework_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Garyuu_Bladework_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Garyuu_Bladework_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Chihayaburu_Midare_Ranzan_Plunging_Preview.gif",
+                    "caption": "Plunging Attack: Midare Ranzan"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Garyuu_Bladework_N1_Recovery_Preview.gif",
+                    "caption": "Normal Attack 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Garyuu_Bladework_N2_Recovery_Preview.gif",
+                    "caption": "Normal Attack 2"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Garyuu_Bladework_N3_Recovery_Preview.gif",
+                    "caption": "Normal Attack 3"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Garyuu_Bladework_N4_Recovery_Preview.gif",
+                    "caption": "Normal Attack 4"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Garyuu_Bladework_N5_Recovery_Preview.gif",
+                    "caption": "Normal Attack 5"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Garyuu_Bladework_C_Recovery_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Talent_Chihayaburu.png",
+            "talentName": "Chihayaburu",
+            "talentType": "Elemental Skill",
+            "description": "Unleashes a secret technique as fierce as the rushing wind that pulls objects and opponents towards Kazuha's current position before launching opponents within the AoE, dealing Anemo DMG and lifting Kazuha into the air on a rushing gust of wind.\nWithin 10s of remaining airborne after casting Chihayaburu, Kazuha can unleash a powerful Plunging Attack known as Midare Ranzan.\n\n(Press/Tap)\nCan be used in mid-air.\n\nHold\nCharges up before unleashing greater Anemo DMG over a larger AoE than (Press/Tap) Mode.\n\nPlunging Attack: Midare Ranzan\nWhen a Plunging Attack is performed using the effects of the Elemental Skill Chihayaburu, Plunging Attack DMG is converted to Anemo DMG. On landing, Kazuha creates a small wind tunnel via a secret blade technique that pulls in nearby objects and opponents.\nMidare Ranzan's DMG is considered Plunging Attack DMG.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Chihayaburu_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Chihayaburu_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Chihayaburu_Midair_Preview.gif",
+                    "caption": "Midair"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Chihayaburu_Midare_Ranzan_Effect_Preview.gif",
+                    "caption": "Midare Ranzan Effect"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Kazuha_Slash.png",
+            "talentName": "Kazuha Slash",
+            "talentType": "Elemental Burst",
+            "description": "The signature technique of Kazuha's self-styled bladework — a single slash that strikes with the force of the first winds of autumn, dealing AoE Anemo DMG.\nThe blade's passage will leave behind a field named \"Autumn Whirlwind\" that periodically deals AoE Anemo DMG to opponents within its range.\n\nElemental Absorption\nIf Autumn Whirlwind comes into contact with Hydro/Pyro/Cryo/Electro, it will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Kazuha_Slash_Preview.gif",
+                    "caption": "Without Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Kazuha_Slash_Cryo_Preview.gif",
+                    "caption": "Cryo Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Kazuha_Slash_Electro_Preview.gif",
+                    "caption": "Electro Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Kazuha_Slash_Hydro_Preview.gif",
+                    "caption": "Hydro Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Kazuha_Slash_Pyro_Preview.gif",
+                    "caption": "Pyro Elemental Absorption"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Talent_Soumon_Swordsmanship.png",
+            "talentName": "Soumon Swordsmanship",
+            "talentType": "1st Ascension Passive",
+            "description": "If Chihayaburu comes into contact with Hydro/Pyro/Cryo/Electro when cast, Chihayaburu will absorb that element and if Plunging Attack: Midare Ranzan is used before the effect expires, it will deal an additional 200% ATK of the absorbed elemental type as DMG. This will be considered Plunging Attack DMG.\nElemental Absorption may only occur once per use of Chihayaburu.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Soumon_Swordsmanship_Cryo_Preview.gif",
+                    "caption": "Cryo Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Soumon_Swordsmanship_Electro_Preview.gif",
+                    "caption": "Electro Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Soumon_Swordsmanship_Hydro_Preview.gif",
+                    "caption": "Hydro Elemental Absorption"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Soumon_Swordsmanship_Pyro_Preview.gif",
+                    "caption": "Pyro Elemental Absorption"
+                }
+            ]
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Talent_Poetics_of_Fuubutsu.png",
+            "talentName": "Poetics of Fuubutsu",
+            "talentType": "4th Ascension Passive",
+            "description": "Upon triggering a Swirl reaction, Kaedehara Kazuha will grant all party members a 0.04% Elemental DMG Bonus to the element absorbed by Swirl for every point of Elemental Mastery he has for 8s. Bonuses for different elements obtained through this method can co-exist.\n",
+            "figureUrls": []
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Talent_Cloud_Strider.png",
+            "talentName": "Cloud Strider",
+            "talentType": "Utility Passive",
+            "description": "Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.\n",
+            "figureUrls": []
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Constellation_Scarlet_Hills.png",
+            "name": "Scarlet Hills",
+            "level": 1,
+            "description": "Decreases Chihayaburu's CD by 10%.\nUsing Kazuha Slash resets the CD of Chihayaburu."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Constellation_Yamaarashi_Tailwind.png",
+            "name": "Yamaarashi Tailwind",
+            "level": 2,
+            "description": "The Autumn Whirlwind field created by Kazuha Slash has the following effects:\nIncreases Kaedehara Kazuha's own Elemental Mastery by 200 for its duration.\nIncreases the Elemental Mastery of characters within the field by 200.\n\nThe Elemental Mastery-increasing effects of this Constellation do not stack."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Constellation_Maple_Monogatari.png",
+            "name": "Maple Monogatari",
+            "level": 3,
+            "description": "Increases the Level of Chihayaburu by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Constellation_Oozora_Genpou.png",
+            "name": "Oozora Genpou",
+            "level": 4,
+            "description": "When Kaedehara Kazuha's Energy is lower than 45, he obtains the following effects:\n(Pressing/Tapping) or Holding Chihayaburu regenerates 3 or 4 Energy for Kaedehara Kazuha, respectively.\nWhen gliding, Kaedehara Kazuha regenerates 2 Energy per second."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Constellation_Wisdom_of_Bansei.png",
+            "name": "Wisdom of Bansei",
+            "level": 5,
+            "description": "Increases the Level of Kazuha Slash by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Constellation_Crimson_Momiji.png",
+            "name": "Crimson Momiji",
+            "level": 6,
+            "description": "After using Chihayaburu or Kazuha Slash, Kaedehara Kazuha gains an Anemo Infusion for 5s. Additionally, each point of Elemental Mastery will increase the DMG dealt by Kaedehara Kazuha's Normal, Charged, and Plunging Attacks by 0.2%.\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Kaedehara_Kazuha_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Character_Kaedehara_Kazuha_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Character_Kaedehara_Kazuha_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Item_Kaedehara_Kazuha_Autumn_Maple-Viewing.png"
+    }
+}
