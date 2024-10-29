@@ -7,16 +7,31 @@ type Weapon {
     effect: String!
 }
 
+type FigureUrl {
+    url: String!,
+    caption: String,
+}
+
 type Talent {
-    name: String!,
-    type: String!,
+    talentIcon: String!,
+    talentName: String!,
+    talentType: String!,
     description: String!,
+    figureUrls: [FigureUrl!],
 }
 
 type Constellation {
     name: String!,
     level: Int!,
     description: String!,
+    iconUrl: String!,
+}
+
+type ImageUrls {
+    card: String!,
+    wish: String!,
+    inGame: String!,
+    nameCard: String!,
 }
 
 interface BaseCharacter {
@@ -25,6 +40,10 @@ interface BaseCharacter {
     rarity: String!,
     weaponType: String!,
     region: String!,
+        iconUrl: String!,
+    elementUrl: String!,
+    weaponUrl: String!,
+    regionUrl: String!,
 }
 
 
@@ -46,8 +65,13 @@ type AdvancedCharacter implements BaseCharacter {
     rarity: String!,
     weaponType: String!,
     region: String!,
+    iconUrl: String!,
+    elementUrl: String!,
+    weaponUrl: String!,
+    regionUrl: String!,
     talents: [Talent!],
     constellations: [Constellation!],
+    imageUrls: ImageUrls!,
 }
 
 

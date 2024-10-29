@@ -1,15 +1,30 @@
 import { z } from "zod";
 
 export const talentSchema = z.object({
-  name: z.string(),
-  type: z.string(),
+  talentIcon: z.string(),
+  talentName: z.string(),
+  talentType: z.string(),
   description: z.string(),
+  figureUrls: z.array(
+    z.object({
+      url: z.string(),
+      caption: z.string(),
+    })
+  ),
 });
 
 export const constellationSchema = z.object({
   name: z.string(),
   description: z.string(),
   level: z.number(),
+  iconUrl: z.string(),
+});
+
+export const imageUrlsSchema = z.object({
+  card: z.string(),
+  wish: z.string(),
+  inGame: z.string(),
+  nameCard: z.string(),
 });
 
 export const baseCharacterSchema = z.object({
@@ -24,14 +39,11 @@ export const baseCharacterSchema = z.object({
   regionUrl: z.string(),
 });
 
-export const advancedCharacterSchema = baseCharacterSchema
-  .omit({
-    iconUrl: true,
-  })
-  .extend({
-    talents: z.array(talentSchema),
-    constellations: z.array(constellationSchema),
-  });
+export const advancedCharacterSchema = baseCharacterSchema.extend({
+  talents: z.array(talentSchema),
+  constellations: z.array(constellationSchema),
+  imageUrls: imageUrlsSchema,
+});
 
 export const characterFilterSchema = z.object({
   name: z.string().optional(),

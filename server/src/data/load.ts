@@ -46,7 +46,7 @@ function loadCharacter(name: string): AdvancedCharacter | null {
     .join("_");
   const filePath = path.join(
     CHARACTER_DIR,
-    snakeCaseName,
+    "detailed",
     `${snakeCaseName}.json`
   );
   const file = fs.readFileSync(filePath, "utf8");
