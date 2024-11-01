@@ -27,7 +27,226 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Card_Force_Translocation_Arkhe_Pneuma_Preview.gif",
                     "caption": "Arkhe: Pneuma"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG": [
+                    "38.79",
+                    "41.94",
+                    "45.1",
+                    "49.61",
+                    "52.77",
+                    "56.38",
+                    "61.34",
+                    "66.3",
+                    "71.26",
+                    "76.67",
+                    "82.08",
+                    "87.49",
+                    "92.91",
+                    "98.32"
+                ],
+                "2-Hit DMG": [
+                    "38.01",
+                    "41.11",
+                    "44.2",
+                    "48.62",
+                    "51.71",
+                    "55.25",
+                    "60.11",
+                    "64.97",
+                    "69.84",
+                    "75.14",
+                    "80.44",
+                    "85.75",
+                    "91.05",
+                    "96.36"
+                ],
+                "3-Hit DMG": [
+                    "27.26\n+\n27.26",
+                    "29.48\n+\n29.48",
+                    "31.7\n+\n31.7",
+                    "34.87\n+\n34.87",
+                    "37.09\n+\n37.09",
+                    "39.63\n+\n39.63",
+                    "43.11\n+\n43.11",
+                    "46.6\n+\n46.6",
+                    "50.09\n+\n50.09",
+                    "53.89\n+\n53.89",
+                    "57.69\n+\n57.69",
+                    "61.5\n+\n61.5",
+                    "65.3\n+\n65.3",
+                    "69.11\n+\n69.11"
+                ],
+                "4-Hit DMG": [
+                    "56.93",
+                    "61.57",
+                    "66.2",
+                    "72.82",
+                    "77.45",
+                    "82.75",
+                    "90.03",
+                    "97.31",
+                    "104.6",
+                    "112.54",
+                    "120.48",
+                    "128.43",
+                    "136.37",
+                    "144.32"
+                ],
+                "Plunge DMG": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27",
+                    "128.2",
+                    "136.12",
+                    "144.05"
+                ],
+                "Low Plunge DMG": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.16",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48",
+                    "256.34",
+                    "272.19",
+                    "288.05"
+                ],
+                "High Plunge DMG": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37",
+                    "320.18",
+                    "339.98",
+                    "359.79"
+                ],
+                "Aimed Shot": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "92.82",
+                    "98.94",
+                    "105.06",
+                    "111.18"
+                ],
+                "Aimed Shot Charge Level 1": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "235.6",
+                    "248",
+                    "263.5",
+                    "279"
+                ],
+                "Prop Arrow DMG": [
+                    "172.8",
+                    "185.76",
+                    "198.72",
+                    "216",
+                    "228.96",
+                    "241.92",
+                    "259.2",
+                    "276.48",
+                    "293.76",
+                    "311.04",
+                    "328.32",
+                    "345.6",
+                    "367.2",
+                    "388.8"
+                ],
+                "HP Cost": [
+                    "20% Max HP"
+                ],
+                "Grin-Malkin Hat Inherited HP": [
+                    "64",
+                    "68.8",
+                    "73.6",
+                    "80",
+                    "84.8",
+                    "89.6",
+                    "96",
+                    "102.4",
+                    "108.8",
+                    "115.2",
+                    "121.6",
+                    "128",
+                    "136",
+                    "144"
+                ],
+                "Grin-Malkin Hat Duration": [
+                    "4s"
+                ],
+                "Pyrotechnic Strike DMG": [
+                    "212",
+                    "227.9",
+                    "243.8",
+                    "265",
+                    "280.9",
+                    "296.8",
+                    "318",
+                    "339.2",
+                    "360.4",
+                    "381.6",
+                    "402.8",
+                    "424",
+                    "450.5",
+                    "477"
+                ],
+                "Spiritbreath Thorn DMG": [
+                    "27.55",
+                    "29.62",
+                    "31.68",
+                    "34.44",
+                    "36.51",
+                    "38.57",
+                    "41.33",
+                    "44.08",
+                    "46.84",
+                    "49.59",
+                    "52.35",
+                    "55.1",
+                    "58.55",
+                    "61.99"
+                ],
+                "Spiritbreath Thorn Interval": [
+                    "6s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Talent_Bewildering_Lights.png",
@@ -43,7 +262,39 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Bewildering_Lights_Grin-Malkin_Hat_Preview.gif",
                     "caption": "Detonating Grin-Malkin Hat"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG": [
+                    "167.2",
+                    "179.74",
+                    "192.28",
+                    "209",
+                    "221.54",
+                    "234.08",
+                    "250.8",
+                    "267.52",
+                    "284.24",
+                    "300.96"
+                ],
+                "Skill DMG Bonus": [
+                    "53.2 ATK/Stack",
+                    "57.19 ATK/Stack",
+                    "61.18 ATK/Stack",
+                    "66.5 ATK/Stack",
+                    "70.49 ATK/Stack",
+                    "74.48 ATK/Stack",
+                    "79.8 ATK/Stack",
+                    "85.12 ATK/Stack",
+                    "90.44 ATK/Stack",
+                    "95.76 ATK/Stack"
+                ],
+                "HP Regeneration": [
+                    "20%/Stack"
+                ],
+                "CD": [
+                    "15s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Wondrous_Trick_Miracle_Parade.png",
@@ -55,28 +306,72 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Wondrous_Trick_Miracle_Parade_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG": [
+                    "154",
+                    "165.55",
+                    "177.1",
+                    "192.5",
+                    "204.05",
+                    "215.6",
+                    "231",
+                    "246.4",
+                    "261.8",
+                    "277.2",
+                    "292.6",
+                    "308",
+                    "327.25"
+                ],
+                "Explosive Firework DMG": [
+                    "414",
+                    "445.05",
+                    "476.1",
+                    "517.5",
+                    "548.55",
+                    "579.6",
+                    "621",
+                    "662.4",
+                    "703.8",
+                    "745.2",
+                    "786.6",
+                    "828",
+                    "879.75"
+                ],
+                "Duration": [
+                    "3s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Talent_Perilous_Performance.png",
             "talentName": "Perilous Performance",
             "talentType": "1st Ascension Passive",
             "description": "If Lyney consumes HP when firing off a Prop Arrow, the Grin-Malkin hat summoned by the arrow will, upon hitting an opponent, restore 3 Energy to Lyney and increase DMG dealt by 80% of his ATK.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Talent_Conclusive_Ovation.png",
             "talentName": "Conclusive Ovation",
             "talentType": "4th Ascension Passive",
             "description": "The DMG Lyney deals to opponents affected by Pyro will receive the following buffs:\nIncreases the DMG dealt by 60%.\nEach Pyro party member other than Lyney will cause the DMG dealt to increase by an additional 20%.\nLyney can deal up to 100% increased DMG to opponents affected by Pyro in this way.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Talent_Trivial_Observations.png",
             "talentName": "Trivial Observations",
             "talentType": "Utility Passive",
             "description": "Displays the location of nearby resources unique to Fontaine on the mini-map.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

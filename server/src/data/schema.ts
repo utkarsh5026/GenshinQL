@@ -11,6 +11,7 @@ export const talentSchema = z.object({
       caption: z.string(),
     })
   ),
+  scaling: z.record(z.array(z.string())),
 });
 
 export const constellationSchema = z.object({

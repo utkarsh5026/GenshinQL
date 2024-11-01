@@ -55,7 +55,129 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Garyuu_Bladework_C_Recovery_Preview.gif",
                     "caption": "Charged Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "44.98",
+                    "48.64",
+                    "52.3",
+                    "57.53",
+                    "61.19",
+                    "65.38",
+                    "71.13",
+                    "76.88",
+                    "82.63",
+                    "88.91",
+                    "96.1"
+                ],
+                "2-Hit DMG (%)": [
+                    "45.24",
+                    "48.92",
+                    "52.6",
+                    "57.86",
+                    "61.54",
+                    "65.75",
+                    "71.54",
+                    "77.32",
+                    "83.11",
+                    "89.42",
+                    "96.65"
+                ],
+                "3-Hit DMG (%)": [
+                    "25.8\n+\n30.96",
+                    "27.9\n+\n33.48",
+                    "30\n+\n36",
+                    "33\n+\n39.6",
+                    "35.1\n+\n42.12",
+                    "37.5\n+\n45",
+                    "40.8\n+\n48.96",
+                    "44.1\n+\n52.92",
+                    "47.4\n+\n56.88",
+                    "51\n+\n61.2",
+                    "55.13\n+\n66.15"
+                ],
+                "4-Hit DMG (%)": [
+                    "60.72",
+                    "65.66",
+                    "70.6",
+                    "77.66",
+                    "82.6",
+                    "88.25",
+                    "96.02",
+                    "103.78",
+                    "111.55",
+                    "120.02",
+                    "129.73"
+                ],
+                "5-Hit DMG (%)": [
+                    "25.37×3",
+                    "27.43×3",
+                    "29.5×3",
+                    "32.45×3",
+                    "34.52×3",
+                    "36.88×3",
+                    "40.12×3",
+                    "43.36×3",
+                    "46.61×3",
+                    "50.15×3",
+                    "54.21×3"
+                ],
+                "Charged Attack DMG (%)": [
+                    "43\n+\n74.65",
+                    "46.5\n+\n80.72",
+                    "50\n+\n86.8",
+                    "55\n+\n95.48",
+                    "58.5\n+\n101.56",
+                    "62.5\n+\n108.5",
+                    "68\n+\n118.05",
+                    "73.5\n+\n127.6",
+                    "79\n+\n137.14",
+                    "85\n+\n147.56",
+                    "91.88\n+\n159.5"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "20"
+                ],
+                "Plunge DMG (%)": [
+                    "81.83",
+                    "88.49",
+                    "95.16",
+                    "104.67",
+                    "111.33",
+                    "118.94",
+                    "129.41",
+                    "139.88",
+                    "150.35",
+                    "161.76",
+                    "173.18"
+                ],
+                "Low Plunge DMG (%)": [
+                    "163.63",
+                    "176.95",
+                    "190.27",
+                    "209.3",
+                    "222.62",
+                    "237.84",
+                    "258.77",
+                    "279.7",
+                    "300.63",
+                    "323.46",
+                    "346.29"
+                ],
+                "High Plunge DMG (%)": [
+                    "204.39",
+                    "221.02",
+                    "237.66",
+                    "261.42",
+                    "278.06",
+                    "297.07",
+                    "323.21",
+                    "349.36",
+                    "375.5",
+                    "404.02",
+                    "432.54"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Talent_Chihayaburu.png",
@@ -79,7 +201,47 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Chihayaburu_Midare_Ranzan_Effect_Preview.gif",
                     "caption": "Midare Ranzan Effect"
                 }
-            ]
+            ],
+            "scaling": {
+                "Press Skill DMG (%)": [
+                    "192.00",
+                    "206.40",
+                    "220.80",
+                    "240.00",
+                    "254.40",
+                    "268.80",
+                    "288.00",
+                    "307.20",
+                    "326.40",
+                    "345.60",
+                    "364.80",
+                    "384.00",
+                    "408.00",
+                    "432.00"
+                ],
+                "Press CD": [
+                    "6s"
+                ],
+                "Hold Skill DMG (%)": [
+                    "260.80",
+                    "280.36",
+                    "299.92",
+                    "326.00",
+                    "345.56",
+                    "365.12",
+                    "391.20",
+                    "417.28",
+                    "443.36",
+                    "469.44",
+                    "495.52",
+                    "521.60",
+                    "554.20",
+                    "586.80"
+                ],
+                "Hold CD": [
+                    "9s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Kazuha_Slash.png",
@@ -107,7 +269,66 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Kazuha_Slash_Pyro_Preview.gif",
                     "caption": "Pyro Elemental Absorption"
                 }
-            ]
+            ],
+            "scaling": {
+                "Slashing DMG (%)": [
+                    "262.40",
+                    "282.08",
+                    "301.76",
+                    "328.00",
+                    "347.68",
+                    "367.36",
+                    "393.60",
+                    "419.84",
+                    "446.08",
+                    "472.32",
+                    "498.56",
+                    "524.80",
+                    "557.60",
+                    "590.40"
+                ],
+                "DoT (%)": [
+                    "120",
+                    "129",
+                    "138",
+                    "150",
+                    "159",
+                    "168",
+                    "180",
+                    "192",
+                    "204",
+                    "216",
+                    "228",
+                    "240",
+                    "255",
+                    "270"
+                ],
+                "Additional Elemental DMG (%)": [
+                    "36.00",
+                    "38.70",
+                    "41.40",
+                    "45.00",
+                    "47.70",
+                    "50.40",
+                    "54.00",
+                    "57.60",
+                    "61.20",
+                    "64.80",
+                    "68.40",
+                    "72.00",
+                    "76.50",
+                    "81.00"
+                ],
+                "Duration": [
+                    "8s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Talent_Soumon_Swordsmanship.png",
@@ -131,21 +352,24 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Soumon_Swordsmanship_Pyro_Preview.gif",
                     "caption": "Pyro Elemental Absorption"
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Talent_Poetics_of_Fuubutsu.png",
             "talentName": "Poetics of Fuubutsu",
             "talentType": "4th Ascension Passive",
             "description": "Upon triggering a Swirl reaction, Kaedehara Kazuha will grant all party members a 0.04% Elemental DMG Bonus to the element absorbed by Swirl for every point of Elemental Mastery he has for 8s. Bonuses for different elements obtained through this method can co-exist.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Talent_Cloud_Strider.png",
             "talentName": "Cloud Strider",
             "talentType": "Utility Passive",
             "description": "Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

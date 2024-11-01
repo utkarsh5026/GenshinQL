@@ -27,7 +27,103 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Kaboom%21_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "72.16",
+                    "77.57",
+                    "82.98",
+                    "90.2",
+                    "95.61",
+                    "101.02",
+                    "108.24",
+                    "115.46",
+                    "122.67",
+                    "129.89",
+                    "137.39"
+                ],
+                "2-Hit DMG (%)": [
+                    "62.4",
+                    "67.08",
+                    "71.76",
+                    "78",
+                    "82.68",
+                    "87.36",
+                    "93.6",
+                    "99.84",
+                    "106.08",
+                    "112.32",
+                    "118.81"
+                ],
+                "3-Hit DMG (%)": [
+                    "89.92",
+                    "96.66",
+                    "103.41",
+                    "112.4",
+                    "119.14",
+                    "125.89",
+                    "134.88",
+                    "143.87",
+                    "152.86",
+                    "161.86",
+                    "171.21"
+                ],
+                "Charged Attack DMG (%)": [
+                    "157.36",
+                    "169.16",
+                    "180.96",
+                    "196.7",
+                    "208.5",
+                    "220.3",
+                    "236.04",
+                    "251.78",
+                    "267.51",
+                    "283.25",
+                    "299.61"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "50"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Jumpy_Dumpty.png",
@@ -39,7 +135,47 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Jumpy_Dumpty_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Jumpy Dumpty DMG (%)": [
+                    "95.20",
+                    "102.34",
+                    "109.48",
+                    "119.00",
+                    "126.14",
+                    "133.28",
+                    "142.80",
+                    "152.32",
+                    "161.84",
+                    "171.36",
+                    "180.88",
+                    "190.40",
+                    "202.30",
+                    "214.20"
+                ],
+                "Mine DMG (%)": [
+                    "32.80",
+                    "35.26",
+                    "37.72",
+                    "41.00",
+                    "43.46",
+                    "45.92",
+                    "49.20",
+                    "52.48",
+                    "55.76",
+                    "59.04",
+                    "62.32",
+                    "65.60",
+                    "69.70",
+                    "73.80"
+                ],
+                "Mine Duration": [
+                    "15s"
+                ],
+                "CD": [
+                    "20s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Sparks_%27n%27_Splash.png",
@@ -51,28 +187,58 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Sparks_%27n%27_Splash_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Sparks 'n' Splash DMG (%)": [
+                    "42.64",
+                    "45.84",
+                    "49.04",
+                    "53.30",
+                    "56.50",
+                    "59.70",
+                    "63.96",
+                    "68.22",
+                    "72.49",
+                    "76.75",
+                    "81.02",
+                    "85.28",
+                    "90.61",
+                    "95.94"
+                ],
+                "Duration": [
+                    "10s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Talent_Pounding_Surprise.png",
             "talentName": "Pounding Surprise",
             "talentType": "1st Ascension Passive",
             "description": "When Jumpy Dumpty and Normal Attacks deal DMG, Klee has a 50% chance to obtain an Explosive Spark. This Explosive Spark is consumed by the next Charged Attack, which costs no Stamina and deals 50% increased DMG.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Talent_Sparkling_Burst.png",
             "talentName": "Sparkling Burst",
             "talentType": "4th Ascension Passive",
             "description": "When Klee's Charged Attack results in a CRIT Hit, all party members gain 2 Elemental Energy.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Talent_All_Of_My_Treasures%21.png",
             "talentName": "All Of My Treasures!",
             "talentType": "Utility Passive",
             "description": "Displays the location of nearby resources unique to Mondstadt on the mini-map.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

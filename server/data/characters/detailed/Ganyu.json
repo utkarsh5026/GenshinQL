@@ -31,7 +31,178 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Liutian_Archery_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "31.73",
+                    "34.32",
+                    "36.9",
+                    "40.59",
+                    "43.17",
+                    "46.13",
+                    "50.18",
+                    "54.24",
+                    "58.3",
+                    "62.73",
+                    "67.8"
+                ],
+                "2-Hit DMG (%)": [
+                    "35.6",
+                    "38.5",
+                    "41.4",
+                    "45.54",
+                    "48.44",
+                    "51.75",
+                    "56.3",
+                    "60.86",
+                    "65.41",
+                    "70.38",
+                    "76.07"
+                ],
+                "3-Hit DMG (%)": [
+                    "45.49",
+                    "49.2",
+                    "52.9",
+                    "58.19",
+                    "61.89",
+                    "66.13",
+                    "71.94",
+                    "77.76",
+                    "83.58",
+                    "89.93",
+                    "97.2"
+                ],
+                "4-Hit DMG (%)": [
+                    "45.49",
+                    "49.2",
+                    "52.9",
+                    "58.19",
+                    "61.89",
+                    "66.13",
+                    "71.94",
+                    "77.76",
+                    "83.58",
+                    "89.93",
+                    "97.2"
+                ],
+                "5-Hit DMG (%)": [
+                    "48.25",
+                    "52.17",
+                    "56.1",
+                    "61.71",
+                    "65.64",
+                    "70.13",
+                    "76.3",
+                    "82.47",
+                    "88.64",
+                    "95.37",
+                    "103.08"
+                ],
+                "6-Hit DMG (%)": [
+                    "57.62",
+                    "62.31",
+                    "67",
+                    "73.7",
+                    "78.39",
+                    "83.75",
+                    "91.12",
+                    "98.49",
+                    "105.86",
+                    "113.9",
+                    "123.11"
+                ],
+                "Aimed Shot (%)": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "92.82"
+                ],
+                "Aimed Shot Charge Level 1 (%)": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "235.6"
+                ],
+                "Frostflake Arrow DMG (%)": [
+                    "128",
+                    "137.6",
+                    "147.2",
+                    "160",
+                    "169.6",
+                    "179.2",
+                    "192",
+                    "204.8",
+                    "217.6",
+                    "230.4",
+                    "243.2"
+                ],
+                "Frostflake Arrow Bloom DMG (%)": [
+                    "217.6",
+                    "233.92",
+                    "250.24",
+                    "272",
+                    "288.32",
+                    "304.64",
+                    "326.4",
+                    "348.16",
+                    "369.92",
+                    "391.68",
+                    "413.44"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Talent_Trail_of_the_Qilin.png",
@@ -43,7 +214,47 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Trail_of_the_Qilin_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Inherited HP (% Max HP)": [
+                    "120",
+                    "129",
+                    "138",
+                    "150",
+                    "159",
+                    "168",
+                    "180",
+                    "192",
+                    "204",
+                    "216",
+                    "228",
+                    "240",
+                    "255",
+                    "270"
+                ],
+                "Skill DMG (%)": [
+                    "132",
+                    "141.9",
+                    "151.8",
+                    "165",
+                    "174.9",
+                    "184.8",
+                    "198",
+                    "211.2",
+                    "224.4",
+                    "237.6",
+                    "250.8",
+                    "264",
+                    "280.5",
+                    "297"
+                ],
+                "Duration": [
+                    "6s"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Celestial_Shower.png",
@@ -55,28 +266,58 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Celestial_Shower_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Ice Shard DMG (%)": [
+                    "70.27",
+                    "75.54",
+                    "80.81",
+                    "87.84",
+                    "93.11",
+                    "98.38",
+                    "105.41",
+                    "112.44",
+                    "119.46",
+                    "126.49",
+                    "133.52",
+                    "140.54",
+                    "149.33",
+                    "158"
+                ],
+                "Duration": [
+                    "15s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Talent_Undivided_Heart.png",
             "talentName": "Undivided Heart",
             "talentType": "1st Ascension Passive",
             "description": "After firing a Frostflake Arrow, the CRIT Rate of subsequent Frostflake Arrows and their resulting bloom effects is increased by 20% for 5s.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Talent_Harmony_between_Heaven_and_Earth.png",
             "talentName": "Harmony between Heaven and Earth",
             "talentType": "4th Ascension Passive",
             "description": "Celestial Shower grants a 20% Cryo DMG Bonus to active members in the AoE.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Talent_Preserved_for_the_Hunt.png",
             "talentName": "Preserved for the Hunt",
             "talentType": "Utility Passive",
             "description": "Refunds 15% of the ore used when crafting Bow-type weapons.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

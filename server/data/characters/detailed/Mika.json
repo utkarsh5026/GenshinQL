@@ -27,7 +27,129 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Spear_of_Favonius_-_Arrow%27s_Passage_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "43.26",
+                    "46.78",
+                    "50.31",
+                    "55.34",
+                    "58.86",
+                    "62.88",
+                    "68.42",
+                    "73.95",
+                    "79.48",
+                    "85.52",
+                    "91.56"
+                ],
+                "2-Hit DMG (%)": [
+                    "41.5",
+                    "44.88",
+                    "48.26",
+                    "53.08",
+                    "56.46",
+                    "60.32",
+                    "65.63",
+                    "70.94",
+                    "76.25",
+                    "82.04",
+                    "87.83"
+                ],
+                "3-Hit DMG (%)": [
+                    "54.5",
+                    "58.94",
+                    "63.38",
+                    "69.71",
+                    "74.15",
+                    "79.22",
+                    "86.19",
+                    "93.16",
+                    "100.13",
+                    "107.74",
+                    "115.34"
+                ],
+                "4-Hit DMG (%)": [
+                    "27.61\n+\n27.61",
+                    "29.86\n+\n29.86",
+                    "32.11\n+\n32.11",
+                    "35.32\n+\n35.32",
+                    "37.57\n+\n37.57",
+                    "40.14\n+\n40.14",
+                    "43.67\n+\n43.67",
+                    "47.2\n+\n47.2",
+                    "50.73\n+\n50.73",
+                    "54.59\n+\n54.59",
+                    "58.44\n+\n58.44"
+                ],
+                "5-Hit DMG (%)": [
+                    "70.87",
+                    "76.64",
+                    "82.41",
+                    "90.65",
+                    "96.42",
+                    "103.01",
+                    "112.08",
+                    "121.15",
+                    "130.21",
+                    "140.1",
+                    "149.99"
+                ],
+                "Charged Attack DMG (%)": [
+                    "112.75",
+                    "121.92",
+                    "131.1",
+                    "144.21",
+                    "153.39",
+                    "163.88",
+                    "178.3",
+                    "192.72",
+                    "207.14",
+                    "222.87",
+                    "238.6"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Talent_Starfrost_Swirl.png",
@@ -43,7 +165,75 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Starfrost_Swirl_Hold_Preview.gif",
                     "caption": "Hold, with a Rimestar Flare"
                 }
-            ]
+            ],
+            "scaling": {
+                "Flowfrost Arrow DMG (%)": [
+                    "67.2",
+                    "72.24",
+                    "77.28",
+                    "84",
+                    "89.04",
+                    "94.08",
+                    "100.8",
+                    "107.52",
+                    "114.24",
+                    "120.96",
+                    "127.68",
+                    "134.4",
+                    "142.8"
+                ],
+                "Rimestar Flare DMG (%)": [
+                    "84",
+                    "90.3",
+                    "96.6",
+                    "105",
+                    "111.3",
+                    "117.6",
+                    "126",
+                    "134.4",
+                    "142.8",
+                    "151.2",
+                    "159.6",
+                    "168",
+                    "178.5"
+                ],
+                "Rimestar Shard DMG (%)": [
+                    "25.2",
+                    "27.09",
+                    "28.98",
+                    "31.5",
+                    "33.39",
+                    "35.28",
+                    "37.8",
+                    "40.32",
+                    "42.84",
+                    "45.36",
+                    "47.88",
+                    "50.4",
+                    "53.55"
+                ],
+                "ATK SPD Bonus (%)": [
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25"
+                ],
+                "Soulwind Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "15s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Talent_Skyfeather_Song.png",
@@ -55,7 +245,51 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Skyfeather_Song_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Cast Healing": [
+                    "12.17% Max HP\n+\n1172.0355",
+                    "13.08% Max HP\n+\n1289.2554",
+                    "13.99% Max HP\n+\n1416.2435",
+                    "15.21% Max HP\n+\n1553",
+                    "16.12% Max HP\n+\n1699.5248",
+                    "17.04% Max HP\n+\n1855.8179",
+                    "18.25% Max HP\n+\n2021.8794",
+                    "19.47% Max HP\n+\n2197.7092",
+                    "20.69% Max HP\n+\n2383.3071",
+                    "21.9% Max HP\n+\n2578.6736",
+                    "23.12% Max HP\n+\n2783.8083",
+                    "24.34% Max HP\n+\n2998.7114",
+                    "25.86% Max HP\n+\n3223.3828"
+                ],
+                "Eagleplume Healing": [
+                    "2.43% Max HP\n+\n233.95428",
+                    "2.61% Max HP\n+\n257.35297",
+                    "2.8% Max HP\n+\n282.70154",
+                    "3.04% Max HP\n+\n310",
+                    "3.22% Max HP\n+\n339.24835",
+                    "3.4% Max HP\n+\n370.4466",
+                    "3.65% Max HP\n+\n403.59473",
+                    "3.89% Max HP\n+\n438.69275",
+                    "4.13% Max HP\n+\n475.74066",
+                    "4.38% Max HP\n+\n514.73846",
+                    "4.62% Max HP\n+\n555.68616",
+                    "4.86% Max HP\n+\n598.58374",
+                    "5.17% Max HP\n+\n643.4312"
+                ],
+                "Eagleplume Healing Interval": [
+                    "2.5s"
+                ],
+                "Eagleplume Duration": [
+                    "15s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Suppressive_Barrage.png",
@@ -67,21 +301,24 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Suppressive_Barrage_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Talent_Topographical_Mapping.png",
             "talentName": "Topographical Mapping",
             "talentType": "4th Ascension Passive",
             "description": "When an active character affected by both Skyfeather Song's Eagleplume and Starfrost Swirl's Soulwind at once scores a CRIT Hit with their attacks, Soulwind will grant them 1 stack of Detector from Suppressive Barrage. During a single instance of Soulwind, 1 Detector stack can be gained in this manner.\nAdditionally, the maximum number of stacks that can be gained through Soulwind alone is increased by 1.\nRequires Suppressive Barrage to be unlocked first.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Talent_Demarcation.png",
             "talentName": "Demarcation",
             "talentType": "Utility Passive",
             "description": "Displays the location of nearby resources unique to Mondstadt on the mini-map.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

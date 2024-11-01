@@ -27,7 +27,132 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Shuumatsuban_Ninja_Blade_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "72.24",
+                    "78.12",
+                    "84",
+                    "92.4",
+                    "98.28",
+                    "105",
+                    "114.24",
+                    "123.48",
+                    "132.72",
+                    "142.8",
+                    "154.35"
+                ],
+                "2-Hit DMG (%)": [
+                    "71.38",
+                    "77.19",
+                    "83",
+                    "91.3",
+                    "97.11",
+                    "103.75",
+                    "112.88",
+                    "122.01",
+                    "131.14",
+                    "141.1",
+                    "152.51"
+                ],
+                "3-Hit DMG (%)": [
+                    "43.43\n+\n43.43",
+                    "46.97\n+\n46.97",
+                    "50.5\n+\n50.5",
+                    "55.55\n+\n55.55",
+                    "59.09\n+\n59.09",
+                    "63.13\n+\n63.13",
+                    "68.68\n+\n68.68",
+                    "74.23\n+\n74.23",
+                    "79.79\n+\n79.79",
+                    "85.85\n+\n85.85",
+                    "92.79\n+\n92.79"
+                ],
+                "4-Hit DMG (%)": [
+                    "98.13",
+                    "106.11",
+                    "114.1",
+                    "125.51",
+                    "133.5",
+                    "142.63",
+                    "155.18",
+                    "167.73",
+                    "180.28",
+                    "193.97",
+                    "209.66"
+                ],
+                "Charged Attack Spinning DMG (%)": [
+                    "62.55",
+                    "67.64",
+                    "72.73",
+                    "80",
+                    "85.09",
+                    "90.91",
+                    "98.91",
+                    "106.91",
+                    "114.91",
+                    "123.64",
+                    "133.64"
+                ],
+                "Charged Attack Final DMG (%)": [
+                    "113.09",
+                    "122.3",
+                    "131.5",
+                    "144.65",
+                    "153.86",
+                    "164.38",
+                    "178.84",
+                    "193.31",
+                    "207.77",
+                    "223.55",
+                    "241.63"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG (%)": [
+                    "74.59",
+                    "80.66",
+                    "86.73",
+                    "95.4",
+                    "101.47",
+                    "108.41",
+                    "117.95",
+                    "127.49",
+                    "137.03",
+                    "147.44",
+                    "157.85"
+                ],
+                "Low Plunge DMG (%)": [
+                    "149.14",
+                    "161.28",
+                    "173.42",
+                    "190.77",
+                    "202.91",
+                    "216.78",
+                    "235.86",
+                    "254.93",
+                    "274.01",
+                    "294.82",
+                    "315.63"
+                ],
+                "High Plunge DMG (%)": [
+                    "186.29",
+                    "201.45",
+                    "216.62",
+                    "238.28",
+                    "253.44",
+                    "270.77",
+                    "294.6",
+                    "318.42",
+                    "342.25",
+                    "368.25",
+                    "394.24"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_Yoohoo_Art_Fuuin_Dash.png",
@@ -47,7 +172,90 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Yoohoo_Art_Fuuin_Dash_Elemental_Absorption_Preview.gif",
                     "caption": "Elemental Absorption (Pyro)"
                 }
-            ]
+            ],
+            "scaling": {
+                "Fuufuu Windwheel DMG (%)": [
+                    "36.0",
+                    "38.7",
+                    "41.4",
+                    "45",
+                    "47.7",
+                    "50.4",
+                    "54",
+                    "57.6",
+                    "61.2",
+                    "64.8",
+                    "68.4",
+                    "72",
+                    "76.5"
+                ],
+                "Fuufuu Whirlwind Kick Press DMG (%)": [
+                    "158.4",
+                    "170.3",
+                    "182.2",
+                    "198",
+                    "209.88",
+                    "221.76",
+                    "237.6",
+                    "253.44",
+                    "269.28",
+                    "285.12",
+                    "300.96",
+                    "316.8",
+                    "336.6"
+                ],
+                "Fuufuu Whirlwind Kick Hold DMG (%)": [
+                    "217.6",
+                    "233.9",
+                    "250.2",
+                    "272",
+                    "288.32",
+                    "304.64",
+                    "326.4",
+                    "348.16",
+                    "369.92",
+                    "391.68",
+                    "413.44",
+                    "435.2",
+                    "462.4"
+                ],
+                "Fuufuu Windwheel Elemental DMG (%)": [
+                    "16.8",
+                    "18.1",
+                    "19.3",
+                    "21",
+                    "22.26",
+                    "23.52",
+                    "25.2",
+                    "26.88",
+                    "28.56",
+                    "30.24",
+                    "31.92",
+                    "33.6",
+                    "35.7"
+                ],
+                "Fuufuu Whirlwind Kick Elemental DMG (%)": [
+                    "76.2",
+                    "81.9",
+                    "87.6",
+                    "95.2",
+                    "100.91",
+                    "106.62",
+                    "114.24",
+                    "121.86",
+                    "129.47",
+                    "137.09",
+                    "144.7",
+                    "152.32",
+                    "161.84"
+                ],
+                "Duration": [
+                    "10s"
+                ],
+                "CD": [
+                    "6-11s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Yoohoo_Art_Mujina_Flurry.png",
@@ -67,7 +275,78 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Yoohoo_Art_Mujina_Flurry_No_Opponents_Preview.gif",
                     "caption": "No opponents nearby"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill Activation DMG (%)": [
+                    "117",
+                    "126",
+                    "134",
+                    "146",
+                    "154.76",
+                    "163.52",
+                    "175.2",
+                    "186.88",
+                    "198.56",
+                    "210.24",
+                    "221.92",
+                    "233.6",
+                    "248.2"
+                ],
+                "Skill Activation Healing": [
+                    "92.2% ATK\n+\n577",
+                    "99.1% ATK\n+\n635",
+                    "106.0% ATK\n+\n698",
+                    "115.2% ATK\n+\n765",
+                    "122.11% ATK\n+\n837.2",
+                    "129.02% ATK\n+\n914.2",
+                    "138.24% ATK\n+\n996",
+                    "147.46% ATK\n+\n1,082",
+                    "156.67% ATK\n+\n1,174",
+                    "165.89% ATK\n+\n1,270",
+                    "175.1% ATK\n+\n1,371",
+                    "184.32% ATK\n+\n1,477",
+                    "195.84% ATK\n+\n1,587"
+                ],
+                "Muji-Muji Daruma DMG (%)": [
+                    "52",
+                    "56",
+                    "60",
+                    "65",
+                    "68.9",
+                    "72.8",
+                    "78",
+                    "83.2",
+                    "88.4",
+                    "93.6",
+                    "98.8",
+                    "104",
+                    "110.5"
+                ],
+                "Muji-Muji Daruma Healing": [
+                    "79.9% ATK\n+\n500",
+                    "85.9% ATK\n+\n550",
+                    "91.9% ATK\n+\n605",
+                    "99.8% ATK\n+\n663",
+                    "105.83% ATK\n+\n725",
+                    "111.82% ATK\n+\n792",
+                    "119.81% ATK\n+\n863",
+                    "127.8% ATK\n+\n938",
+                    "135.78% ATK\n+\n1,017",
+                    "143.77% ATK\n+\n1,100",
+                    "151.76% ATK\n+\n1,188",
+                    "159.74% ATK\n+\n1,280",
+                    "169.73% ATK\n+\n1,376"
+                ],
+                "Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "20s"
+                ],
+                "Energy Cost": [
+                    "80"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Talent_Someone_More_Capable.png",
@@ -79,7 +358,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Someone_More_Capable_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Talent_No_Work_Today%21.png",
@@ -95,7 +375,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/No_Work_Today_Attack_Preview.gif",
                     "caption": "Increased AoE"
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Talent_Yoohoo_Art_Silencer%27s_Secret.png",
@@ -107,7 +388,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Yoohoo_Art_Silencer%27s_Secret_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         }
     ],
     "constellations": [

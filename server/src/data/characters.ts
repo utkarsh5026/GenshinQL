@@ -1,10 +1,11 @@
-import { WebDriver, until, By } from "selenium-webdriver";
+import { WebDriver, until, By, WebElement } from "selenium-webdriver";
 import {
   URL,
   saveJson,
   setupDriver,
   loadJsonPath,
   listDirectories,
+  listFiles,
 } from "./setup";
 import path from "path";
 
@@ -164,6 +165,135 @@ async function getCharacterImages(driver: WebDriver) {
 }
 
 /**
+ * Extracts figure URLs and captions from talent description figures
+ *
+ * @param driver - The WebDriver instance
+ * @param descRow - The row element containing the figures
+ * @returns Promise resolving to array of figure URLs and captions
+ */
+async function getFigureUrls(driver: WebDriver, descRow: WebElement) {
+  const figures = await descRow.findElements(By.css("figure.thumb.tnone"));
+  return Promise.all(
+    figures.map(async (figure) => {
+      try {
+        const image = await figure.findElement(By.css("a img"));
+        const url = parseUrl(await image.getAttribute("data-src"));
+        let caption = "";
+
+        try {
+          caption = await driver.executeScript(
+            `
+          const fig = arguments[0];
+          const captionEl = fig.querySelector('figcaption p.caption');
+          return captionEl ? captionEl.textContent.trim() : '';
+        `,
+            figure
+          );
+
+          if (caption) {
+            console.log("Caption found:", caption);
+          }
+        } catch (e) {
+          try {
+            caption = await driver.executeScript(
+              `
+            const fig = arguments[0];
+            const figcaption = fig.querySelector('figcaption');
+            return figcaption ? figcaption.textContent.trim() : '';
+          `,
+              figure
+            );
+          } catch (err) {
+            console.log("No caption found");
+          }
+        }
+
+        return { url, caption };
+      } catch (error) {
+        console.log("Error getting figure urls:", error);
+        return { url: "", caption: "" };
+      }
+    })
+  );
+}
+
+/**
+ * Scrapes and retrieves talent scaling information from a character's talent row.
+ *
+ * @param driver - The WebDriver instance used for browser automation
+ * @param row - The WebElement representing the talent row containing scaling data
+ * @returns A Record mapping stat names to arrays of scaling values. For example:
+ *          {
+ *            "Normal Attack DMG": ["100%", "110%", "120%"],
+ *            "Charged Attack DMG": ["150%", "165%", "180%"],
+ *            "CD": ["12s"]
+ *          }
+ *          Returns empty object if scaling data cannot be retrieved.
+ */
+async function getTalentScaling(driver: WebDriver, row: WebElement) {
+  try {
+    const containerSelector =
+      '.giw-collapsible[data-expandtext="▼Attribute Scaling▼"]';
+    await waitForElement(driver, containerSelector);
+
+    // Force show the content
+    await driver.executeScript(`
+      const containers = document.querySelectorAll('${containerSelector}');
+      containers.forEach(container => {
+        if (container.querySelector('.mw-collapsible-content')) {
+          container.querySelector('.mw-collapsible-content').style.display = 'block';
+        }
+      });
+    `);
+
+    // Get the wikitable directly
+    const tables = await row.findElements(
+      By.css(`${containerSelector} table.wikitable`)
+    );
+    const scaling: Record<string, string[]> = {};
+
+    for (const table of tables) {
+      const rows = await table.findElements(By.css("tbody tr"));
+
+      let currentSection = "";
+
+      for (const scalingRow of rows) {
+        const headings = await scalingRow.findElements(By.css("th"));
+
+        // Check if it's a section header (th that spans all columns)
+        if (headings.length === 1) {
+          const colspan = await headings[0].getAttribute("colspan");
+          if (colspan === "12") {
+            currentSection = await headings[0].getText();
+            continue;
+          }
+        }
+
+        // Get the stat name and values
+        if (headings.length > 0) {
+          const statName = await headings[0].getText();
+          if (!statName.trim()) continue;
+
+          const values = await scalingRow.findElements(By.css("td"));
+          const valueTexts = await Promise.all(
+            values.map((value) => value.getText())
+          );
+
+          if (valueTexts.length > 0) {
+            scaling[statName] = valueTexts;
+          }
+        }
+      }
+    }
+
+    return scaling;
+  } catch (error) {
+    console.error("Error in getTalentScaling:", error);
+    return {};
+  }
+}
+
+/**
  * Scrapes and retrieves talent information for a character from their wiki page.
  *
  * @param driver - The WebDriver instance used for browser automation
@@ -188,66 +318,37 @@ async function getTalents(driver: WebDriver) {
     const cells = await row.findElements(By.css("td"));
 
     if (cells.length == 3) {
-      console.log("Found attack animation");
-      const talentIcon = parseUrl(
-        await cells[0].findElement(By.css("a img")).getAttribute("data-src")
-      );
-      const talentName = await cells[1].getText();
-      const talentType = await cells[2].getText();
+      try {
+        const talentIcon = parseUrl(
+          await cells[0].findElement(By.css("a img")).getAttribute("data-src")
+        );
+        const talentName = await cells[1].getText();
+        const talentType = await cells[2].getText();
 
-      const descRow = rows[i + 1];
-      const descCells = await descRow.findElement(By.css("td"));
-      const description = (await descCells.getText()).split("▼")[0];
+        console.log(talentName, talentType);
 
-      const figures = await descRow.findElements(By.css("figure.thumb.tnone"));
-      const figureUrls = await Promise.all(
-        figures.map(async (figure) => {
-          const image = await figure.findElement(By.css("a > img"));
-          const url = parseUrl(await image.getAttribute("data-src"));
-          let caption = "";
+        const descRow = rows[i + 1];
+        const descCells = await descRow.findElement(By.css("td"));
+        const description = (await descCells.getText()).split("▼")[0];
 
-          try {
-            caption = await driver.executeScript(
-              `
-              const fig = arguments[0];
-              const captionEl = fig.querySelector('figcaption p.caption');
-              return captionEl ? captionEl.textContent.trim() : '';
-            `,
-              figure
-            );
+        const figureUrls = await getFigureUrls(driver, descRow);
+        const scaling = await getTalentScaling(driver, descRow);
 
-            if (caption) {
-              console.log("Caption found:", caption);
-            }
-          } catch (e) {
-            try {
-              caption = await driver.executeScript(
-                `
-                const fig = arguments[0];
-                const figcaption = fig.querySelector('figcaption');
-                return figcaption ? figcaption.textContent.trim() : '';
-              `,
-                figure
-              );
-            } catch (err) {
-              console.log("No caption found");
-            }
-          }
-
-          return { url, caption };
-        })
-      );
-
-      talents.push({
-        talentIcon,
-        talentName,
-        talentType,
-        description,
-        figureUrls,
-      });
+        talents.push({
+          talentIcon,
+          talentName,
+          talentType,
+          description,
+          figureUrls,
+          scaling,
+        });
+      } catch (error) {
+        console.log("Error scraping talent:", error);
+      }
     }
   }
 
+  console.log("---------------Scraped talents---------------\n");
   return talents;
 }
 
@@ -288,6 +389,18 @@ async function getConstellations(driver: WebDriver): Promise<Constellation[]> {
   return constellations;
 }
 
+async function getCharacterNameCardUrls(driver: WebDriver) {
+  const selector = 'div[data-source="namecard"] span.item-next';
+  await waitForElement(driver, selector);
+
+  const url = await driver
+    .findElement(By.css(selector))
+    .findElement(By.css("a"))
+    .getAttribute("href");
+
+  await driver.get(url);
+}
+
 /**
  * Scrapes character information and saves it to a JSON file.
  *
@@ -325,10 +438,9 @@ async function saveCharacters(driver: WebDriver) {
  * @returns {Promise<any>} A promise that resolves to the loaded character data.
  */
 const loadCharacters = async () => {
-  const characters = await loadJsonPath(
+  return  loadJsonPath(
     path.join(CHARACTER_DIR_NAME, "characters.json")
   );
-  return characters;
 };
 
 /**
@@ -343,7 +455,8 @@ const scrapeAndSaveDetailedCharacterInfo = async (
   force = false
 ) => {
   const characters = await loadCharacters();
-  const savedCharacters = await listDirectories(path.join(CHARACTER_DIR_NAME));
+  const savedCharacters = await listFiles(path.join("characters", "detailed"));
+  let canFetch = false;
 
   if (characters) {
     for (const char of characters) {
@@ -353,8 +466,12 @@ const scrapeAndSaveDetailedCharacterInfo = async (
         continue;
       }
 
+      const canFetch = ["Xiao", "Sucrose", "Mona"].includes(name);
+      if (!canFetch) continue;
+
       try {
         const name = char.name.split(" ").join("_");
+        console.log(`Scraping ${name}`);
         const desc = await scrapeCharacter(driver, name);
 
         const fullDesc = {
@@ -396,4 +513,4 @@ async function main() {
   await driver.quit();
 }
 
-main();
+main().then(()=> console.log("Completed"));

@@ -27,7 +27,132 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Steel_Fang_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "95.92",
+                    "102.46",
+                    "109",
+                    "117.72",
+                    "124.26",
+                    "131.89",
+                    "141.7",
+                    "151.51",
+                    "161.32",
+                    "171.13",
+                    "180.94"
+                ],
+                "2-Hit DMG (%)": [
+                    "82.63",
+                    "88.27",
+                    "93.9",
+                    "101.41",
+                    "107.05",
+                    "113.62",
+                    "122.07",
+                    "130.52",
+                    "138.97",
+                    "147.42",
+                    "155.87"
+                ],
+                "3-Hit DMG (%)": [
+                    "103.31",
+                    "110.36",
+                    "117.4",
+                    "126.79",
+                    "133.84",
+                    "142.05",
+                    "152.62",
+                    "163.19",
+                    "173.75",
+                    "184.32",
+                    "194.88"
+                ],
+                "4-Hit DMG (%)": [
+                    "136.05",
+                    "145.32",
+                    "154.6",
+                    "166.97",
+                    "176.24",
+                    "187.07",
+                    "200.98",
+                    "214.89",
+                    "228.81",
+                    "242.72",
+                    "256.64"
+                ],
+                "Charged Attack Cyclic DMG (%)": [
+                    "62.54",
+                    "67.63",
+                    "72.72",
+                    "79.99",
+                    "85.08",
+                    "90.9",
+                    "98.9",
+                    "106.9",
+                    "114.9",
+                    "123.62",
+                    "132.35"
+                ],
+                "Charged Attack Final DMG (%)": [
+                    "113.09",
+                    "122.3",
+                    "131.5",
+                    "144.65",
+                    "153.86",
+                    "164.38",
+                    "178.84",
+                    "193.31",
+                    "207.77",
+                    "223.55",
+                    "239.33"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG (%)": [
+                    "82.05",
+                    "88.72",
+                    "95.4",
+                    "104.94",
+                    "111.62",
+                    "119.25",
+                    "129.75",
+                    "140.24",
+                    "150.74",
+                    "162.19",
+                    "173.63"
+                ],
+                "Low Plunge DMG (%)": [
+                    "164.06",
+                    "177.41",
+                    "190.77",
+                    "209.84",
+                    "223.2",
+                    "238.46",
+                    "259.44",
+                    "280.43",
+                    "301.41",
+                    "324.3",
+                    "347.19"
+                ],
+                "High Plunge DMG (%)": [
+                    "204.92",
+                    "221.6",
+                    "238.28",
+                    "262.1",
+                    "278.78",
+                    "297.85",
+                    "324.06",
+                    "350.27",
+                    "376.48",
+                    "405.07",
+                    "433.66"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Claw_and_Thunder.png",
@@ -43,7 +168,56 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Claw_and_Thunder_Hold_Preview.gif",
                     "caption": "Hold"
                 }
-            ]
+            ],
+            "scaling": {
+                "Press Skill DMG (%)": [
+                    "199.2",
+                    "214.14",
+                    "229.08",
+                    "249",
+                    "263.94",
+                    "278.88",
+                    "298.8",
+                    "318.72",
+                    "338.64",
+                    "358.56",
+                    "378.48",
+                    "398.4",
+                    "423.3",
+                    "448"
+                ],
+                "Hold Skill DMG (%)": [
+                    "295.2",
+                    "317.34",
+                    "339.48",
+                    "369",
+                    "391.14",
+                    "413.28",
+                    "442.8",
+                    "472.32",
+                    "501.84",
+                    "531.36",
+                    "560.88",
+                    "590.4",
+                    "627.3",
+                    "664"
+                ],
+                "Energy Recharge Bonus": [
+                    "ᕀ20% per Electro Sigil"
+                ],
+                "Energy Regenerated": [
+                    "5 per Electro Sigil Absorbed"
+                ],
+                "Electro Sigil duration": [
+                    "18s"
+                ],
+                "Press CD": [
+                    "6s"
+                ],
+                "CD (hold)": [
+                    "10s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Talent_Lightning_Fang.png",
@@ -55,28 +229,89 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Lightning_Fang_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Elemental Burst DMG (%)": [
+                    "160",
+                    "172",
+                    "184",
+                    "200",
+                    "212",
+                    "224",
+                    "240",
+                    "256",
+                    "272",
+                    "288",
+                    "304",
+                    "320",
+                    "340",
+                    "360"
+                ],
+                "Soul Companion DMG (% Normal Attack DMG)": [
+                    "24",
+                    "25.8",
+                    "27.6",
+                    "30",
+                    "31.8",
+                    "33.6",
+                    "36",
+                    "38.4",
+                    "40.8",
+                    "43.2",
+                    "45.6",
+                    "48",
+                    "51",
+                    "54"
+                ],
+                "Normal ATK SPD Bonus": [
+                    "26",
+                    "28",
+                    "30",
+                    "32",
+                    "34",
+                    "36",
+                    "37",
+                    "38",
+                    "39",
+                    "40"
+                ],
+                "Electro RES Bonus (%)": [
+                    "80%"
+                ],
+                "Duration": [
+                    "15s"
+                ],
+                "CD": [
+                    "20s"
+                ],
+                "Energy Cost": [
+                    "80"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Talent_Awakening.png",
             "talentName": "Awakening",
             "talentType": "1st Ascension Passive",
             "description": "Decreases Claw and Thunder's CD by 18%. Using Lightning Fang resets the CD of Claw and Thunder.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Hunger.png",
             "talentName": "Hunger",
             "talentType": "4th Ascension Passive",
             "description": "When Razor's Energy is below 50%, increases Energy Recharge by 30%.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Wolvensprint.png",
             "talentName": "Wolvensprint",
             "talentType": "Utility Passive",
             "description": "Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

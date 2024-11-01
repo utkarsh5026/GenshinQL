@@ -27,7 +27,129 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Spear_of_the_Church_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "52.46",
+                    "56.73",
+                    "61",
+                    "67.1",
+                    "71.37",
+                    "76.25",
+                    "82.96",
+                    "89.67",
+                    "96.38",
+                    "103.7",
+                    "111.02"
+                ],
+                "2-Hit DMG (%)": [
+                    "51.6",
+                    "55.8",
+                    "60",
+                    "66",
+                    "70.2",
+                    "75",
+                    "81.6",
+                    "88.2",
+                    "94.8",
+                    "102",
+                    "109.2"
+                ],
+                "3-Hit DMG (%)": [
+                    "31.82×2",
+                    "34.41×2",
+                    "37×2",
+                    "40.7×2",
+                    "43.29×2",
+                    "46.25×2",
+                    "50.32×2",
+                    "54.39×2",
+                    "58.46×2",
+                    "62.9×2",
+                    "67.34×2"
+                ],
+                "4-Hit DMG (%)": [
+                    "69.66",
+                    "75.33",
+                    "81",
+                    "89.1",
+                    "94.77",
+                    "101.25",
+                    "110.16",
+                    "119.07",
+                    "127.98",
+                    "137.7",
+                    "147.42"
+                ],
+                "5-Hit DMG (%)": [
+                    "41.62\n+\n43",
+                    "45.01\n+\n46.5",
+                    "48.4\n+\n50",
+                    "53.24\n+\n55",
+                    "56.63\n+\n58.5",
+                    "60.5\n+\n62.5",
+                    "65.82\n+\n68",
+                    "71.15\n+\n73.5",
+                    "76.47\n+\n79",
+                    "82.28\n+\n85",
+                    "88.09\n+\n91"
+                ],
+                "Charged Attack DMG (%)": [
+                    "136.74",
+                    "147.87",
+                    "159",
+                    "174.9",
+                    "186.03",
+                    "198.75",
+                    "216.24",
+                    "233.73",
+                    "251.22",
+                    "270.3",
+                    "289.38"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Talent_Ravaging_Confession.png",
@@ -39,7 +161,27 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Ravaging_Confession_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "58.4\n+\n136",
+                    "62.78\n+\n146.2",
+                    "67.16\n+\n156.4",
+                    "73\n+\n170",
+                    "77.38\n+\n180.2",
+                    "81.76\n+\n190.4",
+                    "87.6\n+\n204",
+                    "93.44\n+\n217.6",
+                    "99.28\n+\n231.2",
+                    "105.12\n+\n244.8",
+                    "110.96\n+\n258.4",
+                    "116.8\n+\n272",
+                    "124.1\n+\n289"
+                ],
+                "CD": [
+                    "6s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Talent_Rites_of_Termination.png",
@@ -51,28 +193,74 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Rites_of_Termination_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "104\n+\n152",
+                    "111.8\n+\n163.4",
+                    "119.6\n+\n174.8",
+                    "130\n+\n190",
+                    "137.8\n+\n201.4",
+                    "145.6\n+\n212.8",
+                    "156\n+\n228",
+                    "166.4\n+\n243.2",
+                    "176.8\n+\n258.4",
+                    "187.2\n+\n273.6",
+                    "197.6\n+\n288.8",
+                    "208\n+\n304",
+                    "221\n+\n323",
+                    "234\n+\n342"
+                ],
+                "Ice Lance DoT (%)": [
+                    "132",
+                    "141.9",
+                    "151.8",
+                    "165",
+                    "174.9",
+                    "184.8",
+                    "198",
+                    "211.2",
+                    "224.4",
+                    "237.6",
+                    "250.8",
+                    "264",
+                    "280.5",
+                    "297"
+                ],
+                "Duration": [
+                    "8s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Talent_Regina_Probationum.png",
             "talentName": "Regina Probationum",
             "talentType": "1st Ascension Passive",
             "description": "When Rosaria strikes an opponent from behind using Ravaging Confession, Rosaria's CRIT Rate increases by 12% for 5s.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Talent_Shadow_Samaritan.png",
             "talentName": "Shadow Samaritan",
             "talentType": "4th Ascension Passive",
             "description": "Casting Rites of Termination increases CRIT Rate of all nearby party members (except Rosaria herself) by 15% of Rosaria's CRIT Rate for 10s.\nCRIT Rate Bonus gained this way cannot exceed 15%.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Talent_Night_Walk.png",
             "talentName": "Night Walk",
             "talentType": "Utility Passive",
             "description": "At night (18:00 – 6:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%.\nDoes not take effect in Domains, Trounce Domains, or Spiral Abyss. Swift Stride does not stack.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

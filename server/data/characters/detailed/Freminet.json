@@ -27,7 +27,150 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Flowing_Eddies_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG": [
+                    "84.24",
+                    "91.09",
+                    "97.95",
+                    "107.75",
+                    "114.6",
+                    "122.44",
+                    "133.21",
+                    "143.99",
+                    "154.76",
+                    "166.52",
+                    "178.27",
+                    "190.02",
+                    "201.78"
+                ],
+                "2-Hit DMG": [
+                    "80.68",
+                    "87.24",
+                    "93.81",
+                    "103.19",
+                    "109.76",
+                    "117.26",
+                    "127.58",
+                    "137.9",
+                    "148.22",
+                    "159.48",
+                    "170.73",
+                    "181.99",
+                    "193.25"
+                ],
+                "3-Hit DMG": [
+                    "101.9",
+                    "110.2",
+                    "118.49",
+                    "130.34",
+                    "138.64",
+                    "148.12",
+                    "161.15",
+                    "174.18",
+                    "187.22",
+                    "201.44",
+                    "215.66",
+                    "229.88",
+                    "244.1"
+                ],
+                "4-Hit DMG": [
+                    "123.8",
+                    "133.88",
+                    "143.96",
+                    "158.35",
+                    "168.43",
+                    "179.95",
+                    "195.78",
+                    "211.62",
+                    "227.46",
+                    "244.73",
+                    "262.01",
+                    "279.28",
+                    "296.56"
+                ],
+                "Charged Attack Cyclic DMG": [
+                    "62.52",
+                    "67.61",
+                    "72.7",
+                    "79.97",
+                    "85.06",
+                    "90.87",
+                    "98.87",
+                    "106.87",
+                    "114.87",
+                    "123.59",
+                    "132.31",
+                    "141.04",
+                    "149.76"
+                ],
+                "Charged Attack Final DMG": [
+                    "113.09",
+                    "122.29",
+                    "131.5",
+                    "144.65",
+                    "153.86",
+                    "164.37",
+                    "178.84",
+                    "193.31",
+                    "207.77",
+                    "223.55",
+                    "239.33",
+                    "255.11",
+                    "270.89"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG": [
+                    "74.59",
+                    "80.66",
+                    "86.73",
+                    "95.4",
+                    "101.47",
+                    "108.41",
+                    "117.95",
+                    "127.49",
+                    "137.03",
+                    "147.44",
+                    "157.85",
+                    "168.26",
+                    "178.66"
+                ],
+                "Low Plunge DMG": [
+                    "149.14",
+                    "161.28",
+                    "173.42",
+                    "190.77",
+                    "202.91",
+                    "216.78",
+                    "235.86",
+                    "254.93",
+                    "274.01",
+                    "294.82",
+                    "315.63",
+                    "336.44",
+                    "357.25"
+                ],
+                "High Plunge DMG": [
+                    "186.29",
+                    "201.45",
+                    "216.62",
+                    "238.28",
+                    "253.44",
+                    "270.77",
+                    "294.6",
+                    "318.42",
+                    "342.25",
+                    "368.25",
+                    "394.24",
+                    "420.23",
+                    "446.23"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Pressurized_Floe.png",
@@ -55,7 +198,135 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Pressurized_Floe_Shattering_Pressure_3_Preview.gif",
                     "caption": "Level 4 Shattering Pressure"
                 }
-            ]
+            ],
+            "scaling": {
+                "Upward Thrust DMG": [
+                    "83.04",
+                    "89.27",
+                    "95.5",
+                    "103.8",
+                    "110.03",
+                    "116.26",
+                    "124.56",
+                    "132.86",
+                    "141.17",
+                    "149.47",
+                    "157.78",
+                    "166.08",
+                    "176.46"
+                ],
+                "Frost DMG": [
+                    "7.16",
+                    "7.7",
+                    "8.23",
+                    "8.95",
+                    "9.49",
+                    "10.02",
+                    "10.74",
+                    "11.46",
+                    "12.17",
+                    "12.89",
+                    "13.6",
+                    "14.32",
+                    "15.22"
+                ],
+                "Level 0 Shattering Pressure DMG": [
+                    "200.48",
+                    "215.52",
+                    "230.55",
+                    "250.6",
+                    "265.64",
+                    "280.67",
+                    "300.72",
+                    "320.77",
+                    "340.82",
+                    "360.86",
+                    "380.91",
+                    "400.96",
+                    "426.02"
+                ],
+                "Level 1 Shattering Pressure DMG (% Cryo + % Physical)": [
+                    "100.24\n+\n48.69",
+                    "107.76\n+\n52.34",
+                    "115.28\n+\n55.99",
+                    "125.3\n+\n60.86",
+                    "132.82\n+\n64.51",
+                    "140.34\n+\n68.16",
+                    "150.36\n+\n73.03",
+                    "160.38\n+\n77.9",
+                    "170.41\n+\n82.77",
+                    "180.43\n+\n87.64",
+                    "190.46\n+\n92.51",
+                    "200.48\n+\n97.38",
+                    "213.01\n+\n103.46"
+                ],
+                "Level 2 Shattering Pressure DMG (% Cryo + % Physical)": [
+                    "70.17\n+\n85.2",
+                    "75.43\n+\n91.59",
+                    "80.69\n+\n97.98",
+                    "87.71\n+\n106.51",
+                    "92.97\n+\n112.9",
+                    "98.24\n+\n119.29",
+                    "105.25\n+\n127.81",
+                    "112.27\n+\n136.33",
+                    "119.29\n+\n144.85",
+                    "126.3\n+\n153.37",
+                    "133.32\n+\n161.89",
+                    "140.34\n+\n170.41",
+                    "149.11\n+\n181.06"
+                ],
+                "Level 3 Shattering Pressure DMG (% Cryo + % Physical)": [
+                    "40.1\n+\n121.72",
+                    "43.1\n+\n130.85",
+                    "46.11\n+\n139.98",
+                    "50.12\n+\n152.15",
+                    "53.13\n+\n161.28",
+                    "56.13\n+\n170.41",
+                    "60.14\n+\n182.58",
+                    "64.15\n+\n194.75",
+                    "68.16\n+\n206.92",
+                    "72.17\n+\n219.1",
+                    "76.18\n+\n231.27",
+                    "80.19\n+\n243.44",
+                    "85.2\n+\n258.65"
+                ],
+                "Level 4 Shattering Pressure DMG": [
+                    "243.44",
+                    "261.7",
+                    "279.96",
+                    "304.3",
+                    "322.56",
+                    "340.82",
+                    "365.16",
+                    "389.5",
+                    "413.85",
+                    "438.19",
+                    "462.54",
+                    "486.88",
+                    "517.31"
+                ],
+                "Spiritbreath Thorn DMG": [
+                    "14.4",
+                    "15.48",
+                    "16.56",
+                    "18",
+                    "19.08",
+                    "20.16",
+                    "21.6",
+                    "23.04",
+                    "24.48",
+                    "25.92",
+                    "27.36",
+                    "28.8",
+                    "30.6"
+                ],
+                "Spiritbreath Thorn Interval": [
+                    "9s"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Talent_Shadowhunter%27s_Ambush.png",
@@ -71,28 +342,54 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Shadowhunter%27s_Ambush_Preview_2.gif",
                     "caption": "Elemental Skill"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG": [
+                    "318.4",
+                    "342.28",
+                    "366.16",
+                    "398",
+                    "421.88",
+                    "445.76",
+                    "477.6",
+                    "509.44",
+                    "541.28",
+                    "573.12"
+                ],
+                "Duration": [
+                    "10s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Talent_Saturation_Deep_Dive.png",
             "talentName": "Saturation Deep Dive",
             "talentType": "1st Ascension Passive",
             "description": "When Freminet unleashes Pressurized Floe: Shattering Pressure, if Pers Timer has yet to reach Pressure Level 4, the CD of Pressurized Floe will be decreased by 1s.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Parallel_Condensers.png",
             "talentName": "Parallel Condensers",
             "talentType": "4th Ascension Passive",
             "description": "When Freminet triggers Shatter against opponents, the DMG dealt by Pressurized Floe: Shattering Pressure will be increased by 40% for 5s.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Talent_Deepwater_Navigation.png",
             "talentName": "Deepwater Navigation",
             "talentType": "Utility Passive",
             "description": "Decreases Aquatic Stamina consumption for your own party members by 35%.\nNot stackable with Passive Talents that provide the exact same effects.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

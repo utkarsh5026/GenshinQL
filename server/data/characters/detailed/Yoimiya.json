@@ -51,7 +51,152 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Firework_Flare-Up_N5_Recovery_Preview.gif",
                     "caption": "Normal Attack 5"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "35.64×2",
+                    "38.07×2",
+                    "40.5×2",
+                    "43.74×2",
+                    "46.17×2",
+                    "49×2",
+                    "52.65×2",
+                    "56.29×2",
+                    "59.94×2",
+                    "63.59×2",
+                    "67.23×2"
+                ],
+                "2-Hit DMG (%)": [
+                    "68.38",
+                    "73.04",
+                    "77.7",
+                    "83.92",
+                    "88.58",
+                    "94.02",
+                    "101.01",
+                    "108",
+                    "115",
+                    "121.99",
+                    "128.98"
+                ],
+                "3-Hit DMG (%)": [
+                    "88.89",
+                    "94.95",
+                    "101.01",
+                    "109.09",
+                    "115.15",
+                    "122.22",
+                    "131.31",
+                    "140.4",
+                    "149.49",
+                    "158.59",
+                    "167.68"
+                ],
+                "4-Hit DMG (%)": [
+                    "46.42×2",
+                    "49.59×2",
+                    "52.75×2",
+                    "56.97×2",
+                    "60.14×2",
+                    "63.83×2",
+                    "68.58×2",
+                    "73.32×2",
+                    "78.07×2",
+                    "82.82×2",
+                    "87.56×2"
+                ],
+                "5-Hit DMG (%)": [
+                    "105.86",
+                    "113.08",
+                    "120.3",
+                    "129.92",
+                    "137.14",
+                    "145.56",
+                    "156.39",
+                    "167.22",
+                    "178.04",
+                    "188.87",
+                    "199.7"
+                ],
+                "Aimed Shot (%)": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "92.82"
+                ],
+                "Fully-Charged Aimed Shot (%)": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "235.6"
+                ],
+                "Kindling Arrow DMG (%)": [
+                    "16.4",
+                    "17.63",
+                    "18.86",
+                    "20.5",
+                    "21.73",
+                    "22.96",
+                    "24.6",
+                    "26.24",
+                    "27.88",
+                    "29.52",
+                    "31.16"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Niwabi_Fire-Dance.png",
@@ -71,7 +216,30 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Niwabi_Fire-Dance_Charged_Preview.gif",
                     "caption": "Charged Attack In Niwabi Enshou State"
                 }
-            ]
+            ],
+            "scaling": {
+                "Blazing Arrow DMG (% Normal Attack DMG)": [
+                    "137.91",
+                    "140.18",
+                    "142.45",
+                    "145.40",
+                    "147.67",
+                    "149.94",
+                    "152.89",
+                    "155.84",
+                    "158.79",
+                    "161.74",
+                    "164.69",
+                    "167.65",
+                    "170.60"
+                ],
+                "Duration": [
+                    "10s"
+                ],
+                "CD": [
+                    "18s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Talent_Ryuukin_Saxifrage.png",
@@ -87,7 +255,48 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Ryuukin_Saxifrage_Aurous_Blaze_Preview.gif",
                     "caption": "Aurous Blaze explosion by a party member"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "127.2",
+                    "136.74",
+                    "146.28",
+                    "159",
+                    "168.54",
+                    "178.08",
+                    "190.8",
+                    "203.52",
+                    "216.24",
+                    "228.96",
+                    "241.68",
+                    "254.4",
+                    "270.3"
+                ],
+                "Aurous Blaze Explosion DMG (%)": [
+                    "122",
+                    "131.15",
+                    "140.3",
+                    "152.5",
+                    "161.65",
+                    "170.8",
+                    "183",
+                    "195.2",
+                    "207.4",
+                    "219.6",
+                    "231.8",
+                    "244",
+                    "259.25"
+                ],
+                "Duration": [
+                    "10s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Tricks_of_the_Trouble-Maker.png",
@@ -99,14 +308,16 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Tricks_of_the_Trouble-Maker_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Talent_Summer_Night%27s_Dawn.png",
             "talentName": "Summer Night's Dawn",
             "talentType": "4th Ascension Passive",
             "description": "Using Ryuukin Saxifrage causes nearby party members (not including Yoimiya) to gain a 10% ATK increase for 15s. Additionally, a further ATK Bonus will be added on based on the number of \"Tricks of the Trouble-Maker\" stacks Yoimiya possesses when using Ryuukin Saxifrage. Each stack increases this ATK Bonus by 1%.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Talent_Blazing_Match.png",
@@ -118,7 +329,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Blazing_Match_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         }
     ],
     "constellations": [

@@ -71,3 +71,23 @@ export async function listDirectories(dirPath: string): Promise<string[]> {
     return [];
   }
 }
+
+/**
+ * Lists only files (not directories) in a directory
+ *
+ * @param dirPath - Path to the directory
+ * @returns Promise resolving to array of filenames
+ */
+export async function listFiles(dirPath: string): Promise<string[]> {
+  try {
+    const fullPath = path.join(DATA_PATH, dirPath);
+    const entries = await fs.readdir(fullPath, { withFileTypes: true });
+    const files = entries
+      .filter((entry) => entry.isFile())
+      .map((entry) => entry.name);
+    return files;
+  } catch (error) {
+    console.error(`Error reading directory ${dirPath}:`, error);
+    return [];
+  }
+}

@@ -23,7 +23,116 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Weaving_Blade_Charged_Preview.gif",
                     "caption": "Charged Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "49.41",
+                    "53.43",
+                    "57.45",
+                    "63.2",
+                    "67.22",
+                    "71.82",
+                    "78.14",
+                    "84.46",
+                    "90.78",
+                    "97.67",
+                    "104.57"
+                ],
+                "2-Hit DMG (%)": [
+                    "46.83",
+                    "50.65",
+                    "54.46",
+                    "59.9",
+                    "63.72",
+                    "68.07",
+                    "74.06",
+                    "80.05",
+                    "86.04",
+                    "92.58",
+                    "99.11"
+                ],
+                "3-Hit DMG (%)": [
+                    "30.42\n+\n30.42",
+                    "32.89\n+\n32.89",
+                    "35.37\n+\n35.37",
+                    "38.9\n+\n38.9",
+                    "41.38\n+\n41.38",
+                    "44.21\n+\n44.21",
+                    "48.1\n+\n48.1",
+                    "51.99\n+\n51.99",
+                    "55.88\n+\n55.88",
+                    "60.13\n+\n60.13",
+                    "64.37\n+\n64.37"
+                ],
+                "4-Hit DMG (%)": [
+                    "75.12",
+                    "81.24",
+                    "87.35",
+                    "96.09",
+                    "102.2",
+                    "109.19",
+                    "118.8",
+                    "128.41",
+                    "138.02",
+                    "148.5",
+                    "158.98"
+                ],
+                "Charged Attack DMG (%)": [
+                    "54.31\n+\n54.31",
+                    "58.73\n+\n58.73",
+                    "63.15\n+\n63.15",
+                    "69.46\n+\n69.46",
+                    "73.89\n+\n73.89",
+                    "78.94\n+\n78.94",
+                    "85.88\n+\n85.88",
+                    "92.83\n+\n92.83",
+                    "99.78\n+\n99.78",
+                    "107.35\n+\n107.35",
+                    "114.93\n+\n114.93"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "20"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.93",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Talent_Fluttering_Hasode.png",
@@ -39,7 +148,48 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Fluttering_Hasode_Hold_Preview.gif",
                     "caption": "Hold"
                 }
-            ]
+            ],
+            "scaling": {
+                "Tamoto DMG": [
+                    "82.08% ATK\n+\n102.6% DEF",
+                    "88.24% ATK\n+\n110.29% DEF",
+                    "94.39% ATK\n+\n117.99% DEF",
+                    "102.6% ATK\n+\n128.25% DEF",
+                    "108.76% ATK\n+\n135.94% DEF",
+                    "114.91% ATK\n+\n143.64% DEF",
+                    "123.12% ATK\n+\n153.9% DEF",
+                    "131.33% ATK\n+\n164.16% DEF",
+                    "139.54% ATK\n+\n174.42% DEF",
+                    "147.74% ATK\n+\n184.68% DEF",
+                    "155.95% ATK\n+\n194.94% DEF",
+                    "164.16% ATK\n+\n205.2% DEF",
+                    "174.42% ATK\n+\n218.02% DEF"
+                ],
+                "Tamoto Duration": [
+                    "17s"
+                ],
+                "Tamoto Attack Interval": [
+                    "3.6s"
+                ],
+                "Upward Sweep Attack DMG": [
+                    "149.28% ATK\n+\n186.6% DEF",
+                    "160.48% ATK\n+\n200.59% DEF",
+                    "171.67% ATK\n+\n214.59% DEF",
+                    "186.6% ATK\n+\n233.25% DEF",
+                    "197.8% ATK\n+\n247.25% DEF",
+                    "208.99% ATK\n+\n261.24% DEF",
+                    "223.92% ATK\n+\n279.9% DEF",
+                    "238.85% ATK\n+\n298.56% DEF",
+                    "253.78% ATK\n+\n317.22% DEF",
+                    "268.7% ATK\n+\n335.88% DEF",
+                    "283.63% ATK\n+\n354.54% DEF",
+                    "298.56% ATK\n+\n373.2% DEF",
+                    "317.22% ATK\n+\n396.53% DEF"
+                ],
+                "CD": [
+                    "16s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Talent_Hiyoku_Twin_Blades.png",
@@ -51,7 +201,30 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Hiyoku_Twin_Blades_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG": [
+                    "256.32% ATK\n+\n320.4% DEF",
+                    "275.54% ATK\n+\n344.43% DEF",
+                    "294.77% ATK\n+\n368.46% DEF",
+                    "320.4% ATK\n+\n400.5% DEF",
+                    "339.62% ATK\n+\n424.53% DEF",
+                    "358.85% ATK\n+\n448.56% DEF",
+                    "384.48% ATK\n+\n480.6% DEF",
+                    "410.11% ATK\n+\n512.64% DEF",
+                    "435.74% ATK\n+\n544.68% DEF",
+                    "461.38% ATK\n+\n576.72% DEF",
+                    "487.01% ATK\n+\n608.76% DEF",
+                    "512.64% ATK\n+\n640.8% DEF",
+                    "544.68% ATK\n+\n680.85% DEF"
+                ],
+                "CD": [
+                    "13.5s"
+                ],
+                "Energy Cost": [
+                    "50"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Talent_Tailor-Made.png",
@@ -63,21 +236,24 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Tailor-Made_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Talent_The_Finishing_Touch.png",
             "talentName": "The Finishing Touch",
             "talentType": "4th Ascension Passive",
             "description": "When a nearby party member creates a Geo Construct, Chiori will gain 20% Geo DMG Bonus for 20s.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Talent_Brocaded_Collar%27s_Beauteous_Silhouette.png",
             "talentName": "Brocaded Collar's Beauteous Silhouette",
             "talentType": "Utility Passive",
             "description": "When any party member is wearing an outfit apart from their default outfit, or is wearing a wind glider other than the Wings of First Flight, your party members will obtain the Swift Stride effect: Movement SPD is increased by 10%.\nThis effect does not take effect in Domains, Trounce Domains and the Spiral Abyss. Swift Stride does not stack.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

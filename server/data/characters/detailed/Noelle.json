@@ -27,7 +27,132 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Favonius_Bladework_-_Maid_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "79.12",
+                    "85.56",
+                    "92",
+                    "101.2",
+                    "107.64",
+                    "115",
+                    "125.12",
+                    "135.24",
+                    "145.36",
+                    "156.4",
+                    "167.44"
+                ],
+                "2-Hit DMG (%)": [
+                    "73.36",
+                    "79.33",
+                    "85.3",
+                    "93.83",
+                    "99.8",
+                    "106.62",
+                    "116.01",
+                    "125.39",
+                    "134.77",
+                    "145.01",
+                    "155.25"
+                ],
+                "3-Hit DMG (%)": [
+                    "86.26",
+                    "93.28",
+                    "100.3",
+                    "110.33",
+                    "117.35",
+                    "125.37",
+                    "136.41",
+                    "147.44",
+                    "158.47",
+                    "170.51",
+                    "182.55"
+                ],
+                "4-Hit DMG (%)": [
+                    "113.43",
+                    "122.67",
+                    "131.9",
+                    "145.09",
+                    "154.32",
+                    "164.88",
+                    "179.38",
+                    "193.89",
+                    "208.4",
+                    "224.23",
+                    "240.06"
+                ],
+                "Charged Attack Cyclic DMG (%)": [
+                    "50.74",
+                    "54.87",
+                    "59",
+                    "64.9",
+                    "69.03",
+                    "73.75",
+                    "80.24",
+                    "86.73",
+                    "93.22",
+                    "100.3",
+                    "107.38"
+                ],
+                "Charged Attack Final DMG (%)": [
+                    "90.47",
+                    "97.84",
+                    "105.2",
+                    "115.72",
+                    "123.08",
+                    "131.5",
+                    "143.07",
+                    "154.64",
+                    "166.22",
+                    "178.84",
+                    "191.46"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG (%)": [
+                    "74.59",
+                    "80.66",
+                    "86.73",
+                    "95.4",
+                    "101.47",
+                    "108.41",
+                    "117.95",
+                    "127.49",
+                    "137.03",
+                    "147.44",
+                    "157.85"
+                ],
+                "Low Plunge DMG (%)": [
+                    "149.14",
+                    "161.28",
+                    "173.42",
+                    "190.77",
+                    "202.91",
+                    "216.78",
+                    "235.86",
+                    "254.93",
+                    "274.01",
+                    "294.82",
+                    "315.63"
+                ],
+                "High Plunge DMG (%)": [
+                    "186.29",
+                    "201.45",
+                    "216.62",
+                    "238.28",
+                    "253.44",
+                    "270.77",
+                    "294.6",
+                    "318.42",
+                    "342.25",
+                    "368.25",
+                    "394.24"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Breastplate.png",
@@ -39,7 +164,76 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Breastplate_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (% DEF)": [
+                    "120",
+                    "129",
+                    "138",
+                    "150",
+                    "159",
+                    "168",
+                    "180",
+                    "192",
+                    "204",
+                    "216",
+                    "228",
+                    "240",
+                    "255",
+                    "270"
+                ],
+                "DMG Absorption": [
+                    "160% DEF\n+\n769",
+                    "172% DEF\n+\n846",
+                    "184% DEF\n+\n930",
+                    "200% DEF\n+\n1,020",
+                    "212% DEF\n+\n1,116",
+                    "224% DEF\n+\n1,218",
+                    "240% DEF\n+\n1,327",
+                    "256% DEF\n+\n1,443",
+                    "272% DEF\n+\n1,565",
+                    "288% DEF\n+\n1,693",
+                    "304% DEF\n+\n1,828",
+                    "320% DEF\n+\n1,969",
+                    "340% DEF\n+\n2,117",
+                    "360% DEF\n+\n2,271"
+                ],
+                "Healing": [
+                    "21.28% DEF\n+\n102",
+                    "22.88% DEF\n+\n112",
+                    "24.47% DEF\n+\n124",
+                    "26.6% DEF\n+\n136",
+                    "28.2% DEF\n+\n148",
+                    "29.79% DEF\n+\n162",
+                    "31.92% DEF\n+\n177",
+                    "34.05% DEF\n+\n192",
+                    "36.18% DEF\n+\n208",
+                    "38.3% DEF\n+\n225",
+                    "40.43% DEF\n+\n243",
+                    "42.56% DEF\n+\n262",
+                    "45.22% DEF\n+\n282",
+                    "47.92% DEF\n+\n303"
+                ],
+                "Healing Triggering Chance (%)": [
+                    "50",
+                    "51",
+                    "52",
+                    "53",
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58",
+                    "59",
+                    "60"
+                ],
+                "Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "24s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_Sweeping_Time.png",
@@ -63,7 +257,66 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Sweeping_Time_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "Burst DMG (%)": [
+                    "67.2",
+                    "72.24",
+                    "77.28",
+                    "84",
+                    "89.04",
+                    "94.08",
+                    "100.8",
+                    "107.52",
+                    "114.24",
+                    "120.96",
+                    "127.68",
+                    "134.4",
+                    "142.8",
+                    "151"
+                ],
+                "Skill DMG (%)": [
+                    "92.8",
+                    "99.76",
+                    "106.72",
+                    "116",
+                    "122.96",
+                    "129.92",
+                    "139.2",
+                    "148.48",
+                    "157.76",
+                    "167.04",
+                    "176.32",
+                    "185.6",
+                    "197.2",
+                    "209"
+                ],
+                "ATK Bonus (% DEF)": [
+                    "40",
+                    "43",
+                    "46",
+                    "50",
+                    "53",
+                    "56",
+                    "60",
+                    "64",
+                    "68",
+                    "72",
+                    "76",
+                    "80",
+                    "85",
+                    "90"
+                ],
+                "Duration": [
+                    "15s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Talent_Devotion.png",
@@ -75,21 +328,24 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Devotion_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Talent_Nice_and_Clean.png",
             "talentName": "Nice and Clean",
             "talentType": "4th Ascension Passive",
             "description": "Every 4 Normal or Charged Attack hits will decrease the CD of Breastplate by 1s.\nHitting multiple opponents with a single attack is only counted as 1 hit.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Talent_Maid%27s_Knighthood.png",
             "talentName": "Maid's Knighthood",
             "talentType": "Utility Passive",
             "description": "When a Perfect Cooking is achieved on a DEF-boosting dish, Noelle has a 12% chance to obtain double the product.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

@@ -27,7 +27,116 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Swiftshatter_Spear_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "44.39",
+                    "48.01",
+                    "51.62",
+                    "56.78",
+                    "60.4",
+                    "64.53",
+                    "70.2",
+                    "75.88",
+                    "81.56",
+                    "87.75",
+                    "93.95"
+                ],
+                "2-Hit DMG (%)": [
+                    "43.63",
+                    "47.18",
+                    "50.73",
+                    "55.8",
+                    "59.35",
+                    "63.41",
+                    "68.99",
+                    "74.57",
+                    "80.15",
+                    "86.24",
+                    "92.33"
+                ],
+                "3-Hit DMG (%)": [
+                    "26.79×2",
+                    "28.97×2",
+                    "31.15×2",
+                    "34.27×2",
+                    "36.45×2",
+                    "38.94×2",
+                    "42.36×2",
+                    "45.79×2",
+                    "49.22×2",
+                    "52.95×2",
+                    "56.69×2"
+                ],
+                "4-Hit DMG (%)": [
+                    "67.36",
+                    "72.84",
+                    "78.32",
+                    "86.15",
+                    "91.63",
+                    "97.9",
+                    "106.52",
+                    "115.13",
+                    "123.75",
+                    "133.14",
+                    "142.54"
+                ],
+                "Charged Attack DMG (%)": [
+                    "112.75",
+                    "121.92",
+                    "131.1",
+                    "144.21",
+                    "153.39",
+                    "163.88",
+                    "178.3",
+                    "192.72",
+                    "207.14",
+                    "222.87",
+                    "238.6"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Talent_Blazing_Blessing.png",
@@ -39,7 +148,63 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Blazing_Blessing_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "146.4",
+                    "157.38",
+                    "168.36",
+                    "183",
+                    "193.98",
+                    "204.96",
+                    "219.6",
+                    "234.24",
+                    "248.88",
+                    "263.52",
+                    "278.16",
+                    "292.8",
+                    "311.1",
+                    "329"
+                ],
+                "Shield DMG Absorption": [
+                    "7.2% Max HP\n+\n693.3",
+                    "7.74% Max HP\n+\n762.6",
+                    "8.28% Max HP\n+\n837.7",
+                    "9% Max HP\n+\n918.7",
+                    "9.54% Max HP\n+\n1,005",
+                    "10.08% Max HP\n+\n1,097",
+                    "10.8% Max HP\n+\n1,196",
+                    "11.52% Max HP\n+\n1,300",
+                    "12.24% Max HP\n+\n1,409",
+                    "12.96% Max HP\n+\n1,525",
+                    "13.68% Max HP\n+\n1,646",
+                    "14.4% Max HP\n+\n1,773",
+                    "15.3% Max HP\n+\n1,906",
+                    "16.2% Max HP\n+\n2,046"
+                ],
+                "Shield Duration": [
+                    "8s"
+                ],
+                "Max Shield DMG Absorption": [
+                    "19.6% Max HP\n+\n1,887",
+                    "21.07% Max HP\n+\n2,076",
+                    "22.54% Max HP\n+\n2,280",
+                    "24.5% Max HP\n+\n2,500",
+                    "25.97% Max HP\n+\n2,736",
+                    "27.44% Max HP\n+\n2,988",
+                    "29.4% Max HP\n+\n3,255",
+                    "31.36% Max HP\n+\n3,539",
+                    "33.32% Max HP\n+\n3,838",
+                    "35.28% Max HP\n+\n4,152",
+                    "37.24% Max HP\n+\n4,482",
+                    "39.2% Max HP\n+\n4,829",
+                    "41.65% Max HP\n+\n5,190",
+                    "44.1% Max HP\n+\n5,568"
+                ],
+                "Skill CD": [
+                    "15s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Talent_Crimson_Ooyoroi.png",
@@ -55,7 +220,69 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Crimson_Ooyoroi_Scorching_Ooyoroi_Preview.gif",
                     "caption": "Fiery Collapse"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "88",
+                    "94.6",
+                    "101.2",
+                    "110",
+                    "116.6",
+                    "123.2",
+                    "132",
+                    "140.8",
+                    "149.6",
+                    "158.4",
+                    "167.2",
+                    "176",
+                    "187",
+                    "198"
+                ],
+                "Fiery Collapse DMG (%)": [
+                    "58",
+                    "62.35",
+                    "66.7",
+                    "72.5",
+                    "76.85",
+                    "81.2",
+                    "87",
+                    "92.8",
+                    "98.6",
+                    "104.4",
+                    "110.2",
+                    "116",
+                    "123.25",
+                    "131"
+                ],
+                "Shield DMG Absorption": [
+                    "1.14% Max HP\n+\n110",
+                    "1.23% Max HP\n+\n121",
+                    "1.32% Max HP\n+\n132.9",
+                    "1.43% Max HP\n+\n145.8",
+                    "1.52% Max HP\n+\n159.5",
+                    "1.6% Max HP\n+\n174.2",
+                    "1.72% Max HP\n+\n189.8",
+                    "1.83% Max HP\n+\n206.3",
+                    "1.94% Max HP\n+\n223.7",
+                    "2.06% Max HP\n+\n242",
+                    "2.17% Max HP\n+\n261.3",
+                    "2.29% Max HP\n+\n281.5",
+                    "2.43% Max HP\n+\n302.6",
+                    "2.6% Max HP\n+\n325"
+                ],
+                "Shield Duration": [
+                    "8s"
+                ],
+                "Scorching Ooyoroi Duration": [
+                    "15s"
+                ],
+                "Skill CD": [
+                    "20s"
+                ],
+                "Energy Cost": [
+                    "80"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_Imbricated_Armor.png",
@@ -71,7 +298,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Imbricated_Armor_2_Preview.gif",
                     "caption": "After 1st Ascension"
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Flaming_Assault.png",
@@ -83,7 +311,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Flaming_Assault_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Snap_and_Swing.png",
@@ -95,7 +324,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Snap_and_Swing_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         }
     ],
     "constellations": [

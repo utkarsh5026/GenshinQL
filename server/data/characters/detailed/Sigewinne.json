@@ -23,7 +23,126 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Targeted_Treatment_Charged_Preview.gif",
                     "caption": "Charged Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "52.61",
+                    "56.9",
+                    "61.18",
+                    "67.3",
+                    "71.58",
+                    "76.47",
+                    "83.2",
+                    "89.93",
+                    "96.66",
+                    "104",
+                    "111.35"
+                ],
+                "2-Hit DMG (%)": [
+                    "51.07",
+                    "55.23",
+                    "59.38",
+                    "65.32",
+                    "69.48",
+                    "74.23",
+                    "80.76",
+                    "87.3",
+                    "93.83",
+                    "100.95",
+                    "108.08"
+                ],
+                "3-Hit DMG (%)": [
+                    "78.29",
+                    "84.66",
+                    "91.04",
+                    "100.14",
+                    "106.51",
+                    "113.8",
+                    "123.81",
+                    "133.82",
+                    "143.84",
+                    "154.76",
+                    "165.69"
+                ],
+                "Aimed Shot (%)": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "92.82"
+                ],
+                "Fully-Charged Aimed Shot (%)": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "235.6"
+                ],
+                "Mini-Stration Bubble DMG (%)": [
+                    "24.8",
+                    "26.66",
+                    "28.52",
+                    "31",
+                    "32.86",
+                    "34.72",
+                    "37.2",
+                    "39.68",
+                    "42.16",
+                    "44.64",
+                    "47.12"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Talent_Rebound_Hydrotherapy.png",
@@ -35,7 +154,63 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Rebound_Hydrotherapy_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Bolstering Bubblebalm DMG": [
+                    "2.28% Max HP",
+                    "2.45% Max HP",
+                    "2.62% Max HP",
+                    "2.85% Max HP",
+                    "3.02% Max HP",
+                    "3.19% Max HP",
+                    "3.42% Max HP",
+                    "3.65% Max HP",
+                    "3.88% Max HP",
+                    "4.1% Max HP",
+                    "4.33% Max HP",
+                    "4.56% Max HP",
+                    "4.84% Max HP"
+                ],
+                "Bolstering Bubblebalm Healing": [
+                    "2.8% Max HP\n+\n270",
+                    "3.01% Max HP\n+\n297",
+                    "3.22% Max HP\n+\n326",
+                    "3.5% Max HP\n+\n357",
+                    "3.71% Max HP\n+\n391",
+                    "3.92% Max HP\n+\n427",
+                    "4.2% Max HP\n+\n465",
+                    "4.48% Max HP\n+\n506",
+                    "4.76% Max HP\n+\n548",
+                    "5.04% Max HP\n+\n593",
+                    "5.32% Max HP\n+\n640",
+                    "5.6% Max HP\n+\n690",
+                    "5.95% Max HP\n+\n742"
+                ],
+                "Final Bounce Healing": [
+                    "50% Max HP"
+                ],
+                "Surging Blade DMG": [
+                    "0.68% Max HP",
+                    "0.74% Max HP",
+                    "0.79% Max HP",
+                    "0.85% Max HP",
+                    "0.91% Max HP",
+                    "0.96% Max HP",
+                    "1.03% Max HP",
+                    "1.09% Max HP",
+                    "1.16% Max HP",
+                    "1.23% Max HP",
+                    "1.3% Max HP",
+                    "1.37% Max HP",
+                    "1.45% Max HP"
+                ],
+                "Surging Blade Interval": [
+                    "10s"
+                ],
+                "CD": [
+                    "18s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Talent_Super_Saturated_Syringing.png",
@@ -47,21 +222,49 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Super_Saturated_Syringing_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG": [
+                    "11.77% Max HP",
+                    "12.65% Max HP",
+                    "13.54% Max HP",
+                    "14.71% Max HP",
+                    "15.6% Max HP",
+                    "16.48% Max HP",
+                    "17.66% Max HP",
+                    "18.83% Max HP",
+                    "20.01% Max HP",
+                    "21.19% Max HP",
+                    "22.36% Max HP",
+                    "23.54% Max HP",
+                    "25.01% Max HP"
+                ],
+                "Duration": [
+                    "2.5s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Talent_Requires_Appropriate_Rest.png",
             "talentName": "Requires Appropriate Rest",
             "talentType": "1st Ascension Passive",
             "description": "Sigewinne grants herself the \"Semi-Strict Bedrest\" effect for 18s after using Rebound Hydrotherapy: Sigewinne gains an 8% Hydro DMG Bonus and 10 stacks of Convalescence. When the Elemental Skills of your nearby off-field party members other than Sigewinne deal DMG, consume 1 stack of Convalescence, and increase the DMG dealt by this instance of Elemental Skill DMG. Every 1,000 Max HP Sigewinne has above 30,000 increases the DMG by 80. The maximum DMG increase for Elemental Skills that can be gained in this way is 2,800.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Talent_Detailed_Diagnosis%2C_Thorough_Treatment.png",
             "talentName": "Detailed Diagnosis, Thorough Treatment",
             "talentType": "4th Ascension Passive",
             "description": "When Sigewinne performs healing, the amount healed for this instance is increased based on the total current value of the Bonds of Life on all party members: For each 1,000 HP worth of Bonds of Life, the outgoing healing is increased by 3%. The amount of healing provided can be increased by up to 30% in this way.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Talent_Emergency_Dose.png",
@@ -73,7 +276,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Emergency_Dose_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         }
     ],
     "constellations": [

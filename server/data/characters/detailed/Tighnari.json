@@ -31,7 +31,152 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Khanda_Barrier-Buster_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "44.63",
+                    "48.27",
+                    "51.9",
+                    "57.09",
+                    "60.72",
+                    "64.88",
+                    "70.58",
+                    "76.29",
+                    "82",
+                    "88.23",
+                    "94.46"
+                ],
+                "2-Hit DMG (%)": [
+                    "41.97",
+                    "45.38",
+                    "48.8",
+                    "53.68",
+                    "57.1",
+                    "61",
+                    "66.37",
+                    "71.74",
+                    "77.1",
+                    "82.96",
+                    "88.82"
+                ],
+                "3-Hit DMG (%)": [
+                    "26.45×2",
+                    "28.6×2",
+                    "30.75×2",
+                    "33.83×2",
+                    "35.98×2",
+                    "38.44×2",
+                    "41.82×2",
+                    "45.2×2",
+                    "48.59×2",
+                    "52.28×2",
+                    "55.96×2"
+                ],
+                "4-Hit DMG (%)": [
+                    "68.63",
+                    "74.21",
+                    "79.8",
+                    "87.78",
+                    "93.37",
+                    "99.75",
+                    "108.53",
+                    "117.31",
+                    "126.08",
+                    "135.66",
+                    "145.24"
+                ],
+                "Aimed Shot (%)": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "92.82"
+                ],
+                "Level 1 Aimed Shot (%)": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "235.6"
+                ],
+                "Wreath Arrow DMG (%)": [
+                    "87.2",
+                    "93.74",
+                    "100.28",
+                    "109",
+                    "115.54",
+                    "122.08",
+                    "130.8",
+                    "139.52",
+                    "148.24",
+                    "156.96",
+                    "165.68"
+                ],
+                "Clusterbloom Arrow DMG (%)": [
+                    "38.6",
+                    "41.49",
+                    "44.39",
+                    "48.25",
+                    "51.14",
+                    "54.04",
+                    "57.9",
+                    "61.76",
+                    "65.62",
+                    "69.48",
+                    "73.34"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Vijnana-Phala_Mine.png",
@@ -51,7 +196,33 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Vijnana-Phala_Mine_Vijnana_Suffusion_Charged_Preview.gif",
                     "caption": "Vijnana Suffusion, Charged Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "149.6",
+                    "160.82",
+                    "172.04",
+                    "187",
+                    "198.22",
+                    "209.44",
+                    "224.4",
+                    "239.36",
+                    "254.32",
+                    "269.28",
+                    "284.24",
+                    "299.2",
+                    "317.9"
+                ],
+                "Vijnana-Khanda Field Duration": [
+                    "8s"
+                ],
+                "Vijnana Suffusion Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "12s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Talent_Fashioner%27s_Tanglevine_Shaft.png",
@@ -63,28 +234,69 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Fashioner%27s_Tanglevine_Shaft_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Tanglevine Shaft DMG (%)": [
+                    "55.62",
+                    "59.79",
+                    "63.96",
+                    "69.53",
+                    "73.7",
+                    "77.87",
+                    "83.43",
+                    "88.99",
+                    "94.55",
+                    "100.12",
+                    "105.68",
+                    "111.24",
+                    "118.19"
+                ],
+                "Secondary Tanglevine Shaft DMG (%)": [
+                    "67.98",
+                    "73.08",
+                    "78.18",
+                    "84.97",
+                    "90.07",
+                    "95.17",
+                    "101.97",
+                    "108.77",
+                    "115.57",
+                    "122.36",
+                    "129.16",
+                    "135.96",
+                    "144.46"
+                ],
+                "CD": [
+                    "12s"
+                ],
+                "Energy Cost": [
+                    "40"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Talent_Keen_Sight.png",
             "talentName": "Keen Sight",
             "talentType": "1st Ascension Passive",
             "description": "After Tighnari fires a Wreath Arrow, his Elemental Mastery is increased by 50 for 4s.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Talent_Scholarly_Blade.png",
             "talentName": "Scholarly Blade",
             "talentType": "4th Ascension Passive",
             "description": "For every point of Elemental Mastery Tighnari possesses, his Charged Attack and Fashioner's Tanglevine Shaft DMG are increased by 0.06%.\nThe maximum DMG Bonus obtainable this way is 60%.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Talent_Encyclopedic_Knowledge.png",
             "talentName": "Encyclopedic Knowledge",
             "talentType": "Utility Passive",
             "description": "Displays the location of nearby resources unique to Sumeru on the mini-map.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

@@ -59,7 +59,191 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Invitation_to_a_Beheading_High_Speed_Movement_Preview.gif",
                     "caption": "High Speed Movement"
                 }
-            ]
+            ],
+            "scaling": {
+                "Masque of the Red Death Increase (%)": [
+                    "120.4",
+                    "130.2",
+                    "140",
+                    "154",
+                    "163.8",
+                    "175",
+                    "190.4",
+                    "205.8",
+                    "221.2",
+                    "238",
+                    "254.8",
+                    "271.6",
+                    "288.4",
+                    "305.2"
+                ],
+                "1-Hit DMG (%)": [
+                    "47.5",
+                    "51.37",
+                    "55.23",
+                    "60.76",
+                    "64.62",
+                    "69.04",
+                    "75.12",
+                    "81.19",
+                    "87.27",
+                    "93.9",
+                    "100.52",
+                    "107.15",
+                    "113.78",
+                    "120.41"
+                ],
+                "2-Hit DMG (%)": [
+                    "52.11",
+                    "56.35",
+                    "60.59",
+                    "66.65",
+                    "70.89",
+                    "75.73",
+                    "82.4",
+                    "89.06",
+                    "95.73",
+                    "103",
+                    "110.27",
+                    "117.54",
+                    "124.81",
+                    "132.08"
+                ],
+                "3-Hit DMG (%)": [
+                    "65.39",
+                    "70.71",
+                    "76.03",
+                    "83.63",
+                    "88.96",
+                    "95.04",
+                    "103.4",
+                    "111.76",
+                    "120.13",
+                    "129.25",
+                    "138.37",
+                    "147.5",
+                    "156.62",
+                    "165.75"
+                ],
+                "4-Hit DMG (%)": [
+                    "37.15\n+\n37.15",
+                    "40.17\n+\n40.17",
+                    "43.19\n+\n43.19",
+                    "47.51\n+\n47.51",
+                    "50.53\n+\n50.53",
+                    "53.99\n+\n53.99",
+                    "58.74\n+\n58.74",
+                    "63.49\n+\n63.49",
+                    "68.24\n+\n68.24",
+                    "73.43\n+\n73.43",
+                    "78.61\n+\n78.61",
+                    "83.79\n+\n83.79",
+                    "88.98\n+\n88.98",
+                    "94.16\n+\n94.16"
+                ],
+                "5-Hit DMG (%)": [
+                    "69.98",
+                    "75.68",
+                    "81.37",
+                    "89.51",
+                    "95.21",
+                    "101.72",
+                    "110.67",
+                    "119.62",
+                    "128.57",
+                    "138.34",
+                    "148.1",
+                    "157.87",
+                    "167.63",
+                    "177.4"
+                ],
+                "6-Hit DMG (%)": [
+                    "85.38",
+                    "92.33",
+                    "99.28",
+                    "109.2",
+                    "116.15",
+                    "124.1",
+                    "135.02",
+                    "145.94",
+                    "156.86",
+                    "168.77",
+                    "180.68",
+                    "192.6",
+                    "204.51",
+                    "216.42"
+                ],
+                "Charged Attack DMG (%)": [
+                    "90.82",
+                    "98.21",
+                    "105.6",
+                    "116.16",
+                    "123.55",
+                    "132",
+                    "143.62",
+                    "155.23",
+                    "166.85",
+                    "179.52",
+                    "192.19",
+                    "204.86",
+                    "217.54",
+                    "230.21"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "High-Speed Movement Stamina Cost": [
+                    "40/s"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3",
+                    "144.22",
+                    "153.14",
+                    "162.06"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54",
+                    "288.38",
+                    "306.22",
+                    "324.05"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92",
+                    "360.2",
+                    "382.48",
+                    "404.76"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Talent_All_Is_Ash.png",
@@ -75,7 +259,48 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/All_Is_Ash_2_Preview.gif",
                     "caption": "With Crimson Moon's Semblance"
                 }
-            ]
+            ],
+            "scaling": {
+                "Spike DMG (%)": [
+                    "14.84",
+                    "15.95",
+                    "17.07",
+                    "18.55",
+                    "19.66",
+                    "20.78",
+                    "22.26",
+                    "23.74",
+                    "25.23",
+                    "26.71"
+                ],
+                "Cleave DMG (%)": [
+                    "133.56",
+                    "143.58",
+                    "153.59",
+                    "166.95",
+                    "176.97",
+                    "186.98",
+                    "200.34",
+                    "213.7",
+                    "227.05",
+                    "240.41"
+                ],
+                "Blood-Debt Directive DMG (%)": [
+                    "31.8",
+                    "34.19",
+                    "36.57",
+                    "39.75",
+                    "42.13",
+                    "44.52",
+                    "47.7",
+                    "50.88",
+                    "54.06",
+                    "57.24"
+                ],
+                "CD": [
+                    "30s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Talent_Balemoon_Rising.png",
@@ -87,28 +312,57 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Balemoon_Rising_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "370.4",
+                    "398.18",
+                    "425.96",
+                    "463",
+                    "490.78",
+                    "518.56",
+                    "555.6",
+                    "592.64",
+                    "629.68",
+                    "666.72",
+                    "703.76",
+                    "740.8",
+                    "787.1"
+                ],
+                "Amount of HP Restored": [
+                    "150% Bond of Life\n+\n150% ATK"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Agony_Alone_May_Be_Repaid.png",
             "talentName": "Agony Alone May Be Repaid",
             "talentType": "1st Ascension Passive",
             "description": "Blood-Debt Directives have the following characteristics:\nArlecchino will be granted a Bond of Life worth 130% of her Max HP when an opponent to which she herself applied a Directive is defeated.\n5s after a Directive is applied, it will be upgraded to a Blood-Debt Due. When absorbed, it will instead grant Arlecchino a Bond of Life worth 130%.\nA Bond of Life created in the aforementioned ways cannot exceed the original limit on the value of Bonds of Life obtained through All Is Ash.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Talent_Strength_Alone_Can_Defend.png",
             "talentName": "Strength Alone Can Defend",
             "talentType": "4th Ascension Passive",
             "description": "Arlecchino gains 1% All Elemental and Physical RES for every 100 ATK she has in excess of 1,000. The maximum RES increase she can gain this way for each is 20%.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Talent_The_Balemoon_Alone_May_Know.png",
             "talentName": "The Balemoon Alone May Know",
             "talentType": "Utility Passive",
             "description": "While in combat, Arlecchino gains a 40% Pyro DMG Bonus and can only be healed through Balemoon Rising.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

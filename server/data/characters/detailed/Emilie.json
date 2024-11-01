@@ -27,7 +27,116 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Shadow-Hunting_Spear_%28Custom%29_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "48.56",
+                    "52.51",
+                    "56.47",
+                    "62.11",
+                    "66.07",
+                    "70.58",
+                    "76.79",
+                    "83",
+                    "89.22",
+                    "95.99",
+                    "102.77"
+                ],
+                "2-Hit DMG (%)": [
+                    "44.9",
+                    "48.55",
+                    "52.2",
+                    "57.42",
+                    "61.08",
+                    "65.25",
+                    "71",
+                    "76.74",
+                    "82.48",
+                    "88.75",
+                    "95.01"
+                ],
+                "3-Hit DMG (%)": [
+                    "59.3",
+                    "64.13",
+                    "68.95",
+                    "75.85",
+                    "80.68",
+                    "86.19",
+                    "93.78",
+                    "101.36",
+                    "108.95",
+                    "117.22",
+                    "125.5"
+                ],
+                "4-Hit DMG (%)": [
+                    "75.1",
+                    "81.22",
+                    "87.33",
+                    "96.06",
+                    "102.17",
+                    "109.16",
+                    "118.77",
+                    "128.37",
+                    "137.98",
+                    "148.46",
+                    "158.94"
+                ],
+                "Charged Attack DMG (%)": [
+                    "91.33",
+                    "98.77",
+                    "106.2",
+                    "116.82",
+                    "124.25",
+                    "132.75",
+                    "144.43",
+                    "156.11",
+                    "167.8",
+                    "180.54",
+                    "193.28"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Talent_Fragrance_Extraction.png",
@@ -39,7 +148,78 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Fragrance_Extraction_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "47.08",
+                    "50.61",
+                    "54.14",
+                    "58.85",
+                    "62.38",
+                    "65.91",
+                    "70.62",
+                    "75.33",
+                    "80.04",
+                    "84.74",
+                    "89.45",
+                    "94.16",
+                    "100.05"
+                ],
+                "Level 1 Lumidouce Case Attack DMG (%)": [
+                    "39.6",
+                    "42.57",
+                    "45.54",
+                    "49.5",
+                    "52.47",
+                    "55.44",
+                    "59.4",
+                    "63.36",
+                    "67.32",
+                    "71.28",
+                    "75.24",
+                    "79.2",
+                    "84.15"
+                ],
+                "Level 2 Lumidouce Case Attack DMG (%)": [
+                    "84 × 2",
+                    "90.3 × 2",
+                    "96.6 × 2",
+                    "105 × 2",
+                    "111.3 × 2",
+                    "117.6 × 2",
+                    "126 × 2",
+                    "134.4 × 2",
+                    "142.8 × 2",
+                    "151.2 × 2",
+                    "159.6 × 2",
+                    "168 × 2",
+                    "178.5 × 2"
+                ],
+                "Lumidouce Case Duration": [
+                    "22s"
+                ],
+                "Spiritbreath Thorn DMG (%)": [
+                    "38.52",
+                    "41.41",
+                    "44.3",
+                    "48.15",
+                    "51.04",
+                    "53.93",
+                    "57.78",
+                    "61.63",
+                    "65.48",
+                    "69.34",
+                    "73.19",
+                    "77.04",
+                    "81.86"
+                ],
+                "Spiritbreath Thorn Interval": [
+                    "10s"
+                ],
+                "Skill CD": [
+                    "14s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Aromatic_Explication.png",
@@ -51,28 +231,57 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Aromatic_Explication_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Level 3 Lumidouce Case Attack DMG (%)": [
+                    "217.2",
+                    "233.49",
+                    "249.78",
+                    "271.5",
+                    "287.79",
+                    "304.08",
+                    "325.8",
+                    "347.52",
+                    "369.24",
+                    "390.96",
+                    "412.68",
+                    "434.4",
+                    "461.55"
+                ],
+                "Level 3 Lumidouce Case Duration": [
+                    "2.8s"
+                ],
+                "CD": [
+                    "13.5s"
+                ],
+                "Energy Cost": [
+                    "50"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Lingering_Fragrance.png",
             "talentName": "Lingering Fragrance",
             "talentType": "1st Ascension Passive",
             "description": "Each time it collects 2 Scents, the Level 2 Lumidouce Case will consume Scents and release Cleardew Cologne that deals AoE Dendro DMG equal to 600% of Emilie's ATK to opponents. This DMG is not considered Elemental Skill DMG.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Talent_Rectification.png",
             "talentName": "Rectification",
             "talentType": "4th Ascension Passive",
             "description": "Emilie deals increased DMG to Burning opponents based on her ATK, with every 1,000 ATK increasing DMG dealt by 15%. The maximum DMG bonus that can be gained this way is 36%.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Talent_Headspace_Capture.png",
             "talentName": "Headspace Capture",
             "talentType": "Utility Passive",
             "description": "When the Lumidouce Case created by Emilie is on the field, all party members gain 85% Pyro RES against Burning DMG.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

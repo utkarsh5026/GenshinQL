@@ -51,7 +51,139 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Stealthy_Bowshot_N4_Recovery_Preview.gif",
                     "caption": "Normal Attack 4"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "40.68",
+                    "43.99",
+                    "47.3",
+                    "52.03",
+                    "55.34",
+                    "59.13",
+                    "64.33",
+                    "69.53",
+                    "74.73",
+                    "80.41",
+                    "86.09"
+                ],
+                "2-Hit DMG (%)": [
+                    "39.04",
+                    "42.22",
+                    "45.4",
+                    "49.94",
+                    "53.12",
+                    "56.75",
+                    "61.74",
+                    "66.74",
+                    "71.73",
+                    "77.18",
+                    "82.63"
+                ],
+                "3-Hit DMG (%)": [
+                    "51.6",
+                    "55.8",
+                    "60",
+                    "66",
+                    "70.2",
+                    "75",
+                    "81.6",
+                    "88.2",
+                    "94.8",
+                    "102",
+                    "109.2"
+                ],
+                "4-Hit DMG (%)": [
+                    "32.51\n+\n32.51",
+                    "35.15\n+\n35.15",
+                    "37.8\n+\n37.8",
+                    "41.58\n+\n41.58",
+                    "44.23\n+\n44.23",
+                    "47.25\n+\n47.25",
+                    "51.41\n+\n51.41",
+                    "55.57\n+\n55.57",
+                    "59.72\n+\n59.72",
+                    "64.26\n+\n64.26",
+                    "68.8\n+\n68.8"
+                ],
+                "Aimed Shot (%)": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "92.82"
+                ],
+                "Fully-Charged Aimed Shot (%)": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "235.6"
+                ],
+                "Breakthrough Barb DMG (% Max HP)": [
+                    "11.58",
+                    "12.44",
+                    "13.31",
+                    "14.47",
+                    "15.34",
+                    "16.21",
+                    "17.36",
+                    "18.52",
+                    "19.68",
+                    "20.84",
+                    "21.99"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Lingering_Lifeline.png",
@@ -71,7 +203,31 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Lingering_Lifeline_Breakthrough_Reset_Preview.gif",
                     "caption": "Breakthrough Reset"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (% Max HP)": [
+                    "22.61",
+                    "24.31",
+                    "26.01",
+                    "28.27",
+                    "29.96",
+                    "31.66",
+                    "33.92",
+                    "36.18",
+                    "38.44",
+                    "40.70",
+                    "42.97",
+                    "45.23",
+                    "48.05",
+                    "50.88"
+                ],
+                "Max Duration (Hold)": [
+                    "3s"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Talent_Depth-Clarion_Dice.png",
@@ -87,21 +243,66 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Depth-Clarion_Dice_Exquisite_Throw_Preview.gif",
                     "caption": "Exquisite Throw"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (% Max HP)": [
+                    "7.31",
+                    "7.86",
+                    "8.4",
+                    "9.13",
+                    "9.68",
+                    "10.23",
+                    "10.96",
+                    "11.69",
+                    "12.42",
+                    "13.15",
+                    "13.89",
+                    "14.62",
+                    "15.53",
+                    "16.44"
+                ],
+                "Exquisite Throw DMG (% Max HP)": [
+                    "4.87×3",
+                    "5.24×3",
+                    "5.6×3",
+                    "6.09×3",
+                    "6.46×3",
+                    "6.82×3",
+                    "7.31×3",
+                    "7.8×3",
+                    "8.28×3",
+                    "8.77×3",
+                    "9.26×3",
+                    "9.74×3",
+                    "10.35×3",
+                    "10.96×3"
+                ],
+                "Duration": [
+                    "15s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Talent_Turn_Control.png",
             "talentName": "Turn Control",
             "talentType": "1st Ascension Passive",
             "description": "When the party has 1/2/3/4 Elemental Types, Yelan's Max HP is increased by 6%/12%/18%/30%.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Talent_Adapt_With_Ease.png",
             "talentName": "Adapt With Ease",
             "talentType": "4th Ascension Passive",
             "description": "So long as an Exquisite Throw is in play, your own active character deals 1% more DMG. This increases by a further 3.5% DMG every second. The maximum increase to DMG dealt is 50%.\nThe pre-existing effect will be dispelled if Depth-Clarion Dice is recast during its duration.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Talent_Necessary_Calculation.png",
@@ -113,7 +314,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Necessary_Calculation_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         }
     ],
     "constellations": [

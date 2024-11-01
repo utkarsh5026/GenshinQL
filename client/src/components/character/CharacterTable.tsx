@@ -9,8 +9,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Avatar } from "@/components/ui/avatar";
 import { Character } from "@/graphql/types";
 import CharacterSheet from "./CharacterSheet";
+import { AvatarImage } from "@radix-ui/react-avatar";
 
 const CharactersTable: React.FC = () => {
   const { loading, error, data } = useQuery(GET_CHARACTERS);
@@ -54,10 +56,13 @@ const CharactersTable: React.FC = () => {
           <CharacterSheet character={character} key={character.name}>
             <TableRow>
               <TableCell>
-                <CharacterIcon
-                  iconUrl={character.iconUrl}
-                  name={character.name}
-                />
+                <Avatar className="bg-blue-500">
+                  <AvatarImage
+                    src={character.iconUrl}
+                    alt={character.name}
+                    loading="lazy"
+                  />
+                </Avatar>
               </TableCell>
               <TableCell className="text-left font-bold">
                 {character.name}
@@ -86,24 +91,6 @@ const CharactersTable: React.FC = () => {
         ))}
       </TableBody>
     </Table>
-  );
-};
-
-const CharacterIcon: React.FC<{ iconUrl: string; name: string }> = ({
-  iconUrl,
-  name,
-}) => {
-  return (
-    <img
-      loading="lazy"
-      src={iconUrl}
-      alt={name}
-      style={{ width: "50px", height: "50px" }}
-      onError={(e) => {
-        console.error(`Failed to load image: ${iconUrl}`);
-        e.currentTarget.style.display = "none";
-      }}
-    />
   );
 };
 

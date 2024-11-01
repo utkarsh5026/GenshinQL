@@ -27,7 +27,116 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Word_of_Wind_and_Flower_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "40.3",
+                    "43.33",
+                    "46.35",
+                    "50.38",
+                    "53.4",
+                    "56.42",
+                    "60.45",
+                    "64.48",
+                    "68.51",
+                    "72.54",
+                    "76.57"
+                ],
+                "2-Hit DMG (%)": [
+                    "38.86",
+                    "41.77",
+                    "44.68",
+                    "48.57",
+                    "51.48",
+                    "54.4",
+                    "58.28",
+                    "62.17",
+                    "66.05",
+                    "69.94",
+                    "73.82"
+                ],
+                "3-Hit DMG (%)": [
+                    "48.88",
+                    "52.54",
+                    "56.21",
+                    "61.1",
+                    "64.76",
+                    "68.43",
+                    "73.32",
+                    "78.2",
+                    "83.09",
+                    "87.98",
+                    "92.87"
+                ],
+                "4-Hit DMG (%)": [
+                    "64.92",
+                    "69.79",
+                    "74.65",
+                    "81.15",
+                    "86.01",
+                    "90.88",
+                    "97.38",
+                    "103.87",
+                    "110.36",
+                    "116.85",
+                    "123.34"
+                ],
+                "Charged Attack DMG (%)": [
+                    "123.12",
+                    "132.35",
+                    "141.59",
+                    "153.9",
+                    "163.13",
+                    "172.37",
+                    "184.68",
+                    "196.99",
+                    "209.3",
+                    "221.62",
+                    "233.93"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "50"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.16",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Talent_White_Clouds_at_Dawn.png",
@@ -59,7 +168,42 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/White_Clouds_at_Dawn_Lock_On_Preview.gif",
                     "caption": "Driftcloud Wave Lock On Effect"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "24.8",
+                    "26.66",
+                    "28.52",
+                    "31",
+                    "32.86",
+                    "34.72",
+                    "37.2",
+                    "39.68",
+                    "42.16",
+                    "44.64",
+                    "47.12",
+                    "49.6",
+                    "52.7"
+                ],
+                "Driftcloud Wave DMG (%)": [
+                    "116/148/337.6",
+                    "124.7/159.1/362.92",
+                    "133.4/170.2/388.24",
+                    "145/185/422",
+                    "153.7/196.1/447.32",
+                    "162.4/207.2/472.64",
+                    "174/222/506.4",
+                    "185.6/236.8/540.16",
+                    "197.2/251.6/573.92",
+                    "208.8/266.4/607.68",
+                    "220.4/281.2/641.44",
+                    "232/296/675.2",
+                    "246.5/314.5/717.4"
+                ],
+                "CD": [
+                    "12s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Stars_Gather_at_Dusk.png",
@@ -75,28 +219,102 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Stars_Gather_at_Dusk_Starwicker_Preview.gif",
                     "caption": "Starwicker"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "108",
+                    "116.1",
+                    "124.2",
+                    "135",
+                    "143.1",
+                    "151.2",
+                    "162",
+                    "172.8",
+                    "183.6",
+                    "194.4",
+                    "205.2",
+                    "216",
+                    "229.5"
+                ],
+                "Starwicker DMG (%)": [
+                    "39.2",
+                    "42.14",
+                    "45.08",
+                    "49",
+                    "51.94",
+                    "54.88",
+                    "58.8",
+                    "62.72",
+                    "66.64",
+                    "70.56",
+                    "74.48",
+                    "78.4",
+                    "83.3"
+                ],
+                "Healing": [
+                    "92.16% ATK\n+\n578",
+                    "99.07% ATK\n+\n636",
+                    "105.98% ATK\n+\n698",
+                    "115.2% ATK\n+\n766",
+                    "122.11% ATK\n+\n838",
+                    "129.02% ATK\n+\n915",
+                    "138.24% ATK\n+\n997",
+                    "147.46% ATK\n+\n1083",
+                    "156.67% ATK\n+\n1175",
+                    "165.89% ATK\n+\n1271",
+                    "175.1% ATK\n+\n1372",
+                    "184.32% ATK\n+\n1478",
+                    "195.84% ATK\n+\n1589"
+                ],
+                "Continuous Healing": [
+                    "43.01% ATK\n+\n270",
+                    "46.23% ATK\n+\n297",
+                    "49.46% ATK\n+\n326",
+                    "53.76% ATK\n+\n357",
+                    "56.99% ATK\n+\n391",
+                    "60.21% ATK\n+\n427",
+                    "64.51% ATK\n+\n465",
+                    "68.81% ATK\n+\n506",
+                    "73.11% ATK\n+\n548",
+                    "77.41% ATK\n+\n593",
+                    "81.72% ATK\n+\n640",
+                    "86.02% ATK\n+\n690",
+                    "91.39% ATK\n+\n742"
+                ],
+                "Duration": [
+                    "16s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Talent_Galefeather_Pursuit.png",
             "talentName": "Galefeather Pursuit",
             "talentType": "1st Ascension Passive",
             "description": "Each opponent hit by Driftcloud Waves from White Clouds at Dawn will grant all nearby party members 1 stack of Storm Pinion for 20s. Max 4 stacks. These will cause the characters' Plunging Attack CRIT Rate to increase by 4%/6%/8%/10% respectively.\nEach Storm Pinion created by hitting an opponent has an independent duration.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Consider%2C_the_Adeptus_in_Her_Realm.png",
             "talentName": "Consider, the Adeptus in Her Realm",
             "talentType": "4th Ascension Passive",
             "description": "When the Starwicker created by Stars Gather at Dusk has Adeptal Assistance stacks, nearby active characters' Plunging Attack shockwave DMG will be increased by 200% of Xianyun's ATK. The maximum DMG increase that can be achieved this way is 9,000.\nEach Plunging Attack shockwave DMG instance can only apply this increased DMG effect to a single opponent. Each character can trigger this effect once every 0.4s.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Talent_Crane_Form.png",
             "talentName": "Crane Form",
             "talentType": "Utility Passive",
             "description": "Increases gliding SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

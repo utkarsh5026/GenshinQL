@@ -51,7 +51,129 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Kamisato_Art_Kabuki_C_Recovery_Preview.gif",
                     "caption": "Charged Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "45.73",
+                    "49.45",
+                    "53.17",
+                    "58.49",
+                    "62.21",
+                    "66.46",
+                    "72.31",
+                    "78.16",
+                    "84.01",
+                    "90.39",
+                    "96.77"
+                ],
+                "2-Hit DMG (%)": [
+                    "48.68",
+                    "52.65",
+                    "56.61",
+                    "62.27",
+                    "66.23",
+                    "70.76",
+                    "76.99",
+                    "83.22",
+                    "89.44",
+                    "96.24",
+                    "103.03"
+                ],
+                "3-Hit DMG (%)": [
+                    "62.62",
+                    "67.72",
+                    "72.82",
+                    "80.1",
+                    "85.19",
+                    "91.02",
+                    "99.03",
+                    "107.04",
+                    "115.05",
+                    "123.79",
+                    "132.53"
+                ],
+                "4-Hit DMG (%)": [
+                    "22.65×3",
+                    "24.49×3",
+                    "26.33×3",
+                    "28.97×3",
+                    "30.81×3",
+                    "32.92×3",
+                    "35.81×3",
+                    "38.71×3",
+                    "41.61×3",
+                    "44.77×3",
+                    "47.93×3"
+                ],
+                "5-Hit DMG (%)": [
+                    "78.18",
+                    "84.55",
+                    "90.91",
+                    "100",
+                    "106.36",
+                    "113.64",
+                    "123.64",
+                    "133.64",
+                    "143.64",
+                    "154.55",
+                    "165.45"
+                ],
+                "Charged Attack DMG (%)": [
+                    "55.13×3",
+                    "59.61×3",
+                    "64.1×3",
+                    "70.51×3",
+                    "75×3",
+                    "80.13×3",
+                    "87.18×3",
+                    "94.23×3",
+                    "101.28×3",
+                    "108.97×3",
+                    "116.66×3"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "20"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Talent_Kamisato_Art_Hyouka.png",
@@ -63,7 +185,28 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Kamisato_Art_Hyouka_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "239.2",
+                    "257.14",
+                    "275.08",
+                    "299",
+                    "316.94",
+                    "334.88",
+                    "358.8",
+                    "382.72",
+                    "406.64",
+                    "430.56",
+                    "454.48",
+                    "478.4",
+                    "508.3",
+                    "538"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Talent_Kamisato_Art_Soumetsu.png",
@@ -75,7 +218,50 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Kamisato_Art_Soumetsu_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Cutting DMG (%)": [
+                    "112.3",
+                    "120.72",
+                    "129.15",
+                    "140.38",
+                    "148.8",
+                    "157.22",
+                    "168.45",
+                    "179.68",
+                    "190.91",
+                    "202.14",
+                    "213.37",
+                    "224.6",
+                    "238.64",
+                    "253"
+                ],
+                "Bloom DMG (%)": [
+                    "168.45",
+                    "181.08",
+                    "193.72",
+                    "210.56",
+                    "223.2",
+                    "235.83",
+                    "252.67",
+                    "269.52",
+                    "286.37",
+                    "303.21",
+                    "320.05",
+                    "336.9",
+                    "357.96",
+                    "379"
+                ],
+                "Duration": [
+                    "5s"
+                ],
+                "CD": [
+                    "20s"
+                ],
+                "Energy Cost": [
+                    "80"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Talent_Kamisato_Art_Senho.png",
@@ -99,7 +285,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Kamisato_Art_Senho_Plunge_Infusion_Preview.gif",
                     "caption": "Plunging Attack infused with Cryo"
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Talent_Amatsumi_Kunitsumi_Sanctification.png",
@@ -111,7 +298,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Amatsumi_Kunitsumi_Sanctification_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Talent_Kanten_Senmyou_Blessing.png",
@@ -123,7 +311,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Kanten_Senmyou_Blessing_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Talent_Fruits_of_Shinsa.png",
@@ -135,7 +324,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Fruits_of_Shinsa_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         }
     ],
     "constellations": [

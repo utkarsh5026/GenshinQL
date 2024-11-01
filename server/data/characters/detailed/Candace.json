@@ -27,7 +27,116 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Gleaming_Spear_Guardian_Stance_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "60.8",
+                    "65.75",
+                    "70.7",
+                    "77.77",
+                    "82.72",
+                    "88.38",
+                    "96.15",
+                    "103.93",
+                    "111.71",
+                    "120.19",
+                    "128.67"
+                ],
+                "2-Hit DMG (%)": [
+                    "61.15",
+                    "66.12",
+                    "71.1",
+                    "78.21",
+                    "83.19",
+                    "88.88",
+                    "96.7",
+                    "104.52",
+                    "112.34",
+                    "120.87",
+                    "129.4"
+                ],
+                "3-Hit DMG (%)": [
+                    "35.49\n+\n43.37",
+                    "38.38\n+\n46.9",
+                    "41.27\n+\n50.43",
+                    "45.39\n+\n55.48",
+                    "48.28\n+\n59.01",
+                    "51.58\n+\n63.04",
+                    "56.12\n+\n68.59",
+                    "60.66\n+\n74.14",
+                    "65.2\n+\n79.69",
+                    "70.15\n+\n85.74",
+                    "75.1\n+\n91.79"
+                ],
+                "4-Hit DMG (%)": [
+                    "94.94",
+                    "102.67",
+                    "110.4",
+                    "121.44",
+                    "129.17",
+                    "138",
+                    "150.14",
+                    "162.29",
+                    "174.43",
+                    "187.68",
+                    "200.93"
+                ],
+                "Charged Attack DMG": [
+                    "124.18",
+                    "134.29",
+                    "144.4",
+                    "158.84",
+                    "168.95",
+                    "180.5",
+                    "196.38",
+                    "212.27",
+                    "228.15",
+                    "245.48",
+                    "262.81"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Sacred_Rite_Heron%27s_Sanctum.png",
@@ -43,7 +152,60 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Sacred_Rite_Heron%27s_Sanctum_Hold_Preview.gif",
                     "caption": "Hold"
                 }
-            ]
+            ],
+            "scaling": {
+                "Shield DMG Absorption (% Max HP)": [
+                    "12%\n+\n1,155",
+                    "12.9%\n+\n1,271",
+                    "13.8%\n+\n1,396",
+                    "15%\n+\n1,531",
+                    "15.9%\n+\n1,675",
+                    "16.8%\n+\n1,829",
+                    "18%\n+\n1,993",
+                    "19.2%\n+\n2,166",
+                    "20.4%\n+\n2,349",
+                    "21.6%\n+\n2,542",
+                    "22.8%\n+\n2,744",
+                    "24%\n+\n2,956",
+                    "25.5%\n+\n3,178"
+                ],
+                "Basic DMG (% Max HP)": [
+                    "12",
+                    "12.9",
+                    "13.8",
+                    "15",
+                    "15.9",
+                    "16.8",
+                    "18",
+                    "19.2",
+                    "20.4",
+                    "21.6",
+                    "22.8",
+                    "24",
+                    "25.5"
+                ],
+                "Charged Up DMG (% Max HP)": [
+                    "19.04",
+                    "20.47",
+                    "21.9",
+                    "23.8",
+                    "25.23",
+                    "26.66",
+                    "28.56",
+                    "30.46",
+                    "32.37",
+                    "34.27",
+                    "36.18",
+                    "38.08",
+                    "40.46"
+                ],
+                "Press CD": [
+                    "6s"
+                ],
+                "Holding CD": [
+                    "9s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Talent_Sacred_Rite_Wagtail%27s_Tide.png",
@@ -55,7 +217,54 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Sacred_Rite_Wagtail%27s_Tide_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (% Max HP)": [
+                    "6.61",
+                    "7.11",
+                    "7.6",
+                    "8.26",
+                    "8.76",
+                    "9.25",
+                    "9.92",
+                    "10.58",
+                    "11.24",
+                    "11.9",
+                    "12.56",
+                    "13.22",
+                    "14.05"
+                ],
+                "Duration": [
+                    "9s"
+                ],
+                "DMG Bonus": [
+                    "20%"
+                ],
+                "Wave Impact DMG (% Max HP)": [
+                    "6.61",
+                    "7.11",
+                    "7.6",
+                    "8.26",
+                    "8.76",
+                    "9.25",
+                    "9.92",
+                    "10.58",
+                    "11.24",
+                    "11.9",
+                    "12.56",
+                    "13.22",
+                    "14.05"
+                ],
+                "Wave Instances": [
+                    "3"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Aegis_of_Crossed_Arrows.png",
@@ -67,21 +276,24 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Aegis_of_Crossed_Arrows_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Talent_Celestial_Dome_of_Sand.png",
             "talentName": "Celestial Dome of Sand",
             "talentType": "4th Ascension Passive",
             "description": "Characters affected by the Prayer of the Crimson Crown caused by Sacred Rite: Wagtail's Tide will deal 0.5% increased DMG to opponents for every 1,000 points of Candace's Max HP when they deal Elemental DMG with their Normal Attacks.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Talent_To_Dawn%27s_First_Light.png",
             "talentName": "To Dawn's First Light",
             "talentType": "Utility Passive",
             "description": "Decreases climbing Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

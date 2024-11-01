@@ -7,6 +7,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Character } from "@/graphql/types";
+import { GET_CHARACTER } from "@/graphql/queries";
+import { useLazyQuery } from "@apollo/client";
 
 interface CharacterSheetProps {
   character: Character;
@@ -17,18 +19,23 @@ const CharacterSheet: React.FC<CharacterSheetProps> = ({
   character,
   children,
 }) => {
+  const [fetchCharacter, { loading, data }] = useLazyQuery(GET_CHARACTER);
+
+  const handleSheetOpen = (open: boolean) => {
+    if (open) {
+      fetchCharacter({ variables: { name: character.name } });
+    }
+  };
+
   return (
-    <Sheet>
+    <Sheet onOpenChange={handleSheetOpen}>
       <SheetTrigger asChild>{children}</SheetTrigger>
       <SheetContent>
         <SheetHeader>
           <SheetTitle>{character.name}</SheetTitle>
         </SheetHeader>
         <div className="mt-4">
-          <p>Element: {character.element}</p>
-          <p>Rarity: {character.rarity}</p>
-          <p>Weapon Type: {character.weaponType}</p>
-          <p>Region: {character.region}</p>
+          {loading ? <p>Loading...</p> : <p>Element: {data?.element}</p>}
         </div>
       </SheetContent>
     </Sheet>

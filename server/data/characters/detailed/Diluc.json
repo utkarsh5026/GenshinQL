@@ -27,7 +27,132 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Tempered_Sword_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "89.7",
+                    "97",
+                    "104.3",
+                    "114.73",
+                    "122.03",
+                    "130.38",
+                    "141.85",
+                    "153.32",
+                    "164.79",
+                    "177.31",
+                    "191.65"
+                ],
+                "2-Hit DMG (%)": [
+                    "87.63",
+                    "94.77",
+                    "101.9",
+                    "112.09",
+                    "119.22",
+                    "127.38",
+                    "138.58",
+                    "149.79",
+                    "161",
+                    "173.23",
+                    "187.24"
+                ],
+                "3-Hit DMG (%)": [
+                    "98.81",
+                    "106.86",
+                    "114.9",
+                    "126.39",
+                    "134.43",
+                    "143.63",
+                    "156.26",
+                    "168.9",
+                    "181.54",
+                    "195.33",
+                    "211.13"
+                ],
+                "4-Hit DMG (%)": [
+                    "133.99",
+                    "144.89",
+                    "155.8",
+                    "171.38",
+                    "182.29",
+                    "194.75",
+                    "211.89",
+                    "229.03",
+                    "246.16",
+                    "264.86",
+                    "286.28"
+                ],
+                "Charged Attack Cyclic DMG (%)": [
+                    "68.8",
+                    "74.4",
+                    "80",
+                    "88",
+                    "93.6",
+                    "100",
+                    "108.8",
+                    "117.6",
+                    "126.4",
+                    "136",
+                    "147"
+                ],
+                "Charged Attack Final DMG (%)": [
+                    "124.7",
+                    "134.85",
+                    "145",
+                    "159.5",
+                    "169.65",
+                    "181.25",
+                    "197.2",
+                    "213.15",
+                    "229.1",
+                    "246.5",
+                    "266.44"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG (%)": [
+                    "89.51",
+                    "96.79",
+                    "104.08",
+                    "114.48",
+                    "121.77",
+                    "130.09",
+                    "141.54",
+                    "152.99",
+                    "164.44",
+                    "176.93",
+                    "189.42"
+                ],
+                "Low Plunge DMG (%)": [
+                    "178.97",
+                    "193.54",
+                    "208.11",
+                    "228.92",
+                    "243.49",
+                    "260.13",
+                    "283.03",
+                    "305.92",
+                    "328.81",
+                    "353.78",
+                    "378.76"
+                ],
+                "High Plunge DMG (%)": [
+                    "223.55",
+                    "241.74",
+                    "259.94",
+                    "285.93",
+                    "304.13",
+                    "324.92",
+                    "353.52",
+                    "382.11",
+                    "410.7",
+                    "441.89",
+                    "473.09"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Talent_Searing_Onslaught.png",
@@ -43,7 +168,60 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Searing_Onslaught_Preview_Red_Dead_of_Night.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "94.40",
+                    "101.48",
+                    "108.56",
+                    "118.00",
+                    "125.08",
+                    "132.16",
+                    "141.60",
+                    "151.04",
+                    "160.48",
+                    "169.92",
+                    "179.36",
+                    "188.80",
+                    "200.60",
+                    "212.40"
+                ],
+                "2-Hit DMG (%)": [
+                    "97.60",
+                    "104.92",
+                    "112.24",
+                    "122.00",
+                    "129.32",
+                    "136.64",
+                    "146.40",
+                    "156.16",
+                    "165.92",
+                    "175.68",
+                    "185.44",
+                    "195.20",
+                    "207.40",
+                    "219.60"
+                ],
+                "3-Hit DMG (%)": [
+                    "128.80",
+                    "138.46",
+                    "148.12",
+                    "161.00",
+                    "170.66",
+                    "180.32",
+                    "193.20",
+                    "206.08",
+                    "218.96",
+                    "231.84",
+                    "244.72",
+                    "257.60",
+                    "273.70",
+                    "289.80"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Talent_Dawn.png",
@@ -59,28 +237,90 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Dawn_Preview_Red_Dead_of_Night.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Slashing DMG (%)": [
+                    "204",
+                    "219.3",
+                    "234.6",
+                    "255",
+                    "270.3",
+                    "285.6",
+                    "306",
+                    "326.4",
+                    "346.8",
+                    "367.2",
+                    "387.6",
+                    "408",
+                    "433.5",
+                    "459"
+                ],
+                "DoT (%)": [
+                    "60",
+                    "64.5",
+                    "69",
+                    "75",
+                    "79.5",
+                    "84",
+                    "90",
+                    "96",
+                    "102",
+                    "108",
+                    "114",
+                    "120",
+                    "127.5",
+                    "135"
+                ],
+                "Explosion DMG (%)": [
+                    "204",
+                    "219.3",
+                    "234.6",
+                    "255",
+                    "270.3",
+                    "285.6",
+                    "306",
+                    "326.4",
+                    "346.8",
+                    "367.2",
+                    "387.6",
+                    "408",
+                    "433.5",
+                    "459"
+                ],
+                "CD": [
+                    "12s"
+                ],
+                "Infusion Duration": [
+                    "8s"
+                ],
+                "Energy Cost": [
+                    "40"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Talent_Relentless.png",
             "talentName": "Relentless",
             "talentType": "1st Ascension Passive",
             "description": "Diluc's Charged Attack Stamina Cost is decreased by 50%, and its duration is increased by 3s.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Talent_Blessing_of_Phoenix.png",
             "talentName": "Blessing of Phoenix",
             "talentType": "4th Ascension Passive",
             "description": "The Pyro Infusion provided by Dawn lasts for 4s longer. Additionally, Diluc gains 20% Pyro DMG Bonus during the duration of this effect.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Tradition_of_the_Dawn_Knight.png",
             "talentName": "Tradition of the Dawn Knight",
             "talentType": "Utility Passive",
             "description": "Refunds 15% of the ore used when crafting Claymore-type weapons.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

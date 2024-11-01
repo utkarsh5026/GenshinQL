@@ -47,7 +47,139 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Tengu_Bowmanship_N5_Recovery_Preview.gif",
                     "caption": "Normal Attack 5"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "36.89",
+                    "39.9",
+                    "42.9",
+                    "47.19",
+                    "50.19",
+                    "53.63",
+                    "58.34",
+                    "63.06",
+                    "67.78",
+                    "72.93",
+                    "78.08"
+                ],
+                "2-Hit DMG (%)": [
+                    "38.7",
+                    "41.85",
+                    "45",
+                    "49.5",
+                    "52.65",
+                    "56.25",
+                    "61.2",
+                    "66.15",
+                    "71.1",
+                    "76.5",
+                    "81.9"
+                ],
+                "3-Hit DMG (%)": [
+                    "48.5",
+                    "52.45",
+                    "56.4",
+                    "62.04",
+                    "65.99",
+                    "70.5",
+                    "76.7",
+                    "82.91",
+                    "89.11",
+                    "95.88",
+                    "102.65"
+                ],
+                "4-Hit DMG (%)": [
+                    "50.4",
+                    "54.5",
+                    "58.6",
+                    "64.46",
+                    "68.56",
+                    "73.25",
+                    "79.7",
+                    "86.14",
+                    "92.59",
+                    "99.62",
+                    "106.65"
+                ],
+                "5-Hit DMG (%)": [
+                    "58.05",
+                    "62.78",
+                    "67.5",
+                    "74.25",
+                    "78.97",
+                    "84.38",
+                    "91.8",
+                    "99.22",
+                    "106.65",
+                    "114.75",
+                    "122.85"
+                ],
+                "Aimed Shot (%)": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "92.82"
+                ],
+                "Fully-Charged Aimed Shot (%)": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "235.6"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Talent_Tengu_Stormcall.png",
@@ -63,7 +195,50 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Tengu_Stormcall_Crowfeather_Cover_Preview.gif",
                     "caption": "Crowfeather Cover to Tengu Juurai: Ambush"
                 }
-            ]
+            ],
+            "scaling": {
+                "Tengu Juurai: Ambush DMG (%)": [
+                    "125.8",
+                    "135.2",
+                    "144.6",
+                    "157.2",
+                    "166.6",
+                    "176.1",
+                    "188.6",
+                    "201.2",
+                    "213.7",
+                    "226.3",
+                    "238.9",
+                    "251.5",
+                    "267.2",
+                    "283.0"
+                ],
+                "ATK Bonus Ratio (%)": [
+                    "43",
+                    "46",
+                    "49",
+                    "54",
+                    "57",
+                    "60",
+                    "64.4",
+                    "69",
+                    "73.0",
+                    "77.3",
+                    "81.6",
+                    "85.9",
+                    "91.2",
+                    "97"
+                ],
+                "ATK Bonus Duration": [
+                    "6s"
+                ],
+                "Duration": [
+                    "18s"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Subjugation_Koukou_Sendou.png",
@@ -75,7 +250,47 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Subjugation_Koukou_Sendou_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Tengu Juurai: Titanbreaker DMG (%)": [
+                    "409.6",
+                    "440.3",
+                    "471.0",
+                    "512",
+                    "542.7",
+                    "573.4",
+                    "614.4",
+                    "655.4",
+                    "696.3",
+                    "737.2",
+                    "778.2",
+                    "819.2",
+                    "870.4",
+                    "921.6"
+                ],
+                "Tengu Juurai: Stormcluster DMG (%)": [
+                    "34.1",
+                    "36.7",
+                    "39.2",
+                    "42.7",
+                    "45.2",
+                    "47.8",
+                    "51.1",
+                    "54.6",
+                    "58.0",
+                    "61.4",
+                    "64.8",
+                    "68.2",
+                    "72.5",
+                    "76.8"
+                ],
+                "CD": [
+                    "20s"
+                ],
+                "Energy Cost": [
+                    "80"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Talent_Immovable_Will.png",
@@ -87,14 +302,16 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Immovable_Will_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Talent_Decorum.png",
             "talentName": "Decorum",
             "talentType": "4th Ascension Passive",
             "description": "When Tengu Juurai: Ambush hits opponents, Kujou Sara will restore 1.2 Energy to all party members for every 100% Energy Recharge she has. This effect can be triggered once every 3s.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Land_Survey.png",
@@ -106,7 +323,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Land_Survey_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         }
     ],
     "constellations": [

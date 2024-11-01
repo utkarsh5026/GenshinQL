@@ -39,7 +39,145 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Fight_Club_Legend_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "79.23",
+                    "85.68",
+                    "92.13",
+                    "101.34",
+                    "107.79",
+                    "115.16",
+                    "125.3",
+                    "135.43",
+                    "145.57",
+                    "156.62",
+                    "169.29"
+                ],
+                "2-Hit DMG (%)": [
+                    "76.37",
+                    "82.58",
+                    "88.8",
+                    "97.68",
+                    "103.9",
+                    "111",
+                    "120.77",
+                    "130.54",
+                    "140.3",
+                    "150.96",
+                    "163.17"
+                ],
+                "3-Hit DMG (%)": [
+                    "91.64",
+                    "99.1",
+                    "106.56",
+                    "117.22",
+                    "124.68",
+                    "133.2",
+                    "144.92",
+                    "156.64",
+                    "168.36",
+                    "181.15",
+                    "195.8"
+                ],
+                "4-Hit DMG (%)": [
+                    "117.22",
+                    "126.77",
+                    "136.31",
+                    "149.94",
+                    "159.48",
+                    "170.39",
+                    "185.38",
+                    "200.37",
+                    "215.37",
+                    "231.72",
+                    "250.47"
+                ],
+                "Arataki Kesagiri Combo Slash DMG (%)": [
+                    "91.16",
+                    "98.58",
+                    "106",
+                    "116.6",
+                    "124.02",
+                    "132.5",
+                    "144.16",
+                    "155.82",
+                    "167.48",
+                    "180.2",
+                    "194.78"
+                ],
+                "Arataki Kesagiri Final Slash DMG (%)": [
+                    "190.92",
+                    "206.46",
+                    "222",
+                    "244.2",
+                    "259.74",
+                    "277.5",
+                    "301.92",
+                    "326.34",
+                    "350.76",
+                    "377.4",
+                    "407.93"
+                ],
+                "Superlative Superstrength Duration": [
+                    "60s"
+                ],
+                "Saichimonji Slash DMG (%)": [
+                    "90.47",
+                    "97.84",
+                    "105.2",
+                    "115.72",
+                    "123.08",
+                    "131.5",
+                    "143.07",
+                    "154.64",
+                    "166.22",
+                    "178.84",
+                    "193.31"
+                ],
+                "Saichimonji Slash Stamina Cost": [
+                    "20"
+                ],
+                "Plunge DMG (%)": [
+                    "81.83",
+                    "88.49",
+                    "95.16",
+                    "104.67",
+                    "111.33",
+                    "118.94",
+                    "129.41",
+                    "139.88",
+                    "150.35",
+                    "161.76",
+                    "173.18"
+                ],
+                "Low Plunge DMG (%)": [
+                    "163.63",
+                    "176.95",
+                    "190.27",
+                    "209.3",
+                    "222.62",
+                    "237.84",
+                    "258.77",
+                    "279.7",
+                    "300.63",
+                    "323.46",
+                    "346.29"
+                ],
+                "High Plunge DMG (%)": [
+                    "204.39",
+                    "221.02",
+                    "237.66",
+                    "261.42",
+                    "278.06",
+                    "297.07",
+                    "323.21",
+                    "349.36",
+                    "375.5",
+                    "404.02",
+                    "432.54"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Masatsu_Zetsugi_Akaushi_Burst%21.png",
@@ -55,7 +193,34 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Masatsu_Zetsugi_Akaushi_Burst%21_Hold_Preview.gif",
                     "caption": "Hold"
                 }
-            ]
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "307.2",
+                    "330.24",
+                    "353.28",
+                    "384",
+                    "407.04",
+                    "430.08",
+                    "460.8",
+                    "491.52",
+                    "522.24",
+                    "552.96",
+                    "583.68",
+                    "614.4",
+                    "652.8",
+                    "691"
+                ],
+                "Inherited HP": [
+                    "100% Max HP"
+                ],
+                "Duration": [
+                    "6s"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Talent_Royal_Descent_Behold%2C_Itto_the_Evil%21.png",
@@ -67,7 +232,37 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Royal_Descent_Behold%2C_Itto_the_Evil%21_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "ATK Bonus (% DEF)": [
+                    "57.6",
+                    "61.92",
+                    "66.24",
+                    "72",
+                    "76.32",
+                    "80.64",
+                    "86.4",
+                    "92.16",
+                    "97.92",
+                    "103.68",
+                    "109.44",
+                    "115.2",
+                    "122.4",
+                    "129.6"
+                ],
+                "ATK SPD Bonus": [
+                    "10%"
+                ],
+                "Duration": [
+                    "11s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Talent_Arataki_Ichiban.png",
@@ -79,14 +274,16 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Arataki_Ichiban_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Talent_Bloodline_of_the_Crimson_Oni.png",
             "talentName": "Bloodline of the Crimson Oni",
             "talentType": "4th Ascension Passive",
             "description": "Arataki Kesagiri DMG is increased by 35% of Arataki Itto's DEF.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Woodchuck_Chucked.png",
@@ -98,7 +295,8 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Woodchuck_Chucked_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {}
         }
     ],
     "constellations": [

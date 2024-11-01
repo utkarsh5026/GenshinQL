@@ -27,7 +27,132 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Stellar_Rend_Plunging_Preview.gif",
                     "caption": "Plunging Attack"
                 }
-            ]
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "83.86",
+                    "90.68",
+                    "97.51",
+                    "107.26",
+                    "114.08",
+                    "121.88",
+                    "132.61",
+                    "143.34",
+                    "154.06",
+                    "165.76",
+                    "177.46"
+                ],
+                "2-Hit DMG (%)": [
+                    "79.04",
+                    "85.48",
+                    "91.91",
+                    "101.1",
+                    "107.54",
+                    "114.89",
+                    "125",
+                    "135.11",
+                    "145.22",
+                    "156.25",
+                    "167.28"
+                ],
+                "3-Hit DMG (%)": [
+                    "106.65",
+                    "115.33",
+                    "124.01",
+                    "136.41",
+                    "145.09",
+                    "155.01",
+                    "168.65",
+                    "182.29",
+                    "195.93",
+                    "210.81",
+                    "225.69"
+                ],
+                "4-Hit DMG (%)": [
+                    "127.95",
+                    "138.36",
+                    "148.78",
+                    "163.66",
+                    "174.07",
+                    "185.97",
+                    "202.34",
+                    "218.7",
+                    "235.07",
+                    "252.92",
+                    "270.78"
+                ],
+                "Charged Attack Cyclic DMG (%)": [
+                    "62.52",
+                    "67.61",
+                    "72.7",
+                    "79.97",
+                    "85.06",
+                    "90.87",
+                    "98.87",
+                    "106.87",
+                    "114.87",
+                    "123.59",
+                    "132.31"
+                ],
+                "Charged Attack Final DMG (%)": [
+                    "113.09",
+                    "122.29",
+                    "131.5",
+                    "144.65",
+                    "153.86",
+                    "164.37",
+                    "178.84",
+                    "193.31",
+                    "207.77",
+                    "223.55",
+                    "239.33"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG (%)": [
+                    "64.15",
+                    "69.37",
+                    "74.59",
+                    "82.05",
+                    "87.27",
+                    "93.23",
+                    "101.44",
+                    "109.64",
+                    "117.85",
+                    "126.8",
+                    "135.75"
+                ],
+                "Low Plunge DMG (%)": [
+                    "128.26",
+                    "138.7",
+                    "149.14",
+                    "164.06",
+                    "174.5",
+                    "186.43",
+                    "202.84",
+                    "219.24",
+                    "235.65",
+                    "253.54",
+                    "271.44"
+                ],
+                "High Plunge DMG (%)": [
+                    "160.21",
+                    "173.25",
+                    "186.29",
+                    "204.92",
+                    "217.96",
+                    "232.86",
+                    "253.35",
+                    "273.84",
+                    "294.34",
+                    "316.69",
+                    "339.05"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Talent_Bestial_Ascent.png",
@@ -51,7 +176,30 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/To_Tame_All_Beasts_Preview.gif",
                     "caption": "Plunging Attack: Charmed Cloudstrider (C6)"
                 }
-            ]
+            ],
+            "scaling": {
+                "Plunging Attack: Charmed Cloudstrider DMG (%)": [
+                    "230.4",
+                    "247.68",
+                    "264.96",
+                    "288",
+                    "305.28",
+                    "322.56",
+                    "345.6",
+                    "368.64",
+                    "391.68",
+                    "414.72",
+                    "437.76",
+                    "460.8",
+                    "489.6"
+                ],
+                "HP Cost": [
+                    "15% Max HP"
+                ],
+                "CD": [
+                    "6s"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Talent_Suanni%27s_Gilded_Dance.png",
@@ -63,28 +211,60 @@
                     "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Suanni%27s_Gilded_Dance_Preview.gif",
                     "caption": ""
                 }
-            ]
+            ],
+            "scaling": {
+                "Suanni Man Chai Smash DMG": [
+                    "370.4",
+                    "398.18",
+                    "425.96",
+                    "463",
+                    "490.78",
+                    "518.56",
+                    "555.6",
+                    "592.64",
+                    "629.68",
+                    "666.72",
+                    "703.76",
+                    "740.8",
+                    "787.1"
+                ],
+                "Skill Healing": [
+                    "30% Max HP"
+                ],
+                "Wushou Stance Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Talent_Dance_of_Amity.png",
             "talentName": "Dance of Amity",
             "talentType": "1st Ascension Passive",
             "description": "After Bestial Ascent's Plunging Attack: Charmed Cloudstrider hits an opponent, Gaming will regain 1.5% of his Max HP once every 0.2s for 0.8s.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Talent_Air_of_Prosperity.png",
             "talentName": "Air of Prosperity",
             "talentType": "4th Ascension Passive",
             "description": "When Gaming has less than 50% HP, he will receive a 20% Incoming Healing Bonus. When Gaming has 50% HP or more, Plunging Attack: Charmed Cloudstrider will deal 20% more DMG.",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         },
         {
             "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Talent_The_Sunlit_Way.png",
             "talentName": "The Striding Beast",
             "talentType": "Utility Passive",
             "description": "During the day (6:00 – 18:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%.\nDoes not take effect in Domains, Trounce Domains, or Spiral Abyss. Swift Stride does not stack.\n",
-            "figureUrls": []
+            "figureUrls": [],
+            "scaling": {}
         }
     ],
     "constellations": [

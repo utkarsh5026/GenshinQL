@@ -12,12 +12,18 @@ type FigureUrl {
     caption: String,
 }
 
+type StringArrayRecord {
+    key: String!
+    value: [String!]!
+}
+
 type Talent {
     talentIcon: String!,
     talentName: String!,
     talentType: String!,
     description: String!,
     figureUrls: [FigureUrl!],
+    scaling : [StringArrayRecord!],
 }
 
 type Constellation {
