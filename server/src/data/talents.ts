@@ -12,6 +12,11 @@ type Talent = z.infer<typeof talentDaySchema>;
 
 const parseUrl = (url: string) => url.split("/revision/")[0];
 
+
+/**
+ * Loads talent materials for all specified locations and saves them to a JSON file.
+ * @param driver The WebDriver instance used to navigate and scrape the web page.
+ */
 async function loadTalents(driver: WebDriver) {
     const loc: Record<string, Talent[]> = {}
     for (const location of locations) {
@@ -25,6 +30,13 @@ async function loadTalents(driver: WebDriver) {
     }
 }
 
+
+/**
+ * Finds and retrieves talent materials for a specific region.
+ * @param region The region for which to find talent materials.
+ * @param driver The WebDriver instance used to navigate and scrape the web page.
+ * @returns A promise that resolves to an array of Talent objects.
+ */
 async function findTalentsForRegion(region: Location, driver: WebDriver): Promise<Talent[]> {
     const table = await driver.findElement(By.css(`span#${region}`))
         .findElement(By.xpath("./parent::*"))

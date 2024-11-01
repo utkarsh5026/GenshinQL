@@ -46,7 +46,7 @@ interface BaseCharacter {
     rarity: String!,
     weaponType: String!,
     region: String!,
-        iconUrl: String!,
+    iconUrl: String!,
     elementUrl: String!,
     weaponUrl: String!,
     regionUrl: String!,
@@ -89,11 +89,34 @@ input CharacterFilter {
     region: String,
 }
 
+type TalentCharacter {
+    name: String!,
+    url: String!,
+}
+
+type TalentBook {
+    name: String!,
+    url: String!,
+}
+
+
+type TalentMaterialDay {
+    day: String!,
+    books: [TalentBook!]!,
+    characters: [TalentCharacter!]!,
+}
+
+type TalentMaterial {
+    location: String!,
+    days: [TalentMaterialDay!]!,
+}
+
 
 type Query {
     characters: [Character!]
     character(name: String!): AdvancedCharacter!
     filterCharacters(filter: CharacterFilter!): [Character!]
+    talentBooks: [TalentMaterial!]
 }
 `;
 
