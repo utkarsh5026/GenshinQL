@@ -1,12 +1,5 @@
-import { WebDriver, until, By, WebElement } from "selenium-webdriver";
-import {
-  URL,
-  saveJson,
-  setupDriver,
-  loadJsonPath,
-  listDirectories,
-  listFiles,
-} from "./setup";
+import { By, until, WebDriver, WebElement } from "selenium-webdriver";
+import { listFiles, loadJsonPath, saveJson, setupDriver, URL } from "./setup";
 import path from "path";
 
 const CHARACTER_DIR_NAME = "characters";
@@ -37,7 +30,7 @@ interface Constellation {
  * @returns A Promise that resolves to an array of character data rows, or undefined if an error occurs.
  */
 async function scrapeCharacters(
-  driver: WebDriver
+  driver: WebDriver,
 ): Promise<string[][] | undefined> {
   const charactersUrl = `${URL}/Character`;
   try {
@@ -46,7 +39,7 @@ async function scrapeCharacters(
     await driver.wait(until.elementLocated(By.css(tableSelector)), 10000);
 
     const rowElements = await driver.findElements(
-      By.css(`${tableSelector} tr`)
+      By.css(`${tableSelector} tr`),
     );
     const rows = await Promise.all(
       rowElements.slice(1).map(async (row) => {
@@ -83,7 +76,7 @@ async function scrapeCharacters(
         texts.push(weaponUrl);
 
         return texts;
-      })
+      }),
     );
 
     return rows;
@@ -140,7 +133,7 @@ async function getCharacterImages(driver: WebDriver) {
   const urls = await Promise.all(
     characterUrls.map(async (url) => {
       return parseUrl(await url.getAttribute("href"));
-    })
+    }),
   );
 
   const urlMap: Record<string, string> = {};
@@ -153,7 +146,7 @@ async function getCharacterImages(driver: WebDriver) {
   }
 
   const nameCardContainer = await driver.findElement(
-    By.css('div[data-source="namecard"]')
+    By.css('div[data-source="namecard"]'),
   );
   const nameCardUrl = await nameCardContainer
     .findElement(By.css("img"))
@@ -187,7 +180,7 @@ async function getFigureUrls(driver: WebDriver, descRow: WebElement) {
           const captionEl = fig.querySelector('figcaption p.caption');
           return captionEl ? captionEl.textContent.trim() : '';
         `,
-            figure
+            figure,
           );
 
           if (caption) {
@@ -201,7 +194,7 @@ async function getFigureUrls(driver: WebDriver, descRow: WebElement) {
             const figcaption = fig.querySelector('figcaption');
             return figcaption ? figcaption.textContent.trim() : '';
           `,
-              figure
+              figure,
             );
           } catch (err) {
             console.log("No caption found");
@@ -213,7 +206,7 @@ async function getFigureUrls(driver: WebDriver, descRow: WebElement) {
         console.log("Error getting figure urls:", error);
         return { url: "", caption: "" };
       }
-    })
+    }),
   );
 }
 
@@ -248,7 +241,7 @@ async function getTalentScaling(driver: WebDriver, row: WebElement) {
 
     // Get the wikitable directly
     const tables = await row.findElements(
-      By.css(`${containerSelector} table.wikitable`)
+      By.css(`${containerSelector} table.wikitable`),
     );
     const scaling: Record<string, string[]> = {};
 
@@ -276,7 +269,7 @@ async function getTalentScaling(driver: WebDriver, row: WebElement) {
 
           const values = await scalingRow.findElements(By.css("td"));
           const valueTexts = await Promise.all(
-            values.map((value) => value.getText())
+            values.map((value) => value.getText()),
           );
 
           if (valueTexts.length > 0) {
@@ -320,7 +313,7 @@ async function getTalents(driver: WebDriver) {
     if (cells.length == 3) {
       try {
         const talentIcon = parseUrl(
-          await cells[0].findElement(By.css("a img")).getAttribute("data-src")
+          await cells[0].findElement(By.css("a img")).getAttribute("data-src"),
         );
         const talentName = await cells[1].getText();
         const talentType = await cells[2].getText();
@@ -370,7 +363,7 @@ async function getConstellations(driver: WebDriver): Promise<Constellation[]> {
 
     if (cells.length === 3) {
       const iconUrl = parseUrl(
-        await cells[0].findElement(By.css("a img")).getAttribute("data-src")
+        await cells[0].findElement(By.css("a img")).getAttribute("data-src"),
       );
       const name = await cells[1].getText();
       const level = await cells[2].getText();
@@ -387,18 +380,6 @@ async function getConstellations(driver: WebDriver): Promise<Constellation[]> {
   }
 
   return constellations;
-}
-
-async function getCharacterNameCardUrls(driver: WebDriver) {
-  const selector = 'div[data-source="namecard"] span.item-next';
-  await waitForElement(driver, selector);
-
-  const url = await driver
-    .findElement(By.css(selector))
-    .findElement(By.css("a"))
-    .getAttribute("href");
-
-  await driver.get(url);
 }
 
 /**
@@ -425,7 +406,7 @@ async function saveCharacters(driver: WebDriver) {
       };
     })
     .filter(
-      (character) => character.name !== "Aloy" && character.name !== "Traveler"
+      (character) => character.name !== "Aloy" && character.name !== "Traveler",
     );
   console.log(JSON.stringify(charactersTable, null, 2));
   await saveJson(charactersTable, "characters", "characters");
@@ -438,9 +419,7 @@ async function saveCharacters(driver: WebDriver) {
  * @returns {Promise<any>} A promise that resolves to the loaded character data.
  */
 const loadCharacters = async () => {
-  return  loadJsonPath(
-    path.join(CHARACTER_DIR_NAME, "characters.json")
-  );
+  return loadJsonPath(path.join(CHARACTER_DIR_NAME, "characters.json"));
 };
 
 /**
@@ -452,7 +431,7 @@ const loadCharacters = async () => {
  */
 const scrapeAndSaveDetailedCharacterInfo = async (
   driver: WebDriver,
-  force = false
+  force = false,
 ) => {
   const characters = await loadCharacters();
   const savedCharacters = await listFiles(path.join("characters", "detailed"));
@@ -482,7 +461,7 @@ const scrapeAndSaveDetailedCharacterInfo = async (
         saveJson(fullDesc, path.join("characters", "detailed"), name).then(
           () => {
             console.log(`Saved ${name}`);
-          }
+          },
         );
       } catch (error) {
         console.error(`Error scraping ${char.name}:`, error);
@@ -513,4 +492,4 @@ async function main() {
   await driver.quit();
 }
 
-main().then(()=> console.log("Completed"));
+main().then(() => console.log("Completed"));
