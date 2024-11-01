@@ -13,44 +13,59 @@ const getTodayDayOfWeek = () => {
     return days[date.getDay()];
 }
 
+/**
+ * TalentTable component displays a table of talent books and characters.
+ *
+ * @param {TalentTableProps} props - The props for the component.
+ * @param {TalentBookCalendar} props.talent - The talent book calendar data.
+ * @returns {JSX.Element} The rendered table component.
+ */
 const TalentTable: React.FC<TalentTableProps> = ({talent}) => {
     const cols = ["day", "books", "characters"];
     const days = useMemo(() => talent.days, [talent.days]);
     console.log(getTodayDayOfWeek());
-    return <Table>
-        <TableHeader>
-            <TableRow>
-                {cols.map((col) => <TableHead>{col.toUpperCase()}</TableHead>)}
-            </TableRow>
-        </TableHeader>
-        <TableBody>
-            {days.map((d) => {
-                const {day, books, characters} = d;
-                return <TableRow>
-                    <TableCell>{day}</TableCell>
-                    <TableCell>
-                        {books.map((book) => {
-                            return <div className="grid grid-cols-2 gap-0">
-                                <img src={book.url} alt={book.name} className="h-12 w-12"/>
-                                <span className={"text-xs font-extralight"}>{book.name}</span>
-                            </div>
-                        })}
-                    </TableCell>
-                    <TableCell>
-                        <div className="grid grid-cols-3 gap-2">
-                            {characters.map((char) => {
-                                return <div className="gap-2">
-                                    <Avatar className={"h-16 w-16 my-1"}>
-                                        <AvatarImage src={char.url} alt={char.name}/>
-                                    </Avatar>
-                                    <span className={"text-center text-sm"}>{char.name}</span>
-                                </div>
-                            })}</div>
-                    </TableCell>
+
+    return (
+        <Table>
+            <TableHeader>
+                <TableRow>
+                    {cols.map((col) => (
+                        <TableHead key={col}>{col.toUpperCase()}</TableHead>
+                    ))}
                 </TableRow>
-            })}
-        </TableBody>
-    </Table>
-}
+            </TableHeader>
+            <TableBody>
+                {days.map((d) => {
+                    const {day, books, characters} = d;
+                    return (
+                        <TableRow key={day}>
+                            <TableCell>{day}</TableCell>
+                            <TableCell>
+                                {books.map((book) => (
+                                    <div key={book.name} className="grid grid-cols-2 gap-0">
+                                        <img src={book.url} alt={book.name} className="h-12 w-12"/>
+                                        <span className="text-xs font-extralight">{book.name}</span>
+                                    </div>
+                                ))}
+                            </TableCell>
+                            <TableCell>
+                                <div className="grid grid-cols-3 gap-2">
+                                    {characters.map((char) => (
+                                        <div key={char.name} className="gap-2">
+                                            <Avatar className="h-16 w-16 my-1">
+                                                <AvatarImage src={char.url} alt={char.name}/>
+                                            </Avatar>
+                                            <span className="text-center text-sm">{char.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </TableCell>
+                        </TableRow>
+                    );
+                })}
+            </TableBody>
+        </Table>
+    );
+};
 
 export default TalentTable;
