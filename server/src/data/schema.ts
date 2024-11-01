@@ -82,3 +82,18 @@ export const imageSchema = z.object({
   url: z.string(),
   caption: z.string(),
 });
+
+export const gallerySchema = z.object({
+  screenAnimations: z.array(imageSchema),
+  nameCards: z.array(imageSchema),
+  attackAnimations: z.array(
+    z.object({
+      skill: z.union([
+        z.literal("Normal_Attack"),
+        z.literal("Elemental_Burst"),
+        z.literal("Elemental_Skill"),
+      ]),
+      animations: z.array(imageSchema),
+    }),
+  ),
+});
