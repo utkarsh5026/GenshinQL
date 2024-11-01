@@ -37,9 +37,18 @@ const TalentTable: React.FC<TalentTableProps> = ({talent}) => {
             <TableBody>
                 {days.map((d) => {
                     const {day, books, characters} = d;
+                    const isToday = day.includes(getTodayDayOfWeek());
+
                     return (
-                        <TableRow key={day}>
-                            <TableCell>{day}</TableCell>
+                        <TableRow key={day} className={isToday ? "bg-green-950 hover:bg-green-950" : ""}>
+                            <TableCell>
+                                <div>
+                                    <div className="my-2">{day}</div>
+                                    {isToday &&
+                                        <span
+                                            className="text-xs font-extralight bg-green-700 p-2 rounded-xl">Today</span>}
+                                </div>
+                            </TableCell>
                             <TableCell>
                                 {books.map((book) => (
                                     <div key={book.name} className="grid grid-cols-2 gap-0">
@@ -51,11 +60,11 @@ const TalentTable: React.FC<TalentTableProps> = ({talent}) => {
                             <TableCell>
                                 <div className="grid grid-cols-3 gap-2">
                                     {characters.map((char) => (
-                                        <div key={char.name} className="gap-2">
+                                        <div key={char.name} className="flex flex-col justify-start align-start gap-1">
                                             <Avatar className="h-16 w-16 my-1">
                                                 <AvatarImage src={char.url} alt={char.name}/>
                                             </Avatar>
-                                            <span className="text-center text-sm">{char.name}</span>
+                                            <span className="text-xs">{char.name}</span>
                                         </div>
                                     ))}
                                 </div>
