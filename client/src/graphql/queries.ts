@@ -66,3 +66,22 @@ export const GET_CHARACTER = gql`
         }
     }
 `;
+
+
+export const GET_TALENT_MATERIALS_CALENDAR = gql`
+    query TalentBooks {
+        talentBooks {
+            location
+            days {
+                day
+                books {
+                    name
+                    url
+                }
+                characters {
+                    url
+                    name
+                }
+            }
+        }
+    }`
