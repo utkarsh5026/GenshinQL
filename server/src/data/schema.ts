@@ -9,7 +9,7 @@ export const talentSchema = z.object({
     z.object({
       url: z.string(),
       caption: z.string(),
-    }),
+    })
   ),
   scaling: z.record(z.array(z.string())),
 });
@@ -68,13 +68,13 @@ export const talentDaySchema = z.object({
     z.object({
       name: z.string(),
       url: z.string(),
-    }),
+    })
   ),
   characters: z.array(
     z.object({
       name: z.string(),
       url: z.string(),
-    }),
+    })
   ),
 });
 
@@ -94,6 +94,12 @@ export const gallerySchema = z.object({
         z.literal("Elemental_Skill"),
       ]),
       animations: z.array(imageSchema),
-    }),
+    })
   ),
 });
+
+export const talentBookTypeSchema = z.union([
+  z.literal("teaching"),
+  z.literal("guide"),
+  z.literal("philosophies"),
+]);
