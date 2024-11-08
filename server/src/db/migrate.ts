@@ -14,6 +14,25 @@ import WeaponPassive from "./models/WeaponPassive";
 type Weapon = z.infer<typeof weaponSchema>;
 type WeaponType = z.infer<typeof weaponTypeSchema>;
 
+/**
+ * Migrates weapon data from JSON files into the database.
+ *
+ * This function performs the following steps:
+ * 1. Loads weapon data from JSON file organized by weapon type
+ * 2. Creates WeaponType records for each unique weapon type
+ * 3. Creates Weapon records with associated materials and passives
+ * 4. Saves all records to the database with proper relationships
+ *
+ * The weapon data is expected to contain:
+ * - Weapon types (sword, bow, etc) as top level keys
+ * - Arrays of weapon objects containing:
+ *   - Basic weapon info (name, rarity, attack, etc)
+ *   - Materials needed for ascension/upgrades
+ *   - Passive effects/abilities
+ *
+ * @throws Error if weapon type lookup fails
+ * @throws Error if database operations fail
+ */
 async function migrateWeapons() {
   const weaponRepo = repo(WeaponModel);
   const weaponTypeRepo = repo(WeaponTypeModel);
