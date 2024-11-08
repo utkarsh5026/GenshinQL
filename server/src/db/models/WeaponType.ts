@@ -1,8 +1,7 @@
-import { Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, OneToMany, PrimaryGeneratedColumn, Column } from "typeorm";
 
-import { Column } from "typeorm";
 import Weapon from "./Weapon";
-
+import Character from "./Character";
 @Entity()
 export default class WeaponType {
   @PrimaryGeneratedColumn()
@@ -16,4 +15,7 @@ export default class WeaponType {
 
   @OneToMany(() => Weapon, "weaponType")
   weapons: Weapon[];
+
+  @OneToMany(() => Character, (character) => character.weaponType)
+  characters: Character[];
 }

@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import Character from "./Character";
 
 @Entity()
 export default class Element {
@@ -10,4 +11,7 @@ export default class Element {
 
   @Column()
   iconUrl: string;
+
+  @OneToMany(() => Character, (character) => character.element)
+  characters: Character[];
 }

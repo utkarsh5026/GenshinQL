@@ -4,15 +4,22 @@ import { initDb } from "./init";
 
 import { printAllTableContents, repo } from "./utils";
 import { z } from "zod";
-import { weaponSchema, weaponTypeSchema } from "../data/schema";
+import {
+  talentDaySchema,
+  weaponSchema,
+  weaponTypeSchema,
+} from "../data/schema";
 
 import WeaponModel from "./models/Weapon";
 import WeaponTypeModel from "./models/WeaponType";
 import WeaponMaterial from "./models/WeaponMaterial";
 import WeaponPassive from "./models/WeaponPassive";
+import TalentMaterial from "./models/TalentMaterial";
+import NationModel from "./models/Nation";
 
-type Weapon = z.infer<typeof weaponSchema>;
-type WeaponType = z.infer<typeof weaponTypeSchema>;
+type WeaponSchema = z.infer<typeof weaponSchema>;
+type WeaponTypeSchema = z.infer<typeof weaponTypeSchema>;
+type TalentDaySchema = z.infer<typeof talentDaySchema>;
 
 /**
  * Migrates weapon data from JSON files into the database.
@@ -39,9 +46,9 @@ async function migrateWeapons() {
 
   const weaponData = (await loadJsonPath(
     path.join("weapons", "weaper.json")
-  )) as Record<WeaponType, Weapon[]>;
+  )) as Record<WeaponTypeSchema, WeaponSchema[]>;
 
-  const wepTypes = Object.keys(weaponData) as WeaponType[];
+  const wepTypes = Object.keys(weaponData) as WeaponTypeSchema[];
   for (const type of wepTypes) {
     const newType = new WeaponTypeModel();
     newType.name = type;
@@ -92,10 +99,98 @@ async function migrateWeapons() {
   await weaponRepo.save(weaponsToSave);
 }
 
+/**
+ * Migrates talent material data from JSON files into the database.
+ *
+ * This function performs the following steps:
+ * 1. Loads talent material data from JSON file organized by nation
+ * 2. Retrieves all nations from the database
+ * 3. For each nation, creates TalentMaterial records for its talent books
+ * 4. Associates each talent material with its nation
+ * 5. Saves all records to the database with proper relationships
+ *
+ * The talent material data is expected to contain:
+ * - Nations as top level keys
+ * - Arrays of talent day objects containing:
+ *   - Days when materials are available
+ *   - Book types (teachings, guides, philosophies)
+ *   - Characters that use the materials
+ *
+ * @throws Error if talent materials are not found for a nation
+ * @throws Error if database operations fail
+ */
+async function migrateTalentMaterials() {
+  const materials = (await loadJsonPath(
+    path.join("talent", "dailyTalents.json")
+  )) as Record<string, TalentDaySchema[]>;
+
+  const nations = await repo(NationModel).find();
+
+  const materialsToSave: TalentMaterial[] = [];
+  for (const nation of nations) {
+    const name = nation.name;
+    const nationMats = materials[name as keyof typeof materials];
+
+    if (!nationMats) throw new Error(`No materials found for ${name}`);
+    const books = createTalenBooks(nationMats).map((mat) => {
+      mat.nation = nation;
+      return mat;
+    });
+    materialsToSave.push(...books);
+  }
+
+  await repo(TalentMaterial).save(materialsToSave);
+}
+
+/**
+ * Creates TalentMaterial entities from talent material day data.
+ *
+ * This function processes talent material data for a nation and creates TalentMaterial
+ * entities with the following:
+ * - Name of the talent book (e.g. "Freedom" from "Teachings of Freedom")
+ * - URLs for teaching, guide and philosophy versions of the book
+ * - Days of the week when the materials are available
+ *
+ * @param talentMaterials - Array of talent material data containing book info and availability days
+ * @returns Array of TalentMaterial entities ready to be saved
+ * @throws Error if any required book type (teaching/guide/philosophy) is not found
+ */
+function createTalenBooks(
+  talentMaterials: TalentDaySchema[]
+): TalentMaterial[] {
+  const getBookUrl = (bookType: string, mat: TalentDaySchema) => {
+    const book = mat.books.find((book) => book.name.includes(bookType));
+    if (!book) throw new Error(`No ${bookType} book found`);
+    return book.url;
+  };
+
+  const materialsToSave: TalentMaterial[] = [];
+  for (const mat of talentMaterials) {
+    const { day, books } = mat;
+    const [dayOne, dayTwo] = day.replace("/", "").split("\n");
+
+    const name = books[0].name.split(" ")[2];
+    const teachingUrl = getBookUrl("Teaching", mat);
+    const guideUrl = getBookUrl("Guide", mat);
+    const philosophyUrl = getBookUrl("Philosophy", mat);
+
+    const newMat = new TalentMaterial();
+    newMat.name = name;
+    newMat.teachingUrl = teachingUrl;
+    newMat.guideUrl = guideUrl;
+    newMat.philosophyUrl = philosophyUrl;
+    newMat.dayOne = dayOne;
+    newMat.dayTwo = dayTwo;
+  }
+
+  return materialsToSave;
+}
+
 export async function migrate() {
   await initDb();
   console.log("Migrating weapons...");
-  await migrateWeapons();
+  //   await migrateWeapons();
+  await migrateTalentMaterials();
   await printAllTableContents();
 }
 

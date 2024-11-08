@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
-
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import TalentMaterial from "./TalentMaterial";
+import Character from "./Character";
 @Entity()
 export default class Nation {
   @PrimaryGeneratedColumn()
@@ -10,4 +11,10 @@ export default class Nation {
 
   @Column()
   iconUrl: string;
+
+  @OneToMany(() => TalentMaterial, (talentMaterial) => talentMaterial.nation)
+  talentMaterials: TalentMaterial[];
+
+  @OneToMany(() => Character, (character) => character.nation)
+  characters: Character[];
 }

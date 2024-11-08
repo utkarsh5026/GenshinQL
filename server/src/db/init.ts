@@ -1,12 +1,18 @@
 import { DataSource } from "typeorm";
+import path from "path";
+import fs from "fs";
+
 import Nation from "./models/Nation";
 import Element from "./models/Element";
 import Weapon from "./models/Weapon";
 import WeaponType from "./models/WeaponType";
 import WeaponMaterial from "./models/WeaponMaterial";
 import WeaponPassive from "./models/WeaponPassive";
-import path from "path";
-import fs from "fs";
+import Character from "./models/Character";
+import CharacterTalent from "./models/CharacterTalent";
+import Constellation from "./models/Constellation";
+import TalentMaterial from "./models/TalentMaterial";
+import TalentAnimations from "./models/TalentAnimations";
 
 export const dataSource = new DataSource({
   type: "sqlite",
@@ -21,6 +27,11 @@ export const dataSource = new DataSource({
     WeaponType,
     WeaponMaterial,
     WeaponPassive,
+    Character,
+    CharacterTalent,
+    Constellation,
+    TalentMaterial,
+    TalentAnimations,
   ],
 });
 
