@@ -10,6 +10,7 @@ import WeaponType from "./WeaponType";
 import Element from "./Element";
 import CharacterTalent from "./CharacterTalent";
 import Constellation from "./Constellation";
+import TalentMaterial from "./TalentMaterial";
 @Entity()
 export default class Character {
   @PrimaryGeneratedColumn()
@@ -38,4 +39,10 @@ export default class Character {
 
   @OneToMany(() => Constellation, (constellation) => constellation.character)
   constellations: Constellation[];
+
+  @ManyToOne(
+    () => TalentMaterial,
+    (talentMaterial) => talentMaterial.characters
+  )
+  talentMaterial: TalentMaterial;
 }

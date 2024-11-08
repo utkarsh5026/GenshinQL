@@ -1,5 +1,12 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from "typeorm";
 import Nation from "./Nation";
+import Character from "./Character";
 
 @Entity()
 export default class TalentMaterial {
@@ -26,4 +33,7 @@ export default class TalentMaterial {
 
   @ManyToOne(() => Nation, (nation) => nation.talentMaterials)
   nation: Nation;
+
+  @OneToMany(() => Character, (character) => character.talentMaterial)
+  characters: Character[];
 }
