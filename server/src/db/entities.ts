@@ -20,18 +20,6 @@ export class Element {
 }
 
 @Entity()
-export class WeaponType {
-  @PrimaryGeneratedColumn()
-  id: number;
-
-  @Column()
-  name: string;
-
-  @Column()
-  iconUrl: string;
-}
-
-@Entity()
 export class Nation {
   @PrimaryGeneratedColumn()
   id: number;
@@ -41,23 +29,4 @@ export class Nation {
 
   @Column()
   iconUrl: string;
-}
-
-@Entity()
-export class Weapon {
-  @PrimaryGeneratedColumn()
-  id: number;
-
-  @Column()
-  name: string;
-
-  @Column()
-  rarity: number;
-
-  @Column()
-  attack: number;
-
-  @ManyToOne(() => WeaponType)
-  @JoinColumn({ name: "weaponTypeId" })
-  weaponType: WeaponType;
 }

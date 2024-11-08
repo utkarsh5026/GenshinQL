@@ -21,10 +21,10 @@ const CharacterGrid: React.FC<CharacterGridProps> = ({ characters }) => {
       {characters.map((char) => (
         <div
           key={char.name}
-          className="flex flex-col justify-start align-start gap-1 cursor-pointer transition duration-300 ease-in-out hover:scale-125"
+          className="flex flex-col justify-start align-start gap-1 cursor-pointer transition duration-300 ease-in-out hover:scale-150"
         >
           <Avatar className="h-12 w-12 my-1 bg-black">
-            <AvatarImage src={char.url} alt={char.name} />
+            <AvatarImage src={char.url} alt={char.name} loading={"lazy"} />
           </Avatar>
           <span className="text-xs">{char.name}</span>
         </div>

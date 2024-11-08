@@ -7,11 +7,12 @@ import {
   waitForElementCss,
 } from "./setup";
 import { parseUrl, underScore } from "./utils";
-import { weaponTypeSchema } from "./schema";
+import { weaponSchema, weaponTypeSchema } from "./schema";
 import { z } from "zod";
 import path from "path";
 
 type WeaponType = z.infer<typeof weaponTypeSchema>;
+type Weapon = z.infer<typeof weaponSchema>;
 
 const WEAPON_TYPES: WeaponType[] = [
   "Sword",
@@ -163,7 +164,6 @@ async function loadWeapons() {
     for (const weapon of WEAPON_TYPES) {
       const result = [];
       const data = await loadJsonPath(path.join("weapons", `${weapon}.json`));
-      // console.log(data);
       for (const weapon of data) {
         try {
           const { materials, passives } = await extractEachWeaponData(
@@ -184,6 +184,30 @@ async function loadWeapons() {
   } finally {
     await driver.quit();
   }
+}
+
+async function addMaterialCount() {
+  const result = (await loadJsonPath(
+    path.join("weapons", "wep.json"),
+  )) as Record<WeaponType, Weapon[]>;
+
+  const four_star_weapon = [150000, 3, 9, 9, 4, 15, 18, 27, 10, 15, 18];
+  const five_star_weapon = [225000, 5, 14, 14, 6, 23, 27, 41, 15, 23, 27];
+
+  for (const weaponType of WEAPON_TYPES) {
+    const weapons = result[weaponType];
+    for (const weapon of weapons) {
+      const rarity = weapon.rarity;
+      const materialCount = rarity === 4 ? four_star_weapon : five_star_weapon;
+
+      const materials = weapon.materials;
+      for (let i = 0; i < materials.length; i++) {
+        materials[i].count = materialCount[i];
+      }
+    }
+  }
+
+  await saveJson(result, "weapons", "weaper");
 }
 
 /**
@@ -211,6 +235,8 @@ async function main() {
     await saveJson(weaponData, "weapons", weapon);
   }
   await driver.quit();
+  await loadWeapons();
 }
 
-loadWeapons().then(() => console.log("Done loading weapons!"));
+// main().then(() => console.log("Done loading weapons!"));
+addMaterialCount().then(() => console.log("Done adding material count!"));

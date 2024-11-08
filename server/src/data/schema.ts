@@ -103,3 +103,17 @@ export const talentBookTypeSchema = z.union([
   z.literal("guide"),
   z.literal("philosophies"),
 ]);
+
+export const weaponSchema = z.object({
+  name: z.string(),
+  rarity: z.number(),
+  attack: z.number(),
+  subStat: z.string(),
+  effect: z.string(),
+  materials: z.array(
+    imageSchema.extend({
+      count: z.number().optional(),
+    })
+  ),
+  passives: z.array(z.string()),
+});
