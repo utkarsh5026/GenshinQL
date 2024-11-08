@@ -1,5 +1,6 @@
-import { DataSource, DataTypeNotSupportedError } from "typeorm";
-import { Nation } from "./entities";
+import { DataSource } from "typeorm";
+import Nation from "./models/Nation";
+import Element from "./models/Element";
 import Weapon from "./models/Weapon";
 import WeaponType from "./models/WeaponType";
 import WeaponMaterial from "./models/WeaponMaterial";
@@ -13,7 +14,14 @@ export const dataSource = new DataSource({
 
   synchronize: true,
   logging: true,
-  entities: [Nation, Weapon, WeaponType, WeaponMaterial, WeaponPassive],
+  entities: [
+    Nation,
+    Element,
+    Weapon,
+    WeaponType,
+    WeaponMaterial,
+    WeaponPassive,
+  ],
 });
 
 /**
