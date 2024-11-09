@@ -1,5 +1,6 @@
 import DataLoader from "dataloader";
 import { loadTalentBooksSchedule, loadCharacters } from "../db/load";
+import { randomInt } from "crypto";
 
 /**
  * DataLoader for fetching talent books schedule.
@@ -46,8 +47,14 @@ export const talentBooksLoader = new DataLoader(async (keys) => {
               const { name, gallery } = char;
               let iconUrl = char.iconUrl;
 
-              if (gallery?.screenAnimation?.idleOne)
-                iconUrl = gallery.screenAnimation.idleOne;
+              const prob = randomInt(0, 100);
+              if (prob < 50) {
+                if (gallery?.screenAnimation?.idleOne)
+                  iconUrl = gallery.screenAnimation.idleOne;
+              } else {
+                if (gallery?.screenAnimation?.idleTwo)
+                  iconUrl = gallery.screenAnimation.idleTwo;
+              }
 
               return {
                 name,
