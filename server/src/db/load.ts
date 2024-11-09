@@ -1,5 +1,6 @@
 import Character from "./models/Character";
 import Nation from "./models/Nation";
+import WeaponType from "./models/WeaponType";
 import { repo } from "./utils";
 
 /**
@@ -9,7 +10,7 @@ import { repo } from "./utils";
  * the related talent materials and characters. The data is retrieved from the
  * Nation repository with specific relations and selected fields.
  *
- * @returns {Promise<Array>} A promise that resolves to an array of nations with their talent books schedule.
+ * @returns {Promise<Nation[]>} A promise that resolves to an array of nations with their talent books schedule.
  */
 export async function loadTalentBooksSchedule(): Promise<Nation[]> {
   const nationRepo = repo(Nation);
@@ -42,9 +43,35 @@ export async function loadTalentBooksSchedule(): Promise<Nation[]> {
     },
   });
 }
-export async function loadCharacters() {
+
+/**
+ * Loads the characters from the database.
+ *
+ * This function fetches all characters, including their related elements,
+ * weapon types, and nations. The data is retrieved from the Character repository
+ * with specific relations.
+ *
+ * @returns {Promise<Character[]>} A promise that resolves to an array of characters with their related data.
+ */
+export async function loadCharacters(): Promise<Character[]> {
   const characterRepo = repo(Character);
   return characterRepo.find({
     relations: ["element", "weaponType", "nation"],
+  });
+}
+
+/**
+ * Loads the weapons from the database.
+ *
+ * This function fetches all weapon types, including their related weapons,
+ * materials, and passives. The data is retrieved from the WeaponType repository
+ * with specific relations.
+ *
+ * @returns {Promise<WeaponType[]>} A promise that resolves to an array of weapon types with their related data.
+ */
+export async function loadWeapons(): Promise<WeaponType[]> {
+  const wepTypeRepo = repo(WeaponType);
+  return await wepTypeRepo.find({
+    relations: ["weapons", "weapons.materials", "weapons.passives"],
   });
 }

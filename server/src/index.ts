@@ -4,8 +4,12 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 import typeDefs from "./graphql/typedef";
 import resolvers from "./graphql/resolvers";
 import { initDb } from "./db/init";
-import { loadTalentBooksSchedule } from "./db/load";
-import { baseCharacterLoader, talentBooksLoader } from "./graphql/loader";
+import { loadWeapons } from "./db/load";
+import {
+  baseCharacterLoader,
+  talentBooksLoader,
+  weaponLoader,
+} from "./graphql/loader";
 
 const server = new ApolloServer({
   typeDefs: typeDefs,
@@ -19,6 +23,7 @@ async function startServer() {
       loaders: {
         talentBooksLoader,
         baseCharacterLoader,
+        weaponLoader,
       },
     }),
   });
@@ -31,7 +36,7 @@ startServer()
     await initDb();
     console.log("Database initialized");
 
-    const talents = await loadTalentBooksSchedule();
+    console.dir(await loadWeapons(), { depth: null });
   })
   .catch((error) => {
     console.error(error);

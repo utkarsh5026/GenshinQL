@@ -112,11 +112,35 @@ type TalentMaterial {
 }
 
 
+type WeaponMaterial {
+    url: String!,
+    name: String!,
+    amount: Int!,
+}
+
+type Weapon {
+    name: String!,
+    rarity: Int!,
+    attack: Int!,
+    subStat: String!,
+    effect: String!,
+    type: String!,
+    passives: [String!]!,
+    materials: [WeaponMaterial!]!,
+}
+
+type WeaponTypeDetails {
+    type: String!,
+    weapons: [Weapon!]!,
+}
+
+
 type Query {
     characters: [Character!]
     character(name: String!): AdvancedCharacter!
     filterCharacters(filter: CharacterFilter!): [Character!]
     talentBooks: [TalentMaterial!]
+    weapons: [WeaponTypeDetails!]
 }
 `;
 

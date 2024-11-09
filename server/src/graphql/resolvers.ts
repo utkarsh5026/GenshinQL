@@ -41,6 +41,9 @@ const resolvers: IResolvers = {
         throw new Error("Failed to fetch talent books");
       }
     },
+    weapons: async (_parent, _args, context) => {
+      return await context.loaders.weaponLoader.load("all");
+    },
   },
 };
 

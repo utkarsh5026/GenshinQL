@@ -1,5 +1,9 @@
 import DataLoader from "dataloader";
-import { loadTalentBooksSchedule, loadCharacters } from "../db/load";
+import {
+  loadTalentBooksSchedule,
+  loadCharacters,
+  loadWeapons,
+} from "../db/load";
 import { randomInt } from "crypto";
 
 /**
@@ -99,6 +103,45 @@ export const baseCharacterLoader = new DataLoader(async (keys) => {
         weaponUrl: weaponType.iconUrl,
         region: nation.name,
         regionUrl: nation.iconUrl,
+      };
+    });
+  });
+});
+
+/**
+ * DataLoader for loading weapon information.
+ *
+ * This loader batches and caches requests to load weapon data by their keys.
+ * It uses the `loadWeapons` function to fetch all weapons and then maps
+ * the requested keys to the corresponding weapon data.
+ *
+ * @param {Array<string>} keys - An array of weapon keys to load.
+ * @returns {Promise<Array<Object>>} A promise that resolves to an array of weapon objects.
+ */
+export const weaponLoader = new DataLoader(async (keys) => {
+  const weapons = await loadWeapons();
+  return keys.map((key) => {
+    return weapons.map((weaponType) => {
+      const { weapons, name } = weaponType;
+      return {
+        type: name,
+        weapons: weapons.map((weapon) => {
+          const { name, rarity, attack, subStat, effect, materials } = weapon;
+          return {
+            name,
+            rarity,
+            attack,
+            subStat,
+            effect,
+            type: weaponType.name,
+            materials: materials.map((mat) => ({
+              url: mat.url,
+              name: mat.caption,
+              amount: mat.count,
+            })),
+            passives: weapon.passives.map((passive) => passive.description),
+          };
+        }),
       };
     });
   });
