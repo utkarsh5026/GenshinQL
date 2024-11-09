@@ -21,9 +21,8 @@ import Gallery from "./models/Gallery";
 export const dataSource = new DataSource({
   type: "sqlite",
   database: "genshin.db",
-
   synchronize: true,
-  logging: true,
+  logging: ["error"],
   entities: [
     Nation,
     Element,

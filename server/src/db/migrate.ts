@@ -6,13 +6,14 @@ import { initDb } from "./init";
 import { repo } from "./utils";
 import { z } from "zod";
 import {
+  advancedCharacterSchema,
   baseCharacterSchema,
+  constellationSchema,
+  gallerySchema,
   talentDaySchema,
+  talentSchema,
   weaponSchema,
   weaponTypeSchema,
-  advancedCharacterSchema,
-  constellationSchema,
-  talentSchema,
 } from "../data/schema";
 
 import WeaponModel from "./models/Weapon";
@@ -26,7 +27,12 @@ import CharacterModel from "./models/Character";
 import ConstellationModel from "./models/Constellation";
 import CharacterTalentModel from "./models/CharacterTalent";
 import TalentAnimationsModel from "./models/TalentAnimations";
+import GalleryModel from "./models/Gallery";
+import ScreenAnimationModel from "./models/ScreenAnimation";
+import NameCardModel from "./models/NameCard";
+import AttackAnimationModel from "./models/AttackAnimation";
 import { Like } from "typeorm";
+import { toOriginalName } from "../data/utils";
 
 type WeaponSchema = z.infer<typeof weaponSchema>;
 type WeaponTypeSchema = z.infer<typeof weaponTypeSchema>;
@@ -35,6 +41,14 @@ type BaseCharacterSchema = z.infer<typeof baseCharacterSchema>;
 type AdvancedCharacterSchema = z.infer<typeof advancedCharacterSchema>;
 type ConstellationSchema = z.infer<typeof constellationSchema>;
 type TalentSchema = z.infer<typeof talentSchema>;
+type GallerySchema = z.infer<typeof gallerySchema>;
+type ScreenAnimationSchema = z.infer<
+  typeof gallerySchema.shape.screenAnimations
+>;
+type NameCardSchema = z.infer<typeof gallerySchema.shape.nameCards>;
+type AttackAnimationSchema = z.infer<
+  typeof gallerySchema.shape.attackAnimations
+>;
 
 async function listJsonFiles(dirPath: string) {
   const files = await fs.readdir(dirPath);
@@ -200,10 +214,9 @@ async function createTalentBooks(
 
       const chars = await Promise.all(
         characters.map(async ({ name }) => {
-          const char = await charRepo.findOne({
+          return await charRepo.findOne({
             where: { name: Like(`%${name}%`) },
           });
-          return char;
         })
       );
 
@@ -417,6 +430,142 @@ function createTalents(
 }
 
 /**
+ * Migrates gallery data from JSON files into the database.
+ *
+ * This function performs the following steps:
+ * 1. Loads gallery data from JSON file containing character galleries
+ * 2. For each character, creates a Gallery record with associated:
+ *    - Screen animations (idle poses, menu screens etc)
+ *    - Name cards (background, icon, banner)
+ *    - Attack animations
+ * 3. Links each gallery to its corresponding character
+ * 4. Saves all gallery records with proper relationships
+ *
+ * The gallery data is expected to contain:
+ * - Character names as top level keys
+ * - Gallery objects containing:
+ *   - Screen animations for different poses/menus
+ *   - Name card images and banners
+ *   - Combat/attack animations
+ *
+ * @throws Error if character lookup fails
+ * @throws Error if database operations fail
+ */
+async function migrateGallery() {
+  const galleryData = (await loadJsonPath(
+    path.join("characters", "gallery.json")
+  )) as Record<string, GallerySchema>;
+  const charRepo = repo(CharacterModel);
+
+  const galleriesToSave: GalleryModel[] = [];
+
+  for (const [charName, gallery] of Object.entries(galleryData)) {
+    try {
+      const character = await charRepo.findOneByOrFail({
+        name: toOriginalName(charName),
+      });
+
+      const { screenAnimations, nameCards, attackAnimations } = gallery;
+      const newGallery = new GalleryModel();
+      newGallery.screenAnimation = createScreenAnimation(screenAnimations);
+      newGallery.nameCard = createNameCard(nameCards);
+      newGallery.attackAnimation = createAttackAnimation(attackAnimations);
+      newGallery.character = character;
+      galleriesToSave.push(newGallery);
+    } catch (e) {
+      console.log(`Error saving gallery for ${charName}`, e);
+    }
+  }
+
+  await repo(GalleryModel).save(galleriesToSave);
+}
+
+/**
+ * Creates a ScreenAnimationModel from screen animation data.
+ *
+ * This function maps screen animation captions to their URLs and
+ * initializes a ScreenAnimationModel with the mapped data.
+ *
+ * @param screenAnimations - Array of screen animation data with captions and URLs
+ * @returns A ScreenAnimationModel populated with the provided data
+ */
+function createScreenAnimation(
+  screenAnimations: ScreenAnimationSchema
+): ScreenAnimationModel {
+  const capMap: Record<string, string> = {};
+  screenAnimations.forEach(({ caption, url }) => {
+    capMap[caption] = url;
+  });
+
+  const newScreenAnimation = new ScreenAnimationModel();
+  newScreenAnimation.idleOne = capMap["Idle 1"] ?? "";
+  newScreenAnimation.idleTwo = capMap["Idle 2"] ?? "";
+  newScreenAnimation.weaponMenu = capMap["Weapon Menu"] ?? "";
+  newScreenAnimation.talentMenu = capMap["Talent Menu"] ?? "";
+  newScreenAnimation.partySetup = capMap["Party Setup"] ?? "";
+
+  return newScreenAnimation;
+}
+
+/**
+ * Creates a NameCardModel from name card data.
+ *
+ * This function maps name card captions to their URLs and
+ * initializes a NameCardModel with the mapped data.
+ *
+ * @param nameCards - Array of name card data with captions and URLs
+ * @returns A NameCardModel populated with the provided data
+ * @throws Error if a required caption is not found
+ */
+function createNameCard(nameCards: NameCardSchema): NameCardModel {
+  const nameCardMap: Record<string, string> = {};
+  const getUrl = (text: string) => {
+    const caption = Object.keys(nameCardMap).find((key) => key.includes(text));
+    if (caption === undefined) throw new Error(`No caption found for ${text}`);
+    return nameCardMap[caption];
+  };
+
+  nameCards.forEach(({ caption, url }) => {
+    nameCardMap[caption] = url;
+  });
+
+  const newNameCard = new NameCardModel();
+  newNameCard.background = getUrl("Background");
+  newNameCard.icon = getUrl("Icon");
+  newNameCard.banner = getUrl("Banner");
+
+  return newNameCard;
+}
+
+/**
+ * Creates an AttackAnimationModel from attack animation data.
+ *
+ * This function maps attack animation skills to their URLs and
+ * initializes an AttackAnimationModel with the mapped data.
+ *
+ * @param attackAnimations - Array of attack animation data with skills and animations
+ * @returns An AttackAnimationModel populated with the provided data
+ */
+function createAttackAnimation(
+  attackAnimations: AttackAnimationSchema
+): AttackAnimationModel {
+  const skillMap: Record<(typeof attackAnimations)[number]["skill"], string> = {
+    Normal_Attack: "",
+    Elemental_Burst: "",
+    Elemental_Skill: "",
+  };
+  for (const { skill, animations } of attackAnimations) {
+    skillMap[skill] = animations[0].url;
+  }
+
+  const newAttackAnimation = new AttackAnimationModel();
+  newAttackAnimation.normalAttack = skillMap["Normal_Attack"];
+  newAttackAnimation.elementalBurst = skillMap["Elemental_Burst"];
+  newAttackAnimation.elementalSkill = skillMap["Elemental_Skill"];
+  return newAttackAnimation;
+}
+
+/**
  * Main migration function that populates the database with all game data.
  *
  * This function orchestrates the entire database migration process by:
@@ -438,6 +587,7 @@ export async function migrate() {
   await savePrimitives();
   await migrateWeapons();
   await saveCharacters();
+  await migrateGallery();
   await migrateTalentMaterials();
 }
 

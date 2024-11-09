@@ -26,9 +26,12 @@ const parseUrl = (url: string) => url.split("/revision/")[0];
  * @param {boolean} [force=false] - Force re-scraping of already saved characters
  * @returns {Promise<void>}
  */
-async function loadCharactersGallery(driver: WebDriver, force = false) {
+async function loadCharactersGallery(
+  driver: WebDriver,
+  force: boolean = false
+): Promise<void> {
   const characters = await loadJsonPath(
-    path.join(CHARACTERS, "characters.json"),
+    path.join(CHARACTERS, "characters.json")
   );
   const alreadySaved = await loadJsonPath(path.join(CHARACTERS, GALLERY_FILE));
 
@@ -37,6 +40,8 @@ async function loadCharactersGallery(driver: WebDriver, force = false) {
     try {
       const name = char.name.split(" ").join("_");
       if (!force && name in alreadySaved) continue;
+
+      console.log(`Scraping ${char.name}`);
       charGalleryMap[name] = await getCharacterGalleryImages(driver, name);
       console.log(`Scraped ${char.name}`);
     } catch (error) {
@@ -81,7 +86,7 @@ async function getCharacterGalleryImages(driver: WebDriver, character: string) {
         skill,
         animations: await getCharacterAttackAnimations(driver, skill),
       };
-    }),
+    })
   );
 
   return {
@@ -99,7 +104,7 @@ async function getCharacterGalleryImages(driver: WebDriver, character: string) {
  * @returns {Promise<Array<GenshinImage>>}
  */
 async function getCharacterScreenAnimations(
-  driver: WebDriver,
+  driver: WebDriver
 ): Promise<GenshinImage[]> {
   const cssSelector = "span#Character_Screen_Animations";
   await waitForElementCss(driver, cssSelector);
@@ -129,7 +134,7 @@ async function getCharacterScreenAnimations(
           caption: "",
         };
       }
-    }),
+    })
   );
 }
 
@@ -141,7 +146,7 @@ async function getCharacterScreenAnimations(
  * @returns {Promise<Array<GenshinImage>>}
  */
 async function getCharacterNameCard(
-  driver: WebDriver,
+  driver: WebDriver
 ): Promise<GenshinImage[]> {
   const cssSelector = "span#Namecard";
   await waitForElementCss(driver, cssSelector);
@@ -164,7 +169,7 @@ async function getCharacterNameCard(
  */
 async function getCharacterAttackAnimations(
   driver: WebDriver,
-  skill: string,
+  skill: string
 ): Promise<GenshinImage[]> {
   const cssSelector = `span#${skill}`;
   await waitForElementCss(driver, cssSelector);
@@ -201,7 +206,7 @@ async function parseImages(images: WebElement[]): Promise<GenshinImage[]> {
           caption: "",
         };
       }
-    }),
+    })
   );
 }
 
@@ -215,7 +220,7 @@ async function main() {
   const driver = await setupDriver();
 
   try {
-    await loadCharactersGallery(driver, true);
+    await loadCharactersGallery(driver);
   } finally {
     await driver.quit();
   }
