@@ -43,7 +43,7 @@ async function loadTalents(driver: WebDriver) {
  */
 async function findTalentsForRegion(
   region: Location,
-  driver: WebDriver,
+  driver: WebDriver
 ): Promise<Talent[]> {
   const table = await driver
     .findElement(By.css(`span#${region}`))
@@ -69,10 +69,10 @@ async function findTalentsForRegion(
         const name = await book.getAttribute("alt");
         const url = await book.getAttribute("data-src");
         return { name, url: parseUrl(url) };
-      }),
+      })
     );
     const characterContainers = await cells[2].findElements(
-      By.css("span.card-body"),
+      By.css("span.card-body")
     );
     const characters = await Promise.all(
       characterContainers.map(async (container) => {
@@ -83,7 +83,7 @@ async function findTalentsForRegion(
           .findElement(By.css(`span.card-image-container img`))
           .getAttribute("data-src");
         return { name, url: parseUrl(url) };
-      }),
+      })
     );
 
     talents.push({ day, books, characters });

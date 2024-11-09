@@ -1,5 +1,4 @@
-import { EntityTarget, Table } from "typeorm";
-import { ObjectLiteral } from "typeorm";
+import { EntityTarget, Table, ObjectLiteral } from "typeorm";
 import { dataSource } from "./init";
 
 /**
