@@ -34,6 +34,8 @@ export default class TalentMaterial {
   @ManyToOne(() => Nation, (nation) => nation.talentMaterials)
   nation: Nation;
 
-  @OneToMany(() => Character, (character) => character.talentMaterial)
+  @OneToMany(() => Character, (character) => character.talentMaterial, {
+    cascade: true,
+  })
   characters: Character[];
 }

@@ -3,7 +3,7 @@ import fs from "fs/promises";
 import { loadJsonPath } from "../data/setup";
 import { initDb } from "./init";
 
-import { printAllTableContents, repo } from "./utils";
+import { repo } from "./utils";
 import { z } from "zod";
 import {
   baseCharacterSchema,
@@ -26,6 +26,7 @@ import CharacterModel from "./models/Character";
 import ConstellationModel from "./models/Constellation";
 import CharacterTalentModel from "./models/CharacterTalent";
 import TalentAnimationsModel from "./models/TalentAnimations";
+import { Like } from "typeorm";
 
 type WeaponSchema = z.infer<typeof weaponSchema>;
 type WeaponTypeSchema = z.infer<typeof weaponTypeSchema>;
@@ -146,11 +147,11 @@ async function migrateTalentMaterials() {
     const nationMats = materials[name];
 
     if (!nationMats) throw new Error(`No materials found for ${name}`);
-    const books = createTalentBooks(nationMats).map((mat) => {
+    const books = await createTalentBooks(nationMats);
+    books.forEach((mat) => {
       mat.nation = nation;
-      return mat;
+      materialsToSave.push(mat);
     });
-    materialsToSave.push(...books);
   }
 
   await repo(TalentMaterial).save(materialsToSave);
@@ -169,35 +170,47 @@ async function migrateTalentMaterials() {
  * @returns Array of TalentMaterial entities ready to be saved
  * @throws Error if any required book type (teaching/guide/philosophy) is not found
  */
-function createTalentBooks(
+async function createTalentBooks(
   talentMaterials: TalentDaySchema[]
-): TalentMaterial[] {
+): Promise<TalentMaterial[]> {
   const getBookUrl = (bookType: string, mat: TalentDaySchema) => {
     const book = mat.books.find((book) => book.name.includes(bookType));
     if (!book) throw new Error(`No ${bookType} book found`);
     return book.url;
   };
 
-  const materialsToSave: TalentMaterial[] = [];
-  for (const mat of talentMaterials) {
-    const { day, books } = mat;
-    const [dayOne, dayTwo] = day.replace("/", "").split("\n");
+  const charRepo = repo(CharacterModel);
+  return await Promise.all(
+    talentMaterials.map(async (mat) => {
+      const { day, books, characters } = mat;
+      const [dayOne, dayTwo] = day.replace("/", "").split("\n");
 
-    const name = books[0].name.split(" ")[2];
-    const teachingUrl = getBookUrl("Teaching", mat);
-    const guideUrl = getBookUrl("Guide", mat);
-    const philosophyUrl = getBookUrl("Philosophies", mat);
+      const name = books[0].name.split(" ")[2];
+      const teachingUrl = getBookUrl("Teaching", mat);
+      const guideUrl = getBookUrl("Guide", mat);
+      const philosophyUrl = getBookUrl("Philosophies", mat);
 
-    const newMat = new TalentMaterial();
-    newMat.name = name;
-    newMat.teachingUrl = teachingUrl;
-    newMat.guideUrl = guideUrl;
-    newMat.philosophyUrl = philosophyUrl;
-    newMat.dayOne = dayOne;
-    newMat.dayTwo = dayTwo;
-  }
+      const newMat = new TalentMaterial();
+      newMat.name = name;
+      newMat.teachingUrl = teachingUrl;
+      newMat.guideUrl = guideUrl;
+      newMat.philosophyUrl = philosophyUrl;
+      newMat.dayOne = dayOne;
+      newMat.dayTwo = dayTwo;
 
-  return materialsToSave;
+      const chars = await Promise.all(
+        characters.map(async ({ name }) => {
+          const char = await charRepo.findOne({
+            where: { name: Like(`%${name}%`) },
+          });
+          return char;
+        })
+      );
+
+      newMat.characters = chars.filter((char) => char !== null);
+      return newMat;
+    })
+  );
 }
 
 /**
@@ -424,9 +437,8 @@ export async function migrate() {
   console.log("Migrating weapons...");
   await savePrimitives();
   await migrateWeapons();
-  await migrateTalentMaterials();
   await saveCharacters();
-  await printAllTableContents();
+  await migrateTalentMaterials();
 }
 
 if (require.main === module) {
