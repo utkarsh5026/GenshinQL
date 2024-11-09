@@ -4,6 +4,8 @@ import {
   Column,
   ManyToOne,
   OneToMany,
+  OneToOne,
+  JoinColumn,
 } from "typeorm";
 import Nation from "./Nation";
 import WeaponType from "./WeaponType";
@@ -11,6 +13,7 @@ import Element from "./Element";
 import CharacterTalent from "./CharacterTalent";
 import Constellation from "./Constellation";
 import TalentMaterial from "./TalentMaterial";
+import Gallery from "./Gallery";
 @Entity()
 export default class Character {
   @PrimaryGeneratedColumn()
@@ -48,4 +51,8 @@ export default class Character {
     (talentMaterial) => talentMaterial.characters
   )
   talentMaterial: TalentMaterial;
+
+  @OneToOne(() => Gallery, (gallery) => gallery.character)
+  @JoinColumn()
+  gallery: Gallery;
 }

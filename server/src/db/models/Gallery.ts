@@ -2,6 +2,7 @@ import { Entity, OneToOne, PrimaryGeneratedColumn, JoinColumn } from "typeorm";
 import NameCard from "./NameCard";
 import ScreenAnimation from "./ScreenAnimation";
 import AttackAnimation from "./AttackAnimation";
+import Character from "./Character";
 
 @Entity()
 export default class Gallery {
@@ -19,4 +20,7 @@ export default class Gallery {
   @OneToOne(() => AttackAnimation)
   @JoinColumn()
   attackAnimation: AttackAnimation;
+
+  @OneToOne(() => Character, (character) => character.gallery)
+  character: Character;
 }
