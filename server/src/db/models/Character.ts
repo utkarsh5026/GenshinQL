@@ -33,11 +33,14 @@ export default class Character {
 
   @OneToMany(
     () => CharacterTalent,
-    (characterTalent) => characterTalent.character
+    (characterTalent) => characterTalent.character,
+    { cascade: true }
   )
   characterTalents: CharacterTalent[];
 
-  @OneToMany(() => Constellation, (constellation) => constellation.character)
+  @OneToMany(() => Constellation, (constellation) => constellation.character, {
+    cascade: true,
+  })
   constellations: Constellation[];
 
   @ManyToOne(

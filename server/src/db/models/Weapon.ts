@@ -34,9 +34,9 @@ export default class Weapon {
   @JoinColumn({ name: "weaponTypeId" })
   weaponType: WeaponType;
 
-  @OneToMany(() => WeaponMaterial, "weapon")
+  @OneToMany(() => WeaponMaterial, "weapon", { cascade: true })
   materials: WeaponMaterial[];
 
-  @OneToMany(() => WeaponPassive, "weapon")
+  @OneToMany(() => WeaponPassive, "weapon", { cascade: true })
   passives: WeaponPassive[];
 }

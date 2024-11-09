@@ -27,7 +27,8 @@ export default class CharacterTalent {
 
   @OneToMany(
     () => TalentAnimations,
-    (talentAnimations) => talentAnimations.characterTalent
+    (talentAnimations) => talentAnimations.characterTalent,
+    { cascade: true }
   )
   talentAnimations: TalentAnimations[];
 
