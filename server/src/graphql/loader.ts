@@ -80,6 +80,19 @@ export const talentBooksLoader = new DataLoader(async (keys) => {
 export const baseCharacterLoader = new DataLoader(async (keys) => {
   const characters = await loadCharacters();
   return keys.map((key) => {
-    return characters;
+    return characters.map((char) => {
+      const { name, iconUrl, element, rarity, weaponType, nation } = char;
+      return {
+        name,
+        iconUrl,
+        element: element.name,
+        elementUrl: element.iconUrl,
+        rarity: `${rarity} stars`,
+        weaponType: weaponType.name,
+        weaponUrl: weaponType.iconUrl,
+        region: nation.name,
+        regionUrl: nation.iconUrl,
+      };
+    });
   });
 });
