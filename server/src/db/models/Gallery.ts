@@ -9,15 +9,15 @@ export default class Gallery {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @OneToOne(() => ScreenAnimation)
+  @OneToOne(() => ScreenAnimation, { cascade: true })
   @JoinColumn()
   screenAnimation: ScreenAnimation;
 
-  @OneToOne(() => NameCard)
+  @OneToOne(() => NameCard, { cascade: true })
   @JoinColumn()
   nameCard: NameCard;
 
-  @OneToOne(() => AttackAnimation)
+  @OneToOne(() => AttackAnimation, { cascade: true })
   @JoinColumn()
   attackAnimation: AttackAnimation;
 

@@ -52,7 +52,7 @@ export default class Character {
   )
   talentMaterial: TalentMaterial;
 
-  @OneToOne(() => Gallery, (gallery) => gallery.character)
+  @OneToOne(() => Gallery, (gallery) => gallery.character, { cascade: true })
   @JoinColumn()
   gallery: Gallery;
 }
