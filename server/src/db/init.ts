@@ -13,6 +13,10 @@ import CharacterTalent from "./models/CharacterTalent";
 import Constellation from "./models/Constellation";
 import TalentMaterial from "./models/TalentMaterial";
 import TalentAnimations from "./models/TalentAnimations";
+import ScreenAnimation from "./models/ScreenAnimation";
+import NameCard from "./models/NameCard";
+import AttackAnimation from "./models/AttackAnimation";
+import Gallery from "./models/Gallery";
 
 export const dataSource = new DataSource({
   type: "sqlite",
@@ -32,6 +36,10 @@ export const dataSource = new DataSource({
     Constellation,
     TalentMaterial,
     TalentAnimations,
+    ScreenAnimation,
+    NameCard,
+    AttackAnimation,
+    Gallery,
   ],
 });
 
