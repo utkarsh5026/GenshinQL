@@ -1,11 +1,13 @@
 import { IResolvers } from "@graphql-tools/utils";
-import { characters, filterCharacters, getCharacter } from "../data/load";
+import { filterCharacters } from "../data/load";
 
 const resolvers: IResolvers = {
   Query: {
-    characters: () => characters,
-    character: (_, { name }: { name: string }) => {
-      const character = getCharacter(name);
+    characters: async (_parent, _args, context) => {
+      return await context.loaders.baseCharacterLoader.load("all");
+    },
+    character: async (_parent, { name }: { name: string }, context) => {
+      const character = await context.loaders.baseCharacterLoader.load(name);
       if (!character) {
         throw new Error(`Character "${name}" not found`);
       }

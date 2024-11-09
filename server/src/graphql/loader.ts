@@ -1,5 +1,5 @@
 import DataLoader from "dataloader";
-import { loadTalentBooksSchedule } from "../db/load";
+import { loadTalentBooksSchedule, loadCharacters } from "../db/load";
 
 /**
  * DataLoader for fetching talent books schedule.
@@ -67,8 +67,19 @@ export const talentBooksLoader = new DataLoader(async (keys) => {
   });
 });
 
-// Function to load talent books using DataLoader
-export async function loadTalentBooks() {
-  const key = "all"; // or any appropriate key
-  return talentBooksLoader.load(key);
-}
+/**
+ * DataLoader for loading base character information.
+ *
+ * This loader batches and caches requests to load character data by their keys.
+ * It uses the `loadCharacters` function to fetch all characters and then maps
+ * the requested keys to the corresponding character data.
+ *
+ * @param {Array<string>} keys - An array of character keys to load.
+ * @returns {Promise<Array<Object>>} A promise that resolves to an array of character objects.
+ */
+export const baseCharacterLoader = new DataLoader(async (keys) => {
+  const characters = await loadCharacters();
+  return keys.map((key) => {
+    return characters;
+  });
+});

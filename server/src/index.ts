@@ -5,7 +5,7 @@ import typeDefs from "./graphql/typedef";
 import resolvers from "./graphql/resolvers";
 import { initDb } from "./db/init";
 import { loadTalentBooksSchedule } from "./db/load";
-import { talentBooksLoader } from "./graphql/loader";
+import { baseCharacterLoader, talentBooksLoader } from "./graphql/loader";
 
 const server = new ApolloServer({
   typeDefs: typeDefs,
@@ -18,6 +18,7 @@ async function startServer() {
     context: async () => ({
       loaders: {
         talentBooksLoader,
+        baseCharacterLoader,
       },
     }),
   });
