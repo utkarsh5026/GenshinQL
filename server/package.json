@@ -15,6 +15,7 @@
   "description": "",
   "dependencies": {
     "@apollo/server": "^4.11.0",
+    "dataloader": "^2.2.2",
     "graphql": "^16.9.0",
     "reflect-metadata": "^0.2.2",
     "selenium-webdriver": "^4.25.0",

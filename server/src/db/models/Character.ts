@@ -34,6 +34,9 @@ export default class Character {
   @ManyToOne(() => Element, (element) => element.characters)
   element: Element;
 
+  @Column()
+  iconUrl: string;
+
   @OneToMany(
     () => CharacterTalent,
     (characterTalent) => characterTalent.character,

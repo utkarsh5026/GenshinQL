@@ -333,12 +333,13 @@ async function saveCharacters() {
       region,
       constellations,
       talents,
+      iconUrl,
     } = charData;
 
     const newChar = new CharacterModel();
     newChar.name = name;
     newChar.rarity = rarity;
-
+    newChar.iconUrl = iconUrl;
     newChar.element = await elementRepo.findOneByOrFail({
       name: element,
     });
