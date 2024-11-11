@@ -3,8 +3,10 @@ import {
   loadTalentBooksSchedule,
   loadCharacters,
   loadWeapons,
+  loadCharacterByName,
 } from "../db/load";
 import { randomInt } from "crypto";
+import Character from "../db/models/Character";
 
 /**
  * DataLoader for fetching talent books schedule.
@@ -91,20 +93,7 @@ export const talentBooksLoader = new DataLoader(async (keys) => {
 export const baseCharacterLoader = new DataLoader(async (keys) => {
   const characters = await loadCharacters();
   return keys.map((key) => {
-    return characters.map((char) => {
-      const { name, iconUrl, element, rarity, weaponType, nation } = char;
-      return {
-        name,
-        iconUrl,
-        element: element.name,
-        elementUrl: element.iconUrl,
-        rarity: `${rarity} stars`,
-        weaponType: weaponType.name,
-        weaponUrl: weaponType.iconUrl,
-        region: nation.name,
-        regionUrl: nation.iconUrl,
-      };
-    });
+    return characters.map((char) => toGraphQlCharacter(char));
   });
 });
 
@@ -146,3 +135,87 @@ export const weaponLoader = new DataLoader(async (keys) => {
     });
   });
 });
+
+/**
+ * DataLoader for loading character information.
+ *
+ * This loader batches and caches requests to load character data by their keys.
+ * It uses the `loadCharacterByName` function to fetch character details and then
+ * maps the requested keys to the corresponding character data.
+ *
+ * @param {Array<string>} keys - An array of character keys to load.
+ * @returns {Promise<Array<Object>>} A promise that resolves to an array of character objects.
+ */
+export const characterLoader = new DataLoader(
+  async (keys: readonly string[]) => {
+    return keys.map(async (key) => {
+      const character = await loadCharacterByName(key);
+      if (character) {
+        const { constellations, characterTalents } = character;
+        return {
+          ...toGraphQlCharacter(character),
+          constellations: constellations.map((con) => {
+            const { description, name, iconUrl, level } = con;
+            return {
+              name,
+              description,
+              iconUrl,
+              level,
+            };
+          }),
+          talents: characterTalents.map((talent) => {
+            const {
+              name,
+              iconUrl,
+              talentType,
+              description,
+              scaling,
+              talentAnimations,
+            } = talent;
+            return {
+              talentName: name,
+              talentIcon: iconUrl,
+              talentType,
+              description,
+              scaling: Object.entries(scaling).map(([key, value]) => ({
+                key,
+                value,
+              })),
+              figureUrls: talentAnimations.map((anim) => {
+                const { url, caption } = anim;
+                return {
+                  url,
+                  caption,
+                };
+              }),
+            };
+          }),
+        };
+      }
+    });
+  }
+);
+
+/**
+ * Converts a Character object to a GraphQL-compatible format.
+ *
+ * This function takes a Character object and extracts relevant fields,
+ * transforming them into a format suitable for GraphQL responses.
+ *
+ * @param {Character} character - The character object to convert.
+ * @returns {Object} A GraphQL-compatible character object.
+ */
+function toGraphQlCharacter(character: Character) {
+  const { name, iconUrl, element, rarity, weaponType, nation } = character;
+  return {
+    name,
+    iconUrl,
+    element: element.name,
+    elementUrl: element.iconUrl,
+    rarity,
+    weaponType: weaponType.name,
+    weaponUrl: weaponType.iconUrl,
+    region: nation.name,
+    regionUrl: nation.iconUrl,
+  };
+}

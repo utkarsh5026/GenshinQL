@@ -7,28 +7,7 @@ const resolvers: IResolvers = {
       return await context.loaders.baseCharacterLoader.load("all");
     },
     character: async (_parent, { name }: { name: string }, context) => {
-      const character = await context.loaders.baseCharacterLoader.load(name);
-      if (!character) {
-        throw new Error(`Character "${name}" not found`);
-      }
-
-      const newCharacter: any = {
-        ...character,
-      };
-
-      for (let i = 0; i < character.talents.length; i++) {
-        const talent = character.talents[i];
-        newCharacter.talents[i].scaling = Object.entries(talent.scaling).map(
-          ([key, value]) => {
-            return {
-              key,
-              value,
-            };
-          }
-        );
-      }
-
-      return newCharacter;
+      return await context.loaders.characterLoader.load(name);
     },
     filterCharacters: (_, args) => filterCharacters(args.filter),
     talentBooks: async (_parent, _args, context) => {

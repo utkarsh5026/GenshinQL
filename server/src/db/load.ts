@@ -75,3 +75,33 @@ export async function loadWeapons(): Promise<WeaponType[]> {
     relations: ["weapons", "weapons.materials", "weapons.passives"],
   });
 }
+
+/**
+ * Loads a character by their name from the database.
+ *
+ * This function fetches a character based on the provided name, including their related elements,
+ * weapon types, nations, constellations, and character talents with their animations. The data is
+ * retrieved from the Character repository with specific relations and ordered by constellation level.
+ *
+ * @param {string} name - The name of the character to load.
+ * @returns {Promise<Character | null>} A promise that resolves to the character with their related data.
+ */
+export async function loadCharacterByName(
+  name: string
+): Promise<Character | null> {
+  return await repo(Character).findOne({
+    where: { name },
+    relations: [
+      "element",
+      "weaponType",
+      "nation",
+      "constellations",
+      "characterTalents.talentAnimations",
+    ],
+    order: {
+      constellations: {
+        level: "ASC",
+      },
+    },
+  });
+}

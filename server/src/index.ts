@@ -1,19 +1,21 @@
 import "reflect-metadata";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
+import { ApolloServerPluginLandingPageLocalDefault } from "@apollo/server/plugin/landingPage/default";
 import typeDefs from "./graphql/typedef";
 import resolvers from "./graphql/resolvers";
 import { initDb } from "./db/init";
-import { loadWeapons } from "./db/load";
 import {
   baseCharacterLoader,
   talentBooksLoader,
   weaponLoader,
+  characterLoader,
 } from "./graphql/loader";
 
 const server = new ApolloServer({
   typeDefs: typeDefs,
   resolvers: resolvers,
+  plugins: [ApolloServerPluginLandingPageLocalDefault()],
 });
 
 async function startServer() {
@@ -24,6 +26,7 @@ async function startServer() {
         talentBooksLoader,
         baseCharacterLoader,
         weaponLoader,
+        characterLoader,
       },
     }),
   });
@@ -36,7 +39,7 @@ startServer()
     await initDb();
     console.log("Database initialized");
 
-    console.dir(await loadWeapons(), { depth: null });
+    // console.dir(await loadWeapons(), { depth: null });
   })
   .catch((error) => {
     console.error(error);
