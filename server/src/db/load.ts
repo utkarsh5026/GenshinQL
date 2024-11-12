@@ -97,10 +97,21 @@ export async function loadCharacterByName(
       "nation",
       "constellations",
       "characterTalents.talentAnimations",
+      "gallery",
+      "gallery.nameCard",
     ],
     order: {
       constellations: {
         level: "ASC",
+      },
+    },
+
+    select: {
+      gallery: {
+        id: true,
+        nameCard: {
+          background: true,
+        },
       },
     },
   });

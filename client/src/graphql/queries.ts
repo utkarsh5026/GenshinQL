@@ -55,10 +55,7 @@ export const GET_CHARACTER = gql`
       rarity
       name
       imageUrls {
-        wish
         nameCard
-        inGame
-        card
       }
       iconUrl
       elementUrl

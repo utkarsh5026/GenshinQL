@@ -190,6 +190,9 @@ export const characterLoader = new DataLoader(
               }),
             };
           }),
+          imageUrls: {
+            nameCard: character.gallery.nameCard.background,
+          },
         };
       }
     });

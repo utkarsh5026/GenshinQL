@@ -13,20 +13,19 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   coverUrl,
 }) => {
   return (
-    <div className="relative w-full shadow-md">
+    <div className="relative w-full shadow-md flex flex-col items-center">
       {/* Cover Image */}
-      <div className="w-full h-20 overflow-hidden rounded-md relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-white/30 z-10" />
+      <div className="w-full h-32 overflow-hidden rounded-md relative">
         <img
           src={coverUrl}
           alt="Profile Cover"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover opacity-40 z-10"
         />
       </div>
 
       {/* Centered Avatar */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-14">
-        <Avatar className="bg-blue-400 border-2 border-orange-500">
+      <div className="relative -mt-10">
+        <Avatar className="bg-blue-400 border-2 border-orange-500 z-40 h-20 w-20">
           <AvatarImage src={avatarUrl} />
         </Avatar>
       </div>
