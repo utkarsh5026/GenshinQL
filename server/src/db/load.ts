@@ -126,7 +126,19 @@ export async function loadCharacterByName(
   });
 }
 
-export async function loadCharacterGallery(name: string) {
+/**
+ * Loads the gallery information for a character by their name from the database.
+ *
+ * This function fetches the gallery data for a character based on the provided name,
+ * including their related name card, attack animations, and screen animations. The data is
+ * retrieved from the Character repository with specific relations.
+ *
+ * @param {string} name - The name of the character whose gallery information is to be loaded.
+ * @returns {Promise<Character | null>} A promise that resolves to the character's gallery information with related data.
+ */
+export async function loadCharacterGallery(
+  name: string
+): Promise<Character | null> {
   return await repo(Character).findOne({
     where: { name },
     relations: [
