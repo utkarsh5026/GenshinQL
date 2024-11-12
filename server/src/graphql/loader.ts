@@ -97,9 +97,9 @@ export const baseCharacterLoader = new DataLoader(async (keys) => {
     return characters.map((char) => {
       return {
         ...toGraphQlCharacter(char),
-        idleOneUrl: char.gallery?.screenAnimation?.idleOne,
-        idleTwoUrl: char.gallery?.screenAnimation?.idleTwo,
-        partyJoinUrl: char.gallery?.screenAnimation?.partySetup,
+        idleOne: char.gallery?.screenAnimation?.idleOne,
+        idleTwo: char.gallery?.screenAnimation?.idleTwo,
+        partyJoin: char.gallery?.screenAnimation?.partySetup,
       };
     });
   });

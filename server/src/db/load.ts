@@ -31,13 +31,6 @@ export async function loadTalentBooksSchedule(): Promise<Nation[]> {
         characters: {
           name: true,
           iconUrl: true,
-          gallery: {
-            id: true,
-            // screenAnimation: {
-            //   idleTwo: true,
-            //   idleOne: true,
-            // },
-          },
         },
       },
     },
@@ -63,21 +56,6 @@ export async function loadCharacters(): Promise<Character[]> {
       "gallery.screenAnimation",
       "gallery.attackAnimation",
     ],
-    // select: {
-    //   gallery: {
-    //     id: true,
-    //     screenAnimation: {
-    //       idleOne: true,
-    //       idleTwo: true,
-    //       partySetup: true,
-    //     },
-    //     attackAnimation: {
-    //       normalAttack: true,
-    //       elementalSkill: true,
-    //       elementalBurst: true,
-    //     },
-    //   },
-    // },
   });
 }
 

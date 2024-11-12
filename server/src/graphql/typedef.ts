@@ -63,9 +63,9 @@ type Character implements BaseCharacter {
     elementUrl: String!,
     weaponUrl: String!,
     regionUrl: String!,
-    idleOneUrl: String,
-    idleTwoUrl: String,
-    partyJoinUrl: String,
+    idleOne: AnimationMedia,
+    idleTwo: AnimationMedia,
+    partyJoin: AnimationMedia,
 }
 
 type AdvancedCharacter implements BaseCharacter {
@@ -137,19 +137,26 @@ type WeaponTypeDetails {
     weapons: [Weapon!]!,
 }
 
+type AnimationMedia {
+    imageUrl: String
+    videoUrl: String
+    caption: String
+    videoType: String
+}
+
 type AttackAnimation {
-    normalAttack: String
-    elementalSkill: String
-    elementalBurst: String
+    normalAttack: AnimationMedia
+    elementalSkill: AnimationMedia
+    elementalBurst: AnimationMedia
 }
 
 type ScreenAnimation {
-    idleOne: String
-    idleTwo: String
-    partyJoin: String
+    idleOne: AnimationMedia
+    idleTwo: AnimationMedia
+    partyJoin: AnimationMedia
 }
 
-type NameCardAnimation {
+type NameCardImage {
     background: String
     icon: String
 }
@@ -157,7 +164,7 @@ type NameCardAnimation {
 type CharacterGallery {
     attackAnimation: AttackAnimation
     screenAnimation: ScreenAnimation
-    nameCard: NameCardAnimation
+    nameCard: NameCardImage
 }
 
 
