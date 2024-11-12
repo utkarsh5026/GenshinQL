@@ -1,19 +1,23 @@
 import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import Gallery from "./Gallery";
+import { animationSchema } from "../../data/schema";
+import { z } from "zod";
+
+type Animation = z.infer<typeof animationSchema>;
 
 @Entity()
 export default class AttackAnimation {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  normalAttack: string;
+  @Column("simple-json")
+  normalAttack: Animation[];
 
-  @Column()
-  elementalSkill: string;
+  @Column("simple-json")
+  elementalSkill: Animation[];
 
-  @Column()
-  elementalBurst: string;
+  @Column("simple-json")
+  elementalBurst: Animation[];
 
   @OneToOne(() => Gallery)
   gallery: Gallery;

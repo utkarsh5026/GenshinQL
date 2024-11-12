@@ -83,8 +83,13 @@ export const imageSchema = z.object({
   caption: z.string(),
 });
 
+export const animationSchema = imageSchema.extend({
+  videoUrl: z.string(),
+  videoType: z.string(),
+});
+
 export const gallerySchema = z.object({
-  screenAnimations: z.array(imageSchema),
+  screenAnimations: z.array(animationSchema),
   nameCards: z.array(imageSchema),
   attackAnimations: z.array(
     z.object({
@@ -93,7 +98,7 @@ export const gallerySchema = z.object({
         z.literal("Elemental_Burst"),
         z.literal("Elemental_Skill"),
       ]),
-      animations: z.array(imageSchema),
+      animations: z.array(animationSchema),
     })
   ),
 });

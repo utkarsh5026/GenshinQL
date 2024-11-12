@@ -57,10 +57,10 @@ export const talentBooksLoader = new DataLoader(async (keys) => {
               const prob = randomInt(0, 100);
               if (prob < 50) {
                 if (gallery?.screenAnimation?.idleOne)
-                  iconUrl = gallery.screenAnimation.idleOne;
+                  iconUrl = gallery.screenAnimation.idleOne.imageUrl;
               } else {
                 if (gallery?.screenAnimation?.idleTwo)
-                  iconUrl = gallery.screenAnimation.idleTwo;
+                  iconUrl = gallery.screenAnimation.idleTwo.imageUrl;
               }
 
               return {

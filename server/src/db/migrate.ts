@@ -14,6 +14,7 @@ import {
   talentSchema,
   weaponSchema,
   weaponTypeSchema,
+  animationSchema,
 } from "../data/schema";
 
 import WeaponModel from "./models/Weapon";
@@ -33,6 +34,7 @@ import NameCardModel from "./models/NameCard";
 import AttackAnimationModel from "./models/AttackAnimation";
 import { Like } from "typeorm";
 import { toOriginalName } from "../data/utils";
+import ScreenAnimationMedia from "./models/ScreenAnimationMedia";
 
 type WeaponSchema = z.infer<typeof weaponSchema>;
 type WeaponTypeSchema = z.infer<typeof weaponTypeSchema>;
@@ -49,6 +51,7 @@ type NameCardSchema = z.infer<typeof gallerySchema.shape.nameCards>;
 type AttackAnimationSchema = z.infer<
   typeof gallerySchema.shape.attackAnimations
 >;
+type AnimationSchema = z.infer<typeof animationSchema>;
 
 async function listJsonFiles(dirPath: string) {
   const files = await fs.readdir(dirPath);
@@ -454,7 +457,7 @@ function createTalents(
  */
 async function migrateGallery() {
   const galleryData = (await loadJsonPath(
-    path.join("characters", "gallery.json")
+    path.join("characters", "gallery_op_latest.json")
   )) as Record<string, GallerySchema>;
   const charRepo = repo(CharacterModel);
 
@@ -493,17 +496,33 @@ async function migrateGallery() {
 function createScreenAnimation(
   screenAnimations: ScreenAnimationSchema
 ): ScreenAnimationModel {
-  const capMap: Record<string, string> = {};
-  screenAnimations.forEach(({ caption, url }) => {
-    capMap[caption] = url;
+  const createSceenAnimationMedia = (animation?: AnimationSchema) => {
+    if (!animation) return null;
+    const { url, videoUrl, caption, videoType } = animation;
+    const newMedia = new ScreenAnimationMedia();
+    newMedia.imageUrl = url;
+    newMedia.videoUrl = videoUrl;
+    newMedia.caption = caption;
+    newMedia.videoType = videoType;
+    return newMedia;
+  };
+  const capMap: Record<string, AnimationSchema> = {};
+  screenAnimations.forEach((sca) => {
+    capMap[sca.caption] = sca;
   });
 
   const newScreenAnimation = new ScreenAnimationModel();
-  newScreenAnimation.idleOne = capMap["Idle 1"] ?? "";
-  newScreenAnimation.idleTwo = capMap["Idle 2"] ?? "";
-  newScreenAnimation.weaponMenu = capMap["Weapon Menu"] ?? "";
-  newScreenAnimation.talentMenu = capMap["Talent Menu"] ?? "";
-  newScreenAnimation.partySetup = capMap["Party Setup"] ?? "";
+  newScreenAnimation.idleOne = createSceenAnimationMedia(capMap["Idle 1"]);
+  newScreenAnimation.idleTwo = createSceenAnimationMedia(capMap["Idle 2"]);
+  newScreenAnimation.weaponMenu = createSceenAnimationMedia(
+    capMap["Weapon Menu"]
+  );
+  newScreenAnimation.talentMenu = createSceenAnimationMedia(
+    capMap["Talent Menu"]
+  );
+  newScreenAnimation.partySetup = createSceenAnimationMedia(
+    capMap["Party Setup"]
+  );
 
   return newScreenAnimation;
 }
@@ -550,13 +569,16 @@ function createNameCard(nameCards: NameCardSchema): NameCardModel {
 function createAttackAnimation(
   attackAnimations: AttackAnimationSchema
 ): AttackAnimationModel {
-  const skillMap: Record<(typeof attackAnimations)[number]["skill"], string> = {
-    Normal_Attack: "",
-    Elemental_Burst: "",
-    Elemental_Skill: "",
+  const skillMap: Record<
+    (typeof attackAnimations)[number]["skill"],
+    AnimationSchema[]
+  > = {
+    Normal_Attack: [],
+    Elemental_Burst: [],
+    Elemental_Skill: [],
   };
   for (const { skill, animations } of attackAnimations) {
-    skillMap[skill] = animations[0].url;
+    skillMap[skill] = animations;
   }
 
   const newAttackAnimation = new AttackAnimationModel();

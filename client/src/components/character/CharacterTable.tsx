@@ -31,6 +31,7 @@ const CharactersTable: React.FC = () => {
     if (!characters) return [];
 
     const getCharUrl = (character: Character) => {
+      if (character.partyJoinUrl) return character.partyJoinUrl;
       if (character.idleOneUrl) return character.idleOneUrl;
       if (character.idleTwoUrl) return character.idleTwoUrl;
       return character.iconUrl;
@@ -63,12 +64,12 @@ const CharactersTable: React.FC = () => {
             <TableRow>
               <TableCell>
                 <div className="relative h-12 w-12">
-                  <Avatar className="relative h-full w-full">
+                  <Avatar className="relative h-full w-full cursor-pointer transition duration-300 ease-in-out hover:scale-150">
                     <AvatarImage
                       src={character.iconUrl}
                       alt={character.name}
                       loading="lazy"
-                      className="h-full w-full rounded-full"
+                      className="h-full w-full"
                     />
                   </Avatar>
                 </div>

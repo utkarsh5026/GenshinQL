@@ -40,7 +40,6 @@ async function loadCharactersGallery(
     try {
       const name = char.name.split(" ").join("_");
       if (!force && name in alreadySaved) continue;
-
       console.log(`Scraping ${char.name}`);
       charGalleryMap[name] = await getCharacterGalleryImages(driver, name);
       console.log(`Scraped ${char.name}`);
@@ -49,7 +48,7 @@ async function loadCharactersGallery(
     }
   }
 
-  await saveJson(charGalleryMap, "characters", "gallery_op");
+  await saveJson(charGalleryMap, "characters", "gallery_op_latest");
   console.log("Gallery saved");
 }
 
@@ -115,27 +114,7 @@ async function getCharacterScreenAnimations(
     .findElement(By.xpath("./following-sibling::div"));
 
   const figures = await galleryContainer.findElements(By.css("figure"));
-  return await Promise.all(
-    figures.map(async (figure) => {
-      try {
-        const img = await figure
-          .findElement(By.css("img"))
-          .getAttribute("data-src");
-        const caption = await figure
-          .findElement(By.css("figcaption"))
-          .getText();
-        return {
-          url: parseUrl(img),
-          caption,
-        };
-      } catch {
-        return {
-          url: "",
-          caption: "",
-        };
-      }
-    })
-  );
+  return await parseFigures(figures);
 }
 
 /**
@@ -157,7 +136,7 @@ async function getCharacterNameCard(
     .findElement(By.xpath("./following-sibling::div"))
     .findElements(By.css("img"));
 
-  return parseImages(images);
+  return await parseImages(images);
 }
 
 /**
@@ -179,8 +158,47 @@ async function getCharacterAttackAnimations(
     .findElement(By.xpath("./parent::*"))
     .findElement(By.xpath("./following-sibling::div"));
 
-  const images = await galleryContainer.findElement(By.css("img"));
-  return await parseImages([images]);
+  const figures = await galleryContainer.findElements(By.css("figure"));
+  return await parseFigures(figures);
+}
+
+/**
+ * Parses figure elements to extract image URLs, captions, and video details.
+ * Handles errors by returning empty strings for failed extractions.
+ *
+ * @param {WebElement[]} figures - Array of WebElement objects representing figures
+ * @returns {Promise<Array<{url: string, caption: string, videoUrl: string, videoType: string}>>}
+ */
+async function parseFigures(figures: WebElement[]) {
+  return await Promise.all(
+    figures.map(async (figure) => {
+      try {
+        const img = await figure
+          .findElement(By.css("img"))
+          .getAttribute("data-src");
+        const caption = await figure
+          .findElement(By.css("figcaption"))
+          .getText();
+        const videoSource = await figure.findElement(By.css("video source"));
+
+        const videoUrl = await videoSource.getAttribute("data-src");
+        const videoType = await videoSource.getAttribute("type");
+        return {
+          url: parseUrl(img),
+          caption,
+          videoUrl: parseUrl(videoUrl),
+          videoType,
+        };
+      } catch {
+        return {
+          url: "",
+          caption: "",
+          videoUrl: "",
+          videoType: "",
+        };
+      }
+    })
+  );
 }
 
 /**
@@ -216,11 +234,10 @@ async function parseImages(images: WebElement[]): Promise<GenshinImage[]> {
  *
  * @returns {Promise<void>}
  */
-async function main() {
+async function main(): Promise<void> {
   const driver = await setupDriver();
-
   try {
-    await loadCharactersGallery(driver);
+    await loadCharactersGallery(driver, true);
   } finally {
     await driver.quit();
   }

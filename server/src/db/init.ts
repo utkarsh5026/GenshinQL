@@ -17,6 +17,7 @@ import ScreenAnimation from "./models/ScreenAnimation";
 import NameCard from "./models/NameCard";
 import AttackAnimation from "./models/AttackAnimation";
 import Gallery from "./models/Gallery";
+import ScreenAnimationMedia from "./models/ScreenAnimationMedia";
 
 export const dataSource = new DataSource({
   type: "sqlite",
@@ -39,6 +40,7 @@ export const dataSource = new DataSource({
     NameCard,
     AttackAnimation,
     Gallery,
+    ScreenAnimationMedia,
   ],
 });
 

@@ -1,25 +1,33 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, OneToOne, JoinColumn } from "typeorm";
 import Gallery from "./Gallery";
+import ScreenAnimationMedia from "./ScreenAnimationMedia";
+
+type SCAMedia = ScreenAnimationMedia | null;
 
 @Entity()
 export default class ScreenAnimation {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  idleOne: string;
+  @OneToOne(() => ScreenAnimationMedia, { cascade: true, nullable: true })
+  @JoinColumn()
+  idleOne: SCAMedia;
 
-  @Column()
-  idleTwo: string;
+  @OneToOne(() => ScreenAnimationMedia, { cascade: true, nullable: true })
+  @JoinColumn()
+  idleTwo: SCAMedia;
 
-  @Column()
-  talentMenu: string;
+  @OneToOne(() => ScreenAnimationMedia, { cascade: true, nullable: true })
+  @JoinColumn()
+  talentMenu: SCAMedia;
 
-  @Column()
-  weaponMenu: string;
+  @OneToOne(() => ScreenAnimationMedia, { cascade: true, nullable: true })
+  @JoinColumn()
+  weaponMenu: SCAMedia;
 
-  @Column()
-  partySetup: string;
+  @OneToOne(() => ScreenAnimationMedia, { cascade: true, nullable: true })
+  @JoinColumn()
+  partySetup: SCAMedia;
 
   @OneToOne(() => Gallery)
   gallery: Gallery;

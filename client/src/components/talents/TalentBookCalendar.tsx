@@ -35,7 +35,7 @@ const TalentCalender: React.FC = () => {
       data && data.talentBooks
         ? (data.talentBooks as TalentBookCalendar[])
         : [],
-    [data],
+    [data]
   );
 
   if (loading) return null;
@@ -80,10 +80,7 @@ const TalentCalender: React.FC = () => {
                   (isCalendar ? (
                     <TalentTable talent={books} />
                   ) : (
-                    <TalentCalendarView
-                      nDays={7}
-                      talent={books as TalentBookCalendar}
-                    />
+                    <TalentCalendarView nDays={7} talent={books} />
                   ))}
               </TabsContent>
             );
