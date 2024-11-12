@@ -28,6 +28,9 @@ const resolvers: IResolvers = {
     weapons: async (_parent, _args, context) => {
       return await context.loaders.weaponLoader.load("all");
     },
+    characterGallery: async (_parent, { name }: { name: string }, context) => {
+      return await context.loaders.characterGalleryLoader.load(name);
+    },
   },
 };
 

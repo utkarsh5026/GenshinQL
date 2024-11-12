@@ -4,6 +4,7 @@ import {
   loadCharacters,
   loadWeapons,
   loadCharacterByName,
+  loadCharacterGallery,
 } from "../db/load";
 import { randomInt } from "crypto";
 import Character from "../db/models/Character";
@@ -198,6 +199,44 @@ export const characterLoader = new DataLoader(
           }),
           imageUrls: {
             nameCard: character.gallery.nameCard.background,
+          },
+        };
+      }
+    });
+  }
+);
+
+/**
+ * DataLoader for loading character galleries.
+ *
+ * This DataLoader batches and caches requests to load character galleries
+ * by their names. It retrieves the gallery information for each character,
+ * including attack animations, screen animations, and name card details.
+ *
+ * @param {readonly string[]} keys - An array of character names to load galleries for.
+ * @returns {Promise<Object[]>} A promise that resolves to an array of character gallery objects.
+ */
+export const characterGalleryLoader = new DataLoader(
+  async (keys: readonly string[]) => {
+    return keys.map(async (key) => {
+      const charGallery = await loadCharacterGallery(key);
+      if (charGallery) {
+        const { gallery } = charGallery;
+        const { attackAnimation, screenAnimation, nameCard } = gallery;
+        return {
+          attackAnimation: {
+            normalAttack: attackAnimation.normalAttack,
+            elementalSkill: attackAnimation.elementalSkill,
+            elementalBurst: attackAnimation.elementalBurst,
+          },
+          screenAnimation: {
+            idleOne: screenAnimation.idleOne,
+            idleTwo: screenAnimation.idleTwo,
+            partyJoin: screenAnimation.partySetup,
+          },
+          nameCard: {
+            background: nameCard.background,
+            icon: nameCard.icon,
           },
         };
       }

@@ -136,10 +136,34 @@ type WeaponTypeDetails {
     weapons: [Weapon!]!,
 }
 
+type AttackAnimation {
+    normalAttack: String
+    elementalSkill: String
+    elementalBurst: String
+}
+
+type ScreenAnimation {
+    idleOne: String
+    idleTwo: String
+    partyJoin: String
+}
+
+type NameCardAnimation {
+    background: String
+    icon: String
+}
+
+type CharacterGallery {
+    attackAnimation: AttackAnimation
+    screenAnimation: ScreenAnimation
+    nameCard: NameCardAnimation
+}
+
 
 type Query {
     characters: [Character!]
     character(name: String!): AdvancedCharacter!
+    characterGallery(name: String!): CharacterGallery!
     filterCharacters(filter: CharacterFilter!): [Character!]
     talentBooks: [TalentMaterial!]
     weapons: [WeaponTypeDetails!]

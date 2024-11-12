@@ -125,3 +125,15 @@ export async function loadCharacterByName(
     },
   });
 }
+
+export async function loadCharacterGallery(name: string) {
+  return await repo(Character).findOne({
+    where: { name },
+    relations: [
+      "gallery",
+      "gallery.nameCard",
+      "gallery.attackAnimation",
+      "gallery.screenAnimation",
+    ],
+  });
+}
