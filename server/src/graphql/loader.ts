@@ -99,6 +99,7 @@ export const baseCharacterLoader = new DataLoader(async (keys) => {
         ...toGraphQlCharacter(char),
         idleOneUrl: char.gallery?.screenAnimation?.idleOne,
         idleTwoUrl: char.gallery?.screenAnimation?.idleTwo,
+        partyJoinUrl: char.gallery?.screenAnimation?.partySetup,
       };
     });
   });

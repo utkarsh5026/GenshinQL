@@ -14,6 +14,7 @@ export const GET_CHARACTERS = gql`
       regionUrl
       idleOneUrl
       idleTwoUrl
+      partyJoinUrl
     }
   }
 `;

@@ -1,7 +1,7 @@
 import Character from "./models/Character";
 import Nation from "./models/Nation";
 import WeaponType from "./models/WeaponType";
-import { repo } from "./utils";
+import {repo} from "./utils";
 
 /**
  * Loads the talent books schedule from the database.
@@ -63,6 +63,7 @@ export async function loadCharacters(): Promise<Character[]> {
         screenAnimation: {
           idleOne: true,
           idleTwo: true,
+          partySetup: true,
         },
       },
     },
@@ -96,7 +97,7 @@ export async function loadWeapons(): Promise<WeaponType[]> {
  * @returns {Promise<Character | null>} A promise that resolves to the character with their related data.
  */
 export async function loadCharacterByName(
-  name: string
+  name: string,
 ): Promise<Character | null> {
   return await repo(Character).findOne({
     where: { name },
@@ -137,7 +138,7 @@ export async function loadCharacterByName(
  * @returns {Promise<Character | null>} A promise that resolves to the character's gallery information with related data.
  */
 export async function loadCharacterGallery(
-  name: string
+  name: string,
 ): Promise<Character | null> {
   return await repo(Character).findOne({
     where: { name },

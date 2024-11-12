@@ -65,6 +65,7 @@ type Character implements BaseCharacter {
     regionUrl: String!,
     idleOneUrl: String,
     idleTwoUrl: String,
+    partyJoinUrl: String,
 }
 
 type AdvancedCharacter implements BaseCharacter {

@@ -10,6 +10,7 @@ export type Character = {
   regionUrl: string;
   idleOneUrl?: string;
   idleTwoUrl?: string;
+  partyJoinUrl?: string;
 };
 
 type TalentScale = {
@@ -68,4 +69,21 @@ export type Weapon = {
   rarity: string;
   type: string;
   subStat: string;
+};
+
+type ScreenAnimation = {
+  idleOne?: string;
+  idleTwo?: string;
+  partyJoin: string;
+};
+
+type NameCardAnimation = {
+  background: string;
+  icon: string;
+};
+
+type CharacterGallery = {
+  attackAnimation: AttackAnimation;
+  screenAnimation: ScreenAnimation;
+  nameCard: NameCardAnimation;
 };
