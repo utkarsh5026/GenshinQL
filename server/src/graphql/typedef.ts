@@ -63,6 +63,8 @@ type Character implements BaseCharacter {
     elementUrl: String!,
     weaponUrl: String!,
     regionUrl: String!,
+    idleOneUrl: String,
+    idleTwoUrl: String,
 }
 
 type AdvancedCharacter implements BaseCharacter {

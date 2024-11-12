@@ -30,9 +30,15 @@ const CharactersTable: React.FC = () => {
 
     if (!characters) return [];
 
+    const getCharUrl = (character: Character) => {
+      if (character.idleOneUrl) return character.idleOneUrl;
+      if (character.idleTwoUrl) return character.idleTwoUrl;
+      return character.iconUrl;
+    };
+
     return characters.map((character) => ({
       ...character,
-      iconUrl: character.iconUrl.split("/revision/")[0],
+      iconUrl: getCharUrl(character),
       elementUrl: character.elementUrl.split("/revision/")[0],
     }));
   }, [data]);
@@ -45,7 +51,7 @@ const CharactersTable: React.FC = () => {
       <TableHeader>
         <TableRow>
           {columnNames.map((columnName) => (
-            <TableHead className="font-bold" key={columnName}>
+            <TableHead className="font-bold cursor-pointer" key={columnName}>
               {columnName}
             </TableHead>
           ))}
@@ -56,13 +62,16 @@ const CharactersTable: React.FC = () => {
           <CharacterSheet character={character} key={character.name}>
             <TableRow>
               <TableCell>
-                <Avatar className="bg-blue-500">
-                  <AvatarImage
-                    src={character.iconUrl}
-                    alt={character.name}
-                    loading="lazy"
-                  />
-                </Avatar>
+                <div className="relative h-12 w-12">
+                  <Avatar className="relative h-full w-full">
+                    <AvatarImage
+                      src={character.iconUrl}
+                      alt={character.name}
+                      loading="lazy"
+                      className="h-full w-full rounded-full"
+                    />
+                  </Avatar>
+                </div>
               </TableCell>
               <TableCell className="text-left font-bold">
                 {character.name}

@@ -56,7 +56,16 @@ export async function loadTalentBooksSchedule(): Promise<Nation[]> {
 export async function loadCharacters(): Promise<Character[]> {
   const characterRepo = repo(Character);
   return characterRepo.find({
-    relations: ["element", "weaponType", "nation"],
+    relations: ["element", "weaponType", "nation", "gallery.screenAnimation"],
+    select: {
+      gallery: {
+        id: true,
+        screenAnimation: {
+          idleOne: true,
+          idleTwo: true,
+        },
+      },
+    },
   });
 }
 

@@ -7,8 +7,9 @@ import { GET_CHARACTER } from "./graphql/queries";
 import TalentCalender from "@/components/talents/TalentBookCalendar.tsx";
 import CharacterDescription from "./components/character/CharacterDescription";
 import { CharacterDetailed } from "./graphql/types";
+import CharactersTable from "./components/character/CharacterTable";
 
-type CurrentView = "character" | "talentCalender";
+type CurrentView = "character" | "talentCalender" | "charactersTable";
 
 function App() {
   const [getCharacter, { data }] = useLazyQuery(GET_CHARACTER);
@@ -25,11 +26,15 @@ function App() {
   const handleTalentCalenderClick = () => {
     setCurrentView("talentCalender");
   };
+  const handleCharactersTableClick = () => {
+    setCurrentView("charactersTable");
+  };
   return (
     <SidebarProvider>
       <AppSideBar
         onCharacterClick={handleCharacterClick}
         onTalentCalenderClick={handleTalentCalenderClick}
+        onCharactersTableClick={handleCharactersTableClick}
       />
       <main className="flex flex-col items-center justify-center w-full">
         {currentView === "character" && (
@@ -38,6 +43,7 @@ function App() {
           />
         )}
         {currentView === "talentCalender" && <TalentCalender />}
+        {currentView === "charactersTable" && <CharactersTable />}
       </main>
     </SidebarProvider>
   );

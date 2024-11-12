@@ -93,7 +93,13 @@ export const talentBooksLoader = new DataLoader(async (keys) => {
 export const baseCharacterLoader = new DataLoader(async (keys) => {
   const characters = await loadCharacters();
   return keys.map((key) => {
-    return characters.map((char) => toGraphQlCharacter(char));
+    return characters.map((char) => {
+      return {
+        ...toGraphQlCharacter(char),
+        idleOneUrl: char.gallery?.screenAnimation?.idleOne,
+        idleTwoUrl: char.gallery?.screenAnimation?.idleTwo,
+      };
+    });
   });
 });
 

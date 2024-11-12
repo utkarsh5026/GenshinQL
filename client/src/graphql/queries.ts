@@ -12,6 +12,8 @@ export const GET_CHARACTERS = gql`
       elementUrl
       weaponUrl
       regionUrl
+      idleOneUrl
+      idleTwoUrl
     }
   }
 `;

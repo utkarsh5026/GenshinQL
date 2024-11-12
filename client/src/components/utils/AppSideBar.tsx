@@ -14,7 +14,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
-import { CalendarHeart, ChevronDown } from "lucide-react";
+import { CalendarHeart, ChevronDown, Table2 } from "lucide-react";
 import { useQuery } from "@apollo/client";
 import { GET_CHARACTER_FOR_SIDEBAR } from "@/graphql/queries";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
@@ -23,11 +23,13 @@ import type { Character } from "@/graphql/types";
 interface AppSideBarProps {
   onCharacterClick: (name: string) => void;
   onTalentCalenderClick: () => void;
+  onCharactersTableClick: () => void;
 }
 
 const AppSideBar: React.FC<AppSideBarProps> = ({
   onCharacterClick,
   onTalentCalenderClick,
+  onCharactersTableClick,
 }) => {
   const { data } = useQuery(GET_CHARACTER_FOR_SIDEBAR);
   return (
@@ -37,6 +39,9 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
         <SidebarMenu>
           <SidebarMenuButton onClick={onTalentCalenderClick}>
             <CalendarHeart /> Talents Calendar
+          </SidebarMenuButton>
+          <SidebarMenuButton onClick={onCharactersTableClick}>
+            <Table2 /> Characters Table
           </SidebarMenuButton>
           <Collapsible defaultOpen={false} className="group/collapsible">
             <SidebarItem>

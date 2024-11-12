@@ -8,6 +8,8 @@ export type Character = {
   elementUrl: string;
   weaponUrl: string;
   regionUrl: string;
+  idleOneUrl?: string;
+  idleTwoUrl?: string;
 };
 
 type TalentScale = {

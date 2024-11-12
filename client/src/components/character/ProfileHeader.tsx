@@ -14,7 +14,6 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
 }) => {
   return (
     <div className="relative w-full shadow-md flex flex-col items-center">
-      {/* Cover Image */}
       <div className="w-full h-32 overflow-hidden rounded-md relative">
         <img
           src={coverUrl}
