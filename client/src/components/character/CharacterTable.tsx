@@ -9,10 +9,13 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Avatar } from "@/components/ui/avatar";
-import { Character } from "@/graphql/types";
+import { AnimationMedia, Character } from "@/graphql/types";
 import CharacterSheet from "./CharacterSheet";
-import { AvatarImage } from "@radix-ui/react-avatar";
+import CharacterMediaAvatar from "./CharacterMediaAvatar";
+
+type CharacterWithMedia = Character & {
+  media: AnimationMedia;
+};
 
 const CharactersTable: React.FC = () => {
   const { loading, error, data } = useQuery(GET_CHARACTERS);
@@ -25,21 +28,28 @@ const CharactersTable: React.FC = () => {
     "Region",
   ];
 
-  const characters: Character[] = useMemo(() => {
+  console.log(data);
+
+  const characters: CharacterWithMedia[] = useMemo(() => {
     const characters = data?.characters as Character[];
 
     if (!characters) return [];
 
-    const getCharUrl = (character: Character) => {
-      if (character.partyJoinUrl) return character.partyJoinUrl;
-      if (character.idleOneUrl) return character.idleOneUrl;
-      if (character.idleTwoUrl) return character.idleTwoUrl;
-      return character.iconUrl;
+    const getCharMedia = (character: Character) => {
+      if (character.partyJoin) return character.partyJoin;
+      if (character.idleOne) return character.idleOne;
+      if (character.idleTwo) return character.idleTwo;
+      return {
+        imageUrl: character.iconUrl,
+        videoUrl: "",
+        caption: character.name,
+        videoType: "",
+      };
     };
 
     return characters.map((character) => ({
       ...character,
-      iconUrl: getCharUrl(character),
+      media: getCharMedia(character),
       elementUrl: character.elementUrl.split("/revision/")[0],
     }));
   }, [data]);
@@ -59,19 +69,12 @@ const CharactersTable: React.FC = () => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {characters.map((character: Character) => (
+        {characters.map((character: CharacterWithMedia) => (
           <CharacterSheet character={character} key={character.name}>
             <TableRow>
               <TableCell>
                 <div className="relative h-12 w-12">
-                  <Avatar className="relative h-full w-full cursor-pointer transition duration-300 ease-in-out hover:scale-150">
-                    <AvatarImage
-                      src={character.iconUrl}
-                      alt={character.name}
-                      loading="lazy"
-                      className="h-full w-full"
-                    />
-                  </Avatar>
+                  <CharacterMediaAvatar media={character.media} />
                 </div>
               </TableCell>
               <TableCell className="text-left font-bold">

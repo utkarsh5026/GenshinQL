@@ -12,9 +12,24 @@ export const GET_CHARACTERS = gql`
       elementUrl
       weaponUrl
       regionUrl
-      idleOneUrl
-      idleTwoUrl
-      partyJoinUrl
+      idleOne {
+        imageUrl
+        videoUrl
+        caption
+        videoType
+      }
+      idleTwo {
+        imageUrl
+        videoUrl
+        caption
+        videoType
+      }
+      partyJoin {
+        imageUrl
+        videoUrl
+        caption
+        videoType
+      }
     }
   }
 `;

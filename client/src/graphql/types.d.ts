@@ -8,9 +8,9 @@ export type Character = {
   elementUrl: string;
   weaponUrl: string;
   regionUrl: string;
-  idleOneUrl?: string;
-  idleTwoUrl?: string;
-  partyJoinUrl?: string;
+  idleOne?: AnimationMedia;
+  idleTwo?: AnimationMedia;
+  partyJoin?: AnimationMedia;
 };
 
 type TalentScale = {
@@ -86,4 +86,11 @@ type CharacterGallery = {
   attackAnimation: AttackAnimation;
   screenAnimation: ScreenAnimation;
   nameCard: NameCardAnimation;
+};
+
+export type AnimationMedia = {
+  imageUrl: string;
+  videoUrl: string;
+  caption: string;
+  videoType: string;
 };
