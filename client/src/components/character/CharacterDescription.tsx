@@ -113,7 +113,7 @@ interface CharacterCardProps {
 
 const CharacterCard: React.FC<CharacterCardProps> = ({ children }) => {
   return (
-    <Card className="p-4 h-full w-full overflow-auto scrollbar-hide">
+    <Card className="p-4 h-full w-full overflow-auto scrollbar-hide bg-transparent">
       {children}
     </Card>
   );
