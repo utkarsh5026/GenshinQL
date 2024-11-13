@@ -4,6 +4,7 @@ import { Card } from "../ui/card";
 import ProfileHeader from "./ProfileHeader";
 import CharacterTalentTable from "./CharacterTalentTable";
 import CharacterConstellations from "./CharacterConstellations";
+import CharacterPassives from "./CharacterPassives";
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;
@@ -69,6 +70,19 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
             <Card className="p-4">
               <CharacterConstellations
                 constellations={character.constellations}
+              />
+            </Card>
+          )}
+          {selectedMenuItem === "Passives" && (
+            <Card className="p-4">
+              <CharacterPassives
+                passives={character.talents.filter((talent) => {
+                  return ![
+                    "Normal Attack",
+                    "Elemental Skill",
+                    "Elemental Burst",
+                  ].includes(talent.talentType);
+                })}
               />
             </Card>
           )}

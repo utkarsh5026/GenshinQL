@@ -38,8 +38,8 @@ const CharacterConstellations: React.FC<CharacterConstellationsProps> = ({
               <TableCell className="text-center text-xs">
                 {constellation.level}
               </TableCell>
-              <TableCell className="text-sm">{constellation.name}</TableCell>
-              <TableCell className="text-sm font-thin">
+              <TableCell className="text-xs">{constellation.name}</TableCell>
+              <TableCell className="text-xs font-thin">
                 <TextProcessor text={constellation.description} />
               </TableCell>
             </TableRow>
