@@ -1,7 +1,7 @@
 import React from "react";
 import type { Talent } from "@/graphql/types";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import CharacterTalentScaling from "@/components/character/CharacterTalentScaling.tsx";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../ui/tabs";
+import CharacterTalentScaling from "@/components/character/talents/CharacterTalentScaling";
 import {
   Collapsible,
   CollapsibleContent,

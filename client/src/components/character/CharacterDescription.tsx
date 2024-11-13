@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CharacterDetailed } from "@/graphql/types";
 import { Card } from "../ui/card";
 import ProfileHeader from "./ProfileHeader";
-import CharacterTalentTable from "./CharacterTalentTable";
+import CharacterTalentTable from "./talents/CharacterTalentTable";
 import CharacterConstellations from "./CharacterConstellations";
 import CharacterPassives from "./CharacterPassives";
 import { decideColor } from "@/utils/color";
