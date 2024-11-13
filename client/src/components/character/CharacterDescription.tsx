@@ -6,6 +6,7 @@ import CharacterTalentTable from "./CharacterTalentTable";
 import CharacterConstellations from "./CharacterConstellations";
 import CharacterPassives from "./CharacterPassives";
 import { decideColor } from "@/utils/color";
+import CharacterAttackAnimations from "./CharacterAttackAnimations";
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;
@@ -99,6 +100,11 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                   ].includes(talent.talentType);
                 })}
               />
+            </CharacterCard>
+          )}
+          {selectedMenuItem === "Attacks" && (
+            <CharacterCard>
+              <CharacterAttackAnimations character={character} />
             </CharacterCard>
           )}
         </div>

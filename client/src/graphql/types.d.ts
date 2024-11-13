@@ -21,7 +21,7 @@ type TalentScale = {
 export type Talent = {
   talentName: string;
   talentIcon: string;
-  talentType: string;
+  talentType: AttackTalentType;
   description: string;
   figureUrls: {
     url: string;
@@ -95,3 +95,19 @@ export type AnimationMedia = {
   caption: string;
   videoType: string;
 };
+
+export type AttackAnimation = {
+  normalAttack: AnimationMedia[];
+  elementalSkill: AnimationMedia[];
+  elementalBurst: AnimationMedia[];
+};
+
+export type AttackTalentType =
+  | "Normal Attack"
+  | "Elemental Skill"
+  | "Elemental Burst";
+
+export type OtherTalentType =
+  | "1st Ascension Passive"
+  | "4th Ascension Passive"
+  | "Utility Passive";

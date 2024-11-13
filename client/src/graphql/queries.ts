@@ -1,6 +1,16 @@
 import { gql } from "@apollo/client";
 
+const ANIMATION_FIELDS = gql`
+  fragment AnimationFields on AnimationMedia {
+    imageUrl
+    videoUrl
+    caption
+    videoType
+  }
+`;
+
 export const GET_CHARACTERS = gql`
+  ${ANIMATION_FIELDS}
   query GetCharacters {
     characters {
       name
@@ -13,22 +23,13 @@ export const GET_CHARACTERS = gql`
       weaponUrl
       regionUrl
       idleOne {
-        imageUrl
-        videoUrl
-        caption
-        videoType
+        ...AnimationFields
       }
       idleTwo {
-        imageUrl
-        videoUrl
-        caption
-        videoType
+        ...AnimationFields
       }
       partyJoin {
-        imageUrl
-        videoUrl
-        caption
-        videoType
+        ...AnimationFields
       }
     }
   }
@@ -80,26 +81,18 @@ export const GET_CHARACTER = gql`
       element
       screenAnimation {
         idleOne {
-          imageUrl
-          videoUrl
-          caption
-          videoType
+          ...AnimationFields
         }
         idleTwo {
-          imageUrl
-          videoUrl
-          caption
-          videoType
+          ...AnimationFields
         }
         partySetup {
-          imageUrl
-          videoUrl
-          caption
-          videoType
+          ...AnimationFields
         }
       }
     }
   }
+  ${ANIMATION_FIELDS}
 `;
 
 export const GET_TALENT_MATERIALS_CALENDAR = gql`
@@ -134,4 +127,21 @@ export const GET_WEAPONS = gql`
       }
     }
   }
+`;
+
+export const GET_CHARACTER_ATTACK_ANIMATIONS = gql`
+  query Characters($name: String!) {
+    characterAttackAnimations(name: $name) {
+      normalAttack {
+        ...AnimationFields
+      }
+      elementalSkill {
+        ...AnimationFields
+      }
+      elementalBurst {
+        ...AnimationFields
+      }
+    }
+  }
+  ${ANIMATION_FIELDS}
 `;
