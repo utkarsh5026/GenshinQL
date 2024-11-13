@@ -2,11 +2,7 @@ import React from "react";
 import type { Talent } from "@/graphql/types";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../ui/tabs";
 import CharacterTalentScaling from "@/components/character/talents/CharacterTalentScaling";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible.tsx";
+import ListSplitter from "@/components/utils/ListSplitter";
 
 interface CharacterTalentTableProps {
   talents: Talent[];
@@ -38,8 +34,8 @@ const CharacterTalentTable: React.FC<CharacterTalentTableProps> = ({
 
   console.log(talents);
   return (
-    <Tabs>
-      <TabsList defaultValue={"Normal Attack"}>
+    <Tabs defaultValue={"Normal Attack"} defaultChecked>
+      <TabsList>
         {tabsName.map((tabName) => {
           return (
             <TabsTrigger key={tabName.label} value={tabName.label}>
@@ -56,35 +52,14 @@ const CharacterTalentTable: React.FC<CharacterTalentTableProps> = ({
       {talents.map((talent) => {
         return (
           <TabsContent key={talent.talentType} value={talent.talentType}>
-            <CharacterTalentScaling talent={talent} />
-            <Collapsible defaultChecked>
-              <CollapsibleTrigger> Animations </CollapsibleTrigger>
-              <CollapsibleContent>
-                <div className={"grid grid-cols-2 gap-4"}>
-                  {talent.figureUrls.map((figureUrl) => {
-                    const { url, caption } = figureUrl;
-                    return (
-                      <div>
-                        <figure>
-                          <img
-                            src={url}
-                            alt={caption}
-                            height={"240px"}
-                            width={"240px"}
-                            loading={"lazy"}
-                          />
-                          <figcaption className={"text-xs font-thin mt-0.5"}>
-                            {caption.trim().length > 0
-                              ? caption
-                              : talent.talentName}
-                          </figcaption>
-                        </figure>
-                      </div>
-                    );
-                  })}
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
+            <div className="p-4 flex flex-row gap-4">
+              <div className="w-1/2 text-sm">
+                <ListSplitter text={talent.description} />
+              </div>
+              <div className="w-1/2">
+                <CharacterTalentScaling talent={talent} />
+              </div>
+            </div>
           </TabsContent>
         );
       })}

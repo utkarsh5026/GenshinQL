@@ -2,8 +2,10 @@ import React, { useMemo, useState } from "react";
 import type { Talent } from "@/graphql/types";
 import {
   Table,
+  TableBody,
   TableCell,
   TableHead,
+  TableHeader,
   TableRow,
 } from "@/components/ui/table.tsx";
 import { Slider } from "@/components/ui/slider.tsx";
@@ -22,6 +24,14 @@ function findSliderMaxCount(talent: Talent): number {
   return max;
 }
 
+/**
+ * CharacterTalentScaling component displays a slider and a table
+ * representing the scaling values of a character's talent.
+ *
+ * @param {CharacterTalentScalingProps} props - The properties for the component.
+ * @param {Talent} props.talent - The talent object containing scaling data.
+ * @returns {JSX.Element} The rendered component.
+ */
 const CharacterTalentScaling: React.FC<CharacterTalentScalingProps> = ({
   talent,
 }) => {
@@ -35,18 +45,6 @@ const CharacterTalentScaling: React.FC<CharacterTalentScalingProps> = ({
   };
   return (
     <div>
-      <Table>
-        {talent.scaling.map((s) => {
-          return (
-            <TableRow className="text-xs">
-              <TableHead className="font-thin">{s.key}</TableHead>
-              <TableCell className="font-medium">
-                {s.value[Math.min(level - 1, s.value.length - 1)]}
-              </TableCell>
-            </TableRow>
-          );
-        })}
-      </Table>
       <div className="w-full max-w-md mx-auto p-4">
         <Slider
           step={1}
@@ -56,12 +54,33 @@ const CharacterTalentScaling: React.FC<CharacterTalentScalingProps> = ({
           value={[level]}
           className="transition-all duration-300 ease-in-out"
         />
-        <div className="mt-2 text-center">
-          <span className="text-lg font-semibold">
-            Level: {level} / {maxCount}
-          </span>
-        </div>
       </div>
+      <Table className="rounded-lg border-1 w-full table-fixed">
+        <TableHeader>
+          <TableRow>
+            <TableHead
+              colSpan={2}
+              className="text-center font-semibold text-pretty text-yellow-500"
+            >
+              {`Talent Level: ${level}`}
+            </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {talent.scaling.map((s) => {
+            return (
+              <TableRow className="text-sm" key={s.key}>
+                <TableHead className="font-medium border-r-2 border-gray-500 w-1/2 whitespace-normal break-words p-2">
+                  {s.key}
+                </TableHead>
+                <TableCell className="font-medium w-1/2 whitespace-normal break-words">
+                  {s.value[Math.min(level - 1, s.value.length - 1)]}
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
     </div>
   );
 };

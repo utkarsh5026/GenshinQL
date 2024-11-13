@@ -8,7 +8,7 @@ import {
   TableBody,
   TableCell,
 } from "../ui/table";
-import TextProcessor from "../utils/TextProcessor";
+import ListSplitter from "../utils/ListSplitter";
 
 interface CharacterConstellationsProps {
   constellations: Constellation[];
@@ -39,8 +39,8 @@ const CharacterConstellations: React.FC<CharacterConstellationsProps> = ({
                 {constellation.level}
               </TableCell>
               <TableCell className="text-xs">{constellation.name}</TableCell>
-              <TableCell className="text-xs font-thin">
-                <TextProcessor text={constellation.description} />
+              <TableCell className="text-xs font-normal whitespace-normal break-words">
+                <ListSplitter text={constellation.description} />
               </TableCell>
             </TableRow>
           ))}
