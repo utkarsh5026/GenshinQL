@@ -45,7 +45,7 @@ const CharacterAttackAnimationGrid: React.FC<
               className="max-w-xs p-4 bg-gray-900 rounded-lg"
               side="right"
             >
-              <ListSplitter text={talent?.description || ""} />
+              <ListSplitter text={talent?.description ?? ""} />
             </TooltipContent>
           </Tooltip>
         </div>
