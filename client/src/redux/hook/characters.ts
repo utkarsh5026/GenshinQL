@@ -21,10 +21,14 @@ export const useCharacters = () => {
     (state: RootState) => state.characters.characters
   );
 
-  const fetchCharacters = useCallback(async () => {
-    const { data } = await load();
-    dispatch(setCharacters(data?.characters || []));
-  }, [load, dispatch]);
+  const fetchCharacters = useCallback(
+    async (checkCache = true) => {
+      if (checkCache && characters.length > 0) return;
+      const { data } = await load();
+      dispatch(setCharacters(data?.characters || []));
+    },
+    [load, dispatch, characters]
+  );
 
   return { characters, loading, error, fetchCharacters };
 };

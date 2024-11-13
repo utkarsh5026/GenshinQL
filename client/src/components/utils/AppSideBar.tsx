@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Sidebar,
   SidebarContent,
@@ -15,10 +15,8 @@ import {
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
 import { CalendarHeart, ChevronDown, Table2 } from "lucide-react";
-import { useQuery } from "@apollo/client";
-import { GET_CHARACTER_FOR_SIDEBAR } from "@/graphql/queries";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import type { Character } from "@/graphql/types";
+import { useCharacters } from "@/redux/hook/characters";
 
 interface AppSideBarProps {
   onCharacterClick: (name: string) => void;
@@ -31,7 +29,12 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
   onTalentCalenderClick,
   onCharactersTableClick,
 }) => {
-  const { data } = useQuery(GET_CHARACTER_FOR_SIDEBAR);
+  const { characters, fetchCharacters } = useCharacters();
+
+  useEffect(() => {
+    fetchCharacters();
+  }, [fetchCharacters]);
+
   return (
     <Sidebar side="left">
       <SidebarHeader>Genshin Impact</SidebarHeader>
@@ -54,7 +57,7 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
 
               <CollapsibleContent>
                 <SidebarMenuSub>
-                  {data?.characters.map((character: Character) => (
+                  {characters.map((character) => (
                     <SidebarMenuSubItem
                       key={character.name}
                       className="py-1 min-h-0 cursor-pointer hover:bg-accent/50 transition-colors"
