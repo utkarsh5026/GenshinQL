@@ -1,13 +1,13 @@
 import React from "react";
-import TextProcessor from "../utils/TextProcessor";
+import TextProcessor from "../../utils/TextProcessor.tsx";
 import { Talent } from "@/graphql/types";
 import {
   Card,
-  CardHeader,
-  CardTitle,
   CardContent,
   CardDescription,
-} from "../ui/card";
+  CardHeader,
+  CardTitle,
+} from "../../ui/card.tsx";
 
 interface CharacterPassivesProps {
   passives: Talent[];

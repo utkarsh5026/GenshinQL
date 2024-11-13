@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Avatar, AvatarImage } from "../ui/avatar";
+import { Avatar, AvatarImage } from "../../ui/avatar.tsx";
 import { AnimationMedia } from "@/graphql/types";
-import AnimatedCover from "./AnimatedCover";
+import AnimatedCover from "../../utils/AnimatedCover.tsx";
 import { ChevronRight } from "lucide-react";
 
 interface ProfileHeaderProps {
@@ -20,7 +20,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   fallbackCoverUrl,
 }) => {
   const [currentAnimation, setCurrentAnimation] = useState<"one" | "two">(
-    "one"
+    "one",
   );
 
   const handleNextAnimation = () => {

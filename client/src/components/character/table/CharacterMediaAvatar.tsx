@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar.tsx";
 import { AnimationMedia } from "@/graphql/types";
 
 interface CharacterMediaAvatarProps {

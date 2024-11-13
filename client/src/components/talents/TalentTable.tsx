@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table.tsx";
-import CharacterGrid from "@/components/character/CharacterGrid.tsx";
+import CharacterGrid from "@/components/character/utils/CharacterGrid.tsx";
 import TalentBooks from "@/components/talents/TalentBooks.tsx";
 import AnimatedTable from "@/components/utils/AnimatedTable.tsx";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimationMedia, Talent } from "@/graphql/types";
-import AnimatedCover from "../AnimatedCover";
-import { Card, CardHeader, CardTitle, CardContent } from "../../ui/card";
+import AnimatedCover from "../../utils/AnimatedCover.tsx";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
 import ListSplitter from "../../utils/ListSplitter";
 

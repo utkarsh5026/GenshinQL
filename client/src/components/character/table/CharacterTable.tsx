@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { useQuery } from "@apollo/client";
-import { GET_CHARACTERS } from "@/graphql/queries";
+import { GET_CHARACTERS } from "@/graphql/queries.ts";
 import {
   Table,
   TableBody,
@@ -8,10 +8,10 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/ui/table.tsx";
 import { AnimationMedia, Character } from "@/graphql/types";
-import CharacterSheet from "./CharacterSheet";
-import CharacterMediaAvatar from "./CharacterMediaAvatar";
+
+import CharacterMediaAvatar from "./CharacterMediaAvatar.tsx";
 
 type CharacterWithMedia = Character & {
   media: AnimationMedia;
@@ -70,37 +70,35 @@ const CharactersTable: React.FC = () => {
       </TableHeader>
       <TableBody>
         {characters.map((character: CharacterWithMedia) => (
-          <CharacterSheet character={character} key={character.name}>
-            <TableRow>
-              <TableCell>
-                <div className="relative h-12 w-12">
-                  <CharacterMediaAvatar media={character.media} />
-                </div>
-              </TableCell>
-              <TableCell className="text-left font-bold">
-                {character.name}
-              </TableCell>
-              <TableCell className="text-left">
-                <ElementDisplay
-                  element={character.element}
-                  elementUrl={character.elementUrl}
-                />
-              </TableCell>
-              <TableCell className="text-left">{character.rarity}</TableCell>
-              <TableCell className="text-left">
-                <ElementDisplay
-                  element={character.weaponType}
-                  elementUrl={character.weaponUrl}
-                />
-              </TableCell>
-              <TableCell className="text-left">
-                <ElementDisplay
-                  element={character.region}
-                  elementUrl={character.regionUrl}
-                />
-              </TableCell>
-            </TableRow>
-          </CharacterSheet>
+          <TableRow key={character.name}>
+            <TableCell>
+              <div className="relative h-12 w-12">
+                <CharacterMediaAvatar media={character.media} />
+              </div>
+            </TableCell>
+            <TableCell className="text-left font-bold">
+              {character.name}
+            </TableCell>
+            <TableCell className="text-left">
+              <ElementDisplay
+                element={character.element}
+                elementUrl={character.elementUrl}
+              />
+            </TableCell>
+            <TableCell className="text-left">{character.rarity}</TableCell>
+            <TableCell className="text-left">
+              <ElementDisplay
+                element={character.weaponType}
+                elementUrl={character.weaponUrl}
+              />
+            </TableCell>
+            <TableCell className="text-left">
+              <ElementDisplay
+                element={character.region}
+                elementUrl={character.regionUrl}
+              />
+            </TableCell>
+          </TableRow>
         ))}
       </TableBody>
     </Table>
@@ -118,8 +116,7 @@ const ElementDisplay: React.FC<{ element: string; elementUrl: string }> = ({
         alt={element}
         width={24}
         height={24}
-        className="rounded-full"
-        style={{ width: "24px", height: "24px" }}
+        className="rounded-full w-16 h-16"
       />
       <span>{element}</span>
     </div>

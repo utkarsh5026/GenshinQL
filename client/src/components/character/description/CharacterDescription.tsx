@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { CharacterDetailed } from "@/graphql/types";
-import { Card } from "../ui/card";
-import ProfileHeader from "./ProfileHeader";
-import CharacterTalentTable from "./talents/CharacterTalentTable";
-import CharacterConstellations from "./CharacterConstellations";
-import CharacterPassives from "./CharacterPassives";
-import { decideColor } from "@/utils/color";
-import CharacterAttackAnimations from "./attack/CharacterAttackAnimations";
+import { Card } from "../../ui/card.tsx";
+import ProfileHeader from "./ProfileHeader.tsx";
+import CharacterTalentTable from "../talents/CharacterTalentTable.tsx";
+import CharacterConstellations from "../constellations/CharacterConstellations.tsx";
+import CharacterPassives from "../passives/CharacterPassives.tsx";
+import { decideColor } from "@/utils/color.ts";
+import CharacterAttackAnimations from "../attack/CharacterAttackAnimations.tsx";
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;

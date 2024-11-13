@@ -5,9 +5,9 @@ import AppSideBar from "./components/utils/AppSideBar";
 import { useLazyQuery } from "@apollo/client";
 import { GET_CHARACTER } from "./graphql/queries";
 import TalentCalender from "@/components/talents/TalentBookCalendar.tsx";
-import CharacterDescription from "./components/character/CharacterDescription";
+import CharacterDescription from "./components/character/description/CharacterDescription.tsx";
 import { CharacterDetailed } from "./graphql/types";
-import CharactersTable from "./components/character/CharacterTable";
+import CharactersTable from "./components/character/table/CharacterTable.tsx";
 
 type CurrentView = "character" | "talentCalender" | "charactersTable";
 
