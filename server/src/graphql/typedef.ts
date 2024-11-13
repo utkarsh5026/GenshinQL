@@ -168,6 +168,11 @@ type CharacterGallery {
     nameCard: NameCardImage
 }
 
+type CharacterAttackAnimations {
+    normalAttack: [AnimationMedia!]
+    elementalSkill: [AnimationMedia!]
+    elementalBurst: [AnimationMedia!]
+}
 
 type Query {
     characters: [Character!]
@@ -176,6 +181,7 @@ type Query {
     filterCharacters(filter: CharacterFilter!): [Character!]
     talentBooks: [TalentMaterial!]
     weapons: [WeaponTypeDetails!]
+    characterAttackAnimations(name: String!): CharacterAttackAnimations!
 }
 `;
 

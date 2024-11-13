@@ -11,6 +11,7 @@ import {
   weaponLoader,
   characterLoader,
   characterGalleryLoader,
+  characterAttackAnimationsLoader,
 } from "./graphql/loader";
 
 const server = new ApolloServer({
@@ -29,6 +30,7 @@ async function startServer() {
         weaponLoader,
         characterLoader,
         characterGalleryLoader,
+        characterAttackAnimationsLoader,
       },
     }),
   });

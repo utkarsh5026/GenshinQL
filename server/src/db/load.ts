@@ -140,3 +140,28 @@ export async function loadCharacterGallery(
     ],
   });
 }
+
+/**
+ * Loads the attack animations for a character by their name from the database.
+ *
+ * This function fetches the attack animation data for a character based on the provided name.
+ * The data is retrieved from the Character repository with specific relations.
+ *
+ * @param {string} name - The name of the character whose attack animations are to be loaded.
+ * @returns {Promise<Character | null>} A promise that resolves to the character's attack animation information with related data.
+ */
+export async function loadCharacterAttackAnimations(
+  name: string
+): Promise<Character | null> {
+  return await repo(Character).findOne({
+    where: { name },
+    relations: ["gallery", "gallery.attackAnimation"],
+    select: {
+      id: true,
+      name: true,
+      gallery: {
+        id: true,
+      },
+    },
+  });
+}

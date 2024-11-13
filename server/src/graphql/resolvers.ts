@@ -31,6 +31,13 @@ const resolvers: IResolvers = {
     characterGallery: async (_parent, { name }: { name: string }, context) => {
       return await context.loaders.characterGalleryLoader.load(name);
     },
+    characterAttackAnimations: async (
+      _parent,
+      { name }: { name: string },
+      context
+    ) => {
+      return await context.loaders.characterAttackAnimationsLoader.load(name);
+    },
   },
 };
 

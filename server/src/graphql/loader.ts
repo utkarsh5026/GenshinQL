@@ -5,9 +5,12 @@ import {
   loadWeapons,
   loadCharacterByName,
   loadCharacterGallery,
+  loadCharacterAttackAnimations,
 } from "../db/load";
 import { randomInt } from "crypto";
 import Character from "../db/models/Character";
+import { animationSchema } from "../data/schema";
+import { z } from "zod";
 
 /**
  * DataLoader for fetching talent books schedule.
@@ -240,6 +243,46 @@ export const characterGalleryLoader = new DataLoader(
             background: nameCard.background,
             icon: nameCard.icon,
           },
+        };
+      }
+    });
+  }
+);
+
+/**
+ * DataLoader for loading character attack animations.
+ *
+ * This DataLoader batches and caches requests to load character attack animations
+ * by their names. It retrieves the animation details for each character,
+ * including normal attacks, elemental skills, and elemental bursts.
+ *
+ * @param {readonly string[]} keys - An array of character names to load attack animations for.
+ * @returns {Promise<Object[]>} A promise that resolves to an array of character attack animation objects.
+ */
+export const characterAttackAnimationsLoader = new DataLoader(
+  async (keys: readonly string[]) => {
+    const toGraphQlForm = (animations: z.infer<typeof animationSchema>[]) => {
+      return animations.map((ani) => {
+        const { url, caption, videoType, videoUrl } = ani;
+        return {
+          imageUrl: url,
+          caption,
+          videoUrl,
+          videoType,
+        };
+      });
+    };
+
+    return keys.map(async (key) => {
+      const char = await loadCharacterAttackAnimations(key);
+      console.dir(char, { depth: null });
+      if (char) {
+        const { gallery } = char;
+        const { attackAnimation } = gallery;
+        return {
+          normalAttack: toGraphQlForm(attackAnimation.normalAttack),
+          elementalSkill: toGraphQlForm(attackAnimation.elementalSkill),
+          elementalBurst: toGraphQlForm(attackAnimation.elementalBurst),
         };
       }
     });
