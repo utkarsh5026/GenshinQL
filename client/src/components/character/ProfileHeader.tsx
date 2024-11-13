@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { AnimationMedia } from "@/graphql/types";
 import AnimatedCover from "./AnimatedCover";
+import { ChevronRight } from "lucide-react";
 
 interface ProfileHeaderProps {
   name: string;
@@ -18,14 +19,31 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   idleTwo,
   fallbackCoverUrl,
 }) => {
+  const [currentAnimation, setCurrentAnimation] = useState<"one" | "two">(
+    "one"
+  );
+
+  const handleNextAnimation = () => {
+    setCurrentAnimation(currentAnimation === "one" ? "two" : "one");
+  };
+
   return (
     <div className="relative w-full shadow-md flex flex-col items-center border-2 border-white rounded-lg">
-      <div className="w-full h-44 overflow-hidden rounded-md relative">
+      <div className="w-full h-44 overflow-hidden rounded-md relative group">
         <AnimatedCover
-          animation={idleOne}
+          animation={currentAnimation === "one" ? idleOne : idleTwo}
           fallbackUrl={fallbackCoverUrl}
-          className="w-full opacity-60 z-10"
+          className="w-full opacity-80 z-10"
         />
+        {idleTwo && (
+          <button
+            aria-label="Next animation"
+            onClick={handleNextAnimation}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 z-20 opacity-0 group-hover:opacity-100 transition-all duration-200"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        )}
       </div>
 
       {/* Centered Avatar */}
@@ -34,8 +52,6 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
           <AvatarImage src={avatarUrl} />
         </Avatar>
       </div>
-
-      {/* Name below avatar */}
       <div className="mt-5 pb-3 text-center">
         <span className="font-medium">{name}</span>
       </div>

@@ -38,7 +38,7 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
   };
 
   return (
-    <div className={`w-full h-full overflow-hidden relative ${className}`}>
+    <div className={`w-full overflow-hidden relative ${className}`}>
       {animation ? (
         <>
           {!showVideo && animation.imageUrl && (
