@@ -47,7 +47,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.05,
+          opacity: 0.03,
         }}
       />
 

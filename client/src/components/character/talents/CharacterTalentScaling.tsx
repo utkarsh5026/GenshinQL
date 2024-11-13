@@ -70,10 +70,10 @@ const CharacterTalentScaling: React.FC<CharacterTalentScalingProps> = ({
           {talent.scaling.map((s) => {
             return (
               <TableRow className="text-sm" key={s.key}>
-                <TableHead className="font-medium border-r-2 border-gray-500 w-1/2 whitespace-normal break-words p-2">
+                <TableHead className="font-thin border-r-2 border-gray-500 w-1/2 whitespace-normal break-words p-2">
                   {s.key}
                 </TableHead>
-                <TableCell className="font-medium w-1/2 whitespace-normal break-words">
+                <TableCell className="font-normal w-1/2 whitespace-normal break-words">
                   {s.value[Math.min(level - 1, s.value.length - 1)]}
                 </TableCell>
               </TableRow>

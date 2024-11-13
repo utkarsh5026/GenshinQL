@@ -53,7 +53,7 @@ const CharacterTalentTable: React.FC<CharacterTalentTableProps> = ({
         return (
           <TabsContent key={talent.talentType} value={talent.talentType}>
             <div className="p-4 flex flex-row gap-4">
-              <div className="w-1/2 text-sm">
+              <div className="w-1/2 text-sm font-thin overflow-auto h-[500px] scrollbar-hide">
                 <ListSplitter text={talent.description} />
               </div>
               <div className="w-1/2">

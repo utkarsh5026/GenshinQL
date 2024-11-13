@@ -5,7 +5,7 @@
 
 @layer base {
   html {
-    font-family: 'Cascadia Mono', monospace;
+    font-family: "Cascadia Mono", monospace;
   }
   :root {
     --background: 0 0% 100%;
