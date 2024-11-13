@@ -1,24 +1,30 @@
 import React from "react";
 import { Avatar, AvatarImage } from "../ui/avatar";
+import { AnimationMedia } from "@/graphql/types";
+import AnimatedCover from "./AnimatedCover";
 
 interface ProfileHeaderProps {
   name: string;
   avatarUrl: string;
-  coverUrl: string;
+  idleOne?: AnimationMedia;
+  idleTwo?: AnimationMedia;
+  fallbackCoverUrl?: string;
 }
 
 const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   name,
   avatarUrl,
-  coverUrl,
+  idleOne,
+  idleTwo,
+  fallbackCoverUrl,
 }) => {
   return (
     <div className="relative w-full shadow-md flex flex-col items-center border-2 border-white rounded-lg">
-      <div className="w-full h-32 overflow-hidden rounded-md relative">
-        <img
-          src={coverUrl}
-          alt="Profile Cover"
-          className="w-full h-full object-cover opacity-40 z-10"
+      <div className="w-full h-44 overflow-hidden rounded-md relative">
+        <AnimatedCover
+          animation={idleOne}
+          fallbackUrl={fallbackCoverUrl}
+          className="w-full opacity-60 z-10"
         />
       </div>
 

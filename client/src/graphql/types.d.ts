@@ -46,6 +46,7 @@ export type CharacterDetailed = Character & {
     inGame: string;
     nameCard: string;
   };
+  screenAnimation: ScreenAnimation;
 };
 
 export type TalentBookCalendar = {
@@ -71,10 +72,10 @@ export type Weapon = {
   subStat: string;
 };
 
-type ScreenAnimation = {
-  idleOne?: string;
-  idleTwo?: string;
-  partyJoin: string;
+export type ScreenAnimation = {
+  idleOne?: AnimationMedia;
+  idleTwo?: AnimationMedia;
+  partySetup?: AnimationMedia;
 };
 
 type NameCardAnimation = {

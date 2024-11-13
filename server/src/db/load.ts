@@ -98,6 +98,7 @@ export async function loadCharacterByName(
       "characterTalents.talentAnimations",
       "gallery",
       "gallery.nameCard",
+      "gallery.screenAnimation",
     ],
     order: {
       constellations: {

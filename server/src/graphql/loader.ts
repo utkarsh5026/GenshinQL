@@ -201,6 +201,7 @@ export const characterLoader = new DataLoader(
           imageUrls: {
             nameCard: character.gallery.nameCard.background,
           },
+          screenAnimation: character.gallery.screenAnimation,
         };
       }
     });

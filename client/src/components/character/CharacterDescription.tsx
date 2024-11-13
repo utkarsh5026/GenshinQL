@@ -33,16 +33,29 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
 
   if (!character) return <div>Character not found</div>;
 
-  return (
-    <div className="flex flex-col w-full border-2 border-white rounded-lg">
-      <div className="w-full mb-4"></div>
+  console.log(character.screenAnimation);
 
-      <div className="flex gap-4 p-4">
+  return (
+    <div className="relative flex flex-col w-full h-[calc(100%-8rem)] overflow-auto border-2 border-white rounded-lg scrollbar-hide">
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${character.imageUrls.nameCard})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.1,
+        }}
+      />
+
+      <div className="relative z-10 flex gap-4 p-4 h-full">
         <div className="w-1/4 min-w-[250px]">
           <ProfileHeader
             name={character.name}
             avatarUrl={character.iconUrl}
-            coverUrl={character.imageUrls.nameCard}
+            idleOne={character.screenAnimation?.idleOne}
+            idleTwo={character.screenAnimation?.idleTwo}
+            fallbackCoverUrl={character.imageUrls.nameCard}
           />
 
           <div className="flex flex-col gap-2 mt-4">
@@ -60,21 +73,21 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           </div>
         </div>
 
-        <div className="flex-1">
+        <div className="flex overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
           {selectedMenuItem === "Talents" && (
-            <Card className="p-4">
+            <Card className="p-4 h-full w-full overflow-auto scrollbar-hide">
               <CharacterTalentTable talents={character.talents} />
             </Card>
           )}
           {selectedMenuItem === "Constellations" && (
-            <Card className="p-4">
+            <Card className="p-4 h-full w-full overflow-auto scrollbar-hide">
               <CharacterConstellations
                 constellations={character.constellations}
               />
             </Card>
           )}
           {selectedMenuItem === "Passives" && (
-            <Card className="p-4">
+            <Card className="p-4 h-full w-full overflow-auto scrollbar-hide">
               <CharacterPassives
                 passives={character.talents.filter((talent) => {
                   return ![

@@ -81,6 +81,7 @@ type AdvancedCharacter implements BaseCharacter {
     talents: [Talent!],
     constellations: [Constellation!],
     imageUrls: ImageUrls!,
+    screenAnimation: ScreenAnimation!,
 }
 
 
@@ -153,7 +154,7 @@ type AttackAnimation {
 type ScreenAnimation {
     idleOne: AnimationMedia
     idleTwo: AnimationMedia
-    partyJoin: AnimationMedia
+    partySetup: AnimationMedia
 }
 
 type NameCardImage {

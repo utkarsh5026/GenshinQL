@@ -37,14 +37,17 @@ const TextProcessor: React.FC<TextProcessorProps> = ({ text }) => {
       // Check if the part is a number or percentage
       if (/^\d+%?$/.test(part)) {
         return (
-          <span key={index} style={{ color: "#f39c12" }}>
+          <span key={`number-${part}-${index}`} style={{ color: "#f39c12" }}>
             {part}
           </span>
         );
       }
 
       return color ? (
-        <span key={index} style={{ color, fontWeight: "bold" }}>
+        <span
+          key={`element-${part}-${index}`}
+          style={{ color, fontWeight: "bold" }}
+        >
           {part}
         </span>
       ) : (

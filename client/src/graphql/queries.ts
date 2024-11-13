@@ -78,6 +78,26 @@ export const GET_CHARACTER = gql`
       iconUrl
       elementUrl
       element
+      screenAnimation {
+        idleOne {
+          imageUrl
+          videoUrl
+          caption
+          videoType
+        }
+        idleTwo {
+          imageUrl
+          videoUrl
+          caption
+          videoType
+        }
+        partySetup {
+          imageUrl
+          videoUrl
+          caption
+          videoType
+        }
+      }
     }
   }
 `;
