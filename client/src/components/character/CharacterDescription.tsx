@@ -5,6 +5,7 @@ import ProfileHeader from "./ProfileHeader";
 import CharacterTalentTable from "./CharacterTalentTable";
 import CharacterConstellations from "./CharacterConstellations";
 import CharacterPassives from "./CharacterPassives";
+import { decideColor } from "@/utils/color";
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;
@@ -33,10 +34,11 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
 
   if (!character) return <div>Character not found</div>;
 
-  console.log(character.screenAnimation);
-
   return (
-    <div className="relative flex flex-col w-full h-[calc(100%-8rem)] overflow-auto border-2 border-white rounded-lg scrollbar-hide">
+    <div
+      className={`relative flex flex-col h-[90vh] overflow-auto border-2 rounded-lg scrollbar-hide`}
+      style={{ borderColor: decideColor(character.element) }}
+    >
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -44,7 +46,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.1,
+          opacity: 0.05,
         }}
       />
 
@@ -73,21 +75,21 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           </div>
         </div>
 
-        <div className="flex overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
+        <div className="flex flex-grow overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
           {selectedMenuItem === "Talents" && (
-            <Card className="p-4 h-full w-full overflow-auto scrollbar-hide">
+            <CharacterCard>
               <CharacterTalentTable talents={character.talents} />
-            </Card>
+            </CharacterCard>
           )}
           {selectedMenuItem === "Constellations" && (
-            <Card className="p-4 h-full w-full overflow-auto scrollbar-hide">
+            <CharacterCard>
               <CharacterConstellations
                 constellations={character.constellations}
               />
-            </Card>
+            </CharacterCard>
           )}
           {selectedMenuItem === "Passives" && (
-            <Card className="p-4 h-full w-full overflow-auto scrollbar-hide">
+            <CharacterCard>
               <CharacterPassives
                 passives={character.talents.filter((talent) => {
                   return ![
@@ -97,11 +99,23 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                   ].includes(talent.talentType);
                 })}
               />
-            </Card>
+            </CharacterCard>
           )}
         </div>
       </div>
     </div>
+  );
+};
+
+interface CharacterCardProps {
+  children: React.ReactNode;
+}
+
+const CharacterCard: React.FC<CharacterCardProps> = ({ children }) => {
+  return (
+    <Card className="p-4 h-full w-full overflow-auto scrollbar-hide">
+      {children}
+    </Card>
   );
 };
 

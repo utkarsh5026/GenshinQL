@@ -36,7 +36,10 @@ function App() {
         onTalentCalenderClick={handleTalentCalenderClick}
         onCharactersTableClick={handleCharactersTableClick}
       />
-      <main className="flex flex-col items-center justify-center w-full">
+      <main
+        className="items-center justify-center  w-full
+       h-full"
+      >
         {currentView === "character" && (
           <CharacterDescription
             character={data?.character as CharacterDetailed}
