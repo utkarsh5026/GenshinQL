@@ -1,6 +1,4 @@
-import React, { useMemo } from "react";
-import { useQuery } from "@apollo/client";
-import { GET_CHARACTERS } from "@/graphql/queries.ts";
+import React, { useMemo, useEffect } from "react";
 import {
   Table,
   TableBody,
@@ -12,13 +10,14 @@ import {
 import { AnimationMedia, Character } from "@/graphql/types";
 
 import CharacterMediaAvatar from "./CharacterMediaAvatar.tsx";
+import { useCharacters } from "@/redux/hook/characters.ts";
 
 type CharacterWithMedia = Character & {
   media: AnimationMedia;
 };
 
 const CharactersTable: React.FC = () => {
-  const { loading, error, data } = useQuery(GET_CHARACTERS);
+  const { characters, loading, error, fetchCharacters } = useCharacters();
   const columnNames = [
     "Icon",
     "Name",
@@ -28,11 +27,11 @@ const CharactersTable: React.FC = () => {
     "Region",
   ];
 
-  console.log(data);
+  useEffect(() => {
+    if (characters.length === 0) fetchCharacters();
+  }, [fetchCharacters, characters]);
 
-  const characters: CharacterWithMedia[] = useMemo(() => {
-    const characters = data?.characters as Character[];
-
+  const charactersWithMedia: CharacterWithMedia[] = useMemo(() => {
     if (!characters) return [];
 
     const getCharMedia = (character: Character) => {
@@ -52,7 +51,7 @@ const CharactersTable: React.FC = () => {
       media: getCharMedia(character),
       elementUrl: character.elementUrl.split("/revision/")[0],
     }));
-  }, [data]);
+  }, [characters]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -69,7 +68,7 @@ const CharactersTable: React.FC = () => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {characters.map((character: CharacterWithMedia) => (
+        {charactersWithMedia.map((character) => (
           <TableRow key={character.name}>
             <TableCell>
               <div className="relative h-12 w-12">
@@ -116,7 +115,7 @@ const ElementDisplay: React.FC<{ element: string; elementUrl: string }> = ({
         alt={element}
         width={24}
         height={24}
-        className="rounded-full w-16 h-16"
+        className="rounded-full w-6 h-6"
       />
       <span>{element}</span>
     </div>
