@@ -3,7 +3,7 @@ import { AnimationMedia, Talent } from "@/graphql/types";
 import AnimatedCover from "./AnimatedCover";
 import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
-import TextProcessor from "../utils/TextProcessor";
+import ListSplitter from "../utils/ListSplitter";
 
 interface CharacterAttackAnimationGridProps {
   talent: Talent | undefined;
@@ -41,8 +41,11 @@ const CharacterAttackAnimationGrid: React.FC<
                 </span>
               </CardTitle>
             </TooltipTrigger>
-            <TooltipContent className="max-w-xs p-4" side="right">
-              <TextProcessor text={talent?.description || ""} />
+            <TooltipContent
+              className="max-w-xs p-4 bg-gray-900 rounded-lg"
+              side="right"
+            >
+              <ListSplitter text={talent?.description || ""} />
             </TooltipContent>
           </Tooltip>
         </div>
