@@ -49,12 +49,12 @@ const CharacterPassives: React.FC<CharacterPassivesProps> = ({ passives }) => {
               <CardTitle className="text-base text-yellow-100">
                 {passive.talentName}
               </CardTitle>
-              <CardDescription className="text-xs text-gray-400">
+              <CardDescription className="text-xs text-gray-400 font-thin">
                 ({passive.talentType})
               </CardDescription>
             </div>
           </CardHeader>
-          <CardContent>
+          <CardContent className="text-sm font-thin">
             <TextProcessor text={passive.description} />
           </CardContent>
         </Card>
