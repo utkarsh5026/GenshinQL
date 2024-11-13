@@ -6,7 +6,7 @@ import CharacterTalentTable from "./talents/CharacterTalentTable";
 import CharacterConstellations from "./CharacterConstellations";
 import CharacterPassives from "./CharacterPassives";
 import { decideColor } from "@/utils/color";
-import CharacterAttackAnimations from "./CharacterAttackAnimations";
+import CharacterAttackAnimations from "./attack/CharacterAttackAnimations";
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;

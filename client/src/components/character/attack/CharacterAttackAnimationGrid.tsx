@@ -1,9 +1,9 @@
 import React from "react";
 import { AnimationMedia, Talent } from "@/graphql/types";
-import AnimatedCover from "./AnimatedCover";
-import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
-import ListSplitter from "../utils/ListSplitter";
+import AnimatedCover from "../AnimatedCover";
+import { Card, CardHeader, CardTitle, CardContent } from "../../ui/card";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
+import ListSplitter from "../../utils/ListSplitter";
 
 interface CharacterAttackAnimationGridProps {
   talent: Talent | undefined;
