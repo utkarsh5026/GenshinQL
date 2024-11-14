@@ -1,30 +1,53 @@
 import { SupabaseClient } from "@supabase/supabase-js";
-import { supaBase } from "./client";
+import { createSupabaseClient } from "./client";
 
 /**
  * StorageClient is a wrapper around the SupabaseClient to interact with storage buckets.
  */
-class StorageClient {
+export class StorageClient {
   /**
    * Constructs a new StorageClient instance.
    * @param supabase - The Supabase client instance.
    */
-  constructor(private readonly supabase: SupabaseClient) {}
+  private constructor(private readonly supabase: SupabaseClient) {}
+
+  static async create() {
+    const supabase = await createSupabaseClient();
+    return new StorageClient(supabase);
+  }
 
   /**
    * Returns a Bucket instance for the specified bucket name.
    * @param bucketName - The name of the bucket.
    * @returns A Bucket instance.
    */
-  bucket(bucketName: string) {
-    return new Bucket(this.supabase, bucketName);
+  public async bucket(bucketName: string) {
+    const buckets = await this.listBuckets();
+    if (buckets.some((bucket) => bucket.name === bucketName)) {
+      return new StorageBucket(this.supabase, bucketName);
+    }
+
+    const { data, error } = await this.supabase.storage.createBucket(
+      bucketName,
+      {
+        public: true,
+      }
+    );
+    if (error) throw error;
+    return new StorageBucket(this.supabase, data.name);
+  }
+
+  private async listBuckets() {
+    const { data, error } = await this.supabase.storage.listBuckets();
+    if (error) throw error;
+    return data;
   }
 }
 
 /**
  * Bucket provides methods to interact with a specific storage bucket.
  */
-class Bucket {
+class StorageBucket {
   /**
    * Constructs a new Bucket instance.
    * @param supabase - The Supabase client instance.
@@ -115,5 +138,4 @@ class Bucket {
   }
 }
 
-const storageClient = new StorageClient(supaBase);
-export default storageClient;
+export type StorageBucketType = StorageBucket;

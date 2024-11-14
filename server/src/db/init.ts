@@ -21,7 +21,7 @@ import ScreenAnimationMedia from "./models/ScreenAnimationMedia";
 
 export const dataSource = new DataSource({
   type: "sqlite",
-  database: "genshin.db",
+  database: "genshin-supa.db",
   synchronize: true,
   logging: ["error"],
   entities: [
