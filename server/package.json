@@ -15,6 +15,7 @@
   "description": "",
   "dependencies": {
     "@apollo/server": "^4.11.2",
+    "@supabase/supabase-js": "^2.46.1",
     "compression": "^1.7.5",
     "cors": "^2.8.5",
     "dataloader": "^2.2.2",
