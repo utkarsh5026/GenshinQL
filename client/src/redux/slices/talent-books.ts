@@ -17,9 +17,14 @@ interface TalentBookState {
   talentCharMap: Record<string, TalentBook>;
 }
 
-function createCharTalentMap(
+/**
+ * Creates a mapping of character names to their talent book requirements
+ * @param calendar - Array of talent book calendar data
+ * @returns Record mapping character names to their talent book details
+ */
+const createCharTalentMap = (
   calendar: TalentBookCalendar[]
-): Record<string, TalentBook> {
+): Record<string, TalentBook> => {
   const map: Record<string, TalentBook> = {};
 
   for (const book of calendar) {
@@ -45,7 +50,7 @@ function createCharTalentMap(
   }
 
   return map;
-}
+};
 
 const initialState: TalentBookState = {
   calendar: null,
