@@ -38,9 +38,8 @@ async function downloadFile(
         },
       });
 
-      if (!response.ok) {
+      if (!response.ok)
         throw new Error(`HTTP error! status: ${response.status}`);
-      }
 
       const contentType = response.headers.get("content-type");
       const fileType = contentType?.split("/")[1] ?? "unknown";
@@ -106,13 +105,11 @@ async function downLoadThenUpload(
         contentType
       );
 
-      const result = { res, url: bucket.getPublicUrl(res.path) };
-      // console.log(result);
-      return result;
+      return { res, url: bucket.getPublicUrl(res.path) };
     } catch (error) {
-      if (attempt === maxRetries) {
+      if (attempt === maxRetries)
         throw new Error(`Failed after ${maxRetries} attempts: ${error}`);
-      }
+
       const delay = initialDelay * Math.pow(2, attempt - 1);
       console.log(
         `Attempt ${attempt} failed, retrying in ${delay}ms...`,
