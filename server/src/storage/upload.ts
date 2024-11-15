@@ -18,6 +18,8 @@ type FileType = "image" | "video" | "audio";
  * Downloads a file from the given URL and returns its buffer and file type.
  *
  * @param url - The URL of the file to download.
+ * @param maxRetries - The maximum number of retry attempts for downloading the file. Default is 4.
+ * @param initialDelay - The initial delay in milliseconds before retrying a failed attempt. Default is 1000ms.
  * @returns A promise that resolves to an object containing the file buffer and file type.
  * @throws Will throw an error if the download fails.
  */
