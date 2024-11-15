@@ -1,18 +1,30 @@
 import { initDb } from "../db/init";
 import { repo } from "../db/utils";
-import Nation from "../db/models/Nation";
 import { type StorageBucketType, StorageClient } from "./store";
+
+import Nation from "../db/models/Nation";
 import WeaponType from "../db/models/WeaponType";
 import Element from "../db/models/Element";
 import Character from "../db/models/Character";
 import CharacterTalent from "../db/models/CharacterTalent";
 import Constellation from "../db/models/Constellation";
+import TalentMaterial from "../db/models/TalentMaterial";
+import ScreenAnimationMedia from "../db/models/ScreenAnimationMedia";
+import { z } from "zod";
+import { animationSchema } from "../data/schema";
 
 const PRIMITIVES_BUCKET = "primitives";
 const CHARACTER_BUCKET = "characters";
 const CONSTELLATION_BUCKET = "constellations";
 const TALENT_BUCKET = "talents";
+const SCREEN_ANIMATION_BUCKET = "screen_animations";
+const ATTACK_ANIMATION_BUCKET = "attack_animations";
+
 type FileType = "image" | "video" | "audio";
+type Animation = z.infer<typeof animationSchema>;
+
+const createCharName = (charName: string, suffix: string) =>
+  `${charName}_${suffix}`;
 
 /**
  * Downloads a file from the given URL and returns its buffer and file type.
@@ -26,8 +38,13 @@ type FileType = "image" | "video" | "audio";
 async function downloadFile(
   url: string,
   maxRetries = 4,
-  initialDelay = 1000
+  initialDelay = 1000,
 ): Promise<{ buffer: Buffer; fileType: string } | undefined> {
+  const getFileType = (url: string) => {
+    const parts = url.split(".");
+    return parts[parts.length - 1];
+  };
+
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       console.log(`Attempting to download: ${url}`);
@@ -41,12 +58,9 @@ async function downloadFile(
       if (!response.ok)
         throw new Error(`HTTP error! status: ${response.status}`);
 
-      const contentType = response.headers.get("content-type");
-      const fileType = contentType?.split("/")[1] ?? "unknown";
       const buffer = Buffer.from(await response.arrayBuffer());
-
       console.log(`Successfully downloaded: ${url}`);
-      return { buffer, fileType };
+      return { buffer, fileType: getFileType(url) };
     } catch (error) {
       console.error(`Download error for URL ${url}:`, error);
 
@@ -57,7 +71,7 @@ async function downloadFile(
 
       const delay = initialDelay * Math.pow(2, attempt - 1);
       console.log(
-        `Attempt ${attempt}/${maxRetries} failed, retrying in ${delay}ms...`
+        `Attempt ${attempt}/${maxRetries} failed, retrying in ${delay}ms...`,
       );
       await new Promise((resolve) => setTimeout(resolve, delay));
     }
@@ -80,9 +94,9 @@ async function downLoadThenUpload(
   url: string,
   bucket: StorageBucketType,
   fileName: string,
-  contentType: string,
+  contentType: FileType = "image",
   maxRetries = 4,
-  initialDelay = 1000
+  initialDelay = 1000,
 ) {
   if (!url.includes("static.wikia.nocookie.net"))
     return {
@@ -102,7 +116,7 @@ async function downLoadThenUpload(
       const res = await bucket.upload(
         `${sanitizedFileName}.${fileType}`,
         buffer,
-        contentType
+        contentType,
       );
 
       return { res, url: bucket.getPublicUrl(res.path) };
@@ -113,7 +127,7 @@ async function downLoadThenUpload(
       const delay = initialDelay * Math.pow(2, attempt - 1);
       console.log(
         `Attempt ${attempt} failed, retrying in ${delay}ms...`,
-        error
+        error,
       );
       await new Promise((resolve) => setTimeout(resolve, delay));
     }
@@ -132,7 +146,7 @@ async function uploadNation(bucket: StorageBucketType) {
       const result = await downLoadThenUpload(iconUrl, bucket, name, "image");
       if (result) nation.iconUrl = result.url;
       return nation;
-    })
+    }),
   );
   await repo(Nation).save(nationsToSave);
 }
@@ -149,7 +163,7 @@ async function uploadElement(bucket: StorageBucketType) {
       const result = await downLoadThenUpload(iconUrl, bucket, name, "image");
       if (result) element.iconUrl = result.url;
       return element;
-    })
+    }),
   );
   await repo(Element).save(elementsToSave);
 }
@@ -166,7 +180,7 @@ async function uploadWeaponType(bucket: StorageBucketType) {
       const result = await downLoadThenUpload(iconUrl, bucket, name, "image");
       if (result) weaponType.iconUrl = result.url;
       return weaponType;
-    })
+    }),
   );
   await repo(WeaponType).save(weaponTypesToSave);
 }
@@ -183,7 +197,7 @@ async function uploadCharacterMedia(bucket: StorageBucketType) {
       const result = await downLoadThenUpload(iconUrl, bucket, name, "image");
       if (result) character.iconUrl = result.url;
       return character;
-    })
+    }),
   );
   await repo(Character).save(charactersToSave);
 }
@@ -213,11 +227,162 @@ async function uploadConstellations(bucket: StorageBucketType) {
   const constellationsToSave = [];
   for (const constellation of constellations) {
     const { iconUrl, name } = constellation;
-    const result = await downLoadThenUpload(iconUrl, bucket, name, "image");
+    const result = await downLoadThenUpload(iconUrl, bucket, name);
     if (result) constellation.iconUrl = result.url;
     constellationsToSave.push(constellation);
   }
   await repo(Constellation).save(constellationsToSave);
+}
+
+/**
+ * Uploads talent material icons to the specified bucket.
+ *
+ * This function retrieves all talent materials from the database, downloads their
+ * associated guide, philosophy, and teaching icons, and uploads them to the specified
+ * storage bucket. The URLs of the uploaded icons are then updated in the database.
+ *
+ * @param bucket - The storage bucket where the icons will be uploaded.
+ */
+async function uploadTalentMaterials(bucket: StorageBucketType) {
+  const talentMaterials = await repo(TalentMaterial).find();
+  const save = [];
+  for (const talentMaterial of talentMaterials) {
+    const { guideUrl, philosophyUrl, name, teachingUrl } = talentMaterial;
+    const newGuide = await downLoadThenUpload(
+      guideUrl,
+      bucket,
+      `material_${name}_guide`,
+    );
+    const newPhilosophy = await downLoadThenUpload(
+      philosophyUrl,
+      bucket,
+      `material_${name}_philosophy`,
+    );
+    const newTeaching = await downLoadThenUpload(
+      teachingUrl,
+      bucket,
+      `material_${name}_teaching`,
+    );
+
+    if (newGuide) talentMaterial.guideUrl = newGuide.url;
+    if (newPhilosophy) talentMaterial.philosophyUrl = newPhilosophy.url;
+    if (newTeaching) talentMaterial.teachingUrl = newTeaching.url;
+    save.push(talentMaterial);
+  }
+  await repo(TalentMaterial).save(save);
+}
+
+/**
+ * Uploads screen animations for characters to the specified storage bucket.
+ *
+ * This function retrieves all characters with their associated screen animations
+ * from the database. It then downloads the image and video files for each screen
+ * animation and uploads them to the specified storage bucket. The URLs of the
+ * uploaded files are updated in the database.
+ *
+ * @param bucket - The storage bucket where the screen animations will be uploaded.
+ */
+async function uploadScreenAnimations(bucket: StorageBucketType) {
+  const upload = async (media: ScreenAnimationMedia | null, name: string) => {
+    if (!media) return;
+    const { imageUrl, videoUrl } = media;
+    if (imageUrl) {
+      const result = await downLoadThenUpload(imageUrl, bucket, name, "image");
+      if (result) media.imageUrl = result.url;
+    }
+    if (videoUrl) {
+      const result = await downLoadThenUpload(videoUrl, bucket, name, "video");
+      if (result) media.videoUrl = result.url;
+    }
+  };
+
+  const name = (charName: string, suffix: string) =>
+    `character_${charName}_${suffix}`;
+
+  const screenAnimations = await repo(Character).find({
+    relations: ["gallery", "gallery.screenAnimation"],
+  });
+
+  const save = [];
+  for (const character of screenAnimations) {
+    const {
+      name: charName,
+      gallery: { screenAnimation },
+    } = character;
+
+    const { idleOne, idleTwo, talentMenu, weaponMenu, partySetup } =
+      screenAnimation;
+    await upload(idleOne, name(charName, "idle_one"));
+    await upload(idleTwo, name(charName, "idle_two"));
+    await upload(talentMenu, name(charName, "talent_menu"));
+    await upload(weaponMenu, name(charName, "weapon_menu"));
+    await upload(partySetup, name(charName, "party_setup"));
+
+    save.push(character);
+  }
+  await repo(Character).save(save);
+}
+
+/**
+ * Uploads attack animations media for characters to the specified storage bucket.
+ *
+ * This function retrieves all characters with their associated attack animations
+ * from the database. It then downloads the image and video files for each frame
+ * of the attack animations and uploads them to the specified storage bucket.
+ * The URLs of the uploaded files are updated in the database.
+ *
+ * @param bucket - The storage bucket where the attack animations will be uploaded.
+ */
+async function uploadAttackAnimationsMedia(bucket: StorageBucketType) {
+  const upload = async (animation: Animation[], name: string) => {
+    for (let i = 0; i < animation.length; i++) {
+      const frame = animation[i];
+      const { url: imageUrl, videoUrl } = frame;
+      if (imageUrl) {
+        const result = await downLoadThenUpload(
+          imageUrl,
+          bucket,
+          `${name}_${i}`,
+          "image",
+        );
+        if (result) frame.url = result.url;
+      }
+      if (videoUrl) {
+        const result = await downLoadThenUpload(
+          videoUrl,
+          bucket,
+          `${name}_${i}`,
+          "video",
+        );
+        if (result) frame.videoUrl = result.url;
+      }
+    }
+  };
+
+  const attackAnimations = await repo(Character).find({
+    relations: ["gallery", "gallery.attackAnimation"],
+  });
+
+  for (const character of attackAnimations) {
+    try {
+      const {
+        name,
+        gallery: { attackAnimation },
+      } = character;
+
+      const { normalAttack, elementalSkill, elementalBurst } = attackAnimation;
+      await upload(normalAttack, createCharName(name, "normal_attack"));
+      await upload(elementalSkill, createCharName(name, "elemental_skill"));
+      await upload(elementalBurst, createCharName(name, "elemental_burst"));
+
+      await repo(Character).save(character);
+    } catch (error) {
+      console.error(
+        `Error uploading attack animations for character ${character.name}:`,
+        error,
+      );
+    }
+  }
 }
 
 async function main() {
@@ -227,7 +392,8 @@ async function main() {
   const characterBucket = await store.bucket(CHARACTER_BUCKET);
   const talentBucket = await store.bucket(TALENT_BUCKET);
   const constellationBucket = await store.bucket(CONSTELLATION_BUCKET);
-
+  const screenAnimationBucket = await store.bucket(SCREEN_ANIMATION_BUCKET);
+  const attackAnimationBucket = await store.bucket(ATTACK_ANIMATION_BUCKET);
   await Promise.all([
     uploadNation(primitiveBucket),
     uploadElement(primitiveBucket),
@@ -235,6 +401,9 @@ async function main() {
     uploadCharacterMedia(characterBucket),
     uploadTalents(talentBucket),
     uploadConstellations(constellationBucket),
+    uploadTalentMaterials(talentBucket),
+    uploadScreenAnimations(screenAnimationBucket),
+    uploadAttackAnimationsMedia(attackAnimationBucket),
   ]);
 }
 
