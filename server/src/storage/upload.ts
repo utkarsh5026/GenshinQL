@@ -55,9 +55,6 @@ async function downloadFile(
         },
       });
 
-      if (!response.ok)
-        throw new Error(`HTTP error! status: ${response.status}`);
-
       const buffer = Buffer.from(await response.arrayBuffer());
       console.log(`Successfully downloaded: ${url}`);
       return { buffer, fileType: getFileType(url) };

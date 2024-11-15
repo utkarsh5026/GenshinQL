@@ -36,22 +36,28 @@ async function scrapeWeapons(driver: WebDriver, weapon: WeaponType) {
   const weaponUrl = `${URL}/${weapon}`;
   try {
     await driver.get(weaponUrl);
-    const dataIndex = weapon === "Bow" ? 2 : 1;
+    const dataIndex = weapon === "Bow" ? 3 : 1;
     const tableSelector = `table.article-table[data-index-number='${dataIndex}']`;
     await driver.wait(until.elementLocated(By.css(tableSelector)), 10000);
 
-    const headerElements = await driver.findElements(
-      By.css(`${tableSelector} th`),
-    );
+    const table = await driver
+      .findElement(By.css(`span#List_of_${weapon}s`))
+      .findElement(By.xpath(".."))
+      .findElement(By.xpath("following-sibling::table"));
+
+    console.log(table.getTagName(), await table.getAttribute("class"));
+
+    const headerElements = await table.findElements(By.css("th"));
     const headers = await Promise.all(headerElements.map((el) => el.getText()));
 
     // Extract rows
-    const rowElements = await driver.findElements(
-      By.css(`${tableSelector} tr`),
-    );
+    const rowElements = await table.findElements(By.css("tr"));
     const rows = await Promise.all(
       rowElements.slice(1).map(async (row) => {
         const cells = await row.findElements(By.css("td"));
+        const image = await cells[0]
+          .findElement(By.css("img"))
+          .getAttribute("data-src");
         const texts = await Promise.all(cells.map((cell) => cell.getText()));
 
         const quality = await cells[2]
@@ -59,8 +65,9 @@ async function scrapeWeapons(driver: WebDriver, weapon: WeaponType) {
           .getAttribute("alt");
 
         texts[2] = quality;
+        texts[0] = parseUrl(image);
         return texts;
-      }),
+      })
     );
 
     return {
@@ -91,24 +98,22 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
 
   const container = await driver.findElement(By.css(selector));
   const materials = await Promise.all(
-    (await container.findElements(By.css("div.card-container"))).map(
-      async (card) => {
-        const imageUrl = await card
-          .findElement(By.css("img"))
-          .getAttribute("data-src");
+    (
+      await container.findElements(By.css("div.card-container"))
+    ).map(async (card) => {
+      const imageUrl = await card
+        .findElement(By.css("img"))
+        .getAttribute("data-src");
 
-        const caption = await card
-          .findElement(By.css("span.card-caption"))
-          .getText();
+      const caption = await card
+        .findElement(By.css("span.card-caption"))
+        .getText();
 
-        console.log("card", imageUrl, caption);
-
-        return {
-          url: parseUrl(imageUrl),
-          caption,
-        };
-      },
-    ),
+      return {
+        url: parseUrl(imageUrl),
+        caption,
+      };
+    })
   );
 
   const tabSelector = "li.wds-tabs__tab";
@@ -122,14 +127,53 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
     const weaponContent = await driver
       .findElement(By.css("div.wds-tab__content.wds-is-current td"))
       .getText();
-    console.log(weaponContent);
     passives.push(weaponContent);
   }
 
   return {
     materials,
     passives,
+    images: await getWeaponImages(driver),
   };
+}
+
+/**
+ * Retrieves a list of image URLs associated with a weapon from the web page.
+ * This function navigates through the weapon's image collection on the page,
+ * extracts the URLs of all images, and includes a specific image for weapon details.
+ *
+ * @param {WebDriver} driver - The Selenium WebDriver instance used to interact with the web page.
+ * @returns {Promise<string[]>} A promise that resolves to an array of image URLs.
+ */
+async function getWeaponImages(driver: WebDriver): Promise<string[]> {
+  const selector = "div.pi-image-collection";
+  await waitForElementCss(driver, selector);
+
+  const imageContainer = await driver.findElement(By.css(selector));
+  const imageElements = await imageContainer.findElements(By.css("img"));
+
+  console.log(imageElements.length, await imageContainer.getAttribute("class"));
+
+  const images = await Promise.all(
+    imageElements.map(async (imageElement) => {
+      const image = await imageElement.getAttribute("src");
+      return parseUrl(image);
+    })
+  );
+
+  try {
+    const weaponDetailsImage = await driver.findElement(
+      By.css("img[alt='Weapon Details Announcement']")
+    );
+    const weaponDetailsImageUrl = await weaponDetailsImage.getAttribute(
+      "data-src"
+    );
+    images.push(parseUrl(weaponDetailsImageUrl));
+  } catch (error) {
+    console.error("Error getting weapon details image:", error);
+  }
+
+  return images;
 }
 
 /**
@@ -150,7 +194,7 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
  *
  * @returns {Promise<void>} A promise that resolves when all weapon data has been processed and saved
  */
-async function loadWeapons() {
+async function loadWeapons(): Promise<void> {
   const driver = await setupDriver();
   const weaponData: Record<WeaponType, any> = {
     Sword: [],
@@ -163,15 +207,19 @@ async function loadWeapons() {
   try {
     for (const weapon of WEAPON_TYPES) {
       const result = [];
-      const data = await loadJsonPath(path.join("weapons", `${weapon}.json`));
+      const data = await loadJsonPath(
+        path.join("weapons", `${weapon}s_new.json`)
+      );
       for (const weapon of data) {
         try {
-          const { materials, passives } = await extractEachWeaponData(
+          console.log("\n==Scraping", weapon.name, "==\n");
+          const { materials, passives, images } = await extractEachWeaponData(
             driver,
-            weapon.name,
+            weapon.name
           );
           weapon.materials = materials;
           weapon.passives = passives;
+          weapon.images = images;
           result.push(weapon);
         } catch (error) {
           console.error("Error extracting weapon data for", weapon.name, error);
@@ -180,7 +228,7 @@ async function loadWeapons() {
       weaponData[weapon] = result;
     }
 
-    await saveJson(weaponData, "weapons", "wep");
+    await saveJson(weaponData, "weapons", "weapons_new");
   } finally {
     await driver.quit();
   }
@@ -188,7 +236,7 @@ async function loadWeapons() {
 
 async function addMaterialCount() {
   const result = (await loadJsonPath(
-    path.join("weapons", "wep.json"),
+    path.join("weapons", "wep.json")
   )) as Record<WeaponType, Weapon[]>;
 
   const four_star_weapon = [150000, 3, 9, 9, 4, 15, 18, 27, 10, 15, 18];
@@ -206,7 +254,6 @@ async function addMaterialCount() {
       }
     }
   }
-
   await saveJson(result, "weapons", "weaper");
 }
 
@@ -216,27 +263,30 @@ async function addMaterialCount() {
 async function main() {
   const driver = await setupDriver();
 
-  for (const weapon of WEAPON_TYPES) {
-    const data = await scrapeWeapons(driver, weapon);
-    const weaponData = data?.rows.map((row) => {
-      const stars = parseInt(row[2].split(" ")[0]);
-      const attack = parseInt(row[3].split(" ")[0]);
-      const substat = row[4].split("\n")[0];
+  // for (const weapon of WEAPON_TYPES) {
+  //   const data = await scrapeWeapons(driver, weapon);
+  //   const weaponData = data?.rows.map((row) => {
+  //     const stars = parseInt(row[2].split(" ")[0]);
+  //     const attack = parseInt(row[3].split(" ")[0]);
+  //     const substat = row[4].split("\n")[0];
+  //     const iconUrl = parseUrl(row[0]);
 
-      return {
-        name: row[1],
-        rarity: stars,
-        attack: attack,
-        subStat: substat,
-        effect: row[5],
-      };
-    });
+  //     return {
+  //       name: row[1],
+  //       rarity: stars,
+  //       attack: attack,
+  //       subStat: substat,
+  //       effect: row[5],
+  //       iconUrl,
+  //     };
+  //   });
 
-    await saveJson(weaponData, "weapons", weapon);
-  }
+  //   await saveJson(weaponData, "weapons", `${weapon}s_new`);
+  // }
   await driver.quit();
   await loadWeapons();
 }
 
-// main().then(() => console.log("Done loading weapons!"));
-addMaterialCount().then(() => console.log("Done adding material count!"));
+if (require.main === module) {
+  main().then(() => console.log("Done loading weapons!"));
+}

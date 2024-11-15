@@ -19,6 +19,9 @@ export default class Weapon {
   name: string;
 
   @Column()
+  iconUrl: string;
+
+  @Column()
   rarity: number;
 
   @Column()

@@ -97,7 +97,10 @@ async function scrapeCharacters(
  *          - imageUrls: Record containing character image URLs
  *          Returns undefined if scraping fails
  */
-async function scrapeCharacter(driver: WebDriver, character: string) {
+export async function scrapeCharacterDetailed(
+  driver: WebDriver,
+  character: string
+) {
   const characterUrl = `${URL}/${character}`;
 
   try {
@@ -383,15 +386,15 @@ async function getConstellations(driver: WebDriver): Promise<Constellation[]> {
 }
 
 /**
- * Scrapes character information and saves it to a JSON file.
+ * Scrapes character data from the main characters page and processes it into a structured format.
  *
  * @param driver - The WebDriver instance used for browser automation.
- * @returns A Promise that resolves when the characters have been saved.
+ * @returns A Promise that resolves to an array of character objects, excluding "Aloy" and "Traveler".
  */
-async function saveCharacters(driver: WebDriver) {
+export async function scrapeCharacterTable(driver: WebDriver) {
   const characters = await scrapeCharacters(driver);
 
-  const charactersTable = characters
+  return characters
     ?.map((character) => {
       return {
         iconUrl: parseUrl(character[0]),
@@ -408,6 +411,17 @@ async function saveCharacters(driver: WebDriver) {
     .filter(
       (character) => character.name !== "Aloy" && character.name !== "Traveler"
     );
+}
+
+/**
+/**
+ * Scrapes character information and saves it to a JSON file.
+ *
+ * @param driver - The WebDriver instance used for browser automation.
+ * @returns A Promise that resolves when the characters have been saved.
+ */
+async function saveCharacters(driver: WebDriver) {
+  const charactersTable = await scrapeCharacterTable(driver);
   console.log(JSON.stringify(charactersTable, null, 2));
   await saveJson(charactersTable, "characters", "characters");
   return charactersTable;
@@ -451,7 +465,7 @@ const scrapeAndSaveDetailedCharacterInfo = async (
       try {
         const name = char.name.split(" ").join("_");
         console.log(`Scraping ${name}`);
-        const desc = await scrapeCharacter(driver, name);
+        const desc = await scrapeCharacterDetailed(driver, name);
 
         const fullDesc = {
           ...char,
