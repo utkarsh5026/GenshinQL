@@ -14,7 +14,12 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
-import { CalendarHeart, ChevronDown, Table2 } from "lucide-react";
+import {
+  CalendarHeart,
+  ChevronDown,
+  Table2,
+  CalendarClock,
+} from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { useCharacters } from "@/redux/hook/characters";
 
@@ -22,12 +27,14 @@ interface AppSideBarProps {
   onCharacterClick: (name: string) => void;
   onTalentCalenderClick: () => void;
   onCharactersTableClick: () => void;
+  onCharacterRoutineClick: () => void;
 }
 
 const AppSideBar: React.FC<AppSideBarProps> = ({
   onCharacterClick,
   onTalentCalenderClick,
   onCharactersTableClick,
+  onCharacterRoutineClick,
 }) => {
   const { characters, fetchCharacters } = useCharacters();
 
@@ -45,6 +52,9 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
           </SidebarMenuButton>
           <SidebarMenuButton onClick={onCharactersTableClick}>
             <Table2 /> Characters Table
+          </SidebarMenuButton>
+          <SidebarMenuButton onClick={onCharacterRoutineClick}>
+            <CalendarClock /> Characters Routine
           </SidebarMenuButton>
           <Collapsible defaultOpen={false} className="group/collapsible">
             <SidebarItem>

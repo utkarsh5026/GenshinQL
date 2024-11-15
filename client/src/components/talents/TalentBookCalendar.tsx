@@ -1,7 +1,4 @@
-import React, { useMemo, useState } from "react";
-import { useQuery } from "@apollo/client";
-import { GET_TALENT_MATERIALS_CALENDAR } from "@/graphql/queries.ts";
-import type { TalentBookCalendar } from "@/graphql/types";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   Tabs,
   TabsContent,
@@ -12,6 +9,7 @@ import TalentTable from "@/components/talents/TalentTable.tsx";
 import { Button } from "@/components/ui/button.tsx";
 import { Aperture, CalendarDays } from "lucide-react";
 import TalentCalendarView from "@/components/talents/TalentCalendarView.tsx";
+import useTalentBooks from "@/redux/hook/talent-book.ts";
 
 /**
  * TalentCalender component displays a calendar or table view of talent books.
@@ -20,26 +18,23 @@ import TalentCalendarView from "@/components/talents/TalentCalendarView.tsx";
  */
 const TalentCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
-  const { data, loading } = useQuery(GET_TALENT_MATERIALS_CALENDAR);
+  const { calendar, loading, fetchBooks } = useTalentBooks();
+
+  useEffect(() => {
+    fetchBooks();
+  }, [fetchBooks]);
 
   const locations = useMemo(() => {
-    const books =
-      data && data.talentBooks
-        ? (data.talentBooks as TalentBookCalendar[])
-        : [];
+    const books = calendar || [];
     return books.map(({ location }) => location);
-  }, [data]);
+  }, [calendar]);
 
-  const talentBooks = useMemo(
-    () =>
-      data && data.talentBooks
-        ? (data.talentBooks as TalentBookCalendar[])
-        : [],
-    [data]
-  );
+  const talentBooks = calendar || [];
 
-  if (loading) return null;
-  if (data && talentBooks.length > 0)
+  console.log(talentBooks.length, loading);
+  // if (loading) return <div>Loading...</div>;
+
+  if (locations.length > 0)
     return (
       <div>
         <Tabs defaultValue={locations[0]}>
@@ -78,9 +73,9 @@ const TalentCalender: React.FC = () => {
                 </div>
                 {books &&
                   (isCalendar ? (
-                    <TalentTable talent={books} />
-                  ) : (
                     <TalentCalendarView nDays={7} talent={books} />
+                  ) : (
+                    <TalentTable talent={books} />
                   ))}
               </TabsContent>
             );

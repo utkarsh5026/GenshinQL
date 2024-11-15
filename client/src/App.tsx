@@ -8,8 +8,13 @@ import TalentCalender from "@/components/talents/TalentBookCalendar.tsx";
 import CharacterDescription from "./components/character/description/CharacterDescription.tsx";
 import { CharacterDetailed } from "./graphql/types";
 import CharactersTable from "./components/character/table/CharacterTable.tsx";
+import CharacterRoutine from "./components/character/routine/CharacterRoutine.tsx";
 
-type CurrentView = "character" | "talentCalender" | "charactersTable";
+type CurrentView =
+  | "character"
+  | "talentCalender"
+  | "charactersTable"
+  | "characterRoutine";
 
 function App() {
   const [getCharacter, { data }] = useLazyQuery(GET_CHARACTER);
@@ -23,18 +28,14 @@ function App() {
     const res = await getCharacter({ variables: { name } });
     console.log(res);
   };
-  const handleTalentCalenderClick = () => {
-    setCurrentView("talentCalender");
-  };
-  const handleCharactersTableClick = () => {
-    setCurrentView("charactersTable");
-  };
+
   return (
     <SidebarProvider>
       <AppSideBar
         onCharacterClick={handleCharacterClick}
-        onTalentCalenderClick={handleTalentCalenderClick}
-        onCharactersTableClick={handleCharactersTableClick}
+        onTalentCalenderClick={() => setCurrentView("talentCalender")}
+        onCharactersTableClick={() => setCurrentView("charactersTable")}
+        onCharacterRoutineClick={() => setCurrentView("characterRoutine")}
       />
       <main
         className="items-center justify-center  w-full
@@ -47,6 +48,7 @@ function App() {
         )}
         {currentView === "talentCalender" && <TalentCalender />}
         {currentView === "charactersTable" && <CharactersTable />}
+        {currentView === "characterRoutine" && <CharacterRoutine />}
       </main>
     </SidebarProvider>
   );

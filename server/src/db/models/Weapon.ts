@@ -18,7 +18,7 @@ export default class Weapon {
   @Column()
   name: string;
 
-  @Column()
+  @Column({ nullable: true })
   iconUrl: string;
 
   @Column()
