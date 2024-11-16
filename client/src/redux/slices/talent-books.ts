@@ -29,7 +29,7 @@ const createCharTalentMap = (
 
   for (const book of calendar) {
     for (const { books, characters, day } of book.days) {
-      const [dayOne, dayTwo] = day.split(" ");
+      const [dayOne, dayTwo] = day.split(/\s+/);
       const guideUrl = books.find((b) => b.name.includes("Guide"))?.url;
       const philosophyUrl = books.find((b) =>
         b.name.includes("Philosophies")

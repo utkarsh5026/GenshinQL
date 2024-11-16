@@ -4,6 +4,16 @@ import { useAppDispatch, useAppSelector } from "../hooks";
 import { RootState } from "../store";
 import { GET_CHARACTERS } from "@/graphql/queries";
 import { setCharacters } from "../slices/characters";
+import type { Character } from "@/graphql/types";
+import type { ApolloError } from "@apollo/client";
+
+interface CharacterHook {
+  characters: Character[];
+  characterMap: Record<string, Character>;
+  loading: boolean;
+  error: ApolloError | undefined;
+  fetchCharacters: () => Promise<void>;
+}
 
 /**
  * Custom hook to fetch and manage character data.
@@ -14,11 +24,11 @@ import { setCharacters } from "../slices/characters";
  * @property {ApolloError | undefined} error - The error state of the query.
  * @property {Function} fetchCharacters - Function to fetch characters from the server.
  */
-export const useCharacters = () => {
+export const useCharacters = (): CharacterHook => {
   const [load, { loading, error }] = useLazyQuery(GET_CHARACTERS);
   const dispatch = useAppDispatch();
-  const characters = useAppSelector(
-    (state: RootState) => state.characters.characters
+  const { characters, characterMap } = useAppSelector(
+    (state: RootState) => state.characters
   );
 
   const fetchCharacters = useCallback(
@@ -30,5 +40,5 @@ export const useCharacters = () => {
     [load, dispatch, characters]
   );
 
-  return { characters, loading, error, fetchCharacters };
+  return { characters, characterMap, loading, error, fetchCharacters };
 };

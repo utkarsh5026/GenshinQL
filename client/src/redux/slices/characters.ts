@@ -5,12 +5,14 @@ interface CharactersState {
   characters: Character[];
   loading: boolean;
   error: ApolloError | null;
+  characterMap: Record<string, Character>;
 }
 
 const initialState: CharactersState = {
   characters: [],
   loading: false,
   error: null,
+  characterMap: {},
 };
 
 const charactersSlice = createSlice({
@@ -19,6 +21,13 @@ const charactersSlice = createSlice({
   reducers: {
     setCharacters: (state, action: PayloadAction<Character[]>) => {
       state.characters = action.payload;
+      state.characterMap = action.payload.reduce(
+        (acc, char) => {
+          acc[char.name] = char;
+          return acc;
+        },
+        {} as Record<string, Character>
+      );
     },
   },
 });

@@ -111,3 +111,8 @@ export type OtherTalentType =
   | "1st Ascension Passive"
   | "4th Ascension Passive"
   | "Utility Passive";
+
+export type AvatarRequirement = {
+  name: string;
+  iconUrl: string;
+};
