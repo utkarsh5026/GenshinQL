@@ -7,6 +7,8 @@ import CharacterConstellations from "../constellations/CharacterConstellations.t
 import CharacterPassives from "../passives/CharacterPassives.tsx";
 import { decideColor } from "@/utils/color.ts";
 import CharacterAttackAnimations from "../attack/CharacterAttackAnimations.tsx";
+import { useCharacters } from "@/redux/hook/characters.ts";
+import RoutineTable from "../routine/RoutineTable.tsx";
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;
@@ -17,7 +19,8 @@ type CharacterMenuItem =
   | "Talents"
   | "Constellations"
   | "Passives"
-  | "Attacks";
+  | "Attacks"
+  | "Routine";
 
 const menuItems: CharacterMenuItem[] = [
   "Profile",
@@ -25,6 +28,7 @@ const menuItems: CharacterMenuItem[] = [
   "Constellations",
   "Passives",
   "Attacks",
+  "Routine",
 ];
 
 const CharacterDescription: React.FC<CharacterDetailedProps> = ({
@@ -32,7 +36,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
 }) => {
   const [selectedMenuItem, setSelectedMenuItem] =
     useState<CharacterMenuItem>("Profile");
-
+  const { characterMap } = useCharacters();
   if (!character) return <div>Character not found</div>;
 
   return (
@@ -105,6 +109,11 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           {selectedMenuItem === "Attacks" && (
             <CharacterCard>
               <CharacterAttackAnimations character={character} />
+            </CharacterCard>
+          )}
+          {selectedMenuItem === "Routine" && (
+            <CharacterCard>
+              <RoutineTable characters={[characterMap[character.name]]} />
             </CharacterCard>
           )}
         </div>
