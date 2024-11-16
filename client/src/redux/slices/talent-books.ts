@@ -8,6 +8,7 @@ export type TalentBook = {
   guideUrl: string;
   dayOne: string;
   dayTwo: string;
+  bookName: string;
 };
 
 interface TalentBookState {
@@ -39,9 +40,12 @@ const createCharTalentMap = (
       for (const char of characters) {
         map[char.name] = {
           name: char.name,
-          guideUrl: guideUrl || "",
-          philosophyUrl: philosophyUrl || "",
-          teachingUrl: teachingUrl || "",
+          bookName:
+            books.find((b) => b.name.includes("Guide"))?.name.split(" ")[2] ??
+            "",
+          guideUrl: guideUrl ?? "",
+          philosophyUrl: philosophyUrl ?? "",
+          teachingUrl: teachingUrl ?? "",
           dayOne,
           dayTwo,
         };

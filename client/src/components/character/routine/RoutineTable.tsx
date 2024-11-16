@@ -9,7 +9,8 @@ import {
 import { TalentBook } from "@/redux/slices/talent-books";
 import React from "react";
 import CharacterGrid from "../utils/CharacterGrid";
-
+import TalentBooksShowCase from "./TalentBooksShowCase";
+import { getCurrentDay } from "@/utils/day";
 interface Routine {
   day: string;
   talentBooks: { book: TalentBook; url: string; name: string }[];
@@ -20,6 +21,7 @@ interface RoutineTableProps {
 }
 
 const RoutineTable: React.FC<RoutineTableProps> = ({ routines }) => {
+  const currentDay = getCurrentDay();
   return (
     <div>
       <Table className="w-full">
@@ -32,23 +34,44 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ routines }) => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {routines.map((routine) => (
-            <TableRow key={routine.day}>
-              <TableCell className="font-bold text-left py-2">
-                {routine.day}
-              </TableCell>
-              <TableCell className="py-2">
-                <CharacterGrid
-                  characters={routine.talentBooks.map((book) => ({
-                    name: book.name,
-                    url: book.url,
-                  }))}
-                />
-              </TableCell>
-              <TableCell className="py-2">Weapon</TableCell>
-              <TableCell className="py-2">Talent</TableCell>
-            </TableRow>
-          ))}
+          {routines.map((routine) => {
+            const rowUniqueBooks = Array.from(
+              new Set(routine.talentBooks.map((book) => book.book.guideUrl))
+            ).map(
+              (url) =>
+                routine.talentBooks.find((book) => book.book.guideUrl === url)!
+                  .book
+            );
+
+            return (
+              <TableRow
+                key={routine.day}
+                className={
+                  routine.day === currentDay
+                    ? "bg-green-500/20 hover:bg-green-500/20"
+                    : ""
+                }
+              >
+                <TableCell className="font-bold text-left py-2">
+                  {routine.day === currentDay
+                    ? `${routine.day} (Today)`
+                    : routine.day}
+                </TableCell>
+                <TableCell className="py-2">
+                  <CharacterGrid
+                    characters={routine.talentBooks.map((book) => ({
+                      name: book.name,
+                      url: book.url,
+                    }))}
+                  />
+                </TableCell>
+                <TableCell className="py-2">Weapon</TableCell>
+                <TableCell className="py-2">
+                  <TalentBooksShowCase talentBooks={rowUniqueBooks} />
+                </TableCell>
+              </TableRow>
+            );
+          })}
         </TableBody>
       </Table>
     </div>
