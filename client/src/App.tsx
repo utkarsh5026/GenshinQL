@@ -14,7 +14,8 @@ type CurrentView =
   | "character"
   | "talentCalender"
   | "charactersTable"
-  | "characterRoutine";
+  | "characterRoutine"
+  | "weaponCalender";
 
 function App() {
   const [getCharacter, { data }] = useLazyQuery(GET_CHARACTER);
@@ -36,6 +37,7 @@ function App() {
         onTalentCalenderClick={() => setCurrentView("talentCalender")}
         onCharactersTableClick={() => setCurrentView("charactersTable")}
         onCharacterRoutineClick={() => setCurrentView("characterRoutine")}
+        onWeaponCalenderClick={() => setCurrentView("weaponCalender")}
       />
       <main
         className="items-center justify-center  w-full

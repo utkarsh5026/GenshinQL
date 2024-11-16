@@ -15,10 +15,11 @@ import {
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
 import {
+  CalendarClock,
   CalendarHeart,
   ChevronDown,
+  LucideSwords,
   Table2,
-  CalendarClock,
 } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { useCharacters } from "@/redux/hook/characters";
@@ -28,6 +29,7 @@ interface AppSideBarProps {
   onTalentCalenderClick: () => void;
   onCharactersTableClick: () => void;
   onCharacterRoutineClick: () => void;
+  onWeaponCalenderClick: () => void;
 }
 
 const AppSideBar: React.FC<AppSideBarProps> = ({
@@ -35,6 +37,7 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
   onTalentCalenderClick,
   onCharactersTableClick,
   onCharacterRoutineClick,
+  onWeaponCalenderClick,
 }) => {
   const { characters, fetchCharacters } = useCharacters();
 
@@ -55,6 +58,9 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
           </SidebarMenuButton>
           <SidebarMenuButton onClick={onCharacterRoutineClick}>
             <CalendarClock /> Characters Routine
+          </SidebarMenuButton>
+          <SidebarMenuButton onClick={onWeaponCalenderClick}>
+            <LucideSwords /> Weapons Calendar
           </SidebarMenuButton>
           <Collapsible defaultOpen={false} className="group/collapsible">
             <SidebarItem>
