@@ -6,7 +6,7 @@ import Nation from "./models/Nation";
 import Element from "./models/Element";
 import Weapon from "./models/Weapon";
 import WeaponType from "./models/WeaponType";
-import WeaponMaterial from "./models/WeaponMaterial";
+import WeaponMaterial from "./models/WeapMaterial";
 import WeaponPassive from "./models/WeaponPassive";
 import Character from "./models/Character";
 import CharacterTalent from "./models/CharacterTalent";
@@ -18,6 +18,7 @@ import NameCard from "./models/NameCard";
 import AttackAnimation from "./models/AttackAnimation";
 import Gallery from "./models/Gallery";
 import ScreenAnimationMedia from "./models/ScreenAnimationMedia";
+import WeaponMaterialImages from "./models/WeaponMaterialImages";
 
 export const dataSource = new DataSource({
   type: "sqlite",
@@ -41,6 +42,7 @@ export const dataSource = new DataSource({
     AttackAnimation,
     Gallery,
     ScreenAnimationMedia,
+    WeaponMaterialImages,
   ],
 });
 

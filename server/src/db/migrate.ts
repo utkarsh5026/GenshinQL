@@ -12,14 +12,15 @@ import {
   gallerySchema,
   talentDaySchema,
   talentSchema,
-  weaponSchema,
   weaponTypeSchema,
   animationSchema,
+  WeaponMaterialSchema,
+  WeaponSchema,
 } from "../data/schema";
 
 import WeaponModel from "./models/Weapon";
 import WeaponTypeModel from "./models/WeaponType";
-import WeaponMaterial from "./models/WeaponMaterial";
+import WeaponMaterial from "./models/WeapMaterial";
 import WeaponPassive from "./models/WeaponPassive";
 import TalentMaterial from "./models/TalentMaterial";
 import NationModel from "./models/Nation";
@@ -35,8 +36,8 @@ import AttackAnimationModel from "./models/AttackAnimation";
 import { Like } from "typeorm";
 import { toOriginalName } from "../data/utils";
 import ScreenAnimationMedia from "./models/ScreenAnimationMedia";
+import WeaponMaterialImages from "./models/WeaponMaterialImages";
 
-type WeaponSchema = z.infer<typeof weaponSchema>;
 type WeaponTypeSchema = z.infer<typeof weaponTypeSchema>;
 type TalentDaySchema = z.infer<typeof talentDaySchema>;
 type BaseCharacterSchema = z.infer<typeof baseCharacterSchema>;
@@ -82,8 +83,9 @@ async function migrateWeapons() {
   const weaponTypeRepo = repo(WeaponTypeModel);
 
   const weaponData = (await loadJsonPath(
-    path.join("weapons", "weaper.json")
+    path.join("weapons", "weapons_new.json")
   )) as Record<WeaponTypeSchema, WeaponSchema[]>;
+  const matMap = await createWeaponMaterialMap();
 
   const wepTypes = Object.keys(weaponData) as WeaponTypeSchema[];
   const weaponsToSave: WeaponModel[] = [];
@@ -92,10 +94,12 @@ async function migrateWeapons() {
     const weapons = weaponData[type];
 
     for (const weapon of weapons) {
-      const { name, rarity, attack, subStat, effect, materials, passives } =
+      const { name, rarity, attack, subStat, effect, passives, iconUrl } =
         weapon;
+      const mat = matMap[name];
 
       const newWeapon = new WeaponModel();
+      newWeapon.iconUrl = iconUrl;
       newWeapon.name = name;
       newWeapon.rarity = rarity;
       newWeapon.attack = attack;
@@ -105,14 +109,17 @@ async function migrateWeapons() {
         name: type,
       });
 
-      const materialsToSave: WeaponMaterial[] = [];
-      for (const mat of materials) {
-        const newMaterial = new WeaponMaterial();
-        newMaterial.url = mat.url;
-        newMaterial.caption = mat.caption;
-        newMaterial.count = mat.count ?? 0;
-        materialsToSave.push(newMaterial);
-      }
+      newWeapon.material = await repo(WeaponMaterial).findOneOrFail({
+        where: {
+          dayOne: mat.day,
+          nation: {
+            name: mat.nation,
+          },
+        },
+        relations: {
+          nation: true,
+        },
+      });
 
       const passivesToSave: WeaponPassive[] = [];
       for (const passive of passives) {
@@ -122,12 +129,122 @@ async function migrateWeapons() {
       }
 
       newWeapon.passives = passivesToSave;
-      newWeapon.materials = materialsToSave;
       weaponsToSave.push(newWeapon);
     }
   }
 
   await weaponRepo.save(weaponsToSave);
+}
+
+/**
+ * Creates a mapping of weapon names to their material farming details.
+ *
+ * This function performs the following:
+ * 1. Loads weapon material data from JSON file organized by nation
+ * 2. Validates that materials exist for all nations (except Snezhnaya)
+ * 3. Creates a map where:
+ *    - Keys are weapon names
+ *    - Values are objects containing:
+ *      - day: The first day the material is available (cleaned of formatting)
+ *      - nation: The nation where the material is found
+ *
+ * @returns A record mapping weapon names to their material details
+ * @throws Error if materials are not found for a nation
+ */
+async function createWeaponMaterialMap() {
+  const materials = (await loadJsonPath(
+    path.join("weapons", "material_calendar.json")
+  )) as Record<string, WeaponMaterialSchema[]>;
+
+  (await repo(NationModel).find()).forEach((nation) => {
+    if (nation.name === "Snezhnaya") return;
+    if (!Object.keys(materials).includes(nation.name))
+      throw new Error(`No materials found for ${nation.name}`);
+  });
+
+  const matMap: Record<string, { day: string; nation: string }> = {};
+  for (const [nation, mats] of Object.entries(materials)) {
+    mats.forEach((mat) => {
+      mat.weapons.forEach((weapon) => {
+        matMap[weapon] = {
+          day: mat.day.replace("/", "").split("\n")[0],
+          nation,
+        };
+      });
+    });
+  }
+  return matMap;
+}
+
+/**
+ * Migrates weapon material data from JSON files into the database.
+ *
+ * This function performs the following steps:
+ * 1. Loads weapon material data from JSON file organized by nation
+ * 2. Retrieves all nations from the database
+ * 3. For each nation, creates WeaponMaterial records for its weapon materials
+ * 4. Associates each weapon material with:
+ *    - Its nation
+ *    - The days it's available
+ *    - Images of the material at different star levels
+ * 5. Saves all records to the database with proper relationships
+ *
+ * The weapon material data is expected to contain:
+ * - Nations as top level keys
+ * - Arrays of material objects containing:
+ *   - Days when materials are available
+ *   - Images of the materials at different rarities
+ *   - Weapons that use the materials
+ *
+ * @throws Error if weapon materials are not found for a nation
+ * @throws Error if database operations fail
+ */
+async function migrateWeaponMaterials() {
+  const matRepo = repo(WeaponMaterial);
+
+  const materials = (await loadJsonPath(
+    path.join("weapons", "material_calendar.json")
+  )) as Record<string, WeaponMaterialSchema[]>;
+
+  console.dir(materials, { depth: null });
+
+  const nations = await repo(NationModel).find();
+  nations.forEach((nation) => {
+    if (nation.name === "Snezhnaya") return;
+    if (!Object.keys(materials).includes(nation.name))
+      throw new Error(`No materials found for ${nation.name}`);
+  });
+
+  const save: WeaponMaterial[] = [];
+  for (const nation of nations) {
+    const { name } = nation;
+    if (name === "Snezhnaya") continue;
+    const mats = materials[name];
+
+    const matModels = mats.map((mat) => {
+      const { day, images } = mat;
+      const newMat = new WeaponMaterial();
+      const [dayOne, dayTwo] = day.replace("/", "").split("\n");
+      newMat.dayOne = dayOne;
+      newMat.dayTwo = dayTwo;
+      newMat.nation = nation;
+
+      newMat.materialImages = images.map((image, index) => {
+        const newImage = new WeaponMaterialImages();
+        newImage.url = image.url;
+        newImage.caption = image.caption;
+        newImage.starLevel = index + 2;
+        newImage.weaponMaterial = newMat;
+        return newImage;
+      });
+
+      return newMat;
+    });
+
+    nation.weaponMaterials = matModels;
+    save.push(...matModels);
+  }
+  await matRepo.save(save);
 }
 
 /**
@@ -462,7 +579,6 @@ async function migrateGallery() {
   const charRepo = repo(CharacterModel);
 
   const galleriesToSave: GalleryModel[] = [];
-
   for (const [charName, gallery] of Object.entries(galleryData)) {
     try {
       const character = await charRepo.findOneByOrFail({
@@ -608,6 +724,7 @@ export async function migrate() {
   await initDb();
   console.log("Migrating weapons...");
   await savePrimitives();
+  await migrateWeaponMaterials();
   await migrateWeapons();
   await saveCharacters();
   await migrateGallery();

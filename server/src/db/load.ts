@@ -71,7 +71,7 @@ export async function loadCharacters(): Promise<Character[]> {
 export async function loadWeapons(): Promise<WeaponType[]> {
   const wepTypeRepo = repo(WeaponType);
   return await wepTypeRepo.find({
-    relations: ["weapons", "weapons.materials", "weapons.passives"],
+    relations: ["weapons", "weapons.passives"],
   });
 }
 

@@ -126,11 +126,11 @@ type Weapon {
     name: String!,
     rarity: Int!,
     attack: Int!,
+    iconUrl: String!,
     subStat: String!,
     effect: String!,
     type: String!,
     passives: [String!]!,
-    materials: [WeaponMaterial!]!,
 }
 
 type WeaponTypeDetails {

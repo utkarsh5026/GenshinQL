@@ -113,6 +113,7 @@ export const weaponSchema = z.object({
   name: z.string(),
   rarity: z.number(),
   attack: z.number(),
+  iconUrl: z.string(),
   subStat: z.string(),
   effect: z.string(),
   materials: z.array(
@@ -122,3 +123,13 @@ export const weaponSchema = z.object({
   ),
   passives: z.array(z.string()),
 });
+
+export const weapMaterialSchema = z.object({
+  day: z.string(),
+  images: z.array(imageSchema),
+  weapons: z.array(z.string()),
+});
+
+export type WeaponMaterialSchema = z.infer<typeof weapMaterialSchema>;
+export type ImageSchema = z.infer<typeof imageSchema>;
+export type WeaponSchema = z.infer<typeof weaponSchema>;

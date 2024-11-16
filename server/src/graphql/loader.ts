@@ -61,10 +61,8 @@ export const talentBooksLoader = new DataLoader(async (keys) => {
               if (prob < 50) {
                 if (gallery?.screenAnimation?.idleOne)
                   iconUrl = gallery.screenAnimation.idleOne.imageUrl;
-              } else {
-                if (gallery?.screenAnimation?.idleTwo)
-                  iconUrl = gallery.screenAnimation.idleTwo.imageUrl;
-              }
+              } else if (gallery?.screenAnimation?.idleTwo)
+                iconUrl = gallery.screenAnimation.idleTwo.imageUrl;
 
               return {
                 name,
@@ -126,19 +124,15 @@ export const weaponLoader = new DataLoader(async (keys) => {
       return {
         type: name,
         weapons: weapons.map((weapon) => {
-          const { name, rarity, attack, subStat, effect, materials } = weapon;
+          const { name, rarity, attack, subStat, effect, iconUrl } = weapon;
           return {
             name,
             rarity,
             attack,
             subStat,
             effect,
+            iconUrl,
             type: weaponType.name,
-            materials: materials.map((mat) => ({
-              url: mat.url,
-              name: mat.caption,
-              amount: mat.count,
-            })),
             passives: weapon.passives.map((passive) => passive.description),
           };
         }),

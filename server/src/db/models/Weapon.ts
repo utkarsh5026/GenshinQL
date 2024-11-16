@@ -7,7 +7,7 @@ import {
   JoinColumn,
 } from "typeorm";
 import WeaponType from "./WeaponType";
-import WeaponMaterial from "./WeaponMaterial";
+import WeaponMaterial from "./WeapMaterial";
 import WeaponPassive from "./WeaponPassive";
 
 @Entity()
@@ -37,8 +37,8 @@ export default class Weapon {
   @JoinColumn({ name: "weaponTypeId" })
   weaponType: WeaponType;
 
-  @OneToMany(() => WeaponMaterial, "weapon", { cascade: true })
-  materials: WeaponMaterial[];
+  @ManyToOne(() => WeaponMaterial, (material) => material.weapons)
+  material: WeaponMaterial;
 
   @OneToMany(() => WeaponPassive, "weapon", { cascade: true })
   passives: WeaponPassive[];
