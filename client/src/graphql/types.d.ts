@@ -116,3 +116,12 @@ export type AvatarRequirement = {
   name: string;
   iconUrl: string;
 };
+
+export type Day =
+  | "Monday"
+  | "Tuesday"
+  | "Wednesday"
+  | "Thursday"
+  | "Friday"
+  | "Saturday"
+  | "Sunday";
