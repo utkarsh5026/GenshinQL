@@ -1,11 +1,12 @@
 import DataLoader from "dataloader";
 import {
-  loadTalentBooksSchedule,
-  loadCharacters,
-  loadWeapons,
+  loadCharacterAttackAnimations,
   loadCharacterByName,
   loadCharacterGallery,
-  loadCharacterAttackAnimations,
+  loadCharacters,
+  loadTalentBooksSchedule,
+  loadWeaponMaterialSchedule,
+  loadWeapons,
 } from "../db/load";
 import { randomInt } from "crypto";
 import Character from "../db/models/Character";
@@ -306,3 +307,30 @@ function toGraphQlCharacter(character: Character) {
     regionUrl: nation.iconUrl,
   };
 }
+
+export const weaponMaterialScheduleLoader = new DataLoader(
+  async (keys: readonly string[]) => {
+    const schedule = await loadWeaponMaterialSchedule();
+    return keys.map((key) => {
+      return schedule
+        .map((nation) => {
+          const { name, weaponMaterials } = nation;
+          if (name === "Snezhnaya") return null;
+          const materials = weaponMaterials.map((mat) => {
+            const { dayOne, dayTwo, weapons, materialImages } = mat;
+            return {
+              day: `${dayOne} ${dayTwo}`,
+              weapons,
+              materialImages,
+            };
+          });
+
+          return {
+            nation: name,
+            materials,
+          };
+        })
+        .filter(Boolean);
+    });
+  }
+);

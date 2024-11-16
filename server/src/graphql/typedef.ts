@@ -116,11 +116,6 @@ type TalentMaterial {
 }
 
 
-type WeaponMaterial {
-    url: String!,
-    name: String!,
-    amount: Int!,
-}
 
 type Weapon {
     name: String!,
@@ -174,6 +169,23 @@ type CharacterAttackAnimations {
     elementalBurst: [AnimationMedia!]
 }
 
+
+type WeaponImage {
+    name: String!
+    iconUrl: String!
+}
+
+type WeaponMaterial {
+    day: String!
+    weapons: [WeaponImage!]!
+    materialImages: [WeaponImage!]!
+}
+
+type WeaponMaterialSchedule {
+    nation: String!
+    materials: [WeaponMaterial!]!
+}
+
 type Query {
     characters: [Character!]
     character(name: String!): AdvancedCharacter!
@@ -182,6 +194,7 @@ type Query {
     talentBooks: [TalentMaterial!]
     weapons: [WeaponTypeDetails!]
     characterAttackAnimations(name: String!): CharacterAttackAnimations!
+    weaponMaterialSchedule: [WeaponMaterialSchedule!]!
 }
 `;
 

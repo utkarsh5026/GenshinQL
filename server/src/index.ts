@@ -7,12 +7,14 @@ import resolvers from "./graphql/resolvers";
 import { initDb } from "./db/init";
 import {
   baseCharacterLoader,
+  characterAttackAnimationsLoader,
+  characterGalleryLoader,
+  characterLoader,
   talentBooksLoader,
   weaponLoader,
-  characterLoader,
-  characterGalleryLoader,
-  characterAttackAnimationsLoader,
+  weaponMaterialScheduleLoader,
 } from "./graphql/loader";
+import { loadWeaponMaterialSchedule } from "./db/load";
 
 const server = new ApolloServer({
   typeDefs: typeDefs,
@@ -31,6 +33,7 @@ async function startServer() {
         characterLoader,
         characterGalleryLoader,
         characterAttackAnimationsLoader,
+        weaponMaterialScheduleLoader,
       },
     }),
   });
@@ -42,8 +45,6 @@ startServer()
     console.log("Server started");
     await initDb();
     console.log("Database initialized");
-
-    // console.dir(await loadWeapons(), { depth: null });
   })
   .catch((error) => {
     console.error(error);

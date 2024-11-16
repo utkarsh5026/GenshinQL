@@ -165,3 +165,13 @@ export async function loadCharacterAttackAnimations(
     },
   });
 }
+
+export async function loadWeaponMaterialSchedule() {
+  return await repo(Nation).find({
+    relations: [
+      "weaponMaterials",
+      "weaponMaterials.weapons",
+      "weaponMaterials.materialImages",
+    ],
+  });
+}

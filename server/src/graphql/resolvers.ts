@@ -38,6 +38,14 @@ const resolvers: IResolvers = {
     ) => {
       return await context.loaders.characterAttackAnimationsLoader.load(name);
     },
+    weaponMaterialSchedule: async (_parent, _args, context) => {
+      const schedule = await context.loaders.weaponMaterialScheduleLoader.load(
+        "all"
+      );
+
+      console.dir(schedule, { depth: null });
+      return schedule.filter(Boolean);
+    },
   },
 };
 
