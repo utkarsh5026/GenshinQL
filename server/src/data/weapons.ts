@@ -22,6 +22,103 @@ const WEAPON_TYPES: WeaponType[] = [
   "Catalyst",
 ] as const;
 
+const nations = [
+  "Mondstadt",
+  "Liyue",
+  "Inazuma",
+  "Sumeru",
+  "Fontaine",
+  "Natlan",
+] as const;
+type Nation = (typeof nations)[number];
+
+type MaterialCalendar = {
+  day: string;
+  images: { url: string; caption: string }[];
+  weapons: string[];
+};
+
+/**
+ * Scrapes weapon ascension material data from the Genshin Impact wiki.
+ * This function loads the material farming schedule for each nation, including:
+ * - Which days the materials are available
+ * - Images and names of the materials
+ * - List of weapons that use those materials
+ *
+ * The data is organized by nation (Mondstadt, Liyue, etc) and then by day of the week.
+ *
+ * @returns {Promise<Record<Nation, MaterialCalendar[]>>} A Promise that resolves to an object mapping each nation to their material calendar data.
+ * Each nation's calendar contains an array of material groups, with each group containing:
+ * - day: The days these materials are available (e.g. "Monday/Thursday")
+ * - images: Array of material images with URLs and captions
+ * - weapons: Array of weapon names that use these materials
+ */
+export async function loadMaterialCalendar(): Promise<
+  Record<Nation, MaterialCalendar[]>
+> {
+  const driver = await setupDriver();
+  const url =
+    "https://genshin-impact.fandom.com/wiki/Weapon_Ascension_Material";
+  await driver.get(url);
+
+  const result: Record<Nation, MaterialCalendar[]> = {
+    Mondstadt: [],
+    Liyue: [],
+    Inazuma: [],
+    Sumeru: [],
+    Fontaine: [],
+    Natlan: [],
+  };
+
+  for (const nation of nations) {
+    const selector = `span#${nation}`;
+    await waitForElementCss(driver, selector);
+    const table = await driver
+      .findElement(By.css(selector))
+      .findElement(By.xpath(".."))
+      .findElement(By.xpath("following-sibling::table"));
+
+    const rows = await table.findElements(By.css("tr"));
+    result[nation] = (
+      await Promise.all(
+        rows.map(async (row) => {
+          const cells = await row.findElements(By.css("td"));
+          if (cells.length === 3) {
+            const day = await cells[0].getText();
+            const materialImages = await cells[1].findElements(By.css("img"));
+            const images = (
+              await Promise.all(
+                materialImages.map(async (img) => {
+                  const src = await img.getAttribute("data-src");
+                  return {
+                    url: parseUrl(src),
+                    caption: await img.getAttribute("alt"),
+                  };
+                })
+              )
+            ).filter((item) => !item.caption.includes("Quality"));
+
+            const weapons = await cells[2].findElements(By.css("a"));
+            const weaponNames = await Promise.all(
+              weapons.map(async (weapon) => weapon.getAttribute("title"))
+            );
+
+            return {
+              day,
+              images,
+              weapons: weaponNames,
+            };
+          }
+          return undefined;
+        })
+      )
+    ).filter((item): item is MaterialCalendar => item !== undefined);
+  }
+
+  await driver.quit();
+  return result;
+}
+
 /**
  * Array of weapon types in Genshin Impact.
  */
@@ -280,7 +377,6 @@ async function main() {
   //       iconUrl,
   //     };
   //   });
-
   //   await saveJson(weaponData, "weapons", `${weapon}s_new`);
   // }
   await driver.quit();
@@ -288,5 +384,8 @@ async function main() {
 }
 
 if (require.main === module) {
-  main().then(() => console.log("Done loading weapons!"));
+  // main().then(() => console.log("Done loading weapons!"));
+  loadMaterialCalendar().then((result) =>
+    saveJson(result, "weapons", "material_calendar")
+  );
 }
