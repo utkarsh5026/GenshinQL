@@ -1,7 +1,12 @@
 import { useAppSelector, useAppDispatch } from "../hooks";
 import { useCallback } from "react";
-import { setWeapons, setLoading, setError } from "../slices/weapons";
-import { GET_WEAPONS } from "@/graphql/queries";
+import {
+  setWeapons,
+  setLoading,
+  setError,
+  addWeapons,
+} from "../slices/weapons";
+import { GET_WEAPONS, GET_WEAPONS_OF_TYPE } from "@/graphql/queries";
 import { ApolloError, useLazyQuery } from "@apollo/client";
 import { Weapon } from "@/graphql/types";
 
@@ -11,6 +16,7 @@ interface WeaponsHook {
   loading: boolean;
   error: ApolloError | undefined;
   fetchWeapons: () => Promise<void>;
+  fetchWeaponsOfType: (type: string) => Promise<void>;
 }
 
 /**
@@ -26,6 +32,7 @@ interface WeaponsHook {
  */
 export const useWeapons = (): WeaponsHook => {
   const [getWeapons, { loading, error }] = useLazyQuery(GET_WEAPONS);
+  const [getWeaponsOfType] = useLazyQuery(GET_WEAPONS_OF_TYPE);
   const { weapons, weaponMap } = useAppSelector((state) => state.weapons);
   const dispatch = useAppDispatch();
 
@@ -36,5 +43,31 @@ export const useWeapons = (): WeaponsHook => {
     else dispatch(setWeapons(data?.weapons || []));
   }, [dispatch, getWeapons]);
 
-  return { weapons, weaponMap, loading, error, fetchWeapons };
+  const fetchWeaponsOfType = useCallback(
+    async (type: string) => {
+      dispatch(setLoading(true));
+      try {
+        const { data, error } = await getWeaponsOfType({ variables: { type } });
+        if (error) {
+          dispatch(setError(error));
+          return;
+        }
+
+        const typeWeapons = data?.weaponsOfType ?? [];
+        dispatch(addWeapons(typeWeapons));
+      } finally {
+        dispatch(setLoading(false));
+      }
+    },
+    [dispatch, getWeaponsOfType]
+  );
+
+  return {
+    weapons,
+    weaponMap,
+    loading,
+    error,
+    fetchWeapons,
+    fetchWeaponsOfType,
+  };
 };

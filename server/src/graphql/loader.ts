@@ -364,7 +364,10 @@ export const weaponsOfTypeLoader = new DataLoader(
   async (keys: readonly string[]) => {
     return keys.map(async (key) => {
       const weapons = await loadWeaponsOfType(key);
-      return weapons;
+      return weapons.map((weapon) => ({
+        ...weapon,
+        type: weapon.weaponType.name,
+      }));
     });
   }
 );

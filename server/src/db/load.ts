@@ -180,6 +180,7 @@ export async function loadWeaponMaterialSchedule() {
 
 export async function loadWeaponsOfType(type: string) {
   return await repo(Weapon).find({
+    relations: ["weaponType"],
     where: { weaponType: { name: type } },
     order: {
       rarity: "DESC",

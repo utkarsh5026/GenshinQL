@@ -114,19 +114,28 @@ export const GET_TALENT_MATERIALS_CALENDAR = gql`
   }
 `;
 
+export const WEAPON_FIELDS = gql`
+  fragment WeaponFields on Weapon {
+    type
+    rarity
+    name
+    attack
+    subStat
+    effect
+    iconUrl
+  }
+`;
+
 export const GET_WEAPONS = gql`
   query Weapons {
     weapons {
       type
       weapons {
-        type
-        rarity
-        name
-        attack
-        subStat
+        ...WeaponFields
       }
     }
   }
+  ${WEAPON_FIELDS}
 `;
 
 export const GET_CHARACTER_ATTACK_ANIMATIONS = gql`
@@ -168,4 +177,13 @@ export const GET_WEAPON_MATERIALS_CALENDAR = gql`
       }
     }
   }
+`;
+
+export const GET_WEAPONS_OF_TYPE = gql`
+  query WeaponsOfType($type: String!) {
+    weaponsOfType(type: $type) {
+      ...WeaponFields
+    }
+  }
+  ${WEAPON_FIELDS}
 `;

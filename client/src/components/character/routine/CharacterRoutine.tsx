@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useCharacters } from "@/redux/hook/characters";
-import CharacterSearchBar from "../search/CharacterSearchBar";
 import RoutineTable from "./RoutineTable";
-import SelectedCharacters from "./SelectedCharacters";
+import ChipSearchBar from "@/components/utils/ChipSearchBar";
 
 /**
  * CharacterRoutine component manages the character farming routine interface.
@@ -35,24 +34,19 @@ const CharacterRoutine: React.FC = () => {
       </div>
       <div className="col-span-1 flex flex-col">
         <div className="flex-none mb-1">
-          <CharacterSearchBar
-            characters={characters}
-            onCharacterSelect={(character) => {
-              if (selectedCharacters.includes(character.name)) {
-                return;
-              }
+          <ChipSearchBar
+            items={characters}
+            selectedItems={selectedCharacters.map((name) => characterMap[name])}
+            onItemSelect={(character) => {
               setSelectedCharacters([...selectedCharacters, character.name]);
+            }}
+            onItemRemove={(character) => {
+              setSelectedCharacters(
+                selectedCharacters.filter((c) => c !== character.name)
+              );
             }}
           />
         </div>
-        <SelectedCharacters
-          characters={selectedCharacters.map((name) => characterMap[name])}
-          handleRemoveCharacter={(character) => {
-            setSelectedCharacters(
-              selectedCharacters.filter((c) => c !== character.name)
-            );
-          }}
-        />
       </div>
     </div>
   );

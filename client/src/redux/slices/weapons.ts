@@ -43,9 +43,23 @@ export const weaponsSlice = createSlice({
     setError: (state, action: PayloadAction<Error | null>) => {
       state.error = action.payload;
     },
+
+    addWeapons: (state, action: PayloadAction<Weapon[]>) => {
+      const existingWeaponNames = new Set(state.weapons.map((w) => w.name));
+
+      const uniqueWeapons = action.payload.filter(
+        (weapon) => !existingWeaponNames.has(weapon.name)
+      );
+
+      if (uniqueWeapons.length > 0) {
+        state.weapons = [...state.weapons, ...uniqueWeapons];
+        state.weaponMap = createWeaponMap(state.weapons);
+      }
+    },
   },
 });
 
-export const { setWeapons, setLoading, setError } = weaponsSlice.actions;
+export const { setWeapons, setLoading, setError, addWeapons } =
+  weaponsSlice.actions;
 
 export default weaponsSlice.reducer;

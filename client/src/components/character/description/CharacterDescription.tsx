@@ -7,8 +7,7 @@ import CharacterConstellations from "../constellations/CharacterConstellations.t
 import CharacterPassives from "../passives/CharacterPassives.tsx";
 import { decideColor } from "@/utils/color.ts";
 import CharacterAttackAnimations from "../attack/CharacterAttackAnimations.tsx";
-import { useCharacters } from "@/redux/hook/characters.ts";
-import RoutineTable from "../routine/RoutineTable.tsx";
+import CharacterRoutineDetailed from "../routine/CharacterRoutineDetailed.tsx";
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;
@@ -36,7 +35,6 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
 }) => {
   const [selectedMenuItem, setSelectedMenuItem] =
     useState<CharacterMenuItem>("Profile");
-  const { characterMap } = useCharacters();
   if (!character) return <div>Character not found</div>;
 
   return (
@@ -113,7 +111,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           )}
           {selectedMenuItem === "Routine" && (
             <CharacterCard>
-              <RoutineTable characters={[characterMap[character.name]]} />
+              <CharacterRoutineDetailed character={character} />
             </CharacterCard>
           )}
         </div>
