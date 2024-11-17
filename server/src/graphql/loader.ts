@@ -320,7 +320,10 @@ export const weaponMaterialScheduleLoader = new DataLoader(
             const { dayOne, dayTwo, weapons, materialImages } = mat;
             return {
               day: `${dayOne} ${dayTwo}`,
-              weapons,
+              weapons: weapons.map((weapon) => ({
+                ...weapon,
+                type: weapon.weaponType.name,
+              })),
               materialImages,
             };
           });

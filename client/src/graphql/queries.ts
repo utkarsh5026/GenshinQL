@@ -145,3 +145,27 @@ export const GET_CHARACTER_ATTACK_ANIMATIONS = gql`
   }
   ${ANIMATION_FIELDS}
 `;
+
+export const GET_WEAPON_MATERIALS_CALENDAR = gql`
+  query Schedule {
+    weaponMaterialSchedule {
+      nation
+      materials {
+        day
+        materialImages {
+          caption
+          url
+        }
+        weapons {
+          name
+          iconUrl
+          rarity
+          attack
+          subStat
+          effect
+          type
+        }
+      }
+    }
+  }
+`;

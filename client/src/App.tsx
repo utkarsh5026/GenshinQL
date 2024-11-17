@@ -9,6 +9,7 @@ import CharacterDescription from "./components/character/description/CharacterDe
 import { CharacterDetailed } from "./graphql/types";
 import CharactersTable from "./components/character/table/CharacterTable.tsx";
 import CharacterRoutine from "./components/character/routine/CharacterRoutine.tsx";
+import WeaponCalender from "./components/weapons/WeaponCalender.tsx";
 
 type CurrentView =
   | "character"
@@ -51,6 +52,7 @@ function App() {
         {currentView === "talentCalender" && <TalentCalender />}
         {currentView === "charactersTable" && <CharactersTable />}
         {currentView === "characterRoutine" && <CharacterRoutine />}
+        {currentView === "weaponCalender" && <WeaponCalender />}
       </main>
     </SidebarProvider>
   );

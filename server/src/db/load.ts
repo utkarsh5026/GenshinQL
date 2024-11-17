@@ -171,6 +171,7 @@ export async function loadWeaponMaterialSchedule() {
     relations: [
       "weaponMaterials",
       "weaponMaterials.weapons",
+      "weaponMaterials.weapons.weaponType",
       "weaponMaterials.materialImages",
     ],
   });

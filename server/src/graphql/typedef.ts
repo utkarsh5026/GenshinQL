@@ -125,7 +125,6 @@ type Weapon {
     subStat: String!,
     effect: String!,
     type: String!,
-    passives: [String!]!,
 }
 
 type WeaponTypeDetails {
@@ -177,8 +176,8 @@ type WeaponImage {
 
 type WeaponMaterial {
     day: String!
-    weapons: [WeaponImage!]!
-    materialImages: [WeaponImage!]!
+    weapons: [Weapon!]!
+    materialImages: [FigureUrl!]!
 }
 
 type WeaponMaterialSchedule {

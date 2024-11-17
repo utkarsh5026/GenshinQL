@@ -19,10 +19,11 @@ const WeaponCalender: React.FC = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
-  if (weaponMaterialSchedule === null) return <div>No data</div>;
+  if (weaponMaterialSchedule === null || nations.length === 0)
+    return <div>No data</div>;
   return (
     <div>
-      <Tabs>
+      <Tabs defaultValue={nations[0]} defaultChecked>
         <TabsList>
           {nations.map((nation) => {
             return (
@@ -32,9 +33,13 @@ const WeaponCalender: React.FC = () => {
             );
           })}
         </TabsList>
-        <TabsContent value="Mondstadt">
-          <ScheduleTable schedule={weaponMaterialSchedule[0]} />
-        </TabsContent>
+        {nations.map((nation, index) => {
+          return (
+            <TabsContent key={nation} value={nation}>
+              <ScheduleTable schedule={weaponMaterialSchedule[index]} />
+            </TabsContent>
+          );
+        })}
       </Tabs>
     </div>
   );

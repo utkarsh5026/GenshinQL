@@ -67,9 +67,11 @@ export type TalentBookCalendar = {
 export type Weapon = {
   name: string;
   iconUrl: string;
-  rarity: string;
+  attack: number;
+  rarity: number;
   type: string;
   subStat: string;
+  effect: string;
 };
 
 export type ScreenAnimation = {
@@ -117,6 +119,11 @@ export type AvatarRequirement = {
   iconUrl: string;
 };
 
+export type ImageUrl = {
+  caption: string;
+  url: string;
+};
+
 export type Day =
   | "Monday"
   | "Tuesday"
@@ -125,3 +132,12 @@ export type Day =
   | "Friday"
   | "Saturday"
   | "Sunday";
+
+export type WeaponMaterialSchedule = {
+  nation: string;
+  materials: {
+    day: string;
+    materialImages: ImageUrl[];
+    weapons: Weapon[];
+  }[];
+};
