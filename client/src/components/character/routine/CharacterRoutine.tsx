@@ -30,6 +30,7 @@ const CharacterRoutine: React.FC = () => {
       <div className="col-span-3">
         <RoutineTable
           characters={selectedCharacters.map((name) => characterMap[name])}
+          weapons={[]}
         />
       </div>
       <div className="col-span-1 flex flex-col">

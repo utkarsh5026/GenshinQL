@@ -38,9 +38,9 @@ const CharacterRoutineDetailed: React.FC<CharacterRoutineDetailedProps> = ({
             selectedWeapons.filter((w) => w.name !== weapon.name)
           );
         }}
-        placeholder={`Search weapons for ${character.name}`}
+        placeholder={`Search weapons for ${character.name} 😊`}
       />
-      <RoutineTable characters={[character]} />
+      <RoutineTable characters={[character]} weapons={selectedWeapons} />
     </div>
   );
 };

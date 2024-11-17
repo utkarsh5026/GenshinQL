@@ -11,11 +11,13 @@ import React, { useEffect, useMemo } from "react";
 import CharacterGrid from "../utils/CharacterGrid";
 import TalentBooksShowCase from "./TalentBooksShowCase";
 import { getCurrentDay } from "@/utils/day";
-import type { Character, Day } from "@/graphql/types";
+import type { Character, Day, Weapon } from "@/graphql/types";
 import useTalentBooks from "@/redux/hook/talent-book";
+import WeaponShowCase from "@/components/weapons/WeaponShowCase";
 
 interface RoutineTableProps {
   characters: Character[];
+  weapons: Weapon[];
 }
 
 /**
@@ -32,7 +34,7 @@ interface RoutineTableProps {
  * @param {Character[]} props.characters - Array of selected characters to display in the routine
  * @returns {JSX.Element} Table displaying the weekly talent book farming schedule
  */
-const RoutineTable: React.FC<RoutineTableProps> = ({ characters }) => {
+const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
   const currentDay = getCurrentDay();
   const { talentCharMap, fetchBooks } = useTalentBooks();
 
@@ -77,6 +79,7 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters }) => {
             <TableHead className="py-2">Character</TableHead>
             <TableHead className="py-2">Weapon</TableHead>
             <TableHead className="py-2">Talent</TableHead>
+            <TableHead className="py-2">Weapon Material</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -107,7 +110,9 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters }) => {
                     }))}
                   />
                 </TableCell>
-                <TableCell className="py-2">Weapon</TableCell>
+                <TableCell className="py-2">
+                  <WeaponShowCase weapons={weapons} />
+                </TableCell>
                 <TableCell className="py-2">
                   <TalentBooksShowCase talentBooks={rowUniqueBooks} />
                 </TableCell>
