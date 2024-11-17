@@ -13,8 +13,8 @@ import {
   talentBooksLoader,
   weaponLoader,
   weaponMaterialScheduleLoader,
+  weaponsOfTypeLoader,
 } from "./graphql/loader";
-import { loadWeaponMaterialSchedule } from "./db/load";
 
 const server = new ApolloServer({
   typeDefs: typeDefs,
@@ -34,6 +34,7 @@ async function startServer() {
         characterGalleryLoader,
         characterAttackAnimationsLoader,
         weaponMaterialScheduleLoader,
+        weaponsOfTypeLoader,
       },
     }),
   });
@@ -44,7 +45,6 @@ startServer()
   .then(async () => {
     console.log("Server started");
     await initDb();
-    console.log("Database initialized");
   })
   .catch((error) => {
     console.error(error);

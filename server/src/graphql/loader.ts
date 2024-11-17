@@ -7,6 +7,7 @@ import {
   loadTalentBooksSchedule,
   loadWeaponMaterialSchedule,
   loadWeapons,
+  loadWeaponsOfType,
 } from "../db/load";
 import { randomInt } from "crypto";
 import Character from "../db/models/Character";
@@ -308,6 +309,19 @@ function toGraphQlCharacter(character: Character) {
   };
 }
 
+/**
+ * DataLoader for weapon material schedules.
+ *
+ * This loader retrieves the schedule of weapon material availability for each nation.
+ * It filters out Snezhnaya and transforms the data into a GraphQL-compatible format.
+ * The schedule includes:
+ * - The nation name
+ * - Material availability days
+ * - Associated weapons and their types
+ * - Material images
+ *
+ * @returns {Promise<Array>} An array of weapon material schedules grouped by nation
+ */
 export const weaponMaterialScheduleLoader = new DataLoader(
   async (keys: readonly string[]) => {
     const schedule = await loadWeaponMaterialSchedule();
@@ -334,6 +348,23 @@ export const weaponMaterialScheduleLoader = new DataLoader(
           };
         })
         .filter(Boolean);
+    });
+  }
+);
+
+/**
+ * DataLoader for weapons of a specific type.
+ *
+ * This loader retrieves all weapons that match a given weapon type (e.g., "Sword", "Bow", etc.).
+ * It batches and caches requests for weapons by their type to optimize database queries.
+ *
+ * @returns {Promise<Array>} An array of weapons matching the requested weapon type.
+ */
+export const weaponsOfTypeLoader = new DataLoader(
+  async (keys: readonly string[]) => {
+    return keys.map(async (key) => {
+      const weapons = await loadWeaponsOfType(key);
+      return weapons;
     });
   }
 );

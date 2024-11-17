@@ -1,5 +1,6 @@
 import Character from "./models/Character";
 import Nation from "./models/Nation";
+import Weapon from "./models/Weapon";
 import WeaponType from "./models/WeaponType";
 import { repo } from "./utils";
 
@@ -174,5 +175,14 @@ export async function loadWeaponMaterialSchedule() {
       "weaponMaterials.weapons.weaponType",
       "weaponMaterials.materialImages",
     ],
+  });
+}
+
+export async function loadWeaponsOfType(type: string) {
+  return await repo(Weapon).find({
+    where: { weaponType: { name: type } },
+    order: {
+      rarity: "DESC",
+    },
   });
 }

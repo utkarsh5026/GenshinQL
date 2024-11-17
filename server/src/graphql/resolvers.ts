@@ -42,9 +42,10 @@ const resolvers: IResolvers = {
       const schedule = await context.loaders.weaponMaterialScheduleLoader.load(
         "all"
       );
-
-      console.dir(schedule, { depth: null });
       return schedule.filter(Boolean);
+    },
+    weaponsOfType: async (_parent, { type }: { type: string }, context) => {
+      return await context.loaders.weaponsOfTypeLoader.load(type);
     },
   },
 };

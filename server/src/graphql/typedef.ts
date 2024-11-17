@@ -194,6 +194,7 @@ type Query {
     weapons: [WeaponTypeDetails!]
     characterAttackAnimations(name: String!): CharacterAttackAnimations!
     weaponMaterialSchedule: [WeaponMaterialSchedule!]!
+    weaponsOfType(type: String!): [Weapon!]!
 }
 `;
 
