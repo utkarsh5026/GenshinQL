@@ -19,6 +19,7 @@ import {
   CalendarHeart,
   ChevronDown,
   LucideSwords,
+  AxeIcon,
   Table2,
 } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
@@ -30,6 +31,7 @@ interface AppSideBarProps {
   onCharactersTableClick: () => void;
   onCharacterRoutineClick: () => void;
   onWeaponCalenderClick: () => void;
+  onWeaponsDetailedClick: () => void;
 }
 
 const AppSideBar: React.FC<AppSideBarProps> = ({
@@ -38,6 +40,7 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
   onCharactersTableClick,
   onCharacterRoutineClick,
   onWeaponCalenderClick,
+  onWeaponsDetailedClick,
 }) => {
   const { characters, fetchCharacters } = useCharacters();
 
@@ -61,6 +64,9 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
           </SidebarMenuButton>
           <SidebarMenuButton onClick={onWeaponCalenderClick}>
             <LucideSwords /> Weapons Calendar
+          </SidebarMenuButton>
+          <SidebarMenuButton onClick={onWeaponsDetailedClick}>
+            <AxeIcon /> Weapons Detailed
           </SidebarMenuButton>
           <Collapsible defaultOpen={false} className="group/collapsible">
             <SidebarItem>

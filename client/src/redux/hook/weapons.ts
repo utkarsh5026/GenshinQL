@@ -12,7 +12,8 @@ import { Weapon } from "@/graphql/types";
 
 interface WeaponsHook {
   weapons: Weapon[];
-  weaponMap: Record<string, Weapon>;
+  weaponMap: Record<string, number>;
+  weaponTypeMap: Record<string, number[]>;
   loading: boolean;
   error: ApolloError | undefined;
   fetchWeapons: () => Promise<void>;
@@ -33,14 +34,24 @@ interface WeaponsHook {
 export const useWeapons = (): WeaponsHook => {
   const [getWeapons, { loading, error }] = useLazyQuery(GET_WEAPONS);
   const [getWeaponsOfType] = useLazyQuery(GET_WEAPONS_OF_TYPE);
-  const { weapons, weaponMap } = useAppSelector((state) => state.weapons);
+  const { weapons, weaponMap, weaponTypeMap } = useAppSelector(
+    (state) => state.weapons
+  );
   const dispatch = useAppDispatch();
 
   const fetchWeapons = useCallback(async () => {
     dispatch(setLoading(true));
     const { data, error } = await getWeapons();
+    console.log(data);
     if (error) dispatch(setError(error));
-    else dispatch(setWeapons(data?.weapons || []));
+    else if (data)
+      dispatch(
+        setWeapons(
+          data?.weapons
+            .map((rec: { weapons: Weapon[] }) => rec.weapons)
+            .flat() || []
+        )
+      );
   }, [dispatch, getWeapons]);
 
   const fetchWeaponsOfType = useCallback(
@@ -65,6 +76,7 @@ export const useWeapons = (): WeaponsHook => {
   return {
     weapons,
     weaponMap,
+    weaponTypeMap,
     loading,
     error,
     fetchWeapons,

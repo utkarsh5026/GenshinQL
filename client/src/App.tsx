@@ -12,13 +12,15 @@ import CharacterRoutine from "./components/character/routine/CharacterRoutine.ts
 import WeaponCalender from "./components/weapons/WeaponCalender.tsx";
 import { useWeaponMaterials } from "@/redux/hook/weapon-material";
 import useTalentBooks from "./redux/hook/talent-book.ts";
+import WeaponsDetailed from "./components/weapons/WeaponsDetailed.tsx";
 
 type CurrentView =
   | "character"
   | "talentCalender"
   | "charactersTable"
   | "characterRoutine"
-  | "weaponCalender";
+  | "weaponCalender"
+  | "weaponsDetailed";
 
 function App() {
   const [getCharacter, { data }] = useLazyQuery(GET_CHARACTER);
@@ -47,6 +49,7 @@ function App() {
         onCharactersTableClick={() => setCurrentView("charactersTable")}
         onCharacterRoutineClick={() => setCurrentView("characterRoutine")}
         onWeaponCalenderClick={() => setCurrentView("weaponCalender")}
+        onWeaponsDetailedClick={() => setCurrentView("weaponsDetailed")}
       />
       <main
         className="items-center justify-center  w-full
@@ -61,6 +64,7 @@ function App() {
         {currentView === "charactersTable" && <CharactersTable />}
         {currentView === "characterRoutine" && <CharacterRoutine />}
         {currentView === "weaponCalender" && <WeaponCalender />}
+        {currentView === "weaponsDetailed" && <WeaponsDetailed />}
       </main>
     </SidebarProvider>
   );

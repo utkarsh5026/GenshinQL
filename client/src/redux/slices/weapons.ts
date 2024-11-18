@@ -3,19 +3,29 @@ import type { Weapon } from "@/graphql/types";
 
 interface WeaponsState {
   weapons: Weapon[];
-  weaponMap: Record<string, Weapon>;
+  weaponMap: Record<string, number>;
+  weaponTypeMap: Record<string, number[]>;
   loading: boolean;
   error: Error | null;
 }
 
-const createWeaponMap = (weapons: Weapon[]): Record<string, Weapon> => {
+const createWeaponMap = (weapons: Weapon[]): Record<string, number> => {
   return weapons.reduce(
-    (acc, weapon) => {
-      acc[weapon.name] = weapon;
+    (acc, weapon, index) => {
+      acc[weapon.name] = index;
       return acc;
     },
-    {} as Record<string, Weapon>
+    {} as Record<string, number>
   );
+};
+
+const createWeaponTypeMap = (weapons: Weapon[]): Record<string, number[]> => {
+  const weaponTypeMap: Record<string, number[]> = {};
+  weapons.forEach((weapon, index) => {
+    weaponTypeMap[weapon.type] = weaponTypeMap[weapon.type] || [];
+    weaponTypeMap[weapon.type].push(index);
+  });
+  return weaponTypeMap;
 };
 
 const initialState: WeaponsState = {
@@ -23,6 +33,7 @@ const initialState: WeaponsState = {
   weaponMap: {},
   loading: false,
   error: null,
+  weaponTypeMap: {},
 };
 
 export const weaponsSlice = createSlice({
@@ -30,8 +41,10 @@ export const weaponsSlice = createSlice({
   initialState,
   reducers: {
     setWeapons: (state, action: PayloadAction<Weapon[]>) => {
+      console.log(action.payload);
       state.weapons = action.payload;
       state.weaponMap = createWeaponMap(action.payload);
+      state.weaponTypeMap = createWeaponTypeMap(action.payload);
       state.loading = false;
       state.error = null;
     },
