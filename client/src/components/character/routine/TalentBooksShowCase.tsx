@@ -1,13 +1,12 @@
 import React from "react";
 import type { TalentBook } from "@/redux/slices/talent-books";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Skeleton } from "@/components/ui/skeleton";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
   TooltipProvider,
 } from "@/components/ui/tooltip";
+import AvatarWithSkeleton from "@/components/utils/AvatarWithSkeleton";
 
 interface TalentBooksShowCaseProps {
   talentBooks: TalentBook[];
@@ -17,24 +16,19 @@ const TalentBookCard: React.FC<{ iconUrl: string; name: string }> = ({
   iconUrl,
   name,
 }) => {
-  const [isLoading, setIsLoading] = React.useState(true);
-
   return (
-    <Avatar className="w-8 h-8  bg-slate-800">
-      {isLoading && <Skeleton className="h-full w-full rounded-full" />}
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger>
-            <AvatarImage
-              src={iconUrl}
-              onLoad={() => setIsLoading(false)}
-              className={isLoading ? "hidden" : ""}
-            />
-          </TooltipTrigger>
-          <TooltipContent>{name}</TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-    </Avatar>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          <AvatarWithSkeleton
+            name={name}
+            url={iconUrl}
+            avatarClassName="w-8 h-8 bg-slate-800"
+          />
+        </TooltipTrigger>
+        <TooltipContent>{name}</TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 };
 

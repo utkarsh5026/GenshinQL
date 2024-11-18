@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Skeleton } from "../ui/skeleton";
+import { motion } from "framer-motion";
 
 interface AvatarWithSkeletonProps {
   name: string;
@@ -19,13 +20,19 @@ const AvatarWithSkeleton: React.FC<AvatarWithSkeletonProps> = ({
 
   return (
     <Avatar className={avatarClassName}>
-      <AvatarImage
-        className={imageClassName}
-        src={url}
-        onLoadingStatusChange={(status) => {
-          setIsLoading(status === "loading");
-        }}
-      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.2, ease: "easeInOut", delay: 0.2 }}
+      >
+        <AvatarImage
+          className={imageClassName}
+          src={url}
+          onLoadingStatusChange={(status) => {
+            setIsLoading(status === "loading");
+          }}
+        />
+      </motion.div>
       <AvatarFallback>
         {isLoading ? <Skeleton className="w-full h-full rounded-full" /> : name}
       </AvatarFallback>
