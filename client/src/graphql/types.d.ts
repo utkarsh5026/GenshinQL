@@ -141,3 +141,8 @@ export type WeaponMaterialSchedule = {
     weapons: Weapon[];
   }[];
 };
+
+export type WeaponMaterial = {
+  day: string;
+  materialImages: ImageUrl[];
+};

@@ -11,14 +11,25 @@ import React, { useEffect, useMemo } from "react";
 import CharacterGrid from "../utils/CharacterGrid";
 import TalentBooksShowCase from "./TalentBooksShowCase";
 import { getCurrentDay } from "@/utils/day";
-import type { Character, Day, Weapon } from "@/graphql/types";
+import type { Character, Day, Weapon, WeaponMaterial } from "@/graphql/types";
 import useTalentBooks from "@/redux/hook/talent-book";
 import WeaponShowCase from "@/components/weapons/WeaponShowCase";
+import { useWeaponMaterials } from "@/redux/hook/weapon-material";
 
 interface RoutineTableProps {
   characters: Character[];
   weapons: Weapon[];
 }
+
+type CharacterTalent = {
+  character: Character;
+  book: TalentBook;
+};
+
+type WeaponMaterialRoutine = {
+  weapon: Weapon;
+  material: WeaponMaterial;
+};
 
 /**
  * RoutineTable component displays a weekly schedule of talent book farming days for selected characters.
@@ -37,6 +48,7 @@ interface RoutineTableProps {
 const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
   const currentDay = getCurrentDay();
   const { talentCharMap, fetchBooks } = useTalentBooks();
+  const { weaponMap } = useWeaponMaterials();
 
   useEffect(() => {
     fetchBooks();
@@ -48,27 +60,73 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
       talentBooks: talentCharMap?.[char.name],
     }));
 
-    const dayMap: Record<Day, { character: Character; book: TalentBook }[]> = {
-      Monday: [],
-      Tuesday: [],
-      Wednesday: [],
-      Thursday: [],
-      Friday: [],
-      Saturday: [],
-      Sunday: [],
+    const dayMap: Record<
+      Day,
+      {
+        charTalents: CharacterTalent[];
+        weaponMaterials: WeaponMaterialRoutine[];
+      }
+    > = {
+      Monday: {
+        charTalents: [],
+        weaponMaterials: [],
+      },
+      Tuesday: {
+        charTalents: [],
+        weaponMaterials: [],
+      },
+      Wednesday: {
+        charTalents: [],
+        weaponMaterials: [],
+      },
+      Thursday: {
+        charTalents: [],
+        weaponMaterials: [],
+      },
+      Friday: {
+        charTalents: [],
+        weaponMaterials: [],
+      },
+      Saturday: {
+        charTalents: [],
+        weaponMaterials: [],
+      },
+      Sunday: {
+        charTalents: [],
+        weaponMaterials: [],
+      },
     };
+
     for (const { character, talentBooks } of books) {
       const { dayOne, dayTwo } = talentBooks;
-      dayMap[dayOne as Day].push({ character, book: talentBooks });
-      dayMap[dayTwo as Day].push({ character, book: talentBooks });
+      const charTalent = {
+        character,
+        book: talentBooks,
+      };
+      dayMap[dayOne as Day].charTalents.push(charTalent);
+      dayMap[dayTwo as Day].charTalents.push(charTalent);
+    }
+
+    for (const weapon of weapons) {
+      const weaponMaterial = weaponMap?.[weapon.name];
+      if (weaponMaterial) {
+        const [dayOne, dayTwo] = weaponMaterial.day.split(" ");
+        const wepMat = {
+          weapon,
+          material: weaponMaterial,
+        };
+        dayMap[dayOne as Day].weaponMaterials.push(wepMat);
+        dayMap[dayTwo as Day].weaponMaterials.push(wepMat);
+      }
     }
 
     return Object.entries(dayMap).map(([day, books]) => ({
       day: day as Day,
-      characters: books.map((book) => book.character),
-      talentBooks: books.map((book) => book.book),
+      characters: books.charTalents.map((char) => char.character),
+      talentBooks: books.charTalents.map((char) => char.book),
+      weaponMaterials: books.weaponMaterials,
     }));
-  }, [characters, talentCharMap]);
+  }, [characters, talentCharMap, weaponMap, weapons]);
 
   return (
     <div>
@@ -79,7 +137,6 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
             <TableHead className="py-2">Character</TableHead>
             <TableHead className="py-2">Weapon</TableHead>
             <TableHead className="py-2">Talent</TableHead>
-            <TableHead className="py-2">Weapon Material</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -111,7 +168,11 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
                   />
                 </TableCell>
                 <TableCell className="py-2">
-                  <WeaponShowCase weapons={weapons} />
+                  <WeaponShowCase
+                    weapons={rout.weaponMaterials.map(
+                      (wepMat) => wepMat.weapon
+                    )}
+                  />
                 </TableCell>
                 <TableCell className="py-2">
                   <TalentBooksShowCase talentBooks={rowUniqueBooks} />

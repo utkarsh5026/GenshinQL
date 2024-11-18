@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SidebarProvider } from "./components/ui/sidebar";
 import AppSideBar from "./components/utils/AppSideBar";
 import { useLazyQuery } from "@apollo/client";
@@ -10,6 +10,8 @@ import { CharacterDetailed } from "./graphql/types";
 import CharactersTable from "./components/character/table/CharacterTable.tsx";
 import CharacterRoutine from "./components/character/routine/CharacterRoutine.tsx";
 import WeaponCalender from "./components/weapons/WeaponCalender.tsx";
+import { useWeaponMaterials } from "@/redux/hook/weapon-material";
+import useTalentBooks from "./redux/hook/talent-book.ts";
 
 type CurrentView =
   | "character"
@@ -21,6 +23,12 @@ type CurrentView =
 function App() {
   const [getCharacter, { data }] = useLazyQuery(GET_CHARACTER);
   const [currentView, setCurrentView] = useState<CurrentView>("talentCalender");
+  const { fetchWeaponMaterials } = useWeaponMaterials();
+  const { fetchBooks } = useTalentBooks();
+
+  useEffect(() => {
+    Promise.all([fetchWeaponMaterials(), fetchBooks()]);
+  }, [fetchWeaponMaterials, fetchBooks]);
 
   console.dir(data, { depth: null });
 
