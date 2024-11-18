@@ -68,7 +68,10 @@ const CharacterRoutine: React.FC = () => {
               };
             })}
             onItemSelect={(weapon) => {
-              setSelectedWeapons([...selectedWeapons, weaponMap[weapon.name]]);
+              setSelectedWeapons([
+                ...selectedWeapons,
+                weapons[weaponMap[weapon.name]],
+              ]);
             }}
             onItemRemove={(weapon) => {
               setSelectedWeapons(
