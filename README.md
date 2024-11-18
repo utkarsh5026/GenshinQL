@@ -42,3 +42,10 @@ Here are some of the screenshots of this application
 ## Weapon Calender
 
 ![Weapon-Schedule](./images/weapon-schedule.png)
+
+
+# Future Additions
+1. Integratring with Enka network
+2. Adding functionality to store data in AWS s3
+3. Adding sections for guides
+4. Adding artifacts, materials, boss drops in more nuanced way for character building
