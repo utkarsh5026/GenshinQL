@@ -41,7 +41,7 @@ const WeaponsDetailedGrid: React.FC<WeaponsDetailedGridProps> = ({
     );
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 ">
       <div className="flex justify-center mb-4">
         <div className="relative w-64">
           <input

@@ -24,8 +24,8 @@ const WeaponCard: React.FC<WeaponCardProps> = ({ weapon }) => {
   const rarityStars = "★".repeat(rarity);
 
   return (
-    <div className="flex flex-col gap-4 p-4 bg-gray-100 rounded-lg text-gray-900">
-      <div className="flex items-start gap-4">
+    <div className="flex flex-col border bg-gray-100 border-amber-500/50 rounded-lg text-gray-900">
+      <div className="flex items-start gap-4 p-4">
         <AvatarWithSkeleton
           name={name}
           url={iconUrl}
@@ -38,7 +38,7 @@ const WeaponCard: React.FC<WeaponCardProps> = ({ weapon }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 text-sm">
+      <div className="grid grid-cols-2 gap-4 text-sm p-4 mb-4">
         <div>
           <p className="text-gray-500">Base Attack</p>
           <p className="font-medium">{attack}</p>
@@ -49,7 +49,7 @@ const WeaponCard: React.FC<WeaponCardProps> = ({ weapon }) => {
         </div>
       </div>
 
-      <div>
+      <div className="p-4 opacity-70">
         <p className="text-gray-500 text-sm mb-2">Effect</p>
         <div className="text-sm">
           <ListSplitter text={effect} />
