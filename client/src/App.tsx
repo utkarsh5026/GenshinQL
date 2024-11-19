@@ -20,7 +20,8 @@ type CurrentView =
   | "charactersTable"
   | "characterRoutine"
   | "weaponCalender"
-  | "weaponsDetailed";
+  | "weaponsDetailed"
+  | "tierList";
 
 function App() {
   const [getCharacter, { data }] = useLazyQuery(GET_CHARACTER);
@@ -50,6 +51,7 @@ function App() {
         onCharacterRoutineClick={() => setCurrentView("characterRoutine")}
         onWeaponCalenderClick={() => setCurrentView("weaponCalender")}
         onWeaponsDetailedClick={() => setCurrentView("weaponsDetailed")}
+        onTierListClick={() => setCurrentView("tierList")}
       />
       <main
         className="items-center justify-center  w-full

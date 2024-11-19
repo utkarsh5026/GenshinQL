@@ -21,6 +21,7 @@ import {
   LucideSwords,
   AxeIcon,
   Table2,
+  ChartBarDecreasing,
 } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { useCharacters } from "@/redux/hook/characters";
@@ -32,6 +33,7 @@ interface AppSideBarProps {
   onCharacterRoutineClick: () => void;
   onWeaponCalenderClick: () => void;
   onWeaponsDetailedClick: () => void;
+  onTierListClick: () => void;
 }
 
 const AppSideBar: React.FC<AppSideBarProps> = ({
@@ -41,6 +43,7 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
   onCharacterRoutineClick,
   onWeaponCalenderClick,
   onWeaponsDetailedClick,
+  onTierListClick,
 }) => {
   const { characters, fetchCharacters } = useCharacters();
 
@@ -67,6 +70,9 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
           </SidebarMenuButton>
           <SidebarMenuButton onClick={onWeaponsDetailedClick}>
             <AxeIcon /> Weapons Detailed
+          </SidebarMenuButton>
+          <SidebarMenuButton onClick={onTierListClick}>
+            <ChartBarDecreasing /> Tier List
           </SidebarMenuButton>
           <Collapsible defaultOpen={false} className="group/collapsible">
             <SidebarItem>
