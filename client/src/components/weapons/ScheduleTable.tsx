@@ -31,6 +31,26 @@ interface ScheduleTableProps {
 const ScheduleTable: React.FC<ScheduleTableProps> = ({ schedule }) => {
   const { materials } = schedule;
   const today = getCurrentDay();
+
+  // Reorder materials to have today first, or Sunday if today is not found
+  const reorderedMaterials = [...materials];
+  const todayIndex = reorderedMaterials.findIndex((material) =>
+    material.day.toLowerCase().includes(today.toLowerCase())
+  );
+
+  if (todayIndex !== -1) {
+    const [todayMaterial] = reorderedMaterials.splice(todayIndex, 1);
+    reorderedMaterials.unshift(todayMaterial);
+  } else {
+    const sundayIndex = reorderedMaterials.findIndex(
+      (material) => material.day.toLowerCase() === "sunday"
+    );
+    if (sundayIndex !== -1) {
+      const [sundayMaterial] = reorderedMaterials.splice(sundayIndex, 1);
+      reorderedMaterials.unshift(sundayMaterial);
+    }
+  }
+
   return (
     <Table className="border-2 border-amber-500/50">
       <TableHeader>
@@ -41,16 +61,21 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({ schedule }) => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {materials.map((material) => (
-          <TableRow key={material.day}>
-            <TableCell
-              className={`font-medium text-left ${
+        {reorderedMaterials.map((material) => (
+          <TableRow
+            key={material.day}
+            className={`${
+              material.day.toLowerCase().includes(today.toLowerCase())
+                ? "bg-green-950 hover:bg-green-950"
+                : ""
+            }`}
+          >
+            <TableCell className="font-medium text-left">
+              {`${material.day} ${
                 material.day.toLowerCase().includes(today.toLowerCase())
-                  ? "text-green-500"
+                  ? "(Today)"
                   : ""
               }`}
-            >
-              {material.day}
             </TableCell>
             <TableCell>
               <div className="grid grid-cols-2">
