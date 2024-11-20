@@ -31,9 +31,17 @@ const TierList: React.FC = () => {
         prev.filter((char) => char.name !== active.id)
       );
       setTierListMap((prev) => {
-        const overLevel = [...prev[over.id]];
-        overLevel.push(characterMap[active.id]);
-        return { ...prev, [over.id]: overLevel };
+        const updatedMap = Object.keys(prev).reduce(
+          (acc, level) => {
+            acc[level] = prev[level].filter((char) => char.name !== active.id);
+            return acc;
+          },
+          {} as Record<string, Character[]>
+        );
+
+        const overLevel = [...updatedMap[over.id], characterMap[active.id]];
+
+        return { ...updatedMap, [over.id]: overLevel };
       });
     }
   };

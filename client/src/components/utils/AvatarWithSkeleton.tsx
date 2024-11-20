@@ -23,7 +23,7 @@ const AvatarWithSkeleton: React.FC<AvatarWithSkeletonProps> = ({
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.2, ease: "easeInOut", delay: 0.2 }}
+        transition={{ duration: 0.05, ease: "easeInOut" }}
       >
         <AvatarImage
           className={imageClassName}
