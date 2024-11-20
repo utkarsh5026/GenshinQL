@@ -13,7 +13,7 @@ import WeaponCalender from "./components/weapons/WeaponCalender.tsx";
 import { useWeaponMaterials } from "@/redux/hook/weapon-material";
 import useTalentBooks from "./redux/hook/talent-book.ts";
 import WeaponsDetailed from "./components/weapons/WeaponsDetailed.tsx";
-import TierList from "./components/tierlist/TierList.tsx";
+import TierList from "./components/tierlist/CharacterTierList.tsx";
 
 type CurrentView =
   | "character"
