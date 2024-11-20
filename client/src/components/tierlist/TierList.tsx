@@ -6,6 +6,34 @@ import { Character } from "@/graphql/types";
 import TierLevel from "./TierLevel";
 
 const tierLevels = ["S", "A", "B", "C", "D"];
+const tierLevelsBg = [
+  "bg-red-800",
+  "bg-orange-800",
+  "bg-yellow-800",
+  "bg-green-800",
+  "bg-blue-800",
+];
+
+const updateTierListMap = (
+  activeId: string,
+  overId: string,
+  prevMap: Record<string, Character[]>,
+  characterMap: Record<string, Character>,
+  onlyRemove: boolean = false
+) => {
+  const updatedMap = Object.keys(prevMap).reduce(
+    (acc, level) => {
+      acc[level] = prevMap[level].filter((char) => char.name !== activeId);
+      return acc;
+    },
+    {} as Record<string, Character[]>
+  );
+
+  if (onlyRemove) return updatedMap;
+
+  const overLevel = [...updatedMap[overId], characterMap[activeId]];
+  return { ...updatedMap, [overId]: overLevel };
+};
 
 const TierList: React.FC = () => {
   const { characters, characterMap } = useCharacters();
@@ -27,21 +55,23 @@ const TierList: React.FC = () => {
     const { active, over } = event;
     console.log(active, over);
     if (over && active.id !== over.id) {
-      setCharactersToJudge((prev) =>
-        prev.filter((char) => char.name !== active.id)
-      );
-      setTierListMap((prev) => {
-        const updatedMap = Object.keys(prev).reduce(
-          (acc, level) => {
-            acc[level] = prev[level].filter((char) => char.name !== active.id);
-            return acc;
-          },
-          {} as Record<string, Character[]>
+      let onlyRemove = false;
+      if (over.id === "characters") {
+        setCharactersToJudge([...charactersToJudge, characterMap[active.id]]);
+        onlyRemove = true;
+      } else
+        setCharactersToJudge((prev) =>
+          prev.filter((char) => char.name !== active.id)
         );
 
-        const overLevel = [...updatedMap[over.id], characterMap[active.id]];
-
-        return { ...updatedMap, [over.id]: overLevel };
+      setTierListMap((prev) => {
+        return updateTierListMap(
+          active.id as string,
+          over.id as string,
+          prev,
+          characterMap,
+          onlyRemove
+        );
       });
     }
   };
@@ -51,10 +81,11 @@ const TierList: React.FC = () => {
       <DndContext onDragEnd={handleDragEnd}>
         <div className="flex flex-col gap-8">
           <div className="">
-            {tierLevels.map((level) => (
+            {tierLevels.map((level, index) => (
               <TierLevel
                 key={level}
                 name={level}
+                tierTextBg={tierLevelsBg[index]}
                 characters={tierListMap[level]}
               />
             ))}

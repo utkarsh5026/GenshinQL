@@ -26,7 +26,7 @@ const DraggableCharacter: React.FC<DraggableCharacterProps> = ({
       <AvatarWithSkeleton
         url={character.iconUrl}
         name={character.name}
-        avatarClassName="bg-green-950"
+        avatarClassName={`h-16 w-16 p-1`}
       />
     </div>
   );
