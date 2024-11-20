@@ -43,8 +43,12 @@ Here are some of the screenshots of this application
 
 ![Weapon-Schedule](./images/weapon-schedule.png)
 
+## Character Tier List Builder
+
+![Character-Tier-List](./images/character-tier-list.png)
 
 # Future Additions
+
 1. Integratring with Enka network
 2. Adding functionality to store data in AWS s3
 3. Adding sections for guides
