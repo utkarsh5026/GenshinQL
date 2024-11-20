@@ -76,6 +76,14 @@ const CharacterTierList: React.FC = () => {
     }
   };
 
+  const handleTierNameChange = (name: string) => {
+    console.log(name);
+  };
+
+  const isValidTierName = (name: string) => {
+    return name.length > 0 && !Object.keys(tierListMap).includes(name);
+  };
+
   return (
     <div>
       <DndContext onDragEnd={handleDragEnd}>
@@ -87,6 +95,8 @@ const CharacterTierList: React.FC = () => {
                 name={level}
                 tierTextBg={tierLevelsBg[index]}
                 characters={tierListMap[level]}
+                onNameChange={handleTierNameChange}
+                isValidName={isValidTierName}
               />
             ))}
           </div>
