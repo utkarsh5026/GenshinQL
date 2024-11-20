@@ -13,6 +13,7 @@ import WeaponCalender from "./components/weapons/WeaponCalender.tsx";
 import { useWeaponMaterials } from "@/redux/hook/weapon-material";
 import useTalentBooks from "./redux/hook/talent-book.ts";
 import WeaponsDetailed from "./components/weapons/WeaponsDetailed.tsx";
+import TierList from "./components/tierlist/TierList.tsx";
 
 type CurrentView =
   | "character"
@@ -36,10 +37,7 @@ function App() {
   console.dir(data, { depth: null });
 
   const handleCharacterClick = async (name: string) => {
-    console.log(name);
-    setCurrentView("character");
-    const res = await getCharacter({ variables: { name } });
-    console.log(res);
+    await getCharacter({ variables: { name } });
   };
 
   return (
@@ -67,6 +65,7 @@ function App() {
         {currentView === "characterRoutine" && <CharacterRoutine />}
         {currentView === "weaponCalender" && <WeaponCalender />}
         {currentView === "weaponsDetailed" && <WeaponsDetailed />}
+        {currentView === "tierList" && <TierList />}
       </main>
     </SidebarProvider>
   );
