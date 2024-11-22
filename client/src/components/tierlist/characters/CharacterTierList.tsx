@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import CharactersList from "./CharactersList";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
 import { useCharacters } from "@/redux/hook/characters";
 import { Character } from "@/graphql/types";
 import TierLevel from "./TierLevel";
+import DroppableArea from "../base/DroppableArea";
+import DraggableCharacter from "./DraggableCharacter";
 
 const tierLevels = ["S", "A", "B", "C", "D"];
 const tierLevelsBg = [
@@ -14,6 +15,15 @@ const tierLevelsBg = [
   "bg-blue-800",
 ];
 
+/**
+ * Updates the tier list mapping when a character is dragged between tiers
+ * @param activeId - The name/ID of the character being dragged
+ * @param overId - The ID of the tier the character is being dropped into
+ * @param prevMap - The previous tier list mapping of characters
+ * @param characterMap - Map of character names to Character objects
+ * @param onlyRemove - If true, only removes character from previous tier without adding to new tier
+ * @returns Updated tier list mapping with character moved to new tier
+ */
 const updateTierListMap = (
   activeId: string,
   overId: string,
@@ -49,15 +59,17 @@ const CharacterTierList: React.FC = () => {
     )
   );
 
-  console.log(tierListMap);
-
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
     console.log(active, over);
     if (over && active.id !== over.id) {
       let onlyRemove = false;
       if (over.id === "characters") {
-        setCharactersToJudge([...charactersToJudge, characterMap[active.id]]);
+        setCharactersToJudge((prev) => {
+          const alreadyInTier = prev.find((char) => char.name === active.id);
+          if (alreadyInTier) return prev;
+          return [...prev, characterMap[active.id]];
+        });
         onlyRemove = true;
       } else
         setCharactersToJudge((prev) =>
@@ -76,8 +88,20 @@ const CharacterTierList: React.FC = () => {
     }
   };
 
-  const handleTierNameChange = (name: string) => {
-    console.log(name);
+  const handleTierNameChange = (prevName: string, newName: string) => {
+    const tierCharacters = tierListMap[prevName];
+    setTierListMap((prev) => {
+      // Create new object maintaining order of keys
+      const updatedMap: Record<string, Character[]> = {};
+      Object.keys(prev).forEach((key) => {
+        if (key === prevName) {
+          updatedMap[newName] = tierCharacters;
+        } else {
+          updatedMap[key] = prev[key];
+        }
+      });
+      return updatedMap;
+    });
   };
 
   const isValidTierName = (name: string) => {
@@ -89,7 +113,7 @@ const CharacterTierList: React.FC = () => {
       <DndContext onDragEnd={handleDragEnd}>
         <div className="flex flex-col gap-8">
           <div className="">
-            {tierLevels.map((level, index) => (
+            {Object.keys(tierListMap).map((level, index) => (
               <TierLevel
                 key={level}
                 name={level}
@@ -100,7 +124,11 @@ const CharacterTierList: React.FC = () => {
               />
             ))}
           </div>
-          <CharactersList characters={charactersToJudge} />
+          <DroppableArea id="characters" className="flex flex-wrap gap-4">
+            {charactersToJudge.map((char) => (
+              <DraggableCharacter key={char.name} character={char} />
+            ))}
+          </DroppableArea>
         </div>
       </DndContext>
     </div>

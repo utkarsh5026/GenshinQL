@@ -1,13 +1,14 @@
 import React from "react";
 import { useDroppable } from "@dnd-kit/core";
-import CharactersList from "./CharactersList";
 import type { Character } from "@/graphql/types";
+import DraggableComponent from "../base/DraggableComponent";
+import AvatarWithSkeleton from "@/components/utils/AvatarWithSkeleton";
 
 interface TierLevelProps {
   name: string;
   characters: Character[];
   tierTextBg: string;
-  onNameChange: (name: string) => void;
+  onNameChange: (prevName: string, newName: string) => void;
   isValidName: (name: string) => boolean;
 }
 
@@ -18,12 +19,11 @@ const TierLevel: React.FC<TierLevelProps> = ({
   onNameChange,
   isValidName,
 }) => {
-  const { isOver, setNodeRef } = useDroppable({
-    id: name,
-  });
-
   const [isEditing, setIsEditing] = React.useState(false);
   const [editableName, setEditableName] = React.useState(name);
+  const { isOver, setNodeRef } = useDroppable({
+    id: editableName,
+  });
 
   const handleNameClick = () => {
     setIsEditing(true);
@@ -36,7 +36,7 @@ const TierLevel: React.FC<TierLevelProps> = ({
   const handleBlur = () => {
     setIsEditing(false);
     if (isValidName(editableName)) {
-      onNameChange(editableName);
+      onNameChange(name, editableName);
     } else {
       setEditableName(name);
     }
@@ -70,7 +70,17 @@ const TierLevel: React.FC<TierLevelProps> = ({
         ref={setNodeRef}
         className={`flex-1 border-2 border-gray-300 ${isOver ? "bg-slate-900" : "bg-transparent"} p-2`}
       >
-        <CharactersList characters={characters} />
+        <div className="flex flex-row flex-wrap gap-2">
+          {characters.map((character) => (
+            <DraggableComponent id={character.name}>
+              <AvatarWithSkeleton
+                name={character.name}
+                url={character.iconUrl}
+                avatarClassName={`h-16 w-16 p-1`}
+              />
+            </DraggableComponent>
+          ))}
+        </div>
       </div>
     </div>
   );

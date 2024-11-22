@@ -1,7 +1,7 @@
 import type { Character } from "@/graphql/types";
 import { useDraggable } from "@dnd-kit/core";
 import React from "react";
-import AvatarWithSkeleton from "../utils/AvatarWithSkeleton";
+import AvatarWithSkeleton from "../../utils/AvatarWithSkeleton";
 
 interface DraggableCharacterProps {
   character: Character;
