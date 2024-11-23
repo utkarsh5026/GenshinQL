@@ -2,18 +2,11 @@ import React, { useState } from "react";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
 import { useCharacters } from "@/redux/hook/characters";
 import { Character } from "@/graphql/types";
-import TierLevel from "./TierLevel";
 import DroppableArea from "../base/DroppableArea";
 import DraggableCharacter from "./DraggableCharacter";
+import CharacterTierLevel from "./CharacterTierLevel";
 
 const tierLevels = ["S", "A", "B", "C", "D"];
-const tierLevelsBg = [
-  "bg-red-800",
-  "bg-orange-800",
-  "bg-yellow-800",
-  "bg-green-800",
-  "bg-blue-800",
-];
 
 /**
  * Updates the tier list mapping when a character is dragged between tiers
@@ -113,11 +106,10 @@ const CharacterTierList: React.FC = () => {
       <DndContext onDragEnd={handleDragEnd}>
         <div className="flex flex-col gap-8">
           <div className="">
-            {Object.keys(tierListMap).map((level, index) => (
-              <TierLevel
+            {Object.keys(tierListMap).map((level) => (
+              <CharacterTierLevel
                 key={level}
-                name={level}
-                tierTextBg={tierLevelsBg[index]}
+                initialName={level}
                 characters={tierListMap[level]}
                 onNameChange={handleTierNameChange}
                 isValidName={isValidTierName}

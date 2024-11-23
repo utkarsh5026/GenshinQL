@@ -37,6 +37,7 @@ function App() {
   console.dir(data, { depth: null });
 
   const handleCharacterClick = async (name: string) => {
+    setCurrentView("character");
     await getCharacter({ variables: { name } });
   };
 
