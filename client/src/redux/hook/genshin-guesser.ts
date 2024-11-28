@@ -4,6 +4,8 @@ import {
   addGuessedChar as addGuessedCharAction,
   setCurrentChar as setCurrentCharAction,
   resetGame as resetGameAction,
+  setVictory as setVictoryAction,
+  setDefeat as setDefeatAction,
 } from "../slices/genshin-guesser";
 import type { Character } from "@/graphql/types";
 
@@ -16,6 +18,8 @@ interface UseGenshinGuesser {
   addGuessedChar: (char: string) => void;
   selectCurrentCharacter: (characters: Character[]) => void;
   resetGame: () => void;
+  handleDefeat: () => void;
+  handleVictory: () => void;
 }
 
 /**
@@ -28,6 +32,8 @@ interface UseGenshinGuesser {
  * @returns {(char: string) => void} addGuessedChar - Function to add a guessed character
  * @returns {(characters: Character[]) => void} selectCurrentCharacter - Function to randomly select a new character
  * @returns {() => void} resetGame - Function to reset the game state
+ * @returns {() => void} handleDefeat - Function to handle defeat
+ * @returns {() => void} handleVictory - Function to handle victory
  */
 const useGenshinGuesser = (): UseGenshinGuesser => {
   const { guessedChars, currentChar, gameOver, gameWon, streak } =
@@ -55,6 +61,14 @@ const useGenshinGuesser = (): UseGenshinGuesser => {
     dispatch(resetGameAction());
   }, [dispatch]);
 
+  const handleDefeat = useCallback(() => {
+    dispatch(setDefeatAction());
+  }, [dispatch]);
+
+  const handleVictory = useCallback(() => {
+    dispatch(setVictoryAction());
+  }, [dispatch]);
+
   return {
     guessedChars,
     addGuessedChar,
@@ -64,6 +78,8 @@ const useGenshinGuesser = (): UseGenshinGuesser => {
     gameOver,
     gameWon,
     streak,
+    handleDefeat,
+    handleVictory,
   };
 };
 

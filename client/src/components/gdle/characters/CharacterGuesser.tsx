@@ -74,19 +74,21 @@ const CharacterGuesser: React.FC = () => {
   if (!selectedCharacter) return null;
 
   return (
-    <div className="flex gap-4">
-      <div className="w-2/3">
-        <GuessSearchTable
-          selectedCharacter={selectedCharacter}
-          onGuess={handleGuess}
-        />
-      </div>
-      <div className="w-1/3">
-        <GameOverDisplay
-          selectedCharacter={selectedCharacter}
-          gameWon={gameWon}
-          onReset={handleReset}
-        />
+    <div className="flex flex-col gap-4">
+      <div className="flex gap-4">
+        <div className="w-2/3">
+          <GuessSearchTable
+            selectedCharacter={selectedCharacter}
+            onGuess={handleGuess}
+          />
+        </div>
+        <div className="w-1/3">
+          <GameOverDisplay
+            selectedCharacter={selectedCharacter}
+            gameWon={gameWon}
+            onReset={handleReset}
+          />
+        </div>
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ const server = new ApolloServer({
 
 async function startServer() {
   const { url } = await startStandaloneServer(server, {
-    listen: { port: 4000 },
+    listen: { port: 4001 },
     context: async () => ({
       loaders: {
         talentBooksLoader,

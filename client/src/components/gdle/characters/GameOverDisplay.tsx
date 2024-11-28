@@ -25,7 +25,7 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
   const guessCount = guessedChars.length;
 
   return (
-    <Card>
+    <Card className="border-none mt-16 bg-gray-900/90">
       <CardContent className="p-4 flex flex-col gap-8">
         <div className="text-lg">
           <span>Guess: </span>
