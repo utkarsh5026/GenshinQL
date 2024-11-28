@@ -7,6 +7,7 @@ interface GenshinGuesserState {
   currentChar: string | null;
   gameOver: boolean;
   gameWon: boolean;
+  streak: number;
 }
 
 const initialState: GenshinGuesserState = {
@@ -14,6 +15,7 @@ const initialState: GenshinGuesserState = {
   currentChar: null,
   gameOver: false,
   gameWon: false,
+  streak: 0,
 };
 
 const genshinGuesserSlice = createSlice({
@@ -23,11 +25,13 @@ const genshinGuesserSlice = createSlice({
     setVictory: (state) => {
       state.gameWon = true;
       state.gameOver = true;
+      state.streak += 1;
     },
 
     setDefeat: (state) => {
       state.gameOver = true;
       state.gameWon = false;
+      state.streak = 0;
     },
 
     setCurrentChar: (state, action: PayloadAction<string>) => {
@@ -41,9 +45,11 @@ const genshinGuesserSlice = createSlice({
       if (guessedChar === state.currentChar) {
         state.gameWon = true;
         state.gameOver = true;
+        state.streak += 1;
       } else if (state.guessedChars.length === MAX_GUESSES) {
         state.gameOver = true;
         state.gameWon = false;
+        state.streak = 0;
       }
     },
 

@@ -12,6 +12,7 @@ interface UseGenshinGuesser {
   currentChar: string | null;
   gameOver: boolean;
   gameWon: boolean;
+  streak: number;
   addGuessedChar: (char: string) => void;
   selectCurrentCharacter: (characters: Character[]) => void;
   resetGame: () => void;
@@ -29,9 +30,8 @@ interface UseGenshinGuesser {
  * @returns {() => void} resetGame - Function to reset the game state
  */
 const useGenshinGuesser = (): UseGenshinGuesser => {
-  const { guessedChars, currentChar, gameOver, gameWon } = useAppSelector(
-    (state) => state.genshinGuesser
-  );
+  const { guessedChars, currentChar, gameOver, gameWon, streak } =
+    useAppSelector((state) => state.genshinGuesser);
   const dispatch = useAppDispatch();
 
   const addGuessedChar = useCallback(
@@ -63,6 +63,7 @@ const useGenshinGuesser = (): UseGenshinGuesser => {
     currentChar,
     gameOver,
     gameWon,
+    streak,
   };
 };
 
