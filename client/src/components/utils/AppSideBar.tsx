@@ -22,6 +22,7 @@ import {
   AxeIcon,
   Table2,
   ChartBarDecreasing,
+  Gamepad2,
 } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { useCharacters } from "@/redux/hook/characters";
@@ -34,6 +35,7 @@ interface AppSideBarProps {
   onWeaponCalenderClick: () => void;
   onWeaponsDetailedClick: () => void;
   onTierListClick: () => void;
+  onGenshinGuesserClick: () => void;
 }
 
 const AppSideBar: React.FC<AppSideBarProps> = ({
@@ -44,6 +46,7 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
   onWeaponCalenderClick,
   onWeaponsDetailedClick,
   onTierListClick,
+  onGenshinGuesserClick,
 }) => {
   const { characters, fetchCharacters } = useCharacters();
 
@@ -73,6 +76,9 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
           </SidebarMenuButton>
           <SidebarMenuButton onClick={onTierListClick}>
             <ChartBarDecreasing /> Tier List
+          </SidebarMenuButton>
+          <SidebarMenuButton onClick={onGenshinGuesserClick}>
+            <Gamepad2 /> Genshin Guesser
           </SidebarMenuButton>
           <Collapsible defaultOpen={false} className="group/collapsible">
             <SidebarItem>

@@ -1,6 +1,7 @@
 import React from "react";
 import CharacterTierList from "./characters/CharacterTierList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import WeaponsTierList from "./weapons/WeaponsTierList";
 
 const TierList: React.FC = () => {
   return (
@@ -12,6 +13,9 @@ const TierList: React.FC = () => {
         </TabsList>
         <TabsContent value="characters" key="characters">
           <CharacterTierList />
+        </TabsContent>
+        <TabsContent value="weapons" key="weapons">
+          <WeaponsTierList />
         </TabsContent>
       </Tabs>
     </div>

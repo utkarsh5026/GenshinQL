@@ -14,6 +14,7 @@ import { useWeaponMaterials } from "@/redux/hook/weapon-material";
 import useTalentBooks from "./redux/hook/talent-book.ts";
 import WeaponsDetailed from "./components/weapons/WeaponsDetailed.tsx";
 import TierList from "./components/tierlist/TierList.tsx";
+import GenshinGuesser from "./components/gdle/main/GenshinGuesser.tsx";
 
 type CurrentView =
   | "character"
@@ -22,7 +23,8 @@ type CurrentView =
   | "characterRoutine"
   | "weaponCalender"
   | "weaponsDetailed"
-  | "tierList";
+  | "tierList"
+  | "genshinGuesser";
 
 function App() {
   const [getCharacter, { data }] = useLazyQuery(GET_CHARACTER);
@@ -51,6 +53,7 @@ function App() {
         onWeaponCalenderClick={() => setCurrentView("weaponCalender")}
         onWeaponsDetailedClick={() => setCurrentView("weaponsDetailed")}
         onTierListClick={() => setCurrentView("tierList")}
+        onGenshinGuesserClick={() => setCurrentView("genshinGuesser")}
       />
       <main
         className="items-center justify-center  w-full
@@ -67,6 +70,7 @@ function App() {
         {currentView === "weaponCalender" && <WeaponCalender />}
         {currentView === "weaponsDetailed" && <WeaponsDetailed />}
         {currentView === "tierList" && <TierList />}
+        {currentView === "genshinGuesser" && <GenshinGuesser />}
       </main>
     </SidebarProvider>
   );
