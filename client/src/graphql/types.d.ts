@@ -8,6 +8,7 @@ export type Character = {
   elementUrl: string;
   weaponUrl: string;
   regionUrl: string;
+  version: string;
   idleOne?: AnimationMedia;
   idleTwo?: AnimationMedia;
   partyJoin?: AnimationMedia;
