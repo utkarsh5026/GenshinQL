@@ -52,7 +52,7 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
             <div className="text-sm text-gray-500 flex flex-col items-center gap-4">
               <motion.div
                 initial={{ rotate: -180, scale: 0 }}
-                animate={{ rotate: 0, scale: 1 }}
+                animate={{ rotate: 0, scale: [0, 1.5, 1] }}
                 transition={{
                   type: "spring",
                   damping: 10,
