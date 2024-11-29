@@ -44,6 +44,7 @@ export const advancedCharacterSchema = baseCharacterSchema.extend({
   talents: z.array(talentSchema),
   constellations: z.array(constellationSchema),
   imageUrls: imageUrlsSchema,
+  version: z.string(),
 });
 
 export const characterFilterSchema = z.object({

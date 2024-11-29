@@ -1,0 +1,295 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Yanfei_Icon.png",
+    "name": "Yanfei",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Catalyst",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Catalyst_Pyro.png",
+            "talentName": "Seal of Approval",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nShoots fireballs that deal up to three counts of Pyro DMG.\nWhen Yanfei's Normal Attacks hit enemies, they will grant her a single Scarlet Seal. Yanfei may possess a maximum of 3 Scarlet Seals, and each time this effect is triggered, the duration of currently possessed Scarlet Seals will refresh.\nEach Scarlet Seal will decrease Yanfei's Stamina consumption and will disappear when she leaves the field.\n\nCharged Attack\nConsumes Stamina and all Scarlet Seals before dealing AoE Pyro DMG to the opponents after a short casting time.\nThis Charged Attack's AoE and DMG will increase according to the amount of Scarlet Seals consumed.\n\nPlunging Attack\nGathering the power of Pyro, Yanfei plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Pyro DMG upon impact with the ground.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Seal_of_Approval_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Seal_of_Approval_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Seal_of_Approval_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "58.34",
+                    "62.72",
+                    "67.09",
+                    "72.93",
+                    "77.3",
+                    "81.68",
+                    "87.51",
+                    "93.35",
+                    "99.18",
+                    "105.01",
+                    "110.85"
+                ],
+                "2-Hit DMG (%)": [
+                    "52.13",
+                    "56.04",
+                    "59.94",
+                    "65.16",
+                    "69.07",
+                    "72.98",
+                    "78.19",
+                    "83.4",
+                    "88.61",
+                    "93.83",
+                    "99.04"
+                ],
+                "3-Hit DMG (%)": [
+                    "76.01",
+                    "81.71",
+                    "87.41",
+                    "95.02",
+                    "100.72",
+                    "106.42",
+                    "114.02",
+                    "121.62",
+                    "129.22",
+                    "136.82",
+                    "144.42"
+                ],
+                "Charged Attack DMG (0–4 Seals) (%)": [
+                    "98.23\n/\n115.56\n/\n132.9\n/\n150.23\n/\n167.57",
+                    "104.11\n/\n122.48\n/\n140.86\n/\n159.23\n/\n177.6",
+                    "109.99\n/\n129.4\n/\n148.81\n/\n168.23\n/\n187.64",
+                    "117.64\n/\n138.4\n/\n159.16\n/\n179.92\n/\n200.68",
+                    "123.52\n/\n145.32\n/\n167.12\n/\n188.92\n/\n210.71",
+                    "129.4\n/\n152.24\n/\n175.08\n/\n197.91\n/\n220.75",
+                    "137.05\n/\n161.24\n/\n185.42\n/\n209.61\n/\n233.79",
+                    "144.7\n/\n170.23\n/\n195.77\n/\n221.3\n/\n246.84",
+                    "152.34\n/\n179.23\n/\n206.11\n/\n233\n/\n259.88",
+                    "159.99\n/\n188.22\n/\n216.46\n/\n244.69\n/\n272.92",
+                    "167.64\n/\n197.22\n/\n226.8\n/\n256.39\n/\n285.97"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "50"
+                ],
+                "Scarlet Seal Stamina Consumption Decrease": [
+                    "15% Per Seal"
+                ],
+                "Scarlet Seal Duration": [
+                    "10s"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Talent_Signed_Edict.png",
+            "talentName": "Signed Edict",
+            "talentType": "Elemental Skill",
+            "description": "Summons blistering flames that deal AoE Pyro DMG.\nOpponents hit by the flames will grant Yanfei the maximum number of Scarlet Seals.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Signed_Edict_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "169.6",
+                    "182.32",
+                    "195.04",
+                    "212",
+                    "224.72",
+                    "237.44",
+                    "254.4",
+                    "271.36",
+                    "288.32",
+                    "305.28",
+                    "322.24",
+                    "339.2",
+                    "360.4",
+                    "382"
+                ],
+                "CD": [
+                    "9s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Done_Deal.png",
+            "talentName": "Done Deal",
+            "talentType": "Elemental Burst",
+            "description": "Triggers a spray of intense flames that rush at nearby opponents, dealing AoE Pyro DMG, granting Yanfei the maximum number of Scarlet Seals, and applying Brilliance to her.\n\nBrilliance\nHas the following effects:\nGrants Yanfei a Scarlet Seal at fixed intervals.\nIncreases the DMG dealt by her Charged Attacks.\nThe effects of Brilliance will end if Yanfei leaves the field or falls in battle.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Done_Deal_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "182.4",
+                    "196.08",
+                    "209.76",
+                    "228",
+                    "241.68",
+                    "255.36",
+                    "273.6",
+                    "291.84",
+                    "310.08",
+                    "328.32",
+                    "346.56",
+                    "364.8",
+                    "387.6",
+                    "410"
+                ],
+                "Scarlet Seal Grant Interval": [
+                    "1s"
+                ],
+                "Charged Attack DMG Bonus (%)": [
+                    "33.4",
+                    "35.4",
+                    "37.4",
+                    "40",
+                    "42",
+                    "44",
+                    "46.6",
+                    "49.2",
+                    "51.8",
+                    "54.4",
+                    "57",
+                    "59.6",
+                    "62.2",
+                    "65"
+                ],
+                "Duration": [
+                    "15s"
+                ],
+                "CD": [
+                    "20s"
+                ],
+                "Energy Cost": [
+                    "80"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Talent_Proviso.png",
+            "talentName": "Proviso",
+            "talentType": "1st Ascension Passive",
+            "description": "When Yanfei consumes Scarlet Seals by using a Charged Attack, each Scarlet Seal will increase Yanfei's Pyro DMG Bonus by 5%. This effect lasts for 6s. When a Charged Attack is used again during the effect's duration, it will dispel the previous effect.\n",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Talent_Blazing_Eye.png",
+            "talentName": "Blazing Eye",
+            "talentType": "4th Ascension Passive",
+            "description": "When Yanfei's Charged Attack deals a CRIT Hit to opponents, she will deal an additional instance of AoE Pyro DMG equal to 80% of her ATK. This DMG counts as Charged Attack DMG.\n",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Talent_Encyclopedic_Expertise.png",
+            "talentName": "Encyclopedic Expertise",
+            "talentType": "Utility Passive",
+            "description": "Displays the location of nearby resources unique to Liyue on the mini-map.\n",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Constellation_The_Law_Knows_No_Kindness.png",
+            "name": "The Law Knows No Kindness",
+            "level": 1,
+            "description": "When Yanfei uses her Charged Attack, each existing Scarlet Seal additionally reduces the stamina cost of this Charged Attack by 10% and increases resistance against interruption during its release.\n▼Gameplay Notes▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Constellation_Right_of_Final_Interpretation.png",
+            "name": "Right of Final Interpretation",
+            "level": 2,
+            "description": "Increases Yanfei's Charged Attack CRIT Rate by 20% against enemies below 50% HP."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_Samadhi_Fire-Forged.png",
+            "name": "Samadhi Fire-Forged",
+            "level": 3,
+            "description": "Increases the Level of Signed Edict by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Constellation_Supreme_Amnesty.png",
+            "name": "Supreme Amnesty",
+            "level": 4,
+            "description": "When Done Deal is used:\nCreates a shield that absorbs up to 45% of Yanfei's Max HP for 15s.\nThis shield absorbs Pyro DMG 250% more effectively.\n▼Preview▼"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Constellation_Abiding_Affidavit.png",
+            "name": "Abiding Affidavit",
+            "level": 5,
+            "description": "Increases the Level of Done Deal by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Constellation_Extra_Clause.png",
+            "name": "Extra Clause",
+            "level": 6,
+            "description": "Increases the maximum number of Scarlet Seals by 1.\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Yanfei_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Character_Yanfei_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Character_Yanfei_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Yanfei_Impartial.png"
+    },
+    "version": "1.5"
+}

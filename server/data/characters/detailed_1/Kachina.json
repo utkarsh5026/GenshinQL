@@ -1,0 +1,312 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Kachina_Icon.png",
+    "name": "Kachina",
+    "rarity": "4 Stars",
+    "element": "Geo",
+    "weaponType": "Polearm",
+    "region": "Natlan",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Polearm_Geo.png",
+            "talentName": "Cragbiter",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Cragbiter_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "49.4",
+                    "53.42",
+                    "57.44",
+                    "63.18",
+                    "67.2",
+                    "71.8",
+                    "78.12",
+                    "84.44",
+                    "90.76",
+                    "97.65",
+                    "104.54"
+                ],
+                "2-Hit DMG (%)": [
+                    "27.57\n+\n30.63",
+                    "29.81\n+\n33.13",
+                    "32.06\n+\n35.62",
+                    "35.26\n+\n39.18",
+                    "37.51\n+\n41.67",
+                    "40.07\n+\n44.52",
+                    "43.6\n+\n48.44",
+                    "47.12\n+\n52.36",
+                    "50.65\n+\n56.28",
+                    "54.5\n+\n60.55",
+                    "58.34\n+\n64.83"
+                ],
+                "3-Hit DMG (%)": [
+                    "70.43",
+                    "76.16",
+                    "81.89",
+                    "90.08",
+                    "95.81",
+                    "102.36",
+                    "111.37",
+                    "120.38",
+                    "129.39",
+                    "139.22",
+                    "149.04"
+                ],
+                "4-Hit DMG (%)": [
+                    "77.44",
+                    "83.74",
+                    "90.04",
+                    "99.05",
+                    "105.35",
+                    "112.55",
+                    "122.46",
+                    "132.36",
+                    "142.27",
+                    "153.07",
+                    "163.88"
+                ],
+                "Charged Attack DMG (%)": [
+                    "112.66",
+                    "121.83",
+                    "131",
+                    "144.1",
+                    "153.27",
+                    "163.75",
+                    "178.16",
+                    "192.57",
+                    "206.98",
+                    "222.7",
+                    "238.42"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Go%2C_Go_Turbo_Twirly%21.png",
+            "talentName": "Go, Go Turbo Twirly!",
+            "talentType": "Elemental Skill",
+            "description": "Fight alongside the turbo trusty Turbo Twirly!\nSummons Turbo Twirly. When the skill is Held and released, Kachina will summon and ride Turbo Twirly.\nAfter the Skill is used, Kachina will gain 60 Nightsoul points and enter the Nightsoul's Blessing state.\n\nNightsoul's Blessing: Kachina\nTurbo Twirly's various actions consume Kachina's Nightsoul points.\nThe Nightsoul's Blessing state will end when these points have been depleted.\n\nTurbo Twirly\nCan exist independently or be ridden and operated by Kachina. When Turbo Twirly is present, Kachina's Elemental Skill, \"Go, Go Turbo Twirly!\", will change to an option to Mount/Dismount Turbo Twirly.\nWhen present independent of Kachina, it will slam the ground at intervals, dealing Nightsoul-aligned AoE Geo DMG based on Kachina's DEF.\nWhen Kachina is riding Turbo Twirly, she can control it to move and climb swiftly, and use Normal Attacks to slam the ground, dealing Nightsoul-aligned AoE Geo DMG based on Kachina's DEF.\n\nTurbo Twirly will disappear once Kachina's Nightsoul's Blessing state ends, and it is considered a Geo Construct. 1 Turbo Twirly can exist on the field at any one time.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Go%2C_Go_Turbo_Twirly%21_Movement_Preview.gif",
+                    "caption": "Movement"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Go%2C_Go_Turbo_Twirly%21_Combat_Preview.gif",
+                    "caption": "Combat"
+                }
+            ],
+            "scaling": {
+                "Turbo Twirly Mounted DMG (%DEF)": [
+                    "87.76",
+                    "94.34",
+                    "100.92",
+                    "109.7",
+                    "116.28",
+                    "122.86",
+                    "131.64",
+                    "140.42",
+                    "149.19",
+                    "157.97",
+                    "166.74",
+                    "175.52",
+                    "186.49"
+                ],
+                "Turbo Twirly Independent DMG (%DEF)": [
+                    "63.76",
+                    "68.54",
+                    "73.32",
+                    "79.7",
+                    "84.48",
+                    "89.26",
+                    "95.64",
+                    "102.02",
+                    "108.39",
+                    "114.77",
+                    "121.14",
+                    "127.52",
+                    "135.49"
+                ],
+                "Nightsoul Point Limit": [
+                    "60"
+                ],
+                "CD": [
+                    "20s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Talent_Time_to_Get_Serious%21.png",
+            "talentName": "Time to Get Serious!",
+            "talentType": "Elemental Burst",
+            "description": "Striking the ground, Kachina deals AoE Geo DMG based on her DEF and creates a Turbo Drill Field.\nThe Field increases Turbo Twirly's attack AoE and its movement speed when Kachina is riding it.\n\nIf Kachina's own Turbo Twirly is present when this is used, Turbo Twirly will be summoned to her side.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Time_to_Get_Serious%21_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%DEF)": [
+                    "380.57",
+                    "413.66",
+                    "442.52",
+                    "481",
+                    "509.86",
+                    "538.72",
+                    "577.2",
+                    "615.68",
+                    "654.16",
+                    "692.64",
+                    "731.12",
+                    "769.6",
+                    "817.7"
+                ],
+                "Field Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Talent_Mountain_Echoes.png",
+            "talentName": "Mountain Echoes",
+            "talentType": "1st Ascension Passive",
+            "description": "When nearby party members trigger a Nightsoul Burst, Kachina's Geo DMG Bonus increases by 20% for 12s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Talent_The_Weight_of_Stone.png",
+            "talentName": "The Weight of Stone",
+            "talentType": "4th Ascension Passive",
+            "description": "Turbo Twirly's DMG is increased by 20% of Kachina's DEF.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Heart_of_Unity.png",
+            "talentName": "Heart of Unity",
+            "talentType": "Night Realm's Gift Passive",
+            "description": "After her Nightsoul points are depleted, Kachina will switch to consuming Phlogiston to maintain her Nightsoul's Blessing.\nWhile in an area with Phlogiston Mechanics within Natlan, she can use Nightsoul Transmission: Kachina. When the active character is currently sprinting, climbing, in a movement mode caused by certain Talents, or at a certain height in the air, the following will trigger when switching to Kachina: Kachina will enter the Nightsoul's Blessing state and ride Turbo Twirly when taking the field while gaining 30 Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own team.\n\nAdditionally, while in Natlan, Kachina will consume 90% less Stamina when climbing while riding Turbo Twirly.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Heart_of_Unity_Nightsoul_Points_Preview.gif",
+                    "caption": "Nightsoul Points"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Heart_of_Unity_Nightsoul_Transmission_Preview.gif",
+                    "caption": "Nightsoul Transmission"
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Boon_of_Crystal_Flame.png",
+            "talentName": "Boon of Crystal Flame",
+            "talentType": "Utility Passive",
+            "description": "While in an area with Phlogiston Mechanics within Natlan, 20 Stamina will be restored when interacting with some harvestable items. Additionally, the location of nearby resources unique to Natlan will appear on your mini-map.\n",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Constellation_Shards_Are_Gems_Too.png",
+            "name": "Shards Are Gems Too",
+            "level": 1,
+            "description": "When Kachina mounts or dismounts Turbo Twirly, she will absorb nearby Elemental Shards created by Crystallize.\nAdditionally, when a party member picks up such a Shard, 3 Energy will be restored to Kachina. Energy can be restored this way once every 5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Constellation_Never_Leave_Home_Without..._Turbo_Twirly.png",
+            "name": "Never Leave Home Without... Turbo Twirly",
+            "level": 2,
+            "description": "When Kachina uses \"Time to Get Serious!\", she will regain 20 Nightsoul points. If there is no Turbo Twirly belonging to her on the field, she will enter Nightsoul's Blessing and summon one."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Constellation_Improved_Stabilizer.png",
+            "name": "Improved Stabilizer",
+            "level": 3,
+            "description": "Increases the Level of Go, Go Turbo Twirly! by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Constellation_More_Foes%2C_More_Caution.png",
+            "name": "More Foes, More Caution",
+            "level": 4,
+            "description": "When there are 1/2/3/4 (or more) opponents within the Turbo Drill Field created by \"Time to Get Serious!\", the active character within the field gains 8%/12%/16%/20% increased DEF."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Constellation_All_I%27ve_Collected_Till_Now.png",
+            "name": "All I've Collected Till Now",
+            "level": 5,
+            "description": "Increases the Level of Time to Get Serious! by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Constellation_This_Time%2C_I%27ve_Gotta_Win.png",
+            "name": "This Time, I've Gotta Win",
+            "level": 6,
+            "description": "When your active character's shield is replaced or destroyed for any reason, Kachina will deal 200% of her DEF as AoE Geo DMG. This effect can be triggered once every 5s.\n▼Advanced Properties▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Kachina_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Character_Kachina_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Character_Kachina_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Kachina_Twirly.png"
+    },
+    "version": "5.0"
+}

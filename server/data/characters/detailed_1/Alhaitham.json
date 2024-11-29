@@ -1,0 +1,382 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Alhaitham_Icon.png",
+    "name": "Alhaitham",
+    "rarity": "5 Stars",
+    "element": "Dendro",
+    "weaponType": "Sword",
+    "region": "Sumeru",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Sword_Dendro.png",
+            "talentName": "Abductive Reasoning",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Abductive_Reasoning_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Abductive_Reasoning_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Abductive_Reasoning_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG": [
+                    "49.53",
+                    "53.56",
+                    "57.59",
+                    "63.35",
+                    "67.38",
+                    "71.98",
+                    "78.32",
+                    "84.65",
+                    "90.99",
+                    "97.9",
+                    "104.81"
+                ],
+                "2-Hit DMG": [
+                    "50.75",
+                    "54.88",
+                    "59.01",
+                    "64.91",
+                    "69.04",
+                    "73.76",
+                    "80.25",
+                    "86.75",
+                    "93.24",
+                    "100.32",
+                    "107.4"
+                ],
+                "3-Hit DMG": [
+                    "34.18\n+\n34.18",
+                    "36.96\n+\n36.96",
+                    "39.74\n+\n39.74",
+                    "43.72\n+\n43.72",
+                    "46.5\n+\n46.5",
+                    "49.68\n+\n49.68",
+                    "54.05\n+\n54.05",
+                    "58.42\n+\n58.42",
+                    "62.79\n+\n62.79",
+                    "67.56\n+\n67.56",
+                    "72.33\n+\n72.33"
+                ],
+                "4-Hit DMG": [
+                    "66.77",
+                    "72.2",
+                    "77.64",
+                    "85.4",
+                    "90.84",
+                    "97.05",
+                    "105.59",
+                    "114.13",
+                    "122.67",
+                    "131.98",
+                    "141.3"
+                ],
+                "5-Hit DMG": [
+                    "83.85",
+                    "90.68",
+                    "97.5",
+                    "107.25",
+                    "114.08",
+                    "121.88",
+                    "132.6",
+                    "143.33",
+                    "154.05",
+                    "165.75",
+                    "177.45"
+                ],
+                "Charged Attack DMG": [
+                    "55.25\n+\n55.25",
+                    "59.75\n+\n59.75",
+                    "64.25\n+\n64.25",
+                    "70.67\n+\n70.67",
+                    "75.17\n+\n75.17",
+                    "80.31\n+\n80.31",
+                    "87.38\n+\n87.38",
+                    "94.45\n+\n94.45",
+                    "101.52\n+\n101.52",
+                    "109.22\n+\n109.22",
+                    "116.93\n+\n116.93"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "20"
+                ],
+                "Plunge DMG": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Talent_Universality_An_Elaboration_on_Form.png",
+            "talentName": "Universality: An Elaboration on Form",
+            "talentType": "Elemental Skill",
+            "description": "Rushes forward, dealing Dendro DMG to nearby opponents when the rush ends, causing a Chisel-Light Mirror to form.\nHolding this skill will cause it to behave differently.\n\nHold\nEnters Aiming Mode to adjust the direction of Alhaitham's rush attack.\n\nChisel-Light Mirror\nWhen this skill is unleashed, Alhaitham will generate 1 Chisel-Light Mirror. If there are no Mirrors at this time, he will generate 1 additional Mirror. Chisel-Light Mirrors will have the following properties:\nWhen he possesses Chisel-Light Mirrors, Alhaitham's Normal, Charged, and Plunging Attacks will be converted to Dendro DMG. This cannot be overridden.\nWhen attacks of the aforementioned kinds hit opponents, the Chisel-Light Mirrors will unleash a Projection Attack that deals AoE Dendro DMG based on the number of Mirrors on the field.\nA total of 3 Chisel-Light Mirrors can exist at once.\nThe Chisel-Light Mirrors will disappear one after the other over time, and will all disappear when Alhaitham leaves the field.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Universality_An_Elaboration_on_Form_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Universality_An_Elaboration_on_Form_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Universality_An_Elaboration_on_Form_1-Mirror_Projection_Attack_Preview.gif",
+                    "caption": "1-Mirror Projection Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Universality_An_Elaboration_on_Form_2-Mirror_Projection_Attack_Preview.gif",
+                    "caption": "2-Mirror Projection Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Universality_An_Elaboration_on_Form_3-Mirror_Projection_Attack_Preview.gif",
+                    "caption": "3-Mirror Projection Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Universality_An_Elaboration_on_Form_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Universality_An_Elaboration_on_Form_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Universality_An_Elaboration_on_Form_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "Rush Attack DMG": [
+                    "193.6 ATK\n+\n154.88 Elemental Mastery",
+                    "208.12 ATK\n+\n166.5 Elemental Mastery",
+                    "222.64 ATK\n+\n178.11 Elemental Mastery",
+                    "242 ATK\n+\n193.6 Elemental Mastery",
+                    "256.52 ATK\n+\n205.22 Elemental Mastery",
+                    "271.04 ATK\n+\n216.83 Elemental Mastery",
+                    "290.4 ATK\n+\n232.32 Elemental Mastery",
+                    "309.76 ATK\n+\n247.81 Elemental Mastery",
+                    "329.12 ATK\n+\n263.3 Elemental Mastery",
+                    "348.48 ATK\n+\n278.78 Elemental Mastery",
+                    "367.84 ATK\n+\n294.27 Elemental Mastery",
+                    "387.2 ATK\n+\n309.76 Elemental Mastery",
+                    "411.4 ATK\n+\n329.12 Elemental Mastery"
+                ],
+                "Projection Attack Interval": [
+                    "1.6s"
+                ],
+                "1-Mirror Projection Attack DMG": [
+                    "67.2 ATK\n+\n134.4 Elemental Mastery",
+                    "72.24 ATK\n+\n144.48 Elemental Mastery",
+                    "77.28 ATK\n+\n154.56 Elemental Mastery",
+                    "84 ATK\n+\n168 Elemental Mastery",
+                    "89.04 ATK\n+\n178.08 Elemental Mastery",
+                    "94.08 ATK\n+\n188.16 Elemental Mastery",
+                    "100.8 ATK\n+\n201.6 Elemental Mastery",
+                    "107.52 ATK\n+\n215.04 Elemental Mastery",
+                    "114.24 ATK\n+\n228.48 Elemental Mastery",
+                    "120.96 ATK\n+\n241.92 Elemental Mastery",
+                    "127.68 ATK\n+\n255.36 Elemental Mastery",
+                    "134.4 ATK\n+\n268.8 Elemental Mastery",
+                    "142.8 ATK\n+\n285.6 Elemental Mastery"
+                ],
+                "2-Mirror Projection Attack DMG": [
+                    "(67.2 ATK\n+\n134.4 Elemental Mastery)×2",
+                    "(72.24 ATK\n+\n144.48 Elemental Mastery)×2",
+                    "(77.28 ATK\n+\n154.56 Elemental Mastery)×2",
+                    "(84 ATK\n+\n168 Elemental Mastery)×2",
+                    "(89.04 ATK\n+\n178.08 Elemental Mastery)×2",
+                    "(94.08 ATK\n+\n188.16 Elemental Mastery)×2",
+                    "(100.8 ATK\n+\n201.6 Elemental Mastery)×2",
+                    "(107.52 ATK\n+\n215.04 Elemental Mastery)×2",
+                    "(114.24 ATK\n+\n228.48 Elemental Mastery)×2",
+                    "(120.96 ATK\n+\n241.92 Elemental Mastery)×2",
+                    "(127.68 ATK\n+\n255.36 Elemental Mastery)×2",
+                    "(134.4 ATK\n+\n268.8 Elemental Mastery)×2",
+                    "(142.8 ATK\n+\n285.6 Elemental Mastery)×2"
+                ],
+                "3-Mirror Projection Attack DMG": [
+                    "(67.2 ATK\n+\n134.4 Elemental Mastery)×3",
+                    "(72.24 ATK\n+\n144.48 Elemental Mastery)×3",
+                    "(77.28 ATK\n+\n154.56 Elemental Mastery)×3",
+                    "(84 ATK\n+\n168 Elemental Mastery)×3",
+                    "(89.04 ATK\n+\n178.08 Elemental Mastery)×3",
+                    "(94.08 ATK\n+\n188.16 Elemental Mastery)×3",
+                    "(100.8 ATK\n+\n201.6 Elemental Mastery)×3",
+                    "(107.52 ATK\n+\n215.04 Elemental Mastery)×3",
+                    "(114.24 ATK\n+\n228.48 Elemental Mastery)×3",
+                    "(120.96 ATK\n+\n241.92 Elemental Mastery)×3",
+                    "(127.68 ATK\n+\n255.36 Elemental Mastery)×3",
+                    "(134.4 ATK\n+\n268.8 Elemental Mastery)×3",
+                    "(142.8 ATK\n+\n285.6 Elemental Mastery)×3"
+                ],
+                "Chisel-Light Mirror Removal Interval": [
+                    "4s"
+                ],
+                "CD": [
+                    "18s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Talent_Particular_Field_Fetters_of_Phenomena.png",
+            "talentName": "Particular Field: Fetters of Phenomena",
+            "talentType": "Elemental Burst",
+            "description": "Creates a Particular Binding Field and deals multiple instances of AoE Dendro DMG.\nIf Chisel-Light Mirrors exist when this ability is unleashed, all such Mirrors will be consumed and increase the number of DMG instances dealt.\n2s after this ability is unleashed, if 0/1/2/3 Mirrors were consumed, Alhaitham will generate 3/2/1/0 new Mirrors in turn.\n",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Particular_Field_Fetters_of_Phenomena_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Single-Instance DMG": [
+                    "121.6 ATK\n+\n97.28 Elemental Mastery",
+                    "130.72 ATK\n+\n104.58 Elemental Mastery",
+                    "139.84 ATK\n+\n111.87 Elemental Mastery",
+                    "152 ATK\n+\n121.6 Elemental Mastery",
+                    "161.12 ATK\n+\n128.9 Elemental Mastery",
+                    "170.24 ATK\n+\n136.19 Elemental Mastery",
+                    "182.4 ATK\n+\n145.92 Elemental Mastery",
+                    "194.56 ATK\n+\n155.65 Elemental Mastery",
+                    "206.72 ATK\n+\n165.38 Elemental Mastery",
+                    "218.88 ATK\n+\n175.1 Elemental Mastery",
+                    "231.04 ATK\n+\n184.83 Elemental Mastery",
+                    "243.2 ATK\n+\n194.56 Elemental Mastery",
+                    "258.4 ATK\n+\n206.72 Elemental Mastery"
+                ],
+                "Basic Attack Instances": [
+                    "4"
+                ],
+                "1-Mirror Attack Instances": [
+                    "6"
+                ],
+                "2-Mirror Attack Instances": [
+                    "8"
+                ],
+                "3-Mirror Attack Instances": [
+                    "10"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Four-Causal_Correction.png",
+            "talentName": "Four-Causal Correction",
+            "talentType": "1st Ascension Passive",
+            "description": "When Alhaitham's Charged or Plunging Attacks hit opponents, they will generate 1 Chisel-Light Mirror. This effect can be triggered once every 12s.\n",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Talent_Mysteries_Laid_Bare.png",
+            "talentName": "Mysteries Laid Bare",
+            "talentType": "4th Ascension Passive",
+            "description": "Each point of Alhaitham's Elemental Mastery will increase the DMG dealt by Projection Attacks and Particular Field: Fetters of Phenomena by 0.1%.\nThe maximum DMG increase this way for both these abilities is 100%.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Talent_Law_of_Reductive_Overdetermination.png",
+            "talentName": "Law of Reductive Overdetermination",
+            "talentType": "Utility Passive",
+            "description": "When Alhaitham crafts Weapon Ascension Materials, he has a 10% chance to receive double the product.\n",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Constellation_Intuition.png",
+            "name": "Intuition",
+            "level": 1,
+            "description": "When a Projection Attack hits an opponent, Universality: An Elaboration on Form's CD is decreased by 1.2s. This effect can be triggered once every 1s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Constellation_Debate.png",
+            "name": "Debate",
+            "level": 2,
+            "description": "When Alhaitham generates a Chisel-Light Mirror, his Elemental Mastery will be increased by 50 for 8 seconds, max 4 stacks. Each stack's duration is counted independently. This effect can be triggered even when the maximum number of Chisel-Light Mirrors has been reached."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Constellation_Negation.png",
+            "name": "Negation",
+            "level": 3,
+            "description": "Increases the Level of Universality: An Elaboration on Form by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Constellation_Elucidation.png",
+            "name": "Elucidation",
+            "level": 4,
+            "description": "When Particular Field: Fetters of Phenomena is unleashed, the following effects will become active based on the number of Chisel-Light Mirrors consumed and created this time around:\nEach Mirror consumed will increase the Elemental Mastery of all other nearby party members by 30 for 15s.\nEach Mirror generated will grant Alhaitham a 10% Dendro DMG Bonus for 15s.\n\nThe pre-existing duration of the aforementioned effects will be cleared if you use Particular Field: Fetters of Phenomena again while they are in effect."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Constellation_Sagacity.png",
+            "name": "Sagacity",
+            "level": 5,
+            "description": "Increases the Level of Particular Field: Fetters of Phenomena by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Constellation_Structuration.png",
+            "name": "Structuration",
+            "level": 6,
+            "description": "Alhaitham gains the following effects:\n2 seconds after Particular Field: Fetters of Phenomena is unleashed, he will generate 3 Chisel-Light Mirrors regardless of the number of mirrors consumed.\nIf Alhaitham generates Chisel-Light Mirrors when their numbers have already maxed out, his CRIT Rate and CRIT DMG will increase by 10% and 70% respectively for 6s. If this effect is triggered again during its initial duration, the duration remaining will be increased by 6s.\n▼Gameplay Notes▼\n▼Preview▼"
+        }
+    ],
+    "imageUrls": {
+        "card": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Alhaitham_Card.png",
+        "wish": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Character_Alhaitham_Full_Wish.png",
+        "inGame": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Character_Alhaitham_Game.png",
+        "nameCard": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Item_Alhaitham_Enlightenment.png"
+    },
+    "version": "3.4"
+}

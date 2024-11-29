@@ -1,0 +1,91 @@
+{
+    "Ororon": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Namecard_Background_Ororon_Nightshade.png",
+                "caption": "Ororon: Nightshade Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Ororon_Nightshade.png",
+                "caption": "Ororon: Nightshade Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Namecard_Banner_Ororon_Nightshade.png",
+                "caption": "Ororon: Nightshade Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Spiritvessel_Snapshot_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Spiritvessel_Snapshot_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Spiritvessel_Snapshot_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Spiritvessel_Snapshot_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Dark_Voices_Echo_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Dark_Voices_Echo_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Night%27s_Sling_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Night%27s_Sling_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ]
+    }
+}
