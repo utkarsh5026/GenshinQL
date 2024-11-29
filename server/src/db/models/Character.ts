@@ -37,6 +37,9 @@ export default class Character {
   @Column()
   iconUrl: string;
 
+  @Column({ nullable: true })
+  version: string;
+
   @OneToMany(
     () => CharacterTalent,
     (characterTalent) => characterTalent.character,
