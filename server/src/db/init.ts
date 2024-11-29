@@ -19,6 +19,8 @@ import AttackAnimation from "./models/AttackAnimation";
 import Gallery from "./models/Gallery";
 import ScreenAnimationMedia from "./models/ScreenAnimationMedia";
 import WeaponMaterialImages from "./models/WeaponMaterialImages";
+import PaimonPaintings from "./models/PaimonPaintings";
+import HoyolabDetailedImages from "./models/HoyolabDetailedImages";
 
 export const dataSource = new DataSource({
   type: "sqlite",
@@ -43,6 +45,8 @@ export const dataSource = new DataSource({
     Gallery,
     ScreenAnimationMedia,
     WeaponMaterialImages,
+    PaimonPaintings,
+    HoyolabDetailedImages,
   ],
 });
 
