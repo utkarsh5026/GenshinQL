@@ -19,6 +19,13 @@ export const CHARACTER_DIR = path.join(BASE_DIR, CHARACTER_DIR_NAME);
 export const WEAPONS_DIR = path.join(BASE_DIR, WEAPON_DIR_NAME);
 export const TALENT_DIR = path.join(BASE_DIR, TALENT_DIR_NAME);
 
+/**
+ * Loads and parses JSON data from a file.
+ * @param filepath - Path to the JSON file. If it doesn't end in .json, the extension will be added
+ * @template T - The expected type of the parsed JSON data
+ * @returns The parsed JSON data cast to type T, or null if the file doesn't exist
+ * @throws {Error} If the file exists but contains invalid JSON
+ */
 export const loadJsonData = async <T>(filepath: string): Promise<T | null> => {
   if (!filepath.endsWith(".json")) filepath += ".json";
 
