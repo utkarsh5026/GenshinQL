@@ -53,7 +53,7 @@ export const dataSource = new DataSource({
 /**
  * Initializes the database connection and optionally drops existing database
  * @param drop - If true, drops the existing database before initializing
- * @returns Promise that resolves when database is initialized
+ * @returns Promise that resolves when a database is initialized
  */
 export async function initDb(drop = false) {
   const fileLocation = path.join(__dirname, "genshin.db");
