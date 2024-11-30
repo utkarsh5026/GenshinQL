@@ -1,9 +1,9 @@
-import { saveJson, setupDriver, URL } from "./setup";
+import { setupDriver } from "./setup";
 import { By, WebDriver } from "selenium-webdriver";
-import { z } from "zod";
-import { talentDaySchema } from "./schema";
-
-const TALENT_URL = `${URL}/Character_Talent_Material`;
+import { TalentDaySchema } from "./schema";
+import { getParentNextTableSibling } from "./utils";
+import { TALENT_URL } from "./urls";
+import { saveFile, TALENT_DIR, TALENT_FILE } from "./fileio";
 
 const locations = [
   "Mondstadt",
@@ -13,8 +13,6 @@ const locations = [
   "Fontaine",
   "Natlan",
 ] as const;
-type Location = (typeof locations)[number];
-type Talent = z.infer<typeof talentDaySchema>;
 
 const parseUrl = (url: string) => url.split("/revision/")[0];
 
@@ -23,13 +21,13 @@ const parseUrl = (url: string) => url.split("/revision/")[0];
  * @param driver The WebDriver instance used to navigate and scrape the web page.
  */
 async function loadTalents(driver: WebDriver) {
-  const loc: Record<string, Talent[]> = {};
-  for (const location of locations) {
-    loc[location] = await findTalentsForRegion(location, driver);
-  }
+  const loc: Record<string, TalentDaySchema[]> = {};
 
   try {
-    await saveJson(loc, "talents", "dailyTalents");
+    for (const location of locations) {
+      loc[location] = await findTalentsForRegion(location, driver);
+    }
+    await saveFile(loc, TALENT_DIR, TALENT_FILE);
   } catch (error) {
     console.error("Error saving talents:", error);
   }
@@ -41,19 +39,16 @@ async function loadTalents(driver: WebDriver) {
  * @param driver The WebDriver instance used to navigate and scrape the web page.
  * @returns A promise that resolves to an array of Talent objects.
  */
-async function findTalentsForRegion(
-  region: Location,
+export async function findTalentsForRegion(
+  region: string,
   driver: WebDriver
-): Promise<Talent[]> {
-  const table = await driver
-    .findElement(By.css(`span#${region}`))
-    .findElement(By.xpath("./parent::*"))
-    .findElement(By.xpath("./following-sibling::table"));
+): Promise<TalentDaySchema[]> {
+  const table = await getParentNextTableSibling(driver, `span#${region}`);
 
   const tableBody = await table.findElement(By.css("tbody"));
   const rows = await tableBody.findElements(By.css("tr"));
 
-  const talents: Talent[] = [];
+  const talents: TalentDaySchema[] = [];
 
   for (const row of rows) {
     const cells = await row.findElements(By.css("td"));
@@ -71,9 +66,11 @@ async function findTalentsForRegion(
         return { name, url: parseUrl(url) };
       })
     );
+
     const characterContainers = await cells[2].findElements(
       By.css("span.card-body")
     );
+
     const characters = await Promise.all(
       characterContainers.map(async (container) => {
         const name = await container
@@ -88,11 +85,12 @@ async function findTalentsForRegion(
 
     talents.push({ day, books, characters });
   }
-
   return talents;
 }
 
-async function loadDailyTalents() {
+async function main() {
+  const args = process.argv.slice(2);
+
   const driver = await setupDriver();
   await driver.get(TALENT_URL);
   try {
@@ -102,4 +100,6 @@ async function loadDailyTalents() {
   }
 }
 
-loadDailyTalents().then(() => console.log("Done!"));
+if (require.main === module) {
+  main().then(() => console.log("Done!"));
+}
