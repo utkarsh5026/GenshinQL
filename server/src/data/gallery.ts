@@ -7,13 +7,15 @@ import {
   waitForElementCss,
 } from "./setup";
 import path from "path";
-import { imageSchema } from "./schema";
-import { z } from "zod";
-
-type GenshinImage = z.infer<typeof imageSchema>;
-
-const CHARACTERS = "characters";
-const GALLERY_FILE = "gallery.json";
+import { AnimationSchema, GallerySchema, GenshinImageSchema } from "./schema";
+import {
+  CHARACTER_DIR,
+  CHARACTER_DIR_NAME,
+  GALLERY_FILE,
+  getLatestVersionFile,
+  loadJsonData,
+} from "./fileio";
+import { getParentNextDivSibling } from "./utils";
 
 const parseUrl = (url: string) => url.split("/revision/")[0];
 
@@ -31,15 +33,18 @@ async function loadCharactersGallery(
   force: boolean = false
 ): Promise<void> {
   const characters = await loadJsonPath(
-    path.join(CHARACTERS, "characters.json")
+    path.join(CHARACTER_DIR, "characters.json")
   );
-  const alreadySaved = await loadJsonPath(path.join(CHARACTERS, GALLERY_FILE));
+  const alreadySaved = await loadJsonPath(
+    path.join(CHARACTER_DIR, GALLERY_FILE)
+  );
 
   const charGalleryMap: Record<string, any> = alreadySaved;
   for (const char of characters) {
     try {
       const name = char.name.split(" ").join("_");
       if (!force && name in alreadySaved) continue;
+
       console.log(`Scraping ${char.name}`);
       charGalleryMap[name] = await getCharacterGalleryImages(driver, name);
       console.log(`Scraped ${char.name}`);
@@ -58,16 +63,12 @@ async function loadCharactersGallery(
  *
  * @param {WebDriver} driver - Selenium WebDriver instance
  * @param {string} character - Character name in URL-friendly format
- * @returns {Promise<{
- *   screenAnimations: Array<GenshinImage>,
- *   nameCards: Array<GenshinImage>,
- *   attackAnimations: Array<{
- *     skill: "Normal_Attack" | "Elemental_Burst" | "Elemental_Skill",
- *     animations: Array<GenshinImage>
- *   }>
- * }>}
+ * @returns {Promise<GallerySchema>}
  */
-async function getCharacterGalleryImages(driver: WebDriver, character: string) {
+export async function getCharacterGalleryImages(
+  driver: WebDriver,
+  character: string
+): Promise<GallerySchema> {
   const galleryUrl = `${URL}/${character}/Gallery`;
   await driver.get(galleryUrl);
 
@@ -92,6 +93,14 @@ async function getCharacterGalleryImages(driver: WebDriver, character: string) {
     screenAnimations,
     nameCards,
     attackAnimations,
+    detailedImages: await getImagesAfterHeading(
+      driver,
+      "span#Character_Details"
+    ),
+    stickers: await getImagesAfterHeading(
+      driver,
+      'span[id="Paimon\'s_Paintings"]'
+    ),
   };
 }
 
@@ -100,11 +109,11 @@ async function getCharacterGalleryImages(driver: WebDriver, character: string) {
  * Locates and extracts image URLs and captions from figure elements.
  *
  * @param {WebDriver} driver - Selenium WebDriver instance
- * @returns {Promise<Array<GenshinImage>>}
+ * @returns {Promise<Array<AnimationSchema>>}
  */
 async function getCharacterScreenAnimations(
   driver: WebDriver
-): Promise<GenshinImage[]> {
+): Promise<AnimationSchema[]> {
   const cssSelector = "span#Character_Screen_Animations";
   await waitForElementCss(driver, cssSelector);
 
@@ -122,11 +131,11 @@ async function getCharacterScreenAnimations(
  * Locates and extracts image URLs and captions from the name card section.
  *
  * @param {WebDriver} driver - Selenium WebDriver instance
- * @returns {Promise<Array<GenshinImage>>}
+ * @returns {Promise<Array<GenshinImageSchema>>}
  */
 async function getCharacterNameCard(
   driver: WebDriver
-): Promise<GenshinImage[]> {
+): Promise<GenshinImageSchema[]> {
   const cssSelector = "span#Namecard";
   await waitForElementCss(driver, cssSelector);
 
@@ -144,12 +153,12 @@ async function getCharacterNameCard(
  *
  * @param {WebDriver} driver - Selenium WebDriver instance
  * @param {string} skill - Attack type ("Normal_Attack", "Elemental_Burst", or "Elemental_Skill")
- * @returns {Promise<Array<GenshinImage>>}
+ * @returns {Promise<Array<AnimationSchema>>}
  */
 async function getCharacterAttackAnimations(
   driver: WebDriver,
   skill: string
-): Promise<GenshinImage[]> {
+): Promise<AnimationSchema[]> {
   const cssSelector = `span#${skill}`;
   await waitForElementCss(driver, cssSelector);
 
@@ -169,7 +178,11 @@ async function getCharacterAttackAnimations(
  * @param {WebElement[]} figures - Array of WebElement objects representing figures
  * @returns {Promise<Array<{url: string, caption: string, videoUrl: string, videoType: string}>>}
  */
-async function parseFigures(figures: WebElement[]) {
+async function parseFigures(
+  figures: WebElement[]
+): Promise<
+  Array<{ url: string; caption: string; videoUrl: string; videoType: string }>
+> {
   return await Promise.all(
     figures.map(async (figure) => {
       try {
@@ -206,9 +219,11 @@ async function parseFigures(figures: WebElement[]) {
  * Handles errors by returning empty strings for failed extractions.
  *
  * @param {WebElement[]} images - Array of WebElement objects representing images
- * @returns {Promise<Array<GenshinImage>>}
+ * @returns {Promise<Array<GenshinImageSchema>>}
  */
-async function parseImages(images: WebElement[]): Promise<GenshinImage[]> {
+async function parseImages(
+  images: WebElement[]
+): Promise<GenshinImageSchema[]> {
   return await Promise.all(
     images.map(async (img) => {
       try {
@@ -243,6 +258,46 @@ async function main(): Promise<void> {
   }
 }
 
-main()
-  .then(() => console.log("Done"))
-  .catch(console.error);
+/**
+ * Retrieves and parses images that appear after a specified heading in the DOM.
+ *
+ * @param driver - Selenium WebDriver instance for browser automation
+ * @param headingSelector - CSS selector string to find the heading element
+ * @returns Promise resolving to array of image objects with urls and captions
+ * @throws Error if heading element cannot be found or images cannot be parsed
+ */
+async function getImagesAfterHeading(
+  driver: WebDriver,
+  headingSelector: string
+): Promise<GenshinImageSchema[]> {
+  try {
+    await waitForElementCss(driver, headingSelector);
+    const container = await getParentNextDivSibling(driver, headingSelector);
+    const imgs = await container.findElements(By.css("img"));
+    return await parseImages(imgs);
+  } catch (error) {
+    console.error(`Error getting images after ${headingSelector}:`, error);
+    return [];
+  }
+}
+
+export async function saveGalleryFile(
+  charGallery: Record<string, GallerySchema>,
+  rewrite: boolean = false
+) {
+  const gallery = await loadJsonData<Record<string, GallerySchema>>(
+    path.join(CHARACTER_DIR, GALLERY_FILE)
+  );
+
+  if (!gallery) throw new Error("Gallery file not found");
+
+  const newGallery = rewrite ? charGallery : { ...gallery, ...charGallery };
+  const newFile = await getLatestVersionFile(CHARACTER_DIR, GALLERY_FILE, true);
+  await saveJson(newGallery, CHARACTER_DIR_NAME, newFile);
+}
+
+if (require.main === module) {
+  main()
+    .then(() => console.log("Done"))
+    .catch(console.error);
+}
