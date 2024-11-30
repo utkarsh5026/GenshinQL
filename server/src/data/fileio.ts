@@ -10,7 +10,7 @@ export const TALENT_DIR_NAME = "talents";
 export const GALLERY_FILE = "gallery_op_latest";
 export const BASE_CHARACTERS_FILE = "baseCharacters";
 export const ADVANCED_CHARACTERS_FILE = "advancedCharacters";
-export const TALENT_FILE = "talents";
+export const TALENT_FILE = "dailyTalents";
 export const WEAPONS_DETAILED_FILE = "weaponsDetailed";
 
 // directories paths
@@ -107,7 +107,7 @@ export async function saveFileWithNewVersion(
   data: any,
   fullPath: string,
   fileStartsWith: string
-) {
+): Promise<void> {
   const newFile = await getLatestVersionFile(fullPath, fileStartsWith, true);
   await saveJson(data, fullPath, newFile);
 }
@@ -129,4 +129,48 @@ export async function listFiles(fullPath: string): Promise<string[]> {
     console.error(`Error reading directory ${fullPath}:`, error);
     return [];
   }
+}
+
+/**
+ * Saves data to a JSON file with an auto-incrementing version number in the filename.
+ * Gets the next version number and saves the data with that version.
+ *
+ * @param {Record<string, T>} data - The data to save to the JSON file
+ * @param {string} fullPath - The full path to the directory to save the file in
+ * @param {string} fileName - The filename to save the data as.
+ * @param {boolean} overwrite - Whether to overwrite the file if it exists
+ */
+export async function saveFile<T>(
+  data: Record<string, T>,
+  fullPath: string,
+  fileName: string,
+  overwrite: boolean = false
+) {
+  const oldFileName = await getLatestVersionFile(fullPath, fileName, false);
+  console.log(`File found: ${oldFileName}`);
+
+  if (!overwrite) {
+    const existingData = await loadJsonData<Record<string, T>>(
+      path.join(fullPath, oldFileName)
+    );
+
+    if (existingData) {
+      const newData = { ...existingData, ...data };
+      await saveFileWithNewVersion(newData, fullPath, fileName);
+    } else await saveFileWithNewVersion(data, fullPath, fileName);
+  } else await saveFileWithNewVersion(data, fullPath, fileName);
+}
+
+/**
+ * Loads the contents of the latest version of a file in a directory.
+ * @param fullPath - Path to the directory
+ * @param fileName - The filename to load the contents of
+ * @returns The contents of the latest version of the file, or null if the file doesn't exist
+ */
+export async function loadLatestFileContents<T>(
+  fullPath: string,
+  fileName: string
+): Promise<T | null> {
+  const file = await getLatestVersionFile(fullPath, fileName, false);
+  return await loadJsonData<T>(path.join(fullPath, file));
 }
