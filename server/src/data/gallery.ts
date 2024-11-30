@@ -1,21 +1,9 @@
 import { By, WebDriver, WebElement } from "selenium-webdriver";
-import {
-  loadJsonPath,
-  saveJson,
-  setupDriver,
-  URL,
-  waitForElementCss,
-} from "./setup";
-import path from "path";
+import { setupDriver, URL, waitForElementCss } from "./setup";
 import { AnimationSchema, GallerySchema, GenshinImageSchema } from "./schema";
-import {
-  CHARACTER_DIR,
-  CHARACTER_DIR_NAME,
-  GALLERY_FILE,
-  getLatestVersionFile,
-  loadJsonData,
-} from "./fileio";
-import { getParentNextDivSibling } from "./utils";
+import { CHARACTER_DIR, GALLERY_FILE, loadJsonData, saveFile } from "./fileio";
+import { getParentNextDivSibling, parseCharacterName } from "./utils";
+import { loadCharacters, loadCharactersGallery } from "./load";
 
 const parseUrl = (url: string) => url.split("/revision/")[0];
 
@@ -28,21 +16,24 @@ const parseUrl = (url: string) => url.split("/revision/")[0];
  * @param {boolean} [force=false] - Force re-scraping of already saved characters
  * @returns {Promise<void>}
  */
-async function loadCharactersGallery(
+async function getCharacterGallery(
   driver: WebDriver,
   force: boolean = false
 ): Promise<void> {
-  const characters = await loadJsonPath(
-    path.join(CHARACTER_DIR, "characters.json")
-  );
-  const alreadySaved = await loadJsonPath(
-    path.join(CHARACTER_DIR, GALLERY_FILE)
-  );
+  type CharacterGalleryMap = Record<string, GallerySchema>;
+  const characters = await loadCharacters();
 
-  const charGalleryMap: Record<string, any> = alreadySaved;
+  if (!characters) throw new Error("Characters not found");
+  console.log(characters?.length);
+
+  const alreadySaved = await loadCharactersGallery();
+  console.log(alreadySaved);
+  if (!alreadySaved) throw new Error("Gallery file not found");
+
+  const charGalleryMap: CharacterGalleryMap = {};
   for (const char of characters) {
     try {
-      const name = char.name.split(" ").join("_");
+      const name = parseCharacterName(char.name);
       if (!force && name in alreadySaved) continue;
 
       console.log(`Scraping ${char.name}`);
@@ -53,8 +44,7 @@ async function loadCharactersGallery(
     }
   }
 
-  await saveJson(charGalleryMap, "characters", "gallery_op_latest");
-  console.log("Gallery saved");
+  await saveFile(charGalleryMap, CHARACTER_DIR, GALLERY_FILE, force);
 }
 
 /**
@@ -244,21 +234,6 @@ async function parseImages(
 }
 
 /**
- * Main entry point for the scraper.
- * Sets up the WebDriver, runs the scraping process, and ensures cleanup.
- *
- * @returns {Promise<void>}
- */
-async function main(): Promise<void> {
-  const driver = await setupDriver();
-  try {
-    await loadCharactersGallery(driver, true);
-  } finally {
-    await driver.quit();
-  }
-}
-
-/**
  * Retrieves and parses images that appear after a specified heading in the DOM.
  *
  * @param driver - Selenium WebDriver instance for browser automation
@@ -281,19 +256,21 @@ async function getImagesAfterHeading(
   }
 }
 
-export async function saveGalleryFile(
-  charGallery: Record<string, GallerySchema>,
-  rewrite: boolean = false
-) {
-  const gallery = await loadJsonData<Record<string, GallerySchema>>(
-    path.join(CHARACTER_DIR, GALLERY_FILE)
-  );
-
-  if (!gallery) throw new Error("Gallery file not found");
-
-  const newGallery = rewrite ? charGallery : { ...gallery, ...charGallery };
-  const newFile = await getLatestVersionFile(CHARACTER_DIR, GALLERY_FILE, true);
-  await saveJson(newGallery, CHARACTER_DIR_NAME, newFile);
+/**
+ * Main entry point for the scraper.
+ * Sets up the WebDriver, runs the scraping process, and ensures cleanup.
+ *
+ * @returns {Promise<void>}
+ */
+async function main(): Promise<void> {
+  const driver = await setupDriver();
+  const args = process.argv.slice(2);
+  const force = args.includes("--force");
+  try {
+    await getCharacterGallery(driver, force);
+  } finally {
+    await driver.quit();
+  }
 }
 
 if (require.main === module) {
