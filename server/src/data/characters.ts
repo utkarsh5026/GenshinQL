@@ -1,27 +1,26 @@
 import { By, until, WebDriver, WebElement } from "selenium-webdriver";
-import { listFiles, loadJsonPath, saveJson, setupDriver, URL } from "./setup";
+import { setupDriver, URL } from "./setup";
 import path from "path";
-
-const CHARACTER_DIR_NAME = "characters";
+import { getParentNextTableSibling, parseCharacterName } from "./utils";
+import {
+  CHARACTER_DIR,
+  listFiles,
+  loadJsonData,
+  saveFileWithNewVersion,
+  saveJson,
+} from "./fileio";
+import {
+  AdvancedCharacterSchema,
+  BaseCharacterSchema,
+  ConstellationSchema,
+  TalentSchema,
+} from "./schema";
 
 const parseUrl = (url: string) => url.split("/revision/")[0];
 
 const waitForElement = async (driver: WebDriver, cssSelector: string) => {
   await driver.wait(until.elementLocated(By.css(cssSelector)), 10000);
 };
-
-interface Talent {
-  name: string;
-  type: string;
-  description: string;
-}
-
-interface Constellation {
-  name: string;
-  level: number;
-  description: string;
-  iconUrl: string;
-}
 
 /**
  * Scrapes character data from the main characters page.
@@ -41,16 +40,16 @@ async function scrapeCharacters(
     const rowElements = await driver.findElements(
       By.css(`${tableSelector} tr`)
     );
-    const rows = await Promise.all(
+
+    return await Promise.all(
       rowElements.slice(1).map(async (row) => {
         const cells = await row.findElements(By.css("td"));
         const texts = await Promise.all(cells.map((cell) => cell.getText()));
 
-        const iconUrl = await cells[0]
+        texts[0] = await cells[0]
           .findElement(By.css("img"))
           .getAttribute("data-src");
 
-        texts[0] = iconUrl;
         const rarity = await cells[2]
           .findElement(By.css("img"))
           .getAttribute("alt");
@@ -78,8 +77,6 @@ async function scrapeCharacters(
         return texts;
       })
     );
-
-    return rows;
   } catch (error) {
     console.error("Error scraping characters:", error);
     return undefined;
@@ -108,14 +105,33 @@ export async function scrapeCharacterDetailed(
     const imageUrls = await getCharacterImages(driver);
     const talents = await getTalents(driver);
     const constellations = await getConstellations(driver);
+    const version = await getCharacterVersion(driver);
     return {
       talents,
       constellations,
       imageUrls,
+      version,
     };
   } catch (error) {
     console.error(error);
   }
+}
+
+/**
+ * Retrieves the version number when a character was first released.
+ * Finds the Character Event Wishes table and extracts the version from the last cell
+ * of the first banner row.
+ *
+ * @param driver - The WebDriver instance used for browser automation
+ * @returns Promise resolving to the version string (e.g. "1.0")
+ */
+async function getCharacterVersion(driver: WebDriver) {
+  const selector = "span#Character_Event_Wishes";
+  const table = await getParentNextTableSibling(driver, selector);
+  const rows = await table.findElements(By.css("tr"));
+
+  const cells = await rows[1].findElements(By.css("td"));
+  return await cells[cells.length - 1].getText();
 }
 
 /**
@@ -300,14 +316,14 @@ async function getTalentScaling(driver: WebDriver, row: WebElement) {
  *          - description: Description text of the talent
  *          - figureUrls: Array of preview images and captions for the talent
  */
-async function getTalents(driver: WebDriver) {
+async function getTalents(driver: WebDriver): Promise<TalentSchema[]> {
   const talentSelector = "table.talent-table";
   await waitForElement(driver, talentSelector);
 
   const rows = await driver.findElements(By.css(`${talentSelector} tr`));
   console.log(rows.length);
 
-  const talents = [];
+  const talents: TalentSchema[] = [];
 
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i];
@@ -320,8 +336,6 @@ async function getTalents(driver: WebDriver) {
         );
         const talentName = await cells[1].getText();
         const talentType = await cells[2].getText();
-
-        console.log(talentName, talentType);
 
         const descRow = rows[i + 1];
         const descCells = await descRow.findElement(By.css("td"));
@@ -354,12 +368,14 @@ async function getTalents(driver: WebDriver) {
  * @param driver - The WebDriver instance used for browser automation.
  * @returns A Promise that resolves to an array of Constellation objects.
  */
-async function getConstellations(driver: WebDriver): Promise<Constellation[]> {
+async function getConstellations(
+  driver: WebDriver
+): Promise<ConstellationSchema[]> {
   const tableSelector = "table.constellation-table";
   await waitForElement(driver, tableSelector);
 
   const rows = await driver.findElements(By.css(`${tableSelector} tr`));
-  const constellations: Constellation[] = [];
+  const constellations: ConstellationSchema[] = [];
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i];
     const cells = await row.findElements(By.css("td"));
@@ -391,30 +407,35 @@ async function getConstellations(driver: WebDriver): Promise<Constellation[]> {
  * @param driver - The WebDriver instance used for browser automation.
  * @returns A Promise that resolves to an array of character objects, excluding "Aloy" and "Traveler".
  */
-export async function scrapeCharacterTable(driver: WebDriver) {
+export async function scrapeCharacterTable(
+  driver: WebDriver
+): Promise<BaseCharacterSchema[]> {
   const characters = await scrapeCharacters(driver);
 
-  return characters
-    ?.map((character) => {
-      return {
-        iconUrl: parseUrl(character[0]),
-        name: character[1],
-        rarity: character[2],
-        element: character[3],
-        weaponType: character[4],
-        region: character[5],
-        elementUrl: parseUrl(character[7]),
-        weaponUrl: parseUrl(character[9]),
-        regionUrl: parseUrl(character[8]),
-      };
-    })
-    .filter(
-      (character) => character.name !== "Aloy" && character.name !== "Traveler"
-    );
+  return (
+    characters
+      ?.map((character) => {
+        return {
+          iconUrl: parseUrl(character[0]),
+          name: character[1],
+          rarity: character[2],
+          element: character[3],
+          weaponType: character[4],
+          region: character[5],
+          elementUrl: parseUrl(character[7]),
+          weaponUrl: parseUrl(character[9]),
+          regionUrl: parseUrl(character[8]),
+        };
+      })
+      .filter(
+        (character) =>
+          character.name !== "Aloy" && character.name !== "Traveler"
+      ) ?? []
+  );
 }
 
 /**
-/**
+ /**
  * Scrapes character information and saves it to a JSON file.
  *
  * @param driver - The WebDriver instance used for browser automation.
@@ -422,19 +443,10 @@ export async function scrapeCharacterTable(driver: WebDriver) {
  */
 async function saveCharacters(driver: WebDriver) {
   const charactersTable = await scrapeCharacterTable(driver);
-  console.log(JSON.stringify(charactersTable, null, 2));
-  await saveJson(charactersTable, "characters", "characters");
+  const filePath = path.join(CHARACTER_DIR, "characters.json");
+  await saveFileWithNewVersion(charactersTable, CHARACTER_DIR, "characters");
   return charactersTable;
 }
-
-/**
- * Loads character data from a JSON file.
- *
- * @returns {Promise<any>} A promise that resolves to the loaded character data.
- */
-const loadCharacters = async () => {
-  return loadJsonPath(path.join(CHARACTER_DIR_NAME, "characters.json"));
-};
 
 /**
  * Scrapes and saves detailed character information for characters that haven't been processed yet.
@@ -445,47 +457,97 @@ const loadCharacters = async () => {
  */
 const scrapeAndSaveDetailedCharacterInfo = async (
   driver: WebDriver,
-  force = false
-) => {
-  const characters = await loadCharacters();
-  const savedCharacters = await listFiles(path.join("characters", "detailed"));
-  let canFetch = false;
+  force: boolean = false
+): Promise<void> => {
+  const characters = await loadJsonData<BaseCharacterSchema[]>(
+    path.join(CHARACTER_DIR, "characters.json")
+  );
 
-  if (characters) {
-    for (const char of characters) {
-      const name = char.name.split(" ").join("_");
-      if (!force && savedCharacters.includes(name)) {
-        console.log(`${char.name} already saved`);
-        continue;
-      }
-
-      const canFetch = ["Xiao", "Sucrose", "Mona"].includes(name);
-      if (!canFetch) continue;
-
-      try {
-        const name = char.name.split(" ").join("_");
-        console.log(`Scraping ${name}`);
-        const desc = await scrapeCharacterDetailed(driver, name);
-
-        const fullDesc = {
-          ...char,
-          ...desc,
-        };
-
-        saveJson(fullDesc, path.join("characters", "detailed"), name).then(
-          () => {
-            console.log(`Saved ${name}`);
-          }
-        );
-      } catch (error) {
-        console.error(`Error scraping ${char.name}:`, error);
-      }
-    }
+  if (!characters) {
+    console.error("No characters found");
+    return;
   }
+
+  await scrapeCharactersInDetail(driver, characters, force);
 };
 
-async function mergeCharacters() {
-  const characters = await loadCharacters();
+/**
+ * Scrapes detailed information for each character and saves it to individual files.
+ * After scraping all characters, combines the files into a single detailed characters file.
+ *
+ * @param driver - The Selenium WebDriver instance used for browser automation
+ * @param characters - Array of base character data to scrape details for
+ * @param force - If true, scrapes all characters even if they were previously saved.
+ *               If false, skips characters that already have saved data.
+ * @returns Promise that resolves when all characters have been scraped and saved
+ */
+export async function scrapeCharactersInDetail(
+  driver: WebDriver,
+  characters: BaseCharacterSchema[],
+  force: boolean = false
+) {
+  const detailedDir = path.join(CHARACTER_DIR, "detailed_1");
+  const savedCharacters = await listFiles(detailedDir);
+
+  for (const char of characters) {
+    const name = parseCharacterName(char.name);
+    if (!force && savedCharacters.includes(name)) {
+      console.log(`${char.name} already saved`);
+      continue;
+    }
+
+    try {
+      console.log(`Scraping ${name}`);
+      const desc = await scrapeCharacterDetailed(driver, name);
+
+      const fullDesc = {
+        ...char,
+        ...desc,
+      };
+
+      await saveJson(fullDesc, detailedDir, name);
+    } catch (error) {
+      console.error(`Error scraping ${char.name}:`, error);
+    }
+  }
+
+  await morphAllFilesIntoOne();
+}
+
+/**
+ * Combines all individual character detail files into a single file.
+ * Reads each character's detailed data file from the detailed subdirectory,
+ * combines them into a single object keyed by character name,
+ * and saves the combined data to a versioned file.
+ *
+ * @remarks
+ * The individual files are read from CHARACTER_DIR/detailed/
+ * The combined file is saved to CHARACTER_DIR/characters_detailed{version}.json
+ *
+ * @returns Promise that resolves when the combined file has been saved
+ */
+async function morphAllFilesIntoOne() {
+  let charactersDetailed: Record<string, AdvancedCharacterSchema> = {};
+  const charDir = path.join(CHARACTER_DIR, "detailed_1");
+  const files = await listFiles(charDir);
+
+  for (const file of files) {
+    const char = await loadJsonData<AdvancedCharacterSchema>(
+      path.join(charDir, file)
+    );
+
+    if (char)
+      charactersDetailed = {
+        ...charactersDetailed,
+        [char.name]: char,
+      };
+  }
+
+  await saveFileWithNewVersion(
+    charactersDetailed,
+    CHARACTER_DIR,
+    "characters_detailed"
+  );
 }
 
 async function main() {
@@ -503,11 +565,12 @@ async function main() {
   const driver = await setupDriver();
 
   if (args.includes("--base")) await saveCharacters(driver);
-
   if (args.includes("--detailed"))
     await scrapeAndSaveDetailedCharacterInfo(driver, true);
 
   await driver.quit();
 }
 
-main().then(() => console.log("Completed"));
+if (require.main === module) {
+  main().then(() => console.log("Completed"));
+}
