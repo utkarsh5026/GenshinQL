@@ -102,6 +102,8 @@ export const gallerySchema = z.object({
       animations: z.array(animationSchema),
     })
   ),
+  detailedImages: z.array(imageSchema).optional(),
+  stickers: z.array(imageSchema).optional(),
 });
 
 export const talentBookTypeSchema = z.union([
