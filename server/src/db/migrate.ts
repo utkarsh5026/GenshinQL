@@ -7,15 +7,16 @@ import { repo } from "./utils";
 import { z } from "zod";
 import {
   advancedCharacterSchema,
+  animationSchema,
   baseCharacterSchema,
   constellationSchema,
   gallerySchema,
+  ImageSchema,
   talentDaySchema,
   talentSchema,
-  weaponTypeSchema,
-  animationSchema,
   WeaponMaterialSchema,
   WeaponSchema,
+  weaponTypeSchema,
 } from "../data/schema";
 
 import WeaponModel from "./models/Weapon";
@@ -37,6 +38,13 @@ import { Like } from "typeorm";
 import { toOriginalName } from "../data/utils";
 import ScreenAnimationMedia from "./models/ScreenAnimationMedia";
 import WeaponMaterialImages from "./models/WeaponMaterialImages";
+import HoyolabDetailedImages from "./models/HoyolabDetailedImages";
+import PaimonPaintings from "./models/PaimonPaintings";
+import {
+  loadCharacters,
+  loadCharactersGallery,
+  loadDailyTalents,
+} from "../data/load";
 
 type WeaponTypeSchema = z.infer<typeof weaponTypeSchema>;
 type TalentDaySchema = z.infer<typeof talentDaySchema>;
@@ -83,7 +91,7 @@ async function migrateWeapons() {
   const weaponTypeRepo = repo(WeaponTypeModel);
 
   const weaponData = (await loadJsonPath(
-    path.join("weapons", "weapons_new.json")
+    path.join("weapons", "weapons_new.json"),
   )) as Record<WeaponTypeSchema, WeaponSchema[]>;
   const matMap = await createWeaponMaterialMap();
 
@@ -153,7 +161,7 @@ async function migrateWeapons() {
  */
 async function createWeaponMaterialMap() {
   const materials = (await loadJsonPath(
-    path.join("weapons", "material_calendar.json")
+    path.join("weapons", "material_calendar.json"),
   )) as Record<string, WeaponMaterialSchema[]>;
 
   (await repo(NationModel).find()).forEach((nation) => {
@@ -203,7 +211,7 @@ async function migrateWeaponMaterials() {
   const matRepo = repo(WeaponMaterial);
 
   const materials = (await loadJsonPath(
-    path.join("weapons", "material_calendar.json")
+    path.join("weapons", "material_calendar.json"),
   )) as Record<string, WeaponMaterialSchema[]>;
 
   console.dir(materials, { depth: null });
@@ -269,7 +277,7 @@ async function migrateWeaponMaterials() {
  */
 async function migrateTalentMaterials() {
   const materials = (await loadJsonPath(
-    path.join("talents", "dailyTalents.json")
+    path.join("talents", "dailyTalents.json"),
   )) as Record<string, TalentDaySchema[]>;
 
   const nations = await repo(NationModel).find();
@@ -305,7 +313,7 @@ async function migrateTalentMaterials() {
  * @throws Error if any required book type (teaching/guide/philosophy) is not found
  */
 async function createTalentBooks(
-  talentMaterials: TalentDaySchema[]
+  talentMaterials: TalentDaySchema[],
 ): Promise<TalentMaterial[]> {
   const getBookUrl = (bookType: string, mat: TalentDaySchema) => {
     const book = mat.books.find((book) => book.name.includes(bookType));
@@ -337,12 +345,12 @@ async function createTalentBooks(
           return await charRepo.findOne({
             where: { name: Like(`%${name}%`) },
           });
-        })
+        }),
       );
 
       newMat.characters = chars.filter((char) => char !== null);
       return newMat;
-    })
+    }),
   );
 }
 
@@ -366,14 +374,16 @@ async function createTalentBooks(
  * @throws Error if database operations fail
  */
 async function savePrimitives() {
-  const characters = (await loadJsonPath(
-    path.join("characters", "characters.json")
-  )) as BaseCharacterSchema[];
-  console.log(characters);
+  type StringMap = Record<string, string>;
+  const characters = await loadCharacters();
 
-  const elementMap: Record<string, string> = {};
-  const nationMap: Record<string, string> = {};
-  const weaponMap: Record<string, string> = {};
+  if (characters === null) throw new Error("Character data not found");
+
+  console.dir(characters, { depth: null, colors: true });
+
+  const elementMap: StringMap = {};
+  const nationMap: StringMap = {};
+  const weaponMap: StringMap = {};
 
   for (const char of characters) {
     const { element, region, weaponType, weaponUrl, regionUrl, elementUrl } =
@@ -442,7 +452,7 @@ async function saveCharacters() {
   const charactersToSave: CharacterModel[] = [];
   for (const charFile of characterFiles) {
     const charData = (await loadJsonPath(
-      path.join("characters", "detailed", charFile)
+      path.join("characters", "detailed", charFile),
     )) as AdvancedCharacterSchema;
 
     const {
@@ -454,6 +464,7 @@ async function saveCharacters() {
       constellations,
       talents,
       iconUrl,
+      version,
     } = charData;
 
     const newChar = new CharacterModel();
@@ -471,6 +482,8 @@ async function saveCharacters() {
     newChar.nation = await nationRepo.findOneByOrFail({
       name: region,
     });
+
+    newChar.version = version;
 
     newChar.constellations = createConstellations(constellations, newChar);
     newChar.characterTalents = createTalents(talents, newChar);
@@ -493,7 +506,7 @@ async function saveCharacters() {
  */
 function createConstellations(
   constellations: ConstellationSchema[],
-  char: CharacterModel
+  char: CharacterModel,
 ): ConstellationModel[] {
   return constellations.map((cons) => {
     const newCons = new ConstellationModel();
@@ -520,7 +533,7 @@ function createConstellations(
  */
 function createTalents(
   talents: TalentSchema[],
-  char: CharacterModel
+  char: CharacterModel,
 ): CharacterTalentModel[] {
   return talents.map((tal) => {
     const {
@@ -573,10 +586,10 @@ function createTalents(
  * @throws Error if database operations fail
  */
 async function migrateGallery() {
-  const galleryData = (await loadJsonPath(
-    path.join("characters", "gallery_op_latest.json")
-  )) as Record<string, GallerySchema>;
+  const galleryData = await loadCharactersGallery();
   const charRepo = repo(CharacterModel);
+
+  if (galleryData === null) throw new Error("Gallery data not found");
 
   const galleriesToSave: GalleryModel[] = [];
   for (const [charName, gallery] of Object.entries(galleryData)) {
@@ -585,11 +598,22 @@ async function migrateGallery() {
         name: toOriginalName(charName),
       });
 
-      const { screenAnimations, nameCards, attackAnimations } = gallery;
+      const {
+        screenAnimations,
+        nameCards,
+        attackAnimations,
+        detailedImages,
+        stickers,
+      } = gallery;
       const newGallery = new GalleryModel();
+
       newGallery.screenAnimation = createScreenAnimation(screenAnimations);
       newGallery.nameCard = createNameCard(nameCards);
       newGallery.attackAnimation = createAttackAnimation(attackAnimations);
+
+      if (detailedImages)
+        newGallery.detailedImages = createDetailedImages(detailedImages);
+      if (stickers) newGallery.paimonPaintings = createStickers(stickers);
       newGallery.character = character;
       galleriesToSave.push(newGallery);
     } catch (e) {
@@ -610,9 +634,9 @@ async function migrateGallery() {
  * @returns A ScreenAnimationModel populated with the provided data
  */
 function createScreenAnimation(
-  screenAnimations: ScreenAnimationSchema
+  screenAnimations: ScreenAnimationSchema,
 ): ScreenAnimationModel {
-  const createSceenAnimationMedia = (animation?: AnimationSchema) => {
+  const createScreenAnimationMedia = (animation?: AnimationSchema) => {
     if (!animation) return null;
     const { url, videoUrl, caption, videoType } = animation;
     const newMedia = new ScreenAnimationMedia();
@@ -628,16 +652,16 @@ function createScreenAnimation(
   });
 
   const newScreenAnimation = new ScreenAnimationModel();
-  newScreenAnimation.idleOne = createSceenAnimationMedia(capMap["Idle 1"]);
-  newScreenAnimation.idleTwo = createSceenAnimationMedia(capMap["Idle 2"]);
-  newScreenAnimation.weaponMenu = createSceenAnimationMedia(
-    capMap["Weapon Menu"]
+  newScreenAnimation.idleOne = createScreenAnimationMedia(capMap["Idle 1"]);
+  newScreenAnimation.idleTwo = createScreenAnimationMedia(capMap["Idle 2"]);
+  newScreenAnimation.weaponMenu = createScreenAnimationMedia(
+    capMap["Weapon Menu"],
   );
-  newScreenAnimation.talentMenu = createSceenAnimationMedia(
-    capMap["Talent Menu"]
+  newScreenAnimation.talentMenu = createScreenAnimationMedia(
+    capMap["Talent Menu"],
   );
-  newScreenAnimation.partySetup = createSceenAnimationMedia(
-    capMap["Party Setup"]
+  newScreenAnimation.partySetup = createScreenAnimationMedia(
+    capMap["Party Setup"],
   );
 
   return newScreenAnimation;
@@ -683,7 +707,7 @@ function createNameCard(nameCards: NameCardSchema): NameCardModel {
  * @returns An AttackAnimationModel populated with the provided data
  */
 function createAttackAnimation(
-  attackAnimations: AttackAnimationSchema
+  attackAnimations: AttackAnimationSchema,
 ): AttackAnimationModel {
   const skillMap: Record<
     (typeof attackAnimations)[number]["skill"],
@@ -705,6 +729,58 @@ function createAttackAnimation(
 }
 
 /**
+ * Creates HoyolabDetailedImages entities from image data.
+ *
+ * This function takes an array of image data and creates HoyolabDetailedImages
+ * entities with the image URLs. These represent detailed character images from
+ * the Hoyolab website.
+ *
+ * @param detailedImages - Array of image data containing URLs
+ * @returns Array of HoyolabDetailedImages entities ready to be saved
+ */
+function createDetailedImages(
+  detailedImages: ImageSchema[],
+): HoyolabDetailedImages[] {
+  return detailedImages.map((image) => {
+    const newDetailedImage = new HoyolabDetailedImages();
+    newDetailedImage.url = image.url;
+    return newDetailedImage;
+  });
+}
+
+/**
+ * Creates PaimonPaintings entities from sticker image data.
+ *
+ * This function takes an array of sticker image data and creates PaimonPaintings
+ * entities with the image URLs. These represent Paimon sticker/emoji images
+ * used in the game.
+ *
+ * @param stickers - Array of sticker image data containing URLs
+ * @returns Array of PaimonPaintings entities ready to be saved
+ */
+function createStickers(stickers: ImageSchema[]): PaimonPaintings[] {
+  return stickers.map((image) => {
+    const newSticker = new PaimonPaintings();
+    newSticker.url = image.url;
+    return newSticker;
+  });
+}
+
+async function checkAvailabilityOfFiles() {
+  const results = await Promise.all([
+    loadCharacters(),
+    loadCharactersGallery(),
+    loadDailyTalents(),
+  ]);
+
+  results.forEach((result, index) => {
+    if (result === null) {
+      throw new Error("Data not found for the function at index " + index);
+    }
+  });
+}
+
+/**
  * Main migration function that populates the database with all game data.
  *
  * This function orchestrates the entire database migration process by:
@@ -721,6 +797,7 @@ function createAttackAnimation(
  * @throws Error if any migration step fails
  */
 export async function migrate() {
+  await checkAvailabilityOfFiles();
   await initDb();
   console.log("Migrating weapons...");
   await savePrimitives();
