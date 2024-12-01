@@ -3,32 +3,17 @@
  * and update and add all the necessary JSON files.
  * use this to add newly released characters. 😊😊
  */
-import { WebDriver } from "selenium-webdriver";
-import {
-  scrapeCharactersInDetail,
-  scrapeCharacterTable,
-} from "../data/characters";
-import { setupDriver } from "../data/setup";
+import {scrapeCharactersInDetail, scrapeCharacterTable,} from "../data/characters";
+import {setupDriver} from "../data/setup";
 import Character from "../db/models/Character";
-import { repo } from "../db/utils";
-import { initDb } from "../db/init";
-import { getCharacterGalleryImages } from "../data/gallery";
-import {
-  BaseCharacterSchema,
-  GallerySchema,
-  TalentDaySchema,
-} from "../data/schema";
-import {
-  CHARACTER_DIR,
-  GALLERY_FILE,
-  saveFile,
-  saveFileWithNewVersion,
-  TALENT_DIR,
-  TALENT_FILE,
-} from "../data/fileio";
-import { findTalentsForRegion } from "../data/talents";
-import { TALENT_URL } from "../data/urls";
-import { parseCharacterName } from "../data/utils";
+import {repo} from "../db/utils";
+import {initDb} from "../db/init";
+import {getCharacterGalleryImages} from "../data/gallery";
+import {BaseCharacterSchema, GallerySchema, TalentDaySchema,} from "../data/schema";
+import {CHARACTER_DIR, GALLERY_FILE, saveFile, saveFileWithNewVersion, TALENT_DIR, TALENT_FILE,} from "../data/fileio";
+import {findTalentsForRegion} from "../data/talents";
+import {TALENT_URL} from "../data/urls";
+import {parseCharacterName} from "../data/utils";
 
 /**
  * Main pipeline for processing new Genshin Impact characters.
@@ -62,7 +47,6 @@ async function newCharactersPipeline() {
 /**
  * Scrapes and saves gallery images for new characters.
  *
- * @param driver - Selenium WebDriver instance for web scraping
  * @param characters - Array of base character data to get gallery images for
  * @returns Promise that resolves when gallery data is saved
  * @throws Error if scraping or saving fails
@@ -104,7 +88,9 @@ const getNewCharacters = async (): Promise<BaseCharacterSchema[]> => {
 
     return characters.filter(
       (character) =>
-        !existingCharacters.some((existing) => existing.name === character.name)
+        !existingCharacters.some(
+          (existing) => existing.name === character.name,
+        ),
     );
   } finally {
     await driver.quit();
