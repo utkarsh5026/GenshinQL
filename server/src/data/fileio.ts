@@ -34,7 +34,6 @@ export const loadJsonData = async <T>(filepath: string): Promise<T | null> => {
     .then(() => true)
     .catch(() => false);
   if (!exists) return null;
-
   const data = await fs.readFile(filepath, "utf8");
   return JSON.parse(data) as T;
 };
