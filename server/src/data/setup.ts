@@ -2,8 +2,7 @@ import { Builder, By, until, WebDriver } from "selenium-webdriver";
 import chrome from "selenium-webdriver/chrome";
 import fs from "fs/promises";
 import path from "path";
-
-const DATA_PATH = path.join(__dirname, "..", "..", "data");
+import { BASE_DIR } from "./fileio";
 
 /**
  * URL for the Genshin Impact Fandom wiki.
@@ -28,7 +27,7 @@ export async function setupDriver(): Promise<WebDriver> {
  * @param {string} fileName - The filename to save the data as.
  */
 export async function saveJson(data: any, subDir: string, fileName: string) {
-  const basePath = path.join(DATA_PATH, subDir);
+  const basePath = path.join(BASE_DIR, subDir);
   try {
     try {
       await fs.access(basePath);
@@ -45,7 +44,7 @@ export async function saveJson(data: any, subDir: string, fileName: string) {
 
 export async function loadJsonPath(subDir: string) {
   try {
-    const filePath = path.join(DATA_PATH, subDir);
+    const filePath = path.join(BASE_DIR, subDir);
     await fs.access(filePath);
     return JSON.parse(await fs.readFile(filePath, "utf-8"));
   } catch {
@@ -61,7 +60,7 @@ export async function loadJsonPath(subDir: string) {
  */
 export async function listDirectories(dirPath: string): Promise<string[]> {
   try {
-    const fullPath = path.join(DATA_PATH, dirPath);
+    const fullPath = path.join(BASE_DIR, dirPath);
     const entries = await fs.readdir(fullPath, { withFileTypes: true });
     return entries
       .filter((entry) => entry.isDirectory())
@@ -72,30 +71,10 @@ export async function listDirectories(dirPath: string): Promise<string[]> {
   }
 }
 
-/**
- * Lists only files (not directories) in a directory
- *
- * @param dirPath - Path to the directory
- * @returns Promise resolving to array of filenames
- */
-export async function listFiles(dirPath: string): Promise<string[]> {
-  try {
-    const fullPath = path.join(DATA_PATH, dirPath);
-    const entries = await fs.readdir(fullPath, { withFileTypes: true });
-    const files = entries
-      .filter((entry) => entry.isFile())
-      .map((entry) => entry.name);
-    return files;
-  } catch (error) {
-    console.error(`Error reading directory ${dirPath}:`, error);
-    return [];
-  }
-}
-
 export function waitForElementCss(
   driver: WebDriver,
   css: string,
-  timeout = 20000,
+  timeout = 20000
 ) {
   return driver.wait(until.elementLocated(By.css(css)), timeout);
 }
@@ -103,7 +82,7 @@ export function waitForElementCss(
 export function waitForElementXpath(
   driver: WebDriver,
   xpath: string,
-  timeout = 10000,
+  timeout = 10000
 ) {
   return driver.wait(until.elementLocated(By.xpath(xpath)), timeout);
 }
