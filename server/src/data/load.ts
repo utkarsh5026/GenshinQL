@@ -21,7 +21,7 @@ import {
 type CharacterFilter = z.infer<typeof characterFilterSchema>;
 type TalentDaySchema = z.infer<typeof talentDaySchema>;
 type CharacterGalleryMap = Record<string, GallerySchema>;
-type WeaponMap = Record<WeaponTypeSchema, WeaponSchema>;
+type WeaponMap = Record<WeaponTypeSchema, WeaponSchema[]>;
 type TalentMap = Record<string, TalentDaySchema[]>;
 
 /**
@@ -31,7 +31,7 @@ type TalentMap = Record<string, TalentDaySchema[]>;
 export function loadCharacters(): Promise<BaseCharacterSchema[] | null> {
   return loadLatestFileContents<BaseCharacterSchema[]>(
     CHARACTER_DIR,
-    BASE_CHARACTERS_FILE
+    BASE_CHARACTERS_FILE,
   );
 }
 
@@ -42,7 +42,7 @@ export function loadCharacters(): Promise<BaseCharacterSchema[] | null> {
 export function loadCharactersGallery(): Promise<CharacterGalleryMap | null> {
   return loadLatestFileContents<CharacterGalleryMap>(
     CHARACTER_DIR,
-    GALLERY_FILE
+    GALLERY_FILE,
   );
 }
 
@@ -52,7 +52,7 @@ export function loadCharactersGallery(): Promise<CharacterGalleryMap | null> {
  * @returns An array of BaseCharacter objects that match the filter criteria.
  */
 export async function filterCharacters(
-  filter: CharacterFilter
+  filter: CharacterFilter,
 ): Promise<BaseCharacterSchema[] | null> {
   const parsedFilter = characterFilterSchema.parse(filter);
   return loadCharacters().then((characters) => {

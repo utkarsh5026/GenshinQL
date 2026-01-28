@@ -10,8 +10,7 @@ import CharacterTalent from "../db/models/CharacterTalent";
 import Constellation from "../db/models/Constellation";
 import TalentMaterial from "../db/models/TalentMaterial";
 import ScreenAnimationMedia from "../db/models/ScreenAnimationMedia";
-import { z } from "zod";
-import { animationSchema } from "../data/schema";
+import { AnimationSchema } from "../data/schema";
 
 const PRIMITIVES_BUCKET = "primitives";
 const CHARACTER_BUCKET = "characters";
@@ -21,7 +20,6 @@ const SCREEN_ANIMATION_BUCKET = "screen_animations";
 const ATTACK_ANIMATION_BUCKET = "attack_animations";
 
 type FileType = "image" | "video" | "audio";
-type Animation = z.infer<typeof animationSchema>;
 
 const createCharName = (charName: string, suffix: string) =>
   `${charName}_${suffix}`;
@@ -31,7 +29,8 @@ const createCharName = (charName: string, suffix: string) =>
  *
  * @param url - The URL of the file to download.
  * @param maxRetries - The maximum number of retry attempts for downloading the file. Default is 4.
- * @param initialDelay - The initial delay in milliseconds before retrying a failed attempt. Default is 1000ms.
+ * @param initialDelay - The initial delay in milliseconds before retrying a failed attempt.
+ * Default is 1000 ms.
  * @returns A promise that resolves to an object containing the file buffer and file type.
  * @throws Will throw an error if the download fails.
  */
@@ -83,7 +82,7 @@ async function downloadFile(
  * @param fileName - The name to use for the uploaded file.
  * @param contentType - The MIME type of the file.
  * @param maxRetries - The maximum number of retry attempts for downloading and uploading the file. Default is 3.
- * @param initialDelay - The initial delay in milliseconds before retrying a failed attempt. Default is 1000ms.
+ * @param initialDelay - The initial delay in milliseconds before retrying a failed attempt. Default is 1000 ms.
  * @returns A promise that resolves to an object containing the upload response and the public URL of the uploaded file.
  * @throws Will throw an error if the operation fails after the maximum number of retries.
  */
@@ -321,7 +320,7 @@ async function uploadScreenAnimations(bucket: StorageBucketType) {
 }
 
 /**
- * Uploads attack animations media for characters to the specified storage bucket.
+ * Uploads attack animation media for characters to the specified storage bucket.
  *
  * This function retrieves all characters with their associated attack animations
  * from the database. It then downloads the image and video files for each frame
@@ -331,7 +330,7 @@ async function uploadScreenAnimations(bucket: StorageBucketType) {
  * @param bucket - The storage bucket where the attack animations will be uploaded.
  */
 async function uploadAttackAnimationsMedia(bucket: StorageBucketType) {
-  const upload = async (animation: Animation[], name: string) => {
+  const upload = async (animation: AnimationSchema[], name: string) => {
     for (let i = 0; i < animation.length; i++) {
       const frame = animation[i];
       const { url: imageUrl, videoUrl } = frame;

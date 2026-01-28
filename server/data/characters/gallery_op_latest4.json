@@ -9373,8 +9373,94 @@
                 ]
             }
         ],
-        "detailedImages": [],
-        "stickers": []
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Chasca_Character_Details_1.png",
+                "caption": "Chasca Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Chasca_Character_Details_2.png",
+                "caption": "Chasca Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Chasca_Character_Details_3.gif",
+                "caption": "Chasca Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Chasca_Character_Details_4.png",
+                "caption": "Chasca Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Chasca_Character_Details_5.png",
+                "caption": "Chasca Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Chasca_Character_Details_6.gif",
+                "caption": "Chasca Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Chasca_Character_Details_7.png",
+                "caption": "Chasca Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Chasca_Character_Details_8.gif",
+                "caption": "Chasca Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Chasca_Character_Details_9.gif",
+                "caption": "Chasca Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Chasca_Character_Details_10.gif",
+                "caption": "Chasca Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Chasca_Character_Details_11.png",
+                "caption": "Chasca Details 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Chasca_Character_Details_12.gif",
+                "caption": "Chasca Details 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Chasca_Character_Details_13.gif",
+                "caption": "Chasca Details 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Chasca_Character_Details_14.png",
+                "caption": "Chasca Details 14"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Chasca_Character_Details_15.png",
+                "caption": "Chasca Details 15"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Paimon%27s_Paintings_35_Chasca_1.png",
+                "caption": "Mediation Set 35"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Icon_Emoji_Paimon%27s_Paintings_36_Chasca_1.png",
+                "caption": "Pause Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Icon_Emoji_Paimon%27s_Paintings_37_Chasca_1.png",
+                "caption": "Set 37"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Icon_Emoji_Paimon%27s_Paintings_37_Chasca_2.png",
+                "caption": "Set 37"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Icon_Emoji_Paimon%27s_Paintings_37_Chasca_3.png",
+                "caption": "Set 37"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Icon_Emoji_Paimon%27s_Paintings_37_Chasca_4.png",
+                "caption": "Set 37"
+            }
+        ]
     },
     "Ororon": {
         "screenAnimations": [
@@ -9464,7 +9550,89 @@
                 ]
             }
         ],
-        "detailedImages": [],
-        "stickers": []
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Ororon_Character_Details_1.png",
+                "caption": "Ororon Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Ororon_Character_Details_2.png",
+                "caption": "Ororon Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Ororon_Character_Details_3.gif",
+                "caption": "Ororon Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Ororon_Character_Details_4.png",
+                "caption": "Ororon Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Ororon_Character_Details_5.png",
+                "caption": "Ororon Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Ororon_Character_Details_6.png",
+                "caption": "Ororon Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Ororon_Character_Details_7.png",
+                "caption": "Ororon Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Ororon_Character_Details_8.gif",
+                "caption": "Ororon Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Ororon_Character_Details_9.gif",
+                "caption": "Ororon Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Ororon_Character_Details_10.gif",
+                "caption": "Ororon Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Ororon_Character_Details_11.gif",
+                "caption": "Ororon Details 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Ororon_Character_Details_12.gif",
+                "caption": "Ororon Details 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Ororon_Character_Details_13.gif",
+                "caption": "Ororon Details 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Ororon_Character_Details_14.png",
+                "caption": "Ororon Details 14"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Ororon_Character_Details_15.png",
+                "caption": "Ororon Details 15"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Icon_Emoji_Paimon%27s_Paintings_36_Ororon_1.png",
+                "caption": "Sorry Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_1.png",
+                "caption": "Set 37"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_2.png",
+                "caption": "Set 37"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_3.png",
+                "caption": "Set 37"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_4.png",
+                "caption": "Set 37"
+            }
+        ]
     }
 }

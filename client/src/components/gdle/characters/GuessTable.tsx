@@ -10,6 +10,7 @@ import AvatarWithSkeleton from "@/components/utils/AvatarWithSkeleton";
 import { Character } from "@/graphql/types";
 import React from "react";
 import { motion } from "framer-motion";
+import { ChevronDown, ChevronUp, ChevronsDown, ChevronsUp } from "lucide-react";
 
 interface GuessTableProps {
   characters: Character[];
@@ -32,6 +33,19 @@ const GuessTable: React.FC<GuessTableProps> = ({
     return correct === guess;
   };
 
+  const handleVersion = (correct: string, guess: string) => {
+    if (correct === guess) return 0;
+
+    const [correctPatch, correctVersion] = correct.split(".");
+    const [guessPatch, guessVersion] = guess.split(".");
+
+    if (correctPatch === guessPatch) {
+      return correctVersion < guessVersion ? 1 : -1;
+    }
+
+    return correctPatch < guessPatch ? 2 : -2;
+  };
+
   return (
     <div>
       <Table>
@@ -42,6 +56,7 @@ const GuessTable: React.FC<GuessTableProps> = ({
             <TableHead>Region</TableHead>
             <TableHead>Weapon</TableHead>
             <TableHead>Element</TableHead>
+            <TableHead>Version</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -96,6 +111,14 @@ const GuessTable: React.FC<GuessTableProps> = ({
                   />
                 </GuessTableCell>
               </TableCell>
+              <TableCell>
+                <GuessTableCell index={3} isCorrect={true}>
+                  <VersionTableCell
+                    version={handleVersion("2.4", "2.4")}
+                    value="1.4"
+                  />
+                </GuessTableCell>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -124,10 +147,42 @@ const GuessTableCell: React.FC<GuessTableCellProps> = ({
         delay: index * 0.15,
         ease: "easeOut",
       }}
-      className={`${isCorrect ? "bg-green-900" : "bg-red-900"} w-full h-full p-2 rounded-md flex items-center justify-center`}
+      className={`${isCorrect ? "bg-green-900" : "bg-red-900"} w-full h-full p-2 rounded-md flex items-center justify-center min-w-[40px] min-h-[60px]`}
     >
       {children}
     </motion.div>
+  );
+};
+
+interface VersionTableCellProps {
+  version: -2 | -1 | 0 | 1 | 2;
+  value: string;
+}
+
+const VersionTableCell: React.FC<VersionTableCellProps> = ({
+  version,
+  value,
+}) => {
+  const getVersionIcon = () => {
+    switch (version) {
+      case -2:
+        return <ChevronsDown className="text-red-500" />;
+      case -1:
+        return <ChevronDown className="text-red-500" />;
+      case 0:
+        return null;
+      case 1:
+        return <ChevronUp className="text-green-500" />;
+      case 2:
+        return <ChevronsUp className="text-green-500" />;
+    }
+  };
+
+  return (
+    <div className="flex items-center justify-center gap-2">
+      {getVersionIcon()}
+      <div>{value}</div>
+    </div>
   );
 };
 

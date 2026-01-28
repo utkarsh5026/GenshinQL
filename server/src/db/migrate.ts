@@ -15,7 +15,6 @@ import {
   talentDaySchema,
   talentSchema,
   WeaponMaterialSchema,
-  WeaponSchema,
   weaponTypeSchema,
 } from "../data/schema";
 
@@ -40,10 +39,12 @@ import ScreenAnimationMedia from "./models/ScreenAnimationMedia";
 import WeaponMaterialImages from "./models/WeaponMaterialImages";
 import HoyolabDetailedImages from "./models/HoyolabDetailedImages";
 import PaimonPaintings from "./models/PaimonPaintings";
+
 import {
   loadCharacters,
   loadCharactersGallery,
   loadDailyTalents,
+  loadWeapons,
 } from "../data/load";
 
 type WeaponTypeSchema = z.infer<typeof weaponTypeSchema>;
@@ -90,9 +91,8 @@ async function migrateWeapons() {
   const weaponRepo = repo(WeaponModel);
   const weaponTypeRepo = repo(WeaponTypeModel);
 
-  const weaponData = (await loadJsonPath(
-    path.join("weapons", "weapons_new.json"),
-  )) as Record<WeaponTypeSchema, WeaponSchema[]>;
+  const weaponData = await loadWeapons();
+  if (weaponData === null) throw new Error("Weapon data not found");
   const matMap = await createWeaponMaterialMap();
 
   const wepTypes = Object.keys(weaponData) as WeaponTypeSchema[];

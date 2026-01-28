@@ -24,7 +24,7 @@ import HoyolabDetailedImages from "./models/HoyolabDetailedImages";
 
 export const dataSource = new DataSource({
   type: "sqlite",
-  database: "genshin-supa.db",
+  database: "genshin-new.db",
   synchronize: true,
   logging: ["error"],
   entities: [
