@@ -1,14 +1,20 @@
 import { By, until, WebDriver, WebElement } from 'selenium-webdriver';
 import { setupDriver, URL } from './setup.js';
 import * as path from 'node:path';
-import { getParentNextTableSibling, parseCharacterName } from './utils.js';
+import chalk from 'chalk';
+import {
+  getParentNextTableSibling,
+  parseCharacterName,
+  safeGet,
+} from './utils.js';
 import {
   CHARACTER_DIR,
   listFiles,
   loadJsonData,
   saveFileWithNewVersion,
   saveJson,
-} from './fileio.js';
+  saveToPublic,
+} from './fileio';
 import {
   AdvancedCharacterSchema,
   BaseCharacterSchema,
@@ -27,57 +33,14 @@ const waitForElement = async (driver: WebDriver, cssSelector: string) => {
   );
 };
 
-/**
- * Scrapes character data from the main characters page.
- *
- * @param driver - The WebDriver instance used for browser automation.
- * @returns A Promise that resolves to an array of character data rows, or undefined if an error occurs.
- */
-async function scrapeCharacters(
-  driver: WebDriver
-): Promise<string[][] | undefined> {
-  const getCharacterRows = async () => {
-    const charactersUrl = `${URL}/Character`;
-    await driver.get(charactersUrl);
-    const tableSelector = `table.article-table[data-index-number='1']`;
-    await driver.wait(
-      until.elementLocated(By.css(tableSelector)),
-      TIME_TO_WAIT_FOR_ELEMENT_MS
-    );
+async function getTableRows(driver: WebDriver, tableSelector: string) {
+  console.log(`Looking for table with selector: ${tableSelector}`);
+  await driver.wait(
+    until.elementLocated(By.css(tableSelector)),
+    TIME_TO_WAIT_FOR_ELEMENT_MS
+  );
 
-    return await driver.findElements(By.css(`${tableSelector} tr`));
-  };
-
-  const findImageInCell = async (cell: WebElement) => {
-    try {
-      return await cell.findElement(By.css('img')).getAttribute('data-src');
-    } catch {
-      return '';
-    }
-  };
-
-  try {
-    const rowElements = await getCharacterRows();
-    return await Promise.all(
-      rowElements.slice(1).map(async (row) => {
-        const cells = await row.findElements(By.css('td'));
-        const texts = await Promise.all(cells.map((cell) => cell.getText()));
-
-        texts[0] = await findImageInCell(cells[0]);
-        texts[2] = await findImageInCell(cells[2]);
-
-        const [elementUrl, regionUrl, weaponUrl] = await Promise.all(
-          [3, 5, 4].map((i) => findImageInCell(cells[i]))
-        );
-
-        texts.push(elementUrl, regionUrl, weaponUrl);
-        return texts;
-      })
-    );
-  } catch (error) {
-    console.error('Error scraping characters:', error);
-    return undefined;
-  }
+  return await driver.findElements(By.css(`${tableSelector} tr`));
 }
 
 /**
@@ -295,7 +258,6 @@ async function getTalents(driver: WebDriver): Promise<TalentSchema[]> {
   await waitForElement(driver, talentSelector);
 
   const rows = await driver.findElements(By.css(`${talentSelector} tr`));
-  console.log(rows.length);
 
   const talents: TalentSchema[] = [];
 
@@ -345,34 +307,37 @@ async function getTalents(driver: WebDriver): Promise<TalentSchema[]> {
 async function getConstellations(
   driver: WebDriver
 ): Promise<ConstellationSchema[]> {
-  const tableSelector = 'table.constellation-table';
-  await waitForElement(driver, tableSelector);
+  const rows = await getTableRows(driver, 'table.constellation-table');
 
-  const rows = await driver.findElements(By.css(`${tableSelector} tr`));
-  const constellations: ConstellationSchema[] = [];
-  for (let i = 0; i < rows.length; i++) {
-    const row = rows[i];
+  const parseConstellationRow = async (row: WebElement, index: number) => {
     const cells = await row.findElements(By.css('td'));
 
-    if (cells.length === 3) {
-      const iconUrl = parseUrl(
-        await cells[0].findElement(By.css('a img')).getAttribute('data-src')
-      );
-      const name = await cells[1].getText();
-      const level = await cells[2].getText();
-
-      const description = await rows[i + 1].findElement(By.css('td')).getText();
-
-      constellations.push({
-        iconUrl,
-        name,
-        level: Number.parseInt(level),
-        description,
-      });
+    if (cells.length != 3) {
+      return null;
     }
-  }
 
-  return constellations;
+    const [iconCell, nameCell, levelCell] = cells;
+
+    const iconUrl = parseUrl(
+      await iconCell.findElement(By.css('a img')).getAttribute('data-src')
+    );
+    const name = await nameCell.getText();
+    const level = await levelCell.getText();
+
+    const description = await rows[index + 1]
+      .findElement(By.css('td'))
+      .getText();
+
+    return {
+      iconUrl,
+      name,
+      level: Number.parseInt(level),
+      description,
+    };
+  };
+
+  const constellations = await Promise.all(rows.map(parseConstellationRow));
+  return constellations.filter((c) => c !== null);
 }
 
 /**
@@ -381,48 +346,98 @@ async function getConstellations(
  * @param driver - The WebDriver instance used for browser automation.
  * @returns A Promise that resolves to an array of character objects, excluding "Aloy" and "Traveler".
  */
-export async function scrapeCharacterTable(
+async function scrapeBaseCharactersTable(
   driver: WebDriver
 ): Promise<BaseCharacterSchema[]> {
-  const characters = await scrapeCharacters(driver);
+  const getCharacterRows = async () => {
+    console.log(
+      chalk.cyan('📍 Navigating to:'),
+      chalk.blue(`${URL}/Character`)
+    );
+    await driver.get(`${URL}/Character`);
+    await driver.sleep(2000);
 
-  if (!characters) {
-    return [];
-  }
+    const tableSelector = `//h2[*[@id='Playable_Characters'] or normalize-space(.)='Playable Characters']/following-sibling::table[1]`;
+    console.log(
+      chalk.yellow('🔍 Looking for table with XPath:'),
+      chalk.gray(tableSelector)
+    );
+    await driver.wait(
+      until.elementLocated(By.xpath(tableSelector)),
+      TIME_TO_WAIT_FOR_ELEMENT_MS
+    );
+    console.log(chalk.green('✅ Table found successfully!'));
+    return await driver.findElements(By.xpath(`${tableSelector}//tr`));
+  };
 
-  return (
-    characters
-      .map((character) => {
-        return {
-          iconUrl: parseUrl(character[0]),
-          name: character[1],
-          rarity: character[2],
-          element: character[3],
-          weaponType: character[4],
-          region: character[5],
-          elementUrl: parseUrl(character[7]),
-          weaponUrl: parseUrl(character[9]),
-          regionUrl: parseUrl(character[8]),
-        };
-      })
-      .filter(
-        (character) =>
-          character.name !== 'Aloy' && character.name !== 'Traveler'
-      ) ?? []
-  );
-}
+  const findImageInCell = async (cell: WebElement) => {
+    try {
+      return await cell.findElement(By.css('img')).getAttribute('data-src');
+    } catch {
+      return '';
+    }
+  };
 
-/**
- /**
- * Scrapes character information and saves it to a JSON file.
- *
- * @param driver - The WebDriver instance used for browser automation.
- * @returns A Promise that resolves when the characters have been saved.
- */
-async function saveCharacters(driver: WebDriver) {
-  const charactersTable = await scrapeCharacterTable(driver);
-  await saveFileWithNewVersion(charactersTable, CHARACTER_DIR, 'characters');
-  return charactersTable;
+  const parseTableRow = async (
+    row: WebElement
+  ): Promise<BaseCharacterSchema | null> => {
+    const cells = await row.findElements(By.css('td'));
+    const texts = await Promise.all(cells.map((cell) => cell.getText()));
+
+    texts[0] = await findImageInCell(cells[0]);
+    texts[2] = await findImageInCell(cells[2]);
+
+    const [elementUrl, regionUrl, weaponUrl] = await Promise.all(
+      [3, 5, 4].map((i) => findImageInCell(cells[i]))
+    );
+
+    const character: BaseCharacterSchema = {
+      iconUrl: parseUrl(texts[0]),
+      name: texts[1],
+      rarity: texts[2],
+      element: texts[3],
+      weaponType: texts[4],
+      region: texts[5],
+      elementUrl: parseUrl(elementUrl),
+      weaponUrl: parseUrl(weaponUrl),
+      regionUrl: parseUrl(regionUrl),
+    };
+
+    if (character.name === 'Aloy' || character.name === 'Traveler') {
+      console.log(chalk.gray('⏭️  Skipping:'), chalk.dim(character.name));
+      return null;
+    }
+
+    console.log(
+      chalk.green('✓'),
+      chalk.white(character.name),
+      chalk.gray(`(${character.element})`)
+    );
+    return character;
+  };
+
+  const scrape = async () => {
+    const rowElements = await getCharacterRows();
+    console.log(
+      chalk.cyan('📊 Processing'),
+      chalk.bold(`${rowElements.length - 1}`),
+      chalk.cyan('character rows...')
+    );
+    const characters = await Promise.all(
+      rowElements.slice(1).map(parseTableRow)
+    );
+    const filtered = characters.filter(
+      (c): c is BaseCharacterSchema => c !== null
+    );
+    console.log(
+      chalk.green.bold(
+        `\n✨ Successfully scraped ${filtered.length} characters!`
+      )
+    );
+    return filtered;
+  };
+
+  return safeGet(scrape, []);
 }
 
 /**
@@ -544,9 +559,10 @@ async function main() {
 
   if (args.includes('--base')) {
     console.log('Starting base character scraping...');
-    await saveCharacters(driver);
+    await saveToPublic(await scrapeBaseCharactersTable(driver), 'characters');
     console.log('Base character scraping complete');
   }
+
   if (args.includes('--detailed')) {
     console.log('Starting detailed character scraping...');
     await scrapeAndSaveDetailedCharacterInfo(driver, true);
@@ -558,6 +574,8 @@ async function main() {
   console.log('WebDriver closed');
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+const isMainModule =
+  process.argv[1] && import.meta.url.includes(path.basename(process.argv[1]));
+if (isMainModule) {
   main().then(() => console.log('Completed'));
 }
