@@ -83,7 +83,9 @@ const CharactersTable: React.FC = () => {
                 elementUrl={character.elementUrl}
               />
             </TableCell>
-            <TableCell className="text-left">{character.rarity}</TableCell>
+            <TableCell className="text-left">
+              <RarityDisplay rarity={character.rarity} />
+            </TableCell>
             <TableCell className="text-left">
               <ElementDisplay
                 element={character.weaponType}
@@ -117,6 +119,21 @@ const ElementDisplay: React.FC<{ element: string; elementUrl: string }> = ({
         className="rounded-full w-6 h-6"
       />
       <span>{element}</span>
+    </div>
+  );
+};
+
+const RarityDisplay: React.FC<{ rarity: string }> = ({ rarity }) => {
+  const rarityNum = Number.parseInt(rarity, 10);
+  const starColor = rarityNum === 5 ? "text-yellow-500" : "text-violet-500";
+
+  return (
+    <div className="flex items-center">
+      {Array.from({ length: rarityNum }).map((_, index) => (
+        <span key={index} className={`${starColor} text-lg`}>
+          ★
+        </span>
+      ))}
     </div>
   );
 };
