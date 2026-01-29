@@ -45,18 +45,44 @@ export const WEAPONS_DIR = path.join(BASE_DIR, WEAPON_DIR_NAME);
 export const TALENT_DIR = path.join(BASE_DIR, TALENT_DIR_NAME);
 
 /**
- * Loads and parses JSON data from a file.
+ * Loads and parses JSON data from a file with detailed logging.
  */
 export const loadJsonData = async <T>(filepath: string): Promise<T | null> => {
   if (!filepath.endsWith('.json')) filepath += '.json';
 
-  const exists = await fs
-    .access(filepath)
-    .then(() => true)
-    .catch(() => false);
-  if (!exists) return null;
-  const data = await fs.readFile(filepath, 'utf8');
-  return JSON.parse(data) as T;
+  const fileName = path.basename(filepath);
+  console.log(chalk.cyan('📖 Loading:'), chalk.white(fileName));
+
+  try {
+    const exists = await fs
+      .access(filepath)
+      .then(() => true)
+      .catch(() => false);
+
+    if (!exists) {
+      console.log(chalk.yellow('⚠️  File not found:'), chalk.white(fileName));
+      return null;
+    }
+
+    const data = await fs.readFile(filepath, 'utf8');
+    const parsed = JSON.parse(data) as T;
+
+    const fileSize = Buffer.byteLength(data, 'utf8');
+    const fileSizeKB = (fileSize / 1024).toFixed(2);
+
+    console.log(
+      chalk.green('✅ Loaded:'),
+      chalk.bold(fileName),
+      chalk.gray(`(${fileSizeKB} KB)`)
+    );
+    console.log(chalk.gray('   →'), chalk.dim(filepath));
+
+    return parsed;
+  } catch (error) {
+    console.log(chalk.red('❌ Error loading:'), chalk.white(fileName));
+    console.error(chalk.red('   Error:'), error);
+    throw error;
+  }
 };
 
 /**
@@ -238,6 +264,17 @@ export async function saveToPublic(
   } catch (error) {
     handleSaveError(error, fileName, 'Error saving');
   }
+}
+
+/**
+ * Loads data from the public folder.
+ * This is used to read production data files that were saved with saveToPublic.
+ * Wrapper around loadJsonData that constructs the path to the public directory.
+ */
+export async function loadFromPublic<T>(fileName: string): Promise<T | null> {
+  fileName = normalizeFileName(fileName);
+  const filePath = path.join(PUBLIC_DIR, fileName);
+  return await loadJsonData<T>(filePath);
 }
 
 /**
