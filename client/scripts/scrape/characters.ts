@@ -6,7 +6,9 @@ import {
   getParentNextTableSibling,
   parseCharacterName,
   findImageInCell,
+  findImageAltInCell,
   safeGet,
+  getTableFromHeading,
 } from './utils.js';
 import {
   CHARACTER_DIR,
@@ -358,17 +360,8 @@ async function scrapeBaseCharactersTable(
     await driver.get(`${URL}/Character`);
     await driver.sleep(2000);
 
-    const tableSelector = `//h2[*[@id='Playable_Characters'] or normalize-space(.)='Playable Characters']/following-sibling::table[1]`;
-    console.log(
-      chalk.yellow('🔍 Looking for table with XPath:'),
-      chalk.gray(tableSelector)
-    );
-    await driver.wait(
-      until.elementLocated(By.xpath(tableSelector)),
-      TIME_TO_WAIT_FOR_ELEMENT_MS
-    );
-    console.log(chalk.green('✅ Table found successfully!'));
-    return await driver.findElements(By.xpath(`${tableSelector}//tr`));
+    const table = await getTableFromHeading(driver, 'Playable Characters');
+    return await table.findElements(By.css('tr'));
   };
 
   const parseTableRow = async (
@@ -377,23 +370,23 @@ async function scrapeBaseCharactersTable(
     const cells = await row.findElements(By.css('td'));
     const texts = await Promise.all(cells.map((cell) => cell.getText()));
 
-    texts[0] = await findImageInCell(cells[0]);
-    texts[2] = await findImageInCell(cells[2]);
+    texts[2] = await findImageAltInCell(cells[2]);
 
-    const [elementUrl, regionUrl, weaponUrl] = await Promise.all(
-      [3, 5, 4].map((i) => findImageInCell(cells[i]))
+    const [iconUrl, elementUrl, regionUrl, weaponUrl] = await Promise.all(
+      [0, 3, 5, 4].map((i) => findImageInCell(cells[i]))
     );
 
     const character: BaseCharacterSchema = {
-      iconUrl: parseUrl(texts[0]),
+      iconUrl: parseUrl(iconUrl),
       name: texts[1],
-      rarity: texts[2],
+      rarity: await findImageAltInCell(cells[2]),
       element: texts[3],
       weaponType: texts[4],
       region: texts[5],
       elementUrl: parseUrl(elementUrl),
       weaponUrl: parseUrl(weaponUrl),
       regionUrl: parseUrl(regionUrl),
+      modelType: texts.at(-1) || 'Unknown',
     };
 
     if (character.name === 'Aloy' || character.name === 'Traveler') {
