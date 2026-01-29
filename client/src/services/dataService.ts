@@ -10,10 +10,7 @@ import type {
 
 const DATA_BASE_URL = "/";
 
-let charactersCache: {
-  characters: Character[];
-  detailed: Record<string, CharacterDetailed>;
-} | null = null;
+let charactersCache: Character[] | null = null;
 
 let talentsCache: { talentBooks: TalentBookCalendar[] } | null = null;
 
@@ -31,37 +28,43 @@ let galleryCache: Record<
   }
 > | null = null;
 
+async function loadDataForFile<T>(fileName: string, cache: T | null): Promise<T> {
+  if (cache) return cache;
 
+  const response = await fetch(`${DATA_BASE_URL}${fileName}`);
+  if (!response.ok) throw new Error(`Failed to fetch data from ${fileName}`);
+
+  const data: T = await response.json();
+  return data;
+}
 
 /**
  * Fetches and caches character data from the static JSON file.
  */
 async function loadCharactersData() {
   if (charactersCache) return charactersCache;
-  const response = await fetch("characters.json");
-  if (!response.ok) throw new Error("Failed to fetch characters data");
 
-  charactersCache = await response.json();
-  console.log("Characters data loaded", charactersCache);
-  return charactersCache!;
+  const data = await loadDataForFile<Character[]>('characters.json', null);
+  charactersCache = data;
+  return data;
 }
 
 /**
  * Fetches all characters with basic info.
  */
 export async function fetchCharacters(): Promise<Character[]> {
-  const data = await loadCharactersData();
-  return data.characters;
+  return await loadCharactersData();
 }
 
 /**
  * Fetches detailed character data by name.
+ * TODO: Implement loading detailed character data from separate files
  */
 export async function fetchCharacterDetailed(
-  name: string,
+  _name: string,
 ): Promise<CharacterDetailed | null> {
-  const data = await loadCharactersData();
-  return data.detailed[name] || null;
+  console.warn('fetchCharacterDetailed not yet implemented');
+  return null;
 }
 
 /**
@@ -71,7 +74,6 @@ async function loadTalentsData() {
   if (talentsCache) return talentsCache;
 
   const response = await fetch(`${DATA_BASE_URL}/talents.json`);
-  alert(response)
   if (!response.ok) throw new Error("Failed to fetch talents data");
 
   talentsCache = await response.json();
