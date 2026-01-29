@@ -32,10 +32,10 @@ function getChromedriverPath(): string {
 /**
  * Sets up and returns a Selenium WebDriver for Chrome.
  * Uses the local ChromeDriver from node_modules for better portability.
- * @param mode - If 'prod', runs in headless mode; otherwise shows the browser
+ * Reads mode from NODE_ENV environment variable - if 'production', runs in headless mode
  */
-export async function setupDriver(mode?: string): Promise<WebDriver> {
-  const isHeadless = mode === 'prod';
+export async function setupDriver(): Promise<WebDriver> {
+  const isHeadless = process.env.NODE_ENV === 'production';
 
   logger.info('🚀 Setting up Chrome WebDriver...');
   logger.cyan(
@@ -80,17 +80,17 @@ export async function setupDriver(mode?: string): Promise<WebDriver> {
   return driver;
 }
 
-export async function withWebDriver(
-  fn: (driver: WebDriver) => Promise<void>,
-  mode?: string
-) {
-  const driver = await setupDriver(mode);
+export async function withWebDriver<T = void>(
+  fn: (driver: WebDriver) => Promise<T>
+): Promise<T> {
+  const driver = await setupDriver();
   try {
     logger.info('▶ Starting scraping operation...\n');
-    await fn(driver);
-    logger.success('\n✓ Scraping completed successfully!');
+    const result = await fn(driver);
+    logger.success('\nScraping completed successfully!');
+    return result;
   } catch (error) {
-    logger.error('\n✗ Error during scraping:');
+    logger.error('\nError during scraping:');
     logger.error(`   ${error}`);
     throw error;
   } finally {
@@ -99,7 +99,6 @@ export async function withWebDriver(
     logger.debug('✓ WebDriver closed\n');
   }
 }
-
 
 export function waitForElementCss(
   driver: WebDriver,
