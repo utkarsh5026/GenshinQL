@@ -1,18 +1,22 @@
 import { By, until, WebDriver, WebElement } from 'selenium-webdriver';
 import { URL, withWebDriver } from './setup.js';
 import * as path from 'node:path';
+import * as fs from 'node:fs/promises';
 import chalk from 'chalk';
+import { logger } from '../logger';
 import {
-  getParentNextTableSibling,
   parseCharacterName,
   findImageInCell,
   findImageAltInCell,
   safeGet,
   getTableFromHeading,
+  waitForElement,
 } from './utils.js';
 import {
   CHARACTER_DIR,
+  PUBLIC_DIR,
   listFiles,
+  loadFromPublic,
   loadJsonData,
   saveFileWithNewVersion,
   saveJson,
@@ -21,23 +25,16 @@ import {
 import {
   AdvancedCharacterSchema,
   BaseCharacterSchema,
-  ConstellationSchema,
   TalentSchema,
 } from './schema.js';
 
 const TIME_TO_WAIT_FOR_ELEMENT_MS = 10000;
+const CHARACTERS_FILE_NAME = 'characters';
 
 const parseUrl = (url: string) => url.split('/revision/')[0];
 
-const waitForElement = async (driver: WebDriver, cssSelector: string) => {
-  await driver.wait(
-    until.elementLocated(By.css(cssSelector)),
-    TIME_TO_WAIT_FOR_ELEMENT_MS
-  );
-};
-
 async function getTableRows(driver: WebDriver, tableSelector: string) {
-  console.log(`Looking for table with selector: ${tableSelector}`);
+  logger.debug(`Looking for table with selector: ${tableSelector}`);
   await driver.wait(
     until.elementLocated(By.css(tableSelector)),
     TIME_TO_WAIT_FOR_ELEMENT_MS
@@ -48,87 +45,165 @@ async function getTableRows(driver: WebDriver, tableSelector: string) {
 
 /**
  * Scrapes character details from their wiki page including images, talents and constellations.
+ * Creates a new WebDriver instance for each character scrape.
  */
-export async function scrapeCharacterDetailed(
-  driver: WebDriver,
-  character: string
-) {
-  const characterUrl = `${URL}/${character}`;
+export async function scrapeCharacterDetailed(character: string) {
+  const getCharacterReleaseVersion = async (driver: WebDriver) => {
+    logger.info(`Fetching release version for ${character}...`);
+    const table = await getTableFromHeading(
+      driver,
+      'Character Event Wishes',
+      'h3'
+    );
+    const rows = await table.findElements(By.css('tr'));
 
-  try {
-    await driver.get(characterUrl);
-    const imageUrls = await getCharacterImages(driver);
-    const talents = await getTalents(driver);
-    const constellations = await getConstellations(driver);
-    const version = await getCharacterVersion(driver);
-    return {
-      talents,
-      constellations,
-      imageUrls,
-      version,
+    const cells = await rows[1].findElements(By.css('td'));
+    const lastCell = cells.at(-1);
+
+    if (!lastCell) {
+      logger.warn(`Release version not found for ${character}`);
+      return 'Unknown Version';
+    }
+    const version = await lastCell.getText();
+    logger.success(`Release version: ${version}`);
+    return version;
+  };
+
+  const getCharacterImages = async (driver: WebDriver) => {
+    logger.info(`Scraping images for ${character}...`);
+    const selector = 'a.image.image-thumbnail';
+    await waitForElement(driver, selector);
+
+    const characterUrls = await driver.findElements(By.css(selector));
+    const urls = await Promise.all(
+      characterUrls.map(async (url) => {
+        return parseUrl(await url.getAttribute('href'));
+      })
+    );
+
+    const urlMap: Map<string, string> = new Map();
+
+    for (const url of urls) {
+      const lowerUrl = url.toLowerCase();
+      if (lowerUrl.includes('card')) urlMap.set('card', url);
+      else if (lowerUrl.includes('wish')) urlMap.set('wish', url);
+      else if (lowerUrl.includes('game')) urlMap.set('inGame', url);
+    }
+
+    const nameCardContainer = await driver.findElement(
+      By.css('div[data-source="namecard"]')
+    );
+
+    urlMap.set('nameCard', parseUrl(await findImageInCell(nameCardContainer)));
+    logger.success(`Found ${urlMap.size} images`);
+    return urlMap;
+  };
+
+  const getTalents = async (driver: WebDriver) => {
+    logger.info(`Scraping talents for ${character}...`);
+    const talentSelector = 'table.talent-table';
+    await waitForElement(driver, talentSelector);
+
+    const rows = await driver.findElements(By.css(`${talentSelector} tr`));
+
+    const talents: TalentSchema[] = [];
+
+    for (let i = 0; i < rows.length; i++) {
+      const row = rows[i];
+      const cells = await row.findElements(By.css('td'));
+
+      if (cells.length == 3) {
+        try {
+          const talentIcon = parseUrl(
+            await cells[0].findElement(By.css('a img')).getAttribute('data-src')
+          );
+          const talentName = await cells[1].getText();
+          const talentType = await cells[2].getText();
+
+          const descRow = rows[i + 1];
+          const descCells = await descRow.findElement(By.css('td'));
+          const description = (await descCells.getText()).split('▼')[0];
+
+          const figureUrls = await getFigureUrls(driver, descRow);
+          const scaling = await getTalentScaling(driver, descRow);
+
+          talents.push({
+            talentIcon,
+            talentName,
+            talentType,
+            description,
+            figureUrls,
+            scaling,
+          });
+          logger.debug(`  - ${talentName} (${talentType})`);
+        } catch (error) {
+          logger.error('Error scraping talent:', error);
+        }
+      }
+    }
+
+    logger.success(`Scraped ${talents.length} talents`);
+    return talents;
+  };
+
+  const getConstellations = async (driver: WebDriver) => {
+    const rows = await getTableRows(driver, 'table.constellation-table');
+
+    const parseConstellationRow = async (row: WebElement, index: number) => {
+      const cells = await row.findElements(By.css('td'));
+      if (cells.length != 3) {
+        return null;
+      }
+
+      const [iconCell, nameCell, levelCell] = cells;
+      const iconUrl = parseUrl(
+        await iconCell.findElement(By.css('a img')).getAttribute('data-src')
+      );
+
+      const description = await rows[index + 1]
+        .findElement(By.css('td'))
+        .getText();
+
+      return {
+        iconUrl,
+        name: await nameCell.getText(),
+        level: Number.parseInt(await levelCell.getText()),
+        description,
+      };
     };
-  } catch (error) {
-    console.error(error);
-  }
-}
 
-/**
- * Retrieves the version number when a character was first released.
- * Finds the Character Event Wishes table and extracts the version from the last cell
- * of the first banner row.
- *
- * @param driver - The WebDriver instance used for browser automation
- * @returns Promise resolving to the version string (e.g. "1.0")
- */
-async function getCharacterVersion(driver: WebDriver) {
-  const selector = 'span#Character_Event_Wishes';
-  const table = await getParentNextTableSibling(driver, selector);
-  const rows = await table.findElements(By.css('tr'));
+    const constellations = await Promise.all(rows.map(parseConstellationRow));
+    return constellations.filter((c) => c !== null);
+  };
 
-  const cells = await rows[1].findElements(By.css('td'));
-  return await cells[cells.length - 1].getText();
-}
+  const scrapeCharacter = async (driver: WebDriver) => {
+    const characterUrl = `${URL}/${character}`;
+    logger.cyan(`\n=== Starting scrape for ${character} ===`);
+    logger.info(`Navigating to ${characterUrl}`);
 
-/**
- * Scrapes and retrieves character image URLs from the character's wiki page.
- *
- * @param driver - The WebDriver instance used for browser automation
- * @returns A record containing URLs for different character images:
- *          - card: Character's card image
- *          - wish: Character's wish banner image
- *          - inGame: Character's in-game portrait
- *          - nameCard: Character's namecard item image
- */
-async function getCharacterImages(driver: WebDriver) {
-  const selector = 'a.image.image-thumbnail';
-  await driver.wait(until.elementLocated(By.css(selector)), 10000);
+    try {
+      await driver.get(characterUrl);
 
-  const characterUrls = await driver.findElements(By.css(selector));
-  const urls = await Promise.all(
-    characterUrls.map(async (url) => {
-      return parseUrl(await url.getAttribute('href'));
-    })
-  );
+      const [imageUrls, talents, constellations, version] = await Promise.all([
+        getCharacterImages(driver),
+        getTalents(driver),
+        getConstellations(driver),
+        getCharacterReleaseVersion(driver),
+      ]);
 
-  const urlMap: Record<string, string> = {};
+      logger.success(`\n=== Completed scrape for ${character} ===\n`);
+      return {
+        talents,
+        constellations,
+        imageUrls,
+        version,
+      };
+    } catch (error) {
+      logger.error(`Failed to scrape ${character}:`, error);
+    }
+  };
 
-  for (const url of urls) {
-    const lowerUrl = url.toLowerCase();
-    if (lowerUrl.includes('card')) urlMap.card = url;
-    else if (lowerUrl.includes('wish')) urlMap.wish = url;
-    else if (lowerUrl.includes('game')) urlMap.inGame = url;
-  }
-
-  const nameCardContainer = await driver.findElement(
-    By.css('div[data-source="namecard"]')
-  );
-  const nameCardUrl = await nameCardContainer
-    .findElement(By.css('img'))
-    .getAttribute('data-src');
-
-  urlMap.nameCard = parseUrl(nameCardUrl);
-
-  return urlMap;
+  return await withWebDriver(scrapeCharacter);
 }
 
 /**
@@ -139,49 +214,83 @@ async function getCharacterImages(driver: WebDriver) {
  * @returns Promise resolving to array of figure URLs and captions
  */
 async function getFigureUrls(driver: WebDriver, descRow: WebElement) {
-  const figures = await descRow.findElements(By.css('figure.thumb.tnone'));
-  return Promise.all(
-    figures.map(async (figure) => {
-      try {
-        const image = await figure.findElement(By.css('a img'));
-        const url = parseUrl(await image.getAttribute('data-src'));
-        let caption = '';
+  try {
+    const tabs = await descRow.findElements(By.css('.wds-tabs__tab'));
 
+    if (tabs.length > 0) {
+      let previewTabFound = false;
+      for (const tab of tabs) {
+        const tabText = await tab.getText();
+        if (tabText.includes('Preview')) {
+          await driver.executeScript(
+            'arguments[0].scrollIntoView({behavior: "smooth", block: "center"}); arguments[0].click();',
+            tab
+          );
+          previewTabFound = true;
+          logger.debug('Clicked Preview tab');
+          break;
+        }
+      }
+
+      if (previewTabFound) {
+        await driver.sleep(800);
+      }
+    }
+
+    let figures = await descRow.findElements(
+      By.css('.wds-tab__content.wds-is-current figure.thumb')
+    );
+
+    if (figures.length === 0) {
+      figures = await descRow.findElements(By.css('figure.thumb'));
+    }
+
+    return Promise.all(
+      figures.map(async (figure) => {
         try {
-          caption = await driver.executeScript(
-            `
+          const image = await figure.findElement(By.css('a img'));
+          const url = parseUrl(await image.getAttribute('data-src'));
+          let caption = '';
+
+          try {
+            caption = await driver.executeScript(
+              `
           const fig = arguments[0];
           const captionEl = fig.querySelector('figcaption p.caption');
           return captionEl ? captionEl.textContent.trim() : '';
         `,
-            figure
-          );
+              figure
+            );
 
-          if (caption) {
-            console.log('Caption found:', caption);
-          }
-        } catch {
-          try {
-            caption = await driver.executeScript(
-              `
+            if (caption) {
+              logger.debug('Caption found:', caption);
+            }
+          } catch {
+            try {
+              caption = await driver.executeScript(
+                `
             const fig = arguments[0];
             const figcaption = fig.querySelector('figcaption');
             return figcaption ? figcaption.textContent.trim() : '';
           `,
-              figure
-            );
-          } catch {
-            console.log('No caption found');
+                figure
+              );
+            } catch {
+              logger.debug('No caption found');
+            }
           }
-        }
 
-        return { url, caption };
-      } catch (error) {
-        console.log('Error getting figure urls:', error);
-        return { url: '', caption: '' };
-      }
-    })
-  );
+          return { url, caption };
+        } catch (error) {
+          logger.error('Error getting figure urls:', error);
+          return { url: '', caption: '' };
+        }
+      })
+    );
+  } catch (error) {
+    logger.error('Error in getFigureUrls:', error);
+    return [];
+  }
 }
 
 /**
@@ -199,21 +308,34 @@ async function getFigureUrls(driver: WebDriver, descRow: WebElement) {
  */
 async function getTalentScaling(driver: WebDriver, row: WebElement) {
   try {
-    const containerSelector =
-      '.giw-collapsible[data-expandtext="▼Attribute Scaling▼"]';
-    await waitForElement(driver, containerSelector);
+    const tabs = await row.findElements(By.css('.wds-tabs__tab'));
+    if (tabs.length === 0) {
+      logger.debug('No tabs found in this talent row');
+      return {};
+    }
 
-    await driver.executeScript(`
-      const containers = document.querySelectorAll('${containerSelector}');
-      containers.forEach(container => {
-        if (container.querySelector('.mw-collapsible-content')) {
-          container.querySelector('.mw-collapsible-content').style.display = 'block';
-        }
-      });
-    `);
+    let attributeScalingTabFound = false;
+    for (const tab of tabs) {
+      const tabText = await tab.getText();
+      if (tabText.includes('Attribute Scaling')) {
+        await driver.executeScript(
+          'arguments[0].scrollIntoView({behavior: "smooth", block: "center"}); arguments[0].click();',
+          tab
+        );
+        attributeScalingTabFound = true;
+        logger.debug('Clicked Attribute Scaling tab');
+        break;
+      }
+    }
 
+    if (!attributeScalingTabFound) {
+      logger.debug('Attribute Scaling tab not found in this row');
+      return {};
+    }
+
+    await driver.sleep(800);
     const tables = await row.findElements(
-      By.css(`${containerSelector} table.wikitable`)
+      By.css('.wds-tab__content.wds-is-current table.wikitable')
     );
     const scaling: Record<string, string[]> = {};
 
@@ -248,99 +370,9 @@ async function getTalentScaling(driver: WebDriver, row: WebElement) {
 
     return scaling;
   } catch (error) {
-    console.error('Error in getTalentScaling:', error);
+    logger.error('Error in getTalentScaling:', error);
     return {};
   }
-}
-
-/**
- * Scrapes and retrieves talent information for a character from their wiki page.
- */
-async function getTalents(driver: WebDriver): Promise<TalentSchema[]> {
-  const talentSelector = 'table.talent-table';
-  await waitForElement(driver, talentSelector);
-
-  const rows = await driver.findElements(By.css(`${talentSelector} tr`));
-
-  const talents: TalentSchema[] = [];
-
-  for (let i = 0; i < rows.length; i++) {
-    const row = rows[i];
-    const cells = await row.findElements(By.css('td'));
-
-    if (cells.length == 3) {
-      try {
-        const talentIcon = parseUrl(
-          await cells[0].findElement(By.css('a img')).getAttribute('data-src')
-        );
-        const talentName = await cells[1].getText();
-        const talentType = await cells[2].getText();
-
-        const descRow = rows[i + 1];
-        const descCells = await descRow.findElement(By.css('td'));
-        const description = (await descCells.getText()).split('▼')[0];
-
-        const figureUrls = await getFigureUrls(driver, descRow);
-        const scaling = await getTalentScaling(driver, descRow);
-
-        talents.push({
-          talentIcon,
-          talentName,
-          talentType,
-          description,
-          figureUrls,
-          scaling,
-        });
-      } catch (error) {
-        console.log('Error scraping talent:', error);
-      }
-    }
-  }
-
-  console.log('---------------Scraped talents---------------\n');
-  return talents;
-}
-
-/**
- * Scrapes and retrieves constellation information for a character from the webpage.
- *
- * @param driver - The WebDriver instance used for browser automation.
- * @returns A Promise that resolves to an array of Constellation objects.
- */
-async function getConstellations(
-  driver: WebDriver
-): Promise<ConstellationSchema[]> {
-  const rows = await getTableRows(driver, 'table.constellation-table');
-
-  const parseConstellationRow = async (row: WebElement, index: number) => {
-    const cells = await row.findElements(By.css('td'));
-
-    if (cells.length != 3) {
-      return null;
-    }
-
-    const [iconCell, nameCell, levelCell] = cells;
-
-    const iconUrl = parseUrl(
-      await iconCell.findElement(By.css('a img')).getAttribute('data-src')
-    );
-    const name = await nameCell.getText();
-    const level = await levelCell.getText();
-
-    const description = await rows[index + 1]
-      .findElement(By.css('td'))
-      .getText();
-
-    return {
-      iconUrl,
-      name,
-      level: Number.parseInt(level),
-      description,
-    };
-  };
-
-  const constellations = await Promise.all(rows.map(parseConstellationRow));
-  return constellations.filter((c) => c !== null);
 }
 
 /**
@@ -430,37 +462,42 @@ async function scrapeBaseCharactersTable(
  * Scrapes and saves detailed character information for characters that haven't been processed yet.
  */
 const scrapeAndSaveDetailedCharacterInfo = async (
-  driver: WebDriver,
   force: boolean = false
 ): Promise<void> => {
-  const characters = await loadJsonData<BaseCharacterSchema[]>(
-    path.join(CHARACTER_DIR, 'characters.json')
-  );
+  const characters =
+    await loadFromPublic<BaseCharacterSchema[]>(CHARACTERS_FILE_NAME);
 
   if (!characters) {
     console.error('No characters found');
     return;
   }
 
-  await scrapeCharactersInDetail(driver, characters, force);
+  await scrapeCharactersInDetail(characters.slice(0, 1), force);
 };
 
 /**
  * Scrapes detailed information for each character and saves it to individual files.
  * After scraping all characters, combines the files into a single detailed characters file.
+ * Each character gets its own WebDriver instance for isolated scraping.
  *
- * @param driver - The Selenium WebDriver instance used for browser automation
  * @param characters - Array of base character data to scrape details for
  * @param force - If true, scrapes all characters even if they were previously saved.
  *               If false, skips characters that already have saved data.
  * @returns Promise that resolves when all characters have been scraped and saved
  */
 export async function scrapeCharactersInDetail(
-  driver: WebDriver,
   characters: BaseCharacterSchema[],
   force: boolean = false
 ) {
-  const detailedDir = path.join(CHARACTER_DIR, 'detailed_1');
+  const detailedDir = path.join(PUBLIC_DIR, 'characters');
+
+  try {
+    await fs.access(detailedDir);
+  } catch {
+    await fs.mkdir(detailedDir, { recursive: true });
+    console.log(chalk.blue('📁 Created directory:'), chalk.gray(detailedDir));
+  }
+
   const savedCharacters = await listFiles(detailedDir);
 
   for (const char of characters) {
@@ -472,7 +509,7 @@ export async function scrapeCharactersInDetail(
 
     try {
       console.log(`Scraping ${name}`);
-      const desc = await scrapeCharacterDetailed(driver, name);
+      const desc = await scrapeCharacterDetailed(name);
 
       const fullDesc = {
         ...char,
@@ -502,7 +539,14 @@ export async function scrapeCharactersInDetail(
  */
 async function morphAllFilesIntoOne() {
   let charactersDetailed: Record<string, AdvancedCharacterSchema> = {};
-  const charDir = path.join(CHARACTER_DIR, 'detailed_1');
+  const charDir = path.join(PUBLIC_DIR, 'characters');
+  try {
+    await fs.access(charDir);
+  } catch {
+    await fs.mkdir(charDir, { recursive: true });
+    console.log(chalk.blue('📁 Created directory:'), chalk.gray(charDir));
+  }
+
   const files = await listFiles(charDir);
 
   for (const file of files) {
@@ -541,13 +585,16 @@ async function main() {
 
   const scrapeCharactersBase = async (driver: WebDriver) => {
     console.log('Starting base character scraping...');
-    await saveToPublic(await scrapeBaseCharactersTable(driver), 'characters');
+    await saveToPublic(
+      await scrapeBaseCharactersTable(driver),
+      CHARACTERS_FILE_NAME
+    );
     console.log('Base character scraping complete');
   };
 
-  const saveCharactersDetailed = async (driver: WebDriver) => {
+  const saveCharactersDetailed = async () => {
     console.log('Starting detailed character scraping...');
-    await scrapeAndSaveDetailedCharacterInfo(driver, true);
+    await scrapeAndSaveDetailedCharacterInfo(true);
     console.log('Detailed character scraping complete');
   };
 
@@ -556,7 +603,7 @@ async function main() {
   }
 
   if (args.includes('--detailed')) {
-    await withWebDriver(saveCharactersDetailed);
+    await saveCharactersDetailed();
   }
 }
 
