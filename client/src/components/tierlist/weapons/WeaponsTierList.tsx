@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import DraggableArea from "../base/DroppableArea";
-import { useWeapons } from "@/redux/hook/weapons";
+import { useWeaponsStore } from "@/stores";
 import WeaponAvatar from "@/components/weapons/WeaponAvatar";
 import { DndContext } from "@dnd-kit/core";
 import WeaponTierLevel from "./WeaponTierLevel";
-import type { Weapon } from "@/graphql/types";
+import type { Weapon } from "@/types";
 const tierLevels = ["S", "A", "B", "C", "D"];
 
 const WeaponsTierList: React.FC = () => {
@@ -15,7 +15,7 @@ const WeaponsTierList: React.FC = () => {
     C: [],
     D: [],
   });
-  const { weapons, weaponMap } = useWeapons();
+  const { weapons, weaponMap } = useWeaponsStore();
 
   console.log(weapons);
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDroppable } from "@dnd-kit/core";
-import type { Character } from "@/graphql/types";
+import type { Character } from "@/types";
 import DraggableComponent from "../base/DraggableComponent";
 import AvatarWithSkeleton from "@/components/utils/AvatarWithSkeleton";
 

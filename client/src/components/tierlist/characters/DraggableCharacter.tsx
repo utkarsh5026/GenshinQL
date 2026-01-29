@@ -1,4 +1,4 @@
-import type { Character } from "@/graphql/types";
+import type { Character } from "@/types";
 import React from "react";
 import AvatarWithSkeleton from "../../utils/AvatarWithSkeleton";
 import DraggableComponent from "../base/DraggableComponent";

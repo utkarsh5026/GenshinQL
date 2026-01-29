@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
-import { useCharacters } from "@/redux/hook/characters";
-import { Character } from "@/graphql/types";
+import { useCharactersStore } from "@/stores";
+import { Character } from "@/types";
 import DroppableArea from "../base/DroppableArea";
 import DraggableCharacter from "./DraggableCharacter";
 import CharacterTierLevel from "./CharacterTierLevel";
@@ -39,7 +39,7 @@ const updateTierListMap = (
 };
 
 const CharacterTierList: React.FC = () => {
-  const { characters, characterMap } = useCharacters();
+  const { characters, characterMap } = useCharactersStore();
   const [charactersToJudge, setCharactersToJudge] =
     useState<Character[]>(characters);
   const [tierListMap, setTierListMap] = useState<Record<string, Character[]>>(
