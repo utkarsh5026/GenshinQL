@@ -3,7 +3,6 @@ import * as fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import chalk from 'chalk';
 import * as os from 'node:os';
-import { logger } from '../logger';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -163,6 +162,66 @@ export async function listFiles(fullPath: string): Promise<string[]> {
 }
 
 /**
+ * Ensures a filename has .json extension
+ */
+function normalizeFileName(fileName: string): string {
+  return fileName.endsWith('.json') ? fileName : `${fileName}.json`;
+}
+
+/**
+ * Ensures directory exists, creating it if necessary
+ */
+async function ensureDirectoryExists(dir: string): Promise<void> {
+  await fs.access(dir).catch(async () => {
+    await fs.mkdir(dir, { recursive: true });
+    console.log(chalk.blue('📁 Created directory:'), chalk.gray(dir));
+  });
+}
+
+interface WriteJsonFileOptions {
+  data: unknown;
+  filePath: string;
+  fileName: string;
+}
+
+/**
+ * Core function to write JSON file with consistent logging
+ */
+async function writeJsonFile({
+  data,
+  filePath,
+  fileName,
+}: WriteJsonFileOptions): Promise<void> {
+  console.log(chalk.cyan('💾 Preparing to save:'), chalk.white(fileName));
+
+  const jsonData = JSON.stringify(data, null, 4);
+  const fileSize = Buffer.byteLength(jsonData, 'utf8');
+  const fileSizeKB = (fileSize / 1024).toFixed(2);
+
+  await fs.writeFile(filePath, jsonData);
+
+  console.log(
+    chalk.green('✅ Saved:'),
+    chalk.bold(fileName),
+    chalk.gray(`(${fileSizeKB} KB)`)
+  );
+  console.log(chalk.gray('   →'), chalk.dim(filePath));
+}
+
+/**
+ * Handles file save errors with consistent logging
+ */
+function handleSaveError(
+  error: unknown,
+  fileName: string,
+  message: string
+): never {
+  console.log(chalk.red(`❌ ${message}:`), chalk.white(fileName));
+  console.error(chalk.red('   Error:'), error);
+  throw error;
+}
+
+/**
  * Saves data directly to the public folder so React components can access it.
  * This is used for production data files that the frontend needs to fetch.
  */
@@ -170,32 +229,14 @@ export async function saveToPublic(
   data: unknown,
   fileName: string
 ): Promise<void> {
-  fileName = fileName.endsWith('.json') ? fileName : `${fileName}.json`;
+  fileName = normalizeFileName(fileName);
 
   try {
-    console.log(chalk.cyan('💾 Preparing to save:'), chalk.white(fileName));
-
-    await fs.access(PUBLIC_DIR).catch(async () => {
-      await fs.mkdir(PUBLIC_DIR, { recursive: true });
-      console.log(chalk.blue('📁 Created directory:'), chalk.gray(PUBLIC_DIR));
-    });
-
-    const jsonData = JSON.stringify(data, null, 4);
+    await ensureDirectoryExists(PUBLIC_DIR);
     const filePath = path.join(PUBLIC_DIR, fileName);
-    const fileSize = Buffer.byteLength(jsonData, 'utf8');
-    const fileSizeKB = (fileSize / 1024).toFixed(2);
-
-    await fs.writeFile(filePath, jsonData);
-    console.log(
-      chalk.green('✅ Saved:'),
-      chalk.bold(fileName),
-      chalk.gray(`(${fileSizeKB} KB)`)
-    );
-    console.log(chalk.gray('   →'), chalk.dim(filePath));
+    await writeJsonFile({ data, filePath, fileName });
   } catch (error) {
-    console.log(chalk.red('❌ Error saving:'), chalk.white(fileName));
-    console.error(chalk.red('   Error:'), error);
-    throw error;
+    handleSaveError(error, fileName, 'Error saving');
   }
 }
 
@@ -208,44 +249,25 @@ export async function saveToTemp(
   fileName: string,
   subDir: string = 'genshin-scraper'
 ): Promise<string> {
-  const baseName = fileName.endsWith('.json')
-    ? fileName.replace('.json', '')
-    : fileName;
+  const baseName = normalizeFileName(fileName);
 
   const timestamp = Date.now();
   const uniqueFileName = `${baseName}_${timestamp}.json`;
   const tempDir = path.join(os.tmpdir(), subDir);
 
   try {
-    console.log(
-      chalk.cyan('🗂️  Preparing temp save:'),
-      chalk.white(uniqueFileName)
-    );
-
     await fs.mkdir(tempDir, { recursive: true });
     const tempFilePath = path.join(tempDir, uniqueFileName);
 
-    const jsonData = JSON.stringify(data, null, 2);
-    const fileSize = Buffer.byteLength(jsonData, 'utf8');
-    const fileSizeKB = (fileSize / 1024).toFixed(2);
-
-    await fs.writeFile(tempFilePath, jsonData);
-
-    console.log(
-      chalk.green('✅ Temp file saved:'),
-      chalk.bold(uniqueFileName),
-      chalk.gray(`(${fileSizeKB} KB)`)
-    );
-    console.log(chalk.gray('   →'), chalk.dim(tempFilePath));
+    await writeJsonFile({
+      data,
+      filePath: tempFilePath,
+      fileName: uniqueFileName,
+    });
 
     return tempFilePath;
   } catch (error) {
-    logger.error(
-      chalk.red('❌ Error saving temp file:'),
-      chalk.white(uniqueFileName)
-    );
-    console.error(chalk.red('   Error:'), error);
-    throw error;
+    handleSaveError(error, uniqueFileName, 'Error saving temp file');
   }
 }
 
