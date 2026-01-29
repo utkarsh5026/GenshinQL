@@ -25,7 +25,7 @@ import {
   Gamepad2,
 } from "lucide-react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { useCharacters } from "@/redux/hook/characters";
+import { useCharactersStore } from "@/stores";
 
 interface AppSideBarProps {
   onCharacterClick: (name: string) => void;
@@ -48,7 +48,7 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
   onTierListClick,
   onGenshinGuesserClick,
 }) => {
-  const { characters, fetchCharacters } = useCharacters();
+  const { characters, fetchCharacters } = useCharactersStore();
 
   useEffect(() => {
     fetchCharacters();

@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { AnimationMedia } from "@/graphql/types";
+import { AnimationMedia } from "@/types";
 import { Volume2, VolumeX } from "lucide-react";
 
 interface AnimatedCoverProps {
