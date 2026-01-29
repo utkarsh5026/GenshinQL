@@ -57,14 +57,63 @@ export async function fetchCharacters(): Promise<Character[]> {
 }
 
 /**
- * Fetches detailed character data by name.
- * TODO: Implement loading detailed character data from separate files
+ * Fetches detailed character data by name from individual character JSON files.
  */
 export async function fetchCharacterDetailed(
-  _name: string,
+  name: string,
 ): Promise<CharacterDetailed | null> {
-  console.warn('fetchCharacterDetailed not yet implemented');
-  return null;
+  try {
+    // Fetch the character's individual JSON file
+    const response = await fetch(`${DATA_BASE_URL}characters/${name}.json`);
+    if (!response.ok) {
+      console.error(`Failed to fetch character data for ${name}`);
+      return null;
+    }
+
+    const characterData = await response.json();
+
+    // Transform scaling object to array format expected by the type
+    if (characterData.talents) {
+      characterData.talents = characterData.talents.map((talent: any) => ({
+        ...talent,
+        scaling: talent.scaling
+          ? Object.entries(talent.scaling).map(([key, value]) => ({
+              key,
+              value,
+            }))
+          : [],
+      }));
+    }
+
+    // Try to fetch gallery data, but don't fail if it's not available
+    let gallery = null;
+    try {
+      gallery = await fetchCharacterGallery(name);
+    } catch (error) {
+      console.warn(`Gallery data not available for ${name}, continuing without it`);
+    }
+
+    // Merge character data with gallery data (if available)
+    const detailedCharacter: CharacterDetailed = {
+      ...characterData,
+      screenAnimation: gallery?.screenAnimations || {
+        idleOne: undefined,
+        idleTwo: undefined,
+        partySetup: undefined,
+      },
+      imageUrls: {
+        card: gallery?.nameCard?.icon || '',
+        wish: gallery?.nameCard?.background || '',
+        inGame: gallery?.nameCard?.background || '',
+        nameCard: gallery?.nameCard?.background || '',
+      },
+    };
+
+    return detailedCharacter;
+  } catch (error) {
+    console.error(`Error fetching character ${name}:`, error);
+    return null;
+  }
 }
 
 /**
