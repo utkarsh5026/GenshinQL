@@ -30,6 +30,14 @@ export const waitForElement = async (
   );
 };
 
+export const waitAndGetElement = async (
+  driver: WebDriver,
+  cssSelector: string
+): Promise<WebElement> => {
+  await waitForElement(driver, cssSelector);
+  return driver.findElement(By.css(cssSelector));
+};
+
 export const findImageAltInCell = async (cell: WebElement) => {
   try {
     return await cell.findElement(By.css('img')).getAttribute('alt');
