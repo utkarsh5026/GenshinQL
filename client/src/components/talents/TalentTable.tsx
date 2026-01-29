@@ -1,16 +1,7 @@
 import React, { useMemo } from "react";
 import type { TalentBookCalendar } from "@/types";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table.tsx";
 import CharacterGrid from "@/components/character/utils/CharacterGrid.tsx";
 import TalentBooks from "@/components/talents/TalentBooks.tsx";
-import AnimatedTable from "@/components/utils/AnimatedTable.tsx";
 
 interface TalentTableProps {
   talent: TalentBookCalendar;
@@ -38,51 +29,59 @@ const getTodayDayOfWeek = () => {
  * @returns {JSX.Element} The rendered table component.
  */
 const TalentTable: React.FC<TalentTableProps> = ({ talent }) => {
-  const cols = ["day", "books", "characters"];
   const days = useMemo(() => talent.days, [talent.days]);
-  console.log(getTodayDayOfWeek());
 
   return (
-    <AnimatedTable>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            {cols.map((col) => (
-              <TableHead key={col}>{col.toUpperCase()}</TableHead>
-            ))}
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {days.map((d) => {
-            const { day, books, characters } = d;
-            const isToday = day.includes(getTodayDayOfWeek());
-            return (
-              <TableRow
-                key={day}
-                className={isToday ? "bg-green-950 hover:bg-green-950" : ""}
-              >
-                <TableCell>
-                  <div>
-                    <div className="my-2">{day}</div>
-                    {isToday && (
-                      <span className="text-xs font-extralight bg-green-700 p-2 rounded-xl">
-                        Today
-                      </span>
-                    )}
-                  </div>
-                </TableCell>
-                <TableCell>
-                  <TalentBooks books={books} />
-                </TableCell>
-                <TableCell>
-                  <CharacterGrid characters={characters} />
-                </TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
-    </AnimatedTable>
+    <div className="font-sans max-w-[1400px] mx-auto p-8">
+      <div className="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden border border-white/[0.08]">
+        <div className="grid grid-cols-[200px_1fr_2fr] bg-white/[0.02] border-b border-white/10">
+          <div className="px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">
+            Day
+          </div>
+          <div className="px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">
+            Talent Books
+          </div>
+          <div className="px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">
+            Characters
+          </div>
+        </div>
+
+        {days.map((d) => {
+          const { day, books, characters } = d;
+          const isToday = day.includes(getTodayDayOfWeek());
+
+          return (
+            <div
+              key={day}
+              className={`grid grid-cols-[200px_1fr_2fr] bg-black/20 transition-colors duration-150 border-b border-white/[0.04] last:border-b-0 hover:bg-white/[0.03] ${
+                isToday
+                  ? 'bg-gradient-to-r from-[#a8a29e]/[0.08] to-[#a8a29e]/[0.04] border-l-[3px] border-l-[#d4af37]/60 hover:from-[#a8a29e]/[0.12] hover:to-[#a8a29e]/[0.06]'
+                  : ''
+              }`}
+            >
+              <div className="px-6 py-7 flex flex-col gap-2 border-r border-white/[0.06]">
+                <div className="text-[0.9375rem] font-medium text-white/95">
+                  {day}
+                </div>
+                {isToday && (
+                  <span className="inline-flex w-fit px-2.5 py-1 bg-[#d4af37]/15 rounded text-[0.6875rem] font-semibold tracking-wider uppercase text-[#d4af37]/90 font-mono border border-[#d4af37]/25">
+                    Today
+                  </span>
+                )}
+              </div>
+
+              <div className="px-6 py-7 border-r border-white/[0.06]">
+                <TalentBooks books={books} />
+              </div>
+
+              <div className="px-6 py-7">
+                <CharacterGrid characters={characters} />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 
