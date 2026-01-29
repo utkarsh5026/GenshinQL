@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod';
 
 export const talentSchema = z.object({
   talentIcon: z.string(),
@@ -9,7 +9,7 @@ export const talentSchema = z.object({
     z.object({
       url: z.string(),
       caption: z.string(),
-    }),
+    })
   ),
   scaling: z.record(z.array(z.string())),
 });
@@ -56,11 +56,11 @@ export const characterFilterSchema = z.object({
 });
 
 export const weaponTypeSchema = z.union([
-  z.literal("Sword"),
-  z.literal("Claymore"),
-  z.literal("Polearm"),
-  z.literal("Catalyst"),
-  z.literal("Bow"),
+  z.literal('Sword'),
+  z.literal('Claymore'),
+  z.literal('Polearm'),
+  z.literal('Catalyst'),
+  z.literal('Bow'),
 ]);
 
 export const talentDaySchema = z.object({
@@ -69,13 +69,13 @@ export const talentDaySchema = z.object({
     z.object({
       name: z.string(),
       url: z.string(),
-    }),
+    })
   ),
   characters: z.array(
     z.object({
       name: z.string(),
       url: z.string(),
-    }),
+    })
   ),
 });
 
@@ -95,21 +95,21 @@ export const gallerySchema = z.object({
   attackAnimations: z.array(
     z.object({
       skill: z.union([
-        z.literal("Normal_Attack"),
-        z.literal("Elemental_Burst"),
-        z.literal("Elemental_Skill"),
+        z.literal('Normal_Attack'),
+        z.literal('Elemental_Burst'),
+        z.literal('Elemental_Skill'),
       ]),
       animations: z.array(animationSchema),
-    }),
+    })
   ),
   detailedImages: z.array(imageSchema).optional(),
   stickers: z.array(imageSchema).optional(),
 });
 
 export const talentBookTypeSchema = z.union([
-  z.literal("teaching"),
-  z.literal("guide"),
-  z.literal("philosophies"),
+  z.literal('teaching'),
+  z.literal('guide'),
+  z.literal('philosophies'),
 ]);
 
 export const weaponSchema = z.object({
@@ -122,9 +122,10 @@ export const weaponSchema = z.object({
   materials: z.array(
     imageSchema.extend({
       count: z.number().optional(),
-    }),
+    })
   ),
   passives: z.array(z.string()),
+  images: z.array(z.string()),
 });
 
 export const weapMaterialSchema = z.object({
