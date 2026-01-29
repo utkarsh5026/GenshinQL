@@ -1,5 +1,5 @@
 import React from "react";
-import type { Character } from "@/graphql/types";
+import type { Character } from "@/types";
 import SearchBar from "@/components/utils/SearchBar";
 
 interface CharacterSearchBarProps {

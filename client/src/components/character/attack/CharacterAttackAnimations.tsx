@@ -1,13 +1,13 @@
-import { GET_CHARACTER_ATTACK_ANIMATIONS } from "@/graphql/queries";
+import { fetchCharacterAttackAnimations } from "@/services/dataService";
 import {
   AttackAnimation,
   CharacterDetailed,
   AttackTalentType,
   Talent,
-} from "@/graphql/types";
-import React from "react";
-import { useQuery } from "@apollo/client";
+} from "@/types";
+import React, { useEffect, useState } from "react";
 import CharacterAttackAnimationGrid from "./CharacterAttackAnimationGrid";
+
 interface CharacterAttackAnimationsProps {
   character: CharacterDetailed;
 }
@@ -25,9 +25,18 @@ interface CharacterAttackAnimationsProps {
 const CharacterAttackAnimations: React.FC<CharacterAttackAnimationsProps> = ({
   character,
 }) => {
-  const { data, loading } = useQuery(GET_CHARACTER_ATTACK_ANIMATIONS, {
-    variables: { name: character.name },
-  });
+  const [attackAnimations, setAttackAnimations] = useState<AttackAnimation | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadAnimations = async () => {
+      setLoading(true);
+      const data = await fetchCharacterAttackAnimations(character.name);
+      setAttackAnimations(data);
+      setLoading(false);
+    };
+    loadAnimations();
+  }, [character.name]);
 
   const talentMap: Record<AttackTalentType, Talent | undefined> = {
     "Normal Attack": character.talents.find(
@@ -41,10 +50,8 @@ const CharacterAttackAnimations: React.FC<CharacterAttackAnimationsProps> = ({
     ),
   };
 
-  const attackAnimations = data?.characterAttackAnimations as AttackAnimation;
-
   if (loading) return <div>Loading...</div>;
-  if (!data) return <div>No data</div>;
+  if (!attackAnimations) return <div>No data</div>;
 
   return (
     <div className="flex flex-col gap-4">

@@ -1,5 +1,5 @@
 import React from "react";
-import type { TalentBook } from "@/redux/slices/talent-books";
+import type { TalentBook } from "@/stores/useTalentBooksStore";
 import {
   Tooltip,
   TooltipContent,

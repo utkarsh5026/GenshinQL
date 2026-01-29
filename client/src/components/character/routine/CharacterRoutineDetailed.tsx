@@ -1,5 +1,5 @@
-import type { Character, Weapon } from "@/graphql/types";
-import { useWeapons } from "@/redux/hook/weapons";
+import type { Character, Weapon } from "@/types";
+import { useWeaponsStore } from "@/stores";
 import React, { useEffect, useMemo, useState } from "react";
 import RoutineTable from "./RoutineTable";
 import ChipSearchBar from "@/components/utils/ChipSearchBar";
@@ -11,7 +11,7 @@ interface CharacterRoutineDetailedProps {
 const CharacterRoutineDetailed: React.FC<CharacterRoutineDetailedProps> = ({
   character,
 }) => {
-  const { fetchWeaponsOfType, weapons, weaponMap } = useWeapons();
+  const { fetchWeaponsOfType, weapons, weaponMap } = useWeaponsStore();
 
   const weaponsOfType = useMemo(() => {
     return weapons.filter((weapon) => weapon.type === character.weaponType);

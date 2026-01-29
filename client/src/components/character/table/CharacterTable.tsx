@@ -11,6 +11,7 @@ import { AnimationMedia, Character } from "@/types";
 
 import CharacterMediaAvatar from "./CharacterMediaAvatar.tsx";
 import { useCharactersStore } from "@/stores";
+import { CachedImage } from "@/components/utils/CachedImage";
 
 type CharacterWithMedia = Character & {
   media: AnimationMedia;
@@ -111,7 +112,7 @@ const ElementDisplay: React.FC<{ element: string; elementUrl: string }> = ({
 }) => {
   return (
     <div className="flex items-center space-x-2">
-      <img
+      <CachedImage
         src={elementUrl}
         alt={element}
         width={24}

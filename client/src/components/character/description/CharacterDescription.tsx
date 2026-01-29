@@ -1,40 +1,40 @@
-import React, { useState } from "react";
-import { CharacterDetailed } from "@/graphql/types";
-import { Card } from "../../ui/card.tsx";
-import ProfileHeader from "./ProfileHeader.tsx";
-import CharacterTalentTable from "../talents/CharacterTalentTable.tsx";
-import CharacterConstellations from "../constellations/CharacterConstellations.tsx";
-import CharacterPassives from "../passives/CharacterPassives.tsx";
-import { decideColor } from "@/utils/color.ts";
-import CharacterAttackAnimations from "../attack/CharacterAttackAnimations.tsx";
-import CharacterRoutineDetailed from "../routine/CharacterRoutineDetailed.tsx";
+import React, { useState } from 'react';
+import { CharacterDetailed } from '@/types';
+import { Card } from '../../ui/card.tsx';
+import ProfileHeader from './profile-header.tsx';
+import CharacterTalentTable from '../talents/CharacterTalentTable.tsx';
+import CharacterConstellations from '../constellations/CharacterConstellations.tsx';
+import CharacterPassives from '../passives/CharacterPassives.tsx';
+import { decideColor } from '@/utils/color.ts';
+import CharacterAttackAnimations from '../attack/CharacterAttackAnimations.tsx';
+import CharacterRoutineDetailed from '../routine/CharacterRoutineDetailed.tsx';
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;
 }
 
 type CharacterMenuItem =
-  | "Profile"
-  | "Talents"
-  | "Constellations"
-  | "Passives"
-  | "Attacks"
-  | "Routine";
+  | 'Profile'
+  | 'Talents'
+  | 'Constellations'
+  | 'Passives'
+  | 'Attacks'
+  | 'Routine';
 
 const menuItems: CharacterMenuItem[] = [
-  "Profile",
-  "Talents",
-  "Constellations",
-  "Passives",
-  "Attacks",
-  "Routine",
+  'Profile',
+  'Talents',
+  'Constellations',
+  'Passives',
+  'Attacks',
+  'Routine',
 ];
 
 const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   character,
 }) => {
   const [selectedMenuItem, setSelectedMenuItem] =
-    useState<CharacterMenuItem>("Profile");
+    useState<CharacterMenuItem>('Profile');
   if (!character) return <div>Character not found</div>;
 
   return (
@@ -46,9 +46,9 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${character.imageUrls.nameCard})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
           opacity: 0.03,
         }}
       />
@@ -69,7 +69,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                 onClick={() => setSelectedMenuItem(item)}
                 key={item}
                 className={`w-full text-left text-sm text-gray-500 border-2 border-white rounded-lg p-2 hover:bg-white hover:text-black cursor-pointer transition-all duration-300 ${
-                  selectedMenuItem === item ? "bg-white text-black" : ""
+                  selectedMenuItem === item ? 'bg-white text-black' : ''
                 }`}
               >
                 {item}
@@ -79,37 +79,71 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
         </div>
 
         <div className="flex flex-grow overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
-          {selectedMenuItem === "Talents" && (
+          {selectedMenuItem === 'Profile' && (
+            <CharacterCard>
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-600">Rarity</h3>
+                    <p className="text-lg">{character.rarity}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-600">Element</h3>
+                    <p className="text-lg">{character.element}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-600">Weapon</h3>
+                    <p className="text-lg">{character.weaponType}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-600">Region</h3>
+                    <p className="text-lg">{character.region}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-600">Model Type</h3>
+                    <p className="text-lg">{character.modelType}</p>
+                  </div>
+                  {character.version && (
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-600">Version</h3>
+                      <p className="text-lg">{character.version}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </CharacterCard>
+          )}
+          {selectedMenuItem === 'Talents' && (
             <CharacterCard>
               <CharacterTalentTable talents={character.talents} />
             </CharacterCard>
           )}
-          {selectedMenuItem === "Constellations" && (
+          {selectedMenuItem === 'Constellations' && (
             <CharacterCard>
               <CharacterConstellations
                 constellations={character.constellations}
               />
             </CharacterCard>
           )}
-          {selectedMenuItem === "Passives" && (
+          {selectedMenuItem === 'Passives' && (
             <CharacterCard>
               <CharacterPassives
                 passives={character.talents.filter((talent) => {
                   return ![
-                    "Normal Attack",
-                    "Elemental Skill",
-                    "Elemental Burst",
+                    'Normal Attack',
+                    'Elemental Skill',
+                    'Elemental Burst',
                   ].includes(talent.talentType);
                 })}
               />
             </CharacterCard>
           )}
-          {selectedMenuItem === "Attacks" && (
+          {selectedMenuItem === 'Attacks' && (
             <CharacterCard>
               <CharacterAttackAnimations character={character} />
             </CharacterCard>
           )}
-          {selectedMenuItem === "Routine" && (
+          {selectedMenuItem === 'Routine' && (
             <CharacterCard>
               <CharacterRoutineDetailed character={character} />
             </CharacterCard>

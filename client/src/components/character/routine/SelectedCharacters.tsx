@@ -1,5 +1,5 @@
 import React from "react";
-import type { AvatarRequirement } from "@/graphql/types";
+import type { AvatarRequirement } from "@/types";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 interface SelectedCharactersProps {

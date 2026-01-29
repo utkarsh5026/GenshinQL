@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import type { Talent } from "@/graphql/types";
+import type { Talent } from "@/types";
 import {
   Table,
   TableBody,

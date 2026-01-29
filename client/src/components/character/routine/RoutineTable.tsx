@@ -6,15 +6,14 @@ import {
   TableBody,
   TableHeader,
 } from "@/components/ui/table";
-import { TalentBook } from "@/redux/slices/talent-books";
 import React, { useEffect, useMemo } from "react";
 import CharacterGrid from "../utils/CharacterGrid";
 import TalentBooksShowCase from "./TalentBooksShowCase";
 import { getCurrentDay } from "@/utils/day";
-import type { Character, Day, Weapon, WeaponMaterial } from "@/graphql/types";
-import useTalentBooks from "@/redux/hook/talent-book";
+import type { Character, Day, Weapon, WeaponMaterial } from "@/types";
 import WeaponShowCase from "@/components/weapons/WeaponShowCase";
-import { useWeaponMaterials } from "@/redux/hook/weapon-material";
+import { useTalentBooksStore, type TalentBook } from "@/stores";
+import { useWeaponMaterialStore } from "@/stores";
 
 interface RoutineTableProps {
   characters: Character[];
@@ -47,12 +46,13 @@ type WeaponMaterialRoutine = {
  */
 const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
   const currentDay = getCurrentDay();
-  const { talentCharMap, fetchBooks } = useTalentBooks();
-  const { weaponMap } = useWeaponMaterials();
+  const { talentCharMap, fetchBooks } = useTalentBooksStore();
+  const { weaponMap, fetchWeaponMaterials } = useWeaponMaterialStore();
 
   useEffect(() => {
     fetchBooks();
-  }, [fetchBooks]);
+    fetchWeaponMaterials();
+  }, [fetchBooks, fetchWeaponMaterials]);
 
   const routines = useMemo(() => {
     const books = characters.map((char) => ({

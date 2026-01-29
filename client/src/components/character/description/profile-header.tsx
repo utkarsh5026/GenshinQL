@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Avatar, AvatarImage } from "../../ui/avatar.tsx";
-import { AnimationMedia } from "@/graphql/types";
+import { AnimationMedia } from "@/types";
 import AnimatedCover from "../../utils/AnimatedCover.tsx";
 import { ChevronRight } from "lucide-react";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimationMedia, Talent } from "@/graphql/types";
+import { AnimationMedia, Talent } from "@/types";
 import AnimatedCover from "../../utils/AnimatedCover.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
@@ -22,7 +22,7 @@ interface CharacterAttackAnimationGridProps {
  */
 const CharacterAttackAnimationGrid: React.FC<
   CharacterAttackAnimationGridProps
-> = ({ talent, animations }) => {
+> = ({ talent, animations }: CharacterAttackAnimationGridProps): JSX.Element => {
   return (
     <Card className="border-none bg-transparent">
       <CardHeader>
