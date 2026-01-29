@@ -7,17 +7,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table.tsx";
-import { AnimationMedia, Character } from "@/graphql/types";
+import { AnimationMedia, Character } from "@/types";
 
 import CharacterMediaAvatar from "./CharacterMediaAvatar.tsx";
-import { useCharacters } from "@/redux/hook/characters.ts";
+import { useCharactersStore } from "@/stores";
 
 type CharacterWithMedia = Character & {
   media: AnimationMedia;
 };
 
 const CharactersTable: React.FC = () => {
-  const { characters, loading, error, fetchCharacters } = useCharacters();
+  const { characters, loading, error, fetchCharacters } = useCharactersStore();
   const columnNames = [
     "Icon",
     "Name",
@@ -28,8 +28,8 @@ const CharactersTable: React.FC = () => {
   ];
 
   useEffect(() => {
-    if (characters.length === 0) fetchCharacters();
-  }, [fetchCharacters, characters]);
+    fetchCharacters();
+  }, [fetchCharacters]);
 
   const charactersWithMedia: CharacterWithMedia[] = useMemo(() => {
     if (!characters) return [];
@@ -49,7 +49,6 @@ const CharactersTable: React.FC = () => {
     return characters.map((character) => ({
       ...character,
       media: getCharMedia(character),
-      elementUrl: character.elementUrl.split("/revision/")[0],
     }));
   }, [characters]);
 
