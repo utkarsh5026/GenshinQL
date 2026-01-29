@@ -1,0 +1,855 @@
+{
+    "Mondstadt": [
+        {
+            "day": "Monday/\nThursday",
+            "books": [
+                {
+                    "name": "Teachings of Freedom",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Teachings_of_Freedom.png"
+                },
+                {
+                    "name": "Guide to Freedom",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Item_Guide_to_Freedom.png"
+                },
+                {
+                    "name": "Philosophies of Freedom",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Item_Philosophies_of_Freedom.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Aloy",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Aloy_Icon.png"
+                },
+                {
+                    "name": "Amber",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Amber_Icon.png"
+                },
+                {
+                    "name": "Barbara",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Barbara_Icon.png"
+                },
+                {
+                    "name": "Diona",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Diona_Icon.png"
+                },
+                {
+                    "name": "Klee",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Klee_Icon.png"
+                },
+                {
+                    "name": "Sucrose",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sucrose_Icon.png"
+                },
+                {
+                    "name": "Tartaglia",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Tartaglia_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Tuesday/\nFriday",
+            "books": [
+                {
+                    "name": "Teachings of Resistance",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Teachings_of_Resistance.png"
+                },
+                {
+                    "name": "Guide to Resistance",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Item_Guide_to_Resistance.png"
+                },
+                {
+                    "name": "Philosophies of Resistance",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Philosophies_of_Resistance.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Bennett",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Bennett_Icon.png"
+                },
+                {
+                    "name": "Diluc",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Diluc_Icon.png"
+                },
+                {
+                    "name": "Eula",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Eula_Icon.png"
+                },
+                {
+                    "name": "Jean",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Jean_Icon.png"
+                },
+                {
+                    "name": "Mona",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Mona_Icon.png"
+                },
+                {
+                    "name": "Noelle",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Noelle_Icon.png"
+                },
+                {
+                    "name": "Razor",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Razor_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Wednesday/\nSaturday",
+            "books": [
+                {
+                    "name": "Teachings of Ballad",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Teachings_of_Ballad.png"
+                },
+                {
+                    "name": "Guide to Ballad",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Guide_to_Ballad.png"
+                },
+                {
+                    "name": "Philosophies of Ballad",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Philosophies_of_Ballad.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Albedo",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Albedo_Icon.png"
+                },
+                {
+                    "name": "Dahlia",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Dahlia_Icon.png"
+                },
+                {
+                    "name": "Durin",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Durin_Icon.png"
+                },
+                {
+                    "name": "Fischl",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Fischl_Icon.png"
+                },
+                {
+                    "name": "Kaeya",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kaeya_Icon.png"
+                },
+                {
+                    "name": "Lisa",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lisa_Icon.png"
+                },
+                {
+                    "name": "Mika",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Mika_Icon.png"
+                },
+                {
+                    "name": "Rosaria",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Rosaria_Icon.png"
+                },
+                {
+                    "name": "Venti",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Venti_Icon.png"
+                }
+            ]
+        }
+    ],
+    "Liyue": [
+        {
+            "day": "Monday/\nThursday",
+            "books": [
+                {
+                    "name": "Teachings of Prosperity",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Item_Teachings_of_Prosperity.png"
+                },
+                {
+                    "name": "Guide to Prosperity",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Guide_to_Prosperity.png"
+                },
+                {
+                    "name": "Philosophies of Prosperity",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Item_Philosophies_of_Prosperity.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Gaming",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Gaming_Icon.png"
+                },
+                {
+                    "name": "Keqing",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png"
+                },
+                {
+                    "name": "Ningguang",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Ningguang_Icon.png"
+                },
+                {
+                    "name": "Qiqi",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Qiqi_Icon.png"
+                },
+                {
+                    "name": "Shenhe",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Shenhe_Icon.png"
+                },
+                {
+                    "name": "Xiao",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Xiao_Icon.png"
+                },
+                {
+                    "name": "Yelan",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Tuesday/\nFriday",
+            "books": [
+                {
+                    "name": "Teachings of Diligence",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Teachings_of_Diligence.png"
+                },
+                {
+                    "name": "Guide to Diligence",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Guide_to_Diligence.png"
+                },
+                {
+                    "name": "Philosophies of Diligence",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Item_Philosophies_of_Diligence.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Chongyun",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Chongyun_Icon.png"
+                },
+                {
+                    "name": "Ganyu",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Ganyu_Icon.png"
+                },
+                {
+                    "name": "Hu Tao",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Hu_Tao_Icon.png"
+                },
+                {
+                    "name": "Kaedehara Kazuha",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Kaedehara_Kazuha_Icon.png"
+                },
+                {
+                    "name": "Lan Yan",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Lan_Yan_Icon.png"
+                },
+                {
+                    "name": "Xiangling",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Xiangling_Icon.png"
+                },
+                {
+                    "name": "Yaoyao",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Yaoyao_Icon.png"
+                },
+                {
+                    "name": "Yun Jin",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Yun_Jin_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Wednesday/\nSaturday",
+            "books": [
+                {
+                    "name": "Teachings of Gold",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Item_Teachings_of_Gold.png"
+                },
+                {
+                    "name": "Guide to Gold",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Item_Guide_to_Gold.png"
+                },
+                {
+                    "name": "Philosophies of Gold",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Philosophies_of_Gold.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Baizhu",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Baizhu_Icon.png"
+                },
+                {
+                    "name": "Beidou",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Beidou_Icon.png"
+                },
+                {
+                    "name": "Xianyun",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Xianyun_Icon.png"
+                },
+                {
+                    "name": "Xingqiu",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Xingqiu_Icon.png"
+                },
+                {
+                    "name": "Xinyan",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Xinyan_Icon.png"
+                },
+                {
+                    "name": "Yanfei",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Yanfei_Icon.png"
+                },
+                {
+                    "name": "Zhongli",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Zhongli_Icon.png"
+                },
+                {
+                    "name": "Zibai",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Zibai_Icon.png"
+                }
+            ]
+        }
+    ],
+    "Inazuma": [
+        {
+            "day": "Monday/\nThursday",
+            "books": [
+                {
+                    "name": "Teachings of Transience",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Teachings_of_Transience.png"
+                },
+                {
+                    "name": "Guide to Transience",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Item_Guide_to_Transience.png"
+                },
+                {
+                    "name": "Philosophies of Transience",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Philosophies_of_Transience.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Kirara",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kirara_Icon.png"
+                },
+                {
+                    "name": "Sangonomiya Kokomi",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Sangonomiya_Kokomi_Icon.png"
+                },
+                {
+                    "name": "Shikanoin Heizou",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Shikanoin_Heizou_Icon.png"
+                },
+                {
+                    "name": "Thoma",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Thoma_Icon.png"
+                },
+                {
+                    "name": "Yoimiya",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Yoimiya_Icon.png"
+                },
+                {
+                    "name": "Yumemizuki Mizuki",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Yumemizuki_Mizuki_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Tuesday/\nFriday",
+            "books": [
+                {
+                    "name": "Teachings of Elegance",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Item_Teachings_of_Elegance.png"
+                },
+                {
+                    "name": "Guide to Elegance",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Guide_to_Elegance.png"
+                },
+                {
+                    "name": "Philosophies of Elegance",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Item_Philosophies_of_Elegance.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Arataki Itto",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Arataki_Itto_Icon.png"
+                },
+                {
+                    "name": "Kamisato Ayaka",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Kamisato_Ayaka_Icon.png"
+                },
+                {
+                    "name": "Kamisato Ayato",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Kamisato_Ayato_Icon.png"
+                },
+                {
+                    "name": "Kujou Sara",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Kujou_Sara_Icon.png"
+                },
+                {
+                    "name": "Kuki Shinobu",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Kuki_Shinobu_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Wednesday/\nSaturday",
+            "books": [
+                {
+                    "name": "Teachings of Light",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Item_Teachings_of_Light.png"
+                },
+                {
+                    "name": "Guide to Light",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Item_Guide_to_Light.png"
+                },
+                {
+                    "name": "Philosophies of Light",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Item_Philosophies_of_Light.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Chiori",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Chiori_Icon.png"
+                },
+                {
+                    "name": "Gorou",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Gorou_Icon.png"
+                },
+                {
+                    "name": "Raiden Shogun",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Raiden_Shogun_Icon.png"
+                },
+                {
+                    "name": "Sayu",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Sayu_Icon.png"
+                },
+                {
+                    "name": "Yae Miko",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Yae_Miko_Icon.png"
+                }
+            ]
+        }
+    ],
+    "Sumeru": [
+        {
+            "day": "Monday/\nThursday",
+            "books": [
+                {
+                    "name": "Teachings of Admonition",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Teachings_of_Admonition.png"
+                },
+                {
+                    "name": "Guide to Admonition",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Item_Guide_to_Admonition.png"
+                },
+                {
+                    "name": "Philosophies of Admonition",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Philosophies_of_Admonition.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Candace",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Candace_Icon.png"
+                },
+                {
+                    "name": "Cyno",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cyno_Icon.png"
+                },
+                {
+                    "name": "Faruzan",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Faruzan_Icon.png"
+                },
+                {
+                    "name": "Tighnari",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Tighnari_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Tuesday/\nFriday",
+            "books": [
+                {
+                    "name": "Teachings of Ingenuity",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Item_Teachings_of_Ingenuity.png"
+                },
+                {
+                    "name": "Guide to Ingenuity",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Item_Guide_to_Ingenuity.png"
+                },
+                {
+                    "name": "Philosophies of Ingenuity",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Item_Philosophies_of_Ingenuity.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Alhaitham",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Alhaitham_Icon.png"
+                },
+                {
+                    "name": "Dori",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Dori_Icon.png"
+                },
+                {
+                    "name": "Kaveh",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Kaveh_Icon.png"
+                },
+                {
+                    "name": "Layla",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Layla_Icon.png"
+                },
+                {
+                    "name": "Nahida",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Nahida_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Wednesday/\nSaturday",
+            "books": [
+                {
+                    "name": "Teachings of Praxis",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Item_Teachings_of_Praxis.png"
+                },
+                {
+                    "name": "Guide to Praxis",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Item_Guide_to_Praxis.png"
+                },
+                {
+                    "name": "Philosophies of Praxis",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Item_Philosophies_of_Praxis.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Collei",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Collei_Icon.png"
+                },
+                {
+                    "name": "Dehya",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Dehya_Icon.png"
+                },
+                {
+                    "name": "Nilou",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Nilou_Icon.png"
+                },
+                {
+                    "name": "Sethos",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Sethos_Icon.png"
+                },
+                {
+                    "name": "Wanderer",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Wanderer_Icon.png"
+                }
+            ]
+        }
+    ],
+    "Fontaine": [
+        {
+            "day": "Monday/\nThursday",
+            "books": [
+                {
+                    "name": "Teachings of Equity",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Item_Teachings_of_Equity.png"
+                },
+                {
+                    "name": "Guide to Equity",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Item_Guide_to_Equity.png"
+                },
+                {
+                    "name": "Philosophies of Equity",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Item_Philosophies_of_Equity.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Lyney",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Lyney_Icon.png"
+                },
+                {
+                    "name": "Navia",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Navia_Icon.png"
+                },
+                {
+                    "name": "Neuvillette",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Neuvillette_Icon.png"
+                },
+                {
+                    "name": "Sigewinne",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Sigewinne_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Tuesday/\nFriday",
+            "books": [
+                {
+                    "name": "Teachings of Justice",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Teachings_of_Justice.png"
+                },
+                {
+                    "name": "Guide to Justice",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Guide_to_Justice.png"
+                },
+                {
+                    "name": "Philosophies of Justice",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Item_Philosophies_of_Justice.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Charlotte",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Charlotte_Icon.png"
+                },
+                {
+                    "name": "Clorinde",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Clorinde_Icon.png"
+                },
+                {
+                    "name": "Escoffier",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Escoffier_Icon.png"
+                },
+                {
+                    "name": "Freminet",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Freminet_Icon.png"
+                },
+                {
+                    "name": "Furina",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Furina_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Wednesday/\nSaturday",
+            "books": [
+                {
+                    "name": "Teachings of Order",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Item_Teachings_of_Order.png"
+                },
+                {
+                    "name": "Guide to Order",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Item_Guide_to_Order.png"
+                },
+                {
+                    "name": "Philosophies of Order",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Philosophies_of_Order.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Arlecchino",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Arlecchino_Icon.png"
+                },
+                {
+                    "name": "Chevreuse",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Chevreuse_Icon.png"
+                },
+                {
+                    "name": "Emilie",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Emilie_Icon.png"
+                },
+                {
+                    "name": "Lynette",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Lynette_Icon.png"
+                },
+                {
+                    "name": "Wriothesley",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Wriothesley_Icon.png"
+                }
+            ]
+        }
+    ],
+    "Natlan": [
+        {
+            "day": "Monday/\nThursday",
+            "books": [
+                {
+                    "name": "Teachings of Contention",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Teachings_of_Contention.png"
+                },
+                {
+                    "name": "Guide to Contention",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Item_Guide_to_Contention.png"
+                },
+                {
+                    "name": "Philosophies of Contention",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Item_Philosophies_of_Contention.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Iansan",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Iansan_Icon.png"
+                },
+                {
+                    "name": "Mavuika",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Mavuika_Icon.png"
+                },
+                {
+                    "name": "Mualani",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mualani_Icon.png"
+                },
+                {
+                    "name": "Skirk",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Skirk_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Tuesday/\nFriday",
+            "books": [
+                {
+                    "name": "Teachings of Kindling",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Teachings_of_Kindling.png"
+                },
+                {
+                    "name": "Guide to Kindling",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Item_Guide_to_Kindling.png"
+                },
+                {
+                    "name": "Philosophies of Kindling",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Philosophies_of_Kindling.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Citlali",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Citlali_Icon.png"
+                },
+                {
+                    "name": "Kinich",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Kinich_Icon.png"
+                },
+                {
+                    "name": "Ororon",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Ororon_Icon.png"
+                },
+                {
+                    "name": "Xilonen",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Xilonen_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Wednesday/\nSaturday",
+            "books": [
+                {
+                    "name": "Teachings of Conflict",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Item_Teachings_of_Conflict.png"
+                },
+                {
+                    "name": "Guide to Conflict",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Item_Guide_to_Conflict.png"
+                },
+                {
+                    "name": "Philosophies of Conflict",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Item_Philosophies_of_Conflict.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Chasca",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Chasca_Icon.png"
+                },
+                {
+                    "name": "Ifa",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Ifa_Icon.png"
+                },
+                {
+                    "name": "Ineffa",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Ineffa_Icon.png"
+                },
+                {
+                    "name": "Kachina",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Kachina_Icon.png"
+                },
+                {
+                    "name": "Varesa",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Varesa_Icon.png"
+                }
+            ]
+        }
+    ],
+    "Nod-Krai": [
+        {
+            "day": "Monday/\nThursday",
+            "books": [
+                {
+                    "name": "Teachings of Moonlight",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Item_Teachings_of_Moonlight.png"
+                },
+                {
+                    "name": "Guide to Moonlight",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Guide_to_Moonlight.png"
+                },
+                {
+                    "name": "Philosophies of Moonlight",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Philosophies_of_Moonlight.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Columbina",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Columbina_Icon.png"
+                },
+                {
+                    "name": "Lauma",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Lauma_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Tuesday/\nFriday",
+            "books": [
+                {
+                    "name": "Teachings of Elysium",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Item_Teachings_of_Elysium.png"
+                },
+                {
+                    "name": "Guide to Elysium",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Item_Guide_to_Elysium.png"
+                },
+                {
+                    "name": "Philosophies of Elysium",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Item_Philosophies_of_Elysium.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Aino",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Aino_Icon.png"
+                },
+                {
+                    "name": "Illuga",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Illuga_Icon.png"
+                },
+                {
+                    "name": "Nefer",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Nefer_Icon.png"
+                }
+            ]
+        },
+        {
+            "day": "Wednesday/\nSaturday",
+            "books": [
+                {
+                    "name": "Teachings of Vagrancy",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Teachings_of_Vagrancy.png"
+                },
+                {
+                    "name": "Guide to Vagrancy",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Guide_to_Vagrancy.png"
+                },
+                {
+                    "name": "Philosophies of Vagrancy",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Item_Philosophies_of_Vagrancy.png"
+                }
+            ],
+            "characters": [
+                {
+                    "name": "Flins",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Flins_Icon.png"
+                },
+                {
+                    "name": "Jahoda",
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Jahoda_Icon.png"
+                }
+            ]
+        }
+    ]
+}
