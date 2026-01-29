@@ -2,7 +2,7 @@ import { Builder, By, until, WebDriver } from 'selenium-webdriver';
 import * as chrome from 'selenium-webdriver/chrome';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import chalk from 'chalk';
+import { logger } from '../logger.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -37,11 +37,9 @@ function getChromedriverPath(): string {
 export async function setupDriver(mode?: string): Promise<WebDriver> {
   const isHeadless = mode === 'prod';
 
-  console.log(chalk.blue('🚀 Setting up Chrome WebDriver...'));
-  console.log(
-    chalk.cyan(
-      `   Mode: ${isHeadless ? chalk.yellow('Headless (Production)') : chalk.green('Visible Browser (Development)')}`
-    )
+  logger.info('🚀 Setting up Chrome WebDriver...');
+  logger.cyan(
+    `   Mode: ${isHeadless ? 'Headless (Production)' : 'Visible Browser (Development)'}`
   );
 
   const options = new chrome.Options();
@@ -65,7 +63,7 @@ export async function setupDriver(mode?: string): Promise<WebDriver> {
   options.excludeSwitches('enable-automation');
   options.addArguments('--disable-web-security');
 
-  console.log(chalk.gray('   Initializing ChromeDriver...'));
+  logger.debug('   Initializing ChromeDriver...');
   const service = new chrome.ServiceBuilder(getChromedriverPath());
 
   const driver = await new Builder()
@@ -78,7 +76,7 @@ export async function setupDriver(mode?: string): Promise<WebDriver> {
     "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
   );
 
-  console.log(chalk.green('✓ WebDriver ready!\n'));
+  logger.success('✓ WebDriver ready!\n');
   return driver;
 }
 
@@ -88,17 +86,17 @@ export async function withWebDriver(
 ) {
   const driver = await setupDriver(mode);
   try {
-    console.log(chalk.blue('▶ Starting scraping operation...\n'));
+    logger.info('▶ Starting scraping operation...\n');
     await fn(driver);
-    console.log(chalk.green('\n✓ Scraping completed successfully!'));
+    logger.success('\n✓ Scraping completed successfully!');
   } catch (error) {
-    console.log(chalk.red('\n✗ Error during scraping:'));
-    console.log(chalk.red(`   ${error}`));
+    logger.error('\n✗ Error during scraping:');
+    logger.error(`   ${error}`);
     throw error;
   } finally {
-    console.log(chalk.gray('🔄 Closing WebDriver...'));
+    logger.debug('🔄 Closing WebDriver...');
     await driver.quit();
-    console.log(chalk.gray('✓ WebDriver closed\n'));
+    logger.debug('✓ WebDriver closed\n');
   }
 }
 
