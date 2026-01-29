@@ -1,77 +1,112 @@
-import { Builder, By, until, WebDriver } from "selenium-webdriver";
-import * as chrome from "selenium-webdriver/chrome";
-import * as fs from "node:fs/promises";
-import * as path from "node:path";
-import { BASE_DIR } from "./fileio.js";
+import { Builder, By, until, WebDriver } from 'selenium-webdriver';
+import * as chrome from 'selenium-webdriver/chrome';
+import * as path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import chalk from 'chalk';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * URL for the Genshin Impact Fandom wiki.
  */
-export const URL = "https://genshin-impact.fandom.com/wiki";
+export const URL = 'https://genshin-impact.fandom.com/wiki';
+
+/**
+ * Gets the path to the local ChromeDriver binary.
+ */
+function getChromedriverPath(): string {
+  const chromedriverPath = path.join(
+    __dirname,
+    '..',
+    '..',
+    'node_modules',
+    'chromedriver',
+    'lib',
+    'chromedriver',
+    process.platform === 'win32' ? 'chromedriver.exe' : 'chromedriver'
+  );
+  return chromedriverPath;
+}
 
 /**
  * Sets up and returns a Selenium WebDriver for Chrome.
+ * Uses the local ChromeDriver from node_modules for better portability.
+ * @param mode - If 'prod', runs in headless mode; otherwise shows the browser
  */
-export async function setupDriver(): Promise<WebDriver> {
+export async function setupDriver(mode?: string): Promise<WebDriver> {
+  const isHeadless = mode === 'prod';
+
+  console.log(chalk.blue('🚀 Setting up Chrome WebDriver...'));
+  console.log(
+    chalk.cyan(
+      `   Mode: ${isHeadless ? chalk.yellow('Headless (Production)') : chalk.green('Visible Browser (Development)')}`
+    )
+  );
+
   const options = new chrome.Options();
-  options.addArguments("--ignore-certificate-errors");
-  options.addArguments("--ignore-ssl-errors");
-  return new Builder().forBrowser("chrome").setChromeOptions(options).build();
+  options.addArguments('--ignore-certificate-errors');
+  options.addArguments('--ignore-ssl-errors');
+
+  // Run in headless mode for production
+  if (isHeadless) {
+    options.addArguments('--headless');
+  }
+
+  options.addArguments('--disable-gpu');
+  options.addArguments('--no-sandbox');
+  options.addArguments('--disable-dev-shm-usage');
+  options.addArguments('--window-size=1920,1080');
+  options.addArguments(
+    '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+  );
+
+  options.addArguments('--disable-blink-features=AutomationControlled');
+  options.excludeSwitches('enable-automation');
+  options.addArguments('--disable-web-security');
+
+  console.log(chalk.gray('   Initializing ChromeDriver...'));
+  const service = new chrome.ServiceBuilder(getChromedriverPath());
+
+  const driver = await new Builder()
+    .forBrowser('chrome')
+    .setChromeOptions(options)
+    .setChromeService(service)
+    .build();
+
+  await driver.executeScript(
+    "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+  );
+
+  console.log(chalk.green('✓ WebDriver ready!\n'));
+  return driver;
 }
 
-/**
- * Saves the scraped weapon data to a JSON file.
- */
-export async function saveJson(
-  data: unknown,
-  subDir: string,
-  fileName: string,
+export async function withWebDriver(
+  fn: (driver: WebDriver) => Promise<void>,
+  mode?: string
 ) {
-  const basePath = path.join(BASE_DIR, subDir);
+  const driver = await setupDriver(mode);
   try {
-    try {
-      await fs.access(basePath);
-    } catch {
-      await fs.mkdir(basePath, { recursive: true });
-      console.log(`Created directory: ${basePath}`);
-    }
-    const jsonData = JSON.stringify(data, null, 4);
-    await fs.writeFile(path.join(basePath, `${fileName}.json`), jsonData);
+    console.log(chalk.blue('▶ Starting scraping operation...\n'));
+    await fn(driver);
+    console.log(chalk.green('\n✓ Scraping completed successfully!'));
   } catch (error) {
-    console.error(`Error saving ${fileName}:`, error);
+    console.log(chalk.red('\n✗ Error during scraping:'));
+    console.log(chalk.red(`   ${error}`));
+    throw error;
+  } finally {
+    console.log(chalk.gray('🔄 Closing WebDriver...'));
+    await driver.quit();
+    console.log(chalk.gray('✓ WebDriver closed\n'));
   }
 }
 
-export async function loadJsonPath(subDir: string) {
-  try {
-    const filePath = path.join(BASE_DIR, subDir);
-    await fs.access(filePath);
-    return JSON.parse(await fs.readFile(filePath, "utf-8"));
-  } catch {
-    return null;
-  }
-}
-
-/**
- * Lists all directories within a given directory.
- */
-export async function listDirectories(dirPath: string): Promise<string[]> {
-  try {
-    const fullPath = path.join(BASE_DIR, dirPath);
-    const entries = await fs.readdir(fullPath, { withFileTypes: true });
-    return entries
-      .filter((entry) => entry.isDirectory())
-      .map((entry) => entry.name);
-  } catch (error) {
-    console.error(`Error listing directories in ${dirPath}:`, error);
-    return [];
-  }
-}
 
 export function waitForElementCss(
   driver: WebDriver,
   css: string,
-  timeout = 20000,
+  timeout = 20000
 ) {
   return driver.wait(until.elementLocated(By.css(css)), timeout);
 }
@@ -79,7 +114,7 @@ export function waitForElementCss(
 export function waitForElementXpath(
   driver: WebDriver,
   xpath: string,
-  timeout = 10000,
+  timeout = 10000
 ) {
   return driver.wait(until.elementLocated(By.xpath(xpath)), timeout);
 }

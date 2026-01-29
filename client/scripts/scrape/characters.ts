@@ -1,10 +1,11 @@
 import { By, until, WebDriver, WebElement } from 'selenium-webdriver';
-import { setupDriver, URL } from './setup.js';
+import { URL, withWebDriver } from './setup.js';
 import * as path from 'node:path';
 import chalk from 'chalk';
 import {
   getParentNextTableSibling,
   parseCharacterName,
+  findImageInCell,
   safeGet,
 } from './utils.js';
 import {
@@ -370,14 +371,6 @@ async function scrapeBaseCharactersTable(
     return await driver.findElements(By.xpath(`${tableSelector}//tr`));
   };
 
-  const findImageInCell = async (cell: WebElement) => {
-    try {
-      return await cell.findElement(By.css('img')).getAttribute('data-src');
-    } catch {
-      return '';
-    }
-  };
-
   const parseTableRow = async (
     row: WebElement
   ): Promise<BaseCharacterSchema | null> => {
@@ -553,25 +546,25 @@ async function main() {
     return;
   }
 
-  console.log('Setting up WebDriver...');
-  const driver = await setupDriver();
-  console.log('WebDriver setup complete');
-
-  if (args.includes('--base')) {
+  const scrapeCharactersBase = async (driver: WebDriver) => {
     console.log('Starting base character scraping...');
     await saveToPublic(await scrapeBaseCharactersTable(driver), 'characters');
     console.log('Base character scraping complete');
-  }
+  };
 
-  if (args.includes('--detailed')) {
+  const saveCharactersDetailed = async (driver: WebDriver) => {
     console.log('Starting detailed character scraping...');
     await scrapeAndSaveDetailedCharacterInfo(driver, true);
     console.log('Detailed character scraping complete');
+  };
+
+  if (args.includes('--base')) {
+    await withWebDriver(scrapeCharactersBase);
   }
 
-  console.log('Closing WebDriver...');
-  await driver.quit();
-  console.log('WebDriver closed');
+  if (args.includes('--detailed')) {
+    await withWebDriver(saveCharactersDetailed);
+  }
 }
 
 const isMainModule =
