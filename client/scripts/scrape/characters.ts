@@ -99,6 +99,7 @@ export async function scrapeCharacterDetailed(character: string) {
     return urlMap;
   };
 
+
   const getTalents = async (driver: WebDriver) => {
     logger.info(`Scraping talents for ${character}...`);
     const talentSelector = 'table.talent-table';
@@ -121,8 +122,7 @@ export async function scrapeCharacterDetailed(character: string) {
           const talentType = await cells[2].getText();
 
           const descRow = rows[i + 1];
-          const descCells = await descRow.findElement(By.css('td'));
-          const description = (await descCells.getText()).split('▼')[0];
+          const description = await getTalentDescription(driver, descRow);
 
           const figureUrls = await getFigureUrls(driver, descRow);
           const scaling = await getTalentScaling(driver, descRow);
@@ -204,6 +204,64 @@ export async function scrapeCharacterDetailed(character: string) {
   };
 
   return await withWebDriver(scrapeCharacter);
+}
+
+/**
+ * Extracts talent description from the Description tab
+ *
+ * @param driver - The WebDriver instance
+ * @param descRow - The row element containing the description
+ * @returns Promise resolving to the description text
+ */
+async function getTalentDescription(
+  driver: WebDriver,
+  descRow: WebElement
+): Promise<string> {
+  try {
+    // Check if tabs exist within this specific row
+    const tabs = await descRow.findElements(By.css('.wds-tabs__tab'));
+
+    if (tabs.length > 0) {
+      // Find and click the "Description" tab within this specific row
+      let descriptionTabFound = false;
+      for (const tab of tabs) {
+        const tabText = await tab.getText();
+        if (tabText.includes('Description')) {
+          // Scroll the tab into view and click it using JavaScript to avoid click interception
+          await driver.executeScript(
+            'arguments[0].scrollIntoView({behavior: "smooth", block: "center"}); arguments[0].click();',
+            tab
+          );
+          descriptionTabFound = true;
+          logger.debug('Clicked Description tab');
+          break;
+        }
+      }
+
+      if (descriptionTabFound) {
+        // Wait for the tab content to become active
+        await driver.sleep(800);
+      }
+    }
+
+    // Try to get description from the new tab structure first
+    const tabContent = await descRow.findElements(
+      By.css('.wds-tab__content.wds-is-current p')
+    );
+
+    if (tabContent.length > 0) {
+      const description = await tabContent[0].getText();
+      return description;
+    }
+
+    // Fallback to old structure
+    const descCells = await descRow.findElement(By.css('td'));
+    const rawDescription = (await descCells.getText()).split('▼')[0];
+    return rawDescription;
+  } catch (error) {
+    logger.error('Error in getTalentDescription:', error);
+    return '';
+  }
 }
 
 /**
