@@ -7,10 +7,18 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\" \"scripts/**/*.{ts,js}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\" \"scripts/**/*.{ts,js}\"",
+    "scrape": "npx tsx scripts/index.ts",
+    "scrape:all": "npx tsx scripts/index.ts all",
+    "scrape:characters": "npx tsx scripts/scrape/characters.ts --base --detailed",
+    "scrape:gallery": "npx tsx scripts/scrape/gallery.ts",
+    "scrape:talents": "npx tsx scripts/scrape/talents.ts",
+    "scrape:weapons": "npx tsx scripts/scrape/weapons.ts",
+    "consolidate": "npx tsx scripts/consolidate.ts"
   },
   "dependencies": {
-    "@apollo/client": "^3.11.8",
     "@dnd-kit/core": "^6.1.0",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-collapsible": "^1.1.1",
@@ -26,7 +34,6 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "framer-motion": "^11.11.11",
-    "graphql": "^16.9.0",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.453.0",
     "react": "^18.3.1",
@@ -36,13 +43,15 @@
     "tailwind-merge": "^2.5.4",
     "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss-animate": "^1.0.7",
-    "vaul": "^1.1.0"
+    "vaul": "^1.1.0",
+    "zustand": "^5.0.10"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
     "@types/node": "^22.7.8",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
+    "@types/selenium-webdriver": "^4.1.26",
     "@vitejs/plugin-react": "^4.3.2",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.11.1",
@@ -51,9 +60,13 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
     "prettier": "3.3.3",
+    "selenium-webdriver": "^4.25.0",
     "tailwindcss": "^3.4.14",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.7.0",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "zod": "^3.23.8"
   }
 }
