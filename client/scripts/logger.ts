@@ -7,49 +7,49 @@ export const logger = {
   /**
    * Info message (blue) - for general information
    */
-  info: (message: string, ...args: any[]) => {
+  info: (message: string, ...args: unknown[]) => {
     console.log(chalk.blue(message), ...args);
   },
 
   /**
    * Success message (green) - for successful operations
    */
-  success: (message: string, ...args: any[]) => {
+  success: (message: string, ...args: unknown[]) => {
     console.log(chalk.green(message), ...args);
   },
 
   /**
    * Error message (red) - for errors and failures
    */
-  error: (message: string, ...args: any[]) => {
+  error: (message: string, ...args: unknown[]) => {
     console.log(chalk.red(message), ...args);
   },
 
   /**
    * Warning message (yellow) - for warnings
    */
-  warn: (message: string, ...args: any[]) => {
+  warn: (message: string, ...args: unknown[]) => {
     console.log(chalk.yellow(message), ...args);
   },
 
   /**
    * Debug/secondary message (gray) - for less important info
    */
-  debug: (message: string, ...args: any[]) => {
+  debug: (message: string, ...args: unknown[]) => {
     console.log(chalk.gray(message), ...args);
   },
 
   /**
    * Cyan message - for supplementary info
    */
-  cyan: (message: string, ...args: any[]) => {
+  cyan: (message: string, ...args: unknown[]) => {
     console.log(chalk.cyan(message), ...args);
   },
 
   /**
    * Plain message - no color
    */
-  log: (message: string, ...args: any[]) => {
+  log: (message: string, ...args: unknown[]) => {
     console.log(message, ...args);
   },
 };
