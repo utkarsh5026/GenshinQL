@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table.tsx";
-import type { TalentBookCalendar } from "@/graphql/types";
+import type { TalentBookCalendar } from "@/types";
 import TalentBooks from "@/components/talents/TalentBooks.tsx";
 import CharacterGrid from "@/components/character/utils/CharacterGrid.tsx";
 import AnimatedTable from "@/components/utils/AnimatedTable.tsx";

@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import type { TalentBookCalendar } from "@/graphql/types";
+import type { TalentBookCalendar } from "@/types";
 import {
   Table,
   TableBody,

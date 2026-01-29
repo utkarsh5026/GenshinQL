@@ -73,10 +73,16 @@ export async function fetchCharacterDetailed(
 async function loadTalentsData() {
   if (talentsCache) return talentsCache;
 
-  const response = await fetch(`${DATA_BASE_URL}/talents.json`);
-  if (!response.ok) throw new Error("Failed to fetch talents data");
+  const rawData = await loadDataForFile<Record<string, any[]>>('dailyTalents.json', null);
 
-  talentsCache = await response.json();
+  // Transform the data structure from { "Mondstadt": [...], "Liyue": [...] }
+  // to the expected format: { talentBooks: [{ location: "Mondstadt", days: [...] }, ...] }
+  const talentBooks = Object.entries(rawData).map(([location, days]) => ({
+    location,
+    days
+  }));
+
+  talentsCache = { talentBooks };
   return talentsCache!;
 }
 

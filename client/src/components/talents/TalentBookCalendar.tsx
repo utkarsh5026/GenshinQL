@@ -1,15 +1,15 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/ui/tabs.tsx";
-import TalentTable from "@/components/talents/TalentTable.tsx";
-import { Button } from "@/components/ui/button.tsx";
-import { Aperture, CalendarDays } from "lucide-react";
-import TalentCalendarView from "@/components/talents/TalentCalendarView.tsx";
-import useTalentBooks from "@/redux/hook/talent-book.ts";
+} from '@/components/ui/tabs.tsx';
+import TalentTable from '@/components/talents/TalentTable.tsx';
+import { Button } from '@/components/ui/button.tsx';
+import { Aperture, CalendarDays } from 'lucide-react';
+import TalentCalendarView from '@/components/talents/TalentCalendarView.tsx';
+import { useTalentBooksStore } from '@/stores';
 
 /**
  * TalentCalender component displays a calendar or table view of talent books.
@@ -18,7 +18,7 @@ import useTalentBooks from "@/redux/hook/talent-book.ts";
  */
 const TalentCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
-  const { calendar, loading, fetchBooks } = useTalentBooks();
+  const { calendar, loading, fetchBooks } = useTalentBooksStore();
 
   useEffect(() => {
     fetchBooks();
@@ -32,7 +32,6 @@ const TalentCalender: React.FC = () => {
   const talentBooks = calendar || [];
 
   console.log(talentBooks.length, loading);
-  // if (loading) return <div>Loading...</div>;
 
   if (locations.length > 0)
     return (
@@ -58,7 +57,7 @@ const TalentCalender: React.FC = () => {
                       setIsCalendar(!isCalendar);
                     }}
                   >
-                    <div className={"flex gap-2"}>
+                    <div className={'flex gap-2'}>
                       {isCalendar ? (
                         <CalendarDays size={20} />
                       ) : (
@@ -66,7 +65,7 @@ const TalentCalender: React.FC = () => {
                       )}
 
                       <div>
-                        {isCalendar ? "Switch to Table" : "Switch to Calendar"}
+                        {isCalendar ? 'Switch to Table' : 'Switch to Calendar'}
                       </div>
                     </div>
                   </Button>
