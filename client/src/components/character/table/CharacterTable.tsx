@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import {
   Table,
   TableBody,
@@ -10,15 +10,17 @@ import {
 import { AnimationMedia, Character } from "@/types";
 
 import CharacterMediaAvatar from "./CharacterMediaAvatar.tsx";
-import { useCharactersStore } from "@/stores";
 import { CachedImage } from "@/components/utils/CachedImage";
 
 type CharacterWithMedia = Character & {
   media: AnimationMedia;
 };
 
-const CharactersTable: React.FC = () => {
-  const { characters, loading, error, fetchCharacters } = useCharactersStore();
+interface CharactersTableProps {
+  characters: Character[];
+}
+
+const CharactersTable: React.FC<CharactersTableProps> = ({ characters }) => {
   const columnNames = [
     "Icon",
     "Name",
@@ -27,10 +29,6 @@ const CharactersTable: React.FC = () => {
     "Weapon Type",
     "Region",
   ];
-
-  useEffect(() => {
-    fetchCharacters();
-  }, [fetchCharacters]);
 
   const charactersWithMedia: CharacterWithMedia[] = useMemo(() => {
     if (!characters) return [];
@@ -52,9 +50,6 @@ const CharactersTable: React.FC = () => {
       media: getCharMedia(character),
     }));
   }, [characters]);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
 
   return (
     <Table>
