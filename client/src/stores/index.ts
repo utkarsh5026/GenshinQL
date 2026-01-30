@@ -1,4 +1,3 @@
-// Character Store
 export {
   useCharactersStore,
   useCharacters,
@@ -7,7 +6,6 @@ export {
   useCharactersError,
 } from './useCharactersStore';
 
-// Weapons Store
 export {
   useWeaponsStore,
   useWeapons,
@@ -17,7 +15,6 @@ export {
   useWeaponsError,
 } from './useWeaponsStore';
 
-// Talent Books Store
 export {
   useTalentBooksStore,
   useTalentCalendar,
@@ -27,7 +24,6 @@ export {
 } from './useTalentBooksStore';
 export type { TalentBook } from './useTalentBooksStore';
 
-// Weapon Material Store
 export {
   useWeaponMaterialStore,
   useWeaponMaterialSchedule,
@@ -37,7 +33,6 @@ export {
 } from './useWeaponMaterialStore';
 export type { WeaponMaterial } from './useWeaponMaterialStore';
 
-// Genshin Guesser Store
 export {
   useGenshinGuesserStore,
   useGenshinGuesserGuessedChars,
@@ -47,5 +42,16 @@ export {
   useGenshinGuesserStreak,
 } from './useGenshinGuesserStore';
 
+// Primitives Store
+export {
+  usePrimitivesStore,
+  usePrimitives,
+  useElements,
+  useRegions,
+  useWeaponTypes,
+  usePrimitivesLoading,
+  usePrimitivesError,
+} from './usePrimitivesStore';
+
 // Re-export common types for convenience
-export type { Character, Weapon, TalentBookCalendar, WeaponMaterialSchedule } from '@/types';
+export type { Character, Weapon, TalentBookCalendar, WeaponMaterialSchedule, Primitives, PrimitiveItem } from '@/types';

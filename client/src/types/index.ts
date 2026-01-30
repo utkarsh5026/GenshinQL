@@ -205,3 +205,14 @@ export type CharacterRaw = Character & {
   version?: string;
   gallery?: GalleryRaw;
 };
+
+export type PrimitiveItem = {
+  name: string;
+  url: string;
+};
+
+export type Primitives = {
+  elements: PrimitiveItem[];
+  regions: PrimitiveItem[];
+  weaponTypes: PrimitiveItem[];
+};

@@ -11,6 +11,7 @@ import type {
   Talent,
   AttackTalentType,
   AnimationMedia,
+  Primitives,
 } from '@/types';
 
 const DATA_BASE_URL = '/';
@@ -32,6 +33,8 @@ let galleryCache: Record<
     nameCard: { background: string; icon: string };
   }
 > | null = null;
+
+let primitivesCache: Primitives | null = null;
 
 async function loadDataForFile<T>(
   fileName: string,
@@ -196,7 +199,7 @@ export async function fetchCharacterDetailed(
 async function loadTalentsData() {
   if (talentsCache) return talentsCache;
 
-  const rawData = await loadDataForFile<Record<string, any[]>>(
+  const rawData = await loadDataForFile<Record<string, TalentBookCalendar['days']>>(
     'dailyTalents.json',
     null
   );
@@ -308,6 +311,24 @@ export async function fetchCharacterAttackAnimations(
 }
 
 /**
+ * Fetches and caches primitives data (elements, regions, weaponTypes).
+ */
+async function loadPrimitivesData() {
+  if (primitivesCache) return primitivesCache;
+
+  const data = await loadDataForFile<Primitives>('primitives.json', null);
+  primitivesCache = data;
+  return data;
+}
+
+/**
+ * Fetches primitives (elements, regions, weaponTypes with their icon URLs).
+ */
+export async function fetchPrimitives(): Promise<Primitives> {
+  return await loadPrimitivesData();
+}
+
+/**
  * Clears all cached data (useful for refreshing).
  */
 export function clearCache() {
@@ -315,4 +336,5 @@ export function clearCache() {
   talentsCache = null;
   weaponsCache = null;
   galleryCache = null;
+  primitivesCache = null;
 }
