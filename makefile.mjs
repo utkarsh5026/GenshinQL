@@ -162,6 +162,11 @@ const tasks = {
     category: 'Scraping',
     action: () => runNpmCommand('check-characters'),
   },
+  'check-gallery': {
+    description: 'Check gallery data coverage',
+    category: 'Scraping',
+    action: () => runNpmCommand('check-gallery'),
+  },
   consolidate: {
     description: 'Consolidate scraped data',
     category: 'Scraping',
