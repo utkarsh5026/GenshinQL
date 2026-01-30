@@ -64,6 +64,72 @@ function isGalleryDataComplete(
 }
 
 /**
+ * Checks all character files for gallery data completeness and reports coverage statistics.
+ * Similar to checkCharacterCoverage in characters.ts but focused on gallery data validation.
+ */
+export async function checkGalleryCoverage(): Promise<void> {
+  logger.cyan('\n=== Checking Gallery Coverage ===\n');
+
+  try {
+    await fs.access(CHARACTERS_DIR);
+  } catch {
+    logger.error('Characters directory not found:', CHARACTERS_DIR);
+    return;
+  }
+
+  const characterFiles = (await listFiles(CHARACTERS_DIR)).filter((file) =>
+    file.endsWith('.json')
+  );
+
+  let totalChecked = 0;
+  let totalComplete = 0;
+  const incompleteCharacters: string[] = [];
+
+  for (const file of characterFiles) {
+    const charName = file.replace('.json', '');
+    const filePath = path.join(CHARACTERS_DIR, file);
+    totalChecked++;
+
+    try {
+      const character = await loadJsonData<AdvancedCharacterSchema>(filePath);
+
+      if (!character) {
+        logger.warn(`${charName} - could not load file`);
+        incompleteCharacters.push(charName);
+        continue;
+      }
+
+      if (!character.gallery) {
+        logger.warn(`${charName} - no gallery data`);
+        incompleteCharacters.push(charName);
+        continue;
+      }
+
+      const isComplete = isGalleryDataComplete(character.gallery, charName);
+      if (isComplete) {
+        totalComplete++;
+      } else {
+        incompleteCharacters.push(charName);
+      }
+    } catch (error) {
+      logger.error(`${charName} - error reading file:`, error);
+      incompleteCharacters.push(charName);
+    }
+  }
+
+  logger.info(`Total characters checked: ${totalChecked}`);
+  logger.success(`Complete characters: ${totalComplete}`);
+
+  if (incompleteCharacters.length === 0) {
+    logger.success('\nAll characters have complete gallery data!\n');
+  } else {
+    logger.warn(
+      `Incomplete/Missing (${incompleteCharacters.length}): ${incompleteCharacters.join(', ')}\n`
+    );
+  }
+}
+
+/**
  * Scrapes gallery data for a single character using its own WebDriver instance.
  * Creates a new WebDriver instance for each character scrape.
  *
@@ -325,13 +391,29 @@ async function parseImages(
  * @returns {Promise<void>}
  */
 async function main(): Promise<void> {
-  logger.cyan('\n🎨 Starting gallery scraper...\n');
+  logger.info('Starting gallery script...');
+  const args = process.argv.slice(2);
+  logger.info('Arguments:', args);
 
-  try {
-    await mergeGalleryIntoCharacterFiles(false);
-  } catch (error) {
-    logger.error('❌ Error in main:', error);
-    throw error;
+  if (args.length === 0) {
+    logger.info('Usage: node gallery.js --merge --check');
+    logger.info('  --merge: Scrape and merge gallery data for characters');
+    logger.info('  --check: Check gallery coverage for all characters');
+    return;
+  }
+
+  if (args.includes('--merge')) {
+    logger.cyan('\n🎨 Starting gallery merge...\n');
+    try {
+      await mergeGalleryIntoCharacterFiles(false);
+    } catch (error) {
+      logger.error('❌ Error in merge:', error);
+      throw error;
+    }
+  }
+
+  if (args.includes('--check')) {
+    await checkGalleryCoverage();
   }
 }
 
