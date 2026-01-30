@@ -1,0 +1,380 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Bennett_Icon.png",
+    "name": "Bennett",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Sword",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "modelType": "Medium Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Sword_Pyro.png",
+            "talentName": "Strike of Fortune",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Strike_of_Fortune_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Strike_of_Fortune_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Strike_of_Fortune_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "44.55",
+                    "48.17",
+                    "51.8",
+                    "56.98",
+                    "60.61",
+                    "64.75",
+                    "70.45",
+                    "76.15",
+                    "81.84",
+                    "88.06",
+                    "94.28"
+                ],
+                "2-Hit DMG (%)": [
+                    "42.74",
+                    "46.22",
+                    "49.7",
+                    "54.67",
+                    "58.15",
+                    "62.13",
+                    "67.59",
+                    "73.06",
+                    "78.53",
+                    "84.49",
+                    "90.45"
+                ],
+                "3-Hit DMG (%)": [
+                    "54.61",
+                    "59.05",
+                    "63.5",
+                    "69.85",
+                    "74.3",
+                    "79.38",
+                    "86.36",
+                    "93.34",
+                    "100.33",
+                    "107.95",
+                    "115.57"
+                ],
+                "4-Hit DMG (%)": [
+                    "59.68",
+                    "64.54",
+                    "69.4",
+                    "76.34",
+                    "81.2",
+                    "86.75",
+                    "94.38",
+                    "102.02",
+                    "109.65",
+                    "117.98",
+                    "126.31"
+                ],
+                "5-Hit DMG (%)": [
+                    "71.9",
+                    "77.75",
+                    "83.6",
+                    "91.96",
+                    "97.81",
+                    "104.5",
+                    "113.7",
+                    "122.89",
+                    "132.09",
+                    "142.12",
+                    "152.15"
+                ],
+                "Charged Attack DMG (%)": [
+                    "55.9\n+\n60.72",
+                    "60.45\n+\n65.66",
+                    "65\n+\n70.6",
+                    "71.5\n+\n77.66",
+                    "76.05\n+\n82.6",
+                    "81.25\n+\n88.25",
+                    "88.4\n+\n96.02",
+                    "95.55\n+\n103.78",
+                    "102.7\n+\n111.55",
+                    "110.5\n+\n120.02",
+                    "118.3\n+\n128.49"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "20"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Passion_Overload.png",
+            "talentName": "Passion Overload",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nBennett puts all his fire and passion for adventuring into his sword. Results may vary based on how fired up he is...\n\n(‍Press\n‍/‍Tap\n‍)\nA single, swift flame strike that deals Pyro DMG.\n\nHold (Short)\nCharges up, resulting in different effects when unleashed based on the Charge Level.\nLevel 1: Strikes twice, dealing Pyro DMG and launching opponents.\nLevel 2: Unleashes 3 consecutive attacks that deal impressive Pyro DMG, but the last attack triggers an explosion that launches both Bennett and the enemy.\nBennett takes no damage from being launched.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Passion_Overload_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Passion_Overload_L1_Preview.gif",
+                    "caption": "Level 1 Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Passion_Overload_L2_Preview.gif",
+                    "caption": "Level 2 Hold"
+                }
+            ],
+            "scaling": {
+                "Press DMG (%)": [
+                    "137.6",
+                    "147.92",
+                    "158.24",
+                    "172",
+                    "182.32",
+                    "192.64",
+                    "206.4",
+                    "220.16",
+                    "233.92",
+                    "247.68",
+                    "261.44",
+                    "275.2",
+                    "292.4",
+                    "310"
+                ],
+                "Charge Level 1 DMG (%)": [
+                    "84\n+\n92",
+                    "90.3\n+\n98.9",
+                    "96.6\n+\n105.8",
+                    "105\n+\n115",
+                    "111.3\n+\n121.9",
+                    "117.6\n+\n128.8",
+                    "126\n+\n138",
+                    "134.4\n+\n147.2",
+                    "142.8\n+\n156.4",
+                    "151.2\n+\n165.6",
+                    "159.6\n+\n174.8",
+                    "168\n+\n184",
+                    "178.5\n+\n195.5",
+                    "189\n+\n207"
+                ],
+                "Charge Level 2 DMG (%)": [
+                    "88\n+\n96",
+                    "94.6\n+\n103.2",
+                    "101.2\n+\n110.4",
+                    "110\n+\n120",
+                    "116.6\n+\n127.2",
+                    "123.2\n+\n134.4",
+                    "132\n+\n144",
+                    "140.8\n+\n153.6",
+                    "149.6\n+\n163.2",
+                    "158.4\n+\n172.8",
+                    "167.2\n+\n182.4",
+                    "176\n+\n192",
+                    "187\n+\n204",
+                    "198\n+\n216"
+                ],
+                "Explosion DMG (%)": [
+                    "132",
+                    "141.9",
+                    "151.8",
+                    "165",
+                    "174.9",
+                    "184.8",
+                    "198",
+                    "211.2",
+                    "224.4",
+                    "237.6",
+                    "250.8",
+                    "264",
+                    "280.5",
+                    "297"
+                ],
+                "CD": [
+                    "5/7.5/10s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Fantastic_Voyage.png",
+            "talentName": "Fantastic Voyage",
+            "talentType": "Elemental Burst",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nBennett performs a jumping attack that deals Pyro DMG, creating an Inspiration Field.\n\nInspiration Field\nIf the health of a character within the AoE is equal to or falls below 70%, their health will continuously regenerate. The amount of HP restored scales off Bennett's Max HP.\nIf the health of a character within the AoE is higher than 70%, they gain an ATK Bonus that is based on Bennett's Base ATK.\nImbues characters within the AoE with Pyro.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Fantastic_Voyage_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "232.8",
+                    "250.26",
+                    "267.72",
+                    "291",
+                    "308.46",
+                    "325.92",
+                    "349.2",
+                    "372.48",
+                    "395.76",
+                    "419.04",
+                    "442.32",
+                    "465.6",
+                    "494.7",
+                    "524"
+                ],
+                "Continuous Regeneration Per Sec": [
+                    "6% Max HP\n+\n577",
+                    "6.45% Max HP\n+\n635",
+                    "6.9% Max HP\n+\n697",
+                    "7.5% Max HP\n+\n765",
+                    "7.95% Max HP\n+\n837",
+                    "8.4% Max HP\n+\n914",
+                    "9% Max HP\n+\n995",
+                    "9.6% Max HP\n+\n1,082",
+                    "10.2% Max HP\n+\n1,174",
+                    "10.8% Max HP\n+\n1,270",
+                    "11.4% Max HP\n+\n1,371",
+                    "12% Max HP\n+\n1,477",
+                    "12.75% Max HP\n+\n1,587",
+                    "13.50% Max HP\n+\n1,703"
+                ],
+                "ATK Bonus Ratio (% Base ATK)": [
+                    "56",
+                    "60.2",
+                    "64.4",
+                    "70",
+                    "74.2",
+                    "78.4",
+                    "84",
+                    "89.6",
+                    "95.2",
+                    "100.8",
+                    "106.4",
+                    "112",
+                    "119",
+                    "126"
+                ],
+                "Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Talent_Rekindle.png",
+            "talentName": "Rekindle",
+            "talentType": "1st Ascension Passive",
+            "description": "Decreases Passion Overload's CD by 20%.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Talent_Fearnaught.png",
+            "talentName": "Fearnaught",
+            "talentType": "4th Ascension Passive",
+            "description": "When inside Fantastic Voyage's circle, Passion Overload's CD is decreased by 50% and Bennett cannot be launched by this skill's explosion.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_It_Should_Be_Safe....png",
+            "talentName": "It Should Be Safe...",
+            "talentType": "Utility Passive",
+            "description": "When dispatched on an expedition in Mondstadt, time consumed is reduced by 25%.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Constellation_Grand_Expectation.png",
+            "name": "Grand Expectation",
+            "level": 1,
+            "description": "Fantastic Voyage's ATK increase no longer has an HP restriction, and gains an additional 20% of Bennett's Base ATK."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Constellation_Impasse_Conqueror.png",
+            "name": "Impasse Conqueror",
+            "level": 2,
+            "description": "When Bennett's HP falls below 70%, his Energy Recharge is increased by 30%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Constellation_Unstoppable_Fervor.png",
+            "name": "Unstoppable Fervor",
+            "level": 3,
+            "description": "Increases the Level of Passion Overload by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Constellation_Unexpected_Odyssey.png",
+            "name": "Unexpected Odyssey",
+            "level": 4,
+            "description": "Description\nAdvanced Properties\nPreview\nUsing a Normal Attack as the second attack of Passion Overload's Charge Level 1 will perform a follow-up attack.\nThis additional attack does 135% of the second attack's DMG."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Constellation_True_Explorer.png",
+            "name": "True Explorer",
+            "level": 5,
+            "description": "Increases the Level of Fantastic Voyage by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Constellation_Fire_Ventures_With_Me.png",
+            "name": "Fire Ventures With Me",
+            "level": 6,
+            "description": "Description\nGameplay Notes\nSword, Claymore, or Polearm-wielding characters inside Fantastic Voyage's radius gain a 15% Pyro DMG Bonus and their weapons are infused with Pyro."
+        }
+    ],
+    "imageUrls": {},
+    "version": "1.2"
+}

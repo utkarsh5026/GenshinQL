@@ -1,0 +1,466 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Aino_Icon.png",
+    "name": "Aino",
+    "rarity": "4 Stars",
+    "element": "Hydro",
+    "weaponType": "Claymore",
+    "region": "Nod-Krai",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
+    "modelType": "Short Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Claymore_Hydro.png",
+            "talentName": "Bish-Bash-Bosh Repair",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Bish-Bash-Bosh_Repair_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Bish-Bash-Bosh_Repair_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "66.5",
+                    "71.91",
+                    "77.32",
+                    "85.06",
+                    "90.47",
+                    "96.66",
+                    "105.16",
+                    "113.67",
+                    "122.17",
+                    "131.45",
+                    "140.73"
+                ],
+                "2-Hit DMG (%)": [
+                    "66.19",
+                    "71.58",
+                    "76.97",
+                    "84.66",
+                    "90.05",
+                    "96.21",
+                    "104.68",
+                    "113.14",
+                    "121.61",
+                    "130.84",
+                    "140.08"
+                ],
+                "3-Hit DMG (%)": [
+                    "49.22 ×2",
+                    "53.22 ×2",
+                    "57.23 ×2",
+                    "62.95 ×2",
+                    "66.96 ×2",
+                    "71.54 ×2",
+                    "77.83 ×2",
+                    "84.13 ×2",
+                    "90.42 ×2",
+                    "97.29 ×2",
+                    "104.16 ×2"
+                ],
+                "Charged Attack Loop DMG (%)": [
+                    "62.52",
+                    "67.61",
+                    "72.7",
+                    "79.97",
+                    "85.06",
+                    "90.88",
+                    "98.87",
+                    "106.87",
+                    "114.87",
+                    "123.59",
+                    "132.31"
+                ],
+                "Charged Attack Final DMG (%)": [
+                    "113.09",
+                    "122.3",
+                    "131.5",
+                    "144.65",
+                    "153.86",
+                    "164.38",
+                    "178.84",
+                    "193.31",
+                    "207.77",
+                    "223.55",
+                    "239.33"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG (%)": [
+                    "74.59",
+                    "80.66",
+                    "86.73",
+                    "95.4",
+                    "101.47",
+                    "108.41",
+                    "117.95",
+                    "127.49",
+                    "137.03",
+                    "147.44",
+                    "157.85"
+                ],
+                "Low Plunge DMG (%)": [
+                    "149.14",
+                    "161.28",
+                    "173.42",
+                    "190.77",
+                    "202.91",
+                    "216.78",
+                    "235.86",
+                    "254.93",
+                    "274.01",
+                    "294.82",
+                    "315.63"
+                ],
+                "High Plunge DMG (%)": [
+                    "186.29",
+                    "201.45",
+                    "216.62",
+                    "238.28",
+                    "253.44",
+                    "270.77",
+                    "294.6",
+                    "318.42",
+                    "342.25",
+                    "368.25",
+                    "394.24"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Talent_Musecatcher.png",
+            "talentName": "Musecatcher",
+            "talentType": "Elemental Skill",
+            "description": "Aino throws a Musecatcher forward, dealing Hydro DMG and dragging her along behind it. When the dragging stops, Aino deals AoE Hydro DMG to nearby opponents.\nHolding the Skill will cause it to behave differently.\n\nHold\nEnter Aiming Mode to adjust the Musecatcher's throwing direction.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Musecatcher_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Musecatcher_Hold_Preview.gif",
+                    "caption": "Hold"
+                }
+            ],
+            "scaling": {
+                "Stage 1 DMG (%)": [
+                    "65.6",
+                    "70.52",
+                    "75.44",
+                    "82",
+                    "86.92",
+                    "91.84",
+                    "98.4",
+                    "104.96",
+                    "111.52",
+                    "118.08",
+                    "124.64",
+                    "131.2",
+                    "139.4"
+                ],
+                "Stage 2 DMG (%)": [
+                    "188.8",
+                    "202.96",
+                    "217.12",
+                    "236",
+                    "250.16",
+                    "264.32",
+                    "283.2",
+                    "302.08",
+                    "320.96",
+                    "339.84",
+                    "358.72",
+                    "377.6",
+                    "401.2"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Talent_Precision_Hydronic_Cooler.png",
+            "talentName": "Precision Hydronic Cooler",
+            "talentType": "Elemental Burst",
+            "description": "Aino deploys a custom water-spraying device, the Cool Your Jets Ducky to establish a Focused Hydronic Cooling Zone.\nWhile active, the Cool Your Jets Ducky will periodically fire water balls at nearby opponents, dealing Hydro DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Precision_Hydronic_Cooler_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Water Ball DMG (%)": [
+                    "20.11",
+                    "21.62",
+                    "23.13",
+                    "25.14",
+                    "26.65",
+                    "28.16",
+                    "30.17",
+                    "32.18",
+                    "34.19",
+                    "36.2",
+                    "38.21",
+                    "40.22",
+                    "42.74"
+                ],
+                "Duration": [
+                    "14s"
+                ],
+                "CD": [
+                    "13.5s"
+                ],
+                "Energy Cost": [
+                    "50"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Modular_Efficiency_Protocol.png",
+            "talentName": "Modular Efficiency Protocol",
+            "talentType": "1st Ascension Passive",
+            "description": "Aino will be granted the corresponding buff effects based on the party's Moonsign.\n\nMoonsign: Ascendant Gleam: Her Elemental Burst Precision Hydronic Cooler is enhanced: The Cool Your Jets Ducky will fire water balls more frequently, and the water balls will deal AoE Hydro DMG over a larger area of effect.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Talent_Structured_Power_Booster.png",
+            "talentName": "Structured Power Booster",
+            "talentType": "4th Ascension Passive",
+            "description": "Aino's Elemental Burst DMG is increased by 50% of her Elemental Mastery.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Talent_Force_Limit_Analysis.png",
+            "talentName": "Force Limit Analysis",
+            "talentType": "Moonsign Benediction Passive",
+            "description": "When Aino is in the party, the party's Moonsign will increase by 1 level.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Talent_Miniaturized_Detection_Sensor.png",
+            "talentName": "Miniaturized Detection Sensor",
+            "talentType": "Utility Passive",
+            "description": "Displays the location of nearby resources unique to Nod-Krai on the mini-map.\nAdditionally, Aino appears to be able to alter the Cool Your Jets Ducky's appearance in some way...",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Constellation_The_Theory_of_Ash%E2%80%94Field_Equilibrium.png",
+            "name": "The Theory of Ash—Field Equilibrium",
+            "level": 1,
+            "description": "After Aino uses her Elemental Skill Musecatcher or her Elemental Burst Precision Hydronic Cooler, her Elemental Mastery will be increased by 80. The Elemental Mastery of other nearby active party members will be increased by 80 for 15s.\n\nThe Elemental Mastery-increasing effects of this Constellation do not stack."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Constellation_The_Principle_of_Transference_in_Gear_Differentials.png",
+            "name": "The Principle of Transference in Gear Differentials",
+            "level": 2,
+            "description": "Description\nAdvanced Properties\nIf Aino is off-field while the Focused Hydronic Cooling Zone of her Elemental Burst Precision Hydronic Cooler is active, when your active party member hits a nearby opponent with an attack, the Cool Your Jets Ducky will fire an additional water ball at that opponent, dealing AoE Hydro DMG equal to 25% of Aino's ATK and 100% of her Elemental Mastery. This DMG is considered Elemental Burst DMG. This effect can be triggered once every 5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Constellation_Cake_and_the_Art_of_Mechanism_Repair.png",
+            "name": "Cake and the Art of Mechanism Repair",
+            "level": 3,
+            "description": "Increases the Level of Precision Hydronic Cooler by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Constellation_Butter_and_Cats_and_the_Law_of_Energy_Supply.png",
+            "name": "Butter and Cats and the Law of Energy Supply",
+            "level": 4,
+            "description": "When the Elemental Skill Musecatcher hits an opponent, it will restore 10 Elemental Energy for Aino. Energy can be restored to her in this manner once every 10s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Constellation_Perpetual_Turbine_of_Metal_and_Light.png",
+            "name": "Perpetual Turbine of Metal and Light",
+            "level": 5,
+            "description": "Increases the Level of Musecatcher by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Constellation_The_Burden_of_Creative_Genius.png",
+            "name": "The Burden of Creative Genius",
+            "level": 6,
+            "description": "For the next 15s after using the Elemental Burst Precision Hydronic Cooler, DMG from nearby active characters' Electro-Charged, Bloom, Lunar-Charged, Lunar-Bloom, and Lunar-Crystallize reactions is increased by 15%.\nMoonsign: Ascendant Gleam: DMG from the aforementioned reactions will be further increased by 20%."
+        }
+    ],
+    "imageUrls": {},
+    "version": "Luna I",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Namecard_Background_Aino_Whoopsie_Ducksie.png",
+                "caption": "Aino: Whoopsie Ducksie Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Item_Aino_Whoopsie_Ducksie.png",
+                "caption": "Aino: Whoopsie Ducksie Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Namecard_Banner_Aino_Whoopsie_Ducksie.png",
+                "caption": "Aino: Whoopsie Ducksie Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Bish-Bash-Bosh_Repair_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Bish-Bash-Bosh_Repair_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Bish-Bash-Bosh_Repair_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Bish-Bash-Bosh_Repair_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Precision_Hydronic_Cooler_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Precision_Hydronic_Cooler_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Musecatcher_Press_Preview.gif",
+                        "caption": "Press",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Musecatcher_Press_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Musecatcher_Hold_Preview.gif",
+                        "caption": "Hold",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Musecatcher_Hold_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Aino_Character_Details_1.png",
+                "caption": "Aino Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Aino_Character_Details_2.png",
+                "caption": "Aino Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Aino_Character_Details_3.gif",
+                "caption": "Aino Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Aino_Character_Details_4.png",
+                "caption": "Aino Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Aino_Character_Details_5.png",
+                "caption": "Aino Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Aino_Character_Details_6.png",
+                "caption": "Aino Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Aino_Character_Details_7.png",
+                "caption": "Aino Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Aino_Character_Details_8.gif",
+                "caption": "Aino Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Aino_Character_Details_9.gif",
+                "caption": "Aino Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Aino_Character_Details_10.gif",
+                "caption": "Aino Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Aino_Character_Details_11.png",
+                "caption": "Aino Details 11"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Icon_Emoji_Paimon%27s_Paintings_43_Aino_1.png",
+                "caption": "Nice! Set 43"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Icon_Emoji_Paimon%27s_Paintings_44_Aino_1.png",
+                "caption": "Angry Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Icon_Emoji_Paimon%27s_Paintings_44_Aino_2.png",
+                "caption": "Cover Up Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Icon_Emoji_Paimon%27s_Paintings_44_Aino_3.png",
+                "caption": "Sneaky Snacking Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Icon_Emoji_Paimon%27s_Paintings_44_Aino_4.png",
+                "caption": "Set 44"
+            }
+        ]
+    }
+}

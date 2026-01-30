@@ -1,0 +1,388 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Hu_Tao_Icon.png",
+    "name": "Hu Tao",
+    "rarity": "5 Stars",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "modelType": "Medium Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png",
+            "talentName": "Secret Spear of Wangsheng",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 6 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Secret_Spear_of_Wangsheng_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Secret_Spear_of_Wangsheng_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Secret_Spear_of_Wangsheng_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "46.89",
+                    "50.08",
+                    "53.28",
+                    "57.54",
+                    "60.74",
+                    "64.47",
+                    "69.26",
+                    "74.06",
+                    "78.85",
+                    "83.65",
+                    "88.44"
+                ],
+                "2-Hit DMG (%)": [
+                    "48.25",
+                    "51.54",
+                    "54.83",
+                    "59.22",
+                    "62.51",
+                    "66.35",
+                    "71.28",
+                    "76.22",
+                    "81.15",
+                    "86.09",
+                    "91.02"
+                ],
+                "3-Hit DMG (%)": [
+                    "61.05",
+                    "65.21",
+                    "69.38",
+                    "74.92",
+                    "79.09",
+                    "83.94",
+                    "90.19",
+                    "96.43",
+                    "102.68",
+                    "108.92",
+                    "115.16"
+                ],
+                "4-Hit DMG (%)": [
+                    "65.64",
+                    "70.12",
+                    "74.59",
+                    "80.56",
+                    "85.03",
+                    "90.26",
+                    "96.97",
+                    "103.68",
+                    "110.4",
+                    "117.11",
+                    "123.82"
+                ],
+                "5-Hit DMG (%)": [
+                    "33.27\n+\n35.2",
+                    "35.54\n+\n37.6",
+                    "37.81\n+\n40",
+                    "40.84\n+\n43.2",
+                    "43.1\n+\n45.6",
+                    "45.75\n+\n48.4",
+                    "49.15\n+\n52",
+                    "52.56\n+\n55.6",
+                    "55.96\n+\n59.2",
+                    "59.36\n+\n62.8",
+                    "62.77\n+\n66.4"
+                ],
+                "6-Hit DMG (%)": [
+                    "85.96",
+                    "91.82",
+                    "97.68",
+                    "105.49",
+                    "111.36",
+                    "118.19",
+                    "126.98",
+                    "135.78",
+                    "144.57",
+                    "153.36",
+                    "162.15"
+                ],
+                "Charged Attack (%)": [
+                    "135.96",
+                    "145.23",
+                    "154.5",
+                    "166.86",
+                    "176.13",
+                    "186.94",
+                    "200.85",
+                    "214.75",
+                    "228.66",
+                    "242.56",
+                    "256.47"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "65.42",
+                    "69.88",
+                    "74.34",
+                    "80.29",
+                    "84.75",
+                    "89.95",
+                    "96.64",
+                    "103.33",
+                    "110.02",
+                    "116.71",
+                    "123.4"
+                ],
+                "Low Plunge DMG (%)": [
+                    "130.81",
+                    "139.73",
+                    "148.65",
+                    "160.54",
+                    "169.46",
+                    "179.86",
+                    "193.24",
+                    "206.62",
+                    "220",
+                    "233.38",
+                    "246.76"
+                ],
+                "High Plunge DMG (%)": [
+                    "163.39",
+                    "174.53",
+                    "185.67",
+                    "200.52",
+                    "211.66",
+                    "224.66",
+                    "241.37",
+                    "258.08",
+                    "274.79",
+                    "291.5",
+                    "308.21"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Guide_to_Afterlife.png",
+            "talentName": "Guide to Afterlife",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nOnly an unwavering flame can cleanse the impurities of this world.\nHu Tao consumes a set portion of her HP to knock the surrounding enemies back and enter the Paramita Papilio state.\n\nParamita Papilio\nIncreases Hu Tao's ATK based on her Max HP at the time of entering this state. ATK Bonus gained this way cannot exceed 400% of Hu Tao's Base ATK.\nConverts attack DMG to Pyro DMG, which cannot be overridden by any other elemental infusion.\nCharged Attacks apply the Blood Blossom effect to the enemies hit.\nIncreases Hu Tao's resistance to interruption.\n\nBlood Blossom\nEnemies affected by Blood Blossom will take Pyro DMG every 4s. This DMG is considered Elemental Skill DMG.\nEach enemy can be affected by only one Blood Blossom effect at a time, and its duration may only be refreshed by Hu Tao herself.\n\nParamita Papilio ends when its duration is over, or Hu Tao has left the battlefield or fallen.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Guide_to_Afterlife_Normal_Preview.gif",
+                    "caption": "Normal Attacks in Paramita Papilio State"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Guide_to_Afterlife_Charged_Preview.gif",
+                    "caption": "Charged Attacks in Paramita Papilio State"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Guide_to_Afterlife_Effect_Preview.gif",
+                    "caption": "Blood Blossom Effect"
+                }
+            ],
+            "scaling": {
+                "Activation Cost": [
+                    "30% Current HP"
+                ],
+                "ATK Increase (% Max HP)": [
+                    "3.84",
+                    "4.07",
+                    "4.3",
+                    "4.6",
+                    "4.83",
+                    "5.06",
+                    "5.36",
+                    "5.66",
+                    "5.96",
+                    "6.26",
+                    "6.55",
+                    "6.85",
+                    "7.15",
+                    "7.45"
+                ],
+                "Blood Blossom DMG (%)": [
+                    "64",
+                    "68.8",
+                    "73.6",
+                    "80",
+                    "84.8",
+                    "89.6",
+                    "96",
+                    "102.4",
+                    "108.8",
+                    "115.2",
+                    "121.6",
+                    "128",
+                    "136",
+                    "144"
+                ],
+                "Blood Blossom Duration": [
+                    "8s"
+                ],
+                "Duration": [
+                    "9s"
+                ],
+                "CD": [
+                    "16s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Talent_Spirit_Soother.png",
+            "talentName": "Spirit Soother",
+            "talentType": "Elemental Burst",
+            "description": "Commands a blazing spirit to attack, dealing Pyro DMG in a large AoE.\nUpon striking the enemy, regenerates a percentage of Hu Tao's Max HP. This effect can be triggered up to 5 times, based on the number of enemies hit.\nIf Hu Tao's HP is below or equal to 50% when the enemy is hit, both the DMG and HP Regeneration are increased.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Spirit_Soother_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "303.27",
+                    "321.43",
+                    "339.59",
+                    "363.2",
+                    "381.36",
+                    "399.52",
+                    "423.13",
+                    "446.74",
+                    "470.34",
+                    "493.95",
+                    "517.56",
+                    "541.17",
+                    "564.78",
+                    "588"
+                ],
+                "Low HP Skill DMG (%)": [
+                    "379.09",
+                    "401.79",
+                    "424.49",
+                    "454",
+                    "476.7",
+                    "499.4",
+                    "528.91",
+                    "558.42",
+                    "587.93",
+                    "617.44",
+                    "646.95",
+                    "676.46",
+                    "705.97",
+                    "735"
+                ],
+                "Skill HP Regeneration (% Max HP)": [
+                    "6.26",
+                    "6.64",
+                    "7.01",
+                    "7.5",
+                    "7.88",
+                    "8.25",
+                    "8.74",
+                    "9.22",
+                    "9.71",
+                    "10.2",
+                    "10.69",
+                    "11.18",
+                    "11.66",
+                    "12.15"
+                ],
+                "Low HP Skill Regeneration (% Max HP)": [
+                    "8.35",
+                    "8.85",
+                    "9.35",
+                    "10",
+                    "10.5",
+                    "11",
+                    "11.65",
+                    "12.3",
+                    "12.95",
+                    "13.6",
+                    "14.25",
+                    "14.9",
+                    "15.55",
+                    "16.20"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Talent_Flutter_By.png",
+            "talentName": "Flutter By",
+            "talentType": "1st Ascension Passive",
+            "description": "When a Paramita Papilio state activated by Guide to Afterlife ends, all allies in the party (excluding Hu Tao herself) will have their CRIT Rate increased by 12% for 8s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Sanguine_Rouge.png",
+            "talentName": "Sanguine Rouge",
+            "talentType": "4th Ascension Passive",
+            "description": "When Hu Tao's HP is equal to or less than 50%, her Pyro DMG Bonus is increased by 33%.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sanguine_Rouge_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Talent_The_More_the_Merrier.png",
+            "talentName": "The More the Merrier",
+            "talentType": "Utility Passive",
+            "description": "When Hu Tao cooks a dish perfectly, she has a 18% chance to receive an additional \"Suspicious\" dish of the same type.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Constellation_Crimson_Bouquet.png",
+            "name": "Crimson Bouquet",
+            "level": 1,
+            "description": "While in a Paramita Papilio state activated by Guide to Afterlife, Hu Tao's Charged Attacks do not consume Stamina."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Constellation_Ominous_Rainfall.png",
+            "name": "Ominous Rainfall",
+            "level": 2,
+            "description": "Increases the Blood Blossom DMG by an amount equal to 10% of Hu Tao's Max HP at the time the effect is applied.\nAdditionally, Spirit Soother will also apply the Blood Blossom effect."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Constellation_Lingering_Carmine.png",
+            "name": "Lingering Carmine",
+            "level": 3,
+            "description": "Increases the Level of Guide to Afterlife by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Constellation_Garden_of_Eternal_Rest.png",
+            "name": "Garden of Eternal Rest",
+            "level": 4,
+            "description": "Upon defeating an enemy affected by a Blood Blossom that Hu Tao applied herself, all nearby allies in the party (excluding Hu Tao herself) will have their CRIT Rate increased by 12% for 15s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Constellation_Floral_Incense.png",
+            "name": "Floral Incense",
+            "level": 5,
+            "description": "Increases the Level of Spirit Soother by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Constellation_Butterfly%27s_Embrace.png",
+            "name": "Butterfly's Embrace",
+            "level": 6,
+            "description": "Triggers when Hu Tao's HP drops below 25%, or when she suffers a lethal strike:\nHu Tao will not fall as a result of the DMG sustained. Additionally, for the next 10s, all of her Elemental and Physical RES is increased by 200%, her CRIT Rate is increased by 100%, and her resistance to interruption is greatly increased.\nThis effect triggers automatically when Hu Tao has 1 HP left.\nCan only occur once every 60s."
+        }
+    ],
+    "imageUrls": {},
+    "version": "1.3"
+}

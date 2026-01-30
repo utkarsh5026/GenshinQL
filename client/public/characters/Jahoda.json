@@ -1,0 +1,367 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Jahoda_Icon.png",
+    "name": "Jahoda",
+    "rarity": "4 Stars",
+    "element": "Anemo",
+    "weaponType": "Bow",
+    "region": "Nod-Krai",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
+    "modelType": "Medium Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Bow_Anemo.png",
+            "talentName": "Strike While the Arrow's Hot",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, mighty winds will accumulate on the arrowhead. A fully charged wind arrow will deal Anemo DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, hitting opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Strike_While_the_Arrow%27s_Hot_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "41.67",
+                    "45.07",
+                    "48.46",
+                    "53.3",
+                    "56.7",
+                    "60.57",
+                    "65.9",
+                    "71.23",
+                    "76.56",
+                    "82.38",
+                    "88.19"
+                ],
+                "2-Hit DMG (%)": [
+                    "19.23 × 2",
+                    "20.8 × 2",
+                    "22.36 × 2",
+                    "24.6 × 2",
+                    "26.16 × 2",
+                    "27.95 × 2",
+                    "30.41 × 2",
+                    "32.87 × 2",
+                    "35.33 × 2",
+                    "38.02 × 2",
+                    "40.7 × 2"
+                ],
+                "3-Hit DMG (%)": [
+                    "51.2",
+                    "55.36",
+                    "59.53",
+                    "65.49",
+                    "69.65",
+                    "74.41",
+                    "80.96",
+                    "87.51",
+                    "94.06",
+                    "101.2",
+                    "108.35"
+                ],
+                "Aimed Shot (%)": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "92.82"
+                ],
+                "Fully-Charged Aimed Shot (%)": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "235.6"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Talent_Savvy_Strategy_Splitting_the_Spoils.png",
+            "talentName": "Savvy Strategy: Splitting the Spoils",
+            "talentType": "Elemental Skill",
+            "description": "Jahoda dashes toward her opponent, entering the Shadow Pursuit state upon contact. While in this state, Jahoda moves continuously and swiftly: If nearby opponents are affected by Pyro, Hydro, Electro, or Cryo, she will quietly convert her Purr-loined Treasure Flask\n\n\n\n\n\nto that element, gradually filling it. When the duration ends or the skill is used again, Jahoda drains the Purr-loined Treasure Flask and deals a single instance of Anemo DMG to nearby opponents. When the Purr-loined Treasure Flask is full, Jahoda immediately drains it, exiting the Shadow Pursuit state and dealing a more powerful instance of Anemo DMG.\nIf her dash fails to make contact with an opponent, Jahoda instead drops a Smoke Bomb at her location, dealing a single instance of Anemo DMG to nearby opponents.\n\nMoonsign: Ascendant Gleam: When the Purr-loined Treasure Flask becomes full, Jahoda will not immediately discharge it. Instead, for a short duration, she steadily consumes the stored element inside and periodically fires Fluffy Meowballs at nearby opponents, dealing DMG of the corresponding element stored in the Purr-loined Treasure Flask. When a Fluffy Meowball hits an opponent, Jahoda regenerates 2 Elemental Energy. This effect can be triggered once every 3.5s.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Savvy_Strategy_Splitting_the_Spoils_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Smoke Bomb DMG (%)": [
+                    "159",
+                    "170.92",
+                    "182.85",
+                    "198.75",
+                    "210.67",
+                    "222.6",
+                    "238.5",
+                    "254.4",
+                    "270.3",
+                    "286.2",
+                    "302.1",
+                    "318",
+                    "337.88"
+                ],
+                "Unfilled Treasure Flask DMG (%)": [
+                    "190.8",
+                    "205.11",
+                    "219.42",
+                    "238.5",
+                    "252.81",
+                    "267.12",
+                    "286.2",
+                    "305.28",
+                    "324.36",
+                    "343.44",
+                    "362.52",
+                    "381.6",
+                    "405.45"
+                ],
+                "Filled Treasure Flask DMG (%)": [
+                    "212",
+                    "227.9",
+                    "243.8",
+                    "265",
+                    "280.9",
+                    "296.8",
+                    "318",
+                    "339.2",
+                    "360.4",
+                    "381.6",
+                    "402.8",
+                    "424",
+                    "450.5"
+                ],
+                "Treasure Flask Duration": [
+                    "20s"
+                ],
+                "Meowball DMG (%)": [
+                    "128",
+                    "137.6",
+                    "147.2",
+                    "160",
+                    "169.6",
+                    "179.2",
+                    "192",
+                    "204.8",
+                    "217.6",
+                    "230.4",
+                    "243.2",
+                    "256",
+                    "272"
+                ],
+                "CD": [
+                    "15s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Talent_Hidden_Aces_Seven_Tools_of_the_Hunter.png",
+            "talentName": "Hidden Aces: Seven Tools of the Hunter",
+            "talentType": "Elemental Burst",
+            "description": "Time to reveal those pocket aces! Jahoda retrieves 2 Purrsonal Coordinated Assistance Robots\n\n\n\nand deals a single instance of Anemo DMG to nearby opponents.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Hidden_Aces_Seven_Tools_of_the_Hunter_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "207.2",
+                    "222.74",
+                    "238.28",
+                    "259",
+                    "274.54",
+                    "290.08",
+                    "310.8",
+                    "331.52",
+                    "352.24",
+                    "372.96",
+                    "393.68",
+                    "414.4",
+                    "440.3"
+                ],
+                "Purrsonal Coordinated Assistance Robot DMG (%)": [
+                    "17.27",
+                    "18.56",
+                    "19.86",
+                    "21.58",
+                    "22.88",
+                    "24.17",
+                    "25.9",
+                    "27.63",
+                    "29.35",
+                    "31.08",
+                    "32.81",
+                    "34.53",
+                    "36.69"
+                ],
+                "Purrsonal Coordinated Assistance Robot Duration": [
+                    "12s"
+                ],
+                "Purrsonal Coordinated Assistance Robot Healing": [
+                    "79.87% ATK\n+\n501",
+                    "85.86% ATK\n+\n551",
+                    "91.85% ATK\n+\n605",
+                    "99.84% ATK\n+\n664",
+                    "105.83% ATK\n+\n726",
+                    "111.82% ATK\n+\n793",
+                    "119.81% ATK\n+\n864",
+                    "127.8% ATK\n+\n939",
+                    "135.78% ATK\n+\n1018",
+                    "143.77% ATK\n+\n1102",
+                    "151.76% ATK\n+\n1189",
+                    "159.74% ATK\n+\n1281",
+                    "169.73% ATK\n+\n1377"
+                ],
+                "Lowest HP Character Additional Healing": [
+                    "30.72% ATK\n+\n193",
+                    "33.02% ATK\n+\n212",
+                    "35.33% ATK\n+\n233",
+                    "38.4% ATK\n+\n255",
+                    "40.7% ATK\n+\n279",
+                    "43.01% ATK\n+\n305",
+                    "46.08% ATK\n+\n332",
+                    "49.15% ATK\n+\n361",
+                    "52.22% ATK\n+\n392",
+                    "55.3% ATK\n+\n424",
+                    "58.37% ATK\n+\n457",
+                    "61.44% ATK\n+\n493",
+                    "65.28% ATK\n+\n530"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Talent_Plan_to_Get_Paid.png",
+            "talentName": "Plan to Get Paid",
+            "talentType": "1st Ascension Passive",
+            "description": "When your team has at least one Pyro, Hydro, Electro, or Cryo character, the Purrsonal Coordinated Assistance Robots\n\n\n\nfrom the Elemental Burst Hidden Aces: Seven Tools of the Hunter will be enhanced based on the number of characters of each corresponding element.\nJahoda secretly keeps track of these characters. Among them, the element with the highest number of characters determines the enhancement effect:\nPyro: Purrsonal Coordinated Assistance Robots deal 130% of their original DMG.\nHydro: Purrsonal Coordinated Assistance Robots heal for 120% of their original healing amount.\nElectro: The number of Purrsonal Coordinated Assistance Robots increases by one.\nCryo: The attack interval of Purrsonal Coordinated Assistance Robots is reduced by 10%.\n\nIf there's a tie between elements, the order of priority that determines which enhancement takes effect is: Pyro, Hydro, Electro, then Cryo. Only one elemental effect can initially be triggered.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Talent_Sweet_Berry_Bounty.png",
+            "talentName": "Sweet Berry Bounty",
+            "talentType": "4th Ascension Passive",
+            "description": "When a Purrsonal Coordinated Assistance Robot\n\n\n\nfrom the Elemental Burst Hidden Aces: Seven Tools of the Hunter triggers healing on an active team member, if that character's HP is above 70%, their Elemental Mastery will be increased by 100 for 6s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Talent_Rooftop_Dash.png",
+            "talentName": "Rooftop Dash",
+            "talentType": "Moonsign Benediction Passive",
+            "description": "When Jahoda is in the party, the party's Moonsign will increase by 1 level.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Backstreet_Guile.png",
+            "talentName": "Backstreet Guile",
+            "talentType": "Utility Passive",
+            "description": "When dispatched on an expedition in Nod-Krai, time consumed is reduced by 25%.\nAdditionally, as the employee of the Curatorium of Secrets, Jahoda seemingly has the ability to obtain intelligence from a variety of sources — intelligence that certain factions in Nasha Town might find extremely interesting.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Constellation_One_More_Flask%21.png",
+            "name": "One More Flask!",
+            "level": 1,
+            "description": "Description\nAdvanced Properties\nWhen a Fluffy Meowball fired by the Purr-loined Treasure Flask\n\n\n\n\n\nfrom the Elemental Skill Savvy Strategy: Splitting the Spoils hits an enemy, there is a 50% chance for it to bounce, dealing the corresponding Elemental DMG to nearby opponents."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Constellation_Rogue%27s_Quick_Thinking.png",
+            "name": "Rogue's Quick Thinking",
+            "level": 2,
+            "description": "Moonsign: Ascendant Gleam: In the Ascension Talent \"Plan to Get Paid,\" Jahoda can secretly track, in addition to the element with the highest number of characters, the element with the next highest number of characters among the remaining types. This allows up to two elemental effects to be active at once. You must first unlock the Ascension Talent \"Plan to Get Paid.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Constellation_Desperate_Gamble.png",
+            "name": "Desperate Gamble",
+            "level": 3,
+            "description": "Increases the Level of Hidden Aces: Seven Tools of the Hunter by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Constellation_Wild_Berry_Amid_the_Dust.png",
+            "name": "Wild Berry Amid the Dust",
+            "level": 4,
+            "description": "When a Purrsonal Coordinated Assistance Robot\n\n\n\nfrom the Elemental Burst Hidden Aces: Seven Tools of the Hunter undergoes an Elemental Conversion, Jahoda will recover 4 Elemental Energy."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Constellation_The_Greatest_Treasure.png",
+            "name": "The Greatest Treasure",
+            "level": 5,
+            "description": "Increases the Level of Savvy Strategy: Splitting the Spoils by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Constellation_The_Littlest_Luck.png",
+            "name": "The Littlest Luck",
+            "level": 6,
+            "description": "Moonsign: Ascendant Gleam: After the Purr-loined Treasure Flask\n\n\n\n\n\nfrom the Elemental Skill Savvy Strategy: Splitting the Spoils is full, nearby Moonsign characters in your party have their CRIT Rate increased by 5% and CRIT DMG increased by 40% for 20s."
+        }
+    ],
+    "imageUrls": {},
+    "version": "Luna III"
+}

@@ -1,0 +1,312 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Iansan_Icon.png",
+    "name": "Iansan",
+    "rarity": "4 Stars",
+    "element": "Electro",
+    "weaponType": "Polearm",
+    "region": "Natlan",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
+    "modelType": "Short Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png",
+            "talentName": "Weighted Spike",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n\nNightsoul State: Swift Stormflight\nWhile in the Nightsoul's Blessing state: Iansan's Charged Attack will be transformed into the formidable Swift Stormflight, consuming a certain amount of Stamina to stomp fiercely down, dealing Nightsoul-aligned AoE Electro DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Weighted_Spike_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Weighted_Spike_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "46.98",
+                    "50.8",
+                    "54.62",
+                    "60.09",
+                    "63.91",
+                    "68.28",
+                    "74.29",
+                    "80.3",
+                    "86.3",
+                    "92.86",
+                    "99.41"
+                ],
+                "2-Hit DMG (%)": [
+                    "42.76",
+                    "46.25",
+                    "49.73",
+                    "54.7",
+                    "58.18",
+                    "62.16",
+                    "67.63",
+                    "73.1",
+                    "78.57",
+                    "84.53",
+                    "90.5"
+                ],
+                "3-Hit DMG (%)": [
+                    "64.39",
+                    "69.63",
+                    "74.87",
+                    "82.36",
+                    "87.6",
+                    "93.59",
+                    "101.82",
+                    "110.06",
+                    "118.29",
+                    "127.28",
+                    "136.26"
+                ],
+                "Charged Attack DMG (%)": [
+                    "100.28",
+                    "108.44",
+                    "116.6",
+                    "128.26",
+                    "136.42",
+                    "145.75",
+                    "158.58",
+                    "171.4",
+                    "184.23",
+                    "198.22",
+                    "212.21"
+                ],
+                "Swift Stormflight DMG (%)": [
+                    "84.19",
+                    "91.05",
+                    "97.9",
+                    "107.69",
+                    "114.54",
+                    "122.37",
+                    "133.14",
+                    "143.91",
+                    "154.68",
+                    "166.43",
+                    "178.18"
+                ],
+                "Charged Attack & Swift Stormflight Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Talent_Thunderbolt_Rush.png",
+            "talentName": "Thunderbolt Rush",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nIansan charges forward a certain distance, dealing Nightsoul-aligned Electro DMG to all opponents in her path.\nAfter this Skill is used, Iansan will regain 54 Nightsoul points and enter the Nightsoul's Blessing state. Within 5s after this is done, using a Normal Attack will trigger 1 quick Swift Stormflight stomp from Iansan that will not consume Stamina.\n\nNightsoul's Blessing: Iansan\nContinuously consumes Nightsoul points. If she runs out, or uses this Skill again, her Nightsoul's Blessing state will end. It has the following properties:\nIncreases Iansan's Movement SPD.\nHolding sprint will switch Iansan to Rushing Thunderbolt mode, greatly increasing her Movement SPD temporarily. In this mode, Iansan can make flying leaps using terrain, or consume additional Nightsoul points to move on water or liquid Phlogiston while being immune to DMG from the latter.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Thunderbolt_Rush_Combat_Preview.gif",
+                    "caption": "Combat"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Thunderbolt_Rush_Nightsoul%27s_Blessing_Preview.gif",
+                    "caption": "Nightsoul's Blessing"
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "286.4",
+                    "307.88",
+                    "329.36",
+                    "358",
+                    "379.48",
+                    "400.96",
+                    "429.6",
+                    "458.24",
+                    "486.88",
+                    "515.52",
+                    "544.16",
+                    "572.8",
+                    "608.6"
+                ],
+                "Nightsoul Point Limit": [
+                    "54"
+                ],
+                "CD": [
+                    "16s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_The_Three_Principles_of_Power.png",
+            "talentName": "The Three Principles of Power",
+            "talentType": "Elemental Burst",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nIansan's stomping foot shatters the very earth with \"Power,\" dealing Nightsoul-aligned AoE Electro DMG. She then whips out her \"Limited-Edition Kinetic Energy Scale (For Workouts).\"\nWhen this Skill is used, Iansan will gain 15 Nightsoul points and enter the Nightsoul's Blessing state.\nWhen the Kinetic Energy Scale leaves the field, Iansan's Nightsoul's Blessing state will end.\n\nKinetic Energy Scale\nThe Kinetic Energy Scale will follow the character around, boosting the ATK of your current active party member in different ways based on Iansan's Nightsoul points.\nIf Iansan has less than 42 Nightsoul points, the ATK bonus will be based on her Nightsoul points and ATK.\nIf Iansan has at least 42 Nightsoul points, the Kinetic Energy Scale will switch to the \"Ardent Support!\" state, in which the ATK bonus will be stronger and based on her ATK alone.\nAdditionally, the Scale will log the distance your current active character (excluding Iansan) has moved so long as it is active, restoring Nightsoul points to Iansan every second based on the distance moved in the previous second.\nThe Scale will disappear once her Nightsoul's Blessing state ends. It will also disappear after 1 second when you are not in a state of combat. While it is active, Iansan's Nightsoul's Blessing state will not end even if she is not on the field.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/The_Three_Principles_of_Power_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "430.4",
+                    "462.68",
+                    "494.96",
+                    "538",
+                    "570.28",
+                    "602.56",
+                    "645.6",
+                    "688.64",
+                    "731.68",
+                    "774.72",
+                    "817.76",
+                    "860.8",
+                    "914.6"
+                ],
+                "High Nightsoul Points ATK Conversion Rate": [
+                    "27% ATK"
+                ],
+                "Low Nightsoul Points ATK Conversion Rate": [
+                    "0.5% ATK / Nightsoul Point"
+                ],
+                "Max ATK Bonus": [
+                    "330",
+                    "370",
+                    "410",
+                    "450",
+                    "490",
+                    "530",
+                    "570",
+                    "610",
+                    "650",
+                    "690",
+                    "730",
+                    "770",
+                    "810"
+                ],
+                "Duration": [
+                    "12s"
+                ],
+                "Non-Combat State Duration": [
+                    "1s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Talent_Enhanced_Resistance_Training.png",
+            "talentName": "Enhanced Resistance Training",
+            "talentType": "1st Ascension Passive",
+            "description": "After Swift Stormflight hits opponents, Iansan will gain the Precise Movement effect for 15s.\nDuring this time, her ATK is increased by 20%, and whenever she regains Nightsoul points through the Kinetic Energy Scale in her Elemental Burst, The Three Principles of Power, she will gain 1 extra Nightsoul point. Additionally, when your current active party member consumes or restores Nightsoul points, the extra Nightsoul points Iansan gains the next time she restores Nightsoul points via the Scale will be increased to 4. This effect can occur once every 2.8s.\n\"Precise Movement\" will expire when Iansan's Nightsoul's Blessing state ends.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Talent_Kinetic_Energy_Gradient_Test.png",
+            "talentName": "Kinetic Energy Gradient Test",
+            "talentType": "4th Ascension Passive",
+            "description": "When a nearby party member triggers a Nightsoul Burst, Iansan will obtain the Warming Up effect for 10s.\nDuring this time, when Iansan restores at least 1 Nightsoul points, she will heal your current active character for 60% of her ATK. This effect can be triggered once every 2.8s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Talent_Hard_Work_and_Drive.png",
+            "talentName": "Hard Work and Drive",
+            "talentType": "Night Realm's Gift Passive",
+            "description": "After Nightsoul points have been fully depleted and Iansan is on the field, she will switch to using Phlogiston to maintain her Nightsoul's Blessing.\nWhile in an area with Phlogiston Mechanics within Natlan, Nightsoul Transmission: Iansan can be used. When the current active character is sprinting or in movement modes caused by certain Talents, or at a certain height in the air, switching to Iansan will trigger the following: Iansan enters the Nightsoul's Blessing state and obtains 25 Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own party.\nWhile in an area with Phlogiston Mechanics within Natlan, Iansan will not take fall DMG when using terrain differences to make leaps.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Talent_Caloric_Balancing_Plan.png",
+            "talentName": "Caloric Balancing Plan",
+            "talentType": "Utility Passive",
+            "description": "While in an area with Phlogiston Mechanics within Natlan, regain 10 Phlogiston when Phlogiston levels drop below 50%. This can occur once every 10s.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Constellation_Starting%27s_Never_Easy.png",
+            "name": "Starting's Never Easy",
+            "level": 1,
+            "description": "When Iansan is in combat and is in the Nightsoul's Blessing state, she will restore 15 Elemental Energy for every 6 Nightsoul points she consumes. This effect can trigger once every 18s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Constellation_Laziness_is_the_Enemy%21.png",
+            "name": "Laziness is the Enemy!",
+            "level": 2,
+            "description": "When using the Elemental Burst The Three Principles of Power, Iansan will also gain the Precise Movement effect from her Ascension Talent \"Enhanced Resistance Training\" for 15s. Additionally, if Iansan is off-field while Precise Movement is active, she will also increase your current active character's ATK by 30%. You must first unlock the Ascension Talent \"Enhanced Resistance Training\" to access the above effect."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Constellation_Scientific_Diet_Planning.png",
+            "name": "Scientific Diet Planning",
+            "level": 3,
+            "description": "Increases the Level of Thunderbolt Rush by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Constellation_Slow_and_Steady_Wins_the_Race.png",
+            "name": "Slow and Steady Wins the Race",
+            "level": 4,
+            "description": "When the Kinetic Energy Scale is present, Iansan will gain 2 stacks of Surging Force after your current active character (excluding herself) uses their Elemental Burst. The stacks last until the Scale leaves the field, and Surging Force can be gained once per Scale summoning. Whenever Iansan restores Nightsoul points via the Scale, she will consume 1 Surging Force stack and restore 4 additional Nightsoul points.\nAdditionally, if her Nightsoul restoration from the Scale overflows, Iansan will gain 50% of the overflow the next time she restores Nightsoul points via the Scale."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Constellation_We_Can_Push_It_Further%21.png",
+            "name": "We Can Push It Further!",
+            "level": 5,
+            "description": "Increases the Level of The Three Principles of Power by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Constellation_Teachings_of_the_Collective_of_Plenty.png",
+            "name": "Teachings of the Collective of Plenty",
+            "level": 6,
+            "description": "The Kinetic Energy Scale's duration is increased by 3s.\nAdditionally, when Iansan triggers Nightsoul points restoration, if there is any overflow, she will gain the Extreme Force effect, which increases the DMG dealt by your current active character by 25% for 3s."
+        }
+    ],
+    "imageUrls": {},
+    "version": "5.5"
+}

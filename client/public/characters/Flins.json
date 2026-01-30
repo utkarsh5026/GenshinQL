@@ -1,0 +1,450 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Flins_Icon.png",
+    "name": "Flins",
+    "rarity": "5 Stars",
+    "element": "Electro",
+    "weaponType": "Polearm",
+    "region": "Nod-Krai",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
+    "modelType": "Tall Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png",
+            "talentName": "Pocztowy Demonspear",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to perform a forward spear throw.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Pocztowy_Demonspear_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Pocztowy_Demonspear_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "44.73",
+                    "48.37",
+                    "52.01",
+                    "57.21",
+                    "60.85",
+                    "65.01",
+                    "70.73",
+                    "76.45",
+                    "82.17",
+                    "88.41",
+                    "94.65"
+                ],
+                "2-Hit DMG (%)": [
+                    "45.15",
+                    "48.82",
+                    "52.5",
+                    "57.75",
+                    "61.42",
+                    "65.62",
+                    "71.4",
+                    "77.17",
+                    "82.95",
+                    "89.25",
+                    "95.55"
+                ],
+                "3-Hit DMG (%)": [
+                    "55.92",
+                    "60.47",
+                    "65.02",
+                    "71.53",
+                    "76.08",
+                    "81.28",
+                    "88.43",
+                    "95.58",
+                    "102.74",
+                    "110.54",
+                    "118.34"
+                ],
+                "4-Hit DMG (%)": [
+                    "32.04×2",
+                    "34.65×2",
+                    "37.25×2",
+                    "40.98×2",
+                    "43.59×2",
+                    "46.57×2",
+                    "50.67×2",
+                    "54.76×2",
+                    "58.86×2",
+                    "63.33×2",
+                    "67.8×2"
+                ],
+                "5-Hit DMG (%)": [
+                    "76.79",
+                    "83.05",
+                    "89.3",
+                    "98.23",
+                    "104.48",
+                    "111.62",
+                    "121.44",
+                    "131.27",
+                    "141.09",
+                    "151.8",
+                    "162.52"
+                ],
+                "Charged Attack DMG (%)": [
+                    "103.03",
+                    "111.41",
+                    "119.8",
+                    "131.78",
+                    "140.17",
+                    "149.75",
+                    "162.93",
+                    "176.11",
+                    "189.28",
+                    "203.66",
+                    "218.04"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Ancient_Rite_Arcane_Light.png",
+            "talentName": "Ancient Rite: Arcane Light",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nFlins summons forth the ancient power concealed within his lamp and switches to his Manifest Flame form. This form has the following characteristics:\nFlins's Normal and Charged Attacks deal Electro DMG that cannot be overridden by other Elemental infusions, and he is unable to perform Plunging Attacks.\nHis interruption resistance is increased.\nHis Elemental Skill Ancient Rite: Arcane Light is replaced with the special Elemental Skill Northland Spearstorm.\n\nNorthland Spearstorm\nFlins summons a flurry of spears in front, dealing AoE Electro DMG and causing his Elemental Burst Ancient Ritual: Cometh the Night to be replaced with the special Elemental Burst Thunderous Symphony\n\nfor the next 6s.\nThe base CD of Northland Spearstorm is 6s and will not be affected by other effects.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Ancient_Rite_Arcane_Light_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "58.25",
+                    "62.62",
+                    "66.99",
+                    "72.81",
+                    "77.18",
+                    "81.55",
+                    "87.37",
+                    "93.2",
+                    "99.02",
+                    "104.85",
+                    "110.67",
+                    "116.5",
+                    "123.78"
+                ],
+                "2-Hit DMG (%)": [
+                    "58.8",
+                    "63.21",
+                    "67.62",
+                    "73.5",
+                    "77.91",
+                    "82.32",
+                    "88.2",
+                    "94.08",
+                    "99.96",
+                    "105.84",
+                    "111.72",
+                    "117.6",
+                    "124.94"
+                ],
+                "3-Hit DMG (%)": [
+                    "72.83",
+                    "78.29",
+                    "83.75",
+                    "91.03",
+                    "96.49",
+                    "101.96",
+                    "109.24",
+                    "116.52",
+                    "123.8",
+                    "131.09",
+                    "138.37",
+                    "145.65",
+                    "154.75"
+                ],
+                "4-Hit DMG (%)": [
+                    "41.73×2",
+                    "44.85×2",
+                    "47.98×2",
+                    "52.16×2",
+                    "55.29×2",
+                    "58.42×2",
+                    "62.59×2",
+                    "66.76×2",
+                    "70.93×2",
+                    "75.11×2",
+                    "79.28×2",
+                    "83.45×2",
+                    "88.67×2"
+                ],
+                "5-Hit DMG (%)": [
+                    "100.01",
+                    "107.51",
+                    "115.01",
+                    "125.01",
+                    "132.51",
+                    "140.02",
+                    "150.02",
+                    "160.02",
+                    "170.02",
+                    "180.02",
+                    "190.02",
+                    "200.02",
+                    "212.52"
+                ],
+                "Charged Attack DMG (%)": [
+                    "114.96",
+                    "123.58",
+                    "132.2",
+                    "143.7",
+                    "152.32",
+                    "160.94",
+                    "172.44",
+                    "183.94",
+                    "195.43",
+                    "206.93",
+                    "218.42",
+                    "229.92",
+                    "244.29"
+                ],
+                "Northland Spearstorm DMG (%)": [
+                    "178.4",
+                    "191.78",
+                    "205.16",
+                    "223",
+                    "236.38",
+                    "249.76",
+                    "267.6",
+                    "285.44",
+                    "303.28",
+                    "321.12",
+                    "338.96",
+                    "356.8",
+                    "379.1"
+                ],
+                "Northland Spearstorm CD": [
+                    "6s"
+                ],
+                "Manifest Flame Duration": [
+                    "10s"
+                ],
+                "Skill CD": [
+                    "16s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Talent_Ancient_Ritual_Cometh_the_Night.png",
+            "talentName": "Ancient Ritual: Cometh the Night",
+            "talentType": "Elemental Burst",
+            "description": "Flins unleashes the true power of his lamp, dealing AoE Electro DMG and, after a short delay, dealing 2 instances of middle-phase and 1 instance of final-phase AoE Electro DMG, all of which are considered Lunar-Charged DMG.\nMoonsign: Ascendant Gleam: Flins's Skill is enhanced: If there are thunderclouds nearby, Flins will deal an additional 2 instances of middle-phase Lunar-Charged AoE Electro DMG.\n\nAfter using the special Elemental Skill Northland Spearstorm, Flins's Elemental Burst Ancient Ritual: Cometh the Night will be replaced with the special Elemental Burst Thunderous Symphony for the next 6s.\n\nThunderous Symphony\nConsume less Elemental Energy to unleash a special Elemental Burst. Flins deals a single instance of AoE Electro DMG that is considered Lunar-Charged DMG.\nMoonsign: Ascendant Gleam: Flins's Skill is enhanced: If there are thunderclouds nearby, Flins will deal an additional instance of Lunar-Charged AoE Electro DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Ancient_Ritual_Cometh_the_Night_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Initial Skill DMG (%)": [
+                    "259.84",
+                    "279.33",
+                    "298.82",
+                    "324.8",
+                    "344.29",
+                    "363.78",
+                    "389.76",
+                    "415.74",
+                    "441.73",
+                    "467.71",
+                    "493.7",
+                    "519.68",
+                    "552.16"
+                ],
+                "Middle Phase Lunar-Charged DMG (%)": [
+                    "16.24",
+                    "17.46",
+                    "18.68",
+                    "20.3",
+                    "21.52",
+                    "22.74",
+                    "24.36",
+                    "25.98",
+                    "27.61",
+                    "29.23",
+                    "30.86",
+                    "32.48",
+                    "34.51"
+                ],
+                "Final Phase Lunar-Charged DMG (%)": [
+                    "116.93",
+                    "125.7",
+                    "134.47",
+                    "146.16",
+                    "154.93",
+                    "163.7",
+                    "175.39",
+                    "187.08",
+                    "198.78",
+                    "210.47",
+                    "222.16",
+                    "233.86",
+                    "248.47"
+                ],
+                "Energy Cost": [
+                    "80"
+                ],
+                "CD": [
+                    "20s"
+                ],
+                "Thunderous Symphony DMG (%)": [
+                    "71.46",
+                    "76.82",
+                    "82.17",
+                    "89.32",
+                    "94.68",
+                    "100.04",
+                    "107.18",
+                    "114.33",
+                    "121.48",
+                    "128.62",
+                    "135.77",
+                    "142.91",
+                    "151.84"
+                ],
+                "Thunderous Symphony Additional DMG (%)": [
+                    "103.94",
+                    "111.73",
+                    "119.53",
+                    "129.92",
+                    "137.72",
+                    "145.51",
+                    "155.9",
+                    "166.3",
+                    "176.69",
+                    "187.08",
+                    "197.48",
+                    "207.87",
+                    "220.86"
+                ],
+                "Thunderous Symphony Energy Cost": [
+                    "30"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Talent_Symphony_of_Winter.png",
+            "talentName": "Symphony of Winter",
+            "talentType": "1st Ascension Passive",
+            "description": "Flins will gain a corresponding buff effect based on the party's Moonsign.\n\nMoonsign: Ascendant Gleam: Lunar-Charged reactions triggered by Flins will deal an additional 20% DMG.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Talent_Whispering_Flame.png",
+            "talentName": "Whispering Flame",
+            "talentType": "4th Ascension Passive",
+            "description": "Flins's Elemental Mastery is increased by 8% of his ATK. The maximum increase obtainable this way is 160.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Electro_Moonsign_Lunar-Charged.png",
+            "talentName": "Old World Secrets",
+            "talentType": "Moonsign Benediction Passive",
+            "description": "When a party member triggers an Electro-Charged reaction, it will be converted into the Lunar-Charged reaction, with every 100 ATK that Flins has increasing Lunar-Charged's Base DMG by 0.7%, up to a maximum of 14%.\n\nAdditionally, when Flins is in the party, the party's Moonsign will increase by 1 level.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Talent_A_Light_in_the_Dark.png",
+            "talentName": "A Light in the Dark",
+            "talentType": "Utility Passive",
+            "description": "Displays the location of nearby resources unique to Nod-Krai on the mini-map.\nAdditionally, Flins appears to be able to decipher the whispers of the Wild Hunt...",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Constellation_Part_the_Veil_of_Snow.png",
+            "name": "Part the Veil of Snow",
+            "level": 1,
+            "description": "The basic cooldown of the special Elemental Skill Northland Spearstorm is reduced to 4s.\nAdditionally, when party members trigger Lunar-Charged reactions, Flins will recover 8 Elemental Energy. This effect can occur once every 5.5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Constellation_The_Devil%27s_Wall.png",
+            "name": "The Devil's Wall",
+            "level": 2,
+            "description": "Description\nAdvanced Properties\nFor the next 6s after using the special Elemental Skill Northland Spearstorm, when Flins's next Normal Attack hits an opponent, it will deal an additional 50% of Flins's ATK as AoE Electro DMG. This DMG is considered Lunar-Charged DMG.\nMoonsign: Ascendant Gleam: While Flins is on the field, after his Electro attacks hit an opponent, that opponent's Electro RES will be decreased by 25% for 7s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Constellation_Stranger_in_the_Night.png",
+            "name": "Stranger in the Night",
+            "level": 3,
+            "description": "Increases the Level of Ancient Ritual: Cometh the Night by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Constellation_Night_on_Bald_Mountain.png",
+            "name": "Night on Bald Mountain",
+            "level": 4,
+            "description": "Flins's ATK is increased by 20%.\nAdditionally, his Ascension Talent \"Whispering Flame\" is enhanced: Flins's Elemental Mastery is increased by 10% of his ATK. The maximum increase obtainable this way is 220."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Constellation_Exile%27s_Shadow.png",
+            "name": "Exile's Shadow",
+            "level": 5,
+            "description": "Increases the Level of Ancient Rite: Arcane Light by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Constellation_Songs_and_Dances_of_Death.png",
+            "name": "Songs and Dances of Death",
+            "level": 6,
+            "description": "The DMG dealt to opponents by Flins's Lunar-Charged reactions is elevated\nby 35%.\nMoonsign: Ascendant Gleam: All nearby party members' Lunar-Charged DMG is elevated by 10%."
+        }
+    ],
+    "imageUrls": {},
+    "version": "Luna I"
+}

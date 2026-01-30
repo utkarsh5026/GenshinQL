@@ -1,0 +1,367 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Diluc_Icon.png",
+    "name": "Diluc",
+    "rarity": "5 Stars",
+    "element": "Pyro",
+    "weaponType": "Claymore",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "modelType": "Tall Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png",
+            "talentName": "Tempered Sword",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous slashes.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Tempered_Sword_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Tempered_Sword_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Tempered_Sword_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "89.7",
+                    "97",
+                    "104.3",
+                    "114.73",
+                    "122.03",
+                    "130.38",
+                    "141.85",
+                    "153.32",
+                    "164.79",
+                    "177.31",
+                    "191.65"
+                ],
+                "2-Hit DMG (%)": [
+                    "87.63",
+                    "94.77",
+                    "101.9",
+                    "112.09",
+                    "119.22",
+                    "127.38",
+                    "138.58",
+                    "149.79",
+                    "161",
+                    "173.23",
+                    "187.24"
+                ],
+                "3-Hit DMG (%)": [
+                    "98.81",
+                    "106.86",
+                    "114.9",
+                    "126.39",
+                    "134.43",
+                    "143.63",
+                    "156.26",
+                    "168.9",
+                    "181.54",
+                    "195.33",
+                    "211.13"
+                ],
+                "4-Hit DMG (%)": [
+                    "133.99",
+                    "144.89",
+                    "155.8",
+                    "171.38",
+                    "182.29",
+                    "194.75",
+                    "211.89",
+                    "229.03",
+                    "246.16",
+                    "264.86",
+                    "286.28"
+                ],
+                "Charged Attack Cyclic DMG (%)": [
+                    "68.8",
+                    "74.4",
+                    "80",
+                    "88",
+                    "93.6",
+                    "100",
+                    "108.8",
+                    "117.6",
+                    "126.4",
+                    "136",
+                    "147"
+                ],
+                "Charged Attack Final DMG (%)": [
+                    "124.7",
+                    "134.85",
+                    "145",
+                    "159.5",
+                    "169.65",
+                    "181.25",
+                    "197.2",
+                    "213.15",
+                    "229.1",
+                    "246.5",
+                    "266.44"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG (%)": [
+                    "89.51",
+                    "96.79",
+                    "104.08",
+                    "114.48",
+                    "121.77",
+                    "130.09",
+                    "141.54",
+                    "152.99",
+                    "164.44",
+                    "176.93",
+                    "189.42"
+                ],
+                "Low Plunge DMG (%)": [
+                    "178.97",
+                    "193.54",
+                    "208.11",
+                    "228.92",
+                    "243.49",
+                    "260.13",
+                    "283.03",
+                    "305.92",
+                    "328.81",
+                    "353.78",
+                    "378.76"
+                ],
+                "High Plunge DMG (%)": [
+                    "223.55",
+                    "241.74",
+                    "259.94",
+                    "285.93",
+                    "304.13",
+                    "324.92",
+                    "353.52",
+                    "382.11",
+                    "410.7",
+                    "441.89",
+                    "473.09"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Talent_Searing_Onslaught.png",
+            "talentName": "Searing Onslaught",
+            "talentType": "Elemental Skill",
+            "description": "Performs a forward slash that deals Pyro DMG.\n\nThis skill can be consecutively used 3 times.\nEnters CD if not cast again within a short period.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Searing_Onslaught_Preview.gif",
+                    "caption": ""
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Searing_Onslaught_Preview_Red_Dead_of_Night.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "94.40",
+                    "101.48",
+                    "108.56",
+                    "118.00",
+                    "125.08",
+                    "132.16",
+                    "141.60",
+                    "151.04",
+                    "160.48",
+                    "169.92",
+                    "179.36",
+                    "188.80",
+                    "200.60",
+                    "212.40"
+                ],
+                "2-Hit DMG (%)": [
+                    "97.60",
+                    "104.92",
+                    "112.24",
+                    "122.00",
+                    "129.32",
+                    "136.64",
+                    "146.40",
+                    "156.16",
+                    "165.92",
+                    "175.68",
+                    "185.44",
+                    "195.20",
+                    "207.40",
+                    "219.60"
+                ],
+                "3-Hit DMG (%)": [
+                    "128.80",
+                    "138.46",
+                    "148.12",
+                    "161.00",
+                    "170.66",
+                    "180.32",
+                    "193.20",
+                    "206.08",
+                    "218.96",
+                    "231.84",
+                    "244.72",
+                    "257.60",
+                    "273.70",
+                    "289.80"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Talent_Dawn.png",
+            "talentName": "Dawn",
+            "talentType": "Elemental Burst",
+            "description": "Releases intense flames to knock back nearby opponents, dealing Pyro DMG.\nThe flames then converge into the weapon, summoning a Phoenix that flies forward and deals massive Pyro DMG to all opponents in its path. The Phoenix explodes upon reaching its destination, causing a large amount of AoE Pyro DMG.\nThe searing flames that run down his blade cause it to be infused with Pyro.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Dawn_Preview.gif",
+                    "caption": ""
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Dawn_Preview_Red_Dead_of_Night.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Slashing DMG (%)": [
+                    "204",
+                    "219.3",
+                    "234.6",
+                    "255",
+                    "270.3",
+                    "285.6",
+                    "306",
+                    "326.4",
+                    "346.8",
+                    "367.2",
+                    "387.6",
+                    "408",
+                    "433.5",
+                    "459"
+                ],
+                "DoT (%)": [
+                    "60",
+                    "64.5",
+                    "69",
+                    "75",
+                    "79.5",
+                    "84",
+                    "90",
+                    "96",
+                    "102",
+                    "108",
+                    "114",
+                    "120",
+                    "127.5",
+                    "135"
+                ],
+                "Explosion DMG (%)": [
+                    "204",
+                    "219.3",
+                    "234.6",
+                    "255",
+                    "270.3",
+                    "285.6",
+                    "306",
+                    "326.4",
+                    "346.8",
+                    "367.2",
+                    "387.6",
+                    "408",
+                    "433.5",
+                    "459"
+                ],
+                "CD": [
+                    "12s"
+                ],
+                "Infusion Duration": [
+                    "8s"
+                ],
+                "Energy Cost": [
+                    "40"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Talent_Relentless.png",
+            "talentName": "Relentless",
+            "talentType": "1st Ascension Passive",
+            "description": "Diluc's Charged Attack Stamina Cost is decreased by 50%, and its duration is increased by 3s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Talent_Blessing_of_Phoenix.png",
+            "talentName": "Blessing of Phoenix",
+            "talentType": "4th Ascension Passive",
+            "description": "The Pyro Infusion provided by Dawn lasts for 4s longer. Additionally, Diluc gains 20% Pyro DMG Bonus during the duration of this effect.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Tradition_of_the_Dawn_Knight.png",
+            "talentName": "Tradition of the Dawn Knight",
+            "talentType": "Utility Passive",
+            "description": "Refunds 15% of the ore used when crafting Claymore-type weapons.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Constellation_Conviction.png",
+            "name": "Conviction",
+            "level": 1,
+            "description": "Diluc deals 15% more DMG to opponents whose HP is above 50%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Constellation_Searing_Ember.png",
+            "name": "Searing Ember",
+            "level": 2,
+            "description": "Description\nGameplay Notes\nWhen Diluc takes DMG, his ATK increases by 10% and his ATK SPD increases by 5%. Lasts for 10s.\nThis effect can stack up to 3 times and can only occur once every 1.5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Constellation_Fire_and_Steel.png",
+            "name": "Fire and Steel",
+            "level": 3,
+            "description": "Increases the Level of Searing Onslaught by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Constellation_Flowing_Flame.png",
+            "name": "Flowing Flame",
+            "level": 4,
+            "description": "Description\nGameplay Notes\nPreview\nCasting Searing Onslaught in rhythm greatly increases damage dealt.\n2s after casting Searing Onslaught, casting the next Searing Onslaught in the combo deals 40% additional DMG. This effect lasts for 2s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Constellation_Phoenix%2C_Harbinger_of_Dawn.png",
+            "name": "Phoenix, Harbinger of Dawn",
+            "level": 5,
+            "description": "Increases the Level of Dawn by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Constellation_Flaming_Sword%2C_Nemesis_of_the_Dark.png",
+            "name": "Flaming Sword, Nemesis of the Dark",
+            "level": 6,
+            "description": "Description\nPreview\nAfter casting Searing Onslaught, the next 2 Normal Attacks within the next 6s will have their DMG and ATK SPD increased by 30%.\nAdditionally, Searing Onslaught will not interrupt the Normal Attack combo."
+        }
+    ],
+    "imageUrls": {},
+    "version": "4.5"
+}
