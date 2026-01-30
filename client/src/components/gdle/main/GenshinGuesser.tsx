@@ -1,9 +1,9 @@
 import React from "react";
 import CharacterGuesser from "../characters/CharacterGuesser";
-import { useCharacters } from "@/redux/hook/characters";
+import { useCharactersStore } from "@/stores";
 
 const GenshinGuesser: React.FC = () => {
-  const { characters } = useCharacters();
+  const { characters } = useCharactersStore();
 
   if (characters.length === 0) return null;
   return (

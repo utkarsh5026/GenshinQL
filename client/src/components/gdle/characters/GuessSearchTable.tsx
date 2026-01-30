@@ -1,11 +1,10 @@
 import React from "react";
 import SearchBar from "@/components/utils/SearchBar";
 import GuessTable from "./GuessTable";
-import type { Character } from "@/graphql/types";
+import type { Character } from "@/types";
 import Confetti from "react-confetti";
 import { Card, CardContent } from "@/components/ui/card";
-import { useCharacters } from "@/redux/hook/characters";
-import useGenshinGuesser from "@/redux/hook/genshin-guesser";
+import { useCharactersStore, useGenshinGuesserStore } from "@/stores";
 
 interface GuessSearchTableProps {
   selectedCharacter: Character;
@@ -24,8 +23,8 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
   selectedCharacter,
   onGuess,
 }) => {
-  const { characters, characterMap } = useCharacters();
-  const { guessedChars, gameWon, gameOver } = useGenshinGuesser();
+  const { characters, characterMap } = useCharactersStore();
+  const { guessedChars, gameWon, gameOver } = useGenshinGuesserStore();
 
   const guessedCharacters = guessedChars.map((char) => characterMap[char]);
 

@@ -1,11 +1,11 @@
-import { Character } from "@/graphql/types";
+import { Character } from "@/types";
 import { motion } from "framer-motion";
 import { Avatar } from "@/components/ui/avatar";
 import AnimatedCover from "@/components/utils/AnimatedCover";
 import { Button } from "@/components/ui/button";
 import { RefreshCcw } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import useGenshinGuesser from "@/redux/hook/genshin-guesser";
+import { useGenshinGuesserStore } from "@/stores";
 
 const MAX_GUESSES = 5;
 
@@ -20,7 +20,7 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
   gameWon,
   onReset,
 }) => {
-  const { guessedChars, gameOver } = useGenshinGuesser();
+  const { guessedChars, gameOver } = useGenshinGuesserStore();
 
   const guessCount = guessedChars.length;
 

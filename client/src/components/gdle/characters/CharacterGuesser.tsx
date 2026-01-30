@@ -1,8 +1,7 @@
-import { Character } from "@/graphql/types";
+import { Character } from "@/types";
 import React, { useMemo, useEffect, useRef } from "react";
 import GuessSearchTable from "./GuessSearchTable";
-import { useCharacters } from "@/redux/hook/characters";
-import useGenshinGuesser from "@/redux/hook/genshin-guesser";
+import { useCharactersStore, useGenshinGuesserStore } from "@/stores";
 import GameOverDisplay from "./GameOverDisplay";
 
 /**
@@ -23,14 +22,14 @@ import GameOverDisplay from "./GameOverDisplay";
  * @returns A React component containing the complete game interface
  */
 const CharacterGuesser: React.FC = () => {
-  const { characters, characterMap } = useCharacters();
+  const { characters, characterMap } = useCharactersStore();
   const {
     addGuessedChar,
     resetGame,
     currentChar,
     gameWon,
     selectCurrentCharacter,
-  } = useGenshinGuesser();
+  } = useGenshinGuesserStore();
 
   const selectedCharacter = useMemo(() => {
     if (!currentChar) return null;

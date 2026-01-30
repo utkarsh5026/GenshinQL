@@ -7,7 +7,7 @@ import {
   TableBody,
 } from "@/components/ui/table";
 import AvatarWithSkeleton from "@/components/utils/AvatarWithSkeleton";
-import { Character } from "@/graphql/types";
+import { Character } from "@/types";
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp, ChevronsDown, ChevronsUp } from "lucide-react";
