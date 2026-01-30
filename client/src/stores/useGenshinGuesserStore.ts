@@ -3,6 +3,16 @@ import { devtools } from 'zustand/middleware';
 import type { Character } from '@/types';
 
 const MAX_GUESSES = 5;
+const STORAGE_KEY = 'genshindle-stats';
+
+interface GameStats {
+  gamesPlayed: number;
+  gamesWon: number;
+  currentStreak: number;
+  maxStreak: number;
+  guessDistribution: Record<number, number>; // { 1: 5, 2: 10, 3: 8, 4: 3, 5: 2 }
+  lastPlayedDate: string | null;
+}
 
 interface GenshinGuesserState {
   // State
@@ -11,6 +21,7 @@ interface GenshinGuesserState {
   gameOver: boolean;
   gameWon: boolean;
   streak: number;
+  stats: GameStats;
 
   // Actions
   setVictory: () => void;
@@ -19,7 +30,39 @@ interface GenshinGuesserState {
   addGuessedChar: (charName: string) => void;
   selectCurrentCharacter: (characters: Character[]) => void;
   resetGame: () => void;
+  updateStats: (guessCount: number, won: boolean) => void;
+  resetStats: () => void;
 }
+
+// Helper to load stats from localStorage
+const loadStats = (): GameStats => {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      return JSON.parse(stored);
+    }
+  } catch (e) {
+    console.error('Failed to load stats:', e);
+  }
+
+  return {
+    gamesPlayed: 0,
+    gamesWon: 0,
+    currentStreak: 0,
+    maxStreak: 0,
+    guessDistribution: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
+    lastPlayedDate: null,
+  };
+};
+
+// Helper to save stats
+const saveStats = (stats: GameStats) => {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
+  } catch (e) {
+    console.error('Failed to save stats:', e);
+  }
+};
 
 const initialState = {
   guessedChars: [],
@@ -27,6 +70,7 @@ const initialState = {
   gameOver: false,
   gameWon: false,
   streak: 0,
+  stats: loadStats(),
 };
 
 export const useGenshinGuesserStore = create<GenshinGuesserState>()(
@@ -63,14 +107,17 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
       },
 
       addGuessedChar: (charName) => {
-        const { guessedChars, currentChar } = get();
+        const { guessedChars, currentChar, updateStats } = get();
 
         // Prevent duplicate guesses
         if (guessedChars.includes(charName)) return;
 
         const newGuessedChars = [...guessedChars, charName];
+        const guessCount = newGuessedChars.length;
 
         if (charName === currentChar) {
+          // Victory!
+          updateStats(guessCount, true);
           set(
             (state) => ({
               guessedChars: newGuessedChars,
@@ -82,6 +129,8 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
             'guesser/addGuess/victory'
           );
         } else if (newGuessedChars.length === MAX_GUESSES) {
+          // Defeat - used all guesses
+          updateStats(guessCount, false);
           set(
             {
               guessedChars: newGuessedChars,
@@ -93,6 +142,7 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
             'guesser/addGuess/defeat'
           );
         } else {
+          // Continue playing
           set(
             {
               guessedChars: newGuessedChars,
@@ -122,6 +172,45 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
           false,
           'guesser/reset'
         );
+      },
+
+      updateStats: (guessCount: number, won: boolean) => {
+        set((state) => {
+          const newStats = { ...state.stats };
+
+          newStats.gamesPlayed += 1;
+
+          if (won) {
+            newStats.gamesWon += 1;
+            newStats.currentStreak += 1;
+            newStats.maxStreak = Math.max(newStats.maxStreak, newStats.currentStreak);
+            newStats.guessDistribution[guessCount] =
+              (newStats.guessDistribution[guessCount] || 0) + 1;
+          } else {
+            newStats.currentStreak = 0;
+          }
+
+          newStats.lastPlayedDate = new Date().toISOString();
+
+          saveStats(newStats);
+
+          return { stats: newStats };
+        }, false, 'guesser/updateStats');
+      },
+
+      resetStats: () => {
+        const freshStats: GameStats = {
+          gamesPlayed: 0,
+          gamesWon: 0,
+          currentStreak: 0,
+          maxStreak: 0,
+          guessDistribution: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
+          lastPlayedDate: null,
+        };
+
+        saveStats(freshStats);
+
+        set({ stats: freshStats }, false, 'guesser/resetStats');
       },
     }),
     { name: 'GenshinGuesserStore' }

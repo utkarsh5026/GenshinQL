@@ -11,6 +11,7 @@ import { Character } from "@/types";
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp, ChevronsDown, ChevronsUp } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface GuessTableProps {
   characters: Character[];
@@ -50,18 +51,24 @@ const GuessTable: React.FC<GuessTableProps> = ({
     <div>
       <Table>
         <TableHeader>
-          <TableRow>
-            <TableHead>Icon</TableHead>
-            <TableHead>Name</TableHead>
-            <TableHead>Region</TableHead>
-            <TableHead>Weapon</TableHead>
-            <TableHead>Element</TableHead>
-            <TableHead>Version</TableHead>
+          <TableRow className="border-b-2 border-border hover:bg-transparent">
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Icon</TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Name</TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Region</TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Weapon</TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Element</TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Version</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {characters.map((character) => (
-            <TableRow key={character.name} className="text-left">
+          {characters.map((character, idx) => (
+            <TableRow
+              key={character.name}
+              className={cn(
+                "text-left transition-colors duration-200",
+                idx % 2 === 0 ? "bg-transparent" : "bg-muted/30"
+              )}
+            >
               <TableCell>
                 <AvatarWithSkeleton
                   name={character.name}
@@ -140,16 +147,35 @@ const GuessTableCell: React.FC<GuessTableCellProps> = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, rotateX: 90 }}
-      animate={{ opacity: 1, rotateX: 0 }}
+      initial={{ opacity: 0, rotateX: 90, scale: 0.8 }}
+      animate={{ opacity: 1, rotateX: 0, scale: 1 }}
       transition={{
-        duration: 0.5,
-        delay: index * 0.15,
-        ease: "easeOut",
+        duration: 0.6,
+        delay: index * 0.12,
+        ease: [0.34, 1.56, 0.64, 1], // Elastic ease out
       }}
-      className={`${isCorrect ? "bg-green-900" : "bg-red-900"} w-full h-full p-2 rounded-md flex items-center justify-center min-w-[40px] min-h-[60px]`}
+      whileHover={{ scale: 1.05 }}
+      className={`relative w-full h-full p-3 rounded-lg flex items-center justify-center min-w-[50px] min-h-[70px] transition-all duration-300 shadow-md hover:shadow-xl border ${
+        isCorrect
+          ? "bg-game-correct-bg border-game-correct"
+          : "bg-game-wrong-bg border-game-wrong"
+      }`}
     >
-      {children}
+      {/* Subtle gradient overlay for depth */}
+      <div className="absolute inset-0 rounded-lg opacity-20 pointer-events-none bg-gradient-to-br from-white/10 to-transparent" />
+
+      {/* Content */}
+      <div className="relative z-10">{children}</div>
+
+      {/* Pulse effect for correct answers */}
+      {isCorrect && (
+        <motion.div
+          className="absolute inset-0 rounded-lg border-2 border-game-correct"
+          initial={{ opacity: 0.8, scale: 1 }}
+          animate={{ opacity: 0, scale: 1.3 }}
+          transition={{ duration: 0.6, delay: index * 0.12 + 0.3 }}
+        />
+      )}
     </motion.div>
   );
 };
