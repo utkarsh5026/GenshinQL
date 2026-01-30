@@ -1,12 +1,11 @@
 import { By, WebDriver, WebElement } from 'selenium-webdriver';
-import { setupDriver, URL, waitForElementCss, withWebDriver } from './setup';
+import { setupDriver, URL, waitForElementCss, withWebDriver, waitForPageLoad, handleCloudflareChallenge } from './setup.js';
 import {
   findImageInCell,
   getTableFromHeading,
   parseUrl,
   underScore,
   parseCharacterName,
-  toOriginalName,
 } from './utils.js';
 import { weaponSchema, weaponTypeSchema } from './schema.js';
 import { z } from 'zod';
@@ -24,7 +23,7 @@ import {
   PUBLIC_DIR,
   saveFileWithNewVersion,
 } from './fileio.js';
-import { logger } from '../logger';
+import { logger } from '../logger.js';
 
 const WEAPON_FILE_NAME = 'weapons';
 
@@ -101,14 +100,14 @@ export async function loadMaterialCalendar(): Promise<
     const rows = await table.findElements(By.css('tr'));
     result[nation] = (
       await Promise.all(
-        rows.map(async (row) => {
+        rows.map(async (row: WebElement) => {
           const cells = await row.findElements(By.css('td'));
           if (cells.length === 3) {
             const day = await cells[0].getText();
             const materialImages = await cells[1].findElements(By.css('img'));
             const images = (
               await Promise.all(
-                materialImages.map(async (img) => {
+                materialImages.map(async (img: WebElement) => {
                   const src = await img.getAttribute('data-src');
                   return {
                     url: parseUrl(src),
@@ -120,7 +119,7 @@ export async function loadMaterialCalendar(): Promise<
 
             const weapons = await cells[2].findElements(By.css('a'));
             const weaponNames = await Promise.all(
-              weapons.map(async (weapon) => weapon.getAttribute('title'))
+              weapons.map(async (weapon: WebElement) => weapon.getAttribute('title'))
             );
 
             return {
@@ -150,6 +149,18 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
 
   await driver.get(url);
   logger.debug(`  ↳ Navigated to ${weaponName} page`);
+
+  // Wait for the page to fully load before looking for elements
+  await waitForPageLoad(driver);
+  logger.debug(`  ↳ Page loaded completely`);
+
+  // Check for and handle Cloudflare challenge
+  await handleCloudflareChallenge(driver);
+
+  // Scroll down to trigger any lazy-loaded content
+  await driver.executeScript('window.scrollTo(0, document.body.scrollHeight / 2);');
+  await driver.sleep(1000);
+  logger.debug(`  ↳ Scrolled to trigger lazy loading`);
 
   const selector = 'span.card-list-container';
   await waitForElementCss(driver, selector);
@@ -194,10 +205,20 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
   const images = await getWeaponImages(driver);
   logger.debug(`  ↳ Collected ${images.length} images`);
 
+  // Extract ascension data
+  logger.info(`  ↳ Extracting ascension data...`);
+  const ascension = await extractWeaponAscensionData(driver, weaponName);
+  if (ascension) {
+    logger.success(`  ↳ Extracted ${ascension.phases.length} ascension phases`);
+  } else {
+    logger.warn(`  ↳ No ascension data found (may be expected for some weapons)`);
+  }
+
   return {
     materials,
     passives,
     images,
+    ascension,
   };
 }
 
@@ -233,7 +254,7 @@ async function getWeaponImages(driver: WebDriver): Promise<string[]> {
       await weaponDetailsImage.getAttribute('data-src');
     images.push(parseUrl(weaponDetailsImageUrl));
     logger.debug(`    ↳ Added weapon details announcement image`);
-  } catch (error) {
+  } catch {
     logger.debug(`    ↳ No weapon details announcement image found`);
   }
 
@@ -241,14 +262,258 @@ async function getWeaponImages(driver: WebDriver): Promise<string[]> {
 }
 
 /**
+ * Parses stat values that may contain percentages or decimals
+ * Examples: "44.1%", "198", "9.6%"
+ */
+function parseStatValue(text: string): number {
+  const cleaned = text.trim().replace('%', '');
+  return parseFloat(cleaned);
+}
+
+/**
+ * Extracts ascension materials and mora cost from a cost cell
+ */
+async function extractAscensionCost(
+  driver: WebDriver,
+  costCell: WebElement
+): Promise<{ mora: number; materials: Array<{ url: string; caption: string; count: number }> }> {
+  try {
+    // Expand collapsible section if needed
+    const collapsed = await costCell.getAttribute('class');
+    if (collapsed?.includes('mw-collapsed')) {
+      try {
+        const toggle = await costCell.findElement(By.css('.mw-collapsible-toggle'));
+        await driver.executeScript('arguments[0].click();', toggle);
+        await driver.sleep(500); // Wait for expansion
+      } catch {
+        logger.debug(`    ↳ No collapsible toggle found or couldn't click`);
+      }
+    }
+
+    // Extract Mora amount
+    const fullText = await costCell.getText();
+    const moraMatch = fullText.match(/(\d{1,3}(?:,\d{3})*)\s*Mora/i);
+    const mora = moraMatch ? parseInt(moraMatch[1].replace(/,/g, '')) : 0;
+
+    // Extract material cards
+    const materialCards = await costCell.findElements(
+      By.css('div.card-container, span.card-wrapper')
+    );
+
+    const materials: Array<{ url: string; caption: string; count: number }> = [];
+
+    for (const card of materialCards) {
+      try {
+        // Get image
+        const img = await card.findElement(By.css('img'));
+        const imageUrl = await img.getAttribute('data-src') || await img.getAttribute('src');
+
+        // Get caption/name
+        const caption = await img.getAttribute('alt');
+
+        // Get count from card text (e.g., "×5" or "x3")
+        const cardText = await card.getText();
+        const countMatch = cardText.match(/[×x](\d+)/i);
+        const count = countMatch ? parseInt(countMatch[1]) : 1;
+
+        // Skip Mora card (already extracted)
+        if (caption.toLowerCase().includes('mora')) continue;
+
+        materials.push({
+          url: parseUrl(imageUrl),
+          caption: caption.replace(/[×x]\d+/gi, '').trim(),
+          count,
+        });
+      } catch (error) {
+        logger.debug(`    ⚠ Failed to parse material card: ${error}`);
+      }
+    }
+
+    return { mora, materials };
+
+  } catch (error) {
+    logger.debug(`  ⚠ Error extracting materials: ${error}`);
+    return { mora: 0, materials: [] };
+  }
+}
+
+/**
+ * Parses a single ascension row to extract level and stat data
+ */
+async function parseAscensionRow(
+  cells: WebElement[],
+  phaseNumber: number
+): Promise<{
+  phase: number;
+  levelRange: string;
+  baseAttack: { min: number; max: number };
+  subStat: { min?: number; max?: number };
+  mora?: number;
+  materials?: Array<{ url: string; caption: string; count: number }>;
+} | null> {
+  try {
+    // Expected structure: [Phase, Level, Base ATK, Sub-stat]
+    // But we need to handle rowspan for phase column
+
+    let cellIndex = 0;
+
+    // Check if this row has a phase indicator (rowspan=2)
+    const hasPhaseCell = await cells[0].getAttribute('rowspan');
+    if (hasPhaseCell) cellIndex = 1;
+
+    // Extract level range (e.g., "1/20", "20/20")
+    const levelRange = await cells[cellIndex].getText();
+
+    // Extract base ATK
+    const baseAtkText = await cells[cellIndex + 1].getText();
+    const baseAtk = parseFloat(baseAtkText);
+
+    // Extract sub-stat (may be percentage or flat value)
+    let subStat: number | undefined;
+    if (cells.length > cellIndex + 2) {
+      const subStatText = await cells[cellIndex + 2].getText();
+      subStat = subStatText ? parseStatValue(subStatText) : undefined;
+    }
+
+    return {
+      phase: phaseNumber,
+      levelRange,
+      baseAttack: { min: baseAtk, max: baseAtk },
+      subStat: { min: subStat, max: subStat },
+      mora: undefined,
+      materials: undefined,
+    };
+
+  } catch (error) {
+    logger.debug(`  ⚠ Error parsing row: ${error}`);
+    return null;
+  }
+}
+
+/**
+ * Extracts weapon ascension table data from the wiki page
+ * @param driver - Selenium WebDriver instance
+ * @param weaponName - Name of the weapon for logging
+ * @returns Ascension data with all 7 phases, or null if extraction fails
+ */
+async function extractWeaponAscensionData(
+  driver: WebDriver,
+  weaponName: string
+): Promise<{ phases: Array<{
+  phase: number;
+  levelRange: string;
+  baseAttack: { min: number; max: number };
+  subStat: { min?: number; max?: number };
+  mora?: number;
+  materials?: Array<{ url: string; caption: string; count: number }>;
+}> } | null> {
+  try {
+    logger.debug('  ↳ Locating ascension table...');
+
+    // Find table with "Ascension" heading
+    const table = await getTableFromHeading(driver, 'Ascension');
+    const rows = await table.findElements(By.css('tbody tr'));
+
+    logger.debug(`  ↳ Found ${rows.length} table rows`);
+
+    const phases: Array<{
+      phase: number;
+      levelRange: string;
+      baseAttack: { min: number; max: number };
+      subStat: { min?: number; max?: number };
+      mora?: number;
+      materials?: Array<{ url: string; caption: string; count: number }>;
+    }> = [];
+    let currentPhase = 0;
+
+    // Parse rows in pairs (min level + max level for each phase)
+    for (let i = 0; i < rows.length; i++) {
+      const cells = await rows[i].findElements(By.css('td'));
+
+      // Skip header rows and ascension cost rows
+      if (cells.length === 0 || cells.length === 1) continue;
+
+      // Check if this row has a phase indicator (rowspan=2)
+      const hasPhaseCell = await cells[0].getAttribute('rowspan');
+
+      if (hasPhaseCell === '2') {
+        // This is the min level row for a new phase
+        const minData = await parseAscensionRow(cells, currentPhase);
+
+        // Get the next row for max level
+        i++;
+        if (i >= rows.length) break;
+
+        const maxCells = await rows[i].findElements(By.css('td'));
+        const maxData = await parseAscensionRow(maxCells, currentPhase);
+
+        if (minData && maxData) {
+          // Combine min and max data into a single phase
+          const phaseData = {
+            phase: currentPhase,
+            levelRange: `${minData.levelRange}/${maxData.levelRange.split('/')[1]}`,
+            baseAttack: {
+              min: minData.baseAttack.min,
+              max: maxData.baseAttack.max,
+            },
+            subStat: {
+              min: minData.subStat.min,
+              max: maxData.subStat.max,
+            },
+            mora: undefined as number | undefined,
+            materials: undefined as Array<{ url: string; caption: string; count: number }> | undefined,
+          };
+
+          // Check if next row is ascension cost
+          if (i + 1 < rows.length) {
+            const nextCells = await rows[i + 1].findElements(By.css('td'));
+            if (nextCells.length === 1) {
+              // This is an ascension cost row
+              const materials = await extractAscensionCost(driver, nextCells[0]);
+              phaseData.mora = materials.mora;
+              phaseData.materials = materials.materials;
+              i++; // Skip the cost row
+            }
+          }
+
+          phases.push(phaseData);
+          currentPhase++;
+        }
+      }
+    }
+
+    // Validate phase count
+    if (phases.length < 7) {
+      logger.warn(`  ⚠ Expected 7 phases, got ${phases.length} for ${weaponName}`);
+    }
+
+    // Validate each phase has required data
+    phases.forEach((phase, idx) => {
+      if (!phase.baseAttack.min || !phase.baseAttack.max) {
+        logger.error(`  ✗ Phase ${idx} missing base ATK data`);
+      }
+    });
+
+    logger.success(`  ↳ Extracted ${phases.length} ascension phases`);
+    return { phases };
+
+  } catch (error) {
+    logger.error(`  ✗ Failed to extract ascension data: ${error}`);
+    return null;
+  }
+}
+
+/**
  * Scrapes detailed weapon data from a weapon's individual wiki page.
  * Creates a new WebDriver instance for each weapon scrape.
+ * Uses visible browser mode to avoid anti-bot detection.
  *
  * @param weaponName - The name of the weapon to scrape detailed data for
  * @returns Promise resolving to detailed weapon data including materials, passives, and images
  */
 export async function scrapeWeaponDetailed(weaponName: string) {
-  return await withWebDriver(async (driver) => {
+  // Force visible browser mode to avoid anti-bot detection
+  return await withWebDriver(async (driver: WebDriver) => {
     const name = encodeURIComponent(underScore(weaponName));
     const weaponUrl = `${URL}/${name}`;
 
@@ -272,7 +537,7 @@ export async function scrapeWeaponDetailed(weaponName: string) {
       logger.error(`✗ Error scraping ${weaponName}:`, error);
       throw error;
     }
-  });
+  }, true); // Force visible mode
 }
 
 /**
