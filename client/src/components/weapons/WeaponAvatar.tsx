@@ -1,4 +1,4 @@
-import type { Weapon } from "@/graphql/types";
+import type { Weapon } from "@/types";
 import {
   HoverCard,
   HoverCardContent,

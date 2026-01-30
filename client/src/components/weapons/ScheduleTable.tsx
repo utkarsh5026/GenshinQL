@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table";
-import type { WeaponMaterialSchedule } from "@/graphql/types";
+import type { WeaponMaterialSchedule } from "@/types";
 import WeaponShowCase from "./WeaponShowCase";
 import AvatarWithSkeleton from "../utils/AvatarWithSkeleton";
 
@@ -32,16 +32,12 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({ schedule }) => {
   const { materials } = schedule;
   const today = getCurrentDay();
 
-  // Reorder materials to have today first, or Sunday if today is not found
   const reorderedMaterials = [...materials];
   const todayIndex = reorderedMaterials.findIndex((material) =>
     material.day.toLowerCase().includes(today.toLowerCase())
   );
 
-  if (todayIndex !== -1) {
-    const [todayMaterial] = reorderedMaterials.splice(todayIndex, 1);
-    reorderedMaterials.unshift(todayMaterial);
-  } else {
+  if (todayIndex === -1) {
     const sundayIndex = reorderedMaterials.findIndex(
       (material) => material.day.toLowerCase() === "sunday"
     );
@@ -49,6 +45,9 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({ schedule }) => {
       const [sundayMaterial] = reorderedMaterials.splice(sundayIndex, 1);
       reorderedMaterials.unshift(sundayMaterial);
     }
+  } else {
+    const [todayMaterial] = reorderedMaterials.splice(todayIndex, 1);
+    reorderedMaterials.unshift(todayMaterial);
   }
 
   return (
@@ -64,18 +63,16 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({ schedule }) => {
         {reorderedMaterials.map((material) => (
           <TableRow
             key={material.day}
-            className={`${
-              material.day.toLowerCase().includes(today.toLowerCase())
-                ? "bg-green-950 hover:bg-green-950"
-                : ""
-            }`}
+            className={`${material.day.toLowerCase().includes(today.toLowerCase())
+              ? "bg-green-950 hover:bg-green-950"
+              : ""
+              }`}
           >
             <TableCell className="font-medium text-left">
-              {`${material.day} ${
-                material.day.toLowerCase().includes(today.toLowerCase())
-                  ? "(Today)"
-                  : ""
-              }`}
+              {`${material.day} ${material.day.toLowerCase().includes(today.toLowerCase())
+                ? "(Today)"
+                : ""
+                }`}
             </TableCell>
             <TableCell>
               <div className="grid grid-cols-2">

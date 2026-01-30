@@ -1,4 +1,4 @@
-import { Weapon } from "@/graphql/types";
+import { Weapon } from "@/types";
 import React from "react";
 import AvatarWithSkeleton from "../utils/AvatarWithSkeleton";
 import ListSplitter from "../utils/ListSplitter";

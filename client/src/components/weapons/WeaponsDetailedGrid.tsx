@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WeaponCard from "./WeaponCard";
-import { Weapon } from "@/graphql/types";
+import { Weapon } from "@/types";
 
 interface WeaponsDetailedGridProps {
   weapons: Weapon[];
