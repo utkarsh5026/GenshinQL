@@ -3,6 +3,7 @@ import { Search, Filter } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Popover,
   PopoverContent,
@@ -11,6 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { CachedImage } from "@/components/utils/CachedImage";
 import FilterChip from "./FilterChip";
+import styles from "./FilterBar.module.css";
 
 interface FilterOption {
   name: string;
@@ -54,14 +56,32 @@ const FilterBar: React.FC<FilterBarProps> = ({
     const starColor = rarityNum === 5 ? "text-yellow-500" : "text-violet-500";
 
     return (
-      <div className="flex items-center">
+      <div className={styles.rarityStars}>
         {Array.from({ length: rarityNum }).map((_, index) => (
-          <span key={index} className={`${starColor} text-base`}>
+          <span
+            key={`${rarity}-star-${index}`}
+            className={`${starColor} text-base`}
+            style={{ '--star-index': index } as React.CSSProperties}
+          >
             ★
           </span>
         ))}
       </div>
     );
+  };
+
+  const getElementAnimationClass = (elementName: string) => {
+    const normalized = elementName.toLowerCase();
+    switch (normalized) {
+      case 'anemo': return styles.anemo;
+      case 'pyro': return styles.pyro;
+      case 'hydro': return styles.hydro;
+      case 'electro': return styles.electro;
+      case 'cryo': return styles.cryo;
+      case 'geo': return styles.geo;
+      case 'dendro': return styles.dendro;
+      default: return '';
+    }
   };
 
   return (
@@ -128,28 +148,36 @@ const FilterBar: React.FC<FilterBarProps> = ({
                   {uniqueElements.map((element) => (
                     <div
                       key={element.name}
-                      className="flex items-center space-x-2"
+                      className={`flex items-center space-x-2 ${styles.filterItem} cursor-pointer`}
+                      onClick={() => onToggleElement(element.name)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          onToggleElement(element.name);
+                        }
+                      }}
+                      role="checkbox"
+                      aria-checked={selectedElements.includes(element.name)}
+                      tabIndex={0}
                     >
-                      <input
-                        type="checkbox"
+                      <Checkbox
                         id={`element-${element.name}`}
                         checked={selectedElements.includes(element.name)}
-                        onChange={() => onToggleElement(element.name)}
-                        className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-2 focus:ring-primary cursor-pointer"
+                        onCheckedChange={() => onToggleElement(element.name)}
+                        onClick={(e) => e.stopPropagation()}
                       />
-                      <label
-                        htmlFor={`element-${element.name}`}
-                        className="flex items-center gap-2 cursor-pointer text-sm flex-1"
-                      >
-                        <CachedImage
-                          src={element.iconUrl}
-                          alt={element.name}
-                          width={20}
-                          height={20}
-                          className="w-5 h-5 rounded-full"
-                        />
+                      <div className={`flex items-center gap-2 text-sm flex-1 ${styles.filterLabel}`}>
+                        <div className={`${styles.iconContainer} ${getElementAnimationClass(element.name)}`}>
+                          <CachedImage
+                            src={element.iconUrl}
+                            alt={element.name}
+                            width={20}
+                            height={20}
+                            className="w-5 h-5 rounded-full"
+                          />
+                        </div>
                         <span>{element.name}</span>
-                      </label>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -164,20 +192,29 @@ const FilterBar: React.FC<FilterBarProps> = ({
                 </label>
                 <div className="space-y-2">
                   {uniqueRarities.map((rarity) => (
-                    <div key={rarity} className="flex items-center space-x-2">
-                      <input
-                        type="checkbox"
+                    <div
+                      key={rarity}
+                      className={`flex items-center space-x-2 ${styles.filterItem} cursor-pointer`}
+                      onClick={() => onToggleRarity(rarity)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          onToggleRarity(rarity);
+                        }
+                      }}
+                      role="checkbox"
+                      aria-checked={selectedRarities.includes(rarity)}
+                      tabIndex={0}
+                    >
+                      <Checkbox
                         id={`rarity-${rarity}`}
                         checked={selectedRarities.includes(rarity)}
-                        onChange={() => onToggleRarity(rarity)}
-                        className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-2 focus:ring-primary cursor-pointer"
+                        onCheckedChange={() => onToggleRarity(rarity)}
+                        onClick={(e) => e.stopPropagation()}
                       />
-                      <label
-                        htmlFor={`rarity-${rarity}`}
-                        className="flex items-center gap-1 cursor-pointer flex-1"
-                      >
+                      <div className={`flex items-center gap-1 flex-1 ${styles.filterLabel}`}>
                         {renderRarityStars(rarity)}
-                      </label>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -194,28 +231,36 @@ const FilterBar: React.FC<FilterBarProps> = ({
                   {uniqueRegions.map((region) => (
                     <div
                       key={region.name}
-                      className="flex items-center space-x-2"
+                      className={`flex items-center space-x-2 ${styles.filterItem} cursor-pointer`}
+                      onClick={() => onToggleRegion(region.name)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          onToggleRegion(region.name);
+                        }
+                      }}
+                      role="checkbox"
+                      aria-checked={selectedRegions.includes(region.name)}
+                      tabIndex={0}
                     >
-                      <input
-                        type="checkbox"
+                      <Checkbox
                         id={`region-${region.name}`}
                         checked={selectedRegions.includes(region.name)}
-                        onChange={() => onToggleRegion(region.name)}
-                        className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-2 focus:ring-primary cursor-pointer"
+                        onCheckedChange={() => onToggleRegion(region.name)}
+                        onClick={(e) => e.stopPropagation()}
                       />
-                      <label
-                        htmlFor={`region-${region.name}`}
-                        className="flex items-center gap-2 cursor-pointer text-sm flex-1"
-                      >
-                        <CachedImage
-                          src={region.iconUrl}
-                          alt={region.name}
-                          width={20}
-                          height={20}
-                          className="w-5 h-5 rounded-full"
-                        />
+                      <div className={`flex items-center gap-2 text-sm flex-1 ${styles.filterLabel}`}>
+                        <div className={`${styles.iconContainer} ${styles.regionIcon}`}>
+                          <CachedImage
+                            src={region.iconUrl}
+                            alt={region.name}
+                            width={20}
+                            height={20}
+                            className="w-5 h-5 rounded-full"
+                          />
+                        </div>
                         <span>{region.name}</span>
-                      </label>
+                      </div>
                     </div>
                   ))}
                 </div>
