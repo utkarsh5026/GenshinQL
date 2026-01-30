@@ -1,21 +1,23 @@
-import React, { useState } from "react";
-import DraggableArea from "../base/DroppableArea";
-import { useWeaponsStore } from "@/stores";
-import WeaponAvatar from "@/components/weapons/WeaponAvatar";
-import { DndContext } from "@dnd-kit/core";
-import WeaponTierLevel from "./WeaponTierLevel";
-import type { Weapon } from "@/types";
-const tierLevels = ["S", "A", "B", "C", "D"];
+import { DndContext } from '@dnd-kit/core';
+import React, { useState } from 'react';
+
+import WeaponAvatar from '@/components/weapons/WeaponAvatar';
+import { useWeaponsStore } from '@/stores';
+import type { Weapon } from '@/types';
+
+import DraggableArea from '../base/DroppableArea';
+import WeaponTierLevel from './WeaponTierLevel';
+const tierLevels = ['S', 'A', 'B', 'C', 'D'];
 
 const WeaponsTierList: React.FC = () => {
-  const [tierListMap, setTierListMap] = useState<Record<string, Weapon[]>>({
+  const [tierListMap] = useState<Record<string, Weapon[]>>({
     S: [],
     A: [],
     B: [],
     C: [],
     D: [],
   });
-  const { weapons, weaponMap } = useWeaponsStore();
+  const { weapons } = useWeaponsStore();
 
   console.log(weapons);
   return (

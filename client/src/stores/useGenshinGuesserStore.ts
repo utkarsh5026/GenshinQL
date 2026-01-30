@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
+
 import type { Character } from '@/types';
 
 const MAX_GUESSES = 5;
@@ -156,7 +157,11 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
       selectCurrentCharacter: (characters) => {
         if (characters.length === 0) return;
         const randIdx = Math.floor(Math.random() * characters.length);
-        set({ currentChar: characters[randIdx].name }, false, 'guesser/selectChar');
+        set(
+          { currentChar: characters[randIdx].name },
+          false,
+          'guesser/selectChar'
+        );
       },
 
       resetGame: () => {
@@ -175,27 +180,34 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
       },
 
       updateStats: (guessCount: number, won: boolean) => {
-        set((state) => {
-          const newStats = { ...state.stats };
+        set(
+          (state) => {
+            const newStats = { ...state.stats };
 
-          newStats.gamesPlayed += 1;
+            newStats.gamesPlayed += 1;
 
-          if (won) {
-            newStats.gamesWon += 1;
-            newStats.currentStreak += 1;
-            newStats.maxStreak = Math.max(newStats.maxStreak, newStats.currentStreak);
-            newStats.guessDistribution[guessCount] =
-              (newStats.guessDistribution[guessCount] || 0) + 1;
-          } else {
-            newStats.currentStreak = 0;
-          }
+            if (won) {
+              newStats.gamesWon += 1;
+              newStats.currentStreak += 1;
+              newStats.maxStreak = Math.max(
+                newStats.maxStreak,
+                newStats.currentStreak
+              );
+              newStats.guessDistribution[guessCount] =
+                (newStats.guessDistribution[guessCount] || 0) + 1;
+            } else {
+              newStats.currentStreak = 0;
+            }
 
-          newStats.lastPlayedDate = new Date().toISOString();
+            newStats.lastPlayedDate = new Date().toISOString();
 
-          saveStats(newStats);
+            saveStats(newStats);
 
-          return { stats: newStats };
-        }, false, 'guesser/updateStats');
+            return { stats: newStats };
+          },
+          false,
+          'guesser/updateStats'
+        );
       },
 
       resetStats: () => {

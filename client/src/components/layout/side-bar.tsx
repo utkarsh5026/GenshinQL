@@ -1,5 +1,22 @@
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@radix-ui/react-collapsible';
+import {
+  AxeIcon,
+  CalendarClock,
+  CalendarHeart,
+  ChartBarDecreasing,
+  ChevronDown,
+  Gamepad2,
+  LucideSwords,
+  Table2,
+} from 'lucide-react';
 import React, { useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
 import {
   Sidebar,
   SidebarContent,
@@ -9,24 +26,8 @@ import {
   SidebarMenuSub,
   SidebarMenuSubItem,
 } from '@/components/ui/sidebar';
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '@radix-ui/react-collapsible';
-import {
-  CalendarClock,
-  CalendarHeart,
-  ChevronDown,
-  LucideSwords,
-  AxeIcon,
-  Table2,
-  ChartBarDecreasing,
-  Gamepad2,
-} from 'lucide-react';
-import { Avatar, AvatarImage } from '@/components/ui/avatar';
-import { useCharactersStore } from '@/stores';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useCharactersStore } from '@/stores';
 
 const AppSideBar: React.FC = () => {
   const isMobile = useIsMobile();
@@ -140,33 +141,33 @@ const AppSideBar: React.FC = () => {
           {!isMobile && (
             <div className="pt-2">
               <Collapsible defaultOpen={false} className="group/collapsible">
-              <SidebarItem>
-                <CollapsibleTrigger className="w-full">
-                  <div className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-indigo-500/10 transition-colors group">
-                    <span className="text-sm font-medium">Characters</span>
-                    <ChevronDown className="ml-auto w-4 h-4 text-indigo-500 group-hover:text-indigo-600 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-                  </div>
-                </CollapsibleTrigger>
+                <SidebarItem>
+                  <CollapsibleTrigger className="w-full">
+                    <div className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-indigo-500/10 transition-colors group">
+                      <span className="text-sm font-medium">Characters</span>
+                      <ChevronDown className="ml-auto w-4 h-4 text-indigo-500 group-hover:text-indigo-600 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+                    </div>
+                  </CollapsibleTrigger>
 
-                <CollapsibleContent className="mt-1">
-                  <SidebarMenuSub className="ml-3 border-l border-indigo-500/20 pl-3 space-y-1 max-h-[400px] overflow-y-auto scrollbar-hide">
-                    {characters.map((character) => (
-                      <SidebarMenuSubItem key={character.name}>
-                        <Link
-                          to={`/characters/${character.name}`}
-                          className="flex items-center gap-2.5 py-1.5 px-2 rounded-md hover:bg-indigo-500/10 transition-colors group"
-                        >
-                          <Avatar className="h-7 w-7 ring-1 ring-border/50 group-hover:ring-indigo-500/30">
-                            <AvatarImage src={character.iconUrl} />
-                          </Avatar>
-                          <span className="text-sm">{character.name}</span>
-                        </Link>
-                      </SidebarMenuSubItem>
-                    ))}
-                  </SidebarMenuSub>
-                </CollapsibleContent>
-              </SidebarItem>
-            </Collapsible>
+                  <CollapsibleContent className="mt-1">
+                    <SidebarMenuSub className="ml-3 border-l border-indigo-500/20 pl-3 space-y-1 max-h-[400px] overflow-y-auto scrollbar-hide">
+                      {characters.map((character) => (
+                        <SidebarMenuSubItem key={character.name}>
+                          <Link
+                            to={`/characters/${character.name}`}
+                            className="flex items-center gap-2.5 py-1.5 px-2 rounded-md hover:bg-indigo-500/10 transition-colors group"
+                          >
+                            <Avatar className="h-7 w-7 ring-1 ring-border/50 group-hover:ring-indigo-500/30">
+                              <AvatarImage src={character.iconUrl} />
+                            </Avatar>
+                            <span className="text-sm">{character.name}</span>
+                          </Link>
+                        </SidebarMenuSubItem>
+                      ))}
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarItem>
+              </Collapsible>
             </div>
           )}
         </SidebarMenu>

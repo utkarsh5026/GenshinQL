@@ -1,8 +1,10 @@
-import React from "react";
-import TierLevel from "../base/TierLevel";
-import type { Character } from "@/types";
-import DraggableComponent from "../base/DraggableComponent";
-import AvatarWithSkeleton from "@/components/utils/AvatarWithSkeleton";
+import React from 'react';
+
+import AvatarWithSkeleton from '@/components/utils/AvatarWithSkeleton';
+import type { Character } from '@/types';
+
+import DraggableComponent from '../base/DraggableComponent';
+import TierLevel from '../base/TierLevel';
 
 interface CharacterTierLevelProps {
   initialName: string;

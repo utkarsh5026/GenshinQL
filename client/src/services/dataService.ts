@@ -1,17 +1,17 @@
 import type {
+  AnimationMedia,
+  AttackAnimation,
+  AttackTalentType,
   Character,
   CharacterDetailed,
+  CharacterRaw,
+  GalleryRaw,
+  Primitives,
+  ScreenAnimation,
+  Talent,
   TalentBookCalendar,
   Weapon,
   WeaponMaterialSchedule,
-  AttackAnimation,
-  ScreenAnimation,
-  GalleryRaw,
-  CharacterRaw,
-  Talent,
-  AttackTalentType,
-  AnimationMedia,
-  Primitives,
 } from '@/types';
 
 const DATA_BASE_URL = '/';
@@ -138,7 +138,7 @@ export async function fetchCharacterDetailed(
   try {
     const response = await fetch(`${DATA_BASE_URL}characters/${name}.json`);
     if (!response.ok) {
-      console.error(`Failed to fetch character data for ${name}`);
+      console.error('Failed to fetch character data for', name);
       return null;
     }
 
@@ -188,7 +188,7 @@ export async function fetchCharacterDetailed(
 
     return detailedCharacter;
   } catch (error) {
-    console.error(`Error fetching character ${name}:`, error);
+    console.error('Error fetching character:', name, error);
     return null;
   }
 }
@@ -199,10 +199,9 @@ export async function fetchCharacterDetailed(
 async function loadTalentsData() {
   if (talentsCache) return talentsCache;
 
-  const rawData = await loadDataForFile<Record<string, TalentBookCalendar['days']>>(
-    'dailyTalents.json',
-    null
-  );
+  const rawData = await loadDataForFile<
+    Record<string, TalentBookCalendar['days']>
+  >('dailyTalents.json', null);
 
   const talentBooks = Object.entries(rawData).map(([location, days]) => ({
     location,
@@ -305,7 +304,7 @@ export async function fetchCharacterAttackAnimations(
 
     return transformAttackAnimations(rawData.gallery.attackAnimations);
   } catch (error) {
-    console.error(`Error fetching attack animations for ${name}:`, error);
+    console.error('Error fetching attack animations for:', name, error);
     return null;
   }
 }

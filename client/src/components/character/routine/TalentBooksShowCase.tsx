@@ -1,12 +1,13 @@
-import React from "react";
-import type { TalentBook } from "@/stores/useTalentBooksStore";
+import React from 'react';
+
 import {
   Tooltip,
   TooltipContent,
-  TooltipTrigger,
   TooltipProvider,
-} from "@/components/ui/tooltip";
-import AvatarWithSkeleton from "@/components/utils/AvatarWithSkeleton";
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import AvatarWithSkeleton from '@/components/utils/AvatarWithSkeleton';
+import type { TalentBook } from '@/stores/useTalentBooksStore';
 
 interface TalentBooksShowCaseProps {
   talentBooks: TalentBook[];

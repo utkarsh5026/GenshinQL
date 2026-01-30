@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+
 import { CharacterDetailed } from '@/types';
+import { decideColor } from '@/utils/color.ts';
+
 import { Card } from '../../ui/card.tsx';
-import ProfileHeader from './profile-header.tsx';
-import CharacterTalentTable from '../talents/CharacterTalentTable.tsx';
+import CharacterAttackAnimations from '../attack/CharacterAttackAnimations.tsx';
 import CharacterConstellations from '../constellations/CharacterConstellations.tsx';
 import CharacterPassives from '../passives/CharacterPassives.tsx';
-import { decideColor } from '@/utils/color.ts';
-import CharacterAttackAnimations from '../attack/CharacterAttackAnimations.tsx';
 import CharacterRoutineDetailed from '../routine/CharacterRoutineDetailed.tsx';
+import CharacterTalentTable from '../talents/CharacterTalentTable.tsx';
+import ProfileHeader from './profile-header.tsx';
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;
@@ -84,28 +86,40 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-600">Rarity</h3>
+                    <h3 className="text-sm font-semibold text-gray-600">
+                      Rarity
+                    </h3>
                     <p className="text-lg">{character.rarity}</p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-600">Element</h3>
+                    <h3 className="text-sm font-semibold text-gray-600">
+                      Element
+                    </h3>
                     <p className="text-lg">{character.element}</p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-600">Weapon</h3>
+                    <h3 className="text-sm font-semibold text-gray-600">
+                      Weapon
+                    </h3>
                     <p className="text-lg">{character.weaponType}</p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-600">Region</h3>
+                    <h3 className="text-sm font-semibold text-gray-600">
+                      Region
+                    </h3>
                     <p className="text-lg">{character.region}</p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-600">Model Type</h3>
+                    <h3 className="text-sm font-semibold text-gray-600">
+                      Model Type
+                    </h3>
                     <p className="text-lg">{character.modelType}</p>
                   </div>
                   {character.version && (
                     <div>
-                      <h3 className="text-sm font-semibold text-gray-600">Version</h3>
+                      <h3 className="text-sm font-semibold text-gray-600">
+                        Version
+                      </h3>
                       <p className="text-lg">{character.version}</p>
                     </div>
                   )}

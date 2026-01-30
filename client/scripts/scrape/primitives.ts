@@ -1,7 +1,8 @@
-import { loadFromPublic, saveToPublic } from './fileio.js';
-import { logger } from '../logger.js';
-import { BaseCharacterSchema, primitivesSchema, Primitives } from './schema.js';
 import * as path from 'node:path';
+
+import { logger } from '../logger.js';
+import { loadFromPublic, saveToPublic } from './fileio.js';
+import { BaseCharacterSchema, Primitives, primitivesSchema } from './schema.js';
 
 const CHARACTERS_FILE = 'characters';
 const PRIMITIVES_FILE = 'primitives';

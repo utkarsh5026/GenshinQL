@@ -1,5 +1,6 @@
-import React from "react";
-import TextProcessor from "./TextProcessor";
+import React from 'react';
+
+import TextProcessor from './TextProcessor';
 
 interface ListSplitterProps {
   text: string;

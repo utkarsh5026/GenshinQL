@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { Avatar, AvatarImage } from "../../ui/avatar.tsx";
-import { AnimationMedia } from "@/types";
-import AnimatedCover from "../../utils/AnimatedCover.tsx";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from 'lucide-react';
+import React, { useState } from 'react';
+
+import { AnimationMedia } from '@/types';
+
+import { Avatar, AvatarImage } from '../../ui/avatar.tsx';
+import AnimatedCover from '../../utils/AnimatedCover.tsx';
 
 interface ProfileHeaderProps {
   name: string;
@@ -19,19 +21,19 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   idleTwo,
   fallbackCoverUrl,
 }) => {
-  const [currentAnimation, setCurrentAnimation] = useState<"one" | "two">(
-    "one",
+  const [currentAnimation, setCurrentAnimation] = useState<'one' | 'two'>(
+    'one'
   );
 
   const handleNextAnimation = () => {
-    setCurrentAnimation(currentAnimation === "one" ? "two" : "one");
+    setCurrentAnimation(currentAnimation === 'one' ? 'two' : 'one');
   };
 
   return (
     <div className="relative w-full shadow-md flex flex-col items-center border-2 border-white rounded-lg">
       <div className="w-full h-44 overflow-hidden rounded-md relative group">
         <AnimatedCover
-          animation={currentAnimation === "one" ? idleOne : idleTwo}
+          animation={currentAnimation === 'one' ? idleOne : idleTwo}
           fallbackUrl={fallbackCoverUrl}
           className="w-full opacity-80 z-10"
         />

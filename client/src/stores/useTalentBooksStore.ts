@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
+
 import { fetchTalentBooks as fetchTalentBooksService } from '@/services/dataService';
 import type { TalentBookCalendar } from '@/types';
 
@@ -36,20 +37,26 @@ const initialState = {
 };
 
 // Helper function to create character->talent book mapping
-const createCharTalentMap = (calendar: TalentBookCalendar[]): Record<string, TalentBook> => {
+const createCharTalentMap = (
+  calendar: TalentBookCalendar[]
+): Record<string, TalentBook> => {
   const map: Record<string, TalentBook> = {};
 
   for (const book of calendar) {
     for (const { books, characters, day } of book.days) {
       const [dayOne, dayTwo] = day.split(/\s+/);
       const guideUrl = books.find((b) => b.name.includes('Guide'))?.url;
-      const philosophyUrl = books.find((b) => b.name.includes('Philosophies'))?.url;
+      const philosophyUrl = books.find((b) =>
+        b.name.includes('Philosophies')
+      )?.url;
       const teachingUrl = books.find((b) => b.name.includes('Teaching'))?.url;
 
       for (const char of characters) {
         map[char.name] = {
           name: char.name,
-          bookName: books.find((b) => b.name.includes('Guide'))?.name.split(' ')[2] ?? '',
+          bookName:
+            books.find((b) => b.name.includes('Guide'))?.name.split(' ')[2] ??
+            '',
           guideUrl: guideUrl ?? '',
           philosophyUrl: philosophyUrl ?? '',
           teachingUrl: teachingUrl ?? '',
@@ -97,13 +104,20 @@ export const useTalentBooksStore = create<TalentBooksState>()(
           console.log(data);
           get().setCalendar(data);
         } catch (err) {
-          const errorMessage = err instanceof Error ? err.message : 'Failed to fetch talent books';
-          set({ loading: false, error: errorMessage }, false, 'talentBooks/fetchBooks/rejected');
+          const errorMessage =
+            err instanceof Error ? err.message : 'Failed to fetch talent books';
+          set(
+            { loading: false, error: errorMessage },
+            false,
+            'talentBooks/fetchBooks/rejected'
+          );
         }
       },
 
-      setLoading: (loading) => set({ loading }, false, 'talentBooks/setLoading'),
-      setError: (error) => set({ loading: false, error }, false, 'talentBooks/setError'),
+      setLoading: (loading) =>
+        set({ loading }, false, 'talentBooks/setLoading'),
+      setError: (error) =>
+        set({ loading: false, error }, false, 'talentBooks/setError'),
       reset: () => set(initialState, false, 'talentBooks/reset'),
     }),
     { name: 'TalentBooksStore' }
@@ -111,7 +125,11 @@ export const useTalentBooksStore = create<TalentBooksState>()(
 );
 
 // Selector hooks for optimized subscriptions
-export const useTalentCalendar = () => useTalentBooksStore((state) => state.calendar);
-export const useTalentCharMap = () => useTalentBooksStore((state) => state.talentCharMap);
-export const useTalentBooksLoading = () => useTalentBooksStore((state) => state.loading);
-export const useTalentBooksError = () => useTalentBooksStore((state) => state.error);
+export const useTalentCalendar = () =>
+  useTalentBooksStore((state) => state.calendar);
+export const useTalentCharMap = () =>
+  useTalentBooksStore((state) => state.talentCharMap);
+export const useTalentBooksLoading = () =>
+  useTalentBooksStore((state) => state.loading);
+export const useTalentBooksError = () =>
+  useTalentBooksStore((state) => state.error);

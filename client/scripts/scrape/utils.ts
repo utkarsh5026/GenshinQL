@@ -1,6 +1,7 @@
-import { By, WebDriver, WebElement, until } from 'selenium-webdriver';
-import { waitForElementCss } from './setup.js';
 import chalk from 'chalk';
+import { By, until, WebDriver, WebElement } from 'selenium-webdriver';
+
+import { waitForElementCss } from './setup.js';
 
 const TIME_TO_WAIT_FOR_ELEMENT_MS = 10000;
 

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+
 import { assetCache, clearOldCache } from '@/utils/assetCache';
 
 interface CacheStats {
@@ -43,30 +44,36 @@ export function useCacheManager() {
     }
   }, [refreshStats]);
 
-  const clearOldAssets = useCallback(async (maxAgeInDays: number = 7) => {
-    setIsLoading(true);
-    try {
-      const maxAge = maxAgeInDays * 24 * 60 * 60 * 1000;
-      await clearOldCache(maxAge);
-      await refreshStats();
-    } catch (error) {
-      console.error('Failed to clear old cache:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [refreshStats]);
+  const clearOldAssets = useCallback(
+    async (maxAgeInDays: number = 7) => {
+      setIsLoading(true);
+      try {
+        const maxAge = maxAgeInDays * 24 * 60 * 60 * 1000;
+        await clearOldCache(maxAge);
+        await refreshStats();
+      } catch (error) {
+        console.error('Failed to clear old cache:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [refreshStats]
+  );
 
-  const deleteAsset = useCallback(async (url: string) => {
-    setIsLoading(true);
-    try {
-      await assetCache.delete(url);
-      await refreshStats();
-    } catch (error) {
-      console.error('Failed to delete asset:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [refreshStats]);
+  const deleteAsset = useCallback(
+    async (url: string) => {
+      setIsLoading(true);
+      try {
+        await assetCache.delete(url);
+        await refreshStats();
+      } catch (error) {
+        console.error('Failed to delete asset:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [refreshStats]
+  );
 
   useEffect(() => {
     refreshStats();
@@ -89,7 +96,7 @@ export function useCacheManager() {
 export function useAutoClearOldCache(maxAgeInDays: number = 7) {
   useEffect(() => {
     const maxAge = maxAgeInDays * 24 * 60 * 60 * 1000;
-    clearOldCache(maxAge).catch(error => {
+    clearOldCache(maxAge).catch((error) => {
       console.error('Auto clear old cache failed:', error);
     });
   }, [maxAgeInDays]);

@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useCharactersStore, useWeaponsStore } from "@/stores";
-import RoutineTable from "./RoutineTable";
-import ChipSearchBar from "@/components/utils/ChipSearchBar";
-import type { Weapon } from "@/types";
+import React, { useEffect, useState } from 'react';
+
+import ChipSearchBar from '@/components/utils/ChipSearchBar';
+import { useCharactersStore, useWeaponsStore } from '@/stores';
+import type { Weapon } from '@/types';
+
+import RoutineTable from './RoutineTable';
 /**
  * CharacterRoutine component manages the character farming routine interface.
  * It allows users to select characters and displays their talent book farming days

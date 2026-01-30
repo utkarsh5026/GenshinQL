@@ -1,17 +1,18 @@
+import { motion } from 'framer-motion';
+import { ChevronDown, ChevronsDown, ChevronsUp, ChevronUp } from 'lucide-react';
+import React from 'react';
+
 import {
   Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableHeader,
   TableBody,
-} from "@/components/ui/table";
-import AvatarWithSkeleton from "@/components/utils/AvatarWithSkeleton";
-import { Character } from "@/types";
-import React from "react";
-import { motion } from "framer-motion";
-import { ChevronDown, ChevronUp, ChevronsDown, ChevronsUp } from "lucide-react";
-import { cn } from "@/lib/utils";
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
+import AvatarWithSkeleton from '@/components/utils/AvatarWithSkeleton';
+import { cn } from '@/lib/utils';
+import { Character } from '@/types';
 
 interface GuessTableProps {
   characters: Character[];
@@ -37,8 +38,8 @@ const GuessTable: React.FC<GuessTableProps> = ({
   const handleVersion = (correct: string, guess: string) => {
     if (correct === guess) return 0;
 
-    const [correctPatch, correctVersion] = correct.split(".");
-    const [guessPatch, guessVersion] = guess.split(".");
+    const [correctPatch, correctVersion] = correct.split('.');
+    const [guessPatch, guessVersion] = guess.split('.');
 
     if (correctPatch === guessPatch) {
       return correctVersion < guessVersion ? 1 : -1;
@@ -52,12 +53,24 @@ const GuessTable: React.FC<GuessTableProps> = ({
       <Table>
         <TableHeader>
           <TableRow className="border-b-2 border-border hover:bg-transparent">
-            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Icon</TableHead>
-            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Name</TableHead>
-            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Region</TableHead>
-            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Weapon</TableHead>
-            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Element</TableHead>
-            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Version</TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Icon
+            </TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Name
+            </TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Region
+            </TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Weapon
+            </TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Element
+            </TableHead>
+            <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Version
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -65,8 +78,8 @@ const GuessTable: React.FC<GuessTableProps> = ({
             <TableRow
               key={character.name}
               className={cn(
-                "text-left transition-colors duration-200",
-                idx % 2 === 0 ? "bg-transparent" : "bg-muted/30"
+                'text-left transition-colors duration-200',
+                idx % 2 === 0 ? 'bg-transparent' : 'bg-muted/30'
               )}
             >
               <TableCell>
@@ -121,7 +134,7 @@ const GuessTable: React.FC<GuessTableProps> = ({
               <TableCell>
                 <GuessTableCell index={3} isCorrect={true}>
                   <VersionTableCell
-                    version={handleVersion("2.4", "2.4")}
+                    version={handleVersion('2.4', '2.4')}
                     value="1.4"
                   />
                 </GuessTableCell>
@@ -157,8 +170,8 @@ const GuessTableCell: React.FC<GuessTableCellProps> = ({
       whileHover={{ scale: 1.05 }}
       className={`relative w-full h-full p-3 rounded-lg flex items-center justify-center min-w-[50px] min-h-[70px] transition-all duration-300 shadow-md hover:shadow-xl border ${
         isCorrect
-          ? "bg-game-correct-bg border-game-correct"
-          : "bg-game-wrong-bg border-game-wrong"
+          ? 'bg-game-correct-bg border-game-correct'
+          : 'bg-game-wrong-bg border-game-wrong'
       }`}
     >
       {/* Subtle gradient overlay for depth */}

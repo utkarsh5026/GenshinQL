@@ -1,19 +1,21 @@
-import type { Weapon } from "@/types";
+import React from 'react';
+
+import type { Weapon } from '@/types';
+
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "../ui/hover-card";
-import React from "react";
-import AvatarWithSkeleton from "../utils/AvatarWithSkeleton";
-import WeaponCard from "./WeaponCard";
+} from '../ui/hover-card';
+import AvatarWithSkeleton from '../utils/AvatarWithSkeleton';
+import WeaponCard from './WeaponCard';
 
 const bgColorMap = {
-  "1": "bg-gray-300",
-  "2": "bg-gray-400",
-  "3": "bg-blue-300",
-  "4": "bg-purple-900/50",
-  "5": "bg-amber-700/50",
+  '1': 'bg-gray-300',
+  '2': 'bg-gray-400',
+  '3': 'bg-blue-300',
+  '4': 'bg-purple-900/50',
+  '5': 'bg-amber-700/50',
 };
 
 interface WeaponAvatarProps {

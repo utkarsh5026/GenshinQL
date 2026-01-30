@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import WeaponCard from "./WeaponCard";
-import { Weapon } from "@/types";
+import React, { useState } from 'react';
+
+import { Weapon } from '@/types';
+
+import WeaponCard from './WeaponCard';
 
 interface WeaponsDetailedGridProps {
   weapons: Weapon[];
@@ -22,14 +24,14 @@ const WeaponsDetailedGrid: React.FC<WeaponsDetailedGridProps> = ({
   weapons,
 }) => {
   const [selectedRarity, setSelectedRarity] = useState<number | null>(null);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleRarityClick = (rarity: number) => {
     setSelectedRarity(rarity);
   };
 
   const handleClearSearch = () => {
-    setSearchTerm("");
+    setSearchTerm('');
   };
 
   const filteredWeapons = weapons
@@ -67,14 +69,14 @@ const WeaponsDetailedGrid: React.FC<WeaponsDetailedGridProps> = ({
           <button
             key={rarity}
             onClick={() => handleRarityClick(rarity)}
-            className={`chip ${selectedRarity === rarity ? "selected" : ""}`}
+            className={`chip ${selectedRarity === rarity ? 'selected' : ''}`}
             style={{
               backgroundColor:
-                selectedRarity === rarity ? "#006400" : "#f0f0f0",
-              padding: "8px 16px",
-              borderRadius: "16px",
-              border: "none",
-              cursor: "pointer",
+                selectedRarity === rarity ? '#006400' : '#f0f0f0',
+              padding: '8px 16px',
+              borderRadius: '16px',
+              border: 'none',
+              cursor: 'pointer',
             }}
           >
             {rarity} ★

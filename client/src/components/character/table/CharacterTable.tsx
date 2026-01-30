@@ -1,4 +1,5 @@
-import React, { useMemo } from "react";
+import React, { useMemo } from 'react';
+
 import {
   Table,
   TableBody,
@@ -6,11 +7,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table.tsx";
-import { AnimationMedia, Character } from "@/types";
+} from '@/components/ui/table.tsx';
+import { CachedImage } from '@/components/utils/CachedImage';
+import { AnimationMedia, Character } from '@/types';
 
-import CharacterMediaAvatar from "./CharacterMediaAvatar.tsx";
-import { CachedImage } from "@/components/utils/CachedImage";
+import CharacterMediaAvatar from './CharacterMediaAvatar.tsx';
 
 type CharacterWithMedia = Character & {
   media: AnimationMedia;
@@ -22,12 +23,12 @@ interface CharactersTableProps {
 
 const CharactersTable: React.FC<CharactersTableProps> = ({ characters }) => {
   const columnNames = [
-    "Icon",
-    "Name",
-    "Element",
-    "Rarity",
-    "Weapon Type",
-    "Region",
+    'Icon',
+    'Name',
+    'Element',
+    'Rarity',
+    'Weapon Type',
+    'Region',
   ];
 
   const charactersWithMedia: CharacterWithMedia[] = useMemo(() => {
@@ -39,9 +40,9 @@ const CharactersTable: React.FC<CharactersTableProps> = ({ characters }) => {
       if (character.idleTwo) return character.idleTwo;
       return {
         imageUrl: character.iconUrl,
-        videoUrl: "",
+        videoUrl: '',
         caption: character.name,
-        videoType: "",
+        videoType: '',
       };
     };
 
@@ -121,7 +122,7 @@ const ElementDisplay: React.FC<{ element: string; elementUrl: string }> = ({
 
 const RarityDisplay: React.FC<{ rarity: string }> = ({ rarity }) => {
   const rarityNum = Number.parseInt(rarity, 10);
-  const starColor = rarityNum === 5 ? "text-yellow-500" : "text-violet-500";
+  const starColor = rarityNum === 5 ? 'text-yellow-500' : 'text-violet-500';
 
   return (
     <div className="flex items-center">

@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { Skeleton } from "../ui/skeleton";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { Skeleton } from '../ui/skeleton';
 import {
   Tooltip,
   TooltipContent,
-  TooltipTrigger,
   TooltipProvider,
-} from "../ui/tooltip";
+  TooltipTrigger,
+} from '../ui/tooltip';
 
 interface AvatarWithSkeletonProps {
   name: string;
@@ -32,13 +33,13 @@ const AvatarWithSkeleton: React.FC<AvatarWithSkeletonProps> = ({
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.05, ease: "easeInOut" }}
+              transition={{ duration: 0.05, ease: 'easeInOut' }}
             >
               <AvatarImage
                 className={imageClassName}
                 src={url}
                 onLoadingStatusChange={(status) => {
-                  setIsLoading(status === "loading");
+                  setIsLoading(status === 'loading');
                 }}
               />
             </motion.div>

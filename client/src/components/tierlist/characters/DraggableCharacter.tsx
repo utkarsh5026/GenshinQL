@@ -1,7 +1,9 @@
-import type { Character } from "@/types";
-import React from "react";
-import AvatarWithSkeleton from "../../utils/AvatarWithSkeleton";
-import DraggableComponent from "../base/DraggableComponent";
+import React from 'react';
+
+import type { Character } from '@/types';
+
+import AvatarWithSkeleton from '../../utils/AvatarWithSkeleton';
+import DraggableComponent from '../base/DraggableComponent';
 
 interface DraggableCharacterProps {
   character: Character;

@@ -1,29 +1,38 @@
+import * as fs from 'node:fs/promises';
+import path from 'node:path';
+
+import chalk from 'chalk';
 import { By, WebDriver, WebElement } from 'selenium-webdriver';
-import { setupDriver, URL, waitForElementCss, withWebDriver, waitForPageLoad, handleCloudflareChallenge } from './setup.js';
+import { z } from 'zod';
+
+import { logger } from '../logger.js';
+import {
+  cleanupTempFiles,
+  listFiles,
+  loadFromPublic,
+  loadJsonData,
+  PUBLIC_DIR,
+  saveFileWithNewVersion,
+  saveJson,
+  saveToPublic,
+  saveToTemp,
+} from './fileio.js';
+import { weaponSchema, weaponTypeSchema } from './schema.js';
+import {
+  handleCloudflareChallenge,
+  setupDriver,
+  URL,
+  waitForElementCss,
+  waitForPageLoad,
+  withWebDriver,
+} from './setup.js';
 import {
   findImageInCell,
   getTableFromHeading,
+  parseCharacterName,
   parseUrl,
   underScore,
-  parseCharacterName,
 } from './utils.js';
-import { weaponSchema, weaponTypeSchema } from './schema.js';
-import { z } from 'zod';
-import path from 'node:path';
-import * as fs from 'node:fs/promises';
-import chalk from 'chalk';
-import {
-  cleanupTempFiles,
-  loadFromPublic,
-  loadJsonData,
-  saveToPublic,
-  saveToTemp,
-  saveJson,
-  listFiles,
-  PUBLIC_DIR,
-  saveFileWithNewVersion,
-} from './fileio.js';
-import { logger } from '../logger.js';
 
 const WEAPON_FILE_NAME = 'weapons';
 
@@ -119,7 +128,9 @@ export async function loadMaterialCalendar(): Promise<
 
             const weapons = await cells[2].findElements(By.css('a'));
             const weaponNames = await Promise.all(
-              weapons.map(async (weapon: WebElement) => weapon.getAttribute('title'))
+              weapons.map(async (weapon: WebElement) =>
+                weapon.getAttribute('title')
+              )
             );
 
             return {
@@ -158,7 +169,9 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
   await handleCloudflareChallenge(driver);
 
   // Scroll down to trigger any lazy-loaded content
-  await driver.executeScript('window.scrollTo(0, document.body.scrollHeight / 2);');
+  await driver.executeScript(
+    'window.scrollTo(0, document.body.scrollHeight / 2);'
+  );
   await driver.sleep(1000);
   logger.debug(`  ↳ Scrolled to trigger lazy loading`);
 
@@ -211,7 +224,9 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
   if (ascension) {
     logger.success(`  ↳ Extracted ${ascension.phases.length} ascension phases`);
   } else {
-    logger.warn(`  ↳ No ascension data found (may be expected for some weapons)`);
+    logger.warn(
+      `  ↳ No ascension data found (may be expected for some weapons)`
+    );
   }
 
   return {
@@ -276,13 +291,18 @@ function parseStatValue(text: string): number {
 async function extractAscensionCost(
   driver: WebDriver,
   costCell: WebElement
-): Promise<{ mora: number; materials: Array<{ url: string; caption: string; count: number }> }> {
+): Promise<{
+  mora: number;
+  materials: Array<{ url: string; caption: string; count: number }>;
+}> {
   try {
     // Expand collapsible section if needed
     const collapsed = await costCell.getAttribute('class');
     if (collapsed?.includes('mw-collapsed')) {
       try {
-        const toggle = await costCell.findElement(By.css('.mw-collapsible-toggle'));
+        const toggle = await costCell.findElement(
+          By.css('.mw-collapsible-toggle')
+        );
         await driver.executeScript('arguments[0].click();', toggle);
         await driver.sleep(500); // Wait for expansion
       } catch {
@@ -300,13 +320,16 @@ async function extractAscensionCost(
       By.css('div.card-container, span.card-wrapper')
     );
 
-    const materials: Array<{ url: string; caption: string; count: number }> = [];
+    const materials: Array<{ url: string; caption: string; count: number }> =
+      [];
 
     for (const card of materialCards) {
       try {
         // Get image
         const img = await card.findElement(By.css('img'));
-        const imageUrl = await img.getAttribute('data-src') || await img.getAttribute('src');
+        const imageUrl =
+          (await img.getAttribute('data-src')) ||
+          (await img.getAttribute('src'));
 
         // Get caption/name
         const caption = await img.getAttribute('alt');
@@ -330,7 +353,6 @@ async function extractAscensionCost(
     }
 
     return { mora, materials };
-
   } catch (error) {
     logger.debug(`  ⚠ Error extracting materials: ${error}`);
     return { mora: 0, materials: [] };
@@ -383,7 +405,6 @@ async function parseAscensionRow(
       mora: undefined,
       materials: undefined,
     };
-
   } catch (error) {
     logger.debug(`  ⚠ Error parsing row: ${error}`);
     return null;
@@ -399,14 +420,16 @@ async function parseAscensionRow(
 async function extractWeaponAscensionData(
   driver: WebDriver,
   weaponName: string
-): Promise<{ phases: Array<{
-  phase: number;
-  levelRange: string;
-  baseAttack: { min: number; max: number };
-  subStat: { min?: number; max?: number };
-  mora?: number;
-  materials?: Array<{ url: string; caption: string; count: number }>;
-}> } | null> {
+): Promise<{
+  phases: Array<{
+    phase: number;
+    levelRange: string;
+    baseAttack: { min: number; max: number };
+    subStat: { min?: number; max?: number };
+    mora?: number;
+    materials?: Array<{ url: string; caption: string; count: number }>;
+  }>;
+} | null> {
   try {
     logger.debug('  ↳ Locating ascension table...');
 
@@ -461,7 +484,9 @@ async function extractWeaponAscensionData(
               max: maxData.subStat.max,
             },
             mora: undefined as number | undefined,
-            materials: undefined as Array<{ url: string; caption: string; count: number }> | undefined,
+            materials: undefined as
+              | Array<{ url: string; caption: string; count: number }>
+              | undefined,
           };
 
           // Check if next row is ascension cost
@@ -469,7 +494,10 @@ async function extractWeaponAscensionData(
             const nextCells = await rows[i + 1].findElements(By.css('td'));
             if (nextCells.length === 1) {
               // This is an ascension cost row
-              const materials = await extractAscensionCost(driver, nextCells[0]);
+              const materials = await extractAscensionCost(
+                driver,
+                nextCells[0]
+              );
               phaseData.mora = materials.mora;
               phaseData.materials = materials.materials;
               i++; // Skip the cost row
@@ -484,7 +512,9 @@ async function extractWeaponAscensionData(
 
     // Validate phase count
     if (phases.length < 7) {
-      logger.warn(`  ⚠ Expected 7 phases, got ${phases.length} for ${weaponName}`);
+      logger.warn(
+        `  ⚠ Expected 7 phases, got ${phases.length} for ${weaponName}`
+      );
     }
 
     // Validate each phase has required data
@@ -496,7 +526,6 @@ async function extractWeaponAscensionData(
 
     logger.success(`  ↳ Extracted ${phases.length} ascension phases`);
     return { phases };
-
   } catch (error) {
     logger.error(`  ✗ Failed to extract ascension data: ${error}`);
     return null;
@@ -566,11 +595,15 @@ export async function scrapeWeaponsInDetail(
   }
 
   const savedWeapons = await listFiles(detailedDir);
-  const toScrape = force ? weapons : weapons.filter(w => !savedWeapons.includes(parseCharacterName(w.name)));
+  const toScrape = force
+    ? weapons
+    : weapons.filter((w) => !savedWeapons.includes(parseCharacterName(w.name)));
 
   logger.info(`\n📊 Processing: ${toScrape.length}/${weapons.length} weapons`);
   if (!force && savedWeapons.length > 0) {
-    logger.debug(`⏭️  Skipping ${weapons.length - toScrape.length} already saved weapons`);
+    logger.debug(
+      `⏭️  Skipping ${weapons.length - toScrape.length} already saved weapons`
+    );
   }
 
   let successCount = 0;
@@ -627,13 +660,13 @@ async function morphAllFilesIntoOne() {
   }
 
   const files = await listFiles(weaponsDir);
-  logger.info(`\n📦 Combining ${files.length} weapon files into weapons_detailed.json...`);
+  logger.info(
+    `\n📦 Combining ${files.length} weapon files into weapons_detailed.json...`
+  );
 
   let combinedCount = 0;
   for (const file of files) {
-    const weapon = await loadJsonData<Weapon>(
-      path.join(weaponsDir, file)
-    );
+    const weapon = await loadJsonData<Weapon>(path.join(weaponsDir, file));
 
     if (weapon) {
       weaponsDetailed = {
@@ -646,15 +679,15 @@ async function morphAllFilesIntoOne() {
     }
   }
 
-  logger.debug(`  ↳ Successfully loaded ${combinedCount}/${files.length} weapon files`);
-
-  await saveFileWithNewVersion(
-    weaponsDetailed,
-    PUBLIC_DIR,
-    'weapons_detailed'
+  logger.debug(
+    `  ↳ Successfully loaded ${combinedCount}/${files.length} weapon files`
   );
 
-  logger.success(`✨ Combined ${combinedCount} weapons into weapons_detailed.json!`);
+  await saveFileWithNewVersion(weaponsDetailed, PUBLIC_DIR, 'weapons_detailed');
+
+  logger.success(
+    `✨ Combined ${combinedCount} weapons into weapons_detailed.json!`
+  );
 }
 
 /**
@@ -715,10 +748,14 @@ const scrapeAndSaveDetailedWeaponInfo = async (
 ): Promise<void> => {
   logger.info('📂 Loading weapons data from weapons.json...');
   const weaponsData =
-    await loadFromPublic<Record<WeaponType, BaseWeaponType[]>>(WEAPON_FILE_NAME);
+    await loadFromPublic<Record<WeaponType, BaseWeaponType[]>>(
+      WEAPON_FILE_NAME
+    );
 
   if (!weaponsData) {
-    logger.error('❌ No weapons found in weapons.json. Run with --base flag first.');
+    logger.error(
+      '❌ No weapons found in weapons.json. Run with --base flag first.'
+    );
     return;
   }
 
@@ -727,7 +764,9 @@ const scrapeAndSaveDetailedWeaponInfo = async (
   for (const weaponType of WEAPON_TYPES) {
     if (weaponsData[weaponType]) {
       allWeapons.push(...weaponsData[weaponType]);
-      logger.debug(`  ↳ ${weaponType}: ${weaponsData[weaponType].length} weapons`);
+      logger.debug(
+        `  ↳ ${weaponType}: ${weaponsData[weaponType].length} weapons`
+      );
     }
   }
 
@@ -748,9 +787,18 @@ async function main() {
   if (args.length === 0) {
     logger.warn('⚠️  No arguments provided\n');
     logger.log(chalk.white('Usage:'));
-    logger.log(chalk.gray('  node weapons.js --base      ') + chalk.dim('# Scrape basic weapon data'));
-    logger.log(chalk.gray('  node weapons.js --detailed  ') + chalk.dim('# Scrape detailed weapon data'));
-    logger.log(chalk.gray('  node weapons.js --base --detailed') + chalk.dim('# Scrape both\n'));
+    logger.log(
+      chalk.gray('  node weapons.js --base      ') +
+        chalk.dim('# Scrape basic weapon data')
+    );
+    logger.log(
+      chalk.gray('  node weapons.js --detailed  ') +
+        chalk.dim('# Scrape detailed weapon data')
+    );
+    logger.log(
+      chalk.gray('  node weapons.js --base --detailed') +
+        chalk.dim('# Scrape both\n')
+    );
     return;
   }
 
@@ -802,7 +850,9 @@ async function main() {
     await cleanupTempFiles();
     logger.debug('🧹 Cleaned up temporary files');
 
-    logger.success(`\n✨ Base scraping complete! Total weapons: ${totalWeapons}\n`);
+    logger.success(
+      `\n✨ Base scraping complete! Total weapons: ${totalWeapons}\n`
+    );
   };
 
   const saveWeaponsDetailed = async () => {

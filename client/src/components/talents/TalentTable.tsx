@@ -1,7 +1,8 @@
-import React, { useMemo } from "react";
-import type { TalentBookCalendar } from "@/types";
-import CharacterGrid from "@/components/character/utils/CharacterGrid.tsx";
-import TalentBooks from "@/components/talents/TalentBooks.tsx";
+import React, { useMemo } from 'react';
+
+import CharacterGrid from '@/components/character/utils/CharacterGrid.tsx';
+import TalentBooks from '@/components/talents/TalentBooks.tsx';
+import type { TalentBookCalendar } from '@/types';
 
 interface TalentTableProps {
   talent: TalentBookCalendar;
@@ -9,13 +10,13 @@ interface TalentTableProps {
 
 const getTodayDayOfWeek = () => {
   const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
   ];
   const date = new Date();
   return days[date.getDay()];
@@ -71,12 +72,16 @@ const TalentTable: React.FC<TalentTableProps> = ({ talent }) => {
               </div>
 
               <div className="px-4 py-4 md:px-6 md:py-7 md:border-r border-white/[0.06]">
-                <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">Talent Books</div>
+                <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">
+                  Talent Books
+                </div>
                 <TalentBooks books={books} />
               </div>
 
               <div className="px-4 py-4 md:px-6 md:py-7">
-                <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">Characters</div>
+                <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">
+                  Characters
+                </div>
                 <CharacterGrid characters={characters} />
               </div>
             </div>

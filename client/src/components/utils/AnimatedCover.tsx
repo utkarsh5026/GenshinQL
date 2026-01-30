@@ -1,6 +1,7 @@
-import { useEffect, useState, useRef } from "react";
-import { AnimationMedia } from "@/types";
-import { Volume2, VolumeX } from "lucide-react";
+import { Volume2, VolumeX } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+
+import { AnimationMedia } from '@/types';
 
 interface AnimatedCoverProps {
   animation?: AnimationMedia;
@@ -11,7 +12,7 @@ interface AnimatedCoverProps {
 export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
   animation,
   fallbackUrl,
-  className = "",
+  className = '',
 }) => {
   const [showVideo, setShowVideo] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
@@ -23,7 +24,7 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
 
       video.load();
 
-      video.addEventListener("canplaythrough", () => {
+      video.addEventListener('canplaythrough', () => {
         setShowVideo(true);
         video.play();
       });
@@ -52,7 +53,7 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
             <>
               <video
                 ref={videoRef}
-                className={`w-full object-cover ${!showVideo ? "hidden" : ""}`}
+                className={`w-full object-cover ${!showVideo ? 'hidden' : ''}`}
                 loop
                 muted
                 playsInline

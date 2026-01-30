@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+
 import { fetchPrimitives as fetchPrimitivesService } from '@/services/dataService';
 import type { Primitives } from '@/types';
 

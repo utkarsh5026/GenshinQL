@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
+
 import { fetchCharacterDetailed } from '@/services/dataService';
 import type { CharacterDetailed as CharacterDetailedType } from '@/types';
+
 import CharacterDescription from './character-description';
 
 const CharacterDetail = () => {

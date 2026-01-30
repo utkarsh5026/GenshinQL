@@ -1,8 +1,10 @@
-import { Character } from "@/types";
-import React, { useMemo, useEffect, useRef } from "react";
-import GuessSearchTable from "./GuessSearchTable";
-import { useCharactersStore, useGenshinGuesserStore } from "@/stores";
-import GameOverDisplay from "./GameOverDisplay";
+import React, { useEffect, useMemo, useRef } from 'react';
+
+import { useCharactersStore, useGenshinGuesserStore } from '@/stores';
+import { Character } from '@/types';
+
+import GameOverDisplay from './GameOverDisplay';
+import GuessSearchTable from './GuessSearchTable';
 
 /**
  * CharacterGuesser component implements the main game logic for the Genshin character guessing game.
@@ -49,10 +51,10 @@ const CharacterGuesser: React.FC = () => {
 
   useEffect(() => {
     if (selectedCharacter?.partyJoin) {
-      const video = document.createElement("video");
+      const video = document.createElement('video');
       video.src = selectedCharacter.partyJoin.videoUrl;
-      video.preload = "auto";
-      video.style.display = "none";
+      video.preload = 'auto';
+      video.style.display = 'none';
       videoRef.current = video;
       document.body.appendChild(video);
 

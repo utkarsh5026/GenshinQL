@@ -1,14 +1,17 @@
 import './App.css';
+
 import { useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
-import { SidebarProvider } from './components/ui/sidebar';
-import { AppSideBar, Layout } from './components/layout';
-import {
-  useWeaponMaterialStore,
-  useTalentBooksStore,
-  usePrimitivesStore,
-} from '@/stores';
+
 import { useAutoClearOldCache } from '@/hooks/useCacheManager';
+import {
+  usePrimitivesStore,
+  useTalentBooksStore,
+  useWeaponMaterialStore,
+} from '@/stores';
+
+import { AppSideBar, Layout } from './components/layout';
+import { SidebarProvider } from './components/ui/sidebar';
 import { routes } from './routes';
 
 function App() {

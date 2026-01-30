@@ -1,30 +1,32 @@
-import { By, until, WebDriver, WebElement } from 'selenium-webdriver';
-import { URL, withWebDriver } from './setup.js';
-import * as path from 'node:path';
 import * as fs from 'node:fs/promises';
+import * as path from 'node:path';
+
 import chalk from 'chalk';
+import { By, until, WebDriver, WebElement } from 'selenium-webdriver';
+
 import { logger } from '../logger.js';
 import {
-  parseCharacterName,
-  findImageInCell,
-  findImageAltInCell,
-  safeGet,
-  getTableFromHeading,
-  waitForElement,
-  waitAndGetElement,
-} from './utils.js';
-import {
-  PUBLIC_DIR,
   listFiles,
   loadFromPublic,
+  PUBLIC_DIR,
   saveJson,
   saveToPublic,
 } from './fileio.js';
 import {
+  advancedCharacterSchema,
   BaseCharacterSchema,
   TalentSchema,
-  advancedCharacterSchema,
 } from './schema.js';
+import { URL, withWebDriver } from './setup.js';
+import {
+  findImageAltInCell,
+  findImageInCell,
+  getTableFromHeading,
+  parseCharacterName,
+  safeGet,
+  waitAndGetElement,
+  waitForElement,
+} from './utils.js';
 
 const TIME_TO_WAIT_FOR_ELEMENT_MS = 10000;
 const CHARACTERS_FILE_NAME = 'characters';

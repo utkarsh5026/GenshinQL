@@ -1,12 +1,14 @@
-import React from "react";
-import SearchBar from "@/components/utils/SearchBar";
-import GuessTable from "./GuessTable";
-import type { Character } from "@/types";
-import Confetti from "react-confetti";
-import { Card, CardContent } from "@/components/ui/card";
-import { useCharactersStore, useGenshinGuesserStore } from "@/stores";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { motion } from 'framer-motion';
+import React from 'react';
+import Confetti from 'react-confetti';
+
+import { Card, CardContent } from '@/components/ui/card';
+import SearchBar from '@/components/utils/SearchBar';
+import { cn } from '@/lib/utils';
+import { useCharactersStore, useGenshinGuesserStore } from '@/stores';
+import type { Character } from '@/types';
+
+import GuessTable from './GuessTable';
 
 interface GuessSearchTableProps {
   selectedCharacter: Character;
@@ -40,7 +42,7 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
             numberOfPieces={300}
             recycle={false}
             gravity={0.3}
-            colors={["#fbbf24", "#a855f7", "#22c55e"]}
+            colors={['#fbbf24', '#a855f7', '#22c55e']}
           />
         )}
 
@@ -48,15 +50,15 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             className={cn(
-              "text-center py-4 px-6 rounded-xl text-xl font-bold border-2",
+              'text-center py-4 px-6 rounded-xl text-xl font-bold border-2',
               gameWon
-                ? "text-game-correct border-game-correct bg-game-correct/10"
-                : "text-game-wrong border-game-wrong bg-game-wrong/10"
+                ? 'text-game-correct border-game-correct bg-game-correct/10'
+                : 'text-game-wrong border-game-wrong bg-game-wrong/10'
             )}
           >
-            {gameWon ? "Perfect! You guessed it! 🎉" : "Game Over! 🥺"}
+            {gameWon ? 'Perfect! You guessed it! 🎉' : 'Game Over! 🥺'}
           </motion.div>
         ) : (
           <SearchBar

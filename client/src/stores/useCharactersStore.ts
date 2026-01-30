@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
+
 import { fetchCharacters as fetchCharactersService } from '@/services/dataService';
 import type { Character } from '@/types';
 

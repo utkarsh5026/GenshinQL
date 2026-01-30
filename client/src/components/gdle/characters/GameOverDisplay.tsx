@@ -1,13 +1,15 @@
-import { Character } from "@/types";
-import { motion } from "framer-motion";
-import { Avatar } from "@/components/ui/avatar";
-import AnimatedCover from "@/components/utils/AnimatedCover";
-import { Button } from "@/components/ui/button";
-import { RefreshCcw } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { useGenshinGuesserStore } from "@/stores";
-import { cn } from "@/lib/utils";
-import GameStats from "./GameStats";
+import { motion } from 'framer-motion';
+import { RefreshCcw } from 'lucide-react';
+
+import { Avatar } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import AnimatedCover from '@/components/utils/AnimatedCover';
+import { cn } from '@/lib/utils';
+import { useGenshinGuesserStore } from '@/stores';
+import { Character } from '@/types';
+
+import GameStats from './GameStats';
 
 const MAX_GUESSES = 5;
 
@@ -33,8 +35,8 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
           <span className="text-muted-foreground">Guess: </span>
           <span
             className={cn(
-              "font-mono text-2xl",
-              guessCount >= 4 ? "text-game-wrong" : "text-genshin-gold"
+              'font-mono text-2xl',
+              guessCount >= 4 ? 'text-game-wrong' : 'text-genshin-gold'
             )}
           >
             {guessCount}/{MAX_GUESSES}
@@ -55,9 +57,9 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
             }}
             transition={{
               duration: 0.6,
-              ease: "easeOut",
+              ease: 'easeOut',
               scale: {
-                type: "spring",
+                type: 'spring',
                 damping: 8,
                 stiffness: 100,
               },
@@ -68,7 +70,7 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
                 initial={{ rotate: -180, scale: 0 }}
                 animate={{ rotate: 0, scale: [0, 1.5, 1] }}
                 transition={{
-                  type: "spring",
+                  type: 'spring',
                   damping: 10,
                   stiffness: 100,
                   delay: 0.2,
@@ -90,14 +92,14 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
               >
                 <div
                   className={cn(
-                    "text-xl font-bold tracking-tight",
-                    gameWon ? "text-game-correct" : "text-game-wrong"
+                    'text-xl font-bold tracking-tight',
+                    gameWon ? 'text-game-correct' : 'text-game-wrong'
                   )}
                 >
-                  {gameWon ? "Congratulations!" : "Better luck next time!"}
+                  {gameWon ? 'Congratulations!' : 'Better luck next time!'}
                 </div>
                 <div className="text-base text-muted-foreground flex items-center gap-2 justify-center">
-                  <span>{gameWon ? "You guessed" : "The answer was"}</span>
+                  <span>{gameWon ? 'You guessed' : 'The answer was'}</span>
                   <span className="font-semibold text-foreground">
                     {selectedCharacter.name}
                   </span>

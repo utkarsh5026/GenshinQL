@@ -1,8 +1,9 @@
-import * as path from 'node:path';
 import * as fs from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
-import chalk from 'chalk';
 import * as os from 'node:os';
+import * as path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import chalk from 'chalk';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

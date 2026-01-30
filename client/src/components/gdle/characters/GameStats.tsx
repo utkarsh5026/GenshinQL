@@ -1,9 +1,10 @@
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useGenshinGuesserStore } from "@/stores";
-import { motion } from "framer-motion";
-import { Trophy, Target, Flame, TrendingUp } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { motion } from 'framer-motion';
+import { Flame, Target, TrendingUp, Trophy } from 'lucide-react';
+import React from 'react';
+
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import { useGenshinGuesserStore } from '@/stores';
 
 const GameStats: React.FC = () => {
   const { stats } = useGenshinGuesserStore();
@@ -74,7 +75,9 @@ const GameStats: React.FC = () => {
                     <motion.div
                       className="h-full rounded-md flex items-center justify-end pr-2 bg-game-correct-bg"
                       initial={{ width: 0 }}
-                      animate={{ width: `${Math.max(percentage, count > 0 ? 15 : 0)}%` }}
+                      animate={{
+                        width: `${Math.max(percentage, count > 0 ? 15 : 0)}%`,
+                      }}
                       transition={{ duration: 0.6, delay: num * 0.1 }}
                     >
                       {count > 0 && (
@@ -115,11 +118,11 @@ const StatCard: React.FC<StatCardProps> = ({
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.4, delay }}
       className={cn(
-        "p-3 rounded-lg border transition-all duration-200",
-        "hover:shadow-md hover:scale-105 cursor-default",
+        'p-3 rounded-lg border transition-all duration-200',
+        'hover:shadow-md hover:scale-105 cursor-default',
         highlight
-          ? "bg-game-correct-bg/20 border-game-correct"
-          : "bg-muted/50 border-border"
+          ? 'bg-game-correct-bg/20 border-game-correct'
+          : 'bg-muted/50 border-border'
       )}
     >
       <div className="flex items-center gap-2 mb-1 text-muted-foreground">

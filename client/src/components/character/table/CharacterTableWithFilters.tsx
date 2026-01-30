@@ -1,8 +1,10 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+
+import { Button } from '@/components/ui/button';
+import { useCharactersStore } from '@/stores';
+
 import CharactersTable from './CharacterTable';
 import FilterBar from './FilterBar';
-import { useCharactersStore } from '@/stores';
-import { Button } from '@/components/ui/button';
 
 interface FilterOption {
   name: string;

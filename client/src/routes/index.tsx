@@ -1,12 +1,13 @@
-import { RouteObject, Navigate } from 'react-router-dom';
-import TalentCalendar from '@/components/talents/TalentBookCalendar';
-import CharacterTableWithFilters from '@/components/character/table/CharacterTableWithFilters';
+import { Navigate, RouteObject } from 'react-router-dom';
+
+import CharacterDetail from '@/components/character/description/character-detail';
 import CharacterRoutine from '@/components/character/routine/CharacterRoutine';
+import CharacterTableWithFilters from '@/components/character/table/CharacterTableWithFilters';
+import GenshinGuesser from '@/components/gdle/main/GenshinGuesser';
+import TalentCalendar from '@/components/talents/TalentBookCalendar';
+import TierList from '@/components/tierlist/TierList';
 import WeaponCalendar from '@/components/weapons/WeaponCalender';
 import WeaponsDetailed from '@/components/weapons/WeaponsDetailed';
-import TierList from '@/components/tierlist/TierList';
-import GenshinGuesser from '@/components/gdle/main/GenshinGuesser';
-import CharacterDetail from '@/components/character/description/character-detail';
 
 export const routes: RouteObject[] = [
   {

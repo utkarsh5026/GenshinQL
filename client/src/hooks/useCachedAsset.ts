@@ -1,4 +1,5 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+
 import { fetchAndCacheAsset } from '@/utils/assetCache';
 
 /**
@@ -42,24 +43,26 @@ export function useCachedAsset(url: string | undefined | null): string {
  */
 export function useCachedAssets(urls: (string | undefined | null)[]): string[] {
   const [cachedUrls, setCachedUrls] = useState<string[]>(
-    urls.map(url => url || '')
+    urls.map((url) => url || '')
   );
 
   // Create a stable reference for the URLs array
   const urlsKey = useMemo(() => urls.join(','), [urls]);
 
   useEffect(() => {
-    const validUrls = urls.filter((url): url is string => !!url && url.trim() !== '');
+    const validUrls = urls.filter(
+      (url): url is string => !!url && url.trim() !== ''
+    );
 
     if (validUrls.length === 0) {
-      setCachedUrls(urls.map(url => url || ''));
+      setCachedUrls(urls.map((url) => url || ''));
       return;
     }
 
     let isMounted = true;
 
     Promise.all(
-      urls.map(url => {
+      urls.map((url) => {
         if (!url || url.trim() === '') return Promise.resolve('');
         return fetchAndCacheAsset(url).catch(() => url);
       })
@@ -88,10 +91,10 @@ export function usePreloadAssets(urls: string[], enabled = true): void {
   useEffect(() => {
     if (!enabled || urls.length === 0) return;
 
-    const validUrls = urls.filter(url => url && url.trim() !== '');
+    const validUrls = urls.filter((url) => url && url.trim() !== '');
 
     Promise.all(
-      validUrls.map(url => fetchAndCacheAsset(url).catch(() => {}))
+      validUrls.map((url) => fetchAndCacheAsset(url).catch(() => {}))
     );
   }, [urlsKey, urls, enabled]);
 }

@@ -1,22 +1,24 @@
-import React from "react";
-import type { Talent } from "@/types";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../ui/tabs";
-import CharacterTalentScaling from "@/components/character/talents/CharacterTalentScaling";
-import ListSplitter from "@/components/utils/ListSplitter";
+import React from 'react';
+
+import CharacterTalentScaling from '@/components/character/talents/CharacterTalentScaling';
+import ListSplitter from '@/components/utils/ListSplitter';
+import type { Talent } from '@/types';
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../ui/tabs';
 
 interface CharacterTalentTableProps {
   talents: Talent[];
 }
 
-type AttackType = "Normal Attack" | "Elemental Skill" | "Elemental Burst";
+type AttackType = 'Normal Attack' | 'Elemental Skill' | 'Elemental Burst';
 
 const CharacterTalentTable: React.FC<CharacterTalentTableProps> = ({
   talents,
 }) => {
   const attackOrder: AttackType[] = [
-    "Normal Attack",
-    "Elemental Skill",
-    "Elemental Burst",
+    'Normal Attack',
+    'Elemental Skill',
+    'Elemental Burst',
   ];
 
   const tabsName = talents
@@ -34,7 +36,7 @@ const CharacterTalentTable: React.FC<CharacterTalentTableProps> = ({
 
   console.log(talents);
   return (
-    <Tabs defaultValue={"Normal Attack"} defaultChecked>
+    <Tabs defaultValue={'Normal Attack'} defaultChecked>
       <TabsList>
         {tabsName.map((tabName) => {
           return (

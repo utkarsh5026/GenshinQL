@@ -1,16 +1,18 @@
+import * as fs from 'node:fs/promises';
+import * as path from 'node:path';
+
 import { By, WebDriver, WebElement } from 'selenium-webdriver';
-import { URL, waitForElementCss, withWebDriver } from './setup.js';
+
+import { logger } from '../logger.js';
+import { listFiles, loadJsonData, PUBLIC_DIR, saveJson } from './fileio.js';
 import {
   AdvancedCharacterSchema,
   GallerySchema,
   gallerySchema,
   GenshinImageSchema,
 } from './schema.js';
+import { URL, waitForElementCss, withWebDriver } from './setup.js';
 import { getParentNextDivSibling, launchDriverInBatchSafe } from './utils.js';
-import * as path from 'node:path';
-import * as fs from 'node:fs/promises';
-import { listFiles, loadJsonData, PUBLIC_DIR, saveJson } from './fileio.js';
-import { logger } from '../logger.js';
 
 const parseUrl = (url: string) => url.split('/revision/')[0];
 const CHARACTERS_DIR = path.join(PUBLIC_DIR, 'characters');

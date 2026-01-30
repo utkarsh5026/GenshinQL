@@ -1,7 +1,9 @@
-import { Builder, By, until, WebDriver } from 'selenium-webdriver';
-import * as chrome from 'selenium-webdriver/chrome.js';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import { Builder, By, until, WebDriver } from 'selenium-webdriver';
+import * as chrome from 'selenium-webdriver/chrome.js';
+
 import { logger } from '../logger.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -35,7 +37,9 @@ function getChromedriverPath(): string {
  * Reads mode from NODE_ENV environment variable - if 'production', runs in headless mode
  * @param forceVisible - If true, forces visible browser mode regardless of NODE_ENV
  */
-export async function setupDriver(forceVisible: boolean = false): Promise<WebDriver> {
+export async function setupDriver(
+  forceVisible: boolean = false
+): Promise<WebDriver> {
   const isHeadless = !forceVisible && process.env.NODE_ENV === 'production';
 
   logger.info('🚀 Setting up Chrome WebDriver...');
@@ -145,10 +149,15 @@ export function waitForElementXpath(
  * Waits for the page to be fully loaded by checking document.readyState
  * and waiting for any pending network requests to complete.
  */
-export async function waitForPageLoad(driver: WebDriver, timeout = 30000): Promise<void> {
+export async function waitForPageLoad(
+  driver: WebDriver,
+  timeout = 30000
+): Promise<void> {
   await driver.wait(
     async () => {
-      const readyState = await driver.executeScript('return document.readyState');
+      const readyState = await driver.executeScript(
+        'return document.readyState'
+      );
       return readyState === 'complete';
     },
     timeout,
@@ -161,11 +170,14 @@ export async function waitForPageLoad(driver: WebDriver, timeout = 30000): Promi
 /**
  * Checks if Cloudflare CAPTCHA is present and waits for user to solve it
  */
-export async function handleCloudflareChallenge(driver: WebDriver): Promise<void> {
+export async function handleCloudflareChallenge(
+  driver: WebDriver
+): Promise<void> {
   try {
     // Check if we're on a Cloudflare challenge page
     const pageSource = await driver.getPageSource();
-    const isCloudflare = pageSource.includes('Cloudflare') &&
+    const isCloudflare =
+      pageSource.includes('Cloudflare') &&
       (pageSource.includes('Verify you are human') ||
         pageSource.includes('Just a moment'));
 
@@ -183,7 +195,8 @@ export async function handleCloudflareChallenge(driver: WebDriver): Promise<void
         const currentSource = await driver.getPageSource();
 
         // Check if we're past the challenge
-        const stillOnChallenge = currentSource.includes('Cloudflare') &&
+        const stillOnChallenge =
+          currentSource.includes('Cloudflare') &&
           currentSource.includes('Verify you are human');
 
         if (!stillOnChallenge) {
@@ -197,7 +210,10 @@ export async function handleCloudflareChallenge(driver: WebDriver): Promise<void
       throw new Error('Cloudflare challenge timeout');
     }
   } catch (error) {
-    if (error instanceof Error && error.message === 'Cloudflare challenge timeout') {
+    if (
+      error instanceof Error &&
+      error.message === 'Cloudflare challenge timeout'
+    ) {
       throw error;
     }
     // If we can't detect Cloudflare, just continue

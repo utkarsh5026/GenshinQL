@@ -1,19 +1,21 @@
+import React, { useEffect, useMemo } from 'react';
+
 import {
   Table,
-  TableHead,
-  TableRow,
-  TableCell,
   TableBody,
+  TableCell,
+  TableHead,
   TableHeader,
-} from "@/components/ui/table";
-import React, { useEffect, useMemo } from "react";
-import CharacterGrid from "../utils/CharacterGrid";
-import TalentBooksShowCase from "./TalentBooksShowCase";
-import { getCurrentDay } from "@/utils/day";
-import type { Character, Day, Weapon, WeaponMaterial } from "@/types";
-import WeaponShowCase from "@/components/weapons/WeaponShowCase";
-import { useTalentBooksStore, type TalentBook } from "@/stores";
-import { useWeaponMaterialStore } from "@/stores";
+  TableRow,
+} from '@/components/ui/table';
+import WeaponShowCase from '@/components/weapons/WeaponShowCase';
+import { type TalentBook, useTalentBooksStore } from '@/stores';
+import { useWeaponMaterialStore } from '@/stores';
+import type { Character, Day, Weapon, WeaponMaterial } from '@/types';
+import { getCurrentDay } from '@/utils/day';
+
+import CharacterGrid from '../utils/CharacterGrid';
+import TalentBooksShowCase from './TalentBooksShowCase';
 
 interface RoutineTableProps {
   characters: Character[];
@@ -110,7 +112,7 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
     for (const weapon of weapons) {
       const weaponMaterial = weaponMap?.[weapon.name];
       if (weaponMaterial) {
-        const [dayOne, dayTwo] = weaponMaterial.day.split(" ");
+        const [dayOne, dayTwo] = weaponMaterial.day.split(' ');
         const wepMat = {
           weapon,
           material: weaponMaterial,
@@ -152,8 +154,8 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
                 key={rout.day}
                 className={
                   rout.day === currentDay
-                    ? "bg-green-500/20 hover:bg-green-500/20"
-                    : ""
+                    ? 'bg-green-500/20 hover:bg-green-500/20'
+                    : ''
                 }
               >
                 <TableCell className="font-bold text-left py-2">

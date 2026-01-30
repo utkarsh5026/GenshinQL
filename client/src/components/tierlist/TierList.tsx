@@ -1,7 +1,8 @@
-import React from "react";
-import CharacterTierList from "./characters/CharacterTierList";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import WeaponsTierList from "./weapons/WeaponsTierList";
+import React from 'react';
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import CharacterTierList from './characters/CharacterTierList';
+import WeaponsTierList from './weapons/WeaponsTierList';
 
 const TierList: React.FC = () => {
   return (

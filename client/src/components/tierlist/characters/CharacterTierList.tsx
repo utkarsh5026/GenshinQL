@@ -1,12 +1,14 @@
-import React, { useState } from "react";
-import { DndContext, DragEndEvent } from "@dnd-kit/core";
-import { useCharactersStore } from "@/stores";
-import { Character } from "@/types";
-import DroppableArea from "../base/DroppableArea";
-import DraggableCharacter from "./DraggableCharacter";
-import CharacterTierLevel from "./CharacterTierLevel";
+import { DndContext, DragEndEvent } from '@dnd-kit/core';
+import React, { useState } from 'react';
 
-const tierLevels = ["S", "A", "B", "C", "D"];
+import { useCharactersStore } from '@/stores';
+import { Character } from '@/types';
+
+import DroppableArea from '../base/DroppableArea';
+import CharacterTierLevel from './CharacterTierLevel';
+import DraggableCharacter from './DraggableCharacter';
+
+const tierLevels = ['S', 'A', 'B', 'C', 'D'];
 
 /**
  * Updates the tier list mapping when a character is dragged between tiers
@@ -57,7 +59,7 @@ const CharacterTierList: React.FC = () => {
     console.log(active, over);
     if (over && active.id !== over.id) {
       let onlyRemove = false;
-      if (over.id === "characters") {
+      if (over.id === 'characters') {
         setCharactersToJudge((prev) => {
           const alreadyInTier = prev.find((char) => char.name === active.id);
           if (alreadyInTier) return prev;

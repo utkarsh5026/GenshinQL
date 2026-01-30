@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar.tsx";
-import { AnimationMedia } from "@/types";
-import { useCachedAsset } from "@/hooks/useCachedAsset";
+import React, { useState } from 'react';
+
+import { Avatar, AvatarImage } from '@/components/ui/avatar.tsx';
+import { useCachedAsset } from '@/hooks/useCachedAsset';
+import { AnimationMedia } from '@/types';
 
 interface CharacterMediaAvatarProps {
   media: AnimationMedia;
@@ -27,7 +28,7 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
     >
       <Avatar
         className={`relative h-full w-full cursor-pointer transition duration-300 ease-in-out hover:scale-150 ${
-          isVideoLoaded ? "animate-woosh" : ""
+          isVideoLoaded ? 'animate-woosh' : ''
         }`}
       >
         <AvatarImage
@@ -44,7 +45,7 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
             muted
             className={`absolute inset-0 h-full w-full object-cover
                  transition-opacity duration-300 ${
-                   isVideoLoaded ? "opacity-100" : "opacity-0"
+                   isVideoLoaded ? 'opacity-100' : 'opacity-0'
                  }`}
             onCanPlayThrough={() => setIsVideoLoaded(true)}
           />

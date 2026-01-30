@@ -1,9 +1,11 @@
-import React from "react";
-import { AnimationMedia, Talent } from "@/types";
-import AnimatedCover from "../../utils/AnimatedCover.tsx";
-import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
-import ListSplitter from "../../utils/ListSplitter";
+import React from 'react';
+
+import { AnimationMedia, Talent } from '@/types';
+
+import { Card, CardContent, CardHeader, CardTitle } from '../../ui/card';
+import { Tooltip, TooltipContent, TooltipTrigger } from '../../ui/tooltip';
+import AnimatedCover from '../../utils/AnimatedCover.tsx';
+import ListSplitter from '../../utils/ListSplitter';
 
 interface CharacterAttackAnimationGridProps {
   talent: Talent | undefined;
@@ -22,7 +24,10 @@ interface CharacterAttackAnimationGridProps {
  */
 const CharacterAttackAnimationGrid: React.FC<
   CharacterAttackAnimationGridProps
-> = ({ talent, animations }: CharacterAttackAnimationGridProps): JSX.Element => {
+> = ({
+  talent,
+  animations,
+}: CharacterAttackAnimationGridProps): JSX.Element => {
   return (
     <Card className="border-none bg-transparent">
       <CardHeader>
@@ -45,7 +50,7 @@ const CharacterAttackAnimationGrid: React.FC<
               className="max-w-xs p-4 bg-gray-900 rounded-lg"
               side="right"
             >
-              <ListSplitter text={talent?.description ?? ""} />
+              <ListSplitter text={talent?.description ?? ''} />
             </TooltipContent>
           </Tooltip>
         </div>

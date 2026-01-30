@@ -1,18 +1,20 @@
-import React from "react";
-import { Search, Filter } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Filter, Search } from 'lucide-react';
+import React from 'react';
+
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Input } from '@/components/ui/input';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
-import { Separator } from "@/components/ui/separator";
-import { CachedImage } from "@/components/utils/CachedImage";
-import FilterChip from "./FilterChip";
-import styles from "./FilterBar.module.css";
+} from '@/components/ui/popover';
+import { Separator } from '@/components/ui/separator';
+import { CachedImage } from '@/components/utils/CachedImage';
+
+import styles from './FilterBar.module.css';
+import FilterChip from './FilterChip';
 
 interface FilterOption {
   name: string;
@@ -53,7 +55,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
 
   const renderRarityStars = (rarity: string) => {
     const rarityNum = Number.parseInt(rarity, 10);
-    const starColor = rarityNum === 5 ? "text-yellow-500" : "text-violet-500";
+    const starColor = rarityNum === 5 ? 'text-yellow-500' : 'text-violet-500';
 
     return (
       <div className={styles.rarityStars}>
@@ -73,14 +75,22 @@ const FilterBar: React.FC<FilterBarProps> = ({
   const getElementAnimationClass = (elementName: string) => {
     const normalized = elementName.toLowerCase();
     switch (normalized) {
-      case 'anemo': return styles.anemo;
-      case 'pyro': return styles.pyro;
-      case 'hydro': return styles.hydro;
-      case 'electro': return styles.electro;
-      case 'cryo': return styles.cryo;
-      case 'geo': return styles.geo;
-      case 'dendro': return styles.dendro;
-      default: return '';
+      case 'anemo':
+        return styles.anemo;
+      case 'pyro':
+        return styles.pyro;
+      case 'hydro':
+        return styles.hydro;
+      case 'electro':
+        return styles.electro;
+      case 'cryo':
+        return styles.cryo;
+      case 'geo':
+        return styles.geo;
+      case 'dendro':
+        return styles.dendro;
+      default:
+        return '';
     }
   };
 
@@ -166,8 +176,12 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         onCheckedChange={() => onToggleElement(element.name)}
                         onClick={(e) => e.stopPropagation()}
                       />
-                      <div className={`flex items-center gap-2 text-sm flex-1 ${styles.filterLabel}`}>
-                        <div className={`${styles.iconContainer} ${getElementAnimationClass(element.name)}`}>
+                      <div
+                        className={`flex items-center gap-2 text-sm flex-1 ${styles.filterLabel}`}
+                      >
+                        <div
+                          className={`${styles.iconContainer} ${getElementAnimationClass(element.name)}`}
+                        >
                           <CachedImage
                             src={element.iconUrl}
                             alt={element.name}
@@ -212,7 +226,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         onCheckedChange={() => onToggleRarity(rarity)}
                         onClick={(e) => e.stopPropagation()}
                       />
-                      <div className={`flex items-center gap-1 flex-1 ${styles.filterLabel}`}>
+                      <div
+                        className={`flex items-center gap-1 flex-1 ${styles.filterLabel}`}
+                      >
                         {renderRarityStars(rarity)}
                       </div>
                     </div>
@@ -249,8 +265,12 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         onCheckedChange={() => onToggleRegion(region.name)}
                         onClick={(e) => e.stopPropagation()}
                       />
-                      <div className={`flex items-center gap-2 text-sm flex-1 ${styles.filterLabel}`}>
-                        <div className={`${styles.iconContainer} ${styles.regionIcon}`}>
+                      <div
+                        className={`flex items-center gap-2 text-sm flex-1 ${styles.filterLabel}`}
+                      >
+                        <div
+                          className={`${styles.iconContainer} ${styles.regionIcon}`}
+                        >
                           <CachedImage
                             src={region.iconUrl}
                             alt={region.name}
@@ -279,9 +299,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
 
           {/* Element chips */}
           {selectedElements.map((element) => {
-            const elementData = uniqueElements.find(
-              (e) => e.name === element
-            );
+            const elementData = uniqueElements.find((e) => e.name === element);
             return (
               <FilterChip
                 key={element}

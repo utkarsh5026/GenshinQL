@@ -1,7 +1,9 @@
-import React, { useEffect, useMemo } from "react";
-import { useWeaponMaterialStore } from "@/stores";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import ScheduleTable from "./ScheduleTable";
+import React, { useEffect, useMemo } from 'react';
+
+import { useWeaponMaterialStore } from '@/stores';
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import ScheduleTable from './ScheduleTable';
 
 const WeaponCalender: React.FC = () => {
   const { weaponMaterialSchedule, loading, error, fetchWeaponMaterials } =

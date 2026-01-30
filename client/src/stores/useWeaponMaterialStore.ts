@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
+
 import { fetchWeaponMaterialSchedule as fetchWeaponMaterialScheduleService } from '@/services/dataService';
 import type { ImageUrl, WeaponMaterialSchedule } from '@/types';
 
@@ -68,18 +69,30 @@ export const useWeaponMaterialStore = create<WeaponMaterialState>()(
       },
 
       fetchWeaponMaterials: async () => {
-        set({ loading: true, error: null }, false, 'weaponMaterial/fetch/pending');
+        set(
+          { loading: true, error: null },
+          false,
+          'weaponMaterial/fetch/pending'
+        );
 
         try {
           const data = await fetchWeaponMaterialScheduleService();
           get().setWeaponMaterialSchedule(data);
         } catch (err) {
-          const errorMessage = err instanceof Error ? err.message : 'Failed to fetch weapon materials';
-          set({ loading: false, error: errorMessage }, false, 'weaponMaterial/fetch/rejected');
+          const errorMessage =
+            err instanceof Error
+              ? err.message
+              : 'Failed to fetch weapon materials';
+          set(
+            { loading: false, error: errorMessage },
+            false,
+            'weaponMaterial/fetch/rejected'
+          );
         }
       },
 
-      setLoading: (loading) => set({ loading }, false, 'weaponMaterial/setLoading'),
+      setLoading: (loading) =>
+        set({ loading }, false, 'weaponMaterial/setLoading'),
       setError: (error) => set({ error }, false, 'weaponMaterial/setError'),
       reset: () => set(initialState, false, 'weaponMaterial/reset'),
     }),
@@ -94,4 +107,5 @@ export const useWeaponMapFromMaterials = () =>
   useWeaponMaterialStore((state) => state.weaponMap);
 export const useWeaponMaterialLoading = () =>
   useWeaponMaterialStore((state) => state.loading);
-export const useWeaponMaterialError = () => useWeaponMaterialStore((state) => state.error);
+export const useWeaponMaterialError = () =>
+  useWeaponMaterialStore((state) => state.error);

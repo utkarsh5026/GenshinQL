@@ -1,5 +1,5 @@
-import React from "react";
-import { useDroppable } from "@dnd-kit/core";
+import { useDroppable } from '@dnd-kit/core';
+import React from 'react';
 
 interface DroppableAreaProps {
   id: string;
@@ -26,7 +26,7 @@ const DroppableArea: React.FC<DroppableAreaProps> = ({
   return (
     <div
       ref={setNodeRef}
-      className={`${className} ${isOver ? "bg-slate-900" : ""} flex flex-row`}
+      className={`${className} ${isOver ? 'bg-slate-900' : ''} flex flex-row`}
     >
       {children}
     </div>

@@ -1,12 +1,14 @@
-import { fetchCharacterAttackAnimations } from "@/services/dataService";
+import React, { useEffect, useState } from 'react';
+
+import { fetchCharacterAttackAnimations } from '@/services/dataService';
 import {
   AttackAnimation,
-  CharacterDetailed,
   AttackTalentType,
+  CharacterDetailed,
   Talent,
-} from "@/types";
-import React, { useEffect, useState } from "react";
-import CharacterAttackAnimationGrid from "./CharacterAttackAnimationGrid";
+} from '@/types';
+
+import CharacterAttackAnimationGrid from './CharacterAttackAnimationGrid';
 
 interface CharacterAttackAnimationsProps {
   character: CharacterDetailed;
@@ -25,7 +27,8 @@ interface CharacterAttackAnimationsProps {
 const CharacterAttackAnimations: React.FC<CharacterAttackAnimationsProps> = ({
   character,
 }) => {
-  const [attackAnimations, setAttackAnimations] = useState<AttackAnimation | null>(null);
+  const [attackAnimations, setAttackAnimations] =
+    useState<AttackAnimation | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -39,14 +42,14 @@ const CharacterAttackAnimations: React.FC<CharacterAttackAnimationsProps> = ({
   }, [character.name]);
 
   const talentMap: Record<AttackTalentType, Talent | undefined> = {
-    "Normal Attack": character.talents.find(
-      (talent) => talent.talentType === "Normal Attack"
+    'Normal Attack': character.talents.find(
+      (talent) => talent.talentType === 'Normal Attack'
     ),
-    "Elemental Skill": character.talents.find(
-      (talent) => talent.talentType === "Elemental Skill"
+    'Elemental Skill': character.talents.find(
+      (talent) => talent.talentType === 'Elemental Skill'
     ),
-    "Elemental Burst": character.talents.find(
-      (talent) => talent.talentType === "Elemental Burst"
+    'Elemental Burst': character.talents.find(
+      (talent) => talent.talentType === 'Elemental Burst'
     ),
   };
 
@@ -56,15 +59,15 @@ const CharacterAttackAnimations: React.FC<CharacterAttackAnimationsProps> = ({
   return (
     <div className="flex flex-col gap-4">
       <CharacterAttackAnimationGrid
-        talent={talentMap["Normal Attack"]}
+        talent={talentMap['Normal Attack']}
         animations={attackAnimations.normalAttack}
       />
       <CharacterAttackAnimationGrid
-        talent={talentMap["Elemental Skill"]}
+        talent={talentMap['Elemental Skill']}
         animations={attackAnimations.elementalSkill}
       />
       <CharacterAttackAnimationGrid
-        talent={talentMap["Elemental Burst"]}
+        talent={talentMap['Elemental Burst']}
         animations={attackAnimations.elementalBurst}
       />
     </div>

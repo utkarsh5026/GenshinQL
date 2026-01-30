@@ -1,7 +1,9 @@
-import { useWeaponsStore } from "@/stores";
-import React, { useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import WeaponsDetailedGrid from "./WeaponsDetailedGrid";
+import React, { useEffect } from 'react';
+
+import { useWeaponsStore } from '@/stores';
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import WeaponsDetailedGrid from './WeaponsDetailedGrid';
 
 /**
  * WeaponsDetailed component displays a tabbed interface for different weapon types.

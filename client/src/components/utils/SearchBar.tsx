@@ -1,13 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
+
 import {
   Command,
-  CommandInput,
-  CommandList,
   CommandEmpty,
   CommandGroup,
+  CommandInput,
   CommandItem,
+  CommandList,
 } from '@/components/ui/command';
-import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 type SearchBarItem = {

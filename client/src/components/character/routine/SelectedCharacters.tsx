@@ -1,6 +1,7 @@
-import React from "react";
-import type { AvatarRequirement } from "@/types";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import React from 'react';
+
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import type { AvatarRequirement } from '@/types';
 
 interface SelectedCharactersProps {
   characters: AvatarRequirement[];

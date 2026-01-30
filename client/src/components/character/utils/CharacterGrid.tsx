@@ -1,5 +1,6 @@
-import React from "react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar.tsx";
+import React from 'react';
+
+import { Avatar, AvatarImage } from '@/components/ui/avatar.tsx';
 
 interface CharacterGridProps {
   characters: {
@@ -24,9 +25,11 @@ const CharacterGrid: React.FC<CharacterGridProps> = ({ characters }) => {
           className="flex flex-col justify-start align-start gap-1 cursor-pointer transition duration-300 ease-in-out hover:scale-110 md:hover:scale-150"
         >
           <Avatar className="h-10 w-10 md:h-12 md:w-12 my-1 bg-black">
-            <AvatarImage src={char.url} alt={char.name} loading={"lazy"} />
+            <AvatarImage src={char.url} alt={char.name} loading={'lazy'} />
           </Avatar>
-          <span className="text-[0.625rem] md:text-xs leading-tight">{char.name}</span>
+          <span className="text-[0.625rem] md:text-xs leading-tight">
+            {char.name}
+          </span>
         </div>
       ))}
     </div>

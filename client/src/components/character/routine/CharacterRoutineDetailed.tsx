@@ -1,8 +1,10 @@
-import type { Character, Weapon } from "@/types";
-import { useWeaponsStore } from "@/stores";
-import React, { useEffect, useMemo, useState } from "react";
-import RoutineTable from "./RoutineTable";
-import ChipSearchBar from "@/components/utils/ChipSearchBar";
+import React, { useEffect, useMemo, useState } from 'react';
+
+import ChipSearchBar from '@/components/utils/ChipSearchBar';
+import { useWeaponsStore } from '@/stores';
+import type { Character, Weapon } from '@/types';
+
+import RoutineTable from './RoutineTable';
 
 interface CharacterRoutineDetailedProps {
   character: Character;

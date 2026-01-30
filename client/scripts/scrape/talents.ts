@@ -1,11 +1,13 @@
-import { withWebDriver } from './setup.js';
-import { By, WebDriver } from 'selenium-webdriver';
-import { TalentDaySchema } from './schema.js';
-import { getTableFromHeading } from './utils.js';
-import { BASE_URL } from './urls.js';
-import { saveToPublic } from './fileio.js';
-import { logger } from '../logger.js';
 import * as path from 'node:path';
+
+import { By, WebDriver } from 'selenium-webdriver';
+
+import { logger } from '../logger.js';
+import { saveToPublic } from './fileio.js';
+import { TalentDaySchema } from './schema.js';
+import { withWebDriver } from './setup.js';
+import { BASE_URL } from './urls.js';
+import { getTableFromHeading } from './utils.js';
 
 const TALENT_FILE = 'dailyTalents';
 
@@ -57,7 +59,8 @@ async function loadTalents(driver: WebDriver) {
       0
     );
     const totalChars = Object.values(loc).reduce(
-      (sum, days) => sum + days.reduce((s, day) => s + day.characters.length, 0),
+      (sum, days) =>
+        sum + days.reduce((s, day) => s + day.characters.length, 0),
       0
     );
     logger.info(`   📊 Total: ${totalDays} days, ${totalChars} characters`);
@@ -92,7 +95,9 @@ export async function findTalentsForRegion(
     const row = rows[i];
     const cells = await row.findElements(By.css('td'));
     if (cells.length !== 3) {
-      logger.warn(`   ⚠ Skipping row ${i + 1}: Expected 3 cells, found ${cells.length}`);
+      logger.warn(
+        `   ⚠ Skipping row ${i + 1}: Expected 3 cells, found ${cells.length}`
+      );
       continue;
     }
 
@@ -116,7 +121,9 @@ export async function findTalentsForRegion(
       const characterContainers = await cells[2].findElements(
         By.css('span.card-body')
       );
-      logger.info(`      🔍 Extracting ${characterContainers.length} characters...`);
+      logger.info(
+        `      🔍 Extracting ${characterContainers.length} characters...`
+      );
 
       const characters = await Promise.all(
         characterContainers.map(async (container) => {
@@ -128,7 +135,9 @@ export async function findTalentsForRegion(
           return { name, url: parseUrl(url) };
         })
       );
-      logger.success(`      ✓ Found ${characters.length} characters for ${day}`);
+      logger.success(
+        `      ✓ Found ${characters.length} characters for ${day}`
+      );
 
       talents.push({ day, books, characters });
     } catch (error) {
@@ -138,7 +147,9 @@ export async function findTalentsForRegion(
     }
   }
 
-  logger.success(`   ✓ Completed ${region}: ${talents.length} talent schedules extracted\n`);
+  logger.success(
+    `   ✓ Completed ${region}: ${talents.length} talent schedules extracted\n`
+  );
   return talents;
 }
 

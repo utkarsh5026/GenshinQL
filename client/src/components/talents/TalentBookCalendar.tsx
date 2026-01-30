@@ -1,14 +1,15 @@
+import { Aperture, CalendarDays } from 'lucide-react';
 import React, { useEffect, useMemo, useState } from 'react';
+
+import TalentCalendarView from '@/components/talents/TalentCalendarView.tsx';
+import TalentTable from '@/components/talents/TalentTable.tsx';
+import { Button } from '@/components/ui/button.tsx';
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
 } from '@/components/ui/tabs.tsx';
-import TalentTable from '@/components/talents/TalentTable.tsx';
-import { Button } from '@/components/ui/button.tsx';
-import { Aperture, CalendarDays } from 'lucide-react';
-import TalentCalendarView from '@/components/talents/TalentCalendarView.tsx';
 import { useTalentBooksStore } from '@/stores';
 
 /**
@@ -40,7 +41,11 @@ const TalentCalender: React.FC = () => {
           <TabsList className="flex-wrap md:flex-nowrap justify-start overflow-x-auto">
             {locations.map((loc) => {
               return (
-                <TabsTrigger key={loc} value={loc} className="text-xs md:text-sm px-3 md:px-4">
+                <TabsTrigger
+                  key={loc}
+                  value={loc}
+                  className="text-xs md:text-sm px-3 md:px-4"
+                >
                   {loc}
                 </TabsTrigger>
               );
