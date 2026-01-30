@@ -6,7 +6,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -20,7 +21,8 @@
 }
 
 @keyframes flicker {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1) drop-shadow(0 0 2px rgba(255, 100, 50, 0.3));
   }
   50% {
@@ -34,7 +36,8 @@
 }
 
 @keyframes wave {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     filter: drop-shadow(0 0 2px rgba(50, 150, 255, 0.3));
   }
@@ -50,7 +53,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1) drop-shadow(0 0 2px rgba(150, 100, 255, 0.3));
   }
   50% {
@@ -64,7 +68,8 @@
 }
 
 @keyframes shimmer {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1) drop-shadow(0 0 2px rgba(150, 220, 255, 0.3));
   }
   25% {
@@ -84,7 +89,8 @@
 }
 
 @keyframes solidPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     filter: drop-shadow(0 0 2px rgba(255, 200, 50, 0.3));
   }
@@ -100,7 +106,8 @@
 }
 
 @keyframes bloom {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1) rotate(0deg);
     filter: drop-shadow(0 0 2px rgba(100, 200, 50, 0.3));
   }
@@ -163,7 +170,8 @@
 }
 
 @keyframes starTwinkle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
@@ -179,7 +187,8 @@
 }
 
 @keyframes gentleGlow {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1);
   }
   50% {

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface TextProcessorProps {
   text: string;
@@ -15,13 +15,13 @@ interface TextProcessorProps {
 const TextProcessor: React.FC<TextProcessorProps> = ({ text }) => {
   const processText = (input: string) => {
     const elementColors: { [key: string]: string } = {
-      dendro: "#2ecc71",
-      pyro: "#e74c3c",
-      hydro: "#3498db",
-      electro: "#9b59b6",
-      anemo: "#1abc9c",
-      geo: "#f1c40f",
-      cryo: "#ecf0f1",
+      dendro: '#2ecc71',
+      pyro: '#e74c3c',
+      hydro: '#3498db',
+      electro: '#9b59b6',
+      anemo: '#1abc9c',
+      geo: '#f1c40f',
+      cryo: '#ecf0f1',
     };
 
     const parts = input.split(
@@ -37,7 +37,7 @@ const TextProcessor: React.FC<TextProcessorProps> = ({ text }) => {
       // Check if the part is a number or percentage
       if (/^\d+%?$/.test(part)) {
         return (
-          <span key={`number-${part}-${index}`} style={{ color: "#f39c12" }}>
+          <span key={`number-${part}-${index}`} style={{ color: '#f39c12' }}>
             {part}
           </span>
         );
@@ -46,7 +46,7 @@ const TextProcessor: React.FC<TextProcessorProps> = ({ text }) => {
       return color ? (
         <span
           key={`element-${part}-${index}`}
-          style={{ color, fontWeight: "bold" }}
+          style={{ color, fontWeight: 'bold' }}
         >
           {part}
         </span>

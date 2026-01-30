@@ -107,14 +107,14 @@ export type AttackAnimation = {
 };
 
 export type AttackTalentType =
-  | "Normal Attack"
-  | "Elemental Skill"
-  | "Elemental Burst";
+  | 'Normal Attack'
+  | 'Elemental Skill'
+  | 'Elemental Burst';
 
 export type OtherTalentType =
-  | "1st Ascension Passive"
-  | "4th Ascension Passive"
-  | "Utility Passive";
+  | '1st Ascension Passive'
+  | '4th Ascension Passive'
+  | 'Utility Passive';
 
 export type AvatarRequirement = {
   name: string;
@@ -127,13 +127,13 @@ export type ImageUrl = {
 };
 
 export type Day =
-  | "Monday"
-  | "Tuesday"
-  | "Wednesday"
-  | "Thursday"
-  | "Friday"
-  | "Saturday"
-  | "Sunday";
+  | 'Monday'
+  | 'Tuesday'
+  | 'Wednesday'
+  | 'Thursday'
+  | 'Friday'
+  | 'Saturday'
+  | 'Sunday';
 
 export type WeaponMaterialSchedule = {
   nation: string;
@@ -170,8 +170,8 @@ export type GalleryRaw = {
       videoType: string;
     }[];
   }[];
-  detailedImages?: { url: string; caption: string; }[];
-  stickers?: { url: string; caption: string; }[];
+  detailedImages?: { url: string; caption: string }[];
+  stickers?: { url: string; caption: string }[];
 };
 
 export type TalentRaw = {
@@ -185,7 +185,7 @@ export type TalentRaw = {
     videoUrl?: string;
     videoType?: string;
   }[];
-  scaling: Record<string, string[]>;  // Object in JSON
+  scaling: Record<string, string[]>; // Object in JSON
 };
 
 export type CharacterRaw = Character & {

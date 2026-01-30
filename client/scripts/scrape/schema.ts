@@ -9,8 +9,8 @@ export const talentSchema = z.object({
     z.object({
       url: z.string(),
       caption: z.string(),
-      videoUrl: z.string().optional(),   // Add video support
-      videoType: z.string().optional(),   // Add video type
+      videoUrl: z.string().optional(), // Add video support
+      videoType: z.string().optional(), // Add video type
     })
   ),
   scaling: z.record(z.array(z.string())),
@@ -106,7 +106,7 @@ export const advancedCharacterSchema = baseCharacterSchema.extend({
   talents: z.array(talentSchema),
   constellations: z.array(constellationSchema),
   version: z.string().optional(),
-  gallery: gallerySchema.optional(),  // Add gallery to character JSON
+  gallery: gallerySchema.optional(), // Add gallery to character JSON
 });
 
 export const talentBookTypeSchema = z.union([
@@ -114,7 +114,6 @@ export const talentBookTypeSchema = z.union([
   z.literal('guide'),
   z.literal('philosophies'),
 ]);
-
 
 export const ascensionMaterialSchema = z.object({
   url: z.string(),

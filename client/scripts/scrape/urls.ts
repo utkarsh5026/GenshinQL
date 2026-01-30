@@ -1,9 +1,9 @@
-import { WebDriver } from "selenium-webdriver";
+import { WebDriver } from 'selenium-webdriver';
 
 /**
  * URL for the Genshin Impact Fandom wiki.
  */
-export const BASE_URL = "https://genshin-impact.fandom.com/wiki";
+export const BASE_URL = 'https://genshin-impact.fandom.com/wiki';
 
 /**
  * URL for the Character Talent Material page.
@@ -26,7 +26,7 @@ export async function openInNewTab(driver: WebDriver, url: string) {
   const handles = await driver.getAllWindowHandles();
   const newTabHandle = handles.at(-1);
   if (!newTabHandle) {
-    throw new Error("New tab handle is undefined");
+    throw new Error('New tab handle is undefined');
   }
   await driver.switchTo().window(newTabHandle);
 }

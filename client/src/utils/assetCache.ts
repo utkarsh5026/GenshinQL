@@ -39,7 +39,9 @@ class AssetCacheDB {
         const db = (event.target as IDBOpenDBRequest).result;
 
         if (!db.objectStoreNames.contains(STORE_NAME)) {
-          const objectStore = db.createObjectStore(STORE_NAME, { keyPath: 'url' });
+          const objectStore = db.createObjectStore(STORE_NAME, {
+            keyPath: 'url',
+          });
           objectStore.createIndex('timestamp', 'timestamp', { unique: false });
         }
       };
@@ -164,7 +166,10 @@ class AssetCacheDB {
 
       request.onsuccess = () => {
         const assets = request.result as CachedAsset[];
-        const totalSize = assets.reduce((sum, asset) => sum + asset.blob.size, 0);
+        const totalSize = assets.reduce(
+          (sum, asset) => sum + asset.blob.size,
+          0
+        );
         resolve(totalSize);
       };
 
@@ -175,7 +180,11 @@ class AssetCacheDB {
     });
   }
 
-  async getCacheStats(): Promise<{ count: number; size: number; sizeInMB: number }> {
+  async getCacheStats(): Promise<{
+    count: number;
+    size: number;
+    sizeInMB: number;
+  }> {
     await this.init();
     if (!this.db) return { count: 0, size: 0, sizeInMB: 0 };
 
@@ -240,19 +249,23 @@ export async function fetchAndCacheAsset(url: string): Promise<string> {
  * Preloads multiple assets in parallel
  */
 export async function preloadAssets(urls: string[]): Promise<void> {
-  const validUrls = urls.filter(url => url && url.trim() !== '');
+  const validUrls = urls.filter((url) => url && url.trim() !== '');
 
   await Promise.all(
-    validUrls.map(url => fetchAndCacheAsset(url).catch(err => {
-      console.warn(`Failed to preload asset: ${url}`, err);
-    }))
+    validUrls.map((url) =>
+      fetchAndCacheAsset(url).catch((err) => {
+        console.warn(`Failed to preload asset: ${url}`, err);
+      })
+    )
   );
 }
 
 /**
  * Clears old cached assets based on timestamp (default: 7 days)
  */
-export async function clearOldCache(maxAge: number = 7 * 24 * 60 * 60 * 1000): Promise<void> {
+export async function clearOldCache(
+  maxAge: number = 7 * 24 * 60 * 60 * 1000
+): Promise<void> {
   await assetCache.init();
   const db = assetCache.getDB();
   if (!db) return;
@@ -275,12 +288,12 @@ export async function clearOldCache(maxAge: number = 7 * 24 * 60 * 60 * 1000): P
         }
         cursor.continue();
       } else {
-        Promise.all(
-          keysToDelete.map(key => assetCache.delete(key))
-        ).then(() => {
-          console.log(`Cleared ${keysToDelete.length} old assets from cache`);
-          resolve();
-        }).catch(reject);
+        Promise.all(keysToDelete.map((key) => assetCache.delete(key)))
+          .then(() => {
+            console.log(`Cleared ${keysToDelete.length} old assets from cache`);
+            resolve();
+          })
+          .catch(reject);
       }
     };
 
