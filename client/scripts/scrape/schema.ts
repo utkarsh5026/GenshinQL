@@ -105,7 +105,6 @@ export const gallerySchema = z.object({
 export const advancedCharacterSchema = baseCharacterSchema.extend({
   talents: z.array(talentSchema),
   constellations: z.array(constellationSchema),
-  imageUrls: imageUrlsSchema,
   version: z.string().optional(),
   gallery: gallerySchema.optional(),  // Add gallery to character JSON
 });
@@ -115,6 +114,32 @@ export const talentBookTypeSchema = z.union([
   z.literal('guide'),
   z.literal('philosophies'),
 ]);
+
+
+export const ascensionMaterialSchema = z.object({
+  url: z.string(),
+  caption: z.string(),
+  count: z.number(),
+});
+
+export const weaponAscensionPhaseSchema = z.object({
+  phase: z.number(),
+  levelRange: z.string(),
+  baseAttack: z.object({
+    min: z.number(),
+    max: z.number(),
+  }),
+  subStat: z.object({
+    min: z.number().optional(),
+    max: z.number().optional(),
+  }),
+  mora: z.number().optional(),
+  materials: z.array(ascensionMaterialSchema).optional(),
+});
+
+export const weaponAscensionDataSchema = z.object({
+  phases: z.array(weaponAscensionPhaseSchema),
+});
 
 export const weaponSchema = z.object({
   name: z.string(),
@@ -130,12 +155,24 @@ export const weaponSchema = z.object({
   ),
   passives: z.array(z.string()),
   images: z.array(z.string()),
+  ascension: weaponAscensionDataSchema.optional(),
 });
 
 export const weapMaterialSchema = z.object({
   day: z.string(),
   images: z.array(imageSchema),
   weapons: z.array(z.string()),
+});
+
+export const primitiveItemSchema = z.object({
+  name: z.string(),
+  url: z.string(),
+});
+
+export const primitivesSchema = z.object({
+  elements: z.array(primitiveItemSchema),
+  regions: z.array(primitiveItemSchema),
+  weaponTypes: z.array(primitiveItemSchema),
 });
 
 export type WeaponMaterialSchema = z.infer<typeof weapMaterialSchema>;
@@ -152,3 +189,5 @@ export type TalentDaySchema = z.infer<typeof talentDaySchema>;
 export type ImageUrlsSchema = z.infer<typeof imageUrlsSchema>;
 export type TalentSchema = z.infer<typeof talentSchema>;
 export type ConstellationSchema = z.infer<typeof constellationSchema>;
+export type PrimitiveItem = z.infer<typeof primitiveItemSchema>;
+export type Primitives = z.infer<typeof primitivesSchema>;

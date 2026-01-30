@@ -1,7 +1,7 @@
-.PHONY: help install dev build preview lint format format-check typecheck pre-commit test test-watch validate ci update outdated audit audit-fix clean clean-cache fresh-install scrape scrape-all scrape-characters scrape-gallery scrape-talents scrape-weapons consolidate
+.PHONY: help install dev build preview lint format format-check typecheck pre-commit test test-watch validate ci update outdated audit audit-fix clean clean-cache fresh-install scrape scrape-all scrape-characters scrape-gallery scrape-talents scrape-weapons check-characters consolidate generate-primitives
 
 
 .DEFAULT_GOAL := help
 
-help install dev build preview lint format format-check typecheck pre-commit test test-watch validate ci update outdated audit audit-fix clean clean-cache fresh-install scrape scrape-all scrape-characters scrape-gallery scrape-talents scrape-weapons consolidate:
+help install dev build preview lint format format-check typecheck pre-commit test test-watch validate ci update outdated audit audit-fix clean clean-cache fresh-install scrape scrape-all scrape-characters scrape-gallery scrape-talents scrape-weapons check-characters consolidate generate-primitives:
 	@node makefile.mjs $@

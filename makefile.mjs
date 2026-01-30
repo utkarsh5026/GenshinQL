@@ -157,10 +157,20 @@ const tasks = {
     category: 'Scraping',
     action: () => runScrapeCommand('scrape:weapons'),
   },
+  'check-characters': {
+    description: 'Check character data coverage',
+    category: 'Scraping',
+    action: () => runNpmCommand('check-characters'),
+  },
   consolidate: {
     description: 'Consolidate scraped data',
     category: 'Scraping',
     action: () => runScrapeCommand('consolidate'),
+  },
+  'generate-primitives': {
+    description: 'Generate primitives from characters data',
+    category: 'Scraping',
+    action: () => runNpmCommand('generate-primitives'),
   },
 };
 
