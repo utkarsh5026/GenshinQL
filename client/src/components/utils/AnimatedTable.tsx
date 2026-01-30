@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import React from 'react';
 
 interface AnimatedTableProps {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ const AnimatedTable: React.FC<AnimatedTableProps> = ({ children }) => {
         opacity: 1,
         transition: {
           duration: 0.5,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         },
       }}
       initial={{ opacity: 0 }}

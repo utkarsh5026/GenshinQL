@@ -1,8 +1,10 @@
-import React from "react";
-import { useDroppable } from "@dnd-kit/core";
-import type { Character } from "@/graphql/types";
-import DraggableComponent from "../base/DraggableComponent";
-import AvatarWithSkeleton from "@/components/utils/AvatarWithSkeleton";
+import { useDroppable } from '@dnd-kit/core';
+import React from 'react';
+
+import AvatarWithSkeleton from '@/components/utils/AvatarWithSkeleton';
+import type { Character } from '@/types';
+
+import DraggableComponent from '../base/DraggableComponent';
 
 interface TierLevelProps {
   name: string;
@@ -68,7 +70,7 @@ const TierLevel: React.FC<TierLevelProps> = ({
       </div>
       <div
         ref={setNodeRef}
-        className={`flex-1 border-2 border-gray-300 ${isOver ? "bg-slate-900" : "bg-transparent"} p-2`}
+        className={`flex-1 border-2 border-gray-300 ${isOver ? 'bg-slate-900' : 'bg-transparent'} p-2`}
       >
         <div className="flex flex-row flex-wrap gap-2">
           {characters.map((character) => (

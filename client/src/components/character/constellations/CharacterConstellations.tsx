@@ -1,5 +1,7 @@
-import React from "react";
-import { Constellation } from "../../../graphql/types";
+import React from 'react';
+
+import { Constellation } from '@/types';
+
 import {
   Table,
   TableBody,
@@ -7,8 +9,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../ui/table.tsx";
-import ListSplitter from "../../utils/ListSplitter.tsx";
+} from '../../ui/table.tsx';
+import ListSplitter from '../../utils/ListSplitter.tsx';
 
 interface CharacterConstellationsProps {
   constellations: Constellation[];

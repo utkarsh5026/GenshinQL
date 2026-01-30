@@ -1,0 +1,538 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Albedo_Icon.png",
+    "name": "Albedo",
+    "rarity": "5 Stars",
+    "element": "Geo",
+    "weaponType": "Sword",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "modelType": "Medium Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Sword_Geo.png",
+            "talentName": "Favonius Bladework - Weiss",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Favonius_Bladework_-_Weiss_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Favonius_Bladework_-_Weiss_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Favonius_Bladework_-_Weiss_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "36.74",
+                    "39.73",
+                    "42.72",
+                    "46.99",
+                    "49.98",
+                    "53.4",
+                    "58.1",
+                    "62.8",
+                    "67.5",
+                    "72.62",
+                    "78.5"
+                ],
+                "2-Hit DMG (%)": [
+                    "36.74",
+                    "39.73",
+                    "42.72",
+                    "46.99",
+                    "49.98",
+                    "53.4",
+                    "58.1",
+                    "62.8",
+                    "67.5",
+                    "72.62",
+                    "78.5"
+                ],
+                "3-Hit DMG (%)": [
+                    "47.45",
+                    "51.32",
+                    "55.18",
+                    "60.7",
+                    "64.56",
+                    "68.97",
+                    "75.04",
+                    "81.11",
+                    "87.18",
+                    "93.81",
+                    "101.39"
+                ],
+                "4-Hit DMG (%)": [
+                    "49.75",
+                    "53.8",
+                    "57.85",
+                    "63.63",
+                    "67.68",
+                    "72.31",
+                    "78.68",
+                    "85.04",
+                    "91.4",
+                    "98.34",
+                    "106.3"
+                ],
+                "5-Hit DMG (%)": [
+                    "62.07",
+                    "67.13",
+                    "72.18",
+                    "79.4",
+                    "84.45",
+                    "90.22",
+                    "98.16",
+                    "106.1",
+                    "114.04",
+                    "122.7",
+                    "132.63"
+                ],
+                "Charged Attack DMG (%)": [
+                    "47.3\n+\n60.2",
+                    "51.15\n+\n65.1",
+                    "55\n+\n70",
+                    "60.5\n+\n77",
+                    "64.35\n+\n81.9",
+                    "68.75\n+\n87.5",
+                    "74.8\n+\n95.2",
+                    "80.85\n+\n102.9",
+                    "86.9\n+\n110.6",
+                    "93.5\n+\n119",
+                    "101.06\n+\n128.63"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "20"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_Abiogenesis_Solar_Isotoma.png",
+            "talentName": "Abiogenesis: Solar Isotoma",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nAlbedo creates a Solar Isotoma using alchemy, which deals AoE Geo DMG on appearance.\n\nSolar Isotoma\nhas the following properties:\nWhen opponents within the Solar Isotoma field take DMG, the Solar Isotoma will generate Transient Blossoms which deal AoE Geo DMG. DMG dealt scales off Albedo's DEF.\nTransient Blossoms can only be generated once every 2s.\nWhen a character is located at the locus of the Solar Isotoma, the Solar Isotoma will accumulate Geo power to form a crystallized platform that lifts the character up to a certain height. Only one crystallized platform can exist at a time.\nSolar Isotoma is considered a Geo construct. Only one Solar Isotoma created by Albedo himself can exist at a time.\n\nHold to designate the location of the skill.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Abiogenesis_Solar_Isotoma_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Abiogenesis_Solar_Isotoma_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Abiogenesis_Solar_Isotoma_Platform_Preview.gif",
+                    "caption": "Platform"
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "130.4",
+                    "140.18",
+                    "149.96",
+                    "163",
+                    "172.78",
+                    "182.56",
+                    "195.6",
+                    "208.64",
+                    "221.68",
+                    "234.72",
+                    "247.76",
+                    "260.8",
+                    "277.1",
+                    "293.4"
+                ],
+                "Transient Blossom DMG (% DEF)": [
+                    "133.6",
+                    "143.62",
+                    "153.64",
+                    "167",
+                    "177.02",
+                    "187.04",
+                    "200.4",
+                    "213.76",
+                    "227.12",
+                    "240.48",
+                    "253.84",
+                    "267.2",
+                    "283.9",
+                    "300.6"
+                ],
+                "Duration": [
+                    "30s"
+                ],
+                "Skill CD": [
+                    "4s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Rite_of_Progeniture_Tectonic_Tide.png",
+            "talentName": "Rite of Progeniture: Tectonic Tide",
+            "talentType": "Elemental Burst",
+            "description": "Under Albedo's command, Geo crystals surge and burst forth, dealing AoE Geo DMG in front of him.\nIf a Solar Isotoma created by Albedo himself is on the field, 7 Fatal Blossoms will be generated in the Solar Isotoma field, bursting violently into bloom and dealing AoE Geo DMG.\n\nTectonic Tide DMG and Fatal Blossom DMG will not generate Transient Blossoms.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Rite_of_Progeniture_Tectonic_Tide_Preview.gif",
+                    "caption": "Without Fatal Blossoms"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Rite_of_Progeniture_Tectonic_Tide_Blossom_Preview.gif",
+                    "caption": "With Fatal Blossoms"
+                }
+            ],
+            "scaling": {
+                "Elemental Burst DMG (%)": [
+                    "367.2",
+                    "394.74",
+                    "422.28",
+                    "459",
+                    "486.54",
+                    "514.08",
+                    "550.8",
+                    "587.52",
+                    "624.24",
+                    "660.96",
+                    "697.68",
+                    "734.4",
+                    "780.3",
+                    "826"
+                ],
+                "Fatal Blossom DMG": [
+                    "72% each",
+                    "77.4% each",
+                    "82.8% each",
+                    "90% each",
+                    "95.4% each",
+                    "100.8% each",
+                    "108% each",
+                    "115.2% each",
+                    "122.4% each",
+                    "129.6% each",
+                    "136.8% each",
+                    "144% each",
+                    "153% each",
+                    "162% each"
+                ],
+                "CD": [
+                    "12s"
+                ],
+                "Energy Cost": [
+                    "40"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Talent_Calcite_Might.png",
+            "talentName": "Calcite Might",
+            "talentType": "1st Ascension Passive",
+            "description": "Transient Blossoms generated by Abiogenesis: Solar Isotoma deal 25% more DMG to opponents whose HP is below 50%.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Talent_Homuncular_Nature.png",
+            "talentName": "Homuncular Nature",
+            "talentType": "4th Ascension Passive",
+            "description": "Using Rite of Progeniture: Tectonic Tide increases the Elemental Mastery of nearby party members by 125 for 10s.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Homuncular_Nature_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Talent_Book_of_Blinding_Light.png",
+            "talentName": "Book of Blinding Light",
+            "talentType": "Witch's Eve Rite Passive",
+            "description": "After completing Witch's Homework: Beyond the Lesson, Albedo will become a Hexerei character. When the party includes at least 2 Hexerei characters, you will gain the Hexerei: Secret Rite effect, which enhances Hexerei characters.\n\nHexerei: Secret Rite\nWhen Albedo hits an opponent with his Elemental Skill within 20s of using an Elemental Skill, it will generate Silver Isotomas near the opponent that last for 10s. When there are no Solar Isotomas created by Albedo on the field, and as long as Albedo is not downed, a single Silver Isotoma will begin generating Transient Blossoms, just as Solar Isotomas would. There can be up to two Silver Isotomas generated by Albedo on the field at any one time.\nAfter creating a Solar Isotoma, nearby party members' Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, and Elemental Burst DMG are increased by 4% for every 1,000 DEF Albedo has for 20s. The maximum increase that can be achieved this way is 12%.\nAfter generating a Silver Isotoma, nearby Hexerei party members' Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, and Elemental Burst DMG are increased by 10% for every 1,000 DEF Albedo has for 20s. The maximum increase that can be achieved this way is 30%.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Flash_of_Genius_%28Albedo%29.png",
+            "talentName": "Flash of Genius",
+            "talentType": "Utility Passive",
+            "description": "When Albedo crafts Weapon Ascension Materials, he has a 10% chance to receive double the product.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Constellation_Flower_of_Eden.png",
+            "name": "Flower of Eden",
+            "level": 1,
+            "description": "Description\nHexerei Buff\nTransient Blossoms generated by Albedo's Abiogenesis: Solar Isotoma regenerate 1.2 Energy for Albedo."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Constellation_Opening_of_Phanerozoic.png",
+            "name": "Opening of Phanerozoic",
+            "level": 2,
+            "description": "Description\nHexerei Buff\nPreview\nTransient Blossoms generated by Abiogenesis: Solar Isotoma grant Albedo Fatal Reckoning for 30s:\nUnleashing Rite of Progeniture: Tectonic Tide consumes all stacks of Fatal Reckoning. Each stack of Fatal Reckoning consumed increases the DMG dealt by Fatal Blossoms and Rite of Progeniture: Tectonic Tide's burst DMG by 30% of Albedo's DEF.\nThis effect stacks up to 4 times."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Constellation_Grace_of_Helios.png",
+            "name": "Grace of Helios",
+            "level": 3,
+            "description": "Increases the Level of Abiogenesis: Solar Isotoma by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Constellation_Descent_of_Divinity.png",
+            "name": "Descent of Divinity",
+            "level": 4,
+            "description": "Description\nHexerei Buff\nActive party members within the Solar Isotoma field have their Plunging Attack DMG increased by 30%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Constellation_Tide_of_Hadean.png",
+            "name": "Tide of Hadean",
+            "level": 5,
+            "description": "Increases the Level of Rite of Progeniture: Tectonic Tide by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Constellation_Dust_of_Purification.png",
+            "name": "Dust of Purification",
+            "level": 6,
+            "description": "Description\nHexerei Buff\nActive party members within the Solar Isotoma field who are protected by a shield created by Crystallize have their DMG increased by 17%."
+        }
+    ],
+    "imageUrls": {},
+    "version": "1.2",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Idle_Albedo_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Idle_Albedo_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Idle_Albedo_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Idle_Albedo_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Talent_Menu_Albedo.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Talent_Menu_Albedo.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Weapon_Menu_Albedo.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Weapon_Menu_Albedo.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Party_Setup_Albedo.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Party_Setup_Albedo.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Namecard_Background_Albedo_Sun_Blossom.png",
+                "caption": "Albedo: Sun Blossom Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Item_Albedo_Sun_Blossom.png",
+                "caption": "Albedo: Sun Blossom Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Namecard_Banner_Albedo_Sun_Blossom.png",
+                "caption": "Albedo: Sun Blossom Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Favonius_Bladework_-_Weiss_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Favonius_Bladework_-_Weiss_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Favonius_Bladework_-_Weiss_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Favonius_Bladework_-_Weiss_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Favonius_Bladework_-_Weiss_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Favonius_Bladework_-_Weiss_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Rite_of_Progeniture_Tectonic_Tide_Preview.gif",
+                        "caption": "Without Fatal Blossoms",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Rite_of_Progeniture_Tectonic_Tide_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Rite_of_Progeniture_Tectonic_Tide_Blossom_Preview.gif",
+                        "caption": "With Fatal Blossoms",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Rite_of_Progeniture_Tectonic_Tide_Blossom_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Abiogenesis_Solar_Isotoma_Press_Preview.gif",
+                        "caption": "Press",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Abiogenesis_Solar_Isotoma_Press_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Abiogenesis_Solar_Isotoma_Hold_Preview.gif",
+                        "caption": "Hold",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Abiogenesis_Solar_Isotoma_Hold_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Abiogenesis_Solar_Isotoma_Platform_Preview.gif",
+                        "caption": "Platform",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Abiogenesis_Solar_Isotoma_Platform_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Albedo_Character_Details_1.png",
+                "caption": "Character Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Albedo_Character_Details_2.gif",
+                "caption": "Character Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Albedo_Character_Details_3.gif",
+                "caption": "Character Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Albedo_Character_Details_4.gif",
+                "caption": "Character Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Albedo_Character_Details_5.png",
+                "caption": "Character Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Albedo_Character_Details_6.png",
+                "caption": "Character Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Albedo_Character_Details_7.png",
+                "caption": "Character Details 7"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Icon_Emoji_Paimon%27s_Paintings_04_Albedo_1.png",
+                "caption": "Have some flowers Set 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_Emoji_Paimon%27s_Paintings_04_Albedo_2.png",
+                "caption": "It was nothing Set 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Icon_Emoji_Paimon%27s_Paintings_04_Albedo_3.png",
+                "caption": "What happened? Set 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Icon_Emoji_Paimon%27s_Paintings_04_Albedo_4.png",
+                "caption": "Cold Set 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Icon_Emoji_Paimon%27s_Paintings_11_Albedo_1.png",
+                "caption": "Evil Laugh Set 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Icon_Emoji_Paimon%27s_Paintings_11_Albedo_2.png",
+                "caption": "Pensive Set 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Icon_Emoji_Paimon%27s_Paintings_11_Albedo_3.png",
+                "caption": "Leave it to Me Set 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Icon_Emoji_Paimon%27s_Paintings_31_Albedo_1.png",
+                "caption": "Behave Set 31"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Icon_Emoji_Paimon%27s_Paintings_41_Albedo_1.png",
+                "caption": "Go On Set 41"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Icon_Emoji_Paimon%27s_Paintings_45_Durin_1.png",
+                "caption": "Peek Set 45"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Icon_Emoji_Paimon%27s_Paintings_46_Albedo_1.png",
+                "caption": "Take a Seat Set 46"
+            }
+        ]
+    }
+}

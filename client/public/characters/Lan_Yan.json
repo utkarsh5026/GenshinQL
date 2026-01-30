@@ -1,0 +1,460 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Lan_Yan_Icon.png",
+    "name": "Lan Yan",
+    "rarity": "4 Stars",
+    "element": "Anemo",
+    "weaponType": "Catalyst",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "modelType": "Medium Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png",
+            "talentName": "Black Pheasant Strides on Water",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nWields her Feathermoon Rings to perform up to 4 attacks, dealing Anemo DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina to throw out a Feathermoon Ring, dealing Anemo DMG.\n\nPlunging Attack\nGathers the power of Anemo and plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Anemo DMG upon impact with the ground.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Black_Pheasant_Strides_on_Water_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Black_Pheasant_Strides_on_Water_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "41.44",
+                    "44.55",
+                    "47.66",
+                    "51.8",
+                    "54.91",
+                    "58.02",
+                    "62.16",
+                    "66.3",
+                    "70.45",
+                    "74.59",
+                    "78.74"
+                ],
+                "2-Hit DMG (%)": [
+                    "20.41\n+\n24.95",
+                    "21.94\n+\n26.82",
+                    "23.47\n+\n28.69",
+                    "25.52\n+\n31.19",
+                    "27.05\n+\n33.06",
+                    "28.58\n+\n34.93",
+                    "30.62\n+\n37.42",
+                    "32.66\n+\n39.92",
+                    "34.7\n+\n42.41",
+                    "36.74\n+\n44.91",
+                    "38.78\n+\n47.4"
+                ],
+                "3-Hit DMG (%)": [
+                    "26.92\n+\n26.92",
+                    "28.94\n+\n28.94",
+                    "30.96\n+\n30.96",
+                    "33.65\n+\n33.65",
+                    "35.67\n+\n35.67",
+                    "37.69\n+\n37.69",
+                    "40.38\n+\n40.38",
+                    "43.07\n+\n43.07",
+                    "45.76\n+\n45.76",
+                    "48.46\n+\n48.46",
+                    "51.15\n+\n51.15"
+                ],
+                "4-Hit DMG (%)": [
+                    "64.56",
+                    "69.4",
+                    "74.24",
+                    "80.7",
+                    "85.54",
+                    "90.38",
+                    "96.84",
+                    "103.3",
+                    "109.75",
+                    "116.21",
+                    "122.66"
+                ],
+                "Charged Attack DMG (%)": [
+                    "37.84 × 3",
+                    "40.68 × 3",
+                    "43.52 × 3",
+                    "47.3 × 3",
+                    "50.14 × 3",
+                    "52.98 × 3",
+                    "56.76 × 3",
+                    "60.54 × 3",
+                    "64.33 × 3",
+                    "68.11 × 3",
+                    "71.9 × 3"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "50"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Talent_Swallow-Wisp_Pinion_Dance.png",
+            "talentName": "Swallow-Wisp Pinion Dance",
+            "talentType": "Elemental Skill",
+            "description": "Summoning forth the Swallow-Wisp Shield, a secret art passed down across generations, Lan Yan dashes forward and, upon making contact with her target, will leap back into the air.\nThe Swallow-Wisp Shield's DMG absorption scales based on her ATK, and has a 250% absorption efficiency against Anemo DMG.\nWhile in mid-air due to the effects of her Elemental Skill: Swallow-Wisp Pinion Dance, pressing her Elemental Skill again or pressing Normal Attack will cause Lan Yan to hurl her Feathermoon Rings at an opponent, and they will spin between nearby opponents twice upon hit, dealing Anemo DMG.\nHolding the Skill will cause it to behave differently.\n\nHold\nEnter Aiming Mode to adjust the dash direction.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Swallow-Wisp_Pinion_Dance_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Swallow-Wisp_Pinion_Dance_Hold_Preview.gif",
+                    "caption": "Hold"
+                }
+            ],
+            "scaling": {
+                "Feathermoon Ring DMG (%)": [
+                    "96.26",
+                    "103.48",
+                    "110.69",
+                    "120.32",
+                    "127.54",
+                    "134.76",
+                    "144.38",
+                    "154.01",
+                    "163.64",
+                    "173.26",
+                    "182.89",
+                    "192.51",
+                    "204.54"
+                ],
+                "Shield DMG Absorption": [
+                    "276.48% ATK\n+\n1156",
+                    "297.22% ATK\n+\n1271",
+                    "317.95% ATK\n+\n1396",
+                    "345.6% ATK\n+\n1531",
+                    "366.34% ATK\n+\n1676",
+                    "387.07% ATK\n+\n1830",
+                    "414.72% ATK\n+\n1993",
+                    "442.37% ATK\n+\n2167",
+                    "470.02% ATK\n+\n2350",
+                    "497.66% ATK\n+\n2542",
+                    "525.31% ATK\n+\n2745",
+                    "552.96% ATK\n+\n2957",
+                    "587.52% ATK\n+\n3178"
+                ],
+                "Shield Duration": [
+                    "12.5s"
+                ],
+                "CD": [
+                    "16s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Talent_Lustrous_Moonrise.png",
+            "talentName": "Lustrous Moonrise",
+            "talentType": "Elemental Burst",
+            "description": "Lan Yan creates a Feathermoon Swallow Array, pulling in nearby opponents and objects and dealing multiple instances of AoE Anemo DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Lustrous_Moonrise_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "241.06 × 3",
+                    "259.14 × 3",
+                    "277.22 × 3",
+                    "301.33 × 3",
+                    "319.41 × 3",
+                    "337.49 × 3",
+                    "361.6 × 3",
+                    "385.7 × 3",
+                    "409.81 × 3",
+                    "433.92 × 3",
+                    "458.02 × 3",
+                    "482.13 × 3",
+                    "512.26 × 3"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Talent_Four_Sealing_Divination_Charms.png",
+            "talentName": "Four Sealing Divination Charms",
+            "talentType": "1st Ascension Passive",
+            "description": "When the dash from the Elemental Skill Swallow-Wisp Pinion Dance hits a target, if it interacts with Hydro/Pyro/Cryo/Electro, the Swallow-Wisp Shield will undergo Elemental Absorption, with the converted shield absorbing DMG from the corresponding element with 250% efficiency.\nAdditionally, if this use of Swallow-Wisp Pinion Dance causes the Swallow-Wisp Shield to undergo Elemental Absorption, the Feathermoon Rings that Lan Yan throws at her foes additionally deal Elemental DMG equal to 50% of the original in the corresponding Elemental Type. This DMG is considered Elemental Skill DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Four_Sealing_Divination_Charms_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Talent_Skyfeather_Evil-Subduing_Charm.png",
+            "talentName": "Skyfeather Evil-Subduing Charm",
+            "talentType": "4th Ascension Passive",
+            "description": "The Elemental Skill Swallow-Wisp Pinion Dance and the Elemental Burst Lustrous Moonrise deal increased DMG equal to 309% and 774% of Lan Yan's Elemental Mastery respectively.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Talent_Thought_and_Intent%2C_Like_Silken_Scent.png",
+            "talentName": "Thought and Intent, Like Silken Scent",
+            "talentType": "Utility Passive",
+            "description": "When Lan Yan is in the party, your characters will not startle Crystalflies and certain other animals when getting near them.\nCheck the \"Other\" sub-category of the \"Living Beings / Wildlife\" section in the Archive for creatures this skill works on.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Constellation_As_One_Might_Stride_Betwixt_the_Clouds.png",
+            "name": "\"As One Might Stride Betwixt the Clouds\"",
+            "level": 1,
+            "description": "Description\nGameplay Notes\nAfter triggering the Elemental Absorption from the Ascension Talent \"Four Sealing Divination Charms,\" this instance of Lan Yan's Elemental Skill Swallow-Wisp Pinion Dance will produce another Feathermoon Ring when they are thrown at opponents.\nYou must first unlock the Ascension Talent \"Four Sealing Divination Charms.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Constellation_Dance_Vestments_Billow_Like_Rainbow_Jade.png",
+            "name": "\"Dance Vestments Billow Like Rainbow Jade\"",
+            "level": 2,
+            "description": "While the Swallow-Wisp Shield is active, when your active party member's Normal Attacks deal DMG, 40% of the Shield's DMG absorption will be restored, up to its original maximum absorption. This effect can occur once every 2s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Constellation_On_White_Wings_Pierce_Through_Cloud_and_Fog.png",
+            "name": "\"On White Wings Pierce Through Cloud and Fog\"",
+            "level": 3,
+            "description": "Increases the Level of Swallow-Wisp Pinion Dance by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_With_Drakefalcon%27s_Blood-Pearls_Adorned.png",
+            "name": "\"With Drakefalcon's Blood-Pearls Adorned\"",
+            "level": 4,
+            "description": "After Lan Yan uses her Elemental Burst Lustrous Moonrise, the Elemental Mastery of all nearby party members increases by 60 for 12s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Constellation_Having_Met_You%2C_My_Heart_is_Gladdened.png",
+            "name": "\"Having Met You, My Heart is Gladdened\"",
+            "level": 5,
+            "description": "Increases the Level of Lustrous Moonrise by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Constellation_Let_Us_Away_on_Sylphic_Wing%2C_the_Silvered_Ornaments_to_Ring.png",
+            "name": "\"Let Us Away on Sylphic Wing, the Silvered Ornaments to Ring\"",
+            "level": 6,
+            "description": "Swallow-Wisp Pinion Dance gains 1 additional charge."
+        }
+    ],
+    "imageUrls": {},
+    "version": "5.3",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Idle_Lan_Yan_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Idle_Lan_Yan_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Idle_Lan_Yan_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Idle_Lan_Yan_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Talent_Menu_Lan_Yan.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Talent_Menu_Lan_Yan.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Weapon_Menu_Lan_Yan.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Weapon_Menu_Lan_Yan.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Party_Setup_Lan_Yan.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Party_Setup_Lan_Yan.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Namecard_Background_Lan_Yan_Silver_Swallow.png",
+                "caption": "Lan Yan: Silver Swallow Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Lan_Yan_Silver_Swallow.png",
+                "caption": "Lan Yan: Silver Swallow Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Namecard_Banner_Lan_Yan_Silver_Swallow.png",
+                "caption": "Lan Yan: Silver Swallow Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Black_Pheasant_Strides_on_Water_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Black_Pheasant_Strides_on_Water_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Black_Pheasant_Strides_on_Water_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Black_Pheasant_Strides_on_Water_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Lustrous_Moonrise_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Lustrous_Moonrise_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Swallow-Wisp_Pinion_Dance_Press_Preview.gif",
+                        "caption": "Press",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Swallow-Wisp_Pinion_Dance_Press_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Swallow-Wisp_Pinion_Dance_Hold_Preview.gif",
+                        "caption": "Hold",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Swallow-Wisp_Pinion_Dance_Hold_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Lan_Yan_Character_Details_1.png",
+                "caption": "Lan Yan Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Lan_Yan_Character_Details_2.png",
+                "caption": "Lan Yan Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Lan_Yan_Character_Details_3.gif",
+                "caption": "Lan Yan Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Lan_Yan_Character_Details_4.png",
+                "caption": "Lan Yan Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Lan_Yan_Character_Details_5.png",
+                "caption": "Lan Yan Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Lan_Yan_Character_Details_6.png",
+                "caption": "Lan Yan Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Lan_Yan_Character_Details_7.png",
+                "caption": "Lan Yan Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Lan_Yan_Character_Details_8.gif",
+                "caption": "Lan Yan Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Lan_Yan_Character_Details_9.gif",
+                "caption": "Lan Yan Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Lan_Yan_Character_Details_10.gif",
+                "caption": "Lan Yan Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Lan_Yan_Character_Details_11.gif",
+                "caption": "Lan Yan Details 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Lan_Yan_Character_Details_12.png",
+                "caption": "Lan Yan Details 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Lan_Yan_Character_Details_13.png",
+                "caption": "Lan Yan Details 13"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Icon_Emoji_Paimon%27s_Paintings_38_Lan_Yan_1.png",
+                "caption": "Greetings Set 38"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Icon_Emoji_Paimon%27s_Paintings_38_Lan_Yan_2.png",
+                "caption": "Time to Relax Set 38"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Icon_Emoji_Paimon%27s_Paintings_38_Lan_Yan_3.png",
+                "caption": "Yummy Set 38"
+            }
+        ]
+    }
+}

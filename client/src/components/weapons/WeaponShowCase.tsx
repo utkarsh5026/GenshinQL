@@ -1,6 +1,8 @@
-import React, { useMemo } from "react";
-import { Weapon } from "@/graphql/types";
-import WeaponAvatar from "./WeaponAvatar";
+import React, { useMemo } from 'react';
+
+import { Weapon } from '@/types';
+
+import WeaponAvatar from './WeaponAvatar';
 
 interface WeaponShowCaseProps {
   weapons: Weapon[];

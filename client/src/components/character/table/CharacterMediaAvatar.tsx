@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar.tsx";
-import { AnimationMedia } from "@/graphql/types";
+import React, { useState } from 'react';
+
+import { Avatar, AvatarImage } from '@/components/ui/avatar.tsx';
+import { useCachedAsset } from '@/hooks/useCachedAsset';
+import { AnimationMedia } from '@/types';
 
 interface CharacterMediaAvatarProps {
   media: AnimationMedia;
@@ -11,6 +13,9 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  const cachedImageUrl = useCachedAsset(media.imageUrl);
+  const cachedVideoUrl = useCachedAsset(media.videoUrl);
 
   return (
     <div
@@ -23,24 +28,24 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
     >
       <Avatar
         className={`relative h-full w-full cursor-pointer transition duration-300 ease-in-out hover:scale-150 ${
-          isVideoLoaded ? "animate-woosh" : ""
+          isVideoLoaded ? 'animate-woosh' : ''
         }`}
       >
         <AvatarImage
-          src={media.imageUrl}
+          src={cachedImageUrl}
           alt={media.caption}
           loading="lazy"
           className="h-full w-full"
         />
-        {isHovered && media.videoUrl && (
+        {isHovered && cachedVideoUrl && (
           <video
-            src={media.videoUrl}
+            src={cachedVideoUrl}
             autoPlay
             loop
             muted
-            className={`absolute inset-0 h-full w-full object-cover 
+            className={`absolute inset-0 h-full w-full object-cover
                  transition-opacity duration-300 ${
-                   isVideoLoaded ? "opacity-100" : "opacity-0"
+                   isVideoLoaded ? 'opacity-100' : 'opacity-0'
                  }`}
             onCanPlayThrough={() => setIsVideoLoaded(true)}
           />

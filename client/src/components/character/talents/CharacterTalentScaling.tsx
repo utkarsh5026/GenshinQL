@@ -1,5 +1,6 @@
-import React, { useMemo, useState } from "react";
-import type { Talent } from "@/graphql/types";
+import React, { useMemo, useState } from 'react';
+
+import { Slider } from '@/components/ui/slider.tsx';
 import {
   Table,
   TableBody,
@@ -7,8 +8,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table.tsx";
-import { Slider } from "@/components/ui/slider.tsx";
+} from '@/components/ui/table.tsx';
+import type { Talent } from '@/types';
 
 interface CharacterTalentScalingProps {
   talent: Talent;

@@ -1,11 +1,15 @@
-import { Character } from "@/graphql/types";
-import { motion } from "framer-motion";
-import { Avatar } from "@/components/ui/avatar";
-import AnimatedCover from "@/components/utils/AnimatedCover";
-import { Button } from "@/components/ui/button";
-import { RefreshCcw } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import useGenshinGuesser from "@/redux/hook/genshin-guesser";
+import { motion } from 'framer-motion';
+import { RefreshCcw } from 'lucide-react';
+
+import { Avatar } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import AnimatedCover from '@/components/utils/AnimatedCover';
+import { cn } from '@/lib/utils';
+import { useGenshinGuesserStore } from '@/stores';
+import { Character } from '@/types';
+
+import GameStats from './GameStats';
 
 const MAX_GUESSES = 5;
 
@@ -20,17 +24,29 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
   gameWon,
   onReset,
 }) => {
-  const { guessedChars, gameOver } = useGenshinGuesser();
+  const { guessedChars, gameOver } = useGenshinGuesserStore();
 
   const guessCount = guessedChars.length;
 
   return (
-    <Card className="border-none mt-16 bg-gray-900/90">
-      <CardContent className="p-4 flex flex-col gap-8">
-        <div className="text-lg">
-          <span>Guess: </span>
-          <span className="font-bold text-yellow-700">{`${guessCount}/${MAX_GUESSES}`}</span>
+    <Card className="border-none mt-16 bg-card/95 backdrop-blur-sm">
+      <CardContent className="p-8 flex flex-col space-y-8">
+        <div className="text-xl font-bold tracking-wide">
+          <span className="text-muted-foreground">Guess: </span>
+          <span
+            className={cn(
+              'font-mono text-2xl',
+              guessCount >= 4 ? 'text-game-wrong' : 'text-genshin-gold'
+            )}
+          >
+            {guessCount}/{MAX_GUESSES}
+          </span>
         </div>
+
+        {/* Show statistics when game is active */}
+        {!gameOver && <GameStats />}
+
+        {/* Show game over screen when game ends */}
         {gameOver && (
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -41,9 +57,9 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
             }}
             transition={{
               duration: 0.6,
-              ease: "easeOut",
+              ease: 'easeOut',
               scale: {
-                type: "spring",
+                type: 'spring',
                 damping: 8,
                 stiffness: 100,
               },
@@ -54,7 +70,7 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
                 initial={{ rotate: -180, scale: 0 }}
                 animate={{ rotate: 0, scale: [0, 1.5, 1] }}
                 transition={{
-                  type: "spring",
+                  type: 'spring',
                   damping: 10,
                   stiffness: 100,
                   delay: 0.2,
@@ -72,20 +88,27 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="font-bold"
+                className="text-center space-y-2"
               >
-                <span
-                  className={`${gameWon ? "text-green-700" : "text-red-700"}`}
+                <div
+                  className={cn(
+                    'text-xl font-bold tracking-tight',
+                    gameWon ? 'text-game-correct' : 'text-game-wrong'
+                  )}
                 >
-                  {gameWon
-                    ? `Congrats! You correctly guessed ${selectedCharacter.name} 🎉`
-                    : `The correct answer is ${selectedCharacter.name} 🥺`}
-                </span>
-                <img
-                  src={selectedCharacter.iconUrl}
-                  alt={selectedCharacter.name}
-                  className="w-6 h-6 inline-block ml-2 align-text-bottom"
-                />
+                  {gameWon ? 'Congratulations!' : 'Better luck next time!'}
+                </div>
+                <div className="text-base text-muted-foreground flex items-center gap-2 justify-center">
+                  <span>{gameWon ? 'You guessed' : 'The answer was'}</span>
+                  <span className="font-semibold text-foreground">
+                    {selectedCharacter.name}
+                  </span>
+                  <img
+                    src={selectedCharacter.iconUrl}
+                    alt={selectedCharacter.name}
+                    className="w-6 h-6 rounded-full border border-border"
+                  />
+                </div>
               </motion.div>
 
               <motion.div
@@ -96,9 +119,10 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
                 <Button
                   variant="outline"
                   onClick={onReset}
-                  className="flex items-center bg-gray-900"
+                  className="flex items-center gap-2 hover:bg-accent/50 transition-colors duration-200"
                 >
-                  <RefreshCcw className="w-4 h-4 mr-2" /> Play again
+                  <RefreshCcw className="w-4 h-4" />
+                  <span className="font-medium">Play again</span>
                 </Button>
               </motion.div>
             </div>

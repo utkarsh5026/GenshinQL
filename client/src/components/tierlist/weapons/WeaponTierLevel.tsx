@@ -1,7 +1,9 @@
-import React from "react";
-import TierLevel from "../base/TierLevel";
-import type { Weapon } from "@/graphql/types";
-import WeaponAvatar from "@/components/weapons/WeaponAvatar";
+import React from 'react';
+
+import WeaponAvatar from '@/components/weapons/WeaponAvatar';
+import type { Weapon } from '@/types';
+
+import TierLevel from '../base/TierLevel';
 
 interface WeaponTierLevelProps {
   initialName: string;

@@ -1,11 +1,13 @@
-import React, { useEffect, useMemo } from "react";
-import { useWeaponMaterials } from "@/redux/hook/weapon-material";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import ScheduleTable from "./ScheduleTable";
+import React, { useEffect, useMemo } from 'react';
+
+import { useWeaponMaterialStore } from '@/stores';
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import ScheduleTable from './ScheduleTable';
 
 const WeaponCalender: React.FC = () => {
   const { weaponMaterialSchedule, loading, error, fetchWeaponMaterials } =
-    useWeaponMaterials();
+    useWeaponMaterialStore();
 
   useEffect(() => {
     if (weaponMaterialSchedule === null) fetchWeaponMaterials();
@@ -17,7 +19,7 @@ const WeaponCalender: React.FC = () => {
   }, [weaponMaterialSchedule]);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (error) return <div>Error: {error}</div>;
 
   if (weaponMaterialSchedule === null || nations.length === 0)
     return <div>No data</div>;

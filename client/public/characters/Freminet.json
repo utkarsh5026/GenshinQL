@@ -1,0 +1,633 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Freminet_Icon.png",
+    "name": "Freminet",
+    "rarity": "4 Stars",
+    "element": "Cryo",
+    "weaponType": "Claymore",
+    "region": "Fontaine",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+    "modelType": "Medium Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Claymore_Cryo.png",
+            "talentName": "Flowing Eddies",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Flowing_Eddies_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Flowing_Eddies_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Flowing_Eddies_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG": [
+                    "84.24",
+                    "91.09",
+                    "97.95",
+                    "107.75",
+                    "114.6",
+                    "122.44",
+                    "133.21",
+                    "143.99",
+                    "154.76",
+                    "166.52",
+                    "178.27",
+                    "190.02",
+                    "201.78"
+                ],
+                "2-Hit DMG": [
+                    "80.68",
+                    "87.24",
+                    "93.81",
+                    "103.19",
+                    "109.76",
+                    "117.26",
+                    "127.58",
+                    "137.9",
+                    "148.22",
+                    "159.48",
+                    "170.73",
+                    "181.99",
+                    "193.25"
+                ],
+                "3-Hit DMG": [
+                    "101.9",
+                    "110.2",
+                    "118.49",
+                    "130.34",
+                    "138.64",
+                    "148.12",
+                    "161.15",
+                    "174.18",
+                    "187.22",
+                    "201.44",
+                    "215.66",
+                    "229.88",
+                    "244.1"
+                ],
+                "4-Hit DMG": [
+                    "123.8",
+                    "133.88",
+                    "143.96",
+                    "158.35",
+                    "168.43",
+                    "179.95",
+                    "195.78",
+                    "211.62",
+                    "227.46",
+                    "244.73",
+                    "262.01",
+                    "279.28",
+                    "296.56"
+                ],
+                "Charged Attack Cyclic DMG": [
+                    "62.52",
+                    "67.61",
+                    "72.7",
+                    "79.97",
+                    "85.06",
+                    "90.87",
+                    "98.87",
+                    "106.87",
+                    "114.87",
+                    "123.59",
+                    "132.31",
+                    "141.04",
+                    "149.76"
+                ],
+                "Charged Attack Final DMG": [
+                    "113.09",
+                    "122.29",
+                    "131.5",
+                    "144.65",
+                    "153.86",
+                    "164.37",
+                    "178.84",
+                    "193.31",
+                    "207.77",
+                    "223.55",
+                    "239.33",
+                    "255.11",
+                    "270.89"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG": [
+                    "74.59",
+                    "80.66",
+                    "86.73",
+                    "95.4",
+                    "101.47",
+                    "108.41",
+                    "117.95",
+                    "127.49",
+                    "137.03",
+                    "147.44",
+                    "157.85",
+                    "168.26",
+                    "178.66"
+                ],
+                "Low Plunge DMG": [
+                    "149.14",
+                    "161.28",
+                    "173.42",
+                    "190.77",
+                    "202.91",
+                    "216.78",
+                    "235.86",
+                    "254.93",
+                    "274.01",
+                    "294.82",
+                    "315.63",
+                    "336.44",
+                    "357.25"
+                ],
+                "High Plunge DMG": [
+                    "186.29",
+                    "201.45",
+                    "216.62",
+                    "238.28",
+                    "253.44",
+                    "270.77",
+                    "294.6",
+                    "318.42",
+                    "342.25",
+                    "368.25",
+                    "394.24",
+                    "420.23",
+                    "446.23"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Pressurized_Floe.png",
+            "talentName": "Pressurized Floe",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nPerforms an upward thrust that deals Cryo DMG and causes Freminet to enter Pers Timer for 10s.\nWhile Pers Timer is active, his Elemental Skill will turn into Shattering Pressure.\n\nShattering Pressure\nExecutes different sorts of attacks based on the Pressure Level of Pers Timer, and then cancels Pers Timer.\nLevel 0: Unleashes a vertical cut, dealing Cryo DMG.\nLevels 1 to 3: Unleashes a vertical cut alongside Pers, dealing Cryo DMG and Physical DMG. DMG dealt scales based on Pressure Level.\nLevel 4: Borrows the power of a fully-pressurized Pers to deal Physical DMG. Meanwhile, Normal Attack: Flowing Eddies will be replaced by Shattering Pressure.\n\nPers Timer\nWhen Freminet uses Normal Attacks, he will also unleash waves of frost that deal Cryo DMG and increase Pers's Pressure Level.\nThe accompanying Cryo DMG dealt this way is considered Elemental Skill DMG.\n\nArkhe: Pneuma\nAt certain intervals, after using the upward thrust, a Spiritbreath Thorn in the form of another upward thrust will be created, dealing Pneuma-aligned Cryo DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Pressurized_Floe_Preview.gif",
+                    "caption": "Upward Thrust and Spiritbreath Thorn"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Pressurized_Floe_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Pressurized_Floe_Shattering_Pressure_1_Preview.gif",
+                    "caption": "Level 0 Shattering Pressure"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Pressurized_Floe_Shattering_Pressure_2_Preview.gif",
+                    "caption": "Level 1–3 Shattering Pressure"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Pressurized_Floe_Shattering_Pressure_3_Preview.gif",
+                    "caption": "Level 4 Shattering Pressure"
+                }
+            ],
+            "scaling": {
+                "Upward Thrust DMG": [
+                    "83.04",
+                    "89.27",
+                    "95.5",
+                    "103.8",
+                    "110.03",
+                    "116.26",
+                    "124.56",
+                    "132.86",
+                    "141.17",
+                    "149.47",
+                    "157.78",
+                    "166.08",
+                    "176.46"
+                ],
+                "Frost DMG": [
+                    "7.16",
+                    "7.7",
+                    "8.23",
+                    "8.95",
+                    "9.49",
+                    "10.02",
+                    "10.74",
+                    "11.46",
+                    "12.17",
+                    "12.89",
+                    "13.6",
+                    "14.32",
+                    "15.22"
+                ],
+                "Level 0 Shattering Pressure DMG": [
+                    "200.48",
+                    "215.52",
+                    "230.55",
+                    "250.6",
+                    "265.64",
+                    "280.67",
+                    "300.72",
+                    "320.77",
+                    "340.82",
+                    "360.86",
+                    "380.91",
+                    "400.96",
+                    "426.02"
+                ],
+                "Level 1 Shattering Pressure DMG (% Cryo + % Physical)": [
+                    "100.24\n+\n48.69",
+                    "107.76\n+\n52.34",
+                    "115.28\n+\n55.99",
+                    "125.3\n+\n60.86",
+                    "132.82\n+\n64.51",
+                    "140.34\n+\n68.16",
+                    "150.36\n+\n73.03",
+                    "160.38\n+\n77.9",
+                    "170.41\n+\n82.77",
+                    "180.43\n+\n87.64",
+                    "190.46\n+\n92.51",
+                    "200.48\n+\n97.38",
+                    "213.01\n+\n103.46"
+                ],
+                "Level 2 Shattering Pressure DMG (% Cryo + % Physical)": [
+                    "70.17\n+\n85.2",
+                    "75.43\n+\n91.59",
+                    "80.69\n+\n97.98",
+                    "87.71\n+\n106.51",
+                    "92.97\n+\n112.9",
+                    "98.24\n+\n119.29",
+                    "105.25\n+\n127.81",
+                    "112.27\n+\n136.33",
+                    "119.29\n+\n144.85",
+                    "126.3\n+\n153.37",
+                    "133.32\n+\n161.89",
+                    "140.34\n+\n170.41",
+                    "149.11\n+\n181.06"
+                ],
+                "Level 3 Shattering Pressure DMG (% Cryo + % Physical)": [
+                    "40.1\n+\n121.72",
+                    "43.1\n+\n130.85",
+                    "46.11\n+\n139.98",
+                    "50.12\n+\n152.15",
+                    "53.13\n+\n161.28",
+                    "56.13\n+\n170.41",
+                    "60.14\n+\n182.58",
+                    "64.15\n+\n194.75",
+                    "68.16\n+\n206.92",
+                    "72.17\n+\n219.1",
+                    "76.18\n+\n231.27",
+                    "80.19\n+\n243.44",
+                    "85.2\n+\n258.65"
+                ],
+                "Level 4 Shattering Pressure DMG": [
+                    "243.44",
+                    "261.7",
+                    "279.96",
+                    "304.3",
+                    "322.56",
+                    "340.82",
+                    "365.16",
+                    "389.5",
+                    "413.85",
+                    "438.19",
+                    "462.54",
+                    "486.88",
+                    "517.31"
+                ],
+                "Spiritbreath Thorn DMG": [
+                    "14.4",
+                    "15.48",
+                    "16.56",
+                    "18",
+                    "19.08",
+                    "20.16",
+                    "21.6",
+                    "23.04",
+                    "24.48",
+                    "25.92",
+                    "27.36",
+                    "28.8",
+                    "30.6"
+                ],
+                "Spiritbreath Thorn Interval": [
+                    "9s"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Talent_Shadowhunter%27s_Ambush.png",
+            "talentName": "Shadowhunter's Ambush",
+            "talentType": "Elemental Burst",
+            "description": "Description\nAdvanced Properties\nAttribute Scaling\nPreview\nUnleashes a wave of untouchable cold, dealing AoE Cryo DMG, resetting the CD of the Elemental Skill \"Pressurized Floe,\" and causing Freminet to enter the Subnautical Hunter mode for 10s.\n\nWhile in Subnautical Hunter mode, Freminet's resistance to interruption will increase, and his Elemental Skill \"Pressurized Floe\" will obtain the following buffs:\nCD is decreased by 70%.\nNormal Attacks will increase the Pers Timer by 1 additional Pressure Level, and the frost released by his Normal Attacks deal 200% of their original DMG.\n\nThese effects will be canceled when Freminet leaves the field.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Shadowhunter%27s_Ambush_Preview.gif",
+                    "caption": "Activation"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Shadowhunter%27s_Ambush_Preview_2.gif",
+                    "caption": "Elemental Skill"
+                }
+            ],
+            "scaling": {
+                "Skill DMG": [
+                    "318.4",
+                    "342.28",
+                    "366.16",
+                    "398",
+                    "421.88",
+                    "445.76",
+                    "477.6",
+                    "509.44",
+                    "541.28",
+                    "573.12"
+                ],
+                "Duration": [
+                    "10s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Talent_Saturation_Deep_Dive.png",
+            "talentName": "Saturation Deep Dive",
+            "talentType": "1st Ascension Passive",
+            "description": "When Freminet unleashes Pressurized Floe: Shattering Pressure, if Pers Timer has yet to reach Pressure Level 4, the CD of Pressurized Floe will be decreased by 1s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Parallel_Condensers.png",
+            "talentName": "Parallel Condensers",
+            "talentType": "4th Ascension Passive",
+            "description": "When Freminet triggers Shatter against opponents, the DMG dealt by Pressurized Floe: Shattering Pressure will be increased by 40% for 5s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Talent_Deepwater_Navigation.png",
+            "talentName": "Deepwater Navigation",
+            "talentType": "Utility Passive",
+            "description": "Decreases Aquatic Stamina consumption for your own party members by 35%.\nNot stackable with Passive Talents that provide the exact same effects.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Constellation_Dreams_of_the_Foamy_Deep.png",
+            "name": "Dreams of the Foamy Deep",
+            "level": 1,
+            "description": "The CRIT Rate of Pressurized Floe: Shattering Pressure will be increased by 15%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Constellation_Penguins_and_the_Land_of_Plenty.png",
+            "name": "Penguins and the Land of Plenty",
+            "level": 2,
+            "description": "Unleashing Pressurized Floe: Shattering Pressure will restore 2 Energy to Freminet. If a Pressure Level 4 Shattering Pressure is unleashed, this will restore 3 Energy."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Constellation_Song_of_the_Eddies_and_Bleached_Sands.png",
+            "name": "Song of the Eddies and Bleached Sands",
+            "level": 3,
+            "description": "Increases the Level of Normal Attack: Flowing Eddies by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Constellation_Dance_of_the_Snowy_Moon_and_Flute.png",
+            "name": "Dance of the Snowy Moon and Flute",
+            "level": 4,
+            "description": "After Freminet triggers Frozen, Shatter, or Superconduct against opponents, his ATK will be increased by 9% for 6s. Max 2 stacks. This can be triggered once every 0.3s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Constellation_Nights_of_Hearth_and_Happiness.png",
+            "name": "Nights of Hearth and Happiness",
+            "level": 5,
+            "description": "Increases the Level of Pressurized Floe by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Constellation_Moment_of_Waking_and_Resolve.png",
+            "name": "Moment of Waking and Resolve",
+            "level": 6,
+            "description": "After Freminet triggers Frozen, Shatter, or Superconduct against opponents, his CRIT DMG will be increased by 12% for 6s. Max 3 stacks. This can be triggered once every 0.3s."
+        }
+    ],
+    "imageUrls": {},
+    "version": "4.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Idle_Freminet_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Idle_Freminet_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Idle_Freminet_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Idle_Freminet_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Talent_Menu_Freminet.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Talent_Menu_Freminet.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Weapon_Menu_Freminet.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Weapon_Menu_Freminet.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Party_Setup_Freminet.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Party_Setup_Freminet.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Namecard_Background_Freminet_Progress.png",
+                "caption": "Freminet: Progress Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Freminet_Progress.png",
+                "caption": "Freminet: Progress Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Namecard_Banner_Freminet_Progress.png",
+                "caption": "Freminet: Progress Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Flowing_Eddies_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Flowing_Eddies_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Flowing_Eddies_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Flowing_Eddies_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Flowing_Eddies_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Flowing_Eddies_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Shadowhunter%27s_Ambush_Preview.gif",
+                        "caption": "Activation",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Shadowhunter%27s_Ambush_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Shadowhunter%27s_Ambush_Preview_2.gif",
+                        "caption": "Elemental Skill",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Shadowhunter%27s_Ambush_Preview_2.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Pressurized_Floe_Preview.gif",
+                        "caption": "Upward Thrust and Spiritbreath Thorn",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Pressurized_Floe_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Pressurized_Floe_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Pressurized_Floe_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Pressurized_Floe_Shattering_Pressure_1_Preview.gif",
+                        "caption": "Level 0 Shattering Pressure",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Pressurized_Floe_Shattering_Pressure_1_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Pressurized_Floe_Shattering_Pressure_2_Preview.gif",
+                        "caption": "Level 1–3 Shattering Pressure",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Pressurized_Floe_Shattering_Pressure_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Pressurized_Floe_Shattering_Pressure_3_Preview.gif",
+                        "caption": "Level 4 Shattering Pressure",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Pressurized_Floe_Shattering_Pressure_3_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Freminet_Character_Details_1.png",
+                "caption": "Freminet Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Freminet_Character_Details_2.png",
+                "caption": "Freminet Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Freminet_Character_Details_3.gif",
+                "caption": "Freminet Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Freminet_Character_Details_4.gif",
+                "caption": "Freminet Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Freminet_Character_Details_5.gif",
+                "caption": "Freminet Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Freminet_Character_Details_6.gif",
+                "caption": "Freminet Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Freminet_Character_Details_7.gif",
+                "caption": "Freminet Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Freminet_Character_Details_8.png",
+                "caption": "Freminet Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Freminet_Character_Details_9.png",
+                "caption": "Freminet Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Freminet_Character_Details_10.png",
+                "caption": "Freminet Details 10"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Icon_Emoji_Paimon%27s_Paintings_26_Freminet_1.png",
+                "caption": "Lurking Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Icon_Emoji_Paimon%27s_Paintings_26_Freminet_2.png",
+                "caption": "Popping in Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Icon_Emoji_Paimon%27s_Paintings_26_Freminet_3.png",
+                "caption": "Alert Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Icon_Emoji_Paimon%27s_Paintings_26_Freminet_4.png",
+                "caption": "Hobby Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Icon_Emoji_Paimon%27s_Paintings_28_Freminet_1.png",
+                "caption": "Don't Look! Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Icon_Emoji_Paimon%27s_Paintings_28_Freminet_2.png",
+                "caption": "How Awkward Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Icon_Emoji_Paimon%27s_Paintings_32_Freminet_1.png",
+                "caption": "Holding back tears Set 32"
+            }
+        ]
+    }
+}

@@ -1,0 +1,548 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Xianyun_Icon.png",
+    "name": "Xianyun",
+    "rarity": "5 Stars",
+    "element": "Anemo",
+    "weaponType": "Catalyst",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "modelType": "Tall Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png",
+            "talentName": "Word of Wind and Flower",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nSummons swirling winds to perform up to 4 attacks, dealing Anemo DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina and launches a Breeze Bolt in a straight line that deals Anemo DMG to opponents along its path.\n\nPlunging Attack\nGathers the power of Anemo and plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Anemo DMG upon impact with the ground.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Word_of_Wind_and_Flower_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Word_of_Wind_and_Flower_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Word_of_Wind_and_Flower_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "40.3",
+                    "43.33",
+                    "46.35",
+                    "50.38",
+                    "53.4",
+                    "56.42",
+                    "60.45",
+                    "64.48",
+                    "68.51",
+                    "72.54",
+                    "76.57"
+                ],
+                "2-Hit DMG (%)": [
+                    "38.86",
+                    "41.77",
+                    "44.68",
+                    "48.57",
+                    "51.48",
+                    "54.4",
+                    "58.28",
+                    "62.17",
+                    "66.05",
+                    "69.94",
+                    "73.82"
+                ],
+                "3-Hit DMG (%)": [
+                    "48.88",
+                    "52.54",
+                    "56.21",
+                    "61.1",
+                    "64.76",
+                    "68.43",
+                    "73.32",
+                    "78.2",
+                    "83.09",
+                    "87.98",
+                    "92.87"
+                ],
+                "4-Hit DMG (%)": [
+                    "64.92",
+                    "69.79",
+                    "74.65",
+                    "81.15",
+                    "86.01",
+                    "90.88",
+                    "97.38",
+                    "103.87",
+                    "110.36",
+                    "116.85",
+                    "123.34"
+                ],
+                "Charged Attack DMG (%)": [
+                    "123.12",
+                    "132.35",
+                    "141.59",
+                    "153.9",
+                    "163.13",
+                    "172.37",
+                    "184.68",
+                    "196.99",
+                    "209.3",
+                    "221.62",
+                    "233.93"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "50"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.16",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Talent_White_Clouds_at_Dawn.png",
+            "talentName": "White Clouds at Dawn",
+            "talentType": "Elemental Skill",
+            "description": "Xianyun enters the Cloud Transmogrification state, in which she will not take Fall DMG, and uses Skyladder once.\nIn this state, her Plunging Attack will be converted into Driftcloud Wave instead, which deals AoE Anemo DMG and ends the Cloud Transmogrification state. This DMG is considered Plunging Attack DMG.\nEach use of Skyladder while in this state increases the DMG and AoE of the next Driftcloud Wave used.\n\nSkyladder\nCan be used while in mid-air. Xianyun leaps forward, dealing Anemo DMG to targets along her path.\nDuring each Cloud Transmogrification state Xianyun enters, Skyladder may be used up to 3 times and only 1 instance of Skyladder DMG can be dealt to any one opponent.\nIf Skyladder is not used again in a short period, the Cloud Transmogrification state will be canceled.\n\nIf Xianyun does not use Driftcloud Wave while in this state, the next CD of White Clouds at Dawn will be decreased by 3s.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/White_Clouds_at_Dawn_Preview.gif",
+                    "caption": "White Clouds at Dawn and Skyladders"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/White_Clouds_at_Dawn_Preview_2.gif",
+                    "caption": "White Clouds at Dawn and Skyladders (Chained)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/White_Clouds_at_Dawn_Driftcloud_Wave_1_Preview.gif",
+                    "caption": "Driftcloud Wave Lv. 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/White_Clouds_at_Dawn_Driftcloud_Wave_2_Preview.gif",
+                    "caption": "Driftcloud Wave Lv. 2"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/White_Clouds_at_Dawn_Driftcloud_Wave_3_Preview.gif",
+                    "caption": "Driftcloud Wave Lv. 3"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/White_Clouds_at_Dawn_Lock_On_Preview.gif",
+                    "caption": "Driftcloud Wave Lock On Effect"
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "24.8",
+                    "26.66",
+                    "28.52",
+                    "31",
+                    "32.86",
+                    "34.72",
+                    "37.2",
+                    "39.68",
+                    "42.16",
+                    "44.64",
+                    "47.12",
+                    "49.6",
+                    "52.7"
+                ],
+                "Driftcloud Wave DMG (%)": [
+                    "116\n/\n148\n/\n337.6",
+                    "124.7\n/\n159.1\n/\n362.92",
+                    "133.4\n/\n170.2\n/\n388.24",
+                    "145\n/\n185\n/\n422",
+                    "153.7\n/\n196.1\n/\n447.32",
+                    "162.4\n/\n207.2\n/\n472.64",
+                    "174\n/\n222\n/\n506.4",
+                    "185.6\n/\n236.8\n/\n540.16",
+                    "197.2\n/\n251.6\n/\n573.92",
+                    "208.8\n/\n266.4\n/\n607.68",
+                    "220.4\n/\n281.2\n/\n641.44",
+                    "232\n/\n296\n/\n675.2",
+                    "246.5\n/\n314.5\n/\n717.4"
+                ],
+                "CD": [
+                    "12s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Stars_Gather_at_Dusk.png",
+            "talentName": "Stars Gather at Dusk",
+            "talentType": "Elemental Burst",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nBrings forth a sacred breeze that deals AoE Anemo DMG and heals all nearby characters based on Xianyun's ATK. It will also summon the \"Starwicker\" mechanism.\n\nStarwicker\nContinuously follows the active character and periodically heals all nearby party members based on Xianyun's ATK.\nStarts with 8 stacks of Adeptal Assistance. While Adeptal Assistance is active, nearby active characters in the party will have their jump height increased.\nWhen the active character completes a Plunging Attack, Starwicker will consume 1 stack of Adeptal Assistance and deal AoE Anemo DMG.\nOnly 1 Starwicker can exist simultaneously.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Stars_Gather_at_Dusk_Preview.gif",
+                    "caption": ""
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Stars_Gather_at_Dusk_Starwicker_Preview.gif",
+                    "caption": "Starwicker"
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "108",
+                    "116.1",
+                    "124.2",
+                    "135",
+                    "143.1",
+                    "151.2",
+                    "162",
+                    "172.8",
+                    "183.6",
+                    "194.4",
+                    "205.2",
+                    "216",
+                    "229.5"
+                ],
+                "Starwicker DMG (%)": [
+                    "39.2",
+                    "42.14",
+                    "45.08",
+                    "49",
+                    "51.94",
+                    "54.88",
+                    "58.8",
+                    "62.72",
+                    "66.64",
+                    "70.56",
+                    "74.48",
+                    "78.4",
+                    "83.3"
+                ],
+                "Healing": [
+                    "92.16% ATK\n+\n578",
+                    "99.07% ATK\n+\n636",
+                    "105.98% ATK\n+\n698",
+                    "115.2% ATK\n+\n766",
+                    "122.11% ATK\n+\n838",
+                    "129.02% ATK\n+\n915",
+                    "138.24% ATK\n+\n997",
+                    "147.46% ATK\n+\n1083",
+                    "156.67% ATK\n+\n1175",
+                    "165.89% ATK\n+\n1271",
+                    "175.1% ATK\n+\n1372",
+                    "184.32% ATK\n+\n1478",
+                    "195.84% ATK\n+\n1589"
+                ],
+                "Continuous Healing": [
+                    "43.01% ATK\n+\n270",
+                    "46.23% ATK\n+\n297",
+                    "49.46% ATK\n+\n326",
+                    "53.76% ATK\n+\n357",
+                    "56.99% ATK\n+\n391",
+                    "60.21% ATK\n+\n427",
+                    "64.51% ATK\n+\n465",
+                    "68.81% ATK\n+\n506",
+                    "73.11% ATK\n+\n548",
+                    "77.41% ATK\n+\n593",
+                    "81.72% ATK\n+\n640",
+                    "86.02% ATK\n+\n690",
+                    "91.39% ATK\n+\n742"
+                ],
+                "Duration": [
+                    "16s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Talent_Galefeather_Pursuit.png",
+            "talentName": "Galefeather Pursuit",
+            "talentType": "1st Ascension Passive",
+            "description": "Each opponent hit by Driftcloud Waves from White Clouds at Dawn will grant all nearby party members 1 stack of Storm Pinion for 20s. Max 4 stacks. These will cause the characters' Plunging Attack CRIT Rate to increase by 4%/6%/8%/10% respectively.\nEach Storm Pinion created by hitting an opponent has an independent duration.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Consider%2C_the_Adeptus_in_Her_Realm.png",
+            "talentName": "Consider, the Adeptus in Her Realm",
+            "talentType": "4th Ascension Passive",
+            "description": "When the Starwicker created by Stars Gather at Dusk has Adeptal Assistance stacks, nearby active characters' Plunging Attack shockwave DMG will be increased by 200% of Xianyun's ATK. The maximum DMG increase that can be achieved this way is 9,000.\nEach Plunging Attack shockwave DMG instance can only apply this increased DMG effect to a single opponent. Each character can trigger this effect once every 0.4s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Talent_Crane_Form.png",
+            "talentName": "Crane Form",
+            "talentType": "Utility Passive",
+            "description": "Increases gliding SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Constellation_Purifying_Wind.png",
+            "name": "Purifying Wind",
+            "level": 1,
+            "description": "White Clouds at Dawn gains 1 additional charge."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Constellation_Aloof_From_the_World.png",
+            "name": "Aloof From the World",
+            "level": 2,
+            "description": "Description\nPreview\nAfter using a Skyladder from White Clouds at Dawn, Xianyun's ATK will be increased by 20% for 15s.\nAdditionally, the effects of the Ascension Talent \"Consider, the Adeptus in Her Realm\" will be enhanced: When the Starwicker created by Stars Gather at Dusk has Adeptal Assistance stacks, nearby active characters' Plunging Attack shockwave DMG will be increased by 400% of Xianyun's ATK. The maximum DMG increase that can be achieved this way is 18,000.\nEach Plunging Attack shockwave DMG instance can only apply this increased DMG effect to a single opponent. Each character can trigger this effect once every 0.4s.\nYou must first unlock the Ascension Talent \"Consider, the Adeptus in Her Realm.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Constellation_Creations_of_Star_and_Moon.png",
+            "name": "Creations of Star and Moon",
+            "level": 3,
+            "description": "Increases the Level of Stars Gather at Dusk by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Constellation_Mystery_Millet_Gourmet.png",
+            "name": "Mystery Millet Gourmet",
+            "level": 4,
+            "description": "After using Skyladder 1/2/3 times during one White Clouds at Dawn Cloud Transmogrification state, when a Driftcloud Wave unleashed during that instance hits an opponent, it will heal all nearby party members for 50%/80%/150% of Xianyun's ATK. This effect can be triggered once every 5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Constellation_Astride_Rose-Colored_Clouds.png",
+            "name": "Astride Rose-Colored Clouds",
+            "level": 5,
+            "description": "Increases the Level of White Clouds at Dawn by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Constellation_They_Call_Her_Cloud_Retainer.png",
+            "name": "They Call Her Cloud Retainer",
+            "level": 6,
+            "description": "After Xianyun uses 1/2/3 Skyladders within one Cloud Transmogrification caused by White Clouds at Dawn, the CRIT DMG of a Driftcloud Wave created in this instance of Cloud Transmogrification will be increased by 15%/35%/70%.\nWithin 16s after Xianyun has used Stars Gather at Dusk, White Clouds at Dawn will not enter CD. This effect will be canceled once she has used White Clouds at Dawn 8 times."
+        }
+    ],
+    "imageUrls": {},
+    "version": "4.4",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Idle_Xianyun_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Idle_Xianyun_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Idle_Xianyun_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Idle_Xianyun_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Talent_Menu_Xianyun.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Talent_Menu_Xianyun.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Weapon_Menu_Xianyun.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Weapon_Menu_Xianyun.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Party_Setup_Xianyun.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Party_Setup_Xianyun.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Namecard_Background_Xianyun_White_Clouds.png",
+                "caption": "Xianyun: White Clouds Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Item_Xianyun_White_Clouds.png",
+                "caption": "Xianyun: White Clouds Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Namecard_Banner_Xianyun_White_Clouds.png",
+                "caption": "Xianyun: White Clouds Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Word_of_Wind_and_Flower_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Word_of_Wind_and_Flower_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Word_of_Wind_and_Flower_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Word_of_Wind_and_Flower_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Word_of_Wind_and_Flower_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Word_of_Wind_and_Flower_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Stars_Gather_at_Dusk_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Stars_Gather_at_Dusk_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Stars_Gather_at_Dusk_Starwicker_Preview.gif",
+                        "caption": "Starwicker",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Stars_Gather_at_Dusk_Starwicker_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/White_Clouds_at_Dawn_Preview.gif",
+                        "caption": "White Clouds at Dawn and Skyladders",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/White_Clouds_at_Dawn_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/White_Clouds_at_Dawn_Preview_2.gif",
+                        "caption": "White Clouds at Dawn and Skyladders (Chained)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/White_Clouds_at_Dawn_Preview_2.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/White_Clouds_at_Dawn_Driftcloud_Wave_1_Preview.gif",
+                        "caption": "Driftcloud Wave Lv. 1",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/White_Clouds_at_Dawn_Driftcloud_Wave_1_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/White_Clouds_at_Dawn_Driftcloud_Wave_2_Preview.gif",
+                        "caption": "Driftcloud Wave Lv. 2",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/White_Clouds_at_Dawn_Driftcloud_Wave_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/White_Clouds_at_Dawn_Driftcloud_Wave_3_Preview.gif",
+                        "caption": "Driftcloud Wave Lv. 3",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/White_Clouds_at_Dawn_Driftcloud_Wave_3_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/White_Clouds_at_Dawn_Lock_On_Preview.gif",
+                        "caption": "Driftcloud Wave Lock On Effect",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/White_Clouds_at_Dawn_Lock_On_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Xianyun_Character_Details_1.png",
+                "caption": "Xianyun Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Xianyun_Character_Details_2.png",
+                "caption": "Xianyun Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Xianyun_Character_Details_3.gif",
+                "caption": "Xianyun Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Xianyun_Character_Details_4.gif",
+                "caption": "Xianyun Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Xianyun_Character_Details_5.gif",
+                "caption": "Xianyun Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Xianyun_Character_Details_6.png",
+                "caption": "Xianyun Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Xianyun_Character_Details_7.png",
+                "caption": "Xianyun Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Xianyun_Character_Details_8.png",
+                "caption": "Xianyun Details 8"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Icon_Emoji_Paimon%27s_Paintings_30_Xianyun_1.png",
+                "caption": "Adeptal Greeting Set 30"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Icon_Emoji_Paimon%27s_Paintings_30_Xianyun_2.png",
+                "caption": "Confident Bird Set 30"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Icon_Emoji_Paimon%27s_Paintings_30_Xianyun_3.png",
+                "caption": "Stay Calm Set 30"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Icon_Emoji_Paimon%27s_Paintings_30_Xianyun_4.png",
+                "caption": "A Healthy, Loving Family Set 30"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Icon_Emoji_Paimon%27s_Paintings_39_Xianyun.png",
+                "caption": "Locating.... Set 39"
+            }
+        ]
+    }
+}

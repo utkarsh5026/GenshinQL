@@ -1,4 +1,6 @@
-import { getCurrentDay } from "@/utils/day";
+import type { WeaponMaterialSchedule } from '@/types';
+import { getCurrentDay } from '@/utils/day';
+
 import {
   Table,
   TableBody,
@@ -6,10 +8,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../ui/table";
-import type { WeaponMaterialSchedule } from "@/graphql/types";
-import WeaponShowCase from "./WeaponShowCase";
-import AvatarWithSkeleton from "../utils/AvatarWithSkeleton";
+} from '../ui/table';
+import AvatarWithSkeleton from '../utils/AvatarWithSkeleton';
+import WeaponShowCase from './WeaponShowCase';
 
 interface ScheduleTableProps {
   schedule: WeaponMaterialSchedule;
@@ -32,23 +33,22 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({ schedule }) => {
   const { materials } = schedule;
   const today = getCurrentDay();
 
-  // Reorder materials to have today first, or Sunday if today is not found
   const reorderedMaterials = [...materials];
   const todayIndex = reorderedMaterials.findIndex((material) =>
     material.day.toLowerCase().includes(today.toLowerCase())
   );
 
-  if (todayIndex !== -1) {
-    const [todayMaterial] = reorderedMaterials.splice(todayIndex, 1);
-    reorderedMaterials.unshift(todayMaterial);
-  } else {
+  if (todayIndex === -1) {
     const sundayIndex = reorderedMaterials.findIndex(
-      (material) => material.day.toLowerCase() === "sunday"
+      (material) => material.day.toLowerCase() === 'sunday'
     );
     if (sundayIndex !== -1) {
       const [sundayMaterial] = reorderedMaterials.splice(sundayIndex, 1);
       reorderedMaterials.unshift(sundayMaterial);
     }
+  } else {
+    const [todayMaterial] = reorderedMaterials.splice(todayIndex, 1);
+    reorderedMaterials.unshift(todayMaterial);
   }
 
   return (
@@ -66,15 +66,15 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({ schedule }) => {
             key={material.day}
             className={`${
               material.day.toLowerCase().includes(today.toLowerCase())
-                ? "bg-green-950 hover:bg-green-950"
-                : ""
+                ? 'bg-green-950 hover:bg-green-950'
+                : ''
             }`}
           >
             <TableCell className="font-medium text-left">
               {`${material.day} ${
                 material.day.toLowerCase().includes(today.toLowerCase())
-                  ? "(Today)"
-                  : ""
+                  ? '(Today)'
+                  : ''
               }`}
             </TableCell>
             <TableCell>

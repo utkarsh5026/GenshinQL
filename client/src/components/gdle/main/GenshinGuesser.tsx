@@ -1,17 +1,14 @@
-import React from "react";
-import CharacterGuesser from "../characters/CharacterGuesser";
-import { useCharacters } from "@/redux/hook/characters";
+import React from 'react';
+
+import { useCharactersStore } from '@/stores';
+
+import CharacterGuesser from '../characters/CharacterGuesser';
 
 const GenshinGuesser: React.FC = () => {
-  const { characters } = useCharacters();
+  const { characters } = useCharactersStore();
 
   if (characters.length === 0) return null;
-  return (
-    <CharacterGuesser
-      selectedCharacter={characters[0]}
-      characters={characters}
-    />
-  );
+  return <CharacterGuesser />;
 };
 
 export default GenshinGuesser;

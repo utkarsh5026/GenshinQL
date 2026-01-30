@@ -1,11 +1,14 @@
-import React from "react";
-import SearchBar from "@/components/utils/SearchBar";
-import GuessTable from "./GuessTable";
-import type { Character } from "@/graphql/types";
-import Confetti from "react-confetti";
-import { Card, CardContent } from "@/components/ui/card";
-import { useCharacters } from "@/redux/hook/characters";
-import useGenshinGuesser from "@/redux/hook/genshin-guesser";
+import { motion } from 'framer-motion';
+import React from 'react';
+import Confetti from 'react-confetti';
+
+import { Card, CardContent } from '@/components/ui/card';
+import SearchBar from '@/components/utils/SearchBar';
+import { cn } from '@/lib/utils';
+import { useCharactersStore, useGenshinGuesserStore } from '@/stores';
+import type { Character } from '@/types';
+
+import GuessTable from './GuessTable';
 
 interface GuessSearchTableProps {
   selectedCharacter: Character;
@@ -24,47 +27,55 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
   selectedCharacter,
   onGuess,
 }) => {
-  const { characters, characterMap } = useCharacters();
-  const { guessedChars, gameWon, gameOver } = useGenshinGuesser();
+  const { characters, characterMap } = useCharactersStore();
+  const { guessedChars, gameWon, gameOver } = useGenshinGuesserStore();
 
   const guessedCharacters = guessedChars.map((char) => characterMap[char]);
 
   return (
-    <Card className="border-none">
-      <CardContent className="p-6">
+    <Card className="border-none bg-card/95 backdrop-blur-sm">
+      <CardContent className="p-8 space-y-6">
         {gameWon && (
           <Confetti
             width={window.innerWidth}
             height={window.innerHeight}
-            numberOfPieces={200}
-            recycle={true}
+            numberOfPieces={300}
+            recycle={false}
+            gravity={0.3}
+            colors={['#fbbf24', '#a855f7', '#22c55e']}
           />
         )}
-        <div className="flex flex-col gap-4">
-          {gameOver || gameWon ? (
-            <div
-              className={`text-center text-xl font-bold ${
-                gameWon ? "text-green-700" : "text-red-700"
-              }`}
-            >
-              {gameWon ? "You guessed it correctly! 🎉" : "You lost! 🥺"}
-            </div>
-          ) : (
-            <SearchBar
-              items={characters.map((character) => ({
-                name: character.name,
-                iconUrl: character.iconUrl,
-              }))}
-              onItemSelect={(item) => {
-                onGuess(characterMap[item.name]);
-              }}
-            />
-          )}
-          <GuessTable
-            characters={guessedCharacters}
-            correctCharacter={selectedCharacter}
+
+        {gameOver || gameWon ? (
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className={cn(
+              'text-center py-4 px-6 rounded-xl text-xl font-bold border-2',
+              gameWon
+                ? 'text-game-correct border-game-correct bg-game-correct/10'
+                : 'text-game-wrong border-game-wrong bg-game-wrong/10'
+            )}
+          >
+            {gameWon ? 'Perfect! You guessed it! 🎉' : 'Game Over! 🥺'}
+          </motion.div>
+        ) : (
+          <SearchBar
+            items={characters.map((character) => ({
+              name: character.name,
+              iconUrl: character.iconUrl,
+            }))}
+            onItemSelect={(item) => {
+              onGuess(characterMap[item.name]);
+            }}
           />
-        </div>
+        )}
+
+        <GuessTable
+          characters={guessedCharacters}
+          correctCharacter={selectedCharacter}
+        />
       </CardContent>
     </Card>
   );

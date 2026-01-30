@@ -1,0 +1,519 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Columbina_Icon.png",
+    "name": "Columbina",
+    "rarity": "5 Stars",
+    "element": "Hydro",
+    "weaponType": "Catalyst",
+    "region": "Nod-Krai",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
+    "modelType": "Unknown",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png",
+            "talentName": "Moondew Cascade",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nSummons Moonlit Tides, performing up to 3 attacks that deal Hydro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina to deal AoE Hydro DMG after a short casting time.\nIf you have at least 1 Verdant Dew\n\n, Columbina's Charged Attacks will be replaced with the special Charged Attack Moondew Cleanse, which will not consume Stamina: Consume 1 Verdant Dew to deal 3 instances of AoE Dendro DMG to opponents in front. This DMG is considered Lunar-Bloom DMG.\n\nPlunging Attack\nPlunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Hydro DMG upon impact with the ground.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Moondew_Cascade_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Moondew_Cascade_Moondew_Cleanse_Preview.gif",
+                    "caption": "Special Charged Attack: Moondew Cleanse"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "46.79",
+                    "50.3",
+                    "53.81",
+                    "58.49",
+                    "62",
+                    "65.51",
+                    "70.19",
+                    "74.87",
+                    "79.55",
+                    "84.23",
+                    "88.9"
+                ],
+                "2-Hit DMG (%)": [
+                    "36.63",
+                    "39.37",
+                    "42.12",
+                    "45.78",
+                    "48.53",
+                    "51.28",
+                    "54.94",
+                    "58.6",
+                    "62.26",
+                    "65.93",
+                    "69.59"
+                ],
+                "3-Hit DMG (%)": [
+                    "58.48",
+                    "62.87",
+                    "67.26",
+                    "73.11",
+                    "77.49",
+                    "81.88",
+                    "87.73",
+                    "93.57",
+                    "99.42",
+                    "105.27",
+                    "111.12"
+                ],
+                "Charged Attack DMG (%)": [
+                    "116.08",
+                    "124.79",
+                    "133.49",
+                    "145.1",
+                    "153.81",
+                    "162.51",
+                    "174.12",
+                    "185.73",
+                    "197.34",
+                    "208.94",
+                    "220.55"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "50"
+                ],
+                "Moondew Cleanse DMG": [
+                    "1.51% Max HP ×3",
+                    "1.62% Max HP ×3",
+                    "1.74% Max HP ×3",
+                    "1.89% Max HP ×3",
+                    "2% Max HP ×3",
+                    "2.12% Max HP ×3",
+                    "2.27% Max HP ×3",
+                    "2.42% Max HP ×3",
+                    "2.57% Max HP ×3",
+                    "2.72% Max HP ×3",
+                    "2.87% Max HP ×3"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Eternal_Tides.png",
+            "talentName": "Eternal Tides",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nAwaken Moonbound Tides, dealing AoE Hydro DMG and summoning Gravity Ripple\n\n\n\n\n\n\n.\nGravity Ripple will follow the active character on the field, while continuously dealing AoE Hydro DMG to surrounding opponents. While Gravity Ripple is on the field, and nearby party members trigger Lunar reactions or inflict Lunar Reaction DMG, Columbina will accrue a special Gravity. Once Gravity is accumulated to its limit, different types of damage will be dealt to enemies based on the type of Lunar Reaction that has accumulated the most Gravity for Columbina.\nMoonsign: Ascendant Gleam: Gravity Ripple inflicts AoE Hydro DMG over a wider area.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Eternal_Tides_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (% Max HP)": [
+                    "16.72",
+                    "17.97",
+                    "19.23",
+                    "20.9",
+                    "22.15",
+                    "23.41",
+                    "25.08",
+                    "26.75",
+                    "28.42",
+                    "30.1",
+                    "31.77",
+                    "33.44",
+                    "35.53"
+                ],
+                "Gravity Ripple: Continuous DMG (% Max HP)": [
+                    "9.36",
+                    "10.06",
+                    "10.76",
+                    "11.7",
+                    "12.4",
+                    "13.1",
+                    "14.04",
+                    "14.98",
+                    "15.91",
+                    "16.85",
+                    "17.78",
+                    "18.72",
+                    "19.89"
+                ],
+                "Gravity Interference: Lunar-Charged DMG (% Max HP)": [
+                    "4.7",
+                    "5.06",
+                    "5.41",
+                    "5.88",
+                    "6.23",
+                    "6.59",
+                    "7.06",
+                    "7.53",
+                    "8",
+                    "8.47",
+                    "8.94",
+                    "9.41",
+                    "10"
+                ],
+                "Gravity Interference: Lunar-Bloom DMG (% Max HP)": [
+                    "1.41 ×5",
+                    "1.51 ×5",
+                    "1.62 ×5",
+                    "1.76 ×5",
+                    "1.87 ×5",
+                    "1.97 ×5",
+                    "2.11 ×5",
+                    "2.25 ×5",
+                    "2.39 ×5",
+                    "2.53 ×5",
+                    "2.68 ×5",
+                    "2.82 ×5",
+                    "2.99 ×5"
+                ],
+                "Gravity Interference: Lunar-Crystallize DMG (% Max HP)": [
+                    "8.82",
+                    "9.49",
+                    "10.15",
+                    "11.03",
+                    "11.69",
+                    "12.35",
+                    "13.24",
+                    "14.12",
+                    "15",
+                    "15.88",
+                    "16.77",
+                    "17.65",
+                    "18.75"
+                ],
+                "Gravity Limit": [
+                    "60"
+                ],
+                "Gravity Ripple Duration": [
+                    "25s"
+                ],
+                "CD": [
+                    "17s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Talent_Moonlit_Melancholy.png",
+            "talentName": "Moonlit Melancholy",
+            "talentType": "Elemental Burst",
+            "description": "Hills and tides unite under the silver light of a pristine new moon. Temporarily transforms the surrounding terrain into Lunar Domain\n\n, dealing AoE Hydro DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Moonlit_Melancholy_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (% Max HP)": [
+                    "32.24",
+                    "34.66",
+                    "37.08",
+                    "40.3",
+                    "42.72",
+                    "45.14",
+                    "48.36",
+                    "51.58",
+                    "54.81",
+                    "58.03",
+                    "61.26",
+                    "64.48",
+                    "68.51"
+                ],
+                "Lunar Reaction DMG Bonus (%)": [
+                    "13",
+                    "16",
+                    "19",
+                    "22",
+                    "25",
+                    "28",
+                    "31",
+                    "34",
+                    "37",
+                    "40",
+                    "43",
+                    "46",
+                    "49"
+                ],
+                "Lunar Domain Duration": [
+                    "20s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Lunacy%27s_Lure.png",
+            "talentName": "Lunacy's Lure",
+            "talentType": "1st Ascension Passive",
+            "description": "When triggering Gravity Interference\n\n\n\n\n\n\n, Columbina gains the Lunacy effect, increasing her CRIT Rate by 5% for 10s. This effect can be stacked up to 3 times.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Talent_Law_of_the_New_Moon.png",
+            "talentName": "Law of the New Moon",
+            "talentType": "4th Ascension Passive",
+            "description": "When characters within the Lunar Domain\n\ntrigger Lunar reactions, they will gain the following effects respectively:\nLunar-Charged: When the Thundercloud performs lightning strike(s) against a valid target, it has a 33% chance to perform an additional lightning strike.\nLunar-Bloom: When triggering Lunar-Bloom reactions, the party gains a special Moonridge Dew\n\n\n. Up to 3 Moonridge Dews can be gained every 18s.\nLunar-Crystallize: When Moondrift Harmony is triggered, every Moondrift has a 33% chance to inflict an extra attack.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Talent_Moonlight%2C_Lent_Unto_You.png",
+            "talentName": "Moonlight, Lent Unto You",
+            "talentType": "Moonsign Benediction Passive",
+            "description": "When a party member triggers an Electro-Charged, Bloom, or Hydro-Crystallize reaction, it will be converted into a Lunar-Charged, Lunar-Bloom, or Lunar-Crystallize reaction respectively. Lunar Reaction DMG inflicted by party members gain a Base DMG increase based on Columbina's Max HP. For every 1,000 points of Max HP, the Base DMG of Lunar reactions is increased by 0.2%, up to a maximum of 7%.\n\nAdditionally, when Columbina is in the party, the party's Moonsign will increase by 1 level.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Lunar_Vigil.png",
+            "talentName": "Lunar Vigil",
+            "talentType": "Utility Passive",
+            "description": "If one of your party members is incapacitated while in the Nod-Krai region, Columbina will revive this character. The amount of HP the character will have upon revival is based on Columbina's Friendship Level. This effect can occur once every 100s. This effect does not trigger in Domains, Trounce Domains, or the Spiral Abyss.\nAdditionally, Columbina appears to have a special affinity for certain animals who are influenced by kuuvahki...",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Constellation_Radiance_Over_Blossoms_and_Peaks.png",
+            "name": "Radiance Over Blossoms and Peaks",
+            "level": 1,
+            "description": "Unleashing her Elemental Skill Eternal Tides will immediately trigger an effect equivalent to the effect of Gravity Interference\n\n\n\n\n\n\n. This effect can be triggered once every 15s.\nMoonsign: Ascendant Gleam\nWhen Gravity Interference is triggered, if the Lunar reaction type that has accumulated the most Gravity for Columbina is:\nLunar-Charged: Your current active character will recover 6 Energy.\nLunar-Bloom: Your active character's interruption resistance will be increased for 8s.\nLunar-Crystallize: Summons a Rainsea Shield. The Rainsea Shield's DMG absorption is based on 12% of Columbina's Max HP, and it will absorb Hydro DMG with 250% effectiveness for 8s.\n\nAll nearby party members' Lunar Reaction DMG is elevated\nby 1.5%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Constellation_Not_in_Lone_Splendor.png",
+            "name": "Not in Lone Splendor",
+            "level": 2,
+            "description": "Rate of accumulating Gravity\n\n\n\n\n\n\nincreases by 34%.\nWhen Gravity Interference is triggered, Columbina will receive the Lunar Brilliance effect, which increases her Max HP by 40% for 8s.\nMoonsign: Ascendant Gleam:\nWhen Lunar Brilliance is active, if, during the current trigger of Gravity Interference, the Lunar reaction type that has accumulated the most Gravity for Columbina is:\nLunar-Charged: ATK of your current active character increases. Increase in ATK is equal to 1% of Columbina's Max HP.\nLunar-Bloom: Elemental Mastery of your current active character increases. Increase in Elemental Mastery is equal to 0.35% of Columbina's Max HP.\nLunar-Crystallize: DEF of your current active character increases. Increase in DEF is equal to 1% of Columbina's Max HP.\n\nAll nearby party members' Lunar Reaction DMG is elevated\nby 7%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Constellation_Dreamlike_Glow_Across_Tranquil_Waters.png",
+            "name": "Dreamlike Glow Across Tranquil Waters",
+            "level": 3,
+            "description": "Increases the Level of Elemental Skill Eternal Tides by 3.\nMaximum upgrade level is 15.\n\nAll nearby party members' Lunar Reaction DMG is elevated\nby 1.5%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Constellation_Cloudveiled_Ridges_in_Floral_Mists.png",
+            "name": "Cloudveiled Ridges in Floral Mists",
+            "level": 4,
+            "description": "When Gravity Interference\n\n\n\n\n\n\nis triggered, 4 Elemental Energy will be restored to Columbina;\nAdditionally, if the Lunar reaction type that accumulates the most Gravity for Columbina is Lunar-Charged, Lunar-Bloom, or Lunar-Crystallize, the Lunar Reaction DMG dealt by this instance of Gravity Interference is increased by 12.5%/2.5%/12.5% of Columbina's Max HP respectively. This effect can be triggered at most once every 15s.\n\nAll nearby party members' Lunar Reaction DMG is elevated\nby 1.5%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Constellation_Silence_Tending_One_Lone_Song.png",
+            "name": "Silence Tending One Lone Song",
+            "level": 5,
+            "description": "Increases the Level of Elemental Burst Moonlit Melancholy by 3.\nMaximum upgrade level is 15.\n\nAll nearby party members' Lunar Reaction DMG is elevated\nby 1.5%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Constellation_Through_Darkness_Led_by_Moonlight.png",
+            "name": "Through Darkness Led by Moonlight",
+            "level": 6,
+            "description": "For 8s after characters in the Lunar Domain\n\ntrigger a Lunar reaction, based on the elements involved in the reaction, the CRIT DMG of the corresponding Elemental DMG done by all party members is increased by 80%. The CRIT DMG-increasing effects for the same Elemental Type do not stack.\n\nAll nearby party members' Lunar Reaction DMG is elevated\nby 7%."
+        }
+    ],
+    "imageUrls": {},
+    "version": "Luna IV",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Namecard_Background_Columbina_Someday.png",
+                "caption": "Columbina: Someday Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Item_Columbina_Someday.png",
+                "caption": "Columbina: Someday Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Namecard_Banner_Columbina_Someday.png",
+                "caption": "Columbina: Someday Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Moondew_Cascade_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Moondew_Cascade_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Moondew_Cascade_Moondew_Cleanse_Preview.gif",
+                        "caption": "Special Charged Attack: Moondew Cleanse",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Moondew_Cascade_Moondew_Cleanse_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Moonlit_Melancholy_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Moonlit_Melancholy_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Eternal_Tides_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Eternal_Tides_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Columbina_Character_Details_1.png",
+                "caption": "Columbina Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Columbina_Character_Details_2.png",
+                "caption": "Columbina Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Columbina_Character_Details_3.png",
+                "caption": "Columbina Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Columbina_Character_Details_4.png",
+                "caption": "Columbina Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Columbina_Character_Details_5.gif",
+                "caption": "Columbina Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Columbina_Character_Details_6.gif",
+                "caption": "Columbina Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Columbina_Character_Details_7.gif",
+                "caption": "Columbina Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Columbina_Character_Details_8.png",
+                "caption": "Columbina Details 8"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Icon_Emoji_Paimon%27s_Paintings_44_Columbina_1.png",
+                "caption": "Comfort Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Icon_Emoji_Paimon%27s_Paintings_45_Columbina_1.png",
+                "caption": "Afternoon Tea Set 45"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Icon_Emoji_Paimon%27s_Paintings_46_Columbina_1.png",
+                "caption": "Goodbye Set 46"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Icon_Emoji_Paimon%27s_Paintings_47_Columbina_1.png",
+                "caption": "Set 47"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Icon_Emoji_Paimon%27s_Paintings_47_Columbina_2.png",
+                "caption": "Set 47"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Icon_Emoji_Paimon%27s_Paintings_47_Columbina_3.png",
+                "caption": "Set 47"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Icon_Emoji_Paimon%27s_Paintings_47_Columbina_4.png",
+                "caption": "Set 47"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Icon_Emoji_Paimon%27s_Paintings_47_Sandrone_1.png",
+                "caption": "Set 47"
+            }
+        ]
+    }
+}

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useCharacters } from "@/redux/hook/characters";
-import RoutineTable from "./RoutineTable";
-import ChipSearchBar from "@/components/utils/ChipSearchBar";
-import { useWeapons } from "@/redux/hook/weapons";
-import type { Weapon } from "@/graphql/types";
+import React, { useEffect, useState } from 'react';
+
+import ChipSearchBar from '@/components/utils/ChipSearchBar';
+import { useCharactersStore, useWeaponsStore } from '@/stores';
+import type { Weapon } from '@/types';
+
+import RoutineTable from './RoutineTable';
 /**
  * CharacterRoutine component manages the character farming routine interface.
  * It allows users to select characters and displays their talent book farming days
@@ -21,8 +22,8 @@ import type { Weapon } from "@/graphql/types";
 const CharacterRoutine: React.FC = () => {
   const [selectedCharacters, setSelectedCharacters] = useState<string[]>([]);
   const [selectedWeapons, setSelectedWeapons] = useState<Weapon[]>([]);
-  const { characters, fetchCharacters, characterMap } = useCharacters();
-  const { weapons, fetchWeapons, weaponMap } = useWeapons();
+  const { characters, fetchCharacters, characterMap } = useCharactersStore();
+  const { weapons, fetchWeapons, weaponMap } = useWeaponsStore();
 
   console.log(weapons);
 

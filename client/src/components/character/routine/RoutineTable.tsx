@@ -1,20 +1,21 @@
+import React, { useEffect, useMemo } from 'react';
+
 import {
   Table,
-  TableHead,
-  TableRow,
-  TableCell,
   TableBody,
+  TableCell,
+  TableHead,
   TableHeader,
-} from "@/components/ui/table";
-import { TalentBook } from "@/redux/slices/talent-books";
-import React, { useEffect, useMemo } from "react";
-import CharacterGrid from "../utils/CharacterGrid";
-import TalentBooksShowCase from "./TalentBooksShowCase";
-import { getCurrentDay } from "@/utils/day";
-import type { Character, Day, Weapon, WeaponMaterial } from "@/graphql/types";
-import useTalentBooks from "@/redux/hook/talent-book";
-import WeaponShowCase from "@/components/weapons/WeaponShowCase";
-import { useWeaponMaterials } from "@/redux/hook/weapon-material";
+  TableRow,
+} from '@/components/ui/table';
+import WeaponShowCase from '@/components/weapons/WeaponShowCase';
+import { type TalentBook, useTalentBooksStore } from '@/stores';
+import { useWeaponMaterialStore } from '@/stores';
+import type { Character, Day, Weapon, WeaponMaterial } from '@/types';
+import { getCurrentDay } from '@/utils/day';
+
+import CharacterGrid from '../utils/CharacterGrid';
+import TalentBooksShowCase from './TalentBooksShowCase';
 
 interface RoutineTableProps {
   characters: Character[];
@@ -47,12 +48,13 @@ type WeaponMaterialRoutine = {
  */
 const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
   const currentDay = getCurrentDay();
-  const { talentCharMap, fetchBooks } = useTalentBooks();
-  const { weaponMap } = useWeaponMaterials();
+  const { talentCharMap, fetchBooks } = useTalentBooksStore();
+  const { weaponMap, fetchWeaponMaterials } = useWeaponMaterialStore();
 
   useEffect(() => {
     fetchBooks();
-  }, [fetchBooks]);
+    fetchWeaponMaterials();
+  }, [fetchBooks, fetchWeaponMaterials]);
 
   const routines = useMemo(() => {
     const books = characters.map((char) => ({
@@ -110,7 +112,7 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
     for (const weapon of weapons) {
       const weaponMaterial = weaponMap?.[weapon.name];
       if (weaponMaterial) {
-        const [dayOne, dayTwo] = weaponMaterial.day.split(" ");
+        const [dayOne, dayTwo] = weaponMaterial.day.split(' ');
         const wepMat = {
           weapon,
           material: weaponMaterial,
@@ -152,8 +154,8 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
                 key={rout.day}
                 className={
                   rout.day === currentDay
-                    ? "bg-green-500/20 hover:bg-green-500/20"
-                    : ""
+                    ? 'bg-green-500/20 hover:bg-green-500/20'
+                    : ''
                 }
               >
                 <TableCell className="font-bold text-left py-2">

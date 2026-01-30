@@ -1,0 +1,49 @@
+# Dependencies
+node_modules
+**/node_modules
+
+# Build outputs
+dist
+build
+.next
+out
+coverage
+
+# Cache
+.cache
+.parcel-cache
+.turbo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Editor directories
+.vscode
+.idea
+
+# Generated files
+*.min.js
+*.min.css
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Data files
+*.json
+!package.json
+!tsconfig.json
+!.prettierrc
+
+# Other
+.git
+.DS_Store

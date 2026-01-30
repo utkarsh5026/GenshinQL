@@ -1,0 +1,401 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Ningguang_Icon.png",
+    "name": "Ningguang",
+    "rarity": "4 Stars",
+    "element": "Geo",
+    "weaponType": "Catalyst",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "modelType": "Tall Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Catalyst_Geo.png",
+            "talentName": "Sparkling Scatter",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nShoots gems that deal Geo DMG.\nUpon hit, this grants Ningguang 1 Star Jade.\n\nCharged Attack\nConsumes a certain amount of stamina to fire off a giant gem that deals Geo DMG.\nIf Ningguang has any Star Jades, unleashing a Charged Attack will cause the Star Jades to be fired at the enemy as well, dealing additional DMG.\n\nPlunging Attack\nGathering the might of Geo, Ningguang plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Geo DMG upon impact with the ground.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Sparkling_Scatter_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Sparkling_Scatter_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Sparkling_Scatter_Star_Jades_Preview.gif",
+                    "caption": "3 Star Jades being fired with a Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Sparkling_Scatter_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "Normal Attack DMG (%)": [
+                    "28×2",
+                    "30.1×2",
+                    "32.2×2",
+                    "35×2",
+                    "37.1×2",
+                    "39.2×2",
+                    "42×2",
+                    "44.8×2",
+                    "47.6×2",
+                    "50.4×2",
+                    "53.31×2"
+                ],
+                "Charged Attack DMG (%)": [
+                    "174.08",
+                    "187.14",
+                    "200.19",
+                    "217.6",
+                    "230.66",
+                    "243.71",
+                    "261.12",
+                    "278.53",
+                    "295.94",
+                    "313.34",
+                    "331.45"
+                ],
+                "DMG per Star Jade (%)": [
+                    "49.6",
+                    "53.32",
+                    "57.04",
+                    "62",
+                    "65.72",
+                    "69.44",
+                    "74.4",
+                    "79.36",
+                    "84.32",
+                    "89.28",
+                    "94.44"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "50"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Jade_Screen.png",
+            "talentName": "Jade Screen",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nNingguang creates a Jade Screen out of gold, obsidian and her great opulence, dealing AoE Geo DMG.\n\nJade Screen\nBlocks opponents' projectiles.\nEndurance scales based on Ningguang's Max HP.\n\nJade Screen is considered a Geo Construct and can be used to block certain attacks, but cannot be climbed. Only one Jade Screen may exist at any one time.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Jade_Screen_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Inherited HP (% Max HP)": [
+                    "50.1",
+                    "53.1",
+                    "56.1",
+                    "60",
+                    "63",
+                    "66",
+                    "69.9",
+                    "73.8",
+                    "77.7",
+                    "81.6",
+                    "85.5",
+                    "89.4",
+                    "93.3",
+                    "97.2"
+                ],
+                "Skill DMG (%)": [
+                    "230.4",
+                    "247.68",
+                    "264.96",
+                    "288",
+                    "305.28",
+                    "322.56",
+                    "345.6",
+                    "368.64",
+                    "391.68",
+                    "414.72",
+                    "437.76",
+                    "460.8",
+                    "489.6",
+                    "518"
+                ],
+                "CD": [
+                    "12s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Starshatter.png",
+            "talentName": "Starshatter",
+            "talentType": "Elemental Burst",
+            "description": "Gathering a great number of gems, Ningguang scatters them all at once, sending homing projectiles at her opponents that deal massive Geo DMG.\nIf Starshatter is cast when a Jade Screen is nearby, the Jade Screen will fire additional gem projectiles at the same time.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Starshatter_Preview.gif",
+                    "caption": ""
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Starshatter_Jade_Screen_Preview.gif",
+                    "caption": "With Jade Screen nearby"
+                }
+            ],
+            "scaling": {
+                "DMG Per Gem (%)": [
+                    "86.96",
+                    "93.48",
+                    "100",
+                    "108.7",
+                    "115.22",
+                    "121.74",
+                    "130.44",
+                    "139.14",
+                    "147.83",
+                    "156.53",
+                    "165.22",
+                    "173.92",
+                    "184.79",
+                    "196"
+                ],
+                "CD": [
+                    "12s"
+                ],
+                "Energy Cost": [
+                    "40"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Talent_Backup_Plan.png",
+            "talentName": "Backup Plan",
+            "talentType": "1st Ascension Passive",
+            "description": "When Ningguang is in possession of Star Jades, her Charged Attack does not consume Stamina.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Talent_Strategic_Reserve.png",
+            "talentName": "Strategic Reserve",
+            "talentType": "4th Ascension Passive",
+            "description": "A character that passes through the Jade Screen will gain a 12% Geo DMG Bonus for 10s.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Strategic_Reserve_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Talent_Trove_of_Marvelous_Treasures.png",
+            "talentName": "Trove of Marvelous Treasures",
+            "talentType": "Utility Passive",
+            "description": "Displays the location of nearby ore veins used in forging on the mini-map.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Constellation_Piercing_Fragments.png",
+            "name": "Piercing Fragments",
+            "level": 1,
+            "description": "Description\nGameplay Notes\nWhen a Normal Attack hits, it deals AoE DMG."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Constellation_Shock_Effect.png",
+            "name": "Shock Effect",
+            "level": 2,
+            "description": "Description\nGameplay Notes\nPreview\nWhen Jade Screen is shattered, its CD will reset.\nCan occur once every 6s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_Majesty_Be_the_Array_of_Stars.png",
+            "name": "Majesty Be the Array of Stars",
+            "level": 3,
+            "description": "Increases the Level of Starshatter by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Constellation_Exquisite_be_the_Jade%2C_Outshining_All_Beneath.png",
+            "name": "Exquisite be the Jade, Outshining All Beneath",
+            "level": 4,
+            "description": "Jade Screen increases nearby characters' Elemental RES by 10%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Constellation_Invincible_Be_the_Jade_Screen.png",
+            "name": "Invincible Be the Jade Screen",
+            "level": 5,
+            "description": "Increases the Level of Jade Screen by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Constellation_Grandeur_Be_the_Seven_Stars.png",
+            "name": "Grandeur Be the Seven Stars",
+            "level": 6,
+            "description": "Description\nGameplay Notes\nPreview\nWhen Starshatter is used, Ningguang gains 7 Star Jades."
+        }
+    ],
+    "imageUrls": {},
+    "version": "1.1",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Idle_Ningguang_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Idle_Ningguang_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Idle_Ningguang_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Idle_Ningguang_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Menu_Ningguang.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Talent_Menu_Ningguang.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Weapon_Menu_Ningguang.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Weapon_Menu_Ningguang.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Party_Setup_Ningguang.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Party_Setup_Ningguang.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Namecard_Background_Ningguang_Phoenix.png",
+                "caption": "Ningguang: Phoenix Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Ningguang_Phoenix.png",
+                "caption": "Ningguang: Phoenix Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Namecard_Banner_Ningguang_Phoenix.png",
+                "caption": "Ningguang: Phoenix Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Sparkling_Scatter_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Sparkling_Scatter_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Sparkling_Scatter_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Sparkling_Scatter_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Sparkling_Scatter_Star_Jades_Preview.gif",
+                        "caption": "3 Star Jades being fired with a Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Sparkling_Scatter_Star_Jades_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Sparkling_Scatter_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Sparkling_Scatter_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Starshatter_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Starshatter_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Starshatter_Jade_Screen_Preview.gif",
+                        "caption": "With Jade Screen nearby",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Starshatter_Jade_Screen_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Jade_Screen_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Jade_Screen_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Icon_Emoji_Paimon%27s_Paintings_12_Ningguang_1.png",
+                "caption": "A Toast! Set 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Icon_Emoji_Paimon%27s_Paintings_12_Ningguang_2.png",
+                "caption": "Confident Set 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Icon_Emoji_Paimon%27s_Paintings_21_Ningguang_1.png",
+                "caption": "Plentiful Mora Set 21"
+            }
+        ]
+    }
+}

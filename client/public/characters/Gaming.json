@@ -1,0 +1,480 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Gaming_Icon.png",
+    "name": "Gaming",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Claymore",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "modelType": "Medium Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png",
+            "talentName": "Stellar Rend",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Stellar_Rend_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Stellar_Rend_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Stellar_Rend_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "83.86",
+                    "90.68",
+                    "97.51",
+                    "107.26",
+                    "114.08",
+                    "121.88",
+                    "132.61",
+                    "143.34",
+                    "154.06",
+                    "165.76",
+                    "177.46"
+                ],
+                "2-Hit DMG (%)": [
+                    "79.04",
+                    "85.48",
+                    "91.91",
+                    "101.1",
+                    "107.54",
+                    "114.89",
+                    "125",
+                    "135.11",
+                    "145.22",
+                    "156.25",
+                    "167.28"
+                ],
+                "3-Hit DMG (%)": [
+                    "106.65",
+                    "115.33",
+                    "124.01",
+                    "136.41",
+                    "145.09",
+                    "155.01",
+                    "168.65",
+                    "182.29",
+                    "195.93",
+                    "210.81",
+                    "225.69"
+                ],
+                "4-Hit DMG (%)": [
+                    "127.95",
+                    "138.36",
+                    "148.78",
+                    "163.66",
+                    "174.07",
+                    "185.97",
+                    "202.34",
+                    "218.7",
+                    "235.07",
+                    "252.92",
+                    "270.78"
+                ],
+                "Charged Attack Cyclic DMG (%)": [
+                    "62.52",
+                    "67.61",
+                    "72.7",
+                    "79.97",
+                    "85.06",
+                    "90.87",
+                    "98.87",
+                    "106.87",
+                    "114.87",
+                    "123.59",
+                    "132.31"
+                ],
+                "Charged Attack Final DMG (%)": [
+                    "113.09",
+                    "122.29",
+                    "131.5",
+                    "144.65",
+                    "153.86",
+                    "164.37",
+                    "178.84",
+                    "193.31",
+                    "207.77",
+                    "223.55",
+                    "239.33"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG (%)": [
+                    "64.15",
+                    "69.37",
+                    "74.59",
+                    "82.05",
+                    "87.27",
+                    "93.23",
+                    "101.44",
+                    "109.64",
+                    "117.85",
+                    "126.8",
+                    "135.75"
+                ],
+                "Low Plunge DMG (%)": [
+                    "128.26",
+                    "138.7",
+                    "149.14",
+                    "164.06",
+                    "174.5",
+                    "186.43",
+                    "202.84",
+                    "219.24",
+                    "235.65",
+                    "253.54",
+                    "271.44"
+                ],
+                "High Plunge DMG (%)": [
+                    "160.21",
+                    "173.25",
+                    "186.29",
+                    "204.92",
+                    "217.96",
+                    "232.86",
+                    "253.35",
+                    "273.84",
+                    "294.34",
+                    "316.69",
+                    "339.05"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Talent_Bestial_Ascent.png",
+            "talentName": "Bestial Ascent",
+            "talentType": "Elemental Skill",
+            "description": "Pounces forward using the Wushou arts, leaping high into the air after coming into contact with a target or surface.\nAfter Gaming has used Bestial Ascent to rise into the air, he will use the especially powerful Plunging Attack: Charmed Cloudstrider when performing a Plunging Attack.\n\nPlunging Attack: Charmed Cloudstrider\nThe DMG from Plunging Attacks caused by Bestial Ascent is converted to Pyro DMG that cannot be overridden by other elemental infusions. Upon landing, Gaming will consume a fixed amount of HP. Gaming's HP cannot be reduced below 10% by this method.\nCharmed Cloudstrider DMG is considered Plunging Attack DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Bestial_Ascent_Preview.gif",
+                    "caption": "Without Jump"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Bestial_Ascent_Preview_2.gif",
+                    "caption": "With Jump"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Bestial_Ascent_Charmed_Cloudstrider_Preview.gif",
+                    "caption": "Plunging Attack: Charmed Cloudstrider"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/To_Tame_All_Beasts_Preview.gif",
+                    "caption": "Plunging Attack: Charmed Cloudstrider (C6)"
+                }
+            ],
+            "scaling": {
+                "Plunging Attack: Charmed Cloudstrider DMG (%)": [
+                    "230.4",
+                    "247.68",
+                    "264.96",
+                    "288",
+                    "305.28",
+                    "322.56",
+                    "345.6",
+                    "368.64",
+                    "391.68",
+                    "414.72",
+                    "437.76",
+                    "460.8",
+                    "489.6"
+                ],
+                "HP Cost": [
+                    "15% Max HP"
+                ],
+                "CD": [
+                    "6s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Talent_Suanni%27s_Gilded_Dance.png",
+            "talentName": "Suanni's Gilded Dance",
+            "talentType": "Elemental Burst",
+            "description": "Gaming enters Wushou Stance, briefly applying Pyro to him, recovering a fixed amount of HP, and summons his companion, the Suanni Man Chai, to smash into his target, dealing AoE Pyro DMG.\nAfter bashing its target, Man Chai will roll to a nearby location before moving towards Gaming. When it links up with Gaming, Man Chai will leave the field and reset the CD for Gaming's Elemental Skill, Bestial Ascent.\nWhile Wushou Stance is active, his resistance to interruption is increased, and when Gaming lands with Charmed Cloudstrider attack or completes the forward pounce attack from Bestial Ascent with over 50% HP, he will summon Man Chai again.\nEach Gaming can only have 1 Man Chai on the field simultaneously.\nThis effect will be canceled once Gaming leaves the field.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Suanni%27s_Gilded_Dance_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Suanni Man Chai Smash DMG": [
+                    "370.4",
+                    "398.18",
+                    "425.96",
+                    "463",
+                    "490.78",
+                    "518.56",
+                    "555.6",
+                    "592.64",
+                    "629.68",
+                    "666.72",
+                    "703.76",
+                    "740.8",
+                    "787.1"
+                ],
+                "Skill Healing": [
+                    "30% Max HP"
+                ],
+                "Wushou Stance Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Talent_Dance_of_Amity.png",
+            "talentName": "Dance of Amity",
+            "talentType": "1st Ascension Passive",
+            "description": "After Bestial Ascent's Plunging Attack: Charmed Cloudstrider hits an opponent, Gaming will regain 1.5% of his Max HP once every 0.2s for 0.8s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Talent_Air_of_Prosperity.png",
+            "talentName": "Air of Prosperity",
+            "talentType": "4th Ascension Passive",
+            "description": "When Gaming has less than 50% HP, he will receive a 20% Incoming Healing Bonus. When Gaming has 50% HP or more, Plunging Attack: Charmed Cloudstrider will deal 20% more DMG.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Talent_The_Sunlit_Way.png",
+            "talentName": "The Striding Beast",
+            "talentType": "Utility Passive",
+            "description": "During the day (6:00 – 18:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%.\nDoes not take effect in Domains, Trounce Domains, or Spiral Abyss. Swift Stride does not stack.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Constellation_Bringer_of_Blessing.png",
+            "name": "Bringer of Blessing",
+            "level": 1,
+            "description": "When the Suanni Man Chai from Suanni's Gilded Dance meets back up with Gaming, it will heal 15% of Gaming's HP."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Constellation_Plum_Blossoms_Underfoot.png",
+            "name": "Plum Blossoms Underfoot",
+            "level": 2,
+            "description": "When Gaming receives healing and this instance of healing overflows, his ATK will be increased by 20% for 5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Constellation_Awakening_Spirit.png",
+            "name": "Awakening Spirit",
+            "level": 3,
+            "description": "Increases the Level of Bestial Ascent by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Constellation_Soar_Across_Mountains.png",
+            "name": "Soar Across Mountains",
+            "level": 4,
+            "description": "When Bestial Ascent's Plunging Attack: Charmed Cloudstrider hits an opponent, it will restore 2 Energy to Gaming. This effect can be triggered once every 0.2s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Constellation_Evil-Daunting_Roar.png",
+            "name": "Evil-Daunting Roar",
+            "level": 5,
+            "description": "Increases the Level of Suanni's Gilded Dance by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Constellation_To_Tame_All_Beasts.png",
+            "name": "To Tame All Beasts",
+            "level": 6,
+            "description": "Description\nGameplay Notes\nPreview\nBestial Ascent's Plunging Attack: Charmed Cloudstrider CRIT Rate increased by 20% and CRIT DMG increased by 40%, and its attack radius will be increased."
+        }
+    ],
+    "imageUrls": {},
+    "version": "4.4",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Idle_Gaming_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Idle_Gaming_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Idle_Gaming_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Idle_Gaming_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Talent_Menu_Gaming.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Talent_Menu_Gaming.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Weapon_Menu_Gaming.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Weapon_Menu_Gaming.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Party_Setup_Gaming.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Party_Setup_Gaming.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Namecard_Background_Gaming_Man_Chai.png",
+                "caption": "Gaming: Man Chai Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Item_Gaming_Man_Chai.png",
+                "caption": "Gaming: Man Chai Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Namecard_Banner_Gaming_Man_Chai.png",
+                "caption": "Gaming: Man Chai Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Stellar_Rend_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Stellar_Rend_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Stellar_Rend_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Stellar_Rend_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Stellar_Rend_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Stellar_Rend_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Suanni%27s_Gilded_Dance_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Suanni%27s_Gilded_Dance_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Bestial_Ascent_Preview.gif",
+                        "caption": "Without Jump",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Bestial_Ascent_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Bestial_Ascent_Preview_2.gif",
+                        "caption": "With Jump",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Bestial_Ascent_Preview_2.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Bestial_Ascent_Charmed_Cloudstrider_Preview.gif",
+                        "caption": "Plunging Attack: Charmed Cloudstrider",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Bestial_Ascent_Charmed_Cloudstrider_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/To_Tame_All_Beasts_Preview.gif",
+                        "caption": "Plunging Attack: Charmed Cloudstrider (C6)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/To_Tame_All_Beasts_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Gaming_Character_Details_1.png",
+                "caption": "Gaming Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Gaming_Character_Details_2.png",
+                "caption": "Gaming Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Gaming_Character_Details_3.gif",
+                "caption": "Gaming Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Gaming_Character_Details_4.gif",
+                "caption": "Gaming Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Gaming_Character_Details_5.gif",
+                "caption": "Gaming Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Gaming_Character_Details_6.png",
+                "caption": "Gaming Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Gaming_Character_Details_7.png",
+                "caption": "Gaming Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Gaming_Character_Details_8.png",
+                "caption": "Gaming Details 8"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Icon_Emoji_Paimon%27s_Paintings_30_Gaming_1.png",
+                "caption": "Happy New Year! Set 30"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Icon_Emoji_Paimon%27s_Paintings_30_Gaming_2.png",
+                "caption": "Wassup? Set 30"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Icon_Emoji_Paimon%27s_Paintings_30_Gaming_3.png",
+                "caption": "High Five! Set 30"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Icon_Emoji_Paimon%27s_Paintings_30_Gaming_4.png",
+                "caption": "Wushou Dance! Set 30"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Icon_Emoji_Paimon%27s_Paintings_47_Gaming_1.png",
+                "caption": "Set 47"
+            }
+        ]
+    }
+}

@@ -1,7 +1,9 @@
-import { useWeapons } from "@/redux/hook/weapons";
-import React, { useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import WeaponsDetailedGrid from "./WeaponsDetailedGrid";
+import React, { useEffect } from 'react';
+
+import { useWeaponsStore } from '@/stores';
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import WeaponsDetailedGrid from './WeaponsDetailedGrid';
 
 /**
  * WeaponsDetailed component displays a tabbed interface for different weapon types.
@@ -11,7 +13,7 @@ import WeaponsDetailedGrid from "./WeaponsDetailedGrid";
  * @returns A tabbed interface showing weapon grids organized by type, or null if weapon data is not loaded
  */
 const WeaponsDetailed: React.FC = () => {
-  const { weapons, fetchWeapons, weaponTypeMap } = useWeapons();
+  const { weapons, fetchWeapons, weaponTypeMap } = useWeaponsStore();
 
   useEffect(() => {
     fetchWeapons();

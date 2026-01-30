@@ -1,13 +1,15 @@
-import React from "react";
-import TextProcessor from "../../utils/TextProcessor.tsx";
-import { Talent } from "@/graphql/types";
+import React from 'react';
+
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../../ui/card.tsx";
+} from '@/components/ui/card.tsx';
+import { Talent } from '@/types';
+
+import TextProcessor from '../../utils/TextProcessor.tsx';
 
 interface CharacterPassivesProps {
   passives: Talent[];
@@ -21,12 +23,11 @@ interface CharacterPassivesProps {
  * @returns {JSX.Element} A React component that renders the passive talents in a card format.
  */
 const CharacterPassives: React.FC<CharacterPassivesProps> = ({ passives }) => {
-  // Add sorting function
   const sortPassives = (a: Talent, b: Talent): number => {
     const order = {
-      "1st Ascension Passive": 1,
-      "4th Ascension Passive": 2,
-      "Utility Passive": 3,
+      '1st Ascension Passive': 1,
+      '4th Ascension Passive': 2,
+      'Utility Passive': 3,
     };
 
     return (

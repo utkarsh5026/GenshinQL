@@ -1,12 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect, useRef, useState } from 'react';
+
 import {
   Command,
-  CommandInput,
-  CommandList,
   CommandEmpty,
   CommandGroup,
+  CommandInput,
   CommandItem,
-} from "@/components/ui/command";
+  CommandList,
+} from '@/components/ui/command';
 
 type SearchBarItem = {
   name: string;
@@ -26,9 +27,9 @@ const ChipSearchBar: React.FC<ChipSearchBarProps> = ({
   selectedItems,
   onItemSelect,
   onItemRemove,
-  placeholder = "Search...",
+  placeholder = 'Search...',
 }) => {
-  const [inputValue, setInputValue] = useState<string>("");
+  const [inputValue, setInputValue] = useState<string>('');
   const [showResults, setShowResults] = useState<boolean>(false);
   const commandRef = useRef<HTMLDivElement>(null);
 
@@ -42,8 +43,8 @@ const ChipSearchBar: React.FC<ChipSearchBarProps> = ({
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const handleInputChange = (value: string) => {
@@ -53,7 +54,7 @@ const ChipSearchBar: React.FC<ChipSearchBarProps> = ({
 
   const handleItemSelect = (item: SearchBarItem) => {
     onItemSelect(item);
-    setInputValue("");
+    setInputValue('');
   };
 
   const filteredItems = items.filter(

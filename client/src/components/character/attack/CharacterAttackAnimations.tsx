@@ -1,13 +1,15 @@
-import { GET_CHARACTER_ATTACK_ANIMATIONS } from "@/graphql/queries";
+import React, { useEffect, useState } from 'react';
+
+import { fetchCharacterAttackAnimations } from '@/services/dataService';
 import {
   AttackAnimation,
-  CharacterDetailed,
   AttackTalentType,
+  CharacterDetailed,
   Talent,
-} from "@/graphql/types";
-import React from "react";
-import { useQuery } from "@apollo/client";
-import CharacterAttackAnimationGrid from "./CharacterAttackAnimationGrid";
+} from '@/types';
+
+import CharacterAttackAnimationGrid from './CharacterAttackAnimationGrid';
+
 interface CharacterAttackAnimationsProps {
   character: CharacterDetailed;
 }
@@ -25,39 +27,47 @@ interface CharacterAttackAnimationsProps {
 const CharacterAttackAnimations: React.FC<CharacterAttackAnimationsProps> = ({
   character,
 }) => {
-  const { data, loading } = useQuery(GET_CHARACTER_ATTACK_ANIMATIONS, {
-    variables: { name: character.name },
-  });
+  const [attackAnimations, setAttackAnimations] =
+    useState<AttackAnimation | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadAnimations = async () => {
+      setLoading(true);
+      const data = await fetchCharacterAttackAnimations(character.name);
+      setAttackAnimations(data);
+      setLoading(false);
+    };
+    loadAnimations();
+  }, [character.name]);
 
   const talentMap: Record<AttackTalentType, Talent | undefined> = {
-    "Normal Attack": character.talents.find(
-      (talent) => talent.talentType === "Normal Attack"
+    'Normal Attack': character.talents.find(
+      (talent) => talent.talentType === 'Normal Attack'
     ),
-    "Elemental Skill": character.talents.find(
-      (talent) => talent.talentType === "Elemental Skill"
+    'Elemental Skill': character.talents.find(
+      (talent) => talent.talentType === 'Elemental Skill'
     ),
-    "Elemental Burst": character.talents.find(
-      (talent) => talent.talentType === "Elemental Burst"
+    'Elemental Burst': character.talents.find(
+      (talent) => talent.talentType === 'Elemental Burst'
     ),
   };
 
-  const attackAnimations = data?.characterAttackAnimations as AttackAnimation;
-
   if (loading) return <div>Loading...</div>;
-  if (!data) return <div>No data</div>;
+  if (!attackAnimations) return <div>No data</div>;
 
   return (
     <div className="flex flex-col gap-4">
       <CharacterAttackAnimationGrid
-        talent={talentMap["Normal Attack"]}
+        talent={talentMap['Normal Attack']}
         animations={attackAnimations.normalAttack}
       />
       <CharacterAttackAnimationGrid
-        talent={talentMap["Elemental Skill"]}
+        talent={talentMap['Elemental Skill']}
         animations={attackAnimations.elementalSkill}
       />
       <CharacterAttackAnimationGrid
-        talent={talentMap["Elemental Burst"]}
+        talent={talentMap['Elemental Burst']}
         animations={attackAnimations.elementalBurst}
       />
     </div>

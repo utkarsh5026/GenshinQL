@@ -1,6 +1,7 @@
-import React from "react";
-import type { Character } from "@/graphql/types";
-import SearchBar from "@/components/utils/SearchBar";
+import React from 'react';
+
+import SearchBar from '@/components/utils/SearchBar';
+import type { Character } from '@/types';
 
 interface CharacterSearchBarProps {
   characters: Character[];

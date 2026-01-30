@@ -1,16 +1,8 @@
-import React, { useMemo } from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table.tsx";
-import type { TalentBookCalendar } from "@/graphql/types";
-import TalentBooks from "@/components/talents/TalentBooks.tsx";
-import CharacterGrid from "@/components/character/utils/CharacterGrid.tsx";
-import AnimatedTable from "@/components/utils/AnimatedTable.tsx";
+import React, { useMemo } from 'react';
+
+import CharacterGrid from '@/components/character/utils/CharacterGrid.tsx';
+import TalentBooks from '@/components/talents/TalentBooks.tsx';
+import type { TalentBookCalendar } from '@/types';
 
 function getNextNDaysFromToday(n: number) {
   const today = new Date();
@@ -35,13 +27,13 @@ const TalentCalendarView: React.FC<TalentCalendarViewProps> = ({
   const dates = getNextNDaysFromToday(nDays);
   const data = useMemo(() => {
     const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
     ];
     return dates.map((date) => {
       const currDay = days[date.getDay()];
@@ -67,49 +59,77 @@ const TalentCalendarView: React.FC<TalentCalendarViewProps> = ({
   }, [dates, talent.days]);
 
   return (
-    <AnimatedTable>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Date</TableHead>
-            <TableHead>Book</TableHead>
-            <TableHead>Characters</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {data.map((d) => {
-            return (
-              <TableRow
-                key={d.date}
-                className={d.isSunday ? "bg-green-950 hover:bg-green-950" : ""}
-              >
-                <TableCell>
-                  <div>
-                    <div>{d.date}</div>
-                    <div>{d.currDay}</div>
-                  </div>
-                </TableCell>
-                <TableCell>
-                  {" "}
-                  {d.isSunday ? (
-                    <div>All books can farmed today</div>
-                  ) : (
-                    <TalentBooks books={d.books} />
-                  )}
-                </TableCell>
-                <TableCell>
-                  {d.isSunday ? (
-                    <div>All characters can be farmed today 😊</div>
-                  ) : (
-                    <CharacterGrid characters={d.characters} />
-                  )}
-                </TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
-    </AnimatedTable>
+    <div className="font-sans max-w-[1400px] mx-auto p-4 md:p-8">
+      <div className="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden border border-white/[0.08]">
+        <div className="hidden md:grid md:grid-cols-[200px_1fr_2fr] bg-white/[0.02] border-b border-white/10">
+          <div className="px-4 md:px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">
+            Date
+          </div>
+          <div className="px-4 md:px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">
+            Talent Books
+          </div>
+          <div className="px-4 md:px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">
+            Characters
+          </div>
+        </div>
+
+        {data.map((d) => (
+          <div
+            key={d.date}
+            className={`flex flex-col md:grid md:grid-cols-[200px_1fr_2fr] bg-black/20 transition-colors duration-150 border-b border-white/[0.04] last:border-b-0 hover:bg-white/[0.03] ${
+              d.isSunday
+                ? 'bg-gradient-to-r from-[#a8a29e]/[0.08] to-[#a8a29e]/[0.04] md:border-l-[3px] border-l-[#d4af37]/60 hover:from-[#a8a29e]/[0.12] hover:to-[#a8a29e]/[0.06]'
+                : ''
+            }`}
+          >
+            <div className="px-4 py-4 md:px-6 md:py-7 flex flex-col gap-1.5 md:gap-2 md:border-r border-white/[0.06] bg-white/[0.02] md:bg-transparent">
+              <div className="text-sm md:text-[0.9375rem] font-medium text-white/95 font-mono">
+                {d.date}
+              </div>
+              <div className="text-xs md:text-xs text-white/40 font-normal tracking-wide">
+                {d.currDay}
+              </div>
+            </div>
+
+            <div className="px-4 py-4 md:px-6 md:py-7 md:border-r border-white/[0.06]">
+              <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">
+                Talent Books
+              </div>
+              {d.isSunday ? (
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-2.5 text-sm md:text-sm text-[#d4af37]/90 font-medium">
+                  <span className="inline-flex px-2.5 py-1 bg-[#d4af37]/15 rounded text-[0.6875rem] font-semibold tracking-wider uppercase font-mono border border-[#d4af37]/25">
+                    All Available
+                  </span>
+                  <span className="text-xs md:text-sm">
+                    All books can be farmed
+                  </span>
+                </div>
+              ) : (
+                <TalentBooks books={d.books} />
+              )}
+            </div>
+
+            <div className="px-4 py-4 md:px-6 md:py-7">
+              <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">
+                Characters
+              </div>
+              {d.isSunday ? (
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-2.5 text-sm md:text-sm text-[#d4af37]/90 font-medium">
+                  <span className="inline-flex px-2.5 py-1 bg-[#d4af37]/15 rounded text-[0.6875rem] font-semibold tracking-wider uppercase font-mono border border-[#d4af37]/25">
+                    All Available
+                  </span>
+                  <span className="text-xs md:text-sm">
+                    All characters can be farmed
+                  </span>
+                </div>
+              ) : (
+                <CharacterGrid characters={d.characters} />
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

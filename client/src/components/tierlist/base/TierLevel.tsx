@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import DroppableArea from "./DroppableArea";
+import React, { useState } from 'react';
+
+import DroppableArea from './DroppableArea';
 
 interface TierLevelProps {
   name: string;

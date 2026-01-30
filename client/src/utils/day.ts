@@ -4,13 +4,13 @@
  */
 export const getCurrentDay = (): string => {
   const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
   ];
   const dayIndex = new Date().getDay();
   return days[dayIndex];

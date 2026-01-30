@@ -1,5 +1,5 @@
-import React from "react";
-import { useDraggable } from "@dnd-kit/core";
+import { useDraggable } from '@dnd-kit/core';
+import React from 'react';
 
 interface DraggableComponentProps {
   id: string;
@@ -25,7 +25,7 @@ const DraggableComponent: React.FC<DraggableComponentProps> = ({
       ? `translate3d(${transform.x}px, ${transform.y}px, 0)`
       : undefined,
     scale: transform ? 2 : 1,
-    transition: "transform ease",
+    transition: 'transform ease',
   };
 
   return (

@@ -1,0 +1,503 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Diona_Icon.png",
+    "name": "Diona",
+    "rarity": "4 Stars",
+    "element": "Cryo",
+    "weaponType": "Bow",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "modelType": "Short Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Bow_Cryo.png",
+            "talentName": "Kätzlein Style",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 5 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, biting frost will accumulate on the arrowhead. A fully charged frost arrow will deal Cryo DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/K%C3%A4tzlein_Style_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/K%C3%A4tzlein_Style_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/K%C3%A4tzlein_Style_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "36.12",
+                    "39.06",
+                    "42",
+                    "46.2",
+                    "49.14",
+                    "52.5",
+                    "57.12",
+                    "61.74",
+                    "66.36",
+                    "71.4",
+                    "77.18"
+                ],
+                "2-Hit DMG (%)": [
+                    "33.54",
+                    "36.27",
+                    "39",
+                    "42.9",
+                    "45.63",
+                    "48.75",
+                    "53.04",
+                    "57.33",
+                    "61.62",
+                    "66.3",
+                    "71.66"
+                ],
+                "3-Hit DMG (%)": [
+                    "45.58",
+                    "49.29",
+                    "53",
+                    "58.3",
+                    "62.01",
+                    "66.25",
+                    "72.08",
+                    "77.91",
+                    "83.74",
+                    "90.1",
+                    "97.39"
+                ],
+                "4-Hit DMG (%)": [
+                    "43",
+                    "46.5",
+                    "50",
+                    "55",
+                    "58.5",
+                    "62.5",
+                    "68",
+                    "73.5",
+                    "79",
+                    "85",
+                    "91.88"
+                ],
+                "5-Hit DMG (%)": [
+                    "53.75",
+                    "58.13",
+                    "62.5",
+                    "68.75",
+                    "73.13",
+                    "78.13",
+                    "85",
+                    "91.88",
+                    "98.75",
+                    "106.25",
+                    "114.84"
+                ],
+                "Aimed Shot (%)": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "93.71"
+                ],
+                "Fully-Charged Aimed Shot (%)": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "236.1"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Talent_Icy_Paws.png",
+            "talentName": "Icy Paws",
+            "talentType": "Elemental Skill",
+            "description": "Fires an Icy Paw that deals Cryo DMG to opponents and forms a shield on hit.\nThe shield's DMG Absorption scales based on Diona's Max HP, and its duration scales off the number of Icy Paws that hit their target.\n\n(‍Press\n‍/‍Tap\n‍)\nRapidly fires off 2 Icy Paws.\n\nHold\nDashes back quickly before firing 5 Icy Paws.\nThe shield created by a Hold attack will gain a 75% DMG Absorption Bonus.\n\nThe shield has a 250% Cryo DMG Absorption Bonus, and will cause your active character to become affected by Cryo at the point of formation for a short duration.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Icy_Paws_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Icy_Paws_Hold_Preview.gif",
+                    "caption": "Hold"
+                }
+            ],
+            "scaling": {
+                "Icy Paw DMG (%)": [
+                    "41.92 per Paw",
+                    "45.06 per Paw",
+                    "48.21 per Paw",
+                    "52.4 per Paw",
+                    "55.54 per Paw",
+                    "58.69 per Paw",
+                    "62.88 per Paw",
+                    "67.07 per Paw",
+                    "71.26 per Paw",
+                    "75.46 per Paw",
+                    "79.65 per Paw",
+                    "83.84 per Paw",
+                    "89.08 per Paw",
+                    "94.3 per Paw"
+                ],
+                "Base Shield DMG Absorption": [
+                    "7.2% Max HP\n+\n692.8",
+                    "7.74% Max HP\n+\n762",
+                    "8.28% Max HP\n+\n837.16",
+                    "9% Max HP\n+\n918",
+                    "9.54% Max HP\n+\n1,004",
+                    "10.08% Max HP\n+\n1,096",
+                    "10.8% Max HP\n+\n1,195",
+                    "11.52% Max HP\n+\n1,299",
+                    "12.24% Max HP\n+\n1,408",
+                    "12.96% Max HP\n+\n1,524",
+                    "13.68% Max HP\n+\n1,645",
+                    "14.4% Max HP\n+\n1,772",
+                    "15.3% Max HP\n+\n1,905",
+                    "16.2% Max HP\n+\n2,044"
+                ],
+                "Duration": [
+                    "1.8s per Paw",
+                    "1.9s per Paw",
+                    "2s per Paw",
+                    "2.1s per Paw",
+                    "2.2s per Paw",
+                    "2.3s per Paw",
+                    "2.4s per Paw"
+                ],
+                "Press CD": [
+                    "6s"
+                ],
+                "Holding CD": [
+                    "15s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Talent_Signature_Mix.png",
+            "talentName": "Signature Mix",
+            "talentType": "Elemental Burst",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nTosses out a special cold brew that deals AoE Cryo DMG and creates a Drunken Mist in an AoE.\n\nDrunken Mist\nDeals continuous Cryo DMG to opponents within the AoE.\nContinuously regenerates the HP of characters within the AoE.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Signature_Mix_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "80",
+                    "86",
+                    "92",
+                    "100",
+                    "106",
+                    "112",
+                    "120",
+                    "128",
+                    "136",
+                    "144",
+                    "152",
+                    "160",
+                    "170",
+                    "180"
+                ],
+                "Continuous Field DMG (%)": [
+                    "52.64",
+                    "56.59",
+                    "60.54",
+                    "65.8",
+                    "69.75",
+                    "73.7",
+                    "78.96",
+                    "84.22",
+                    "89.49",
+                    "94.75",
+                    "100.02",
+                    "105.28",
+                    "111.86",
+                    "118.4"
+                ],
+                "HP Regeneration Over Time": [
+                    "5.34% Max HP\n+\n513.19",
+                    "5.74% Max HP\n+\n564.51",
+                    "6.14% Max HP\n+\n620.11",
+                    "6.67% Max HP\n+\n680",
+                    "7.07% Max HP\n+\n744.15",
+                    "7.47% Max HP\n+\n812.59",
+                    "8% Max HP\n+\n885.3",
+                    "8.54% Max HP\n+\n962.29",
+                    "9.07% Max HP\n+\n1,043",
+                    "9.6% Max HP\n+\n1,129",
+                    "10.14% Max HP\n+\n1,218",
+                    "10.67% Max HP\n+\n1,313",
+                    "11.34% Max HP\n+\n1,411",
+                    "12.01% Max HP\n+\n1,514"
+                ],
+                "Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "20s"
+                ],
+                "Energy Cost": [
+                    "80"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Talent_Cat%27s_Tail_Secret_Menu.png",
+            "talentName": "Cat's Tail Secret Menu",
+            "talentType": "1st Ascension Passive",
+            "description": "Characters shielded by Icy Paws have their Movement SPD increased by 10% and their Stamina Consumption decreased by 10%.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Cat%27s_Tail_Secret_Menu_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Talent_Drunkards%27_Farce.png",
+            "talentName": "Drunkards' Farce",
+            "talentType": "4th Ascension Passive",
+            "description": "Opponents who enter the AoE of Signature Mix have 10% decreased ATK for 15s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Talent_Complimentary_Bar_Food.png",
+            "talentName": "Complimentary Bar Food",
+            "talentType": "Utility Passive",
+            "description": "When a Perfect Cooking is achieved on a dish with restorative effects, Diona has a 12% chance to obtain double the product.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Constellation_A_Lingering_Flavor.png",
+            "name": "A Lingering Flavor",
+            "level": 1,
+            "description": "Description\nPreview\nRegenerates 15 Energy for Diona after the effects of Signature Mix end."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Constellation_Shaken%2C_Not_Purred.png",
+            "name": "Shaken, Not Purred",
+            "level": 2,
+            "description": "Description\nGameplay Notes\nPreview\nIncreases Icy Paws' DMG by 15%, and increases its shield's DMG Absorption by 15%.\nAdditionally, when paws hit their targets, creates a shield for other nearby characters on the field with 50% of the Icy Paws shield's DMG Absorption for 5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Constellation_A%E2%80%94Another_Round%3F.png",
+            "name": "A—Another Round?",
+            "level": 3,
+            "description": "Increases the Level of Signature Mix by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Constellation_Wine_Industry_Slayer.png",
+            "name": "Wine Industry Slayer",
+            "level": 4,
+            "description": "Within the radius of Signature Mix, Diona's charge time for aimed shots is reduced by 60%"
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Constellation_Double_Shot%2C_on_the_Rocks.png",
+            "name": "Double Shot, on the Rocks",
+            "level": 5,
+            "description": "Increases the Level of Icy Paws by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Constellation_Cat%27s_Tail_Closing_Time.png",
+            "name": "Cat's Tail Closing Time",
+            "level": 6,
+            "description": "Characters within Signature Mix's radius will gain the following effects based on their HP amounts:\nIncreases Incoming Healing Bonus by 30% when HP falls below or is equal to 50%.\nElemental Mastery increased by 200 when HP is above 50%."
+        }
+    ],
+    "imageUrls": {},
+    "version": "1.1",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Namecard_Background_Diona_Meow%21.png",
+                "caption": "Diona: Meow! Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Diona_Meow%21.png",
+                "caption": "Diona: Meow! Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Namecard_Banner_Diona_Meow%21.png",
+                "caption": "Diona: Meow! Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Icon_Emoji_Paimon%27s_Paintings_03_Diona_1.png",
+                "caption": "Irritable Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Icon_Emoji_Paimon%27s_Paintings_03_Diona_2.png",
+                "caption": "Bored Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Icon_Emoji_Paimon%27s_Paintings_03_Diona_3.png",
+                "caption": "Fearsome Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Icon_Emoji_Paimon%27s_Paintings_03_Diona_4.png",
+                "caption": "Proud Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Icon_Emoji_Paimon%27s_Paintings_20_Diona_1.png",
+                "caption": "Not Bad! Set 20"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Icon_Emoji_Paimon%27s_Paintings_27_Diona_1.png",
+                "caption": "Doubting me? Set 27"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Icon_Emoji_Paimon%27s_Paintings_31_Diona_1.png",
+                "caption": "\"Mixing\" Set 31"
+            }
+        ]
+    }
+}

@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from 'react';
+
 import {
   Table,
   TableBody,
@@ -6,30 +7,29 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table.tsx";
-import { AnimationMedia, Character } from "@/graphql/types";
+} from '@/components/ui/table.tsx';
+import { CachedImage } from '@/components/utils/CachedImage';
+import { AnimationMedia, Character } from '@/types';
 
-import CharacterMediaAvatar from "./CharacterMediaAvatar.tsx";
-import { useCharacters } from "@/redux/hook/characters.ts";
+import CharacterMediaAvatar from './CharacterMediaAvatar.tsx';
 
 type CharacterWithMedia = Character & {
   media: AnimationMedia;
 };
 
-const CharactersTable: React.FC = () => {
-  const { characters, loading, error, fetchCharacters } = useCharacters();
-  const columnNames = [
-    "Icon",
-    "Name",
-    "Element",
-    "Rarity",
-    "Weapon Type",
-    "Region",
-  ];
+interface CharactersTableProps {
+  characters: Character[];
+}
 
-  useEffect(() => {
-    if (characters.length === 0) fetchCharacters();
-  }, [fetchCharacters, characters]);
+const CharactersTable: React.FC<CharactersTableProps> = ({ characters }) => {
+  const columnNames = [
+    'Icon',
+    'Name',
+    'Element',
+    'Rarity',
+    'Weapon Type',
+    'Region',
+  ];
 
   const charactersWithMedia: CharacterWithMedia[] = useMemo(() => {
     if (!characters) return [];
@@ -40,21 +40,17 @@ const CharactersTable: React.FC = () => {
       if (character.idleTwo) return character.idleTwo;
       return {
         imageUrl: character.iconUrl,
-        videoUrl: "",
+        videoUrl: '',
         caption: character.name,
-        videoType: "",
+        videoType: '',
       };
     };
 
     return characters.map((character) => ({
       ...character,
       media: getCharMedia(character),
-      elementUrl: character.elementUrl.split("/revision/")[0],
     }));
   }, [characters]);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
 
   return (
     <Table>
@@ -84,7 +80,9 @@ const CharactersTable: React.FC = () => {
                 elementUrl={character.elementUrl}
               />
             </TableCell>
-            <TableCell className="text-left">{character.rarity}</TableCell>
+            <TableCell className="text-left">
+              <RarityDisplay rarity={character.rarity} />
+            </TableCell>
             <TableCell className="text-left">
               <ElementDisplay
                 element={character.weaponType}
@@ -110,7 +108,7 @@ const ElementDisplay: React.FC<{ element: string; elementUrl: string }> = ({
 }) => {
   return (
     <div className="flex items-center space-x-2">
-      <img
+      <CachedImage
         src={elementUrl}
         alt={element}
         width={24}
@@ -118,6 +116,21 @@ const ElementDisplay: React.FC<{ element: string; elementUrl: string }> = ({
         className="rounded-full w-6 h-6"
       />
       <span>{element}</span>
+    </div>
+  );
+};
+
+const RarityDisplay: React.FC<{ rarity: string }> = ({ rarity }) => {
+  const rarityNum = Number.parseInt(rarity, 10);
+  const starColor = rarityNum === 5 ? 'text-yellow-500' : 'text-violet-500';
+
+  return (
+    <div className="flex items-center">
+      {Array.from({ length: rarityNum }).map((_, index) => (
+        <span key={index} className={`${starColor} text-lg`}>
+          ★
+        </span>
+      ))}
     </div>
   );
 };

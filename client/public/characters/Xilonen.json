@@ -1,0 +1,553 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Xilonen_Icon.png",
+    "name": "Xilonen",
+    "rarity": "5 Stars",
+    "element": "Geo",
+    "weaponType": "Sword",
+    "region": "Natlan",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
+    "modelType": "Tall Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Sword_Geo.png",
+            "talentName": "Ehecatl's Roar",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 rapid strikes.\n\nCharged Attack\nConsumes a fixed amount of Stamina and performs a forward kick.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact, both based on Xilonen's DEF.\n\nNightsoul's Blessing: Blade Roller\nWhen in the Nightsoul's Blessing state, Xilonen will enter the Blade Roller mode. While in this mode, Xilonen's Normal Attacks will allow her to perform up to 4 kicks using her roller blades, and she will be unable to use Charged Attacks.\nWhen she uses Normal and Plunging Attacks in this mode, they will switch to being based on her DEF, and she will deal Nightsoul-aligned Geo DMG that cannot be overridden.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Ehecatl%27s_Roar_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Ehecatl%27s_Roar_Blade_Roller_Preview.gif",
+                    "caption": "Nightsoul's Blessing: Blade Roller"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "51.79",
+                    "56.01",
+                    "60.22",
+                    "66.25",
+                    "70.46",
+                    "75.28",
+                    "81.9",
+                    "88.53",
+                    "95.15",
+                    "102.38",
+                    "109.61"
+                ],
+                "2-Hit DMG (%)": [
+                    "27.37\n+\n27.37",
+                    "29.6\n+\n29.6",
+                    "31.83\n+\n31.83",
+                    "35.01\n+\n35.01",
+                    "37.24\n+\n37.24",
+                    "39.79\n+\n39.79",
+                    "43.29\n+\n43.29",
+                    "46.79\n+\n46.79",
+                    "50.29\n+\n50.29",
+                    "54.11\n+\n54.11",
+                    "57.93\n+\n57.93"
+                ],
+                "3-Hit DMG (%)": [
+                    "72.95",
+                    "78.89",
+                    "84.82",
+                    "93.31",
+                    "99.25",
+                    "106.03",
+                    "115.36",
+                    "124.69",
+                    "134.02",
+                    "144.2",
+                    "154.38"
+                ],
+                "Charged Attack DMG (%)": [
+                    "91.33",
+                    "98.77",
+                    "106.2",
+                    "116.82",
+                    "124.25",
+                    "132.75",
+                    "144.43",
+                    "156.11",
+                    "167.8",
+                    "180.54",
+                    "193.28"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "20"
+                ],
+                "Plunge DMG (%DEF)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%DEF)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%DEF)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ],
+                "Blade Roller 1-Hit DMG (%DEF)": [
+                    "56.02",
+                    "60.58",
+                    "65.14",
+                    "71.66",
+                    "76.22",
+                    "81.43",
+                    "88.59",
+                    "95.76",
+                    "102.92",
+                    "110.74",
+                    "118.56"
+                ],
+                "Blade Roller 2-Hit DMG (%DEF)": [
+                    "55.05",
+                    "59.53",
+                    "64.01",
+                    "70.41",
+                    "74.89",
+                    "80.01",
+                    "87.05",
+                    "94.09",
+                    "101.13",
+                    "108.82",
+                    "116.5"
+                ],
+                "Blade Roller 3-Hit DMG (%DEF)": [
+                    "65.82",
+                    "71.17",
+                    "76.53",
+                    "84.18",
+                    "89.54",
+                    "95.66",
+                    "104.08",
+                    "112.5",
+                    "120.92",
+                    "130.1",
+                    "139.28"
+                ],
+                "Blade Roller 4-Hit DMG (%DEF)": [
+                    "86.03",
+                    "93.03",
+                    "100.03",
+                    "110.04",
+                    "117.04",
+                    "125.04",
+                    "136.04",
+                    "147.05",
+                    "158.05",
+                    "170.05",
+                    "182.06"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Yohual%27s_Scratch.png",
+            "talentName": "Yohual's Scratch",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nLet the rhythms of passion resound throughout the land! Xilonen switches to high-speed combat blading gear and rushes forward a certain distance before dealing Nightsoul-aligned Geo DMG based on her DEF.\nAfter using this, Xilonen will gain 45 Nightsoul points and enter the Nightsoul's Blessing state. In this state, she will shift to the Blade Roller mode.\n\nSource Samples\nXilonen has 3 Samplers with her that can generate different Soundscapes based on her other party members' Elemental Types, decreasing nearby opponents' corresponding Elemental RES while active.\nThe initial recorded Source Sample within each Sampler will be Geo, and for each party member who is Pyro/Hydro/Cryo/Electro, 1 Geo Sampler will change to that corresponding Element.\nWhile Xilonen is in the Nightsoul's Blessing state, the Geo Source Sample she carries will always be active. After unlocking her Ascension Talent, \"Netotiliztli's Echoes,\" Xilonen can trigger said Ascension Talent's effects to regenerate Nightsoul points for herself. When her Nightsoul points hit the maximum, she will consume all her Nightsoul points and activate the 3 Source Samples she has on hand for 15s.\nWhen the Source Samples are active, nearby opponents' corresponding Elemental RES will decrease. Source Sample effects of the same Elemental Type cannot stack. Xilonen can trigger these effects even when off-field.\n\nNightsoul's Blessing: Xilonen\nContinuously consume Nightsoul points. When these points are depleted or if used again, this Nightsoul's Blessing state will end. This state has the following traits:\nSwitches to the Blade Roller mode, increasing Xilonen's Movement SPD and climbing speed, and she can perform high-speed leaps in Ocelot Form while climbing.\nXilonen's Nightsoul's Blessing has the following restrictions: When in this state, Xilonen's Nightsoul points have a 9s time limit. After this limit passes, her Nightsoul points will immediately expire.\n\nAfter Xilonen's Nightsoul points have expired while she is in the Nightsoul's Blessing state, she will no longer be able to generate Nightsoul points via the Ascension Talent \"Netotiliztli's Echoes.\"",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Yohual%27s_Scratch_Movement_Preview.gif",
+                    "caption": "Movement"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Yohual%27s_Scratch_Source_Samples_Preview.gif",
+                    "caption": "Source Samples"
+                }
+            ],
+            "scaling": {
+                "Rush DMG (%DEF)": [
+                    "179.2",
+                    "192.64",
+                    "206.08",
+                    "224",
+                    "237.44",
+                    "250.88",
+                    "268.8",
+                    "286.72",
+                    "304.64",
+                    "322.56",
+                    "340.48",
+                    "358.4",
+                    "380.8"
+                ],
+                "Elemental RES Decrease": [
+                    "9",
+                    "12",
+                    "15",
+                    "18",
+                    "21",
+                    "24",
+                    "27",
+                    "30",
+                    "33",
+                    "36",
+                    "39",
+                    "42",
+                    "45"
+                ],
+                "Source Sample Activation Duration": [
+                    "15s"
+                ],
+                "Nightsoul Point Time Limit": [
+                    "9s"
+                ],
+                "Nightsoul Point Limit": [
+                    "90"
+                ],
+                "CD": [
+                    "7s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Talent_Ocelotlicue_Point%21.png",
+            "talentName": "Ocelotlicue Point!",
+            "talentType": "Elemental Burst",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nActivates the Phlogiston Stereo DJ Controller (Portable) at full power, dealing Nightsoul-aligned AoE Geo DMG based on Xilonen's DEF.\n\nAdditionally, she will trigger the following effects based on her different Source Samples:\nIf she has at least 2 Source Samples that have had their Elemental Types changed, Xilonen will play an Ebullient rhythm, healing nearby active characters at intervals based on her DEF.\nIf she has fewer than 2 Source Samples that have had their Elemental Types changed, Xilonen will start up an Ardent rhythm, which will play two additional beats that deal Nightsoul-aligned AoE Geo DMG based on her DEF.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Ocelotlicue_Point%21_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%DEF)": [
+                    "281.28",
+                    "302.38",
+                    "323.47",
+                    "351.6",
+                    "372.7",
+                    "393.79",
+                    "421.92",
+                    "450.05",
+                    "478.18",
+                    "506.3",
+                    "534.43",
+                    "562.56",
+                    "597.72"
+                ],
+                "Continuous Healing": [
+                    "104.0% DEF\n+\n501",
+                    "111.8% DEF\n+\n551",
+                    "119.6% DEF\n+\n605",
+                    "130.0% DEF\n+\n664",
+                    "137.8% DEF\n+\n726",
+                    "145.6% DEF\n+\n793",
+                    "156.0% DEF\n+\n864",
+                    "166.4% DEF\n+\n939",
+                    "176.8% DEF\n+\n1018",
+                    "187.2% DEF\n+\n1102",
+                    "197.6% DEF\n+\n1189",
+                    "208.0% DEF\n+\n1281",
+                    "221.0% DEF\n+\n1377"
+                ],
+                "Ebullient Rhythm Duration": [
+                    "12s"
+                ],
+                "Follow-Up Beat DMG (%DEF)": [
+                    "281.28",
+                    "302.38",
+                    "323.47",
+                    "351.6",
+                    "372.7",
+                    "393.79",
+                    "421.92",
+                    "450.05",
+                    "478.18",
+                    "506.3",
+                    "534.43",
+                    "562.56",
+                    "597.72"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Talent_Netotiliztli%27s_Echoes.png",
+            "talentName": "Netotiliztli's Echoes",
+            "talentType": "1st Ascension Passive",
+            "description": "Description\nGameplay Notes\nWhile in the Nightsoul's Blessing state:\nIf Xilonen has at least 2 Source Samples that have had their Elemental Types changed, she gains 35 Nightsoul points when her Normal or Plunging Attacks hit opponents. Can be triggered once every 0.1s.\nIf Xilonen has fewer than 2 Source Samples that have had their Elemental Types changed, her Normal and Plunging Attacks deal 30% increased DMG.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Talent_Portable_Armored_Sheath.png",
+            "talentName": "Portable Armored Sheath",
+            "talentType": "4th Ascension Passive",
+            "description": "While in the Nightsoul's Blessing state, when Xilonen's Nightsoul points reach the maximum, she will trigger an effect equal to that of her Nightsoul Burst. This effect can be triggered once every 14s.\nAdditionally, when nearby party members trigger a Nightsoul Burst, Xilonen's DEF is increased by 20% for 15s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Blessing_of_Forge-Fire.png",
+            "talentName": "Blessing of Forge-Fire",
+            "talentType": "Night Realm's Gift Passive",
+            "description": "After her Nightsoul points are fully depleted, Xilonen will switch to consuming Phlogiston to maintain her Nightsoul's Blessing.\nWhile in an area with Phlogiston Mechanics within Natlan, she can use Nightsoul Transmission: Xilonen. When the active character is currently sprinting, climbing, in a movement mode caused by certain Talents, or at a certain height in the air, the following will trigger when switching to Xilonen: Xilonen will enter the Nightsoul's Blessing state and gain 20 Nightsoul points. In this situation, Xilonen's Nightsoul points have a 4s time limit, after which her Nightsoul points will immediately expire. After she uses Yohual's Scratch within this time limit, her Nightsoul point time limit will be extended by 9s. Nightsoul Transmission can be triggered once every 10s by your own team.\n\nAdditionally, while in Natlan, Xilonen will not consume Stamina when climbing while in the Nightsoul's Blessing state.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Talent_Tour_of_Tepeilhuitl.png",
+            "talentName": "Tour of Tepeilhuitl",
+            "talentType": "Utility Passive",
+            "description": "Triggering Nightsoul Transmission restores 15 Phlogiston.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Constellation_Sabbatical_Phrase.png",
+            "name": "Sabbatical Phrase",
+            "level": 1,
+            "description": "Xilonen's Nightsoul point and Phlogiston consumption in her Nightsoul's Blessing state is decreased by 30%, and her Nightsoul point time limit is extended by 45%.\nAdditionally, when Xilonen's Source Samples are active, she can also increase nearby active characters' interruption resistance."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Constellation_Chiucue_Mix.png",
+            "name": "Chiucue Mix",
+            "level": 2,
+            "description": "Xilonen's Geo Source Sample will always remain active. Additionally, when her Source Samples activate, all nearby party members will gain effects corresponding to the active Source Sample that matches their Elemental Type:\nGeo: DMG +50%.\nPyro: ATK +45%.\nHydro: Max HP +45%.\nCryo: CRIT DMG +60%.\nElectro: Restore 25 Energy, decrease Elemental Burst CD by 6s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Constellation_Tonalpohualli%27s_Loop.png",
+            "name": "Tonalpohualli's Loop",
+            "level": 3,
+            "description": "Increases the Level of Yohual's Scratch by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Constellation_Suchitl%27s_Trance.png",
+            "name": "Suchitl's Trance",
+            "level": 4,
+            "description": "After Xilonen uses Yohual's Scratch, she will grant all nearby party members the Blooming Blessing effect for 15s.\nCharacters with Blooming Blessing deal 65% of Xilonen's DEF as increased Normal, Charged, and Plunging Attack DMG. This effect will be removed after triggering 6 times or when the duration ends.\nWhen you hit more than one opponent, trigger counts will be consumed based on the number of opponents hit. The counts for each party member with Blooming Blessing are counted independently."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Constellation_Tlaltecuhtli%27s_Crossfade.png",
+            "name": "Tlaltecuhtli's Crossfade",
+            "level": 5,
+            "description": "Increases the Level of Ocelotlicue Point! by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Constellation_Imperishable_Night_Carnival.png",
+            "name": "Imperishable Night Carnival",
+            "level": 6,
+            "description": "When Xilonen is in the Nightsoul's Blessing state, when she sprints, leaps, or uses Normal or Plunging Attacks, she will gain Imperishable Night's Blessing, ignoring the limitations of her Nightsoul's Blessing state and increasing the DMG dealt by her Normal and Plunging Attacks for 5s.\nDuring this time:\nHer Nightsoul's Blessing time limit countdown will be paused. Xilonen's Nightsoul points, Phlogiston, and Stamina will not decrease, and when her Nightsoul points reach the maximum, her Nightsoul's Blessing state will not end either.\nXilonen deals 300% of her DEF as increased Normal and Plunging Attack DMG while in the Nightsoul's Blessing state.\nShe heals nearby party members for 120% of her DEF every 1.5s.\nShe can gain 1 Imperishable Night's Blessing once every 15s."
+        }
+    ],
+    "imageUrls": {},
+    "version": "5.1",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Idle_Xilonen_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Idle_Xilonen_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Idle_Xilonen_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Idle_Xilonen_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Talent_Menu_Xilonen.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Talent_Menu_Xilonen.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Weapon_Menu_Xilonen.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Weapon_Menu_Xilonen.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Party_Setup_Xilonen.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Party_Setup_Xilonen.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Namecard_Background_Xilonen_Cue_Point.png",
+                "caption": "Xilonen: Cue Point Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Xilonen_Cue_Point.png",
+                "caption": "Xilonen: Cue Point Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Namecard_Banner_Xilonen_Cue_Point.png",
+                "caption": "Xilonen: Cue Point Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Ehecatl%27s_Roar_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Ehecatl%27s_Roar_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Ehecatl%27s_Roar_Blade_Roller_Preview.gif",
+                        "caption": "Nightsoul's Blessing: Blade Roller",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Ehecatl%27s_Roar_Blade_Roller_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Ocelotlicue_Point%21_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Ocelotlicue_Point%21_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Yohual%27s_Scratch_Movement_Preview.gif",
+                        "caption": "Movement",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Yohual%27s_Scratch_Movement_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Yohual%27s_Scratch_Source_Samples_Preview.gif",
+                        "caption": "Source Samples",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Yohual%27s_Scratch_Source_Samples_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Xilonen_Character_Details_1.png",
+                "caption": "Xilonen Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Xilonen_Character_Details_2.png",
+                "caption": "Xilonen Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Xilonen_Character_Details_3.gif",
+                "caption": "Xilonen Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Xilonen_Character_Details_4.gif",
+                "caption": "Xilonen Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Xilonen_Character_Details_5.png",
+                "caption": "Xilonen Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Xilonen_Character_Details_6.png",
+                "caption": "Xilonen Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Xilonen_Character_Details_7.png",
+                "caption": "Xilonen Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Xilonen_Character_Details_8.png",
+                "caption": "Xilonen Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Xilonen_Character_Details_9.gif",
+                "caption": "Xilonen Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Xilonen_Character_Details_10.gif",
+                "caption": "Xilonen Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Xilonen_Character_Details_11.gif",
+                "caption": "Xilonen Details 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Xilonen_Character_Details_12.gif",
+                "caption": "Xilonen Details 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Xilonen_Character_Details_13.png",
+                "caption": "Xilonen Details 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Xilonen_Character_Details_14.gif",
+                "caption": "Xilonen Details 14"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_36_Xilonen_1.png",
+                "caption": "Yawn Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Icon_Emoji_Paimon%27s_Paintings_36_Xilonen_2.png",
+                "caption": "Laid-back Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Icon_Emoji_Paimon%27s_Paintings_36_Xilonen_3.png",
+                "caption": "Grooving Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Icon_Emoji_Paimon%27s_Paintings_36_Xilonen_4.png",
+                "caption": "OPEN UP Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Icon_Emoji_Paimon%27s_Paintings_40_Xilonen_1.png",
+                "caption": "Nope, Not In Set 40"
+            }
+        ]
+    }
+}

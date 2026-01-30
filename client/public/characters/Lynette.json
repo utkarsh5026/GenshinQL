@@ -1,0 +1,507 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Lynette_Icon.png",
+    "name": "Lynette",
+    "rarity": "4 Stars",
+    "element": "Anemo",
+    "weaponType": "Sword",
+    "region": "Fontaine",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+    "modelType": "Medium Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png",
+            "talentName": "Rapid Ritesword",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Rapid_Ritesword_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Rapid_Ritesword_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG": [
+                    "43.08",
+                    "46.59",
+                    "50.09",
+                    "55.1",
+                    "58.61",
+                    "62.62",
+                    "68.13",
+                    "73.64",
+                    "79.15",
+                    "85.16",
+                    "91.17"
+                ],
+                "2-Hit DMG": [
+                    "37.61",
+                    "40.67",
+                    "43.74",
+                    "48.11",
+                    "51.17",
+                    "54.67",
+                    "59.48",
+                    "64.29",
+                    "69.1",
+                    "74.35",
+                    "79.6"
+                ],
+                "3-Hit DMG": [
+                    "27.86\n+\n21.59",
+                    "30.13\n+\n23.35",
+                    "32.4\n+\n25.11",
+                    "35.64\n+\n27.62",
+                    "37.91\n+\n29.38",
+                    "40.5\n+\n31.38",
+                    "44.06\n+\n34.15",
+                    "47.63\n+\n36.91",
+                    "51.19\n+\n39.67",
+                    "55.08\n+\n42.68",
+                    "58.97\n+\n45.7"
+                ],
+                "4-Hit DMG": [
+                    "63.15",
+                    "68.29",
+                    "73.44",
+                    "80.78",
+                    "85.92",
+                    "91.79",
+                    "99.87",
+                    "107.95",
+                    "116.03",
+                    "124.84",
+                    "133.65"
+                ],
+                "Charged Attack DMG": [
+                    "44.2\n+\n61.4",
+                    "47.8\n+\n66.4",
+                    "51.4\n+\n71.4",
+                    "56.54\n+\n78.54",
+                    "60.14\n+\n83.54",
+                    "64.25\n+\n89.25",
+                    "69.9\n+\n97.1",
+                    "75.56\n+\n104.96",
+                    "81.21\n+\n112.81",
+                    "87.38\n+\n121.38",
+                    "93.55\n+\n129.95"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "20"
+                ],
+                "Plunge DMG": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.93",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Enigmatic_Feint.png",
+            "talentName": "Enigmatic Feint",
+            "talentType": "Elemental Skill",
+            "description": "Flicks her mantle and executes an Enigma Thrust, dealing Anemo DMG.\nWhen the Enigma Thrust hits an opponent, it will restore Lynette's HP based on her Max HP, and in the 4s afterward, she will lose a certain amount of HP per second.\nBased on whether you (‍press\n‍/‍tap\n‍) or hold this ability, she will use Enigma Thrust differently.\n\n(‍Press\n‍/‍Tap\n‍)\nShe swiftly uses an Enigma Thrust.\n\nHold\nLynette will enter a high-speed Pilfering Shadow state and apply Shadowsign to a nearby opponent. You can control her movement direction during this state, and you can end it prematurely by using this skill again.\nWhen this high-speed state ends, Lynette will unleash her Enigma Thrust. If there is an opponent with Shadowsign applied to them nearby, Lynette will approach them in a flash before using Enigma Thrust.\n\nA maximum of 1 opponent can have Shadowsign at any one time. When this opponent gets too far from Lynette, the Shadowsign will be canceled.\n\nArkhe: Ousia\nAt specific intervals, Lynette will unleash a Surging Blade when she uses Enigma Thrust, dealing Ousia-aligned Anemo DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Enigmatic_Feint_Press_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Enigmatic_Feint_Hold_Preview.gif",
+                    "caption": "Hold"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Enigmatic_Feint_Arkhe_Ousia_Preview.gif",
+                    "caption": "Arkhe: Ousia"
+                }
+            ],
+            "scaling": {
+                "Enigma Thrust DMG": [
+                    "268",
+                    "288.1",
+                    "308.2",
+                    "335",
+                    "355.1",
+                    "375.2",
+                    "402",
+                    "428.8",
+                    "455.6",
+                    "482.4",
+                    "509.2",
+                    "536",
+                    "569.5"
+                ],
+                "Surging Blade DMG": [
+                    "31.2",
+                    "33.54",
+                    "35.88",
+                    "39",
+                    "41.34",
+                    "43.68",
+                    "46.8",
+                    "49.92",
+                    "53.04",
+                    "56.16",
+                    "59.28",
+                    "62.4",
+                    "66.3"
+                ],
+                "Surging Blade Interval": [
+                    "10s"
+                ],
+                "HP Regeneration": [
+                    "25% Max HP"
+                ],
+                "HP Cost": [
+                    "6% Current HP/s"
+                ],
+                "Hold Max Duration": [
+                    "2.5s"
+                ],
+                "CD": [
+                    "12s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Talent_Magic_Trick_Astonishing_Shift.png",
+            "talentName": "Magic Trick: Astonishing Shift",
+            "talentType": "Elemental Burst",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nLynette raises her mantle high, dealing AoE Anemo DMG, using skillful sleight of hand to make a giant Bogglecat Box appear!\n\nBogglecat Box\nTaunts nearby opponents, attracting their attacks.\nDeals Anemo DMG to nearby opponents at intervals.\nWhen the Bogglecat Box comes into contact with Hydro/Pyro/Cryo/Electro, it will gain the corresponding element and additionally fire Vivid Shots that will deal DMG from that element at intervals.\nElemental Absorption of this kind will only occur once during this ability's duration.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Magic_Trick_Astonishing_Shift_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG": [
+                    "83.2",
+                    "89.44",
+                    "95.68",
+                    "104",
+                    "110.24",
+                    "116.48",
+                    "124.8",
+                    "133.12",
+                    "141.44",
+                    "149.76",
+                    "158.08",
+                    "166.4",
+                    "176.8"
+                ],
+                "Bogglecat Box DMG": [
+                    "51.2",
+                    "55.04",
+                    "58.88",
+                    "64",
+                    "67.84",
+                    "71.68",
+                    "76.8",
+                    "81.92",
+                    "87.04",
+                    "92.16",
+                    "97.28",
+                    "102.4",
+                    "108.8"
+                ],
+                "Vivid Shot DMG": [
+                    "45.6",
+                    "49.02",
+                    "52.44",
+                    "57",
+                    "60.42",
+                    "63.84",
+                    "68.4",
+                    "72.96",
+                    "77.52",
+                    "82.08",
+                    "86.64",
+                    "91.2",
+                    "96.9"
+                ],
+                "Bogglecat Box Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Talent_Sophisticated_Synergy.png",
+            "talentName": "Sophisticated Synergy",
+            "talentType": "1st Ascension Passive",
+            "description": "Within 10s after using Magic Trick: Astonishing Shift, when there are 1/2/3/4 Elemental Types in the party, all party members' ATK will be increased by 8%/12%/16%/20% respectively.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Talent_Props_Positively_Prepped.png",
+            "talentName": "Props Positively Prepped",
+            "talentType": "4th Ascension Passive",
+            "description": "After the Bogglecat Box summoned by Magic Trick: Astonishing Shift performs Elemental Conversion, Lynette's Elemental Burst will deal 15% more DMG. This effect will persist until the Bogglecat Box's duration ends.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Talent_Loci-Based_Mnemonics.png",
+            "talentName": "Loci-Based Mnemonics",
+            "talentType": "Utility Passive",
+            "description": "Shows the location of nearby Recovery Orbs on the minimap. The Aquatic Stamina and HP gained from touching Orbs will be increased by 25%.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Constellation_A_Cold_Blade_Like_a_Shadow.png",
+            "name": "A Cold Blade Like a Shadow",
+            "level": 1,
+            "description": "When Enigmatic Feint's Enigma Thrust hits an opponent with Shadowsign, a vortex will be created at that opponent's position that will pull nearby opponents in."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Constellation_Endless_Mysteries.png",
+            "name": "Endless Mysteries",
+            "level": 2,
+            "description": "Whenever the Bogglecat Box summoned by Magic Trick: Astonishing Shift fires a Vivid Shot, it will fire an extra Vivid Shot."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Constellation_Cognition-Inverting_Gaze.png",
+            "name": "Cognition-Inverting Gaze",
+            "level": 3,
+            "description": "Increases the Level of Magic Trick: Astonishing Shift by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Constellation_Tacit_Coordination.png",
+            "name": "Tacit Coordination",
+            "level": 4,
+            "description": "Increases Enigmatic Feint's charges by 1."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_Obscuring_Ambiguity.png",
+            "name": "Obscuring Ambiguity",
+            "level": 5,
+            "description": "Increases the Level of Enigmatic Feint by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Constellation_Watchful_Eye.png",
+            "name": "Watchful Eye",
+            "level": 6,
+            "description": "Description\nGameplay Notes\nWhen Lynette uses Enigmatic Feint's Enigma Thrust, she will gain an Anemo Infusion and 20% Anemo DMG Bonus for 6s."
+        }
+    ],
+    "imageUrls": {},
+    "version": "4.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Namecard_Background_Lynette_Earnestness.png",
+                "caption": "Lynette: Earnestness Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Lynette_Earnestness.png",
+                "caption": "Lynette: Earnestness Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Namecard_Banner_Lynette_Earnestness.png",
+                "caption": "Lynette: Earnestness Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Lynette_Character_Details_1.png",
+                "caption": "Lynette Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Lynette_Character_Details_2.png",
+                "caption": "Lynette Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Lynette_Character_Details_3.gif",
+                "caption": "Lynette Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Lynette_Character_Details_4.gif",
+                "caption": "Lynette Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Lynette_Character_Details_5.gif",
+                "caption": "Lynette Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Lynette_Character_Details_6.gif",
+                "caption": "Lynette Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Lynette_Character_Details_7.png",
+                "caption": "Lynette Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Lynette_Character_Details_8.png",
+                "caption": "Lynette Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Lynette_Character_Details_9.png",
+                "caption": "Lynette Details 9"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Icon_Emoji_Paimon%27s_Paintings_26_Lynette_1.png",
+                "caption": "Watch the fun Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Icon_Emoji_Paimon%27s_Paintings_26_Lynette_2.png",
+                "caption": "Standby Mode Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Icon_Emoji_Paimon%27s_Paintings_26_Lynette_3.png",
+                "caption": "Gotcha Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Icon_Emoji_Paimon%27s_Paintings_26_Lynette_4.png",
+                "caption": "Cheer Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Icon_Emoji_Paimon%27s_Paintings_28_Lynette_1.png",
+                "caption": "Have a Look. Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Icon_Emoji_Paimon%27s_Paintings_31_Lynette_1.png",
+                "caption": "Small Joys Set 31"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Icon_Emoji_Paimon%27s_Paintings_32_Lynette_1.png",
+                "caption": "*Stare* Set 32"
+            }
+        ]
+    }
+}

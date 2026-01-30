@@ -1,7 +1,9 @@
-import { Weapon } from "@/graphql/types";
-import React from "react";
-import AvatarWithSkeleton from "../utils/AvatarWithSkeleton";
-import ListSplitter from "../utils/ListSplitter";
+import React from 'react';
+
+import { Weapon } from '@/types';
+
+import AvatarWithSkeleton from '../utils/AvatarWithSkeleton';
+import ListSplitter from '../utils/ListSplitter';
 
 interface WeaponCardProps {
   weapon: Weapon;
@@ -21,7 +23,7 @@ interface WeaponCardProps {
 const WeaponCard: React.FC<WeaponCardProps> = ({ weapon }) => {
   const { name, iconUrl, rarity, effect, attack, subStat, type } = weapon;
 
-  const rarityStars = "★".repeat(rarity);
+  const rarityStars = '★'.repeat(rarity);
 
   return (
     <div className="flex flex-col border bg-gray-100 border-amber-500/50 rounded-lg text-gray-900">
