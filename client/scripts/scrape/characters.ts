@@ -586,6 +586,71 @@ export async function scrapeCharactersInDetail(
   }
 }
 
+/**
+ * Checks all characters from characters.json against individual character files
+ * and reports missing properties for each character
+ */
+export async function checkCharacterCoverage(): Promise<void> {
+  logger.cyan('\n=== Checking Character Coverage ===\n');
+
+  const characters =
+    await loadFromPublic<BaseCharacterSchema[]>(CHARACTERS_FILE_NAME);
+
+  if (!characters) {
+    logger.error('No characters found in characters.json');
+    return;
+  }
+
+  const detailedDir = path.join(PUBLIC_DIR, 'characters');
+  let allCovered = true;
+  let totalChecked = 0;
+  let totalComplete = 0;
+  const incompleteCharacters: string[] = [];
+
+  for (const char of characters) {
+    const name = parseCharacterName(char.name);
+    const filePath = path.join(detailedDir, `${name}.json`);
+    totalChecked++;
+
+    try {
+      const content = await fs.readFile(filePath, 'utf-8');
+      const data = JSON.parse(content);
+
+      const result = advancedCharacterSchema.safeParse(data);
+
+      if (!result.success) {
+        allCovered = false;
+        incompleteCharacters.push(char.name);
+        logger.warn(`${char.name} is missing properties:`);
+        result.error.issues.forEach((issue) => {
+          logger.error(`  - ${issue.path.join('.')}: ${issue.message}`);
+        });
+      } else {
+        totalComplete++;
+      }
+    } catch (error) {
+      allCovered = false;
+      incompleteCharacters.push(char.name);
+      if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+        logger.error(`${char.name} - file not found`);
+      } else {
+        logger.error(`${char.name} - error reading file:`, error);
+      }
+    }
+  }
+
+  logger.info(`Total characters checked: ${totalChecked}`);
+  logger.success(`Complete characters: ${totalComplete}`);
+
+  if (allCovered) {
+    logger.success('\nAll characters covered!\n');
+  } else {
+    logger.warn(
+      `Incomplete/Missing (${incompleteCharacters.length}): ${incompleteCharacters.join(', ')}\n`
+    );
+  }
+}
+
 async function main() {
   logger.info('Starting character scraping script...');
   const args = process.argv.slice(2);
@@ -597,7 +662,7 @@ async function main() {
       colors: true,
     });
 
-    logger.info('Usage: node characters.js --base --detailed');
+    logger.info('Usage: node characters.js --base --detailed --check');
     return;
   }
 
@@ -622,6 +687,10 @@ async function main() {
 
   if (args.includes('--detailed')) {
     await saveCharactersDetailed();
+  }
+
+  if (args.includes('--check')) {
+    await checkCharacterCoverage();
   }
 }
 
