@@ -185,39 +185,31 @@ export async function getCharacterGalleryImages(
 
   const getElementsAfterHeading = async <T>(
     headingSelector: string,
-    childSelector: string,
+    childSelector: 'figure' | 'img',
     parser: (elements: WebElement[]) => Promise<T[]>
   ): Promise<T[]> => {
-    await waitForElementCss(driver, headingSelector);
-    const container = await getParentNextDivSibling(driver, headingSelector);
-    const elements = await container.findElements(By.css(childSelector));
     try {
+      await waitForElementCss(driver, headingSelector);
+      const container = await getParentNextDivSibling(driver, headingSelector);
+      const elements = await container.findElements(By.css(childSelector));
       return await parser(elements);
     } catch {
+      logger.debug(
+        `Optional element ${headingSelector} not found for ${character}, skipping...`
+      );
       return [];
     }
   };
-
-  const getCharacterNameCard = async () =>
-    getElementsAfterHeading('span#Namecard', 'img', parseImages);
-
-  const getCharacterScreenAnimations = async () =>
-    getElementsAfterHeading(
-      'span#Character_Screen_Animations',
-      'figure',
-      parseFigures
-    );
-
-  const getCharacterAttackAnimations = async (skill: string) => {
-    return getElementsAfterHeading(`span#${skill}`, 'figure', parseFigures);
-  };
-
   const getImagesAfterHeading = (selector: string) =>
     getElementsAfterHeading(selector, 'img', parseImages);
 
   const [screenAnimations, nameCards] = await Promise.all([
-    getCharacterScreenAnimations(),
-    getCharacterNameCard(),
+    getElementsAfterHeading(
+      'span#Character_Screen_Animations',
+      'figure',
+      parseFigures
+    ),
+    getElementsAfterHeading('span#Namecard', 'img', parseImages),
   ]);
 
   const attackTypes = [
@@ -230,7 +222,11 @@ export async function getCharacterGalleryImages(
     attackTypes.map(async (skill) => {
       return {
         skill,
-        animations: await getCharacterAttackAnimations(skill),
+        animations: await getElementsAfterHeading(
+          `span#${skill}`,
+          'figure',
+          parseFigures
+        ),
       };
     })
   );
