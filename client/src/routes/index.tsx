@@ -6,7 +6,7 @@ import WeaponCalendar from '@/components/weapons/WeaponCalender';
 import WeaponsDetailed from '@/components/weapons/WeaponsDetailed';
 import TierList from '@/components/tierlist/TierList';
 import GenshinGuesser from '@/components/gdle/main/GenshinGuesser';
-import CharacterDetail from '@/components/character/description/CharacterDetail';
+import CharacterDetail from '@/components/character/description/character-detail';
 
 export const routes: RouteObject[] = [
   {
