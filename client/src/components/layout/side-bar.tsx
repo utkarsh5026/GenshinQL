@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import {
   Sidebar,
   SidebarContent,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuButton,
   SidebarMenuItem as SidebarItem,
   SidebarMenuSub,
   SidebarMenuSubItem,
-} from "@/components/ui/sidebar";
+} from '@/components/ui/sidebar';
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@radix-ui/react-collapsible";
+} from '@radix-ui/react-collapsible';
 import {
   CalendarClock,
   CalendarHeart,
@@ -23,31 +23,11 @@ import {
   Table2,
   ChartBarDecreasing,
   Gamepad2,
-} from "lucide-react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { useCharactersStore } from "@/stores";
+} from 'lucide-react';
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import { useCharactersStore } from '@/stores';
 
-interface AppSideBarProps {
-  onCharacterClick: (name: string) => void;
-  onTalentCalenderClick: () => void;
-  onCharactersTableClick: () => void;
-  onCharacterRoutineClick: () => void;
-  onWeaponCalenderClick: () => void;
-  onWeaponsDetailedClick: () => void;
-  onTierListClick: () => void;
-  onGenshinGuesserClick: () => void;
-}
-
-const AppSideBar: React.FC<AppSideBarProps> = ({
-  onCharacterClick,
-  onTalentCalenderClick,
-  onCharactersTableClick,
-  onCharacterRoutineClick,
-  onWeaponCalenderClick,
-  onWeaponsDetailedClick,
-  onTierListClick,
-  onGenshinGuesserClick,
-}) => {
+const AppSideBar: React.FC = () => {
   const { characters, fetchCharacters } = useCharactersStore();
 
   useEffect(() => {
@@ -63,92 +43,121 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
             alt="Genshin Impact"
             className="w-8 h-8"
           />
-          <h1 className="text-lg font-semibold tracking-tight">Genshin Impact</h1>
+          <h1 className="text-lg font-semibold tracking-tight">
+            Genshin Impact
+          </h1>
         </div>
       </SidebarHeader>
 
       <SidebarContent className="px-3 py-4">
         <SidebarMenu className="space-y-1">
-          <SidebarMenuButton
-            onClick={onTalentCalenderClick}
-            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-pink-500/10 transition-colors group"
+          <NavLink
+            to="/talents"
+            className={({ isActive }) =>
+              `w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group ${
+                isActive ? 'bg-pink-500/20' : 'hover:bg-pink-500/10'
+              }`
+            }
           >
             <CalendarHeart className="w-4 h-4 text-pink-500 group-hover:text-pink-600" />
             <span className="text-sm font-medium">Talents Calendar</span>
-          </SidebarMenuButton>
+          </NavLink>
 
-          <SidebarMenuButton
-            onClick={onCharactersTableClick}
-            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-blue-500/10 transition-colors group"
+          <NavLink
+            to="/characters/table"
+            className={({ isActive }) =>
+              `w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group ${
+                isActive ? 'bg-blue-500/20' : 'hover:bg-blue-500/10'
+              }`
+            }
           >
             <Table2 className="w-4 h-4 text-blue-500 group-hover:text-blue-600" />
             <span className="text-sm font-medium">Characters Table</span>
-          </SidebarMenuButton>
+          </NavLink>
 
-          <SidebarMenuButton
-            onClick={onCharacterRoutineClick}
-            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-purple-500/10 transition-colors group"
+          <NavLink
+            to="/characters/routine"
+            className={({ isActive }) =>
+              `w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group ${
+                isActive ? 'bg-purple-500/20' : 'hover:bg-purple-500/10'
+              }`
+            }
           >
             <CalendarClock className="w-4 h-4 text-purple-500 group-hover:text-purple-600" />
             <span className="text-sm font-medium">Characters Routine</span>
-          </SidebarMenuButton>
+          </NavLink>
 
-          <SidebarMenuButton
-            onClick={onWeaponCalenderClick}
-            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-amber-500/10 transition-colors group"
+          <NavLink
+            to="/weapons/calendar"
+            className={({ isActive }) =>
+              `w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group ${
+                isActive ? 'bg-amber-500/20' : 'hover:bg-amber-500/10'
+              }`
+            }
           >
             <LucideSwords className="w-4 h-4 text-amber-500 group-hover:text-amber-600" />
             <span className="text-sm font-medium">Weapons Calendar</span>
-          </SidebarMenuButton>
+          </NavLink>
 
-          <SidebarMenuButton
-            onClick={onWeaponsDetailedClick}
-            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-orange-500/10 transition-colors group"
+          <NavLink
+            to="/weapons"
+            className={({ isActive }) =>
+              `w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group ${
+                isActive ? 'bg-orange-500/20' : 'hover:bg-orange-500/10'
+              }`
+            }
           >
             <AxeIcon className="w-4 h-4 text-orange-500 group-hover:text-orange-600" />
             <span className="text-sm font-medium">Weapons Detailed</span>
-          </SidebarMenuButton>
+          </NavLink>
 
-          <SidebarMenuButton
-            onClick={onTierListClick}
-            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-emerald-500/10 transition-colors group"
+          <NavLink
+            to="/tierlist"
+            className={({ isActive }) =>
+              `w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group ${
+                isActive ? 'bg-emerald-500/20' : 'hover:bg-emerald-500/10'
+              }`
+            }
           >
             <ChartBarDecreasing className="w-4 h-4 text-emerald-500 group-hover:text-emerald-600" />
             <span className="text-sm font-medium">Tier List</span>
-          </SidebarMenuButton>
+          </NavLink>
 
-          <SidebarMenuButton
-            onClick={onGenshinGuesserClick}
-            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-violet-500/10 transition-colors group"
+          <NavLink
+            to="/guesser"
+            className={({ isActive }) =>
+              `w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group ${
+                isActive ? 'bg-violet-500/20' : 'hover:bg-violet-500/10'
+              }`
+            }
           >
             <Gamepad2 className="w-4 h-4 text-violet-500 group-hover:text-violet-600" />
             <span className="text-sm font-medium">Genshin Guesser</span>
-          </SidebarMenuButton>
+          </NavLink>
 
           <div className="pt-2">
             <Collapsible defaultOpen={false} className="group/collapsible">
               <SidebarItem>
                 <CollapsibleTrigger className="w-full">
-                  <SidebarMenuButton className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-indigo-500/10 transition-colors group">
+                  <div className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-indigo-500/10 transition-colors group">
                     <span className="text-sm font-medium">Characters</span>
                     <ChevronDown className="ml-auto w-4 h-4 text-indigo-500 group-hover:text-indigo-600 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-                  </SidebarMenuButton>
+                  </div>
                 </CollapsibleTrigger>
 
                 <CollapsibleContent className="mt-1">
                   <SidebarMenuSub className="ml-3 border-l border-indigo-500/20 pl-3 space-y-1 max-h-[400px] overflow-y-auto scrollbar-hide">
                     {characters.map((character) => (
-                      <SidebarMenuSubItem
-                        key={character.name}
-                        className="cursor-pointer"
-                        onClick={() => onCharacterClick(character.name)}
-                      >
-                        <div className="flex items-center gap-2.5 py-1.5 px-2 rounded-md hover:bg-indigo-500/10 transition-colors group">
+                      <SidebarMenuSubItem key={character.name}>
+                        <Link
+                          to={`/characters/${character.name}`}
+                          className="flex items-center gap-2.5 py-1.5 px-2 rounded-md hover:bg-indigo-500/10 transition-colors group"
+                        >
                           <Avatar className="h-7 w-7 ring-1 ring-border/50 group-hover:ring-indigo-500/30">
                             <AvatarImage src={character.iconUrl} />
                           </Avatar>
                           <span className="text-sm">{character.name}</span>
-                        </div>
+                        </Link>
                       </SidebarMenuSubItem>
                     ))}
                   </SidebarMenuSub>
