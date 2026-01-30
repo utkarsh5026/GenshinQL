@@ -3,13 +3,13 @@ import { URL, waitForElementCss, withWebDriver } from './setup.js';
 import {
   AdvancedCharacterSchema,
   GallerySchema,
-  GenshinImageSchema,
   gallerySchema,
+  GenshinImageSchema,
 } from './schema.js';
-import { getParentNextDivSibling } from './utils.js';
+import { getParentNextDivSibling, launchDriverInBatchSafe } from './utils.js';
 import * as path from 'node:path';
 import * as fs from 'node:fs/promises';
-import { PUBLIC_DIR, loadJsonData, saveJson, listFiles } from './fileio.js';
+import { listFiles, loadJsonData, PUBLIC_DIR, saveJson } from './fileio.js';
 import { logger } from '../logger.js';
 
 const parseUrl = (url: string) => url.split('/revision/')[0];
@@ -18,15 +18,15 @@ const CHARACTERS_DIR = path.join(PUBLIC_DIR, 'characters');
 /**
  * Validates if gallery data has all required fields and proper structure
  * @param galleryData - The gallery data object to validate
- * @param characterName - Character name for logging purposes
+ * @param charName - Character name for logging purposes
  * @returns true if the gallery data is complete, false otherwise
  */
 function isGalleryDataComplete(
   galleryData: unknown,
-  characterName: string
+  charName: string
 ): boolean {
   if (!galleryData) {
-    logger.warn(`${characterName} has no gallery data`);
+    logger.warn(`${charName} has no gallery data`);
     return false;
   }
 
@@ -34,7 +34,7 @@ function isGalleryDataComplete(
 
   if (!result.success) {
     logger.warn(
-      `Gallery validation failed for ${characterName}:`,
+      `Gallery validation failed for ${charName}:`,
       result.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`)
     );
     return false;
@@ -45,21 +45,21 @@ function isGalleryDataComplete(
 
   // Check for required arrays (should exist even if empty)
   if (!validatedGallery.screenAnimations) {
-    logger.warn(`${characterName} gallery missing screenAnimations`);
+    logger.warn(`${charName} gallery missing screenAnimations`);
     return false;
   }
 
   if (!validatedGallery.nameCards) {
-    logger.warn(`${characterName} gallery missing nameCards`);
+    logger.warn(`${charName} gallery missing nameCards`);
     return false;
   }
 
   if (!validatedGallery.attackAnimations) {
-    logger.warn(`${characterName} gallery missing attackAnimations`);
+    logger.warn(`${charName} gallery missing attackAnimations`);
     return false;
   }
 
-  logger.debug(`${characterName} gallery data is complete`);
+  logger.debug(`${charName} gallery data is complete`);
   return true;
 }
 
@@ -67,23 +67,20 @@ function isGalleryDataComplete(
  * Scrapes gallery data for a single character using its own WebDriver instance.
  * Creates a new WebDriver instance for each character scrape.
  *
- * @param {string} characterName - Character name (from filename without .json)
+ * @param {string} charName - Character name (from filename without .json)
  * @returns {Promise<GallerySchema | undefined>}
  */
 async function scrapeCharacterGallery(
-  characterName: string
+  charName: string
 ): Promise<GallerySchema | undefined> {
   const scrapeGallery = async (driver: WebDriver) => {
-    logger.cyan(`\n=== Scraping gallery for ${characterName} ===`);
+    logger.cyan(`\n=== Scraping gallery for ${charName} ===`);
     try {
-      const galleryData = await getCharacterGalleryImages(
-        driver,
-        characterName
-      );
-      logger.success(`✅ Scraped gallery for ${characterName}`);
+      const galleryData = await getCharacterGalleryImages(driver, charName);
+      logger.success(`Scraped gallery for ${charName}`);
       return galleryData;
     } catch (error) {
-      logger.error(`❌ Error scraping gallery for ${characterName}:`, error);
+      logger.error(`Error scraping gallery for ${charName}:`, error);
       throw error;
     }
   };
@@ -110,60 +107,67 @@ async function mergeGalleryIntoCharacterFiles(
     return;
   }
 
-  const characterFiles = await listFiles(CHARACTERS_DIR);
-  logger.cyan(`📁 Found ${characterFiles.length} character files`);
+  const characterFiles = (await listFiles(CHARACTERS_DIR)).filter((file) =>
+    file.endsWith('.json')
+  );
 
-  for (const file of characterFiles) {
-    if (!file.endsWith('.json')) continue;
+  const filterResults = await Promise.all(
+    characterFiles.map(async (file) => {
+      const charName = file.replace('.json', '');
+      const filePath = path.join(CHARACTERS_DIR, file);
 
-    const characterName = file.replace('.json', '');
-    const filePath = path.join(CHARACTERS_DIR, file);
-
-    try {
-      const characterData =
-        await loadJsonData<AdvancedCharacterSchema>(filePath);
-
-      if (!characterData) {
-        logger.warn(`⚠️  Could not load data for ${characterName}`);
-        continue;
+      const character = await loadJsonData<AdvancedCharacterSchema>(filePath);
+      if (!character) {
+        logger.warn(`⚠️  Could not load data for ${charName}`);
+        return { file, needsScraping: false };
       }
 
-      if (!force && characterData.gallery) {
-        const isComplete = isGalleryDataComplete(
-          characterData.gallery,
-          characterName
-        );
+      if (!force && character.gallery) {
+        const isComplete = isGalleryDataComplete(character.gallery, charName);
         if (isComplete) {
           logger.debug(
-            `⏭️  ${characterName} already has complete gallery data, skipping...`
+            `⏭️  ${charName} already has complete gallery data, skipping...`
           );
-          continue;
-        } else {
-          logger.warn(
-            `${characterName} has incomplete gallery data, re-scraping...`
-          );
+          return { file, needsScraping: false };
         }
+        logger.warn(`${charName} has incomplete gallery data, re-scraping...`);
       }
 
-      // Scrape gallery data with its own WebDriver instance
-      const galleryData = await scrapeCharacterGallery(characterName);
+      return { file, needsScraping: true };
+    })
+  );
 
-      if (!galleryData) {
-        logger.warn(`⚠️  No gallery data returned for ${characterName}`);
-        continue;
-      }
+  const filesToScrape = filterResults
+    .filter((r) => r.needsScraping)
+    .map((r) => r.file);
 
-      // Merge gallery data into character data
-      characterData.gallery = galleryData;
+  logger.cyan(
+    `\n📋 Found ${filesToScrape.length}/${characterFiles.length} characters to scrape`
+  );
 
-      // Save back to the same file
-      await saveJson(characterData, CHARACTERS_DIR, file);
+  const createScrapeTask = (file: string) => async () => {
+    const charName = file.replace('.json', '');
+    const filePath = path.join(CHARACTERS_DIR, file);
 
-      logger.success(`✅ Merged gallery data for ${characterName}`);
-    } catch (error) {
-      logger.error(`❌ Error processing ${characterName}:`, error);
+    const character = await loadJsonData<AdvancedCharacterSchema>(filePath);
+    if (!character) return;
+
+    const gallery = await scrapeCharacterGallery(charName);
+    if (!gallery) {
+      logger.warn(`⚠️  No gallery data returned for ${charName}`);
+      return;
     }
-  }
+
+    character.gallery = gallery;
+    await saveJson(character, CHARACTERS_DIR, file);
+    logger.success(`✅ Merged gallery data for ${charName}`);
+  };
+
+  const tasks = filesToScrape.map(createScrapeTask);
+
+  await launchDriverInBatchSafe(tasks, 4, (batchIndex, totalBatches) => {
+    logger.cyan(`\n📦 Completed batch ${batchIndex}/${totalBatches}`);
+  });
 
   logger.success('\n✨ Gallery merge complete!');
 }

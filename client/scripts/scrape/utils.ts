@@ -109,3 +109,60 @@ export async function safeGet<T>(
     return defaultValue;
   }
 }
+
+/**
+ * Executes an array of async functions in batches to avoid overwhelming Selenium
+ * with too many concurrent WebDriver instances.
+ * Prevents MaxListenersExceededWarning by limiting concurrency.
+ *
+ * @param tasks - Array of async functions that return a result
+ * @param batchSize - Number of concurrent tasks to run (default: 3)
+ * @param onBatchComplete - Optional callback after each batch completes
+ * @returns Array of results from all tasks
+ */
+export async function launchDriverInBatch<T>(
+  tasks: Array<() => Promise<T>>,
+  batchSize: number = 3,
+  onBatchComplete?: (batchIndex: number, totalBatches: number) => void
+): Promise<T[]> {
+  const results: T[] = [];
+  const totalBatches = Math.ceil(tasks.length / batchSize);
+
+  for (let i = 0; i < tasks.length; i += batchSize) {
+    const batch = tasks.slice(i, i + batchSize);
+    const batchIndex = Math.floor(i / batchSize) + 1;
+
+    const batchResults = await Promise.all(batch.map((task) => task()));
+    results.push(...batchResults);
+
+    onBatchComplete?.(batchIndex, totalBatches);
+  }
+
+  return results;
+}
+
+/**
+ * Executes an array of async functions in batches, handling errors gracefully.
+ * Failed tasks return undefined instead of throwing.
+ *
+ * @param tasks - Array of async functions that return a result
+ * @param batchSize - Number of concurrent tasks to run (default: 3)
+ * @param onBatchComplete - Optional callback after each batch completes
+ * @returns Array of results (undefined for failed tasks)
+ */
+export async function launchDriverInBatchSafe<T>(
+  tasks: Array<() => Promise<T>>,
+  batchSize: number = 3,
+  onBatchComplete?: (batchIndex: number, totalBatches: number) => void
+): Promise<Array<T | undefined>> {
+  const wrappedTasks = tasks.map((task) => async (): Promise<T | undefined> => {
+    try {
+      return await task();
+    } catch (error) {
+      console.error('Task failed in batch:', error);
+      return undefined;
+    }
+  });
+
+  return launchDriverInBatch(wrappedTasks, batchSize, onBatchComplete);
+}
