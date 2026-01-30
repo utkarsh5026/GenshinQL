@@ -36,7 +36,7 @@ export type Constellation = {
   iconUrl: string;
   name: string;
   description: string;
-  level: string;
+  level: number;
 };
 
 export type CharacterDetailed = Character & {
@@ -147,4 +147,61 @@ export type WeaponMaterialSchedule = {
 export type WeaponMaterial = {
   day: string;
   materialImages: ImageUrl[];
+};
+
+// Raw types for JSON structure (before transformation)
+export type GalleryRaw = {
+  screenAnimations: {
+    url: string;
+    caption: string;
+    videoUrl: string;
+    videoType: string;
+  }[];
+  nameCards: {
+    url: string;
+    caption: string;
+  }[];
+  attackAnimations: {
+    skill: 'Normal_Attack' | 'Elemental_Burst' | 'Elemental_Skill';
+    animations: {
+      url: string;
+      caption: string;
+      videoUrl: string;
+      videoType: string;
+    }[];
+  }[];
+  detailedImages?: { url: string; caption: string; }[];
+  stickers?: { url: string; caption: string; }[];
+};
+
+export type TalentRaw = {
+  talentName: string;
+  talentIcon: string;
+  talentType: string;
+  description: string;
+  figureUrls: {
+    url: string;
+    caption: string;
+    videoUrl?: string;
+    videoType?: string;
+  }[];
+  scaling: Record<string, string[]>;  // Object in JSON
+};
+
+export type CharacterRaw = Character & {
+  talents: TalentRaw[];
+  constellations: {
+    iconUrl: string;
+    name: string;
+    description: string;
+    level: number;
+  }[];
+  imageUrls: {
+    card: string;
+    wish: string;
+    inGame: string;
+    nameCard: string;
+  };
+  version?: string;
+  gallery?: GalleryRaw;
 };

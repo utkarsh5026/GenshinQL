@@ -6,9 +6,14 @@ import type {
   WeaponMaterialSchedule,
   AttackAnimation,
   ScreenAnimation,
-} from "@/types";
+  GalleryRaw,
+  CharacterRaw,
+  Talent,
+  AttackTalentType,
+  AnimationMedia,
+} from '@/types';
 
-const DATA_BASE_URL = "/";
+const DATA_BASE_URL = '/';
 
 let charactersCache: Character[] | null = null;
 
@@ -28,7 +33,10 @@ let galleryCache: Record<
   }
 > | null = null;
 
-async function loadDataForFile<T>(fileName: string, cache: T | null): Promise<T> {
+async function loadDataForFile<T>(
+  fileName: string,
+  cache: T | null
+): Promise<T> {
   if (cache) return cache;
 
   const response = await fetch(`${DATA_BASE_URL}${fileName}`);
@@ -56,57 +64,123 @@ export async function fetchCharacters(): Promise<Character[]> {
   return await loadCharactersData();
 }
 
+function parseAnimation({
+  videoType,
+  url,
+  caption,
+  videoUrl,
+}: Omit<AnimationMedia, 'imageUrl'> & { url: string }): AnimationMedia {
+  return {
+    imageUrl: url,
+    videoUrl,
+    caption,
+    videoType,
+  };
+}
+
+/**
+ * Transforms gallery array structure to named object structure
+ */
+function transformGalleryToScreenAnimation(
+  animations: GalleryRaw['screenAnimations']
+): ScreenAnimation {
+  return {
+    idleOne: animations[0] ? parseAnimation(animations[0]) : undefined,
+    idleTwo: animations[1] ? parseAnimation(animations[1]) : undefined,
+    partySetup: animations[2] ? parseAnimation(animations[2]) : undefined,
+  };
+}
+
+/**
+ * Transforms attack animations array to named object structure
+ */
+function transformAttackAnimations(
+  attackAnimations: GalleryRaw['attackAnimations']
+): AttackAnimation {
+  const normalAttack = attackAnimations.find(
+    (a) => a.skill === 'Normal_Attack'
+  );
+  const elementalSkill = attackAnimations.find(
+    (a) => a.skill === 'Elemental_Skill'
+  );
+  const elementalBurst = attackAnimations.find(
+    (a) => a.skill === 'Elemental_Burst'
+  );
+
+  return {
+    normalAttack: normalAttack?.animations.map(parseAnimation) || [],
+    elementalSkill: elementalSkill?.animations.map(parseAnimation) || [],
+    elementalBurst: elementalBurst?.animations.map(parseAnimation) || [],
+  };
+}
+
+/**
+ * Extracts imageUrls from gallery nameCards
+ */
+function extractImageUrls(nameCards: GalleryRaw['nameCards']) {
+  return {
+    card: nameCards[1]?.url || '', // Icon
+    wish: nameCards[0]?.url || '', // Background
+    inGame: nameCards[0]?.url || '', // Background
+    nameCard: nameCards[0]?.url || '', // Background
+  };
+}
+
 /**
  * Fetches detailed character data by name from individual character JSON files.
  */
 export async function fetchCharacterDetailed(
-  name: string,
+  name: string
 ): Promise<CharacterDetailed | null> {
   try {
-    // Fetch the character's individual JSON file
     const response = await fetch(`${DATA_BASE_URL}characters/${name}.json`);
     if (!response.ok) {
       console.error(`Failed to fetch character data for ${name}`);
       return null;
     }
 
-    const characterData = await response.json();
+    const rawData: CharacterRaw = await response.json();
 
-    // Transform scaling object to array format expected by the type
-    if (characterData.talents) {
-      characterData.talents = characterData.talents.map((talent: any) => ({
-        ...talent,
-        scaling: talent.scaling
-          ? Object.entries(talent.scaling).map(([key, value]) => ({
-              key,
-              value,
-            }))
-          : [],
-      }));
-    }
+    const transformedTalents: Talent[] = rawData.talents.map((talent) => ({
+      ...talent,
+      talentType: talent.talentType as AttackTalentType,
+      figureUrls: talent.figureUrls.map((fig) => ({
+        url: fig.url,
+        caption: fig.caption,
+      })),
+      scaling: Object.entries(talent.scaling).map(([key, value]) => ({
+        key,
+        value,
+      })),
+    }));
 
-    // Try to fetch gallery data, but don't fail if it's not available
-    let gallery = null;
-    try {
-      gallery = await fetchCharacterGallery(name);
-    } catch (error) {
-      console.warn(`Gallery data not available for ${name}, continuing without it`);
-    }
+    const gallery = rawData.gallery;
+    const screenAnimation = gallery?.screenAnimations
+      ? transformGalleryToScreenAnimation(gallery.screenAnimations)
+      : { idleOne: undefined, idleTwo: undefined, partySetup: undefined };
 
-    // Merge character data with gallery data (if available)
+    const imageUrls = rawData.imageUrls?.card
+      ? rawData.imageUrls
+      : gallery?.nameCards
+        ? extractImageUrls(gallery.nameCards)
+        : { card: '', wish: '', inGame: '', nameCard: '' };
+
     const detailedCharacter: CharacterDetailed = {
-      ...characterData,
-      screenAnimation: gallery?.screenAnimations || {
-        idleOne: undefined,
-        idleTwo: undefined,
-        partySetup: undefined,
-      },
-      imageUrls: {
-        card: gallery?.nameCard?.icon || '',
-        wish: gallery?.nameCard?.background || '',
-        inGame: gallery?.nameCard?.background || '',
-        nameCard: gallery?.nameCard?.background || '',
-      },
+      name: rawData.name,
+      iconUrl: rawData.iconUrl,
+      rarity: rawData.rarity,
+      element: rawData.element,
+      weaponType: rawData.weaponType,
+      region: rawData.region,
+      elementUrl: rawData.elementUrl,
+      weaponUrl: rawData.weaponUrl,
+      regionUrl: rawData.regionUrl,
+      modelType: rawData.modelType,
+      version: rawData.version,
+      talents: transformedTalents,
+      constellations: rawData.constellations,
+      imageUrls,
+      screenAnimation,
     };
 
     return detailedCharacter;
@@ -122,13 +196,14 @@ export async function fetchCharacterDetailed(
 async function loadTalentsData() {
   if (talentsCache) return talentsCache;
 
-  const rawData = await loadDataForFile<Record<string, any[]>>('dailyTalents.json', null);
+  const rawData = await loadDataForFile<Record<string, any[]>>(
+    'dailyTalents.json',
+    null
+  );
 
-  // Transform the data structure from { "Mondstadt": [...], "Liyue": [...] }
-  // to the expected format: { talentBooks: [{ location: "Mondstadt", days: [...] }, ...] }
   const talentBooks = Object.entries(rawData).map(([location, days]) => ({
     location,
-    days
+    days,
   }));
 
   talentsCache = { talentBooks };
@@ -150,7 +225,7 @@ async function loadWeaponsData() {
   if (weaponsCache) return weaponsCache;
 
   const response = await fetch(`${DATA_BASE_URL}/weapons.json`);
-  if (!response.ok) throw new Error("Failed to fetch weapons data");
+  if (!response.ok) throw new Error('Failed to fetch weapons data');
 
   weaponsCache = await response.json();
   return weaponsCache!;
@@ -192,7 +267,7 @@ async function loadGalleryData() {
   if (galleryCache) return galleryCache;
 
   const response = await fetch(`${DATA_BASE_URL}/gallery.json`);
-  if (!response.ok) throw new Error("Failed to fetch gallery data");
+  if (!response.ok) throw new Error('Failed to fetch gallery data');
 
   galleryCache = await response.json();
   return galleryCache!;
@@ -207,18 +282,29 @@ export async function fetchCharacterGallery(name: string): Promise<{
   nameCard: { background: string; icon: string };
 } | null> {
   const data = await loadGalleryData();
-  const charName = name.split(" ").join("_");
+  const charName = name.split(' ').join('_');
   return data[charName] || data[name] || null;
 }
 
 /**
- * Fetches character attack animations.
+ * Fetches character attack animations from character's embedded gallery data.
  */
 export async function fetchCharacterAttackAnimations(
-  name: string,
+  name: string
 ): Promise<AttackAnimation | null> {
-  const gallery = await fetchCharacterGallery(name);
-  return gallery?.attackAnimations || null;
+  try {
+    const response = await fetch(`${DATA_BASE_URL}characters/${name}.json`);
+    if (!response.ok) return null;
+
+    const rawData: CharacterRaw = await response.json();
+
+    if (!rawData.gallery?.attackAnimations) return null;
+
+    return transformAttackAnimations(rawData.gallery.attackAnimations);
+  } catch (error) {
+    console.error(`Error fetching attack animations for ${name}:`, error);
+    return null;
+  }
 }
 
 /**
