@@ -321,5 +321,208 @@
         }
     ],
     "imageUrls": {},
-    "version": "1.3"
+    "version": "1.3",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Idle_Xiao_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Idle_Xiao_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Idle_Xiao_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Idle_Xiao_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Menu_Xiao.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Talent_Menu_Xiao.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Weapon_Menu_Xiao.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Weapon_Menu_Xiao.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Party_Setup_Xiao.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Party_Setup_Xiao.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Namecard_Background_Xiao_Mask.png",
+                "caption": "Xiao: Mask Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Xiao_Mask.png",
+                "caption": "Xiao: Mask Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Namecard_Banner_Xiao_Mask.png",
+                "caption": "Xiao: Mask Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Whirlwind_Thrust_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Whirlwind_Thrust_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Whirlwind_Thrust_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Whirlwind_Thrust_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Whirlwind_Thrust_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Whirlwind_Thrust_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Bane_of_All_Evil_Preview.gif",
+                        "caption": "Activation",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Bane_of_All_Evil_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Bane_of_All_Evil_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Bane_of_All_Evil_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Bane_of_All_Evil_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Bane_of_All_Evil_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Bane_of_All_Evil_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Bane_of_All_Evil_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Lemniscatic_Wind_Cycling_Air_Preview.gif",
+                        "caption": "On Air",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Lemniscatic_Wind_Cycling_Air_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Lemniscatic_Wind_Cycling_Ground_Preview.gif",
+                        "caption": "On Ground",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Lemniscatic_Wind_Cycling_Ground_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Xiao_Character_Details_1.jpg",
+                "caption": "Xiao Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Xiao_Character_Details_2.gif",
+                "caption": "Xiao Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Xiao_Character_Details_3.gif",
+                "caption": "Xiao Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Xiao_Character_Details_4.gif",
+                "caption": "Xiao Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Xiao_Character_Details_5.jpg",
+                "caption": "Xiao Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Xiao_Character_Details_6.jpg",
+                "caption": "Xiao Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Xiao_Character_Details_7.jpg",
+                "caption": "Xiao Details 7 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Icon_Emoji_Paimon%27s_Paintings_05_Xiao_1.png",
+                "caption": "Eating Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Icon_Emoji_Paimon%27s_Paintings_05_Xiao_2.png",
+                "caption": "Rubs eyes Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Icon_Emoji_Paimon%27s_Paintings_05_Xiao_3.png",
+                "caption": "Have a seat Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Icon_Emoji_Paimon%27s_Paintings_05_Xiao_4.png",
+                "caption": "Bring it! Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Icon_Emoji_Paimon%27s_Paintings_05_Xiao_5.png",
+                "caption": "Doubt Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Icon_Emoji_Paimon%27s_Paintings_05_Xiao_6.png",
+                "caption": "Dazed Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Icon_Emoji_Paimon%27s_Paintings_05_Xiao_7.png",
+                "caption": "Indifferent Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Icon_Emoji_Paimon%27s_Paintings_05_Xiao_8.png",
+                "caption": "Frown Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Icon_Emoji_Paimon%27s_Paintings_12_Xiao_1.png",
+                "caption": "Disbelieving Set 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Icon_Emoji_Paimon%27s_Paintings_12_Xiao_2.png",
+                "caption": "Eat Snow Set 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Icon_Emoji_Paimon%27s_Paintings_15_Xiao_1.png",
+                "caption": "Ready for Battle Set 15"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Icon_Emoji_Paimon%27s_Paintings_15_Xiao_2.png",
+                "caption": "Show Up Set 15"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Icon_Emoji_Paimon%27s_Paintings_30_Xiao_1.png",
+                "caption": "Polite Refusal Set 30"
+            }
+        ]
+    }
 }

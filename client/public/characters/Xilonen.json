@@ -374,5 +374,180 @@
         }
     ],
     "imageUrls": {},
-    "version": "5.1"
+    "version": "5.1",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Idle_Xilonen_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Idle_Xilonen_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Idle_Xilonen_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Idle_Xilonen_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Talent_Menu_Xilonen.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Talent_Menu_Xilonen.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Weapon_Menu_Xilonen.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Weapon_Menu_Xilonen.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Party_Setup_Xilonen.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Party_Setup_Xilonen.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Namecard_Background_Xilonen_Cue_Point.png",
+                "caption": "Xilonen: Cue Point Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Xilonen_Cue_Point.png",
+                "caption": "Xilonen: Cue Point Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Namecard_Banner_Xilonen_Cue_Point.png",
+                "caption": "Xilonen: Cue Point Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Ehecatl%27s_Roar_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Ehecatl%27s_Roar_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Ehecatl%27s_Roar_Blade_Roller_Preview.gif",
+                        "caption": "Nightsoul's Blessing: Blade Roller",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Ehecatl%27s_Roar_Blade_Roller_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Ocelotlicue_Point%21_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Ocelotlicue_Point%21_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Yohual%27s_Scratch_Movement_Preview.gif",
+                        "caption": "Movement",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Yohual%27s_Scratch_Movement_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Yohual%27s_Scratch_Source_Samples_Preview.gif",
+                        "caption": "Source Samples",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Yohual%27s_Scratch_Source_Samples_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Xilonen_Character_Details_1.png",
+                "caption": "Xilonen Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Xilonen_Character_Details_2.png",
+                "caption": "Xilonen Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Xilonen_Character_Details_3.gif",
+                "caption": "Xilonen Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Xilonen_Character_Details_4.gif",
+                "caption": "Xilonen Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Xilonen_Character_Details_5.png",
+                "caption": "Xilonen Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Xilonen_Character_Details_6.png",
+                "caption": "Xilonen Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Xilonen_Character_Details_7.png",
+                "caption": "Xilonen Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Xilonen_Character_Details_8.png",
+                "caption": "Xilonen Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Xilonen_Character_Details_9.gif",
+                "caption": "Xilonen Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Xilonen_Character_Details_10.gif",
+                "caption": "Xilonen Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Xilonen_Character_Details_11.gif",
+                "caption": "Xilonen Details 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Xilonen_Character_Details_12.gif",
+                "caption": "Xilonen Details 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Xilonen_Character_Details_13.png",
+                "caption": "Xilonen Details 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Xilonen_Character_Details_14.gif",
+                "caption": "Xilonen Details 14"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_36_Xilonen_1.png",
+                "caption": "Yawn Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Icon_Emoji_Paimon%27s_Paintings_36_Xilonen_2.png",
+                "caption": "Laid-back Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Icon_Emoji_Paimon%27s_Paintings_36_Xilonen_3.png",
+                "caption": "Grooving Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Icon_Emoji_Paimon%27s_Paintings_36_Xilonen_4.png",
+                "caption": "OPEN UP Set 36"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Icon_Emoji_Paimon%27s_Paintings_40_Xilonen_1.png",
+                "caption": "Nope, Not In Set 40"
+            }
+        ]
+    }
 }

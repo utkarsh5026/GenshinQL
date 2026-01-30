@@ -373,5 +373,204 @@
         }
     ],
     "imageUrls": {},
-    "version": "2.0"
+    "version": "2.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Idle_Yoimiya_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Idle_Yoimiya_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Idle_Yoimiya_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Idle_Yoimiya_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Menu_Yoimiya.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Talent_Menu_Yoimiya.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Weapon_Menu_Yoimiya.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Weapon_Menu_Yoimiya.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Party_Setup_Yoimiya.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Party_Setup_Yoimiya.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Namecard_Background_Yoimiya_Auratus_Spark.png",
+                "caption": "Yoimiya: Auratus Spark Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Item_Yoimiya_Auratus_Spark.png",
+                "caption": "Yoimiya: Auratus Spark Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Namecard_Banner_Yoimiya_Auratus_Spark.png",
+                "caption": "Yoimiya: Auratus Spark Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Firework_Flare-Up_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Firework_Flare-Up_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Firework_Flare-Up_Charged_Level_1_Preview.gif",
+                        "caption": "Charged Attack, Level 1",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Firework_Flare-Up_Charged_Level_1_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Firework_Flare-Up_Charged_Level_2_Preview.gif",
+                        "caption": "Charged Attack, Level 2",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Firework_Flare-Up_Charged_Level_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Firework_Flare-Up_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Firework_Flare-Up_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Ryuukin_Saxifrage_Preview.gif",
+                        "caption": "Elemental Burst",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Ryuukin_Saxifrage_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Ryuukin_Saxifrage_Aurous_Blaze_Preview.gif",
+                        "caption": "Aurous Blaze explosion by a party member",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Ryuukin_Saxifrage_Aurous_Blaze_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Niwabi_Fire-Dance_Press_Preview.gif",
+                        "caption": "Activate",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Niwabi_Fire-Dance_Press_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Niwabi_Fire-Dance_Normal_Preview.gif",
+                        "caption": "Normal Attack In Niwabi Enshou State",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Niwabi_Fire-Dance_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Niwabi_Fire-Dance_Charged_Preview.gif",
+                        "caption": "Charged Attack In Niwabi Enshou State",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Niwabi_Fire-Dance_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Yoimiya_Character_Details_1.png",
+                "caption": "Yoimiya Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Yoimiya_Character_Details_2.gif",
+                "caption": "Yoimiya Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Yoimiya_Character_Details_3.gif",
+                "caption": "Yoimiya Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Yoimiya_Character_Details_4.gif",
+                "caption": "Yoimiya Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Yoimiya_Character_Details_5.png",
+                "caption": "Yoimiya Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Yoimiya_Character_Details_6.png",
+                "caption": "Yoimiya Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Yoimiya_Character_Details_7.png",
+                "caption": "Yoimiya Details 7 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Icon_Emoji_Paimon%27s_Paintings_08_Yoimiya_1.png",
+                "caption": "No Problem Set 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Icon_Emoji_Paimon%27s_Paintings_08_Yoimiya_2.png",
+                "caption": "Pleased Set 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Icon_Emoji_Paimon%27s_Paintings_08_Yoimiya_3.png",
+                "caption": "Sorry Set 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Icon_Emoji_Paimon%27s_Paintings_08_Yoimiya_4.png",
+                "caption": "Hey Set 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Icon_Emoji_Paimon%27s_Paintings_16_Yoimiya_1.png",
+                "caption": "Strokes Chin Set 16"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Icon_Emoji_Paimon%27s_Paintings_16_Yoimiya_2.png",
+                "caption": "Stretch Set 16"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Icon_Emoji_Paimon%27s_Paintings_16_Yoimiya_3.png",
+                "caption": "So Hot Set 16"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Icon_Emoji_Paimon%27s_Paintings_24_Yoimiya_1.png",
+                "caption": "Good Nara Set 24"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Icon_Emoji_Paimon%27s_Paintings_24_Yoimiya_2.png",
+                "caption": "Bad Nara Set 24"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Icon_Emoji_Paimon%27s_Paintings_29_Yoimiya_1.png",
+                "caption": "Enjoy~ Set 29"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Icon_Emoji_Paimon%27s_Paintings_29_Yoimiya_2.png",
+                "caption": "Binging Dramas Set 29"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Icon_Emoji_Paimon%27s_Paintings_39_Yoimiya.png",
+                "caption": "I See... Set 39"
+            }
+        ]
+    }
 }

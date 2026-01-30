@@ -378,5 +378,137 @@
         }
     ],
     "imageUrls": {},
-    "version": "1.1"
+    "version": "1.1",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Idle_Xinyan_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Idle_Xinyan_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Idle_Xinyan_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Idle_Xinyan_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Talent_Menu_Xinyan.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Talent_Menu_Xinyan.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Weapon_Menu_Xinyan.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Weapon_Menu_Xinyan.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Party_Setup_Xinyan.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Party_Setup_Xinyan.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Namecard_Background_Xinyan_Song%27s_End.png",
+                "caption": "Xinyan: Song's End Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Item_Xinyan_Song%27s_End.png",
+                "caption": "Xinyan: Song's End Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Namecard_Banner_Xinyan_Song%27s_End.png",
+                "caption": "Xinyan: Song's End Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Dance_on_Fire_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Dance_on_Fire_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Dance_on_Fire_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Dance_on_Fire_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Dance_on_Fire_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Dance_on_Fire_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Riff_Revolution_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Riff_Revolution_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Sweeping_Fervor_2_Preview.gif",
+                        "caption": "Level 2 Shield, with 1st Ascension Passive",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Sweeping_Fervor_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Sweeping_Fervor_Max_Preview.gif",
+                        "caption": "Level 3 Shield, with 1st Ascension Passive",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Sweeping_Fervor_Max_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Icon_Emoji_Paimon%27s_Paintings_03_Xinyan_1.png",
+                "caption": "I'm heating up! Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Icon_Emoji_Paimon%27s_Paintings_03_Xinyan_2.png",
+                "caption": "So annoying! Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Icon_Emoji_Paimon%27s_Paintings_10_Xinyan_1.png",
+                "caption": "Charge! Set 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Icon_Emoji_Paimon%27s_Paintings_10_Xinyan_2.png",
+                "caption": "Reluctant Set 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Icon_Emoji_Paimon%27s_Paintings_10_Xinyan_3.png",
+                "caption": "High Five! Set 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Icon_Emoji_Paimon%27s_Paintings_16_Xinyan_1.png",
+                "caption": "Allow Me! Set 16"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Icon_Emoji_Paimon%27s_Paintings_16_Xinyan_2.png",
+                "caption": "Let's Try Set 16"
+            }
+        ]
+    }
 }

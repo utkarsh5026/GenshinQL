@@ -326,5 +326,166 @@
         }
     ],
     "imageUrls": {},
-    "version": "4.1"
+    "version": "4.1",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Idle_Wriothesley_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Idle_Wriothesley_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Idle_Wriothesley_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Idle_Wriothesley_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Talent_Menu_Wriothesley.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Talent_Menu_Wriothesley.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Weapon_Menu_Wriothesley.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Weapon_Menu_Wriothesley.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Party_Setup_Wriothesley.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Party_Setup_Wriothesley.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Namecard_Background_Wriothesley_Detention.png",
+                "caption": "Wriothesley: Detention Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Wriothesley_Detention.png",
+                "caption": "Wriothesley: Detention Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Namecard_Banner_Wriothesley_Detention.png",
+                "caption": "Wriothesley: Detention Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Forceful_Fists_of_Frost_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Forceful_Fists_of_Frost_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Forceful_Fists_of_Frost_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Forceful_Fists_of_Frost_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Forceful_Fists_of_Frost_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Forceful_Fists_of_Frost_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Darkgold_Wolfbite_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Darkgold_Wolfbite_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Icefang_Rush_Preview.gif",
+                        "caption": "Activation",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Icefang_Rush_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Icefang_Rush_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Icefang_Rush_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Wriothesley_Character_Details_1.png",
+                "caption": "Wriothesley Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Wriothesley_Character_Details_2.png",
+                "caption": "Wriothesley Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Wriothesley_Character_Details_3.gif",
+                "caption": "Wriothesley Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Wriothesley_Character_Details_4.gif",
+                "caption": "Wriothesley Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Wriothesley_Character_Details_5.gif",
+                "caption": "Wriothesley Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Wriothesley_Character_Details_6.gif",
+                "caption": "Wriothesley Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Wriothesley_Character_Details_7.png",
+                "caption": "Wriothesley Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Wriothesley_Character_Details_8.png",
+                "caption": "Wriothesley Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Wriothesley_Character_Details_9.png",
+                "caption": "Wriothesley Details 9"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Icon_Emoji_Paimon%27s_Paintings_27_Wriothesley_1.png",
+                "caption": "You're right Set 27"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_27_Wriothesley_2.png",
+                "caption": "That's tough Set 27"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Icon_Emoji_Paimon%27s_Paintings_27_Wriothesley_3.png",
+                "caption": "Come with me Set 27"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Icon_Emoji_Paimon%27s_Paintings_27_Wriothesley_4.png",
+                "caption": "I'm mad Set 27"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Icon_Emoji_Paimon%27s_Paintings_41_Wriothesley_1.png",
+                "caption": "Asking Set 41"
+            }
+        ]
+    }
 }

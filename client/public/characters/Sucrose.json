@@ -145,5 +145,167 @@
         }
     ],
     "imageUrls": {},
-    "version": "1.0"
+    "version": "1.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Namecard_Background_Sucrose_Bio-Alchemy.png",
+                "caption": "Sucrose: Bio-Alchemy Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Sucrose_Bio-Alchemy.png",
+                "caption": "Sucrose: Bio-Alchemy Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Namecard_Banner_Sucrose_Bio-Alchemy.png",
+                "caption": "Sucrose: Bio-Alchemy Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Wind_Spirit_Creation_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Wind_Spirit_Creation_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Wind_Spirit_Creation_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Wind_Spirit_Creation_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Wind_Spirit_Creation_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Wind_Spirit_Creation_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Forbidden_Creation_-_Isomer_75_Type_II_Preview.gif",
+                        "caption": "Without Elemental Absorption (includes Sucrose's Constellation Level 2)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Forbidden_Creation_-_Isomer_75_Type_II_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Astable_Anemohypostasis_Creation_-_6308_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Astable_Anemohypostasis_Creation_-_6308_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Icon_Emoji_Paimon%27s_Paintings_02_Sucrose_1.png",
+                "caption": "OK Set 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Icon_Emoji_Paimon%27s_Paintings_02_Sucrose_2.png",
+                "caption": "I'll be good Set 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Icon_Emoji_Paimon%27s_Paintings_02_Sucrose_3.png",
+                "caption": "Doubt Set 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Icon_Emoji_Paimon%27s_Paintings_02_Sucrose_4.png",
+                "caption": "Shame Set 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Icon_Emoji_Paimon%27s_Paintings_04_Sucrose_1.png",
+                "caption": "You can do it! Set 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Icon_Emoji_Paimon%27s_Paintings_04_Sucrose_2.png",
+                "caption": "Recording Set 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Icon_Emoji_Paimon%27s_Paintings_20_Sucrose_1.png",
+                "caption": "Victory Set 20"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Icon_Emoji_Paimon%27s_Paintings_22_Sucrose_1.png",
+                "caption": "Sorry to disturb Set 22"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Icon_Emoji_Paimon%27s_Paintings_22_Sucrose_2.png",
+                "caption": "Envious Set 22"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Icon_Emoji_Paimon%27s_Paintings_31_Sucrose_1.png",
+                "caption": "Keep Trying! Set 31"
+            }
+        ]
+    }
 }

@@ -350,5 +350,194 @@
         }
     ],
     "imageUrls": {},
-    "version": "2.5"
+    "version": "2.5",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Idle_Yae_Miko_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Idle_Yae_Miko_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Idle_Yae_Miko_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Idle_Yae_Miko_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Talent_Menu_Yae_Miko.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Menu_Yae_Miko.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Weapon_Menu_Yae_Miko.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Weapon_Menu_Yae_Miko.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Party_Setup_Yae_Miko.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Party_Setup_Yae_Miko.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Namecard_Background_Yae_Miko_Kitsune_Dreaming.png",
+                "caption": "Yae Miko: Kitsune Dreaming Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Yae_Miko_Kitsune_Dreaming.png",
+                "caption": "Yae Miko: Kitsune Dreaming Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Namecard_Banner_Yae_Miko_Kitsune_Dreaming.png",
+                "caption": "Yae Miko: Kitsune Dreaming Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Spiritfox_Sin-Eater_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Spiritfox_Sin-Eater_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Spiritfox_Sin-Eater_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Spiritfox_Sin-Eater_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Spiritfox_Sin-Eater_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Spiritfox_Sin-Eater_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Great_Secret_Art_Tenko_Kenshin_Preview.gif",
+                        "caption": "Elemental Burst",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Great_Secret_Art_Tenko_Kenshin_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Great_Secret_Art_Tenko_Kenshin_Unseal_Preview.gif",
+                        "caption": "Unsealing nearby Sesshou Sakuras",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Great_Secret_Art_Tenko_Kenshin_Unseal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Yakan_Evocation_Sesshou_Sakura_Press_Preview.gif",
+                        "caption": "Press",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Yakan_Evocation_Sesshou_Sakura_Press_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Yakan_Evocation_Sesshou_Sakura_Press_3_Preview.gif",
+                        "caption": "Press, 3 charges",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Yakan_Evocation_Sesshou_Sakura_Press_3_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Yakan_Evocation_Sesshou_Sakura_Strikes_Preview.gif",
+                        "caption": "Sesshou Sakura Strikes",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Yakan_Evocation_Sesshou_Sakura_Strikes_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Yakan_Evocation_Sesshou_Sakura_Comparison_Preview.gif",
+                        "caption": "Sesshou Sakura, Level 1 vs Level 3",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Yakan_Evocation_Sesshou_Sakura_Comparison_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Yakan_Evocation_Sesshou_Sakura_C0_Preview.gif",
+                        "caption": "Sesshou Sakura's appearance at levels 3, 2, and 1 respectively",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Yakan_Evocation_Sesshou_Sakura_C0_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Yae_Miko_Character_Details_1.png",
+                "caption": "Yae Miko Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Yae_Miko_Character_Details_2.png",
+                "caption": "Yae Miko Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Yae_Miko_Character_Details_3.gif",
+                "caption": "Yae Miko Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Yae_Miko_Character_Details_4.gif",
+                "caption": "Yae Miko Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Yae_Miko_Character_Details_5.gif",
+                "caption": "Yae Miko Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Yae_Miko_Character_Details_6.png",
+                "caption": "Yae Miko Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Yae_Miko_Character_Details_7.png",
+                "caption": "Yae Miko Details 7 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Yae_Miko_Character_Details_8.png",
+                "caption": "Yae Miko Details 8 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Icon_Emoji_Paimon%27s_Paintings_13_Yae_Miko_1.png",
+                "caption": "Mocking Smile Set 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Icon_Emoji_Paimon%27s_Paintings_13_Yae_Miko_2.png",
+                "caption": "Obfuscating Set 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Icon_Emoji_Paimon%27s_Paintings_13_Yae_Miko_3.png",
+                "caption": "Work In Progress Set 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Icon_Emoji_Paimon%27s_Paintings_13_Yae_Miko_4.png",
+                "caption": "Evil Smile Set 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_24_Yae_Miko_1.png",
+                "caption": "You're Scared Set 24"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Icon_Emoji_Paimon%27s_Paintings_39_Yae_Miko_1.png",
+                "caption": "Satisfied Set 39"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Icon_Emoji_Paimon%27s_Paintings_39_Yae_Miko_2.png",
+                "caption": "Threatening Set 39"
+            }
+        ]
+    }
 }

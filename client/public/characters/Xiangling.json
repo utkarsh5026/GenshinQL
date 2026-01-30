@@ -340,5 +340,119 @@
         }
     ],
     "imageUrls": {},
-    "version": "1.0"
+    "version": "1.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Idle_Xiangling_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Idle_Xiangling_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Idle_Xiangling_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Idle_Xiangling_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Talent_Menu_Xiangling.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Talent_Menu_Xiangling.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Weapon_Menu_Xiangling.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Weapon_Menu_Xiangling.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Party_Setup_Xiangling.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Party_Setup_Xiangling.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Namecard_Background_Xiangling_Fresh_from_the_Pan.png",
+                "caption": "Xiangling: Fresh from the Pan Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Xiangling_Fresh_from_the_Pan.png",
+                "caption": "Xiangling: Fresh from the Pan Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Namecard_Banner_Xiangling_Fresh_from_the_Pan.png",
+                "caption": "Xiangling: Fresh from the Pan Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Dough-Fu_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Dough-Fu_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Dough-Fu_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Dough-Fu_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Dough-Fu_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Dough-Fu_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Pyronado_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Pyronado_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Guoba_Attack_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Guoba_Attack_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Icon_Emoji_Paimon%27s_Paintings_09_Xiangling_1.png",
+                "caption": "Starry-Eyed Set 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Icon_Emoji_Paimon%27s_Paintings_09_Xiangling_2.png",
+                "caption": "Ehehe~ Set 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Icon_Emoji_Paimon%27s_Paintings_38_Xiangling_1.png",
+                "caption": "Wassup? Set 38"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Icon_Emoji_Paimon%27s_Paintings_38_Xiangling_2.png",
+                "caption": "Fortune's Favor Set 38"
+            }
+        ]
+    }
 }

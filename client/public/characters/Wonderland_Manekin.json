@@ -8,5 +8,25 @@
     "elementUrl": "",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
     "regionUrl": "",
-    "modelType": "Manekin: Medium Male\nManekina: Medium Female"
+    "modelType": "Manekin: Medium Male\nManekina: Medium Female",
+    "gallery": {
+        "screenAnimations": [],
+        "nameCards": [],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": []
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": []
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": []
+            }
+        ],
+        "detailedImages": [],
+        "stickers": []
+    }
 }

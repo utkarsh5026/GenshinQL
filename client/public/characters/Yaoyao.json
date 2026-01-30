@@ -327,5 +327,156 @@
         }
     ],
     "imageUrls": {},
-    "version": "3.4"
+    "version": "3.4",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Namecard_Background_Yaoyao_Yuegui.png",
+                "caption": "Yaoyao: Yuegui Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Yaoyao_Yuegui.png",
+                "caption": "Yaoyao: Yuegui Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Namecard_Banner_Yaoyao_Yuegui.png",
+                "caption": "Yaoyao: Yuegui Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Toss_%27N%27_Turn_Spear_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Toss_%27N%27_Turn_Spear_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Yaoyao_Character_Details_1.png",
+                "caption": "Yaoyao Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Yaoyao_Character_Details_2.png",
+                "caption": "Yaoyao Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Yaoyao_Character_Details_3.gif",
+                "caption": "Yaoyao Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Yaoyao_Character_Details_4.gif",
+                "caption": "Yaoyao Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Yaoyao_Character_Details_5.gif",
+                "caption": "Yaoyao Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Yaoyao_Character_Details_6.png",
+                "caption": "Yaoyao Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Yaoyao_Character_Details_7.png",
+                "caption": "Yaoyao Details 7 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Yaoyao_Character_Details_8.png",
+                "caption": "Yaoyao Details 8 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Icon_Emoji_Paimon%27s_Paintings_21_Yaoyao_1.png",
+                "caption": "Happy Holidays! Set 21"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Icon_Emoji_Paimon%27s_Paintings_21_Yaoyao_2.png",
+                "caption": "Good Job! Set 21"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Icon_Emoji_Paimon%27s_Paintings_21_Yaoyao_3.png",
+                "caption": "I'm Done Set 21"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Icon_Emoji_Paimon%27s_Paintings_21_Yaoyao_4.png",
+                "caption": "Greed Set 21"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_Emoji_Paimon%27s_Paintings_47_Yaoyao_Qiqi_1.png",
+                "caption": "Set 47"
+            }
+        ]
+    }
 }
