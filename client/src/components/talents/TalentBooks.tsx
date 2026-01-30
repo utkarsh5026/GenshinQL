@@ -9,12 +9,22 @@ interface TalentBooksProps {
 }
 
 const TalentBooks: React.FC<TalentBooksProps> = ({books}) => {
-    return <div>{books.map((book) => (
-        <div key={book.name} className={"grid grid-cols-2"}>
-            <img src={book.url} alt={book.name} className="h-12 w-12"/>
-            <span className="text-xs font-extralight">{book.name}</span>
+    return (
+        <div className="flex flex-col gap-2">
+            {books.map((book) => (
+                <div key={book.name} className="flex items-center gap-3">
+                    <img
+                        src={book.url}
+                        alt={book.name}
+                        className="h-10 w-10 md:h-12 md:w-12 flex-shrink-0"
+                    />
+                    <span className="text-xs md:text-sm font-light text-white/90">
+                        {book.name}
+                    </span>
+                </div>
+            ))}
         </div>
-    ))}</div>
+    )
 }
 
 export default TalentBooks;

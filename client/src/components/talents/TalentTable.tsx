@@ -32,9 +32,9 @@ const TalentTable: React.FC<TalentTableProps> = ({ talent }) => {
   const days = useMemo(() => talent.days, [talent.days]);
 
   return (
-    <div className="font-sans max-w-[1400px] mx-auto p-8">
+    <div className="font-sans max-w-[1400px] mx-auto p-4 md:p-8">
       <div className="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden border border-white/[0.08]">
-        <div className="grid grid-cols-[200px_1fr_2fr] bg-white/[0.02] border-b border-white/10">
+        <div className="hidden md:grid md:grid-cols-[200px_1fr_2fr] bg-white/[0.02] border-b border-white/10">
           <div className="px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">
             Day
           </div>
@@ -53,14 +53,14 @@ const TalentTable: React.FC<TalentTableProps> = ({ talent }) => {
           return (
             <div
               key={day}
-              className={`grid grid-cols-[200px_1fr_2fr] bg-black/20 transition-colors duration-150 border-b border-white/[0.04] last:border-b-0 hover:bg-white/[0.03] ${
+              className={`flex flex-col md:grid md:grid-cols-[200px_1fr_2fr] bg-black/20 transition-colors duration-150 border-b border-white/[0.04] last:border-b-0 hover:bg-white/[0.03] ${
                 isToday
-                  ? 'bg-gradient-to-r from-[#a8a29e]/[0.08] to-[#a8a29e]/[0.04] border-l-[3px] border-l-[#d4af37]/60 hover:from-[#a8a29e]/[0.12] hover:to-[#a8a29e]/[0.06]'
+                  ? 'bg-gradient-to-r from-[#a8a29e]/[0.08] to-[#a8a29e]/[0.04] md:border-l-[3px] border-l-[#d4af37]/60 hover:from-[#a8a29e]/[0.12] hover:to-[#a8a29e]/[0.06]'
                   : ''
               }`}
             >
-              <div className="px-6 py-7 flex flex-col gap-2 border-r border-white/[0.06]">
-                <div className="text-[0.9375rem] font-medium text-white/95">
+              <div className="px-4 py-4 md:px-6 md:py-7 flex flex-col gap-2 md:border-r border-white/[0.06] bg-white/[0.02] md:bg-transparent">
+                <div className="text-sm md:text-[0.9375rem] font-medium text-white/95">
                   {day}
                 </div>
                 {isToday && (
@@ -70,11 +70,13 @@ const TalentTable: React.FC<TalentTableProps> = ({ talent }) => {
                 )}
               </div>
 
-              <div className="px-6 py-7 border-r border-white/[0.06]">
+              <div className="px-4 py-4 md:px-6 md:py-7 md:border-r border-white/[0.06]">
+                <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">Talent Books</div>
                 <TalentBooks books={books} />
               </div>
 
-              <div className="px-6 py-7">
+              <div className="px-4 py-4 md:px-6 md:py-7">
+                <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">Characters</div>
                 <CharacterGrid characters={characters} />
               </div>
             </div>

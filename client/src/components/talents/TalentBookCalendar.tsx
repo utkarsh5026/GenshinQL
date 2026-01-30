@@ -37,10 +37,10 @@ const TalentCalender: React.FC = () => {
     return (
       <div>
         <Tabs defaultValue={locations[0]}>
-          <TabsList>
+          <TabsList className="flex-wrap md:flex-nowrap justify-start overflow-x-auto">
             {locations.map((loc) => {
               return (
-                <TabsTrigger key={loc} value={loc}>
+                <TabsTrigger key={loc} value={loc} className="text-xs md:text-sm px-3 md:px-4">
                   {loc}
                 </TabsTrigger>
               );
@@ -50,22 +50,25 @@ const TalentCalender: React.FC = () => {
             const books = talentBooks.find((book) => book.location === loc);
             return (
               <TabsContent key={loc} value={loc}>
-                <div className="w-full flex justify-end my-5">
+                <div className="w-full flex justify-end my-3 md:my-5">
                   <Button
-                    className="bg-green-200 text-green-950 border-2"
+                    className="bg-green-200 text-green-950 border-2 text-xs md:text-sm h-9 md:h-10"
                     onClick={() => {
                       setIsCalendar(!isCalendar);
                     }}
                   >
-                    <div className={'flex gap-2'}>
+                    <div className={'flex gap-1.5 md:gap-2'}>
                       {isCalendar ? (
-                        <CalendarDays size={20} />
+                        <CalendarDays size={16} className="md:w-5 md:h-5" />
                       ) : (
-                        <Aperture size={20} />
+                        <Aperture size={16} className="md:w-5 md:h-5" />
                       )}
 
-                      <div>
+                      <div className="hidden sm:block">
                         {isCalendar ? 'Switch to Table' : 'Switch to Calendar'}
+                      </div>
+                      <div className="sm:hidden">
+                        {isCalendar ? 'Table' : 'Calendar'}
                       </div>
                     </div>
                   </Button>

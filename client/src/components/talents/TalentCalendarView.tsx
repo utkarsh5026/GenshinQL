@@ -58,155 +58,46 @@ const TalentCalendarView: React.FC<TalentCalendarViewProps> = ({
   }, [dates, talent.days]);
 
   return (
-    <div className="calendar-container">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
-        .calendar-container {
-          font-family: 'DM Sans', sans-serif;
-          max-width: 1400px;
-          margin: 0 auto;
-          padding: 2rem;
-        }
-
-        .calendar-grid {
-          display: grid;
-          gap: 1px;
-          background: rgba(255, 255, 255, 0.06);
-          border-radius: 12px;
-          overflow: hidden;
-          border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .calendar-header {
-          display: grid;
-          grid-template-columns: 200px 1fr 2fr;
-          background: rgba(255, 255, 255, 0.02);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .header-cell {
-          padding: 1.25rem 1.5rem;
-          font-size: 0.6875rem;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.5);
-          font-family: 'JetBrains Mono', monospace;
-        }
-
-        .calendar-row {
-          display: grid;
-          grid-template-columns: 200px 1fr 2fr;
-          background: rgba(0, 0, 0, 0.2);
-          transition: background 0.15s ease;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-        }
-
-        .calendar-row:last-child {
-          border-bottom: none;
-        }
-
-        .calendar-row:hover {
-          background: rgba(255, 255, 255, 0.03);
-        }
-
-        .calendar-row.special-day {
-          background: linear-gradient(90deg, rgba(168, 162, 158, 0.08) 0%, rgba(168, 162, 158, 0.04) 100%);
-          border-left: 3px solid rgba(212, 175, 55, 0.6);
-        }
-
-        .calendar-row.special-day:hover {
-          background: linear-gradient(90deg, rgba(168, 162, 158, 0.12) 0%, rgba(168, 162, 158, 0.06) 100%);
-        }
-
-        .date-cell {
-          padding: 1.75rem 1.5rem;
-          display: flex;
-          flex-direction: column;
-          gap: 0.375rem;
-          border-right: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .date-main {
-          font-size: 0.9375rem;
-          font-weight: 500;
-          color: rgba(255, 255, 255, 0.95);
-          font-family: 'JetBrains Mono', monospace;
-        }
-
-        .date-day {
-          font-size: 0.75rem;
-          color: rgba(255, 255, 255, 0.4);
-          font-weight: 400;
-          letter-spacing: 0.02em;
-        }
-
-        .books-cell {
-          padding: 1.75rem 1.5rem;
-          border-right: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .characters-cell {
-          padding: 1.75rem 1.5rem;
-        }
-
-        .special-message {
-          display: flex;
-          align-items: center;
-          gap: 0.625rem;
-          font-size: 0.875rem;
-          color: rgba(212, 175, 55, 0.9);
-          font-weight: 500;
-        }
-
-        .special-badge {
-          display: inline-flex;
-          padding: 0.25rem 0.625rem;
-          background: rgba(212, 175, 55, 0.15);
-          border-radius: 4px;
-          font-size: 0.6875rem;
-          font-weight: 600;
-          letter-spacing: 0.05em;
-          text-transform: uppercase;
-          font-family: 'JetBrains Mono', monospace;
-          border: 1px solid rgba(212, 175, 55, 0.25);
-        }
-      `}</style>
-
-      <div className="calendar-grid">
-        <div className="calendar-header">
-          <div className="header-cell">Date</div>
-          <div className="header-cell">Talent Books</div>
-          <div className="header-cell">Characters</div>
+    <div className="font-sans max-w-[1400px] mx-auto p-4 md:p-8">
+      <div className="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden border border-white/[0.08]">
+        <div className="hidden md:grid md:grid-cols-[200px_1fr_2fr] bg-white/[0.02] border-b border-white/10">
+          <div className="px-4 md:px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">Date</div>
+          <div className="px-4 md:px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">Talent Books</div>
+          <div className="px-4 md:px-6 py-5 text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-white/50 font-mono">Characters</div>
         </div>
 
         {data.map((d) => (
           <div
             key={d.date}
-            className={`calendar-row ${d.isSunday ? 'special-day' : ''}`}
+            className={`flex flex-col md:grid md:grid-cols-[200px_1fr_2fr] bg-black/20 transition-colors duration-150 border-b border-white/[0.04] last:border-b-0 hover:bg-white/[0.03] ${
+              d.isSunday
+                ? 'bg-gradient-to-r from-[#a8a29e]/[0.08] to-[#a8a29e]/[0.04] md:border-l-[3px] border-l-[#d4af37]/60 hover:from-[#a8a29e]/[0.12] hover:to-[#a8a29e]/[0.06]'
+                : ''
+            }`}
           >
-            <div className="date-cell">
-              <div className="date-main">{d.date}</div>
-              <div className="date-day">{d.currDay}</div>
+            <div className="px-4 py-4 md:px-6 md:py-7 flex flex-col gap-1.5 md:gap-2 md:border-r border-white/[0.06] bg-white/[0.02] md:bg-transparent">
+              <div className="text-sm md:text-[0.9375rem] font-medium text-white/95 font-mono">{d.date}</div>
+              <div className="text-xs md:text-xs text-white/40 font-normal tracking-wide">{d.currDay}</div>
             </div>
 
-            <div className="books-cell">
+            <div className="px-4 py-4 md:px-6 md:py-7 md:border-r border-white/[0.06]">
+              <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">Talent Books</div>
               {d.isSunday ? (
-                <div className="special-message">
-                  <span className="special-badge">All Available</span>
-                  <span>All books can be farmed</span>
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-2.5 text-sm md:text-sm text-[#d4af37]/90 font-medium">
+                  <span className="inline-flex px-2.5 py-1 bg-[#d4af37]/15 rounded text-[0.6875rem] font-semibold tracking-wider uppercase font-mono border border-[#d4af37]/25">All Available</span>
+                  <span className="text-xs md:text-sm">All books can be farmed</span>
                 </div>
               ) : (
                 <TalentBooks books={d.books} />
               )}
             </div>
 
-            <div className="characters-cell">
+            <div className="px-4 py-4 md:px-6 md:py-7">
+              <div className="md:hidden text-xs font-bold tracking-wider uppercase text-white/50 mb-2 font-mono">Characters</div>
               {d.isSunday ? (
-                <div className="special-message">
-                  <span className="special-badge">All Available</span>
-                  <span>All characters can be farmed</span>
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-2.5 text-sm md:text-sm text-[#d4af37]/90 font-medium">
+                  <span className="inline-flex px-2.5 py-1 bg-[#d4af37]/15 rounded text-[0.6875rem] font-semibold tracking-wider uppercase font-mono border border-[#d4af37]/25">All Available</span>
+                  <span className="text-xs md:text-sm">All characters can be farmed</span>
                 </div>
               ) : (
                 <CharacterGrid characters={d.characters} />
