@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Constellation } from '../../../graphql/types';
+import { Constellation } from '@/types';
+
 import {
   Table,
   TableBody,

@@ -19,6 +19,14 @@ const WeaponsTierList: React.FC = () => {
   });
   const { weapons } = useWeaponsStore();
 
+  const isValidName = (name: string) => {
+    return name.trim().length > 0;
+  };
+
+  const handleNameChange = (name: string) => {
+    console.log('Tier name changed to:', name);
+  };
+
   console.log(weapons);
   return (
     <DndContext>
@@ -27,6 +35,8 @@ const WeaponsTierList: React.FC = () => {
           key={level}
           initialName={level}
           weapons={tierListMap[level]}
+          isValidName={isValidName}
+          onNameChange={handleNameChange}
         />
       ))}
       <DraggableArea id="weapons" className="flex flex-wrap gap-4 border-2">

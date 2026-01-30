@@ -8,12 +8,7 @@ const GenshinGuesser: React.FC = () => {
   const { characters } = useCharactersStore();
 
   if (characters.length === 0) return null;
-  return (
-    <CharacterGuesser
-      selectedCharacter={characters[0]}
-      characters={characters}
-    />
-  );
+  return <CharacterGuesser />;
 };
 
 export default GenshinGuesser;
