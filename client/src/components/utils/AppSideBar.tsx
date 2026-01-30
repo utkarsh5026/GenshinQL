@@ -55,60 +55,107 @@ const AppSideBar: React.FC<AppSideBarProps> = ({
   }, [fetchCharacters]);
 
   return (
-    <Sidebar side="left">
-      <SidebarHeader>Genshin Impact</SidebarHeader>
-      <SidebarContent>
-        <SidebarMenu>
-          <SidebarMenuButton onClick={onTalentCalenderClick}>
-            <CalendarHeart /> Talents Calendar
-          </SidebarMenuButton>
-          <SidebarMenuButton onClick={onCharactersTableClick}>
-            <Table2 /> Characters Table
-          </SidebarMenuButton>
-          <SidebarMenuButton onClick={onCharacterRoutineClick}>
-            <CalendarClock /> Characters Routine
-          </SidebarMenuButton>
-          <SidebarMenuButton onClick={onWeaponCalenderClick}>
-            <LucideSwords /> Weapons Calendar
-          </SidebarMenuButton>
-          <SidebarMenuButton onClick={onWeaponsDetailedClick}>
-            <AxeIcon /> Weapons Detailed
-          </SidebarMenuButton>
-          <SidebarMenuButton onClick={onTierListClick}>
-            <ChartBarDecreasing /> Tier List
-          </SidebarMenuButton>
-          <SidebarMenuButton onClick={onGenshinGuesserClick}>
-            <Gamepad2 /> Genshin Guesser
-          </SidebarMenuButton>
-          <Collapsible defaultOpen={false} className="group/collapsible">
-            <SidebarItem>
-              <CollapsibleTrigger className="w-full">
-                <SidebarMenuButton className="w-full justify-start pl-2">
-                  Characters
-                  <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
-                </SidebarMenuButton>
-              </CollapsibleTrigger>
+    <Sidebar side="left" className="border-r border-border/50">
+      <SidebarHeader className="border-b border-border/50 px-6 py-5 bg-gradient-to-br from-blue-500/5 to-purple-500/5">
+        <div className="flex items-center gap-3">
+          <img
+            src="/favicon-32x32.png"
+            alt="Genshin Impact"
+            className="w-8 h-8"
+          />
+          <h1 className="text-lg font-semibold tracking-tight">Genshin Impact</h1>
+        </div>
+      </SidebarHeader>
 
-              <CollapsibleContent>
-                <SidebarMenuSub>
-                  {characters.map((character) => (
-                    <SidebarMenuSubItem
-                      key={character.name}
-                      className="py-1 min-h-0 cursor-pointer hover:bg-accent/50 transition-colors"
-                      onClick={() => onCharacterClick(character.name)}
-                    >
-                      <div className="flex items-center gap-2">
-                        <Avatar className="h-6 w-6">
-                          <AvatarImage src={character.iconUrl} />
-                        </Avatar>
-                        <span className="text-sm">{character.name}</span>
-                      </div>
-                    </SidebarMenuSubItem>
-                  ))}
-                </SidebarMenuSub>
-              </CollapsibleContent>
-            </SidebarItem>
-          </Collapsible>
+      <SidebarContent className="px-3 py-4">
+        <SidebarMenu className="space-y-1">
+          <SidebarMenuButton
+            onClick={onTalentCalenderClick}
+            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-pink-500/10 transition-colors group"
+          >
+            <CalendarHeart className="w-4 h-4 text-pink-500 group-hover:text-pink-600" />
+            <span className="text-sm font-medium">Talents Calendar</span>
+          </SidebarMenuButton>
+
+          <SidebarMenuButton
+            onClick={onCharactersTableClick}
+            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-blue-500/10 transition-colors group"
+          >
+            <Table2 className="w-4 h-4 text-blue-500 group-hover:text-blue-600" />
+            <span className="text-sm font-medium">Characters Table</span>
+          </SidebarMenuButton>
+
+          <SidebarMenuButton
+            onClick={onCharacterRoutineClick}
+            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-purple-500/10 transition-colors group"
+          >
+            <CalendarClock className="w-4 h-4 text-purple-500 group-hover:text-purple-600" />
+            <span className="text-sm font-medium">Characters Routine</span>
+          </SidebarMenuButton>
+
+          <SidebarMenuButton
+            onClick={onWeaponCalenderClick}
+            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-amber-500/10 transition-colors group"
+          >
+            <LucideSwords className="w-4 h-4 text-amber-500 group-hover:text-amber-600" />
+            <span className="text-sm font-medium">Weapons Calendar</span>
+          </SidebarMenuButton>
+
+          <SidebarMenuButton
+            onClick={onWeaponsDetailedClick}
+            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-orange-500/10 transition-colors group"
+          >
+            <AxeIcon className="w-4 h-4 text-orange-500 group-hover:text-orange-600" />
+            <span className="text-sm font-medium">Weapons Detailed</span>
+          </SidebarMenuButton>
+
+          <SidebarMenuButton
+            onClick={onTierListClick}
+            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-emerald-500/10 transition-colors group"
+          >
+            <ChartBarDecreasing className="w-4 h-4 text-emerald-500 group-hover:text-emerald-600" />
+            <span className="text-sm font-medium">Tier List</span>
+          </SidebarMenuButton>
+
+          <SidebarMenuButton
+            onClick={onGenshinGuesserClick}
+            className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-violet-500/10 transition-colors group"
+          >
+            <Gamepad2 className="w-4 h-4 text-violet-500 group-hover:text-violet-600" />
+            <span className="text-sm font-medium">Genshin Guesser</span>
+          </SidebarMenuButton>
+
+          <div className="pt-2">
+            <Collapsible defaultOpen={false} className="group/collapsible">
+              <SidebarItem>
+                <CollapsibleTrigger className="w-full">
+                  <SidebarMenuButton className="w-full justify-start gap-3 px-3 py-2.5 rounded-lg hover:bg-indigo-500/10 transition-colors group">
+                    <span className="text-sm font-medium">Characters</span>
+                    <ChevronDown className="ml-auto w-4 h-4 text-indigo-500 group-hover:text-indigo-600 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+
+                <CollapsibleContent className="mt-1">
+                  <SidebarMenuSub className="ml-3 border-l border-indigo-500/20 pl-3 space-y-1 max-h-[400px] overflow-y-auto scrollbar-hide">
+                    {characters.map((character) => (
+                      <SidebarMenuSubItem
+                        key={character.name}
+                        className="cursor-pointer"
+                        onClick={() => onCharacterClick(character.name)}
+                      >
+                        <div className="flex items-center gap-2.5 py-1.5 px-2 rounded-md hover:bg-indigo-500/10 transition-colors group">
+                          <Avatar className="h-7 w-7 ring-1 ring-border/50 group-hover:ring-indigo-500/30">
+                            <AvatarImage src={character.iconUrl} />
+                          </Avatar>
+                          <span className="text-sm">{character.name}</span>
+                        </div>
+                      </SidebarMenuSubItem>
+                    ))}
+                  </SidebarMenuSub>
+                </CollapsibleContent>
+              </SidebarItem>
+            </Collapsible>
+          </div>
         </SidebarMenu>
       </SidebarContent>
     </Sidebar>
