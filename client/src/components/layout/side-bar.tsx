@@ -26,8 +26,10 @@ import {
 } from 'lucide-react';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
 import { useCharactersStore } from '@/stores';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const AppSideBar: React.FC = () => {
+  const isMobile = useIsMobile();
   const { characters, fetchCharacters } = useCharactersStore();
 
   useEffect(() => {
@@ -135,8 +137,9 @@ const AppSideBar: React.FC = () => {
             <span className="text-sm font-medium">Genshin Guesser</span>
           </NavLink>
 
-          <div className="pt-2">
-            <Collapsible defaultOpen={false} className="group/collapsible">
+          {!isMobile && (
+            <div className="pt-2">
+              <Collapsible defaultOpen={false} className="group/collapsible">
               <SidebarItem>
                 <CollapsibleTrigger className="w-full">
                   <div className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-indigo-500/10 transition-colors group">
@@ -164,7 +167,8 @@ const AppSideBar: React.FC = () => {
                 </CollapsibleContent>
               </SidebarItem>
             </Collapsible>
-          </div>
+            </div>
+          )}
         </SidebarMenu>
       </SidebarContent>
     </Sidebar>
