@@ -1,6 +1,11 @@
 import { By, WebDriver, WebElement } from 'selenium-webdriver';
 import { URL, waitForElementCss, withWebDriver } from './setup.js';
-import { GallerySchema, GenshinImageSchema } from './schema.js';
+import {
+  AdvancedCharacterSchema,
+  GallerySchema,
+  GenshinImageSchema,
+  gallerySchema,
+} from './schema.js';
 import { getParentNextDivSibling } from './utils.js';
 import * as path from 'node:path';
 import * as fs from 'node:fs/promises';
@@ -9,6 +14,54 @@ import { logger } from '../logger.js';
 
 const parseUrl = (url: string) => url.split('/revision/')[0];
 const CHARACTERS_DIR = path.join(PUBLIC_DIR, 'characters');
+
+/**
+ * Validates if gallery data has all required fields and proper structure
+ * @param galleryData - The gallery data object to validate
+ * @param characterName - Character name for logging purposes
+ * @returns true if the gallery data is complete, false otherwise
+ */
+function isGalleryDataComplete(
+  galleryData: unknown,
+  characterName: string
+): boolean {
+  if (!galleryData) {
+    logger.warn(`${characterName} has no gallery data`);
+    return false;
+  }
+
+  const result = gallerySchema.safeParse(galleryData);
+
+  if (!result.success) {
+    logger.warn(
+      `Gallery validation failed for ${characterName}:`,
+      result.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`)
+    );
+    return false;
+  }
+
+  // Use the validated data from the parse result
+  const validatedGallery = result.data;
+
+  // Check for required arrays (should exist even if empty)
+  if (!validatedGallery.screenAnimations) {
+    logger.warn(`${characterName} gallery missing screenAnimations`);
+    return false;
+  }
+
+  if (!validatedGallery.nameCards) {
+    logger.warn(`${characterName} gallery missing nameCards`);
+    return false;
+  }
+
+  if (!validatedGallery.attackAnimations) {
+    logger.warn(`${characterName} gallery missing attackAnimations`);
+    return false;
+  }
+
+  logger.debug(`${characterName} gallery data is complete`);
+  return true;
+}
 
 /**
  * Scrapes gallery data for a single character using its own WebDriver instance.
@@ -67,16 +120,29 @@ async function mergeGalleryIntoCharacterFiles(
     const filePath = path.join(CHARACTERS_DIR, file);
 
     try {
-      const characterData = await loadJsonData<any>(filePath);
+      const characterData =
+        await loadJsonData<AdvancedCharacterSchema>(filePath);
 
       if (!characterData) {
         logger.warn(`⚠️  Could not load data for ${characterName}`);
         continue;
       }
 
-      if (characterData.gallery && !force) {
-        logger.debug(`⏭️  ${characterName} already has gallery data, skipping...`);
-        continue;
+      if (!force && characterData.gallery) {
+        const isComplete = isGalleryDataComplete(
+          characterData.gallery,
+          characterName
+        );
+        if (isComplete) {
+          logger.debug(
+            `⏭️  ${characterName} already has complete gallery data, skipping...`
+          );
+          continue;
+        } else {
+          logger.warn(
+            `${characterName} has incomplete gallery data, re-scraping...`
+          );
+        }
       }
 
       // Scrape gallery data with its own WebDriver instance
@@ -204,7 +270,6 @@ async function parseFigures(
           videoSource.getAttribute('type'),
         ]);
 
-
         return {
           url: parseUrl(img),
           caption,
@@ -263,7 +328,7 @@ async function main(): Promise<void> {
   logger.cyan('\n🎨 Starting gallery scraper...\n');
 
   try {
-    await mergeGalleryIntoCharacterFiles(true);
+    await mergeGalleryIntoCharacterFiles(false);
   } catch (error) {
     logger.error('❌ Error in main:', error);
     throw error;
