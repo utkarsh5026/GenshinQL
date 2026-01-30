@@ -3,7 +3,7 @@ import { URL, withWebDriver } from './setup.js';
 import * as path from 'node:path';
 import * as fs from 'node:fs/promises';
 import chalk from 'chalk';
-import { logger } from '../logger';
+import { logger } from '../logger.js';
 import {
   parseCharacterName,
   findImageInCell,
@@ -19,11 +19,53 @@ import {
   loadFromPublic,
   saveJson,
   saveToPublic,
-} from './fileio';
-import { BaseCharacterSchema, TalentSchema } from './schema.js';
+} from './fileio.js';
+import {
+  BaseCharacterSchema,
+  TalentSchema,
+  advancedCharacterSchema,
+} from './schema.js';
 
 const TIME_TO_WAIT_FOR_ELEMENT_MS = 10000;
 const CHARACTERS_FILE_NAME = 'characters';
+
+/**
+ * Validates if a character file has all required fields
+ * @param filePath - Path to the character JSON file
+ * @returns true if the file is complete, false otherwise
+ */
+async function isCharacterFileComplete(filePath: string): Promise<boolean> {
+  try {
+    const content = await fs.readFile(filePath, 'utf-8');
+    const data = JSON.parse(content);
+
+    const result = advancedCharacterSchema.safeParse(data);
+
+    if (!result.success) {
+      logger.warn(
+        `Validation failed for ${path.basename(filePath)}:`,
+        result.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`)
+      );
+      return false;
+    }
+
+    if (!data.talents || data.talents.length === 0) {
+      logger.warn(`${path.basename(filePath)} has no talents`);
+      return false;
+    }
+
+    if (!data.constellations || data.constellations.length === 0) {
+      logger.warn(`${path.basename(filePath)} has no constellations`);
+      return false;
+    }
+
+    logger.debug(`${path.basename(filePath)} is complete`);
+    return true;
+  } catch (error) {
+    logger.error(`Error validating ${path.basename(filePath)}:`, error);
+    return false;
+  }
+}
 
 const parseUrl = (url: string) => url.split('/revision/')[0];
 
@@ -90,7 +132,6 @@ export async function scrapeCharacterDetailed(character: string) {
       }
     }
 
-    // Get namecard image
     const nameCardContainer = await driver.findElement(
       By.css('div[data-source="namecard"]')
     );
@@ -522,9 +563,18 @@ export async function scrapeCharactersInDetail(
   const savedCharacters = await listFiles(detailedDir);
   for (const char of characters) {
     const name = parseCharacterName(char.name);
+    const filePath = path.join(detailedDir, `${name}.json`);
+
     if (!force && savedCharacters.includes(`${name}.json`)) {
-      logger.info(`${char.name} already saved`);
-      continue;
+      const isComplete = await isCharacterFileComplete(filePath);
+      if (isComplete) {
+        logger.info(`${char.name} already saved and complete`);
+        continue;
+      } else {
+        logger.warn(
+          `${char.name} file exists but is incomplete, re-scraping...`
+        );
+      }
     }
 
     try {
