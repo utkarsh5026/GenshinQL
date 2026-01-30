@@ -9,6 +9,8 @@ export const talentSchema = z.object({
     z.object({
       url: z.string(),
       caption: z.string(),
+      videoUrl: z.string().optional(),   // Add video support
+      videoType: z.string().optional(),   // Add video type
     })
   ),
   scaling: z.record(z.array(z.string())),
@@ -39,13 +41,6 @@ export const baseCharacterSchema = z.object({
   weaponUrl: z.string(),
   regionUrl: z.string(),
   modelType: z.string(),
-});
-
-export const advancedCharacterSchema = baseCharacterSchema.extend({
-  talents: z.array(talentSchema),
-  constellations: z.array(constellationSchema),
-  imageUrls: imageUrlsSchema,
-  version: z.string(),
 });
 
 export const characterFilterSchema = z.object({
@@ -105,6 +100,14 @@ export const gallerySchema = z.object({
   ),
   detailedImages: z.array(imageSchema).optional(),
   stickers: z.array(imageSchema).optional(),
+});
+
+export const advancedCharacterSchema = baseCharacterSchema.extend({
+  talents: z.array(talentSchema),
+  constellations: z.array(constellationSchema),
+  imageUrls: imageUrlsSchema,
+  version: z.string().optional(),
+  gallery: gallerySchema.optional(),  // Add gallery to character JSON
 });
 
 export const talentBookTypeSchema = z.union([

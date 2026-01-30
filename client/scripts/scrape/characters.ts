@@ -562,7 +562,7 @@ async function main() {
 
   const saveCharactersDetailed = async () => {
     logger.info('Starting detailed character scraping...');
-    await scrapeAndSaveDetailedCharacterInfo(true);
+    await scrapeAndSaveDetailedCharacterInfo(false);
     logger.info('Detailed character scraping complete');
   };
 
