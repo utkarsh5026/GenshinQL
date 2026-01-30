@@ -1,20 +1,19 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { SidebarProvider } from "./components/ui/sidebar";
 import AppSideBar from "./components/utils/AppSideBar";
-import { useLazyQuery } from "@apollo/client";
-import { GET_CHARACTER } from "./graphql/queries";
+import { fetchCharacterDetailed } from "@/services/dataService";
 import TalentCalender from "@/components/talents/TalentBookCalendar.tsx";
 import CharacterDescription from "./components/character/description/CharacterDescription.tsx";
-import { CharacterDetailed } from "./graphql/types";
+import { CharacterDetailed } from "@/types";
 import CharactersTable from "./components/character/table/CharacterTable.tsx";
 import CharacterRoutine from "./components/character/routine/CharacterRoutine.tsx";
 import WeaponCalender from "./components/weapons/WeaponCalender.tsx";
-import { useWeaponMaterials } from "@/redux/hook/weapon-material";
-import useTalentBooks from "./redux/hook/talent-book.ts";
+import { useWeaponMaterialStore, useTalentBooksStore } from "@/stores";
 import WeaponsDetailed from "./components/weapons/WeaponsDetailed.tsx";
 import TierList from "./components/tierlist/TierList.tsx";
 import GenshinGuesser from "./components/gdle/main/GenshinGuesser.tsx";
+import { useAutoClearOldCache } from "@/hooks/useCacheManager";
 
 type CurrentView =
   | "character"
@@ -27,21 +26,25 @@ type CurrentView =
   | "genshinGuesser";
 
 function App() {
-  const [getCharacter, { data }] = useLazyQuery(GET_CHARACTER);
+  const [character, setCharacter] = useState<CharacterDetailed | null>(null);
   const [currentView, setCurrentView] = useState<CurrentView>("talentCalender");
-  const { fetchWeaponMaterials } = useWeaponMaterials();
-  const { fetchBooks } = useTalentBooks();
+  const { fetchWeaponMaterials } = useWeaponMaterialStore();
+  const { fetchBooks } = useTalentBooksStore();
+
+  // Auto-clear cached assets older than 7 days on app load
+  useAutoClearOldCache(7);
 
   useEffect(() => {
     Promise.all([fetchWeaponMaterials(), fetchBooks()]);
   }, [fetchWeaponMaterials, fetchBooks]);
 
-  console.dir(data, { depth: null });
+  console.dir(character, { depth: null });
 
-  const handleCharacterClick = async (name: string) => {
+  const handleCharacterClick = useCallback(async (name: string) => {
     setCurrentView("character");
-    await getCharacter({ variables: { name } });
-  };
+    const charData = await fetchCharacterDetailed(name);
+    setCharacter(charData);
+  }, []);
 
   return (
     <SidebarProvider>
@@ -61,7 +64,7 @@ function App() {
       >
         {currentView === "character" && (
           <CharacterDescription
-            character={data?.character as CharacterDetailed}
+            character={character as CharacterDetailed}
           />
         )}
         {currentView === "talentCalender" && <TalentCalender />}
