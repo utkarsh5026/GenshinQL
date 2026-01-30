@@ -1,5 +1,6 @@
 import path from 'node:path';
 
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
@@ -10,6 +11,7 @@ const ReactCompilerConfig = {
 
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     react({
       babel: {
         plugins: [['babel-plugin-react-compiler', ReactCompilerConfig]],
