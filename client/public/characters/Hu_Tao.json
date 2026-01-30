@@ -384,5 +384,224 @@
         }
     ],
     "imageUrls": {},
-    "version": "1.3"
+    "version": "1.3",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Idle_Hu_Tao_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Idle_Hu_Tao_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Idle_Hu_Tao_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Idle_Hu_Tao_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Talent_Menu_Hu_Tao.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Talent_Menu_Hu_Tao.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Weapon_Menu_Hu_Tao.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Weapon_Menu_Hu_Tao.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Party_Setup_Hu_Tao.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Party_Setup_Hu_Tao.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Namecard_Background_Hu_Tao_Spirit_Soother.png",
+                "caption": "Hu Tao: Spirit Soother Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Hu_Tao_Spirit_Soother.png",
+                "caption": "Hu Tao: Spirit Soother Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Namecard_Banner_Hu_Tao_Spirit_Soother.png",
+                "caption": "Hu Tao: Spirit Soother Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Secret_Spear_of_Wangsheng_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Secret_Spear_of_Wangsheng_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Secret_Spear_of_Wangsheng_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Secret_Spear_of_Wangsheng_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Secret_Spear_of_Wangsheng_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Secret_Spear_of_Wangsheng_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Spirit_Soother_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Spirit_Soother_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Guide_to_Afterlife_Normal_Preview.gif",
+                        "caption": "Normal Attacks in Paramita Papilio State",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Guide_to_Afterlife_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Guide_to_Afterlife_Charged_Preview.gif",
+                        "caption": "Charged Attacks in Paramita Papilio State",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Guide_to_Afterlife_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Guide_to_Afterlife_Effect_Preview.gif",
+                        "caption": "Blood Blossom Effect",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Guide_to_Afterlife_Effect_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Hu_Tao_Character_Details_1.jpg",
+                "caption": "Hu Tao Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Hu_Tao_Character_Details_2.gif",
+                "caption": "Hu Tao Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Hu_Tao_Character_Details_3.gif",
+                "caption": "Hu Tao Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Hu_Tao_Character_Details_4.gif",
+                "caption": "Hu Tao Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Hu_Tao_Character_Details_5.gif",
+                "caption": "Hu Tao Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Hu_Tao_Character_Details_6.jpg",
+                "caption": "Hu Tao Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Hu_Tao_Character_Details_7.jpg",
+                "caption": "Hu Tao Details 7 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Hu_Tao_Character_Details_8.jpg",
+                "caption": "Hu Tao Details 8 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Icon_Emoji_Paimon%27s_Paintings_05_Hu_Tao_1.png",
+                "caption": "Evil laugh Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Icon_Emoji_Paimon%27s_Paintings_05_Hu_Tao_2.png",
+                "caption": "Reciting poetry Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Icon_Emoji_Paimon%27s_Paintings_05_Hu_Tao_3.png",
+                "caption": "Messed up Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Icon_Emoji_Paimon%27s_Paintings_05_Hu_Tao_4.png",
+                "caption": "Adorable Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Icon_Emoji_Paimon%27s_Paintings_05_Hu_Tao_5.png",
+                "caption": "Frighten Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Icon_Emoji_Paimon%27s_Paintings_05_Hu_Tao_6.png",
+                "caption": "I've got this! Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Icon_Emoji_Paimon%27s_Paintings_05_Hu_Tao_7.png",
+                "caption": "Yawn Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Icon_Emoji_Paimon%27s_Paintings_05_Hu_Tao_8.png",
+                "caption": "Pardon me Set 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Icon_Emoji_Paimon%27s_Paintings_10_Hu_Tao_1.png",
+                "caption": "Shocked Set 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Icon_Emoji_Paimon%27s_Paintings_10_Hu_Tao_2.png",
+                "caption": "Greetings Set 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Icon_Emoji_Paimon%27s_Paintings_10_Hu_Tao_3.png",
+                "caption": "Love Set 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Icon_Emoji_Paimon%27s_Paintings_21_Hu_Tao_1.png",
+                "caption": "Thanks, Boss! Set 21"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Icon_Emoji_Paimon%27s_Paintings_24_Hu_Tao_1.png",
+                "caption": "Amazing! Set 24"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Icon_Emoji_Paimon%27s_Paintings_27_Hu_Tao_1.png",
+                "caption": "Eh! No! Set 27"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Icon_Emoji_Paimon%27s_Paintings_27_Hu_Tao_2.png",
+                "caption": "Sure sure sure Set 27"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Icon_Emoji_Paimon%27s_Paintings_30_Hu_Tao_1.png",
+                "caption": "It's For You! Set 30"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Icon_Emoji_Paimon%27s_Paintings_38_Hu_Tao_1.png",
+                "caption": "Lucky Streak Set 38"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Icon_Emoji_Paimon%27s_Paintings_38_Hu_Tao_2.png",
+                "caption": "Promise Set 38"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Icon_Emoji_Paimon%27s_Paintings_47_Zhongli_1.png",
+                "caption": "Set 47"
+            }
+        ]
+    }
 }

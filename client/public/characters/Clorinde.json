@@ -363,5 +363,190 @@
         }
     ],
     "imageUrls": {},
-    "version": "4.7"
+    "version": "4.7",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Idle_Clorinde_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Idle_Clorinde_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Idle_Clorinde_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Idle_Clorinde_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Talent_Menu_Clorinde.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Menu_Clorinde.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Weapon_Menu_Clorinde.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Weapon_Menu_Clorinde.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Party_Setup_Clorinde.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Party_Setup_Clorinde.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Namecard_Background_Clorinde_Roleplay.png",
+                "caption": "Clorinde: Roleplay Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Clorinde_Roleplay.png",
+                "caption": "Clorinde: Roleplay Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Namecard_Banner_Clorinde_Roleplay.png",
+                "caption": "Clorinde: Roleplay Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Oath_of_Hunting_Shadows_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Oath_of_Hunting_Shadows_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Oath_of_Hunting_Shadows_Charged_Preview.gif",
+                        "caption": "Charge Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Oath_of_Hunting_Shadows_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Oath_of_Hunting_Shadows_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Oath_of_Hunting_Shadows_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Last_Lightfall_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Last_Lightfall_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Hunter%27s_Vigil_Preview.gif",
+                        "caption": "Activation",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Hunter%27s_Vigil_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Hunter%27s_Vigil_Swift_Hunt_Lv._1_Preview.gif",
+                        "caption": "Swift Hunt Lv. 1",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Hunter%27s_Vigil_Swift_Hunt_Lv._1_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Hunter%27s_Vigil_Swift_Hunt_Lv._2_Preview.gif",
+                        "caption": "Swift Hunt Lv. 2",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Hunter%27s_Vigil_Swift_Hunt_Lv._2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Hunter%27s_Vigil_Impale_the_Night_Lv._1_Preview.gif",
+                        "caption": "Impale the Night Lv. 1",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Hunter%27s_Vigil_Impale_the_Night_Lv._1_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Hunter%27s_Vigil_Impale_the_Night_Lv._2_Preview.gif",
+                        "caption": "Impale the Night Lv. 2",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Hunter%27s_Vigil_Impale_the_Night_Lv._2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Hunter%27s_Vigil_Impale_the_Night_Lv._3_Preview.gif",
+                        "caption": "Impale the Night Lv. 3",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Hunter%27s_Vigil_Impale_the_Night_Lv._3_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Clorinde_Character_Details_1.png",
+                "caption": "Clorinde Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Clorinde_Character_Details_2.png",
+                "caption": "Clorinde Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Clorinde_Character_Details_3.gif",
+                "caption": "Clorinde Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Clorinde_Character_Details_4.gif",
+                "caption": "Clorinde Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Clorinde_Character_Details_5.gif",
+                "caption": "Clorinde Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Clorinde_Character_Details_6.gif",
+                "caption": "Clorinde Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Clorinde_Character_Details_7.png",
+                "caption": "Clorinde Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Clorinde_Character_Details_8.png",
+                "caption": "Clorinde Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Clorinde_Character_Details_9.png",
+                "caption": "Clorinde Details 9"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Icon_Emoji_Paimon%27s_Paintings_28_Clorinde_1.png",
+                "caption": "Arrest Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Icon_Emoji_Paimon%27s_Paintings_33_Clorinde_1.png",
+                "caption": "Duelist's Salute Set 33"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Icon_Emoji_Paimon%27s_Paintings_33_Clorinde_2.png",
+                "caption": "Let's Move Set 33"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Icon_Emoji_Paimon%27s_Paintings_33_Clorinde_3.png",
+                "caption": "Relaxed Set 33"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Icon_Emoji_Paimon%27s_Paintings_33_Clorinde_4.png",
+                "caption": "Game Master Set 33"
+            }
+        ]
+    }
 }

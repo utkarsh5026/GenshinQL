@@ -367,5 +367,137 @@
         }
     ],
     "imageUrls": {},
-    "version": "1.1"
+    "version": "1.1",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Namecard_Background_Diona_Meow%21.png",
+                "caption": "Diona: Meow! Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Diona_Meow%21.png",
+                "caption": "Diona: Meow! Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Namecard_Banner_Diona_Meow%21.png",
+                "caption": "Diona: Meow! Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Icon_Emoji_Paimon%27s_Paintings_03_Diona_1.png",
+                "caption": "Irritable Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Icon_Emoji_Paimon%27s_Paintings_03_Diona_2.png",
+                "caption": "Bored Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Icon_Emoji_Paimon%27s_Paintings_03_Diona_3.png",
+                "caption": "Fearsome Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Icon_Emoji_Paimon%27s_Paintings_03_Diona_4.png",
+                "caption": "Proud Set 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Icon_Emoji_Paimon%27s_Paintings_20_Diona_1.png",
+                "caption": "Not Bad! Set 20"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Icon_Emoji_Paimon%27s_Paintings_27_Diona_1.png",
+                "caption": "Doubting me? Set 27"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Icon_Emoji_Paimon%27s_Paintings_31_Diona_1.png",
+                "caption": "\"Mixing\" Set 31"
+            }
+        ]
+    }
 }

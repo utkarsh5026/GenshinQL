@@ -1,0 +1,382 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Xinyan_Icon.png",
+    "name": "Xinyan",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Claymore",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "modelType": "Medium Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png",
+            "talentName": "Dance on Fire",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Dance_on_Fire_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Dance_on_Fire_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Dance_on_Fire_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "76.54",
+                    "82.77",
+                    "89",
+                    "97.9",
+                    "104.13",
+                    "111.25",
+                    "121.04",
+                    "130.83",
+                    "140.62",
+                    "151.3",
+                    "161.98"
+                ],
+                "2-Hit DMG (%)": [
+                    "73.96",
+                    "79.98",
+                    "86",
+                    "94.6",
+                    "100.62",
+                    "107.5",
+                    "116.96",
+                    "126.42",
+                    "135.88",
+                    "146.2",
+                    "156.52"
+                ],
+                "3-Hit DMG (%)": [
+                    "95.46",
+                    "103.23",
+                    "111",
+                    "122.1",
+                    "129.87",
+                    "138.75",
+                    "150.96",
+                    "163.17",
+                    "175.38",
+                    "188.7",
+                    "202.02"
+                ],
+                "4-Hit DMG (%)": [
+                    "115.84",
+                    "125.27",
+                    "134.7",
+                    "148.17",
+                    "157.6",
+                    "168.38",
+                    "183.19",
+                    "198.01",
+                    "212.83",
+                    "228.99",
+                    "245.15"
+                ],
+                "Charged Attack Cyclic DMG (%)": [
+                    "62.55",
+                    "67.64",
+                    "72.73",
+                    "80",
+                    "85.09",
+                    "90.91",
+                    "98.91",
+                    "106.91",
+                    "114.91",
+                    "123.64",
+                    "132.36"
+                ],
+                "Charged Attack Final DMG (%)": [
+                    "113.09",
+                    "122.3",
+                    "131.5",
+                    "144.65",
+                    "153.86",
+                    "164.38",
+                    "178.84",
+                    "193.31",
+                    "207.77",
+                    "223.55",
+                    "239.33"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "40/s"
+                ],
+                "Max Duration": [
+                    "5s"
+                ],
+                "Plunge DMG (%)": [
+                    "74.59",
+                    "80.66",
+                    "86.73",
+                    "95.4",
+                    "101.47",
+                    "108.41",
+                    "117.95",
+                    "127.49",
+                    "137.03",
+                    "147.44",
+                    "157.85"
+                ],
+                "Low Plunge DMG (%)": [
+                    "149.14",
+                    "161.28",
+                    "173.42",
+                    "190.77",
+                    "202.91",
+                    "216.78",
+                    "235.86",
+                    "254.93",
+                    "274.01",
+                    "294.82",
+                    "315.63"
+                ],
+                "High Plunge DMG (%)": [
+                    "186.29",
+                    "201.45",
+                    "216.62",
+                    "238.28",
+                    "253.44",
+                    "270.77",
+                    "294.6",
+                    "318.42",
+                    "342.25",
+                    "368.25",
+                    "394.24"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Talent_Sweeping_Fervor.png",
+            "talentName": "Sweeping Fervor",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nXinyan brandishes her instrument, dealing Pyro DMG on nearby opponents, forming a shield made out of her audience's passion.\nThe shield's DMG Absorption scales based on Xinyan's DEF and on the number of opponents hit.\nHitting 0 – 1 opponents grants Shield Level 1: Ad Lib.\nHitting 2 opponents grants Shield Level 2: Lead-In.\nHitting 3 or more opponents grants Shield Level 3: Rave, which will also deal intermittent Pyro DMG to nearby opponents.\n\nThe shield has the following special properties:\nWhen unleashed, it infuses Xinyan with Pyro.\nIt has 250% DMG Absorption effectiveness against Pyro DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Sweeping_Fervor_2_Preview.gif",
+                    "caption": "Level 2 Shield, with 1st Ascension Passive"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Sweeping_Fervor_Max_Preview.gif",
+                    "caption": "Level 3 Shield, with 1st Ascension Passive"
+                }
+            ],
+            "scaling": {
+                "Swing DMG (%)": [
+                    "169.6",
+                    "182.32",
+                    "195.04",
+                    "212",
+                    "224.72",
+                    "237.44",
+                    "254.4",
+                    "271.36",
+                    "288.32",
+                    "305.28",
+                    "322.24",
+                    "339.2",
+                    "360.4",
+                    "382"
+                ],
+                "Shield Level 1 DMG Absorption": [
+                    "104.04% DEF\n+\n500.55",
+                    "111.84% DEF\n+\n550.61",
+                    "119.65% DEF\n+\n604.84",
+                    "130.05% DEF\n+\n663.25",
+                    "137.85% DEF\n+\n725.83",
+                    "145.66% DEF\n+\n792.58",
+                    "156.06% DEF\n+\n863.50",
+                    "166.46% DEF\n+\n938.59",
+                    "176.87% DEF\n+\n1,017",
+                    "187.27% DEF\n+\n1,101",
+                    "197.68% DEF\n+\n1,188",
+                    "208.08% DEF\n+\n1,280",
+                    "221.09% DEF\n+\n1,376",
+                    "234.1% DEF\n+\n1,477"
+                ],
+                "Shield Level 2 DMG Absorption": [
+                    "122.4% DEF\n+\n588.88",
+                    "131.58% DEF\n+\n647.78",
+                    "140.76% DEF\n+\n711.58",
+                    "153% DEF\n+\n780.3",
+                    "162.18% DEF\n+\n853.92",
+                    "171.36% DEF\n+\n932.44",
+                    "183.6% DEF\n+\n1,015",
+                    "195.84% DEF\n+\n1,104",
+                    "208.08% DEF\n+\n1,197",
+                    "220.32% DEF\n+\n1,295",
+                    "232.56% DEF\n+\n1,398",
+                    "244.8% DEF\n+\n1,506",
+                    "260.1% DEF\n+\n1,619",
+                    "275.4% DEF\n+\n1,737"
+                ],
+                "Shield Level 3 DMG Absorption": [
+                    "144% DEF\n+\n692.8",
+                    "154.8% DEF\n+\n762.09",
+                    "165.6% DEF\n+\n837.16",
+                    "180% DEF\n+\n918",
+                    "190.8% DEF\n+\n1,004",
+                    "201.6% DEF\n+\n1,096",
+                    "216% DEF\n+\n1,195",
+                    "230.4% DEF\n+\n1,299",
+                    "244.8% DEF\n+\n1,408",
+                    "259.2% DEF\n+\n1,524",
+                    "273.6% DEF\n+\n1,645",
+                    "288% DEF\n+\n1,772",
+                    "306% DEF\n+\n1,905",
+                    "324.0% DEF\n+\n2,044"
+                ],
+                "DoT (%)": [
+                    "33.6",
+                    "36.12",
+                    "38.64",
+                    "42",
+                    "44.52",
+                    "47.04",
+                    "50.4",
+                    "53.76",
+                    "57.12",
+                    "60.48",
+                    "63.84",
+                    "67.2",
+                    "71.4",
+                    "75.6"
+                ],
+                "Shield Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "18s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Riff_Revolution.png",
+            "talentName": "Riff Revolution",
+            "talentType": "Elemental Burst",
+            "description": "Strumming rapidly, Xinyan launches nearby opponents and deals Physical DMG to them, hyping up the crowd.\nThe sheer intensity of the atmosphere will cause explosions that deal Pyro DMG to nearby opponents.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Riff_Revolution_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "340.8",
+                    "366.36",
+                    "391.92",
+                    "426",
+                    "451.56",
+                    "477.12",
+                    "511.2",
+                    "545.28",
+                    "579.36",
+                    "613.44",
+                    "647.52",
+                    "681.6",
+                    "724.2",
+                    "767"
+                ],
+                "Pyro DoT (%)": [
+                    "40",
+                    "43",
+                    "46",
+                    "50",
+                    "53",
+                    "56",
+                    "60",
+                    "64",
+                    "68",
+                    "72",
+                    "76",
+                    "80",
+                    "85",
+                    "90"
+                ],
+                "Duration": [
+                    "2s"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Talent_%22The_Show_Goes_On%2C_Even_Without_An_Audience...%22.png",
+            "talentName": "\"The Show Goes On, Even Without An Audience...\"",
+            "talentType": "1st Ascension Passive",
+            "description": "Decreases the number of opponents Sweeping Fervor must hit to trigger each level of shielding.\nShield Level 2: Lead-In requirement reduced to 1 opponent hit.\nShield Level 3: Rave requirement reduced to 2 opponents hit or more.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Talent_%22...Now_That%27s_Rock_%27N%27_Roll%21%22.png",
+            "talentName": "\"...Now That's Rock 'N' Roll!\"",
+            "talentType": "4th Ascension Passive",
+            "description": "Characters shielded by Sweeping Fervor deal 15% increased Physical DMG.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Talent_A_Rad_Recipe.png",
+            "talentName": "A Rad Recipe",
+            "talentType": "Utility Passive",
+            "description": "When a Perfect Cooking is achieved on a DEF-boosting dish, Xinyan has a 12% chance to obtain double the product.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Constellation_Fatal_Acceleration.png",
+            "name": "Fatal Acceleration",
+            "level": 1,
+            "description": "Description\nPreview\nUpon scoring a CRIT Hit, increases ATK SPD of Xinyan's Normal and Charged Attacks by 12% for 5s.\nCan only occur once every 5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Constellation_Impromptu_Opening.png",
+            "name": "Impromptu Opening",
+            "level": 2,
+            "description": "Description\nGameplay Notes\nPreview\nRiff Revolution's Physical DMG has its CRIT Rate increased by 100%, and will form a shield at Shield Level 3: Rave when cast."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Constellation_Double-Stop.png",
+            "name": "Double-Stop",
+            "level": 3,
+            "description": "Increases the Level of Sweeping Fervor by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Constellation_Wildfire_Rhythm.png",
+            "name": "Wildfire Rhythm",
+            "level": 4,
+            "description": "Sweeping Fervor's swing DMG decreases opponent's Physical RES by 15% for 12s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Constellation_Screamin%27_for_an_Encore.png",
+            "name": "Screamin' for an Encore",
+            "level": 5,
+            "description": "Increases the Level of Riff Revolution by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Constellation_Rockin%27_in_a_Flaming_World.png",
+            "name": "Rockin' in a Flaming World",
+            "level": 6,
+            "description": "Description\nGameplay Notes\nDecreases the Stamina Consumption of Xinyan's Charged Attacks by 30%. Additionally, Xinyan's Charged Attacks gain an ATK Bonus equal to 50% of her DEF."
+        }
+    ],
+    "imageUrls": {},
+    "version": "1.1"
+}

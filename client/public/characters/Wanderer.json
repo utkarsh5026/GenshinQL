@@ -1,0 +1,532 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Wanderer_Icon.png",
+    "name": "Wanderer",
+    "rarity": "5 Stars",
+    "element": "Anemo",
+    "weaponType": "Catalyst",
+    "region": "Sumeru",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
+    "modelType": "Medium Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png",
+            "talentName": "Yuuban Meigen",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 3 attacks using wind blades, dealing Anemo DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina, gathers a build up of high wind pressure, and deals AoE Anemo DMG after a short casting time.\n\nPlunging Attack\nCalling upon the power of Anemo, the Wanderer plunges towards the ground from mid-air, damaging all opponents in his path. Deals AoE Anemo DMG upon impact with the ground.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Yuuban_Meigen_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Yuuban_Meigen_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Yuuban_Meigen_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "68.71",
+                    "74.31",
+                    "79.9",
+                    "87.89",
+                    "93.48",
+                    "99.88",
+                    "108.66",
+                    "117.45",
+                    "126.24",
+                    "135.83",
+                    "145.42"
+                ],
+                "2-Hit DMG (%)": [
+                    "65.02",
+                    "70.31",
+                    "75.6",
+                    "83.16",
+                    "88.45",
+                    "94.5",
+                    "102.82",
+                    "111.13",
+                    "119.45",
+                    "128.52",
+                    "137.59"
+                ],
+                "3-Hit DMG (%)": [
+                    "47.64\n+\n47.64",
+                    "51.52\n+\n51.52",
+                    "55.4\n+\n55.4",
+                    "60.94\n+\n60.94",
+                    "64.82\n+\n64.82",
+                    "69.25\n+\n69.25",
+                    "75.34\n+\n75.34",
+                    "81.44\n+\n81.44",
+                    "87.53\n+\n87.53",
+                    "94.18\n+\n94.18",
+                    "100.83\n+\n100.83"
+                ],
+                "Charged Attack DMG (%)": [
+                    "132.08",
+                    "141.99",
+                    "151.89",
+                    "165.1",
+                    "175.01",
+                    "184.91",
+                    "198.12",
+                    "211.33",
+                    "224.54",
+                    "237.74",
+                    "250.95"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "50"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Talent_Hanega_Song_of_the_Wind.png",
+            "talentName": "Hanega: Song of the Wind",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nConcentrates the power of the winds to break free from the shackles of the earth, dealing AoE Anemo DMG before leaping into the air and entering the Windfavored state.\n\nWindfavored\nThe Wanderer cannot perform Plunging Attacks in this state. When he uses Normal and Charged Attacks, they will be converted into Kuugo: Fushoudan and Kuugo: Toufukai respectively; the DMG they deal and their AoE will be increased, and their DMG will be considered Normal and Charged Attack DMG respectively. Kuugo: Toufukai will not consume Stamina.\nThe Wanderer will hover persistently during this time. While this state is active, the Wanderer's movements gain the following properties:\nPersistently consumes Kuugoryoku Points to maintain this hovering state.\nWhen sprinting, additional Kuugoryoku Points will be consumed for the Wanderer to accelerate mid-air. Holding sprint will cause persistent Kuugoryoku Point consumption to maintain speed. This effect will replace his default sprint.\nJumping expends extra Kuugoryoku Points to increase hovering height. Holding jump will cause persistent Kuugoryoku Point consumption to keep increasing hovering height.\n\nRunning out of Kuugoryoku Points will end the Windfavored state.\nA second cast during the duration of Windfavored will also end it.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Hanega_Song_of_the_Wind_Windfavored_Preview.gif",
+                    "caption": "Windfavored"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Hanega_Song_of_the_Wind_Kuugo_Fushoudan_Preview.gif",
+                    "caption": "Kuugo: Fushoudan"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Hanega_Song_of_the_Wind_Kuugo_Toufukai_Preview.gif",
+                    "caption": "Kuugo: Toufukai"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Hanega_Song_of_the_Wind_Stagger_Recovery_Preview.gif",
+                    "caption": "Stagger Recovery"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Hanega_Song_of_the_Wind_Sprint_Preview.gif",
+                    "caption": "Sprint"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Hanega_Song_of_the_Wind_Jump_Preview.gif",
+                    "caption": "Jump"
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "95.2",
+                    "102.34",
+                    "109.48",
+                    "119",
+                    "126.14",
+                    "133.28",
+                    "142.8",
+                    "152.32",
+                    "161.84",
+                    "171.36",
+                    "180.88",
+                    "190.4",
+                    "202.3"
+                ],
+                "Kuugo: Fushoudan DMG (% Normal Attack DMG)": [
+                    "132.98",
+                    "134.96",
+                    "136.93",
+                    "139.5",
+                    "141.47",
+                    "143.45",
+                    "146.02",
+                    "148.58",
+                    "151.15",
+                    "153.72",
+                    "156.29",
+                    "158.85",
+                    "161.42"
+                ],
+                "Kuugo: Toufukai DMG (% Charged Attack DMG)": [
+                    "126.39",
+                    "127.97",
+                    "129.55",
+                    "131.6",
+                    "133.18",
+                    "134.76",
+                    "136.81",
+                    "138.87",
+                    "140.92",
+                    "142.98",
+                    "145.03",
+                    "147.08",
+                    "149.14"
+                ],
+                "Initial Kuugoryoku Points": [
+                    "100"
+                ],
+                "CD": [
+                    "6s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Kyougen_Five_Ceremonial_Plays.png",
+            "talentName": "Kyougen: Five Ceremonial Plays",
+            "talentType": "Elemental Burst",
+            "description": "Compresses the atmosphere into a singular vacuum that grinds all troubles away, dealing multiple instances of AoE Anemo DMG. If the character is in the Windfavored state due to the skill \"Hanega: Song of the Wind,\" Windfavored state will end after casting.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Kyougen_Five_Ceremonial_Plays_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "147.2×5",
+                    "158.24×5",
+                    "169.28×5",
+                    "184×5",
+                    "195.04×5",
+                    "206.08×5",
+                    "220.8×5",
+                    "235.52×5",
+                    "250.24×5",
+                    "264.96×5",
+                    "279.68×5",
+                    "294.4×5",
+                    "312.8×5"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Talent_Jade-Claimed_Flower.png",
+            "talentName": "Jade-Claimed Flower",
+            "talentType": "1st Ascension Passive",
+            "description": "Description\nGameplay Notes\nPreview\nIf Hanega: Song of the Wind comes into contact with Hydro/Pyro/Cryo/Electro when it is unleashed, this instance of the Windfavored state will obtain buffs according to the contacted element(s):\nHydro: Kuugoryoku Point cap increases by 20.\nPyro: ATK increases by 30%.\nCryo: CRIT Rate increases by 20%.\nElectro: When Normal and Charged Attacks hit an opponent, 0.8 Energy will be restored. Energy can be restored this way every 0.2s.\n\nYou can have up to 2 different kinds of these buffs simultaneously.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Jade-Claimed_Flower_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Talent_Gales_of_Reverie.png",
+            "talentName": "Gales of Reverie",
+            "talentType": "4th Ascension Passive",
+            "description": "When the Wanderer hits opponents with Kuugo: Fushoudan or Kuugo: Toufukai in his Windfavored state, he has a 16% chance to obtain the Descent effect: The next time the Wanderer accelerates in mid-air while in this instance of the Windfavored state, this effect will be removed, this acceleration instance will not consume any Kuugoryoku Points, and he will fire off 4 wind arrows that deal 35% of his ATK as Anemo DMG each.\nFor each Kuugo: Fushoudan and Kuugo: Toufukai that does not produce this effect, the next attack of those types will have a 12% increased chance of producing it. The calculation of the effect production is done once every 0.1s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Talent_Strum_the_Swirling_Winds.png",
+            "talentName": "Strum the Swirling Winds",
+            "talentType": "Utility Passive",
+            "description": "Mora expended when ascending Bows and Catalysts is decreased by 50%.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Constellation_Shoban_Ostentatious_Plumage.png",
+            "name": "Shoban: Ostentatious Plumage",
+            "level": 1,
+            "description": "When in the Windfavored state, the Attack SPD of the Wanderer's Kuugo: Fushoudan and Kuugo: Toufukai is increased by 10%.\nAdditionally, the wind arrows fired by the Ascension Talent \"Gales of Reverie\" will deal an additional 25% of his ATK as DMG. You must first unlock the Ascension Talent \"Gales of Reverie.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Constellation_Niban_Isle_Amidst_White_Waves.png",
+            "name": "Niban: Isle Amidst White Waves",
+            "level": 2,
+            "description": "Description\nGameplay Notes\nWhen in the Windfavored state, Kyougen: Five Ceremonial Plays will see its DMG increased by 4% per point of difference between the max amount of Kuugoryoku Points contrasted with Kuugoryoku's present capacity when using this skill.\nThrough this method, you can increase Kyougen: Five Ceremonial Plays's DMG by a maximum of 200%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Constellation_Sanban_Moonflower_Kusemai.png",
+            "name": "Sanban: Moonflower Kusemai",
+            "level": 3,
+            "description": "Increases the Level of Kyougen: Five Ceremonial Plays by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Constellation_Yonban_Set_Adrift_into_Spring.png",
+            "name": "Yonban: Set Adrift into Spring",
+            "level": 4,
+            "description": "When casting Hanega: Song of the Wind, should the Ascension Talent \"Jade-Claimed Flower\" be triggered, the character will gain buffs in correspondence to the contacted Elemental Type(s), and also obtain a random untriggered buff. A maximum of 3 such corresponding elemental buffs can exist simultaneously.\nYou must first unlock the Ascension Talent \"Jade-Claimed Flower.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Constellation_Matsuban_Ancient_Illuminator_From_Abroad.png",
+            "name": "Matsuban: Ancient Illuminator From Abroad",
+            "level": 5,
+            "description": "Increases the Level of Hanega: Song of the Wind by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Constellation_Shugen_The_Curtains%27_Melancholic_Sway.png",
+            "name": "Shugen: The Curtains' Melancholic Sway",
+            "level": 6,
+            "description": "Description\nAdvanced Properties\nPreview\nWhen the Wanderer actively hits an opponent with Kuugo: Fushoudan while in the Windfavored state, the following effects will occur:\nDeals an additional instance of Kuugo: Fushoudan at the position hit, dealing 40% of the attack's original DMG. This DMG will be considered Normal Attack DMG.\nWhen the Wanderer falls below 40 Kuugoryoku Points, restores 4 Points to him. Kuugoryoku Points can be restored in this manner once every 0.2s. This restoration can occur up to 5 times within one Windfavored duration."
+        }
+    ],
+    "imageUrls": {},
+    "version": "3.3",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Namecard_Background_Wanderer_Drifter%27s_Ballad.png",
+                "caption": "Wanderer: Drifter's Ballad Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Wanderer_Drifter%27s_Ballad.png",
+                "caption": "Wanderer: Drifter's Ballad Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Namecard_Banner_Wanderer_Drifter%27s_Ballad.png",
+                "caption": "Wanderer: Drifter's Ballad Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Yuuban_Meigen_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Yuuban_Meigen_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Yuuban_Meigen_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Yuuban_Meigen_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Yuuban_Meigen_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Yuuban_Meigen_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Kyougen_Five_Ceremonial_Plays_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Kyougen_Five_Ceremonial_Plays_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Hanega_Song_of_the_Wind_Windfavored_Preview.gif",
+                        "caption": "Windfavored",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Hanega_Song_of_the_Wind_Windfavored_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Hanega_Song_of_the_Wind_Kuugo_Fushoudan_Preview.gif",
+                        "caption": "Kuugo: Fushoudan",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Hanega_Song_of_the_Wind_Kuugo_Fushoudan_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Hanega_Song_of_the_Wind_Kuugo_Toufukai_Preview.gif",
+                        "caption": "Kuugo: Toufukai",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Hanega_Song_of_the_Wind_Kuugo_Toufukai_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Hanega_Song_of_the_Wind_Stagger_Recovery_Preview.gif",
+                        "caption": "Stagger Recovery",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Hanega_Song_of_the_Wind_Stagger_Recovery_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Hanega_Song_of_the_Wind_Sprint_Preview.gif",
+                        "caption": "Sprint",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Hanega_Song_of_the_Wind_Sprint_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Hanega_Song_of_the_Wind_Jump_Preview.gif",
+                        "caption": "Jump",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Hanega_Song_of_the_Wind_Jump_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Wanderer_Character_Details_1.png",
+                "caption": "Wanderer Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Wanderer_Character_Details_10.png",
+                "caption": "Wanderer Details 10 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Wanderer_Character_Details_2.png",
+                "caption": "Wanderer Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Wanderer_Character_Details_3.gif",
+                "caption": "Wanderer Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Wanderer_Character_Details_4.gif",
+                "caption": "Wanderer Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Wanderer_Character_Details_5.gif",
+                "caption": "Wanderer Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Wanderer_Character_Details_6.gif",
+                "caption": "Wanderer Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Wanderer_Character_Details_7.gif",
+                "caption": "Wanderer Details 7 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Wanderer_Character_Details_8.png",
+                "caption": "Wanderer Details 8 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Wanderer_Character_Details_9.png",
+                "caption": "Wanderer Details 9 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Icon_Emoji_Paimon%27s_Paintings_20_Wanderer_1.png",
+                "caption": "Greetings Set 20"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Icon_Emoji_Paimon%27s_Paintings_20_Wanderer_2.png",
+                "caption": "Sobs Set 20"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Icon_Emoji_Paimon%27s_Paintings_20_Wanderer_3.png",
+                "caption": "Funny Face Set 20"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Icon_Emoji_Paimon%27s_Paintings_20_Wanderer_4.png",
+                "caption": "Collapsed Set 20"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Icon_Emoji_Paimon%27s_Paintings_23_Wanderer_1.png",
+                "caption": "Zoned Out Set 23"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Icon_Emoji_Paimon%27s_Paintings_25_Wanderer_1.png",
+                "caption": "Zoned out Set 25"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Icon_Emoji_Paimon%27s_Paintings_25_Wanderer_2.png",
+                "caption": "Threatening Set 25"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Icon_Emoji_Paimon%27s_Paintings_34_Wanderer_1.png",
+                "caption": "Default yes Set 34"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Icon_Emoji_Paimon%27s_Paintings_34_Wanderer_2.png",
+                "caption": "I care Set 34"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Icon_Emoji_Paimon%27s_Paintings_34_Other_1.png",
+                "caption": "FriendSHIP Set 34"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Icon_Emoji_Paimon%27s_Paintings_46_Wanderer_1.png",
+                "caption": "Venting Set 46"
+            }
+        ]
+    }
+}

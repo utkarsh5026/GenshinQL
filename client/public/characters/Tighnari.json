@@ -1,0 +1,548 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Tighnari_Icon.png",
+    "name": "Tighnari",
+    "rarity": "5 Stars",
+    "element": "Dendro",
+    "weaponType": "Bow",
+    "region": "Sumeru",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
+    "modelType": "Medium Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Bow_Dendro.png",
+            "talentName": "Khanda Barrier-Buster",
+            "talentType": "Normal Attack",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nNormal Attack\nPerforms up to 4 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, the power of Dendro will accumulate on the arrowhead before the arrow is fired. Has different effects based on how long the energy has been charged:\nCharge Level 1: Fires off an arrow carrying the power of flora that deals Dendro DMG.\nCharge Level 2: Fires off a Wreath Arrow that deals Dendro DMG. Upon hit, the Wreath Arrow will create 4 Clusterbloom Arrows that will track nearby opponents automatically and deal Dendro DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Khanda_Barrier-Buster_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Khanda_Barrier-Buster_Charged_1_Preview.gif",
+                    "caption": "Charged Attack Level 1"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Khanda_Barrier-Buster_Charged_2_Preview.gif",
+                    "caption": "Charged Attack Level 2"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Khanda_Barrier-Buster_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "44.63",
+                    "48.27",
+                    "51.9",
+                    "57.09",
+                    "60.72",
+                    "64.88",
+                    "70.58",
+                    "76.29",
+                    "82",
+                    "88.23",
+                    "94.46"
+                ],
+                "2-Hit DMG (%)": [
+                    "41.97",
+                    "45.38",
+                    "48.8",
+                    "53.68",
+                    "57.1",
+                    "61",
+                    "66.37",
+                    "71.74",
+                    "77.1",
+                    "82.96",
+                    "88.82"
+                ],
+                "3-Hit DMG (%)": [
+                    "26.45×2",
+                    "28.6×2",
+                    "30.75×2",
+                    "33.83×2",
+                    "35.98×2",
+                    "38.44×2",
+                    "41.82×2",
+                    "45.2×2",
+                    "48.59×2",
+                    "52.28×2",
+                    "55.96×2"
+                ],
+                "4-Hit DMG (%)": [
+                    "68.63",
+                    "74.21",
+                    "79.8",
+                    "87.78",
+                    "93.37",
+                    "99.75",
+                    "108.53",
+                    "117.31",
+                    "126.08",
+                    "135.66",
+                    "145.24"
+                ],
+                "Aimed Shot (%)": [
+                    "43.86",
+                    "47.43",
+                    "51",
+                    "56.1",
+                    "59.67",
+                    "63.75",
+                    "69.36",
+                    "74.97",
+                    "80.58",
+                    "86.7",
+                    "92.82"
+                ],
+                "Level 1 Aimed Shot (%)": [
+                    "124",
+                    "133.3",
+                    "142.6",
+                    "155",
+                    "164.3",
+                    "173.6",
+                    "186",
+                    "198.4",
+                    "210.8",
+                    "223.2",
+                    "235.6"
+                ],
+                "Wreath Arrow DMG (%)": [
+                    "87.2",
+                    "93.74",
+                    "100.28",
+                    "109",
+                    "115.54",
+                    "122.08",
+                    "130.8",
+                    "139.52",
+                    "148.24",
+                    "156.96",
+                    "165.68"
+                ],
+                "Clusterbloom Arrow DMG (%)": [
+                    "38.6",
+                    "41.49",
+                    "44.39",
+                    "48.25",
+                    "51.14",
+                    "54.04",
+                    "57.9",
+                    "61.76",
+                    "65.62",
+                    "69.48",
+                    "73.34"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Vijnana-Phala_Mine.png",
+            "talentName": "Vijnana-Phala Mine",
+            "talentType": "Elemental Skill",
+            "description": "Tighnari throws a Vijnana Stormheart ahead that deals AoE Dendro DMG, creating a Vijnana-Khanda Field that creates mysterious illusions that taunt opponents and draw their fire.\nAdditionally, Tighnari gains the Vijnana Suffusion effect, which will decrease the Wreath Arrow's charging time by 2.4s. This effect will dissipate once the skill duration ends or after Tighnari has fired 3 Wreath Arrows.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Vijnana-Phala_Mine_Preview.gif",
+                    "caption": "Press"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Vijnana-Phala_Mine_Vijnana_Suffusion_Preview.gif",
+                    "caption": "Vijnana Suffusion"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Vijnana-Phala_Mine_Vijnana_Suffusion_Charged_Preview.gif",
+                    "caption": "Vijnana Suffusion, Charged Attack"
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "149.6",
+                    "160.82",
+                    "172.04",
+                    "187",
+                    "198.22",
+                    "209.44",
+                    "224.4",
+                    "239.36",
+                    "254.32",
+                    "269.28",
+                    "284.24",
+                    "299.2",
+                    "317.9"
+                ],
+                "Vijnana-Khanda Field Duration": [
+                    "8s"
+                ],
+                "Vijnana Suffusion Duration": [
+                    "12s"
+                ],
+                "CD": [
+                    "12s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Talent_Fashioner%27s_Tanglevine_Shaft.png",
+            "talentName": "Fashioner's Tanglevine Shaft",
+            "talentType": "Elemental Burst",
+            "description": "Combines the power of all seeds to fire 6 Tanglevine Shafts that can track opponents and deal Dendro DMG.\nAfter they hit, the Tanglevine Shafts will create a secondary wave of Tanglevine Shafts that can also track nearby opponents and deal Dendro DMG on hit.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Fashioner%27s_Tanglevine_Shaft_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Tanglevine Shaft DMG (%)": [
+                    "55.62",
+                    "59.79",
+                    "63.96",
+                    "69.53",
+                    "73.7",
+                    "77.87",
+                    "83.43",
+                    "88.99",
+                    "94.55",
+                    "100.12",
+                    "105.68",
+                    "111.24",
+                    "118.19"
+                ],
+                "Secondary Tanglevine Shaft DMG (%)": [
+                    "67.98",
+                    "73.08",
+                    "78.18",
+                    "84.97",
+                    "90.07",
+                    "95.17",
+                    "101.97",
+                    "108.77",
+                    "115.57",
+                    "122.36",
+                    "129.16",
+                    "135.96",
+                    "144.46"
+                ],
+                "CD": [
+                    "12s"
+                ],
+                "Energy Cost": [
+                    "40"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Talent_Keen_Sight.png",
+            "talentName": "Keen Sight",
+            "talentType": "1st Ascension Passive",
+            "description": "After Tighnari fires a Wreath Arrow, his Elemental Mastery is increased by 50 for 4s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Talent_Scholarly_Blade.png",
+            "talentName": "Scholarly Blade",
+            "talentType": "4th Ascension Passive",
+            "description": "For every point of Elemental Mastery Tighnari possesses, his Charged Attack and Fashioner's Tanglevine Shaft DMG are increased by 0.06%.\nThe maximum DMG Bonus obtainable this way is 60%.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Talent_Encyclopedic_Knowledge.png",
+            "talentName": "Encyclopedic Knowledge",
+            "talentType": "Utility Passive",
+            "description": "Displays the location of nearby resources unique to Sumeru on the mini-map.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_Beginnings_Determined_at_the_Roots.png",
+            "name": "Beginnings Determined at the Roots",
+            "level": 1,
+            "description": "Tighnari's Charged Attack CRIT Rate is increased by 15%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Constellation_Origins_Known_From_the_Stem.png",
+            "name": "Origins Known From the Stem",
+            "level": 2,
+            "description": "When there are opponents within the Vijnana-Khanda Field created by Vijnana-Phala Mine, Tighnari gains 20% Dendro DMG Bonus.\nThe effect will last up to 6s if the field's duration ends or if it no longer has opponents within it."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Constellation_Fortunes_Read_Amongst_the_Branches.png",
+            "name": "Fortunes Read Amongst the Branches",
+            "level": 3,
+            "description": "Increases the Level of Fashioner's Tanglevine Shaft by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Constellation_Withering_Glimpsed_in_the_Leaves.png",
+            "name": "Withering Glimpsed in the Leaves",
+            "level": 4,
+            "description": "When Fashioner's Tanglevine Shaft is unleashed, all nearby party members gain 60 Elemental Mastery for 8s. If the Fashioner's Tanglevine Shaft triggers a Burning, Bloom, Lunar-Bloom, Quicken, or Spread reaction, their Elemental Mastery will be further increased by 60. This latter case will also refresh the buff state's duration."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Constellation_Comprehension_Amidst_the_Flowers.png",
+            "name": "Comprehension Amidst the Flowers",
+            "level": 5,
+            "description": "Increases the Level of Vijnana-Phala Mine by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Constellation_Karma_Adjudged_From_the_Leaden_Fruit.png",
+            "name": "Karma Adjudged From the Leaden Fruit",
+            "level": 6,
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nPreview\nWreath Arrow's charging time is decreased by 0.9s, and will produce 1 additional Clusterbloom Arrow upon hit. This arrow deals 150% of Tighnari's ATK as DMG."
+        }
+    ],
+    "imageUrls": {},
+    "version": "3.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Idle_Tighnari_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Idle_Tighnari_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Idle_Tighnari_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Idle_Tighnari_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Menu_Tighnari.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Talent_Menu_Tighnari.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Weapon_Menu_Tighnari.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Weapon_Menu_Tighnari.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Party_Setup_Tighnari.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Party_Setup_Tighnari.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Namecard_Background_Tighnari_Dew-Kissed.png",
+                "caption": "Tighnari: Dew-Kissed Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Item_Tighnari_Dew-Kissed.png",
+                "caption": "Tighnari: Dew-Kissed Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Namecard_Banner_Tighnari_Dew-Kissed.png",
+                "caption": "Tighnari: Dew-Kissed Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Khanda_Barrier-Buster_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Khanda_Barrier-Buster_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Khanda_Barrier-Buster_Charged_1_Preview.gif",
+                        "caption": "Charged Attack Level 1",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Khanda_Barrier-Buster_Charged_1_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Khanda_Barrier-Buster_Charged_2_Preview.gif",
+                        "caption": "Charged Attack Level 2",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Khanda_Barrier-Buster_Charged_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Khanda_Barrier-Buster_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Khanda_Barrier-Buster_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Fashioner%27s_Tanglevine_Shaft_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Fashioner%27s_Tanglevine_Shaft_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Vijnana-Phala_Mine_Preview.gif",
+                        "caption": "Press",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Vijnana-Phala_Mine_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Vijnana-Phala_Mine_Vijnana_Suffusion_Preview.gif",
+                        "caption": "Vijnana Suffusion",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Vijnana-Phala_Mine_Vijnana_Suffusion_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Vijnana-Phala_Mine_Vijnana_Suffusion_Charged_Preview.gif",
+                        "caption": "Vijnana Suffusion, Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Vijnana-Phala_Mine_Vijnana_Suffusion_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Tighnari_Character_Details_1.png",
+                "caption": "Tighnari Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Tighnari_Character_Details_2.png",
+                "caption": "Tighnari Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Tighnari_Character_Details_3.gif",
+                "caption": "Tighnari Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Tighnari_Character_Details_4.gif",
+                "caption": "Tighnari Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Tighnari_Character_Details_5.gif",
+                "caption": "Tighnari Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Tighnari_Character_Details_6.png",
+                "caption": "Tighnari Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Tighnari_Character_Details_7.png",
+                "caption": "Tighnari Details 7 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Tighnari_Character_Details_8.png",
+                "caption": "Tighnari Details 8 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Icon_Emoji_Paimon%27s_Paintings_17_Tighnari_1.png",
+                "caption": "Taps Blackboard Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Icon_Emoji_Paimon%27s_Paintings_17_Tighnari_2.png",
+                "caption": "Pats Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Icon_Emoji_Paimon%27s_Paintings_17_Tighnari_3.png",
+                "caption": "Shock Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Icon_Emoji_Paimon%27s_Paintings_17_Tighnari_4.png",
+                "caption": "Observing Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Icon_Emoji_Paimon%27s_Paintings_22_Tighnari_1.png",
+                "caption": "Hopeless Set 22"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Icon_Emoji_Paimon%27s_Paintings_22_Tighnari_2.png",
+                "caption": "Flop Set 22"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Icon_Emoji_Paimon%27s_Paintings_23_Tighnari_1.png",
+                "caption": "I'll Take It From Here Set 23"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Icon_Emoji_Paimon%27s_Paintings_32_Tighnari_1.png",
+                "caption": "Waiting for you Set 32"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_1.png",
+                "caption": "认可 \"Approval\" Set Kiehl's"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_2.png",
+                "caption": "石化 \"Petrified\" Set Kiehl's"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_3.png",
+                "caption": "婉拒 \"Turn Down\" Set Kiehl's"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_4.png",
+                "caption": "捋耳朵 \"Stroking Ear\" Set Kiehl's"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_5.png",
+                "caption": "研究 \"Research\" Set Kiehl's"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_6.png",
+                "caption": "护理 \"Tail Maintenance\" Set Kiehl's"
+            }
+        ]
+    }
+}

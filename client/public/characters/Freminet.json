@@ -432,5 +432,202 @@
         }
     ],
     "imageUrls": {},
-    "version": "4.0"
+    "version": "4.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Idle_Freminet_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Idle_Freminet_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Idle_Freminet_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Idle_Freminet_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Talent_Menu_Freminet.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Talent_Menu_Freminet.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Weapon_Menu_Freminet.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Weapon_Menu_Freminet.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Party_Setup_Freminet.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Party_Setup_Freminet.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Namecard_Background_Freminet_Progress.png",
+                "caption": "Freminet: Progress Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Freminet_Progress.png",
+                "caption": "Freminet: Progress Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Namecard_Banner_Freminet_Progress.png",
+                "caption": "Freminet: Progress Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Flowing_Eddies_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Flowing_Eddies_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Flowing_Eddies_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Flowing_Eddies_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Flowing_Eddies_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Flowing_Eddies_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Shadowhunter%27s_Ambush_Preview.gif",
+                        "caption": "Activation",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Shadowhunter%27s_Ambush_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Shadowhunter%27s_Ambush_Preview_2.gif",
+                        "caption": "Elemental Skill",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Shadowhunter%27s_Ambush_Preview_2.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Pressurized_Floe_Preview.gif",
+                        "caption": "Upward Thrust and Spiritbreath Thorn",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Pressurized_Floe_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Pressurized_Floe_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Pressurized_Floe_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Pressurized_Floe_Shattering_Pressure_1_Preview.gif",
+                        "caption": "Level 0 Shattering Pressure",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Pressurized_Floe_Shattering_Pressure_1_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Pressurized_Floe_Shattering_Pressure_2_Preview.gif",
+                        "caption": "Level 1–3 Shattering Pressure",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Pressurized_Floe_Shattering_Pressure_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Pressurized_Floe_Shattering_Pressure_3_Preview.gif",
+                        "caption": "Level 4 Shattering Pressure",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Pressurized_Floe_Shattering_Pressure_3_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Freminet_Character_Details_1.png",
+                "caption": "Freminet Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Freminet_Character_Details_2.png",
+                "caption": "Freminet Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Freminet_Character_Details_3.gif",
+                "caption": "Freminet Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Freminet_Character_Details_4.gif",
+                "caption": "Freminet Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Freminet_Character_Details_5.gif",
+                "caption": "Freminet Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Freminet_Character_Details_6.gif",
+                "caption": "Freminet Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Freminet_Character_Details_7.gif",
+                "caption": "Freminet Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Freminet_Character_Details_8.png",
+                "caption": "Freminet Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Freminet_Character_Details_9.png",
+                "caption": "Freminet Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Freminet_Character_Details_10.png",
+                "caption": "Freminet Details 10"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Icon_Emoji_Paimon%27s_Paintings_26_Freminet_1.png",
+                "caption": "Lurking Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Icon_Emoji_Paimon%27s_Paintings_26_Freminet_2.png",
+                "caption": "Popping in Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Icon_Emoji_Paimon%27s_Paintings_26_Freminet_3.png",
+                "caption": "Alert Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Icon_Emoji_Paimon%27s_Paintings_26_Freminet_4.png",
+                "caption": "Hobby Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Icon_Emoji_Paimon%27s_Paintings_28_Freminet_1.png",
+                "caption": "Don't Look! Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Icon_Emoji_Paimon%27s_Paintings_28_Freminet_2.png",
+                "caption": "How Awkward Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Icon_Emoji_Paimon%27s_Paintings_32_Freminet_1.png",
+                "caption": "Holding back tears Set 32"
+            }
+        ]
+    }
 }

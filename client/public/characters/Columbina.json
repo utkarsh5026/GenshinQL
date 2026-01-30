@@ -358,5 +358,162 @@
         }
     ],
     "imageUrls": {},
-    "version": "Luna IV"
+    "version": "Luna IV",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Namecard_Background_Columbina_Someday.png",
+                "caption": "Columbina: Someday Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Item_Columbina_Someday.png",
+                "caption": "Columbina: Someday Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Namecard_Banner_Columbina_Someday.png",
+                "caption": "Columbina: Someday Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Moondew_Cascade_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Moondew_Cascade_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Moondew_Cascade_Moondew_Cleanse_Preview.gif",
+                        "caption": "Special Charged Attack: Moondew Cleanse",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Moondew_Cascade_Moondew_Cleanse_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Moonlit_Melancholy_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Moonlit_Melancholy_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Eternal_Tides_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Eternal_Tides_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Columbina_Character_Details_1.png",
+                "caption": "Columbina Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Columbina_Character_Details_2.png",
+                "caption": "Columbina Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Columbina_Character_Details_3.png",
+                "caption": "Columbina Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Columbina_Character_Details_4.png",
+                "caption": "Columbina Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Columbina_Character_Details_5.gif",
+                "caption": "Columbina Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Columbina_Character_Details_6.gif",
+                "caption": "Columbina Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Columbina_Character_Details_7.gif",
+                "caption": "Columbina Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Columbina_Character_Details_8.png",
+                "caption": "Columbina Details 8"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Icon_Emoji_Paimon%27s_Paintings_44_Columbina_1.png",
+                "caption": "Comfort Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Icon_Emoji_Paimon%27s_Paintings_45_Columbina_1.png",
+                "caption": "Afternoon Tea Set 45"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Icon_Emoji_Paimon%27s_Paintings_46_Columbina_1.png",
+                "caption": "Goodbye Set 46"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Icon_Emoji_Paimon%27s_Paintings_47_Columbina_1.png",
+                "caption": "Set 47"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Icon_Emoji_Paimon%27s_Paintings_47_Columbina_2.png",
+                "caption": "Set 47"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Icon_Emoji_Paimon%27s_Paintings_47_Columbina_3.png",
+                "caption": "Set 47"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Icon_Emoji_Paimon%27s_Paintings_47_Columbina_4.png",
+                "caption": "Set 47"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Icon_Emoji_Paimon%27s_Paintings_47_Sandrone_1.png",
+                "caption": "Set 47"
+            }
+        ]
+    }
 }

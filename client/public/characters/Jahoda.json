@@ -363,5 +363,160 @@
         }
     ],
     "imageUrls": {},
-    "version": "Luna III"
+    "version": "Luna III",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Namecard_Background_Jahoda_Helping_Hand.png",
+                "caption": "Jahoda: Helping Hand Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Jahoda_Helping_Hand.png",
+                "caption": "Jahoda: Helping Hand Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Namecard_Banner_Jahoda_Helping_Hand.png",
+                "caption": "Jahoda: Helping Hand Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Strike_While_the_Arrow%27s_Hot_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Strike_While_the_Arrow%27s_Hot_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Hidden_Aces_Seven_Tools_of_the_Hunter_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Hidden_Aces_Seven_Tools_of_the_Hunter_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Savvy_Strategy_Splitting_the_Spoils_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Savvy_Strategy_Splitting_the_Spoils_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Jahoda_Character_Details_1.png",
+                "caption": "Jahoda Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Jahoda_Character_Details_2.png",
+                "caption": "Jahoda Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Jahoda_Character_Details_3.png",
+                "caption": "Jahoda Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Jahoda_Character_Details_4.png",
+                "caption": "Jahoda Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Jahoda_Character_Details_5.gif",
+                "caption": "Jahoda Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Jahoda_Character_Details_6.png",
+                "caption": "Jahoda Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Jahoda_Character_Details_7.png",
+                "caption": "Jahoda Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Jahoda_Character_Details_8.png",
+                "caption": "Jahoda Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Jahoda_Character_Details_9.png",
+                "caption": "Jahoda Details 9"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Icon_Emoji_Paimon%27s_Paintings_43_Jahoda_1.png",
+                "caption": "Watch This! Set 43"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Icon_Emoji_Paimon%27s_Paintings_44_Jahoda_1.png",
+                "caption": "Thank You Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Icon_Emoji_Paimon%27s_Paintings_45_Jahoda_1.png",
+                "caption": "Powerless Set 45"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Icon_Emoji_Paimon%27s_Paintings_45_Jahoda_2.png",
+                "caption": "Scream Set 45"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Icon_Emoji_Paimon%27s_Paintings_46_Jahoda_1.png",
+                "caption": "Haha Set 46"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Icon_Emoji_Paimon%27s_Paintings_46_Jahoda_2.png",
+                "caption": "Searching Set 46"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Icon_Emoji_Paimon%27s_Paintings_46_Jahoda_3.png",
+                "caption": "Speechless Set 46"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Icon_Emoji_Paimon%27s_Paintings_46_Jahoda_4.png",
+                "caption": "Shy Set 46"
+            }
+        ]
+    }
 }

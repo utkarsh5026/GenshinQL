@@ -450,5 +450,214 @@
         }
     ],
     "imageUrls": {},
-    "version": "3.1"
+    "version": "3.1",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Idle_Cyno_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Idle_Cyno_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Idle_Cyno_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Idle_Cyno_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Talent_Menu_Cyno.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Talent_Menu_Cyno.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Weapon_Menu_Cyno.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Weapon_Menu_Cyno.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Party_Setup_Cyno.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Party_Setup_Cyno.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Cyno_Silence.png",
+                "caption": "Cyno: Silence Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Cyno_Silence.png",
+                "caption": "Cyno: Silence Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Namecard_Banner_Cyno_Silence.png",
+                "caption": "Cyno: Silence Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Invoker%27s_Spear_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Invoker%27s_Spear_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Invoker%27s_Spear_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Invoker%27s_Spear_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Invoker%27s_Spear_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Invoker%27s_Spear_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Sacred_Rite_Wolf%27s_Swiftness_Preview.gif",
+                        "caption": "Sacred Rite: Wolf's Swiftness",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Sacred_Rite_Wolf%27s_Swiftness_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Sacred_Rite_Wolf%27s_Swiftness_Normal_Preview.gif",
+                        "caption": "Pactsworn Pathclearer, Normal Attacks",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Sacred_Rite_Wolf%27s_Swiftness_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Sacred_Rite_Wolf%27s_Swiftness_Charged_Preview.gif",
+                        "caption": "Pactsworn Pathclearer, Charged Attacks",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Sacred_Rite_Wolf%27s_Swiftness_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Sacred_Rite_Wolf%27s_Swiftness_Plunging_Preview.gif",
+                        "caption": "Pactsworn Pathclearer, Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Sacred_Rite_Wolf%27s_Swiftness_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
+                        "caption": "Pactsworn Pathclearer, Elemental Skill",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Rite_Chasmic_Soulfarer_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Secret_Rite_Chasmic_Soulfarer_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
+                        "caption": "Elemental Skill in Pathsworn Pathclearer State",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Cyno_Character_Details_1.png",
+                "caption": "Cyno Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Cyno_Character_Details_2.png",
+                "caption": "Cyno Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Cyno_Character_Details_3.gif",
+                "caption": "Cyno Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Cyno_Character_Details_4.gif",
+                "caption": "Cyno Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Cyno_Character_Details_5.gif",
+                "caption": "Cyno Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Cyno_Character_Details_6.gif",
+                "caption": "Cyno Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Cyno_Character_Details_7.png",
+                "caption": "Cyno Details 7 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Cyno_Character_Details_8.png",
+                "caption": "Cyno Details 8 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Cyno_Character_Details_9.png",
+                "caption": "Cyno Details 9 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_1.png",
+                "caption": "Duel Set 18"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_2.png",
+                "caption": "Judgement! Set 18"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_3.png",
+                "caption": "I'm Here Set 18"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_4.png",
+                "caption": "Sweating Set 18"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Icon_Emoji_Paimon%27s_Paintings_22_Cyno_1.png",
+                "caption": "No? Not funny? Set 22"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Icon_Emoji_Paimon%27s_Paintings_22_Cyno_2.png",
+                "caption": "Inspection! Set 22"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Icon_Emoji_Paimon%27s_Paintings_23_Cyno_1.png",
+                "caption": "Have at You! Set 23"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Icon_Emoji_Paimon%27s_Paintings_24_Cyno_1.png",
+                "caption": "Art! Set 24"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Icon_Emoji_Paimon%27s_Paintings_32_Cyno_1.png",
+                "caption": "Fess up! Set 32"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Icon_Emoji_Paimon%27s_Paintings_32_Cyno_2.png",
+                "caption": "Awkward... Set 32"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Icon_Emoji_Paimon%27s_Paintings_45_Cyno_1.png",
+                "caption": "Satisfied Set 45"
+            }
+        ]
+    }
 }

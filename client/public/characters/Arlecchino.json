@@ -410,5 +410,226 @@
         }
     ],
     "imageUrls": {},
-    "version": "4.6"
+    "version": "4.6",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Idle_Arlecchino_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Idle_Arlecchino_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Idle_Arlecchino_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Idle_Arlecchino_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Talent_Menu_Arlecchino.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Talent_Menu_Arlecchino.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Weapon_Menu_Arlecchino.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Weapon_Menu_Arlecchino.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Party_Setup_Arlecchino.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Party_Setup_Arlecchino.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Namecard_Background_Arlecchino_Edict.png",
+                "caption": "Arlecchino: Edict Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Arlecchino_Edict.png",
+                "caption": "Arlecchino: Edict Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Namecard_Banner_Arlecchino_Edict.png",
+                "caption": "Arlecchino: Edict Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Invitation_to_a_Beheading_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Invitation_to_a_Beheading_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Invitation_to_a_Beheading_Normal_2_Preview.gif",
+                        "caption": "Normal Attack (Crimson Moon's Semblance)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Invitation_to_a_Beheading_Normal_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Invitation_to_a_Beheading_Normal_3_Preview.gif",
+                        "caption": "Normal Attack (Converted)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Invitation_to_a_Beheading_Normal_3_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Invitation_to_a_Beheading_Normal_4_Preview.gif",
+                        "caption": "Normal Attack (Converted, Crimson Moon's Semblance)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Invitation_to_a_Beheading_Normal_4_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Invitation_to_a_Beheading_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Invitation_to_a_Beheading_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Invitation_to_a_Beheading_Charged_2_Preview.gif",
+                        "caption": "Charged Attack (Crimson Moon's Semblance)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Invitation_to_a_Beheading_Charged_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Invitation_to_a_Beheading_Charged_3_Preview.gif",
+                        "caption": "Charged Attack (Converted)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Invitation_to_a_Beheading_Charged_3_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Invitation_to_a_Beheading_Charged_4_Preview.gif",
+                        "caption": "Charged Attack (Converted, Crimson Moon's Semblance)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Invitation_to_a_Beheading_Charged_4_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Invitation_to_a_Beheading_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Invitation_to_a_Beheading_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Invitation_to_a_Beheading_Plunging_2_Preview.gif",
+                        "caption": "Plunging Attack (Converted)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Invitation_to_a_Beheading_Plunging_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Invitation_to_a_Beheading_High_Speed_Movement_Preview.gif",
+                        "caption": "High Speed Movement",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Invitation_to_a_Beheading_High_Speed_Movement_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Balemoon_Rising_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Balemoon_Rising_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/All_Is_Ash_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/All_Is_Ash_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/All_Is_Ash_2_Preview.gif",
+                        "caption": "With Crimson Moon's Semblance",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/All_Is_Ash_2_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Arlecchino_Character_Details_1.png",
+                "caption": "Arlecchino Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Arlecchino_Character_Details_2.png",
+                "caption": "Arlecchino Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Arlecchino_Character_Details_3.gif",
+                "caption": "Arlecchino Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Arlecchino_Character_Details_4.gif",
+                "caption": "Arlecchino Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Arlecchino_Character_Details_5.gif",
+                "caption": "Arlecchino Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Arlecchino_Character_Details_6.gif",
+                "caption": "Arlecchino Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Arlecchino_Character_Details_7.png",
+                "caption": "Arlecchino Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Arlecchino_Character_Details_8.png",
+                "caption": "Arlecchino Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Arlecchino_Character_Details_9.png",
+                "caption": "Arlecchino Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Arlecchino_Character_Details_10.png",
+                "caption": "Arlecchino Details 10"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Icon_Emoji_Paimon%27s_Paintings_28_Arlecchino_1.png",
+                "caption": "Round of Applause Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_1.png",
+                "caption": "Shh! Set 32"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_2.png",
+                "caption": "No tears, now Set 32"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_3.png",
+                "caption": "Pleasure doing business Set 32"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_4.png",
+                "caption": "Scorn Set 32"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_5.png",
+                "caption": "Unworthy Set 32"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Icon_Emoji_Paimon%27s_Paintings_45_Arlecchino_1.png",
+                "caption": "Calm Set 45"
+            }
+        ]
+    }
 }

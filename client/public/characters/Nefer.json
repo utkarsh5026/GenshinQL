@@ -1,0 +1,570 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Nefer_Icon.png",
+    "name": "Nefer",
+    "rarity": "5 Stars",
+    "element": "Dendro",
+    "weaponType": "Catalyst",
+    "region": "Nod-Krai",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
+    "modelType": "Tall Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Catalyst_Dendro.png",
+            "talentName": "Striking Serpent",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 kicks that deal Dendro DMG with the ferocity and grace of a striking serpent.\n\nCharged Attack\nNefer enters the Slither state, consuming Stamina to move rapidly forward for up to 2.5s. When the skill button is released, the duration ends, or Stamina runs out, Nefer will exit the Slither state and consume a certain amount of additional Stamina to deal Dendro DMG to opponents. When in the Shadow Dance\n\n\nstate, additional Stamina consumption is decreased.\nAdditionally, unleashing the Elemental Skill Senet Strategy: Dance of a Thousand Nights or sprinting while Nefer is in the Slither state will not cause her to exit the state.\n\nPlunging Attack\nCalling upon the might of Dendro, Nefer plunges towards the ground from mid-air, damaging all opponents in her path and dealing AoE Dendro DMG upon impact with the ground.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Striking_Serpent_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "38.07",
+                    "40.93",
+                    "43.78",
+                    "47.59",
+                    "50.44",
+                    "53.3",
+                    "57.11",
+                    "60.91",
+                    "64.72",
+                    "68.53",
+                    "72.34"
+                ],
+                "2-Hit DMG (%)": [
+                    "37.56",
+                    "40.38",
+                    "43.2",
+                    "46.96",
+                    "49.77",
+                    "52.59",
+                    "56.35",
+                    "60.1",
+                    "63.86",
+                    "67.62",
+                    "71.37"
+                ],
+                "3-Hit DMG (%)": [
+                    "25.24 × 2",
+                    "27.13 × 2",
+                    "29.03 × 2",
+                    "31.55 × 2",
+                    "33.44 × 2",
+                    "35.34 × 2",
+                    "37.86 × 2",
+                    "40.38 × 2",
+                    "42.91 × 2",
+                    "45.43 × 2",
+                    "47.96 × 2"
+                ],
+                "4-Hit DMG (%)": [
+                    "60.99",
+                    "65.57",
+                    "70.14",
+                    "76.24",
+                    "80.82",
+                    "85.39",
+                    "91.49",
+                    "97.59",
+                    "103.69",
+                    "109.79",
+                    "115.89"
+                ],
+                "Charged Attack DMG (%)": [
+                    "130.88",
+                    "140.7",
+                    "150.51",
+                    "163.6",
+                    "173.42",
+                    "183.23",
+                    "196.32",
+                    "209.41",
+                    "222.5",
+                    "235.58",
+                    "248.67"
+                ],
+                "Charged Attack Charging Stamina Drain": [
+                    "18.15/s"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "50"
+                ],
+                "Shadow Dance Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "56.83",
+                    "61.45",
+                    "66.08",
+                    "72.69",
+                    "77.31",
+                    "82.6",
+                    "89.87",
+                    "97.14",
+                    "104.41",
+                    "112.34",
+                    "120.27"
+                ],
+                "Low Plunge DMG (%)": [
+                    "113.63",
+                    "122.88",
+                    "132.13",
+                    "145.35",
+                    "154.59",
+                    "165.17",
+                    "179.7",
+                    "194.23",
+                    "208.77",
+                    "224.62",
+                    "240.48"
+                ],
+                "High Plunge DMG (%)": [
+                    "141.93",
+                    "153.49",
+                    "165.04",
+                    "181.54",
+                    "193.1",
+                    "206.3",
+                    "224.45",
+                    "242.61",
+                    "260.76",
+                    "280.57",
+                    "300.37"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Talent_Senet_Strategy_Dance_of_a_Thousand_Nights.png",
+            "talentName": "Senet Strategy: Dance of a Thousand Nights",
+            "talentType": "Elemental Skill",
+            "description": "A dance that dissolved dynasties, as chilling as a winter's night on the great sea of sand, yet lingering with the tenderness of moonlit gauze. Nefer charges forward, dealing AoE Dendro DMG and entering the Shadow Dance\n\n\nstate.\nWhile in the Shadow Dance state, if you have at least 1 Verdant Dew\n\n, Nefer's Charged Attacks will be replaced with the special Charged Attack Phantasm Performance\n\n, which will not consume Stamina. When in the Shadow Dance state, Nefer's resistance to interruption is increased.\n\nTwo initial charges.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Senet_Strategy_Dance_of_a_Thousand_Nights_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (% ATK + % EM)": [
+                    "76.38\n+\n152.77",
+                    "82.11\n+\n164.23",
+                    "87.84\n+\n175.68",
+                    "95.48\n+\n190.96",
+                    "101.21\n+\n202.42",
+                    "106.94\n+\n213.88",
+                    "114.58\n+\n229.15",
+                    "122.21\n+\n244.43",
+                    "129.85\n+\n259.71",
+                    "137.49\n+\n274.98",
+                    "145.13\n+\n290.26",
+                    "152.77\n+\n305.54",
+                    "162.32\n+\n324.63"
+                ],
+                "Phantasm Performance 1-Hit DMG (Nefer - % ATK + % EM)": [
+                    "24.64\n+\n49.28",
+                    "26.49\n+\n52.98",
+                    "28.34\n+\n56.67",
+                    "30.8\n+\n61.6",
+                    "32.65\n+\n65.3",
+                    "34.5\n+\n68.99",
+                    "36.96\n+\n73.92",
+                    "39.42\n+\n78.85",
+                    "41.89\n+\n83.78",
+                    "44.35\n+\n88.7",
+                    "46.82\n+\n93.63",
+                    "49.28\n+\n98.56",
+                    "52.36\n+\n104.72"
+                ],
+                "Phantasm Performance 2-Hit DMG (Nefer - % ATK + % EM)": [
+                    "32.03\n+\n64.06",
+                    "34.43\n+\n68.87",
+                    "36.84\n+\n73.67",
+                    "40.04\n+\n80.08",
+                    "42.44\n+\n84.88",
+                    "44.84\n+\n89.69",
+                    "48.05\n+\n96.1",
+                    "51.25\n+\n102.5",
+                    "54.45\n+\n108.91",
+                    "57.66\n+\n115.32",
+                    "60.86\n+\n121.72",
+                    "64.06\n+\n128.13",
+                    "68.07\n+\n136.14"
+                ],
+                "Phantasm Performance 1-Hit DMG (Shades - % EM)": [
+                    "96",
+                    "103.2",
+                    "110.4",
+                    "120",
+                    "127.2",
+                    "134.4",
+                    "144",
+                    "153.6",
+                    "163.2",
+                    "172.8",
+                    "182.4",
+                    "192",
+                    "204"
+                ],
+                "Phantasm Performance 2-Hit DMG (Shades - % EM)": [
+                    "96",
+                    "103.2",
+                    "110.4",
+                    "120",
+                    "127.2",
+                    "134.4",
+                    "144",
+                    "153.6",
+                    "163.2",
+                    "172.8",
+                    "182.4",
+                    "192",
+                    "204"
+                ],
+                "Phantasm Performance 3-Hit DMG (Shades - % EM)": [
+                    "128",
+                    "137.6",
+                    "147.2",
+                    "160",
+                    "169.6",
+                    "179.2",
+                    "192",
+                    "204.8",
+                    "217.6",
+                    "230.4",
+                    "243.2",
+                    "256",
+                    "272"
+                ],
+                "Phantasm Performance Charges": [
+                    "3"
+                ],
+                "Shadow Dance Duration": [
+                    "9s"
+                ],
+                "CD": [
+                    "9s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Talent_Sacred_Vow_True_Eye%27s_Phantasm.png",
+            "talentName": "Sacred Vow: True Eye's Phantasm",
+            "talentType": "Elemental Burst",
+            "description": "Grant \"revelation\" to the mysteries of the false through Thoth's true sight, dealing AoE Dendro DMG to opponents ahead. When unleashed, Nefer will consume all Veils of Falsehood\n\nto increase the DMG dealt by the current Elemental Burst.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Sacred_Vow_True_Eye%27s_Phantasm_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG": [
+                    "224.64% ATK\n+\n449.28% Elemental Mastery",
+                    "241.49% ATK\n+\n482.98% Elemental Mastery",
+                    "258.34% ATK\n+\n516.67% Elemental Mastery",
+                    "280.8% ATK\n+\n561.6% Elemental Mastery",
+                    "297.65% ATK\n+\n595.3% Elemental Mastery",
+                    "314.5% ATK\n+\n628.99% Elemental Mastery",
+                    "336.96% ATK\n+\n673.92% Elemental Mastery",
+                    "359.42% ATK\n+\n718.85% Elemental Mastery",
+                    "381.89% ATK\n+\n763.78% Elemental Mastery",
+                    "404.35% ATK\n+\n808.7% Elemental Mastery",
+                    "426.82% ATK\n+\n853.63% Elemental Mastery",
+                    "449.28% ATK\n+\n898.56% Elemental Mastery",
+                    "477.36% ATK\n+\n954.72% Elemental Mastery"
+                ],
+                "2-Hit DMG": [
+                    "336.96% ATK\n+\n673.92% Elemental Mastery",
+                    "362.23% ATK\n+\n724.46% Elemental Mastery",
+                    "387.5% ATK\n+\n775.01% Elemental Mastery",
+                    "421.2% ATK\n+\n842.4% Elemental Mastery",
+                    "446.47% ATK\n+\n892.94% Elemental Mastery",
+                    "471.74% ATK\n+\n943.49% Elemental Mastery",
+                    "505.44% ATK\n+\n1010.88% Elemental Mastery",
+                    "539.14% ATK\n+\n1078.27% Elemental Mastery",
+                    "572.83% ATK\n+\n1145.66% Elemental Mastery",
+                    "606.53% ATK\n+\n1213.06% Elemental Mastery",
+                    "640.22% ATK\n+\n1280.45% Elemental Mastery",
+                    "673.92% ATK\n+\n1347.84% Elemental Mastery",
+                    "716.04% ATK\n+\n1432.08% Elemental Mastery"
+                ],
+                "DMG Bonus": [
+                    "13% Per Veil of Falsehood Stack",
+                    "16% Per Veil of Falsehood Stack",
+                    "19% Per Veil of Falsehood Stack",
+                    "22% Per Veil of Falsehood Stack",
+                    "25% Per Veil of Falsehood Stack",
+                    "28% Per Veil of Falsehood Stack",
+                    "31% Per Veil of Falsehood Stack",
+                    "34% Per Veil of Falsehood Stack",
+                    "37% Per Veil of Falsehood Stack",
+                    "40% Per Veil of Falsehood Stack",
+                    "43% Per Veil of Falsehood Stack",
+                    "46% Per Veil of Falsehood Stack",
+                    "49% Per Veil of Falsehood Stack"
+                ],
+                "CD": [
+                    "15s"
+                ],
+                "Energy Cost": [
+                    "60"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Talent_A_Wager_of_Moonlight.png",
+            "talentName": "A Wager of Moonlight",
+            "talentType": "1st Ascension Passive",
+            "description": "Nefer will be granted the corresponding buff effects based on the party's Moonsign.\n\nMoonsign: Ascendant Gleam: When she unleashes her Elemental Skill Senet Strategy: Dance of a Thousand Nights, any Dendro Cores on the field will be converted to Seeds of Deceit, and any Lunar-Bloom reactions triggered by nearby characters in the following 15s that would create Dendro Cores or Bountiful Cores will instead create Seeds of Deceit. Seeds of Deceit cannot trigger Hyperbloom or Burgeon reactions and will not burst.\nWhen Nefer unleashes a Charged Attack or Phantasm Performance\n\n, she can absorb Seeds of Deceit within a certain range, gaining 1 stack of Veil of Falsehood\n\nfor every seed absorbed. When this effect reaches 3 stacks, or when the third stack's duration is refreshed, Nefer's Elemental Mastery will be increased by 100 for 8s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Talent_Daughter_of_the_Dust_and_Sand.png",
+            "talentName": "Daughter of the Dust and Sand",
+            "talentType": "4th Ascension Passive",
+            "description": "When Nefer is in the Shadow Dance\n\n\nstate, for 5s after a party member triggers a Lunar-Bloom reaction, Nefer's Slither state will provide additional Verdant Dew\n\n. Every 100 points of Nefer's Elemental Mastery beyond 500 will strengthen this additional provision effect by 10%. The maximum increase that can be achieved this way is 50%.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Dendro_Moonsign_Lunar-Bloom.png",
+            "talentName": "Dusklit Eaves",
+            "talentType": "Moonsign Benediction Passive",
+            "description": "When a party member triggers a Bloom reaction, it will be converted into the Lunar-Bloom reaction, with every point of Elemental Mastery that Nefer has increasing Lunar-Bloom's Base DMG by 0.0175%, up to a maximum of 14%.\n\nAdditionally, when Nefer is in the party, the party's Moonsign will increase by 1 level.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Conspiracy_of_the_Golden_Vault.png",
+            "talentName": "Conspiracy of the Golden Vault",
+            "talentType": "Utility Passive",
+            "description": "Gains 25% more rewards when dispatched on a Nod-Krai Expedition for 20 hours.\nAdditionally, as the head of the Curatorium of Secrets, Nefer seemingly has the ability to obtain intelligence from a variety of sources — intelligence that certain factions in Nasha Town might find extremely interesting...",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Constellation_Planning_Breeds_Success.png",
+            "name": "Planning Breeds Success",
+            "level": 1,
+            "description": "The Base DMG for Lunar-Bloom reactions caused by Nefer's Phantasm Performance\n\nis increased by 60% of her Elemental Mastery. This effect is also boosted by Veil of Falsehood\n\n."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Constellation_Observation_Feeds_Strategy.png",
+            "name": "Observation Feeds Strategy",
+            "level": 2,
+            "description": "Enhances the effects of the Ascension Talent A Wager of Moonlight: Extends Veil of Falsehood\n\n's duration by 5s, and increases its stack limit to 5, as well as causing Phantasm Performance\n\nto deal up to 140% of its original DMG. When Nefer unleashes her Elemental Skill Senet Strategy: Dance of a Thousand Nights, she will instantly gain 2 stacks of Veil of Falsehood. Additionally, when Veil of Falsehood reaches 5 stacks, or when the fifth stack's duration is refreshed, Nefer's Elemental Mastery will be increased by 200 for 8s instead.\nYou must first unlock the Ascension Talent \"A Wager of Moonlight.\""
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Constellation_Deceit_Cloaks_the_Truth.png",
+            "name": "Deceit Cloaks the Truth",
+            "level": 3,
+            "description": "Increases the Level of Senet Strategy: Dance of a Thousand Nights by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Constellation_Delusion_Ensnares_Reason.png",
+            "name": "Delusion Ensnares Reason",
+            "level": 4,
+            "description": "When Nefer is on the field and in the Shadow Dance\n\n\nstate, you will gain Verdant Dew 25% faster.\nAdditionally, while Nefer is in the Shadow Dance state, nearby opponents will have their Dendro RES decreased by 20%. When Nefer exits the Shadow Dance state or after she strays a certain distance away from the opponents, this effect will be removed after 4.5s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_Opportunity_Hides_in_the_Margins.png",
+            "name": "Opportunity Hides in the Margins",
+            "level": 5,
+            "description": "Increases the Level of Sacred Vow: True Eye's Phantasm by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Constellation_Victory_Flows_from_the_Turning_of_Tides.png",
+            "name": "Victory Flows from the Turning of Tides",
+            "level": 6,
+            "description": "Description\nAdvanced Properties\nWhen Nefer unleashes Phantasm Performance\n\n, the second stage of DMG dealt by herself will be converted to deal AoE Dendro DMG equal to 85% of her Elemental Mastery. Additionally, when the attacks from Phantasm Performance end, an extra instance of AoE Dendro DMG equal to 120% of Nefer's Elemental Mastery will be dealt. All of the aforementioned DMG is considered Lunar-Bloom DMG dealt by Phantasm Performance.\n\nMoonsign: Ascendant Gleam\nNefer's Lunar-Bloom DMG is elevated\nby 15%."
+        }
+    ],
+    "imageUrls": {},
+    "version": "Luna II",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Namecard_Background_Nefer_Secrets.png",
+                "caption": "Nefer: Secrets Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Nefer_Secrets.png",
+                "caption": "Nefer: Secrets Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Namecard_Banner_Nefer_Secrets.png",
+                "caption": "Nefer: Secrets Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Striking_Serpent_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Striking_Serpent_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Sacred_Vow_True_Eye%27s_Phantasm_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Sacred_Vow_True_Eye%27s_Phantasm_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Senet_Strategy_Dance_of_a_Thousand_Nights_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Senet_Strategy_Dance_of_a_Thousand_Nights_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Nefer_Character_Details_1.png",
+                "caption": "Nefer Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Nefer_Character_Details_2.png",
+                "caption": "Nefer Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Nefer_Character_Details_3.png",
+                "caption": "Nefer Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Nefer_Character_Details_4.png",
+                "caption": "Nefer Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Nefer_Character_Details_5.gif",
+                "caption": "Nefer Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Nefer_Character_Details_6.png",
+                "caption": "Nefer Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Nefer_Character_Details_7.png",
+                "caption": "Nefer Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Nefer_Character_Details_8.png",
+                "caption": "Nefer Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Nefer_Character_Details_9.gif",
+                "caption": "Nefer Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Nefer_Character_Details_10.png",
+                "caption": "Nefer Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Nefer_Character_Details_11.gif",
+                "caption": "Nefer Details 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Nefer_Character_Details_12.gif",
+                "caption": "Nefer Details 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Nefer_Character_Details_13.gif",
+                "caption": "Nefer Details 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Nefer_Character_Details_14.gif",
+                "caption": "Nefer Details 14"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Nefer_Character_Details_15.gif",
+                "caption": "Nefer Details 15"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Nefer_Character_Details_16.png",
+                "caption": "Nefer Details 16"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Nefer_Character_Details_17.png",
+                "caption": "Nefer Details 17"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Icon_Emoji_Paimon%27s_Paintings_43_Nefer_1.png",
+                "caption": "Expectant Set 43"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Icon_Emoji_Paimon%27s_Paintings_44_Nefer_1.png",
+                "caption": "Gotcha Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Icon_Emoji_Paimon%27s_Paintings_45_Nefer_1.png",
+                "caption": "Interesting Set 45"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Icon_Emoji_Paimon%27s_Paintings_45_Nefer_2.png",
+                "caption": "Boring Set 45"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Icon_Emoji_Paimon%27s_Paintings_45_Nefer_3.png",
+                "caption": "Tired Set 45"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Icon_Emoji_Paimon%27s_Paintings_45_Nefer_4.png",
+                "caption": "Cat Tease Set 45"
+            }
+        ]
+    }
+}

@@ -413,5 +413,178 @@
         }
     ],
     "imageUrls": {},
-    "version": "1.5"
+    "version": "1.5",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Idle_Eula_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Idle_Eula_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Idle_Eula_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Idle_Eula_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Menu_Eula.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Menu_Eula.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Weapon_Menu_Eula.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Weapon_Menu_Eula.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Party_Setup_Eula.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Party_Setup_Eula.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Eula_Ice-Sealed.png",
+                "caption": "Eula: Ice-Sealed Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Item_Eula_Ice-Sealed.png",
+                "caption": "Eula: Ice-Sealed Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Namecard_Banner_Eula_Ice-Sealed.png",
+                "caption": "Eula: Ice-Sealed Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Favonius_Bladework_-_Edel_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Favonius_Bladework_-_Edel_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Favonius_Bladework_-_Edel_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Favonius_Bladework_-_Edel_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Favonius_Bladework_-_Edel_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Favonius_Bladework_-_Edel_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Glacial_Illumination_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Glacial_Illumination_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Icetide_Vortex_Press_Preview.gif",
+                        "caption": "Press",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Icetide_Vortex_Press_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icetide_Vortex_Hold_Preview.gif",
+                        "caption": "Hold",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Icetide_Vortex_Hold_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Eula_Character_Details_1.png",
+                "caption": "Character Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Eula_Character_Details_2.gif",
+                "caption": "Character Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Eula_Character_Details_3.gif",
+                "caption": "Character Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Eula_Character_Details_4.gif",
+                "caption": "Character Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Eula_Character_Details_5.gif",
+                "caption": "Character Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Eula_Character_Details_6.png",
+                "caption": "Character Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Eula_Character_Details_7.png",
+                "caption": "Character Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Eula_Character_Details_8.png",
+                "caption": "Character Details 8"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Icon_Emoji_Paimon%27s_Paintings_06_Eula_1.png",
+                "caption": "Praise Set 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Icon_Emoji_Paimon%27s_Paintings_06_Eula_2.png",
+                "caption": "Let me see! Set 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icon_Emoji_Paimon%27s_Paintings_06_Eula_3.png",
+                "caption": "Cheers! Set 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Icon_Emoji_Paimon%27s_Paintings_06_Eula_4.png",
+                "caption": "Time to eat! Set 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Icon_Emoji_Paimon%27s_Paintings_11_Eula_1.png",
+                "caption": "Invite Set 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Icon_Emoji_Paimon%27s_Paintings_11_Eula_2.png",
+                "caption": "Sneeze Set 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_11_Eula_3.png",
+                "caption": "Dislike Set 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Icon_Emoji_Paimon%27s_Paintings_25_Eula_1.png",
+                "caption": "Refuse Set 25"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Icon_Emoji_Paimon%27s_Paintings_25_Eula_2.png",
+                "caption": "Shy Set 25"
+            }
+        ]
+    }
 }

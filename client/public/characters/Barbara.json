@@ -304,5 +304,119 @@
         }
     ],
     "imageUrls": {},
-    "version": "1.0"
+    "version": "1.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Idle_Barbara_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Idle_Barbara_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Idle_Barbara_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Idle_Barbara_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Talent_Menu_Barbara.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Talent_Menu_Barbara.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Weapon_Menu_Barbara.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Weapon_Menu_Barbara.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Party_Setup_Barbara.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Party_Setup_Barbara.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Namecard_Background_Barbara_Flow.png",
+                "caption": "Barbara: Flow Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Barbara_Flow.png",
+                "caption": "Barbara: Flow Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Namecard_Banner_Barbara_Flow.png",
+                "caption": "Barbara: Flow Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Whisper_of_Water_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Whisper_of_Water_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Whisper_of_Water_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Whisper_of_Water_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Whisper_of_Water_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Whisper_of_Water_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Shining_Miracle%E2%99%AA_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Shining_Miracle%E2%99%AA_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Let_the_Show_Begin%E2%99%AA_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Let_the_Show_Begin%E2%99%AA_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Icon_Emoji_Paimon%27s_Paintings_07_Barbara_1.png",
+                "caption": "Are you alright? Set 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Icon_Emoji_Paimon%27s_Paintings_07_Barbara_2.png",
+                "caption": "Shy Set 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Icon_Emoji_Paimon%27s_Paintings_07_Barbara_3.png",
+                "caption": "Shh Set 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Icon_Emoji_Paimon%27s_Paintings_07_Barbara_4.png",
+                "caption": "Panicked Set 7"
+            }
+        ]
+    }
 }

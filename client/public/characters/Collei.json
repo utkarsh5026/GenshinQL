@@ -298,5 +298,188 @@
         }
     ],
     "imageUrls": {},
-    "version": "3.0"
+    "version": "3.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Namecard_Background_Collei_Good_Virtue.png",
+                "caption": "Collei: Good Virtue Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Item_Collei_Good_Virtue.png",
+                "caption": "Collei: Good Virtue Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Namecard_Banner_Collei_Good_Virtue.png",
+                "caption": "Collei: Good Virtue Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Collei_Character_Details_1.png",
+                "caption": "Collei Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Collei_Character_Details_2.png",
+                "caption": "Collei Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Collei_Character_Details_3.gif",
+                "caption": "Collei Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Collei_Character_Details_4.gif",
+                "caption": "Collei Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Collei_Character_Details_5.gif",
+                "caption": "Collei Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Collei_Character_Details_6.png",
+                "caption": "Collei Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Collei_Character_Details_7.png",
+                "caption": "Collei Details 7 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Collei_Character_Details_8.png",
+                "caption": "Collei Details 8 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Icon_Emoji_Paimon%27s_Paintings_17_Collei_1.png",
+                "caption": "Yearning Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Icon_Emoji_Paimon%27s_Paintings_17_Collei_2.png",
+                "caption": "Embarrassed Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Icon_Emoji_Paimon%27s_Paintings_17_Collei_3.png",
+                "caption": "Lesson Time Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Icon_Emoji_Paimon%27s_Paintings_17_Collei_4.png",
+                "caption": "Alert Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Icon_Emoji_Paimon%27s_Paintings_20_Collei_1.png",
+                "caption": "Lucky! Set 20"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Icon_Emoji_Paimon%27s_Paintings_22_Collei_1.png",
+                "caption": "No response Set 22"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Icon_Emoji_Paimon%27s_Paintings_22_Collei_2.png",
+                "caption": "Stretch Set 22"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Icon_Emoji_Paimon%27s_Paintings_25_Collei_1.png",
+                "caption": "I can do it Set 25"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Icon_Emoji_Paimon%27s_Paintings_25_Collei_2.png",
+                "caption": "Mimic Set 25"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_7.png",
+                "caption": "委屈 \"Injustice\" Set Kiehl's"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_8.png",
+                "caption": "愣住 \"Stunned\" Set Kiehl's"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_9.png",
+                "caption": "心里乱 \"Disconcerted\" Set Kiehl's"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Icon_Emoji_Paimon%27s_Paintings_Kiehl%27s_10.png",
+                "caption": "晚安 \"Good Night\" Set Kiehl's"
+            }
+        ]
+    }
 }

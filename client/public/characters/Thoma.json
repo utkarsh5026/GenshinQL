@@ -1,0 +1,372 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Thoma_Icon.png",
+    "name": "Thoma",
+    "rarity": "4 Stars",
+    "element": "Pyro",
+    "weaponType": "Polearm",
+    "region": "Inazuma",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+    "modelType": "Tall Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png",
+            "talentName": "Swiftshatter Spear",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Swiftshatter_Spear_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Swiftshatter_Spear_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Swiftshatter_Spear_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "44.39",
+                    "48.01",
+                    "51.62",
+                    "56.78",
+                    "60.4",
+                    "64.53",
+                    "70.2",
+                    "75.88",
+                    "81.56",
+                    "87.75",
+                    "93.95"
+                ],
+                "2-Hit DMG (%)": [
+                    "43.63",
+                    "47.18",
+                    "50.73",
+                    "55.8",
+                    "59.35",
+                    "63.41",
+                    "68.99",
+                    "74.57",
+                    "80.15",
+                    "86.24",
+                    "92.33"
+                ],
+                "3-Hit DMG (%)": [
+                    "26.79×2",
+                    "28.97×2",
+                    "31.15×2",
+                    "34.27×2",
+                    "36.45×2",
+                    "38.94×2",
+                    "42.36×2",
+                    "45.79×2",
+                    "49.22×2",
+                    "52.95×2",
+                    "56.69×2"
+                ],
+                "4-Hit DMG (%)": [
+                    "67.36",
+                    "72.84",
+                    "78.32",
+                    "86.15",
+                    "91.63",
+                    "97.9",
+                    "106.52",
+                    "115.13",
+                    "123.75",
+                    "133.14",
+                    "142.54"
+                ],
+                "Charged Attack DMG (%)": [
+                    "112.75",
+                    "121.92",
+                    "131.1",
+                    "144.21",
+                    "153.39",
+                    "163.88",
+                    "178.3",
+                    "192.72",
+                    "207.14",
+                    "222.87",
+                    "238.6"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "63.93",
+                    "69.14",
+                    "74.34",
+                    "81.77",
+                    "86.98",
+                    "92.92",
+                    "101.1",
+                    "109.28",
+                    "117.46",
+                    "126.38",
+                    "135.3"
+                ],
+                "Low Plunge DMG (%)": [
+                    "127.84",
+                    "138.24",
+                    "148.65",
+                    "163.51",
+                    "173.92",
+                    "185.81",
+                    "202.16",
+                    "218.51",
+                    "234.86",
+                    "252.7",
+                    "270.54"
+                ],
+                "High Plunge DMG (%)": [
+                    "159.68",
+                    "172.67",
+                    "185.67",
+                    "204.24",
+                    "217.23",
+                    "232.09",
+                    "252.51",
+                    "272.93",
+                    "293.36",
+                    "315.64",
+                    "337.92"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Talent_Blazing_Blessing.png",
+            "talentName": "Blazing Blessing",
+            "talentType": "Elemental Skill",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nThoma vaults forward with his polearm and delivers a flame-filled flying kick that deals AoE Pyro DMG, while also summoning a defensive Blazing Barrier. At the moment of casting, Thoma's Elemental Skill applies Pyro to himself.\nThe DMG Absorption of the Blazing Barrier scales off Thoma's Max HP.\nThe Blazing Barrier has the following traits:\nAbsorbs Pyro DMG 250% more effectively.\nWhen a new Blazing Barrier is obtained, the remaining DMG Absorption of an existing Blazing Barrier will stack and its duration will be refreshed.\n\nThe maximum DMG Absorprtion of the Blazing Barrier will not exceed a certain percentage of Thoma's Max HP.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Blazing_Blessing_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "146.4",
+                    "157.38",
+                    "168.36",
+                    "183",
+                    "193.98",
+                    "204.96",
+                    "219.6",
+                    "234.24",
+                    "248.88",
+                    "263.52",
+                    "278.16",
+                    "292.8",
+                    "311.1",
+                    "329"
+                ],
+                "Shield DMG Absorption": [
+                    "7.2% Max HP\n+\n693.3",
+                    "7.74% Max HP\n+\n762.6",
+                    "8.28% Max HP\n+\n837.7",
+                    "9% Max HP\n+\n918.7",
+                    "9.54% Max HP\n+\n1,005",
+                    "10.08% Max HP\n+\n1,097",
+                    "10.8% Max HP\n+\n1,196",
+                    "11.52% Max HP\n+\n1,300",
+                    "12.24% Max HP\n+\n1,409",
+                    "12.96% Max HP\n+\n1,525",
+                    "13.68% Max HP\n+\n1,646",
+                    "14.4% Max HP\n+\n1,773",
+                    "15.3% Max HP\n+\n1,906",
+                    "16.2% Max HP\n+\n2,046"
+                ],
+                "Shield Duration": [
+                    "8s"
+                ],
+                "Max Shield DMG Absorption": [
+                    "19.6% Max HP\n+\n1,887",
+                    "21.07% Max HP\n+\n2,076",
+                    "22.54% Max HP\n+\n2,280",
+                    "24.5% Max HP\n+\n2,500",
+                    "25.97% Max HP\n+\n2,736",
+                    "27.44% Max HP\n+\n2,988",
+                    "29.4% Max HP\n+\n3,255",
+                    "31.36% Max HP\n+\n3,539",
+                    "33.32% Max HP\n+\n3,838",
+                    "35.28% Max HP\n+\n4,152",
+                    "37.24% Max HP\n+\n4,482",
+                    "39.2% Max HP\n+\n4,829",
+                    "41.65% Max HP\n+\n5,190",
+                    "44.1% Max HP\n+\n5,568"
+                ],
+                "Skill CD": [
+                    "15s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Talent_Crimson_Ooyoroi.png",
+            "talentName": "Crimson Ooyoroi",
+            "talentType": "Elemental Burst",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nThoma spins his polearm, slicing at his foes with roaring flames that deal AoE Pyro DMG and weave themselves into a Scorching Ooyoroi.\n\nScorching Ooyoroi\nWhile Scorching Ooyoroi is in effect, the active character's Normal Attacks will trigger Fiery Collapse, dealing AoE Pyro DMG and summoning a Blazing Barrier.\nFiery Collapse can be triggered once every 1s.\n\nExcept for the amount of DMG they can absorb, the Blazing Barriers created in this way are identical to those created by Thoma's Elemental Skill, Blazing Blessing:\nAbsorbs Pyro DMG 250% more effectively.\nWhen a new Blazing Barrier is obtained, the remaining DMG Absorption of an existing Blazing Barrier will stack and its duration will be refreshed.\n\nThe maximum DMG Absorption of the Blazing Barrier will not exceed a certain percentage of Thoma's Max HP.\n\nIf Thoma falls, the effects of Scorching Ooyoroi will be cleared.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Crimson_Ooyoroi_Preview.gif",
+                    "caption": "Elemental Burst"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Crimson_Ooyoroi_Scorching_Ooyoroi_Preview.gif",
+                    "caption": "Fiery Collapse"
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "88",
+                    "94.6",
+                    "101.2",
+                    "110",
+                    "116.6",
+                    "123.2",
+                    "132",
+                    "140.8",
+                    "149.6",
+                    "158.4",
+                    "167.2",
+                    "176",
+                    "187",
+                    "198"
+                ],
+                "Fiery Collapse DMG (%)": [
+                    "58",
+                    "62.35",
+                    "66.7",
+                    "72.5",
+                    "76.85",
+                    "81.2",
+                    "87",
+                    "92.8",
+                    "98.6",
+                    "104.4",
+                    "110.2",
+                    "116",
+                    "123.25",
+                    "131"
+                ],
+                "Shield DMG Absorption": [
+                    "1.14% Max HP\n+\n110",
+                    "1.23% Max HP\n+\n121",
+                    "1.32% Max HP\n+\n132.9",
+                    "1.43% Max HP\n+\n145.8",
+                    "1.52% Max HP\n+\n159.5",
+                    "1.6% Max HP\n+\n174.2",
+                    "1.72% Max HP\n+\n189.8",
+                    "1.83% Max HP\n+\n206.3",
+                    "1.94% Max HP\n+\n223.7",
+                    "2.06% Max HP\n+\n242",
+                    "2.17% Max HP\n+\n261.3",
+                    "2.29% Max HP\n+\n281.5",
+                    "2.43% Max HP\n+\n302.6",
+                    "2.6% Max HP\n+\n325"
+                ],
+                "Shield Duration": [
+                    "8s"
+                ],
+                "Scorching Ooyoroi Duration": [
+                    "15s"
+                ],
+                "Skill CD": [
+                    "20s"
+                ],
+                "Energy Cost": [
+                    "80"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_Imbricated_Armor.png",
+            "talentName": "Imbricated Armor",
+            "talentType": "1st Ascension Passive",
+            "description": "When your current active character obtains or refreshes a Blazing Barrier, this character's Shield Strength will increase by 5% for 6s.\nThis effect can be triggered once every 0.3 seconds. Max 5 stacks.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Imbricated_Armor_1_Preview.gif",
+                    "caption": "Before 1st Ascension"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Imbricated_Armor_2_Preview.gif",
+                    "caption": "After 1st Ascension"
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Flaming_Assault.png",
+            "talentName": "Flaming Assault",
+            "talentType": "4th Ascension Passive",
+            "description": "DMG dealt by Crimson Ooyoroi's Fiery Collapse is increased by 2.2% of Thoma's Max HP.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Flaming_Assault_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Snap_and_Swing.png",
+            "talentName": "Snap and Swing",
+            "talentType": "Utility Passive",
+            "description": "When you fish successfully in Inazuma, Thoma's help grants a 20% chance of scoring a double catch.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Snap_and_Swing_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Constellation_A_Comrade%27s_Duty.png",
+            "name": "A Comrade's Duty",
+            "level": 1,
+            "description": "Description\nPreview\nWhen a character protected by Thoma's own Blazing Barrier (Thoma excluded) is attacked, Thoma's own Blazing Blessing CD is decreased by 3s, while his own Crimson Ooyoroi's CD is decreased by 3s.\nThis effect can be triggered once every 20s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Constellation_A_Subordinate%27s_Skills.png",
+            "name": "A Subordinate's Skills",
+            "level": 2,
+            "description": "Crimson Ooyoroi's duration is increased by 3s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Constellation_Fortified_Resolve.png",
+            "name": "Fortified Resolve",
+            "level": 3,
+            "description": "Increases the Level of Blazing Blessing by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Constellation_Long-Term_Planning.png",
+            "name": "Long-Term Planning",
+            "level": 4,
+            "description": "After using Crimson Ooyoroi, 15 Energy will be restored to Thoma."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Constellation_Raging_Wildfire.png",
+            "name": "Raging Wildfire",
+            "level": 5,
+            "description": "Increases the Level of Crimson Ooyoroi by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Constellation_Burning_Heart.png",
+            "name": "Burning Heart",
+            "level": 6,
+            "description": "When a Blazing Barrier is obtained or refreshed, the DMG dealt by all party members' Normal, Charged, and Plunging Attacks is increased by 15% for 6s."
+        }
+    ],
+    "imageUrls": {},
+    "version": "2.2"
+}

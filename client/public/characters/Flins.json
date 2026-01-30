@@ -446,5 +446,174 @@
         }
     ],
     "imageUrls": {},
-    "version": "Luna I"
+    "version": "Luna I",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Namecard_Background_Flins_Oathkeeper%27s_Lantern.png",
+                "caption": "Flins: Oathkeeper's Lantern Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Item_Flins_Oathkeeper%27s_Lantern.png",
+                "caption": "Flins: Oathkeeper's Lantern Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Namecard_Banner_Flins_Oathkeeper%27s_Lantern.png",
+                "caption": "Flins: Oathkeeper's Lantern Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Pocztowy_Demonspear_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Pocztowy_Demonspear_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Pocztowy_Demonspear_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Pocztowy_Demonspear_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Ancient_Ritual_Cometh_the_Night_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Ancient_Ritual_Cometh_the_Night_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Ancient_Rite_Arcane_Light_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Ancient_Rite_Arcane_Light_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Flins_Character_Details_1.png",
+                "caption": "Flins Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Flins_Character_Details_2.png",
+                "caption": "Flins Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Flins_Character_Details_3.png",
+                "caption": "Flins Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Flins_Character_Details_4.png",
+                "caption": "Flins Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Flins_Character_Details_5.png",
+                "caption": "Flins Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Flins_Character_Details_10.gif",
+                "caption": "Flins Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Flins_Character_Details_11.gif",
+                "caption": "Flins Details 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Flins_Character_Details_12.gif",
+                "caption": "Flins Details 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Flins_Character_Details_13.png",
+                "caption": "Flins Details 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Flins_Character_Details_14.png",
+                "caption": "Flins Details 14"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Flins_Character_Details_6.png",
+                "caption": "Flins Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Flins_Character_Details_7.png",
+                "caption": "Flins Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Flins_Character_Details_8.gif",
+                "caption": "Flins Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Flins_Character_Details_9.png",
+                "caption": "Flins Details 9"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Icon_Emoji_Paimon%27s_Paintings_43_Flins_1.png",
+                "caption": "Thinking Set 43"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Icon_Emoji_Paimon%27s_Paintings_44_Flins_1.png",
+                "caption": "Begone Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Icon_Emoji_Paimon%27s_Paintings_44_Flins_2.png",
+                "caption": "Bow Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Icon_Emoji_Paimon%27s_Paintings_44_Flins_3.png",
+                "caption": "Go Ahead Set 44"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Icon_Emoji_Paimon%27s_Paintings_44_Flins_4.png",
+                "caption": "Illuminate Set 44"
+            }
+        ]
+    }
 }

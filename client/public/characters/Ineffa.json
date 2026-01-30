@@ -315,5 +315,182 @@
         }
     ],
     "imageUrls": {},
-    "version": "5.8"
+    "version": "5.8",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Idle_Ineffa_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Idle_Ineffa_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Idle_Ineffa_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Idle_Ineffa_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Talent_Menu_Ineffa.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Menu_Ineffa.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Weapon_Menu_Ineffa.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Weapon_Menu_Ineffa.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Party_Setup_Ineffa.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Party_Setup_Ineffa.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Namecard_Background_Ineffa_Command.png",
+                "caption": "Ineffa: Command Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Item_Ineffa_Command.png",
+                "caption": "Ineffa: Command Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Namecard_Banner_Ineffa_Command.png",
+                "caption": "Ineffa: Command Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Cyclonic_Duster_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Cyclonic_Duster_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Cyclonic_Duster_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Cyclonic_Duster_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Supreme_Instruction_Cyclonic_Exterminator_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Supreme_Instruction_Cyclonic_Exterminator_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cleaning_Mode_Carrier_Frequency_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Cleaning_Mode_Carrier_Frequency_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Ineffa_Character_Details_1.png",
+                "caption": "Ineffa Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Ineffa_Character_Details_2.png",
+                "caption": "Ineffa Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Ineffa_Character_Details_3.gif",
+                "caption": "Ineffa Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Ineffa_Character_Details_4.png",
+                "caption": "Ineffa Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Ineffa_Character_Details_5.png",
+                "caption": "Ineffa Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Ineffa_Character_Details_6.png",
+                "caption": "Ineffa Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Ineffa_Character_Details_7.png",
+                "caption": "Ineffa Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Ineffa_Character_Details_8.gif",
+                "caption": "Ineffa Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Ineffa_Character_Details_9.png",
+                "caption": "Ineffa Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Ineffa_Character_Details_10.png",
+                "caption": "Ineffa Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Ineffa_Character_Details_11.gif",
+                "caption": "Ineffa Details 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Ineffa_Character_Details_12.gif",
+                "caption": "Ineffa Details 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Ineffa_Character_Details_13.gif",
+                "caption": "Ineffa Details 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Ineffa_Character_Details_14.gif",
+                "caption": "Ineffa Details 14"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Ineffa_Character_Details_15.png",
+                "caption": "Ineffa Details 15"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_1.png",
+                "caption": "Received Set 43"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_2.png",
+                "caption": "Clean Up Set 43"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_3.png",
+                "caption": "Blank Set 43"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_4.png",
+                "caption": "Target Locked Set 43"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_5.png",
+                "caption": "Power Off Set 43"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Icon_Emoji_Paimon%27s_Paintings_44_Aino_3.png",
+                "caption": "Sneaky Snacking Set 44"
+            }
+        ]
+    }
 }

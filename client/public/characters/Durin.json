@@ -355,5 +355,186 @@
         }
     ],
     "imageUrls": {},
-    "version": "Luna III"
+    "version": "Luna III",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Namecard_Background_Durin_Radiant_Heart.png",
+                "caption": "Durin: Radiant Heart Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Durin_Radiant_Heart.png",
+                "caption": "Durin: Radiant Heart Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Namecard_Banner_Durin_Radiant_Heart.png",
+                "caption": "Durin: Radiant Heart Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Radiant_Wingslash_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Radiant_Wingslash_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Radiant_Wingslash_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Radiant_Wingslash_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Principle_of_Purity_As_the_Light_Shifts_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Principle_of_Purity_As_the_Light_Shifts_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Binary_Form_Convergence_and_Division_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Binary_Form_Convergence_and_Division_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Durin_Character_Details_1.png",
+                "caption": "Durin Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Durin_Character_Details_2.png",
+                "caption": "Durin Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Durin_Character_Details_3.gif",
+                "caption": "Durin Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Durin_Character_Details_4.png",
+                "caption": "Durin Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Durin_Character_Details_5.png",
+                "caption": "Durin Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Durin_Character_Details_6.png",
+                "caption": "Durin Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Durin_Character_Details_7.png",
+                "caption": "Durin Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Durin_Character_Details_8.png",
+                "caption": "Durin Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Durin_Character_Details_9.png",
+                "caption": "Durin Details 9"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Durin_Character_Details_10.gif",
+                "caption": "Durin Details 10"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Durin_Character_Details_11.gif",
+                "caption": "Durin Details 11"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Durin_Character_Details_12.gif",
+                "caption": "Durin Details 12"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Durin_Character_Details_13.gif",
+                "caption": "Durin Details 13"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Durin_Character_Details_14.png",
+                "caption": "Durin Details 14"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Durin_Character_Details_15.png",
+                "caption": "Durin Details 15"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Icon_Emoji_Paimon%27s_Paintings_34_Mini_Durin_1.png",
+                "caption": "Surprised Set 34"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Icon_Emoji_Paimon%27s_Paintings_34_Other_1.png",
+                "caption": "FriendSHIP Set 34"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Icon_Emoji_Paimon%27s_Paintings_45_Durin_1.png",
+                "caption": "Peek Set 45"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Icon_Emoji_Paimon%27s_Paintings_46_Durin_1.png",
+                "caption": "Recording Set 46"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Icon_Emoji_Paimon%27s_Paintings_46_Durin_2.png",
+                "caption": "Silent Set 46"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Icon_Emoji_Paimon%27s_Paintings_46_Durin_3.png",
+                "caption": "Frightened Set 46"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Icon_Emoji_Paimon%27s_Paintings_46_Durin_4.png",
+                "caption": "Good Night Set 46"
+            }
+        ]
+    }
 }

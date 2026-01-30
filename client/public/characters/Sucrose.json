@@ -1,0 +1,149 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sucrose_Icon.png",
+    "name": "Sucrose",
+    "rarity": "4 Stars",
+    "element": "Anemo",
+    "weaponType": "Catalyst",
+    "region": "Mondstadt",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+    "modelType": "Medium Female",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png",
+            "talentName": "Wind Spirit Creation",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 4 attacks using Wind Spirits, dealing Anemo DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina and deals AoE Anemo DMG after a short casting time.\n\nPlunging Attack\nCalling upon the power of her Wind Spirits, Sucrose plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Anemo DMG upon impact with the ground.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Wind_Spirit_Creation_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Wind_Spirit_Creation_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Wind_Spirit_Creation_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Talent_Astable_Anemohypostasis_Creation_-_6308.png",
+            "talentName": "Astable Anemohypostasis Creation - 6308",
+            "talentType": "Elemental Skill",
+            "description": "Creates a small Wind Spirit that pulls opponents and objects towards its location, launches opponents within its AoE, and deals Anemo DMG.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Astable_Anemohypostasis_Creation_-_6308_Preview.gif",
+                    "caption": ""
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Talent_Forbidden_Creation_-_Isomer_75_Type_II.png",
+            "talentName": "Forbidden Creation - Isomer 75 / Type II",
+            "talentType": "Elemental Burst",
+            "description": "Sucrose hurls an unstable concoction that creates a Large Wind Spirit.\nWhile it persists, the Large Wind Spirit will continuously pull in surrounding opponents and objects, launch nearby opponents, and deal Anemo DMG.\n\nElemental Absorption\nIf the Wind Spirit comes into contact with Hydro/Pyro/Cryo/Electro energy, it will deal additional Elemental DMG of that type.\nElemental Absorption may only occur once per use.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Forbidden_Creation_-_Isomer_75_Type_II_Preview.gif",
+                    "caption": "Without Elemental Absorption (includes Sucrose's Constellation Level 2)"
+                },
+                {
+                    "url": "",
+                    "caption": ""
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Forbidden_Creation_-_Isomer_75_Type_II_Electro_Preview.gif",
+                    "caption": "Electro Elemental Absorption (includes Sucrose's Constellation Level 2)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Forbidden_Creation_-_Isomer_75_Type_II_Hydro_Preview.gif",
+                    "caption": "Hydro Elemental Absorption (includes Sucrose's Constellation Level 2)"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Forbidden_Creation_-_Isomer_75_Type_II_Pyro_Preview.gif",
+                    "caption": "Pyro Elemental Absorption (includes Sucrose's Constellation Level 2)"
+                }
+            ],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Talent_Catalyst_Conversion.png",
+            "talentName": "Catalyst Conversion",
+            "talentType": "1st Ascension Passive",
+            "description": "When Sucrose triggers a Swirl effect, all characters in the party with the matching element (excluding Sucrose) have their Elemental Mastery increased by 50 for 8s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Talent_Mollis_Favonius.png",
+            "talentName": "Mollis Favonius",
+            "talentType": "4th Ascension Passive",
+            "description": "When Astable Anemohypostasis Creation - 6308 or Forbidden Creation - Isomer 75 / Type II hits an opponent, increases all party members' (excluding Sucrose) Elemental Mastery based on 20% of Sucrose's Elemental Mastery for 8s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Talent_Sevenfold_Transmutation.png",
+            "talentName": "Sevenfold Transmutation",
+            "talentType": "Witch's Eve Rite Passive",
+            "description": "After completing Witch's Homework: Of Wonderland Flowers, Sucrose will become a Hexerei character. When the party includes at least 2 Hexerei characters, you will gain the Hexerei: Secret Rite effect, which enhances Hexerei characters.\n\nHexerei: Secret Rite\nAfter creating a Small Wind Spirit, nearby party members' Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, and Elemental Burst DMG are increased by 5.71428% for 15s.\nAfter creating a Large Wind Spirit, nearby Hexerei party members' Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, and Elemental Burst DMG are increased by 7.14285% for 20s.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Talent_Astable_Invention.png",
+            "talentName": "Astable Invention",
+            "talentType": "Utility Passive",
+            "description": "When Sucrose crafts Character and Weapon Enhancement Materials, she has a 10% chance to obtain double the product.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Constellation_Clustered_Vacuum_Field.png",
+            "name": "Clustered Vacuum Field",
+            "level": 1,
+            "description": "Astable Anemohypostasis Creation - 6308 gains 1 additional charge."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Constellation_Beth_Unbound_Form.png",
+            "name": "Beth: Unbound Form",
+            "level": 2,
+            "description": "The duration of Forbidden Creation - Isomer 75 / Type II is increased by 2s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Constellation_Flawless_Alchemistress.png",
+            "name": "Flawless Alchemistress",
+            "level": 3,
+            "description": "Increases the Level of Astable Anemohypostasis Creation - 6308 by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Constellation_Alchemania.png",
+            "name": "Alchemania",
+            "level": 4,
+            "description": "Every 7 Normal and Charged Attacks, Sucrose will reduce the CD of Astable Anemohypostasis Creation - 6308 by 1-7s."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Constellation_Caution_Standard_Flask.png",
+            "name": "Caution: Standard Flask",
+            "level": 5,
+            "description": "Increases the Level of Forbidden Creation - Isomer 75 / Type II by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Constellation_Chaotic_Entropy.png",
+            "name": "Chaotic Entropy",
+            "level": 6,
+            "description": "Description\nHexerei Buff\nGameplay Notes\nIf Forbidden Creation - Isomer 75 / Type II triggers an Elemental Absorption, all party members gain a 20% Elemental DMG Bonus for the corresponding absorbed element during its duration."
+        }
+    ],
+    "imageUrls": {},
+    "version": "1.0"
+}

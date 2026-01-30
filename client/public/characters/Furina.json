@@ -447,5 +447,236 @@
         }
     ],
     "imageUrls": {},
-    "version": "4.2"
+    "version": "4.2",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Idle_Furina_Ousia_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Idle_Furina_Ousia_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Idle_Furina_Ousia_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Idle_Furina_Ousia_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Talent_Menu_Furina_Ousia.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Menu_Furina_Ousia.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon_Menu_Furina_Ousia.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Weapon_Menu_Furina_Ousia.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Party_Setup_Furina_Ousia.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Party_Setup_Furina_Ousia.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Namecard_Background_Furina_Banquet.png",
+                "caption": "Furina: Banquet Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Item_Furina_Banquet.png",
+                "caption": "Furina: Banquet Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Namecard_Banner_Furina_Banquet.png",
+                "caption": "Furina: Banquet Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Soloist%27s_Solicitation_Normal_Ousia_Preview.gif",
+                        "caption": "Normal Attack (Ousia)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Soloist%27s_Solicitation_Normal_Ousia_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Soloist%27s_Solicitation_Normal_Pneuma_Preview.gif",
+                        "caption": "Normal Attack (Pneuma)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Soloist%27s_Solicitation_Normal_Pneuma_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Soloist%27s_Solicitation_Charged_Ousia_Pneuma_Preview.gif",
+                        "caption": "Charged Attack (Ousia to Pneuma)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Soloist%27s_Solicitation_Charged_Ousia_Pneuma_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Soloist%27s_Solicitation_Charged_Pneuma_Ousia_Preview.gif",
+                        "caption": "Charged Attack (Pneuma to Ousia)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Soloist%27s_Solicitation_Charged_Pneuma_Ousia_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Soloist%27s_Solicitation_Plunging_Ousia_Preview.gif",
+                        "caption": "Plunging Attack (Ousia)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Soloist%27s_Solicitation_Plunging_Ousia_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Soloist%27s_Solicitation_Plunging_Pneuma_Preview.gif",
+                        "caption": "Plunging Attack (Pneuma)",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Soloist%27s_Solicitation_Plunging_Pneuma_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Salon_Solitaire_Plunging_Water_Preview.gif",
+                        "caption": "Plunging on Water Special Effect",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Salon_Solitaire_Plunging_Water_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Let_the_People_Rejoice_Ousia_Preview.gif",
+                        "caption": "Ousia",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Let_the_People_Rejoice_Ousia_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Let_the_People_Rejoice_Pneuma_Preview.gif",
+                        "caption": "Pneuma",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Let_the_People_Rejoice_Pneuma_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Let_the_People_Rejoice_75_Fanfare_Preview.gif",
+                        "caption": "25% Fanfare Indicator",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Let_the_People_Rejoice_75_Fanfare_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Let_the_People_Rejoice_150_Fanfare_Preview.gif",
+                        "caption": "50% Fanfare Indicator",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Let_the_People_Rejoice_150_Fanfare_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Let_the_People_Rejoice_225_Fanfare_Preview.gif",
+                        "caption": "75% Fanfare Indicator",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Let_the_People_Rejoice_225_Fanfare_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Let_the_People_Rejoice_300_Fanfare_Preview.gif",
+                        "caption": "100% Fanfare Indicator",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Let_the_People_Rejoice_300_Fanfare_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Salon_Solitaire_Ousia_Preview.gif",
+                        "caption": "Ousia",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Salon_Solitaire_Ousia_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Salon_Solitaire_Pneuma_Preview.gif",
+                        "caption": "Pneuma",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Salon_Solitaire_Pneuma_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Salon_Solitaire_Salon_Members_Preview.gif",
+                        "caption": "Salon Members",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Salon_Solitaire_Salon_Members_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Salon_Solitaire_Water_Walk_Preview.gif",
+                        "caption": "Walking on Water",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Salon_Solitaire_Water_Walk_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Furina_Character_Details_1.png",
+                "caption": "Furina Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Furina_Character_Details_2.png",
+                "caption": "Furina Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Furina_Character_Details_3.gif",
+                "caption": "Furina Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Furina_Character_Details_4.gif",
+                "caption": "Furina Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Furina_Character_Details_5.gif",
+                "caption": "Furina Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Furina_Character_Details_6.gif",
+                "caption": "Furina Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Furina_Character_Details_7.png",
+                "caption": "Furina Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Furina_Character_Details_8.png",
+                "caption": "Furina Details 8"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Furina_Character_Details_9.png",
+                "caption": "Furina Details 9"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Icon_Emoji_Paimon%27s_Paintings_26_Furina_1.png",
+                "caption": "Happy Set 26"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Icon_Emoji_Paimon%27s_Paintings_28_Furina_1.png",
+                "caption": "How Shocking! Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Icon_Emoji_Paimon%27s_Paintings_28_Furina_2.png",
+                "caption": "This is Hard... Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Icon_Emoji_Paimon%27s_Paintings_28_Furina_3.png",
+                "caption": "Hilarious Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Icon_Emoji_Paimon%27s_Paintings_28_Furina_4.png",
+                "caption": "So Boring Set 28"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Icon_Emoji_Paimon%27s_Paintings_29_Furina_1.png",
+                "caption": "Good take! Set 29"
+            }
+        ]
+    }
 }

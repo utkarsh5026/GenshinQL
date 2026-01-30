@@ -318,5 +318,156 @@
         }
     ],
     "imageUrls": {},
-    "version": "3.0"
+    "version": "3.0",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            },
+            {
+                "url": "",
+                "caption": "",
+                "videoUrl": "",
+                "videoType": ""
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Namecard_Background_Dori_Jinni.png",
+                "caption": "Dori: Jinni Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Dori_Jinni.png",
+                "caption": "Dori: Jinni Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Namecard_Banner_Dori_Jinni.png",
+                "caption": "Dori: Jinni Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    },
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "",
+                        "caption": "",
+                        "videoUrl": "",
+                        "videoType": ""
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Dori_Character_Details_1.png",
+                "caption": "Dori Details 1 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Dori_Character_Details_2.png",
+                "caption": "Dori Details 2 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Dori_Character_Details_3.gif",
+                "caption": "Dori Details 3 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Dori_Character_Details_4.gif",
+                "caption": "Dori Details 4 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Dori_Character_Details_5.gif",
+                "caption": "Dori Details 5 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Dori_Character_Details_6.png",
+                "caption": "Dori Details 6 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Dori_Character_Details_7.png",
+                "caption": "Dori Details 7 Official HoYoLAB Post"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Dori_Character_Details_8.png",
+                "caption": "Dori Details 8 Official HoYoLAB Post"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Icon_Emoji_Paimon%27s_Paintings_17_Dori_1.png",
+                "caption": "Sales Pitch Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Icon_Emoji_Paimon%27s_Paintings_17_Dori_2.png",
+                "caption": "Evil Grin Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Icon_Emoji_Paimon%27s_Paintings_17_Dori_3.png",
+                "caption": "Search Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Icon_Emoji_Paimon%27s_Paintings_17_Dori_4.png",
+                "caption": "Dreaming of Mora Set 17"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Icon_Emoji_Paimon%27s_Paintings_42_Dori_1.png",
+                "caption": "I Swear Set 42"
+            }
+        ]
+    }
 }

@@ -359,5 +359,168 @@
         }
     ],
     "imageUrls": {},
-    "version": "4.3"
+    "version": "4.3",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Idle_Chevreuse_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Idle_Chevreuse_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Idle_Chevreuse_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Idle_Chevreuse_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Talent_Menu_Chevreuse.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Menu_Chevreuse.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Weapon_Menu_Chevreuse.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Weapon_Menu_Chevreuse.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Party_Setup_Chevreuse.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Party_Setup_Chevreuse.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Namecard_Background_Chevreuse_Type_II.png",
+                "caption": "Chevreuse: Type II Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Chevreuse_Type_II.png",
+                "caption": "Chevreuse: Type II Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Namecard_Banner_Chevreuse_Type_II.png",
+                "caption": "Chevreuse: Type II Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Line_Bayonet_Thrust_EX_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Line_Bayonet_Thrust_EX_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Line_Bayonet_Thrust_EX_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Line_Bayonet_Thrust_EX_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Line_Bayonet_Thrust_EX_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Line_Bayonet_Thrust_EX_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Ring_of_Bursting_Grenades_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Ring_of_Bursting_Grenades_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Short-Range_Rapid_Interdiction_Fire_Press_Preview.gif",
+                        "caption": "Press",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Short-Range_Rapid_Interdiction_Fire_Press_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Short-Range_Rapid_Interdiction_Fire_Hold_Preview.gif",
+                        "caption": "Hold",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Short-Range_Rapid_Interdiction_Fire_Hold_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Short-Range_Rapid_Interdiction_Fire_Overcharged_Ball_Preview.gif",
+                        "caption": "Overcharged Ball",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Short-Range_Rapid_Interdiction_Fire_Overcharged_Ball_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Chevreuse_Character_Details_1.png",
+                "caption": "Chevreuse Details 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Chevreuse_Character_Details_2.png",
+                "caption": "Chevreuse Details 2"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Chevreuse_Character_Details_3.gif",
+                "caption": "Chevreuse Details 3"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Chevreuse_Character_Details_4.gif",
+                "caption": "Chevreuse Details 4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Chevreuse_Character_Details_5.gif",
+                "caption": "Chevreuse Details 5"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Chevreuse_Character_Details_6.png",
+                "caption": "Chevreuse Details 6"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Chevreuse_Character_Details_7.png",
+                "caption": "Chevreuse Details 7"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Chevreuse_Character_Details_8.png",
+                "caption": "Chevreuse Details 8"
+            }
+        ],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Icon_Emoji_Paimon%27s_Paintings_29_Chevreuse_1.png",
+                "caption": "Locked and Loaded Set 29"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Icon_Emoji_Paimon%27s_Paintings_29_Chevreuse_2.png",
+                "caption": "Supervised Special Training Set 29"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Icon_Emoji_Paimon%27s_Paintings_29_Chevreuse_3.png",
+                "caption": "Personal Training Set 29"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Icon_Emoji_Paimon%27s_Paintings_29_Chevreuse_4.png",
+                "caption": "Replenish Energy Set 29"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Icon_Emoji_Paimon%27s_Paintings_31_Chevreuse_1.png",
+                "caption": "Don't Do That Again Set 31"
+            }
+        ]
+    }
 }

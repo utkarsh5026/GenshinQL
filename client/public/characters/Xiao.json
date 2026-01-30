@@ -1,0 +1,325 @@
+{
+    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Xiao_Icon.png",
+    "name": "Xiao",
+    "rarity": "5 Stars",
+    "element": "Anemo",
+    "weaponType": "Polearm",
+    "region": "Liyue",
+    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+    "modelType": "Medium Male",
+    "talents": [
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Polearm_Anemo.png",
+            "talentName": "Whirlwind Thrust",
+            "talentType": "Normal Attack",
+            "description": "Normal Attack\nPerforms up to 6 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to perform an upward thrust.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\nXiao does not take DMG from performing Plunging Attacks.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Whirlwind_Thrust_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Whirlwind_Thrust_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Whirlwind_Thrust_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "1-Hit DMG (%)": [
+                    "27.54\n+\n27.54",
+                    "29.42\n+\n29.42",
+                    "31.3\n+\n31.3",
+                    "33.8\n+\n33.8",
+                    "35.68\n+\n35.68",
+                    "37.87\n+\n37.87",
+                    "40.69\n+\n40.69",
+                    "43.51\n+\n43.51",
+                    "46.32\n+\n46.32",
+                    "49.14\n+\n49.14",
+                    "51.96\n+\n51.96"
+                ],
+                "2-Hit DMG (%)": [
+                    "56.94",
+                    "60.82",
+                    "64.7",
+                    "69.88",
+                    "73.76",
+                    "78.29",
+                    "84.11",
+                    "89.93",
+                    "95.76",
+                    "101.58",
+                    "107.4"
+                ],
+                "3-Hit DMG (%)": [
+                    "68.55",
+                    "73.23",
+                    "77.9",
+                    "84.13",
+                    "88.81",
+                    "94.26",
+                    "101.27",
+                    "108.28",
+                    "115.29",
+                    "122.3",
+                    "129.31"
+                ],
+                "4-Hit DMG (%)": [
+                    "37.66\n+\n37.66",
+                    "40.23\n+\n40.23",
+                    "42.8\n+\n42.8",
+                    "46.22\n+\n46.22",
+                    "48.79\n+\n48.79",
+                    "51.79\n+\n51.79",
+                    "55.64\n+\n55.64",
+                    "59.49\n+\n59.49",
+                    "63.34\n+\n63.34",
+                    "67.2\n+\n67.2",
+                    "71.05\n+\n71.05"
+                ],
+                "5-Hit DMG (%)": [
+                    "71.54",
+                    "76.42",
+                    "81.3",
+                    "87.8",
+                    "92.68",
+                    "98.37",
+                    "105.69",
+                    "113.01",
+                    "120.32",
+                    "127.64",
+                    "134.96"
+                ],
+                "6-Hit DMG (%)": [
+                    "95.83",
+                    "102.37",
+                    "108.9",
+                    "117.61",
+                    "124.15",
+                    "131.77",
+                    "141.57",
+                    "151.37",
+                    "161.17",
+                    "170.97",
+                    "180.77"
+                ],
+                "Charged Attack DMG (%)": [
+                    "121.09",
+                    "129.34",
+                    "137.6",
+                    "148.61",
+                    "156.86",
+                    "166.5",
+                    "178.88",
+                    "191.26",
+                    "203.65",
+                    "216.03",
+                    "228.42"
+                ],
+                "Charged Attack Stamina Cost": [
+                    "25"
+                ],
+                "Plunge DMG (%)": [
+                    "81.83",
+                    "88.49",
+                    "95.16",
+                    "104.67",
+                    "111.33",
+                    "118.94",
+                    "129.41",
+                    "139.88",
+                    "150.35",
+                    "161.76",
+                    "173.18"
+                ],
+                "Low Plunge DMG (%)": [
+                    "163.63",
+                    "176.95",
+                    "190.27",
+                    "209.3",
+                    "222.62",
+                    "237.84",
+                    "258.77",
+                    "279.7",
+                    "300.63",
+                    "323.46",
+                    "346.29"
+                ],
+                "High Plunge DMG (%)": [
+                    "204.39",
+                    "221.02",
+                    "237.66",
+                    "261.42",
+                    "278.06",
+                    "297.07",
+                    "323.21",
+                    "349.36",
+                    "375.5",
+                    "404.02",
+                    "432.54"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Talent_Lemniscatic_Wind_Cycling.png",
+            "talentName": "Lemniscatic Wind Cycling",
+            "talentType": "Elemental Skill",
+            "description": "Xiao lunges forward, dealing Anemo DMG to opponents in his path.\nCan be used in mid-air.\nStarts with 2 charges.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Lemniscatic_Wind_Cycling_Air_Preview.gif",
+                    "caption": "On Air"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Lemniscatic_Wind_Cycling_Ground_Preview.gif",
+                    "caption": "On Ground"
+                }
+            ],
+            "scaling": {
+                "Skill DMG (%)": [
+                    "252.8",
+                    "271.76",
+                    "290.72",
+                    "316",
+                    "334.96",
+                    "353.92",
+                    "379.2",
+                    "404.48",
+                    "429.76",
+                    "455.04",
+                    "480.32",
+                    "505.6",
+                    "537.2"
+                ],
+                "CD": [
+                    "10s"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Talent_Bane_of_All_Evil.png",
+            "talentName": "Bane of All Evil",
+            "talentType": "Elemental Burst",
+            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nXiao dons the Yaksha Mask that set gods and demons trembling millennia ago.\n\nYaksha's Mask\nGreatly increases Xiao's jumping ability.\nIncreases his attack AoE and attack DMG.\nConverts attack DMG into Anemo DMG, which cannot be overridden by any other elemental infusion.\n\nIn this state, Xiao will continuously lose HP.\nThe effects of this skill end when Xiao leaves the field.",
+            "figureUrls": [
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Bane_of_All_Evil_Preview.gif",
+                    "caption": "Activation"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Bane_of_All_Evil_Normal_Preview.gif",
+                    "caption": "Normal Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Bane_of_All_Evil_Charged_Preview.gif",
+                    "caption": "Charged Attack"
+                },
+                {
+                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Bane_of_All_Evil_Plunging_Preview.gif",
+                    "caption": "Plunging Attack"
+                }
+            ],
+            "scaling": {
+                "Normal/Charged/Plunging Attack DMG Bonus (%)": [
+                    "58.45",
+                    "61.95",
+                    "65.45",
+                    "70",
+                    "73.5",
+                    "77",
+                    "81.55",
+                    "86.1",
+                    "90.65",
+                    "95.2",
+                    "99.75",
+                    "104.3",
+                    "108.85",
+                    "113"
+                ],
+                "Life Drain": [
+                    "3% Current HP Per Second",
+                    "2.5% Current HP Per Second",
+                    "2% Current HP Per Second"
+                ],
+                "Duration": [
+                    "15s"
+                ],
+                "CD": [
+                    "18s"
+                ],
+                "Energy Cost": [
+                    "70"
+                ]
+            }
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Conqueror_of_Evil_Tamer_of_Demons.png",
+            "talentName": "Conqueror of Evil: Tamer of Demons",
+            "talentType": "1st Ascension Passive",
+            "description": "While under the effects of Bane of All Evil, all DMG dealt by Xiao increases by 5%. DMG increases by a further 5% for every 3s the ability persists. The maximum DMG Bonus is 25%.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Talent_Dissolution_Eon_Heaven_Fall.png",
+            "talentName": "Dissolution Eon: Heaven Fall",
+            "talentType": "4th Ascension Passive",
+            "description": "Using Lemniscatic Wind Cycling increases the DMG of subsequent uses of Lemniscatic Wind Cycling by 15%. This effect lasts for 7s, and has a maximum of 3 stacks. Gaining a new stack refreshes the effect's duration.",
+            "figureUrls": [],
+            "scaling": {}
+        },
+        {
+            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Talent_Transcension_Gravity_Defier.png",
+            "talentName": "Transcension: Gravity Defier",
+            "talentType": "Utility Passive",
+            "description": "Decreases climbing Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.",
+            "figureUrls": [],
+            "scaling": {}
+        }
+    ],
+    "constellations": [
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Constellation_Dissolution_Eon_-_Destroyer_of_Worlds.png",
+            "name": "Dissolution Eon: Destroyer of Worlds",
+            "level": 1,
+            "description": "Increases Lemniscatic Wind Cycling's charges by 1."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Constellation_Annihilation_Eon_-_Blossom_of_Kaleidos.png",
+            "name": "Annihilation Eon: Blossom of Kaleidos",
+            "level": 2,
+            "description": "When in the party and not on the field, Xiao's Energy Recharge is increased by 25%."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Constellation_Conqueror_of_Evil_-_Wrath_Deity.png",
+            "name": "Conqueror of Evil: Wrath Deity",
+            "level": 3,
+            "description": "Increases the Level of Lemniscatic Wind Cycling by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Constellation_Transcension_-_Extinction_of_Suffering.png",
+            "name": "Transcension: Extinction of Suffering",
+            "level": 4,
+            "description": "Description\nPreview\nWhen Xiao's HP falls below 50%, he gains a 100% DEF Bonus."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Constellation_Evolution_Eon_Origin_of_Ignorance.png",
+            "name": "Evolution Eon: Origin of Ignorance",
+            "level": 5,
+            "description": "Increases the Level of Bane of All Evil by 3.\nMaximum upgrade level is 15."
+        },
+        {
+            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Constellation_Conqueror_of_Evil_-_Guardian_Yaksha.png",
+            "name": "Conqueror of Evil: Guardian Yaksha",
+            "level": 6,
+            "description": "Description\nPreview\nWhile under the effects of Bane of All Evil, hitting at least 2 opponents with Xiao's Plunging Attack will immediately grant him 1 charge of Lemniscatic Wind Cycling, and for the next 1s, he may use Lemniscatic Wind Cycling while ignoring its CD."
+        }
+    ],
+    "imageUrls": {},
+    "version": "1.3"
+}

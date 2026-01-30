@@ -334,5 +334,125 @@
         }
     ],
     "imageUrls": {},
-    "version": "4.5"
+    "version": "4.5",
+    "gallery": {
+        "screenAnimations": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Idle_Amber_1.gif",
+                "caption": "Idle 1",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Idle_Amber_1.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Idle_Amber_2.gif",
+                "caption": "Idle 2",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Idle_Amber_2.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Talent_Menu_Amber.gif",
+                "caption": "Talent Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Talent_Menu_Amber.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Menu_Amber.gif",
+                "caption": "Weapon Menu",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Weapon_Menu_Amber.mp4",
+                "videoType": "video/mp4"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Party_Setup_Amber.gif",
+                "caption": "Party Setup",
+                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Party_Setup_Amber.mp4",
+                "videoType": "video/mp4"
+            }
+        ],
+        "nameCards": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Namecard_Background_Amber_Bunny.png",
+                "caption": "Amber: Bunny Background"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Amber_Bunny.png",
+                "caption": "Amber: Bunny Icon"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Namecard_Banner_Amber_Bunny.png",
+                "caption": "Amber: Bunny Banner"
+            }
+        ],
+        "attackAnimations": [
+            {
+                "skill": "Normal_Attack",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Sharpshooter_Normal_Preview.gif",
+                        "caption": "Normal Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Sharpshooter_Normal_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Sharpshooter_Charged_Preview.gif",
+                        "caption": "Charged Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Sharpshooter_Charged_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Sharpshooter_Plunging_Preview.gif",
+                        "caption": "Plunging Attack",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Sharpshooter_Plunging_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Burst",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Fiery_Rain_Preview.gif",
+                        "caption": "",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Fiery_Rain_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            },
+            {
+                "skill": "Elemental_Skill",
+                "animations": [
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Explosive_Puppet_Press_Preview.gif",
+                        "caption": "Press",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Explosive_Puppet_Press_Preview.mp4",
+                        "videoType": "video/mp4"
+                    },
+                    {
+                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Explosive_Puppet_Hold_Preview.gif",
+                        "caption": "Hold",
+                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Explosive_Puppet_Hold_Preview.mp4",
+                        "videoType": "video/mp4"
+                    }
+                ]
+            }
+        ],
+        "detailedImages": [],
+        "stickers": [
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Icon_Emoji_Paimon%27s_Paintings_01_Amber_1.png",
+                "caption": "Noooo! Set 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Icon_Emoji_Paimon%27s_Paintings_01_Amber_3.png",
+                "caption": "Outta my way! Set 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Icon_Emoji_Paimon%27s_Paintings_01_Amber_2.png",
+                "caption": "Save me! Set 1"
+            },
+            {
+                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_31_Amber_1.png",
+                "caption": "Code Talk Set 31"
+            }
+        ]
+    }
 }
