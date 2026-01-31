@@ -114,6 +114,8 @@ const ElementDisplay: React.FC<{ element: string; elementUrl: string }> = ({
         width={24}
         height={24}
         className="rounded-full w-6 h-6"
+        lazy={true}
+        rootMargin="200px"
       />
       <span>{element}</span>
     </div>

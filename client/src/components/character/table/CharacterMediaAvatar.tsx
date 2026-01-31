@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import { Avatar, AvatarImage } from '@/components/ui/avatar.tsx';
-import { useCachedAsset } from '@/hooks/useCachedAsset';
+import { Skeleton } from '@/components/ui/skeleton';
+import { useLazyCachedAsset } from '@/hooks/useCachedAsset';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { AnimationMedia } from '@/types';
 
 interface CharacterMediaAvatarProps {
@@ -13,12 +15,37 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const cachedImageUrl = useCachedAsset(media.imageUrl);
-  const cachedVideoUrl = useCachedAsset(media.videoUrl);
+  // Only load when avatar is visible in viewport
+  const isVisible = useIntersectionObserver(containerRef, {
+    rootMargin: '200px',
+  });
+
+  // Load image when visible
+  const { url: cachedImageUrl, isLoading: imageLoading } = useLazyCachedAsset(
+    media.imageUrl,
+    isVisible
+  );
+
+  // Only load video when both visible AND hovered
+  const { url: cachedVideoUrl } = useLazyCachedAsset(
+    media.videoUrl,
+    isVisible && isHovered
+  );
+
+  // Show skeleton while image is loading
+  if (imageLoading) {
+    return (
+      <div ref={containerRef} className="relative h-12 w-12">
+        <Skeleton className="h-full w-full rounded-full" />
+      </div>
+    );
+  }
 
   return (
     <div
+      ref={containerRef}
       className="relative h-12 w-12"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {

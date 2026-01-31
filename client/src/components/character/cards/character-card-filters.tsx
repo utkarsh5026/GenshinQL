@@ -3,15 +3,15 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useCharactersStore } from '@/stores';
 
-import CharactersTable from './CharacterTable';
-import FilterBar from './FilterBar';
+import FilterBar from '../table/FilterBar';
+import CharacterCardGrid from './characters-grid';
 
 interface FilterOption {
   name: string;
   iconUrl: string;
 }
 
-const CharacterTableWithFilters: React.FC = () => {
+const CharacterCardsWithFilters: React.FC = () => {
   const { characters, loading, error, fetchCharacters } = useCharactersStore();
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -23,7 +23,6 @@ const CharacterTableWithFilters: React.FC = () => {
     fetchCharacters();
   }, [fetchCharacters]);
 
-  // Extract unique filter options from characters
   const uniqueElements = useMemo<FilterOption[]>(() => {
     if (!characters) return [];
     const elementMap = new Map<string, string>();
@@ -64,22 +63,18 @@ const CharacterTableWithFilters: React.FC = () => {
       .sort((a, b) => a.name.localeCompare(b.name));
   }, [characters]);
 
-  // Filter characters based on search and selected filters (AND logic)
   const filteredCharacters = useMemo(() => {
     if (!characters) return [];
 
     return characters.filter((char) => {
-      // Search filter - match name (case-insensitive)
       const matchesSearch =
         searchQuery.trim() === '' ||
         char.name.toLowerCase().includes(searchQuery.toLowerCase());
 
-      // Element filter - if no elements selected, show all
       const matchesElement =
         selectedElements.length === 0 ||
         selectedElements.includes(char.element);
 
-      // Rarity filter - if no rarities selected, show all
       const matchesRarity =
         selectedRarities.length === 0 || selectedRarities.includes(char.rarity);
 
@@ -152,9 +147,7 @@ const CharacterTableWithFilters: React.FC = () => {
       />
 
       {filteredCharacters.length > 0 ? (
-        <div className="overflow-x-auto">
-          <CharactersTable characters={filteredCharacters} />
-        </div>
+        <CharacterCardGrid characters={filteredCharacters} />
       ) : (
         <div className="text-center py-12">
           <p className="text-muted-foreground mb-2">
@@ -169,4 +162,4 @@ const CharacterTableWithFilters: React.FC = () => {
   );
 };
 
-export default CharacterTableWithFilters;
+export default CharacterCardsWithFilters;
