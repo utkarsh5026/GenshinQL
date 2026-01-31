@@ -1,8 +1,8 @@
 import { Navigate, RouteObject } from 'react-router-dom';
 
+import CharacterCardsWithFilters from '@/components/character/cards/character-card-filters';
 import CharacterDetail from '@/components/character/description/character-detail';
 import CharacterRoutine from '@/components/character/routine/CharacterRoutine';
-import CharacterTableWithFilters from '@/components/character/table/CharacterTableWithFilters';
 import GenshinGuesser from '@/components/gdle/main/GenshinGuesser';
 import TalentCalendar from '@/components/talents/TalentBookCalendar';
 import TierList from '@/components/tierlist/TierList';
@@ -20,7 +20,7 @@ export const routes: RouteObject[] = [
   },
   {
     path: '/characters/table',
-    element: <CharacterTableWithFilters />,
+    element: <CharacterCardsWithFilters />,
   },
   {
     path: '/characters/routine',
