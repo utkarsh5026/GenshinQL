@@ -75,7 +75,7 @@ const AppSideBar: React.FC = () => {
             }
           >
             <Table2 className="w-4 h-4 text-blue-500 group-hover:text-blue-600" />
-            <span className="text-sm font-medium">Characters Table</span>
+            <span className="text-sm font-medium">Characters</span>
           </NavLink>
 
           <NavLink
