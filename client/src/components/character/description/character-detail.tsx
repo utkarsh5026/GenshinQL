@@ -11,13 +11,11 @@ const CharacterDetail = () => {
   const [character, setCharacter] = useState<CharacterDetailedType | null>(
     null
   );
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(!!characterName);
+  const [error, setError] = useState(!characterName);
 
   useEffect(() => {
     if (!characterName) {
-      setError(true);
-      setLoading(false);
       return;
     }
 

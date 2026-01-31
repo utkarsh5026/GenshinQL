@@ -2,8 +2,10 @@ import React from 'react';
 
 import { useCachedAsset } from '@/hooks/useCachedAsset';
 
-interface CachedImageProps
-  extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src'> {
+interface CachedImageProps extends Omit<
+  React.ImgHTMLAttributes<HTMLImageElement>,
+  'src'
+> {
   src: string | undefined | null;
   fallback?: string;
 }
@@ -23,8 +25,10 @@ export const CachedImage: React.FC<CachedImageProps> = ({
   return <img {...props} src={cachedSrc || fallback || ''} alt={alt} />;
 };
 
-interface CachedVideoProps
-  extends Omit<React.VideoHTMLAttributes<HTMLVideoElement>, 'src'> {
+interface CachedVideoProps extends Omit<
+  React.VideoHTMLAttributes<HTMLVideoElement>,
+  'src'
+> {
   src: string | undefined | null;
   fallback?: string;
 }

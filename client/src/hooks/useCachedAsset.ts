@@ -7,11 +7,12 @@ import { fetchAndCacheAsset } from '@/utils/assetCache';
  * Returns a blob URL for the cached asset or falls back to the original URL
  */
 export function useCachedAsset(url: string | undefined | null): string {
-  const [cachedUrl, setCachedUrl] = useState<string>(url || '');
+  const [cachedUrl, setCachedUrl] = useState<string>(() =>
+    !url || url.trim() === '' ? '' : url
+  );
 
   useEffect(() => {
     if (!url || url.trim() === '') {
-      setCachedUrl('');
       return;
     }
 
@@ -42,7 +43,7 @@ export function useCachedAsset(url: string | undefined | null): string {
  * Hook to cache multiple assets and return their cached URLs
  */
 export function useCachedAssets(urls: (string | undefined | null)[]): string[] {
-  const [cachedUrls, setCachedUrls] = useState<string[]>(
+  const [cachedUrls, setCachedUrls] = useState<string[]>(() =>
     urls.map((url) => url || '')
   );
 
@@ -55,7 +56,6 @@ export function useCachedAssets(urls: (string | undefined | null)[]): string[] {
     );
 
     if (validUrls.length === 0) {
-      setCachedUrls(urls.map((url) => url || ''));
       return;
     }
 
