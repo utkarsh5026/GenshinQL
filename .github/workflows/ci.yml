@@ -113,7 +113,13 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: cd client && rm -rf node_modules && npm install
+        run: |
+          cd client
+          rm -rf node_modules package-lock.json
+          npm install --legacy-peer-deps --verbose
+
+      - name: Verify Rollup installation
+        run: cd client && npm ls rollup || true
 
       - name: Build production bundle
         run: cd client && npm run build
