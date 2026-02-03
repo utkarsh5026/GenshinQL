@@ -216,3 +216,66 @@ export function createProgressBar(
 
   return `[${bar}] ${percent}% (${current}/${total})`;
 }
+
+/**
+ * Detect actual file type from magic bytes
+ */
+export function detectFileType(buffer: Buffer): string | null {
+  if (buffer.length < 12) {
+    return null;
+  }
+
+  const magicBytes = buffer.slice(0, 12);
+
+  // GIF (GIF87a or GIF89a)
+  if (
+    magicBytes[0] === 0x47 &&
+    magicBytes[1] === 0x49 &&
+    magicBytes[2] === 0x46 &&
+    magicBytes[3] === 0x38 &&
+    (magicBytes[4] === 0x37 || magicBytes[4] === 0x39) &&
+    magicBytes[5] === 0x61
+  ) {
+    return 'gif';
+  }
+
+  // PNG
+  if (
+    magicBytes[0] === 0x89 &&
+    magicBytes[1] === 0x50 &&
+    magicBytes[2] === 0x4e &&
+    magicBytes[3] === 0x47
+  ) {
+    return 'png';
+  }
+
+  // JPEG
+  if (magicBytes[0] === 0xff && magicBytes[1] === 0xd8) {
+    return 'jpg';
+  }
+
+  // WebP (RIFF....WEBP)
+  if (
+    magicBytes[0] === 0x52 &&
+    magicBytes[1] === 0x49 &&
+    magicBytes[2] === 0x46 &&
+    magicBytes[3] === 0x46 &&
+    magicBytes[8] === 0x57 &&
+    magicBytes[9] === 0x45 &&
+    magicBytes[10] === 0x42 &&
+    magicBytes[11] === 0x50
+  ) {
+    return 'webp';
+  }
+
+  // SVG (check for XML/SVG text)
+  const text = buffer.slice(0, 100).toString('utf-8').toLowerCase();
+  if (
+    text.includes('<svg') ||
+    (text.includes('<?xml') && text.includes('svg'))
+  ) {
+    return 'svg';
+  }
+
+  return null;
+}

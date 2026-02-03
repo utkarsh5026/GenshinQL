@@ -15,6 +15,7 @@ import {
 import {
   categorizeUrl,
   createProgressBar,
+  detectFileType,
   extractExtension,
   formatTimestamp,
   getRetryDelay,
@@ -76,24 +77,36 @@ export async function fetchWithRetry(
 }
 
 /**
- * Save downloaded content to local cache
+ * Save downloaded content to local cache with actual file type detection
  *
  * @param buffer - File content
  * @param category - Asset category
  * @param hash - URL hash
- * @param extension - File extension
+ * @param urlExtension - File extension from URL
+ * @returns Actual extension used for the file
  */
 async function saveToLocal(
   buffer: Buffer,
   category: string,
   hash: string,
-  extension: string
-): Promise<void> {
+  urlExtension: string
+): Promise<string> {
   const categoryDir = path.join(PATHS.downloadsDir, category);
   await fs.mkdir(categoryDir, { recursive: true });
 
-  const filePath = path.join(categoryDir, `${hash}.${extension}`);
+  const detectedType = detectFileType(buffer);
+  const actualExtension = detectedType || urlExtension;
+
+  if (detectedType && detectedType !== urlExtension.toLowerCase()) {
+    logger.debug(
+      `Type mismatch: URL extension is .${urlExtension} but actual type is .${detectedType}`
+    );
+  }
+
+  const filePath = path.join(categoryDir, `${hash}.${actualExtension}`);
   await fs.writeFile(filePath, buffer);
+
+  return actualExtension;
 }
 
 /**
@@ -143,18 +156,24 @@ async function downloadAsset(
 ): Promise<AssetMapping> {
   const hash = hashUrl(url);
   const category = categorizeUrl(url);
-  const extension = extractExtension(url);
+  const urlExtension = extractExtension(url);
 
   const buffer = await fetchWithRetry(url);
 
-  await saveToLocal(buffer, category, hash, extension);
+  // Save with actual detected file type
+  const actualExtension = await saveToLocal(
+    buffer,
+    category,
+    hash,
+    urlExtension
+  );
 
   const asset: AssetMapping = {
     originalUrl: url,
     r2Key: '', // Will be set during upload
     r2Url: '', // Will be set during upload
     category,
-    extension,
+    extension: actualExtension, // Use actual extension, not URL extension
     size: buffer.length,
     downloadedAt: formatTimestamp(),
   };
@@ -200,13 +219,10 @@ export async function downloadAssets(
   let failed = 0;
   const failures: Array<{ url: string; error: string }> = [];
 
-  for (let i = 0; i < newUrls.length; i += batchSize) {
-    const batch = newUrls.slice(i, i + batchSize);
-
-    const results = await Promise.allSettled(
-      batch.map((url) => downloadAsset(url, mapping))
-    );
-
+  const updateProgress = (
+    results: PromiseSettledResult<AssetMapping>[],
+    batch: string[]
+  ) => {
     for (let j = 0; j < results.length; j++) {
       const result = results[j];
       const url = batch[j];
@@ -222,28 +238,40 @@ export async function downloadAssets(
         logger.error(`Failed: ${url} - ${result.reason.message}`);
       }
     }
+  };
 
+  const showFinalResult = () => {
+    logger.log('\n=== Download Complete ===\n');
+    logger.success(`Successfully downloaded: ${completed}`);
+    logger.error(`Failed: ${failed}`);
+
+    if (failures.length > 0) {
+      logger.log('\nFailed downloads:');
+      for (const failure of failures.slice(0, 10)) {
+        logger.log(`  - ${failure.url}`);
+        logger.debug(`    Error: ${failure.error}`);
+      }
+
+      if (failures.length > 10) {
+        logger.log(`  ... and ${failures.length - 10} more`);
+      }
+    }
+  };
+
+  for (let i = 0; i < newUrls.length; i += batchSize) {
+    const batch = newUrls.slice(i, i + batchSize);
+
+    const results = await Promise.allSettled(
+      batch.map((url) => downloadAsset(url, mapping))
+    );
+
+    updateProgress(results, batch);
     await saveMapping(mapping);
     const progress = createProgressBar(completed + failed, newUrls.length);
     logger.log(`Progress: ${progress}`);
   }
 
-  logger.log('\n=== Download Complete ===\n');
-  logger.success(`Successfully downloaded: ${completed}`);
-  logger.error(`Failed: ${failed}`);
-
-  if (failures.length > 0) {
-    logger.log('\nFailed downloads:');
-    for (const failure of failures.slice(0, 10)) {
-      logger.log(`  - ${failure.url}`);
-      logger.debug(`    Error: ${failure.error}`);
-    }
-
-    if (failures.length > 10) {
-      logger.log(`  ... and ${failures.length - 10} more`);
-    }
-  }
-
+  showFinalResult();
   await saveMapping(mapping);
   await uploadMappingToR2();
 }
