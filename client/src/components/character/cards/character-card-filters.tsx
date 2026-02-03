@@ -130,7 +130,7 @@ const CharacterCardsWithFilters: React.FC = () => {
     return <div className="p-4 text-destructive">Error: {error.message}</div>;
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <FilterBar
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
