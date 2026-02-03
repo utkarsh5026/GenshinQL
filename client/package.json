@@ -25,7 +25,14 @@
     "check-characters": "npx tsx scripts/scrape/characters.ts --check",
     "check-gallery": "npx tsx scripts/scrape/gallery.ts --check",
     "consolidate": "npx tsx scripts/consolidate.ts",
-    "generate-primitives": "npx tsx scripts/scrape/primitives.ts"
+    "generate-primitives": "npx tsx scripts/scrape/primitives.ts",
+    "r2:status": "npx tsx scripts/r2/index.ts status",
+    "r2:download": "npx tsx scripts/r2/index.ts download",
+    "r2:upload": "npx tsx scripts/r2/index.ts upload",
+    "r2:migrate": "npx tsx scripts/r2/index.ts migrate",
+    "r2:verify": "npx tsx scripts/r2/index.ts verify",
+    "r2:sync": "npx tsx scripts/r2/index.ts sync",
+    "r2:sync-r2": "npx tsx scripts/r2/index.ts sync-r2"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.978.0",
@@ -72,7 +79,7 @@
     "autoprefixer": "^10.4.24",
     "babel-plugin-react-compiler": "^1.0.0",
     "chalk": "^5.6.2",
-    "chromedriver": "^145.0.0",
+    "chromedriver": "^144.0.1",
     "eslint": "^9.39.2",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.26",
