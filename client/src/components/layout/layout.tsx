@@ -12,7 +12,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
       <Sidebar isOpen={mobileMenuOpen} onOpenChange={setMobileMenuOpen} />
 
       <div className="flex flex-col flex-1 md:ml-16">
-        <main className="flex-1 overflow-auto p-4 md:p-6">{children}</main>
+        <main className="flex-1 overflow-auto p-4 md:p-6 m-4">{children}</main>
       </div>
     </div>
   );

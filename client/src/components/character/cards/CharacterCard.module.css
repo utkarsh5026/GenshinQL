@@ -1,0 +1,198 @@
+/* Element-themed animations - copied from FilterBar.module.css */
+
+/* Anemo - Wind/Air: Gentle floating */
+.anemo {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Pyro - Fire: Flickering glow */
+.pyro {
+  animation: flicker 2s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    filter: brightness(1) drop-shadow(0 0 2px rgba(255, 100, 50, 0.3));
+  }
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 4px rgba(255, 100, 50, 0.5));
+  }
+}
+
+/* Hydro - Water: Wave effect */
+.hydro {
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px rgba(50, 150, 255, 0.3));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 4px rgba(50, 150, 255, 0.4));
+  }
+}
+
+/* Electro - Electric: Pulse effect */
+.electro {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    filter: brightness(1) drop-shadow(0 0 2px rgba(150, 100, 255, 0.3));
+  }
+  50% {
+    filter: brightness(1.3) drop-shadow(0 0 6px rgba(150, 100, 255, 0.6));
+  }
+}
+
+/* Cryo - Ice: Shimmer effect */
+.cryo {
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    filter: brightness(1) drop-shadow(0 0 2px rgba(150, 220, 255, 0.3));
+  }
+  25% {
+    filter: brightness(1.2) drop-shadow(0 0 4px rgba(150, 220, 255, 0.5));
+  }
+  50% {
+    filter: brightness(1) drop-shadow(0 0 2px rgba(150, 220, 255, 0.3));
+  }
+  75% {
+    filter: brightness(1.1) drop-shadow(0 0 3px rgba(150, 220, 255, 0.4));
+  }
+}
+
+/* Geo - Rock: Stable pulse */
+.geo {
+  animation: solidPulse 3s ease-in-out infinite;
+}
+
+@keyframes solidPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px rgba(255, 200, 50, 0.3));
+  }
+  50% {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 3px rgba(255, 200, 50, 0.4));
+  }
+}
+
+/* Dendro - Nature: Gentle grow/bloom */
+.dendro {
+  animation: bloom 3.5s ease-in-out infinite;
+}
+
+@keyframes bloom {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 2px rgba(100, 200, 50, 0.3));
+  }
+  50% {
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 0 4px rgba(100, 200, 50, 0.5));
+  }
+}
+
+/* Element icon wrapper - applies subtle element animation */
+.elementIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Card hover base class */
+.cardHover {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Pseudo-element for hover glow effect */
+.cardHover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Element-specific hover glows */
+.anemoGlow:hover::before {
+  opacity: 0.15;
+  box-shadow: 0 0 20px 5px rgba(100, 210, 255, 0.4);
+}
+
+.pyroGlow:hover::before {
+  opacity: 0.15;
+  box-shadow: 0 0 20px 5px rgba(255, 100, 50, 0.4);
+}
+
+.hydroGlow:hover::before {
+  opacity: 0.15;
+  box-shadow: 0 0 20px 5px rgba(50, 150, 255, 0.4);
+}
+
+.electroGlow:hover::before {
+  opacity: 0.15;
+  box-shadow: 0 0 20px 5px rgba(150, 100, 255, 0.4);
+}
+
+.cryoGlow:hover::before {
+  opacity: 0.15;
+  box-shadow: 0 0 20px 5px rgba(150, 220, 255, 0.4);
+}
+
+.geoGlow:hover::before {
+  opacity: 0.15;
+  box-shadow: 0 0 20px 5px rgba(255, 200, 50, 0.4);
+}
+
+.dendroGlow:hover::before {
+  opacity: 0.15;
+  box-shadow: 0 0 20px 5px rgba(100, 200, 50, 0.4);
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .anemo,
+  .pyro,
+  .hydro,
+  .electro,
+  .cryo,
+  .geo,
+  .dendro,
+  .elementIcon {
+    animation: none;
+  }
+
+  .cardHover,
+  .cardHover::before {
+    transition: none;
+  }
+}
