@@ -21,10 +21,10 @@ export interface AssetMapping {
   originalUrl: string;
 
   /** R2 object key (e.g., 'icons/7f8a9b2c.png') */
-  r2Key: string;
+  r2Key?: string;
 
   /** Public R2 URL */
-  r2Url: string;
+  r2Url?: string;
 
   /** Asset category */
   category: AssetCategory;

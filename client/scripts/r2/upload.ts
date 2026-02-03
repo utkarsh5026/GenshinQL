@@ -1,8 +1,15 @@
+import fs from 'node:fs/promises';
+
 import { S3Client } from '@aws-sdk/client-s3';
 
 import { logger } from '../logger.js';
 import { createR2Client, objectExists, uploadToR2 } from './client.js';
-import { getContentType, MIGRATION_CONFIG, R2_CONFIG } from './config.js';
+import {
+  getContentType,
+  MIGRATION_CONFIG,
+  PATHS,
+  R2_CONFIG,
+} from './config.js';
 import { existsInLocal, readFromLocal } from './download.js';
 import {
   type AssetMapping,
@@ -89,9 +96,11 @@ export async function uploadAssets(): Promise<void> {
     return showDownloadHelp();
   }
 
-  logger.log(`Assets to upload: ${toUpload.length}\n`);
+  logger.log(`Assets to upload: ${toUpload.length}`);
 
   const batchSize = MIGRATION_CONFIG.concurrentUploads;
+  logger.log(`Uploading in batches of ${batchSize} concurrent uploads\n`);
+
   let completed = 0;
   let failed = 0;
   const failures: Array<{ url: string; error: string }> = [];
@@ -100,8 +109,16 @@ export async function uploadAssets(): Promise<void> {
     const batch = toUpload.slice(i, i + batchSize);
 
     const results = await Promise.allSettled(
-      batch.map(([hash, asset]) => uploadAsset(hash, asset, client))
+      batch.map(async ([hash, asset], index) => {
+        logger.info(
+          `Uploading ${asset.originalUrl} (${i + index + 1}/${toUpload.length})...`
+        );
+        await uploadAsset(hash, asset, client);
+        logger.success(`✓ Uploaded ${asset.category}/${asset.r2Key}`);
+      })
     );
+
+    console.log(results);
 
     for (let j = 0; j < results.length; j++) {
       const result = results[j];
@@ -115,13 +132,15 @@ export async function uploadAssets(): Promise<void> {
           url: asset.originalUrl,
           error: result.reason.message,
         });
-        logger.error(`Failed: ${asset.originalUrl} - ${result.reason.message}`);
+        logger.error(
+          `✗ Failed ${asset.originalUrl} - ${result.reason.message}`
+        );
       }
     }
 
     await saveMapping(mapping);
     const progress = createProgressBar(completed + failed, toUpload.length);
-    logger.log(`Progress: ${progress}`);
+    logger.log(`\n${progress} - ${completed} uploaded, ${failed} failed\n`);
   }
 
   logger.log('\n=== Upload Complete ===\n');
@@ -143,7 +162,17 @@ export async function uploadAssets(): Promise<void> {
   // Save final mapping
   await saveMapping(mapping);
 
-  // Upload url-mapping.json to R2
+  const mappingExists = await fs
+    .access(PATHS.mappingFile)
+    .then(() => true)
+    .catch(() => false);
+
+  if (!mappingExists) {
+    logger.error('Mapping file does not exist! Cannot upload to R2.');
+    throw new Error('Missing url-mapping.json file');
+  }
+
+  logger.log('\n📤 Syncing url-mapping.json to R2...');
   await uploadMappingToR2(client);
 }
 
@@ -205,11 +234,11 @@ export async function verifyUploads(): Promise<{
         verified++;
       } else if (result.status === 'fulfilled' && !result.value) {
         missing++;
-        missingAssets.push(asset.r2Key);
+        if (asset.r2Key) missingAssets.push(asset.r2Key);
         logger.warn(`Missing in R2: ${asset.r2Key}`);
       } else if (result.status === 'rejected') {
         missing++;
-        missingAssets.push(asset.r2Key);
+        if (asset.r2Key) missingAssets.push(asset.r2Key);
         logger.error(`Error checking ${asset.r2Key}: ${result.reason}`);
       }
     }
@@ -229,7 +258,10 @@ export async function verifyUploads(): Promise<{
   for (let i = 0; i < uploadedAssets.length; i += batchSize) {
     const batch = uploadedAssets.slice(i, i + batchSize);
     const results = await Promise.allSettled(
-      batch.map(([, asset]) => objectExists(client, asset.r2Key))
+      batch.map(([, asset]) => {
+        if (asset.r2Key) return objectExists(client, asset.r2Key);
+        else return Promise.resolve(false);
+      })
     );
 
     updateProgress(results, batch, i);

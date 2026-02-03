@@ -245,7 +245,9 @@ export async function auditR2(): Promise<AuditResults> {
 
     const mappedKeys = new Set<string>();
     for (const asset of Object.values(mapping.mappings)) {
-      mappedKeys.add(asset.r2Key);
+      if (asset.r2Key) {
+        mappedKeys.add(asset.r2Key);
+      }
     }
 
     const results = compareFiles(r2Keys, mappedKeys);
