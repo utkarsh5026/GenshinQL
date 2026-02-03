@@ -130,7 +130,7 @@ const CharacterCardsWithFilters: React.FC = () => {
     return <div className="p-4 text-destructive">Error: {error.message}</div>;
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full -m-4 md:-m-6">
       <FilterBar
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
@@ -149,7 +149,7 @@ const CharacterCardsWithFilters: React.FC = () => {
       {filteredCharacters.length > 0 ? (
         <CharacterCardGrid characters={filteredCharacters} />
       ) : (
-        <div className="text-center py-12">
+        <div className="text-center py-12 px-4 md:px-6">
           <p className="text-muted-foreground mb-2">
             No characters found matching your criteria.
           </p>

@@ -95,7 +95,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
   };
 
   return (
-    <div className="sticky top-0 z-10 bg-background border-b shadow-sm">
+    <div className="sticky top-0 z-20 bg-background border-b shadow-sm">
       {/* Controls row */}
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 p-3 sm:p-4">
         {/* Search - full width on mobile */}
