@@ -225,7 +225,7 @@ export function detectFileType(buffer: Buffer): string | null {
     return null;
   }
 
-  const magicBytes = buffer.slice(0, 12);
+  const magicBytes = buffer.subarray(0, 12);
 
   // GIF (GIF87a or GIF89a)
   if (
@@ -269,7 +269,7 @@ export function detectFileType(buffer: Buffer): string | null {
   }
 
   // SVG (check for XML/SVG text)
-  const text = buffer.slice(0, 100).toString('utf-8').toLowerCase();
+  const text = buffer.subarray(0, 100).toString('utf-8').toLowerCase();
   if (
     text.includes('<svg') ||
     (text.includes('<?xml') && text.includes('svg'))
