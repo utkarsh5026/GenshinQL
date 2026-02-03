@@ -13,21 +13,46 @@
  *   migrate      - Run full migration (download + upload + update)
  *   verify       - Verify uploaded assets
  *   sync         - Sync new assets (post-scraping)
+ *   sync-r2      - Sync mapping database with R2 state
  *   clean        - Clean download cache
  */
 
+import https from 'node:https';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import chalk from 'chalk';
 
+import { auditR2 } from './audit.js';
 import { clearDownloadCache, downloadAssets } from './download.js';
 import { extractAllUrls } from './extract-urls.js';
+import { fixFileMismatches } from './fix-file-types.js';
 import { loadMapping } from './mapping.js';
 import { showStatus } from './status.js';
+import { syncMappingWithR2 } from './sync.js';
 import { restoreFromBackup, updateCharacterJsons } from './update-json.js';
 import { retryFailedUploads, uploadAssets, verifyUploads } from './upload.js';
 import { hashUrl } from './utils.ts';
+
+/**
+ * Check internet connectivity
+ */
+async function checkInternetConnection(): Promise<boolean> {
+  return new Promise((resolve) => {
+    const req = https.get('https://www.cloudflare.com', (res) => {
+      resolve(res.statusCode === 200);
+    });
+
+    req.on('error', () => {
+      resolve(false);
+    });
+
+    req.setTimeout(5000, () => {
+      req.destroy();
+      resolve(false);
+    });
+  });
+}
 
 /**
  * Run full migration process
@@ -107,6 +132,15 @@ async function syncNewAssets(): Promise<void> {
  */
 async function main(): Promise<void> {
   const command = process.argv[2];
+  console.log(chalk.dim('Checking internet connection...'));
+  const isConnected = await checkInternetConnection();
+
+  if (isConnected) {
+    console.log(chalk.green('✓ Internet connection available\n'));
+  } else {
+    console.log(chalk.red('✗ No internet connection detected'));
+    return;
+  }
 
   try {
     switch (command) {
@@ -145,6 +179,18 @@ async function main(): Promise<void> {
         await syncNewAssets();
         break;
 
+      case 'sync-r2':
+      case 'sync-db':
+      case 'reconcile':
+        console.log(chalk.bold('\n🔄 Syncing Database with R2\n'));
+        await syncMappingWithR2();
+        break;
+
+      case 'audit':
+        console.log(chalk.bold('\n🔍 R2 Storage Audit\n'));
+        await auditR2();
+        break;
+
       case 'retry-up':
       case 'retry-upload':
         await retryFailedUploads();
@@ -161,6 +207,12 @@ async function main(): Promise<void> {
         await restoreFromBackup(timestamp);
         break;
       }
+
+      case 'fix':
+      case 'fix-types':
+        console.log(chalk.bold('\n🔧 Fixing File Type Mismatches\n'));
+        await fixFileMismatches();
+        break;
 
       default:
         if (!command) {
