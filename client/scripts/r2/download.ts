@@ -1,12 +1,15 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+import { logger } from '../logger.js';
 import { MIGRATION_CONFIG, PATHS } from './config.js';
 import {
   type AssetMapping,
+  downloadMappingFromR2,
   loadMapping,
   MappingDatabase,
   saveMapping,
+  uploadMappingToR2,
   upsertAsset,
 } from './mapping.js';
 import {
@@ -37,7 +40,7 @@ export async function fetchWithRetry(
       const response = await fetch(url);
 
       if (response.status === 429) {
-        console.warn(`Rate limited for ${url}, waiting...`);
+        logger.warn(`Rate limited for ${url}, waiting...`);
         await sleep(MIGRATION_CONFIG.rateLimitWaitMs);
         continue;
       }
@@ -58,10 +61,10 @@ export async function fetchWithRetry(
       }
 
       const delay = getRetryDelay(attempt);
-      console.warn(
+      logger.warn(
         `Attempt ${attempt + 1}/${maxRetries + 1} failed for ${url}: ${lastError.message}`
       );
-      console.warn(`Retrying in ${delay}ms...`);
+      logger.warn(`Retrying in ${delay}ms...`);
 
       await sleep(delay);
     }
@@ -168,7 +171,8 @@ async function downloadAsset(
 export async function downloadAssets(
   urls: string[] | Set<string>
 ): Promise<void> {
-  console.log('\n=== Starting Download Phase ===\n');
+  logger.log('\n=== Starting Download Phase ===\n');
+  await downloadMappingFromR2();
 
   const urlArray = Array.isArray(urls) ? urls : Array.from(urls);
   const mapping = await loadMapping();
@@ -181,16 +185,16 @@ export async function downloadAssets(
 
   const cachedCount = urlArray.length - newUrls.length;
 
-  console.log(`Total URLs: ${urlArray.length}`);
-  console.log(`Already cached: ${cachedCount}`);
-  console.log(`To download: ${newUrls.length}`);
+  logger.log(`Total URLs: ${urlArray.length}`);
+  logger.log(`Already cached: ${cachedCount}`);
+  logger.log(`To download: ${newUrls.length}`);
 
   if (newUrls.length === 0) {
-    console.log('\nAll assets already downloaded!');
+    logger.success('\nAll assets already downloaded!');
     return;
   }
 
-  console.log(`\nDownloading ${newUrls.length} new assets...\n`);
+  logger.log(`\nDownloading ${newUrls.length} new assets...\n`);
   const batchSize = MIGRATION_CONFIG.concurrentDownloads;
   let completed = 0;
   let failed = 0;
@@ -215,66 +219,46 @@ export async function downloadAssets(
           url,
           error: result.reason.message,
         });
-        console.error(`Failed: ${url} - ${result.reason.message}`);
+        logger.error(`Failed: ${url} - ${result.reason.message}`);
       }
     }
 
     await saveMapping(mapping);
     const progress = createProgressBar(completed + failed, newUrls.length);
-    console.log(`Progress: ${progress}`);
+    logger.log(`Progress: ${progress}`);
   }
 
-  console.log('\n=== Download Complete ===\n');
-  console.log(`Successfully downloaded: ${completed}`);
-  console.log(`Failed: ${failed}`);
+  logger.log('\n=== Download Complete ===\n');
+  logger.success(`Successfully downloaded: ${completed}`);
+  logger.error(`Failed: ${failed}`);
 
   if (failures.length > 0) {
-    console.log('\nFailed downloads:');
+    logger.log('\nFailed downloads:');
     for (const failure of failures.slice(0, 10)) {
-      console.log(`  - ${failure.url}`);
-      console.log(`    Error: ${failure.error}`);
+      logger.log(`  - ${failure.url}`);
+      logger.debug(`    Error: ${failure.error}`);
     }
 
     if (failures.length > 10) {
-      console.log(`  ... and ${failures.length - 10} more`);
+      logger.log(`  ... and ${failures.length - 10} more`);
     }
   }
 
   await saveMapping(mapping);
-}
-
-/**
- * Re-download failed assets
- */
-export async function retryFailedDownloads(): Promise<void> {
-  console.log('Checking for failed downloads...\n');
-
-  const { mappings } = await loadMapping();
-
-  const failed = Object.values(mappings)
-    .filter((asset) => !asset.downloadedAt)
-    .map((asset) => asset.originalUrl);
-
-  if (failed.length === 0) {
-    console.log('No failed downloads found.');
-    return;
-  }
-
-  console.log(`Found ${failed.length} failed downloads. Retrying...\n`);
-  await downloadAssets(failed);
+  await uploadMappingToR2();
 }
 
 /**
  * Clear local download cache
  */
 export async function clearDownloadCache(): Promise<void> {
-  console.log('Clearing download cache...');
+  logger.log('Clearing download cache...');
 
   try {
     await fs.rm(PATHS.downloadsDir, { recursive: true, force: true });
-    console.log('Download cache cleared.');
+    logger.success('Download cache cleared.');
   } catch (error) {
-    console.error('Error clearing cache:', error);
+    logger.error('Error clearing cache:', error);
   }
 }
 
