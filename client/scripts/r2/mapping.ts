@@ -1,7 +1,15 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+import { S3Client } from '@aws-sdk/client-s3';
+
 import { logger } from '../logger.js';
+import {
+  createR2Client,
+  downloadFromR2,
+  objectExists,
+  uploadToR2,
+} from './client.js';
 import { type AssetCategory, PATHS } from './config.js';
 import { formatTimestamp } from './utils.js';
 
@@ -226,4 +234,61 @@ export function getMigrationProgress(mapping: MappingDatabase) {
     remainingDownloads: total - downloaded,
     remainingUploads: downloaded - uploaded,
   };
+}
+
+/**
+ * R2 key for the url-mapping.json file
+ */
+const MAPPING_R2_KEY = 'metadata/url-mapping.json';
+
+/**
+ * Download url-mapping.json from R2 if it exists
+ * This syncs the remote mapping file to local before downloading assets
+ */
+export async function downloadMappingFromR2(): Promise<void> {
+  try {
+    const client = createR2Client();
+
+    const exists = await objectExists(client, MAPPING_R2_KEY);
+
+    if (!exists) {
+      logger.debug('No url-mapping.json found in R2, using local version');
+      return;
+    }
+
+    logger.log('Downloading url-mapping.json from R2...');
+    const buffer = await downloadFromR2(client, MAPPING_R2_KEY);
+    await fs.writeFile(PATHS.mappingFile, buffer);
+    logger.success('Successfully downloaded url-mapping.json from R2');
+  } catch (error) {
+    logger.warn(
+      `Failed to download url-mapping.json from R2: ${(error as Error).message}`
+    );
+    logger.debug('Continuing with local url-mapping.json');
+  }
+}
+
+/**
+ * Upload url-mapping.json to R2
+ * This syncs the local mapping file to R2 after uploading/downloading assets
+ *
+ * @param client - Optional S3 client (creates one if not provided)
+ */
+export async function uploadMappingToR2(client?: S3Client): Promise<void> {
+  try {
+    const r2Client = client || createR2Client();
+
+    logger.log('\nUploading url-mapping.json to R2...');
+
+    const buffer = await fs.readFile(PATHS.mappingFile);
+    await uploadToR2(r2Client, MAPPING_R2_KEY, buffer, 'application/json');
+
+    logger.success(
+      `Successfully uploaded url-mapping.json to R2 at ${MAPPING_R2_KEY}`
+    );
+  } catch (error) {
+    logger.error(
+      `Failed to upload url-mapping.json to R2: ${(error as Error).message}`
+    );
+  }
 }
