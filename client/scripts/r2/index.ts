@@ -14,6 +14,8 @@
  *   verify       - Verify uploaded assets
  *   sync         - Sync new assets (post-scraping)
  *   sync-r2      - Sync mapping database with R2 state
+ *   push-mapping - Upload url-mapping.json to R2
+ *   pull-mapping - Download url-mapping.json from R2
  *   clean        - Clean download cache
  */
 
@@ -27,7 +29,11 @@ import { auditR2 } from './audit.js';
 import { clearDownloadCache, downloadAssets } from './download.js';
 import { extractAllUrls } from './extract-urls.js';
 import { fixFileMismatches } from './fix-file-types.js';
-import { loadMapping } from './mapping.js';
+import {
+  downloadMappingFromR2,
+  loadMapping,
+  uploadMappingToR2,
+} from './mapping.js';
 import { showStatus } from './status.js';
 import { syncMappingWithR2 } from './sync.js';
 import { restoreFromBackup, updateCharacterJsons } from './update-json.js';
@@ -212,6 +218,20 @@ async function main(): Promise<void> {
       case 'fix-types':
         console.log(chalk.bold('\n🔧 Fixing File Type Mismatches\n'));
         await fixFileMismatches();
+        break;
+
+      case 'push-mapping':
+      case 'upload-mapping':
+      case 'mapping-up':
+        console.log(chalk.bold('\n📤 Uploading Mapping Database to R2\n'));
+        await uploadMappingToR2();
+        break;
+
+      case 'pull-mapping':
+      case 'download-mapping':
+      case 'mapping-down':
+        console.log(chalk.bold('\n📥 Downloading Mapping Database from R2\n'));
+        await downloadMappingFromR2();
         break;
 
       default:
