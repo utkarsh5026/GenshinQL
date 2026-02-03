@@ -1,3 +1,4 @@
+import { cpus } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -55,10 +56,13 @@ export type AssetCategory = (typeof ASSET_CATEGORIES)[number];
 
 /**
  * Download and upload configuration
+ * Concurrent operations are set based on available CPU cores
  */
+const CPU_COUNT = cpus().length;
+
 export const MIGRATION_CONFIG = {
-  concurrentDownloads: 10,
-  concurrentUploads: 5,
+  concurrentDownloads: CPU_COUNT,
+  concurrentUploads: CPU_COUNT,
   maxRetries: 3,
   retryDelayMs: 1000,
   retryBackoffMultiplier: 2,
