@@ -1,0 +1,324 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
+import { MIGRATION_CONFIG, PATHS } from './config.js';
+import {
+  type AssetMapping,
+  loadMapping,
+  MappingDatabase,
+  saveMapping,
+  upsertAsset,
+} from './mapping.js';
+import {
+  categorizeUrl,
+  createProgressBar,
+  extractExtension,
+  formatTimestamp,
+  getRetryDelay,
+  hashUrl,
+  sleep,
+} from './utils.js';
+
+/**
+ * Download a file from URL with retry logic
+ *
+ * @param url - URL to download
+ * @param maxRetries - Maximum retry attempts
+ * @returns Downloaded content as Buffer
+ */
+export async function fetchWithRetry(
+  url: string,
+  maxRetries: number = MIGRATION_CONFIG.maxRetries
+): Promise<Buffer> {
+  let lastError: Error | null = null;
+
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      const response = await fetch(url);
+
+      if (response.status === 429) {
+        console.warn(`Rate limited for ${url}, waiting...`);
+        await sleep(MIGRATION_CONFIG.rateLimitWaitMs);
+        continue;
+      }
+
+      if (!response.ok) {
+        throw new Error(
+          `HTTP ${response.status}: ${response.statusText} for ${url}`
+        );
+      }
+
+      const arrayBuffer = await response.arrayBuffer();
+      return Buffer.from(arrayBuffer);
+    } catch (error) {
+      lastError = error as Error;
+
+      if (attempt === maxRetries) {
+        break;
+      }
+
+      const delay = getRetryDelay(attempt);
+      console.warn(
+        `Attempt ${attempt + 1}/${maxRetries + 1} failed for ${url}: ${lastError.message}`
+      );
+      console.warn(`Retrying in ${delay}ms...`);
+
+      await sleep(delay);
+    }
+  }
+
+  throw new Error(
+    `Failed to download ${url} after ${maxRetries + 1} attempts: ${lastError?.message}`
+  );
+}
+
+/**
+ * Save downloaded content to local cache
+ *
+ * @param buffer - File content
+ * @param category - Asset category
+ * @param hash - URL hash
+ * @param extension - File extension
+ */
+async function saveToLocal(
+  buffer: Buffer,
+  category: string,
+  hash: string,
+  extension: string
+): Promise<void> {
+  const categoryDir = path.join(PATHS.downloadsDir, category);
+  await fs.mkdir(categoryDir, { recursive: true });
+
+  const filePath = path.join(categoryDir, `${hash}.${extension}`);
+  await fs.writeFile(filePath, buffer);
+}
+
+/**
+ * Read downloaded file from local cache
+ */
+export async function readFromLocal(
+  category: string,
+  hash: string,
+  extension: string
+): Promise<Buffer> {
+  const filePath = path.join(
+    PATHS.downloadsDir,
+    category,
+    `${hash}.${extension}`
+  );
+  return await fs.readFile(filePath);
+}
+
+/**
+ * Check if asset exists in local cache
+ */
+export async function existsInLocal(
+  category: string,
+  hash: string,
+  extension: string
+): Promise<boolean> {
+  const filePath = path.join(
+    PATHS.downloadsDir,
+    category,
+    `${hash}.${extension}`
+  );
+
+  try {
+    await fs.access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Download a single asset
+ */
+async function downloadAsset(
+  url: string,
+  mapping: MappingDatabase
+): Promise<AssetMapping> {
+  const hash = hashUrl(url);
+  const category = categorizeUrl(url);
+  const extension = extractExtension(url);
+
+  const buffer = await fetchWithRetry(url);
+
+  await saveToLocal(buffer, category, hash, extension);
+
+  const asset: AssetMapping = {
+    originalUrl: url,
+    r2Key: '', // Will be set during upload
+    r2Url: '', // Will be set during upload
+    category,
+    extension,
+    size: buffer.length,
+    downloadedAt: formatTimestamp(),
+  };
+
+  upsertAsset(mapping, hash, asset);
+  return asset;
+}
+
+/**
+ * Download assets with deduplication
+ *
+ * @param urls - Array of URLs to download
+ */
+export async function downloadAssets(
+  urls: string[] | Set<string>
+): Promise<void> {
+  console.log('\n=== Starting Download Phase ===\n');
+
+  const urlArray = Array.isArray(urls) ? urls : Array.from(urls);
+  const mapping = await loadMapping();
+
+  const newUrls = urlArray.filter((url) => {
+    const hash = hashUrl(url);
+    const existing = mapping.mappings[hash];
+    return !existing?.downloadedAt;
+  });
+
+  const cachedCount = urlArray.length - newUrls.length;
+
+  console.log(`Total URLs: ${urlArray.length}`);
+  console.log(`Already cached: ${cachedCount}`);
+  console.log(`To download: ${newUrls.length}`);
+
+  if (newUrls.length === 0) {
+    console.log('\nAll assets already downloaded!');
+    return;
+  }
+
+  console.log(`\nDownloading ${newUrls.length} new assets...\n`);
+  const batchSize = MIGRATION_CONFIG.concurrentDownloads;
+  let completed = 0;
+  let failed = 0;
+  const failures: Array<{ url: string; error: string }> = [];
+
+  for (let i = 0; i < newUrls.length; i += batchSize) {
+    const batch = newUrls.slice(i, i + batchSize);
+
+    const results = await Promise.allSettled(
+      batch.map((url) => downloadAsset(url, mapping))
+    );
+
+    for (let j = 0; j < results.length; j++) {
+      const result = results[j];
+      const url = batch[j];
+
+      if (result.status === 'fulfilled') {
+        completed++;
+      } else {
+        failed++;
+        failures.push({
+          url,
+          error: result.reason.message,
+        });
+        console.error(`Failed: ${url} - ${result.reason.message}`);
+      }
+    }
+
+    await saveMapping(mapping);
+    const progress = createProgressBar(completed + failed, newUrls.length);
+    console.log(`Progress: ${progress}`);
+  }
+
+  console.log('\n=== Download Complete ===\n');
+  console.log(`Successfully downloaded: ${completed}`);
+  console.log(`Failed: ${failed}`);
+
+  if (failures.length > 0) {
+    console.log('\nFailed downloads:');
+    for (const failure of failures.slice(0, 10)) {
+      console.log(`  - ${failure.url}`);
+      console.log(`    Error: ${failure.error}`);
+    }
+
+    if (failures.length > 10) {
+      console.log(`  ... and ${failures.length - 10} more`);
+    }
+  }
+
+  await saveMapping(mapping);
+}
+
+/**
+ * Re-download failed assets
+ */
+export async function retryFailedDownloads(): Promise<void> {
+  console.log('Checking for failed downloads...\n');
+
+  const { mappings } = await loadMapping();
+
+  const failed = Object.values(mappings)
+    .filter((asset) => !asset.downloadedAt)
+    .map((asset) => asset.originalUrl);
+
+  if (failed.length === 0) {
+    console.log('No failed downloads found.');
+    return;
+  }
+
+  console.log(`Found ${failed.length} failed downloads. Retrying...\n`);
+  await downloadAssets(failed);
+}
+
+/**
+ * Clear local download cache
+ */
+export async function clearDownloadCache(): Promise<void> {
+  console.log('Clearing download cache...');
+
+  try {
+    await fs.rm(PATHS.downloadsDir, { recursive: true, force: true });
+    console.log('Download cache cleared.');
+  } catch (error) {
+    console.error('Error clearing cache:', error);
+  }
+}
+
+/**
+ * Get download cache statistics
+ */
+export async function getDownloadCacheStats() {
+  const stats = {
+    totalFiles: 0,
+    totalSizeBytes: 0,
+    byCategory: {} as Record<string, { count: number; sizeBytes: number }>,
+  };
+
+  try {
+    const categories = await fs.readdir(PATHS.downloadsDir);
+
+    for (const category of categories) {
+      const categoryPath = path.join(PATHS.downloadsDir, category);
+      const stat = await fs.stat(categoryPath);
+
+      if (!stat.isDirectory()) continue;
+
+      const files = await fs.readdir(categoryPath);
+      let categorySize = 0;
+
+      for (const file of files) {
+        const filePath = path.join(categoryPath, file);
+        const fileStat = await fs.stat(filePath);
+        categorySize += fileStat.size;
+      }
+
+      stats.byCategory[category] = {
+        count: files.length,
+        sizeBytes: categorySize,
+      };
+
+      stats.totalFiles += files.length;
+      stats.totalSizeBytes += categorySize;
+    }
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw error;
+    }
+  }
+
+  return stats;
+}
