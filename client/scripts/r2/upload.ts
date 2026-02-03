@@ -1,12 +1,8 @@
 import { S3Client } from '@aws-sdk/client-s3';
 
+import { logger } from '../logger.js';
 import { createR2Client, objectExists, uploadToR2 } from './client.js';
-import {
-  type AssetCategory,
-  getContentType,
-  MIGRATION_CONFIG,
-  R2_CONFIG,
-} from './config.js';
+import { getContentType, MIGRATION_CONFIG, R2_CONFIG } from './config.js';
 import { existsInLocal, readFromLocal } from './download.js';
 import {
   type AssetMapping,
@@ -14,6 +10,7 @@ import {
   getAssetsToUpload,
   loadMapping,
   saveMapping,
+  uploadMappingToR2,
 } from './mapping.js';
 import { createProgressBar, formatTimestamp } from './utils.js';
 
@@ -30,12 +27,6 @@ async function uploadAsset(
   asset: AssetMapping,
   client: S3Client
 ): Promise<void> {
-  const generateR2Key = (
-    hash: string,
-    category: AssetCategory,
-    extension: string
-  ) => `${category}/${hash}.${extension}`;
-
   const generateR2Url = (r2Key: string, publicUrl: string) => {
     const baseUrl = publicUrl.endsWith('/')
       ? publicUrl.slice(0, -1)
@@ -43,15 +34,13 @@ async function uploadAsset(
     return `${baseUrl}/${r2Key}`;
   };
 
-  const r2Key = generateR2Key(hash, asset.category, asset.extension);
+  const r2Key = `${asset.category}/${hash}.${asset.extension}`;
 
-  // Check if already uploaded to R2
   if (asset.uploadedAt && (await objectExists(client, r2Key))) {
-    console.log(`Already in R2: ${r2Key}`);
+    logger.debug(`Already in R2: ${r2Key}`);
     return;
   }
 
-  // Check if file exists locally
   const existsLocally = await existsInLocal(
     asset.category,
     hash,
@@ -64,16 +53,10 @@ async function uploadAsset(
     );
   }
 
-  // Read from local cache
   const buffer = await readFromLocal(asset.category, hash, asset.extension);
-
-  // Get content type
   const contentType = getContentType(asset.extension);
-
-  // Upload to R2
   await uploadToR2(client, r2Key, buffer, contentType);
 
-  // Update asset mapping
   asset.r2Key = r2Key;
   asset.r2Url = generateR2Url(r2Key, R2_CONFIG.publicUrl);
   asset.uploadedAt = formatTimestamp();
@@ -83,37 +66,31 @@ async function uploadAsset(
  * Upload all downloaded assets to R2
  */
 export async function uploadAssets(): Promise<void> {
-  console.log('\n=== Starting Upload Phase ===\n');
+  logger.log('\n=== Starting Upload Phase ===\n');
 
-  // Create R2 client
   const client = createR2Client();
-
-  // Load mapping
   const mapping = await loadMapping();
 
-  // Get assets that need uploading
-  const toUpload = getAssetsToUpload(mapping);
-
-  if (toUpload.length === 0) {
-    console.log('No assets to upload. All assets already in R2!');
-
-    // Check if there are assets that need downloading first
+  const showDownloadHelp = () => {
+    logger.success('No assets to upload. All assets already in R2!');
     const allAssets = getAllAssets(mapping);
     const needsDownload = allAssets.filter(([, asset]) => !asset.downloadedAt);
 
     if (needsDownload.length > 0) {
-      console.log(
+      logger.log(
         `\nNote: ${needsDownload.length} assets need to be downloaded first.`
       );
-      console.log('Run: npm run r2:download');
+      logger.cyan('Run: npm run r2:download');
     }
+  };
 
-    return;
+  const toUpload = getAssetsToUpload(mapping);
+  if (toUpload.length === 0) {
+    return showDownloadHelp();
   }
 
-  console.log(`Assets to upload: ${toUpload.length}\n`);
+  logger.log(`Assets to upload: ${toUpload.length}\n`);
 
-  // Upload in batches to control concurrency
   const batchSize = MIGRATION_CONFIG.concurrentUploads;
   let completed = 0;
   let failed = 0;
@@ -122,12 +99,10 @@ export async function uploadAssets(): Promise<void> {
   for (let i = 0; i < toUpload.length; i += batchSize) {
     const batch = toUpload.slice(i, i + batchSize);
 
-    // Upload batch concurrently
     const results = await Promise.allSettled(
       batch.map(([hash, asset]) => uploadAsset(hash, asset, client))
     );
 
-    // Process results
     for (let j = 0; j < results.length; j++) {
       const result = results[j];
       const [, asset] = batch[j];
@@ -140,55 +115,55 @@ export async function uploadAssets(): Promise<void> {
           url: asset.originalUrl,
           error: result.reason.message,
         });
-        console.error(
-          `Failed: ${asset.originalUrl} - ${result.reason.message}`
-        );
+        logger.error(`Failed: ${asset.originalUrl} - ${result.reason.message}`);
       }
     }
 
-    // Save progress after each batch
     await saveMapping(mapping);
-
-    // Show progress
     const progress = createProgressBar(completed + failed, toUpload.length);
-    console.log(`Progress: ${progress}`);
+    logger.log(`Progress: ${progress}`);
   }
 
-  console.log('\n=== Upload Complete ===\n');
-  console.log(`Successfully uploaded: ${completed}`);
-  console.log(`Failed: ${failed}`);
+  logger.log('\n=== Upload Complete ===\n');
+  logger.success(`Successfully uploaded: ${completed}`);
+  logger.error(`Failed: ${failed}`);
 
   if (failures.length > 0) {
-    console.log('\nFailed uploads:');
+    logger.log('\nFailed uploads:');
     for (const failure of failures.slice(0, 10)) {
-      console.log(`  - ${failure.url}`);
-      console.log(`    Error: ${failure.error}`);
+      logger.log(`  - ${failure.url}`);
+      logger.debug(`    Error: ${failure.error}`);
     }
 
     if (failures.length > 10) {
-      console.log(`  ... and ${failures.length - 10} more`);
+      logger.log(`  ... and ${failures.length - 10} more`);
     }
   }
 
   // Save final mapping
   await saveMapping(mapping);
+
+  // Upload url-mapping.json to R2
+  await uploadMappingToR2(client);
 }
 
 /**
  * Re-upload failed assets
  */
 export async function retryFailedUploads(): Promise<void> {
-  console.log('Checking for failed uploads...\n');
+  logger.log('Checking for failed uploads...\n');
 
   const mapping = await loadMapping();
   const failed = getAssetsToUpload(mapping);
 
   if (failed.length === 0) {
-    console.log('No failed uploads found.');
+    logger.success('No failed uploads found.');
+    const client = createR2Client();
+    await uploadMappingToR2(client);
     return;
   }
 
-  console.log(`Found ${failed.length} failed uploads. Retrying...\n`);
+  logger.log(`Found ${failed.length} failed uploads. Retrying...\n`);
   await uploadAssets();
 }
 
@@ -200,7 +175,7 @@ export async function verifyUploads(): Promise<{
   missing: number;
   missingAssets: string[];
 }> {
-  console.log('\nVerifying uploads in R2...\n');
+  logger.log('\nVerifying uploads in R2...\n');
 
   const client = createR2Client();
   const mapping = await loadMapping();
@@ -209,7 +184,7 @@ export async function verifyUploads(): Promise<{
     ([, asset]) => asset.uploadedAt
   );
 
-  console.log(`Checking ${uploadedAssets.length} uploaded assets...\n`);
+  logger.log(`Checking ${uploadedAssets.length} uploaded assets...\n`);
 
   let verified = 0;
   let missing = 0;
@@ -231,11 +206,11 @@ export async function verifyUploads(): Promise<{
       } else if (result.status === 'fulfilled' && !result.value) {
         missing++;
         missingAssets.push(asset.r2Key);
-        console.warn(`Missing in R2: ${asset.r2Key}`);
+        logger.warn(`Missing in R2: ${asset.r2Key}`);
       } else if (result.status === 'rejected') {
         missing++;
         missingAssets.push(asset.r2Key);
-        console.error(`Error checking ${asset.r2Key}: ${result.reason}`);
+        logger.error(`Error checking ${asset.r2Key}: ${result.reason}`);
       }
     }
 
@@ -247,7 +222,7 @@ export async function verifyUploads(): Promise<{
         verified + missing,
         uploadedAssets.length
       );
-      console.log(progress);
+      logger.log(progress);
     }
   };
 
@@ -260,18 +235,18 @@ export async function verifyUploads(): Promise<{
     updateProgress(results, batch, i);
   }
 
-  console.log(`\n=== Verification Complete ===\n`);
-  console.log(`Verified: ${verified}`);
-  console.log(`Missing: ${missing}`);
+  logger.log(`\n=== Verification Complete ===\n`);
+  logger.success(`Verified: ${verified}`);
+  logger.warn(`Missing: ${missing}`);
 
   if (missing > 0) {
-    console.log('\nMissing assets (first 10):');
+    logger.log('\nMissing assets (first 10):');
     for (const key of missingAssets.slice(0, 10)) {
-      console.log(`  - ${key}`);
+      logger.log(`  - ${key}`);
     }
 
     if (missingAssets.length > 10) {
-      console.log(`  ... and ${missingAssets.length - 10} more`);
+      logger.log(`  ... and ${missingAssets.length - 10} more`);
     }
   }
 
@@ -284,7 +259,7 @@ export async function verifyUploads(): Promise<{
  * @param hashes - Array of URL hashes to force re-upload
  */
 export async function forceReupload(hashes: string[]): Promise<void> {
-  console.log(`\nForce re-uploading ${hashes.length} assets...\n`);
+  logger.log(`\nForce re-uploading ${hashes.length} assets...\n`);
 
   const client = createR2Client();
   const mapping = await loadMapping();
@@ -293,7 +268,7 @@ export async function forceReupload(hashes: string[]): Promise<void> {
     const asset = mapping.mappings[hash];
 
     if (!asset) {
-      console.warn(`Asset not found: ${hash}`);
+      logger.warn(`Asset not found: ${hash}`);
       continue;
     }
 
@@ -301,11 +276,13 @@ export async function forceReupload(hashes: string[]): Promise<void> {
 
     try {
       await uploadAsset(hash, asset, client);
-      console.log(`Re-uploaded: ${asset.r2Key}`);
+      logger.success(`Re-uploaded: ${asset.r2Key}`);
     } catch (error) {
-      console.error(`Failed to re-upload ${hash}:`, error);
+      logger.error(`Failed to re-upload ${hash}:`, error);
     }
   }
 
   await saveMapping(mapping);
+
+  await uploadMappingToR2(client);
 }
