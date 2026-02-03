@@ -10,8 +10,7 @@ import {
   useWeaponMaterialStore,
 } from '@/stores';
 
-import { AppSideBar, Layout } from './components/layout';
-import { SidebarProvider } from './components/ui/sidebar';
+import { Layout } from './components/layout';
 import { routes } from './routes';
 
 function App() {
@@ -27,12 +26,7 @@ function App() {
 
   const routing = useRoutes(routes);
 
-  return (
-    <SidebarProvider>
-      <AppSideBar />
-      <Layout>{routing}</Layout>
-    </SidebarProvider>
-  );
+  return <Layout>{routing}</Layout>;
 }
 
 export default App;
