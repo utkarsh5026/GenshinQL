@@ -4,14 +4,31 @@ import { Avatar, AvatarImage } from '@/components/ui/avatar.tsx';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useLazyCachedAsset } from '@/hooks/useCachedAsset';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { cn } from '@/lib/utils';
 import { AnimationMedia } from '@/types';
 
 interface CharacterMediaAvatarProps {
   media: AnimationMedia;
+  containerClassName?: string;
+  avatarClassName?: string;
+  imageClassName?: string;
+  videoClassName?: string;
+  hoverScale?: number;
+  enableHoverAnimation?: boolean;
+  enableWooshAnimation?: boolean;
+  hoverZIndex?: string;
 }
 
 const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
   media,
+  containerClassName,
+  avatarClassName,
+  imageClassName,
+  videoClassName,
+  hoverScale = 1.2,
+  enableHoverAnimation = true,
+  enableWooshAnimation = false,
+  hoverZIndex = 'z-10',
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -37,7 +54,7 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
   // Show skeleton while image is loading
   if (imageLoading) {
     return (
-      <div ref={containerRef} className="relative h-12 w-12">
+      <div ref={containerRef} className={cn('relative', containerClassName)}>
         <Skeleton className="h-full w-full rounded-full" />
       </div>
     );
@@ -46,7 +63,11 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
   return (
     <div
       ref={containerRef}
-      className="relative h-12 w-12"
+      className={cn(
+        'relative',
+        isHovered && 'overflow-visible',
+        containerClassName
+      )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {
         setIsHovered(false);
@@ -54,15 +75,24 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
       }}
     >
       <Avatar
-        className={`relative h-full w-full cursor-pointer transition duration-300 ease-in-out hover:scale-150 ${
-          isVideoLoaded ? 'animate-woosh' : ''
-        }`}
+        className={cn(
+          'relative h-full w-full cursor-pointer transition-all duration-300 ease-in-out',
+          isHovered && hoverZIndex,
+          enableWooshAnimation && isVideoLoaded && 'animate-woosh',
+          avatarClassName
+        )}
+        style={{
+          transform:
+            isHovered && enableHoverAnimation
+              ? `scale(${hoverScale})`
+              : 'scale(1)',
+        }}
       >
         <AvatarImage
           src={cachedImageUrl}
           alt={media.caption}
           loading="lazy"
-          className="h-full w-full"
+          className={cn('h-full w-full', imageClassName)}
         />
         {isHovered && cachedVideoUrl && (
           <video
@@ -70,10 +100,11 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
             autoPlay
             loop
             muted
-            className={`absolute inset-0 h-full w-full object-cover
-                 transition-opacity duration-300 ${
-                   isVideoLoaded ? 'opacity-100' : 'opacity-0'
-                 }`}
+            className={cn(
+              'absolute inset-0 h-full w-full object-cover rounded-full transition-opacity duration-300',
+              isVideoLoaded ? 'opacity-100' : 'opacity-0',
+              videoClassName
+            )}
             onCanPlayThrough={() => setIsVideoLoaded(true)}
           />
         )}

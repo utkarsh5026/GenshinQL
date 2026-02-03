@@ -67,9 +67,11 @@ const CharactersTable: React.FC<CharactersTableProps> = ({ characters }) => {
         {charactersWithMedia.map((character) => (
           <TableRow key={character.name}>
             <TableCell>
-              <div className="relative h-12 w-12">
-                <CharacterMediaAvatar media={character.media} />
-              </div>
+              <CharacterMediaAvatar
+                media={character.media}
+                containerClassName="h-12 w-12"
+                hoverScale={1.5}
+              />
             </TableCell>
             <TableCell className="text-left font-bold">
               {character.name}

@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { getElementBorderClass } from '@/lib/elementColors';
+import {
+  getElementBorderClass,
+  getElementGlassClass,
+} from '@/lib/elementColors';
 import { AnimationMedia, Character } from '@/types';
 
 import CharacterMediaAvatar from '../table/CharacterMediaAvatar';
@@ -14,7 +17,6 @@ interface CharacterCardProps {
 }
 
 const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
-  // Get character media (priority: partyJoin → idleOne → idleTwo → iconUrl fallback)
   const characterMedia: AnimationMedia = useMemo(() => {
     if (character.partyJoin) return character.partyJoin;
     if (character.idleOne) return character.idleOne;
@@ -34,17 +36,21 @@ const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
         className={`
           transition-all duration-300
           hover:shadow-xl hover:scale-[1.02] md:hover:scale-105 hover:-translate-y-1
-          cursor-pointer
+          cursor-pointer 
           ${getElementBorderClass(character.element)}
+          ${getElementGlassClass(character.element)}
+          
         `}
       >
         <CardContent className="p-4">
           {/* Mobile: Horizontal Layout, Desktop: Vertical Layout */}
           <div className="flex md:flex-col gap-4 md:gap-3 items-start md:items-center">
             {/* Character Avatar */}
-            <div className="relative h-24 w-24 md:h-28 md:w-28 shrink-0">
-              <CharacterMediaAvatar media={characterMedia} />
-            </div>
+            <CharacterMediaAvatar
+              media={characterMedia}
+              containerClassName="h-24 w-24 md:h-28 md:w-28 shrink-0"
+              hoverScale={1.15}
+            />
 
             {/* Character Info */}
             <div className="flex-1 md:w-full space-y-2 md:space-y-3">
