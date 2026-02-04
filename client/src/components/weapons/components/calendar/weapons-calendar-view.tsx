@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import type { WeaponMaterialSchedule } from '@/types';
+import { WeaponMaterialSchedule } from '@/stores/useWeaponMaterialStore';
 
 import AvatarWithSkeleton from '../../../utils/AvatarWithSkeleton';
 import WeaponShowCase from '../shared/weapons-showcase';

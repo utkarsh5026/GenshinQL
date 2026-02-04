@@ -76,7 +76,6 @@ export const useTalentBooksStore = create<TalentBooksState>()(
       ...initialState,
 
       setCalendar: (calendar) => {
-        console.log(calendar);
         set(
           {
             calendar,
@@ -101,7 +100,6 @@ export const useTalentBooksStore = create<TalentBooksState>()(
 
         try {
           const data = await fetchTalentBooksService();
-          console.log(data);
           get().setCalendar(data);
         } catch (err) {
           const errorMessage =

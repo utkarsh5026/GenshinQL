@@ -1,23 +1,53 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-import { fetchWeaponMaterialSchedule as fetchWeaponMaterialScheduleService } from '@/services/dataService';
-import type { ImageUrl, WeaponMaterialSchedule } from '@/types';
+import { fetchWeaponCalendarOnly } from '@/services/dataService';
+import type { ImageUrl } from '@/types';
+
+import { useWeaponsStore, type WeaponDetailed } from './useWeaponsStore';
 
 export type WeaponMaterial = {
   day: string;
   materialImages: ImageUrl[];
 };
 
+export type WeaponWithMaterial = WeaponDetailed & {
+  materialSchedule: WeaponMaterial;
+};
+
+export type WeaponMaterialSchedule = {
+  nation: string;
+  materials: Array<{
+    day: string;
+    materialImages: ImageUrl[];
+    weapons: Array<WeaponDetailed>;
+  }>;
+};
+
 interface WeaponMaterialState {
-  // State
-  weaponMaterialSchedule: WeaponMaterialSchedule[] | null;
-  weaponMap: Record<string, WeaponMaterial>;
+  weaponCalendarData: Record<
+    string,
+    Array<{
+      day: string;
+      images: ImageUrl[];
+      weapons: Array<{ name: string; url: string }>;
+    }>
+  > | null;
+  weaponMap: Record<string, WeaponMaterial>; // Basic map: weaponName → material info
+  weaponMaterialSchedule: WeaponMaterialSchedule[]; // Transformed schedule by nation
   loading: boolean;
   error: string | null;
 
-  // Actions
-  setWeaponMaterialSchedule: (schedule: WeaponMaterialSchedule[]) => void;
+  setWeaponCalendarData: (
+    data: Record<
+      string,
+      Array<{
+        day: string;
+        images: ImageUrl[];
+        weapons: Array<{ name: string; url: string }>;
+      }>
+    >
+  ) => void;
   fetchWeaponMaterials: () => Promise<void>;
   setLoading: (loading: boolean) => void;
   setError: (error: string | null) => void;
@@ -25,24 +55,31 @@ interface WeaponMaterialState {
 }
 
 const initialState = {
-  weaponMaterialSchedule: null,
+  weaponCalendarData: null,
   weaponMap: {},
+  weaponMaterialSchedule: [],
   loading: false,
   error: null,
 };
 
-// Helper function to create weapon->material mapping
 const createWeaponMap = (
-  schedules: WeaponMaterialSchedule[]
+  calendarData: Record<
+    string,
+    Array<{
+      day: string;
+      images: ImageUrl[];
+      weapons: Array<{ name: string; url: string }>;
+    }>
+  >
 ): Record<string, WeaponMaterial> => {
   const weaponMap: Record<string, WeaponMaterial> = {};
 
-  schedules.forEach((schedule) => {
-    schedule.materials.forEach((material) => {
-      material.weapons.forEach((weapon) => {
+  Object.values(calendarData).forEach((schedules) => {
+    schedules.forEach((schedule) => {
+      schedule.weapons.forEach((weapon) => {
         weaponMap[weapon.name] = {
-          day: material.day,
-          materialImages: material.materialImages,
+          day: schedule.day,
+          materialImages: schedule.images,
         };
       });
     });
@@ -56,56 +93,75 @@ export const useWeaponMaterialStore = create<WeaponMaterialState>()(
     (set, get) => ({
       ...initialState,
 
-      setWeaponMaterialSchedule: (schedule) => {
-        set(
-          {
-            weaponMaterialSchedule: schedule,
-            weaponMap: createWeaponMap(schedule),
-            loading: false,
-          },
-          false,
-          'weaponMaterial/setSchedule'
-        );
+      setWeaponCalendarData: (data) => {
+        const weaponMap = createWeaponMap(data);
+        const weaponsStoreMap = useWeaponsStore.getState().weaponMap;
+
+        const weaponMaterialSchedule: WeaponMaterialSchedule[] = Object.entries(
+          data
+        ).map(([nation, schedule]) => ({
+          nation,
+          materials: schedule.map((item) => ({
+            day: item.day,
+            materialImages: item.images,
+            weapons: item.weapons
+              .map((weapon) => weaponsStoreMap[weapon.name])
+              .filter(
+                (weapon): weapon is WeaponDetailed => weapon !== undefined
+              ),
+          })),
+        }));
+
+        set({
+          weaponCalendarData: data,
+          weaponMap,
+          weaponMaterialSchedule,
+          loading: false,
+        });
       },
 
       fetchWeaponMaterials: async () => {
-        set(
-          { loading: true, error: null },
-          false,
-          'weaponMaterial/fetch/pending'
-        );
+        set({ loading: true, error: null });
 
         try {
-          const data = await fetchWeaponMaterialScheduleService();
-          get().setWeaponMaterialSchedule(data);
+          const weaponsState = useWeaponsStore.getState();
+          if (weaponsState.loading) {
+            await new Promise<void>((resolve) => {
+              const unsubscribe = useWeaponsStore.subscribe((state) => {
+                if (!state.loading) {
+                  unsubscribe();
+                  resolve();
+                }
+              });
+            });
+          } else if (weaponsState.weapons.length === 0 && !weaponsState.error) {
+            await useWeaponsStore.getState().fetchWeapons();
+          }
+
+          const calendarData = await fetchWeaponCalendarOnly();
+          get().setWeaponCalendarData(calendarData);
         } catch (err) {
           const errorMessage =
             err instanceof Error
               ? err.message
               : 'Failed to fetch weapon materials';
-          set(
-            { loading: false, error: errorMessage },
-            false,
-            'weaponMaterial/fetch/rejected'
-          );
+          set({ loading: false, error: errorMessage });
         }
       },
 
-      setLoading: (loading) =>
-        set({ loading }, false, 'weaponMaterial/setLoading'),
-      setError: (error) => set({ error }, false, 'weaponMaterial/setError'),
-      reset: () => set(initialState, false, 'weaponMaterial/reset'),
+      setLoading: (loading) => set({ loading }),
+      setError: (error) => set({ error }),
+      reset: () => set(initialState),
     }),
     { name: 'WeaponMaterialStore' }
   )
 );
 
-// Selector hooks for optimized subscriptions
-export const useWeaponMaterialSchedule = () =>
-  useWeaponMaterialStore((state) => state.weaponMaterialSchedule);
-export const useWeaponMapFromMaterials = () =>
-  useWeaponMaterialStore((state) => state.weaponMap);
 export const useWeaponMaterialLoading = () =>
   useWeaponMaterialStore((state) => state.loading);
+
 export const useWeaponMaterialError = () =>
   useWeaponMaterialStore((state) => state.error);
+
+export const useWeaponMaterialSchedule = () =>
+  useWeaponMaterialStore((state) => state.weaponMaterialSchedule);

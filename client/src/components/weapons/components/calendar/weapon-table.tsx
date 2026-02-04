@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { WeaponMaterialSchedule } from '@/types';
+import type { WeaponMaterialSchedule } from '@/stores/useWeaponMaterialStore';
 
 import AvatarWithSkeleton from '../../../utils/AvatarWithSkeleton';
 import WeaponShowCase from '../shared/weapons-showcase';

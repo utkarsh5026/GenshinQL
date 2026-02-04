@@ -4,15 +4,21 @@ import React, { useMemo, useState } from 'react';
 import { ElementDisplay } from '@/components/character/utils/DisplayComponents';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useWeaponMaterialStore } from '@/stores';
 import { useRegions } from '@/stores/usePrimitivesStore';
+import {
+  useWeaponMaterialError,
+  useWeaponMaterialLoading,
+  useWeaponMaterialSchedule,
+} from '@/stores/useWeaponMaterialStore';
 
 import WeaponTable from './weapon-table';
 import WeaponCalendarView from './weapons-calendar-view';
 
 const WeaponCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
-  const { weaponMaterialSchedule, loading, error } = useWeaponMaterialStore();
+  const weaponMaterialSchedule = useWeaponMaterialSchedule();
+  const loading = useWeaponMaterialLoading();
+  const error = useWeaponMaterialError();
 
   const regions = useRegions();
 
