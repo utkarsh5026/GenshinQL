@@ -1,4 +1,6 @@
+import { ExternalLink } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { AvatarWithSkeleton, ListSplitter } from '@/components/utils';
 import { WeaponDetailed } from '@/stores/useWeaponsStore';
@@ -49,11 +51,21 @@ const WeaponCard: React.FC<WeaponCardProps> = ({ weapon }) => {
         </div>
       </div>
 
-      <div className="p-4 bg-surface-100 dark:bg-surface-100 rounded-b-lg">
+      <div className="p-4 bg-surface-100 dark:bg-surface-100">
         <p className="text-muted-foreground text-sm mb-2 font-medium">Effect</p>
         <div className="text-sm text-foreground/90">
           <ListSplitter text={effect} />
         </div>
+      </div>
+
+      <div className="p-4 border-t">
+        <Link
+          to={`/weapons/${name}`}
+          className="flex items-center justify-center gap-2 text-sm text-blue-500 hover:text-blue-600 transition-colors"
+        >
+          <span>View Full Details</span>
+          <ExternalLink className="w-4 h-4" />
+        </Link>
       </div>
     </div>
   );
