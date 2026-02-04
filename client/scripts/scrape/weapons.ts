@@ -46,6 +46,12 @@ type WeaponAscensionPhase = z.infer<typeof weaponAscensionPhaseSchema>;
 type Weapon = z.infer<typeof weaponSchema>;
 type BaseWeaponType = Omit<Weapon, 'passives' | 'materials' | 'images'>;
 
+type WeaponsFileData = {
+  nations: string[];
+  days: string[];
+  weapons: Record<string, OptimizedWeaponData[]>;
+};
+
 const WEAPON_TYPES: WeaponType[] = [
   'Sword',
   'Claymore',
@@ -625,10 +631,7 @@ const scrapeAndSaveDetailedWeaponInfo = async (
   force: boolean = false
 ): Promise<void> => {
   logger.info('📂 Loading weapons data from weapons.json...');
-  const weaponsData =
-    await loadFromPublic<Record<WeaponType, BaseWeaponType[]>>(
-      WEAPON_FILE_NAME
-    );
+  const weaponsData = await loadFromPublic<WeaponsFileData>(WEAPON_FILE_NAME);
 
   if (!weaponsData) {
     logger.error(
@@ -637,13 +640,12 @@ const scrapeAndSaveDetailedWeaponInfo = async (
     return;
   }
 
+  const { weapons } = weaponsData;
   const allWeapons: BaseWeaponType[] = [];
   for (const weaponType of WEAPON_TYPES) {
-    if (weaponsData[weaponType]) {
-      allWeapons.push(...weaponsData[weaponType]);
-      logger.debug(
-        `  ↳ ${weaponType}: ${weaponsData[weaponType].length} weapons`
-      );
+    if (weapons[weaponType]) {
+      allWeapons.push(...weapons[weaponType]);
+      logger.debug(`  ↳ ${weaponType}: ${weapons[weaponType].length} weapons`);
     }
   }
 
