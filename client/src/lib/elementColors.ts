@@ -50,3 +50,39 @@ export const getElementGlassClass = (element: string): string => {
     'bg-gradient-to-br from-gray-400/[0.02] via-transparent to-transparent backdrop-blur-md border border-gray-400/[0.08]'
   );
 };
+
+/**
+ * Get element-specific CSS animation class name for character card animations
+ * Returns: 'anemo' | 'pyro' | 'hydro' | etc.
+ */
+export const getElementAnimationClass = (element: string): string => {
+  const normalized = element.toLowerCase();
+  const animationMap: Record<string, string> = {
+    anemo: 'anemo',
+    pyro: 'pyro',
+    hydro: 'hydro',
+    electro: 'electro',
+    cryo: 'cryo',
+    geo: 'geo',
+    dendro: 'dendro',
+  };
+  return animationMap[normalized] || '';
+};
+
+/**
+ * Get element-specific hover glow class name
+ * Returns: 'anemoGlow' | 'pyroGlow' | etc.
+ */
+export const getElementGlowClass = (element: string): string => {
+  const normalized = element.toLowerCase();
+  const glowMap: Record<string, string> = {
+    anemo: 'anemoGlow',
+    pyro: 'pyroGlow',
+    hydro: 'hydroGlow',
+    electro: 'electroGlow',
+    cryo: 'cryoGlow',
+    geo: 'geoGlow',
+    dendro: 'dendroGlow',
+  };
+  return glowMap[normalized] || '';
+};
