@@ -6,7 +6,6 @@ import type {
   CharacterDetailed,
   CharacterRaw,
   GalleryRaw,
-  Primitives,
   ScreenAnimation,
   Talent,
   TalentBookCalendar,
@@ -44,9 +43,7 @@ let galleryCache: Record<
   }
 > | null = null;
 
-let primitivesCache: Primitives | null = null;
-
-async function loadDataForFile<T>(
+export async function loadDataForFile<T>(
   fileName: string,
   cache: T | null
 ): Promise<T> {
@@ -373,24 +370,6 @@ export async function fetchCharacterAttackAnimations(
 }
 
 /**
- * Fetches and caches primitives data (elements, regions, weaponTypes).
- */
-async function loadPrimitivesData() {
-  if (primitivesCache) return primitivesCache;
-
-  const data = await loadDataForFile<Primitives>('primitives.json', null);
-  primitivesCache = data;
-  return data;
-}
-
-/**
- * Fetches primitives (elements, regions, weaponTypes with their icon URLs).
- */
-export async function fetchPrimitives(): Promise<Primitives> {
-  return await loadPrimitivesData();
-}
-
-/**
  * Clears all cached data (useful for refreshing).
  */
 export function clearCache() {
@@ -398,5 +377,4 @@ export function clearCache() {
   talentsCache = null;
   weaponsCache = null;
   galleryCache = null;
-  primitivesCache = null;
 }

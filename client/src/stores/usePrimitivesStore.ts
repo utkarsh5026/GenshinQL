@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import { fetchPrimitives as fetchPrimitivesService } from '@/services/dataService';
+import { loadDataForFile } from '@/services/dataService';
 import type { Primitives } from '@/types';
 
 interface PrimitivesState {
@@ -35,8 +35,11 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
     set({ loading: true, error: null });
 
     try {
-      const data = await fetchPrimitivesService();
-      get().setPrimitives(data);
+      const { primitives, setPrimitives } = get();
+      if (primitives !== null) return;
+
+      const data = await loadDataForFile<Primitives>('primitives.json', null);
+      setPrimitives(data);
     } catch (err) {
       const errorMessage =
         err instanceof Error ? err.message : 'Failed to fetch primitives';
