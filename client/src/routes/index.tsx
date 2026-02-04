@@ -4,7 +4,7 @@ import CharacterCardsWithFilters from '@/components/character/cards/character-ca
 import CharacterDetail from '@/components/character/description/character-detail';
 import CharacterRoutine from '@/components/character/routine/CharacterRoutine';
 import GenshinGuesser from '@/components/gdle/main/GenshinGuesser';
-import TalentCalendar from '@/components/talents/TalentBookCalendar';
+import TalentCalendar from '@/components/talents/talent-book-calendar';
 import TierList from '@/components/tierlist/TierList';
 import WeaponCalendar from '@/components/weapons/components/calendar/weapons-calendar';
 import WeaponsDetailed from '@/components/weapons/components/detailed/weapons-detailed';

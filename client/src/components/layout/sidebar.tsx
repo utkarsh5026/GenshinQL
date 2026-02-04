@@ -57,7 +57,7 @@ const navItems: NavItem[] = [
     iconColor: '#f59e0b', // amber-500
   },
   {
-    route: '/weapons',
+    route: '/weapons/grid',
     label: 'Weapons Detailed',
     icon: Swords,
     color: 'orange',
