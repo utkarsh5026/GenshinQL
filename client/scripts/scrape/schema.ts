@@ -13,7 +13,7 @@ export const talentSchema = z.object({
       videoType: z.string().optional(), // Add video type
     })
   ),
-  scaling: z.record(z.array(z.string())),
+  scaling: z.record(z.string(), z.array(z.string())),
 });
 
 export const constellationSchema = z.object({
