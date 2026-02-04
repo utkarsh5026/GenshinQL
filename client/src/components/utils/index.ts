@@ -1,7 +1,7 @@
 import AvatarWithSkeleton from './AvatarWithSkeleton';
 import { CachedImage, CachedVideo } from './CachedImage';
-import ListSplitter from './ListSplitter';
-import TextProcessor from './TextProcessor';
+import ListSplitter from './list-splitter';
+import TextProcessor from './text-processor';
 
 export {
   AvatarWithSkeleton,

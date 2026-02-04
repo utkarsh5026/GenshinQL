@@ -26,7 +26,15 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
 
   setPrimitives: (primitives) => {
     set({
-      primitives,
+      primitives: {
+        ...primitives,
+        regions: primitives.regions.map((reg) => {
+          return {
+            ...reg,
+            name: reg.name.split('-').join(''),
+          };
+        }),
+      },
       loading: false,
     });
   },

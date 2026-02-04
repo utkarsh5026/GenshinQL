@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TextProcessor from './TextProcessor';
+import TextProcessor from './text-processor';
 
 interface ListSplitterProps {
   text: string;
@@ -9,15 +9,8 @@ interface ListSplitterProps {
 /**
  * ListSplitter component splits a given text into sentences and processes each sentence
  * using the TextProcessor component.
- *
- * @param {ListSplitterProps} props - The properties for the component.
- * @param {string} props.text - The text to be split into sentences.
- *
- * @returns {JSX.Element} A list of processed sentences.
  */
 const ListSplitter: React.FC<ListSplitterProps> = ({ text }) => {
-  // Split text into sentences using regex
-  // This handles common sentence endings (., !, ?) followed by spaces
   const sentences = text
     .split(/[.!?]+\s+/)
     .filter((sentence) => sentence.trim().length > 0);
