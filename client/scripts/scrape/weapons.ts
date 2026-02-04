@@ -27,7 +27,6 @@ import {
   handleCloudflareChallenge,
   setupDriver,
   URL,
-  waitForElementCss,
   waitForPageLoad,
   withWebDriver,
 } from './setup.js';
@@ -41,6 +40,7 @@ import {
 } from './utils.js';
 
 const WEAPON_FILE_NAME = 'weapons';
+const WEAPON_CALENDAR_FILE_NAME = 'weaponCalendar';
 
 type WeaponType = z.infer<typeof weaponTypeSchema>;
 type WeaponAscensionPhase = z.infer<typeof weaponAscensionPhaseSchema>;
@@ -69,7 +69,7 @@ type Nation = (typeof nations)[number];
 type MaterialCalendar = {
   day: string;
   images: { url: string; caption: string }[];
-  weapons: string[];
+  weapons: { name: string; url: string }[];
 };
 
 /**
@@ -87,7 +87,7 @@ type MaterialCalendar = {
  * - images: Array of material images with URLs and captions
  * - weapons: Array of weapon names that use these materials
  */
-export async function loadMaterialCalendar(): Promise<
+async function loadMaterialCalendar(): Promise<
   Record<Nation, MaterialCalendar[]>
 > {
   const driver = await setupDriver();
@@ -116,14 +116,24 @@ export async function loadMaterialCalendar(): Promise<
     ).filter((item) => !item.caption.includes('Quality'));
 
     const weapons = await cells[2].findElements(By.css('a'));
-    const weaponNames = await Promise.all(
-      weapons.map(async (weapon: WebElement) => weapon.getAttribute('title'))
+    const weaponData = await Promise.all(
+      weapons.map(async (weapon: WebElement) => {
+        const [name, img] = await Promise.all([
+          weapon.getAttribute('title'),
+          weapon.findElement(By.css('img')),
+        ]);
+        const imgSrc = await img.getAttribute('data-src');
+        return {
+          name,
+          url: parseUrl(imgSrc),
+        };
+      })
     );
 
     return {
       day,
       images,
-      weapons: weaponNames,
+      weapons: weaponData,
     };
   };
 
@@ -138,8 +148,6 @@ export async function loadMaterialCalendar(): Promise<
   };
 
   for (const nation of nations) {
-    const selector = `span#${nation}`;
-    await waitForElementCss(driver, selector);
     const table = await getTableFromHeading(
       driver,
       nation === 'NodKrai' ? 'Nod-Krai' : nation,
@@ -360,8 +368,6 @@ async function parseAscensionRow(
     // But we need to handle rowspan for phase column
 
     let cellIndex = 0;
-
-    // Check if this row has a phase indicator (rowspan=2)
     const hasPhaseCell = await cells[0].getAttribute('rowspan');
     if (hasPhaseCell) cellIndex = 1;
 
@@ -713,6 +719,10 @@ async function main() {
         chalk.dim('# Scrape detailed weapon data')
     );
     logger.log(
+      chalk.gray('  node weapons.js --calendar  ') +
+        chalk.dim('# Scrape weapon material calendar')
+    );
+    logger.log(
       chalk.gray('  node weapons.js --base --detailed') +
         chalk.dim('# Scrape both\n')
     );
@@ -770,7 +780,7 @@ async function main() {
 
   const saveWeaponsDetailed = async () => {
     logger.info('🔍 PHASE 2: Detailed Weapon Data Scraping');
-    await scrapeAndSaveDetailedWeaponInfo(true);
+    await scrapeAndSaveDetailedWeaponInfo(false);
     logger.success('\n✨ Detailed scraping complete!\n');
   };
 
@@ -782,6 +792,14 @@ async function main() {
 
   if (args.includes('--detailed')) {
     await saveWeaponsDetailed();
+  }
+
+  if (args.includes('--calendar')) {
+    logger.info('📅 PHASE 3: Weapon Material Calendar Scraping');
+    const calendarData = await loadMaterialCalendar();
+    await saveToPublic(calendarData, WEAPON_CALENDAR_FILE_NAME);
+    logger.success(`💾 Saved to public/${WEAPON_CALENDAR_FILE_NAME}.json`);
+    logger.success('\n✨ Calendar scraping complete!\n');
   }
 
   const duration = ((Date.now() - startTime) / 1000).toFixed(2);
