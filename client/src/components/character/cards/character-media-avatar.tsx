@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import { Avatar, AvatarImage } from '@/components/ui/avatar.tsx';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useLazyCachedAsset } from '@/hooks/useCachedAsset';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
 import { cn } from '@/lib/utils';
 import { AnimationMedia } from '@/types';
 
@@ -34,8 +34,8 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Only load when avatar is visible in viewport
-  const isVisible = useIntersectionObserver(containerRef, {
+  // Only load when avatar is visible in viewport - using shared observer
+  const isVisible = useSharedIntersectionObserver(containerRef, {
     rootMargin: '200px',
   });
 
@@ -83,7 +83,7 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
     >
       <Avatar
         className={cn(
-          'relative h-full w-full cursor-pointer transition-all duration-300 ease-in-out',
+          'relative h-full w-full cursor-pointer transition-transform duration-300 ease-in-out',
           isHovered && hoverZIndex,
           enableWooshAnimation && isVideoLoaded && 'animate-woosh',
           avatarClassName
@@ -91,8 +91,9 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
         style={{
           transform:
             isHovered && enableHoverAnimation
-              ? `scale(${hoverScale})`
-              : 'scale(1)',
+              ? `scale3d(${hoverScale}, ${hoverScale}, 1)`
+              : 'scale3d(1, 1, 1)',
+          willChange: 'transform',
         }}
       >
         <AvatarImage

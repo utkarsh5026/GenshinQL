@@ -1,134 +1,52 @@
-/* Element-themed animations - copied from FilterBar.module.css */
+/* Optimized element-themed styles - animations only on hover for better performance */
 
-/* Anemo - Wind/Air: Gentle floating */
-.anemo {
-  animation: float 3s ease-in-out infinite;
+/* Card fade-in animation for initial load */
+.cardFadeIn {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition:
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
+.cardFadeIn.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
-/* Pyro - Fire: Flickering glow */
-.pyro {
-  animation: flicker 2s ease-in-out infinite;
-}
-
-@keyframes flicker {
-  0%,
-  100% {
-    filter: brightness(1) drop-shadow(0 0 2px rgba(255, 100, 50, 0.3));
-  }
-  50% {
-    filter: brightness(1.2) drop-shadow(0 0 4px rgba(255, 100, 50, 0.5));
-  }
-}
-
-/* Hydro - Water: Wave effect */
-.hydro {
-  animation: wave 3s ease-in-out infinite;
-}
-
-@keyframes wave {
-  0%,
-  100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 2px rgba(50, 150, 255, 0.3));
-  }
-  50% {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 4px rgba(50, 150, 255, 0.4));
-  }
-}
-
-/* Electro - Electric: Pulse effect */
-.electro {
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    filter: brightness(1) drop-shadow(0 0 2px rgba(150, 100, 255, 0.3));
-  }
-  50% {
-    filter: brightness(1.3) drop-shadow(0 0 6px rgba(150, 100, 255, 0.6));
-  }
-}
-
-/* Cryo - Ice: Shimmer effect */
-.cryo {
-  animation: shimmer 4s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%,
-  100% {
-    filter: brightness(1) drop-shadow(0 0 2px rgba(150, 220, 255, 0.3));
-  }
-  25% {
-    filter: brightness(1.2) drop-shadow(0 0 4px rgba(150, 220, 255, 0.5));
-  }
-  50% {
-    filter: brightness(1) drop-shadow(0 0 2px rgba(150, 220, 255, 0.3));
-  }
-  75% {
-    filter: brightness(1.1) drop-shadow(0 0 3px rgba(150, 220, 255, 0.4));
-  }
-}
-
-/* Geo - Rock: Stable pulse */
-.geo {
-  animation: solidPulse 3s ease-in-out infinite;
-}
-
-@keyframes solidPulse {
-  0%,
-  100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 2px rgba(255, 200, 50, 0.3));
-  }
-  50% {
-    transform: scale(1.03);
-    filter: drop-shadow(0 0 3px rgba(255, 200, 50, 0.4));
-  }
-}
-
-/* Dendro - Nature: Gentle grow/bloom */
-.dendro {
-  animation: bloom 3.5s ease-in-out infinite;
-}
-
-@keyframes bloom {
-  0%,
-  100% {
-    transform: scale(1) rotate(0deg);
-    filter: drop-shadow(0 0 2px rgba(100, 200, 50, 0.3));
-  }
-  50% {
-    transform: scale(1.08) rotate(2deg);
-    filter: drop-shadow(0 0 4px rgba(100, 200, 50, 0.5));
-  }
-}
-
-/* Element icon wrapper - applies subtle element animation */
+/* Element icon wrapper - no animations by default for performance */
 .elementIcon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease;
+  /* GPU acceleration hint */
+  will-change: transform;
 }
 
-/* Card hover base class */
+/* Card hover base class with GPU acceleration */
 .cardHover {
   position: relative;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Use transform3d for GPU acceleration */
+  transform: translate3d(0, 0, 0);
+  will-change: transform, box-shadow;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Simplified hover effect with GPU acceleration */
+.cardHover:hover {
+  transform: translate3d(0, -4px, 0) scale(1.02);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 768px) {
+  .cardHover:hover {
+    transform: translate3d(0, -4px, 0) scale(1.03);
+  }
 }
 
 /* Pseudo-element for hover glow effect */
@@ -142,40 +60,150 @@
   transition: opacity 0.3s ease;
 }
 
-/* Element-specific hover glows */
+/* Only animate element icons on card hover for performance */
+.cardHover:hover .elementIcon {
+  transform: scale(1.05);
+}
+
+/* Anemo - Wind/Air: Gentle hover effect */
+.cardHover:hover .anemo {
+  animation: float 2s ease-in-out;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -3px, 0);
+  }
+}
+
+/* Pyro - Fire: Subtle brightness on hover */
+.cardHover:hover .pyro {
+  animation: flicker 1.5s ease-in-out;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.15);
+  }
+}
+
+/* Hydro - Water: Gentle scale on hover */
+.cardHover:hover .hydro {
+  animation: wave 2s ease-in-out;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* Electro - Electric: Quick pulse on hover */
+.cardHover:hover .electro {
+  animation: pulse 1s ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+/* Cryo - Ice: Shimmer on hover */
+.cardHover:hover .cryo {
+  animation: shimmer 2s ease-in-out;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.15);
+  }
+}
+
+/* Geo - Rock: Stable pulse on hover */
+.cardHover:hover .geo {
+  animation: solidPulse 2s ease-in-out;
+}
+
+@keyframes solidPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Dendro - Nature: Gentle grow on hover */
+.cardHover:hover .dendro {
+  animation: bloom 2s ease-in-out;
+}
+
+@keyframes bloom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Element-specific hover glows - reduced opacity for subtlety */
 .anemoGlow:hover::before {
-  opacity: 0.15;
-  box-shadow: 0 0 20px 5px rgba(100, 210, 255, 0.4);
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(100, 210, 255, 0.3);
 }
 
 .pyroGlow:hover::before {
-  opacity: 0.15;
-  box-shadow: 0 0 20px 5px rgba(255, 100, 50, 0.4);
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(255, 100, 50, 0.3);
 }
 
 .hydroGlow:hover::before {
-  opacity: 0.15;
-  box-shadow: 0 0 20px 5px rgba(50, 150, 255, 0.4);
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(50, 150, 255, 0.3);
 }
 
 .electroGlow:hover::before {
-  opacity: 0.15;
-  box-shadow: 0 0 20px 5px rgba(150, 100, 255, 0.4);
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(150, 100, 255, 0.3);
 }
 
 .cryoGlow:hover::before {
-  opacity: 0.15;
-  box-shadow: 0 0 20px 5px rgba(150, 220, 255, 0.4);
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(150, 220, 255, 0.3);
 }
 
 .geoGlow:hover::before {
-  opacity: 0.15;
-  box-shadow: 0 0 20px 5px rgba(255, 200, 50, 0.4);
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(255, 200, 50, 0.3);
 }
 
 .dendroGlow:hover::before {
-  opacity: 0.15;
-  box-shadow: 0 0 20px 5px rgba(100, 200, 50, 0.4);
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(100, 200, 50, 0.3);
 }
 
 /* Respect user's motion preferences */
@@ -188,11 +216,19 @@
   .geo,
   .dendro,
   .elementIcon {
-    animation: none;
+    animation: none !important;
   }
 
+  .cardFadeIn,
   .cardHover,
-  .cardHover::before {
+  .cardHover::before,
+  .elementIcon {
     transition: none;
+    will-change: auto;
+  }
+
+  .cardFadeIn {
+    opacity: 1;
+    transform: none;
   }
 }

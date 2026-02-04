@@ -1,10 +1,9 @@
-import { motion } from 'framer-motion';
 import React, { useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
 import {
   getElementAnimationClass,
   getElementBorderClass,
@@ -29,14 +28,23 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   isMounted = true,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const isVisible = useIntersectionObserver(cardRef, {
+  const isVisible = useSharedIntersectionObserver(cardRef, {
     rootMargin: '100px',
     threshold: 0.1,
   });
 
   const staggerDelay = isMounted ? Math.min(index * 0.05, 0.8) : 0;
 
-  console.log(character);
+  // Memoize class calculations to avoid recalculating on every render
+  const elementClasses = useMemo(
+    () => ({
+      border: getElementBorderClass(character.element),
+      glass: getElementGlassClass(character.element),
+      glow: getElementGlowClass(character.element),
+      animation: getElementAnimationClass(character.element),
+    }),
+    [character.element]
+  );
 
   const characterMedia: AnimationMedia = useMemo(() => {
     if (character.partyJoin) return character.partyJoin;
@@ -54,24 +62,19 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   return (
     <Link to={`/characters/${character.name}`} className="block no-underline">
       <div ref={cardRef}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{
-            duration: 0.4,
-            delay: staggerDelay,
-            ease: [0.4, 0, 0.2, 1],
+        <div
+          className={`${styles.cardFadeIn} ${isVisible ? styles.visible : ''}`}
+          style={{
+            animationDelay: `${staggerDelay}s`,
           }}
         >
           <Card
             className={`
-              transition-all duration-300
-              hover:shadow-xl hover:scale-[1.02] md:hover:scale-105 hover:-translate-y-1
               cursor-pointer
-              ${getElementBorderClass(character.element)}
-              ${getElementGlassClass(character.element)}
+              ${elementClasses.border}
+              ${elementClasses.glass}
               ${styles.cardHover}
-              ${styles[getElementGlowClass(character.element)]}
+              ${styles[elementClasses.glow]}
             `}
           >
             <CardContent className="p-4">
@@ -99,7 +102,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
                     {/* Element */}
                     <div className="flex items-center gap-2 md:justify-center">
                       <div
-                        className={`${styles.elementIcon} ${styles[getElementAnimationClass(character.element)]}`}
+                        className={`${styles.elementIcon} ${styles[elementClasses.animation]}`}
                       >
                         <ElementDisplay
                           element={character.element}
@@ -141,7 +144,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </div>
       </div>
     </Link>
   );
