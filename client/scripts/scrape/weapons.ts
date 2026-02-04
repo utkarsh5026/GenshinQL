@@ -1,4 +1,3 @@
-import * as fs from 'node:fs/promises';
 import path from 'node:path';
 
 import chalk from 'chalk';
@@ -13,7 +12,6 @@ import {
   loadFromPublic,
   loadJsonData,
   PUBLIC_DIR,
-  saveFileWithNewVersion,
   saveJson,
   saveToPublic,
   saveToTemp,
@@ -82,10 +80,6 @@ type MaterialCalendar = {
  * The data is organized by nation (Mondstadt, Liyue, etc) and then by day of the week.
  *
  * @returns {Promise<Record<Nation, MaterialCalendar[]>>} A Promise that resolves to an object mapping each nation to their material calendar data.
- * Each nation's calendar contains an array of material groups, with each group containing:
- * - day: The days these materials are available (e.g. "Monday/Thursday")
- * - images: Array of material images with URLs and captions
- * - weapons: Array of weapon names that use these materials
  */
 async function loadMaterialCalendar(): Promise<
   Record<Nation, MaterialCalendar[]>
@@ -106,10 +100,13 @@ async function loadMaterialCalendar(): Promise<
     const images = (
       await Promise.all(
         imgs.map(async (img) => {
-          const src = await img.getAttribute('data-src');
+          const [src, caption] = await Promise.all([
+            img.getAttribute('data-src'),
+            img.getAttribute('alt'),
+          ]);
           return {
             url: parseUrl(src),
-            caption: await img.getAttribute('alt'),
+            caption,
           };
         })
       )
@@ -280,15 +277,6 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
 }
 
 /**
- * Parses stat values that may contain percentages or decimals
- * Examples: "44.1%", "198", "9.6%"
- */
-function parseStatValue(text: string): number {
-  const cleaned = text.trim().replace('%', '');
-  return parseFloat(cleaned);
-}
-
-/**
  * Extracts ascension materials and mora cost from a cost cell
  */
 async function extractAscensionCost(costCell: WebElement): Promise<{
@@ -331,15 +319,11 @@ async function extractAscensionCost(costCell: WebElement): Promise<{
   };
 
   try {
-    const materialCards = await costCell.findElements(
-      By.css('div.card-container')
-    );
-
-    const mora =
-      materialCards.length > 0 ? await extractMora(materialCards[0]) : 0;
+    const matCards = await costCell.findElements(By.css('div.card-container'));
+    const mora = matCards.length > 0 ? await extractMora(matCards[0]) : 0;
 
     const materials = (
-      await Promise.all(materialCards.slice(1).map(parseMaterial))
+      await Promise.all(matCards.slice(1).map(parseMaterial))
     ).filter((m) => m !== undefined);
 
     return { mora, materials };
@@ -363,10 +347,12 @@ async function parseAscensionRow(
   mora?: number;
   materials?: Array<{ url: string; caption: string; count: number }>;
 } | null> {
-  try {
-    // Expected structure: [Phase, Level, Base ATK, Sub-stat]
-    // But we need to handle rowspan for phase column
+  const parseStatValue = (text: string) => {
+    const cleaned = text.trim().replace('%', '');
+    return parseFloat(cleaned);
+  };
 
+  try {
     let cellIndex = 0;
     const hasPhaseCell = await cells[0].getAttribute('rowspan');
     if (hasPhaseCell) cellIndex = 1;
@@ -482,41 +468,6 @@ async function extractWeaponAscensionData(
 }
 
 /**
- * Scrapes detailed weapon data from a weapon's individual wiki page.
- * Creates a new WebDriver instance for each weapon scrape.
- * Uses visible browser mode to avoid anti-bot detection.
- *
- * @param weaponName - The name of the weapon to scrape detailed data for
- * @returns Promise resolving to detailed weapon data including materials, passives, and images
- */
-export async function scrapeWeaponDetailed(weaponName: string) {
-  return await withWebDriver(async (driver: WebDriver) => {
-    const name = encodeURIComponent(underScore(weaponName));
-    const weaponUrl = `${URL}/${name}`;
-
-    try {
-      logger.cyan(`🔍 Scraping: ${weaponName}`);
-      await driver.get(weaponUrl);
-
-      const { materials, passives, images, ascension } =
-        await extractEachWeaponData(driver, weaponName);
-
-      logger.success(`✓ ${weaponName} scraped successfully`);
-
-      return {
-        materials,
-        passives,
-        ascension,
-        images,
-      };
-    } catch (error) {
-      logger.error(`✗ Error scraping ${weaponName}:`, error);
-      throw error;
-    }
-  }, true);
-}
-
-/**
  * Scrapes detailed information for each weapon and saves it to individual files.
  * After scraping all weapons, combines the files into a single detailed weapons file.
  * Each weapon gets its own WebDriver instance for isolated scraping.
@@ -530,21 +481,68 @@ export async function scrapeWeaponsInDetail(
   weapons: BaseWeaponType[],
   force: boolean = false
 ) {
-  const detailedDir = path.join(PUBLIC_DIR, 'weapons');
-  ensureDir(detailedDir);
-
-  const savedWeapons = await listFiles(detailedDir);
-  const toScrape = force
-    ? weapons
-    : weapons.filter((w) => !savedWeapons.includes(parseCharacterName(w.name)));
-
-  logger.info(`\nProcessing: ${toScrape.length}/${weapons.length} weapons`);
-  if (!force && savedWeapons.length > 0) {
-    logger.debug(
-      `  Skipping ${weapons.length - toScrape.length} already saved weapons`
+  const getWeaponsToScrape = async (weaponsDir: string) => {
+    const savedWeapons = (await listFiles(weaponsDir)).map((f) =>
+      f.replace(/\.json$/, '')
     );
-  }
+    const toScrape = force
+      ? weapons
+      : weapons.filter(
+          (w) => !savedWeapons.includes(parseCharacterName(w.name))
+        );
 
+    logger.info(`\nProcessing: ${toScrape.length}/${weapons.length} weapons`);
+    if (!force && savedWeapons.length > 0) {
+      logger.debug(
+        `  Skipping ${weapons.length - toScrape.length} already saved weapons`
+      );
+    }
+    return toScrape;
+  };
+
+  const morphAllFilesIntoOne = async (weaponsDir: string) => {
+    let weaponsDetailed: Record<string, Weapon> = {};
+    const files = await listFiles(weaponsDir);
+    let cnt = 0;
+    for (const file of files) {
+      const weapon = await loadJsonData<Weapon>(path.join(weaponsDir, file));
+
+      if (weapon) {
+        weaponsDetailed = {
+          ...weaponsDetailed,
+          [weapon.name]: weapon,
+        };
+        cnt++;
+      } else {
+        logger.warn(`⚠️  Failed to load ${file}`);
+      }
+    }
+
+    logger.debug(`Successfully loaded ${cnt}/${files.length} weapon files`);
+    await saveToPublic(weaponsDetailed, 'weapons-detailed');
+    logger.success(`✨ Combined ${cnt} weapons into weapons_detailed.json!`);
+  };
+
+  const scrape = async (weaponName: string) => {
+    return await withWebDriver(async (driver: WebDriver) => {
+      const name = encodeURIComponent(underScore(weaponName));
+      const weaponUrl = `${URL}/${name}`;
+
+      try {
+        logger.cyan(`🔍 Scraping: ${weaponName}`);
+        await driver.get(weaponUrl);
+        const scraped = await extractEachWeaponData(driver, weaponName);
+        logger.success(`✓ ${weaponName} scraped successfully`);
+        return { ...scraped };
+      } catch (error) {
+        logger.error(`✗ Error scraping ${weaponName}:`, error);
+        throw error;
+      }
+    }, true);
+  };
+
+  const detailedDir = await ensureDir(path.join(PUBLIC_DIR, 'weapons'));
+  const toScrape = await getWeaponsToScrape(detailedDir);
   let successCount = 0;
   let errorCount = 0;
 
@@ -553,16 +551,11 @@ export async function scrapeWeaponsInDetail(
     const name = parseCharacterName(weapon.name);
 
     try {
-      logger.cyan(`\n[${i + 1}/${toScrape.length}] ${weapon.name}`);
-      const detailedData = await scrapeWeaponDetailed(weapon.name);
-
-      const fullWeaponData = {
-        ...weapon,
-        ...detailedData,
-      };
-
-      await saveJson(fullWeaponData, detailedDir, name);
-      logger.success(`Saved: ${weapon.name}`);
+      await saveJson(
+        { ...weapon, ...(await scrape(weapon.name)) },
+        detailedDir,
+        name
+      );
       successCount++;
     } catch (error) {
       logger.error(`Failed to scrape ${weapon.name}:`, error);
@@ -571,48 +564,7 @@ export async function scrapeWeaponsInDetail(
   }
 
   logger.info(`\n📈 Summary: ${successCount} succeeded, ${errorCount} failed`);
-  await morphAllFilesIntoOne();
-}
-
-/**
- * Combines all individual weapon detail files into a single file.
- *
- * @remarks
- * The individual files are read from PUBLIC_DIR/weapons/
- * The combined file is saved to PUBLIC_DIR/weapons_detailed{version}.json
- *
- * @returns Promise that resolves when the combined file has been saved
- */
-async function morphAllFilesIntoOne() {
-  let weaponsDetailed: Record<string, Weapon> = {};
-  const weaponsDir = path.join(PUBLIC_DIR, 'weapons');
-
-  try {
-    await fs.access(weaponsDir);
-  } catch {
-    await fs.mkdir(weaponsDir, { recursive: true });
-    logger.info(`📁 Created directory: ${weaponsDir}`);
-  }
-
-  const files = await listFiles(weaponsDir);
-  let cnt = 0;
-  for (const file of files) {
-    const weapon = await loadJsonData<Weapon>(path.join(weaponsDir, file));
-
-    if (weapon) {
-      weaponsDetailed = {
-        ...weaponsDetailed,
-        [weapon.name]: weapon,
-      };
-      cnt++;
-    } else {
-      logger.warn(`⚠️  Failed to load ${file}`);
-    }
-  }
-
-  logger.debug(`Successfully loaded ${cnt}/${files.length} weapon files`);
-  await saveFileWithNewVersion(weaponsDetailed, PUBLIC_DIR, 'weapons_detailed');
-  logger.success(`✨ Combined ${cnt} weapons into weapons_detailed.json!`);
+  await morphAllFilesIntoOne(detailedDir);
 }
 
 /**
@@ -709,31 +661,12 @@ async function main() {
 
   if (args.length === 0) {
     logger.warn('⚠️  No arguments provided\n');
-    logger.log(chalk.white('Usage:'));
-    logger.log(
-      chalk.gray('  node weapons.js --base      ') +
-        chalk.dim('# Scrape basic weapon data')
-    );
-    logger.log(
-      chalk.gray('  node weapons.js --detailed  ') +
-        chalk.dim('# Scrape detailed weapon data')
-    );
-    logger.log(
-      chalk.gray('  node weapons.js --calendar  ') +
-        chalk.dim('# Scrape weapon material calendar')
-    );
-    logger.log(
-      chalk.gray('  node weapons.js --base --detailed') +
-        chalk.dim('# Scrape both\n')
-    );
     return;
   }
 
   logger.info(`📋 Running with flags: ${args.join(', ')}\n`);
 
   const scrapeWeaponsBase = async (driver: WebDriver) => {
-    logger.info('PHASE 1: Base Weapon Data Scraping');
-
     const tempLocations: Array<[WeaponType, string]> = [];
     let totalWeapons = 0;
 
@@ -795,7 +728,6 @@ async function main() {
   }
 
   if (args.includes('--calendar')) {
-    logger.info('📅 PHASE 3: Weapon Material Calendar Scraping');
     const calendarData = await loadMaterialCalendar();
     await saveToPublic(calendarData, WEAPON_CALENDAR_FILE_NAME);
     logger.success(`💾 Saved to public/${WEAPON_CALENDAR_FILE_NAME}.json`);
