@@ -1,8 +1,8 @@
 import { Aperture, CalendarDays } from 'lucide-react';
 import React, { useEffect, useMemo, useState } from 'react';
 
-import TalentCalendarView from '@/components/talents/TalentCalendarView.tsx';
-import TalentTable from '@/components/talents/TalentTable.tsx';
+import TalentCalendarView from '@/components/talents/talent-calendar-view';
+import TalentTable from '@/components/talents/talents-table';
 import { Button } from '@/components/ui/button.tsx';
 import {
   Tabs,
@@ -10,7 +10,8 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/ui/tabs.tsx';
-import { useTalentBooksStore } from '@/stores';
+import { CachedImage } from '@/components/utils/CachedImage';
+import { usePrimitivesStore, useTalentBooksStore } from '@/stores';
 
 /**
  * TalentCalender component displays a calendar or table view of talent books.
@@ -20,15 +21,31 @@ import { useTalentBooksStore } from '@/stores';
 const TalentCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
   const { calendar, loading, fetchBooks } = useTalentBooksStore();
+  const { primitives, fetchPrimitives } = usePrimitivesStore();
 
   useEffect(() => {
     fetchBooks();
-  }, [fetchBooks]);
+    fetchPrimitives();
+  }, [fetchBooks, fetchPrimitives]);
 
   const locations = useMemo(() => {
     const books = calendar || [];
     return books.map(({ location }) => location);
   }, [calendar]);
+
+  const regionsWithIcons = useMemo(() => {
+    if (!primitives?.regions) return [];
+
+    return locations.map((location) => {
+      const region = primitives.regions.find(
+        (r) => r.name.toLowerCase() === location.toLowerCase()
+      );
+      return {
+        name: location,
+        iconUrl: region?.url || '',
+      };
+    });
+  }, [locations, primitives]);
 
   const talentBooks = calendar || [];
 
@@ -39,14 +56,23 @@ const TalentCalender: React.FC = () => {
       <div>
         <Tabs defaultValue={locations[0]}>
           <TabsList className="flex-wrap md:flex-nowrap justify-start overflow-x-auto">
-            {locations.map((loc) => {
+            {regionsWithIcons.map((region) => {
               return (
                 <TabsTrigger
-                  key={loc}
-                  value={loc}
-                  className="text-xs md:text-sm px-3 md:px-4"
+                  key={region.name}
+                  value={region.name}
+                  className="text-xs md:text-sm px-3 md:px-4 flex items-center gap-2"
                 >
-                  {loc}
+                  {region.iconUrl && (
+                    <CachedImage
+                      src={region.iconUrl}
+                      alt={region.name}
+                      width={20}
+                      height={20}
+                      className="w-4 h-4 md:w-5 md:h-5 rounded-full"
+                    />
+                  )}
+                  <span>{region.name}</span>
                 </TabsTrigger>
               );
             })}
@@ -57,7 +83,7 @@ const TalentCalender: React.FC = () => {
               <TabsContent key={loc} value={loc}>
                 <div className="w-full flex justify-end my-3 md:my-5">
                   <Button
-                    className="bg-green-200 text-green-950 border-2 text-xs md:text-sm h-9 md:h-10"
+                    className="bg-success-200 text-success-900 border-2 text-xs md:text-sm h-9 md:h-10"
                     onClick={() => {
                       setIsCalendar(!isCalendar);
                     }}

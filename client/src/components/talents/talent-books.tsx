@@ -15,7 +15,7 @@ const TalentBooks: React.FC<TalentBooksProps> = ({ books }) => {
           <img
             src={book.url}
             alt={book.name}
-            className="h-10 w-10 md:h-12 md:w-12 flex-shrink-0"
+            className="h-10 w-10 md:h-12 md:w-12 shrink-0"
           />
           <span className="text-xs md:text-sm font-light text-white/90">
             {book.name}
