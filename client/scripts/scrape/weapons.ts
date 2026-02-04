@@ -1,3 +1,4 @@
+import * as fs from 'node:fs/promises';
 import path from 'node:path';
 
 import chalk from 'chalk';
@@ -68,6 +69,16 @@ type MaterialCalendar = {
   day: string;
   images: { url: string; caption: string }[];
   weapons: { name: string; url: string }[];
+};
+
+type OptimizedWeaponData = BaseWeaponType & {
+  nation?: number;
+  weekdays?: number;
+};
+
+type WeaponMapping = {
+  nation: string;
+  day: string;
 };
 
 /**
@@ -247,21 +258,12 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
     'window.scrollTo(0, document.body.scrollHeight / 2);'
   );
   await driver.sleep(1000);
-  logger.debug(`  ↳ Scrolled to trigger lazy loading`);
 
-  const ascension = await extractWeaponAscensionData(driver, weaponName);
-  if (ascension) {
-    logger.success(`  ↳ Extracted ${ascension.phases.length} ascension phases`);
-  } else {
-    logger.warn(
-      `  ↳ No ascension data found (may be expected for some weapons)`
-    );
-  }
-
-  const [materials, passives, images] = await Promise.all([
+  const [materials, passives, images, ascension] = await Promise.all([
     extractWeaponMaterials(),
     extractWeaponPassives(),
     getWeaponImages(),
+    extractWeaponAscensionData(driver, weaponName),
   ]);
 
   logger.debug(`Extracted ${passives.length} passive descriptions`);
@@ -650,6 +652,159 @@ const scrapeAndSaveDetailedWeaponInfo = async (
 };
 
 /**
+ * Optimizes weapons data by adding nation and weekday indices from the calendar.
+ * Creates a backup of the original file before overwriting.
+ */
+async function optimizeWeaponsData(): Promise<void> {
+  const normalizeDay = (day: string) => {
+    return day.replace(/\n/g, '').trim();
+  };
+
+  const backupOriginalFile = async () => {
+    const originalPath = path.join(PUBLIC_DIR, 'weapons.json');
+    const backupPath = path.join(
+      PUBLIC_DIR,
+      `weapons.backup-${Date.now()}.json`
+    );
+
+    try {
+      await fs.copyFile(originalPath, backupPath);
+      logger.success(`Backup created: ${path.basename(backupPath)}`);
+    } catch (error) {
+      logger.warn(`Could not create backup: ${error}`);
+    }
+  };
+
+  const transformWeapons = (
+    weaponsData: Record<WeaponType, BaseWeaponType[]>,
+    weaponMapping: Map<string, WeaponMapping>,
+    nationsList: string[],
+    daysList: string[]
+  ): Record<string, OptimizedWeaponData[]> => {
+    let foundCount = 0;
+    let notFoundCount = 0;
+
+    const transformed: Record<string, OptimizedWeaponData[]> = {};
+    const weaponEntries = Object.entries(weaponsData);
+
+    for (const [weaponType, weapons] of weaponEntries) {
+      transformed[weaponType] = weapons.map((weapon) => {
+        const mapping = weaponMapping.get(weapon.name);
+
+        if (mapping) {
+          foundCount++;
+          return {
+            ...weapon,
+            nation: nationsList.indexOf(mapping.nation),
+            weekdays: daysList.indexOf(mapping.day),
+          };
+        } else {
+          notFoundCount++;
+          return {
+            ...weapon,
+            nation: -1,
+            weekdays: -1,
+          };
+        }
+      });
+    }
+
+    logger.info(
+      `  ↳ Mapped ${foundCount} weapons, ${notFoundCount} not in calendar (set to -1)`
+    );
+
+    return transformed;
+  };
+
+  const buildWeaponMapping = (calendar: Record<Nation, MaterialCalendar[]>) => {
+    const mapping = new Map<string, WeaponMapping>();
+
+    for (const [nation, schedules] of Object.entries(calendar)) {
+      schedules.forEach(({ day, weapons }) => {
+        for (const weapon of weapons) {
+          if (mapping.has(weapon.name)) {
+            continue;
+          }
+
+          mapping.set(weapon.name, {
+            nation,
+            day: normalizeDay(day),
+          });
+        }
+      });
+    }
+
+    return mapping;
+  };
+
+  const extractNations = (calendar: Record<Nation, MaterialCalendar[]>) =>
+    Object.keys(calendar);
+
+  const extractDays = (calendar: Record<Nation, MaterialCalendar[]>) => {
+    const days = new Set<string>();
+    for (const schedules of Object.values(calendar)) {
+      for (const schedule of schedules) {
+        days.add(normalizeDay(schedule.day));
+      }
+    }
+    return Array.from(days).sort();
+  };
+
+  logger.log('\n' + chalk.bold.cyan('⚔️  Weapon Data Optimization') + '\n');
+
+  const calendar =
+    await loadFromPublic<Record<Nation, MaterialCalendar[]>>('weaponCalendar');
+  if (!calendar) {
+    logger.error('❌ Failed to load weaponCalendar.json');
+    return;
+  }
+
+  const weaponMapping = buildWeaponMapping(calendar);
+  const nationsList = extractNations(calendar);
+  const daysList = extractDays(calendar);
+  logger.success(
+    `Found ${nationsList.length} nations: ${nationsList.join(', ')}`
+  );
+  logger.success(
+    `Found ${daysList.length} day schedules: ${daysList.join(', ')}`
+  );
+
+  const currentData =
+    await loadFromPublic<Record<WeaponType, BaseWeaponType[]>>('weapons');
+
+  if (!currentData) {
+    logger.error('❌ Failed to load weapons.json');
+    return;
+  }
+
+  const weaponTypes = Object.keys(currentData);
+  const totalWeapons = Object.values(currentData).reduce(
+    (sum, weapons) => sum + weapons.length,
+    0
+  );
+  logger.success(
+    `  ✓ Loaded ${totalWeapons} weapons across ${weaponTypes.length} types`
+  );
+
+  await backupOriginalFile();
+
+  const weapons = {
+    nations: nationsList,
+    days: daysList,
+    weapons: transformWeapons(
+      currentData,
+      weaponMapping,
+      nationsList,
+      daysList
+    ),
+  };
+
+  await saveToPublic(weapons, 'weapons');
+  logger.success('Optimized data saved');
+  logger.log('\n' + chalk.bold.green('✅ Optimization complete!') + '\n');
+}
+
+/**
  * Main function to scrape and save weapon data.
  * Supports CLI flags:
  * --base: Scrapes basic weapon data from weapon type tables
@@ -728,10 +883,15 @@ async function main() {
   }
 
   if (args.includes('--calendar')) {
+    logger.info('📅 PHASE 3: Weapon Material Calendar Scraping');
     const calendarData = await loadMaterialCalendar();
     await saveToPublic(calendarData, WEAPON_CALENDAR_FILE_NAME);
     logger.success(`💾 Saved to public/${WEAPON_CALENDAR_FILE_NAME}.json`);
     logger.success('\n✨ Calendar scraping complete!\n');
+  }
+
+  if (args.includes('--base') && args.includes('--calendar')) {
+    await optimizeWeaponsData();
   }
 
   const duration = ((Date.now() - startTime) / 1000).toFixed(2);
