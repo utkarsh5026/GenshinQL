@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 
 import chalk from 'chalk';
 
+import { logger } from '../logger.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -341,5 +343,15 @@ export async function cleanupTempFiles(
     } else {
       console.error(chalk.red('❌ Error during temp cleanup:'), error);
     }
+  }
+}
+
+export async function ensureDir(dir: string) {
+  try {
+    await fs.access(dir);
+    logger.debug(`📁 Using existing directory: ${dir}`);
+  } catch {
+    await fs.mkdir(dir, { recursive: true });
+    logger.info(`📁 Created directory: ${dir}`);
   }
 }

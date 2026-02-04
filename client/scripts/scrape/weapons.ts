@@ -8,6 +8,7 @@ import { z } from 'zod';
 import { logger } from '../logger.js';
 import {
   cleanupTempFiles,
+  ensureDir,
   listFiles,
   loadFromPublic,
   loadJsonData,
@@ -17,7 +18,11 @@ import {
   saveToPublic,
   saveToTemp,
 } from './fileio.js';
-import { weaponSchema, weaponTypeSchema } from './schema.js';
+import {
+  weaponAscensionPhaseSchema,
+  weaponSchema,
+  weaponTypeSchema,
+} from './schema.js';
 import {
   handleCloudflareChallenge,
   setupDriver,
@@ -32,11 +37,13 @@ import {
   parseCharacterName,
   parseUrl,
   underScore,
+  waitAndGetElement,
 } from './utils.js';
 
 const WEAPON_FILE_NAME = 'weapons';
 
 type WeaponType = z.infer<typeof weaponTypeSchema>;
+type WeaponAscensionPhase = z.infer<typeof weaponAscensionPhaseSchema>;
 type Weapon = z.infer<typeof weaponSchema>;
 type BaseWeaponType = Omit<Weapon, 'passives' | 'materials' | 'images'>;
 
@@ -84,9 +91,41 @@ export async function loadMaterialCalendar(): Promise<
   Record<Nation, MaterialCalendar[]>
 > {
   const driver = await setupDriver();
-  const url =
-    'https://genshin-impact.fandom.com/wiki/Weapon_Ascension_Material';
-  await driver.get(url);
+  await driver.get(
+    'https://genshin-impact.fandom.com/wiki/Weapon_Ascension_Material'
+  );
+
+  const extractMaterialData = async (row: WebElement) => {
+    const cells = await row.findElements(By.css('td'));
+    if (cells.length !== 3) {
+      return undefined;
+    }
+
+    const day = await cells[0].getText();
+    const imgs = await cells[1].findElements(By.css('img'));
+    const images = (
+      await Promise.all(
+        imgs.map(async (img) => {
+          const src = await img.getAttribute('data-src');
+          return {
+            url: parseUrl(src),
+            caption: await img.getAttribute('alt'),
+          };
+        })
+      )
+    ).filter((item) => !item.caption.includes('Quality'));
+
+    const weapons = await cells[2].findElements(By.css('a'));
+    const weaponNames = await Promise.all(
+      weapons.map(async (weapon: WebElement) => weapon.getAttribute('title'))
+    );
+
+    return {
+      day,
+      images,
+      weapons: weaponNames,
+    };
+  };
 
   const result: Record<Nation, MaterialCalendar[]> = {
     Mondstadt: [],
@@ -101,48 +140,16 @@ export async function loadMaterialCalendar(): Promise<
   for (const nation of nations) {
     const selector = `span#${nation}`;
     await waitForElementCss(driver, selector);
-    const table = await driver
-      .findElement(By.css(selector))
-      .findElement(By.xpath('..'))
-      .findElement(By.xpath('following-sibling::table'));
+    const table = await getTableFromHeading(
+      driver,
+      nation === 'NodKrai' ? 'Nod-Krai' : nation,
+      'h3'
+    );
 
     const rows = await table.findElements(By.css('tr'));
-    result[nation] = (
-      await Promise.all(
-        rows.map(async (row: WebElement) => {
-          const cells = await row.findElements(By.css('td'));
-          if (cells.length === 3) {
-            const day = await cells[0].getText();
-            const materialImages = await cells[1].findElements(By.css('img'));
-            const images = (
-              await Promise.all(
-                materialImages.map(async (img: WebElement) => {
-                  const src = await img.getAttribute('data-src');
-                  return {
-                    url: parseUrl(src),
-                    caption: await img.getAttribute('alt'),
-                  };
-                })
-              )
-            ).filter((item) => !item.caption.includes('Quality'));
-
-            const weapons = await cells[2].findElements(By.css('a'));
-            const weaponNames = await Promise.all(
-              weapons.map(async (weapon: WebElement) =>
-                weapon.getAttribute('title')
-              )
-            );
-
-            return {
-              day,
-              images,
-              weapons: weaponNames,
-            };
-          }
-          return undefined;
-        })
-      )
-    ).filter((item): item is MaterialCalendar => item !== undefined);
+    result[nation] = (await Promise.all(rows.map(extractMaterialData))).filter(
+      (item): item is MaterialCalendar => item !== undefined
+    );
   }
 
   await driver.quit();
@@ -155,33 +162,32 @@ export async function loadMaterialCalendar(): Promise<
  * @param {string} weaponName - The name of the weapon to extract data for.
  */
 async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
-  const name = encodeURIComponent(underScore(weaponName));
-  const url = `${URL}/${name}`;
+  const extractWeaponPassives = async () => {
+    const tabs = await driver.findElements(By.css('li.wds-tabs__tab'));
+    const passives = [];
+    const refinementTabs = tabs.slice(4, tabs.length);
+    for (const tab of refinementTabs) {
+      await driver.executeScript('arguments[0].click();', tab);
+      const weaponContent = await driver
+        .findElement(By.css('div.wds-tab__content.wds-is-current td'))
+        .getText();
+      passives.push(weaponContent);
+    }
+    return passives;
+  };
 
-  await driver.get(url);
-  logger.debug(`  ↳ Navigated to ${weaponName} page`);
+  const extractWeaponMaterials = async () => {
+    const container = await waitAndGetElement(
+      driver,
+      'span.card-list-container'
+    );
 
-  // Wait for the page to fully load before looking for elements
-  await waitForPageLoad(driver);
-  logger.debug(`  ↳ Page loaded completely`);
+    const materials = await container.findElements(
+      By.css('div.card-container')
+    );
 
-  // Check for and handle Cloudflare challenge
-  await handleCloudflareChallenge(driver);
-
-  // Scroll down to trigger any lazy-loaded content
-  await driver.executeScript(
-    'window.scrollTo(0, document.body.scrollHeight / 2);'
-  );
-  await driver.sleep(1000);
-  logger.debug(`  ↳ Scrolled to trigger lazy loading`);
-
-  const selector = 'span.card-list-container';
-  await waitForElementCss(driver, selector);
-
-  const container = await driver.findElement(By.css(selector));
-  const materials = await Promise.all(
-    (await container.findElements(By.css('div.card-container'))).map(
-      async (card) => {
+    return await Promise.all(
+      materials.map(async (card) => {
         const imageUrl = await card
           .findElement(By.css('img'))
           .getAttribute('data-src');
@@ -194,32 +200,50 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
           url: parseUrl(imageUrl),
           caption,
         };
-      }
-    )
+      })
+    );
+  };
+
+  const getWeaponImages = async () => {
+    const imageContainer = await waitAndGetElement(
+      driver,
+      'div.pi-image-collection'
+    );
+    const imageElements = await imageContainer.findElements(By.css('img'));
+
+    logger.debug(`Found ${imageElements.length} images in collection`);
+
+    const images = await Promise.all(
+      imageElements.map(async (imageElement) => {
+        const image = await imageElement.getAttribute('src');
+        return parseUrl(image);
+      })
+    );
+
+    try {
+      const weaponDetailsImage = await driver.findElement(
+        By.css("img[alt='Weapon Details Announcement']")
+      );
+      const weaponDetailsImageUrl =
+        await weaponDetailsImage.getAttribute('data-src');
+      images.push(parseUrl(weaponDetailsImageUrl));
+      logger.debug(`    ↳ Added weapon details announcement image`);
+    } catch {
+      logger.debug(`    ↳ No weapon details announcement image found`);
+    }
+
+    return images;
+  };
+
+  await waitForPageLoad(driver);
+
+  await handleCloudflareChallenge(driver);
+  await driver.executeScript(
+    'window.scrollTo(0, document.body.scrollHeight / 2);'
   );
-  logger.debug(`  ↳ Extracted ${materials.length} materials`);
+  await driver.sleep(1000);
+  logger.debug(`  ↳ Scrolled to trigger lazy loading`);
 
-  const tabSelector = 'li.wds-tabs__tab';
-  const tabs = await driver.findElements(By.css(tabSelector));
-
-  const passives = [];
-  const refinementTabs = tabs.slice(4, tabs.length);
-  logger.debug(`  ↳ Found ${refinementTabs.length} refinement levels`);
-
-  for (const tab of refinementTabs) {
-    await driver.executeScript('arguments[0].click();', tab);
-    const weaponContent = await driver
-      .findElement(By.css('div.wds-tab__content.wds-is-current td'))
-      .getText();
-    passives.push(weaponContent);
-  }
-  logger.debug(`  ↳ Extracted ${passives.length} passive descriptions`);
-
-  const images = await getWeaponImages(driver);
-  logger.debug(`  ↳ Collected ${images.length} images`);
-
-  // Extract ascension data
-  logger.info(`  ↳ Extracting ascension data...`);
   const ascension = await extractWeaponAscensionData(driver, weaponName);
   if (ascension) {
     logger.success(`  ↳ Extracted ${ascension.phases.length} ascension phases`);
@@ -229,51 +253,22 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
     );
   }
 
+  const [materials, passives, images] = await Promise.all([
+    extractWeaponMaterials(),
+    extractWeaponPassives(),
+    getWeaponImages(),
+  ]);
+
+  logger.debug(`Extracted ${passives.length} passive descriptions`);
+  logger.debug(`Extracted ${materials.length} materials`);
+  logger.debug(`Collected ${images.length} images`);
+
   return {
     materials,
     passives,
     images,
     ascension,
   };
-}
-
-/**
- * Retrieves a list of image URLs associated with a weapon from the web page.
- * This function navigates through the weapon's image collection on the page,
- * extracts the URLs of all images, and includes a specific image for weapon details.
- *
- * @param {WebDriver} driver - The Selenium WebDriver instance used to interact with the web page.
- * @returns {Promise<string[]>} A promise that resolves to an array of image URLs.
- */
-async function getWeaponImages(driver: WebDriver): Promise<string[]> {
-  const selector = 'div.pi-image-collection';
-  await waitForElementCss(driver, selector);
-
-  const imageContainer = await driver.findElement(By.css(selector));
-  const imageElements = await imageContainer.findElements(By.css('img'));
-
-  logger.debug(`    ↳ Found ${imageElements.length} images in collection`);
-
-  const images = await Promise.all(
-    imageElements.map(async (imageElement) => {
-      const image = await imageElement.getAttribute('src');
-      return parseUrl(image);
-    })
-  );
-
-  try {
-    const weaponDetailsImage = await driver.findElement(
-      By.css("img[alt='Weapon Details Announcement']")
-    );
-    const weaponDetailsImageUrl =
-      await weaponDetailsImage.getAttribute('data-src');
-    images.push(parseUrl(weaponDetailsImageUrl));
-    logger.debug(`    ↳ Added weapon details announcement image`);
-  } catch {
-    logger.debug(`    ↳ No weapon details announcement image found`);
-  }
-
-  return images;
 }
 
 /**
@@ -288,73 +283,60 @@ function parseStatValue(text: string): number {
 /**
  * Extracts ascension materials and mora cost from a cost cell
  */
-async function extractAscensionCost(
-  driver: WebDriver,
-  costCell: WebElement
-): Promise<{
+async function extractAscensionCost(costCell: WebElement): Promise<{
   mora: number;
   materials: Array<{ url: string; caption: string; count: number }>;
 }> {
-  try {
-    // Expand collapsible section if needed
-    const collapsed = await costCell.getAttribute('class');
-    if (collapsed?.includes('mw-collapsed')) {
-      try {
-        const toggle = await costCell.findElement(
-          By.css('.mw-collapsible-toggle')
-        );
-        await driver.executeScript('arguments[0].click();', toggle);
-        await driver.sleep(500); // Wait for expansion
-      } catch {
-        logger.debug(`    ↳ No collapsible toggle found or couldn't click`);
-      }
+  const parseMaterial = async (matCell: WebElement) => {
+    try {
+      const img = await matCell.findElement(By.css('img'));
+      const [dataSrc, src, caption, cardCount] = await Promise.all([
+        img.getAttribute('data-src'),
+        img.getAttribute('src'),
+        img.getAttribute('alt'),
+        matCell.findElement(By.css('span.card-text')),
+      ]);
+
+      const imageUrl = dataSrc || src;
+      const count = Number.parseInt(await cardCount.getText());
+
+      return {
+        url: parseUrl(imageUrl),
+        caption: caption.replace(/[×x]\d+/gi, '').trim(),
+        count,
+      };
+    } catch (error) {
+      logger.debug(`    ⚠ Failed to parse material card: ${error}`);
     }
+  };
 
-    // Extract Mora amount
-    const fullText = await costCell.getText();
-    const moraMatch = fullText.match(/(\d{1,3}(?:,\d{3})*)\s*Mora/i);
-    const mora = moraMatch ? parseInt(moraMatch[1].replace(/,/g, '')) : 0;
+  const extractMora = async (moraCard: WebElement) => {
+    try {
+      const moraCountText = await moraCard
+        .findElement(By.css('span.card-text'))
+        .getText();
+      return Number.parseInt(moraCountText.replace(/,/g, ''));
+    } catch (error) {
+      logger.debug(`    ⚠ Failed to parse mora card: ${error}`);
+      return 0;
+    }
+  };
 
-    // Extract material cards
+  try {
     const materialCards = await costCell.findElements(
-      By.css('div.card-container, span.card-wrapper')
+      By.css('div.card-container')
     );
 
-    const materials: Array<{ url: string; caption: string; count: number }> =
-      [];
+    const mora =
+      materialCards.length > 0 ? await extractMora(materialCards[0]) : 0;
 
-    for (const card of materialCards) {
-      try {
-        // Get image
-        const img = await card.findElement(By.css('img'));
-        const imageUrl =
-          (await img.getAttribute('data-src')) ||
-          (await img.getAttribute('src'));
-
-        // Get caption/name
-        const caption = await img.getAttribute('alt');
-
-        // Get count from card text (e.g., "×5" or "x3")
-        const cardText = await card.getText();
-        const countMatch = cardText.match(/[×x](\d+)/i);
-        const count = countMatch ? parseInt(countMatch[1]) : 1;
-
-        // Skip Mora card (already extracted)
-        if (caption.toLowerCase().includes('mora')) continue;
-
-        materials.push({
-          url: parseUrl(imageUrl),
-          caption: caption.replace(/[×x]\d+/gi, '').trim(),
-          count,
-        });
-      } catch (error) {
-        logger.debug(`    ⚠ Failed to parse material card: ${error}`);
-      }
-    }
+    const materials = (
+      await Promise.all(materialCards.slice(1).map(parseMaterial))
+    ).filter((m) => m !== undefined);
 
     return { mora, materials };
   } catch (error) {
-    logger.debug(`  ⚠ Error extracting materials: ${error}`);
+    logger.debug(`Error extracting materials: ${error}`);
     return { mora: 0, materials: [] };
   }
 }
@@ -383,10 +365,7 @@ async function parseAscensionRow(
     const hasPhaseCell = await cells[0].getAttribute('rowspan');
     if (hasPhaseCell) cellIndex = 1;
 
-    // Extract level range (e.g., "1/20", "20/20")
     const levelRange = await cells[cellIndex].getText();
-
-    // Extract base ATK
     const baseAtkText = await cells[cellIndex + 1].getText();
     const baseAtk = parseFloat(baseAtkText);
 
@@ -421,49 +400,25 @@ async function extractWeaponAscensionData(
   driver: WebDriver,
   weaponName: string
 ): Promise<{
-  phases: Array<{
-    phase: number;
-    levelRange: string;
-    baseAttack: { min: number; max: number };
-    subStat: { min?: number; max?: number };
-    mora?: number;
-    materials?: Array<{ url: string; caption: string; count: number }>;
-  }>;
+  phases: Array<WeaponAscensionPhase>;
 } | null> {
   try {
     logger.debug('  ↳ Locating ascension table...');
 
-    // Find table with "Ascension" heading
-    const table = await getTableFromHeading(driver, 'Ascension');
+    const table = await getTableFromHeading(driver, 'Ascensions and Stats');
     const rows = await table.findElements(By.css('tbody tr'));
 
     logger.debug(`  ↳ Found ${rows.length} table rows`);
-
-    const phases: Array<{
-      phase: number;
-      levelRange: string;
-      baseAttack: { min: number; max: number };
-      subStat: { min?: number; max?: number };
-      mora?: number;
-      materials?: Array<{ url: string; caption: string; count: number }>;
-    }> = [];
+    const phases: Array<WeaponAscensionPhase> = [];
     let currentPhase = 0;
 
-    // Parse rows in pairs (min level + max level for each phase)
     for (let i = 0; i < rows.length; i++) {
       const cells = await rows[i].findElements(By.css('td'));
-
-      // Skip header rows and ascension cost rows
       if (cells.length === 0 || cells.length === 1) continue;
-
-      // Check if this row has a phase indicator (rowspan=2)
       const hasPhaseCell = await cells[0].getAttribute('rowspan');
 
       if (hasPhaseCell === '2') {
-        // This is the min level row for a new phase
         const minData = await parseAscensionRow(cells, currentPhase);
-
-        // Get the next row for max level
         i++;
         if (i >= rows.length) break;
 
@@ -471,8 +426,7 @@ async function extractWeaponAscensionData(
         const maxData = await parseAscensionRow(maxCells, currentPhase);
 
         if (minData && maxData) {
-          // Combine min and max data into a single phase
-          const phaseData = {
+          const phaseData: Partial<WeaponAscensionPhase> = {
             phase: currentPhase,
             levelRange: `${minData.levelRange}/${maxData.levelRange.split('/')[1]}`,
             baseAttack: {
@@ -483,41 +437,30 @@ async function extractWeaponAscensionData(
               min: minData.subStat.min,
               max: maxData.subStat.max,
             },
-            mora: undefined as number | undefined,
-            materials: undefined as
-              | Array<{ url: string; caption: string; count: number }>
-              | undefined,
           };
 
-          // Check if next row is ascension cost
           if (i + 1 < rows.length) {
             const nextCells = await rows[i + 1].findElements(By.css('td'));
             if (nextCells.length === 1) {
-              // This is an ascension cost row
-              const materials = await extractAscensionCost(
-                driver,
-                nextCells[0]
-              );
+              const materials = await extractAscensionCost(nextCells[0]);
               phaseData.mora = materials.mora;
               phaseData.materials = materials.materials;
-              i++; // Skip the cost row
+              i++;
             }
           }
 
-          phases.push(phaseData);
+          phases.push(phaseData as WeaponAscensionPhase);
           currentPhase++;
         }
       }
     }
 
-    // Validate phase count
     if (phases.length < 7) {
       logger.warn(
         `  ⚠ Expected 7 phases, got ${phases.length} for ${weaponName}`
       );
     }
 
-    // Validate each phase has required data
     phases.forEach((phase, idx) => {
       if (!phase.baseAttack.min || !phase.baseAttack.max) {
         logger.error(`  ✗ Phase ${idx} missing base ATK data`);
@@ -541,7 +484,6 @@ async function extractWeaponAscensionData(
  * @returns Promise resolving to detailed weapon data including materials, passives, and images
  */
 export async function scrapeWeaponDetailed(weaponName: string) {
-  // Force visible browser mode to avoid anti-bot detection
   return await withWebDriver(async (driver: WebDriver) => {
     const name = encodeURIComponent(underScore(weaponName));
     const weaponUrl = `${URL}/${name}`;
@@ -550,23 +492,22 @@ export async function scrapeWeaponDetailed(weaponName: string) {
       logger.cyan(`🔍 Scraping: ${weaponName}`);
       await driver.get(weaponUrl);
 
-      const { materials, passives, images } = await extractEachWeaponData(
-        driver,
-        weaponName
-      );
+      const { materials, passives, images, ascension } =
+        await extractEachWeaponData(driver, weaponName);
 
       logger.success(`✓ ${weaponName} scraped successfully`);
 
       return {
         materials,
         passives,
+        ascension,
         images,
       };
     } catch (error) {
       logger.error(`✗ Error scraping ${weaponName}:`, error);
       throw error;
     }
-  }, true); // Force visible mode
+  }, true);
 }
 
 /**
@@ -584,25 +525,17 @@ export async function scrapeWeaponsInDetail(
   force: boolean = false
 ) {
   const detailedDir = path.join(PUBLIC_DIR, 'weapons');
-
-  // Ensure the weapons directory exists
-  try {
-    await fs.access(detailedDir);
-    logger.debug(`📁 Using existing directory: ${detailedDir}`);
-  } catch {
-    await fs.mkdir(detailedDir, { recursive: true });
-    logger.info(`📁 Created directory: ${detailedDir}`);
-  }
+  ensureDir(detailedDir);
 
   const savedWeapons = await listFiles(detailedDir);
   const toScrape = force
     ? weapons
     : weapons.filter((w) => !savedWeapons.includes(parseCharacterName(w.name)));
 
-  logger.info(`\n📊 Processing: ${toScrape.length}/${weapons.length} weapons`);
+  logger.info(`\nProcessing: ${toScrape.length}/${weapons.length} weapons`);
   if (!force && savedWeapons.length > 0) {
     logger.debug(
-      `⏭️  Skipping ${weapons.length - toScrape.length} already saved weapons`
+      `  Skipping ${weapons.length - toScrape.length} already saved weapons`
     );
   }
 
@@ -623,10 +556,10 @@ export async function scrapeWeaponsInDetail(
       };
 
       await saveJson(fullWeaponData, detailedDir, name);
-      logger.success(`💾 Saved: ${weapon.name}`);
+      logger.success(`Saved: ${weapon.name}`);
       successCount++;
     } catch (error) {
-      logger.error(`✗ Failed to scrape ${weapon.name}:`, error);
+      logger.error(`Failed to scrape ${weapon.name}:`, error);
       errorCount++;
     }
   }
@@ -637,9 +570,6 @@ export async function scrapeWeaponsInDetail(
 
 /**
  * Combines all individual weapon detail files into a single file.
- * Reads each weapon's detailed data file from the weapons subdirectory,
- * combines them into a single object keyed by weapon name,
- * and saves the combined data to a versioned file.
  *
  * @remarks
  * The individual files are read from PUBLIC_DIR/weapons/
@@ -651,7 +581,6 @@ async function morphAllFilesIntoOne() {
   let weaponsDetailed: Record<string, Weapon> = {};
   const weaponsDir = path.join(PUBLIC_DIR, 'weapons');
 
-  // Ensure the weapons directory exists
   try {
     await fs.access(weaponsDir);
   } catch {
@@ -660,11 +589,7 @@ async function morphAllFilesIntoOne() {
   }
 
   const files = await listFiles(weaponsDir);
-  logger.info(
-    `\n📦 Combining ${files.length} weapon files into weapons_detailed.json...`
-  );
-
-  let combinedCount = 0;
+  let cnt = 0;
   for (const file of files) {
     const weapon = await loadJsonData<Weapon>(path.join(weaponsDir, file));
 
@@ -673,21 +598,15 @@ async function morphAllFilesIntoOne() {
         ...weaponsDetailed,
         [weapon.name]: weapon,
       };
-      combinedCount++;
+      cnt++;
     } else {
       logger.warn(`⚠️  Failed to load ${file}`);
     }
   }
 
-  logger.debug(
-    `  ↳ Successfully loaded ${combinedCount}/${files.length} weapon files`
-  );
-
+  logger.debug(`Successfully loaded ${cnt}/${files.length} weapon files`);
   await saveFileWithNewVersion(weaponsDetailed, PUBLIC_DIR, 'weapons_detailed');
-
-  logger.success(
-    `✨ Combined ${combinedCount} weapons into weapons_detailed.json!`
-  );
+  logger.success(`✨ Combined ${cnt} weapons into weapons_detailed.json!`);
 }
 
 /**
@@ -699,8 +618,7 @@ async function scrapeWeaponsTable(driver: WebDriver, weapon: WeaponType) {
   logger.info(`⚔️  Scraping ${weapon} weapons...`);
 
   const getWeaponsTable = async () => {
-    const weaponUrl = `${URL}/${weapon}`;
-    await driver.get(weaponUrl);
+    await driver.get(`${URL}/${weapon}`);
     logger.debug(`  ↳ Navigating to ${weapon} page`);
     const table = await getTableFromHeading(driver, `List of ${weapon}s`);
     logger.debug(`  ↳ Found weapons table`);
@@ -759,7 +677,6 @@ const scrapeAndSaveDetailedWeaponInfo = async (
     return;
   }
 
-  // Flatten all weapon types into a single array
   const allWeapons: BaseWeaponType[] = [];
   for (const weaponType of WEAPON_TYPES) {
     if (weaponsData[weaponType]) {
@@ -805,9 +722,7 @@ async function main() {
   logger.info(`📋 Running with flags: ${args.join(', ')}\n`);
 
   const scrapeWeaponsBase = async (driver: WebDriver) => {
-    logger.info('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    logger.info('📊 PHASE 1: Base Weapon Data Scraping');
-    logger.info('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
+    logger.info('PHASE 1: Base Weapon Data Scraping');
 
     const tempLocations: Array<[WeaponType, string]> = [];
     let totalWeapons = 0;
@@ -816,7 +731,7 @@ async function main() {
       const data = await scrapeWeaponsTable(driver, weapon);
 
       if (!data) {
-        logger.error(`❌ No data scraped for weapon type: ${weapon}`);
+        logger.error(`No data scraped for weapon type: ${weapon}`);
         return;
       }
 
@@ -826,7 +741,6 @@ async function main() {
       logger.debug(`  ↳ Saved to temp: ${tempLoc}`);
     };
 
-    // Scrape all weapon types
     logger.info(`🔄 Scraping ${WEAPON_TYPES.length} weapon types...\n`);
     for (let i = 0; i < WEAPON_TYPES.length; i++) {
       const wepType = WEAPON_TYPES[i];
@@ -834,7 +748,6 @@ async function main() {
       await scrapeWeaponType(wepType);
     }
 
-    // Merge all weapon types into a single file
     logger.info(`\n📦 Merging ${tempLocations.length} weapon type files...`);
     const weapons: Record<string, BaseWeaponType[]> = {};
     for (const [weaponType, location] of tempLocations) {
@@ -856,12 +769,8 @@ async function main() {
   };
 
   const saveWeaponsDetailed = async () => {
-    logger.info('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     logger.info('🔍 PHASE 2: Detailed Weapon Data Scraping');
-    logger.info('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-
     await scrapeAndSaveDetailedWeaponInfo(true);
-
     logger.success('\n✨ Detailed scraping complete!\n');
   };
 
