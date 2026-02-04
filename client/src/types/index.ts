@@ -74,6 +74,8 @@ export type Weapon = {
   type: string;
   subStat: string;
   effect: string;
+  nation?: number; // index to nations array (-1 if not applicable)
+  weekdays?: number; // index to days array (-1 if not applicable)
 };
 
 export type ScreenAnimation = {

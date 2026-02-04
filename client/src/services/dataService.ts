@@ -21,9 +21,19 @@ let charactersCache: Character[] | null = null;
 let talentsCache: { talentBooks: TalentBookCalendar[] } | null = null;
 
 let weaponsCache: {
-  weapons: { type: string; weapons: Weapon[] }[];
-  materialSchedule: WeaponMaterialSchedule[];
+  nations: string[];
+  days: string[];
+  weapons: Record<string, Weapon[]>;
 } | null = null;
+
+let weaponCalendarCache: Record<
+  string,
+  {
+    day: string;
+    images: { url: string; caption: string }[];
+    weapons: { name: string; url: string }[];
+  }[]
+> | null = null;
 
 let galleryCache: Record<
   string,
@@ -226,7 +236,7 @@ export async function fetchTalentBooks(): Promise<TalentBookCalendar[]> {
 async function loadWeaponsData() {
   if (weaponsCache) return weaponsCache;
 
-  const response = await fetch(`${DATA_BASE_URL}/weapons.json`);
+  const response = await fetch(`${DATA_BASE_URL}weapons.json`);
   if (!response.ok) throw new Error('Failed to fetch weapons data');
 
   weaponsCache = await response.json();
@@ -240,7 +250,11 @@ export async function fetchWeapons(): Promise<
   { type: string; weapons: Weapon[] }[]
 > {
   const data = await loadWeaponsData();
-  return data.weapons;
+  // Transform Record<string, Weapon[]> to array format for backward compatibility
+  return Object.entries(data.weapons).map(([type, weapons]) => ({
+    type,
+    weapons,
+  }));
 }
 
 /**
@@ -248,8 +262,36 @@ export async function fetchWeapons(): Promise<
  */
 export async function fetchWeaponsOfType(type: string): Promise<Weapon[]> {
   const data = await loadWeaponsData();
-  const weaponGroup = data.weapons.find((w) => w.type === type);
-  return weaponGroup?.weapons || [];
+  return data.weapons[type] || [];
+}
+
+/**
+ * Fetches the nations array from weapons data.
+ */
+export async function fetchWeaponNations(): Promise<string[]> {
+  const data = await loadWeaponsData();
+  return data.nations;
+}
+
+/**
+ * Fetches the days array from weapons data.
+ */
+export async function fetchWeaponDays(): Promise<string[]> {
+  const data = await loadWeaponsData();
+  return data.days;
+}
+
+/**
+ * Loads and caches weapon calendar data.
+ */
+async function loadWeaponCalendarData() {
+  if (weaponCalendarCache) return weaponCalendarCache;
+
+  const response = await fetch(`${DATA_BASE_URL}weaponCalendar.json`);
+  if (!response.ok) throw new Error('Failed to fetch weapon calendar data');
+
+  weaponCalendarCache = await response.json();
+  return weaponCalendarCache!;
 }
 
 /**
@@ -258,8 +300,29 @@ export async function fetchWeaponsOfType(type: string): Promise<Weapon[]> {
 export async function fetchWeaponMaterialSchedule(): Promise<
   WeaponMaterialSchedule[]
 > {
-  const data = await loadWeaponsData();
-  return data.materialSchedule;
+  const calendarData = await loadWeaponCalendarData();
+  const weaponsData = await loadWeaponsData();
+
+  // Transform calendar data into material schedule format
+  return Object.entries(calendarData).map(([nation, schedules]) => ({
+    nation,
+    materials: schedules.map((schedule) => ({
+      day: schedule.day,
+      materialImages: schedule.images,
+      weapons: schedule.weapons
+        .map((w) => {
+          // Find the full weapon data from weapons.json and add the type
+          for (const [type, weaponList] of Object.entries(
+            weaponsData.weapons
+          )) {
+            const found = weaponList.find((weapon) => weapon.name === w.name);
+            if (found) return { ...found, type };
+          }
+          return null;
+        })
+        .filter((w): w is Weapon => w !== null),
+    })),
+  }));
 }
 
 /**
@@ -268,7 +331,7 @@ export async function fetchWeaponMaterialSchedule(): Promise<
 async function loadGalleryData() {
   if (galleryCache) return galleryCache;
 
-  const response = await fetch(`${DATA_BASE_URL}/gallery.json`);
+  const response = await fetch(`${DATA_BASE_URL}gallery.json`);
   if (!response.ok) throw new Error('Failed to fetch gallery data');
 
   galleryCache = await response.json();
