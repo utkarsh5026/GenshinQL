@@ -1,61 +1,27 @@
 import React from 'react';
 
 import { AvatarWithSkeleton, ListSplitter } from '@/components/utils';
-import { Weapon } from '@/types';
+import { WeaponDetailed } from '@/stores/useWeaponsStore';
 
-const rarityColorMap: Record<
-  number,
-  { border: string; text: string; divider: string; avatarBorder: string }
-> = {
-  5: {
-    border: 'border-legendary-600/30',
-    text: 'text-legendary-500',
-    divider: 'border-legendary-600/20',
-    avatarBorder: 'border-legendary-500',
-  },
-  4: {
-    border: 'border-epic-600/30',
-    text: 'text-epic-500',
-    divider: 'border-epic-600/20',
-    avatarBorder: 'border-epic-500',
-  },
-  3: {
-    border: 'border-rare-600/30',
-    text: 'text-rare-500',
-    divider: 'border-rare-600/20',
-    avatarBorder: 'border-rare-500',
-  },
-  2: {
-    border: 'border-uncommon-600/30',
-    text: 'text-uncommon-500',
-    divider: 'border-uncommon-600/20',
-    avatarBorder: 'border-uncommon-500',
-  },
-  1: {
-    border: 'border-common-600/30',
-    text: 'text-common-500',
-    divider: 'border-common-600/20',
-    avatarBorder: 'border-common-500',
-  },
-};
+import { getRarityColor } from '../../utils/color-map';
 
 interface WeaponCardProps {
-  weapon: Weapon;
+  weapon: WeaponDetailed;
 }
 
 /**
  * WeaponCard component displays detailed information about a weapon
  */
 const WeaponCard: React.FC<WeaponCardProps> = ({ weapon }) => {
-  const { name, iconUrl, rarity, effect, attack, subStat, type } = weapon;
+  const { name, iconUrl, rarity, effect, attack, subStat, weaponType } = weapon;
 
   const rarityStars = '★'.repeat(rarity);
 
-  const rarityColors = rarityColorMap[rarity] || rarityColorMap[3]; // Default to 3-star if unknown
+  const rarityColors = getRarityColor(rarity);
 
   return (
     <div
-      className={`flex flex-col border bg-surface-200 dark:bg-surface-200 ${rarityColors.border} rounded-lg text-foreground shadow-lg`}
+      className={`flex flex-col border bg-surface-100 dark:bg-surface-200 ${rarityColors.border} rounded-lg text-foreground shadow-lg`}
     >
       <div className="flex items-start gap-4 p-4">
         <AvatarWithSkeleton
@@ -66,7 +32,7 @@ const WeaponCard: React.FC<WeaponCardProps> = ({ weapon }) => {
         <div className="flex flex-col gap-1">
           <h3 className="font-medium text-lg text-foreground">{name}</h3>
           <p className={`${rarityColors.text} font-semibold`}>{rarityStars}</p>
-          <p className="text-sm text-muted-foreground">{type}</p>
+          <p className="text-sm text-muted-foreground">{weaponType}</p>
         </div>
       </div>
 
