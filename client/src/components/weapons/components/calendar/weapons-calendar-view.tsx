@@ -139,7 +139,11 @@ const WeaponCalendarView: React.FC<WeaponCalendarViewProps> = ({
                   </span>
                 </div>
               ) : (
-                <WeaponShowCase weapons={d.weapons} />
+                <WeaponShowCase
+                  weapons={d.weapons}
+                  enableFilters={false}
+                  enableNavigation={false}
+                />
               )}
             </div>
           </div>

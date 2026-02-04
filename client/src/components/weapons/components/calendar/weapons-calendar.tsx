@@ -1,26 +1,27 @@
 import { Aperture, CalendarDays } from 'lucide-react';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
+import { ElementDisplay } from '@/components/character/utils/DisplayComponents';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useWeaponMaterialStore } from '@/stores';
+import { useRegions } from '@/stores/usePrimitivesStore';
 
-import WeaponTable from '../../WeaponTable';
+import WeaponTable from './weapon-table';
 import WeaponCalendarView from './weapons-calendar-view';
 
 const WeaponCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
-  const { weaponMaterialSchedule, loading, error, fetchWeaponMaterials } =
-    useWeaponMaterialStore();
+  const { weaponMaterialSchedule, loading, error } = useWeaponMaterialStore();
 
-  useEffect(() => {
-    if (weaponMaterialSchedule === null) fetchWeaponMaterials();
-  }, [weaponMaterialSchedule, fetchWeaponMaterials]);
+  const regions = useRegions();
 
   const nations = useMemo(() => {
-    if (weaponMaterialSchedule === null) return [];
-    return weaponMaterialSchedule.map((schedule) => schedule.nation);
-  }, [weaponMaterialSchedule]);
+    if (weaponMaterialSchedule === null || regions.length === 0) return [];
+    return regions.filter((region) =>
+      weaponMaterialSchedule.some((s) => s.nation === region.name)
+    );
+  }, [weaponMaterialSchedule, regions]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -30,27 +31,32 @@ const WeaponCalender: React.FC = () => {
 
   return (
     <div>
-      <Tabs defaultValue={nations[0]}>
+      <Tabs defaultValue={nations[0]?.name}>
         <TabsList className="flex-wrap md:flex-nowrap justify-start overflow-x-auto">
           {nations.map((nation) => (
             <TabsTrigger
-              key={nation}
-              value={nation}
+              key={nation.name}
+              value={nation.name}
               className="text-xs md:text-sm px-3 md:px-4"
             >
-              {nation}
+              <ElementDisplay
+                element={nation.name}
+                elementUrl={nation.url}
+                size="sm"
+                showLabel={true}
+              />
             </TabsTrigger>
           ))}
         </TabsList>
         {nations.map((nation) => {
           const schedule = weaponMaterialSchedule.find(
-            (s) => s.nation === nation
+            (s) => s.nation === nation.name
           );
           return (
-            <TabsContent key={nation} value={nation}>
+            <TabsContent key={nation.name} value={nation.name}>
               <div className="w-full flex justify-end my-3 md:my-5">
                 <Button
-                  className="bg-green-200 text-green-950 border-2 text-xs md:text-sm h-9 md:h-10"
+                  className="bg-success-200 text-success-900 border-2 text-xs md:text-sm h-9 md:h-10"
                   onClick={() => {
                     setIsCalendar(!isCalendar);
                   }}
