@@ -3,8 +3,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Source Code Pro', 'Inter', system-ui, -apple-system, sans-serif;
 
+  /* Base theme colors */
   --color-background: oklch(100% 0 0);
   --color-foreground: oklch(24.03% 0 0);
   --color-card: oklch(100% 0 0);
@@ -25,6 +26,238 @@
   --color-input: oklch(90.43% 0 0);
   --color-ring: oklch(24.03% 0 0);
 
+  /* Custom Celestia Midnight Colors - Light Mode (subtle versions) */
+  --color-midnight-50: oklch(98% 0.01 260);
+  --color-midnight-100: oklch(95% 0.015 260);
+  --color-midnight-200: oklch(85% 0.02 260);
+  --color-midnight-300: oklch(70% 0.025 260);
+  --color-midnight-400: oklch(55% 0.03 260);
+  --color-midnight-500: oklch(40% 0.035 260);
+  --color-midnight-600: oklch(28% 0.03 260);
+  --color-midnight-700: oklch(22% 0.025 260);
+  --color-midnight-800: oklch(16% 0.025 260);
+  --color-midnight-900: oklch(12% 0.02 260);
+  --color-midnight-950: oklch(8% 0.02 260);
+
+  --color-celestial-50: oklch(98% 0.05 85);
+  --color-celestial-100: oklch(95% 0.08 85);
+  --color-celestial-200: oklch(90% 0.1 85);
+  --color-celestial-300: oklch(85% 0.12 85);
+  --color-celestial-400: oklch(80% 0.14 85);
+  --color-celestial-500: oklch(75% 0.15 85);
+  --color-celestial-600: oklch(65% 0.13 85);
+  --color-celestial-700: oklch(55% 0.11 85);
+  --color-celestial-800: oklch(45% 0.09 85);
+  --color-celestial-900: oklch(35% 0.07 85);
+
+  --color-starlight-50: oklch(98% 0.02 260);
+  --color-starlight-100: oklch(95% 0.03 260);
+  --color-starlight-200: oklch(88% 0.04 260);
+  --color-starlight-300: oklch(78% 0.05 260);
+  --color-starlight-400: oklch(65% 0.06 260);
+  --color-starlight-500: oklch(55% 0.07 260);
+  --color-starlight-600: oklch(45% 0.06 260);
+  --color-starlight-700: oklch(35% 0.05 260);
+  --color-starlight-800: oklch(25% 0.04 260);
+  --color-starlight-900: oklch(18% 0.03 260);
+
+  /* Status Colors - Game-inspired */
+  --color-success-50: oklch(97% 0.05 145);
+  --color-success-100: oklch(93% 0.08 145);
+  --color-success-200: oklch(85% 0.12 145);
+  --color-success-300: oklch(75% 0.15 145);
+  --color-success-400: oklch(65% 0.17 145);
+  --color-success-500: oklch(55% 0.18 145);
+  --color-success-600: oklch(45% 0.15 145);
+  --color-success-700: oklch(35% 0.12 145);
+  --color-success-800: oklch(28% 0.09 145);
+  --color-success-900: oklch(20% 0.06 145);
+
+  --color-warning-50: oklch(97% 0.05 80);
+  --color-warning-100: oklch(93% 0.08 80);
+  --color-warning-200: oklch(88% 0.12 80);
+  --color-warning-300: oklch(80% 0.15 80);
+  --color-warning-400: oklch(72% 0.17 80);
+  --color-warning-500: oklch(65% 0.18 80);
+  --color-warning-600: oklch(55% 0.15 80);
+  --color-warning-700: oklch(45% 0.12 80);
+  --color-warning-800: oklch(35% 0.09 80);
+  --color-warning-900: oklch(28% 0.06 80);
+
+  --color-info-50: oklch(98% 0.02 240);
+  --color-info-100: oklch(95% 0.04 240);
+  --color-info-200: oklch(88% 0.08 240);
+  --color-info-300: oklch(78% 0.12 240);
+  --color-info-400: oklch(68% 0.15 240);
+  --color-info-500: oklch(58% 0.17 240);
+  --color-info-600: oklch(48% 0.14 240);
+  --color-info-700: oklch(38% 0.11 240);
+  --color-info-800: oklch(28% 0.08 240);
+  --color-info-900: oklch(20% 0.05 240);
+
+  --color-error-50: oklch(97% 0.05 25);
+  --color-error-100: oklch(93% 0.08 25);
+  --color-error-200: oklch(85% 0.15 25);
+  --color-error-300: oklch(75% 0.2 25);
+  --color-error-400: oklch(65% 0.22 25);
+  --color-error-500: oklch(55% 0.22 25);
+  --color-error-600: oklch(48% 0.2 25);
+  --color-error-700: oklch(40% 0.17 25);
+  --color-error-800: oklch(32% 0.13 25);
+  --color-error-900: oklch(25% 0.09 25);
+
+  /* Surface elevation colors */
+  --color-surface-50: oklch(100% 0 0);
+  --color-surface-100: oklch(98% 0 0);
+  --color-surface-200: oklch(96% 0 0);
+  --color-surface-300: oklch(92% 0 0);
+
+  /* Genshin Element Colors */
+  /* Anemo (Wind/Cyan) */
+  --color-anemo-50: oklch(98% 0.02 195);
+  --color-anemo-100: oklch(95% 0.04 195);
+  --color-anemo-200: oklch(90% 0.08 195);
+  --color-anemo-300: oklch(82% 0.12 195);
+  --color-anemo-400: oklch(72% 0.15 195);
+  --color-anemo-500: oklch(65% 0.17 195);
+  --color-anemo-600: oklch(55% 0.14 195);
+  --color-anemo-700: oklch(45% 0.11 195);
+  --color-anemo-800: oklch(35% 0.08 195);
+  --color-anemo-900: oklch(25% 0.05 195);
+
+  /* Pyro (Fire/Red) */
+  --color-pyro-50: oklch(98% 0.02 25);
+  --color-pyro-100: oklch(95% 0.05 25);
+  --color-pyro-200: oklch(88% 0.12 25);
+  --color-pyro-300: oklch(78% 0.18 25);
+  --color-pyro-400: oklch(68% 0.22 25);
+  --color-pyro-500: oklch(60% 0.24 25);
+  --color-pyro-600: oklch(52% 0.21 25);
+  --color-pyro-700: oklch(42% 0.17 25);
+  --color-pyro-800: oklch(32% 0.13 25);
+  --color-pyro-900: oklch(24% 0.09 25);
+
+  /* Hydro (Water/Blue) */
+  --color-hydro-50: oklch(98% 0.01 250);
+  --color-hydro-100: oklch(95% 0.03 250);
+  --color-hydro-200: oklch(88% 0.08 250);
+  --color-hydro-300: oklch(78% 0.13 250);
+  --color-hydro-400: oklch(68% 0.17 250);
+  --color-hydro-500: oklch(58% 0.19 250);
+  --color-hydro-600: oklch(48% 0.16 250);
+  --color-hydro-700: oklch(38% 0.13 250);
+  --color-hydro-800: oklch(28% 0.09 250);
+  --color-hydro-900: oklch(20% 0.06 250);
+
+  /* Electro (Electric/Purple) */
+  --color-electro-50: oklch(98% 0.02 300);
+  --color-electro-100: oklch(95% 0.05 300);
+  --color-electro-200: oklch(88% 0.12 300);
+  --color-electro-300: oklch(78% 0.18 300);
+  --color-electro-400: oklch(68% 0.22 300);
+  --color-electro-500: oklch(60% 0.24 300);
+  --color-electro-600: oklch(50% 0.2 300);
+  --color-electro-700: oklch(40% 0.16 300);
+  --color-electro-800: oklch(30% 0.12 300);
+  --color-electro-900: oklch(22% 0.08 300);
+
+  /* Cryo (Ice/Light Blue) */
+  --color-cryo-50: oklch(99% 0.01 240);
+  --color-cryo-100: oklch(96% 0.02 240);
+  --color-cryo-200: oklch(90% 0.05 240);
+  --color-cryo-300: oklch(82% 0.09 240);
+  --color-cryo-400: oklch(72% 0.12 240);
+  --color-cryo-500: oklch(65% 0.14 240);
+  --color-cryo-600: oklch(55% 0.12 240);
+  --color-cryo-700: oklch(45% 0.09 240);
+  --color-cryo-800: oklch(35% 0.07 240);
+  --color-cryo-900: oklch(25% 0.05 240);
+
+  /* Geo (Earth/Yellow) */
+  --color-geo-50: oklch(98% 0.03 80);
+  --color-geo-100: oklch(95% 0.06 80);
+  --color-geo-200: oklch(90% 0.12 80);
+  --color-geo-300: oklch(82% 0.16 80);
+  --color-geo-400: oklch(72% 0.18 80);
+  --color-geo-500: oklch(62% 0.18 80);
+  --color-geo-600: oklch(52% 0.15 80);
+  --color-geo-700: oklch(42% 0.12 80);
+  --color-geo-800: oklch(32% 0.09 80);
+  --color-geo-900: oklch(24% 0.06 80);
+
+  /* Dendro (Nature/Green) */
+  --color-dendro-50: oklch(98% 0.03 145);
+  --color-dendro-100: oklch(95% 0.06 145);
+  --color-dendro-200: oklch(88% 0.12 145);
+  --color-dendro-300: oklch(78% 0.16 145);
+  --color-dendro-400: oklch(68% 0.18 145);
+  --color-dendro-500: oklch(58% 0.19 145);
+  --color-dendro-600: oklch(48% 0.16 145);
+  --color-dendro-700: oklch(38% 0.13 145);
+  --color-dendro-800: oklch(28% 0.09 145);
+  --color-dendro-900: oklch(20% 0.06 145);
+
+  /* Genshin Rarity Colors */
+  /* Legendary (5-star / Gold-Amber) */
+  --color-legendary-50: oklch(98% 0.03 85);
+  --color-legendary-100: oklch(95% 0.06 85);
+  --color-legendary-200: oklch(90% 0.1 85);
+  --color-legendary-300: oklch(85% 0.13 85);
+  --color-legendary-400: oklch(80% 0.15 85);
+  --color-legendary-500: oklch(75% 0.16 85);
+  --color-legendary-600: oklch(65% 0.14 85);
+  --color-legendary-700: oklch(55% 0.12 85);
+  --color-legendary-800: oklch(45% 0.09 85);
+  --color-legendary-900: oklch(35% 0.07 85);
+
+  /* Epic (4-star / Violet-Purple) */
+  --color-epic-50: oklch(98% 0.02 290);
+  --color-epic-100: oklch(95% 0.05 290);
+  --color-epic-200: oklch(88% 0.12 290);
+  --color-epic-300: oklch(78% 0.18 290);
+  --color-epic-400: oklch(68% 0.22 290);
+  --color-epic-500: oklch(60% 0.24 290);
+  --color-epic-600: oklch(50% 0.2 290);
+  --color-epic-700: oklch(40% 0.16 290);
+  --color-epic-800: oklch(30% 0.12 290);
+  --color-epic-900: oklch(22% 0.08 290);
+
+  /* Rare (3-star / Blue) */
+  --color-rare-50: oklch(98% 0.01 250);
+  --color-rare-100: oklch(95% 0.03 250);
+  --color-rare-200: oklch(88% 0.08 250);
+  --color-rare-300: oklch(78% 0.13 250);
+  --color-rare-400: oklch(68% 0.16 250);
+  --color-rare-500: oklch(58% 0.18 250);
+  --color-rare-600: oklch(48% 0.15 250);
+  --color-rare-700: oklch(38% 0.12 250);
+  --color-rare-800: oklch(28% 0.09 250);
+  --color-rare-900: oklch(20% 0.06 250);
+
+  /* Uncommon (2-star / Green) */
+  --color-uncommon-50: oklch(98% 0.02 145);
+  --color-uncommon-100: oklch(95% 0.05 145);
+  --color-uncommon-200: oklch(88% 0.1 145);
+  --color-uncommon-300: oklch(78% 0.14 145);
+  --color-uncommon-400: oklch(68% 0.16 145);
+  --color-uncommon-500: oklch(58% 0.17 145);
+  --color-uncommon-600: oklch(48% 0.14 145);
+  --color-uncommon-700: oklch(38% 0.11 145);
+  --color-uncommon-800: oklch(28% 0.08 145);
+  --color-uncommon-900: oklch(20% 0.05 145);
+
+  /* Common (1-star / Gray) */
+  --color-common-50: oklch(98% 0 0);
+  --color-common-100: oklch(95% 0 0);
+  --color-common-200: oklch(88% 0 0);
+  --color-common-300: oklch(78% 0 0);
+  --color-common-400: oklch(65% 0 0);
+  --color-common-500: oklch(55% 0 0);
+  --color-common-600: oklch(45% 0 0);
+  --color-common-700: oklch(35% 0 0);
+  --color-common-800: oklch(25% 0 0);
+  --color-common-900: oklch(18% 0 0);
+
   --radius-lg: 0.5rem;
   --radius-md: calc(0.5rem - 2px);
   --radius-sm: calc(0.5rem - 4px);
@@ -35,26 +268,34 @@
     font-family: var(--font-sans);
   }
 
+  /* Celestia Midnight Theme - Inspired by Teyvat's night sky */
   .dark {
-    --color-background: oklch(24.03% 0 0);
-    --color-foreground: oklch(98.18% 0 0);
-    --color-card: oklch(24.03% 0 0);
-    --color-card-foreground: oklch(98.18% 0 0);
-    --color-popover: oklch(24.03% 0 0);
-    --color-popover-foreground: oklch(98.18% 0 0);
-    --color-primary: oklch(98.18% 0 0);
-    --color-primary-foreground: oklch(31.19% 0 0);
-    --color-secondary: oklch(40.49% 0 0);
-    --color-secondary-foreground: oklch(98.18% 0 0);
-    --color-muted: oklch(40.49% 0 0);
-    --color-muted-foreground: oklch(66.57% 0 0);
-    --color-accent: oklch(40.49% 0 0);
-    --color-accent-foreground: oklch(98.18% 0 0);
-    --color-destructive: oklch(45.57% 0.154 29.23);
-    --color-destructive-foreground: oklch(98.18% 0 0);
-    --color-border: oklch(40.49% 0 0);
-    --color-input: oklch(40.49% 0 0);
-    --color-ring: oklch(84.56% 0 0);
+    /* Base theme colors */
+    --color-background: oklch(12% 0.02 260); /* Deep midnight blue-black */
+    --color-foreground: oklch(95% 0.01 260); /* Soft white with blue tint */
+    --color-card: oklch(16% 0.025 260); /* Slightly lighter midnight */
+    --color-card-foreground: oklch(95% 0.01 260);
+    --color-popover: oklch(14% 0.02 260); /* Popover background */
+    --color-popover-foreground: oklch(95% 0.01 260);
+    --color-primary: oklch(75% 0.15 85); /* Celestial gold */
+    --color-primary-foreground: oklch(15% 0.02 85); /* Dark on gold */
+    --color-secondary: oklch(22% 0.03 260); /* Midnight secondary */
+    --color-secondary-foreground: oklch(95% 0.01 260);
+    --color-muted: oklch(22% 0.025 260); /* Muted midnight */
+    --color-muted-foreground: oklch(65% 0.02 260); /* Muted text */
+    --color-accent: oklch(25% 0.04 260); /* Blue-tinted accent bg */
+    --color-accent-foreground: oklch(95% 0.01 260);
+    --color-destructive: oklch(55% 0.22 25); /* Deep red */
+    --color-destructive-foreground: oklch(95% 0 0);
+    --color-border: oklch(28% 0.03 260); /* Subtle blue-gray border */
+    --color-input: oklch(28% 0.03 260);
+    --color-ring: oklch(75% 0.15 85); /* Gold focus ring */
+
+    /* Dark mode surface elevations - inverted scale */
+    --color-surface-50: oklch(8% 0.02 260); /* Deepest */
+    --color-surface-100: oklch(12% 0.02 260); /* Deep (bg level) */
+    --color-surface-200: oklch(16% 0.025 260); /* Card level */
+    --color-surface-300: oklch(20% 0.03 260); /* Elevated */
   }
 }
 
@@ -82,15 +323,16 @@ body {
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
 }
 
+/* Celestia Midnight Sidebar */
 .dark {
-  --sidebar: hsl(240 5.9% 10%);
-  --sidebar-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-primary: hsl(224.3 76.3% 48%);
-  --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(240 3.7% 15.9%);
-  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-border: hsl(240 3.7% 15.9%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --sidebar: oklch(10% 0.025 260); /* Deeper than main bg */
+  --sidebar-foreground: oklch(90% 0.01 260);
+  --sidebar-primary: oklch(75% 0.15 85); /* Celestial gold */
+  --sidebar-primary-foreground: oklch(15% 0.02 85);
+  --sidebar-accent: oklch(18% 0.03 260);
+  --sidebar-accent-foreground: oklch(95% 0.01 260);
+  --sidebar-border: oklch(25% 0.03 260);
+  --sidebar-ring: oklch(70% 0.12 85); /* Subtle gold ring */
 }
 
 @theme inline {
