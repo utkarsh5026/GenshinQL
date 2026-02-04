@@ -2,15 +2,11 @@ import React, { useEffect } from 'react';
 
 import { useWeaponsStore } from '@/stores';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import WeaponsDetailedGrid from './WeaponsDetailedGrid';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../../ui/tabs';
+import WeaponsDetailedGrid from './weapons-grid';
 
 /**
  * WeaponsDetailed component displays a tabbed interface for different weapon types.
- * It fetches weapon data on mount and organizes weapons by their types.
- * Each tab shows a grid of weapons filtered by the selected weapon type.
- *
- * @returns A tabbed interface showing weapon grids organized by type, or null if weapon data is not loaded
  */
 const WeaponsDetailed: React.FC = () => {
   const { weapons, fetchWeapons, weaponTypeMap } = useWeaponsStore();
