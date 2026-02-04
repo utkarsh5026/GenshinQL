@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CharacterTalentScaling from '@/components/character/talents/CharacterTalentScaling';
-import ListSplitter from '@/components/utils/ListSplitter';
+import ListSplitter from '@/components/utils/list-splitter';
 import type { Talent } from '@/types';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../ui/tabs';

@@ -56,7 +56,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
       />
 
       <div className="relative z-10 flex gap-4 p-4 h-full">
-        <div className="w-1/4 min-w-[250px]">
+        <div className="w-1/4 min-w-62.5">
           <ProfileHeader
             name={character.name}
             avatarUrl={character.iconUrl}
@@ -80,7 +80,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           </div>
         </div>
 
-        <div className="flex flex-grow overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
+        <div className="flex grow overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
           {selectedMenuItem === 'Profile' && (
             <CharacterCard>
               <div className="space-y-4">

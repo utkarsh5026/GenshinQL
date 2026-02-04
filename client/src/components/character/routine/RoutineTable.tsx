@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import WeaponShowCase from '@/components/weapons/WeaponShowCase';
+import WeaponShowCase from '@/components/weapons/components/shared/weapons-showcase';
 import { type TalentBook, useTalentBooksStore } from '@/stores';
 import { useWeaponMaterialStore } from '@/stores';
 import type { Character, Day, Weapon, WeaponMaterial } from '@/types';
@@ -100,7 +100,16 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
     };
 
     for (const { character, talentBooks } of books) {
+      if (!talentBooks) continue;
       const { dayOne, dayTwo } = talentBooks;
+      if (
+        !dayOne ||
+        !dayTwo ||
+        !dayMap[dayOne as Day] ||
+        !dayMap[dayTwo as Day]
+      ) {
+        continue;
+      }
       const charTalent = {
         character,
         book: talentBooks,
@@ -112,7 +121,15 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
     for (const weapon of weapons) {
       const weaponMaterial = weaponMap?.[weapon.name];
       if (weaponMaterial) {
-        const [dayOne, dayTwo] = weaponMaterial.day.split(' ');
+        const [dayOne, dayTwo] = weaponMaterial.day.split(/[\s/]+/);
+        if (
+          !dayOne ||
+          !dayTwo ||
+          !dayMap[dayOne as Day] ||
+          !dayMap[dayTwo as Day]
+        ) {
+          continue;
+        }
         const wepMat = {
           weapon,
           material: weaponMaterial,

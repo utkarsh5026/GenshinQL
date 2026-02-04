@@ -5,7 +5,7 @@ import { AnimationMedia, Talent } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle } from '../../ui/card';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../../ui/tooltip';
 import AnimatedCover from '../../utils/AnimatedCover.tsx';
-import ListSplitter from '../../utils/ListSplitter';
+import ListSplitter from '../../utils/list-splitter.tsx';
 
 interface CharacterAttackAnimationGridProps {
   talent: Talent | undefined;

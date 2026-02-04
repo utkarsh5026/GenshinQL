@@ -10,7 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from '../../ui/table.tsx';
-import ListSplitter from '../../utils/ListSplitter.tsx';
+import ListSplitter from '../../utils/list-splitter.tsx';
 
 interface CharacterConstellationsProps {
   constellations: Constellation[];

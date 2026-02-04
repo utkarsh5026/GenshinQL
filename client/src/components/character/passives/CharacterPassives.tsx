@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/card.tsx';
 import { Talent } from '@/types';
 
-import TextProcessor from '../../utils/TextProcessor.tsx';
+import TextProcessor from '../../utils/text-processor.tsx';
 
 interface CharacterPassivesProps {
   passives: Talent[];
