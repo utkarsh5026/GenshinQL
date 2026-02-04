@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useWeaponMaterialStore } from '@/stores';
 
-import WeaponCalendarView from './WeaponCalendarView';
-import WeaponTable from './WeaponTable';
+import WeaponTable from '../../WeaponTable';
+import WeaponCalendarView from './weapons-calendar-view';
 
 const WeaponCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);

@@ -6,7 +6,7 @@ import CharacterRoutine from '@/components/character/routine/CharacterRoutine';
 import GenshinGuesser from '@/components/gdle/main/GenshinGuesser';
 import TalentCalendar from '@/components/talents/TalentBookCalendar';
 import TierList from '@/components/tierlist/TierList';
-import WeaponCalendar from '@/components/weapons/WeaponCalender';
+import WeaponCalendar from '@/components/weapons/components/calendar/weapons-calendar';
 import WeaponsDetailed from '@/components/weapons/WeaponsDetailed';
 
 export const routes: RouteObject[] = [

@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 import { Weapon } from '@/types';
 
-import WeaponAvatar from './WeaponAvatar';
+import WeaponAvatar from '../../WeaponAvatar';
 
 interface WeaponShowCaseProps {
   weapons: Weapon[];
