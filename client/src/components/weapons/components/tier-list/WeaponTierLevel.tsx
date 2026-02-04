@@ -1,9 +1,9 @@
 import React from 'react';
 
-import WeaponAvatar from '@/components/weapons/WeaponAvatar';
 import type { Weapon } from '@/types';
 
-import TierLevel from '../base/TierLevel';
+import TierLevel from '../../../tierlist/base/TierLevel';
+import WeaponAvatar from '../shared/WeaponAvatar';
 
 interface WeaponTierLevelProps {
   initialName: string;

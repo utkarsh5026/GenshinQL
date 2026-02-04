@@ -1,11 +1,11 @@
 import { DndContext } from '@dnd-kit/core';
 import React, { useState } from 'react';
 
-import WeaponAvatar from '@/components/weapons/WeaponAvatar';
 import { useWeaponsStore } from '@/stores';
 import type { Weapon } from '@/types';
 
-import DraggableArea from '../base/DroppableArea';
+import DraggableArea from '../../../tierlist/base/DroppableArea';
+import WeaponAvatar from '../shared/WeaponAvatar';
 import WeaponTierLevel from './WeaponTierLevel';
 const tierLevels = ['S', 'A', 'B', 'C', 'D'];
 
