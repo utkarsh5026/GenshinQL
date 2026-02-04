@@ -13,8 +13,8 @@ import {
 } from '@/lib/elementColors';
 import { AnimationMedia, Character } from '@/types';
 
-import CharacterMediaAvatar from '../table/CharacterMediaAvatar';
 import { ElementDisplay, RarityDisplay } from '../utils/DisplayComponents';
+import CharacterMediaAvatar from './character-media-avatar';
 import styles from './CharacterCard.module.css';
 
 interface CharacterCardProps {
@@ -35,6 +35,8 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   });
 
   const staggerDelay = isMounted ? Math.min(index * 0.05, 0.8) : 0;
+
+  console.log(character);
 
   const characterMedia: AnimationMedia = useMemo(() => {
     if (character.partyJoin) return character.partyJoin;

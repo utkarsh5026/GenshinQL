@@ -39,10 +39,14 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
     rootMargin: '200px',
   });
 
-  // Load image when visible
-  const { url: cachedImageUrl, isLoading: imageLoading } = useLazyCachedAsset(
+  // Load fallback image (character icon) immediately when visible
+  const { url: cachedFallbackUrl, isLoading: fallbackLoading } =
+    useLazyCachedAsset(media.fallbackUrl || media.imageUrl, isVisible);
+
+  // Load main image (GIF) when visible
+  const { url: cachedImageUrl } = useLazyCachedAsset(
     media.imageUrl,
-    isVisible
+    isVisible && !!media.fallbackUrl
   );
 
   // Only load video when both visible AND hovered
@@ -51,14 +55,17 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
     isVisible && isHovered
   );
 
-  // Show skeleton while image is loading
-  if (imageLoading) {
+  // Show skeleton while fallback is loading
+  if (fallbackLoading) {
     return (
       <div ref={containerRef} className={cn('relative', containerClassName)}>
         <Skeleton className="h-full w-full rounded-full" />
       </div>
     );
   }
+
+  // Determine which image to show: GIF if loaded, otherwise fallback
+  const displayImageUrl = cachedImageUrl || cachedFallbackUrl;
 
   return (
     <div
@@ -89,7 +96,7 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
         }}
       >
         <AvatarImage
-          src={cachedImageUrl}
+          src={displayImageUrl}
           alt={media.caption}
           loading="lazy"
           className={cn('h-full w-full', imageClassName)}

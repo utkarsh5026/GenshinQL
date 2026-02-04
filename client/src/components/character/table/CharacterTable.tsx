@@ -11,7 +11,7 @@ import {
 import { CachedImage } from '@/components/utils/CachedImage';
 import { AnimationMedia, Character } from '@/types';
 
-import CharacterMediaAvatar from './CharacterMediaAvatar.tsx';
+import CharacterMediaAvatar from '../cards/character-media-avatar.tsx';
 
 type CharacterWithMedia = Character & {
   media: AnimationMedia;
