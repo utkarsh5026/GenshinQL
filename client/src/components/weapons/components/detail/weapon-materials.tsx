@@ -13,7 +13,7 @@ const WeaponMaterials: React.FC<WeaponMaterialsProps> = ({ materials }) => {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold mb-2">Material Requirements</h2>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-muted-foreground">
           All materials needed for weapon ascension
         </p>
       </div>

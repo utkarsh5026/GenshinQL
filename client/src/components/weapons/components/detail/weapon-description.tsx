@@ -5,7 +5,6 @@ import { getRarityBorderClass } from '@/lib/rarityColors';
 import { WeaponDetailedType } from '@/types';
 
 import WeaponAscension from './weapon-ascension';
-import WeaponGallery from './weapon-gallery';
 import WeaponMaterials from './weapon-materials';
 import WeaponProfile from './weapon-profile';
 import WeaponProfileHeader from './weapon-profile-header';
@@ -16,12 +15,7 @@ interface WeaponDescriptionProps {
 
 type WeaponMenuItem = 'Profile' | 'Ascension' | 'Materials' | 'Gallery';
 
-const menuItems: WeaponMenuItem[] = [
-  'Profile',
-  'Ascension',
-  'Materials',
-  'Gallery',
-];
+const menuItems: WeaponMenuItem[] = ['Profile', 'Ascension', 'Materials'];
 
 const WeaponDescription: React.FC<WeaponDescriptionProps> = ({ weapon }) => {
   const [selectedMenuItem, setSelectedMenuItem] =
@@ -36,20 +30,10 @@ const WeaponDescription: React.FC<WeaponDescriptionProps> = ({ weapon }) => {
       className={`relative flex flex-col h-[90vh] overflow-auto ${rarityBorder} rounded-lg scrollbar-hide`}
     >
       {/* Background image with weapon primary image */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${weapon.images[0] || weapon.iconUrl})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          opacity: 0.05,
-        }}
-      />
 
       <div className="relative z-10 flex gap-4 p-4 h-full">
-        {/* Sidebar - 25% width */}
-        <div className="w-1/4 min-w-62.5">
+        {/* Sidebar - Fixed width */}
+        <div className="w-64 shrink-0">
           <WeaponProfileHeader
             name={weapon.name}
             iconUrl={weapon.iconUrl}
@@ -63,8 +47,10 @@ const WeaponDescription: React.FC<WeaponDescriptionProps> = ({ weapon }) => {
               <button
                 onClick={() => setSelectedMenuItem(item)}
                 key={item}
-                className={`w-full text-left text-sm text-gray-500 border-2 border-white rounded-lg p-2 hover:bg-white hover:text-black cursor-pointer transition-all duration-300 ${
-                  selectedMenuItem === item ? 'bg-white text-black' : ''
+                className={`w-full text-left text-sm text-muted-foreground border-2 border-border rounded-lg p-2 hover:bg-card hover:text-card-foreground cursor-pointer transition-all duration-300 ${
+                  selectedMenuItem === item
+                    ? 'bg-card text-card-foreground'
+                    : ''
                 }`}
               >
                 {item}
@@ -73,8 +59,8 @@ const WeaponDescription: React.FC<WeaponDescriptionProps> = ({ weapon }) => {
           </div>
         </div>
 
-        {/* Content area - 75% width */}
-        <div className="flex grow overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
+        {/* Content area - Fixed width */}
+        <div className="flex shrink-0 grow-0 w-[calc(100%-17rem)] overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
           {selectedMenuItem === 'Profile' && (
             <WeaponCard>
               <WeaponProfile weapon={weapon} />
@@ -88,11 +74,6 @@ const WeaponDescription: React.FC<WeaponDescriptionProps> = ({ weapon }) => {
           {selectedMenuItem === 'Materials' && (
             <WeaponCard>
               <WeaponMaterials materials={weapon.materials} />
-            </WeaponCard>
-          )}
-          {selectedMenuItem === 'Gallery' && (
-            <WeaponCard>
-              <WeaponGallery images={weapon.images} weaponName={weapon.name} />
             </WeaponCard>
           )}
         </div>

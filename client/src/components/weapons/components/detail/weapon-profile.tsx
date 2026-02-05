@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
 import TextProcessor from '@/components/utils/text-processor';
 import { WeaponDetailedType } from '@/types';
@@ -42,65 +43,116 @@ const WeaponProfile: React.FC<WeaponProfileProps> = ({ weapon }) => {
   }, [weapon.effect]);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {/* Basic stats grid */}
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          <h3 className="text-sm font-semibold text-gray-600">Rarity</h3>
-          <p className="text-lg">{weapon.rarity} ★</p>
-        </div>
-        <div>
-          <h3 className="text-sm font-semibold text-gray-600">Base Attack</h3>
-          <p className="text-lg">{weapon.attack}</p>
-        </div>
-        <div>
-          <h3 className="text-sm font-semibold text-gray-600">
-            Secondary Stat
-          </h3>
-          <p className="text-lg">{weapon.subStat}</p>
-        </div>
-        <div>
-          <h3 className="text-sm font-semibold text-gray-600">Nation</h3>
-          <p className="text-lg">{nation}</p>
-        </div>
-        <div className="col-span-2">
-          <h3 className="text-sm font-semibold text-gray-600">Material Days</h3>
-          <p className="text-lg">{weekday}</p>
+      <div>
+        <h2 className="text-lg font-bold mb-4 text-foreground">
+          Weapon Statistics
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          <Card className="border-border/50 bg-card/50 hover:bg-card/80 transition-colors">
+            <CardContent className="pt-4 pb-3">
+              <h3 className="text-xs font-medium text-muted-foreground mb-1">
+                Rarity
+              </h3>
+              <p className="text-2xl font-bold text-legendary-500">
+                {weapon.rarity} ★
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border/50 bg-card/50 hover:bg-card/80 transition-colors">
+            <CardContent className="pt-4 pb-3">
+              <h3 className="text-xs font-medium text-muted-foreground mb-1">
+                Base Attack
+              </h3>
+              <p className="text-2xl font-bold text-pyro-500">
+                {weapon.attack}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border/50 bg-card/50 hover:bg-card/80 transition-colors">
+            <CardContent className="pt-4 pb-3">
+              <h3 className="text-xs font-medium text-muted-foreground mb-1">
+                Secondary Stat
+              </h3>
+              <p className="text-lg font-semibold text-electro-500">
+                {weapon.subStat}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border/50 bg-card/50 hover:bg-card/80 transition-colors">
+            <CardContent className="pt-4 pb-3">
+              <h3 className="text-xs font-medium text-muted-foreground mb-1">
+                Nation
+              </h3>
+              <p className="text-lg font-semibold text-hydro-500">{nation}</p>
+            </CardContent>
+          </Card>
+
+          <Card className="col-span-2 border-border/50 bg-card/50 hover:bg-card/80 transition-colors">
+            <CardContent className="pt-4 pb-3">
+              <h3 className="text-xs font-medium text-muted-foreground mb-1">
+                Material Availability
+              </h3>
+              <p className="text-base font-semibold text-geo-500">{weekday}</p>
+            </CardContent>
+          </Card>
         </div>
       </div>
 
       {/* Weapon Passive with Refinement Slider */}
       {weapon.passives && weapon.passives.length > 0 && (
-        <div className="pt-4 border-t space-y-3">
-          <div>
-            <h3 className="text-sm font-semibold text-gray-600">
-              Weapon Passive
-            </h3>
-            <p className="text-base font-medium mt-1">{effectName}</p>
-          </div>
+        <Card className="border-border/50 bg-linear-to-br from-card/30 to-card/60">
+          <CardContent className="pt-6 pb-5 space-y-4">
+            <div>
+              <h2 className="text-lg font-bold text-foreground mb-1">
+                Weapon Passive
+              </h2>
+              <p className="text-base font-semibold text-primary/90">
+                {effectName}
+              </p>
+            </div>
 
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-600 min-w-fit">Refinement</span>
-            <Slider
-              value={[refinementLevel]}
-              onValueChange={(values) => setRefinementLevel(values[0])}
-              min={1}
-              max={5}
-              step={1}
-              className="flex-1"
-            />
-            <Badge variant={refinementLevel === 5 ? 'default' : 'outline'}>
-              R{refinementLevel}
-            </Badge>
-            {refinementLevel === 5 && (
-              <span className="text-xs text-amber-500">Maximum</span>
-            )}
-          </div>
+            <div className="space-y-3">
+              <div className="flex items-center gap-4">
+                <span className="text-sm font-medium text-muted-foreground min-w-fit">
+                  Refinement Level
+                </span>
+                <Slider
+                  value={[refinementLevel]}
+                  onValueChange={(values) => setRefinementLevel(values[0])}
+                  min={1}
+                  max={5}
+                  step={1}
+                  className="flex-1"
+                />
+                <Badge
+                  variant={refinementLevel === 5 ? 'default' : 'outline'}
+                  className="min-w-12 justify-center text-base font-bold"
+                >
+                  R{refinementLevel}
+                </Badge>
+              </div>
 
-          <div className="mt-2">
-            <TextProcessor text={weapon.passives[refinementLevel - 1]} />
-          </div>
-        </div>
+              {refinementLevel === 5 && (
+                <div className="flex items-center gap-2">
+                  <div className="h-px flex-1 bg-linear-to-r from-transparent via-legendary-500 to-transparent" />
+                  <span className="text-xs font-semibold text-legendary-500 px-2">
+                    ✦ MAXIMUM REFINEMENT ✦
+                  </span>
+                  <div className="h-px flex-1 bg-linear-to-r from-legendary-500 via-legendary-500 to-transparent" />
+                </div>
+              )}
+            </div>
+
+            <div className="pt-2 px-3 py-3 rounded-lg bg-background/30 border border-border/30">
+              <TextProcessor text={weapon.passives[refinementLevel - 1]} />
+            </div>
+          </CardContent>
+        </Card>
       )}
     </div>
   );
