@@ -32,5 +32,32 @@
     "**/node_modules": true,
     "**/dist": true,
     "**/coverage": true
-  }
+  },
+  "cSpell.words": [
+    "Aino",
+    "anemo",
+    "chromedriver",
+    "cmdk",
+    "cryo",
+    "dendro",
+    "Fontai",
+    "Fontaine",
+    "gdle",
+    "Genshin",
+    "Inazuma",
+    "Jsons",
+    "Krai",
+    "Liyue",
+    "Mondstadt",
+    "Namecard",
+    "Natlan",
+    "Polearm",
+    "pyro",
+    "rowspan",
+    "Sumeru",
+    "tierlist",
+    "vaul",
+    "webp",
+    "Wikia"
+  ]
 }
