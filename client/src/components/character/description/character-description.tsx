@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
+import { Card } from '@/components/ui/card.tsx';
 import { CharacterDetailed } from '@/types';
 import { decideColor } from '@/utils/color.ts';
 
-import { Card } from '../../ui/card.tsx';
 import CharacterAttackAnimations from '../attack/CharacterAttackAnimations.tsx';
 import CharacterRoutineDetailed from '../routine/CharacterRoutineDetailed.tsx';
 import CharacterTalentTable from '../talents/CharacterTalentTable.tsx';
@@ -32,18 +32,87 @@ const menuItems: CharacterMenuItem[] = [
   'Routine',
 ];
 
+/**
+ * Returns element-specific Tailwind classes for menu items based on character element
+ */
+const getElementClasses = (element: string) => {
+  const elementLower = element.toLowerCase();
+  const elementClassMap: Record<string, { active: string; indicator: string }> =
+    {
+      anemo: {
+        active:
+          'bg-linear-to-r from-anemo-500/20 via-anemo-400/15 to-transparent text-anemo-300 border-anemo-500/40',
+        indicator: 'bg-anemo-400',
+      },
+      pyro: {
+        active:
+          'bg-linear-to-r from-pyro-500/20 via-pyro-400/15 to-transparent text-pyro-300 border-pyro-500/40',
+        indicator: 'bg-pyro-400',
+      },
+      hydro: {
+        active:
+          'bg-linear-to-r from-hydro-500/20 via-hydro-400/15 to-transparent text-hydro-300 border-hydro-500/40',
+        indicator: 'bg-hydro-400',
+      },
+      electro: {
+        active:
+          'bg-linear-to-r from-electro-500/20 via-electro-400/15 to-transparent text-electro-300 border-electro-500/40',
+        indicator: 'bg-electro-400',
+      },
+      cryo: {
+        active:
+          'bg-linear-to-r from-cryo-500/20 via-cryo-400/15 to-transparent text-cryo-300 border-cryo-500/40',
+        indicator: 'bg-cryo-400',
+      },
+      geo: {
+        active:
+          'bg-linear-to-r from-geo-500/20 via-geo-400/15 to-transparent text-geo-300 border-geo-500/40',
+        indicator: 'bg-geo-400',
+      },
+      dendro: {
+        active:
+          'bg-linear-to-r from-dendro-500/20 via-dendro-400/15 to-transparent text-dendro-300 border-dendro-500/40',
+        indicator: 'bg-dendro-400',
+      },
+    };
+
+  return (
+    elementClassMap[elementLower] || {
+      active:
+        'bg-linear-to-r from-celestial-500/20 via-celestial-400/15 to-transparent text-celestial-300 border-celestial-500/40',
+      indicator: 'bg-celestial-400',
+    }
+  );
+};
+
 const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   character,
 }) => {
   const [selectedMenuItem, setSelectedMenuItem] =
     useState<CharacterMenuItem>('Profile');
-  if (!character) return <div>Character not found</div>;
+
+  console.log('CharacterDescription rendered with character:', character);
+  if (!character)
+    return (
+      <div className="flex items-center justify-center h-[90vh] text-muted-foreground bg-card/50 rounded-lg border border-border">
+        Character not found
+      </div>
+    );
+
+  const elementColor = decideColor(character.element);
+  const elementClasses = getElementClasses(character.element);
 
   return (
     <div
-      className={`relative flex flex-col h-[90vh] overflow-auto border-2 rounded-lg scrollbar-hide`}
-      style={{ borderColor: decideColor(character.element) }}
+      className="relative flex flex-col h-[90vh] overflow-auto rounded-xl scrollbar-hide bg-linear-to-br from-midnight-900/90 via-midnight-800/80 to-midnight-900/90 backdrop-blur-sm"
+      style={{
+        borderWidth: '2px',
+        borderStyle: 'solid',
+        borderColor: elementColor,
+        boxShadow: `0 0 20px ${elementColor}25, inset 0 1px 0 rgba(255,255,255,0.05)`,
+      }}
     >
+      {/* Background namecard with subtle overlay */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -51,12 +120,15 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.03,
+          opacity: 0.08,
         }}
       />
 
-      <div className="relative z-10 flex gap-4 p-4 h-full">
-        <div className="w-64 shrink-0">
+      {/* Gradient overlay for depth */}
+      <div className="absolute inset-0 z-0 bg-linear-to-t from-midnight-950/80 via-transparent to-midnight-900/50" />
+
+      <div className="relative z-10 flex gap-6 p-5 h-full">
+        <div className="w-64 shrink-0 flex flex-col gap-4">
           <ProfileHeader
             name={character.name}
             avatarUrl={character.iconUrl}
@@ -65,82 +137,83 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
             fallbackCoverUrl={character.imageUrls.nameCard}
           />
 
-          <div className="flex flex-col gap-2 mt-4">
-            {menuItems.map((item) => (
-              <button
-                onClick={() => setSelectedMenuItem(item)}
-                key={item}
-                className={`w-full text-left text-sm text-gray-500 border-2 border-white rounded-lg p-2 hover:bg-white hover:text-black cursor-pointer transition-all duration-300 ${
-                  selectedMenuItem === item ? 'bg-white text-black' : ''
-                }`}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
+          {/* Menu Navigation */}
+          <nav className="flex flex-col gap-1.5 mt-2">
+            {menuItems.map((item) => {
+              const isActive = selectedMenuItem === item;
+              return (
+                <button
+                  onClick={() => setSelectedMenuItem(item)}
+                  key={item}
+                  className={`
+                    relative w-full text-left text-sm font-medium rounded-lg px-4 py-2.5
+                    transition-all duration-300 ease-out
+                    border border-transparent
+                    ${
+                      isActive
+                        ? elementClasses.active
+                        : 'text-starlight-400 hover:text-starlight-200 hover:bg-midnight-700/50 hover:border-starlight-600/20'
+                    }
+                  `}
+                  style={
+                    isActive
+                      ? {
+                          boxShadow: `0 0 12px ${elementColor}20`,
+                        }
+                      : undefined
+                  }
+                >
+                  {/* Active indicator bar */}
+                  {isActive && (
+                    <span
+                      className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-4 rounded-r-full ${elementClasses.indicator}`}
+                    />
+                  )}
+                  {item}
+                </button>
+              );
+            })}
+          </nav>
         </div>
 
-        <div className="flex flex-1 min-w-0 overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
+        {/* Main Content Area */}
+        <div className="flex flex-1 min-w-0 overflow-auto h-[calc(100%-1rem)] scrollbar-hide">
           {selectedMenuItem === 'Profile' && (
-            <CharacterCard>
-              <div className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-600">
-                      Rarity
-                    </h3>
-                    <p className="text-lg">{character.rarity}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-600">
-                      Element
-                    </h3>
-                    <p className="text-lg">{character.element}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-600">
-                      Weapon
-                    </h3>
-                    <p className="text-lg">{character.weaponType}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-600">
-                      Region
-                    </h3>
-                    <p className="text-lg">{character.region}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-600">
-                      Model Type
-                    </h3>
-                    <p className="text-lg">{character.modelType}</p>
-                  </div>
+            <CharacterCard elementColor={elementColor}>
+              <div className="space-y-6">
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                  <StatItem
+                    label="Rarity"
+                    value={`${character.rarity}★`}
+                    highlight
+                  />
+                  <StatItem label="Element" value={character.element} />
+                  <StatItem label="Weapon" value={character.weaponType} />
+                  <StatItem label="Region" value={character.region} />
+                  <StatItem label="Model Type" value={character.modelType} />
                   {character.version && (
-                    <div>
-                      <h3 className="text-sm font-semibold text-gray-600">
-                        Version
-                      </h3>
-                      <p className="text-lg">{character.version}</p>
-                    </div>
+                    <StatItem label="Version" value={character.version} />
                   )}
                 </div>
               </div>
             </CharacterCard>
           )}
           {selectedMenuItem === 'Talents' && (
-            <CharacterCard>
+            <CharacterCard elementColor={elementColor}>
               <CharacterTalentTable talents={character.talents} />
             </CharacterCard>
           )}
           {selectedMenuItem === 'Constellations' && (
-            <CharacterCard>
+            <CharacterCard elementColor={elementColor}>
               <CharacterConstellations
                 constellations={character.constellations}
+                element={character.element}
               />
             </CharacterCard>
           )}
           {selectedMenuItem === 'Passives' && (
-            <CharacterCard>
+            <CharacterCard elementColor={elementColor}>
               <CharacterPassives
                 passives={character.talents.filter((talent) => {
                   return ![
@@ -153,12 +226,12 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
             </CharacterCard>
           )}
           {selectedMenuItem === 'Attacks' && (
-            <CharacterCard>
+            <CharacterCard elementColor={elementColor}>
               <CharacterAttackAnimations character={character} />
             </CharacterCard>
           )}
           {selectedMenuItem === 'Routine' && (
-            <CharacterCard>
+            <CharacterCard elementColor={elementColor}>
               <CharacterRoutineDetailed character={character} />
             </CharacterCard>
           )}
@@ -168,13 +241,42 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   );
 };
 
-interface CharacterCardProps {
-  children: React.ReactNode;
+/* Stat Item Component for Profile */
+interface StatItemProps {
+  label: string;
+  value: string;
+  highlight?: boolean;
 }
 
-const CharacterCard: React.FC<CharacterCardProps> = ({ children }) => {
+const StatItem: React.FC<StatItemProps> = ({ label, value, highlight }) => (
+  <div className="group p-3 rounded-lg bg-midnight-800/40 border border-midnight-600/30 hover:border-starlight-500/30 transition-all duration-300">
+    <h3 className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-1">
+      {label}
+    </h3>
+    <p
+      className={`text-lg font-semibold ${highlight ? 'text-celestial-400' : 'text-foreground'}`}
+    >
+      {value}
+    </p>
+  </div>
+);
+
+interface CharacterCardProps {
+  children: React.ReactNode;
+  elementColor?: string;
+}
+
+const CharacterCard: React.FC<CharacterCardProps> = ({
+  children,
+  elementColor,
+}) => {
   return (
-    <Card className="p-4 h-full w-full overflow-auto scrollbar-hide bg-transparent">
+    <Card
+      className="p-5 h-full w-full overflow-auto scrollbar-hide bg-midnight-800/30 backdrop-blur-sm border-midnight-600/40 rounded-xl"
+      style={{
+        boxShadow: elementColor ? `inset 0 1px 0 ${elementColor}10` : undefined,
+      }}
+    >
       {children}
     </Card>
   );

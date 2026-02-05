@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
-import { fetchCharacterDetailed } from '@/services/dataService';
+import { useFetchCharacter } from '@/stores/useCharactersStore';
 import type { CharacterDetailed as CharacterDetailedType } from '@/types';
 
 import CharacterDescription from './character-description';
 
 const CharacterDetail = () => {
   const { characterName } = useParams<{ characterName: string }>();
+  const fetchCharacter = useFetchCharacter();
   const [character, setCharacter] = useState<CharacterDetailedType | null>(
     null
   );
@@ -23,8 +24,7 @@ const CharacterDetail = () => {
       setLoading(true);
       setError(false);
 
-      const fileName = characterName.split(' ').join('_');
-      const charData = await fetchCharacterDetailed(fileName);
+      const charData = await fetchCharacter(characterName);
 
       if (charData) {
         setCharacter(charData);
@@ -35,7 +35,7 @@ const CharacterDetail = () => {
     };
 
     loadCharacter();
-  }, [characterName]);
+  }, [characterName, fetchCharacter]);
 
   if (loading) {
     return (
