@@ -1,59 +1,70 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
+
+type GenshinElement =
+  | 'dendro'
+  | 'pyro'
+  | 'hydro'
+  | 'electro'
+  | 'anemo'
+  | 'geo'
+  | 'cryo';
+
+const ELEMENT_COLORS: Record<GenshinElement, string> = {
+  dendro: 'var(--color-dendro-500)',
+  pyro: 'var(--color-pyro-500)',
+  hydro: 'var(--color-hydro-500)',
+  electro: 'var(--color-electro-500)',
+  anemo: 'var(--color-anemo-500)',
+  geo: 'var(--color-geo-500)',
+  cryo: 'var(--color-cryo-500)',
+} as const;
+
+const TEXT_PATTERN =
+  /(\b(?:dendro|pyro|hydro|electro|anemo|geo|cryo)\b)|(\d+%?)/gi;
 
 interface TextProcessorProps {
   text: string;
+  className?: string;
 }
 
 /**
  * TextProcessor component processes a given text string and applies
- * specific styles to certain keywords and numbers/percentages.
+ * specific styles to element keywords and numbers/percentages.
  */
-const TextProcessor: React.FC<TextProcessorProps> = ({ text }) => {
-  const processText = (input: string) => {
-    const elementColors: { [key: string]: string } = {
-      dendro: 'var(--color-dendro-500)',
-      pyro: 'var(--color-pyro-500)',
-      hydro: 'var(--color-hydro-500)',
-      electro: 'var(--color-electro-500)',
-      anemo: 'var(--color-anemo-500)',
-      geo: 'var(--color-geo-500)',
-      cryo: 'var(--color-cryo-500)',
-    };
+const TextProcessor: React.FC<TextProcessorProps> = ({
+  text,
+  className = '',
+}) => {
+  const processedContent = useMemo(() => {
+    const parts = text.split(TEXT_PATTERN).filter(Boolean);
 
-    const parts = input.split(
-      /(\b(?:dendro|pyro|hydro|electro|anemo|geo|cryo)\b)|(\d+%?)/i
-    );
+    return parts.map((part, index) => {
+      const lowercasePart = part.toLowerCase() as GenshinElement;
+      const elementColor = ELEMENT_COLORS[lowercasePart];
 
-    return parts.filter(Boolean).map((part, index) => {
-      const lowercasePart = part.toLowerCase();
-      const color = elementColors[lowercasePart];
-
-      // Check if the part is a number or percentage
       if (/^\d+%?$/.test(part)) {
         return (
-          <span
-            key={`number-${part}-${index}`}
-            style={{ color: 'var(--color-warning-500)' }}
-          >
+          <span key={`${index}-num-${part}`} className="text-warning-500">
             {part}
           </span>
         );
       }
 
-      return color ? (
+      return elementColor ? (
         <span
-          key={`element-${part}-${index}`}
-          style={{ color, fontWeight: 'bold' }}
+          key={`${index}-elem-${lowercasePart}`}
+          className="font-bold"
+          style={{ color: elementColor }}
         >
           {part}
         </span>
       ) : (
-        part
+        <React.Fragment key={`${index}-text`}>{part}</React.Fragment>
       );
     });
-  };
+  }, [text]);
 
-  return <div>{processText(text)}</div>;
+  return <div className={className}>{processedContent}</div>;
 };
 
-export default TextProcessor;
+export default memo(TextProcessor);
