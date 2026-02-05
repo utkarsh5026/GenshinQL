@@ -16,11 +16,23 @@ const ListSplitter: React.FC<ListSplitterProps> = ({ text }) => {
     .filter((sentence) => sentence.trim().length > 0);
 
   return (
-    <div className="space-y-2 p-4">
-      <ul className="list-disc marker:text-lg space-y-2 text-left">
+    <div className="space-y-3 p-4 rounded-lg bg-surface-200/30">
+      <ul className="space-y-2.5 text-left">
         {sentences.map((sentence, index) => (
-          <li key={index} className="text-sm text-left text-gray-400">
-            <TextProcessor text={sentence} />
+          <li
+            key={index}
+            className="group flex items-start gap-3 text-sm text-muted-foreground 
+                       transition-all duration-200 hover:text-foreground
+                       pl-1 py-1.5 rounded-md hover:bg-starlight-800/20"
+          >
+            <span
+              className="mt-1.5 h-1.5 w-1.5 rounded-full bg-celestial-500 
+                         shrink-0 transition-transform duration-200 
+                         group-hover:scale-125 group-hover:bg-celestial-400"
+            />
+            <span className="leading-relaxed">
+              <TextProcessor text={sentence} />
+            </span>
           </li>
         ))}
       </ul>

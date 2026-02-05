@@ -1,7 +1,11 @@
+import { Clock, Zap } from 'lucide-react';
 import React, { useState } from 'react';
 
 import { Card } from '@/components/ui/card.tsx';
-import { CharacterDetailed } from '@/types';
+import { AnimatedCover } from '@/components/utils/AnimatedCover.tsx';
+import { CachedImage } from '@/components/utils/CachedImage.tsx';
+import { usePrimitives } from '@/stores/usePrimitivesStore.ts';
+import { AnimationMedia, CharacterDetailed } from '@/types';
 import { decideColor } from '@/utils/color.ts';
 
 import CharacterAttackAnimations from '../attack/CharacterAttackAnimations.tsx';
@@ -83,6 +87,12 @@ const getElementClasses = (element: string) => {
       indicator: 'bg-celestial-400',
     }
   );
+};
+
+/** Generates star string for rarity display */
+const getRarityStars = (rarity: string) => {
+  const numStars = parseInt(rarity) || 5;
+  return '★'.repeat(numStars);
 };
 
 const CharacterDescription: React.FC<CharacterDetailedProps> = ({
@@ -180,23 +190,10 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
         <div className="flex flex-1 min-w-0 overflow-auto h-[calc(100%-1rem)] scrollbar-hide">
           {selectedMenuItem === 'Profile' && (
             <CharacterCard elementColor={elementColor}>
-              <div className="space-y-6">
-                {/* Stats Grid */}
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                  <StatItem
-                    label="Rarity"
-                    value={`${character.rarity}★`}
-                    highlight
-                  />
-                  <StatItem label="Element" value={character.element} />
-                  <StatItem label="Weapon" value={character.weaponType} />
-                  <StatItem label="Region" value={character.region} />
-                  <StatItem label="Model Type" value={character.modelType} />
-                  {character.version && (
-                    <StatItem label="Version" value={character.version} />
-                  )}
-                </div>
-              </div>
+              <ProfileContent
+                character={character}
+                onNavigate={setSelectedMenuItem}
+              />
             </CharacterCard>
           )}
           {selectedMenuItem === 'Talents' && (
@@ -241,25 +238,286 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   );
 };
 
-/* Stat Item Component for Profile */
+/* Enhanced Stat Item Component with optional icon */
 interface StatItemProps {
   label: string;
   value: string;
+  iconUrl?: string;
   highlight?: boolean;
 }
 
-const StatItem: React.FC<StatItemProps> = ({ label, value, highlight }) => (
+const StatItem: React.FC<StatItemProps> = ({
+  label,
+  value,
+  iconUrl,
+  highlight,
+}) => (
   <div className="group p-3 rounded-lg bg-midnight-800/40 border border-midnight-600/30 hover:border-starlight-500/30 transition-all duration-300">
-    <h3 className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-1">
+    <h3 className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-1.5">
       {label}
     </h3>
-    <p
-      className={`text-lg font-semibold ${highlight ? 'text-celestial-400' : 'text-foreground'}`}
-    >
-      {value}
-    </p>
+    <div className="flex items-center gap-2">
+      {iconUrl && (
+        <CachedImage
+          src={iconUrl}
+          alt={value}
+          className="w-6 h-6 object-contain"
+        />
+      )}
+      <p
+        className={`text-lg font-semibold ${highlight ? 'text-celestial-400' : 'text-foreground'}`}
+      >
+        {value}
+      </p>
+    </div>
   </div>
 );
+
+/* Section Header for Profile */
+interface SectionHeaderProps {
+  title: string;
+  elementColor?: string;
+}
+
+const SectionHeader: React.FC<SectionHeaderProps> = ({
+  title,
+  elementColor,
+}) => (
+  <div className="flex items-center gap-3 mb-4">
+    <h3 className="text-sm font-semibold uppercase tracking-wider text-starlight-300">
+      {title}
+    </h3>
+    <div
+      className="flex-1 h-px"
+      style={{
+        background: elementColor
+          ? `linear-gradient(to right, ${elementColor}40, transparent)`
+          : 'linear-gradient(to right, rgba(255,255,255,0.1), transparent)',
+      }}
+    />
+  </div>
+);
+
+/* Elemental Burst Showcase Component */
+interface ElementalBurstShowcaseProps {
+  character: CharacterDetailed;
+  elementColor: string;
+  onNavigate: (menuItem: CharacterMenuItem) => void;
+}
+
+const ElementalBurstShowcase: React.FC<ElementalBurstShowcaseProps> = ({
+  character,
+  elementColor,
+  onNavigate,
+}) => {
+  // Find the Elemental Burst talent
+  const burstTalent = character.talents.find(
+    (t) => t.talentType === 'Elemental Burst'
+  );
+
+  if (!burstTalent) return null;
+
+  // Get energy cost and cooldown from scaling data
+  const energyCost = burstTalent.scaling.find((s) =>
+    s.key.toLowerCase().includes('energy')
+  )?.value[0];
+  const cooldown = burstTalent.scaling.find((s) => s.key.toLowerCase() === 'cd')
+    ?.value[0];
+
+  // Get preview animation from figureUrls
+  const previewAnimation: AnimationMedia | undefined = burstTalent.figureUrls[0]
+    ? {
+        imageUrl: burstTalent.figureUrls[0].url,
+        videoUrl: '', // GIF works as image
+        caption: burstTalent.figureUrls[0].caption,
+        videoType: '',
+      }
+    : undefined;
+
+  // Format description - take first meaningful paragraph
+  const formatDescription = (desc: string) => {
+    // Remove prefix like "Description\nGameplay Notes\n..." and clean up
+    const cleaned = desc
+      .replace(/^Description\n.*?\n/i, '')
+      .replace(/^Gameplay Notes\n.*?\n/i, '')
+      .replace(/^Advanced Properties\n.*?\n/i, '')
+      .replace(/^Attribute Scaling\n.*?\n/i, '')
+      .replace(/^Preview\n/i, '')
+      .trim();
+
+    // Take first 2-3 sentences
+    const sentences = cleaned
+      .split(/[.!?]+/)
+      .filter((s) => s.trim().length > 0);
+    return sentences.slice(0, 3).join('. ') + (sentences.length > 0 ? '.' : '');
+  };
+
+  return (
+    <section>
+      <SectionHeader title="Elemental Burst" elementColor={elementColor} />
+      <div
+        className="rounded-xl overflow-hidden border transition-all duration-300 hover:shadow-lg"
+        style={{
+          borderColor: `${elementColor}40`,
+          boxShadow: `0 4px 20px ${elementColor}15`,
+        }}
+      >
+        {/* Header with icon and name */}
+        <div
+          className="flex items-center gap-4 p-4"
+          style={{
+            background: `linear-gradient(135deg, ${elementColor}20 0%, transparent 50%)`,
+          }}
+        >
+          <div
+            className="w-14 h-14 rounded-xl p-2 shrink-0"
+            style={{
+              background: `linear-gradient(135deg, ${elementColor}30, ${elementColor}10)`,
+              boxShadow: `0 0 20px ${elementColor}20`,
+            }}
+          >
+            <CachedImage
+              src={burstTalent.talentIcon}
+              alt={burstTalent.talentName}
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-0.5">
+              {burstTalent.talentType}
+            </p>
+            <h4 className="text-lg font-bold text-foreground truncate">
+              {burstTalent.talentName}
+            </h4>
+          </div>
+          {/* Stats badges */}
+          <div className="flex items-center gap-2">
+            {energyCost && (
+              <div
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold"
+                style={{
+                  background: `${elementColor}25`,
+                  color: elementColor,
+                }}
+              >
+                <Zap className="w-4 h-4" />
+                {energyCost}
+              </div>
+            )}
+            {cooldown && (
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold bg-midnight-700/60 text-starlight-300">
+                <Clock className="w-4 h-4" />
+                {cooldown}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Content area with video and description */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+          {/* Preview Animation */}
+          {previewAnimation && (
+            <div className="relative aspect-video bg-midnight-900/50">
+              <AnimatedCover
+                animation={previewAnimation}
+                fallbackUrl={previewAnimation.imageUrl}
+                aspectRatio="16/9"
+                showLoadingIndicator={false}
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-linear-to-r from-transparent via-transparent to-midnight-900/80 pointer-events-none md:block hidden" />
+            </div>
+          )}
+
+          {/* Description */}
+          <div className="p-5 flex flex-col justify-center bg-midnight-800/30">
+            <p className="text-sm text-starlight-300 leading-relaxed">
+              {formatDescription(burstTalent.description)}
+            </p>
+            <button
+              onClick={() => onNavigate('Talents')}
+              className="mt-4 text-xs font-medium uppercase tracking-wider transition-colors self-start px-4 py-2 rounded-lg border hover:bg-midnight-700/50"
+              style={{
+                color: elementColor,
+                borderColor: `${elementColor}40`,
+              }}
+            >
+              View Full Details →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* Profile Content Component */
+interface ProfileContentProps {
+  character: CharacterDetailed;
+  onNavigate: (menuItem: CharacterMenuItem) => void;
+}
+
+const ProfileContent: React.FC<ProfileContentProps> = ({
+  character,
+  onNavigate,
+}) => {
+  const primitives = usePrimitives();
+
+  // Get icons from primitives
+  const elementIcon = primitives?.elements.find(
+    (e) => e.name.toLowerCase() === character.element.toLowerCase()
+  )?.url;
+  const weaponIcon = primitives?.weaponTypes.find(
+    (w) => w.name.toLowerCase() === character.weaponType.toLowerCase()
+  )?.url;
+  const regionIcon = primitives?.regions.find(
+    (r) => r.name.toLowerCase() === character.region.toLowerCase()
+  )?.url;
+
+  const elementColor = decideColor(character.element);
+
+  return (
+    <div className="space-y-8">
+      {/* Character Info Section */}
+      <section>
+        <SectionHeader title="Character Info" elementColor={elementColor} />
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+          <StatItem
+            label="Rarity"
+            value={getRarityStars(character.rarity)}
+            highlight
+          />
+          <StatItem
+            label="Element"
+            value={character.element}
+            iconUrl={elementIcon || character.elementUrl}
+          />
+          <StatItem
+            label="Weapon"
+            value={character.weaponType}
+            iconUrl={weaponIcon || character.weaponUrl}
+          />
+          <StatItem
+            label="Region"
+            value={character.region}
+            iconUrl={regionIcon || character.regionUrl}
+          />
+          <StatItem label="Model Type" value={character.modelType} />
+          {character.version && (
+            <StatItem label="Version" value={`v${character.version}`} />
+          )}
+        </div>
+      </section>
+
+      {/* Elemental Burst Showcase */}
+      <ElementalBurstShowcase
+        character={character}
+        elementColor={elementColor}
+        onNavigate={onNavigate}
+      />
+    </div>
+  );
+};
 
 interface CharacterCardProps {
   children: React.ReactNode;

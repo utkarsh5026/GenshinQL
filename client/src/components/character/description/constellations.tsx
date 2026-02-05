@@ -22,6 +22,7 @@ import {
 import React, { memo, useMemo } from 'react';
 
 import { ListSplitter } from '@/components/utils';
+import { CachedImage } from '@/components/utils/CachedImage';
 import {
   extractConstellationTags,
   getTagConfig,
@@ -255,10 +256,13 @@ const ConstellationItem: React.FC<ConstellationItemProps> = ({
       className={`group flex gap-3 p-3 rounded-2xl border-none bg-card hover:bg-card/50 transition-all ${elementClasses.border} ${elementClasses.hoverBorder}`}
     >
       <div className="relative shrink-0">
-        <img
+        <CachedImage
+          lazy
           className="w-10 h-10 object-contain opacity-90"
           src={constellation.iconUrl}
           alt={constellation.name}
+          skeletonSize="md"
+          skeletonShape="circle"
         />
         {styles.isTalentUpgrade && (
           <div className="absolute -top-0.5 -right-0.5 flex items-center justify-center w-4 h-4 rounded-full bg-success-600 text-white text-[9px] font-bold">

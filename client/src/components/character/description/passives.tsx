@@ -6,9 +6,10 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card.tsx';
+import { CachedImage } from '@/components/utils/CachedImage';
 import { Talent } from '@/types';
 
-import TextProcessor from '../../utils/text-processor.tsx';
+import ListSplitter from '../../utils/list-splitter.tsx';
 
 interface CharacterPassivesProps {
   passives: Talent[];
@@ -90,25 +91,28 @@ const CharacterPassives: React.FC<CharacterPassivesProps> = ({ passives }) => {
             `}
           >
             {/* Decorative corner accent */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-white/5 to-transparent pointer-events-none" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-linear-to-bl from-white/5 to-transparent pointer-events-none" />
 
             <CardHeader className="pb-3">
               <div className="flex items-start gap-3">
                 {/* Icon with styled background */}
                 <div
                   className={`
-                  relative flex-shrink-0 rounded-lg p-2 ${styles.iconBgClass}
+                  relative shrink-0 rounded-lg p-2 ${styles.iconBgClass}
                   ring-1 ring-white/10 group-hover:ring-white/20 transition-all
                   group-hover:scale-110 duration-300
                 `}
                 >
-                  <img
+                  <CachedImage
+                    lazy
                     className="h-10 w-10 drop-shadow-lg"
                     src={passive.talentIcon}
                     alt={passive.talentName}
+                    skeletonSize="md"
+                    skeletonShape="rounded"
                   />
                   {/* Icon glow effect */}
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 rounded-lg bg-linear-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
 
                 {/* Title and tag */}
@@ -131,11 +135,11 @@ const CharacterPassives: React.FC<CharacterPassivesProps> = ({ passives }) => {
 
             <CardContent className="pt-0">
               {/* Subtle divider */}
-              <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-4" />
+              <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent mb-4" />
 
               {/* Description with better typography */}
               <div className="text-sm leading-relaxed text-foreground/80">
-                <TextProcessor text={passive.description} />
+                <ListSplitter text={passive.description} />
               </div>
             </CardContent>
           </Card>

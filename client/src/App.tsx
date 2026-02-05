@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom';
 
 import { useAutoClearOldCache } from '@/hooks/useCacheManager';
 import {
+  useCharactersStore,
   usePrimitivesStore,
   useTalentBooksStore,
   useWeaponMaterialStore,
@@ -18,17 +19,29 @@ function App() {
   const { fetchWeaponMaterials } = useWeaponMaterialStore();
   const { fetchBooks } = useTalentBooksStore();
   const { fetchWeapons } = useWeaponsStore();
+  const { fetchCharacters } = useCharactersStore();
 
   useAutoClearOldCache(7);
 
   useEffect(() => {
     const loadData = async () => {
-      await Promise.all([fetchPrimitives(), fetchWeapons(), fetchBooks()]);
+      await Promise.all([
+        fetchPrimitives(),
+        fetchWeapons(),
+        fetchBooks(),
+        fetchCharacters(),
+      ]);
       await fetchWeaponMaterials();
     };
 
     loadData();
-  }, [fetchPrimitives, fetchWeapons, fetchWeaponMaterials, fetchBooks]);
+  }, [
+    fetchPrimitives,
+    fetchWeapons,
+    fetchWeaponMaterials,
+    fetchBooks,
+    fetchCharacters,
+  ]);
 
   const routing = useRoutes(routes);
 

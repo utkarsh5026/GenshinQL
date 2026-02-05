@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 
-import { Skeleton } from '@/components/ui/skeleton';
+import { ImageSkeleton } from '@/components/utils/ImageSkeleton';
 import { useCachedAsset, useLazyCachedAsset } from '@/hooks/useCachedAsset';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { cn } from '@/lib/utils';
 
 interface CachedImageProps extends Omit<
   React.ImgHTMLAttributes<HTMLImageElement>,
@@ -14,16 +15,18 @@ interface CachedImageProps extends Omit<
   rootMargin?: string;
   showSkeleton?: boolean;
   skeletonClassName?: string;
+  /** Custom skeleton component to show while loading */
+  customSkeleton?: React.ReactNode;
+  /** Skeleton shape: circle, rounded, or square */
+  skeletonShape?: 'circle' | 'rounded' | 'square';
+  /** Skeleton size: sm (20px), md (40px), lg (64px) */
+  skeletonSize?: 'sm' | 'md' | 'lg';
 }
 
 /**
  * Image component that automatically caches the image in IndexedDB
  * Subsequent loads will use the cached version instead of fetching from network
- *
- * @param lazy - Enable lazy loading (only fetch when in viewport)
- * @param rootMargin - Margin around viewport for intersection observer (default: "200px")
- * @param showSkeleton - Show skeleton while loading (default: true)
- * @param skeletonClassName - Custom className for skeleton
+ * Shows an animated skeleton until the image is fully loaded and rendered
  */
 export const CachedImage: React.FC<CachedImageProps> = ({
   src,
@@ -33,12 +36,16 @@ export const CachedImage: React.FC<CachedImageProps> = ({
   rootMargin = '200px',
   showSkeleton = true,
   skeletonClassName,
+  customSkeleton,
+  skeletonShape = 'circle',
+  skeletonSize = 'md',
   className,
   style,
   ...props
 }) => {
-  const imgRef = useRef<HTMLImageElement>(null);
-  const isIntersecting = useIntersectionObserver(imgRef, {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const isIntersecting = useIntersectionObserver(containerRef, {
     rootMargin,
     enabled: lazy,
   });
@@ -48,24 +55,65 @@ export const CachedImage: React.FC<CachedImageProps> = ({
   const eagerCachedSrc = useCachedAsset(lazy ? null : src);
 
   const cachedSrc = lazy ? lazyAsset.url : eagerCachedSrc;
-  const isLoading = lazy ? lazyAsset.isLoading : false;
+  const isFetchingUrl = lazy ? lazyAsset.isLoading : false;
 
-  // Show skeleton while loading (only in lazy mode)
-  if (lazy && showSkeleton && isLoading) {
+  const handleImageLoad = useCallback(() => {
+    setIsImageLoaded(true);
+  }, []);
+
+  // Determine if we should show the skeleton
+  // Show skeleton if: we're fetching the URL OR the image hasn't loaded yet
+  const shouldShowSkeleton = showSkeleton && (isFetchingUrl || !isImageLoaded);
+
+  // Render skeleton component
+  const renderSkeleton = () => {
+    if (customSkeleton) {
+      return <>{customSkeleton}</>;
+    }
     return (
-      <Skeleton className={skeletonClassName || className} style={style} />
+      <ImageSkeleton
+        size={skeletonSize}
+        shape={skeletonShape}
+        className={skeletonClassName}
+        style={style}
+      />
+    );
+  };
+
+  // If we don't have a URL yet (still fetching), show skeleton only
+  if (isFetchingUrl && showSkeleton) {
+    return (
+      <div
+        ref={containerRef}
+        className={cn('relative', skeletonClassName)}
+        style={style}
+      >
+        {renderSkeleton()}
+      </div>
     );
   }
 
   return (
-    <img
-      {...props}
-      ref={imgRef}
-      src={cachedSrc || fallback || ''}
-      alt={alt}
-      className={className}
-      style={style}
-    />
+    <div ref={containerRef} className="relative inline-block" style={style}>
+      {/* Skeleton overlay - shown until image loads */}
+      {shouldShowSkeleton && (
+        <div className="absolute inset-0 z-10">{renderSkeleton()}</div>
+      )}
+
+      {/* Actual image - starts hidden, fades in when loaded */}
+      <img
+        {...props}
+        src={cachedSrc || fallback || ''}
+        alt={alt}
+        onLoad={handleImageLoad}
+        className={cn(
+          className,
+          // Fade-in transition when image loads
+          'transition-opacity duration-300',
+          isImageLoaded ? 'opacity-100' : 'opacity-0'
+        )}
+      />
+    </div>
   );
 };
 
@@ -117,7 +165,7 @@ export const CachedVideo: React.FC<CachedVideoProps> = ({
   // Show skeleton while loading (only in lazy mode)
   if (lazy && showSkeleton && isLoading) {
     return (
-      <Skeleton className={skeletonClassName || className} style={style} />
+      <ImageSkeleton className={skeletonClassName || className} style={style} />
     );
   }
 
