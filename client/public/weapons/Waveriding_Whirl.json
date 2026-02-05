@@ -1,0 +1,264 @@
+{
+  "name": "Waveriding Whirl",
+  "rarity": 4,
+  "attack": 454,
+  "subStat": "Energy Recharge 61.3%",
+  "effect": "Fangs Flying To and Fro\nDecreases Swimming Stamina consumption by 15%. In addition, for 10s after using an Elemental Skill, Max HP is increased by 20~40%. For every Hydro Elemental character in the party, Max HP is increased by another 12~24%, and the maximum increase that can be achieved in this way is 24~48%. Can be triggered once every 15s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Weapon_Waveriding_Whirl.png",
+  "nation": 5,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Blazing_Sacrificial_Heart%27s_Terror.png",
+      "caption": "Blazing Sacrificial Heart's Terror"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Blazing_Sacrificial_Heart%27s_Hesitance.png",
+      "caption": "Blazing Sacrificial Heart's Hesitance"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Item_Blazing_Sacrificial_Heart%27s_Resolve.png",
+      "caption": "Blazing Sacrificial Heart's Resolve"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Item_Blazing_Sacrificial_Heart%27s_Splendor.png",
+      "caption": "Blazing Sacrificial Heart's Splendor"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Shard_of_a_Shattered_Will.png",
+      "caption": "Shard of a Shattered Will"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Locus_of_a_Clear_Will.png",
+      "caption": "Locus of a Clear Will"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sigil_of_a_Striding_Will.png",
+      "caption": "Sigil of a Striding Will"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Juvenile_Fang.png",
+      "caption": "Juvenile Fang"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Seasoned_Fang.png",
+      "caption": "Seasoned Fang"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Tyrant%27s_Fang.png",
+      "caption": "Tyrant's Fang"
+    }
+  ],
+  "passives": [
+    "Decreases Swimming Stamina consumption by 15%. In addition, for 10s after using an Elemental Skill, Max HP is increased by 20%. For every Hydro Elemental character in the party, Max HP is increased by another 12%, and the maximum increase that can be achieved in this way is 24%. Can be triggered once every 15s.",
+    "Decreases Swimming Stamina consumption by 15%. In addition, for 10s after using an Elemental Skill, Max HP is increased by 20%. For every Hydro Elemental character in the party, Max HP is increased by another 12%, and the maximum increase that can be achieved in this way is 24%. Can be triggered once every 15s.",
+    "Decreases Swimming Stamina consumption by 15%. In addition, for 10s after using an Elemental Skill, Max HP is increased by 20%. For every Hydro Elemental character in the party, Max HP is increased by another 12%, and the maximum increase that can be achieved in this way is 24%. Can be triggered once every 15s.",
+    "Decreases Swimming Stamina consumption by 15%. In addition, for 10s after using an Elemental Skill, Max HP is increased by 20%. For every Hydro Elemental character in the party, Max HP is increased by another 12%, and the maximum increase that can be achieved in this way is 24%. Can be triggered once every 15s.",
+    "Decreases Swimming Stamina consumption by 15%. In addition, for 10s after using an Elemental Skill, Max HP is increased by 20%. For every Hydro Elemental character in the party, Max HP is increased by another 12%, and the maximum increase that can be achieved in this way is 24%. Can be triggered once every 15s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Weapon_Waveriding_Whirl.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Weapon_Waveriding_Whirl_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Weapon_Card_Waveriding_Whirl.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 41,
+          "max": 99
+        },
+        "subStat": {
+          "min": 13.3,
+          "max": 23.6
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Blazing_Sacrificial_Heart%27s_Terror.png",
+            "caption": "Blazing Sacrificial Heart's Terror",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Shard_of_a_Shattered_Will.png",
+            "caption": "Shard of a Shattered Will",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Juvenile_Fang.png",
+            "caption": "Juvenile Fang",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 125,
+          "max": 184
+        },
+        "subStat": {
+          "min": 23.6,
+          "max": 34.3
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Blazing_Sacrificial_Heart%27s_Hesitance.png",
+            "caption": "Blazing Sacrificial Heart's Hesitance",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Shard_of_a_Shattered_Will.png",
+            "caption": "Shard of a Shattered Will",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Juvenile_Fang.png",
+            "caption": "Juvenile Fang",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 210,
+          "max": 238
+        },
+        "subStat": {
+          "min": 34.3,
+          "max": 39.7
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Blazing_Sacrificial_Heart%27s_Hesitance.png",
+            "caption": "Blazing Sacrificial Heart's Hesitance",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Locus_of_a_Clear_Will.png",
+            "caption": "Locus of a Clear Will",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Seasoned_Fang.png",
+            "caption": "Seasoned Fang",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 264,
+          "max": 293
+        },
+        "subStat": {
+          "min": 39.7,
+          "max": 45.1
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Item_Blazing_Sacrificial_Heart%27s_Resolve.png",
+            "caption": "Blazing Sacrificial Heart's Resolve",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Locus_of_a_Clear_Will.png",
+            "caption": "Locus of a Clear Will",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Seasoned_Fang.png",
+            "caption": "Seasoned Fang",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 319,
+          "max": 347
+        },
+        "subStat": {
+          "min": 45.1,
+          "max": 50.5
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Item_Blazing_Sacrificial_Heart%27s_Resolve.png",
+            "caption": "Blazing Sacrificial Heart's Resolve",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sigil_of_a_Striding_Will.png",
+            "caption": "Sigil of a Striding Will",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Tyrant%27s_Fang.png",
+            "caption": "Tyrant's Fang",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 373,
+          "max": 401
+        },
+        "subStat": {
+          "min": 50.5,
+          "max": 55.9
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Item_Blazing_Sacrificial_Heart%27s_Splendor.png",
+            "caption": "Blazing Sacrificial Heart's Splendor",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sigil_of_a_Striding_Will.png",
+            "caption": "Sigil of a Striding Will",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Tyrant%27s_Fang.png",
+            "caption": "Tyrant's Fang",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 427,
+          "max": 454
+        },
+        "subStat": {
+          "min": 55.9,
+          "max": 61.3
+        }
+      }
+    ]
+  }
+}

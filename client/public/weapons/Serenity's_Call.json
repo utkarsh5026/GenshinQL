@@ -1,0 +1,264 @@
+{
+  "name": "Serenity's Call",
+  "rarity": 4,
+  "attack": 454,
+  "subStat": "Energy Recharge 61.3%",
+  "effect": "Solemn Silence\nUpon causing an Elemental Reaction, increases Max HP by 16~32% for 12s. Moonsign: Ascendant Gleam: Max HP from this effect is further increased by 16~32%. This effect can be triggered even if the equipping character is off-field.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Weapon_Serenity%27s_Call.png",
+  "nation": 6,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Artful_Device_Fragment.png",
+      "caption": "Artful Device Fragment"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Artful_Device_Replica.png",
+      "caption": "Artful Device Replica"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Artful_Device_Inheritance.png",
+      "caption": "Artful Device Inheritance"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Item_Artful_Device_Wish.png",
+      "caption": "Artful Device Wish"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Frostnight%27s_Glimmer.png",
+      "caption": "Frostnight's Glimmer"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Frostnight%27s_Glow.png",
+      "caption": "Frostnight's Glow"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Item_Frostnight%27s_Glory.png",
+      "caption": "Frostnight's Glory"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+      "caption": "Tattered Warrant"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+      "caption": "Immaculate Warrant"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Frost-Etched_Warrant.png",
+      "caption": "Frost-Etched Warrant"
+    }
+  ],
+  "passives": [
+    "Upon causing an Elemental Reaction, increases Max HP by 16% for 12s. Moonsign: Ascendant Gleam: Max HP from this effect is further increased by 16%. This effect can be triggered even if the equipping character is off-field.",
+    "Upon causing an Elemental Reaction, increases Max HP by 20% for 12s. Moonsign: Ascendant Gleam: Max HP from this effect is further increased by 20%. This effect can be triggered even if the equipping character is off-field.",
+    "Upon causing an Elemental Reaction, increases Max HP by 24% for 12s. Moonsign: Ascendant Gleam: Max HP from this effect is further increased by 24%. This effect can be triggered even if the equipping character is off-field.",
+    "Upon causing an Elemental Reaction, increases Max HP by 28% for 12s. Moonsign: Ascendant Gleam: Max HP from this effect is further increased by 28%. This effect can be triggered even if the equipping character is off-field.",
+    "Upon causing an Elemental Reaction, increases Max HP by 32% for 12s. Moonsign: Ascendant Gleam: Max HP from this effect is further increased by 32%. This effect can be triggered even if the equipping character is off-field."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Weapon_Serenity%27s_Call.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Weapon_Serenity%27s_Call_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Weapon_Card_Serenity%27s_Call.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 41,
+          "max": 99
+        },
+        "subStat": {
+          "min": 13.3,
+          "max": 23.6
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Artful_Device_Fragment.png",
+            "caption": "Artful Device Fragment",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Frostnight%27s_Glimmer.png",
+            "caption": "Frostnight's Glimmer",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+            "caption": "Tattered Warrant",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 125,
+          "max": 184
+        },
+        "subStat": {
+          "min": 23.6,
+          "max": 34.3
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Artful_Device_Replica.png",
+            "caption": "Artful Device Replica",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Frostnight%27s_Glimmer.png",
+            "caption": "Frostnight's Glimmer",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+            "caption": "Tattered Warrant",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 210,
+          "max": 238
+        },
+        "subStat": {
+          "min": 34.3,
+          "max": 39.7
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Artful_Device_Replica.png",
+            "caption": "Artful Device Replica",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Frostnight%27s_Glow.png",
+            "caption": "Frostnight's Glow",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+            "caption": "Immaculate Warrant",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 264,
+          "max": 293
+        },
+        "subStat": {
+          "min": 39.7,
+          "max": 45.1
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Artful_Device_Inheritance.png",
+            "caption": "Artful Device Inheritance",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Frostnight%27s_Glow.png",
+            "caption": "Frostnight's Glow",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+            "caption": "Immaculate Warrant",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 319,
+          "max": 347
+        },
+        "subStat": {
+          "min": 45.1,
+          "max": 50.5
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Artful_Device_Inheritance.png",
+            "caption": "Artful Device Inheritance",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Item_Frostnight%27s_Glory.png",
+            "caption": "Frostnight's Glory",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Frost-Etched_Warrant.png",
+            "caption": "Frost-Etched Warrant",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 373,
+          "max": 401
+        },
+        "subStat": {
+          "min": 50.5,
+          "max": 55.9
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Item_Artful_Device_Wish.png",
+            "caption": "Artful Device Wish",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Item_Frostnight%27s_Glory.png",
+            "caption": "Frostnight's Glory",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Frost-Etched_Warrant.png",
+            "caption": "Frost-Etched Warrant",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 427,
+          "max": 454
+        },
+        "subStat": {
+          "min": 55.9,
+          "max": 61.3
+        }
+      }
+    ]
+  }
+}

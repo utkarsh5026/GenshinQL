@@ -1,0 +1,264 @@
+{
+  "name": "The First Great Magic",
+  "rarity": 5,
+  "attack": 608,
+  "subStat": "CRIT DMG 66.2%",
+  "effect": "Parsifal the Great\nDMG dealt by Charged Attacks increased by 16~32%. For every party member with the same Elemental Type as the wielder (including the wielder themselves), gain 1 Gimmick stack. For every party member with a different Elemental Type from the wielder, gain 1 Theatrics stack. When the wielder has 1/2/3 or more Gimmick stacks, ATK will be increased by 16/32/48~32/64/96. When the wielder has 1/2/3 or more Theatrics stacks, Movement SPD will be increased by 4/7/10~12/15/18.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Weapon_The_First_Great_Magic.png",
+  "nation": 4,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Fragment_of_an_Ancient_Chord.png",
+      "caption": "Fragment of an Ancient Chord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Chapter_of_an_Ancient_Chord.png",
+      "caption": "Chapter of an Ancient Chord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Movement_of_an_Ancient_Chord.png",
+      "caption": "Movement of an Ancient Chord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Echo_of_an_Ancient_Chord.png",
+      "caption": "Echo of an Ancient Chord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Drop_of_Tainted_Water.png",
+      "caption": "Drop of Tainted Water"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Scoop_of_Tainted_Water.png",
+      "caption": "Scoop of Tainted Water"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Newborn_Tainted_Hydro_Phantasm.png",
+      "caption": "Newborn Tainted Hydro Phantasm"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+      "caption": "Trans­ocean­ic Pearl"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+      "caption": "Trans­ocean­ic Chunk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+      "caption": "Xeno­chrom­at­ic Cryst­al"
+    }
+  ],
+  "passives": [
+    "DMG dealt by Charged Attacks increased by 16%. For every party member with the same Elemental Type as the wielder (including the wielder themselves), gain 1 Gimmick stack. For every party member with a different Elemental Type from the wielder, gain 1 Theatrics stack. When the wielder has 1/2/3 or more Gimmick stacks, ATK will be increased by 16/32/48. When the wielder has 1/2/3 or more Theatrics stacks, Movement SPD will be increased by 4/7/10.",
+    "DMG dealt by Charged Attacks increased by 16%. For every party member with the same Elemental Type as the wielder (including the wielder themselves), gain 1 Gimmick stack. For every party member with a different Elemental Type from the wielder, gain 1 Theatrics stack. When the wielder has 1/2/3 or more Gimmick stacks, ATK will be increased by 16/32/48. When the wielder has 1/2/3 or more Theatrics stacks, Movement SPD will be increased by 4/7/10.",
+    "DMG dealt by Charged Attacks increased by 16%. For every party member with the same Elemental Type as the wielder (including the wielder themselves), gain 1 Gimmick stack. For every party member with a different Elemental Type from the wielder, gain 1 Theatrics stack. When the wielder has 1/2/3 or more Gimmick stacks, ATK will be increased by 16/32/48. When the wielder has 1/2/3 or more Theatrics stacks, Movement SPD will be increased by 4/7/10.",
+    "DMG dealt by Charged Attacks increased by 16%. For every party member with the same Elemental Type as the wielder (including the wielder themselves), gain 1 Gimmick stack. For every party member with a different Elemental Type from the wielder, gain 1 Theatrics stack. When the wielder has 1/2/3 or more Gimmick stacks, ATK will be increased by 16/32/48. When the wielder has 1/2/3 or more Theatrics stacks, Movement SPD will be increased by 4/7/10.",
+    "DMG dealt by Charged Attacks increased by 16%. For every party member with the same Elemental Type as the wielder (including the wielder themselves), gain 1 Gimmick stack. For every party member with a different Elemental Type from the wielder, gain 1 Theatrics stack. When the wielder has 1/2/3 or more Gimmick stacks, ATK will be increased by 16/32/48. When the wielder has 1/2/3 or more Theatrics stacks, Movement SPD will be increased by 4/7/10."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Weapon_The_First_Great_Magic.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Weapon_The_First_Great_Magic_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Weapon_Card_The_First_Great_Magic.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 46,
+          "max": 122
+        },
+        "subStat": {
+          "min": 14.4,
+          "max": 25.4
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Fragment_of_an_Ancient_Chord.png",
+            "caption": "Fragment of an Ancient Chord",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Drop_of_Tainted_Water.png",
+            "caption": "Drop of Tainted Water",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+            "caption": "Transoceanic Pearl",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 153,
+          "max": 235
+        },
+        "subStat": {
+          "min": 25.4,
+          "max": 37.1
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Chapter_of_an_Ancient_Chord.png",
+            "caption": "Chapter of an Ancient Chord",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Drop_of_Tainted_Water.png",
+            "caption": "Drop of Tainted Water",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+            "caption": "Transoceanic Pearl",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 266,
+          "max": 308
+        },
+        "subStat": {
+          "min": 37.1,
+          "max": 42.9
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Chapter_of_an_Ancient_Chord.png",
+            "caption": "Chapter of an Ancient Chord",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Scoop_of_Tainted_Water.png",
+            "caption": "Scoop of Tainted Water",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+            "caption": "Transoceanic Chunk",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 340,
+          "max": 382
+        },
+        "subStat": {
+          "min": 42.9,
+          "max": 48.7
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Movement_of_an_Ancient_Chord.png",
+            "caption": "Movement of an Ancient Chord",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Scoop_of_Tainted_Water.png",
+            "caption": "Scoop of Tainted Water",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+            "caption": "Transoceanic Chunk",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 414,
+          "max": 457
+        },
+        "subStat": {
+          "min": 48.7,
+          "max": 54.5
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Movement_of_an_Ancient_Chord.png",
+            "caption": "Movement of an Ancient Chord",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Newborn_Tainted_Hydro_Phantasm.png",
+            "caption": "Newborn Tainted Hydro Phantasm",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+            "caption": "Xenochromatic Crystal",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 488,
+          "max": 532
+        },
+        "subStat": {
+          "min": 54.5,
+          "max": 60.3
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Echo_of_an_Ancient_Chord.png",
+            "caption": "Echo of an Ancient Chord",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Newborn_Tainted_Hydro_Phantasm.png",
+            "caption": "Newborn Tainted Hydro Phantasm",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+            "caption": "Xenochromatic Crystal",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 563,
+          "max": 608
+        },
+        "subStat": {
+          "min": 60.3,
+          "max": 66.2
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "name": "Oathsworn Eye",
+  "rarity": 4,
+  "attack": 565,
+  "subStat": "ATK 27.6%",
+  "effect": "People of the Faltering Light\nIncreases Energy Recharge by 24~48% for 10s after using an Elemental Skill.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Weapon_Oathsworn_Eye.png",
+  "nation": 2,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Coral_Branch_of_a_Distant_Sea.png",
+      "caption": "Coral Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+      "caption": "Jeweled Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+      "caption": "Jade Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Golden_Branch_of_a_Distant_Sea.png",
+      "caption": "Golden Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Concealed_Claw.png",
+      "caption": "Concealed Claw"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Concealed_Unguis.png",
+      "caption": "Concealed Unguis"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Item_Concealed_Talon.png",
+      "caption": "Concealed Talon"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+      "caption": "Spectral Husk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+      "caption": "Spectral Heart"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+      "caption": "Spectral Nucleus"
+    }
+  ],
+  "passives": [
+    "Increases Energy Recharge by 24% for 10s after using an Elemental Skill.",
+    "Increases Energy Recharge by 30% for 10s after using an Elemental Skill.",
+    "Increases Energy Recharge by 36% for 10s after using an Elemental Skill.",
+    "Increases Energy Recharge by 42% for 10s after using an Elemental Skill.",
+    "Increases Energy Recharge by 48% for 10s after using an Elemental Skill."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Weapon_Oathsworn_Eye.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Weapon_Oathsworn_Eye_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Weapon_Card_Oathsworn_Eye.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 119
+        },
+        "subStat": {
+          "min": 6,
+          "max": 10.6
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Coral_Branch_of_a_Distant_Sea.png",
+            "caption": "Coral Branch of a Distant Sea",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Concealed_Claw.png",
+            "caption": "Concealed Claw",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 144,
+          "max": 226
+        },
+        "subStat": {
+          "min": 10.6,
+          "max": 15.5
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+            "caption": "Jeweled Branch of a Distant Sea",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Concealed_Claw.png",
+            "caption": "Concealed Claw",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 252,
+          "max": 293
+        },
+        "subStat": {
+          "min": 15.5,
+          "max": 17.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+            "caption": "Jeweled Branch of a Distant Sea",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Concealed_Unguis.png",
+            "caption": "Concealed Unguis",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 319,
+          "max": 361
+        },
+        "subStat": {
+          "min": 17.9,
+          "max": 20.3
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+            "caption": "Jade Branch of a Distant Sea",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Concealed_Unguis.png",
+            "caption": "Concealed Unguis",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 387,
+          "max": 429
+        },
+        "subStat": {
+          "min": 20.3,
+          "max": 22.7
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+            "caption": "Jade Branch of a Distant Sea",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Item_Concealed_Talon.png",
+            "caption": "Concealed Talon",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 455,
+          "max": 497
+        },
+        "subStat": {
+          "min": 22.7,
+          "max": 25.1
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Golden_Branch_of_a_Distant_Sea.png",
+            "caption": "Golden Branch of a Distant Sea",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Item_Concealed_Talon.png",
+            "caption": "Concealed Talon",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 523,
+          "max": 565
+        },
+        "subStat": {
+          "min": 25.1,
+          "max": 27.6
+        }
+      }
+    ]
+  }
+}

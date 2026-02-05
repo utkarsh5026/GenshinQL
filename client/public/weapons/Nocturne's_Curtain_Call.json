@@ -1,0 +1,264 @@
+{
+  "name": "Nocturne's Curtain Call",
+  "rarity": 5,
+  "attack": 542,
+  "subStat": "CRIT DMG 88.2%",
+  "effect": "Ballad of the Crossroads\nMax HP increases by 10~18%.\nWhen triggering Lunar reactions or inflicting Lunar Reaction DMG on opponents, the equipping character will recover 14~18 Energy, and receive the Bountiful Sea's Sacred Wine effect for 12s: Max HP increases by an additional 14~22%, CRIT DMG from Lunar Reaction DMG increases by 60~140%.\nThe Energy recovery effect can be triggered at most once every 18s, and can be triggered even when the equipping character is off-field.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Weapon_Nocturne%27s_Curtain_Call.png",
+  "nation": 6,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Item_Sundered_Glory_of_the_Far-North_Scions.png",
+      "caption": "Sundered Glory of the Far-North Scions"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Unyielding_Delusion_of_the_Far-North_Scions.png",
+      "caption": "Unyielding Delusion of the Far-North Scions"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Oblation_of_the_Far-North_Scions.png",
+      "caption": "Oblation of the Far-North Scions"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Aureate_Radiance_of_the_Far-North_Scions.png",
+      "caption": "Aureate Radiance of the Far-North Scions"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Fractured_Eye_of_the_Deep_Shadow.png",
+      "caption": "Fractured Eye of the Deep Shadow"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Item_Aberrant_Core_of_the_Deep_Shadow.png",
+      "caption": "Aberrant Core of the Deep Shadow"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Hooked_Beak_of_the_Deep_Shadow.png",
+      "caption": "Hooked Beak of the Deep Shadow"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+      "caption": "Tattered Warrant"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+      "caption": "Immaculate Warrant"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Frost-Etched_Warrant.png",
+      "caption": "Frost-Etched Warrant"
+    }
+  ],
+  "passives": [
+    "Max HP increases by 10%.\nWhen triggering Lunar reactions or inflicting Lunar Reaction DMG on opponents, the equipping character will recover 14 Energy, and receive the Bountiful Sea's Sacred Wine effect for 12s: Max HP increases by an additional 14%, CRIT DMG from Lunar Reaction DMG increases by 60%.\nThe Energy recovery effect can be triggered at most once every 18s, and can be triggered even when the equipping character is off-field.",
+    "Max HP increases by 12%.\nWhen triggering Lunar reactions or inflicting Lunar Reaction DMG on opponents, the equipping character will recover 15 Energy, and receive the Bountiful Sea's Sacred Wine effect for 12s: Max HP increases by an additional 16%, CRIT DMG from Lunar Reaction DMG increases by 80%.\nThe Energy recovery effect can be triggered at most once every 18s, and can be triggered even when the equipping character is off-field.",
+    "Max HP increases by 14%.\nWhen triggering Lunar reactions or inflicting Lunar Reaction DMG on opponents, the equipping character will recover 16 Energy, and receive the Bountiful Sea's Sacred Wine effect for 12s: Max HP increases by an additional 18%, CRIT DMG from Lunar Reaction DMG increases by 100%.\nThe Energy recovery effect can be triggered at most once every 18s, and can be triggered even when the equipping character is off-field.",
+    "Max HP increases by 16%.\nWhen triggering Lunar reactions or inflicting Lunar Reaction DMG on opponents, the equipping character will recover 17 Energy, and receive the Bountiful Sea's Sacred Wine effect for 12s: Max HP increases by an additional 20%, CRIT DMG from Lunar Reaction DMG increases by 120%.\nThe Energy recovery effect can be triggered at most once every 18s, and can be triggered even when the equipping character is off-field.",
+    "Max HP increases by 18%.\nWhen triggering Lunar reactions or inflicting Lunar Reaction DMG on opponents, the equipping character will recover 18 Energy, and receive the Bountiful Sea's Sacred Wine effect for 12s: Max HP increases by an additional 22%, CRIT DMG from Lunar Reaction DMG increases by 140%.\nThe Energy recovery effect can be triggered at most once every 18s, and can be triggered even when the equipping character is off-field."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Weapon_Nocturne%27s_Curtain_Call.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Weapon_Nocturne%27s_Curtain_Call_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Weapon_Card_Nocturne%27s_Curtain_Call.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 110
+        },
+        "subStat": {
+          "min": 19.2,
+          "max": 33.9
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Item_Sundered_Glory_of_the_Far-North_Scions.png",
+            "caption": "Sundered Glory of the Far-North Scions",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Fractured_Eye_of_the_Deep_Shadow.png",
+            "caption": "Fractured Eye of the Deep Shadow",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+            "caption": "Tattered Warrant",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 141,
+          "max": 210
+        },
+        "subStat": {
+          "min": 33.9,
+          "max": 49.4
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Unyielding_Delusion_of_the_Far-North_Scions.png",
+            "caption": "Unyielding Delusion of the Far-North Scions",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Fractured_Eye_of_the_Deep_Shadow.png",
+            "caption": "Fractured Eye of the Deep Shadow",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+            "caption": "Tattered Warrant",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 241,
+          "max": 275
+        },
+        "subStat": {
+          "min": 49.4,
+          "max": 57.2
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Unyielding_Delusion_of_the_Far-North_Scions.png",
+            "caption": "Unyielding Delusion of the Far-North Scions",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Item_Aberrant_Core_of_the_Deep_Shadow.png",
+            "caption": "Aberrant Core of the Deep Shadow",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+            "caption": "Immaculate Warrant",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 307,
+          "max": 341
+        },
+        "subStat": {
+          "min": 57.2,
+          "max": 65
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Oblation_of_the_Far-North_Scions.png",
+            "caption": "Oblation of the Far-North Scions",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Item_Aberrant_Core_of_the_Deep_Shadow.png",
+            "caption": "Aberrant Core of the Deep Shadow",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+            "caption": "Immaculate Warrant",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 373,
+          "max": 408
+        },
+        "subStat": {
+          "min": 65,
+          "max": 72.7
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Oblation_of_the_Far-North_Scions.png",
+            "caption": "Oblation of the Far-North Scions",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Hooked_Beak_of_the_Deep_Shadow.png",
+            "caption": "Hooked Beak of the Deep Shadow",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Frost-Etched_Warrant.png",
+            "caption": "Frost-Etched Warrant",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 439,
+          "max": 475
+        },
+        "subStat": {
+          "min": 72.7,
+          "max": 80.4
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Aureate_Radiance_of_the_Far-North_Scions.png",
+            "caption": "Aureate Radiance of the Far-North Scions",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Hooked_Beak_of_the_Deep_Shadow.png",
+            "caption": "Hooked Beak of the Deep Shadow",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Frost-Etched_Warrant.png",
+            "caption": "Frost-Etched Warrant",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 506,
+          "max": 542
+        },
+        "subStat": {
+          "min": 80.4,
+          "max": 88.2
+        }
+      }
+    ]
+  }
+}

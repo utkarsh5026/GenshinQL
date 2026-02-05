@@ -1,0 +1,262 @@
+{
+  "name": "Azurelight",
+  "rarity": 5,
+  "attack": 674,
+  "subStat": "CRIT Rate 22.1%",
+  "effect": "White Mountain's Bounty\nWithin 12s after an Elemental Skill is used, ATK is increased by 24~48%. During this time, when the equipping character has 0 Energy, ATK will be further increased by 24~48%, and CRIT DMG will be increased by 40~80%.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Weapon_Azurelight.png",
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Item_Night-Wind%27s_Mystic_Consideration.png",
+      "caption": "Night-Wind's Mystic Consideration"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+      "caption": "Night-Wind's Mystic Premonition"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+      "caption": "Night-Wind's Mystic Augury"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Night-Wind%27s_Mystic_Revelation.png",
+      "caption": "Night-Wind's Mystic Revelation"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Refractive_Bud.png",
+      "caption": "Refractive Bud"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Bewildering_Broadleaf.png",
+      "caption": "Bewildering Broadleaf"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Illusory_Leafcoil.png",
+      "caption": "Illusory Leafcoil"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+      "caption": "Sentry's Wooden Whistle"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+      "caption": "Warrior's Metal Whistle"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+      "caption": "Saurian-Crowned Warrior's Golden Whistle"
+    }
+  ],
+  "passives": [
+    "Within 12s after an Elemental Skill is used, ATK is increased by 24%. During this time, when the equipping character has 0 Energy, ATK will be further increased by 24%, and CRIT DMG will be increased by 40%.",
+    "Within 12s after an Elemental Skill is used, ATK is increased by 30%. During this time, when the equipping character has 0 Energy, ATK will be further increased by 30%, and CRIT DMG will be increased by 50%.",
+    "Within 12s after an Elemental Skill is used, ATK is increased by 36%. During this time, when the equipping character has 0 Energy, ATK will be further increased by 36%, and CRIT DMG will be increased by 60%.",
+    "Within 12s after an Elemental Skill is used, ATK is increased by 42%. During this time, when the equipping character has 0 Energy, ATK will be further increased by 42%, and CRIT DMG will be increased by 70%.",
+    "Within 12s after an Elemental Skill is used, ATK is increased by 48%. During this time, when the equipping character has 0 Energy, ATK will be further increased by 48%, and CRIT DMG will be increased by 80%."
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 48,
+          "max": 133
+        },
+        "subStat": {
+          "min": 4.8,
+          "max": 8.5
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Item_Night-Wind%27s_Mystic_Consideration.png",
+            "caption": "Night-Wind's Mystic Consideration",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Refractive_Bud.png",
+            "caption": "Refractive Bud",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+            "caption": "Sentry's Wooden Whistle",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 164,
+          "max": 261
+        },
+        "subStat": {
+          "min": 8.5,
+          "max": 12.4
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+            "caption": "Night-Wind's Mystic Premonition",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Refractive_Bud.png",
+            "caption": "Refractive Bud",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+            "caption": "Sentry's Wooden Whistle",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 292,
+          "max": 341
+        },
+        "subStat": {
+          "min": 12.4,
+          "max": 14.3
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+            "caption": "Night-Wind's Mystic Premonition",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Bewildering_Broadleaf.png",
+            "caption": "Bewildering Broadleaf",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+            "caption": "Warrior's Metal Whistle",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 373,
+          "max": 423
+        },
+        "subStat": {
+          "min": 14.3,
+          "max": 16.2
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+            "caption": "Night-Wind's Mystic Augury",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Bewildering_Broadleaf.png",
+            "caption": "Bewildering Broadleaf",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+            "caption": "Warrior's Metal Whistle",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 455,
+          "max": 506
+        },
+        "subStat": {
+          "min": 16.2,
+          "max": 18.2
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+            "caption": "Night-Wind's Mystic Augury",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Illusory_Leafcoil.png",
+            "caption": "Illusory Leafcoil",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+            "caption": "Saurian-Crowned Warrior's Golden Whistle",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 537,
+          "max": 590
+        },
+        "subStat": {
+          "min": 18.2,
+          "max": 20.1
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Night-Wind%27s_Mystic_Revelation.png",
+            "caption": "Night-Wind's Mystic Revelation",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Illusory_Leafcoil.png",
+            "caption": "Illusory Leafcoil",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+            "caption": "Saurian-Crowned Warrior's Golden Whistle",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 621,
+          "max": 674
+        },
+        "subStat": {
+          "min": 20.1,
+          "max": 22.1
+        }
+      }
+    ]
+  },
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Weapon_Azurelight.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Weapon_Azurelight_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Weapon_Card_Azurelight.png"
+  ]
+}

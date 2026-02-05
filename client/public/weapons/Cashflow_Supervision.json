@@ -1,0 +1,264 @@
+{
+  "name": "Cashflow Supervision",
+  "rarity": 5,
+  "attack": 674,
+  "subStat": "CRIT Rate 22.1%",
+  "effect": "Golden Blood-Tide\nATK is increased by 16~32%. When current HP increases or decreases, Normal Attack DMG will be increased by 16~32% and Charged Attack DMG will be increased by 14~28% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 8~16%.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Weapon_Cashflow_Supervision.png",
+  "nation": 4,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Item_Broken_Goblet_of_the_Pristine_Sea.png",
+      "caption": "Broken Goblet of the Pristine Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Item_Wine_Goblet_of_the_Pristine_Sea.png",
+      "caption": "Wine Goblet of the Pristine Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Silver_Goblet_of_the_Pristine_Sea.png",
+      "caption": "Silver Goblet of the Pristine Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Golden_Goblet_of_the_Pristine_Sea.png",
+      "caption": "Golden Goblet of the Pristine Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Old_Operative%27s_Pocket_Watch.png",
+      "caption": "Old Operative's Pocket Watch"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Operative%27s_Standard_Pocket_Watch.png",
+      "caption": "Operative's Standard Pocket Watch"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Operative%27s_Constancy.png",
+      "caption": "Operative's Constancy"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+      "caption": "Trans­ocean­ic Pearl"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+      "caption": "Trans­ocean­ic Chunk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+      "caption": "Xeno­chrom­at­ic Cryst­al"
+    }
+  ],
+  "passives": [
+    "ATK is increased by 16%. When current HP increases or decreases, Normal Attack DMG will be increased by 16% and Charged Attack DMG will be increased by 14% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 8%.",
+    "ATK is increased by 20%. When current HP increases or decreases, Normal Attack DMG will be increased by 20% and Charged Attack DMG will be increased by 17.5% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 10%.",
+    "ATK is increased by 24%. When current HP increases or decreases, Normal Attack DMG will be increased by 24% and Charged Attack DMG will be increased by 21% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 12%.",
+    "ATK is increased by 28%. When current HP increases or decreases, Normal Attack DMG will be increased by 28% and Charged Attack DMG will be increased by 24.5% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 14%.",
+    "ATK is increased by 32%. When current HP increases or decreases, Normal Attack DMG will be increased by 32% and Charged Attack DMG will be increased by 28% for 4s. Max 3 stacks. This effect can be triggered once every 0.3s. When the wielder has 3 stacks, ATK SPD will be increased by 16%."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Weapon_Cashflow_Supervision.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Weapon_Cashflow_Supervision_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Weapon_Card_Cashflow_Supervision.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 48,
+          "max": 133
+        },
+        "subStat": {
+          "min": 4.8,
+          "max": 8.5
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Item_Broken_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Broken Goblet of the Pristine Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Old_Operative%27s_Pocket_Watch.png",
+            "caption": "Old Operative's Pocket Watch",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+            "caption": "Transoceanic Pearl",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 164,
+          "max": 261
+        },
+        "subStat": {
+          "min": 8.5,
+          "max": 12.4
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Item_Wine_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Wine Goblet of the Pristine Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Old_Operative%27s_Pocket_Watch.png",
+            "caption": "Old Operative's Pocket Watch",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+            "caption": "Transoceanic Pearl",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 292,
+          "max": 341
+        },
+        "subStat": {
+          "min": 12.4,
+          "max": 14.3
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Item_Wine_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Wine Goblet of the Pristine Sea",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Operative%27s_Standard_Pocket_Watch.png",
+            "caption": "Operative's Standard Pocket Watch",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+            "caption": "Transoceanic Chunk",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 373,
+          "max": 423
+        },
+        "subStat": {
+          "min": 14.3,
+          "max": 16.2
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Silver_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Silver Goblet of the Pristine Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Operative%27s_Standard_Pocket_Watch.png",
+            "caption": "Operative's Standard Pocket Watch",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+            "caption": "Transoceanic Chunk",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 455,
+          "max": 506
+        },
+        "subStat": {
+          "min": 16.2,
+          "max": 18.2
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Silver_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Silver Goblet of the Pristine Sea",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Operative%27s_Constancy.png",
+            "caption": "Operative's Constancy",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+            "caption": "Xenochromatic Crystal",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 537,
+          "max": 590
+        },
+        "subStat": {
+          "min": 18.2,
+          "max": 20.1
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Golden_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Golden Goblet of the Pristine Sea",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Operative%27s_Constancy.png",
+            "caption": "Operative's Constancy",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+            "caption": "Xenochromatic Crystal",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 621,
+          "max": 674
+        },
+        "subStat": {
+          "min": 20.1,
+          "max": 22.1
+        }
+      }
+    ]
+  }
+}

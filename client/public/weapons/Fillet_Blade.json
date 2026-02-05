@@ -1,0 +1,263 @@
+{
+  "name": "Fillet Blade",
+  "rarity": 3,
+  "attack": 401,
+  "subStat": "ATK 35.2%",
+  "effect": "Gash\nOn hit, has 50% chance to deal 240~400% ATK DMG to a single enemy. Can only occur once every 15~11s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Weapon_Fillet_Blade.png",
+  "nation": 1,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Mist_Veiled_Lead_Elixir.png",
+      "caption": "Mist Veiled Lead Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+      "caption": "Mist Veiled Mercury Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+      "caption": "Mist Veiled Gold Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Mist_Veiled_Primo_Elixir.png",
+      "caption": "Mist Veiled Primo Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+      "caption": "Mist Grass Pollen"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+      "caption": "Mist Grass"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+      "caption": "Mist Grass Wick"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Treasure_Hoarder_Insignia.png",
+      "caption": "Treasure Hoarder Insignia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Item_Silver_Raven_Insignia.png",
+      "caption": "Silver Raven Insignia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Golden_Raven_Insignia.png",
+      "caption": "Golden Raven Insignia"
+    }
+  ],
+  "passives": [
+    "On hit, has 50% chance to deal 240% ATK DMG to a single enemy. Can only occur once every 15s.",
+    "On hit, has 50% chance to deal 280% ATK DMG to a single enemy. Can only occur once every 14s.",
+    "On hit, has 50% chance to deal 320% ATK DMG to a single enemy. Can only occur once every 13s.",
+    "On hit, has 50% chance to deal 360% ATK DMG to a single enemy. Can only occur once every 12s.",
+    "On hit, has 50% chance to deal 400% ATK DMG to a single enemy. Can only occur once every 11s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Weapon_Fillet_Blade.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Weapon_Fillet_Blade_2nd.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 39,
+          "max": 94
+        },
+        "subStat": {
+          "min": 7.7,
+          "max": 13.5
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Mist_Veiled_Lead_Elixir.png",
+            "caption": "Mist Veiled Lead Elixir",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+            "caption": "Mist Grass Pollen",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Treasure_Hoarder_Insignia.png",
+            "caption": "Treasure Hoarder Insignia",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 113,
+          "max": 169
+        },
+        "subStat": {
+          "min": 13.5,
+          "max": 19.7
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+            "caption": "Mist Veiled Mercury Elixir",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+            "caption": "Mist Grass Pollen",
+            "count": 8
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Treasure_Hoarder_Insignia.png",
+            "caption": "Treasure Hoarder Insignia",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 189,
+          "max": 216
+        },
+        "subStat": {
+          "min": 19.7,
+          "max": 22.8
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+            "caption": "Mist Veiled Mercury Elixir",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+            "caption": "Mist Grass",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Item_Silver_Raven_Insignia.png",
+            "caption": "Silver Raven Insignia",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 236,
+          "max": 263
+        },
+        "subStat": {
+          "min": 22.8,
+          "max": 25.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+            "caption": "Mist Veiled Gold Elixir",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+            "caption": "Mist Grass",
+            "count": 8
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Item_Silver_Raven_Insignia.png",
+            "caption": "Silver Raven Insignia",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 282,
+          "max": 309
+        },
+        "subStat": {
+          "min": 25.9,
+          "max": 29
+        },
+        "mora": 25000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+            "caption": "Mist Veiled Gold Elixir",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+            "caption": "Mist Grass Wick",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Golden_Raven_Insignia.png",
+            "caption": "Golden Raven Insignia",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 329,
+          "max": 355
+        },
+        "subStat": {
+          "min": 29,
+          "max": 32.1
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Mist_Veiled_Primo_Elixir.png",
+            "caption": "Mist Veiled Primo Elixir",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+            "caption": "Mist Grass Wick",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Golden_Raven_Insignia.png",
+            "caption": "Golden Raven Insignia",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 375,
+          "max": 401
+        },
+        "subStat": {
+          "min": 32.1,
+          "max": 35.2
+        }
+      }
+    ]
+  }
+}

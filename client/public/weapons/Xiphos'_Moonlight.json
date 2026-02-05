@@ -1,0 +1,264 @@
+{
+  "name": "Xiphos' Moonlight",
+  "rarity": 4,
+  "attack": 510,
+  "subStat": "Elemental Mastery 165",
+  "effect": "Jinni's Whisper\nThe following effect will trigger every 10s: The equipping character will gain 0.036~0.072% Energy Recharge for each point of Elemental Mastery they possess for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Weapon_Xiphos%27_Moonlight.png",
+  "nation": 3,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Copper_Talisman_of_the_Forest_Dew.png",
+      "caption": "Copper Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+      "caption": "Iron Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+      "caption": "Silver Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Golden_Talisman_of_the_Forest_Dew.png",
+      "caption": "Golden Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+      "caption": "Damaged Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+      "caption": "Turbid Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+      "caption": "Radiant Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+      "caption": "Faded Red Satin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+      "caption": "Trimmed Red Silk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+      "caption": "Rich Red Brocade"
+    }
+  ],
+  "passives": [
+    "The following effect will trigger every 10s: The equipping character will gain 0.036% Energy Recharge for each point of Elemental Mastery they possess for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+    "The following effect will trigger every 10s: The equipping character will gain 0.045% Energy Recharge for each point of Elemental Mastery they possess for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+    "The following effect will trigger every 10s: The equipping character will gain 0.054% Energy Recharge for each point of Elemental Mastery they possess for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+    "The following effect will trigger every 10s: The equipping character will gain 0.063% Energy Recharge for each point of Elemental Mastery they possess for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+    "The following effect will trigger every 10s: The equipping character will gain 0.072% Energy Recharge for each point of Elemental Mastery they possess for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Weapon_Xiphos%27_Moonlight.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Weapon_Xiphos%27_Moonlight_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Weapon_Card_Xiphos%27_Moonlight.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 42,
+          "max": 109
+        },
+        "subStat": {
+          "min": 36,
+          "max": 64
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Copper_Talisman_of_the_Forest_Dew.png",
+            "caption": "Copper Talisman of the Forest Dew",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+            "caption": "Damaged Prism",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 135,
+          "max": 205
+        },
+        "subStat": {
+          "min": 64,
+          "max": 93
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+            "caption": "Iron Talisman of the Forest Dew",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+            "caption": "Damaged Prism",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 231,
+          "max": 266
+        },
+        "subStat": {
+          "min": 93,
+          "max": 107
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+            "caption": "Iron Talisman of the Forest Dew",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+            "caption": "Turbid Prism",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 292,
+          "max": 327
+        },
+        "subStat": {
+          "min": 107,
+          "max": 122
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+            "caption": "Silver Talisman of the Forest Dew",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+            "caption": "Turbid Prism",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 353,
+          "max": 388
+        },
+        "subStat": {
+          "min": 122,
+          "max": 136
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+            "caption": "Silver Talisman of the Forest Dew",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+            "caption": "Radiant Prism",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 414,
+          "max": 449
+        },
+        "subStat": {
+          "min": 136,
+          "max": 151
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Golden_Talisman_of_the_Forest_Dew.png",
+            "caption": "Golden Talisman of the Forest Dew",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+            "caption": "Radiant Prism",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 475,
+          "max": 510
+        },
+        "subStat": {
+          "min": 151,
+          "max": 165
+        }
+      }
+    ]
+  }
+}

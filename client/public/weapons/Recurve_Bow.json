@@ -1,0 +1,263 @@
+{
+  "name": "Recurve Bow",
+  "rarity": 3,
+  "attack": 354,
+  "subStat": "HP 46.9%",
+  "effect": "Cull the Weak\nDefeating an opponent restores 8~16% HP.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Weapon_Recurve_Bow.png",
+  "nation": 0,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Item_Fetters_of_the_Dandelion_Gladiator.png",
+      "caption": "Fetters of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+      "caption": "Chains of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+      "caption": "Shackles of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Dream_of_the_Dandelion_Gladiator.png",
+      "caption": "Dream of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+      "caption": "Chaos Device"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+      "caption": "Chaos Circuit"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+      "caption": "Chaos Core"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Item_Divining_Scroll.png",
+      "caption": "Divining Scroll"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Sealed_Scroll.png",
+      "caption": "Sealed Scroll"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Item_Forbidden_Curse_Scroll.png",
+      "caption": "Forbidden Curse Scroll"
+    }
+  ],
+  "passives": [
+    "Defeating an opponent restores 8% HP.",
+    "Defeating an opponent restores 8% HP.",
+    "Defeating an opponent restores 8% HP.",
+    "Defeating an opponent restores 8% HP.",
+    "Defeating an opponent restores 8% HP."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Weapon_Recurve_Bow.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Weapon_Recurve_Bow_2nd.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 38,
+          "max": 86
+        },
+        "subStat": {
+          "min": 10.2,
+          "max": 18
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Item_Fetters_of_the_Dandelion_Gladiator.png",
+            "caption": "Fetters of the Dandelion Gladiator",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+            "caption": "Chaos Device",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Item_Divining_Scroll.png",
+            "caption": "Divining Scroll",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 105,
+          "max": 151
+        },
+        "subStat": {
+          "min": 18,
+          "max": 26.3
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+            "caption": "Chains of the Dandelion Gladiator",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+            "caption": "Chaos Device",
+            "count": 8
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Item_Divining_Scroll.png",
+            "caption": "Divining Scroll",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 171,
+          "max": 193
+        },
+        "subStat": {
+          "min": 26.3,
+          "max": 30.4
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+            "caption": "Chains of the Dandelion Gladiator",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+            "caption": "Chaos Circuit",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Sealed_Scroll.png",
+            "caption": "Sealed Scroll",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 212,
+          "max": 234
+        },
+        "subStat": {
+          "min": 30.4,
+          "max": 34.6
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+            "caption": "Shackles of the Dandelion Gladiator",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+            "caption": "Chaos Circuit",
+            "count": 8
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Sealed_Scroll.png",
+            "caption": "Sealed Scroll",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 253,
+          "max": 274
+        },
+        "subStat": {
+          "min": 34.6,
+          "max": 38.6
+        },
+        "mora": 25000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+            "caption": "Shackles of the Dandelion Gladiator",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+            "caption": "Chaos Core",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Item_Forbidden_Curse_Scroll.png",
+            "caption": "Forbidden Curse Scroll",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 294,
+          "max": 314
+        },
+        "subStat": {
+          "min": 38.6,
+          "max": 42.7
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Dream_of_the_Dandelion_Gladiator.png",
+            "caption": "Dream of the Dandelion Gladiator",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+            "caption": "Chaos Core",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Item_Forbidden_Curse_Scroll.png",
+            "caption": "Forbidden Curse Scroll",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 334,
+          "max": 354
+        },
+        "subStat": {
+          "min": 42.7,
+          "max": 46.9
+        }
+      }
+    ]
+  }
+}

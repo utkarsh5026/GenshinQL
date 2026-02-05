@@ -1,0 +1,264 @@
+{
+  "name": "Hunter's Path",
+  "rarity": 5,
+  "attack": 542,
+  "subStat": "CRIT Rate 44.1%",
+  "effect": "At the End of the Beast-Paths\nGain 12~24% All Elemental DMG Bonus. Obtain the Tireless Hunt effect after hitting an opponent with a Charged Attack. This effect increases Charged Attack DMG by 160~320% of Elemental Mastery. This effect will be removed after 12 Charged Attacks or 10s. Only 1 instance of Tireless Hunt can be gained every 12s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Weapon_Hunter%27s_Path.png",
+  "nation": 3,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Echo_of_Scorching_Might.png",
+      "caption": "Echo of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+      "caption": "Remnant Glow of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+      "caption": "Dream of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Olden_Days_of_Scorching_Might.png",
+      "caption": "Olden Days of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Inactivated_Fungal_Nucleus.png",
+      "caption": "Inactivated Fungal Nucleus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Dormant_Fungal_Nucleus.png",
+      "caption": "Dormant Fungal Nucleus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Robust_Fungal_Nucleus.png",
+      "caption": "Robust Fungal Nucleus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+      "caption": "Faded Red Satin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+      "caption": "Trimmed Red Silk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+      "caption": "Rich Red Brocade"
+    }
+  ],
+  "passives": [
+    "Gain 12% All Elemental DMG Bonus. Obtain the Tireless Hunt effect after hitting an opponent with a Charged Attack. This effect increases Charged Attack DMG by 160% of Elemental Mastery. This effect will be removed after 12 Charged Attacks or 10s. Only 1 instance of Tireless Hunt can be gained every 12s.",
+    "Gain 15% All Elemental DMG Bonus. Obtain the Tireless Hunt effect after hitting an opponent with a Charged Attack. This effect increases Charged Attack DMG by 200% of Elemental Mastery. This effect will be removed after 12 Charged Attacks or 10s. Only 1 instance of Tireless Hunt can be gained every 12s.",
+    "Gain 18% All Elemental DMG Bonus. Obtain the Tireless Hunt effect after hitting an opponent with a Charged Attack. This effect increases Charged Attack DMG by 240% of Elemental Mastery. This effect will be removed after 12 Charged Attacks or 10s. Only 1 instance of Tireless Hunt can be gained every 12s.",
+    "Gain 21% All Elemental DMG Bonus. Obtain the Tireless Hunt effect after hitting an opponent with a Charged Attack. This effect increases Charged Attack DMG by 280% of Elemental Mastery. This effect will be removed after 12 Charged Attacks or 10s. Only 1 instance of Tireless Hunt can be gained every 12s.",
+    "Gain 24% All Elemental DMG Bonus. Obtain the Tireless Hunt effect after hitting an opponent with a Charged Attack. This effect increases Charged Attack DMG by 320% of Elemental Mastery. This effect will be removed after 12 Charged Attacks or 10s. Only 1 instance of Tireless Hunt can be gained every 12s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Weapon_Hunter%27s_Path.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Weapon_Hunter%27s_Path_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Weapon_Card_Hunter%27s_Path.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 110
+        },
+        "subStat": {
+          "min": 9.6,
+          "max": 17
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Echo_of_Scorching_Might.png",
+            "caption": "Echo of Scorching Might",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Inactivated_Fungal_Nucleus.png",
+            "caption": "Inactivated Fungal Nucleus",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 141,
+          "max": 210
+        },
+        "subStat": {
+          "min": 17,
+          "max": 24.7
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+            "caption": "Remnant Glow of Scorching Might",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Inactivated_Fungal_Nucleus.png",
+            "caption": "Inactivated Fungal Nucleus",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 241,
+          "max": 275
+        },
+        "subStat": {
+          "min": 24.7,
+          "max": 28.6
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+            "caption": "Remnant Glow of Scorching Might",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Dormant_Fungal_Nucleus.png",
+            "caption": "Dormant Fungal Nucleus",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 307,
+          "max": 341
+        },
+        "subStat": {
+          "min": 28.6,
+          "max": 32.5
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+            "caption": "Dream of Scorching Might",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Dormant_Fungal_Nucleus.png",
+            "caption": "Dormant Fungal Nucleus",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 373,
+          "max": 408
+        },
+        "subStat": {
+          "min": 32.5,
+          "max": 36.4
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+            "caption": "Dream of Scorching Might",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Robust_Fungal_Nucleus.png",
+            "caption": "Robust Fungal Nucleus",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 439,
+          "max": 475
+        },
+        "subStat": {
+          "min": 36.4,
+          "max": 40.2
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Olden_Days_of_Scorching_Might.png",
+            "caption": "Olden Days of Scorching Might",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Robust_Fungal_Nucleus.png",
+            "caption": "Robust Fungal Nucleus",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 506,
+          "max": 542
+        },
+        "subStat": {
+          "min": 40.2,
+          "max": 44.1
+        }
+      }
+    ]
+  }
+}

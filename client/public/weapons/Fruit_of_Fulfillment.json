@@ -1,0 +1,264 @@
+{
+  "name": "Fruit of Fulfillment",
+  "rarity": 4,
+  "attack": 510,
+  "subStat": "Energy Recharge 45.9%",
+  "effect": "Full Circle\nObtain the \"Wax and Wane\" effect after an Elemental Reaction is triggered, gaining 24~36 Elemental Mastery while losing 5% ATK. For every 0.3s, 1 stack of Wax and Wane can be gained. Max 5 stacks. For every 6s that go by without an Elemental Reaction being triggered, 1 stack will be lost. This effect can be triggered even when the character is off-field.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Weapon_Fruit_of_Fulfillment.png",
+  "nation": 3,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Oasis_Garden%27s_Reminiscence.png",
+      "caption": "Oasis Garden's Reminiscence"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+      "caption": "Oasis Garden's Kindness"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+      "caption": "Oasis Garden's Mourning"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Oasis_Garden%27s_Truth.png",
+      "caption": "Oasis Garden's Truth"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Gloomy_Statuette.png",
+      "caption": "Gloomy Statuette"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Dark_Statuette.png",
+      "caption": "Dark Statuette"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Deathly_Statuette.png",
+      "caption": "Deathly Statuette"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+      "caption": "Fungal Spores"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+      "caption": "Luminescent Pollen"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+      "caption": "Crystalline Cyst Dust"
+    }
+  ],
+  "passives": [
+    "Obtain the \"Wax and Wane\" effect after an Elemental Reaction is triggered, gaining 24 Elemental Mastery while losing 5% ATK. For every 0.3s, 1 stack of Wax and Wane can be gained. Max 5 stacks. For every 6s that go by without an Elemental Reaction being triggered, 1 stack will be lost. This effect can be triggered even when the character is off-field.",
+    "Obtain the \"Wax and Wane\" effect after an Elemental Reaction is triggered, gaining 27 Elemental Mastery while losing 5% ATK. For every 0.3s, 1 stack of Wax and Wane can be gained. Max 5 stacks. For every 6s that go by without an Elemental Reaction being triggered, 1 stack will be lost. This effect can be triggered even when the character is off-field.",
+    "Obtain the \"Wax and Wane\" effect after an Elemental Reaction is triggered, gaining 30 Elemental Mastery while losing 5% ATK. For every 0.3s, 1 stack of Wax and Wane can be gained. Max 5 stacks. For every 6s that go by without an Elemental Reaction being triggered, 1 stack will be lost. This effect can be triggered even when the character is off-field.",
+    "Obtain the \"Wax and Wane\" effect after an Elemental Reaction is triggered, gaining 33 Elemental Mastery while losing 5% ATK. For every 0.3s, 1 stack of Wax and Wane can be gained. Max 5 stacks. For every 6s that go by without an Elemental Reaction being triggered, 1 stack will be lost. This effect can be triggered even when the character is off-field.",
+    "Obtain the \"Wax and Wane\" effect after an Elemental Reaction is triggered, gaining 36 Elemental Mastery while losing 5% ATK. For every 0.3s, 1 stack of Wax and Wane can be gained. Max 5 stacks. For every 6s that go by without an Elemental Reaction being triggered, 1 stack will be lost. This effect can be triggered even when the character is off-field."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Weapon_Fruit_of_Fulfillment.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Weapon_Fruit_of_Fulfillment_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Weapon_Card_Fruit_of_Fulfillment.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 42,
+          "max": 109
+        },
+        "subStat": {
+          "min": 10,
+          "max": 17.7
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Oasis_Garden%27s_Reminiscence.png",
+            "caption": "Oasis Garden's Reminiscence",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Gloomy_Statuette.png",
+            "caption": "Gloomy Statuette",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 135,
+          "max": 205
+        },
+        "subStat": {
+          "min": 17.7,
+          "max": 25.8
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+            "caption": "Oasis Garden's Kindness",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Gloomy_Statuette.png",
+            "caption": "Gloomy Statuette",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 231,
+          "max": 266
+        },
+        "subStat": {
+          "min": 25.8,
+          "max": 29.8
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+            "caption": "Oasis Garden's Kindness",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Dark_Statuette.png",
+            "caption": "Dark Statuette",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 292,
+          "max": 327
+        },
+        "subStat": {
+          "min": 29.8,
+          "max": 33.8
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+            "caption": "Oasis Garden's Mourning",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Dark_Statuette.png",
+            "caption": "Dark Statuette",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 353,
+          "max": 388
+        },
+        "subStat": {
+          "min": 33.8,
+          "max": 37.9
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+            "caption": "Oasis Garden's Mourning",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Deathly_Statuette.png",
+            "caption": "Deathly Statuette",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 414,
+          "max": 449
+        },
+        "subStat": {
+          "min": 37.9,
+          "max": 41.9
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Oasis_Garden%27s_Truth.png",
+            "caption": "Oasis Garden's Truth",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Deathly_Statuette.png",
+            "caption": "Deathly Statuette",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 475,
+          "max": 510
+        },
+        "subStat": {
+          "min": 41.9,
+          "max": 45.9
+        }
+      }
+    ]
+  }
+}

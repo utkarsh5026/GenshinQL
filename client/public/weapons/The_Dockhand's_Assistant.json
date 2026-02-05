@@ -1,0 +1,264 @@
+{
+  "name": "The Dockhand's Assistant",
+  "rarity": 4,
+  "attack": 510,
+  "subStat": "HP 41.3%",
+  "effect": "Sea Shanty\nWhen the wielder is healed or heals others, they will gain a Stoic's Symbol that lasts 30s, up to a maximum of 3 Symbols. When using their Elemental Skill or Burst, all Symbols will be consumed and the Roused effect will be granted for 10s. For each Symbol consumed, gain 40~80 Elemental Mastery, and 2s after the effect occurs, 2~4 Energy per Symbol consumed will be restored for said character. The Roused effect can be triggered once every 15s, and Symbols can be gained even when the character is not on the field.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Weapon_The_Dockhand%27s_Assistant.png",
+  "nation": 4,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Dross_of_Pure_Sacred_Dewdrop.png",
+      "caption": "Dross of Pure Sacred Dewdrop"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Sublimation_of_Pure_Sacred_Dewdrop.png",
+      "caption": "Sublimation of Pure Sacred Dewdrop"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Item_Spring_of_Pure_Sacred_Dewdrop.png",
+      "caption": "Spring of Pure Sacred Dewdrop"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Essence_of_Pure_Sacred_Dewdrop.png",
+      "caption": "Essence of Pure Sacred Dewdrop"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Old_Operative%27s_Pocket_Watch.png",
+      "caption": "Old Operative's Pocket Watch"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Operative%27s_Standard_Pocket_Watch.png",
+      "caption": "Operative's Standard Pocket Watch"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Operative%27s_Constancy.png",
+      "caption": "Operative's Constancy"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+      "caption": "Trans­ocean­ic Pearl"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+      "caption": "Trans­ocean­ic Chunk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+      "caption": "Xeno­chrom­at­ic Cryst­al"
+    }
+  ],
+  "passives": [
+    "When the wielder is healed or heals others, they will gain a Stoic's Symbol that lasts 30s, up to a maximum of 3 Symbols. When using their Elemental Skill or Burst, all Symbols will be consumed and the Roused effect will be granted for 10s. For each Symbol consumed, gain 40 Elemental Mastery, and 2s after the effect occurs, 2 Energy per Symbol consumed will be restored for said character. The Roused effect can be triggered once every 15s, and Symbols can be gained even when the character is not on the field.",
+    "When the wielder is healed or heals others, they will gain a Stoic's Symbol that lasts 30s, up to a maximum of 3 Symbols. When using their Elemental Skill or Burst, all Symbols will be consumed and the Roused effect will be granted for 10s. For each Symbol consumed, gain 50 Elemental Mastery, and 2s after the effect occurs, 2.5 Energy per Symbol consumed will be restored for said character. The Roused effect can be triggered once every 15s, and Symbols can be gained even when the character is not on the field.",
+    "When the wielder is healed or heals others, they will gain a Stoic's Symbol that lasts 30s, up to a maximum of 3 Symbols. When using their Elemental Skill or Burst, all Symbols will be consumed and the Roused effect will be granted for 10s. For each Symbol consumed, gain 60 Elemental Mastery, and 2s after the effect occurs, 3 Energy per Symbol consumed will be restored for said character. The Roused effect can be triggered once every 15s, and Symbols can be gained even when the character is not on the field.",
+    "When the wielder is healed or heals others, they will gain a Stoic's Symbol that lasts 30s, up to a maximum of 3 Symbols. When using their Elemental Skill or Burst, all Symbols will be consumed and the Roused effect will be granted for 10s. For each Symbol consumed, gain 70 Elemental Mastery, and 2s after the effect occurs, 3.5 Energy per Symbol consumed will be restored for said character. The Roused effect can be triggered once every 15s, and Symbols can be gained even when the character is not on the field.",
+    "When the wielder is healed or heals others, they will gain a Stoic's Symbol that lasts 30s, up to a maximum of 3 Symbols. When using their Elemental Skill or Burst, all Symbols will be consumed and the Roused effect will be granted for 10s. For each Symbol consumed, gain 80 Elemental Mastery, and 2s after the effect occurs, 4 Energy per Symbol consumed will be restored for said character. The Roused effect can be triggered once every 15s, and Symbols can be gained even when the character is not on the field."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Weapon_The_Dockhand%27s_Assistant.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Weapon_The_Dockhand%27s_Assistant_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Weapon_Card_The_Dockhand%27s_Assistant.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 42,
+          "max": 109
+        },
+        "subStat": {
+          "min": 9,
+          "max": 15.9
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Dross_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Dross of Pure Sacred Dewdrop",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Old_Operative%27s_Pocket_Watch.png",
+            "caption": "Old Operative's Pocket Watch",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+            "caption": "Transoceanic Pearl",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 135,
+          "max": 205
+        },
+        "subStat": {
+          "min": 15.9,
+          "max": 23.2
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Sublimation_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Sublimation of Pure Sacred Dewdrop",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Old_Operative%27s_Pocket_Watch.png",
+            "caption": "Old Operative's Pocket Watch",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+            "caption": "Transoceanic Pearl",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 231,
+          "max": 266
+        },
+        "subStat": {
+          "min": 23.2,
+          "max": 26.8
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Sublimation_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Sublimation of Pure Sacred Dewdrop",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Operative%27s_Standard_Pocket_Watch.png",
+            "caption": "Operative's Standard Pocket Watch",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+            "caption": "Transoceanic Chunk",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 292,
+          "max": 327
+        },
+        "subStat": {
+          "min": 26.8,
+          "max": 30.4
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Item_Spring_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Spring of Pure Sacred Dewdrop",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Operative%27s_Standard_Pocket_Watch.png",
+            "caption": "Operative's Standard Pocket Watch",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+            "caption": "Transoceanic Chunk",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 353,
+          "max": 388
+        },
+        "subStat": {
+          "min": 30.4,
+          "max": 34.1
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Item_Spring_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Spring of Pure Sacred Dewdrop",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Operative%27s_Constancy.png",
+            "caption": "Operative's Constancy",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+            "caption": "Xenochromatic Crystal",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 414,
+          "max": 449
+        },
+        "subStat": {
+          "min": 34.1,
+          "max": 37.7
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Essence_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Essence of Pure Sacred Dewdrop",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Operative%27s_Constancy.png",
+            "caption": "Operative's Constancy",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+            "caption": "Xenochromatic Crystal",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 475,
+          "max": 510
+        },
+        "subStat": {
+          "min": 37.7,
+          "max": 41.3
+        }
+      }
+    ]
+  }
+}

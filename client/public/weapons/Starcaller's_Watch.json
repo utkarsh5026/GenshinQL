@@ -1,0 +1,264 @@
+{
+  "name": "Starcaller's Watch",
+  "rarity": 5,
+  "attack": 542,
+  "subStat": "Elemental Mastery 265",
+  "effect": "Offering Unto Wind and Sun\nIncreases Elemental Mastery by 100~200. Gain the \"Mirror of Night\" effect within 15s after the equipping character creates a shield: The current active party member deals 28~56% increased DMG to nearby opponents. You can gain the \"Mirror of Night\" effect once every 14s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Weapon_Starcaller%27s_Watch.png",
+  "nation": 5,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Item_Delirious_Decadence_of_the_Sacred_Lord.png",
+      "caption": "Delirious Decadence of the Sacred Lord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Delirious_Desolation_of_the_Sacred_Lord.png",
+      "caption": "Delirious Desolation of the Sacred Lord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Item_Delirious_Demeanor_of_the_Sacred_Lord.png",
+      "caption": "Delirious Demeanor of the Sacred Lord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Delirious_Divinity_of_the_Sacred_Lord.png",
+      "caption": "Delirious Divinity of the Sacred Lord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Shard_of_a_Shattered_Will.png",
+      "caption": "Shard of a Shattered Will"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Locus_of_a_Clear_Will.png",
+      "caption": "Locus of a Clear Will"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sigil_of_a_Striding_Will.png",
+      "caption": "Sigil of a Striding Will"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+      "caption": "Sentry's Wooden Whistle"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+      "caption": "Warrior's Metal Whistle"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+      "caption": "Saurian-Crowned Warrior's Golden Whistle"
+    }
+  ],
+  "passives": [
+    "Increases Elemental Mastery by 100. Gain the \"Mirror of Night\" effect within 15s after the equipping character creates a shield: The current active party member deals 28% increased DMG to nearby opponents. You can gain the \"Mirror of Night\" effect once every 14s.",
+    "Increases Elemental Mastery by 125. Gain the \"Mirror of Night\" effect within 15s after the equipping character creates a shield: The current active party member deals 35% increased DMG to nearby opponents. You can gain the \"Mirror of Night\" effect once every 14s.",
+    "Increases Elemental Mastery by 150. Gain the \"Mirror of Night\" effect within 15s after the equipping character creates a shield: The current active party member deals 42% increased DMG to nearby opponents. You can gain the \"Mirror of Night\" effect once every 14s.",
+    "Increases Elemental Mastery by 175. Gain the \"Mirror of Night\" effect within 15s after the equipping character creates a shield: The current active party member deals 49% increased DMG to nearby opponents. You can gain the \"Mirror of Night\" effect once every 14s.",
+    "Increases Elemental Mastery by 200. Gain the \"Mirror of Night\" effect within 15s after the equipping character creates a shield: The current active party member deals 56% increased DMG to nearby opponents. You can gain the \"Mirror of Night\" effect once every 14s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Weapon_Starcaller%27s_Watch.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Weapon_Starcaller%27s_Watch_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Weapon_Card_Starcaller%27s_Watch.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 110
+        },
+        "subStat": {
+          "min": 58,
+          "max": 102
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Item_Delirious_Decadence_of_the_Sacred_Lord.png",
+            "caption": "Delirious Decadence of the Sacred Lord",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Shard_of_a_Shattered_Will.png",
+            "caption": "Shard of a Shattered Will",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+            "caption": "Sentry's Wooden Whistle",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 141,
+          "max": 210
+        },
+        "subStat": {
+          "min": 102,
+          "max": 148
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Delirious_Desolation_of_the_Sacred_Lord.png",
+            "caption": "Delirious Desolation of the Sacred Lord",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Shard_of_a_Shattered_Will.png",
+            "caption": "Shard of a Shattered Will",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+            "caption": "Sentry's Wooden Whistle",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 241,
+          "max": 275
+        },
+        "subStat": {
+          "min": 148,
+          "max": 172
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Delirious_Desolation_of_the_Sacred_Lord.png",
+            "caption": "Delirious Desolation of the Sacred Lord",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Locus_of_a_Clear_Will.png",
+            "caption": "Locus of a Clear Will",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+            "caption": "Warrior's Metal Whistle",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 307,
+          "max": 341
+        },
+        "subStat": {
+          "min": 172,
+          "max": 195
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Item_Delirious_Demeanor_of_the_Sacred_Lord.png",
+            "caption": "Delirious Demeanor of the Sacred Lord",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Locus_of_a_Clear_Will.png",
+            "caption": "Locus of a Clear Will",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+            "caption": "Warrior's Metal Whistle",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 373,
+          "max": 408
+        },
+        "subStat": {
+          "min": 195,
+          "max": 218
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Item_Delirious_Demeanor_of_the_Sacred_Lord.png",
+            "caption": "Delirious Demeanor of the Sacred Lord",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sigil_of_a_Striding_Will.png",
+            "caption": "Sigil of a Striding Will",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+            "caption": "Saurian-Crowned Warrior's Golden Whistle",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 439,
+          "max": 475
+        },
+        "subStat": {
+          "min": 218,
+          "max": 241
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Delirious_Divinity_of_the_Sacred_Lord.png",
+            "caption": "Delirious Divinity of the Sacred Lord",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sigil_of_a_Striding_Will.png",
+            "caption": "Sigil of a Striding Will",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+            "caption": "Saurian-Crowned Warrior's Golden Whistle",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 506,
+          "max": 542
+        },
+        "subStat": {
+          "min": 241,
+          "max": 265
+        }
+      }
+    ]
+  }
+}

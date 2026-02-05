@@ -1,0 +1,264 @@
+{
+  "name": "Sacrificer's Staff",
+  "rarity": 4,
+  "attack": 620,
+  "subStat": "CRIT Rate 9.2%",
+  "effect": "Untainted Desire\nFor 6s after an Elemental Skill hits an opponent, ATK is increased by 8~16% and Energy Recharge is increased by 6~12%. Max 3 stacks. This effect can be triggered even when the equipping character is off-field.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Weapon_Sacrificer%27s_Staff.png",
+  "nation": 6,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Ember_of_Long_Night_Flint.png",
+      "caption": "Ember of Long Night Flint"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Afterglow_of_Long_Night_Flint.png",
+      "caption": "Afterglow of Long Night Flint"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Item_Flare_of_Long_Night_Flint.png",
+      "caption": "Flare of Long Night Flint"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Item_Blaze_of_Long_Night_Flint.png",
+      "caption": "Blaze of Long Night Flint"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Mistshroud_Manifestation.png",
+      "caption": "Mistshroud Manifestation"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Item_Mistshroud_Plate.png",
+      "caption": "Mistshroud Plate"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Mistshroud_Helmet.png",
+      "caption": "Mistshroud Helmet"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Broken_Drive_Shaft.png",
+      "caption": "Broken Drive Shaft"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Item_Reinforced_Drive_Shaft.png",
+      "caption": "Reinforced Drive Shaft"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Item_Precision_Drive_Shaft.png",
+      "caption": "Precision Drive Shaft"
+    }
+  ],
+  "passives": [
+    "For 6s after an Elemental Skill hits an opponent, ATK is increased by 8% and Energy Recharge is increased by 6%. Max 3 stacks. This effect can be triggered even when the equipping character is off-field.",
+    "For 6s after an Elemental Skill hits an opponent, ATK is increased by 8% and Energy Recharge is increased by 6%. Max 3 stacks. This effect can be triggered even when the equipping character is off-field.",
+    "For 6s after an Elemental Skill hits an opponent, ATK is increased by 8% and Energy Recharge is increased by 6%. Max 3 stacks. This effect can be triggered even when the equipping character is off-field.",
+    "For 6s after an Elemental Skill hits an opponent, ATK is increased by 8% and Energy Recharge is increased by 6%. Max 3 stacks. This effect can be triggered even when the equipping character is off-field.",
+    "For 6s after an Elemental Skill hits an opponent, ATK is increased by 8% and Energy Recharge is increased by 6%. Max 3 stacks. This effect can be triggered even when the equipping character is off-field."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Weapon_Sacrificer%27s_Staff.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Weapon_Sacrificer%27s_Staff_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Weapon_Card_Sacrificer%27s_Staff.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 45,
+          "max": 128
+        },
+        "subStat": {
+          "min": 2,
+          "max": 3.5
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Ember_of_Long_Night_Flint.png",
+            "caption": "Ember of Long Night Flint",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Mistshroud_Manifestation.png",
+            "caption": "Mistshroud Manifestation",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Broken_Drive_Shaft.png",
+            "caption": "Broken Drive Shaft",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 154,
+          "max": 247
+        },
+        "subStat": {
+          "min": 3.5,
+          "max": 5.2
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Afterglow_of_Long_Night_Flint.png",
+            "caption": "Afterglow of Long Night Flint",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Mistshroud_Manifestation.png",
+            "caption": "Mistshroud Manifestation",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Broken_Drive_Shaft.png",
+            "caption": "Broken Drive Shaft",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 273,
+          "max": 321
+        },
+        "subStat": {
+          "min": 5.2,
+          "max": 6
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Afterglow_of_Long_Night_Flint.png",
+            "caption": "Afterglow of Long Night Flint",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Item_Mistshroud_Plate.png",
+            "caption": "Mistshroud Plate",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Item_Reinforced_Drive_Shaft.png",
+            "caption": "Reinforced Drive Shaft",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 347,
+          "max": 395
+        },
+        "subStat": {
+          "min": 6,
+          "max": 6.8
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Item_Flare_of_Long_Night_Flint.png",
+            "caption": "Flare of Long Night Flint",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Item_Mistshroud_Plate.png",
+            "caption": "Mistshroud Plate",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Item_Reinforced_Drive_Shaft.png",
+            "caption": "Reinforced Drive Shaft",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 421,
+          "max": 470
+        },
+        "subStat": {
+          "min": 6.8,
+          "max": 7.6
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Item_Flare_of_Long_Night_Flint.png",
+            "caption": "Flare of Long Night Flint",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Mistshroud_Helmet.png",
+            "caption": "Mistshroud Helmet",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Item_Precision_Drive_Shaft.png",
+            "caption": "Precision Drive Shaft",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 496,
+          "max": 545
+        },
+        "subStat": {
+          "min": 7.6,
+          "max": 8.4
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Item_Blaze_of_Long_Night_Flint.png",
+            "caption": "Blaze of Long Night Flint",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Mistshroud_Helmet.png",
+            "caption": "Mistshroud Helmet",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Item_Precision_Drive_Shaft.png",
+            "caption": "Precision Drive Shaft",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 571,
+          "max": 620
+        },
+        "subStat": {
+          "min": 8.4,
+          "max": 9.2
+        }
+      }
+    ]
+  }
+}

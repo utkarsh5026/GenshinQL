@@ -1,0 +1,264 @@
+{
+  "name": "Flowing Purity",
+  "rarity": 4,
+  "attack": 565,
+  "subStat": "ATK 27.6%",
+  "effect": "Unfinished Masterpiece\nWhen using an Elemental Skill, All Elemental DMG Bonus will be increased by 8~16% for 15s, and a Bond of Life worth 24% of Max HP will be granted. This effect can be triggered once every 10s. When the Bond of Life is cleared, every 1,000 HP cleared in the process will provide 2~4% All Elemental DMG Bonus, up to a maximum of 12~24%. This effect lasts 15s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Weapon_Flowing_Purity.png",
+  "nation": 4,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Dross_of_Pure_Sacred_Dewdrop.png",
+      "caption": "Dross of Pure Sacred Dewdrop"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Sublimation_of_Pure_Sacred_Dewdrop.png",
+      "caption": "Sublimation of Pure Sacred Dewdrop"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Item_Spring_of_Pure_Sacred_Dewdrop.png",
+      "caption": "Spring of Pure Sacred Dewdrop"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Essence_of_Pure_Sacred_Dewdrop.png",
+      "caption": "Essence of Pure Sacred Dewdrop"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Rift_Core.png",
+      "caption": "Rift Core"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Foreign_Synapse.png",
+      "caption": "Foreign Synapse"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Alien_Life_Core.png",
+      "caption": "Alien Life Core"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+      "caption": "Trans­ocean­ic Pearl"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+      "caption": "Trans­ocean­ic Chunk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+      "caption": "Xeno­chrom­at­ic Cryst­al"
+    }
+  ],
+  "passives": [
+    "When using an Elemental Skill, All Elemental DMG Bonus will be increased by 8% for 15s, and a Bond of Life worth 24% of Max HP will be granted. This effect can be triggered once every 10s. When the Bond of Life is cleared, every 1,000 HP cleared in the process will provide 2% All Elemental DMG Bonus, up to a maximum of 12%. This effect lasts 15s.",
+    "When using an Elemental Skill, All Elemental DMG Bonus will be increased by 10% for 15s, and a Bond of Life worth 24% of Max HP will be granted. This effect can be triggered once every 10s. When the Bond of Life is cleared, every 1,000 HP cleared in the process will provide 2.5% All Elemental DMG Bonus, up to a maximum of 15%. This effect lasts 15s.",
+    "When using an Elemental Skill, All Elemental DMG Bonus will be increased by 12% for 15s, and a Bond of Life worth 24% of Max HP will be granted. This effect can be triggered once every 10s. When the Bond of Life is cleared, every 1,000 HP cleared in the process will provide 3% All Elemental DMG Bonus, up to a maximum of 18%. This effect lasts 15s.",
+    "When using an Elemental Skill, All Elemental DMG Bonus will be increased by 14% for 15s, and a Bond of Life worth 24% of Max HP will be granted. This effect can be triggered once every 10s. When the Bond of Life is cleared, every 1,000 HP cleared in the process will provide 3.5% All Elemental DMG Bonus, up to a maximum of 21%. This effect lasts 15s.",
+    "When using an Elemental Skill, All Elemental DMG Bonus will be increased by 16% for 15s, and a Bond of Life worth 24% of Max HP will be granted. This effect can be triggered once every 10s. When the Bond of Life is cleared, every 1,000 HP cleared in the process will provide 4% All Elemental DMG Bonus, up to a maximum of 24%. This effect lasts 15s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Weapon_Flowing_Purity.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Weapon_Flowing_Purity_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Weapon_Card_Flowing_Purity.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 119
+        },
+        "subStat": {
+          "min": 6,
+          "max": 10.6
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Dross_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Dross of Pure Sacred Dewdrop",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Rift_Core.png",
+            "caption": "Rift Core",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+            "caption": "Transoceanic Pearl",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 144,
+          "max": 226
+        },
+        "subStat": {
+          "min": 10.6,
+          "max": 15.5
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Sublimation_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Sublimation of Pure Sacred Dewdrop",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Rift_Core.png",
+            "caption": "Rift Core",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Transoceanic_Pearl.png",
+            "caption": "Transoceanic Pearl",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 252,
+          "max": 293
+        },
+        "subStat": {
+          "min": 15.5,
+          "max": 17.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Sublimation_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Sublimation of Pure Sacred Dewdrop",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Foreign_Synapse.png",
+            "caption": "Foreign Synapse",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+            "caption": "Transoceanic Chunk",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 319,
+          "max": 361
+        },
+        "subStat": {
+          "min": 17.9,
+          "max": 20.3
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Item_Spring_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Spring of Pure Sacred Dewdrop",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Foreign_Synapse.png",
+            "caption": "Foreign Synapse",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Transoceanic_Chunk.png",
+            "caption": "Transoceanic Chunk",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 387,
+          "max": 429
+        },
+        "subStat": {
+          "min": 20.3,
+          "max": 22.7
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Item_Spring_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Spring of Pure Sacred Dewdrop",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Alien_Life_Core.png",
+            "caption": "Alien Life Core",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+            "caption": "Xenochromatic Crystal",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 455,
+          "max": 497
+        },
+        "subStat": {
+          "min": 22.7,
+          "max": 25.1
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Essence_of_Pure_Sacred_Dewdrop.png",
+            "caption": "Essence of Pure Sacred Dewdrop",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Alien_Life_Core.png",
+            "caption": "Alien Life Core",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Xenochromatic_Crystal.png",
+            "caption": "Xenochromatic Crystal",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 523,
+          "max": 565
+        },
+        "subStat": {
+          "min": 25.1,
+          "max": 27.6
+        }
+      }
+    ]
+  }
+}

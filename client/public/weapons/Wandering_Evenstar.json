@@ -1,0 +1,264 @@
+{
+  "name": "Wandering Evenstar",
+  "rarity": 4,
+  "attack": 510,
+  "subStat": "Elemental Mastery 165",
+  "effect": "Wildling Nightstar\nThe following effect will trigger every 10s: The equipping character will gain 24~48% of their Elemental Mastery as bonus ATK for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Weapon_Wandering_Evenstar.png",
+  "nation": 3,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Oasis_Garden%27s_Reminiscence.png",
+      "caption": "Oasis Garden's Reminiscence"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+      "caption": "Oasis Garden's Kindness"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+      "caption": "Oasis Garden's Mourning"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Oasis_Garden%27s_Truth.png",
+      "caption": "Oasis Garden's Truth"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Inactivated_Fungal_Nucleus.png",
+      "caption": "Inactivated Fungal Nucleus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Dormant_Fungal_Nucleus.png",
+      "caption": "Dormant Fungal Nucleus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Robust_Fungal_Nucleus.png",
+      "caption": "Robust Fungal Nucleus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+      "caption": "Fungal Spores"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+      "caption": "Luminescent Pollen"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+      "caption": "Crystalline Cyst Dust"
+    }
+  ],
+  "passives": [
+    "The following effect will trigger every 10s: The equipping character will gain 24% of their Elemental Mastery as bonus ATK for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+    "The following effect will trigger every 10s: The equipping character will gain 30% of their Elemental Mastery as bonus ATK for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+    "The following effect will trigger every 10s: The equipping character will gain 36% of their Elemental Mastery as bonus ATK for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+    "The following effect will trigger every 10s: The equipping character will gain 42% of their Elemental Mastery as bonus ATK for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field.",
+    "The following effect will trigger every 10s: The equipping character will gain 48% of their Elemental Mastery as bonus ATK for 12s, with nearby party members gaining 30% of this buff for the same duration. Multiple instances of this weapon can allow this buff to stack. This effect will still trigger even if the character is not on the field."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Weapon_Wandering_Evenstar.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Weapon_Wandering_Evenstar_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Weapon_Card_Wandering_Evenstar.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 42,
+          "max": 109
+        },
+        "subStat": {
+          "min": 36,
+          "max": 64
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Oasis_Garden%27s_Reminiscence.png",
+            "caption": "Oasis Garden's Reminiscence",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Inactivated_Fungal_Nucleus.png",
+            "caption": "Inactivated Fungal Nucleus",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 135,
+          "max": 205
+        },
+        "subStat": {
+          "min": 64,
+          "max": 93
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+            "caption": "Oasis Garden's Kindness",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Inactivated_Fungal_Nucleus.png",
+            "caption": "Inactivated Fungal Nucleus",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 231,
+          "max": 266
+        },
+        "subStat": {
+          "min": 93,
+          "max": 107
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+            "caption": "Oasis Garden's Kindness",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Dormant_Fungal_Nucleus.png",
+            "caption": "Dormant Fungal Nucleus",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 292,
+          "max": 327
+        },
+        "subStat": {
+          "min": 107,
+          "max": 122
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+            "caption": "Oasis Garden's Mourning",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Dormant_Fungal_Nucleus.png",
+            "caption": "Dormant Fungal Nucleus",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 353,
+          "max": 388
+        },
+        "subStat": {
+          "min": 122,
+          "max": 136
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+            "caption": "Oasis Garden's Mourning",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Robust_Fungal_Nucleus.png",
+            "caption": "Robust Fungal Nucleus",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 414,
+          "max": 449
+        },
+        "subStat": {
+          "min": 136,
+          "max": 151
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Oasis_Garden%27s_Truth.png",
+            "caption": "Oasis Garden's Truth",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Robust_Fungal_Nucleus.png",
+            "caption": "Robust Fungal Nucleus",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 475,
+          "max": 510
+        },
+        "subStat": {
+          "min": 151,
+          "max": 165
+        }
+      }
+    ]
+  }
+}

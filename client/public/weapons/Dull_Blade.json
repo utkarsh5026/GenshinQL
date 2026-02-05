@@ -1,0 +1,52 @@
+{
+  "name": "Dull Blade",
+  "rarity": 1,
+  "attack": 185,
+  "subStat": "None",
+  "effect": "None",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Weapon_Dull_Blade.png",
+  "nation": 0,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Tile_of_Decarabian%27s_Tower.png",
+      "caption": "Tile of Decarabian's Tower"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Item_Debris_of_Decarabian%27s_City.png",
+      "caption": "Debris of Decarabian's City"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Fragment_of_Decarabian%27s_Epic.png",
+      "caption": "Fragment of Decarabian's Epic"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+      "caption": "Heavy Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+      "caption": "Black Bronze Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Firm_Arrowhead.png",
+      "caption": "Firm Arrowhead"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Sharp_Arrowhead.png",
+      "caption": "Sharp Arrowhead"
+    }
+  ],
+  "passives": [],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Weapon_Dull_Blade.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Weapon_Dull_Blade_2nd.png"
+  ],
+  "ascension": {
+    "phases": []
+  }
+}

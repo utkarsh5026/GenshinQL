@@ -1,0 +1,264 @@
+{
+  "name": "Sturdy Bone",
+  "rarity": 4,
+  "attack": 565,
+  "subStat": "ATK 27.6%",
+  "effect": "Trapper's Pride\nSprint or Alternate Sprint Stamina Consumption decreased by 15%. Additionally, after using Sprint or Alternate Sprint, Normal Attack DMG is increased by 16~32% of ATK. This effect expires after triggering 18 times or 7s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Weapon_Sturdy_Bone.png",
+  "nation": 5,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Blazing_Sacrificial_Heart%27s_Terror.png",
+      "caption": "Blazing Sacrificial Heart's Terror"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Blazing_Sacrificial_Heart%27s_Hesitance.png",
+      "caption": "Blazing Sacrificial Heart's Hesitance"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Item_Blazing_Sacrificial_Heart%27s_Resolve.png",
+      "caption": "Blazing Sacrificial Heart's Resolve"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Item_Blazing_Sacrificial_Heart%27s_Splendor.png",
+      "caption": "Blazing Sacrificial Heart's Splendor"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Shard_of_a_Shattered_Will.png",
+      "caption": "Shard of a Shattered Will"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Locus_of_a_Clear_Will.png",
+      "caption": "Locus of a Clear Will"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sigil_of_a_Striding_Will.png",
+      "caption": "Sigil of a Striding Will"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+      "caption": "Sentry's Wooden Whistle"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+      "caption": "Warrior's Metal Whistle"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+      "caption": "Saurian-Crowned Warrior's Golden Whistle"
+    }
+  ],
+  "passives": [
+    "Sprint or Alternate Sprint Stamina Consumption decreased by 15%. Additionally, after using Sprint or Alternate Sprint, Normal Attack DMG is increased by 16% of ATK. This effect expires after triggering 18 times or 7s.",
+    "Sprint or Alternate Sprint Stamina Consumption decreased by 15%. Additionally, after using Sprint or Alternate Sprint, Normal Attack DMG is increased by 20% of ATK. This effect expires after triggering 18 times or 7s.",
+    "Sprint or Alternate Sprint Stamina Consumption decreased by 15%. Additionally, after using Sprint or Alternate Sprint, Normal Attack DMG is increased by 24% of ATK. This effect expires after triggering 18 times or 7s.",
+    "Sprint or Alternate Sprint Stamina Consumption decreased by 15%. Additionally, after using Sprint or Alternate Sprint, Normal Attack DMG is increased by 28% of ATK. This effect expires after triggering 18 times or 7s.",
+    "Sprint or Alternate Sprint Stamina Consumption decreased by 15%. Additionally, after using Sprint or Alternate Sprint, Normal Attack DMG is increased by 32% of ATK. This effect expires after triggering 18 times or 7s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Weapon_Sturdy_Bone.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Weapon_Sturdy_Bone_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Weapon_Card_Sturdy_Bone.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 119
+        },
+        "subStat": {
+          "min": 6,
+          "max": 10.6
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Blazing_Sacrificial_Heart%27s_Terror.png",
+            "caption": "Blazing Sacrificial Heart's Terror",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Shard_of_a_Shattered_Will.png",
+            "caption": "Shard of a Shattered Will",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+            "caption": "Sentry's Wooden Whistle",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 144,
+          "max": 226
+        },
+        "subStat": {
+          "min": 10.6,
+          "max": 15.5
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Blazing_Sacrificial_Heart%27s_Hesitance.png",
+            "caption": "Blazing Sacrificial Heart's Hesitance",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Shard_of_a_Shattered_Will.png",
+            "caption": "Shard of a Shattered Will",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+            "caption": "Sentry's Wooden Whistle",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 252,
+          "max": 293
+        },
+        "subStat": {
+          "min": 15.5,
+          "max": 17.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Blazing_Sacrificial_Heart%27s_Hesitance.png",
+            "caption": "Blazing Sacrificial Heart's Hesitance",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Locus_of_a_Clear_Will.png",
+            "caption": "Locus of a Clear Will",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+            "caption": "Warrior's Metal Whistle",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 319,
+          "max": 361
+        },
+        "subStat": {
+          "min": 17.9,
+          "max": 20.3
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Item_Blazing_Sacrificial_Heart%27s_Resolve.png",
+            "caption": "Blazing Sacrificial Heart's Resolve",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Locus_of_a_Clear_Will.png",
+            "caption": "Locus of a Clear Will",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+            "caption": "Warrior's Metal Whistle",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 387,
+          "max": 429
+        },
+        "subStat": {
+          "min": 20.3,
+          "max": 22.7
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Item_Blazing_Sacrificial_Heart%27s_Resolve.png",
+            "caption": "Blazing Sacrificial Heart's Resolve",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sigil_of_a_Striding_Will.png",
+            "caption": "Sigil of a Striding Will",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+            "caption": "Saurian-Crowned Warrior's Golden Whistle",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 455,
+          "max": 497
+        },
+        "subStat": {
+          "min": 22.7,
+          "max": 25.1
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Item_Blazing_Sacrificial_Heart%27s_Splendor.png",
+            "caption": "Blazing Sacrificial Heart's Splendor",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sigil_of_a_Striding_Will.png",
+            "caption": "Sigil of a Striding Will",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+            "caption": "Saurian-Crowned Warrior's Golden Whistle",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 523,
+          "max": 565
+        },
+        "subStat": {
+          "min": 25.1,
+          "max": 27.6
+        }
+      }
+    ]
+  }
+}
