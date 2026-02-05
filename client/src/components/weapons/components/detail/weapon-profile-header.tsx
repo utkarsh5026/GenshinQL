@@ -47,13 +47,13 @@ const WeaponProfileHeader: React.FC<WeaponProfileHeaderProps> = ({
 
   return (
     <div
-      className={`relative w-full shadow-xl flex flex-col items-center border-2 border-border ${rarityBorderGlow} rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl group/card shrink-0`}
+      className={`relative w-full shadow-lg md:shadow-xl flex flex-col items-center border-2 border-border ${rarityBorderGlow} rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl group/card shrink-0`}
     >
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-linear-to-br from-background via-background/95 to-background/90 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
 
       {/* Cover image with navigation */}
-      <div className="w-full h-44 overflow-hidden relative group/image bg-linear-to-b from-surface-50 to-card">
+      <div className="w-full h-32 md:h-44 overflow-hidden relative group/image bg-linear-to-b from-surface-50 to-card">
         {/* Gradient overlay for depth */}
         <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none" />
 
@@ -70,15 +70,15 @@ const WeaponProfileHeader: React.FC<WeaponProfileHeaderProps> = ({
           <button
             aria-label="Next image"
             onClick={handleNextImage}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 backdrop-blur-sm text-white p-2 rounded-full hover:bg-black/70 hover:scale-110 z-20 opacity-0 group-hover/image:opacity-100 transition-all duration-200"
+            className="absolute right-1 md:right-2 top-1/2 -translate-y-1/2 bg-black/50 backdrop-blur-sm text-white p-1.5 md:p-2 rounded-full hover:bg-black/70 hover:scale-110 z-20 opacity-0 group-hover/image:opacity-100 transition-all duration-200"
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
           </button>
         )}
 
         {/* Image indicator dots */}
         {images.length > 1 && (
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+          <div className="absolute bottom-1.5 md:bottom-2 left-1/2 -translate-x-1/2 flex gap-1 md:gap-1.5 z-20">
             {images.map((_, idx) => (
               <div
                 key={idx}
@@ -94,25 +94,25 @@ const WeaponProfileHeader: React.FC<WeaponProfileHeaderProps> = ({
       </div>
 
       {/* Centered weapon icon with glow */}
-      <div className="relative -mt-10 z-20">
+      <div className="relative -mt-8 md:-mt-10 z-20">
         <div
-          className={`absolute inset-0 blur-xl ${rarityGlow} rounded-full animate-pulse`}
+          className={`absolute inset-0 blur-lg md:blur-xl ${rarityGlow} rounded-full animate-pulse`}
         />
         <Avatar
-          className={`relative bg-linear-to-br from-surface-50 to-card border-4 border-border hover:border-white h-20 w-20 transition-all duration-300 hover:scale-110 shadow-2xl ${rarityGlow}`}
+          className={`relative bg-linear-to-br from-surface-50 to-card border-3 md:border-4 border-border hover:border-white h-16 w-16 md:h-20 md:w-20 transition-all duration-300 hover:scale-110 shadow-xl md:shadow-2xl ${rarityGlow}`}
         >
-          <AvatarImage src={iconUrl} className="p-1" />
+          <AvatarImage src={iconUrl} className="p-0.5 md:p-1" />
         </Avatar>
       </div>
 
       {/* Weapon name and rarity */}
-      <div className="relative mt-5 pb-4 text-center px-3 z-10">
-        <span className="font-semibold text-lg block mb-2 tracking-wide drop-shadow-md">
+      <div className="relative mt-3 md:mt-5 pb-3 md:pb-4 text-center px-2 md:px-3 z-10">
+        <span className="font-semibold text-base md:text-lg block mb-1.5 md:mb-2 tracking-wide drop-shadow-md">
           {name}
         </span>
         <div className="flex justify-center items-center gap-1">
           <span
-            className={`text-2xl ${starColor} drop-shadow-lg transition-transform duration-300 hover:scale-110 inline-block`}
+            className={`text-xl md:text-2xl ${starColor} drop-shadow-lg transition-transform duration-300 hover:scale-110 inline-block`}
           >
             {rarityStars}
           </span>

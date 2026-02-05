@@ -31,9 +31,9 @@ const WeaponDescription: React.FC<WeaponDescriptionProps> = ({ weapon }) => {
     >
       {/* Background image with weapon primary image */}
 
-      <div className="relative z-10 flex gap-4 p-4 h-full">
+      <div className="relative z-10 flex flex-col md:flex-row gap-3 md:gap-4 p-3 md:p-4 h-full">
         {/* Sidebar - Fixed width */}
-        <div className="w-64 shrink-0">
+        <div className="w-full md:w-64 md:shrink-0">
           <WeaponProfileHeader
             name={weapon.name}
             iconUrl={weapon.iconUrl}
@@ -42,12 +42,12 @@ const WeaponDescription: React.FC<WeaponDescriptionProps> = ({ weapon }) => {
           />
 
           {/* Menu buttons */}
-          <div className="flex flex-col gap-2 mt-4">
+          <div className="flex flex-row md:flex-col gap-2 mt-3 md:mt-4 overflow-x-auto md:overflow-x-visible scrollbar-hide">
             {menuItems.map((item) => (
               <button
                 onClick={() => setSelectedMenuItem(item)}
                 key={item}
-                className={`w-full text-left text-sm text-muted-foreground border-2 border-border rounded-lg p-2 hover:bg-card hover:text-card-foreground cursor-pointer transition-all duration-300 ${
+                className={`w-auto md:w-full text-left text-xs md:text-sm text-muted-foreground border-2 border-border rounded-lg px-3 py-2 md:p-2 hover:bg-card hover:text-card-foreground cursor-pointer transition-all duration-300 whitespace-nowrap ${
                   selectedMenuItem === item
                     ? 'bg-card text-card-foreground'
                     : ''
@@ -60,7 +60,7 @@ const WeaponDescription: React.FC<WeaponDescriptionProps> = ({ weapon }) => {
         </div>
 
         {/* Content area - Fixed width */}
-        <div className="flex shrink-0 grow-0 w-[calc(100%-17rem)] overflow-auto h-[calc(100%-2rem)] scrollbar-hide">
+        <div className="flex shrink-0 grow-0 w-full md:w-[calc(100%-17rem)] overflow-auto h-full md:h-[calc(100%-2rem)] scrollbar-hide">
           {selectedMenuItem === 'Profile' && (
             <WeaponCard>
               <WeaponProfile weapon={weapon} />
@@ -89,7 +89,7 @@ interface WeaponCardProps {
 
 const WeaponCard: React.FC<WeaponCardProps> = ({ children }) => {
   return (
-    <Card className="p-4 h-full w-full overflow-auto scrollbar-hide bg-transparent">
+    <Card className="p-3 md:p-4 h-full w-full overflow-auto scrollbar-hide bg-transparent">
       {children}
     </Card>
   );
