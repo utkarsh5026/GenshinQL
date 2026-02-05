@@ -3,7 +3,7 @@ import React from 'react';
 import type { Weapon } from '@/types';
 
 import TierLevel from '../../../tierlist/base/TierLevel';
-import WeaponAvatar from '../shared/WeaponAvatar';
+import WeaponAvatar from '../shared/weapon-avatar';
 
 interface WeaponTierLevelProps {
   initialName: string;

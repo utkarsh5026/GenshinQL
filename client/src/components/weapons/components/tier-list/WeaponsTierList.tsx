@@ -5,7 +5,7 @@ import { useWeaponsStore } from '@/stores';
 import type { Weapon } from '@/types';
 
 import DraggableArea from '../../../tierlist/base/DroppableArea';
-import WeaponAvatar from '../shared/WeaponAvatar';
+import WeaponAvatar from '../shared/weapon-avatar';
 import WeaponTierLevel from './WeaponTierLevel';
 const tierLevels = ['S', 'A', 'B', 'C', 'D'];
 
