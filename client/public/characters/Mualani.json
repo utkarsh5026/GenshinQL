@@ -1,459 +1,478 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mualani_Icon.png",
-    "name": "Mualani",
-    "rarity": "5 Stars",
-    "element": "Hydro",
-    "weaponType": "Catalyst",
-    "region": "Natlan",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mualani_Icon.png",
+  "name": "Mualani",
+  "rarity": "5 Stars",
+  "element": "Hydro",
+  "weaponType": "Catalyst",
+  "region": "Natlan",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png",
+      "talentName": "Cooling Treatment",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 3 attacks that deal Hydro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina to smack a Pufferball into the air that deals AoE Hydro DMG upon landing.\n\nPlunging Attack\nGathers the power of Hydro and plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Hydro DMG upon impact with the ground.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png",
-            "talentName": "Cooling Treatment",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 3 attacks that deal Hydro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina to smack a Pufferball into the air that deals AoE Hydro DMG upon landing.\n\nPlunging Attack\nGathers the power of Hydro and plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Hydro DMG upon impact with the ground.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Cooling_Treatment_Normal_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "51.4",
-                    "55.25",
-                    "59.11",
-                    "64.24",
-                    "68.1",
-                    "71.95",
-                    "77.09",
-                    "82.23",
-                    "87.37",
-                    "92.51",
-                    "97.65"
-                ],
-                "2-Hit DMG (%)": [
-                    "44.63",
-                    "47.97",
-                    "51.32",
-                    "55.78",
-                    "59.13",
-                    "62.48",
-                    "66.94",
-                    "71.4",
-                    "75.86",
-                    "80.33",
-                    "84.79"
-                ],
-                "3-Hit DMG (%)": [
-                    "70.03",
-                    "75.29",
-                    "80.54",
-                    "87.54",
-                    "92.8",
-                    "98.05",
-                    "105.05",
-                    "112.05",
-                    "119.06",
-                    "126.06",
-                    "133.07"
-                ],
-                "Charged Attack DMG (%)": [
-                    "142.88",
-                    "153.6",
-                    "164.31",
-                    "178.6",
-                    "189.32",
-                    "200.03",
-                    "214.32",
-                    "228.61",
-                    "242.9",
-                    "257.18",
-                    "271.47"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "50"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.17",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Surfshark_Wavebreaker.png",
-            "talentName": "Surfshark Wavebreaker",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nCombining her mastery of speed and the waves and water, Mualani can surf anytime, anywhere.\nAfter using this skill, Mualani will gain 60 Nightsoul points and enter the Nightsoul's Blessing state.\n\nNightsoul's Blessing: Mualani\nContinuously consume Nightsoul points. When they are depleted or when the skill is used again, Mualani's Nightsoul's Blessing will end. The state itself has the following traits:\nMualani mounts her Sharky Surfboard, increasing Mualani's Movement SPD and interruption resistance. Mualani can move on water and Liquid Phlogiston while this state is active, and she will take no DMG from the latter.\nNormal Attacks will be converted to Sharky's Bites, dealing Nightsoul-aligned Hydro DMG based on Mualani's Max HP. Sharky's Bites can be used in mid-air. DMG dealt this way is considered Normal Attack DMG.\nWhen she makes contact with opponents in this state, Mualani applies \"Marked as Prey\" to them and gains 1 Wave Momentum stack. Max 3 stacks. 1 stack can be gained from the same opponent every 0.7s.\n\nWave Momentum and Marked as Prey\nWhen Mualani uses Sharky's Bite, her DMG dealt increases based on Wave Momentum stacks. When she has 3 stacks, a Normal Attack will use Sharky's Surging Bite instead, further increasing her DMG and removing all her stacks afterward.\nWhen Sharky's Bites hit opponents Marked as Prey, that mark is removed, and she will fire Shark Missiles at up to 5 nearby opponents Marked as Prey, dealing DMG to them equal to this Sharky's Bite instance and clearing their Marks. If more than 1 opponent is the target of Sharky's Bite and Shark Missiles, the DMG dealt will decrease, with 28% being the maximum decrease when at least 3 opponents are targeted.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Surfshark_Wavebreaker_Movement_Preview.gif",
-                    "caption": "Movement"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Surfshark_Wavebreaker_Combat_Preview.gif",
-                    "caption": "Combat"
-                }
-            ],
-            "scaling": {
-                "Sharky's Bite Base DMG (Max HP%)": [
-                    "8.68",
-                    "9.33",
-                    "9.98",
-                    "10.85",
-                    "11.5",
-                    "12.15",
-                    "13.02",
-                    "13.89",
-                    "14.76",
-                    "15.62",
-                    "16.49",
-                    "17.36",
-                    "18.45",
-                    "19.53"
-                ],
-                "Wave Momentum DMG Bonus (Max HP%/Stack)": [
-                    "4.34",
-                    "4.67",
-                    "4.99",
-                    "5.42",
-                    "5.75",
-                    "6.08",
-                    "6.51",
-                    "6.94",
-                    "7.38",
-                    "7.81",
-                    "8.25",
-                    "8.68",
-                    "9.22",
-                    "9.77"
-                ],
-                "Sharky's Surging Bite Additional DMG Bonus (Max HP%)": [
-                    "21.7",
-                    "23.33",
-                    "24.95",
-                    "27.13",
-                    "28.75",
-                    "30.38",
-                    "32.55",
-                    "34.72",
-                    "36.89",
-                    "39.06",
-                    "41.23",
-                    "43.4",
-                    "46.11",
-                    "48.83"
-                ],
-                "Sharky's Bite CD": [
-                    "1.8s"
-                ],
-                "Nightsoul Point Limit": [
-                    "60"
-                ],
-                "CD": [
-                    "6s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Boomsharka-laka.png",
-            "talentName": "Boomsharka-laka",
-            "talentType": "Elemental Burst",
-            "description": "Fires a Super Shark Missile that can track opponents, dealing Nightsoul-aligned AoE Hydro DMG based on Mualani's Max HP.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Boomsharka-laka_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (Max HP%)": [
-                    "58.44",
-                    "62.82",
-                    "67.21",
-                    "73.05",
-                    "77.43",
-                    "81.81",
-                    "87.66",
-                    "93.5",
-                    "99.35",
-                    "105.19",
-                    "111.03",
-                    "116.88",
-                    "124.18"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Heat-Resistant_Freshwater_Floater.png",
-            "talentName": "Heat-Resistant Freshwater Floater",
-            "talentType": "1st Ascension Passive",
-            "description": "When Sharky's Surging Bite hits an opponent, a Puffer will be generated nearby. Mualani will restore 20 Nightsoul points when she picks up a Puffer. Only 2 such Puffers can be created in this way during a single instance of being in Nightsoul's Blessing.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Talent_Natlan%27s_Greatest_Guide.png",
-            "talentName": "Natlan's Greatest Guide",
-            "talentType": "4th Ascension Passive",
-            "description": "When a nearby party member triggers a Nightsoul Burst, Mualani will gain 1 stack of Wavechaser's Exploits, which lasts for 20s. Max 3 stacks. When she uses Boomsharka-laka, Mualani will clear all Wavechaser's Exploits stacks and increase the DMG of this Boomsharka-laka by 15%/30%/45% of her Max HP based on the number of stacks cleared.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Crests_and_Troughs.png",
-            "talentName": "Crests and Troughs",
-            "talentType": "Night Realm's Gift Passive",
-            "description": "After her Nightsoul points are depleted, Mualani will switch to consuming Phlogiston to maintain her Nightsoul's Blessing.\nWhile in an area with Phlogiston Mechanics within Natlan, she can use Nightsoul Transmission: Mualani. When the active character is currently sprinting, swimming, in a movement mode caused by certain Talents, or at a certain height in the air, the following will trigger when switching to Mualani: Mualani will enter the Nightsoul's Blessing state and gain 40 Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own team.\n\nAdditionally, Mualani's Nightsoul point or Phlogiston consumption while moving on water and Liquid Phlogiston during Nightsoul's Blessing is decreased by 75% while in Natlan, and her Nightsoul point consumption is decreased by 35% while doing the same outside Natlan.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Crests_and_Troughs_Nightsoul_Points_Preview.gif",
-                    "caption": "Nightsoul Points"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Crests_and_Troughs_Nightsoul_Transmission_Preview.gif",
-                    "caption": "Nightsoul Transmission"
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Talent_The_Trick_Is_to_Keep_Smiling%21.png",
-            "talentName": "The Trick Is to Keep Smiling!",
-            "talentType": "Utility Passive",
-            "description": "While in an area with Phlogiston Mechanics within Natlan, 15 Phlogiston will be restored when interacting with some harvestable items. Additionally, the location of nearby resources unique to Natlan will appear on your mini-map.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Cooling_Treatment_Normal_Preview.gif",
+          "caption": ""
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Constellation_The_Leisurely_Meztli....png",
-            "name": "The Leisurely \"Meztli\"...",
-            "level": 1,
-            "description": "The DMG dealt by the first Sharky's Surging Bite after Mualani enters Nightsoul's Blessing and the Shark Missiles it triggers is increased by 66% of Mualani's Max HP. This instance of increased DMG is subject to the diminishing DMG rules of Surfshark Wavebreaker.\nIn addition, while out of combat, Mualani's Nightsoul's Blessing state consumes 30% less Phlogiston and Nightsoul points."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Constellation_Mualani%2C_Going_All_Out%21.png",
-            "name": "Mualani, Going All Out!",
-            "level": 2,
-            "description": "Mualani gains 2 of Surfshark Wavebreaker's Wave Momentum stacks when she enters Nightsoul's Blessing. She will gain 1 stack when obtaining a Puffer.\nIn addition, whenever Mualani obtains 2 Puffers within a single instance of the Nightsoul's Blessing state, she will recover an additional 12 Nightsoul points over 2s. You must first unlock the Ascension Talent \"Heat-Resistant Freshwater Floater.\""
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Constellation_Surfing_Atop_Joyous_Seas.png",
-            "name": "Surfing Atop Joyous Seas",
-            "level": 3,
-            "description": "Increases the Level of Surfshark Wavebreaker by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Constellation_Sharky_Eats_Puffies.png",
-            "name": "Sharky Eats Puffies",
-            "level": 4,
-            "description": "Mualani regenerates 8 Energy when obtaining a Puffer. You must first unlock the Ascension Talent \"Heat-Resistant Freshwater Puffer.\"\nAdditionally, Boomsharka-laka deals 75% increased DMG."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Constellation_Same_Style_of_Surfboard_on_Sale%21.png",
-            "name": "Same Style of Surfboard on Sale!",
-            "level": 5,
-            "description": "Increases the Level of Boomsharka-laka by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Constellation_Spirit_of_the_Springs%27_People.png",
-            "name": "Spirit of the Springs' People",
-            "level": 6,
-            "description": "The DMG increase from the Constellation \"The Leisurely 'Meztli'...\" is no longer limited to being triggered once every Nightsoul's Blessing."
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.0",
-    "gallery": {
-        "screenAnimations": [],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Namecard_Background_Mualani_Sharky.png",
-                "caption": "Mualani: Sharky Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Item_Mualani_Sharky.png",
-                "caption": "Mualani: Sharky Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Namecard_Banner_Mualani_Sharky.png",
-                "caption": "Mualani: Sharky Banner"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "51.4",
+          "55.25",
+          "59.11",
+          "64.24",
+          "68.1",
+          "71.95",
+          "77.09",
+          "82.23",
+          "87.37",
+          "92.51",
+          "97.65"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Cooling_Treatment_Normal_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Cooling_Treatment_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Boomsharka-laka_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Boomsharka-laka_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Surfshark_Wavebreaker_Movement_Preview.gif",
-                        "caption": "Movement",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Surfshark_Wavebreaker_Movement_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Surfshark_Wavebreaker_Combat_Preview.gif",
-                        "caption": "Combat",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Surfshark_Wavebreaker_Combat_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "2-Hit DMG (%)": [
+          "44.63",
+          "47.97",
+          "51.32",
+          "55.78",
+          "59.13",
+          "62.48",
+          "66.94",
+          "71.4",
+          "75.86",
+          "80.33",
+          "84.79"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Mualani_Character_Details_1.png",
-                "caption": "Mualani Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Mualani_Character_Details_2.png",
-                "caption": "Mualani Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Mualani_Character_Details_3.gif",
-                "caption": "Mualani Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Mualani_Character_Details_4.png",
-                "caption": "Mualani Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Mualani_Character_Details_5.png",
-                "caption": "Mualani Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Mualani_Character_Details_6.png",
-                "caption": "Mualani Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Mualani_Character_Details_7.png",
-                "caption": "Mualani Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Mualani_Character_Details_8.gif",
-                "caption": "Mualani Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Mualani_Character_Details_9.gif",
-                "caption": "Mualani Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Mualani_Character_Details_10.gif",
-                "caption": "Mualani Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Mualani_Character_Details_11.gif",
-                "caption": "Mualani Details 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Mualani_Character_Details_12.gif",
-                "caption": "Mualani Details 12"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Mualani_Character_Details_13.gif",
-                "caption": "Mualani Details 13"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Mualani_Character_Details_14.png",
-                "caption": "Mualani Details 14"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Mualani_Character_Details_15.png",
-                "caption": "Mualani Details 15"
-            }
+        "3-Hit DMG (%)": [
+          "70.03",
+          "75.29",
+          "80.54",
+          "87.54",
+          "92.8",
+          "98.05",
+          "105.05",
+          "112.05",
+          "119.06",
+          "126.06",
+          "133.07"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Icon_Emoji_Paimon%27s_Paintings_35_Mualani_1.png",
-                "caption": "Victory! Set 35"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Icon_Emoji_Paimon%27s_Paintings_35_Mualani_2.png",
-                "caption": "Lemme See... Set 35"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Icon_Emoji_Paimon%27s_Paintings_35_Mualani_3.png",
-                "caption": "Cheersquad Set 35"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Icon_Emoji_Paimon%27s_Paintings_35_Mualani_4.png",
-                "caption": "PANIC Set 35"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Icon_Emoji_Paimon%27s_Paintings_40_Mualani_1.png",
-                "caption": "Eager to Take Part Set 40"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Icon_Emoji_Paimon%27s_Paintings_43_Mualani_1.png",
-                "caption": "Checked In Set 43"
-            }
+        "Charged Attack DMG (%)": [
+          "142.88",
+          "153.6",
+          "164.31",
+          "178.6",
+          "189.32",
+          "200.03",
+          "214.32",
+          "228.61",
+          "242.9",
+          "257.18",
+          "271.47"
+        ],
+        "Charged Attack Stamina Cost": ["50"],
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.17",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Surfshark_Wavebreaker.png",
+      "talentName": "Surfshark Wavebreaker",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nCombining her mastery of speed and the waves and water, Mualani can surf anytime, anywhere.\nAfter using this skill, Mualani will gain 60 Nightsoul points and enter the Nightsoul's Blessing state.\n\nNightsoul's Blessing: Mualani\nContinuously consume Nightsoul points. When they are depleted or when the skill is used again, Mualani's Nightsoul's Blessing will end. The state itself has the following traits:\nMualani mounts her Sharky Surfboard, increasing Mualani's Movement SPD and interruption resistance. Mualani can move on water and Liquid Phlogiston while this state is active, and she will take no DMG from the latter.\nNormal Attacks will be converted to Sharky's Bites, dealing Nightsoul-aligned Hydro DMG based on Mualani's Max HP. Sharky's Bites can be used in mid-air. DMG dealt this way is considered Normal Attack DMG.\nWhen she makes contact with opponents in this state, Mualani applies \"Marked as Prey\" to them and gains 1 Wave Momentum stack. Max 3 stacks. 1 stack can be gained from the same opponent every 0.7s.\n\nWave Momentum and Marked as Prey\nWhen Mualani uses Sharky's Bite, her DMG dealt increases based on Wave Momentum stacks. When she has 3 stacks, a Normal Attack will use Sharky's Surging Bite instead, further increasing her DMG and removing all her stacks afterward.\nWhen Sharky's Bites hit opponents Marked as Prey, that mark is removed, and she will fire Shark Missiles at up to 5 nearby opponents Marked as Prey, dealing DMG to them equal to this Sharky's Bite instance and clearing their Marks. If more than 1 opponent is the target of Sharky's Bite and Shark Missiles, the DMG dealt will decrease, with 28% being the maximum decrease when at least 3 opponents are targeted.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Surfshark_Wavebreaker_Movement_Preview.gif",
+          "caption": "Movement"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Surfshark_Wavebreaker_Combat_Preview.gif",
+          "caption": "Combat"
+        }
+      ],
+      "scaling": {
+        "Sharky's Bite Base DMG (Max HP%)": [
+          "8.68",
+          "9.33",
+          "9.98",
+          "10.85",
+          "11.5",
+          "12.15",
+          "13.02",
+          "13.89",
+          "14.76",
+          "15.62",
+          "16.49",
+          "17.36",
+          "18.45",
+          "19.53"
+        ],
+        "Wave Momentum DMG Bonus (Max HP%/Stack)": [
+          "4.34",
+          "4.67",
+          "4.99",
+          "5.42",
+          "5.75",
+          "6.08",
+          "6.51",
+          "6.94",
+          "7.38",
+          "7.81",
+          "8.25",
+          "8.68",
+          "9.22",
+          "9.77"
+        ],
+        "Sharky's Surging Bite Additional DMG Bonus (Max HP%)": [
+          "21.7",
+          "23.33",
+          "24.95",
+          "27.13",
+          "28.75",
+          "30.38",
+          "32.55",
+          "34.72",
+          "36.89",
+          "39.06",
+          "41.23",
+          "43.4",
+          "46.11",
+          "48.83"
+        ],
+        "Sharky's Bite CD": ["1.8s"],
+        "Nightsoul Point Limit": ["60"],
+        "CD": ["6s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Boomsharka-laka.png",
+      "talentName": "Boomsharka-laka",
+      "talentType": "Elemental Burst",
+      "description": "Fires a Super Shark Missile that can track opponents, dealing Nightsoul-aligned AoE Hydro DMG based on Mualani's Max HP.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Boomsharka-laka_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (Max HP%)": [
+          "58.44",
+          "62.82",
+          "67.21",
+          "73.05",
+          "77.43",
+          "81.81",
+          "87.66",
+          "93.5",
+          "99.35",
+          "105.19",
+          "111.03",
+          "116.88",
+          "124.18"
+        ],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Heat-Resistant_Freshwater_Floater.png",
+      "talentName": "Heat-Resistant Freshwater Floater",
+      "talentType": "1st Ascension Passive",
+      "description": "When Sharky's Surging Bite hits an opponent, a Puffer will be generated nearby. Mualani will restore 20 Nightsoul points when she picks up a Puffer. Only 2 such Puffers can be created in this way during a single instance of being in Nightsoul's Blessing.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Talent_Natlan%27s_Greatest_Guide.png",
+      "talentName": "Natlan's Greatest Guide",
+      "talentType": "4th Ascension Passive",
+      "description": "When a nearby party member triggers a Nightsoul Burst, Mualani will gain 1 stack of Wavechaser's Exploits, which lasts for 20s. Max 3 stacks. When she uses Boomsharka-laka, Mualani will clear all Wavechaser's Exploits stacks and increase the DMG of this Boomsharka-laka by 15%/30%/45% of her Max HP based on the number of stacks cleared.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Crests_and_Troughs.png",
+      "talentName": "Crests and Troughs",
+      "talentType": "Night Realm's Gift Passive",
+      "description": "After her Nightsoul points are depleted, Mualani will switch to consuming Phlogiston to maintain her Nightsoul's Blessing.\nWhile in an area with Phlogiston Mechanics within Natlan, she can use Nightsoul Transmission: Mualani. When the active character is currently sprinting, swimming, in a movement mode caused by certain Talents, or at a certain height in the air, the following will trigger when switching to Mualani: Mualani will enter the Nightsoul's Blessing state and gain 40 Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own team.\n\nAdditionally, Mualani's Nightsoul point or Phlogiston consumption while moving on water and Liquid Phlogiston during Nightsoul's Blessing is decreased by 75% while in Natlan, and her Nightsoul point consumption is decreased by 35% while doing the same outside Natlan.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Crests_and_Troughs_Nightsoul_Points_Preview.gif",
+          "caption": "Nightsoul Points"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Crests_and_Troughs_Nightsoul_Transmission_Preview.gif",
+          "caption": "Nightsoul Transmission"
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Talent_The_Trick_Is_to_Keep_Smiling%21.png",
+      "talentName": "The Trick Is to Keep Smiling!",
+      "talentType": "Utility Passive",
+      "description": "While in an area with Phlogiston Mechanics within Natlan, 15 Phlogiston will be restored when interacting with some harvestable items. Additionally, the location of nearby resources unique to Natlan will appear on your mini-map.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Constellation_The_Leisurely_Meztli....png",
+      "name": "The Leisurely \"Meztli\"...",
+      "level": 1,
+      "description": "The DMG dealt by the first Sharky's Surging Bite after Mualani enters Nightsoul's Blessing and the Shark Missiles it triggers is increased by 66% of Mualani's Max HP. This instance of increased DMG is subject to the diminishing DMG rules of Surfshark Wavebreaker.\nIn addition, while out of combat, Mualani's Nightsoul's Blessing state consumes 30% less Phlogiston and Nightsoul points."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Constellation_Mualani%2C_Going_All_Out%21.png",
+      "name": "Mualani, Going All Out!",
+      "level": 2,
+      "description": "Mualani gains 2 of Surfshark Wavebreaker's Wave Momentum stacks when she enters Nightsoul's Blessing. She will gain 1 stack when obtaining a Puffer.\nIn addition, whenever Mualani obtains 2 Puffers within a single instance of the Nightsoul's Blessing state, she will recover an additional 12 Nightsoul points over 2s. You must first unlock the Ascension Talent \"Heat-Resistant Freshwater Floater.\""
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Constellation_Surfing_Atop_Joyous_Seas.png",
+      "name": "Surfing Atop Joyous Seas",
+      "level": 3,
+      "description": "Increases the Level of Surfshark Wavebreaker by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Constellation_Sharky_Eats_Puffies.png",
+      "name": "Sharky Eats Puffies",
+      "level": 4,
+      "description": "Mualani regenerates 8 Energy when obtaining a Puffer. You must first unlock the Ascension Talent \"Heat-Resistant Freshwater Puffer.\"\nAdditionally, Boomsharka-laka deals 75% increased DMG."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Constellation_Same_Style_of_Surfboard_on_Sale%21.png",
+      "name": "Same Style of Surfboard on Sale!",
+      "level": 5,
+      "description": "Increases the Level of Boomsharka-laka by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Constellation_Spirit_of_the_Springs%27_People.png",
+      "name": "Spirit of the Springs' People",
+      "level": 6,
+      "description": "The DMG increase from the Constellation \"The Leisurely 'Meztli'...\" is no longer limited to being triggered once every Nightsoul's Blessing."
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.0",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Idle_Mualani_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Idle_Mualani_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Idle_Mualani_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Idle_Mualani_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Talent_Menu_Mualani.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Talent_Menu_Mualani.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Weapon_Menu_Mualani.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Weapon_Menu_Mualani.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Party_Setup_Mualani.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Party_Setup_Mualani.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Namecard_Background_Mualani_Sharky.png",
+        "caption": "Mualani: Sharky Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Item_Mualani_Sharky.png",
+        "caption": "Mualani: Sharky Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Namecard_Banner_Mualani_Sharky.png",
+        "caption": "Mualani: Sharky Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Cooling_Treatment_Normal_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Cooling_Treatment_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Boomsharka-laka_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Boomsharka-laka_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Surfshark_Wavebreaker_Movement_Preview.gif",
+            "caption": "Movement",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Surfshark_Wavebreaker_Movement_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Surfshark_Wavebreaker_Combat_Preview.gif",
+            "caption": "Combat",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Surfshark_Wavebreaker_Combat_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Mualani_Character_Details_1.png",
+        "caption": "Mualani Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Mualani_Character_Details_2.png",
+        "caption": "Mualani Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Mualani_Character_Details_3.gif",
+        "caption": "Mualani Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Mualani_Character_Details_4.png",
+        "caption": "Mualani Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Mualani_Character_Details_5.png",
+        "caption": "Mualani Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Mualani_Character_Details_6.png",
+        "caption": "Mualani Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Mualani_Character_Details_7.png",
+        "caption": "Mualani Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Mualani_Character_Details_8.gif",
+        "caption": "Mualani Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Mualani_Character_Details_9.gif",
+        "caption": "Mualani Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Mualani_Character_Details_10.gif",
+        "caption": "Mualani Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Mualani_Character_Details_11.gif",
+        "caption": "Mualani Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Mualani_Character_Details_12.gif",
+        "caption": "Mualani Details 12"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Mualani_Character_Details_13.gif",
+        "caption": "Mualani Details 13"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Mualani_Character_Details_14.png",
+        "caption": "Mualani Details 14"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Mualani_Character_Details_15.png",
+        "caption": "Mualani Details 15"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Icon_Emoji_Paimon%27s_Paintings_35_Mualani_1.png",
+        "caption": "Victory! Set 35"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Icon_Emoji_Paimon%27s_Paintings_35_Mualani_2.png",
+        "caption": "Lemme See... Set 35"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Icon_Emoji_Paimon%27s_Paintings_35_Mualani_3.png",
+        "caption": "Cheersquad Set 35"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Icon_Emoji_Paimon%27s_Paintings_35_Mualani_4.png",
+        "caption": "PANIC Set 35"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Icon_Emoji_Paimon%27s_Paintings_40_Mualani_1.png",
+        "caption": "Eager to Take Part Set 40"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Icon_Emoji_Paimon%27s_Paintings_43_Mualani_1.png",
+        "caption": "Checked In Set 43"
+      }
+    ]
+  }
 }

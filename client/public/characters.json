@@ -56,7 +56,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Tall Male"
+    "modelType": "Tall Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Idle_Alhaitham_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Alhaitham_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Idle_Alhaitham_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Alhaitham_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Party_Setup_Alhaitham.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Alhaitham_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Amber_Icon.png",
@@ -278,7 +301,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Medium Male"
+    "modelType": "Medium Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Idle_Bennett_1.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Idle_Bennett_1.mp4",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Bennett_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Idle_Bennett_2.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Idle_Bennett_2.mp4",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Bennett_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Party_Setup_Bennett.gif",
+      "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Party_Setup_Bennett.mp4",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Bennett_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Candace_Icon.png",
@@ -570,7 +616,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Medium Female"
+    "modelType": "Medium Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Idle_Collei_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Collei_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Idle_Collei_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Collei_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Party_Setup_Collei.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Collei_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Columbina_Icon.png",
@@ -582,7 +651,23 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
-    "modelType": "Unknown"
+    "modelType": "Unknown",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Idle_Columbina_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Columbina_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Idle_Columbina_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Columbina_Icon.png"
+      }
+    ]
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cyno_Icon.png",
@@ -734,7 +819,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Short Female"
+    "modelType": "Short Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Idle_Diona_1.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Idle_Diona_1.mp4",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Diona_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Idle_Diona_2.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Idle_Diona_2.mp4",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Diona_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Party_Setup_Diona.gif",
+      "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Party_Setup_Diona.mp4",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Diona_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Dori_Icon.png",
@@ -746,7 +854,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Short Female"
+    "modelType": "Short Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Idle_Dori_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Dori_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Idle_Dori_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Dori_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Party_Setup_Dori.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Dori_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Durin_Icon.png",
@@ -945,7 +1076,23 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
-    "modelType": "Tall Male"
+    "modelType": "Tall Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Idle_Flins_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Flins_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Idle_Flins_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Flins_Icon.png"
+      }
+    ]
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Freminet_Icon.png",
@@ -1202,7 +1349,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Tall Male"
+    "modelType": "Tall Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Idle_Ifa_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Ifa_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Idle_Ifa_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Ifa_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Party_Setup_Ifa.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Ifa_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Ineffa_Icon.png",
@@ -1471,7 +1641,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Tall Male"
+    "modelType": "Tall Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Idle_Kaveh_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Kaveh_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Idle_Kaveh_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Kaveh_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Party_Setup_Kaveh.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Kaveh_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png",
@@ -1483,7 +1676,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
-    "modelType": "Medium Female"
+    "modelType": "Medium Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Idle_Keqing_1.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Idle_Keqing_1.mp4",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Idle_Keqing_2.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Idle_Keqing_2.mp4",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Party_Setup_Keqing.gif",
+      "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Party_Setup_Keqing.mp4",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Kinich_Icon.png",
@@ -1495,7 +1711,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Medium Male"
+    "modelType": "Medium Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Idle_Kinich_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Kinich_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Idle_Kinich_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Kinich_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Party_Setup_Kinich.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Kinich_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kirara_Icon.png",
@@ -1694,7 +1933,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Medium Female"
+    "modelType": "Medium Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Idle_Layla_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Layla_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Idle_Layla_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Layla_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Party_Setup_Layla.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Layla_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lisa_Icon.png",
@@ -1706,7 +1968,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Tall Female"
+    "modelType": "Tall Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Idle_Lisa_1.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Idle_Lisa_1.mp4",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lisa_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Idle_Lisa_2.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Idle_Lisa_2.mp4",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lisa_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Party_Setup_Lisa.gif",
+      "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Party_Setup_Lisa.mp4",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lisa_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Lynette_Icon.png",
@@ -1718,7 +2003,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
-    "modelType": "Medium Female"
+    "modelType": "Medium Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Idle_Lynette_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Lynette_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Idle_Lynette_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Lynette_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Party_Setup_Lynette.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Lynette_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Lyney_Icon.png",
@@ -1730,7 +2038,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
-    "modelType": "Medium Male"
+    "modelType": "Medium Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Idle_Lyney_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Lyney_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Idle_Lyney_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Lyney_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Party_Setup_Lyney.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Lyney_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Mavuika_Icon.png",
@@ -1742,7 +2073,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Tall Female"
+    "modelType": "Tall Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Idle_Mavuika_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Mavuika_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Idle_Mavuika_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Mavuika_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Party_Setup_Mavuika.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Mavuika_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Mika_Icon.png",
@@ -1754,7 +2108,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Medium Male"
+    "modelType": "Medium Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Idle_Mika_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Mika_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Idle_Mika_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Mika_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Party_Setup_Mika.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Mika_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Mona_Icon.png",
@@ -1801,7 +2178,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Medium Female"
+    "modelType": "Medium Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Idle_Mualani_1.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Idle_Mualani_1.mp4",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mualani_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Idle_Mualani_2.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Idle_Mualani_2.mp4",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mualani_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Party_Setup_Mualani.gif",
+      "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Party_Setup_Mualani.mp4",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mualani_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Nahida_Icon.png",
@@ -1813,7 +2213,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Short Female"
+    "modelType": "Short Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Idle_Nahida_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Nahida_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Idle_Nahida_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Nahida_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Party_Setup_Nahida.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Nahida_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Navia_Icon.png",
@@ -1907,7 +2330,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Medium Female"
+    "modelType": "Medium Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Idle_Nilou_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Nilou_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Idle_Nilou_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Nilou_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Party_Setup_Nilou.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Nilou_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Ningguang_Icon.png",
@@ -1989,7 +2435,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Tall Male"
+    "modelType": "Tall Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Idle_Ororon_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Ororon_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Idle_Ororon_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Ororon_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Party_Setup_Ororon.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Ororon_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Qiqi_Icon.png",
@@ -2071,7 +2540,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Medium Male"
+    "modelType": "Medium Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Idle_Razor_1.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Idle_Razor_1.mp4",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Razor_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Idle_Razor_2.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Idle_Razor_2.mp4",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Razor_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Party_Setup_Razor.gif",
+      "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Party_Setup_Razor.mp4",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Razor_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Rosaria_Icon.png",
@@ -2223,7 +2715,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
-    "modelType": "Tall Female"
+    "modelType": "Tall Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Idle_Shenhe_1.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Idle_Shenhe_1.mp4",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Shenhe_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Idle_Shenhe_2.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Idle_Shenhe_2.mp4",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Shenhe_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Party_Setup_Shenhe.gif",
+      "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Party_Setup_Shenhe.mp4",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Shenhe_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Shikanoin_Heizou_Icon.png",
@@ -2235,7 +2750,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
-    "modelType": "Medium Male"
+    "modelType": "Medium Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Idle_Shikanoin_Heizou_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Shikanoin_Heizou_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Idle_Shikanoin_Heizou_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Shikanoin_Heizou_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Party_Setup_Shikanoin_Heizou.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Shikanoin_Heizou_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Sigewinne_Icon.png",
@@ -2317,7 +2855,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Medium Female"
+    "modelType": "Medium Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Idle_Sucrose_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sucrose_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Idle_Sucrose_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sucrose_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Party_Setup_Sucrose.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sucrose_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Tartaglia_Icon.png",
@@ -2504,19 +3065,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Medium Male"
-  },
-  {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Wonderland_Manekin_Icon.png",
-    "name": "Wonderland Manekin",
-    "rarity": "5 Stars",
-    "element": "None",
-    "weaponType": "Sword",
-    "region": "None",
-    "elementUrl": "",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
-    "regionUrl": "",
-    "modelType": "Manekin: Medium Male\nManekina: Medium Female"
+    "modelType": "Medium Male",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Idle_Wanderer_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Wanderer_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Idle_Wanderer_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Wanderer_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Party_Setup_Wanderer.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Wanderer_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Wriothesley_Icon.png",
@@ -2843,7 +3415,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
-    "modelType": "Short Female"
+    "modelType": "Short Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Idle_Yaoyao_1.gif",
+        "videoUrl": "",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Yaoyao_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Idle_Yaoyao_2.gif",
+        "videoUrl": "",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Yaoyao_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Party_Setup_Yaoyao.gif",
+      "videoUrl": "",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Yaoyao_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png",
@@ -2855,7 +3450,30 @@
     "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
     "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
     "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
-    "modelType": "Tall Female"
+    "modelType": "Tall Female",
+    "idleAnimations": [
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Idle_Yelan_1.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Idle_Yelan_1.mp4",
+        "caption": "Idle 1",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png"
+      },
+      {
+        "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Idle_Yelan_2.gif",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Idle_Yelan_2.mp4",
+        "caption": "Idle 2",
+        "videoType": "video/mp4",
+        "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png"
+      }
+    ],
+    "partyJoinAnimation": {
+      "imageUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Party_Setup_Yelan.gif",
+      "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Party_Setup_Yelan.mp4",
+      "caption": "Party Setup",
+      "videoType": "video/mp4",
+      "fallbackUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png"
+    }
   },
   {
     "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Yoimiya_Icon.png",

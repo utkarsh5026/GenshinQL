@@ -1,699 +1,685 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Mavuika_Icon.png",
-    "name": "Mavuika",
-    "rarity": "5 Stars",
-    "element": "Pyro",
-    "weaponType": "Claymore",
-    "region": "Natlan",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Tall Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Mavuika_Icon.png",
+  "name": "Mavuika",
+  "rarity": "5 Stars",
+  "element": "Pyro",
+  "weaponType": "Claymore",
+  "region": "Natlan",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
+  "modelType": "Tall Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png",
+      "talentName": "Flames Weave Life",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 consecutive claymore strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to perform an especially powerful Severing Splendor strike toward the front.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png",
-            "talentName": "Flames Weave Life",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 consecutive claymore strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to perform an especially powerful Severing Splendor strike toward the front.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Flames_Weave_Life_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Flames_Weave_Life_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "80.03",
-                    "86.55",
-                    "93.06",
-                    "102.37",
-                    "108.88",
-                    "116.33",
-                    "126.57",
-                    "136.8",
-                    "147.04",
-                    "158.21",
-                    "169.38"
-                ],
-                "2-Hit DMG (%)": [
-                    "36.48×2",
-                    "39.45×2",
-                    "42.42×2",
-                    "46.66×2",
-                    "49.63×2",
-                    "53.02×2",
-                    "57.69×2",
-                    "62.36×2",
-                    "67.02×2",
-                    "72.11×2",
-                    "77.2×2"
-                ],
-                "3-Hit DMG (%)": [
-                    "33.22×3",
-                    "35.93×3",
-                    "38.63×3",
-                    "42.49×3",
-                    "45.2×3",
-                    "48.29×3",
-                    "52.54×3",
-                    "56.79×3",
-                    "61.04×3",
-                    "65.67×3",
-                    "70.31×3"
-                ],
-                "4-Hit DMG (%)": [
-                    "116.19",
-                    "125.65",
-                    "135.11",
-                    "148.62",
-                    "158.08",
-                    "168.88",
-                    "183.75",
-                    "198.61",
-                    "213.47",
-                    "229.68",
-                    "245.9"
-                ],
-                "Charged Attack DMG (%)": [
-                    "193.84",
-                    "209.62",
-                    "225.4",
-                    "247.94",
-                    "263.72",
-                    "281.75",
-                    "306.54",
-                    "331.34",
-                    "356.13",
-                    "383.18",
-                    "410.23"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "50"
-                ],
-                "Plunge DMG (%)": [
-                    "74.59",
-                    "80.66",
-                    "86.73",
-                    "95.4",
-                    "101.47",
-                    "108.41",
-                    "117.95",
-                    "127.49",
-                    "137.03",
-                    "147.44",
-                    "157.85"
-                ],
-                "Low Plunge DMG (%)": [
-                    "149.14",
-                    "161.28",
-                    "173.42",
-                    "190.77",
-                    "202.91",
-                    "216.78",
-                    "235.86",
-                    "254.93",
-                    "274.01",
-                    "294.82",
-                    "315.63"
-                ],
-                "High Plunge DMG (%)": [
-                    "186.29",
-                    "201.45",
-                    "216.62",
-                    "238.28",
-                    "253.44",
-                    "270.77",
-                    "294.6",
-                    "318.42",
-                    "342.25",
-                    "368.25",
-                    "394.24"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Flames_Weave_Life_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Talent_The_Named_Moment.png",
-            "talentName": "The Named Moment",
-            "talentType": "Elemental Skill",
-            "description": "Calling upon her authority over \"conflict,\" Mavuika summons the All-Fire Armaments passed down through the line of human Archons, dealing Nightsoul-aligned Pyro DMG\nAfter using this, Mavuika's Nightsoul points are restored to max value, and she enters the Nightsoul's Blessing state.\n\nAll-Fire Armaments\nHas different forms when Tapped or Held.\n\n(‍Press\n‍/‍Tap\n‍)\n\"Divine Name Unleashed\": The All-Fire Armaments manifest as a Ring of Searing Radiance. The Ring follows the current active character and attacks nearby opponents at intervals, dealing Nightsoul-aligned Pyro DMG.\n\nHold\n\"Ancient Name Unbound\": The All-Fire Armaments manifest as a Flamestrider. In this state, Mavuika can ride the Flamestrider at high speed, or activate its hidden backup propulsion module to temporarily cross various terrain types and glide in mid-air. Mavuika's Normal, Charged, and Plunging Attacks will also be converted to deal Nightsoul-aligned Pyro DMG which cannot be overridden. When sprinting, she also deals Nightsoul-aligned Pyro DMG to opponents along her path.\n\nWhile in the Nightsoul's Blessing state, Tapping the Elemental Skill can switch the All-Fire Armaments' form. The Armaments will disappear once Mavuika's Nightsoul's Blessing state ends.\n\nNightsoul's Blessing: Mavuika\nContinuously consumes Nightsoul points according to the All-Fire Armaments' form. Mavuika's Nightsoul's Blessing state ends once her Nightsoul points are exhausted.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/The_Named_Moment_Off-Field_DMG_Preview.gif",
-                    "caption": "Attach Method 1: Off-Field DMG"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/The_Named_Moment_On-Field_DMG_Preview.gif",
-                    "caption": "Attach Method 2: On-Field DMG"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/The_Named_Moment_Movement_Preview.gif",
-                    "caption": "Movement"
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "74.4",
-                    "79.98",
-                    "85.56",
-                    "93",
-                    "98.58",
-                    "104.16",
-                    "111.6",
-                    "119.04",
-                    "126.48",
-                    "133.92",
-                    "141.36",
-                    "148.8",
-                    "158.1"
-                ],
-                "Ring of Searing Radiance DMG (%)": [
-                    "128",
-                    "137.6",
-                    "147.2",
-                    "160",
-                    "169.6",
-                    "179.2",
-                    "192",
-                    "204.8",
-                    "217.6",
-                    "230.4",
-                    "243.2",
-                    "256",
-                    "272"
-                ],
-                "Ring of Searing Radiance Attack Interval": [
-                    "2s"
-                ],
-                "Flamestrider Normal Attack 1-Hit DMG (%)": [
-                    "57.26",
-                    "61.93",
-                    "66.59",
-                    "73.25",
-                    "77.91",
-                    "83.23",
-                    "90.56",
-                    "97.88",
-                    "105.21",
-                    "113.2",
-                    "121.19",
-                    "129.18",
-                    "137.17"
-                ],
-                "Flamestrider Normal Attack 2-Hit DMG (%)": [
-                    "59.13",
-                    "63.95",
-                    "68.76",
-                    "75.63",
-                    "80.45",
-                    "85.95",
-                    "93.51",
-                    "101.08",
-                    "108.64",
-                    "116.89",
-                    "125.14",
-                    "133.39",
-                    "141.64"
-                ],
-                "Flamestrider Normal Attack 3-Hit DMG (%)": [
-                    "69.99",
-                    "75.68",
-                    "81.38",
-                    "89.52",
-                    "95.21",
-                    "101.72",
-                    "110.68",
-                    "119.63",
-                    "128.58",
-                    "138.35",
-                    "148.11",
-                    "157.88",
-                    "167.64"
-                ],
-                "Flamestrider Normal Attack 4-Hit DMG (%)": [
-                    "69.7",
-                    "75.38",
-                    "81.05",
-                    "89.16",
-                    "94.83",
-                    "101.31",
-                    "110.23",
-                    "119.15",
-                    "128.06",
-                    "137.79",
-                    "147.51",
-                    "157.24",
-                    "166.97"
-                ],
-                "Flamestrider Normal Attack 5-Hit DMG (%)": [
-                    "91",
-                    "98.41",
-                    "105.82",
-                    "116.4",
-                    "123.81",
-                    "132.27",
-                    "143.91",
-                    "155.55",
-                    "167.19",
-                    "179.89",
-                    "192.59",
-                    "205.29",
-                    "217.99"
-                ],
-                "Flamestrider Sprint DMG (%)": [
-                    "80.84",
-                    "87.42",
-                    "94",
-                    "103.4",
-                    "109.98",
-                    "117.5",
-                    "127.84",
-                    "138.18",
-                    "148.52",
-                    "159.8",
-                    "171.08",
-                    "182.36",
-                    "193.64"
-                ],
-                "Flamestrider Charged Attack Cyclic DMG (%)": [
-                    "98.9",
-                    "106.95",
-                    "115",
-                    "126.5",
-                    "134.55",
-                    "143.75",
-                    "156.4",
-                    "169.05",
-                    "181.7",
-                    "195.5",
-                    "209.3",
-                    "223.1",
-                    "236.9"
-                ],
-                "Flamestrider Charged Attack Final DMG (%)": [
-                    "137.6",
-                    "148.8",
-                    "160",
-                    "176",
-                    "187.2",
-                    "200",
-                    "217.6",
-                    "235.2",
-                    "252.8",
-                    "272",
-                    "291.2",
-                    "310.4",
-                    "329.6"
-                ],
-                "Flamestrider Plunge DMG (%)": [
-                    "159.96",
-                    "172.98",
-                    "186",
-                    "204.6",
-                    "217.62",
-                    "232.5",
-                    "252.96",
-                    "273.42",
-                    "293.88",
-                    "316.2",
-                    "338.52",
-                    "360.84",
-                    "383.16"
-                ],
-                "Nightsoul Point Limit": [
-                    "80"
-                ],
-                "CD": [
-                    "15s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Hour_of_Burning_Skies.png",
-            "talentName": "Hour of Burning Skies",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nLet the people's inner voices reach the divine throne in the heavens.\nMavuika's Elemental Burst is not reliant on Energy, but instead, on \"Fighting Spirit.\"\n\nFighting Spirit\nWhen Mavuika has at least 50% Fighting Spirit, she can consume it all to unleash her Elemental Burst.\nMavuika can obtain Fighting Spirit via the following methods:\nWhen in combat, Nightsoul points consumed by nearby party members are converted to Fighting Spirit.\nWhen nearby party members' Normal Attacks hit opponents, Mavuika gains 1.5 Fighting Spirit. This can trigger once every 0.1s.\n\nAfter using this, Mavuika gains 10 Nightsoul points and enters the Nightsoul's Blessing state. Riding her Flamestrider high in the air, she uses a powerful Sunfell Slice against opponents on the ground, dealing Nightsoul-aligned AoE Pyro DMG and entering the \"Crucible of Death and Life\" state.\n\nCrucible of Death and Life\nDuring this time, Mavuika's various actions will no longer consume Nightsoul points, and her interruption resistance is increased. Also, the DMG dealt by Sunfell Slice and \"Ancient Name Unbound\"'s Normal and Charged Attacks is increased based on the amount of Fighting Spirit she has when using the Elemental Burst.\nCrucible of Death and Life will be canceled when Mavuika leaves the field.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Hour_of_Burning_Skies_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "444.8",
-                    "478.16",
-                    "511.52",
-                    "556",
-                    "589.36",
-                    "622.72",
-                    "667.2",
-                    "711.68",
-                    "756.16",
-                    "800.64",
-                    "845.12",
-                    "889.6",
-                    "945.2"
-                ],
-                "Crucible of Death and Life Duration": [
-                    "7s"
-                ],
-                "Sunfell Slice DMG Bonus": [
-                    "1.6% ATK per Fighting Spirit",
-                    "1.72% ATK per Fighting Spirit",
-                    "1.84% ATK per Fighting Spirit",
-                    "2% ATK per Fighting Spirit",
-                    "2.12% ATK per Fighting Spirit",
-                    "2.24% ATK per Fighting Spirit",
-                    "2.4% ATK per Fighting Spirit",
-                    "2.56% ATK per Fighting Spirit",
-                    "2.72% ATK per Fighting Spirit",
-                    "2.88% ATK per Fighting Spirit",
-                    "3.04% ATK per Fighting Spirit",
-                    "3.2% ATK per Fighting Spirit",
-                    "3.4% ATK per Fighting Spirit"
-                ],
-                "Flamestrider Normal Attack DMG Bonus": [
-                    "0.26% ATK per Fighting Spirit",
-                    "0.28% ATK per Fighting Spirit",
-                    "0.3% ATK per Fighting Spirit",
-                    "0.33% ATK per Fighting Spirit",
-                    "0.35% ATK per Fighting Spirit",
-                    "0.38% ATK per Fighting Spirit",
-                    "0.41% ATK per Fighting Spirit",
-                    "0.44% ATK per Fighting Spirit",
-                    "0.47% ATK per Fighting Spirit",
-                    "0.51% ATK per Fighting Spirit",
-                    "0.55% ATK per Fighting Spirit",
-                    "0.58% ATK per Fighting Spirit",
-                    "0.62% ATK per Fighting Spirit"
-                ],
-                "Flamestrider Charged Attack DMG Bonus": [
-                    "0.52% ATK per Fighting Spirit",
-                    "0.56% ATK per Fighting Spirit",
-                    "0.6% ATK per Fighting Spirit",
-                    "0.66% ATK per Fighting Spirit",
-                    "0.7% ATK per Fighting Spirit",
-                    "0.75% ATK per Fighting Spirit",
-                    "0.82% ATK per Fighting Spirit",
-                    "0.88% ATK per Fighting Spirit",
-                    "0.95% ATK per Fighting Spirit",
-                    "1.02% ATK per Fighting Spirit",
-                    "1.09% ATK per Fighting Spirit",
-                    "1.16% ATK per Fighting Spirit",
-                    "1.24% ATK per Fighting Spirit"
-                ],
-                "CD": [
-                    "18s"
-                ],
-                "Fighting Spirit Limit": [
-                    "200"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Talent_Gift_of_Flaming_Flowers.png",
-            "talentName": "Gift of Flaming Flowers",
-            "talentType": "1st Ascension Passive",
-            "description": "When a nearby party member triggers a Nightsoul Burst, Mavuika's ATK increases by 30% for 10s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Talent_Kiongozi.png",
-            "talentName": "\"Kiongozi\"",
-            "talentType": "4th Ascension Passive",
-            "description": "After using her Elemental Burst, Hour of Burning Skies, every point of Fighting Spirit present when it is used increases the DMG that the current active party member deals by 0.2%. The maximum increase obtainable this way is 40%, and this effect lasts 20s, decaying over this duration until it reaches 0.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Talent_Exhaust_Mode.png",
-            "talentName": "Exhaust Mode",
-            "talentType": "Night Realm's Gift Passive",
-            "description": "After Nightsoul points have been fully depleted, Mavuika will switch to using Phlogiston to maintain the All-Fire Armaments' Flamestrider form.\nWhile in an area with Phlogiston Mechanics within Natlan, Nightsoul Transmission: Mavuika can be used. When the current active character is sprinting, climbing, swimming, in movement modes caused by certain Talents, or at a certain height in the air, switching to Mavuika will trigger the following: Mavuika enters the Nightsoul's Blessing state and obtains 50% of her maximum Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own party.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Talent_Night-Shattering_Radiance.png",
-            "talentName": "Night-Shattering Radiance",
-            "talentType": "Utility Passive",
-            "description": "The party's Nightsoul Transmission CD is decreased by 20%.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Flames_Weave_Life_Charged_Preview.gif",
+          "caption": "Charged Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Constellation_The_Night-Lord%27s_Explication.png",
-            "name": "The Night-Lord's Explication",
-            "level": 1,
-            "description": "Mavuika's maximum Nightsoul points are increased to 120, and she gains Fighting Spirit 25% more efficiently.\nAdditionally, she gains 40% ATK for 8s after gaining Fighting Spirit."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Constellation_The_Ashen_Price.png",
-            "name": "The Ashen Price",
-            "level": 2,
-            "description": "When in the Nightsoul's Blessing State, Mavuika's Base ATK is increased by 200, and she obtains the following effects based on All-Fire Armaments' form:\nRing of Searing Radiance: Nearby opponents' DEF decreased by 20%.\nFlamestrider: Mavuika's Normal Attacks, Charged Attacks, and her Sunfell Slice from the Elemental Burst Hour of Burning Skies deal 60%, 90%, and 120% of her ATK as increased DMG respectively."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Constellation_The_Burning_Sun.png",
-            "name": "The Burning Sun",
-            "level": 3,
-            "description": "Increases the Level of Hour of Burning Skies by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Constellation_The_Leader%27s_Resolve.png",
-            "name": "The Leader's Resolve",
-            "level": 4,
-            "description": "Enhances the effects of the Ascension Talent \"Kiongozi\":\nThe DMG increase gained after using the Elemental Burst Hour of Burning Skies will not decay over time, and an additional 10% DMG Bonus will be gained.\nYou must first unlock the Ascension Talent \"Kiongozi.\""
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Constellation_The_Meaning_of_Truth.png",
-            "name": "The Meaning of Truth",
-            "level": 5,
-            "description": "Increases the Level of The Named Moment by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Constellation_Humanity%27s_Name_Unfettered.png",
-            "name": "\"Humanity's Name\" Unfettered",
-            "level": 6,
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nThe All-Fire Armaments from the Elemental Skill The Named Moment receive all-round improvements:\nRing of Searing Radiance: When the Ring's attacks hit opponents, a Flamestrider will crash into the struck opponent, dealing 200% of ATK as Nightsoul-aligned AoE Pyro DMG.\nFlamestrider: When Mavuika is riding the Flamestrider, she will also summon a Scorching Ring of Searing Radiance to follow her, which will decrease nearby opponents' DEF by 20% and deal 500% of ATK as Nightsoul-aligned AoE Pyro DMG to nearby opponents once every 3s. Mavuika's terrain-crossing abilities will also be further improved.\n\nAdditionally, when Mavuika is riding her Flamestrider and is not in combat, when her Nightsoul points drop to 5, she will gain 80 Nightsoul points. This effect can trigger once every 15s."
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.3",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "80.03",
+          "86.55",
+          "93.06",
+          "102.37",
+          "108.88",
+          "116.33",
+          "126.57",
+          "136.8",
+          "147.04",
+          "158.21",
+          "169.38"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Namecard_Background_Mavuika_Sun-Crowned.png",
-                "caption": "Mavuika: Sun-Crowned Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Mavuika_Sun-Crowned.png",
-                "caption": "Mavuika: Sun-Crowned Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Namecard_Banner_Mavuika_Sun-Crowned.png",
-                "caption": "Mavuika: Sun-Crowned Banner"
-            }
+        "2-Hit DMG (%)": [
+          "36.48×2",
+          "39.45×2",
+          "42.42×2",
+          "46.66×2",
+          "49.63×2",
+          "53.02×2",
+          "57.69×2",
+          "62.36×2",
+          "67.02×2",
+          "72.11×2",
+          "77.2×2"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    },
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    },
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    },
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "33.22×3",
+          "35.93×3",
+          "38.63×3",
+          "42.49×3",
+          "45.2×3",
+          "48.29×3",
+          "52.54×3",
+          "56.79×3",
+          "61.04×3",
+          "65.67×3",
+          "70.31×3"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Mavuika_Character_Details_1.png",
-                "caption": "Mavuika Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Mavuika_Character_Details_2.png",
-                "caption": "Mavuika Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Mavuika_Character_Details_3.gif",
-                "caption": "Mavuika Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Mavuika_Character_Details_4.png",
-                "caption": "Mavuika Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Mavuika_Character_Details_5.png",
-                "caption": "Mavuika Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Mavuika_Character_Details_6.png",
-                "caption": "Mavuika Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Mavuika_Character_Details_7.png",
-                "caption": "Mavuika Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Mavuika_Character_Details_8.png",
-                "caption": "Mavuika Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Mavuika_Character_Details_9.png",
-                "caption": "Mavuika Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Mavuika_Character_Details_10.png",
-                "caption": "Mavuika Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Mavuika_Character_Details_11.png",
-                "caption": "Mavuika Details 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Mavuika_Character_Details_12.gif",
-                "caption": "Mavuika Details 12"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Mavuika_Character_Details_13.gif",
-                "caption": "Mavuika Details 13"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Mavuika_Character_Details_14.gif",
-                "caption": "Mavuika Details 14"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Mavuika_Character_Details_15.gif",
-                "caption": "Mavuika Details 15"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Mavuika_Character_Details_16.gif",
-                "caption": "Mavuika Details 16"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Mavuika_Character_Details_17.png",
-                "caption": "Mavuika Details 17"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Mavuika_Character_Details_18.png",
-                "caption": "Mavuika Details 18"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Mavuika_Character_Details_19.png",
-                "caption": "Mavuika Details 19"
-            }
+        "4-Hit DMG (%)": [
+          "116.19",
+          "125.65",
+          "135.11",
+          "148.62",
+          "158.08",
+          "168.88",
+          "183.75",
+          "198.61",
+          "213.47",
+          "229.68",
+          "245.9"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Paimon%27s_Paintings_35_Mavuika_1.png",
-                "caption": "Crucial Pose! Set 35"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Icon_Emoji_Paimon%27s_Paintings_36_Mavuika_1.png",
-                "caption": "Blaze! Set 36"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Icon_Emoji_Paimon%27s_Paintings_38_Mavuika_1.png",
-                "caption": "Come Quick Set 38"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_Emoji_Paimon%27s_Paintings_38_Mavuika_2.png",
-                "caption": "Full Throttle Set 38"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Icon_Emoji_Paimon%27s_Paintings_38_Mavuika_3.png",
-                "caption": "Head to Head Set 38"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Icon_Emoji_Paimon%27s_Paintings_38_Mavuika_4.png",
-                "caption": "Cheers! Set 38"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Icon_Emoji_Paimon%27s_Paintings_40_Mavuika_1.png",
-                "caption": "Are You There? Set 40"
-            }
+        "Charged Attack DMG (%)": [
+          "193.84",
+          "209.62",
+          "225.4",
+          "247.94",
+          "263.72",
+          "281.75",
+          "306.54",
+          "331.34",
+          "356.13",
+          "383.18",
+          "410.23"
+        ],
+        "Charged Attack Stamina Cost": ["50"],
+        "Plunge DMG (%)": [
+          "74.59",
+          "80.66",
+          "86.73",
+          "95.4",
+          "101.47",
+          "108.41",
+          "117.95",
+          "127.49",
+          "137.03",
+          "147.44",
+          "157.85"
+        ],
+        "Low Plunge DMG (%)": [
+          "149.14",
+          "161.28",
+          "173.42",
+          "190.77",
+          "202.91",
+          "216.78",
+          "235.86",
+          "254.93",
+          "274.01",
+          "294.82",
+          "315.63"
+        ],
+        "High Plunge DMG (%)": [
+          "186.29",
+          "201.45",
+          "216.62",
+          "238.28",
+          "253.44",
+          "270.77",
+          "294.6",
+          "318.42",
+          "342.25",
+          "368.25",
+          "394.24"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Talent_The_Named_Moment.png",
+      "talentName": "The Named Moment",
+      "talentType": "Elemental Skill",
+      "description": "Calling upon her authority over \"conflict,\" Mavuika summons the All-Fire Armaments passed down through the line of human Archons, dealing Nightsoul-aligned Pyro DMG\nAfter using this, Mavuika's Nightsoul points are restored to max value, and she enters the Nightsoul's Blessing state.\n\nAll-Fire Armaments\nHas different forms when Tapped or Held.\n\n(‍Press\n‍/‍Tap\n‍)\n\"Divine Name Unleashed\": The All-Fire Armaments manifest as a Ring of Searing Radiance. The Ring follows the current active character and attacks nearby opponents at intervals, dealing Nightsoul-aligned Pyro DMG.\n\nHold\n\"Ancient Name Unbound\": The All-Fire Armaments manifest as a Flamestrider. In this state, Mavuika can ride the Flamestrider at high speed, or activate its hidden backup propulsion module to temporarily cross various terrain types and glide in mid-air. Mavuika's Normal, Charged, and Plunging Attacks will also be converted to deal Nightsoul-aligned Pyro DMG which cannot be overridden. When sprinting, she also deals Nightsoul-aligned Pyro DMG to opponents along her path.\n\nWhile in the Nightsoul's Blessing state, Tapping the Elemental Skill can switch the All-Fire Armaments' form. The Armaments will disappear once Mavuika's Nightsoul's Blessing state ends.\n\nNightsoul's Blessing: Mavuika\nContinuously consumes Nightsoul points according to the All-Fire Armaments' form. Mavuika's Nightsoul's Blessing state ends once her Nightsoul points are exhausted.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/The_Named_Moment_Off-Field_DMG_Preview.gif",
+          "caption": "Attach Method 1: Off-Field DMG"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/The_Named_Moment_On-Field_DMG_Preview.gif",
+          "caption": "Attach Method 2: On-Field DMG"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/The_Named_Moment_Movement_Preview.gif",
+          "caption": "Movement"
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "74.4",
+          "79.98",
+          "85.56",
+          "93",
+          "98.58",
+          "104.16",
+          "111.6",
+          "119.04",
+          "126.48",
+          "133.92",
+          "141.36",
+          "148.8",
+          "158.1"
+        ],
+        "Ring of Searing Radiance DMG (%)": [
+          "128",
+          "137.6",
+          "147.2",
+          "160",
+          "169.6",
+          "179.2",
+          "192",
+          "204.8",
+          "217.6",
+          "230.4",
+          "243.2",
+          "256",
+          "272"
+        ],
+        "Ring of Searing Radiance Attack Interval": ["2s"],
+        "Flamestrider Normal Attack 1-Hit DMG (%)": [
+          "57.26",
+          "61.93",
+          "66.59",
+          "73.25",
+          "77.91",
+          "83.23",
+          "90.56",
+          "97.88",
+          "105.21",
+          "113.2",
+          "121.19",
+          "129.18",
+          "137.17"
+        ],
+        "Flamestrider Normal Attack 2-Hit DMG (%)": [
+          "59.13",
+          "63.95",
+          "68.76",
+          "75.63",
+          "80.45",
+          "85.95",
+          "93.51",
+          "101.08",
+          "108.64",
+          "116.89",
+          "125.14",
+          "133.39",
+          "141.64"
+        ],
+        "Flamestrider Normal Attack 3-Hit DMG (%)": [
+          "69.99",
+          "75.68",
+          "81.38",
+          "89.52",
+          "95.21",
+          "101.72",
+          "110.68",
+          "119.63",
+          "128.58",
+          "138.35",
+          "148.11",
+          "157.88",
+          "167.64"
+        ],
+        "Flamestrider Normal Attack 4-Hit DMG (%)": [
+          "69.7",
+          "75.38",
+          "81.05",
+          "89.16",
+          "94.83",
+          "101.31",
+          "110.23",
+          "119.15",
+          "128.06",
+          "137.79",
+          "147.51",
+          "157.24",
+          "166.97"
+        ],
+        "Flamestrider Normal Attack 5-Hit DMG (%)": [
+          "91",
+          "98.41",
+          "105.82",
+          "116.4",
+          "123.81",
+          "132.27",
+          "143.91",
+          "155.55",
+          "167.19",
+          "179.89",
+          "192.59",
+          "205.29",
+          "217.99"
+        ],
+        "Flamestrider Sprint DMG (%)": [
+          "80.84",
+          "87.42",
+          "94",
+          "103.4",
+          "109.98",
+          "117.5",
+          "127.84",
+          "138.18",
+          "148.52",
+          "159.8",
+          "171.08",
+          "182.36",
+          "193.64"
+        ],
+        "Flamestrider Charged Attack Cyclic DMG (%)": [
+          "98.9",
+          "106.95",
+          "115",
+          "126.5",
+          "134.55",
+          "143.75",
+          "156.4",
+          "169.05",
+          "181.7",
+          "195.5",
+          "209.3",
+          "223.1",
+          "236.9"
+        ],
+        "Flamestrider Charged Attack Final DMG (%)": [
+          "137.6",
+          "148.8",
+          "160",
+          "176",
+          "187.2",
+          "200",
+          "217.6",
+          "235.2",
+          "252.8",
+          "272",
+          "291.2",
+          "310.4",
+          "329.6"
+        ],
+        "Flamestrider Plunge DMG (%)": [
+          "159.96",
+          "172.98",
+          "186",
+          "204.6",
+          "217.62",
+          "232.5",
+          "252.96",
+          "273.42",
+          "293.88",
+          "316.2",
+          "338.52",
+          "360.84",
+          "383.16"
+        ],
+        "Nightsoul Point Limit": ["80"],
+        "CD": ["15s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Hour_of_Burning_Skies.png",
+      "talentName": "Hour of Burning Skies",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nLet the people's inner voices reach the divine throne in the heavens.\nMavuika's Elemental Burst is not reliant on Energy, but instead, on \"Fighting Spirit.\"\n\nFighting Spirit\nWhen Mavuika has at least 50% Fighting Spirit, she can consume it all to unleash her Elemental Burst.\nMavuika can obtain Fighting Spirit via the following methods:\nWhen in combat, Nightsoul points consumed by nearby party members are converted to Fighting Spirit.\nWhen nearby party members' Normal Attacks hit opponents, Mavuika gains 1.5 Fighting Spirit. This can trigger once every 0.1s.\n\nAfter using this, Mavuika gains 10 Nightsoul points and enters the Nightsoul's Blessing state. Riding her Flamestrider high in the air, she uses a powerful Sunfell Slice against opponents on the ground, dealing Nightsoul-aligned AoE Pyro DMG and entering the \"Crucible of Death and Life\" state.\n\nCrucible of Death and Life\nDuring this time, Mavuika's various actions will no longer consume Nightsoul points, and her interruption resistance is increased. Also, the DMG dealt by Sunfell Slice and \"Ancient Name Unbound\"'s Normal and Charged Attacks is increased based on the amount of Fighting Spirit she has when using the Elemental Burst.\nCrucible of Death and Life will be canceled when Mavuika leaves the field.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Hour_of_Burning_Skies_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "444.8",
+          "478.16",
+          "511.52",
+          "556",
+          "589.36",
+          "622.72",
+          "667.2",
+          "711.68",
+          "756.16",
+          "800.64",
+          "845.12",
+          "889.6",
+          "945.2"
+        ],
+        "Crucible of Death and Life Duration": ["7s"],
+        "Sunfell Slice DMG Bonus": [
+          "1.6% ATK per Fighting Spirit",
+          "1.72% ATK per Fighting Spirit",
+          "1.84% ATK per Fighting Spirit",
+          "2% ATK per Fighting Spirit",
+          "2.12% ATK per Fighting Spirit",
+          "2.24% ATK per Fighting Spirit",
+          "2.4% ATK per Fighting Spirit",
+          "2.56% ATK per Fighting Spirit",
+          "2.72% ATK per Fighting Spirit",
+          "2.88% ATK per Fighting Spirit",
+          "3.04% ATK per Fighting Spirit",
+          "3.2% ATK per Fighting Spirit",
+          "3.4% ATK per Fighting Spirit"
+        ],
+        "Flamestrider Normal Attack DMG Bonus": [
+          "0.26% ATK per Fighting Spirit",
+          "0.28% ATK per Fighting Spirit",
+          "0.3% ATK per Fighting Spirit",
+          "0.33% ATK per Fighting Spirit",
+          "0.35% ATK per Fighting Spirit",
+          "0.38% ATK per Fighting Spirit",
+          "0.41% ATK per Fighting Spirit",
+          "0.44% ATK per Fighting Spirit",
+          "0.47% ATK per Fighting Spirit",
+          "0.51% ATK per Fighting Spirit",
+          "0.55% ATK per Fighting Spirit",
+          "0.58% ATK per Fighting Spirit",
+          "0.62% ATK per Fighting Spirit"
+        ],
+        "Flamestrider Charged Attack DMG Bonus": [
+          "0.52% ATK per Fighting Spirit",
+          "0.56% ATK per Fighting Spirit",
+          "0.6% ATK per Fighting Spirit",
+          "0.66% ATK per Fighting Spirit",
+          "0.7% ATK per Fighting Spirit",
+          "0.75% ATK per Fighting Spirit",
+          "0.82% ATK per Fighting Spirit",
+          "0.88% ATK per Fighting Spirit",
+          "0.95% ATK per Fighting Spirit",
+          "1.02% ATK per Fighting Spirit",
+          "1.09% ATK per Fighting Spirit",
+          "1.16% ATK per Fighting Spirit",
+          "1.24% ATK per Fighting Spirit"
+        ],
+        "CD": ["18s"],
+        "Fighting Spirit Limit": ["200"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Talent_Gift_of_Flaming_Flowers.png",
+      "talentName": "Gift of Flaming Flowers",
+      "talentType": "1st Ascension Passive",
+      "description": "When a nearby party member triggers a Nightsoul Burst, Mavuika's ATK increases by 30% for 10s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Talent_Kiongozi.png",
+      "talentName": "\"Kiongozi\"",
+      "talentType": "4th Ascension Passive",
+      "description": "After using her Elemental Burst, Hour of Burning Skies, every point of Fighting Spirit present when it is used increases the DMG that the current active party member deals by 0.2%. The maximum increase obtainable this way is 40%, and this effect lasts 20s, decaying over this duration until it reaches 0.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Talent_Exhaust_Mode.png",
+      "talentName": "Exhaust Mode",
+      "talentType": "Night Realm's Gift Passive",
+      "description": "After Nightsoul points have been fully depleted, Mavuika will switch to using Phlogiston to maintain the All-Fire Armaments' Flamestrider form.\nWhile in an area with Phlogiston Mechanics within Natlan, Nightsoul Transmission: Mavuika can be used. When the current active character is sprinting, climbing, swimming, in movement modes caused by certain Talents, or at a certain height in the air, switching to Mavuika will trigger the following: Mavuika enters the Nightsoul's Blessing state and obtains 50% of her maximum Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own party.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Talent_Night-Shattering_Radiance.png",
+      "talentName": "Night-Shattering Radiance",
+      "talentType": "Utility Passive",
+      "description": "The party's Nightsoul Transmission CD is decreased by 20%.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Constellation_The_Night-Lord%27s_Explication.png",
+      "name": "The Night-Lord's Explication",
+      "level": 1,
+      "description": "Mavuika's maximum Nightsoul points are increased to 120, and she gains Fighting Spirit 25% more efficiently.\nAdditionally, she gains 40% ATK for 8s after gaining Fighting Spirit."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Constellation_The_Ashen_Price.png",
+      "name": "The Ashen Price",
+      "level": 2,
+      "description": "When in the Nightsoul's Blessing State, Mavuika's Base ATK is increased by 200, and she obtains the following effects based on All-Fire Armaments' form:\nRing of Searing Radiance: Nearby opponents' DEF decreased by 20%.\nFlamestrider: Mavuika's Normal Attacks, Charged Attacks, and her Sunfell Slice from the Elemental Burst Hour of Burning Skies deal 60%, 90%, and 120% of her ATK as increased DMG respectively."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Constellation_The_Burning_Sun.png",
+      "name": "The Burning Sun",
+      "level": 3,
+      "description": "Increases the Level of Hour of Burning Skies by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Constellation_The_Leader%27s_Resolve.png",
+      "name": "The Leader's Resolve",
+      "level": 4,
+      "description": "Enhances the effects of the Ascension Talent \"Kiongozi\":\nThe DMG increase gained after using the Elemental Burst Hour of Burning Skies will not decay over time, and an additional 10% DMG Bonus will be gained.\nYou must first unlock the Ascension Talent \"Kiongozi.\""
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Constellation_The_Meaning_of_Truth.png",
+      "name": "The Meaning of Truth",
+      "level": 5,
+      "description": "Increases the Level of The Named Moment by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Constellation_Humanity%27s_Name_Unfettered.png",
+      "name": "\"Humanity's Name\" Unfettered",
+      "level": 6,
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nThe All-Fire Armaments from the Elemental Skill The Named Moment receive all-round improvements:\nRing of Searing Radiance: When the Ring's attacks hit opponents, a Flamestrider will crash into the struck opponent, dealing 200% of ATK as Nightsoul-aligned AoE Pyro DMG.\nFlamestrider: When Mavuika is riding the Flamestrider, she will also summon a Scorching Ring of Searing Radiance to follow her, which will decrease nearby opponents' DEF by 20% and deal 500% of ATK as Nightsoul-aligned AoE Pyro DMG to nearby opponents once every 3s. Mavuika's terrain-crossing abilities will also be further improved.\n\nAdditionally, when Mavuika is riding her Flamestrider and is not in combat, when her Nightsoul points drop to 5, she will gain 80 Nightsoul points. This effect can trigger once every 15s."
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.3",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Idle_Mavuika_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Idle_Mavuika_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Talent_Menu_Mavuika.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Weapon_Menu_Mavuika.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Party_Setup_Mavuika.gif",
+        "caption": "Party Setup",
+        "videoUrl": "",
+        "videoType": ""
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Namecard_Background_Mavuika_Sun-Crowned.png",
+        "caption": "Mavuika: Sun-Crowned Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Mavuika_Sun-Crowned.png",
+        "caption": "Mavuika: Sun-Crowned Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Namecard_Banner_Mavuika_Sun-Crowned.png",
+        "caption": "Mavuika: Sun-Crowned Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Flames_Weave_Life_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Flames_Weave_Life_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Flames_Weave_Life_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Flames_Weave_Life_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Hour_of_Burning_Skies_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Hour_of_Burning_Skies_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/The_Named_Moment_Off-Field_DMG_Preview.gif",
+            "caption": "Attach Method 1: Off-Field DMG",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/The_Named_Moment_Off-Field_DMG_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/The_Named_Moment_On-Field_DMG_Preview.gif",
+            "caption": "Attach Method 2: On-Field DMG",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/The_Named_Moment_On-Field_DMG_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/The_Named_Moment_Movement_Preview.gif",
+            "caption": "Movement",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/The_Named_Moment_Movement_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Mavuika_Character_Details_1.png",
+        "caption": "Mavuika Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Mavuika_Character_Details_2.png",
+        "caption": "Mavuika Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Mavuika_Character_Details_3.gif",
+        "caption": "Mavuika Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Mavuika_Character_Details_4.png",
+        "caption": "Mavuika Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Mavuika_Character_Details_5.png",
+        "caption": "Mavuika Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Mavuika_Character_Details_6.png",
+        "caption": "Mavuika Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Mavuika_Character_Details_7.png",
+        "caption": "Mavuika Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Mavuika_Character_Details_8.png",
+        "caption": "Mavuika Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Mavuika_Character_Details_9.png",
+        "caption": "Mavuika Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Mavuika_Character_Details_10.png",
+        "caption": "Mavuika Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Mavuika_Character_Details_11.png",
+        "caption": "Mavuika Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Mavuika_Character_Details_12.gif",
+        "caption": "Mavuika Details 12"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Mavuika_Character_Details_13.gif",
+        "caption": "Mavuika Details 13"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Mavuika_Character_Details_14.gif",
+        "caption": "Mavuika Details 14"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Mavuika_Character_Details_15.gif",
+        "caption": "Mavuika Details 15"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Mavuika_Character_Details_16.gif",
+        "caption": "Mavuika Details 16"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Mavuika_Character_Details_17.png",
+        "caption": "Mavuika Details 17"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Mavuika_Character_Details_18.png",
+        "caption": "Mavuika Details 18"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Mavuika_Character_Details_19.png",
+        "caption": "Mavuika Details 19"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Paimon%27s_Paintings_35_Mavuika_1.png",
+        "caption": "Crucial Pose! Set 35"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Icon_Emoji_Paimon%27s_Paintings_36_Mavuika_1.png",
+        "caption": "Blaze! Set 36"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Icon_Emoji_Paimon%27s_Paintings_38_Mavuika_1.png",
+        "caption": "Come Quick Set 38"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_Emoji_Paimon%27s_Paintings_38_Mavuika_2.png",
+        "caption": "Full Throttle Set 38"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Icon_Emoji_Paimon%27s_Paintings_38_Mavuika_3.png",
+        "caption": "Head to Head Set 38"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Icon_Emoji_Paimon%27s_Paintings_38_Mavuika_4.png",
+        "caption": "Cheers! Set 38"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Icon_Emoji_Paimon%27s_Paintings_40_Mavuika_1.png",
+        "caption": "Are You There? Set 40"
+      }
+    ]
+  }
 }

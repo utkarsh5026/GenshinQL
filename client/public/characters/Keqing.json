@@ -1,545 +1,568 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png",
-    "name": "Keqing",
-    "rarity": "5 Stars",
-    "element": "Electro",
-    "weaponType": "Sword",
-    "region": "Liyue",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png",
+  "name": "Keqing",
+  "rarity": "5 Stars",
+  "element": "Electro",
+  "weaponType": "Sword",
+  "region": "Liyue",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Talent_Yunlai_Swordsmanship.png",
+      "talentName": "Yunlai Swordsmanship",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Talent_Yunlai_Swordsmanship.png",
-            "talentName": "Yunlai Swordsmanship",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Yunlai_Swordsmanship_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Yunlai_Swordsmanship_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Yunlai_Swordsmanship_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "41.02",
-                    "44.36",
-                    "47.7",
-                    "52.47",
-                    "55.81",
-                    "59.62",
-                    "64.87",
-                    "70.12",
-                    "75.37",
-                    "81.09",
-                    "86.81"
-                ],
-                "2-Hit DMG (%)": [
-                    "41.02",
-                    "44.36",
-                    "47.7",
-                    "52.47",
-                    "55.81",
-                    "59.62",
-                    "64.87",
-                    "70.12",
-                    "75.37",
-                    "81.09",
-                    "86.81"
-                ],
-                "3-Hit DMG (%)": [
-                    "54.44",
-                    "58.87",
-                    "63.3",
-                    "69.63",
-                    "74.06",
-                    "79.13",
-                    "86.09",
-                    "93.05",
-                    "100.01",
-                    "107.61",
-                    "115.21"
-                ],
-                "4-Hit DMG (%)": [
-                    "31.48\n+\n34.4",
-                    "34.04\n+\n37.2",
-                    "36.6\n+\n40",
-                    "40.26\n+\n44",
-                    "42.82\n+\n46.8",
-                    "45.75\n+\n50",
-                    "49.78\n+\n54.4",
-                    "53.8\n+\n58.8",
-                    "57.83\n+\n63.2",
-                    "62.22\n+\n68",
-                    "66.61\n+\n72.8"
-                ],
-                "5-Hit DMG (%)": [
-                    "66.99",
-                    "72.45",
-                    "77.9",
-                    "85.69",
-                    "91.14",
-                    "97.38",
-                    "105.94",
-                    "114.51",
-                    "123.08",
-                    "132.43",
-                    "141.78"
-                ],
-                "Charged Attack DMG (%)": [
-                    "76.8\n+\n86",
-                    "83.05\n+\n93",
-                    "89.3\n+\n100",
-                    "98.23\n+\n110",
-                    "104.48\n+\n117",
-                    "111.63\n+\n125",
-                    "121.45\n+\n136",
-                    "131.27\n+\n147",
-                    "141.09\n+\n158",
-                    "151.81\n+\n170",
-                    "162.53\n+\n182"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "25"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Yunlai_Swordsmanship_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Stellar_Restoration.png",
-            "talentName": "Stellar Restoration",
-            "talentType": "Elemental Skill",
-            "description": "Hurls a Lightning Stiletto that annihilates her opponents like the swift thunder.\nWhen the Stiletto hits its target, it deals Electro DMG to opponents in a small AoE, and places a Stiletto Mark on the spot hit.\n\nHold\nHold to adjust the direction in which the Stiletto shall be thrown.\nStilettos thrown by the Hold attack mode can be suspended in mid-air, allowing Keqing to jump to them when using Stellar Restoration a second time.\n\nLightning Stiletto\nIf Keqing uses Stellar Restoration again or uses a Charged Attack while its duration lasts, it will clear the Stiletto Mark and produce different effects:",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Stellar_Restoration_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Stellar_Restoration_Hold_Preview.gif",
-                    "caption": "Hold"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Stellar_Restoration_Slashing_Preview.gif",
-                    "caption": "Teleport"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Stellar_Restoration_Thunderclap_Slash_Preview.gif",
-                    "caption": "Thunderclap Slash"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Stellar_Restoration_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Stellar_Restoration_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Stellar_Restoration_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "Lightning Stiletto DMG (%)": [
-                    "50.40",
-                    "54.18",
-                    "57.96",
-                    "63.00",
-                    "66.78",
-                    "70.56",
-                    "75.60",
-                    "80.64",
-                    "85.68",
-                    "90.72",
-                    "95.76",
-                    "100.80",
-                    "107.10",
-                    "113.40"
-                ],
-                "Slashing DMG (%)": [
-                    "168.00",
-                    "180.60",
-                    "193.20",
-                    "210.00",
-                    "222.60",
-                    "235.20",
-                    "252.00",
-                    "268.80",
-                    "285.60",
-                    "302.40",
-                    "319.20",
-                    "336.00",
-                    "357.00",
-                    "378.00"
-                ],
-                "Thunderclap Slash DMG (%)": [
-                    "84.00×2",
-                    "90.30×2",
-                    "96.60×2",
-                    "105.00×2",
-                    "111.30×2",
-                    "117.60×2",
-                    "126.00×2",
-                    "134.40×2",
-                    "142.80×2",
-                    "151.20×2",
-                    "159.60×2",
-                    "168.00×2",
-                    "178.50×2",
-                    "189.00×2"
-                ],
-                "CD": [
-                    "7.5s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Yunlai_Swordsmanship_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Starward_Sword.png",
-            "talentName": "Starward Sword",
-            "talentType": "Elemental Burst",
-            "description": "Keqing unleashes the power of lightning, dealing Electro DMG in an AOE.\nShe then blends into the shadow of her blade, striking a series of thunderclap-blows to nearby opponents simultaneously that deal multiple instances of Electro DMG.\nThe final attack deals massive AoE Electro DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Starward_Sword_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "88",
-                    "94.6",
-                    "101.2",
-                    "110",
-                    "116.6",
-                    "123.2",
-                    "132",
-                    "140.8",
-                    "149.6",
-                    "158.4",
-                    "167.2",
-                    "176",
-                    "187",
-                    "198"
-                ],
-                "Consecutive Slash DMG (%)": [
-                    "24×8",
-                    "25.8×8",
-                    "27.6×8",
-                    "30×8",
-                    "31.8×8",
-                    "33.6×8",
-                    "36×8",
-                    "38.4×8",
-                    "40.8×8",
-                    "43.2×8",
-                    "45.6×8",
-                    "48×8",
-                    "51×8",
-                    "54×8"
-                ],
-                "Last Attack DMG (%)": [
-                    "188.8",
-                    "202.96",
-                    "217.12",
-                    "236",
-                    "250.16",
-                    "264.32",
-                    "283.2",
-                    "302.08",
-                    "320.96",
-                    "339.84",
-                    "358.72",
-                    "377.6",
-                    "401.2",
-                    "424.8"
-                ],
-                "CD": [
-                    "12s"
-                ],
-                "Energy Cost": [
-                    "40"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Talent_Thundering_Penance.png",
-            "talentName": "Thundering Penance",
-            "talentType": "1st Ascension Passive",
-            "description": "After recasting Stellar Restoration while a Lightning Stiletto is present, Keqing's weapon gains an Electro Infusion for 5s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Talent_Aristocratic_Dignity.png",
-            "talentName": "Aristocratic Dignity",
-            "talentType": "4th Ascension Passive",
-            "description": "When casting Starward Sword, Keqing's CRIT Rate is increased by 15%, and her Energy Recharge is increased by 15%. This effect lasts for 8s.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Aristocratic_Dignity_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Talent_Land%27s_Overseer.png",
-            "talentName": "Land's Overseer",
-            "talentType": "Utility Passive",
-            "description": "When dispatched on an expedition in Liyue, time consumed is reduced by 25%.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Yunlai_Swordsmanship_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Constellation_Thundering_Might.png",
-            "name": "Thundering Might",
-            "level": 1,
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nPreview\nRecasting Stellar Restoration while a Lightning Stiletto is present causes Keqing to deal 50% of her ATK as AoE Electro DMG at the start point and terminus of her Blink."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Constellation_Keen_Extraction.png",
-            "name": "Keen Extraction",
-            "level": 2,
-            "description": "When Keqing's Normal and Charged Attacks hit opponents affected by Electro, they have a 50% chance of producing an Elemental Particle.\nThis effect can only occur once every 5s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Constellation_Foreseen_Reformation.png",
-            "name": "Foreseen Reformation",
-            "level": 3,
-            "description": "Increases the Level of Starward Sword by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Constellation_Attunement.png",
-            "name": "Attunement",
-            "level": 4,
-            "description": "For 10s after Keqing triggers an Electro-related Elemental Reaction, her ATK is increased by 25%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Constellation_Beckoning_Stars.png",
-            "name": "Beckoning Stars",
-            "level": 5,
-            "description": "Increases the Level of Stellar Restoration by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Constellation_Tenacious_Star.png",
-            "name": "Tenacious Star",
-            "level": 6,
-            "description": "When initiating a Normal Attack, a Charged Attack, Elemental Skill or Elemental Burst, Keqing gains a 6% Electro DMG Bonus for 8s.\nEffects triggered by Normal Attacks, Charged Attacks, Elemental Skills and Elemental Bursts are considered independent entities."
-        }
-    ],
-    "imageUrls": {},
-    "version": "1.3",
-    "gallery": {
-        "screenAnimations": [],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Namecard_Background_Keqing_Lightning_Stiletto.png",
-                "caption": "Keqing: Lightning Stiletto Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Keqing_Lightning_Stiletto.png",
-                "caption": "Keqing: Lightning Stiletto Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Namecard_Banner_Keqing_Lightning_Stiletto.png",
-                "caption": "Keqing: Lightning Stiletto Banner"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "41.02",
+          "44.36",
+          "47.7",
+          "52.47",
+          "55.81",
+          "59.62",
+          "64.87",
+          "70.12",
+          "75.37",
+          "81.09",
+          "86.81"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Yunlai_Swordsmanship_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Yunlai_Swordsmanship_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Yunlai_Swordsmanship_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Yunlai_Swordsmanship_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Yunlai_Swordsmanship_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Yunlai_Swordsmanship_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Starward_Sword_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Starward_Sword_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Stellar_Restoration_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Stellar_Restoration_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Stellar_Restoration_Hold_Preview.gif",
-                        "caption": "Hold",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Stellar_Restoration_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Stellar_Restoration_Slashing_Preview.gif",
-                        "caption": "Teleport",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Stellar_Restoration_Slashing_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Stellar_Restoration_Thunderclap_Slash_Preview.gif",
-                        "caption": "Thunderclap Slash",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Stellar_Restoration_Thunderclap_Slash_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Stellar_Restoration_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Stellar_Restoration_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Stellar_Restoration_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Stellar_Restoration_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Stellar_Restoration_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Stellar_Restoration_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "2-Hit DMG (%)": [
+          "41.02",
+          "44.36",
+          "47.7",
+          "52.47",
+          "55.81",
+          "59.62",
+          "64.87",
+          "70.12",
+          "75.37",
+          "81.09",
+          "86.81"
         ],
-        "detailedImages": [],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Icon_Emoji_Paimon%27s_Paintings_02_Keqing_1.png",
-                "caption": "Like Set 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Icon_Emoji_Paimon%27s_Paintings_02_Keqing_2.png",
-                "caption": "Good Night Set 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Icon_Emoji_Paimon%27s_Paintings_03_Keqing_1.png",
-                "caption": "Mad Set 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Icon_Emoji_Paimon%27s_Paintings_03_Keqing_2.png",
-                "caption": "I refuse. Set 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Icon_Emoji_Paimon%27s_Paintings_09_Keqing_1.png",
-                "caption": "Doubt Set 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Icon_Emoji_Paimon%27s_Paintings_09_Keqing_2.png",
-                "caption": "Congrats! Set 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Icon_Emoji_Paimon%27s_Paintings_30_Keqing_1.png",
-                "caption": "Shopping Set 30"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Emoji_Paimon%27s_Paintings_OnePlus_1.png",
-                "caption": "好吃 \"Tasty\" Set OnePlus"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Icon_Emoji_Paimon%27s_Paintings_OnePlus_2.png",
-                "caption": "忙碌 \"Busy\" Set OnePlus"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Icon_Emoji_Paimon%27s_Paintings_OnePlus_3.png",
-                "caption": "冲呀 \"Charge!\" Set OnePlus"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Icon_Emoji_Paimon%27s_Paintings_OnePlus_4.png",
-                "caption": "累了 \"Tired\" Set OnePlus"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Icon_Emoji_Paimon%27s_Paintings_OnePlus_5.png",
-                "caption": "期待 \"Anticipation\" Set OnePlus"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Icon_Emoji_Paimon%27s_Paintings_OnePlus_6.png",
-                "caption": "熬夜 \"Staying Up\" Set OnePlus"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_Emoji_Paimon%27s_Paintings_OnePlus_7.png",
-                "caption": "委屈 \"Injustice\" Set OnePlus"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Icon_Emoji_Paimon%27s_Paintings_OnePlus_8.png",
-                "caption": "生气 \"Angry\" Set OnePlus"
-            }
+        "3-Hit DMG (%)": [
+          "54.44",
+          "58.87",
+          "63.3",
+          "69.63",
+          "74.06",
+          "79.13",
+          "86.09",
+          "93.05",
+          "100.01",
+          "107.61",
+          "115.21"
+        ],
+        "4-Hit DMG (%)": [
+          "31.48\n+\n34.4",
+          "34.04\n+\n37.2",
+          "36.6\n+\n40",
+          "40.26\n+\n44",
+          "42.82\n+\n46.8",
+          "45.75\n+\n50",
+          "49.78\n+\n54.4",
+          "53.8\n+\n58.8",
+          "57.83\n+\n63.2",
+          "62.22\n+\n68",
+          "66.61\n+\n72.8"
+        ],
+        "5-Hit DMG (%)": [
+          "66.99",
+          "72.45",
+          "77.9",
+          "85.69",
+          "91.14",
+          "97.38",
+          "105.94",
+          "114.51",
+          "123.08",
+          "132.43",
+          "141.78"
+        ],
+        "Charged Attack DMG (%)": [
+          "76.8\n+\n86",
+          "83.05\n+\n93",
+          "89.3\n+\n100",
+          "98.23\n+\n110",
+          "104.48\n+\n117",
+          "111.63\n+\n125",
+          "121.45\n+\n136",
+          "131.27\n+\n147",
+          "141.09\n+\n158",
+          "151.81\n+\n170",
+          "162.53\n+\n182"
+        ],
+        "Charged Attack Stamina Cost": ["25"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Stellar_Restoration.png",
+      "talentName": "Stellar Restoration",
+      "talentType": "Elemental Skill",
+      "description": "Hurls a Lightning Stiletto that annihilates her opponents like the swift thunder.\nWhen the Stiletto hits its target, it deals Electro DMG to opponents in a small AoE, and places a Stiletto Mark on the spot hit.\n\nHold\nHold to adjust the direction in which the Stiletto shall be thrown.\nStilettos thrown by the Hold attack mode can be suspended in mid-air, allowing Keqing to jump to them when using Stellar Restoration a second time.\n\nLightning Stiletto\nIf Keqing uses Stellar Restoration again or uses a Charged Attack while its duration lasts, it will clear the Stiletto Mark and produce different effects:",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Stellar_Restoration_Press_Preview.gif",
+          "caption": "Press"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Stellar_Restoration_Hold_Preview.gif",
+          "caption": "Hold"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Stellar_Restoration_Slashing_Preview.gif",
+          "caption": "Teleport"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Stellar_Restoration_Thunderclap_Slash_Preview.gif",
+          "caption": "Thunderclap Slash"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Stellar_Restoration_Normal_Preview.gif",
+          "caption": "Normal Attack"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Stellar_Restoration_Charged_Preview.gif",
+          "caption": "Charged Attack"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Stellar_Restoration_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
+        }
+      ],
+      "scaling": {
+        "Lightning Stiletto DMG (%)": [
+          "50.40",
+          "54.18",
+          "57.96",
+          "63.00",
+          "66.78",
+          "70.56",
+          "75.60",
+          "80.64",
+          "85.68",
+          "90.72",
+          "95.76",
+          "100.80",
+          "107.10",
+          "113.40"
+        ],
+        "Slashing DMG (%)": [
+          "168.00",
+          "180.60",
+          "193.20",
+          "210.00",
+          "222.60",
+          "235.20",
+          "252.00",
+          "268.80",
+          "285.60",
+          "302.40",
+          "319.20",
+          "336.00",
+          "357.00",
+          "378.00"
+        ],
+        "Thunderclap Slash DMG (%)": [
+          "84.00×2",
+          "90.30×2",
+          "96.60×2",
+          "105.00×2",
+          "111.30×2",
+          "117.60×2",
+          "126.00×2",
+          "134.40×2",
+          "142.80×2",
+          "151.20×2",
+          "159.60×2",
+          "168.00×2",
+          "178.50×2",
+          "189.00×2"
+        ],
+        "CD": ["7.5s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Starward_Sword.png",
+      "talentName": "Starward Sword",
+      "talentType": "Elemental Burst",
+      "description": "Keqing unleashes the power of lightning, dealing Electro DMG in an AOE.\nShe then blends into the shadow of her blade, striking a series of thunderclap-blows to nearby opponents simultaneously that deal multiple instances of Electro DMG.\nThe final attack deals massive AoE Electro DMG.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Starward_Sword_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "88",
+          "94.6",
+          "101.2",
+          "110",
+          "116.6",
+          "123.2",
+          "132",
+          "140.8",
+          "149.6",
+          "158.4",
+          "167.2",
+          "176",
+          "187",
+          "198"
+        ],
+        "Consecutive Slash DMG (%)": [
+          "24×8",
+          "25.8×8",
+          "27.6×8",
+          "30×8",
+          "31.8×8",
+          "33.6×8",
+          "36×8",
+          "38.4×8",
+          "40.8×8",
+          "43.2×8",
+          "45.6×8",
+          "48×8",
+          "51×8",
+          "54×8"
+        ],
+        "Last Attack DMG (%)": [
+          "188.8",
+          "202.96",
+          "217.12",
+          "236",
+          "250.16",
+          "264.32",
+          "283.2",
+          "302.08",
+          "320.96",
+          "339.84",
+          "358.72",
+          "377.6",
+          "401.2",
+          "424.8"
+        ],
+        "CD": ["12s"],
+        "Energy Cost": ["40"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Talent_Thundering_Penance.png",
+      "talentName": "Thundering Penance",
+      "talentType": "1st Ascension Passive",
+      "description": "After recasting Stellar Restoration while a Lightning Stiletto is present, Keqing's weapon gains an Electro Infusion for 5s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Talent_Aristocratic_Dignity.png",
+      "talentName": "Aristocratic Dignity",
+      "talentType": "4th Ascension Passive",
+      "description": "When casting Starward Sword, Keqing's CRIT Rate is increased by 15%, and her Energy Recharge is increased by 15%. This effect lasts for 8s.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Aristocratic_Dignity_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Talent_Land%27s_Overseer.png",
+      "talentName": "Land's Overseer",
+      "talentType": "Utility Passive",
+      "description": "When dispatched on an expedition in Liyue, time consumed is reduced by 25%.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Constellation_Thundering_Might.png",
+      "name": "Thundering Might",
+      "level": 1,
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nPreview\nRecasting Stellar Restoration while a Lightning Stiletto is present causes Keqing to deal 50% of her ATK as AoE Electro DMG at the start point and terminus of her Blink."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Constellation_Keen_Extraction.png",
+      "name": "Keen Extraction",
+      "level": 2,
+      "description": "When Keqing's Normal and Charged Attacks hit opponents affected by Electro, they have a 50% chance of producing an Elemental Particle.\nThis effect can only occur once every 5s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Constellation_Foreseen_Reformation.png",
+      "name": "Foreseen Reformation",
+      "level": 3,
+      "description": "Increases the Level of Starward Sword by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Constellation_Attunement.png",
+      "name": "Attunement",
+      "level": 4,
+      "description": "For 10s after Keqing triggers an Electro-related Elemental Reaction, her ATK is increased by 25%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Constellation_Beckoning_Stars.png",
+      "name": "Beckoning Stars",
+      "level": 5,
+      "description": "Increases the Level of Stellar Restoration by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Constellation_Tenacious_Star.png",
+      "name": "Tenacious Star",
+      "level": 6,
+      "description": "When initiating a Normal Attack, a Charged Attack, Elemental Skill or Elemental Burst, Keqing gains a 6% Electro DMG Bonus for 8s.\nEffects triggered by Normal Attacks, Charged Attacks, Elemental Skills and Elemental Bursts are considered independent entities."
+    }
+  ],
+  "imageUrls": {},
+  "version": "1.3",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Idle_Keqing_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Idle_Keqing_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Idle_Keqing_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Idle_Keqing_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Talent_Menu_Keqing.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Talent_Menu_Keqing.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Weapon_Menu_Keqing.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Weapon_Menu_Keqing.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Party_Setup_Keqing.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Party_Setup_Keqing.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Namecard_Background_Keqing_Lightning_Stiletto.png",
+        "caption": "Keqing: Lightning Stiletto Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Keqing_Lightning_Stiletto.png",
+        "caption": "Keqing: Lightning Stiletto Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Namecard_Banner_Keqing_Lightning_Stiletto.png",
+        "caption": "Keqing: Lightning Stiletto Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Yunlai_Swordsmanship_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Yunlai_Swordsmanship_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Yunlai_Swordsmanship_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Yunlai_Swordsmanship_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Yunlai_Swordsmanship_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Yunlai_Swordsmanship_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Starward_Sword_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Starward_Sword_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Stellar_Restoration_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Stellar_Restoration_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Stellar_Restoration_Hold_Preview.gif",
+            "caption": "Hold",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Stellar_Restoration_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Stellar_Restoration_Slashing_Preview.gif",
+            "caption": "Teleport",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Stellar_Restoration_Slashing_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Stellar_Restoration_Thunderclap_Slash_Preview.gif",
+            "caption": "Thunderclap Slash",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Stellar_Restoration_Thunderclap_Slash_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Stellar_Restoration_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Stellar_Restoration_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Stellar_Restoration_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Stellar_Restoration_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Stellar_Restoration_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Stellar_Restoration_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Icon_Emoji_Paimon%27s_Paintings_02_Keqing_1.png",
+        "caption": "Like Set 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Icon_Emoji_Paimon%27s_Paintings_02_Keqing_2.png",
+        "caption": "Good Night Set 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Icon_Emoji_Paimon%27s_Paintings_03_Keqing_1.png",
+        "caption": "Mad Set 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Icon_Emoji_Paimon%27s_Paintings_03_Keqing_2.png",
+        "caption": "I refuse. Set 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Icon_Emoji_Paimon%27s_Paintings_09_Keqing_1.png",
+        "caption": "Doubt Set 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Icon_Emoji_Paimon%27s_Paintings_09_Keqing_2.png",
+        "caption": "Congrats! Set 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Icon_Emoji_Paimon%27s_Paintings_30_Keqing_1.png",
+        "caption": "Shopping Set 30"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Emoji_Paimon%27s_Paintings_OnePlus_1.png",
+        "caption": "好吃 \"Tasty\" Set OnePlus"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Icon_Emoji_Paimon%27s_Paintings_OnePlus_2.png",
+        "caption": "忙碌 \"Busy\" Set OnePlus"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Icon_Emoji_Paimon%27s_Paintings_OnePlus_3.png",
+        "caption": "冲呀 \"Charge!\" Set OnePlus"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Icon_Emoji_Paimon%27s_Paintings_OnePlus_4.png",
+        "caption": "累了 \"Tired\" Set OnePlus"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Icon_Emoji_Paimon%27s_Paintings_OnePlus_5.png",
+        "caption": "期待 \"Anticipation\" Set OnePlus"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Icon_Emoji_Paimon%27s_Paintings_OnePlus_6.png",
+        "caption": "熬夜 \"Staying Up\" Set OnePlus"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_Emoji_Paimon%27s_Paintings_OnePlus_7.png",
+        "caption": "委屈 \"Injustice\" Set OnePlus"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Icon_Emoji_Paimon%27s_Paintings_OnePlus_8.png",
+        "caption": "生气 \"Angry\" Set OnePlus"
+      }
+    ]
+  }
 }

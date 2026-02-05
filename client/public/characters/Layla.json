@@ -1,451 +1,439 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Layla_Icon.png",
-    "name": "Layla",
-    "rarity": "4 Stars",
-    "element": "Cryo",
-    "weaponType": "Sword",
-    "region": "Sumeru",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Layla_Icon.png",
+  "name": "Layla",
+  "rarity": "4 Stars",
+  "element": "Cryo",
+  "weaponType": "Sword",
+  "region": "Sumeru",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png",
+      "talentName": "Sword of the Radiant Path",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 3 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png",
-            "talentName": "Sword of the Radiant Path",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 3 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Sword_of_the_Radiant_Path_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Sword_of_the_Radiant_Path_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sword_of_the_Radiant_Path_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "51.22",
-                    "55.39",
-                    "59.55",
-                    "65.51",
-                    "69.68",
-                    "74.44",
-                    "80.99",
-                    "87.55",
-                    "94.1",
-                    "101.24",
-                    "108.39"
-                ],
-                "2-Hit DMG (%)": [
-                    "48.48",
-                    "52.43",
-                    "56.38",
-                    "62.01",
-                    "65.96",
-                    "70.47",
-                    "76.67",
-                    "82.87",
-                    "89.07",
-                    "95.84",
-                    "102.6"
-                ],
-                "3-Hit DMG (%)": [
-                    "72.97",
-                    "78.91",
-                    "84.85",
-                    "93.34",
-                    "99.28",
-                    "106.07",
-                    "115.4",
-                    "124.73",
-                    "134.07",
-                    "144.25",
-                    "154.43"
-                ],
-                "Charged Attack DMG (%)": [
-                    "47.73\n+\n52.55",
-                    "51.62\n+\n56.82",
-                    "55.5\n+\n61.1",
-                    "61.05\n+\n67.21",
-                    "64.94\n+\n71.49",
-                    "69.38\n+\n76.38",
-                    "75.48\n+\n83.1",
-                    "81.58\n+\n89.82",
-                    "87.69\n+\n96.54",
-                    "94.35\n+\n103.87",
-                    "101.01\n+\n111.2"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "20"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Sword_of_the_Radiant_Path_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Talent_Nights_of_Formal_Focus.png",
-            "talentName": "Nights of Formal Focus",
-            "talentType": "Elemental Skill",
-            "description": "Puts forth a shield known as the Curtain of Slumber, dealing AoE Cryo DMG.\nThe Curtain of Slumber's DMG Absorption is based on Layla's Max HP and absorbs Cryo DMG with 250% effectiveness. When the shield is deployed, Layla will have Cryo applied to her briefly.\n\nNight Stars and Shooting Stars\nWhile the Curtain of Slumber is active, it will create 1 Night Star that will be attached to it every 1.5s. When a character protected by this shield uses an Elemental Skill, 2 Night Stars will be created. Night Stars can be created once every 0.3s in this way. A maximum of 4 Night Stars can be accumulated at any one time.\nOnce the Curtain of Slumber has accumulated 4 Night Stars and there are opponents nearby, these Night Stars will transform into homing Shooting Stars that will be fired off in sequence, dealing Cryo DMG to any opponents hit.\nIf the Curtain of Slumber's duration ends or it is destroyed, the Night Stars will disappear. If they are already being fired off as Shooting Stars, these Shooting Stars will last until this wave of shots ends.\n\nNew Night Stars cannot be created until the previous wave of Shooting Stars has been fired completely.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Nights_of_Formal_Focus_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "12.8",
-                    "13.76",
-                    "14.72",
-                    "16",
-                    "16.96",
-                    "17.92",
-                    "19.2",
-                    "20.48",
-                    "21.76",
-                    "23.04",
-                    "24.32",
-                    "25.6",
-                    "27.2",
-                    "28.8"
-                ],
-                "Shooting Star DMG (%)": [
-                    "14.72",
-                    "15.82",
-                    "16.93",
-                    "18.4",
-                    "19.5",
-                    "20.61",
-                    "22.08",
-                    "23.55",
-                    "25.02",
-                    "26.5",
-                    "27.97",
-                    "29.44",
-                    "31.28",
-                    "33.1"
-                ],
-                "Base Shield DMG Absorption (% Max HP +)": [
-                    "10.8\n+\n1,040",
-                    "11.61\n+\n1,144",
-                    "12.42\n+\n1,256",
-                    "13.5\n+\n1,378",
-                    "14.31\n+\n1,508",
-                    "15.12\n+\n1,646",
-                    "16.2\n+\n1,794",
-                    "17.28\n+\n1,950",
-                    "18.36\n+\n2,114",
-                    "19.44\n+\n2,288",
-                    "20.52\n+\n2,470",
-                    "21.6\n+\n2,660",
-                    "22.95\n+\n2,860",
-                    "24.3\n+\n3,068"
-                ],
-                "Shield Duration": [
-                    "12s"
-                ],
-                "CD": [
-                    "12s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Sword_of_the_Radiant_Path_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Dream_of_the_Star-Stream_Shaker.png",
-            "talentName": "Dream of the Star-Stream Shaker",
-            "talentType": "Elemental Burst",
-            "description": "Unleashes a Celestial Dreamsphere that constantly fires Starlight Slugs at opponents within its AoE, dealing Cryo DMG.\nWhen a Starlight Slug hits, it will generate 1 Night Star for nearby Curtains of Slumber. Each Curtain of Slumber can gain 1 Night Star this way every 0.5s.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Dream_of_the_Star-Stream_Shaker_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Starlight Slug DMG (% Max HP)": [
-                    "4.65",
-                    "5",
-                    "5.35",
-                    "5.81",
-                    "6.16",
-                    "6.51",
-                    "6.97",
-                    "7.44",
-                    "7.9",
-                    "8.37",
-                    "8.83",
-                    "9.3",
-                    "9.88"
-                ],
-                "Duration": [
-                    "12s"
-                ],
-                "CD": [
-                    "12s"
-                ],
-                "Energy Cost": [
-                    "40"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Talent_Like_Nascent_Light.png",
-            "talentName": "Like Nascent Light",
-            "talentType": "1st Ascension Passive",
-            "description": "While the Curtain of Slumber is active, the Deep Sleep effect will activate each time the Curtain gains 1 Night Star:\nThe Shield Strength of a character under the effect of the Curtain of Slumber increases by 6%.\nThis effect can have a maximum of 4 stacks and persists until the Curtain of Slumber disappears.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Sweet_Slumber_Undisturbed.png",
-            "talentName": "Sweet Slumber Undisturbed",
-            "talentType": "4th Ascension Passive",
-            "description": "The DMG dealt by the Shooting Stars fired by Nights of Formal Focus is increased by 1.5% of Layla's Max HP.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Shadowy_Dream-Signs.png",
-            "talentName": "Shadowy Dream-Signs",
-            "talentType": "Utility Passive",
-            "description": "When Layla crafts Character Talent Materials, she has a 10% chance to receive double the product.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sword_of_the_Radiant_Path_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Constellation_Fortress_of_Fantasy.png",
-            "name": "Fortress of Fantasy",
-            "level": 1,
-            "description": "Description\nPreview\nThe Shield Absorption of the Curtain of Slumber generated by Nights of Formal Focus is increased by 20%.\nAdditionally, when unleashing Nights of Formal Focus, she will generate a shield for any nearby party members who are not being protected by a Curtain of Slumber. This shield will have 35% of the absorption of a Curtain of Slumber, will last for 12s, and will absorb Cryo DMG with 250% effectiveness."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Constellation_Light%27s_Remit.png",
-            "name": "Light's Remit",
-            "level": 2,
-            "description": "When Shooting Stars from Nights of Formal Focus strike opponents, they will each restore 1 Energy to Layla. Each Shooting Star can restore Energy to her in this manner once."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Constellation_Secrets_of_the_Night.png",
-            "name": "Secrets of the Night",
-            "level": 3,
-            "description": "Increases the Level of Nights of Formal Focus by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Constellation_Starry_Illumination.png",
-            "name": "Starry Illumination",
-            "level": 4,
-            "description": "When Nights of Formal Focus starts to fire off Shooting Stars, it will grant all nearby party members the Dawn Star effect, causing their Normal and Charged Attack DMG to increase based on 5% of Layla's Max HP.\nDawn Star can last up to 3s and will be removed 0.05s after dealing Normal or Charged Attack DMG."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Constellation_Stream_of_Consciousness.png",
-            "name": "Stream of Consciousness",
-            "level": 5,
-            "description": "Increases the Level of Dream of the Star-Stream Shaker by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Constellation_Radiant_Soulfire.png",
-            "name": "Radiant Soulfire",
-            "level": 6,
-            "description": "Shooting Stars from Nights of Formal Focus deal 40% increased DMG, and Starlight Slugs from Dream of the Star-Stream Shaker deal 40% increased DMG.\nAdditionally, the interval between the creation of Night Stars via Nights of Formal Focus is decreased by 20%."
-        }
-    ],
-    "imageUrls": {},
-    "version": "3.2",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "51.22",
+          "55.39",
+          "59.55",
+          "65.51",
+          "69.68",
+          "74.44",
+          "80.99",
+          "87.55",
+          "94.1",
+          "101.24",
+          "108.39"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Namecard_Background_Layla_Daydream.png",
-                "caption": "Layla: Daydream Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Layla_Daydream.png",
-                "caption": "Layla: Daydream Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Namecard_Banner_Layla_Daydream.png",
-                "caption": "Layla: Daydream Banner"
-            }
+        "2-Hit DMG (%)": [
+          "48.48",
+          "52.43",
+          "56.38",
+          "62.01",
+          "65.96",
+          "70.47",
+          "76.67",
+          "82.87",
+          "89.07",
+          "95.84",
+          "102.6"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    },
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    },
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "72.97",
+          "78.91",
+          "84.85",
+          "93.34",
+          "99.28",
+          "106.07",
+          "115.4",
+          "124.73",
+          "134.07",
+          "144.25",
+          "154.43"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Layla_Character_Details_1.png",
-                "caption": "Layla Details 1 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Layla_Character_Details_2.png",
-                "caption": "Layla Details 2 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Layla_Character_Details_3.gif",
-                "caption": "Layla Details 3 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Layla_Character_Details_4.gif",
-                "caption": "Layla Details 4 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Layla_Character_Details_5.gif",
-                "caption": "Layla Details 5 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Layla_Character_Details_6.png",
-                "caption": "Layla Details 6 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Layla_Character_Details_7.png",
-                "caption": "Layla Details 7 Official HoYoLAB Post"
-            }
+        "Charged Attack DMG (%)": [
+          "47.73\n+\n52.55",
+          "51.62\n+\n56.82",
+          "55.5\n+\n61.1",
+          "61.05\n+\n67.21",
+          "64.94\n+\n71.49",
+          "69.38\n+\n76.38",
+          "75.48\n+\n83.1",
+          "81.58\n+\n89.82",
+          "87.69\n+\n96.54",
+          "94.35\n+\n103.87",
+          "101.01\n+\n111.2"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Icon_Emoji_Paimon%27s_Paintings_19_Layla_1.png",
-                "caption": "*cries in poverty* Set 19"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Icon_Emoji_Paimon%27s_Paintings_19_Layla_2.png",
-                "caption": "Sleepwalk Set 19"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Icon_Emoji_Paimon%27s_Paintings_19_Layla_3.png",
-                "caption": "Zero Progress Set 19"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Emoji_Paimon%27s_Paintings_19_Layla_4.png",
-                "caption": "Mozzie Swat Set 19"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Icon_Emoji_Paimon%27s_Paintings_23_Layla_1.png",
-                "caption": "You Can Do This! Set 23"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Icon_Emoji_Paimon%27s_Paintings_45_Layla_1.png",
-                "caption": "Faint Set 45"
-            }
+        "Charged Attack Stamina Cost": ["20"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Talent_Nights_of_Formal_Focus.png",
+      "talentName": "Nights of Formal Focus",
+      "talentType": "Elemental Skill",
+      "description": "Puts forth a shield known as the Curtain of Slumber, dealing AoE Cryo DMG.\nThe Curtain of Slumber's DMG Absorption is based on Layla's Max HP and absorbs Cryo DMG with 250% effectiveness. When the shield is deployed, Layla will have Cryo applied to her briefly.\n\nNight Stars and Shooting Stars\nWhile the Curtain of Slumber is active, it will create 1 Night Star that will be attached to it every 1.5s. When a character protected by this shield uses an Elemental Skill, 2 Night Stars will be created. Night Stars can be created once every 0.3s in this way. A maximum of 4 Night Stars can be accumulated at any one time.\nOnce the Curtain of Slumber has accumulated 4 Night Stars and there are opponents nearby, these Night Stars will transform into homing Shooting Stars that will be fired off in sequence, dealing Cryo DMG to any opponents hit.\nIf the Curtain of Slumber's duration ends or it is destroyed, the Night Stars will disappear. If they are already being fired off as Shooting Stars, these Shooting Stars will last until this wave of shots ends.\n\nNew Night Stars cannot be created until the previous wave of Shooting Stars has been fired completely.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Nights_of_Formal_Focus_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "12.8",
+          "13.76",
+          "14.72",
+          "16",
+          "16.96",
+          "17.92",
+          "19.2",
+          "20.48",
+          "21.76",
+          "23.04",
+          "24.32",
+          "25.6",
+          "27.2",
+          "28.8"
+        ],
+        "Shooting Star DMG (%)": [
+          "14.72",
+          "15.82",
+          "16.93",
+          "18.4",
+          "19.5",
+          "20.61",
+          "22.08",
+          "23.55",
+          "25.02",
+          "26.5",
+          "27.97",
+          "29.44",
+          "31.28",
+          "33.1"
+        ],
+        "Base Shield DMG Absorption (% Max HP +)": [
+          "10.8\n+\n1,040",
+          "11.61\n+\n1,144",
+          "12.42\n+\n1,256",
+          "13.5\n+\n1,378",
+          "14.31\n+\n1,508",
+          "15.12\n+\n1,646",
+          "16.2\n+\n1,794",
+          "17.28\n+\n1,950",
+          "18.36\n+\n2,114",
+          "19.44\n+\n2,288",
+          "20.52\n+\n2,470",
+          "21.6\n+\n2,660",
+          "22.95\n+\n2,860",
+          "24.3\n+\n3,068"
+        ],
+        "Shield Duration": ["12s"],
+        "CD": ["12s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Dream_of_the_Star-Stream_Shaker.png",
+      "talentName": "Dream of the Star-Stream Shaker",
+      "talentType": "Elemental Burst",
+      "description": "Unleashes a Celestial Dreamsphere that constantly fires Starlight Slugs at opponents within its AoE, dealing Cryo DMG.\nWhen a Starlight Slug hits, it will generate 1 Night Star for nearby Curtains of Slumber. Each Curtain of Slumber can gain 1 Night Star this way every 0.5s.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Dream_of_the_Star-Stream_Shaker_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Starlight Slug DMG (% Max HP)": [
+          "4.65",
+          "5",
+          "5.35",
+          "5.81",
+          "6.16",
+          "6.51",
+          "6.97",
+          "7.44",
+          "7.9",
+          "8.37",
+          "8.83",
+          "9.3",
+          "9.88"
+        ],
+        "Duration": ["12s"],
+        "CD": ["12s"],
+        "Energy Cost": ["40"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Talent_Like_Nascent_Light.png",
+      "talentName": "Like Nascent Light",
+      "talentType": "1st Ascension Passive",
+      "description": "While the Curtain of Slumber is active, the Deep Sleep effect will activate each time the Curtain gains 1 Night Star:\nThe Shield Strength of a character under the effect of the Curtain of Slumber increases by 6%.\nThis effect can have a maximum of 4 stacks and persists until the Curtain of Slumber disappears.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Sweet_Slumber_Undisturbed.png",
+      "talentName": "Sweet Slumber Undisturbed",
+      "talentType": "4th Ascension Passive",
+      "description": "The DMG dealt by the Shooting Stars fired by Nights of Formal Focus is increased by 1.5% of Layla's Max HP.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Shadowy_Dream-Signs.png",
+      "talentName": "Shadowy Dream-Signs",
+      "talentType": "Utility Passive",
+      "description": "When Layla crafts Character Talent Materials, she has a 10% chance to receive double the product.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Constellation_Fortress_of_Fantasy.png",
+      "name": "Fortress of Fantasy",
+      "level": 1,
+      "description": "Description\nPreview\nThe Shield Absorption of the Curtain of Slumber generated by Nights of Formal Focus is increased by 20%.\nAdditionally, when unleashing Nights of Formal Focus, she will generate a shield for any nearby party members who are not being protected by a Curtain of Slumber. This shield will have 35% of the absorption of a Curtain of Slumber, will last for 12s, and will absorb Cryo DMG with 250% effectiveness."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Constellation_Light%27s_Remit.png",
+      "name": "Light's Remit",
+      "level": 2,
+      "description": "When Shooting Stars from Nights of Formal Focus strike opponents, they will each restore 1 Energy to Layla. Each Shooting Star can restore Energy to her in this manner once."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Constellation_Secrets_of_the_Night.png",
+      "name": "Secrets of the Night",
+      "level": 3,
+      "description": "Increases the Level of Nights of Formal Focus by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Constellation_Starry_Illumination.png",
+      "name": "Starry Illumination",
+      "level": 4,
+      "description": "When Nights of Formal Focus starts to fire off Shooting Stars, it will grant all nearby party members the Dawn Star effect, causing their Normal and Charged Attack DMG to increase based on 5% of Layla's Max HP.\nDawn Star can last up to 3s and will be removed 0.05s after dealing Normal or Charged Attack DMG."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Constellation_Stream_of_Consciousness.png",
+      "name": "Stream of Consciousness",
+      "level": 5,
+      "description": "Increases the Level of Dream of the Star-Stream Shaker by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Constellation_Radiant_Soulfire.png",
+      "name": "Radiant Soulfire",
+      "level": 6,
+      "description": "Shooting Stars from Nights of Formal Focus deal 40% increased DMG, and Starlight Slugs from Dream of the Star-Stream Shaker deal 40% increased DMG.\nAdditionally, the interval between the creation of Night Stars via Nights of Formal Focus is decreased by 20%."
+    }
+  ],
+  "imageUrls": {},
+  "version": "3.2",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Idle_Layla_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Idle_Layla_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Talent_Menu_Layla.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Weapon_Menu_Layla.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Party_Setup_Layla.gif",
+        "caption": "Party Setup",
+        "videoUrl": "",
+        "videoType": ""
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Namecard_Background_Layla_Daydream.png",
+        "caption": "Layla: Daydream Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Layla_Daydream.png",
+        "caption": "Layla: Daydream Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Namecard_Banner_Layla_Daydream.png",
+        "caption": "Layla: Daydream Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Sword_of_the_Radiant_Path_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "",
+            "videoType": ""
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Sword_of_the_Radiant_Path_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "",
+            "videoType": ""
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sword_of_the_Radiant_Path_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "",
+            "videoType": ""
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Dream_of_the_Star-Stream_Shaker_Preview.gif",
+            "caption": "",
+            "videoUrl": "",
+            "videoType": ""
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Nights_of_Formal_Focus_Preview.gif",
+            "caption": "",
+            "videoUrl": "",
+            "videoType": ""
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Layla_Character_Details_1.png",
+        "caption": "Layla Details 1 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Layla_Character_Details_2.png",
+        "caption": "Layla Details 2 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Layla_Character_Details_3.gif",
+        "caption": "Layla Details 3 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Layla_Character_Details_4.gif",
+        "caption": "Layla Details 4 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Layla_Character_Details_5.gif",
+        "caption": "Layla Details 5 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Layla_Character_Details_6.png",
+        "caption": "Layla Details 6 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Layla_Character_Details_7.png",
+        "caption": "Layla Details 7 Official HoYoLAB Post"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Icon_Emoji_Paimon%27s_Paintings_19_Layla_1.png",
+        "caption": "*cries in poverty* Set 19"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Icon_Emoji_Paimon%27s_Paintings_19_Layla_2.png",
+        "caption": "Sleepwalk Set 19"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Icon_Emoji_Paimon%27s_Paintings_19_Layla_3.png",
+        "caption": "Zero Progress Set 19"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Emoji_Paimon%27s_Paintings_19_Layla_4.png",
+        "caption": "Mozzie Swat Set 19"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Icon_Emoji_Paimon%27s_Paintings_23_Layla_1.png",
+        "caption": "You Can Do This! Set 23"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Icon_Emoji_Paimon%27s_Paintings_45_Layla_1.png",
+        "caption": "Faint Set 45"
+      }
+    ]
+  }
 }
