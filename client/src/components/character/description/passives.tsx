@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
+import { AbilityTag } from '@/components/character/utils/AbilityTag.tsx';
 import {
   Card,
   CardContent,
@@ -7,6 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card.tsx';
 import { CachedImage } from '@/components/utils/CachedImage';
+import { extractConstellationTags } from '@/lib/constellationTags';
 import { Talent } from '@/types';
 
 import ListSplitter from '../../utils/list-splitter.tsx';
@@ -81,6 +83,12 @@ const CharacterPassives: React.FC<CharacterPassivesProps> = ({ passives }) => {
     <div className="flex flex-col gap-5">
       {passives.sort(sortPassives).map((passive) => {
         const styles = getPassiveStyles(passive.talentType);
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        const tags = useMemo(
+          () => extractConstellationTags(passive.description),
+          [passive.description]
+        );
+
         return (
           <Card
             key={passive.talentName}
@@ -129,6 +137,14 @@ const CharacterPassives: React.FC<CharacterPassivesProps> = ({ passives }) => {
                   >
                     {passive.talentType}
                   </span>
+                  {/* Tags */}
+                  {tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mt-2">
+                      {tags.map((tagId) => (
+                        <AbilityTag key={tagId} tagId={tagId} size="xs" />
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </CardHeader>

@@ -1,131 +1,11 @@
-import {
-  Activity,
-  Battery,
-  Circle,
-  Clock,
-  Flame,
-  FlaskConical,
-  Footprints,
-  GraduationCap,
-  Heart,
-  Layers,
-  Move,
-  Plus,
-  Shield,
-  Sparkles,
-  Sword,
-  Target,
-  Timer,
-  TrendingUp,
-  Zap,
-} from 'lucide-react';
-import React, { memo, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
+import { AbilityTag } from '@/components/character/utils/AbilityTag';
 import { ListSplitter } from '@/components/utils';
 import { CachedImage } from '@/components/utils/CachedImage';
-import {
-  extractConstellationTags,
-  getTagConfig,
-} from '@/lib/constellationTags';
+import { extractConstellationTags } from '@/lib/constellationTags';
 import { Constellation } from '@/types';
 
-interface ConstellationTagProps {
-  tagId: string;
-  size?: 'xs' | 'sm';
-}
-
-/**
- * Get Tailwind classes for tag styling based on color name.
- * Uses project's custom theme colors from index.css.
- */
-const getTagClasses = (color: string): string => {
-  const colorMap: Record<string, string> = {
-    pyro: 'bg-pyro-500/15 text-pyro-400',
-    hydro: 'bg-hydro-500/15 text-hydro-400',
-    electro: 'bg-electro-500/15 text-electro-400',
-    cryo: 'bg-cryo-500/15 text-cryo-400',
-    geo: 'bg-geo-500/15 text-geo-400',
-    dendro: 'bg-dendro-500/15 text-dendro-400',
-    anemo: 'bg-anemo-500/15 text-anemo-400',
-
-    success: 'bg-success-500/15 text-success-400',
-    warning: 'bg-warning-500/15 text-warning-400',
-    info: 'bg-info-500/15 text-info-400',
-    error: 'bg-error-500/15 text-error-400',
-
-    celestial: 'bg-celestial-500/15 text-celestial-400',
-    starlight: 'bg-starlight-500/15 text-starlight-400',
-    midnight: 'bg-midnight-500/15 text-midnight-400',
-
-    legendary: 'bg-legendary-500/15 text-legendary-400',
-    epic: 'bg-epic-500/15 text-epic-400',
-    rare: 'bg-rare-500/15 text-rare-400',
-    uncommon: 'bg-uncommon-500/15 text-uncommon-400',
-    common: 'bg-common-500/15 text-common-400',
-  };
-
-  return colorMap[color] ?? 'bg-common-500/15 text-common-400';
-};
-
-/**
- * Icon mapping for each tag category.
- */
-const TAG_ICONS: Record<string, React.ElementType> = {
-  dmg: Flame,
-  'crit-rate': Target,
-  'crit-dmg': Sparkles,
-  atk: Sword,
-  'elemental-mastery': FlaskConical,
-  hp: Heart,
-  def: Shield,
-  shield: Shield,
-  healing: Plus,
-  resistance: Circle,
-  energy: Battery,
-  'cd-reduction': Timer,
-  duration: Clock,
-  charge: Zap,
-  stamina: Activity,
-  'talent-level': GraduationCap,
-  stack: Layers,
-  'elemental-reaction': FlaskConical,
-  movement: Footprints,
-  aoe: Move,
-};
-
-/**
- * Small badge component for displaying individual constellation tags.
- * Uses dynamic styling based on tag category color with icons.
- */
-const ConstellationTag: React.FC<ConstellationTagProps> = memo(
-  ({ tagId, size = 'xs' }) => {
-    const config = getTagConfig(tagId);
-    if (!config) return null;
-
-    const Icon = TAG_ICONS[tagId] ?? TrendingUp;
-    const sizeClasses =
-      size === 'xs' ? 'text-[10px] px-1.5 py-0.5' : 'text-xs px-2 py-0.5';
-    const iconSize = size === 'xs' ? 10 : 12;
-    const colorClasses = getTagClasses(config.color);
-
-    return (
-      <span
-        className={`
-        inline-flex items-center gap-0.5 rounded-lg font-medium
-        ${sizeClasses}
-        ${colorClasses}
-      `}
-      >
-        <Icon size={iconSize} className="shrink-0" />
-        {config.label}
-      </span>
-    );
-  }
-);
-
-/**
- * Returns element-specific Tailwind classes for constellation styling
- */
 const getElementClasses = (element?: string) => {
   const elementLower = element?.toLowerCase() ?? '';
   const elementClassMap: Record<
@@ -193,7 +73,6 @@ const getElementClasses = (element?: string) => {
 
 const getConstellationStyles = (level: number) => {
   const talentUpgradeStyle = {
-    // C3 & C5 - Talent Level Increase (green/success)
     isTalentUpgrade: true,
   };
 
@@ -273,7 +152,6 @@ const ConstellationItem: React.FC<ConstellationItemProps> = ({
 
       {/* Content */}
       <div className="flex-1 min-w-0 space-y-1.5">
-        {/* Title with inline level */}
         <div className="flex items-center gap-2 flex-wrap">
           <span
             className={`
@@ -298,7 +176,7 @@ const ConstellationItem: React.FC<ConstellationItemProps> = ({
         {tags.length > 0 && (
           <div className="flex flex-wrap gap-1">
             {tags.map((tagId) => (
-              <ConstellationTag key={tagId} tagId={tagId} size="xs" />
+              <AbilityTag key={tagId} tagId={tagId} size="xs" />
             ))}
           </div>
         )}

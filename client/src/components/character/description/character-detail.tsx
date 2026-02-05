@@ -5,7 +5,6 @@ import { useFetchCharacter } from '@/stores/useCharactersStore';
 import type { CharacterDetailed as CharacterDetailedType } from '@/types';
 import { decideColor } from '@/utils/color';
 
-import CharacterCommandPalette from '../command-palette/character-command-palette';
 import CharacterDescription from './character-description';
 import CharacterNavigation from './character-navigation';
 
@@ -56,7 +55,6 @@ const CharacterDetail = () => {
 
   return (
     <div className="flex flex-col h-full gap-3">
-      <CharacterCommandPalette />
       <CharacterNavigation
         currentCharacterName={character.name}
         elementColor={elementColor}
