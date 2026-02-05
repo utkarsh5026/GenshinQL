@@ -4,7 +4,7 @@
 #
 # Usage: make <target>
 
-.PHONY: help characters-base characters-detailed characters-check characters \
+.PHONY: help characters-base characters-detailed characters-check characters-roles characters \
         gallery gallery-check talents weapons-base weapons-detailed \
         weapons-calendar weapons-full weapons primitives all
 
@@ -33,6 +33,9 @@ characters-check:
 
 characters:
 	@node makefile.mjs characters
+
+characters-roles:
+	@node makefile.mjs characters-roles
 
 #------------------------------------------------------------------------------
 # Gallery Scraping

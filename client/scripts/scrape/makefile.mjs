@@ -73,6 +73,11 @@ const tasks = {
       await runTsxScript('characters.ts', ['--detailed']);
     },
   },
+  'characters-roles': {
+    description: 'Scrape character roles and update character files',
+    category: 'Characters',
+    action: () => runTsxScript('characters.ts', ['--roles']),
+  },
 
   gallery: {
     description: 'Scrape and merge gallery data for characters',
@@ -139,9 +144,7 @@ function runTsxScript(script, args = []) {
     console.log(chalk.cyan(`Running: tsx ${script} ${args.join(' ')}`));
     console.log();
 
-    // On Windows with shell, we need to quote the path if it contains spaces
     const quotedPath = isWindows ? `"${scriptPath}"` : scriptPath;
-
     const child = spawn(npxCommand, ['tsx', quotedPath, ...args], {
       cwd: CLIENT_DIR,
       stdio: 'inherit',
