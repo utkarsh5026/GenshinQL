@@ -23,6 +23,13 @@ import {
   weaponTypeSchema,
 } from './schema.js';
 import {
+  getImageUrl,
+  parseMaterialCards,
+  parseUrl,
+  safeExecute,
+  scrapeTable,
+} from './scraping-helpers.js';
+import {
   handleCloudflareChallenge,
   setupDriver,
   URL,
@@ -33,7 +40,6 @@ import {
   findImageInCell,
   getTableFromHeading,
   parseCharacterName,
-  parseUrl,
   underScore,
   waitAndGetElement,
 } from './utils.js';
@@ -117,12 +123,9 @@ async function loadMaterialCalendar(): Promise<
     const images = (
       await Promise.all(
         imgs.map(async (img) => {
-          const [src, caption] = await Promise.all([
-            img.getAttribute('data-src'),
-            img.getAttribute('alt'),
-          ]);
+          const caption = await img.getAttribute('alt');
           return {
-            url: parseUrl(src),
+            url: await getImageUrl(img),
             caption,
           };
         })
@@ -132,14 +135,11 @@ async function loadMaterialCalendar(): Promise<
     const weapons = await cells[2].findElements(By.css('a'));
     const weaponData = await Promise.all(
       weapons.map(async (weapon: WebElement) => {
-        const [name, img] = await Promise.all([
-          weapon.getAttribute('title'),
-          weapon.findElement(By.css('img')),
-        ]);
-        const imgSrc = await img.getAttribute('data-src');
+        const name = await weapon.getAttribute('title');
+        const img = await weapon.findElement(By.css('img'));
         return {
           name,
-          url: parseUrl(imgSrc),
+          url: await getImageUrl(img),
         };
       })
     );
@@ -187,8 +187,7 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
   const extractWeaponPassives = async () => {
     const tabs = await driver.findElements(By.css('li.wds-tabs__tab'));
     const passives = [];
-    const refinementTabs = tabs.slice(4, tabs.length);
-    for (const tab of refinementTabs) {
+    for (const tab of tabs.slice(4, tabs.length)) {
       await driver.executeScript('arguments[0].click();', tab);
       const weaponContent = await driver
         .findElement(By.css('div.wds-tab__content.wds-is-current td'))
@@ -203,27 +202,7 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
       driver,
       'span.card-list-container'
     );
-
-    const materials = await container.findElements(
-      By.css('div.card-container')
-    );
-
-    return await Promise.all(
-      materials.map(async (card) => {
-        const imageUrl = await card
-          .findElement(By.css('img'))
-          .getAttribute('data-src');
-
-        const caption = await card
-          .findElement(By.css('span.card-caption'))
-          .getText();
-
-        return {
-          url: parseUrl(imageUrl),
-          caption,
-        };
-      })
-    );
+    return await parseMaterialCards(container, 'div.card-container');
   };
 
   const getWeaponImages = async () => {
@@ -232,29 +211,21 @@ async function extractEachWeaponData(driver: WebDriver, weaponName: string) {
       'div.pi-image-collection'
     );
     const imageElements = await imageContainer.findElements(By.css('img'));
-
-    logger.debug(`Found ${imageElements.length} images in collection`);
-
     const images = await Promise.all(
-      imageElements.map(async (imageElement) => {
-        const image = await imageElement.getAttribute('src');
-        return parseUrl(image);
-      })
+      imageElements.map((img) => getImageUrl(img, 'src'))
     );
 
-    try {
-      const weaponDetailsImage = await driver.findElement(
-        By.css("img[alt='Weapon Details Announcement']")
-      );
-      const weaponDetailsImageUrl =
-        await weaponDetailsImage.getAttribute('data-src');
-      images.push(parseUrl(weaponDetailsImageUrl));
-      logger.debug(`    ↳ Added weapon details announcement image`);
-    } catch {
-      logger.debug(`    ↳ No weapon details announcement image found`);
-    }
-
-    return images;
+    const detailsImage = await safeExecute(
+      async () => {
+        const img = await driver.findElement(
+          By.css("img[alt='Weapon Details Announcement']")
+        );
+        return await getImageUrl(img);
+      },
+      'No weapon details announcement image found',
+      null
+    );
+    return detailsImage ? [...images, detailsImage] : images;
   };
 
   await waitForPageLoad(driver);
@@ -292,53 +263,58 @@ async function extractAscensionCost(costCell: WebElement): Promise<{
   materials: Array<{ url: string; caption: string; count: number }>;
 }> {
   const parseMaterial = async (matCell: WebElement) => {
-    try {
-      const img = await matCell.findElement(By.css('img'));
-      const [dataSrc, src, caption, cardCount] = await Promise.all([
-        img.getAttribute('data-src'),
-        img.getAttribute('src'),
-        img.getAttribute('alt'),
-        matCell.findElement(By.css('span.card-text')),
-      ]);
+    return await safeExecute(
+      async () => {
+        const img = await matCell.findElement(By.css('img'));
+        const [caption, cardCount] = await Promise.all([
+          img.getAttribute('alt'),
+          matCell.findElement(By.css('span.card-text')),
+        ]);
 
-      const imageUrl = dataSrc || src;
-      const count = Number.parseInt(await cardCount.getText());
+        const url = await getImageUrl(img);
+        const count = Number.parseInt(await cardCount.getText());
 
-      return {
-        url: parseUrl(imageUrl),
-        caption: caption.replace(/[×x]\d+/gi, '').trim(),
-        count,
-      };
-    } catch (error) {
-      logger.debug(`    ⚠ Failed to parse material card: ${error}`);
-    }
+        return {
+          url,
+          caption: caption.replace(/[×x]\d+/gi, '').trim(),
+          count,
+        };
+      },
+      'Failed to parse material card',
+      null
+    );
   };
 
   const extractMora = async (moraCard: WebElement) => {
-    try {
-      const moraCountText = await moraCard
-        .findElement(By.css('span.card-text'))
-        .getText();
-      return Number.parseInt(moraCountText.replace(/,/g, ''));
-    } catch (error) {
-      logger.debug(`    ⚠ Failed to parse mora card: ${error}`);
-      return 0;
-    }
+    return await safeExecute(
+      async () => {
+        const moraCountText = await moraCard
+          .findElement(By.css('span.card-text'))
+          .getText();
+        return Number.parseInt(moraCountText.replace(/,/g, ''));
+      },
+      'Failed to parse mora card',
+      0
+    );
   };
 
-  try {
+  const scrape = async () => {
     const matCards = await costCell.findElements(By.css('div.card-container'));
     const mora = matCards.length > 0 ? await extractMora(matCards[0]) : 0;
 
     const materials = (
       await Promise.all(matCards.slice(1).map(parseMaterial))
-    ).filter((m) => m !== undefined);
+    ).filter(
+      (m): m is { url: string; caption: string; count: number } => m !== null
+    );
 
     return { mora, materials };
-  } catch (error) {
-    logger.debug(`Error extracting materials: ${error}`);
-    return { mora: 0, materials: [] };
-  }
+  };
+
+  return await safeExecute(scrape, 'Error extracting ascension materials', {
+    mora: 0,
+    materials: [],
+  });
 }
 
 /**
@@ -369,7 +345,6 @@ async function parseAscensionRow(
     const baseAtkText = await cells[cellIndex + 1].getText();
     const baseAtk = parseFloat(baseAtkText);
 
-    // Extract sub-stat (may be percentage or flat value)
     let subStat: number | undefined;
     if (cells.length > cellIndex + 2) {
       const subStatText = await cells[cellIndex + 2].getText();
@@ -385,7 +360,7 @@ async function parseAscensionRow(
       materials: undefined,
     };
   } catch (error) {
-    logger.debug(`  ⚠ Error parsing row: ${error}`);
+    logger.debug(`Error parsing row: ${error}`);
     return null;
   }
 }
@@ -403,7 +378,7 @@ async function extractWeaponAscensionData(
   phases: Array<WeaponAscensionPhase>;
 } | null> {
   try {
-    logger.debug('  ↳ Locating ascension table...');
+    logger.debug('Locating ascension table...');
 
     const table = await getTableFromHeading(driver, 'Ascensions and Stats');
     const rows = await table.findElements(By.css('tbody tr'));
@@ -578,50 +553,41 @@ export async function scrapeWeaponsInDetail(
 /**
  * Scrapes weapon data from the Genshin Impact wiki for a specific weapon type.
  * @param {WebDriver} driver - The Selenium WebDriver instance.
- * @param {WeaponType} weapon - The weapon type to scrape.
+ * @param {WeaponType} weaponType - The weapon type to scrape.
  */
-async function scrapeWeaponsTable(driver: WebDriver, weapon: WeaponType) {
-  logger.info(`⚔️  Scraping ${weapon} weapons...`);
+async function scrapeWeaponsTable(driver: WebDriver, weaponType: WeaponType) {
+  await driver.get(`${URL}/${weaponType}`);
 
-  const getWeaponsTable = async () => {
-    await driver.get(`${URL}/${weapon}`);
-    logger.debug(`  ↳ Navigating to ${weapon} page`);
-    const table = await getTableFromHeading(driver, `List of ${weapon}s`);
-    logger.debug(`  ↳ Found weapons table`);
-    return table;
-  };
-
-  const parseTableRow = async (row: WebElement): Promise<BaseWeaponType> => {
+  const parseRow = async (row: WebElement): Promise<BaseWeaponType | null> => {
     const cells = await row.findElements(By.css('td'));
+    if (cells.length < 6) return null;
+
     const texts = await Promise.all(cells.map((cell) => cell.getText()));
     const [image, quality] = await Promise.all([
       findImageInCell(cells[0]),
       cells[2].findElement(By.css('img')).getAttribute('alt'),
     ]);
-    texts[0] = parseUrl(image);
+    const iconUrl = parseUrl(image);
 
-    const weapon = {
+    return {
       name: texts[1],
       rarity: Number.parseInt(quality.split(' ')[0]),
       attack: Number.parseInt(texts[3].split(' ')[0]),
       subStat: texts[4].split('\n')[0],
       effect: texts[5],
-      iconUrl: parseUrl(texts[0]),
+      iconUrl,
     };
-    return weapon;
   };
 
-  try {
-    const table = await getWeaponsTable();
-    const rowElements = await table.findElements(By.css('tr'));
-    logger.debug(`  ↳ Parsing ${rowElements.length - 1} weapon rows`);
-    const rows = await Promise.all(rowElements.slice(1).map(parseTableRow));
-    logger.success(`✓ Scraped ${rows.length} ${weapon} weapons`);
-    return rows;
-  } catch (error) {
-    logger.error(`✗ Error scraping ${weapon}:`, error);
-    return null;
-  }
+  const rows = await scrapeTable<BaseWeaponType>(
+    driver,
+    `List of ${weaponType}s`,
+    'h2',
+    parseRow
+  );
+
+  logger.success(`✓ Scraped ${rows.length} ${weaponType} weapons`);
+  return rows.length > 0 ? rows : null;
 }
 
 /**
@@ -778,16 +744,6 @@ async function optimizeWeaponsData(): Promise<void> {
     logger.error('❌ Failed to load weapons.json');
     return;
   }
-
-  const weaponTypes = Object.keys(currentData);
-  const totalWeapons = Object.values(currentData).reduce(
-    (sum, weapons) => sum + weapons.length,
-    0
-  );
-  logger.success(
-    `  ✓ Loaded ${totalWeapons} weapons across ${weaponTypes.length} types`
-  );
-
   await backupOriginalFile();
 
   const weapons = {
@@ -802,8 +758,6 @@ async function optimizeWeaponsData(): Promise<void> {
   };
 
   await saveToPublic(weapons, 'weapons');
-  logger.success('Optimized data saved');
-  logger.log('\n' + chalk.bold.green('✅ Optimization complete!') + '\n');
 }
 
 /**
@@ -813,7 +767,6 @@ async function optimizeWeaponsData(): Promise<void> {
  * --detailed: Scrapes detailed data for individual weapons
  */
 async function main() {
-  logger.log('\n' + chalk.bold.cyan('⚔️  Weapon Scraping Script') + '\n');
   const args = process.argv.slice(2);
 
   if (args.length === 0) {
