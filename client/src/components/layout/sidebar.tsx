@@ -2,6 +2,7 @@ import {
   Calendar,
   Gamepad2,
   Grid3x3,
+  Link2,
   Sparkles,
   Star,
   Swords,
@@ -84,6 +85,13 @@ const navItems: NavItem[] = [
     icon: Grid3x3,
     color: 'cyan',
     iconColor: '#06b6d4', // cyan-500
+  },
+  {
+    route: '/linker-game',
+    label: 'Linker Game',
+    icon: Link2,
+    color: 'rose',
+    iconColor: '#f43f5e', // rose-500
   },
 ];
 

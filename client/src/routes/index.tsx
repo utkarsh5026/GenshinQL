@@ -4,6 +4,7 @@ import CharacterCardsWithFilters from '@/components/character/cards/character-ca
 import CharacterDetail from '@/components/character/description/character-detail';
 import CharacterRoutine from '@/components/character/routine/CharacterRoutine';
 import GenshinGuesser from '@/components/gdle/main/GenshinGuesser';
+import { LinkerGame } from '@/components/linker-game';
 import { MemoryGame } from '@/components/memory-game';
 import TalentCalendar from '@/components/talents/talent-book-calendar';
 import TierList from '@/components/tierlist/TierList';
@@ -55,6 +56,10 @@ export const routes: RouteObject[] = [
   {
     path: '/memory-game',
     element: <MemoryGame />,
+  },
+  {
+    path: '/linker-game',
+    element: <LinkerGame />,
   },
   {
     path: '*',
