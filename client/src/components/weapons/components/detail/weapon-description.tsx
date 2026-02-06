@@ -98,7 +98,11 @@ const WeaponDescription: React.FC<WeaponDescriptionProps> = ({ weapon }) => {
           )}
           {selectedMenuItem === 'Ascension' && (
             <WeaponCard>
-              <WeaponAscension phases={weapon.ascension.phases} />
+              <WeaponAscension
+                phases={weapon.ascension.phases}
+                rarity={weapon.rarity}
+                subStatType={weapon.subStat}
+              />
             </WeaponCard>
           )}
           {selectedMenuItem === 'Materials' && (
