@@ -11,15 +11,6 @@ interface WeaponsDetailedGridProps {
 
 /**
  * WeaponsDetailedGrid component displays a grid of weapon cards with filtering capabilities.
- *
- * Features:
- * - Search weapons by name
- * - Filter weapons by rarity (1-5 stars)
- * - Responsive grid layout
- *
- * @component
- * @param {Object} props
- * @param {Weapon[]} props.weapons - Array of weapon objects to display
  */
 const WeaponsDetailedGrid: React.FC<WeaponsDetailedGridProps> = ({
   weapons,
@@ -90,9 +81,11 @@ const WeaponsDetailedGrid: React.FC<WeaponsDetailedGridProps> = ({
       </div>
 
       {/* Weapons Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-        {filteredWeapons.map((weapon) => (
-          <WeaponCard key={weapon.name} weapon={weapon} />
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 auto-rows-fr">
+        {filteredWeapons.map((weapon, index) => (
+          <div key={weapon.name} className="h-full">
+            <WeaponCard weapon={weapon} index={index} />
+          </div>
         ))}
       </div>
     </div>
