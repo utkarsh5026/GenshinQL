@@ -49,6 +49,7 @@ export type CharacterDetailed = Character & {
     nameCard: string;
   };
   screenAnimation: ScreenAnimation;
+  gallery?: GalleryRaw;
 };
 
 export type TalentBookCalendar = {
@@ -71,11 +72,48 @@ export type Weapon = {
   iconUrl: string;
   attack: number;
   rarity: number;
-  type: string;
   subStat: string;
   effect: string;
   nation?: number; // index to nations array (-1 if not applicable)
   weekdays?: number; // index to days array (-1 if not applicable)
+};
+
+export type AscensionMaterial = {
+  url: string;
+  caption: string;
+  count: number;
+};
+
+export type AscensionPhase = {
+  phase: number;
+  levelRange: string;
+  baseAttack: {
+    min: number;
+    max: number;
+  };
+  subStat: {
+    min: number;
+    max: number;
+  };
+  mora?: number;
+  materials?: AscensionMaterial[];
+};
+
+export type WeaponDetailedType = {
+  name: string;
+  rarity: number;
+  attack: number;
+  subStat: string;
+  effect: string;
+  iconUrl: string;
+  nation: number;
+  weekdays: number;
+  materials: ImageUrl[];
+  passives: string[];
+  images: string[];
+  ascension: {
+    phases: AscensionPhase[];
+  };
 };
 
 export type ScreenAnimation = {
@@ -100,6 +138,7 @@ export type AnimationMedia = {
   videoUrl: string;
   caption: string;
   videoType: string;
+  fallbackUrl?: string;
 };
 
 export type AttackAnimation = {
@@ -218,3 +257,38 @@ export type Primitives = {
   regions: PrimitiveItem[];
   weaponTypes: PrimitiveItem[];
 };
+
+export type CharacterMenuItem =
+  | 'Profile'
+  | 'Talents'
+  | 'Constellations'
+  | 'Passives'
+  | 'Routine';
+
+// Memory Game Types
+export type StickersData = Record<string, string[]>;
+
+export interface GameSticker {
+  url: string;
+  characterName: string;
+}
+
+export interface MemoryTile {
+  id: number;
+  sticker: GameSticker;
+  isFlipped: boolean;
+  isMatched: boolean;
+}
+
+export interface MemoryGameStats {
+  score: number;
+  moves: number;
+  matchesFound: number;
+  exactMatches: number;
+  characterMatches: number;
+  startTime: number | null;
+  endTime: number | null;
+}
+
+export type GameDifficulty = 'easy' | 'medium' | 'hard';
+export type GameStatus = 'idle' | 'playing' | 'won';

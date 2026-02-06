@@ -1,6 +1,7 @@
 import {
   Calendar,
   Gamepad2,
+  Grid3x3,
   Sparkles,
   Star,
   Swords,
@@ -76,6 +77,13 @@ const navItems: NavItem[] = [
     icon: Gamepad2,
     color: 'violet',
     iconColor: '#8b5cf6', // violet-500
+  },
+  {
+    route: '/memory-game',
+    label: 'Memory Game',
+    icon: Grid3x3,
+    color: 'cyan',
+    iconColor: '#06b6d4', // cyan-500
   },
 ];
 
