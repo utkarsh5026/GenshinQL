@@ -5,6 +5,7 @@ import { fetchWeaponDetailed } from '@/services/dataService';
 import type { WeaponDetailedType } from '@/types';
 
 import WeaponDescription from './weapon-description';
+import WeaponNavigation from './weapon-navigation';
 
 const WeaponDetail = () => {
   const { weaponName } = useParams<{ weaponName: string }>();
@@ -46,7 +47,12 @@ const WeaponDetail = () => {
     return <Navigate to="/weapons/grid" replace />;
   }
 
-  return <WeaponDescription weapon={weapon} />;
+  return (
+    <div className="flex flex-col h-full gap-3">
+      <WeaponNavigation currentWeaponName={weapon.name} />
+      <WeaponDescription weapon={weapon} />
+    </div>
+  );
 };
 
 export default WeaponDetail;
