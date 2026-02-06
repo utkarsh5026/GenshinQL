@@ -11,6 +11,7 @@ interface CharacterGridProps {
   onSelect: (characterName: string) => void;
   isProcessing: boolean;
   selectedName: string | null;
+  selectedNames: string[]; // For multi-select mode
   correctNames: string[];
   showResult: boolean;
   difficulty: LinkerDifficulty;
@@ -21,6 +22,7 @@ export const CharacterGrid = memo(function CharacterGrid({
   onSelect,
   isProcessing,
   selectedName,
+  selectedNames,
   correctNames,
   showResult,
   difficulty,
@@ -43,8 +45,13 @@ export const CharacterGrid = memo(function CharacterGrid({
   return (
     <div className={gridClass}>
       {characters.map((character) => {
-        const isSelected = selectedName === character.name;
+        // Check if selected - in multi mode use selectedNames array
+        const isSelected =
+          selectedName === character.name ||
+          selectedNames.includes(character.name);
         const isCorrect = correctNames.includes(character.name);
+        // In multi mode, already selected correct ones should be disabled
+        const isAlreadySelected = selectedNames.includes(character.name);
 
         return (
           <CharacterTile
@@ -52,9 +59,9 @@ export const CharacterGrid = memo(function CharacterGrid({
             character={character}
             onClick={() => handleSelect(character.name)}
             isSelected={isSelected}
-            isCorrect={showResult ? isCorrect : null}
-            isDisabled={isProcessing}
-            showResult={showResult}
+            isCorrect={showResult ? isCorrect : isAlreadySelected ? true : null}
+            isDisabled={isProcessing || isAlreadySelected}
+            showResult={showResult || isAlreadySelected}
           />
         );
       })}

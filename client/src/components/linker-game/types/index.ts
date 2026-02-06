@@ -4,6 +4,7 @@ import type { Character } from '@/types';
 export type LinkerDifficulty = 'easy' | 'medium' | 'hard';
 export type LinkType = 'element' | 'weaponType' | 'region';
 export type LinkerGameStatus = 'idle' | 'playing' | 'game_over';
+export type SelectionMode = 'single' | 'multi';
 
 export interface LinkerTurn {
   targetCharacter: Character;

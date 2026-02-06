@@ -4,10 +4,11 @@ import { useCharactersStore } from '@/stores/useCharactersStore';
 
 import {
   useLinkerGameDifficulty,
+  useLinkerGameSelectionMode,
   useLinkerGameStatus,
   useLinkerGameStore,
 } from '../store/useLinkerGameStore';
-import type { LinkerDifficulty } from '../types';
+import type { LinkerDifficulty, SelectionMode } from '../types';
 import { GameBoard } from './game-board';
 import { GameHeader } from './game-header';
 import { GameOverModal } from './game-over-modal';
@@ -24,9 +25,13 @@ export const LinkerGame = () => {
 
   const gameStatus = useLinkerGameStatus();
   const difficulty = useLinkerGameDifficulty();
+  const selectionMode = useLinkerGameSelectionMode();
   const initializeGame = useLinkerGameStore((state) => state.initializeGame);
   const resetGame = useLinkerGameStore((state) => state.resetGame);
   const setDifficulty = useLinkerGameStore((state) => state.setDifficulty);
+  const setSelectionMode = useLinkerGameStore(
+    (state) => state.setSelectionMode
+  );
 
   // Fetch characters on mount
   useEffect(() => {
@@ -38,6 +43,13 @@ export const LinkerGame = () => {
       setDifficulty(newDifficulty);
     },
     [setDifficulty]
+  );
+
+  const handleSelectionModeChange = useCallback(
+    (newMode: SelectionMode) => {
+      setSelectionMode(newMode);
+    },
+    [setSelectionMode]
   );
 
   const handleStartGame = useCallback(async () => {
@@ -57,9 +69,9 @@ export const LinkerGame = () => {
 
       await Promise.all(preloadPromises);
       setIsPreloading(false);
-      initializeGame(characters, difficulty);
+      initializeGame(characters, difficulty, selectionMode);
     }
-  }, [characters, difficulty, initializeGame]);
+  }, [characters, difficulty, selectionMode, initializeGame]);
 
   const handlePlayAgain = useCallback(async () => {
     resetGame();
@@ -101,6 +113,8 @@ export const LinkerGame = () => {
             <GameSetup
               difficulty={difficulty}
               onDifficultyChange={handleDifficultyChange}
+              selectionMode={selectionMode}
+              onSelectionModeChange={handleSelectionModeChange}
               onStart={handleStartGame}
               isLoading={isPreloading}
             />

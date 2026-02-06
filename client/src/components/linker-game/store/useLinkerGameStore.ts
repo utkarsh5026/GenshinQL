@@ -15,6 +15,7 @@ import type {
   LinkerGameStats,
   LinkerGameStatus,
   LinkerTurn,
+  SelectionMode,
 } from '../types';
 
 const DIFFICULTY_CONFIG: Record<LinkerDifficulty, LinkerDifficultyConfig> = {
@@ -48,6 +49,7 @@ interface LinkerGameState {
   // Game state
   gameStatus: LinkerGameStatus;
   difficulty: LinkerDifficulty;
+  selectionMode: SelectionMode;
   lives: number;
   maxLives: number;
 
@@ -61,6 +63,8 @@ interface LinkerGameState {
   // Feedback
   lastAnswerCorrect: boolean | null;
   selectedCharacterName: string | null;
+  selectedCharacters: string[]; // For multi-select mode
+  comboCount: number; // Track combo in current turn
   showingResult: boolean;
 
   // All characters (stored for generating new turns)
@@ -69,12 +73,15 @@ interface LinkerGameState {
   // Actions
   initializeGame: (
     characters: Character[],
-    difficulty: LinkerDifficulty
+    difficulty: LinkerDifficulty,
+    selectionMode: SelectionMode
   ) => void;
   selectCharacter: (characterName: string) => void;
+  confirmSelection: () => void; // For multi-select mode
   handleTimeout: () => void;
   resetGame: () => void;
   setDifficulty: (difficulty: LinkerDifficulty) => void;
+  setSelectionMode: (mode: SelectionMode) => void;
   clearResult: () => void;
 }
 
@@ -125,6 +132,7 @@ export const useLinkerGameStore = create<LinkerGameState>()(
     (set, get) => ({
       gameStatus: 'idle',
       difficulty: 'medium',
+      selectionMode: 'single',
       lives: 3,
       maxLives: 3,
       currentTurn: null,
@@ -132,15 +140,18 @@ export const useLinkerGameStore = create<LinkerGameState>()(
       stats: { ...initialStats },
       lastAnswerCorrect: null,
       selectedCharacterName: null,
+      selectedCharacters: [],
+      comboCount: 0,
       showingResult: false,
       allCharacters: [],
 
-      initializeGame: (characters, difficulty) => {
+      initializeGame: (characters, difficulty, selectionMode) => {
         const turn = generateNewTurn(characters, difficulty);
 
         set({
           allCharacters: characters,
           difficulty,
+          selectionMode,
           lives: 3,
           maxLives: 3,
           currentTurn: turn,
@@ -149,6 +160,8 @@ export const useLinkerGameStore = create<LinkerGameState>()(
           stats: { ...initialStats, startTime: Date.now() },
           lastAnswerCorrect: null,
           selectedCharacterName: null,
+          selectedCharacters: [],
+          comboCount: 0,
           showingResult: false,
         });
       },
@@ -161,85 +174,58 @@ export const useLinkerGameStore = create<LinkerGameState>()(
           stats,
           lives,
           difficulty,
+          selectionMode,
+          selectedCharacters,
+          comboCount,
         } = get();
 
         if (gameStatus !== 'playing' || isProcessingAnswer || !currentTurn)
           return;
 
-        set({ isProcessingAnswer: true, selectedCharacterName: characterName });
+        // Check if already selected in multi mode
+        if (
+          selectionMode === 'multi' &&
+          selectedCharacters.includes(characterName)
+        ) {
+          return;
+        }
 
         const isCorrect =
           currentTurn.correctCharacterNames.includes(characterName);
         const config = DIFFICULTY_CONFIG[difficulty];
 
-        if (isCorrect) {
-          // Calculate time bonus
-          const elapsed = Date.now() - currentTurn.turnStartTime;
-          const remainingMs = Math.max(0, config.timePerTurn - elapsed);
-          const remainingSeconds = Math.floor(remainingMs / 1000);
-          const timeBonus = remainingSeconds * config.timeMultiplier;
-          const totalPoints = config.basePoints + timeBonus;
-
-          const newStreak = stats.currentStreak + 1;
-          const newLongestStreak = Math.max(stats.longestStreak, newStreak);
-
+        if (selectionMode === 'single') {
+          // Single selection mode - original behavior
           set({
-            lastAnswerCorrect: true,
-            showingResult: true,
-            stats: {
-              ...stats,
-              score: stats.score + totalPoints,
-              correctAnswers: stats.correctAnswers + 1,
-              totalRounds: stats.totalRounds + 1,
-              currentStreak: newStreak,
-              longestStreak: newLongestStreak,
-            },
+            isProcessingAnswer: true,
+            selectedCharacterName: characterName,
           });
 
-          // Generate next turn after delay
-          setTimeout(() => {
-            const { gameStatus: currentStatus, allCharacters: chars } = get();
-            if (currentStatus !== 'playing') return;
+          if (isCorrect) {
+            // Calculate time bonus
+            const elapsed = Date.now() - currentTurn.turnStartTime;
+            const remainingMs = Math.max(0, config.timePerTurn - elapsed);
+            const remainingSeconds = Math.floor(remainingMs / 1000);
+            const timeBonus = remainingSeconds * config.timeMultiplier;
+            const totalPoints = config.basePoints + timeBonus;
 
-            const newTurn = generateNewTurn(chars, difficulty);
+            const newStreak = stats.currentStreak + 1;
+            const newLongestStreak = Math.max(stats.longestStreak, newStreak);
+
             set({
-              currentTurn: newTurn,
-              isProcessingAnswer: false,
-              lastAnswerCorrect: null,
-              selectedCharacterName: null,
-              showingResult: false,
+              lastAnswerCorrect: true,
+              showingResult: true,
+              stats: {
+                ...stats,
+                score: stats.score + totalPoints,
+                correctAnswers: stats.correctAnswers + 1,
+                totalRounds: stats.totalRounds + 1,
+                currentStreak: newStreak,
+                longestStreak: newLongestStreak,
+              },
             });
-          }, 800);
-        } else {
-          // Wrong answer
-          const newLives = lives - 1;
 
-          set({
-            lastAnswerCorrect: false,
-            showingResult: true,
-            lives: newLives,
-            stats: {
-              ...stats,
-              wrongAnswers: stats.wrongAnswers + 1,
-              totalRounds: stats.totalRounds + 1,
-              currentStreak: 0,
-            },
-          });
-
-          if (newLives <= 0) {
-            // Game over
-            setTimeout(() => {
-              set({
-                gameStatus: 'game_over',
-                isProcessingAnswer: false,
-                stats: {
-                  ...get().stats,
-                  endTime: Date.now(),
-                },
-              });
-            }, 1000);
-          } else {
-            // Continue with next turn
+            // Generate next turn after delay
             setTimeout(() => {
               const { gameStatus: currentStatus, allCharacters: chars } = get();
               if (currentStatus !== 'playing') return;
@@ -250,9 +236,177 @@ export const useLinkerGameStore = create<LinkerGameState>()(
                 isProcessingAnswer: false,
                 lastAnswerCorrect: null,
                 selectedCharacterName: null,
+                selectedCharacters: [],
+                comboCount: 0,
                 showingResult: false,
               });
-            }, 1200);
+            }, 800);
+          } else {
+            // Wrong answer
+            const newLives = lives - 1;
+
+            set({
+              lastAnswerCorrect: false,
+              showingResult: true,
+              lives: newLives,
+              stats: {
+                ...stats,
+                wrongAnswers: stats.wrongAnswers + 1,
+                totalRounds: stats.totalRounds + 1,
+                currentStreak: 0,
+              },
+            });
+
+            if (newLives <= 0) {
+              // Game over
+              setTimeout(() => {
+                set({
+                  gameStatus: 'game_over',
+                  isProcessingAnswer: false,
+                  stats: {
+                    ...get().stats,
+                    endTime: Date.now(),
+                  },
+                });
+              }, 1000);
+            } else {
+              // Continue with next turn
+              setTimeout(() => {
+                const { gameStatus: currentStatus, allCharacters: chars } =
+                  get();
+                if (currentStatus !== 'playing') return;
+
+                const newTurn = generateNewTurn(chars, difficulty);
+                set({
+                  currentTurn: newTurn,
+                  isProcessingAnswer: false,
+                  lastAnswerCorrect: null,
+                  selectedCharacterName: null,
+                  selectedCharacters: [],
+                  comboCount: 0,
+                  showingResult: false,
+                });
+              }, 1200);
+            }
+          }
+        } else {
+          // Multi-select mode
+          if (isCorrect) {
+            const newSelectedCharacters = [
+              ...selectedCharacters,
+              characterName,
+            ];
+            const newComboCount = comboCount + 1;
+
+            // Calculate combo bonus: base points + combo multiplier
+            const comboMultiplier = Math.min(newComboCount, 5); // Cap at 5x
+            const elapsed = Date.now() - currentTurn.turnStartTime;
+            const remainingMs = Math.max(0, config.timePerTurn - elapsed);
+            const remainingSeconds = Math.floor(remainingMs / 1000);
+            const timeBonus = remainingSeconds * config.timeMultiplier;
+            const comboBonus = newComboCount > 1 ? (newComboCount - 1) * 50 : 0;
+            const totalPoints =
+              config.basePoints * comboMultiplier + timeBonus + comboBonus;
+
+            const newStreak = stats.currentStreak + 1;
+            const newLongestStreak = Math.max(stats.longestStreak, newStreak);
+
+            set({
+              selectedCharacters: newSelectedCharacters,
+              selectedCharacterName: characterName,
+              comboCount: newComboCount,
+              lastAnswerCorrect: true,
+              stats: {
+                ...stats,
+                score: stats.score + totalPoints,
+                correctAnswers: stats.correctAnswers + 1,
+                currentStreak: newStreak,
+                longestStreak: newLongestStreak,
+              },
+            });
+
+            // Check if all correct options have been selected
+            const allCorrectSelected = currentTurn.correctCharacterNames.every(
+              (name) => newSelectedCharacters.includes(name)
+            );
+
+            if (allCorrectSelected) {
+              // All correct! End turn with success
+              set({
+                isProcessingAnswer: true,
+                showingResult: true,
+              });
+
+              setTimeout(() => {
+                const { gameStatus: currentStatus, allCharacters: chars } =
+                  get();
+                if (currentStatus !== 'playing') return;
+
+                const newTurn = generateNewTurn(chars, difficulty);
+                set({
+                  currentTurn: newTurn,
+                  isProcessingAnswer: false,
+                  lastAnswerCorrect: null,
+                  selectedCharacterName: null,
+                  selectedCharacters: [],
+                  comboCount: 0,
+                  showingResult: false,
+                  stats: {
+                    ...get().stats,
+                    totalRounds: get().stats.totalRounds + 1,
+                  },
+                });
+              }, 1000);
+            }
+          } else {
+            // Wrong answer in multi mode - lose a life and end turn
+            const newLives = lives - 1;
+
+            set({
+              isProcessingAnswer: true,
+              lastAnswerCorrect: false,
+              showingResult: true,
+              selectedCharacterName: characterName,
+              lives: newLives,
+              stats: {
+                ...stats,
+                wrongAnswers: stats.wrongAnswers + 1,
+                totalRounds: stats.totalRounds + 1,
+                currentStreak: 0,
+              },
+            });
+
+            if (newLives <= 0) {
+              // Game over
+              setTimeout(() => {
+                set({
+                  gameStatus: 'game_over',
+                  isProcessingAnswer: false,
+                  stats: {
+                    ...get().stats,
+                    endTime: Date.now(),
+                  },
+                });
+              }, 1000);
+            } else {
+              // Continue with next turn
+              setTimeout(() => {
+                const { gameStatus: currentStatus, allCharacters: chars } =
+                  get();
+                if (currentStatus !== 'playing') return;
+
+                const newTurn = generateNewTurn(chars, difficulty);
+                set({
+                  currentTurn: newTurn,
+                  isProcessingAnswer: false,
+                  lastAnswerCorrect: null,
+                  selectedCharacterName: null,
+                  selectedCharacters: [],
+                  comboCount: 0,
+                  showingResult: false,
+                });
+              }, 1200);
+            }
           }
         }
       },
@@ -303,6 +457,8 @@ export const useLinkerGameStore = create<LinkerGameState>()(
               isProcessingAnswer: false,
               lastAnswerCorrect: null,
               selectedCharacterName: null,
+              selectedCharacters: [],
+              comboCount: 0,
               showingResult: false,
             });
           }, 1200);
@@ -319,6 +475,8 @@ export const useLinkerGameStore = create<LinkerGameState>()(
           stats: { ...initialStats },
           lastAnswerCorrect: null,
           selectedCharacterName: null,
+          selectedCharacters: [],
+          comboCount: 0,
           showingResult: false,
           allCharacters: [],
         });
@@ -332,8 +490,54 @@ export const useLinkerGameStore = create<LinkerGameState>()(
         set({
           lastAnswerCorrect: null,
           selectedCharacterName: null,
+          selectedCharacters: [],
+          comboCount: 0,
           showingResult: false,
         });
+      },
+
+      setSelectionMode: (mode) => {
+        set({ selectionMode: mode });
+      },
+
+      confirmSelection: () => {
+        // This is called when player wants to end their multi-select turn early
+        const {
+          currentTurn,
+          selectedCharacters,
+          difficulty,
+          gameStatus,
+          isProcessingAnswer,
+        } = get();
+
+        if (gameStatus !== 'playing' || isProcessingAnswer || !currentTurn)
+          return;
+        if (selectedCharacters.length === 0) return;
+
+        set({
+          isProcessingAnswer: true,
+          showingResult: true,
+        });
+
+        setTimeout(() => {
+          const { gameStatus: currentStatus, allCharacters: chars } = get();
+          if (currentStatus !== 'playing') return;
+
+          const newTurn = generateNewTurn(chars, difficulty);
+          set({
+            currentTurn: newTurn,
+            isProcessingAnswer: false,
+            lastAnswerCorrect: null,
+            selectedCharacterName: null,
+            selectedCharacters: [],
+            comboCount: 0,
+            showingResult: false,
+            stats: {
+              ...get().stats,
+              totalRounds: get().stats.totalRounds + 1,
+            },
+          });
+        }, 800);
       },
     }),
     { name: 'LinkerGameStore' }
@@ -373,5 +577,14 @@ export const useLinkerGameLastAnswer = () =>
 
 export const useLinkerGameAllCharacters = () =>
   useLinkerGameStore((state) => state.allCharacters);
+
+export const useLinkerGameSelectionMode = () =>
+  useLinkerGameStore((state) => state.selectionMode);
+
+export const useLinkerGameSelectedCharacters = () =>
+  useLinkerGameStore((state) => state.selectedCharacters);
+
+export const useLinkerGameComboCount = () =>
+  useLinkerGameStore((state) => state.comboCount);
 
 export { DIFFICULTY_CONFIG };

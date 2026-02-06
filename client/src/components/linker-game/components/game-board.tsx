@@ -5,6 +5,7 @@ import {
   useLinkerGameDifficulty,
   useLinkerGameIsProcessing,
   useLinkerGameLastAnswer,
+  useLinkerGameSelectedCharacters,
   useLinkerGameStats,
   useLinkerGameStore,
 } from '../store/useLinkerGameStore';
@@ -18,6 +19,7 @@ export const GameBoard = memo(function GameBoard() {
   const isProcessing = useLinkerGameIsProcessing();
   const lastAnswer = useLinkerGameLastAnswer();
   const stats = useLinkerGameStats();
+  const selectedCharacters = useLinkerGameSelectedCharacters();
   const selectCharacter = useLinkerGameStore((state) => state.selectCharacter);
 
   const handleSelect = useCallback(
@@ -52,6 +54,7 @@ export const GameBoard = memo(function GameBoard() {
         onSelect={handleSelect}
         isProcessing={isProcessing}
         selectedName={lastAnswer.selectedName}
+        selectedNames={selectedCharacters}
         correctNames={currentTurn.correctCharacterNames}
         showResult={lastAnswer.showingResult}
         difficulty={difficulty}
