@@ -1,13 +1,19 @@
 import { memo, useEffect, useMemo, useState } from 'react';
 
+import type { GameDifficulty } from '@/types';
+
 import { useMemoryGameDifficulty } from '../store/useMemoryGameStore';
 import styles from './MemoryGame.module.css';
 
-// Grid configurations for each difficulty
-const GRID_CONFIG = {
+const GRID_CONFIG: Record<
+  GameDifficulty,
+  { cols: number; rows: number; pairs: number }
+> = {
   easy: { cols: 3, rows: 4, pairs: 6 },
   medium: { cols: 4, rows: 4, pairs: 8 },
   hard: { cols: 6, rows: 4, pairs: 12 },
+  expert_wide: { cols: 8, rows: 4, pairs: 16 },
+  expert_square: { cols: 6, rows: 6, pairs: 18 },
 } as const;
 
 interface GameBoardPreviewProps {
@@ -25,7 +31,6 @@ export const GameBoardPreview = memo(function GameBoardPreview({
   const config = useMemo(() => GRID_CONFIG[difficulty], [difficulty]);
   const totalTiles = config.pairs * 2;
 
-  // Calculate tile size based on available height
   useEffect(() => {
     const calculateTileSize = () => {
       const availableHeight = window.innerHeight - 220;
@@ -48,11 +53,14 @@ export const GameBoardPreview = memo(function GameBoardPreview({
     return () => window.removeEventListener('resize', calculateTileSize);
   }, [config]);
 
-  const gridClass = {
+  const gridClass: Record<GameDifficulty, string> = {
     easy: styles.gameBoardEasy,
     medium: styles.gameBoardMedium,
     hard: styles.gameBoardHard,
-  }[difficulty];
+    expert_wide: styles.gameBoardExpertWide,
+    expert_square: styles.gameBoardExpertSquare,
+  };
+  const currentGridClass = gridClass[difficulty];
 
   return (
     <div className={styles.gameBoardArea}>
@@ -67,7 +75,7 @@ export const GameBoardPreview = memo(function GameBoardPreview({
         )}
       </div>
       <div
-        className={`${styles.gameBoard} ${gridClass} ${isLoading ? styles.gameBoardLoading : ''}`}
+        className={`${styles.gameBoard} ${currentGridClass} ${isLoading ? styles.gameBoardLoading : ''}`}
         style={{ '--tile-size': `${tileSize}px` } as React.CSSProperties}
       >
         {Array.from({ length: totalTiles }).map((_, index) => (

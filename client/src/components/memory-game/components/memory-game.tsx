@@ -12,6 +12,7 @@ import {
 } from '../services/stickerService';
 import {
   useMemoryGameDifficulty,
+  useMemoryGameMode,
   useMemoryGameStatus,
   useMemoryGameStore,
 } from '../store/useMemoryGameStore';
@@ -19,6 +20,7 @@ import { DifficultySelector } from './difficulty-selector';
 import { GameBoard } from './game-board';
 import { GameBoardPreview } from './game-board-preview';
 import { GameHeader } from './game-header';
+import { GameModeSelector } from './game-mode-selector';
 import { GameOverModal } from './game-over-modal';
 import styles from './MemoryGame.module.css';
 
@@ -34,8 +36,10 @@ export const MemoryGame = () => {
 
   const gameStatus = useMemoryGameStatus();
   const difficulty = useMemoryGameDifficulty();
+  const gameMode = useMemoryGameMode();
   const initializeGame = useMemoryGameStore((state) => state.initializeGame);
   const resetGame = useMemoryGameStore((state) => state.resetGame);
+  const setGameMode = useMemoryGameStore((state) => state.setGameMode);
 
   useEffect(() => {
     fetchStickers()
@@ -104,6 +108,8 @@ export const MemoryGame = () => {
     );
   }
 
+  const isGameOver = gameStatus === 'won' || gameStatus === 'lost';
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Sticker Memory Game</h1>
@@ -139,6 +145,26 @@ export const MemoryGame = () => {
                 </div>
               </div>
 
+              {/* Game Mode Selector */}
+              <div>
+                <h3 className="text-sm font-medium text-muted-foreground mb-2 text-center">
+                  Game Mode
+                </h3>
+                <GameModeSelector mode={gameMode} onModeChange={setGameMode} />
+              </div>
+
+              {/* Mode-specific tips */}
+              {gameMode === 'time_attack' && (
+                <div className="text-xs text-center text-cryo-400 bg-cryo-500/10 rounded-lg p-2">
+                  Beat the clock! Faster = more points.
+                </div>
+              )}
+              {gameMode === 'bomb_mode' && (
+                <div className="text-xs text-center text-pyro-400 bg-pyro-500/10 rounded-lg p-2">
+                  Save bomb tiles for last or lose 10 points!
+                </div>
+              )}
+
               <DifficultySelector variant="vertical" />
 
               <Button
@@ -162,7 +188,7 @@ export const MemoryGame = () => {
         </div>
       </div>
 
-      {gameStatus === 'won' && <GameOverModal onPlayAgain={handlePlayAgain} />}
+      {isGameOver && <GameOverModal onPlayAgain={handlePlayAgain} />}
     </div>
   );
 };

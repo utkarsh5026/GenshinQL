@@ -8,18 +8,26 @@ interface MemoryTileProps {
   tile: MemoryTileType;
   onClick: () => void;
   matchType?: 'exact' | 'character' | null;
+  isPeeking?: boolean;
 }
 
 export const MemoryTile: React.FC<MemoryTileProps> = ({
   tile,
   onClick,
   matchType,
+  isPeeking = false,
 }) => {
   const className = useMemo(() => {
     const classes = [styles.tile];
 
-    if (tile.isFlipped || tile.isMatched) {
+    // Show flipped during peek or when actually flipped/matched
+    if (isPeeking || tile.isFlipped || tile.isMatched) {
       classes.push(styles.tileFlipped);
+    }
+
+    // Peek-specific styling
+    if (isPeeking) {
+      classes.push(styles.tilePeeking);
     }
 
     if (tile.isMatched) {
@@ -31,8 +39,23 @@ export const MemoryTile: React.FC<MemoryTileProps> = ({
       }
     }
 
+    // Bomb tile styling
+    if (tile.isBomb) {
+      classes.push(styles.tileBomb);
+      if (tile.bombTriggered) {
+        classes.push(styles.tileBombTriggered);
+      }
+    }
+
     return classes.join(' ');
-  }, [tile.isFlipped, tile.isMatched, matchType]);
+  }, [
+    tile.isFlipped,
+    tile.isMatched,
+    tile.isBomb,
+    tile.bombTriggered,
+    matchType,
+    isPeeking,
+  ]);
 
   return (
     <div className={className} onClick={onClick}>
