@@ -4,7 +4,6 @@ import type { RecentItem, SearchResult } from './types';
 const STORAGE_KEY = 'genshinql-search-recents';
 const MAX_RECENTS = 5;
 
-// Map navigation routes to icon names for reconstruction
 const navigationIconMap: Record<string, string> = {
   '/talents': 'Calendar',
   '/characters/table': 'Users',
@@ -40,58 +39,25 @@ export function useRecents() {
 
   const addRecent = useCallback((result: SearchResult) => {
     setRecents((prev) => {
-      let route: string;
-      let recentItem: RecentItem;
+      const timestamp = Date.now();
+      const route =
+        result.type === 'navigation'
+          ? result.route
+          : `/${result.type}s/${result.name}`;
 
-      switch (result.type) {
-        case 'navigation':
-          route = result.route;
-          recentItem = {
-            type: 'navigation',
-            name: result.label,
-            route,
-            label: result.label,
-            iconName: navigationIconMap[route],
-            iconColor: result.iconColor,
-            timestamp: Date.now(),
-          };
-          break;
-        case 'character':
-          route = `/characters/${result.name}`;
-          recentItem = {
-            type: 'character',
-            name: result.name,
-            route,
-            iconUrl: result.iconUrl,
-            rarity: result.rarity,
-            element: result.element,
-            weaponType: result.weaponType,
-            timestamp: Date.now(),
-          };
-          break;
-        case 'weapon':
-          route = `/weapons/${result.name}`;
-          recentItem = {
-            type: 'weapon',
-            name: result.name,
-            route,
-            iconUrl: result.iconUrl,
-            rarity: result.rarity,
-            weaponType: result.weaponType,
-            timestamp: Date.now(),
-          };
-          break;
-      }
+      const recentItem: RecentItem = {
+        ...result,
+        route,
+        timestamp,
+        ...(result.type === 'navigation' && {
+          name: result.label,
+          iconName: navigationIconMap[route],
+        }),
+      } as RecentItem;
 
-      // Remove existing entry with same route
       const filtered = prev.filter((r) => r.route !== route);
-
-      // Add new item at the beginning and limit to MAX_RECENTS
       const updated = [recentItem, ...filtered].slice(0, MAX_RECENTS);
-
-      // Save to localStorage
       saveRecents(updated);
-
       return updated;
     });
   }, []);
