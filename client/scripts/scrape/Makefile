@@ -6,7 +6,7 @@
 
 .PHONY: help characters-base characters-detailed characters-check characters-roles characters \
         gallery gallery-check talents weapons-base weapons-detailed \
-        weapons-calendar weapons-full weapons primitives all
+        weapons-calendar weapons-full weapons primitives artifacts all
 
 # Default target
 .DEFAULT_GOAL := help
@@ -72,6 +72,13 @@ weapons-full:
 
 weapons:
 	@node makefile.mjs weapons
+
+#------------------------------------------------------------------------------
+# Artifact Scraping
+#------------------------------------------------------------------------------
+
+artifacts:
+	@node makefile.mjs artifacts
 
 #------------------------------------------------------------------------------
 # Data Processing

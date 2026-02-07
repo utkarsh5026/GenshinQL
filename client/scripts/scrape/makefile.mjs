@@ -125,6 +125,12 @@ const tasks = {
     },
   },
 
+  artifacts: {
+    description: 'Scrape artifact set data from wiki',
+    category: 'Artifacts',
+    action: () => runTsxScript('artifacts.ts', []),
+  },
+
   primitives: {
     description: 'Generate primitives from characters data',
     category: 'Data Processing',

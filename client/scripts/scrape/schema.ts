@@ -205,6 +205,27 @@ export const primitivesSchema = z.object({
   roles: z.array(characterRoleSchema).optional(),
 });
 
+export const artifactPieceTypeSchema = z.enum([
+  'flower',
+  'plume',
+  'sands',
+  'goblet',
+  'circlet',
+]);
+
+export const artifactPieceSchema = z.object({
+  type: artifactPieceTypeSchema,
+  name: z.string(),
+  iconUrl: z.string(),
+});
+
+export const artifactSetSchema = z.object({
+  name: z.string(),
+  pieces: z.array(artifactPieceSchema),
+  twoPieceBonus: z.string(),
+  fourPieceBonus: z.string(),
+});
+
 export type WeaponMaterialSchema = z.infer<typeof weapMaterialSchema>;
 export type ImageSchema = z.infer<typeof imageSchema>;
 export type WeaponSchema = z.infer<typeof weaponSchema>;
