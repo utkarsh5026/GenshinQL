@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
+import { ItemNavigation } from '@/components/utils';
+import { getRarityHexColor } from '@/components/weapons/utils/color-map';
 import { fetchWeaponDetailed } from '@/services/dataService';
+import { useWeapons } from '@/stores/useWeaponsStore';
 import type { WeaponDetailedType } from '@/types';
 
 import WeaponDescription from './weapon-description';
-import WeaponNavigation from './weapon-navigation';
 
 const WeaponDetail = () => {
   const { weaponName } = useParams<{ weaponName: string }>();
+  const weapons = useWeapons();
   const [weapon, setWeapon] = useState<WeaponDetailedType | null>(null);
   const [loading, setLoading] = useState(!!weaponName);
   const [error, setError] = useState(!weaponName);
@@ -47,9 +50,17 @@ const WeaponDetail = () => {
     return <Navigate to="/weapons/grid" replace />;
   }
 
+  const rarityColor = getRarityHexColor(weapon.rarity);
+
   return (
     <div className="flex flex-col h-full gap-3">
-      <WeaponNavigation currentWeaponName={weapon.name} />
+      <ItemNavigation
+        items={weapons}
+        currentItemName={weapon.name}
+        routePrefix="/weapons"
+        accentColor={rarityColor}
+        labelSingular="weapon"
+      />
       <WeaponDescription weapon={weapon} />
     </div>
   );
