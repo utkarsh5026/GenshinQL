@@ -66,10 +66,12 @@ const StatBox: React.FC<StatBoxProps> = ({
 
 interface GameOverModalProps {
   onPlayAgain: () => void;
+  onBackToMenu: () => void;
 }
 
 export const GameOverModal = memo(function GameOverModal({
   onPlayAgain,
+  onBackToMenu,
 }: GameOverModalProps) {
   const stats = useMemoryGameStats();
   const gameStatus = useMemoryGameStatus();
@@ -179,17 +181,22 @@ export const GameOverModal = memo(function GameOverModal({
           )}
         </div>
 
-        <Button
-          size="lg"
-          onClick={onPlayAgain}
-          className={`w-full py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 ${
-            isWin
-              ? 'bg-linear-to-r from-legendary-400 to-legendary-600 text-white shadow-legendary-500/30 hover:shadow-legendary-500/40'
-              : 'bg-linear-to-r from-pyro-400 to-pyro-600 text-white shadow-pyro-500/30 hover:shadow-pyro-500/40'
-          }`}
-        >
-          {isWin ? 'Play Again' : 'Try Again'}
-        </Button>
+        <div className={styles.gameOverButtons}>
+          <Button
+            size="lg"
+            onClick={onPlayAgain}
+            className={`w-full py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 ${
+              isWin
+                ? 'bg-linear-to-r from-legendary-400 to-legendary-600 text-white shadow-legendary-500/30 hover:shadow-legendary-500/40'
+                : 'bg-linear-to-r from-pyro-400 to-pyro-600 text-white shadow-pyro-500/30 hover:shadow-pyro-500/40'
+            }`}
+          >
+            {isWin ? 'Play Again' : 'Try Again'}
+          </Button>
+          <button onClick={onBackToMenu} className={styles.backToMenuButton}>
+            Back to Menu
+          </button>
+        </div>
       </div>
     </div>
   );
