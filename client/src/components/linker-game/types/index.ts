@@ -2,7 +2,13 @@ import type { Character } from '@/types';
 
 // Linker Game Types
 export type LinkerDifficulty = 'easy' | 'medium' | 'hard';
-export type LinkType = 'element' | 'weaponType' | 'region';
+export type LinkType =
+  | 'element'
+  | 'weaponType'
+  | 'region'
+  | 'rarity'
+  | 'versionBefore'
+  | 'versionAfter';
 export type LinkerGameStatus = 'idle' | 'playing' | 'game_over';
 export type SelectionMode = 'single' | 'multi';
 

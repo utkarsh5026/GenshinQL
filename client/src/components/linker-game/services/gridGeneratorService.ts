@@ -1,4 +1,5 @@
 import type { Character } from '@/types';
+import { isVersionAfter, isVersionBefore } from '@/utils/versionComparison';
 
 import type { LinkType } from '../types';
 
@@ -26,6 +27,27 @@ function randomBetween(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function isCharacterMatch(
+  character: Character,
+  linkType: LinkType,
+  linkValue: string
+): boolean {
+  // Handle version comparison links
+  if (linkType === 'versionBefore') {
+    return character.version
+      ? isVersionBefore(character.version, linkValue)
+      : false;
+  }
+  if (linkType === 'versionAfter') {
+    return character.version
+      ? isVersionAfter(character.version, linkValue)
+      : false;
+  }
+
+  // Handle direct property match (element, weaponType, region, rarity)
+  return character[linkType] === linkValue;
+}
+
 export function generateGrid(
   allCharacters: Character[],
   targetCharacter: Character,
@@ -35,12 +57,16 @@ export function generateGrid(
 ): GeneratedGrid {
   // Filter characters that match the link (excluding target)
   const matchingCharacters = allCharacters.filter(
-    (c) => c.name !== targetCharacter.name && c[linkType] === linkValue
+    (c) =>
+      c.name !== targetCharacter.name &&
+      isCharacterMatch(c, linkType, linkValue)
   );
 
   // Filter characters that do NOT match the link
   const nonMatchingCharacters = allCharacters.filter(
-    (c) => c.name !== targetCharacter.name && c[linkType] !== linkValue
+    (c) =>
+      c.name !== targetCharacter.name &&
+      !isCharacterMatch(c, linkType, linkValue)
   );
 
   // Determine number of correct answers (random within range)
@@ -66,7 +92,14 @@ export function generateGrid(
 }
 
 export function getRandomLinkType(): LinkType {
-  const linkTypes: LinkType[] = ['element', 'weaponType', 'region'];
+  const linkTypes: LinkType[] = [
+    'element',
+    'weaponType',
+    'region',
+    'rarity',
+    'versionBefore',
+    'versionAfter',
+  ];
   return linkTypes[Math.floor(Math.random() * linkTypes.length)];
 }
 
@@ -82,5 +115,11 @@ export function getLinkDisplayName(linkType: LinkType): string {
       return 'Weapon';
     case 'region':
       return 'Region';
+    case 'rarity':
+      return 'Rarity';
+    case 'versionBefore':
+      return 'Released';
+    case 'versionAfter':
+      return 'Released';
   }
 }

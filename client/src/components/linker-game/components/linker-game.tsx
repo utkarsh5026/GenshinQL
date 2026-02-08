@@ -26,12 +26,14 @@ export const LinkerGame = () => {
   const gameStatus = useLinkerGameStatus();
   const difficulty = useLinkerGameDifficulty();
   const selectionMode = useLinkerGameSelectionMode();
+  const gridSize = useLinkerGameStore((state) => state.gridSize);
   const initializeGame = useLinkerGameStore((state) => state.initializeGame);
   const resetGame = useLinkerGameStore((state) => state.resetGame);
   const setDifficulty = useLinkerGameStore((state) => state.setDifficulty);
   const setSelectionMode = useLinkerGameStore(
     (state) => state.setSelectionMode
   );
+  const setGridSize = useLinkerGameStore((state) => state.setGridSize);
 
   // Fetch characters on mount
   useEffect(() => {
@@ -52,6 +54,13 @@ export const LinkerGame = () => {
     [setSelectionMode]
   );
 
+  const handleGridSizeChange = useCallback(
+    (newGridSize: number) => {
+      setGridSize(newGridSize);
+    },
+    [setGridSize]
+  );
+
   const handleStartGame = useCallback(async () => {
     if (characters.length > 0) {
       setIsPreloading(true);
@@ -69,9 +78,9 @@ export const LinkerGame = () => {
 
       await Promise.all(preloadPromises);
       setIsPreloading(false);
-      initializeGame(characters, difficulty, selectionMode);
+      initializeGame(characters, difficulty, selectionMode, gridSize);
     }
-  }, [characters, difficulty, selectionMode, initializeGame]);
+  }, [characters, difficulty, selectionMode, gridSize, initializeGame]);
 
   const handlePlayAgain = useCallback(async () => {
     resetGame();
@@ -115,6 +124,8 @@ export const LinkerGame = () => {
               onDifficultyChange={handleDifficultyChange}
               selectionMode={selectionMode}
               onSelectionModeChange={handleSelectionModeChange}
+              gridSize={gridSize}
+              onGridSizeChange={handleGridSizeChange}
               onStart={handleStartGame}
               isLoading={isPreloading}
             />

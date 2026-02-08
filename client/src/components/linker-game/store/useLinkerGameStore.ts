@@ -3,6 +3,11 @@ import { devtools } from 'zustand/middleware';
 import { useShallow } from 'zustand/react/shallow';
 
 import type { Character } from '@/types';
+import {
+  getRandomVersionInRange,
+  getValidVersionRange,
+  isValidNumericVersion,
+} from '@/utils/versionComparison';
 
 import {
   generateGrid,
@@ -50,6 +55,7 @@ interface LinkerGameState {
   gameStatus: LinkerGameStatus;
   difficulty: LinkerDifficulty;
   selectionMode: SelectionMode;
+  gridSize: number;
   lives: number;
   maxLives: number;
 
@@ -74,7 +80,8 @@ interface LinkerGameState {
   initializeGame: (
     characters: Character[],
     difficulty: LinkerDifficulty,
-    selectionMode: SelectionMode
+    selectionMode: SelectionMode,
+    gridSize: number
   ) => void;
   selectCharacter: (characterName: string) => void;
   confirmSelection: () => void; // For multi-select mode
@@ -82,6 +89,7 @@ interface LinkerGameState {
   resetGame: () => void;
   setDifficulty: (difficulty: LinkerDifficulty) => void;
   setSelectionMode: (mode: SelectionMode) => void;
+  setGridSize: (gridSize: number) => void;
   clearResult: () => void;
 }
 
@@ -98,20 +106,49 @@ const initialStats: LinkerGameStats = {
 
 function generateNewTurn(
   characters: Character[],
-  difficulty: LinkerDifficulty
+  difficulty: LinkerDifficulty,
+  gridSize: number
 ): LinkerTurn {
   const config = DIFFICULTY_CONFIG[difficulty];
-  const targetCharacter = getRandomCharacter(characters);
   const linkType = getRandomLinkType();
-  const linkValue = targetCharacter[linkType];
+
+  let targetCharacter: Character;
+  let linkValue: string;
+  let charactersForGrid: Character[];
+
+  // Handle version-based links differently
+  if (linkType === 'versionBefore' || linkType === 'versionAfter') {
+    // Filter to only characters with valid numeric versions
+    charactersForGrid = characters.filter(
+      (c) => c.version && isValidNumericVersion(c.version)
+    );
+
+    if (charactersForGrid.length === 0) {
+      // Fallback: use all characters if no valid versions found
+      charactersForGrid = characters;
+      targetCharacter = getRandomCharacter(charactersForGrid);
+      linkValue = targetCharacter.element; // Fallback to element link
+    } else {
+      targetCharacter = getRandomCharacter(charactersForGrid);
+
+      // Generate a random version within valid range
+      const { min, max } = getValidVersionRange(charactersForGrid);
+      linkValue = getRandomVersionInRange(min, max);
+    }
+  } else {
+    // Direct property match (element, weaponType, region, rarity)
+    charactersForGrid = characters;
+    targetCharacter = getRandomCharacter(charactersForGrid);
+    linkValue = targetCharacter[linkType];
+  }
 
   const { characters: gridCharacters, correctNames } = generateGrid(
-    characters,
+    charactersForGrid,
     targetCharacter,
     linkType,
     linkValue,
     {
-      gridSize: config.gridSize,
+      gridSize: gridSize,
       minCorrect: config.minCorrect,
       maxCorrect: config.maxCorrect,
     }
@@ -133,6 +170,7 @@ export const useLinkerGameStore = create<LinkerGameState>()(
       gameStatus: 'idle',
       difficulty: 'medium',
       selectionMode: 'single',
+      gridSize: 6,
       lives: 3,
       maxLives: 3,
       currentTurn: null,
@@ -145,13 +183,14 @@ export const useLinkerGameStore = create<LinkerGameState>()(
       showingResult: false,
       allCharacters: [],
 
-      initializeGame: (characters, difficulty, selectionMode) => {
-        const turn = generateNewTurn(characters, difficulty);
+      initializeGame: (characters, difficulty, selectionMode, gridSize) => {
+        const turn = generateNewTurn(characters, difficulty, gridSize);
 
         set({
           allCharacters: characters,
           difficulty,
           selectionMode,
+          gridSize,
           lives: 3,
           maxLives: 3,
           currentTurn: turn,
@@ -227,10 +266,18 @@ export const useLinkerGameStore = create<LinkerGameState>()(
 
             // Generate next turn after delay
             setTimeout(() => {
-              const { gameStatus: currentStatus, allCharacters: chars } = get();
+              const {
+                gameStatus: currentStatus,
+                allCharacters: chars,
+                gridSize: currentGridSize,
+              } = get();
               if (currentStatus !== 'playing') return;
 
-              const newTurn = generateNewTurn(chars, difficulty);
+              const newTurn = generateNewTurn(
+                chars,
+                difficulty,
+                currentGridSize
+              );
               set({
                 currentTurn: newTurn,
                 isProcessingAnswer: false,
@@ -272,11 +319,18 @@ export const useLinkerGameStore = create<LinkerGameState>()(
             } else {
               // Continue with next turn
               setTimeout(() => {
-                const { gameStatus: currentStatus, allCharacters: chars } =
-                  get();
+                const {
+                  gameStatus: currentStatus,
+                  allCharacters: chars,
+                  gridSize: currentGridSize,
+                } = get();
                 if (currentStatus !== 'playing') return;
 
-                const newTurn = generateNewTurn(chars, difficulty);
+                const newTurn = generateNewTurn(
+                  chars,
+                  difficulty,
+                  currentGridSize
+                );
                 set({
                   currentTurn: newTurn,
                   isProcessingAnswer: false,
@@ -338,11 +392,18 @@ export const useLinkerGameStore = create<LinkerGameState>()(
               });
 
               setTimeout(() => {
-                const { gameStatus: currentStatus, allCharacters: chars } =
-                  get();
+                const {
+                  gameStatus: currentStatus,
+                  allCharacters: chars,
+                  gridSize: currentGridSize,
+                } = get();
                 if (currentStatus !== 'playing') return;
 
-                const newTurn = generateNewTurn(chars, difficulty);
+                const newTurn = generateNewTurn(
+                  chars,
+                  difficulty,
+                  currentGridSize
+                );
                 set({
                   currentTurn: newTurn,
                   isProcessingAnswer: false,
@@ -391,11 +452,18 @@ export const useLinkerGameStore = create<LinkerGameState>()(
             } else {
               // Continue with next turn
               setTimeout(() => {
-                const { gameStatus: currentStatus, allCharacters: chars } =
-                  get();
+                const {
+                  gameStatus: currentStatus,
+                  allCharacters: chars,
+                  gridSize: currentGridSize,
+                } = get();
                 if (currentStatus !== 'playing') return;
 
-                const newTurn = generateNewTurn(chars, difficulty);
+                const newTurn = generateNewTurn(
+                  chars,
+                  difficulty,
+                  currentGridSize
+                );
                 set({
                   currentTurn: newTurn,
                   isProcessingAnswer: false,
@@ -448,10 +516,14 @@ export const useLinkerGameStore = create<LinkerGameState>()(
           }, 1000);
         } else {
           setTimeout(() => {
-            const { gameStatus: currentStatus, allCharacters: chars } = get();
+            const {
+              gameStatus: currentStatus,
+              allCharacters: chars,
+              gridSize: currentGridSize,
+            } = get();
             if (currentStatus !== 'playing') return;
 
-            const newTurn = generateNewTurn(chars, difficulty);
+            const newTurn = generateNewTurn(chars, difficulty, currentGridSize);
             set({
               currentTurn: newTurn,
               isProcessingAnswer: false,
@@ -500,6 +572,10 @@ export const useLinkerGameStore = create<LinkerGameState>()(
         set({ selectionMode: mode });
       },
 
+      setGridSize: (gridSize) => {
+        set({ gridSize });
+      },
+
       confirmSelection: () => {
         // This is called when player wants to end their multi-select turn early
         const {
@@ -520,10 +596,14 @@ export const useLinkerGameStore = create<LinkerGameState>()(
         });
 
         setTimeout(() => {
-          const { gameStatus: currentStatus, allCharacters: chars } = get();
+          const {
+            gameStatus: currentStatus,
+            allCharacters: chars,
+            gridSize: currentGridSize,
+          } = get();
           if (currentStatus !== 'playing') return;
 
-          const newTurn = generateNewTurn(chars, difficulty);
+          const newTurn = generateNewTurn(chars, difficulty, currentGridSize);
           set({
             currentTurn: newTurn,
             isProcessingAnswer: false,

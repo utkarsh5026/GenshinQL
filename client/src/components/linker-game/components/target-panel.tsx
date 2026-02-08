@@ -13,7 +13,7 @@ interface TargetPanelProps {
   turnKey: number;
 }
 
-function getLinkIcon(character: Character, linkType: LinkType): string {
+function getLinkIcon(character: Character, linkType: LinkType): string | null {
   switch (linkType) {
     case 'element':
       return character.elementUrl;
@@ -21,6 +21,25 @@ function getLinkIcon(character: Character, linkType: LinkType): string {
       return character.weaponUrl;
     case 'region':
       return character.regionUrl;
+    case 'rarity':
+    case 'versionBefore':
+    case 'versionAfter':
+      return null; // Use text badges for new link types
+  }
+}
+
+function getLinkValueDisplay(linkType: LinkType, linkValue: string): string {
+  switch (linkType) {
+    case 'versionBefore':
+      return `Before ${linkValue}`;
+    case 'versionAfter':
+      return `After ${linkValue}`;
+    case 'rarity':
+    case 'element':
+    case 'weaponType':
+    case 'region':
+    default:
+      return linkValue;
   }
 }
 
@@ -39,6 +58,11 @@ export const TargetPanel = memo(function TargetPanel({
     [character, linkType]
   );
 
+  const linkValueDisplay = useMemo(
+    () => getLinkValueDisplay(linkType, linkValue),
+    [linkType, linkValue]
+  );
+
   const badgeClass = useMemo(() => {
     const baseClass = styles.linkBadge;
     switch (linkType) {
@@ -48,6 +72,11 @@ export const TargetPanel = memo(function TargetPanel({
         return `${baseClass} ${styles.linkBadgeWeapon}`;
       case 'region':
         return `${baseClass} ${styles.linkBadgeRegion}`;
+      case 'rarity':
+        return `${baseClass} ${styles.linkBadgeRarity}`;
+      case 'versionBefore':
+      case 'versionAfter':
+        return `${baseClass} ${styles.linkBadgeVersion}`;
     }
   }, [linkType]);
 
@@ -76,7 +105,7 @@ export const TargetPanel = memo(function TargetPanel({
               className={styles.linkBadgeIcon}
             />
           )}
-          <span className={styles.linkBadgeText}>{linkValue}</span>
+          <span className={styles.linkBadgeText}>{linkValueDisplay}</span>
         </div>
       </div>
     </div>

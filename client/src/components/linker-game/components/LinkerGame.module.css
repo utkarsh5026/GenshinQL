@@ -306,6 +306,22 @@
   );
 }
 
+.linkBadgeRarity {
+  background: linear-gradient(
+    135deg,
+    oklch(65% 0.18 55) 0%,
+    oklch(55% 0.2 45) 100%
+  );
+}
+
+.linkBadgeVersion {
+  background: linear-gradient(
+    135deg,
+    oklch(50% 0.15 200) 0%,
+    oklch(40% 0.18 220) 100%
+  );
+}
+
 .linkBadgeIcon {
   width: 24px;
   height: 24px;
