@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { assetCache, clearOldCache } from '@/utils/assetCache';
+import { assetCache, clearOldCache } from '../utils/assetCache';
 
 interface CacheStats {
   count: number;
@@ -20,59 +20,53 @@ export function useCacheManager() {
   });
   const [isLoading, setIsLoading] = useState(false);
 
-  const refreshStats = useCallback(async () => {
-    setIsLoading(true);
-    try {
-      const cacheStats = await assetCache.getCacheStats();
-      setStats(cacheStats);
-    } catch (error) {
-      console.error('Failed to get cache stats:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
-
-  const clearCache = useCallback(async () => {
-    setIsLoading(true);
-    try {
-      await assetCache.clear();
-      await refreshStats();
-    } catch (error) {
-      console.error('Failed to clear cache:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [refreshStats]);
-
-  const clearOldAssets = useCallback(
-    async (maxAgeInDays: number = 7) => {
+  const executeWithLoading = useCallback(
+    async (operation: () => Promise<void>, errorMessage: string) => {
       setIsLoading(true);
       try {
-        const maxAge = maxAgeInDays * 24 * 60 * 60 * 1000;
-        await clearOldCache(maxAge);
-        await refreshStats();
+        await operation();
       } catch (error) {
-        console.error('Failed to clear old cache:', error);
+        console.error(errorMessage, error);
       } finally {
         setIsLoading(false);
       }
     },
-    [refreshStats]
+    []
+  );
+
+  const refreshStats = useCallback(async () => {
+    await executeWithLoading(async () => {
+      const cacheStats = await assetCache.getCacheStats();
+      setStats(cacheStats);
+    }, 'Failed to get cache stats:');
+  }, [executeWithLoading]);
+
+  const clearCache = useCallback(async () => {
+    await executeWithLoading(async () => {
+      await assetCache.clear();
+      await refreshStats();
+    }, 'Failed to clear cache:');
+  }, [executeWithLoading, refreshStats]);
+
+  const clearOldAssets = useCallback(
+    async (maxAgeInDays: number = 7) => {
+      await executeWithLoading(async () => {
+        const maxAge = maxAgeInDays * 24 * 60 * 60 * 1000;
+        await clearOldCache(maxAge);
+        await refreshStats();
+      }, 'Failed to clear old cache:');
+    },
+    [executeWithLoading, refreshStats]
   );
 
   const deleteAsset = useCallback(
     async (url: string) => {
-      setIsLoading(true);
-      try {
+      await executeWithLoading(async () => {
         await assetCache.delete(url);
         await refreshStats();
-      } catch (error) {
-        console.error('Failed to delete asset:', error);
-      } finally {
-        setIsLoading(false);
-      }
+      }, 'Failed to delete asset:');
     },
-    [refreshStats]
+    [executeWithLoading, refreshStats]
   );
 
   useEffect(() => {
