@@ -1,33 +1,22 @@
 import React, { useMemo } from 'react';
 
 import CharacterGrid from '@/components/character/utils/CharacterGrid.tsx';
-import TalentBooks from '@/components/talents/talent-books';
-import type { TalentBookCalendar } from '@/types';
+import TalentBooks from '@/features/talent-calender/components/talent-books';
+
+import { DAYS } from '../constants';
+import type { TalentBookCalendar } from '../types';
 
 interface TalentTableProps {
   talent: TalentBookCalendar;
 }
 
 const getTodayDayOfWeek = () => {
-  const days = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
   const date = new Date();
-  return days[date.getDay()];
+  return DAYS[date.getDay()];
 };
 
 /**
  * TalentTable component displays a table of talent books and characters.
- *
- * @param {TalentTableProps} props - The props for the component.
- * @param {TalentBookCalendar} props.talent - The talent book calendar data.
- * @returns {JSX.Element} The rendered table component.
  */
 const TalentTable: React.FC<TalentTableProps> = ({ talent }) => {
   const days = useMemo(() => talent.days, [talent.days]);

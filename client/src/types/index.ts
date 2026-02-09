@@ -52,21 +52,6 @@ export type CharacterDetailed = Character & {
   gallery?: GalleryRaw;
 };
 
-export type TalentBookCalendar = {
-  location: string;
-  days: {
-    day: string;
-    books: {
-      name: string;
-      url: string;
-    }[];
-    characters: {
-      name: string;
-      url: string;
-    }[];
-  }[];
-};
-
 export type Weapon = {
   name: string;
   iconUrl: string;

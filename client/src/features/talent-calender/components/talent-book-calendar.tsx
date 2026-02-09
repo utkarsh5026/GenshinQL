@@ -1,8 +1,6 @@
 import { Aperture, CalendarDays } from 'lucide-react';
 import React, { useEffect, useMemo, useState } from 'react';
 
-import TalentCalendarView from '@/components/talents/talent-calendar-view';
-import TalentTable from '@/components/talents/talents-table';
 import { Button } from '@/components/ui/button.tsx';
 import {
   Tabs,
@@ -11,7 +9,11 @@ import {
   TabsTrigger,
 } from '@/components/ui/tabs.tsx';
 import { CachedImage } from '@/features/cache';
-import { usePrimitivesStore, useTalentBooksStore } from '@/stores';
+import TalentCalendarView from '@/features/talent-calender/components/talent-calendar-view';
+import TalentTable from '@/features/talent-calender/components/talents-table';
+import { usePrimitivesStore } from '@/stores';
+
+import { useTalentBooksStore } from '../stores';
 
 /**
  * TalentCalender component displays a calendar or table view of talent books.
@@ -20,7 +22,7 @@ import { usePrimitivesStore, useTalentBooksStore } from '@/stores';
  */
 const TalentCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
-  const { calendar, loading, fetchBooks } = useTalentBooksStore();
+  const { calendar, fetchBooks } = useTalentBooksStore();
   const { primitives, fetchPrimitives } = usePrimitivesStore();
 
   useEffect(() => {
@@ -48,8 +50,6 @@ const TalentCalender: React.FC = () => {
   }, [locations, primitives]);
 
   const talentBooks = calendar || [];
-
-  console.log(talentBooks.length, loading);
 
   if (locations.length > 0)
     return (
