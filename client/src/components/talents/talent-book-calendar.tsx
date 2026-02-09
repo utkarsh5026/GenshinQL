@@ -10,7 +10,7 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/ui/tabs.tsx';
-import { CachedImage } from '@/components/utils/CachedImage';
+import { CachedImage } from '@/features/cache';
 import { usePrimitivesStore, useTalentBooksStore } from '@/stores';
 
 /**

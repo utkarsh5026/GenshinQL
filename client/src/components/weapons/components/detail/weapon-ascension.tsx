@@ -18,9 +18,9 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { CachedImage } from '@/components/utils';
 import { getRarityHexColor } from '@/components/weapons/utils/color-map';
 import { parseSubstat } from '@/components/weapons/utils/substat-utils';
+import { CachedImage } from '@/features/cache';
 import { AscensionPhase } from '@/types';
 
 interface WeaponAscensionProps {

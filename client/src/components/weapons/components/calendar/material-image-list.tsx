@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CachedImage } from '@/components/utils';
+import { CachedImage } from '@/features/cache';
 
 interface MaterialImage {
   url: string;

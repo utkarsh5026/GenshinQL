@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Card, CardContent } from '@/components/ui/card';
-import { CachedImage } from '@/components/utils';
+import { CachedImage } from '@/features/cache';
 import { ImageUrl } from '@/types';
 
 interface WeaponMaterialsProps {
