@@ -7,7 +7,7 @@ import {
   useLinkerGameSelectionMode,
   useLinkerGameStatus,
   useLinkerGameStore,
-} from '../store/useLinkerGameStore';
+} from '../stores/useLinkerGameStore';
 import type { LinkerDifficulty, SelectionMode } from '../types';
 import { GameBoard } from './game-board';
 import { GameHeader } from './game-header';

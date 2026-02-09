@@ -2,13 +2,14 @@ import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import { useShallow } from 'zustand/react/shallow';
 
-import type { Character } from '@/types';
 import {
   getRandomVersionInRange,
   getValidVersionRange,
   isValidNumericVersion,
-} from '@/utils/versionComparison';
+} from '@/features/linker-game/utils/versionComparison';
+import type { Character } from '@/types';
 
+import { DIFFICULTY_CONFIG } from '../constants';
 import {
   generateGrid,
   getRandomCharacter,
@@ -16,39 +17,11 @@ import {
 } from '../services/gridGeneratorService';
 import type {
   LinkerDifficulty,
-  LinkerDifficultyConfig,
   LinkerGameStats,
   LinkerGameStatus,
   LinkerTurn,
   SelectionMode,
 } from '../types';
-
-const DIFFICULTY_CONFIG: Record<LinkerDifficulty, LinkerDifficultyConfig> = {
-  easy: {
-    timePerTurn: 15000,
-    gridSize: 6,
-    basePoints: 100,
-    timeMultiplier: 5,
-    minCorrect: 2,
-    maxCorrect: 3,
-  },
-  medium: {
-    timePerTurn: 10000,
-    gridSize: 6,
-    basePoints: 150,
-    timeMultiplier: 10,
-    minCorrect: 1,
-    maxCorrect: 2,
-  },
-  hard: {
-    timePerTurn: 5000,
-    gridSize: 9,
-    basePoints: 200,
-    timeMultiplier: 20,
-    minCorrect: 1,
-    maxCorrect: 2,
-  },
-};
 
 interface LinkerGameState {
   // Game state
@@ -666,5 +639,3 @@ export const useLinkerGameSelectedCharacters = () =>
 
 export const useLinkerGameComboCount = () =>
   useLinkerGameStore((state) => state.comboCount);
-
-export { DIFFICULTY_CONFIG };

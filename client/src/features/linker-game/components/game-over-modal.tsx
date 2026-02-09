@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import {
   useLinkerGameStats,
   useLinkerGameStore,
-} from '../store/useLinkerGameStore';
+} from '../stores/useLinkerGameStore';
 import styles from './LinkerGame.module.css';
 
 interface GameOverModalProps {

@@ -4,7 +4,7 @@ import { memo, useCallback, useMemo, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-import { DIFFICULTY_CONFIG } from '../store/useLinkerGameStore';
+import { DIFFICULTY_CONFIG } from '../constants';
 import type { LinkerDifficulty, SelectionMode } from '../types';
 import styles from './LinkerGame.module.css';
 

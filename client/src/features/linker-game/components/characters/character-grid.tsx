@@ -2,7 +2,7 @@ import { memo, useCallback, useMemo } from 'react';
 
 import type { Character } from '@/types';
 
-import type { LinkerDifficulty } from '../types';
+import type { LinkerDifficulty } from '../../types';
 import { CharacterTile } from './character-tile';
 import styles from './LinkerGame.module.css';
 

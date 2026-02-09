@@ -3,16 +3,16 @@ import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 
+import { DIFFICULTY_CONFIG } from '../constants';
 import { useTurnTimer } from '../hooks/useTurnTimer';
 import {
-  DIFFICULTY_CONFIG,
   useLinkerGameCurrentTurn,
   useLinkerGameIsProcessing,
   useLinkerGameLives,
   useLinkerGameMaxLives,
   useLinkerGameStats,
   useLinkerGameStore,
-} from '../store/useLinkerGameStore';
+} from '../stores/useLinkerGameStore';
 import type { LinkerDifficulty } from '../types';
 import styles from './LinkerGame.module.css';
 import { LivesDisplay } from './lives-display';

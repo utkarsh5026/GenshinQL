@@ -8,8 +8,8 @@ import {
   useLinkerGameSelectedCharacters,
   useLinkerGameStats,
   useLinkerGameStore,
-} from '../store/useLinkerGameStore';
-import { CharacterGrid } from './character-grid';
+} from '../stores/useLinkerGameStore';
+import { CharacterGrid } from './characters/character-grid';
 import styles from './LinkerGame.module.css';
 import { TargetPanel } from './target-panel';
 
