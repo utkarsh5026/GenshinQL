@@ -1,2 +1,3 @@
 /* Export all hooks from linker-game feature */
-export * from './useTurnTimer';
+export { useGameOver } from './useGameOver';
+export { useTurnTimer } from './useTurnTimer';

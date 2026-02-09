@@ -1,12 +1,9 @@
 import { Trophy, X } from 'lucide-react';
-import { memo, useCallback, useMemo } from 'react';
+import { memo } from 'react';
 
 import { Button } from '@/components/ui/button';
 
-import {
-  useLinkerGameStats,
-  useLinkerGameStore,
-} from '../stores/useLinkerGameStore';
+import { useGameOver } from '../hooks';
 import styles from './LinkerGame.module.css';
 
 interface GameOverModalProps {
@@ -16,34 +13,11 @@ interface GameOverModalProps {
 export const GameOverModal = memo(function GameOverModal({
   onPlayAgain,
 }: GameOverModalProps) {
-  const stats = useLinkerGameStats();
-  const resetGame = useLinkerGameStore((state) => state.resetGame);
-
-  const handleClose = useCallback(() => {
-    resetGame();
-  }, [resetGame]);
-
-  const timePlayed = useMemo(() => {
-    if (!stats.startTime || !stats.endTime) return '0:00';
-    const elapsed = stats.endTime - stats.startTime;
-    const minutes = Math.floor(elapsed / 60000);
-    const seconds = Math.floor((elapsed % 60000) / 1000);
-    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-  }, [stats.startTime, stats.endTime]);
-
-  const accuracy = useMemo(() => {
-    if (stats.totalRounds === 0) return 0;
-    return Math.round((stats.correctAnswers / stats.totalRounds) * 100);
-  }, [stats.correctAnswers, stats.totalRounds]);
-
+  const { stats, resetGame, accuracy, timePlayed } = useGameOver();
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>
-        <button
-          type="button"
-          className={styles.modalClose}
-          onClick={handleClose}
-        >
+        <button type="button" className={styles.modalClose} onClick={resetGame}>
           <X className="w-5 h-5" />
         </button>
 
@@ -91,7 +65,7 @@ export const GameOverModal = memo(function GameOverModal({
           <Button
             variant="ghost"
             className={styles.quitButton}
-            onClick={handleClose}
+            onClick={resetGame}
           >
             Back to Menu
           </Button>

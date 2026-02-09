@@ -2,19 +2,10 @@ import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import { useShallow } from 'zustand/react/shallow';
 
-import {
-  getRandomVersionInRange,
-  getValidVersionRange,
-  isValidNumericVersion,
-} from '@/features/linker-game/utils/versionComparison';
 import type { Character } from '@/types';
 
 import { DIFFICULTY_CONFIG } from '../constants';
-import {
-  generateGrid,
-  getRandomCharacter,
-  getRandomLinkType,
-} from '../services/gridGeneratorService';
+import { generateNewTurn } from '../services';
 import type {
   LinkerDifficulty,
   LinkerGameStats,
@@ -76,66 +67,6 @@ const initialStats: LinkerGameStats = {
   startTime: null,
   endTime: null,
 };
-
-function generateNewTurn(
-  characters: Character[],
-  difficulty: LinkerDifficulty,
-  gridSize: number
-): LinkerTurn {
-  const config = DIFFICULTY_CONFIG[difficulty];
-  const linkType = getRandomLinkType();
-
-  let targetCharacter: Character;
-  let linkValue: string;
-  let charactersForGrid: Character[];
-
-  // Handle version-based links differently
-  if (linkType === 'versionBefore' || linkType === 'versionAfter') {
-    // Filter to only characters with valid numeric versions
-    charactersForGrid = characters.filter(
-      (c) => c.version && isValidNumericVersion(c.version)
-    );
-
-    if (charactersForGrid.length === 0) {
-      // Fallback: use all characters if no valid versions found
-      charactersForGrid = characters;
-      targetCharacter = getRandomCharacter(charactersForGrid);
-      linkValue = targetCharacter.element; // Fallback to element link
-    } else {
-      targetCharacter = getRandomCharacter(charactersForGrid);
-
-      // Generate a random version within valid range
-      const { min, max } = getValidVersionRange(charactersForGrid);
-      linkValue = getRandomVersionInRange(min, max);
-    }
-  } else {
-    // Direct property match (element, weaponType, region, rarity)
-    charactersForGrid = characters;
-    targetCharacter = getRandomCharacter(charactersForGrid);
-    linkValue = targetCharacter[linkType];
-  }
-
-  const { characters: gridCharacters, correctNames } = generateGrid(
-    charactersForGrid,
-    targetCharacter,
-    linkType,
-    linkValue,
-    {
-      gridSize: gridSize,
-      minCorrect: config.minCorrect,
-      maxCorrect: config.maxCorrect,
-    }
-  );
-
-  return {
-    targetCharacter,
-    linkType,
-    linkValue,
-    gridCharacters,
-    correctCharacterNames: correctNames,
-    turnStartTime: Date.now(),
-  };
-}
 
 export const useLinkerGameStore = create<LinkerGameState>()(
   devtools(
