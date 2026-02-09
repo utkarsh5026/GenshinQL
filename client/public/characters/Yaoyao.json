@@ -462,5 +462,34 @@
         "caption": "Set 47"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Healer Support",
+      "sets": [
+        {
+          "name": "Deepwood Memories",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Healer",
+      "sets": [
+        {
+          "name": "Ocean-Hued Clam",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "EM Support",
+      "sets": [
+        {
+          "name": "Instructor",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

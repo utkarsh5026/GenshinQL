@@ -1,475 +1,500 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Fischl_Icon.png",
-    "name": "Fischl",
-    "rarity": "4 Stars",
-    "element": "Electro",
-    "weaponType": "Bow",
-    "region": "Mondstadt",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Fischl_Icon.png",
+  "name": "Fischl",
+  "rarity": "4 Stars",
+  "element": "Electro",
+  "weaponType": "Bow",
+  "region": "Mondstadt",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Bow_Electro.png",
+      "talentName": "Bolts of Downfall",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 5 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, the dark lightning spirits of Immernachtreich shall heed the call of their Prinzessin and indwell the enchanted arrowhead. When fully indwelt, the Rachsüchtig Blitz shall deal immense Electro DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Bow_Electro.png",
-            "talentName": "Bolts of Downfall",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 5 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, the dark lightning spirits of Immernachtreich shall heed the call of their Prinzessin and indwell the enchanted arrowhead. When fully indwelt, the Rachsüchtig Blitz shall deal immense Electro DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Bolts_of_Downfall_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Bolts_of_Downfall_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Bolts_of_Downfall_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Bolts_of_Downfall_N1_Recovery_Preview.gif",
-                    "caption": "Normal Attack 1"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Bolts_of_Downfall_N2_Recovery_Preview.gif",
-                    "caption": "Normal Attack 2"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Bolts_of_Downfall_N3_Recovery_Preview.gif",
-                    "caption": "Normal Attack 3"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Bolts_of_Downfall_N4_Recovery_Preview.gif",
-                    "caption": "Normal Attack 4"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Bolts_of_Downfall_N5_Recovery_Preview.gif",
-                    "caption": "Normal Attack 5"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "44.12",
-                    "47.71",
-                    "51.3",
-                    "56.43",
-                    "60.02",
-                    "64.13",
-                    "69.77",
-                    "75.41",
-                    "81.05",
-                    "87.21",
-                    "93.37"
-                ],
-                "2-Hit DMG (%)": [
-                    "46.78",
-                    "50.59",
-                    "54.4",
-                    "59.84",
-                    "63.65",
-                    "68",
-                    "73.98",
-                    "79.97",
-                    "85.95",
-                    "92.48",
-                    "99.01"
-                ],
-                "3-Hit DMG (%)": [
-                    "58.14",
-                    "62.87",
-                    "67.6",
-                    "74.36",
-                    "79.09",
-                    "84.5",
-                    "91.94",
-                    "99.37",
-                    "106.81",
-                    "114.92",
-                    "123.03"
-                ],
-                "4-Hit DMG (%)": [
-                    "57.71",
-                    "62.4",
-                    "67.1",
-                    "73.81",
-                    "78.51",
-                    "83.88",
-                    "91.26",
-                    "98.64",
-                    "106.02",
-                    "114.07",
-                    "122.12"
-                ],
-                "5-Hit DMG (%)": [
-                    "72.07",
-                    "77.93",
-                    "83.8",
-                    "92.18",
-                    "98.05",
-                    "104.75",
-                    "113.97",
-                    "123.19",
-                    "132.4",
-                    "142.46",
-                    "152.52"
-                ],
-                "Aimed Shot (%)": [
-                    "43.86",
-                    "47.43",
-                    "51",
-                    "56.1",
-                    "59.67",
-                    "63.75",
-                    "69.36",
-                    "74.97",
-                    "80.58",
-                    "86.7",
-                    "92.82"
-                ],
-                "Fully-Charged Aimed Shot (%)": [
-                    "124",
-                    "133.3",
-                    "142.6",
-                    "155",
-                    "164.3",
-                    "173.6",
-                    "186",
-                    "198.4",
-                    "210.8",
-                    "223.2",
-                    "235.6"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.17",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Bolts_of_Downfall_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Talent_Nightrider.png",
-            "talentName": "Nightrider",
-            "talentType": "Elemental Skill",
-            "description": "Summons Oz. The night raven forged of darkness and lightning descends upon the land, dealing Electro DMG in a small AoE.\nFor the ability's duration, Oz will continuously attack nearby opponents with Freikugel.\n\nHold to adjust the location Oz will be summoned to.\n(‍Press‍/‍Tap‍) again any time during the ability's duration to once again summon him to Fischl's side.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Nightrider_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Nightrider_Hold_Preview.gif",
-                    "caption": "Hold"
-                }
-            ],
-            "scaling": {
-                "Oz's ATK DMG (%)": [
-                    "88.8",
-                    "95.46",
-                    "102.12",
-                    "111",
-                    "117.66",
-                    "124.32",
-                    "133.2",
-                    "142.08",
-                    "150.96",
-                    "159.84",
-                    "168.72",
-                    "177.6",
-                    "188.7",
-                    "200"
-                ],
-                "Summoning DMG (%)": [
-                    "115.44",
-                    "124.1",
-                    "132.76",
-                    "144.3",
-                    "152.96",
-                    "161.62",
-                    "173.16",
-                    "184.7",
-                    "196.25",
-                    "207.79",
-                    "219.34",
-                    "230.88",
-                    "245.31",
-                    "260"
-                ],
-                "Oz's Duration": [
-                    "10s"
-                ],
-                "CD": [
-                    "25s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Bolts_of_Downfall_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Talent_Midnight_Phantasmagoria.png",
-            "talentName": "Midnight Phantasmagoria",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nSummons Oz to spread his twin wings of twilight and defend Fischl.\nHas the following properties during the ability's duration:\nFischl takes on Oz's form, greatly increasing her Movement Speed.\nStrikes nearby opponents with lightning, dealing Electro DMG to opponents she comes into contact with. Each opponent can only be struck once.\nOnce this ability's effects end, Oz will remain on the battlefield and attack his Prinzessin's foes. If Oz is already on the field, then this will reset the duration of his presence.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Midnight_Phantasmagoria_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Falling Thunder DMG (%)": [
-                    "208",
-                    "223.6",
-                    "239.2",
-                    "260",
-                    "275.6",
-                    "291.2",
-                    "312",
-                    "332.8",
-                    "353.6",
-                    "374.4",
-                    "395.2",
-                    "416",
-                    "442",
-                    "468"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Bolts_of_Downfall_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Stellar_Predator.png",
-            "talentName": "Stellar Predator",
-            "talentType": "1st Ascension Passive",
-            "description": "When Fischl hits Oz with a fully-charged Aimed Shot, Oz brings down Thundering Retribution, dealing AoE Electro DMG equal to 152.7% of the arrow's DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Stellar_Predator_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Bolts_of_Downfall_N1_Recovery_Preview.gif",
+          "caption": "Normal Attack 1"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Talent_Undone_Be_Thy_Sinful_Hex.png",
-            "talentName": "Undone Be Thy Sinful Hex",
-            "talentType": "4th Ascension Passive",
-            "description": "If your active character triggers an Electro-related Elemental Reaction when Oz is on the field, the opponent shall be stricken with Thundering Retribution that deals Electro DMG equal to 80% of Fischl's ATK.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Bolts_of_Downfall_N2_Recovery_Preview.gif",
+          "caption": "Normal Attack 2"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Talent_Phantasmal_Nocturne.png",
-            "talentName": "Phantasmal Nocturne",
-            "talentType": "Witch's Eve Rite Passive",
-            "description": "After completing Witch's Homework: Of the Unexpected, Fischl will become a Hexerei character. When the party includes at least 2 Hexerei characters, you will gain the Hexerei: Secret Rite effect, which enhances Hexerei characters.\n\nHexerei: Secret Rite\nHark, Prince Nachtraben, Ozvaldo Hrafnavins, he who has witnessed the fall of countless worlds. Sing now the starry septet for your sovereign, for this is the moment of deepest sin, when the gathered souls at the end of causality shatter the darkness of fate.\nAdditionally, when Oz is on the field, party members will gain additional buff effects:\nAfter a nearby party member triggers an Overloaded reaction, Fischl and other nearby active party members have their ATK increased by 22.5% for 10s.\nAfter a nearby party member triggers an Electro-Charged or Lunar-Charged reaction, Fischl and other nearby active party members have their Elemental Mastery increased by 90 for 10s.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Bolts_of_Downfall_N3_Recovery_Preview.gif",
+          "caption": "Normal Attack 3"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Talent_Mein_Hausgarten.png",
-            "talentName": "Mein Hausgarten",
-            "talentType": "Utility Passive",
-            "description": "When dispatched on an expedition in Mondstadt, time consumed is reduced by 25%.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Bolts_of_Downfall_N4_Recovery_Preview.gif",
+          "caption": "Normal Attack 4"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Bolts_of_Downfall_N5_Recovery_Preview.gif",
+          "caption": "Normal Attack 5"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Constellation_Gaze_of_the_Deep.png",
-            "name": "Gaze of the Deep",
-            "level": 1,
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nPreview\nEven when Oz is not present in combat, he can still watch over Fischl through his raven eyes. When Fischl performs a Normal Attack against an opponent, Oz fires a coordinated attack, dealing DMG equal to 22% of Fischl's ATK."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Constellation_Devourer_of_All_Sins.png",
-            "name": "Devourer of All Sins",
-            "level": 2,
-            "description": "When Nightrider is used, it deals an additional 200% ATK as DMG, and its AoE is increased by 50%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Constellation_Wings_of_Nightmare.png",
-            "name": "Wings of Nightmare",
-            "level": 3,
-            "description": "Increases the Level of Nightrider by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Constellation_Her_Pilgrimage_of_Bleak.png",
-            "name": "Her Pilgrimage of Bleak",
-            "level": 4,
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nWhen Midnight Phantasmagoria is used, it deals 222% of ATK as Electro DMG to surrounding opponents.\nWhen the skill duration ends, Fischl regenerates 20% of her HP."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Constellation_Against_the_Fleeing_Light.png",
-            "name": "Against the Fleeing Light",
-            "level": 5,
-            "description": "Increases the Level of Midnight Phantasmagoria by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Constellation_Evernight_Raven.png",
-            "name": "Evernight Raven",
-            "level": 6,
-            "description": "Description\nHexerei Buff\nGameplay Notes\nAdvanced Properties\nExtends the duration of Oz's presence on the field by 2s. Additionally, Oz performs coordinated attacks with your active character when present, dealing 30% of Fischl's ATK as Electro DMG."
-        }
-    ],
-    "imageUrls": {},
-    "version": "1.0",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Idle_Fischl_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Idle_Fischl_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Idle_Fischl_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Idle_Fischl_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Talent_Menu_Fischl.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Menu_Fischl.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Weapon_Menu_Fischl.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Weapon_Menu_Fischl.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Party_Setup_Fischl.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Party_Setup_Fischl.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "44.12",
+          "47.71",
+          "51.3",
+          "56.43",
+          "60.02",
+          "64.13",
+          "69.77",
+          "75.41",
+          "81.05",
+          "87.21",
+          "93.37"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Namecard_Background_Fischl_Night_Raven.png",
-                "caption": "Fischl: Night Raven Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Fischl_Night_Raven.png",
-                "caption": "Fischl: Night Raven Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Namecard_Banner_Fischl_Night_Raven.png",
-                "caption": "Fischl: Night Raven Banner"
-            }
+        "2-Hit DMG (%)": [
+          "46.78",
+          "50.59",
+          "54.4",
+          "59.84",
+          "63.65",
+          "68",
+          "73.98",
+          "79.97",
+          "85.95",
+          "92.48",
+          "99.01"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Bolts_of_Downfall_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Bolts_of_Downfall_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Bolts_of_Downfall_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Bolts_of_Downfall_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Bolts_of_Downfall_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Bolts_of_Downfall_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Midnight_Phantasmagoria_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Midnight_Phantasmagoria_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Nightrider_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Nightrider_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Nightrider_Hold_Preview.gif",
-                        "caption": "Hold",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Nightrider_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "58.14",
+          "62.87",
+          "67.6",
+          "74.36",
+          "79.09",
+          "84.5",
+          "91.94",
+          "99.37",
+          "106.81",
+          "114.92",
+          "123.03"
         ],
-        "detailedImages": [],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Icon_Emoji_Paimon%27s_Paintings_04_Fischl_1.png",
-                "caption": "Not at all! Set 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Icon_Emoji_Paimon%27s_Paintings_04_Fischl_2.png",
-                "caption": "Hahaha Set 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icon_Emoji_Paimon%27s_Paintings_16_Fischl_1.png",
-                "caption": "Stay Calm Set 16"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Icon_Emoji_Paimon%27s_Paintings_16_Fischl_2.png",
-                "caption": "On Vacation Set 16"
-            }
+        "4-Hit DMG (%)": [
+          "57.71",
+          "62.4",
+          "67.1",
+          "73.81",
+          "78.51",
+          "83.88",
+          "91.26",
+          "98.64",
+          "106.02",
+          "114.07",
+          "122.12"
+        ],
+        "5-Hit DMG (%)": [
+          "72.07",
+          "77.93",
+          "83.8",
+          "92.18",
+          "98.05",
+          "104.75",
+          "113.97",
+          "123.19",
+          "132.4",
+          "142.46",
+          "152.52"
+        ],
+        "Aimed Shot (%)": [
+          "43.86",
+          "47.43",
+          "51",
+          "56.1",
+          "59.67",
+          "63.75",
+          "69.36",
+          "74.97",
+          "80.58",
+          "86.7",
+          "92.82"
+        ],
+        "Fully-Charged Aimed Shot (%)": [
+          "124",
+          "133.3",
+          "142.6",
+          "155",
+          "164.3",
+          "173.6",
+          "186",
+          "198.4",
+          "210.8",
+          "223.2",
+          "235.6"
+        ],
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.17",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Talent_Nightrider.png",
+      "talentName": "Nightrider",
+      "talentType": "Elemental Skill",
+      "description": "Summons Oz. The night raven forged of darkness and lightning descends upon the land, dealing Electro DMG in a small AoE.\nFor the ability's duration, Oz will continuously attack nearby opponents with Freikugel.\n\nHold to adjust the location Oz will be summoned to.\n(‍Press‍/‍Tap‍) again any time during the ability's duration to once again summon him to Fischl's side.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Nightrider_Press_Preview.gif",
+          "caption": "Press"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Nightrider_Hold_Preview.gif",
+          "caption": "Hold"
+        }
+      ],
+      "scaling": {
+        "Oz's ATK DMG (%)": [
+          "88.8",
+          "95.46",
+          "102.12",
+          "111",
+          "117.66",
+          "124.32",
+          "133.2",
+          "142.08",
+          "150.96",
+          "159.84",
+          "168.72",
+          "177.6",
+          "188.7",
+          "200"
+        ],
+        "Summoning DMG (%)": [
+          "115.44",
+          "124.1",
+          "132.76",
+          "144.3",
+          "152.96",
+          "161.62",
+          "173.16",
+          "184.7",
+          "196.25",
+          "207.79",
+          "219.34",
+          "230.88",
+          "245.31",
+          "260"
+        ],
+        "Oz's Duration": ["10s"],
+        "CD": ["25s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Talent_Midnight_Phantasmagoria.png",
+      "talentName": "Midnight Phantasmagoria",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nSummons Oz to spread his twin wings of twilight and defend Fischl.\nHas the following properties during the ability's duration:\nFischl takes on Oz's form, greatly increasing her Movement Speed.\nStrikes nearby opponents with lightning, dealing Electro DMG to opponents she comes into contact with. Each opponent can only be struck once.\nOnce this ability's effects end, Oz will remain on the battlefield and attack his Prinzessin's foes. If Oz is already on the field, then this will reset the duration of his presence.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Midnight_Phantasmagoria_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Falling Thunder DMG (%)": [
+          "208",
+          "223.6",
+          "239.2",
+          "260",
+          "275.6",
+          "291.2",
+          "312",
+          "332.8",
+          "353.6",
+          "374.4",
+          "395.2",
+          "416",
+          "442",
+          "468"
+        ],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Stellar_Predator.png",
+      "talentName": "Stellar Predator",
+      "talentType": "1st Ascension Passive",
+      "description": "When Fischl hits Oz with a fully-charged Aimed Shot, Oz brings down Thundering Retribution, dealing AoE Electro DMG equal to 152.7% of the arrow's DMG.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Stellar_Predator_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Talent_Undone_Be_Thy_Sinful_Hex.png",
+      "talentName": "Undone Be Thy Sinful Hex",
+      "talentType": "4th Ascension Passive",
+      "description": "If your active character triggers an Electro-related Elemental Reaction when Oz is on the field, the opponent shall be stricken with Thundering Retribution that deals Electro DMG equal to 80% of Fischl's ATK.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Talent_Phantasmal_Nocturne.png",
+      "talentName": "Phantasmal Nocturne",
+      "talentType": "Witch's Eve Rite Passive",
+      "description": "After completing Witch's Homework: Of the Unexpected, Fischl will become a Hexerei character. When the party includes at least 2 Hexerei characters, you will gain the Hexerei: Secret Rite effect, which enhances Hexerei characters.\n\nHexerei: Secret Rite\nHark, Prince Nachtraben, Ozvaldo Hrafnavins, he who has witnessed the fall of countless worlds. Sing now the starry septet for your sovereign, for this is the moment of deepest sin, when the gathered souls at the end of causality shatter the darkness of fate.\nAdditionally, when Oz is on the field, party members will gain additional buff effects:\nAfter a nearby party member triggers an Overloaded reaction, Fischl and other nearby active party members have their ATK increased by 22.5% for 10s.\nAfter a nearby party member triggers an Electro-Charged or Lunar-Charged reaction, Fischl and other nearby active party members have their Elemental Mastery increased by 90 for 10s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Talent_Mein_Hausgarten.png",
+      "talentName": "Mein Hausgarten",
+      "talentType": "Utility Passive",
+      "description": "When dispatched on an expedition in Mondstadt, time consumed is reduced by 25%.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Constellation_Gaze_of_the_Deep.png",
+      "name": "Gaze of the Deep",
+      "level": 1,
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nPreview\nEven when Oz is not present in combat, he can still watch over Fischl through his raven eyes. When Fischl performs a Normal Attack against an opponent, Oz fires a coordinated attack, dealing DMG equal to 22% of Fischl's ATK."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Constellation_Devourer_of_All_Sins.png",
+      "name": "Devourer of All Sins",
+      "level": 2,
+      "description": "When Nightrider is used, it deals an additional 200% ATK as DMG, and its AoE is increased by 50%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Constellation_Wings_of_Nightmare.png",
+      "name": "Wings of Nightmare",
+      "level": 3,
+      "description": "Increases the Level of Nightrider by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Constellation_Her_Pilgrimage_of_Bleak.png",
+      "name": "Her Pilgrimage of Bleak",
+      "level": 4,
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nWhen Midnight Phantasmagoria is used, it deals 222% of ATK as Electro DMG to surrounding opponents.\nWhen the skill duration ends, Fischl regenerates 20% of her HP."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Constellation_Against_the_Fleeing_Light.png",
+      "name": "Against the Fleeing Light",
+      "level": 5,
+      "description": "Increases the Level of Midnight Phantasmagoria by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Constellation_Evernight_Raven.png",
+      "name": "Evernight Raven",
+      "level": 6,
+      "description": "Description\nHexerei Buff\nGameplay Notes\nAdvanced Properties\nExtends the duration of Oz's presence on the field by 2s. Additionally, Oz performs coordinated attacks with your active character when present, dealing 30% of Fischl's ATK as Electro DMG."
+    }
+  ],
+  "imageUrls": {},
+  "version": "1.0",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Idle_Fischl_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Idle_Fischl_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Idle_Fischl_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Idle_Fischl_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Talent_Menu_Fischl.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Menu_Fischl.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Weapon_Menu_Fischl.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Weapon_Menu_Fischl.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Party_Setup_Fischl.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Party_Setup_Fischl.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Namecard_Background_Fischl_Night_Raven.png",
+        "caption": "Fischl: Night Raven Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Fischl_Night_Raven.png",
+        "caption": "Fischl: Night Raven Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Namecard_Banner_Fischl_Night_Raven.png",
+        "caption": "Fischl: Night Raven Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Bolts_of_Downfall_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Bolts_of_Downfall_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Bolts_of_Downfall_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Bolts_of_Downfall_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Bolts_of_Downfall_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Bolts_of_Downfall_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Midnight_Phantasmagoria_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Midnight_Phantasmagoria_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Nightrider_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Nightrider_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Nightrider_Hold_Preview.gif",
+            "caption": "Hold",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Nightrider_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Icon_Emoji_Paimon%27s_Paintings_04_Fischl_1.png",
+        "caption": "Not at all! Set 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Icon_Emoji_Paimon%27s_Paintings_04_Fischl_2.png",
+        "caption": "Hahaha Set 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icon_Emoji_Paimon%27s_Paintings_16_Fischl_1.png",
+        "caption": "Stay Calm Set 16"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Icon_Emoji_Paimon%27s_Paintings_16_Fischl_2.png",
+        "caption": "On Vacation Set 16"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Golden Troupe",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Sub DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Thundering Fury",
+          "pieces": 2
+        },
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Aggravate Support",
+      "sets": [
+        {
+          "name": "Thundersoother",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

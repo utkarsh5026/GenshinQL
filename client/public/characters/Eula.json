@@ -1,590 +1,603 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Eula_Icon.png",
-    "name": "Eula",
-    "rarity": "5 Stars",
-    "element": "Cryo",
-    "weaponType": "Claymore",
-    "region": "Mondstadt",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Tall Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Eula_Icon.png",
+  "name": "Eula",
+  "rarity": "5 Stars",
+  "element": "Cryo",
+  "weaponType": "Claymore",
+  "region": "Mondstadt",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+  "modelType": "Tall Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Claymore_Cryo.png",
+      "talentName": "Favonius Bladework - Edel",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 5 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous slashes.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Claymore_Cryo.png",
-            "talentName": "Favonius Bladework - Edel",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 5 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous slashes.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Favonius_Bladework_-_Edel_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Favonius_Bladework_-_Edel_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Favonius_Bladework_-_Edel_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "89.73",
-                    "97.04",
-                    "104.34",
-                    "114.77",
-                    "122.08",
-                    "130.42",
-                    "141.9",
-                    "153.38",
-                    "164.86",
-                    "177.38",
-                    "191.72"
-                ],
-                "2-Hit DMG (%)": [
-                    "93.55",
-                    "101.17",
-                    "108.78",
-                    "119.66",
-                    "127.27",
-                    "135.97",
-                    "147.94",
-                    "159.91",
-                    "171.87",
-                    "184.93",
-                    "199.88"
-                ],
-                "3-Hit DMG (%)": [
-                    "56.8\n+\n56.8",
-                    "61.42\n+\n61.42",
-                    "66.05\n+\n66.05",
-                    "72.65\n+\n72.65",
-                    "77.27\n+\n77.27",
-                    "82.56\n+\n82.56",
-                    "89.82\n+\n89.82",
-                    "97.09\n+\n97.09",
-                    "104.35\n+\n104.35",
-                    "112.28\n+\n112.28",
-                    "121.36\n+\n121.36"
-                ],
-                "4-Hit DMG (%)": [
-                    "112.64",
-                    "121.81",
-                    "130.98",
-                    "144.08",
-                    "153.25",
-                    "163.73",
-                    "178.13",
-                    "192.54",
-                    "206.95",
-                    "222.67",
-                    "240.68"
-                ],
-                "5-Hit DMG (%)": [
-                    "71.83\n+\n71.83",
-                    "77.68\n+\n77.68",
-                    "83.53\n+\n83.53",
-                    "91.88\n+\n91.88",
-                    "97.73\n+\n97.73",
-                    "104.41\n+\n104.41",
-                    "113.6\n+\n113.6",
-                    "122.79\n+\n122.79",
-                    "131.97\n+\n131.97",
-                    "142\n+\n142",
-                    "153.48\n+\n153.48"
-                ],
-                "Charged Attack Cyclic DMG (%)": [
-                    "68.8",
-                    "74.4",
-                    "80",
-                    "88",
-                    "93.6",
-                    "100",
-                    "108.8",
-                    "117.6",
-                    "126.4",
-                    "136",
-                    "147"
-                ],
-                "Charged Attack Final DMG (%)": [
-                    "124.4",
-                    "134.52",
-                    "144.65",
-                    "159.12",
-                    "169.24",
-                    "180.81",
-                    "196.72",
-                    "212.64",
-                    "228.55",
-                    "245.91",
-                    "265.79"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "40/s"
-                ],
-                "Max Duration": [
-                    "5s"
-                ],
-                "Plunge DMG (%)": [
-                    "74.59",
-                    "80.66",
-                    "86.73",
-                    "95.4",
-                    "101.47",
-                    "108.41",
-                    "117.95",
-                    "127.49",
-                    "137.03",
-                    "147.44",
-                    "159.37"
-                ],
-                "Low Plunge DMG (%)": [
-                    "149.14",
-                    "161.28",
-                    "173.42",
-                    "190.77",
-                    "202.91",
-                    "216.78",
-                    "235.86",
-                    "254.93",
-                    "274.01",
-                    "294.82",
-                    "318.67"
-                ],
-                "High Plunge DMG (%)": [
-                    "186.29",
-                    "201.45",
-                    "216.62",
-                    "238.28",
-                    "253.44",
-                    "270.77",
-                    "294.6",
-                    "318.42",
-                    "342.25",
-                    "368.25",
-                    "398.03"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Favonius_Bladework_-_Edel_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Talent_Icetide_Vortex.png",
-            "talentName": "Icetide Vortex",
-            "talentType": "Elemental Skill",
-            "description": "Sharp frost, swift blade.\n\n(‍Press\n‍/‍Tap\n‍)\nSlashes swiftly, dealing Cryo DMG.\nWhen it hits an opponent, Eula gains a stack of Grimheart that stacks up to 2 times. These stacks can only be gained once every 0.3s.\n\nGrimheart\nIncreases Eula's resistance to interruption and DEF.\n\nHold\nWielding her sword, Eula consumes all the stacks of Grimheart and lashes forward, dealing AoE Cryo DMG to opponents in front of her.\nIf Grimheart stacks are consumed, surrounding opponents will have their Physical RES and Cryo RES decreased.\nEach consumed stack of Grimheart will be converted into an Icewhirl Brand that deals Cryo DMG to nearby opponents.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Icetide_Vortex_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icetide_Vortex_Hold_Preview.gif",
-                    "caption": "Hold"
-                }
-            ],
-            "scaling": {
-                "Press DMG (%)": [
-                    "146.4",
-                    "157.38",
-                    "168.36",
-                    "183",
-                    "193.98",
-                    "204.96",
-                    "219.6",
-                    "234.24",
-                    "248.88",
-                    "263.52",
-                    "278.16",
-                    "292.8",
-                    "311.1",
-                    "329.4"
-                ],
-                "Hold DMG (%)": [
-                    "245.6",
-                    "264.02",
-                    "282.44",
-                    "307",
-                    "325.42",
-                    "343.84",
-                    "368.4",
-                    "392.96",
-                    "417.52",
-                    "442.08",
-                    "466.64",
-                    "491.2",
-                    "521.9",
-                    "552.6"
-                ],
-                "Icewhirl Brand DMG (%)": [
-                    "96",
-                    "103.2",
-                    "110.4",
-                    "120",
-                    "127.2",
-                    "134.4",
-                    "144",
-                    "153.6",
-                    "163.2",
-                    "172.8",
-                    "182.4",
-                    "192",
-                    "204",
-                    "216"
-                ],
-                "DEF Bonus": [
-                    "30% Per Stack"
-                ],
-                "Grimheart Duration": [
-                    "18s"
-                ],
-                "Physical RES Decrease (%)": [
-                    "16",
-                    "17",
-                    "18",
-                    "19",
-                    "20",
-                    "21",
-                    "22",
-                    "23",
-                    "24",
-                    "25"
-                ],
-                "Cryo RES Decrease (%)": [
-                    "16",
-                    "17",
-                    "18",
-                    "19",
-                    "20",
-                    "21",
-                    "22",
-                    "23",
-                    "24",
-                    "25"
-                ],
-                "RES Decrease Duration": [
-                    "7s"
-                ],
-                "Press CD": [
-                    "4s"
-                ],
-                "CD (hold)": [
-                    "10s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Favonius_Bladework_-_Edel_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Glacial_Illumination.png",
-            "talentName": "Glacial Illumination",
-            "talentType": "Elemental Burst",
-            "description": "Brandishes her greatsword, dealing Cryo DMG to nearby opponents and creating a Lightfall Sword that follows her around for a duration of up to 7s.\nWhile present, the Lightfall Sword increases Eula's resistance to interruption. When Eula's own Normal Attack, Elemental Skill, and Elemental Burst deal DMG to opponents, they will charge the Lightfall Sword, which can gain an energy stack once every 0.1s.\nOnce its duration ends, the Lightfall Sword will descend and explode violently, dealing Physical DMG to nearby opponents.\nThis DMG scales on the number of energy stacks the Lightfall Sword has accumulated.\nIf Eula leaves the field, the Lightfall Sword will explode immediately.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Glacial_Illumination_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "245.6",
-                    "264.02",
-                    "282.44",
-                    "307",
-                    "325.42",
-                    "343.84",
-                    "368.4",
-                    "392.96",
-                    "417.52",
-                    "442.08",
-                    "466.64",
-                    "491.2",
-                    "521.9",
-                    "553"
-                ],
-                "Lightfall Sword Base DMG (%)": [
-                    "367.05",
-                    "396.92",
-                    "426.8",
-                    "469.48",
-                    "499.36",
-                    "533.5",
-                    "580.45",
-                    "627.4",
-                    "674.34",
-                    "725.56",
-                    "784.25",
-                    "853.26",
-                    "922.27",
-                    "991.3"
-                ],
-                "DMG Per Stack (%)": [
-                    "74.99",
-                    "81.1",
-                    "87.2",
-                    "95.92",
-                    "102.02",
-                    "109",
-                    "118.59",
-                    "128.18",
-                    "137.78",
-                    "148.24",
-                    "160.23",
-                    "174.33",
-                    "188.43",
-                    "202.5"
-                ],
-                "Maximum Stacks": [
-                    "30"
-                ],
-                "CD": [
-                    "20s"
-                ],
-                "Energy Cost": [
-                    "80"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Roiling_Rime.png",
-            "talentName": "Roiling Rime",
-            "talentType": "1st Ascension Passive",
-            "description": "If 2 stacks of Grimheart are consumed upon unleashing the Holding Mode of Icetide Vortex, a Shattered Lightfall Sword will be created that will explode immediately, dealing 50% of the basic Physical DMG dealt by a Lightfall Sword created by Glacial Illumination.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Roiling_Rime_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Talent_Wellspring_of_War-Lust.png",
-            "talentName": "Wellspring of War-Lust",
-            "talentType": "4th Ascension Passive",
-            "description": "When Glacial Illumination is cast, the CD of Icetide Vortex is reset and Eula gains 1 stack of Grimheart.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Aristocratic_Introspection.png",
-            "talentName": "Aristocratic Introspection",
-            "talentType": "Utility Passive",
-            "description": "When Eula crafts Character Talent Materials, she has a 10% chance to receive double the product.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Favonius_Bladework_-_Edel_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Constellation_Tidal_Illusion.png",
-            "name": "Tidal Illusion",
-            "level": 1,
-            "description": "Description\nGameplay Notes\nPreview\nEvery time Icetide Vortex's Grimheart stacks are consumed, Eula's Physical DMG is increased by 30% for 6s.\nEach stack consumed will increase the duration of this effect by 6s up to a maximum of 18s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Constellation_Lady_of_Seafoam.png",
-            "name": "Lady of Seafoam",
-            "level": 2,
-            "description": "Decreases the CD of Icetide Vortex's Holding Mode, rendering it identical to (‍Press\n‍/‍Tapping\n‍) CD."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Constellation_Lawrence_Pedigree.png",
-            "name": "Lawrence Pedigree",
-            "level": 3,
-            "description": "Increases the Level of Glacial Illumination by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Constellation_The_Obstinacy_of_One%27s_Inferiors.png",
-            "name": "The Obstinacy of One's Inferiors",
-            "level": 4,
-            "description": "Lightfall Swords deal 25% increased DMG against opponents with less than 50% HP."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Constellation_Chivalric_Quality.png",
-            "name": "Chivalric Quality",
-            "level": 5,
-            "description": "Increases the Level of Icetide Vortex by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Constellation_Noble_Obligation.png",
-            "name": "Noble Obligation",
-            "level": 6,
-            "description": "Lightfall Swords created by Glacial Illumination start with 5 stacks of energy. Normal Attacks, Elemental Skills, and Elemental Bursts have a 50% chance to grant the Lightfall Sword an additional stack of energy."
-        }
-    ],
-    "imageUrls": {},
-    "version": "1.5",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Idle_Eula_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Idle_Eula_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Idle_Eula_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Idle_Eula_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Menu_Eula.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Menu_Eula.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Weapon_Menu_Eula.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Weapon_Menu_Eula.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Party_Setup_Eula.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Party_Setup_Eula.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "89.73",
+          "97.04",
+          "104.34",
+          "114.77",
+          "122.08",
+          "130.42",
+          "141.9",
+          "153.38",
+          "164.86",
+          "177.38",
+          "191.72"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Eula_Ice-Sealed.png",
-                "caption": "Eula: Ice-Sealed Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Item_Eula_Ice-Sealed.png",
-                "caption": "Eula: Ice-Sealed Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Namecard_Banner_Eula_Ice-Sealed.png",
-                "caption": "Eula: Ice-Sealed Banner"
-            }
+        "2-Hit DMG (%)": [
+          "93.55",
+          "101.17",
+          "108.78",
+          "119.66",
+          "127.27",
+          "135.97",
+          "147.94",
+          "159.91",
+          "171.87",
+          "184.93",
+          "199.88"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Favonius_Bladework_-_Edel_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Favonius_Bladework_-_Edel_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Favonius_Bladework_-_Edel_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Favonius_Bladework_-_Edel_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Favonius_Bladework_-_Edel_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Favonius_Bladework_-_Edel_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Glacial_Illumination_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Glacial_Illumination_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Icetide_Vortex_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Icetide_Vortex_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icetide_Vortex_Hold_Preview.gif",
-                        "caption": "Hold",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Icetide_Vortex_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "56.8\n+\n56.8",
+          "61.42\n+\n61.42",
+          "66.05\n+\n66.05",
+          "72.65\n+\n72.65",
+          "77.27\n+\n77.27",
+          "82.56\n+\n82.56",
+          "89.82\n+\n89.82",
+          "97.09\n+\n97.09",
+          "104.35\n+\n104.35",
+          "112.28\n+\n112.28",
+          "121.36\n+\n121.36"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Eula_Character_Details_1.png",
-                "caption": "Character Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Eula_Character_Details_2.gif",
-                "caption": "Character Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Eula_Character_Details_3.gif",
-                "caption": "Character Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Eula_Character_Details_4.gif",
-                "caption": "Character Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Eula_Character_Details_5.gif",
-                "caption": "Character Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Eula_Character_Details_6.png",
-                "caption": "Character Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Eula_Character_Details_7.png",
-                "caption": "Character Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Eula_Character_Details_8.png",
-                "caption": "Character Details 8"
-            }
+        "4-Hit DMG (%)": [
+          "112.64",
+          "121.81",
+          "130.98",
+          "144.08",
+          "153.25",
+          "163.73",
+          "178.13",
+          "192.54",
+          "206.95",
+          "222.67",
+          "240.68"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Icon_Emoji_Paimon%27s_Paintings_06_Eula_1.png",
-                "caption": "Praise Set 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Icon_Emoji_Paimon%27s_Paintings_06_Eula_2.png",
-                "caption": "Let me see! Set 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icon_Emoji_Paimon%27s_Paintings_06_Eula_3.png",
-                "caption": "Cheers! Set 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Icon_Emoji_Paimon%27s_Paintings_06_Eula_4.png",
-                "caption": "Time to eat! Set 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Icon_Emoji_Paimon%27s_Paintings_11_Eula_1.png",
-                "caption": "Invite Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Icon_Emoji_Paimon%27s_Paintings_11_Eula_2.png",
-                "caption": "Sneeze Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_11_Eula_3.png",
-                "caption": "Dislike Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Icon_Emoji_Paimon%27s_Paintings_25_Eula_1.png",
-                "caption": "Refuse Set 25"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Icon_Emoji_Paimon%27s_Paintings_25_Eula_2.png",
-                "caption": "Shy Set 25"
-            }
+        "5-Hit DMG (%)": [
+          "71.83\n+\n71.83",
+          "77.68\n+\n77.68",
+          "83.53\n+\n83.53",
+          "91.88\n+\n91.88",
+          "97.73\n+\n97.73",
+          "104.41\n+\n104.41",
+          "113.6\n+\n113.6",
+          "122.79\n+\n122.79",
+          "131.97\n+\n131.97",
+          "142\n+\n142",
+          "153.48\n+\n153.48"
+        ],
+        "Charged Attack Cyclic DMG (%)": [
+          "68.8",
+          "74.4",
+          "80",
+          "88",
+          "93.6",
+          "100",
+          "108.8",
+          "117.6",
+          "126.4",
+          "136",
+          "147"
+        ],
+        "Charged Attack Final DMG (%)": [
+          "124.4",
+          "134.52",
+          "144.65",
+          "159.12",
+          "169.24",
+          "180.81",
+          "196.72",
+          "212.64",
+          "228.55",
+          "245.91",
+          "265.79"
+        ],
+        "Charged Attack Stamina Cost": ["40/s"],
+        "Max Duration": ["5s"],
+        "Plunge DMG (%)": [
+          "74.59",
+          "80.66",
+          "86.73",
+          "95.4",
+          "101.47",
+          "108.41",
+          "117.95",
+          "127.49",
+          "137.03",
+          "147.44",
+          "159.37"
+        ],
+        "Low Plunge DMG (%)": [
+          "149.14",
+          "161.28",
+          "173.42",
+          "190.77",
+          "202.91",
+          "216.78",
+          "235.86",
+          "254.93",
+          "274.01",
+          "294.82",
+          "318.67"
+        ],
+        "High Plunge DMG (%)": [
+          "186.29",
+          "201.45",
+          "216.62",
+          "238.28",
+          "253.44",
+          "270.77",
+          "294.6",
+          "318.42",
+          "342.25",
+          "368.25",
+          "398.03"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Talent_Icetide_Vortex.png",
+      "talentName": "Icetide Vortex",
+      "talentType": "Elemental Skill",
+      "description": "Sharp frost, swift blade.\n\n(‍Press\n‍/‍Tap\n‍)\nSlashes swiftly, dealing Cryo DMG.\nWhen it hits an opponent, Eula gains a stack of Grimheart that stacks up to 2 times. These stacks can only be gained once every 0.3s.\n\nGrimheart\nIncreases Eula's resistance to interruption and DEF.\n\nHold\nWielding her sword, Eula consumes all the stacks of Grimheart and lashes forward, dealing AoE Cryo DMG to opponents in front of her.\nIf Grimheart stacks are consumed, surrounding opponents will have their Physical RES and Cryo RES decreased.\nEach consumed stack of Grimheart will be converted into an Icewhirl Brand that deals Cryo DMG to nearby opponents.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Icetide_Vortex_Press_Preview.gif",
+          "caption": "Press"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icetide_Vortex_Hold_Preview.gif",
+          "caption": "Hold"
+        }
+      ],
+      "scaling": {
+        "Press DMG (%)": [
+          "146.4",
+          "157.38",
+          "168.36",
+          "183",
+          "193.98",
+          "204.96",
+          "219.6",
+          "234.24",
+          "248.88",
+          "263.52",
+          "278.16",
+          "292.8",
+          "311.1",
+          "329.4"
+        ],
+        "Hold DMG (%)": [
+          "245.6",
+          "264.02",
+          "282.44",
+          "307",
+          "325.42",
+          "343.84",
+          "368.4",
+          "392.96",
+          "417.52",
+          "442.08",
+          "466.64",
+          "491.2",
+          "521.9",
+          "552.6"
+        ],
+        "Icewhirl Brand DMG (%)": [
+          "96",
+          "103.2",
+          "110.4",
+          "120",
+          "127.2",
+          "134.4",
+          "144",
+          "153.6",
+          "163.2",
+          "172.8",
+          "182.4",
+          "192",
+          "204",
+          "216"
+        ],
+        "DEF Bonus": ["30% Per Stack"],
+        "Grimheart Duration": ["18s"],
+        "Physical RES Decrease (%)": [
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25"
+        ],
+        "Cryo RES Decrease (%)": [
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25"
+        ],
+        "RES Decrease Duration": ["7s"],
+        "Press CD": ["4s"],
+        "CD (hold)": ["10s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Glacial_Illumination.png",
+      "talentName": "Glacial Illumination",
+      "talentType": "Elemental Burst",
+      "description": "Brandishes her greatsword, dealing Cryo DMG to nearby opponents and creating a Lightfall Sword that follows her around for a duration of up to 7s.\nWhile present, the Lightfall Sword increases Eula's resistance to interruption. When Eula's own Normal Attack, Elemental Skill, and Elemental Burst deal DMG to opponents, they will charge the Lightfall Sword, which can gain an energy stack once every 0.1s.\nOnce its duration ends, the Lightfall Sword will descend and explode violently, dealing Physical DMG to nearby opponents.\nThis DMG scales on the number of energy stacks the Lightfall Sword has accumulated.\nIf Eula leaves the field, the Lightfall Sword will explode immediately.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Glacial_Illumination_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "245.6",
+          "264.02",
+          "282.44",
+          "307",
+          "325.42",
+          "343.84",
+          "368.4",
+          "392.96",
+          "417.52",
+          "442.08",
+          "466.64",
+          "491.2",
+          "521.9",
+          "553"
+        ],
+        "Lightfall Sword Base DMG (%)": [
+          "367.05",
+          "396.92",
+          "426.8",
+          "469.48",
+          "499.36",
+          "533.5",
+          "580.45",
+          "627.4",
+          "674.34",
+          "725.56",
+          "784.25",
+          "853.26",
+          "922.27",
+          "991.3"
+        ],
+        "DMG Per Stack (%)": [
+          "74.99",
+          "81.1",
+          "87.2",
+          "95.92",
+          "102.02",
+          "109",
+          "118.59",
+          "128.18",
+          "137.78",
+          "148.24",
+          "160.23",
+          "174.33",
+          "188.43",
+          "202.5"
+        ],
+        "Maximum Stacks": ["30"],
+        "CD": ["20s"],
+        "Energy Cost": ["80"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Roiling_Rime.png",
+      "talentName": "Roiling Rime",
+      "talentType": "1st Ascension Passive",
+      "description": "If 2 stacks of Grimheart are consumed upon unleashing the Holding Mode of Icetide Vortex, a Shattered Lightfall Sword will be created that will explode immediately, dealing 50% of the basic Physical DMG dealt by a Lightfall Sword created by Glacial Illumination.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Roiling_Rime_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Talent_Wellspring_of_War-Lust.png",
+      "talentName": "Wellspring of War-Lust",
+      "talentType": "4th Ascension Passive",
+      "description": "When Glacial Illumination is cast, the CD of Icetide Vortex is reset and Eula gains 1 stack of Grimheart.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Aristocratic_Introspection.png",
+      "talentName": "Aristocratic Introspection",
+      "talentType": "Utility Passive",
+      "description": "When Eula crafts Character Talent Materials, she has a 10% chance to receive double the product.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Constellation_Tidal_Illusion.png",
+      "name": "Tidal Illusion",
+      "level": 1,
+      "description": "Description\nGameplay Notes\nPreview\nEvery time Icetide Vortex's Grimheart stacks are consumed, Eula's Physical DMG is increased by 30% for 6s.\nEach stack consumed will increase the duration of this effect by 6s up to a maximum of 18s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Constellation_Lady_of_Seafoam.png",
+      "name": "Lady of Seafoam",
+      "level": 2,
+      "description": "Decreases the CD of Icetide Vortex's Holding Mode, rendering it identical to (‍Press\n‍/‍Tapping\n‍) CD."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Constellation_Lawrence_Pedigree.png",
+      "name": "Lawrence Pedigree",
+      "level": 3,
+      "description": "Increases the Level of Glacial Illumination by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Constellation_The_Obstinacy_of_One%27s_Inferiors.png",
+      "name": "The Obstinacy of One's Inferiors",
+      "level": 4,
+      "description": "Lightfall Swords deal 25% increased DMG against opponents with less than 50% HP."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Constellation_Chivalric_Quality.png",
+      "name": "Chivalric Quality",
+      "level": 5,
+      "description": "Increases the Level of Icetide Vortex by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Constellation_Noble_Obligation.png",
+      "name": "Noble Obligation",
+      "level": 6,
+      "description": "Lightfall Swords created by Glacial Illumination start with 5 stacks of energy. Normal Attacks, Elemental Skills, and Elemental Bursts have a 50% chance to grant the Lightfall Sword an additional stack of energy."
+    }
+  ],
+  "imageUrls": {},
+  "version": "1.5",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Idle_Eula_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Idle_Eula_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Idle_Eula_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Idle_Eula_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Menu_Eula.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Menu_Eula.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Weapon_Menu_Eula.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Weapon_Menu_Eula.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Party_Setup_Eula.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Party_Setup_Eula.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Eula_Ice-Sealed.png",
+        "caption": "Eula: Ice-Sealed Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Item_Eula_Ice-Sealed.png",
+        "caption": "Eula: Ice-Sealed Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Namecard_Banner_Eula_Ice-Sealed.png",
+        "caption": "Eula: Ice-Sealed Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Favonius_Bladework_-_Edel_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Favonius_Bladework_-_Edel_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Favonius_Bladework_-_Edel_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Favonius_Bladework_-_Edel_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Favonius_Bladework_-_Edel_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Favonius_Bladework_-_Edel_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Glacial_Illumination_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Glacial_Illumination_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Icetide_Vortex_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Icetide_Vortex_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icetide_Vortex_Hold_Preview.gif",
+            "caption": "Hold",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Icetide_Vortex_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Eula_Character_Details_1.png",
+        "caption": "Character Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Eula_Character_Details_2.gif",
+        "caption": "Character Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Eula_Character_Details_3.gif",
+        "caption": "Character Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Eula_Character_Details_4.gif",
+        "caption": "Character Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Eula_Character_Details_5.gif",
+        "caption": "Character Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Eula_Character_Details_6.png",
+        "caption": "Character Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Eula_Character_Details_7.png",
+        "caption": "Character Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Eula_Character_Details_8.png",
+        "caption": "Character Details 8"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Icon_Emoji_Paimon%27s_Paintings_06_Eula_1.png",
+        "caption": "Praise Set 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Icon_Emoji_Paimon%27s_Paintings_06_Eula_2.png",
+        "caption": "Let me see! Set 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Icon_Emoji_Paimon%27s_Paintings_06_Eula_3.png",
+        "caption": "Cheers! Set 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Icon_Emoji_Paimon%27s_Paintings_06_Eula_4.png",
+        "caption": "Time to eat! Set 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Icon_Emoji_Paimon%27s_Paintings_11_Eula_1.png",
+        "caption": "Invite Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Icon_Emoji_Paimon%27s_Paintings_11_Eula_2.png",
+        "caption": "Sneeze Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_11_Eula_3.png",
+        "caption": "Dislike Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Icon_Emoji_Paimon%27s_Paintings_25_Eula_1.png",
+        "caption": "Refuse Set 25"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Icon_Emoji_Paimon%27s_Paintings_25_Eula_2.png",
+        "caption": "Shy Set 25"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Pale Flame",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Pale Flame",
+          "pieces": 2
+        },
+        {
+          "name": "Bloodstained Chivalry",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Physical DPS",
+      "sets": [
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

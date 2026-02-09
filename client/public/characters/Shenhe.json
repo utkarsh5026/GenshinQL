@@ -521,5 +521,38 @@
         "caption": "Crane's Lucky Gift Set 30"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "ATK Buffer",
+      "sets": [
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 2
+        },
+        {
+          "name": "Shimenawa's Reminiscence",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Cryo Support",
+      "sets": [
+        {
+          "name": "Blizzard Strayer",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

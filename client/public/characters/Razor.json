@@ -460,5 +460,38 @@
         "caption": "Overwhelmed Set 18"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Physical DPS",
+      "sets": [
+        {
+          "name": "Pale Flame",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Physical DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Pale Flame",
+          "pieces": 2
+        },
+        {
+          "name": "Bloodstained Chivalry",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Electro DPS",
+      "sets": [
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

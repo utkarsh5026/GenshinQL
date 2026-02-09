@@ -482,5 +482,38 @@
         "caption": "Confident Set 42"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 2
+        },
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

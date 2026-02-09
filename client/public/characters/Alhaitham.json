@@ -547,5 +547,42 @@
         "caption": "Undisturbed Set 21"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Gilded Dreams",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Gilded Dreams",
+          "pieces": 2
+        },
+        {
+          "name": "Deepwood Memories",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Spread DPS",
+      "sets": [
+        {
+          "name": "Wanderer's Troupe",
+          "pieces": 2
+        },
+        {
+          "name": "Gilded Dreams",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

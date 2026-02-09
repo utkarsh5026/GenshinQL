@@ -567,5 +567,38 @@
         "caption": "Not okay, hear me? Set 32"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Marechaussee Hunter",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Mono Pyro DPS",
+      "sets": [
+        {
+          "name": "Lavawalker",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Crimson Witch of Flames",
+          "pieces": 2
+        },
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

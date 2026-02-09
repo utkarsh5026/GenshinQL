@@ -479,5 +479,34 @@
         "caption": "Happy Birthday Set 43"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Scroll of the Hero of Cinder City",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Electro Support",
+      "sets": [
+        {
+          "name": "Thundering Fury",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Burst Support",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

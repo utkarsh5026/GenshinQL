@@ -1,473 +1,494 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Qiqi_Icon.png",
-    "name": "Qiqi",
-    "rarity": "5 Stars",
-    "element": "Cryo",
-    "weaponType": "Sword",
-    "region": "Liyue",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
-    "modelType": "Short Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Qiqi_Icon.png",
+  "name": "Qiqi",
+  "rarity": "5 Stars",
+  "element": "Cryo",
+  "weaponType": "Sword",
+  "region": "Liyue",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Liyue_Emblem_Night.png",
+  "modelType": "Short Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png",
+      "talentName": "Ancient Sword Art",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png",
-            "talentName": "Ancient Sword Art",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 5 rapid strikes.\n\nCharged Attack\nConsumes a certain amount Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Ancient_Sword_Art_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Ancient_Sword_Art_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Ancient_Sword_Art_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "37.75",
-                    "40.83",
-                    "43.9",
-                    "48.29",
-                    "51.36",
-                    "54.87",
-                    "59.7",
-                    "64.53",
-                    "69.36",
-                    "74.63",
-                    "79.9"
-                ],
-                "2-Hit DMG (%)": [
-                    "38.87",
-                    "42.04",
-                    "45.2",
-                    "49.72",
-                    "52.88",
-                    "56.5",
-                    "61.47",
-                    "66.44",
-                    "71.42",
-                    "76.84",
-                    "82.26"
-                ],
-                "3-Hit DMG (%)": [
-                    "24.17\n+\n24.17",
-                    "26.13\n+\n26.13",
-                    "28.1\n+\n28.1",
-                    "30.91\n+\n30.91",
-                    "32.88\n+\n32.88",
-                    "35.13\n+\n35.13",
-                    "38.22\n+\n38.22",
-                    "41.31\n+\n41.31",
-                    "44.4\n+\n44.4",
-                    "47.77\n+\n47.77",
-                    "51.14\n+\n51.14"
-                ],
-                "4-Hit DMG (%)": [
-                    "24.68\n+\n24.68",
-                    "26.69\n+\n26.69",
-                    "28.7\n+\n28.7",
-                    "31.57\n+\n31.57",
-                    "33.58\n+\n33.58",
-                    "35.88\n+\n35.88",
-                    "39.03\n+\n39.03",
-                    "42.19\n+\n42.19",
-                    "45.35\n+\n45.35",
-                    "48.79\n+\n48.79",
-                    "52.23\n+\n52.23"
-                ],
-                "5-Hit DMG (%)": [
-                    "63.04",
-                    "68.17",
-                    "73.3",
-                    "80.63",
-                    "85.76",
-                    "91.63",
-                    "99.69",
-                    "107.75",
-                    "115.81",
-                    "124.61",
-                    "133.41"
-                ],
-                "Charged Attack DMG (%)": [
-                    "64.33\n+\n64.33",
-                    "69.56\n+\n69.56",
-                    "74.8\n+\n74.8",
-                    "82.28\n+\n82.28",
-                    "87.52\n+\n87.52",
-                    "93.5\n+\n93.5",
-                    "101.73\n+\n101.73",
-                    "109.96\n+\n109.96",
-                    "118.18\n+\n118.18",
-                    "127.16\n+\n127.16",
-                    "136.14\n+\n136.14"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "20"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Ancient_Sword_Art_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Talent_Adeptus_Art_Herald_of_Frost.png",
-            "talentName": "Adeptus Art: Herald of Frost",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nUsing the Icevein Talisman, Qiqi brings forth the Herald of Frost, dealing Cryo DMG to surrounding opponents.\n\nHerald of Frost\nOn hit, Qiqi's Normal and Charged Attacks regenerate HP for your own party members and nearby teammates. Healing scales based on Qiqi's ATK.\nPeriodically regenerates your active character's HP.\nFollows the character around, dealing Cryo DMG to opponents in their path.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Adeptus_Art_Herald_of_Frost_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "96.00",
-                    "103.20",
-                    "110.40",
-                    "120.00",
-                    "127.20",
-                    "134.40",
-                    "144.00",
-                    "153.60",
-                    "163.20",
-                    "172.80",
-                    "182.40",
-                    "192.00",
-                    "204.00",
-                    "216.00"
-                ],
-                "Regeneration on Hit": [
-                    "10.56% ATK\n+\n67.40",
-                    "11.35% ATK\n+\n74.14",
-                    "12.14% ATK\n+\n81.45",
-                    "13.20% ATK\n+\n89.31",
-                    "13.99% ATK\n+\n97.74",
-                    "14.78% ATK\n+\n106.73",
-                    "15.84% ATK\n+\n116.28",
-                    "16.90% ATK\n+\n126.39",
-                    "17.95% ATK\n+\n137.07",
-                    "19.01% ATK\n+\n148.31",
-                    "20.06% ATK\n+\n160.11",
-                    "21.12% ATK\n+\n172.46",
-                    "22.44% ATK\n+\n185.38",
-                    "23.76% ATK\n+\n198.87"
-                ],
-                "Continuous Regeneration": [
-                    "69.60% ATK\n+\n450.55",
-                    "74.82% ATK\n+\n495.61",
-                    "80.04% ATK\n+\n544.42",
-                    "87.00% ATK\n+\n597.00",
-                    "92.22% ATK\n+\n653.32",
-                    "97.44% ATK\n+\n713.40",
-                    "104.40% ATK\n+\n777.24",
-                    "111.36% ATK\n+\n844.83",
-                    "118.32% ATK\n+\n916.18",
-                    "125.28% ATK\n+\n991.28",
-                    "132.24% ATK\n+\n1070.14",
-                    "139.20% ATK\n+\n1152.76",
-                    "147.90% ATK\n+\n1239.12",
-                    "156.60% ATK\n+\n1329.25"
-                ],
-                "Herald of Frost DMG (%)": [
-                    "36.00",
-                    "38.70",
-                    "41.40",
-                    "45.00",
-                    "47.70",
-                    "50.40",
-                    "54.00",
-                    "57.60",
-                    "61.20",
-                    "64.80",
-                    "68.40",
-                    "72.00",
-                    "76.50",
-                    "81.00"
-                ],
-                "Duration": [
-                    "15s"
-                ],
-                "CD": [
-                    "30s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Ancient_Sword_Art_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_Adeptus_Art_Preserver_of_Fortune.png",
-            "talentName": "Adeptus Art: Preserver of Fortune",
-            "talentType": "Elemental Burst",
-            "description": "Qiqi releases the adeptus power sealed within her body, marking nearby opponents with a Fortune-Preserving Talisman that deals Cryo DMG.\n\nFortune-Preserving Talisman\nWhen opponents affected by this Talisman take DMG, the character that dealt this DMG regenerates HP.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Adeptus_Art_Preserver_of_Fortune_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "284.8",
-                    "306.16",
-                    "327.52",
-                    "356",
-                    "377.36",
-                    "398.72",
-                    "427.2",
-                    "455.68",
-                    "484.16",
-                    "512.64",
-                    "541.12",
-                    "569.6",
-                    "605.2",
-                    "641"
-                ],
-                "Healing": [
-                    "90% ATK\n+\n577.33",
-                    "96.75% ATK\n+\n635.08",
-                    "103.5% ATK\n+\n697.63",
-                    "112.5% ATK\n+\n765",
-                    "119.25% ATK\n+\n837.17",
-                    "126% ATK\n+\n914.16",
-                    "135% ATK\n+\n995.96",
-                    "144% ATK\n+\n1082",
-                    "153% ATK\n+\n1174",
-                    "162% ATK\n+\n1270",
-                    "171% ATK\n+\n1371",
-                    "180% ATK\n+\n1477",
-                    "191.25% ATK\n+\n1587",
-                    "203% ATK\n+\n1703"
-                ],
-                "Duration": [
-                    "15s"
-                ],
-                "CD": [
-                    "20s"
-                ],
-                "Energy Cost": [
-                    "80"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Life-Prolonging_Methods.png",
-            "talentName": "Life-Prolonging Methods",
-            "talentType": "1st Ascension Passive",
-            "description": "When a character under the effects of Adeptus Art: Herald of Frost triggers an Elemental Reaction, their Incoming Healing Bonus is increased by 20% for 8s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Talent_A_Glimpse_Into_Arcanum.png",
-            "talentName": "A Glimpse Into Arcanum",
-            "talentType": "4th Ascension Passive",
-            "description": "When Qiqi hits opponents with her Normal and Charged Attacks, she has a 50% chance to apply a Fortune-Preserving Talisman to them for 6s. This effect can only occur once every 30s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Talent_Former_Life_Memories.png",
-            "talentName": "Former Life Memories",
-            "talentType": "Utility Passive",
-            "description": "Displays the location of nearby resources unique to Liyue on the mini-map.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Ancient_Sword_Art_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Constellation_Ascetics_of_Frost.png",
-            "name": "Ascetics of Frost",
-            "level": 1,
-            "description": "When the Herald of Frost hits an opponent marked by a Fortune-Preserving Talisman, Qiqi regenerates 2 Energy."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Constellation_Frozen_to_the_Bone.png",
-            "name": "Frozen to the Bone",
-            "level": 2,
-            "description": "Qiqi's Normal and Charge Attack DMG against opponents affected by Cryo is increased by 15%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Constellation_Ascendant_Praise.png",
-            "name": "Ascendant Praise",
-            "level": 3,
-            "description": "Increases the Level of Adeptus Art: Preserver of Fortune by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Constellation_Divine_Suppression.png",
-            "name": "Divine Suppression",
-            "level": 4,
-            "description": "Targets marked by the Fortune-Preserving Talisman have their ATK decreased by 20%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Constellation_Crimson_Lotus_Bloom.png",
-            "name": "Crimson Lotus Bloom",
-            "level": 5,
-            "description": "Increases the Level of Adeptus Art: Herald of Frost by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Constellation_Rite_of_Resurrection.png",
-            "name": "Rite of Resurrection",
-            "level": 6,
-            "description": "Using Adeptus Art: Preserver of Fortune revives all fallen party members nearby and regenerates 50% of their HP.\nThis effect can only occur once every 15 mins."
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.3",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Idle_Qiqi_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Idle_Qiqi_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Idle_Qiqi_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Idle_Qiqi_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Talent_Menu_Qiqi.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Talent_Menu_Qiqi.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Weapon_Menu_Qiqi.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Weapon_Menu_Qiqi.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Party_Setup_Qiqi.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Party_Setup_Qiqi.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "37.75",
+          "40.83",
+          "43.9",
+          "48.29",
+          "51.36",
+          "54.87",
+          "59.7",
+          "64.53",
+          "69.36",
+          "74.63",
+          "79.9"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Namecard_Background_Qiqi_Cold_Storage.png",
-                "caption": "Qiqi: Cold Storage Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Qiqi_Cold_Storage.png",
-                "caption": "Qiqi: Cold Storage Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Namecard_Banner_Qiqi_Cold_Storage.png",
-                "caption": "Qiqi: Cold Storage Banner"
-            }
+        "2-Hit DMG (%)": [
+          "38.87",
+          "42.04",
+          "45.2",
+          "49.72",
+          "52.88",
+          "56.5",
+          "61.47",
+          "66.44",
+          "71.42",
+          "76.84",
+          "82.26"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Ancient_Sword_Art_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Ancient_Sword_Art_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Ancient_Sword_Art_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Ancient_Sword_Art_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Ancient_Sword_Art_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Ancient_Sword_Art_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Adeptus_Art_Preserver_of_Fortune_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Adeptus_Art_Preserver_of_Fortune_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Adeptus_Art_Herald_of_Frost_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Adeptus_Art_Herald_of_Frost_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "24.17\n+\n24.17",
+          "26.13\n+\n26.13",
+          "28.1\n+\n28.1",
+          "30.91\n+\n30.91",
+          "32.88\n+\n32.88",
+          "35.13\n+\n35.13",
+          "38.22\n+\n38.22",
+          "41.31\n+\n41.31",
+          "44.4\n+\n44.4",
+          "47.77\n+\n47.77",
+          "51.14\n+\n51.14"
         ],
-        "detailedImages": [],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Icon_Emoji_Paimon%27s_Paintings_02_Qiqi_1.png",
-                "caption": "Fallen Set 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Icon_Emoji_Paimon%27s_Paintings_02_Qiqi_2.png",
-                "caption": "Secretly observing Set 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Icon_Emoji_Paimon%27s_Paintings_02_Qiqi_3.png",
-                "caption": "Oh! Set 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_Emoji_Paimon%27s_Paintings_47_Yaoyao_Qiqi_1.png",
-                "caption": "Set 47"
-            }
+        "4-Hit DMG (%)": [
+          "24.68\n+\n24.68",
+          "26.69\n+\n26.69",
+          "28.7\n+\n28.7",
+          "31.57\n+\n31.57",
+          "33.58\n+\n33.58",
+          "35.88\n+\n35.88",
+          "39.03\n+\n39.03",
+          "42.19\n+\n42.19",
+          "45.35\n+\n45.35",
+          "48.79\n+\n48.79",
+          "52.23\n+\n52.23"
+        ],
+        "5-Hit DMG (%)": [
+          "63.04",
+          "68.17",
+          "73.3",
+          "80.63",
+          "85.76",
+          "91.63",
+          "99.69",
+          "107.75",
+          "115.81",
+          "124.61",
+          "133.41"
+        ],
+        "Charged Attack DMG (%)": [
+          "64.33\n+\n64.33",
+          "69.56\n+\n69.56",
+          "74.8\n+\n74.8",
+          "82.28\n+\n82.28",
+          "87.52\n+\n87.52",
+          "93.5\n+\n93.5",
+          "101.73\n+\n101.73",
+          "109.96\n+\n109.96",
+          "118.18\n+\n118.18",
+          "127.16\n+\n127.16",
+          "136.14\n+\n136.14"
+        ],
+        "Charged Attack Stamina Cost": ["20"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Talent_Adeptus_Art_Herald_of_Frost.png",
+      "talentName": "Adeptus Art: Herald of Frost",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nUsing the Icevein Talisman, Qiqi brings forth the Herald of Frost, dealing Cryo DMG to surrounding opponents.\n\nHerald of Frost\nOn hit, Qiqi's Normal and Charged Attacks regenerate HP for your own party members and nearby teammates. Healing scales based on Qiqi's ATK.\nPeriodically regenerates your active character's HP.\nFollows the character around, dealing Cryo DMG to opponents in their path.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Adeptus_Art_Herald_of_Frost_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "96.00",
+          "103.20",
+          "110.40",
+          "120.00",
+          "127.20",
+          "134.40",
+          "144.00",
+          "153.60",
+          "163.20",
+          "172.80",
+          "182.40",
+          "192.00",
+          "204.00",
+          "216.00"
+        ],
+        "Regeneration on Hit": [
+          "10.56% ATK\n+\n67.40",
+          "11.35% ATK\n+\n74.14",
+          "12.14% ATK\n+\n81.45",
+          "13.20% ATK\n+\n89.31",
+          "13.99% ATK\n+\n97.74",
+          "14.78% ATK\n+\n106.73",
+          "15.84% ATK\n+\n116.28",
+          "16.90% ATK\n+\n126.39",
+          "17.95% ATK\n+\n137.07",
+          "19.01% ATK\n+\n148.31",
+          "20.06% ATK\n+\n160.11",
+          "21.12% ATK\n+\n172.46",
+          "22.44% ATK\n+\n185.38",
+          "23.76% ATK\n+\n198.87"
+        ],
+        "Continuous Regeneration": [
+          "69.60% ATK\n+\n450.55",
+          "74.82% ATK\n+\n495.61",
+          "80.04% ATK\n+\n544.42",
+          "87.00% ATK\n+\n597.00",
+          "92.22% ATK\n+\n653.32",
+          "97.44% ATK\n+\n713.40",
+          "104.40% ATK\n+\n777.24",
+          "111.36% ATK\n+\n844.83",
+          "118.32% ATK\n+\n916.18",
+          "125.28% ATK\n+\n991.28",
+          "132.24% ATK\n+\n1070.14",
+          "139.20% ATK\n+\n1152.76",
+          "147.90% ATK\n+\n1239.12",
+          "156.60% ATK\n+\n1329.25"
+        ],
+        "Herald of Frost DMG (%)": [
+          "36.00",
+          "38.70",
+          "41.40",
+          "45.00",
+          "47.70",
+          "50.40",
+          "54.00",
+          "57.60",
+          "61.20",
+          "64.80",
+          "68.40",
+          "72.00",
+          "76.50",
+          "81.00"
+        ],
+        "Duration": ["15s"],
+        "CD": ["30s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_Adeptus_Art_Preserver_of_Fortune.png",
+      "talentName": "Adeptus Art: Preserver of Fortune",
+      "talentType": "Elemental Burst",
+      "description": "Qiqi releases the adeptus power sealed within her body, marking nearby opponents with a Fortune-Preserving Talisman that deals Cryo DMG.\n\nFortune-Preserving Talisman\nWhen opponents affected by this Talisman take DMG, the character that dealt this DMG regenerates HP.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Adeptus_Art_Preserver_of_Fortune_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "284.8",
+          "306.16",
+          "327.52",
+          "356",
+          "377.36",
+          "398.72",
+          "427.2",
+          "455.68",
+          "484.16",
+          "512.64",
+          "541.12",
+          "569.6",
+          "605.2",
+          "641"
+        ],
+        "Healing": [
+          "90% ATK\n+\n577.33",
+          "96.75% ATK\n+\n635.08",
+          "103.5% ATK\n+\n697.63",
+          "112.5% ATK\n+\n765",
+          "119.25% ATK\n+\n837.17",
+          "126% ATK\n+\n914.16",
+          "135% ATK\n+\n995.96",
+          "144% ATK\n+\n1082",
+          "153% ATK\n+\n1174",
+          "162% ATK\n+\n1270",
+          "171% ATK\n+\n1371",
+          "180% ATK\n+\n1477",
+          "191.25% ATK\n+\n1587",
+          "203% ATK\n+\n1703"
+        ],
+        "Duration": ["15s"],
+        "CD": ["20s"],
+        "Energy Cost": ["80"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Life-Prolonging_Methods.png",
+      "talentName": "Life-Prolonging Methods",
+      "talentType": "1st Ascension Passive",
+      "description": "When a character under the effects of Adeptus Art: Herald of Frost triggers an Elemental Reaction, their Incoming Healing Bonus is increased by 20% for 8s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Talent_A_Glimpse_Into_Arcanum.png",
+      "talentName": "A Glimpse Into Arcanum",
+      "talentType": "4th Ascension Passive",
+      "description": "When Qiqi hits opponents with her Normal and Charged Attacks, she has a 50% chance to apply a Fortune-Preserving Talisman to them for 6s. This effect can only occur once every 30s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Talent_Former_Life_Memories.png",
+      "talentName": "Former Life Memories",
+      "talentType": "Utility Passive",
+      "description": "Displays the location of nearby resources unique to Liyue on the mini-map.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Constellation_Ascetics_of_Frost.png",
+      "name": "Ascetics of Frost",
+      "level": 1,
+      "description": "When the Herald of Frost hits an opponent marked by a Fortune-Preserving Talisman, Qiqi regenerates 2 Energy."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Constellation_Frozen_to_the_Bone.png",
+      "name": "Frozen to the Bone",
+      "level": 2,
+      "description": "Qiqi's Normal and Charge Attack DMG against opponents affected by Cryo is increased by 15%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Constellation_Ascendant_Praise.png",
+      "name": "Ascendant Praise",
+      "level": 3,
+      "description": "Increases the Level of Adeptus Art: Preserver of Fortune by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Constellation_Divine_Suppression.png",
+      "name": "Divine Suppression",
+      "level": 4,
+      "description": "Targets marked by the Fortune-Preserving Talisman have their ATK decreased by 20%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Constellation_Crimson_Lotus_Bloom.png",
+      "name": "Crimson Lotus Bloom",
+      "level": 5,
+      "description": "Increases the Level of Adeptus Art: Herald of Frost by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Constellation_Rite_of_Resurrection.png",
+      "name": "Rite of Resurrection",
+      "level": 6,
+      "description": "Using Adeptus Art: Preserver of Fortune revives all fallen party members nearby and regenerates 50% of their HP.\nThis effect can only occur once every 15 mins."
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.3",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Idle_Qiqi_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Idle_Qiqi_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Idle_Qiqi_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Idle_Qiqi_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Talent_Menu_Qiqi.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Talent_Menu_Qiqi.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Weapon_Menu_Qiqi.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Weapon_Menu_Qiqi.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Party_Setup_Qiqi.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Party_Setup_Qiqi.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Namecard_Background_Qiqi_Cold_Storage.png",
+        "caption": "Qiqi: Cold Storage Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Qiqi_Cold_Storage.png",
+        "caption": "Qiqi: Cold Storage Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Namecard_Banner_Qiqi_Cold_Storage.png",
+        "caption": "Qiqi: Cold Storage Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Ancient_Sword_Art_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Ancient_Sword_Art_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Ancient_Sword_Art_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Ancient_Sword_Art_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Ancient_Sword_Art_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Ancient_Sword_Art_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Adeptus_Art_Preserver_of_Fortune_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Adeptus_Art_Preserver_of_Fortune_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Adeptus_Art_Herald_of_Frost_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Adeptus_Art_Herald_of_Frost_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Icon_Emoji_Paimon%27s_Paintings_02_Qiqi_1.png",
+        "caption": "Fallen Set 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Icon_Emoji_Paimon%27s_Paintings_02_Qiqi_2.png",
+        "caption": "Secretly observing Set 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Icon_Emoji_Paimon%27s_Paintings_02_Qiqi_3.png",
+        "caption": "Oh! Set 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Icon_Emoji_Paimon%27s_Paintings_47_Yaoyao_Qiqi_1.png",
+        "caption": "Set 47"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Healer",
+      "sets": [
+        {
+          "name": "Ocean-Hued Clam",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Healer (Alternative)",
+      "sets": [
+        {
+          "name": "Maiden Beloved",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Physical DPS",
+      "sets": [
+        {
+          "name": "Pale Flame",
+          "pieces": 2
+        },
+        {
+          "name": "Bloodstained Chivalry",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

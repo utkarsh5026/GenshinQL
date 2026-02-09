@@ -435,5 +435,34 @@
         "caption": "Faint Set 45"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Shield Support",
+      "sets": [
+        {
+          "name": "Tenacity of the Millelith",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Cryo Support",
+      "sets": [
+        {
+          "name": "Blizzard Strayer",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Burst Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

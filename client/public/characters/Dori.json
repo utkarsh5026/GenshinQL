@@ -457,5 +457,34 @@
         "caption": "I Swear Set 42"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Healer Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "ER Support",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Healer",
+      "sets": [
+        {
+          "name": "Ocean-Hued Clam",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

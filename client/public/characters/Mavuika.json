@@ -681,5 +681,34 @@
         "caption": "Are You There? Set 40"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Obsidian Codex",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Nightsoul DPS",
+      "sets": [
+        {
+          "name": "Scroll of the Hero of Cinder City",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Pyro DPS",
+      "sets": [
+        {
+          "name": "Crimson Witch of Flames",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

@@ -1,663 +1,678 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cyno_Icon.png",
-    "name": "Cyno",
-    "rarity": "5 Stars",
-    "element": "Electro",
-    "weaponType": "Polearm",
-    "region": "Sumeru",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Medium Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cyno_Icon.png",
+  "name": "Cyno",
+  "rarity": "5 Stars",
+  "element": "Electro",
+  "weaponType": "Polearm",
+  "region": "Sumeru",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
+  "modelType": "Medium Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png",
+      "talentName": "Invoker's Spear",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png",
-            "talentName": "Invoker's Spear",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to lunge forward, dealing damage to opponents along the way.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Invoker%27s_Spear_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Invoker%27s_Spear_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Invoker%27s_Spear_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "49.26",
-                    "53.27",
-                    "57.28",
-                    "63",
-                    "67.01",
-                    "71.59",
-                    "77.9",
-                    "84.2",
-                    "90.5",
-                    "97.37",
-                    "104.24"
-                ],
-                "2-Hit DMG (%)": [
-                    "47.92",
-                    "51.82",
-                    "55.72",
-                    "61.29",
-                    "65.19",
-                    "69.65",
-                    "75.78",
-                    "81.91",
-                    "88.04",
-                    "94.73",
-                    "101.41"
-                ],
-                "3-Hit DMG (%)": [
-                    "29.31\n+\n29.31",
-                    "31.69\n+\n31.69",
-                    "34.08\n+\n34.08",
-                    "37.48\n+\n37.48",
-                    "39.87\n+\n39.87",
-                    "42.6\n+\n42.6",
-                    "46.34\n+\n46.34",
-                    "50.09\n+\n50.09",
-                    "53.84\n+\n53.84",
-                    "57.93\n+\n57.93",
-                    "62.02\n+\n62.02"
-                ],
-                "4-Hit DMG (%)": [
-                    "75.89",
-                    "82.07",
-                    "88.24",
-                    "97.07",
-                    "103.25",
-                    "110.31",
-                    "120.01",
-                    "129.72",
-                    "139.43",
-                    "150.02",
-                    "160.61"
-                ],
-                "Charged Attack DMG (%)": [
-                    "122.38",
-                    "132.34",
-                    "142.3",
-                    "156.53",
-                    "166.49",
-                    "177.88",
-                    "193.53",
-                    "209.18",
-                    "224.83",
-                    "241.91",
-                    "258.99"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "25"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Invoker%27s_Spear_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Talent_Secret_Rite_Chasmic_Soulfarer.png",
-            "talentName": "Secret Rite: Chasmic Soulfarer",
-            "talentType": "Elemental Skill",
-            "description": "Performs a swift thrust, dealing Electro DMG to opponents along the path.\n\nWhen Cyno is under the Pathsworn Pathclearer state triggered by Sacred Rite: Wolf's Swiftness, he will instead unleash a Mortuary Rite that deals thunderous AoE Electro DMG and extends the duration of Pathsworn Pathclearer.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Rite_Chasmic_Soulfarer_Preview.gif",
-                    "caption": ""
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
-                    "caption": "Elemental Skill in Pathsworn Pathclearer State"
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "130.4",
-                    "140.18",
-                    "149.96",
-                    "163",
-                    "172.78",
-                    "182.56",
-                    "195.6",
-                    "208.64",
-                    "221.68",
-                    "234.72",
-                    "247.76",
-                    "260.8",
-                    "277.1"
-                ],
-                "Mortuary Rite DMG (%)": [
-                    "156.8",
-                    "168.56",
-                    "180.32",
-                    "196",
-                    "207.76",
-                    "219.52",
-                    "235.2",
-                    "250.88",
-                    "266.56",
-                    "282.24",
-                    "297.92",
-                    "313.6",
-                    "333.2"
-                ],
-                "Pactsworn Pathclearer Duration Bonus": [
-                    "4s"
-                ],
-                "CD": [
-                    "7.5s"
-                ],
-                "Mortuary Rite CD": [
-                    "3s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Invoker%27s_Spear_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Sacred_Rite_Wolf%27s_Swiftness.png",
-            "talentName": "Sacred Rite: Wolf's Swiftness",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nCalls upon a divine spirit to indwell him, morphing into the Pactsworn Pathclearer.\n\nPactsworn Pathclearer\nCyno's Normal, Charged, and Plunging Attacks will be converted to Electro DMG that cannot be overridden.\nCyno's Elemental Mastery and resistance to interruption will increase, and he gains immunity to Electro-Charged DMG.\n\nThis effect will be canceled when Cyno leaves the field and lasts a maximum of 18s.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Sacred_Rite_Wolf%27s_Swiftness_Preview.gif",
-                    "caption": "Sacred Rite: Wolf's Swiftness"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Sacred_Rite_Wolf%27s_Swiftness_Normal_Preview.gif",
-                    "caption": "Pactsworn Pathclearer, Normal Attacks"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Sacred_Rite_Wolf%27s_Swiftness_Charged_Preview.gif",
-                    "caption": "Pactsworn Pathclearer, Charged Attacks"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Sacred_Rite_Wolf%27s_Swiftness_Plunging_Preview.gif",
-                    "caption": "Pactsworn Pathclearer, Plunging Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
-                    "caption": "Pactsworn Pathclearer, Elemental Skill"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "78.28",
-                    "84.66",
-                    "91.03",
-                    "100.13",
-                    "106.5",
-                    "113.78",
-                    "123.8",
-                    "133.81",
-                    "143.82",
-                    "154.75",
-                    "165.67",
-                    "176.59",
-                    "187.52"
-                ],
-                "2-Hit DMG (%)": [
-                    "82.47",
-                    "89.18",
-                    "95.89",
-                    "105.48",
-                    "112.2",
-                    "119.87",
-                    "130.42",
-                    "140.96",
-                    "151.51",
-                    "163.02",
-                    "174.53",
-                    "186.03",
-                    "197.54"
-                ],
-                "3-Hit DMG (%)": [
-                    "104.63",
-                    "113.15",
-                    "121.67",
-                    "133.83",
-                    "142.35",
-                    "152.08",
-                    "165.47",
-                    "178.85",
-                    "192.23",
-                    "206.83",
-                    "221.43",
-                    "236.03",
-                    "250.63"
-                ],
-                "4-Hit DMG (%)": [
-                    "51.69\n+\n51.69",
-                    "55.9\n+\n55.9",
-                    "60.11\n+\n60.11",
-                    "66.12\n+\n66.12",
-                    "70.33\n+\n70.33",
-                    "75.14\n+\n75.14",
-                    "81.75\n+\n81.75",
-                    "88.36\n+\n88.36",
-                    "94.97\n+\n94.97",
-                    "102.19\n+\n102.19",
-                    "109.4\n+\n109.4",
-                    "116.61\n+\n116.61",
-                    "123.83\n+\n123.83"
-                ],
-                "5-Hit DMG (%)": [
-                    "130.84",
-                    "141.49",
-                    "152.15",
-                    "167.36",
-                    "178.01",
-                    "190.18",
-                    "206.92",
-                    "223.65",
-                    "240.39",
-                    "258.65",
-                    "276.9",
-                    "295.16",
-                    "313.42"
-                ],
-                "Charged Attack DMG (%)": [
-                    "101.05",
-                    "109.28",
-                    "117.5",
-                    "129.25",
-                    "137.47",
-                    "146.88",
-                    "159.8",
-                    "172.72",
-                    "185.65",
-                    "199.75",
-                    "213.85",
-                    "227.95",
-                    "242.05"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "25"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3",
-                    "144.22",
-                    "153.14"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54",
-                    "288.38",
-                    "306.22"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92",
-                    "360.2",
-                    "382.48"
-                ],
-                "Elemental Mastery Bonus": [
-                    "100"
-                ],
-                "Basic Duration": [
-                    "10s"
-                ],
-                "CD": [
-                    "20s"
-                ],
-                "Energy Cost": [
-                    "80"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Featherfall_Judgment.png",
-            "talentName": "Featherfall Judgment",
-            "talentType": "1st Ascension Passive",
-            "description": "When Cyno is in the Pactsworn Pathclearer state activated by Sacred Rite: Wolf's Swiftness, Cyno will enter the Endseer stance at intervals. If he activates Secret Rite: Chasmic Soulfarer while affected by this stance, he will activate the Judication effect, increasing the DMG of this Secret Rite: Chasmic Soulfarer by 35%, and firing off 3 Duststalker Bolts that deal 100% of Cyno's ATK as Electro DMG.\nDuststalker Bolt DMG is considered Elemental Skill DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Featherfall_Judgment_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Talent_Authority_Over_the_Nine_Bows.png",
-            "talentName": "Authority Over the Nine Bows",
-            "talentType": "4th Ascension Passive",
-            "description": "Description\nGameplay Notes\nCyno's DMG values will be increased based on his Elemental Mastery as follows:\nPactsworn Pathclearer's Normal Attack DMG is increased by 150% of his Elemental Mastery.\nDuststalker Bolt DMG from his Ascension Talent Featherfall Judgment is increased by 250% of his Elemental Mastery.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_The_Gift_of_Silence.png",
-            "talentName": "The Gift of Silence",
-            "talentType": "Utility Passive",
-            "description": "Gains 25% more rewards when dispatched on a Sumeru Expedition for 20 hours.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/The_Gift_of_Silence_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Invoker%27s_Spear_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Constellation_Ordinance_Unceasing_Vigil.png",
-            "name": "Ordinance: Unceasing Vigil",
-            "level": 1,
-            "description": "After using Sacred Rite: Wolf's Swiftness, Cyno's Normal Attack SPD will be increased by 20% for 10s. If the Judication effect of his Ascension Talent Featherfall Judgment is triggered during Secret Rite: Chasmic Soulfarer, the duration of this increase will be refreshed.\nYou must first unlock the Ascension Talent \"Featherfall Judgement.\""
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Constellation_Ceremony_Homecoming_of_Spirits.png",
-            "name": "Ceremony: Homecoming of Spirits",
-            "level": 2,
-            "description": "When Cyno's Normal Attacks hit opponents, his Electro DMG Bonus will increase by 10% for 4s. This effect can be triggered once every 0.1s. Max 5 stacks."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Constellation_Precept_Lawful_Enforcer.png",
-            "name": "Precept: Lawful Enforcer",
-            "level": 3,
-            "description": "Increases the Level of Sacred Rite: Wolf's Swiftness by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Constellation_Austerity_Forbidding_Guard.png",
-            "name": "Austerity: Forbidding Guard",
-            "level": 4,
-            "description": "When Cyno is in the Pactsworn Pathclearer state triggered by Sacred Rite: Wolf's Swiftness, after he triggers Electro-Charged, Lunar-Charged, Superconduct, Overloaded, Quicken, Aggravate, Hyperbloom, or an Electro Swirl reaction, he will restore 3 Elemental Energy for all nearby party members (except himself.)\nThis effect can occur 5 times within one use of Sacred Rite: Wolf's Swiftness."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Constellation_Funerary_Rite_The_Passing_of_Starlight.png",
-            "name": "Funerary Rite: The Passing of Starlight",
-            "level": 5,
-            "description": "Increases the Level of Secret Rite: Chasmic Soulfarer by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Constellation_Raiment_Just_Scales.png",
-            "name": "Raiment: Just Scales",
-            "level": 6,
-            "description": "Description\nAdvanced Properties\nPreview\nAfter using Sacred Rite: Wolf's Swiftness or triggering the Judication effect of the Ascension Talent \"Featherfall Judgment,\" Cyno will gain 4 stacks of the \"Day of the Jackal\" effect. When he hits opponents with Normal Attacks, he will consume 1 stack of \"Day of the Jackal\" to fire off one Duststalker Bolt.\n\"Day of the Jackal\" lasts for 8s. Max 8 stacks. It will be canceled once Pactsworn Pathclearer ends.\nA maximum of 1 Duststalker Bolt can be unleashed this way every 0.4s.\nYou must first unlock the Ascension Talent \"Featherfall Judgment.\""
-        }
-    ],
-    "imageUrls": {},
-    "version": "3.1",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Idle_Cyno_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Idle_Cyno_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Idle_Cyno_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Idle_Cyno_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Talent_Menu_Cyno.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Talent_Menu_Cyno.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Weapon_Menu_Cyno.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Weapon_Menu_Cyno.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Party_Setup_Cyno.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Party_Setup_Cyno.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "49.26",
+          "53.27",
+          "57.28",
+          "63",
+          "67.01",
+          "71.59",
+          "77.9",
+          "84.2",
+          "90.5",
+          "97.37",
+          "104.24"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Cyno_Silence.png",
-                "caption": "Cyno: Silence Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Cyno_Silence.png",
-                "caption": "Cyno: Silence Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Namecard_Banner_Cyno_Silence.png",
-                "caption": "Cyno: Silence Banner"
-            }
+        "2-Hit DMG (%)": [
+          "47.92",
+          "51.82",
+          "55.72",
+          "61.29",
+          "65.19",
+          "69.65",
+          "75.78",
+          "81.91",
+          "88.04",
+          "94.73",
+          "101.41"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Invoker%27s_Spear_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Invoker%27s_Spear_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Invoker%27s_Spear_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Invoker%27s_Spear_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Invoker%27s_Spear_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Invoker%27s_Spear_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Sacred_Rite_Wolf%27s_Swiftness_Preview.gif",
-                        "caption": "Sacred Rite: Wolf's Swiftness",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Sacred_Rite_Wolf%27s_Swiftness_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Sacred_Rite_Wolf%27s_Swiftness_Normal_Preview.gif",
-                        "caption": "Pactsworn Pathclearer, Normal Attacks",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Sacred_Rite_Wolf%27s_Swiftness_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Sacred_Rite_Wolf%27s_Swiftness_Charged_Preview.gif",
-                        "caption": "Pactsworn Pathclearer, Charged Attacks",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Sacred_Rite_Wolf%27s_Swiftness_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Sacred_Rite_Wolf%27s_Swiftness_Plunging_Preview.gif",
-                        "caption": "Pactsworn Pathclearer, Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Sacred_Rite_Wolf%27s_Swiftness_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
-                        "caption": "Pactsworn Pathclearer, Elemental Skill",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Rite_Chasmic_Soulfarer_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Secret_Rite_Chasmic_Soulfarer_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
-                        "caption": "Elemental Skill in Pathsworn Pathclearer State",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "29.31\n+\n29.31",
+          "31.69\n+\n31.69",
+          "34.08\n+\n34.08",
+          "37.48\n+\n37.48",
+          "39.87\n+\n39.87",
+          "42.6\n+\n42.6",
+          "46.34\n+\n46.34",
+          "50.09\n+\n50.09",
+          "53.84\n+\n53.84",
+          "57.93\n+\n57.93",
+          "62.02\n+\n62.02"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Cyno_Character_Details_1.png",
-                "caption": "Cyno Details 1 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Cyno_Character_Details_2.png",
-                "caption": "Cyno Details 2 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Cyno_Character_Details_3.gif",
-                "caption": "Cyno Details 3 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Cyno_Character_Details_4.gif",
-                "caption": "Cyno Details 4 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Cyno_Character_Details_5.gif",
-                "caption": "Cyno Details 5 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Cyno_Character_Details_6.gif",
-                "caption": "Cyno Details 6 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Cyno_Character_Details_7.png",
-                "caption": "Cyno Details 7 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Cyno_Character_Details_8.png",
-                "caption": "Cyno Details 8 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Cyno_Character_Details_9.png",
-                "caption": "Cyno Details 9 Official HoYoLAB Post"
-            }
+        "4-Hit DMG (%)": [
+          "75.89",
+          "82.07",
+          "88.24",
+          "97.07",
+          "103.25",
+          "110.31",
+          "120.01",
+          "129.72",
+          "139.43",
+          "150.02",
+          "160.61"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_1.png",
-                "caption": "Duel Set 18"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_2.png",
-                "caption": "Judgement! Set 18"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_3.png",
-                "caption": "I'm Here Set 18"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_4.png",
-                "caption": "Sweating Set 18"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Icon_Emoji_Paimon%27s_Paintings_22_Cyno_1.png",
-                "caption": "No? Not funny? Set 22"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Icon_Emoji_Paimon%27s_Paintings_22_Cyno_2.png",
-                "caption": "Inspection! Set 22"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Icon_Emoji_Paimon%27s_Paintings_23_Cyno_1.png",
-                "caption": "Have at You! Set 23"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Icon_Emoji_Paimon%27s_Paintings_24_Cyno_1.png",
-                "caption": "Art! Set 24"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Icon_Emoji_Paimon%27s_Paintings_32_Cyno_1.png",
-                "caption": "Fess up! Set 32"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Icon_Emoji_Paimon%27s_Paintings_32_Cyno_2.png",
-                "caption": "Awkward... Set 32"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Icon_Emoji_Paimon%27s_Paintings_45_Cyno_1.png",
-                "caption": "Satisfied Set 45"
-            }
+        "Charged Attack DMG (%)": [
+          "122.38",
+          "132.34",
+          "142.3",
+          "156.53",
+          "166.49",
+          "177.88",
+          "193.53",
+          "209.18",
+          "224.83",
+          "241.91",
+          "258.99"
+        ],
+        "Charged Attack Stamina Cost": ["25"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Talent_Secret_Rite_Chasmic_Soulfarer.png",
+      "talentName": "Secret Rite: Chasmic Soulfarer",
+      "talentType": "Elemental Skill",
+      "description": "Performs a swift thrust, dealing Electro DMG to opponents along the path.\n\nWhen Cyno is under the Pathsworn Pathclearer state triggered by Sacred Rite: Wolf's Swiftness, he will instead unleash a Mortuary Rite that deals thunderous AoE Electro DMG and extends the duration of Pathsworn Pathclearer.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Rite_Chasmic_Soulfarer_Preview.gif",
+          "caption": ""
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
+          "caption": "Elemental Skill in Pathsworn Pathclearer State"
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "130.4",
+          "140.18",
+          "149.96",
+          "163",
+          "172.78",
+          "182.56",
+          "195.6",
+          "208.64",
+          "221.68",
+          "234.72",
+          "247.76",
+          "260.8",
+          "277.1"
+        ],
+        "Mortuary Rite DMG (%)": [
+          "156.8",
+          "168.56",
+          "180.32",
+          "196",
+          "207.76",
+          "219.52",
+          "235.2",
+          "250.88",
+          "266.56",
+          "282.24",
+          "297.92",
+          "313.6",
+          "333.2"
+        ],
+        "Pactsworn Pathclearer Duration Bonus": ["4s"],
+        "CD": ["7.5s"],
+        "Mortuary Rite CD": ["3s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Sacred_Rite_Wolf%27s_Swiftness.png",
+      "talentName": "Sacred Rite: Wolf's Swiftness",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nCalls upon a divine spirit to indwell him, morphing into the Pactsworn Pathclearer.\n\nPactsworn Pathclearer\nCyno's Normal, Charged, and Plunging Attacks will be converted to Electro DMG that cannot be overridden.\nCyno's Elemental Mastery and resistance to interruption will increase, and he gains immunity to Electro-Charged DMG.\n\nThis effect will be canceled when Cyno leaves the field and lasts a maximum of 18s.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Sacred_Rite_Wolf%27s_Swiftness_Preview.gif",
+          "caption": "Sacred Rite: Wolf's Swiftness"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Sacred_Rite_Wolf%27s_Swiftness_Normal_Preview.gif",
+          "caption": "Pactsworn Pathclearer, Normal Attacks"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Sacred_Rite_Wolf%27s_Swiftness_Charged_Preview.gif",
+          "caption": "Pactsworn Pathclearer, Charged Attacks"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Sacred_Rite_Wolf%27s_Swiftness_Plunging_Preview.gif",
+          "caption": "Pactsworn Pathclearer, Plunging Attack"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
+          "caption": "Pactsworn Pathclearer, Elemental Skill"
+        }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "78.28",
+          "84.66",
+          "91.03",
+          "100.13",
+          "106.5",
+          "113.78",
+          "123.8",
+          "133.81",
+          "143.82",
+          "154.75",
+          "165.67",
+          "176.59",
+          "187.52"
+        ],
+        "2-Hit DMG (%)": [
+          "82.47",
+          "89.18",
+          "95.89",
+          "105.48",
+          "112.2",
+          "119.87",
+          "130.42",
+          "140.96",
+          "151.51",
+          "163.02",
+          "174.53",
+          "186.03",
+          "197.54"
+        ],
+        "3-Hit DMG (%)": [
+          "104.63",
+          "113.15",
+          "121.67",
+          "133.83",
+          "142.35",
+          "152.08",
+          "165.47",
+          "178.85",
+          "192.23",
+          "206.83",
+          "221.43",
+          "236.03",
+          "250.63"
+        ],
+        "4-Hit DMG (%)": [
+          "51.69\n+\n51.69",
+          "55.9\n+\n55.9",
+          "60.11\n+\n60.11",
+          "66.12\n+\n66.12",
+          "70.33\n+\n70.33",
+          "75.14\n+\n75.14",
+          "81.75\n+\n81.75",
+          "88.36\n+\n88.36",
+          "94.97\n+\n94.97",
+          "102.19\n+\n102.19",
+          "109.4\n+\n109.4",
+          "116.61\n+\n116.61",
+          "123.83\n+\n123.83"
+        ],
+        "5-Hit DMG (%)": [
+          "130.84",
+          "141.49",
+          "152.15",
+          "167.36",
+          "178.01",
+          "190.18",
+          "206.92",
+          "223.65",
+          "240.39",
+          "258.65",
+          "276.9",
+          "295.16",
+          "313.42"
+        ],
+        "Charged Attack DMG (%)": [
+          "101.05",
+          "109.28",
+          "117.5",
+          "129.25",
+          "137.47",
+          "146.88",
+          "159.8",
+          "172.72",
+          "185.65",
+          "199.75",
+          "213.85",
+          "227.95",
+          "242.05"
+        ],
+        "Charged Attack Stamina Cost": ["25"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3",
+          "144.22",
+          "153.14"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54",
+          "288.38",
+          "306.22"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92",
+          "360.2",
+          "382.48"
+        ],
+        "Elemental Mastery Bonus": ["100"],
+        "Basic Duration": ["10s"],
+        "CD": ["20s"],
+        "Energy Cost": ["80"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Featherfall_Judgment.png",
+      "talentName": "Featherfall Judgment",
+      "talentType": "1st Ascension Passive",
+      "description": "When Cyno is in the Pactsworn Pathclearer state activated by Sacred Rite: Wolf's Swiftness, Cyno will enter the Endseer stance at intervals. If he activates Secret Rite: Chasmic Soulfarer while affected by this stance, he will activate the Judication effect, increasing the DMG of this Secret Rite: Chasmic Soulfarer by 35%, and firing off 3 Duststalker Bolts that deal 100% of Cyno's ATK as Electro DMG.\nDuststalker Bolt DMG is considered Elemental Skill DMG.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Featherfall_Judgment_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Talent_Authority_Over_the_Nine_Bows.png",
+      "talentName": "Authority Over the Nine Bows",
+      "talentType": "4th Ascension Passive",
+      "description": "Description\nGameplay Notes\nCyno's DMG values will be increased based on his Elemental Mastery as follows:\nPactsworn Pathclearer's Normal Attack DMG is increased by 150% of his Elemental Mastery.\nDuststalker Bolt DMG from his Ascension Talent Featherfall Judgment is increased by 250% of his Elemental Mastery.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_The_Gift_of_Silence.png",
+      "talentName": "The Gift of Silence",
+      "talentType": "Utility Passive",
+      "description": "Gains 25% more rewards when dispatched on a Sumeru Expedition for 20 hours.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/The_Gift_of_Silence_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Constellation_Ordinance_Unceasing_Vigil.png",
+      "name": "Ordinance: Unceasing Vigil",
+      "level": 1,
+      "description": "After using Sacred Rite: Wolf's Swiftness, Cyno's Normal Attack SPD will be increased by 20% for 10s. If the Judication effect of his Ascension Talent Featherfall Judgment is triggered during Secret Rite: Chasmic Soulfarer, the duration of this increase will be refreshed.\nYou must first unlock the Ascension Talent \"Featherfall Judgement.\""
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Constellation_Ceremony_Homecoming_of_Spirits.png",
+      "name": "Ceremony: Homecoming of Spirits",
+      "level": 2,
+      "description": "When Cyno's Normal Attacks hit opponents, his Electro DMG Bonus will increase by 10% for 4s. This effect can be triggered once every 0.1s. Max 5 stacks."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Constellation_Precept_Lawful_Enforcer.png",
+      "name": "Precept: Lawful Enforcer",
+      "level": 3,
+      "description": "Increases the Level of Sacred Rite: Wolf's Swiftness by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Constellation_Austerity_Forbidding_Guard.png",
+      "name": "Austerity: Forbidding Guard",
+      "level": 4,
+      "description": "When Cyno is in the Pactsworn Pathclearer state triggered by Sacred Rite: Wolf's Swiftness, after he triggers Electro-Charged, Lunar-Charged, Superconduct, Overloaded, Quicken, Aggravate, Hyperbloom, or an Electro Swirl reaction, he will restore 3 Elemental Energy for all nearby party members (except himself.)\nThis effect can occur 5 times within one use of Sacred Rite: Wolf's Swiftness."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Constellation_Funerary_Rite_The_Passing_of_Starlight.png",
+      "name": "Funerary Rite: The Passing of Starlight",
+      "level": 5,
+      "description": "Increases the Level of Secret Rite: Chasmic Soulfarer by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Constellation_Raiment_Just_Scales.png",
+      "name": "Raiment: Just Scales",
+      "level": 6,
+      "description": "Description\nAdvanced Properties\nPreview\nAfter using Sacred Rite: Wolf's Swiftness or triggering the Judication effect of the Ascension Talent \"Featherfall Judgment,\" Cyno will gain 4 stacks of the \"Day of the Jackal\" effect. When he hits opponents with Normal Attacks, he will consume 1 stack of \"Day of the Jackal\" to fire off one Duststalker Bolt.\n\"Day of the Jackal\" lasts for 8s. Max 8 stacks. It will be canceled once Pactsworn Pathclearer ends.\nA maximum of 1 Duststalker Bolt can be unleashed this way every 0.4s.\nYou must first unlock the Ascension Talent \"Featherfall Judgment.\""
+    }
+  ],
+  "imageUrls": {},
+  "version": "3.1",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Idle_Cyno_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Idle_Cyno_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Idle_Cyno_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Idle_Cyno_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Talent_Menu_Cyno.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Talent_Menu_Cyno.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Weapon_Menu_Cyno.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Weapon_Menu_Cyno.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Party_Setup_Cyno.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Party_Setup_Cyno.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Cyno_Silence.png",
+        "caption": "Cyno: Silence Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Cyno_Silence.png",
+        "caption": "Cyno: Silence Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Namecard_Banner_Cyno_Silence.png",
+        "caption": "Cyno: Silence Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Invoker%27s_Spear_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Invoker%27s_Spear_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Invoker%27s_Spear_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Invoker%27s_Spear_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Invoker%27s_Spear_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Invoker%27s_Spear_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Sacred_Rite_Wolf%27s_Swiftness_Preview.gif",
+            "caption": "Sacred Rite: Wolf's Swiftness",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Sacred_Rite_Wolf%27s_Swiftness_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Sacred_Rite_Wolf%27s_Swiftness_Normal_Preview.gif",
+            "caption": "Pactsworn Pathclearer, Normal Attacks",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Sacred_Rite_Wolf%27s_Swiftness_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Sacred_Rite_Wolf%27s_Swiftness_Charged_Preview.gif",
+            "caption": "Pactsworn Pathclearer, Charged Attacks",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Sacred_Rite_Wolf%27s_Swiftness_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Sacred_Rite_Wolf%27s_Swiftness_Plunging_Preview.gif",
+            "caption": "Pactsworn Pathclearer, Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Sacred_Rite_Wolf%27s_Swiftness_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
+            "caption": "Pactsworn Pathclearer, Elemental Skill",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Rite_Chasmic_Soulfarer_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Secret_Rite_Chasmic_Soulfarer_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.gif",
+            "caption": "Elemental Skill in Pathsworn Pathclearer State",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Sacred_Rite_Wolf%27s_Swiftness_Elemental_Skill_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Cyno_Character_Details_1.png",
+        "caption": "Cyno Details 1 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Cyno_Character_Details_2.png",
+        "caption": "Cyno Details 2 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Cyno_Character_Details_3.gif",
+        "caption": "Cyno Details 3 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Cyno_Character_Details_4.gif",
+        "caption": "Cyno Details 4 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Cyno_Character_Details_5.gif",
+        "caption": "Cyno Details 5 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Cyno_Character_Details_6.gif",
+        "caption": "Cyno Details 6 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Cyno_Character_Details_7.png",
+        "caption": "Cyno Details 7 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Cyno_Character_Details_8.png",
+        "caption": "Cyno Details 8 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Cyno_Character_Details_9.png",
+        "caption": "Cyno Details 9 Official HoYoLAB Post"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_1.png",
+        "caption": "Duel Set 18"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_2.png",
+        "caption": "Judgement! Set 18"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_3.png",
+        "caption": "I'm Here Set 18"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Icon_Emoji_Paimon%27s_Paintings_18_Cyno_4.png",
+        "caption": "Sweating Set 18"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Icon_Emoji_Paimon%27s_Paintings_22_Cyno_1.png",
+        "caption": "No? Not funny? Set 22"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Icon_Emoji_Paimon%27s_Paintings_22_Cyno_2.png",
+        "caption": "Inspection! Set 22"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Icon_Emoji_Paimon%27s_Paintings_23_Cyno_1.png",
+        "caption": "Have at You! Set 23"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Icon_Emoji_Paimon%27s_Paintings_24_Cyno_1.png",
+        "caption": "Art! Set 24"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Icon_Emoji_Paimon%27s_Paintings_32_Cyno_1.png",
+        "caption": "Fess up! Set 32"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Icon_Emoji_Paimon%27s_Paintings_32_Cyno_2.png",
+        "caption": "Awkward... Set 32"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Icon_Emoji_Paimon%27s_Paintings_45_Cyno_1.png",
+        "caption": "Satisfied Set 45"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Thundering Fury",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Aggravate DPS",
+      "sets": [
+        {
+          "name": "Gilded Dreams",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 2
+        },
+        {
+          "name": "Thundering Fury",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

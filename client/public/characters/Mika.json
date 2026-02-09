@@ -508,5 +508,38 @@
         "caption": "You Got This Set 43"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Healer",
+      "sets": [
+        {
+          "name": "Ocean-Hued Clam",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Physical Support",
+      "sets": [
+        {
+          "name": "Tenacity of the Millelith",
+          "pieces": 2
+        },
+        {
+          "name": "Maiden Beloved",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

@@ -566,5 +566,38 @@
         "caption": "Blissful Set 36"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Deepwood Memories",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Gilded Dreams",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "EM Support",
+      "sets": [
+        {
+          "name": "Deepwood Memories",
+          "pieces": 2
+        },
+        {
+          "name": "Gilded Dreams",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

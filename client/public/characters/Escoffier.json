@@ -1,483 +1,489 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Escoffier_Icon.png",
-    "name": "Escoffier",
-    "rarity": "5 Stars",
-    "element": "Cryo",
-    "weaponType": "Polearm",
-    "region": "Fontaine",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Escoffier_Icon.png",
+  "name": "Escoffier",
+  "rarity": "5 Stars",
+  "element": "Cryo",
+  "weaponType": "Polearm",
+  "region": "Fontaine",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Polearm_Cryo.png",
+      "talentName": "Kitchen Skills",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 3 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to perform an upward thrust.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Polearm_Cryo.png",
-            "talentName": "Kitchen Skills",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 3 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to perform an upward thrust.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Kitchen_Skills_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Kitchen_Skills_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "51.55",
-                    "55.75",
-                    "59.94",
-                    "65.94",
-                    "70.13",
-                    "74.93",
-                    "81.52",
-                    "88.12",
-                    "94.71",
-                    "101.9",
-                    "109.1"
-                ],
-                "2-Hit DMG (%)": [
-                    "47.59",
-                    "51.47",
-                    "55.34",
-                    "60.88",
-                    "64.75",
-                    "69.18",
-                    "75.26",
-                    "81.35",
-                    "87.44",
-                    "94.08",
-                    "100.72"
-                ],
-                "3-Hit DMG (%)": [
-                    "33\n+\n40.33",
-                    "35.69\n+\n43.62",
-                    "38.37\n+\n46.9",
-                    "42.21\n+\n51.59",
-                    "44.89\n+\n54.87",
-                    "47.96\n+\n58.62",
-                    "52.19\n+\n63.78",
-                    "56.41\n+\n68.94",
-                    "60.63\n+\n74.1",
-                    "65.23\n+\n79.73",
-                    "69.84\n+\n85.36"
-                ],
-                "Charged Attack DMG (%)": [
-                    "115.41",
-                    "124.81",
-                    "134.2",
-                    "147.62",
-                    "157.01",
-                    "167.75",
-                    "182.51",
-                    "197.27",
-                    "212.04",
-                    "228.14",
-                    "244.24"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "25"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Kitchen_Skills_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Low-Temperature_Cooking.png",
-            "talentName": "Low-Temperature Cooking",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nBehold the true meaning of \"cooking\"! Escoffier will demonstrate different cooking techniques when you Tap or Hold this skill, but rest assured, each of them is Fontaine's pride and joy.\n\nTap\nActivates her All-Spectrum Multi-Use Cooking Mek in its Cold Storage mode and deals AoE Cryo DMG to nearby opponents.\n\nCooking Mek: Cold Storage Mode\nFollows the current active character and fires Frosty Parfaits at nearby opponents at intervals, dealing Cryo DMG.\n\nArkhe: Ousia\nAt intervals, Escoffier will summon a Surging Blade when activating her Cooking Mek in Cold Storage mode, dealing Ousia-aligned AoE Cryo DMG.\n\nHold\nActivates her All-Spectrum Multi-Use Cooking Mek's Off-the-Cuff Cookery Mode\n\n.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Low-Temperature_Cooking_Cold_Storage_Mode_Preview.gif",
-                    "caption": "Cold Storage Mode"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Low-Temperature_Cooking_Off-the-Cuff_Cookery_Mode_Preview.gif",
-                    "caption": "Off-the-Cuff Cookery"
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "50.4",
-                    "54.18",
-                    "57.96",
-                    "63",
-                    "66.78",
-                    "70.56",
-                    "75.6",
-                    "80.64",
-                    "85.68",
-                    "90.72",
-                    "95.76",
-                    "100.8",
-                    "107.1"
-                ],
-                "Frosty Parfait DMG (%)": [
-                    "120",
-                    "129",
-                    "138",
-                    "150",
-                    "159",
-                    "168",
-                    "180",
-                    "192",
-                    "204",
-                    "216",
-                    "228",
-                    "240",
-                    "255"
-                ],
-                "Cold Storage Mode Duration": [
-                    "20s"
-                ],
-                "Surging Blade DMG (%)": [
-                    "33.6",
-                    "36.12",
-                    "38.64",
-                    "42",
-                    "44.52",
-                    "47.04",
-                    "50.4",
-                    "53.76",
-                    "57.12",
-                    "60.48",
-                    "63.84",
-                    "67.2",
-                    "71.4"
-                ],
-                "Surging Blade CD Interval": [
-                    "10s"
-                ],
-                "Press CD": [
-                    "15s"
-                ],
-                "Hold CD": [
-                    "6s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Talent_Scoring_Cuts.png",
-            "talentName": "Scoring Cuts",
-            "talentType": "Elemental Burst",
-            "description": "Displaying her exceptional knife skills, Escoffier deals AoE Cryo DMG and restores HP to all nearby party members based on her ATK",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Scoring_Cuts_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "592.8",
-                    "637.26",
-                    "681.72",
-                    "741",
-                    "785.46",
-                    "829.92",
-                    "889.2",
-                    "948.48",
-                    "1007.76",
-                    "1067.04",
-                    "1126.32",
-                    "1185.6",
-                    "1259.7"
-                ],
-                "Healing": [
-                    "172.03% ATK\n+\n1079",
-                    "184.93% ATK\n+\n1186",
-                    "197.84% ATK\n+\n1303",
-                    "215.04% ATK\n+\n1429",
-                    "227.94% ATK\n+\n1564",
-                    "240.84% ATK\n+\n1708",
-                    "258.05% ATK\n+\n1861",
-                    "275.25% ATK\n+\n2022",
-                    "292.45% ATK\n+\n2193",
-                    "309.66% ATK\n+\n2373",
-                    "326.86% ATK\n+\n2562",
-                    "344.06% ATK\n+\n2759",
-                    "365.57% ATK\n+\n2966"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_Better_to_Salivate_Than_Medicate.png",
-            "talentName": "Better to Salivate Than Medicate",
-            "talentType": "1st Ascension Passive",
-            "description": "After using the Elemental Burst Scoring Cuts, Escoffier will obtain the Rehab Diet effect for 9s: Restores HP for nearby active characters every 1s based on 138.24% of Escoffier's ATK.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Better_to_Salivate_Than_Medicate_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Inspiration-Immersed_Seasoning.png",
-            "talentName": "Inspiration-Immersed Seasoning",
-            "talentType": "4th Ascension Passive",
-            "description": "When there are 1/2/3/4 Hydro or Cryo characters in the party, Escoffier will decrease the Hydro RES and Cryo RES of any opponents hit by her Elemental Skill, Low-Temperature Cooking, or her Elemental Burst, Scoring Cuts, by 5%/10%/15%/55% for 12s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Constant_Off-the-Cuff_Cookery.png",
-            "talentName": "Constant Off-the-Cuff Cookery",
-            "talentType": "Utility Passive",
-            "description": "Description\nGameplay Notes\nWhen using the Hold form of her Elemental Skill Low-Temperature Cooking, Escoffier will activate her All-Spectrum Multi-Use Cooking Mek in its Off-the-Cuff Cookery mode.\n\nCooking Mek: Off-the-Cuff Cookery Mode\nPlaces the Cooking Mek on the field. The Cooking Mek can absorb elemental attacks. When the absorbed elemental energy hits a certain limit, Escoffier can convert the ingredients placed within it into wonderful food.\nEscoffier needs time to purchase new ingredients, so she can only make a certain number of dishes like this each week. The number of dishes Escoffier can make resets every Monday at 4:00 AM.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Kitchen_Skills_Charged_Preview.gif",
+          "caption": "Charged Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Constellation_Pre-Dinner_Dance_for_Your_Taste_Buds.png",
-            "name": "Pre-Dinner Dance for Your Taste Buds",
-            "level": 1,
-            "description": "When 4 party members are Hydro or Cryo, all nearby party members will have their Cryo DMG CRIT DMG increased by 60% for 15s after Escoffier uses her Elemental Skill Low-Temperature Cooking or Elemental Burst Scoring Cuts.\nYou must first unlock the Ascension Talent \"Inspiration-Immersed Seasoning.\""
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Constellation_Fresh%2C_Fragrant_Stew_Is_an_Art.png",
-            "name": "Fresh, Fragrant Stew Is an Art",
-            "level": 2,
-            "description": "When Escoffier activates her Cooking Mek in its Cold Storage Mode\n\n\n\n\n, she will gain the \"Freshly-Prepped Delicacy\" effect for 15s. During this time, Escoffier will gain 5 Cold Dish stacks. When nearby active characters apart from Escoffier deal Cryo DMG with a Normal, Charged, or Plunging Attack, or an Elemental Skill or Elemental Burst, they will expend 1 Cold Dish stack to increase their DMG dealt by 240% of Escoffier's ATK.\nIf you hit multiple opponents with a single instance of Cryo DMG, Cold Dish stacks will be consumed based on the number of opponents hit."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Constellation_The_Bakery_Magic_of_Caramel_Browning.png",
-            "name": "The Bakery Magic of Caramel Browning",
-            "level": 3,
-            "description": "Increases the Level of Low-Temperature Cooking by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Constellation_Secret_Rosemary_Recipe.png",
-            "name": "Secret Rosemary Recipe",
-            "level": 4,
-            "description": "Rehab Diet lasts 6 more seconds. While it is active, you have a chance of healing 100% extra HP and restoring 2 Energy to Escoffier when you trigger healing through Rehab Diet. This chance corresponds to Escoffier's CRIT Rate. You can trigger this effect 7 times during any one Rehab Diet's duration.\nYou must first unlock the Ascension Talent \"Better to Salivate Than Medicate.\""
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Constellation_Symphony_of_a_Thousand_Sauces.png",
-            "name": "Symphony of a Thousand Sauces",
-            "level": 5,
-            "description": "Increases the Level of Scoring Cuts by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Constellation_Tea_Parties_Bursting_With_Color.png",
-            "name": "Tea Parties Bursting With Color",
-            "level": 6,
-            "description": "Description\nAdvanced Properties\nCooking Mek: Cold Storage Mode\n\n\n\n\nis enhanced:\nWhen your party's active character's Normal, Charged, or Plunging Attacks hit opponents, Cooking Mek: Cold Storage Mode will fire off another Special-Grade Frosty Parfait, dealing 500% of Escoffier's ATK as AoE Cryo DMG. This DMG is considered Elemental Skill DMG.\nThis effect can be triggered once every 0.5s, and this effect can be triggered 6 times within the duration of one Cooking Mek: Cold Storage Mode."
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.6",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Idle_Escoffier_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Idle_Escoffier_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Idle_Escoffier_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Idle_Escoffier_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Menu_Escoffier.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Talent_Menu_Escoffier.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Weapon_Menu_Escoffier.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Weapon_Menu_Escoffier.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Party_Setup_Escoffier.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Party_Setup_Escoffier.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "51.55",
+          "55.75",
+          "59.94",
+          "65.94",
+          "70.13",
+          "74.93",
+          "81.52",
+          "88.12",
+          "94.71",
+          "101.9",
+          "109.1"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Escoffier_Charm.png",
-                "caption": "Escoffier: Charm Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Escoffier_Charm.png",
-                "caption": "Escoffier: Charm Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Namecard_Banner_Escoffier_Charm.png",
-                "caption": "Escoffier: Charm Banner"
-            }
+        "2-Hit DMG (%)": [
+          "47.59",
+          "51.47",
+          "55.34",
+          "60.88",
+          "64.75",
+          "69.18",
+          "75.26",
+          "81.35",
+          "87.44",
+          "94.08",
+          "100.72"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Kitchen_Skills_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Kitchen_Skills_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Kitchen_Skills_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Kitchen_Skills_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Scoring_Cuts_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Scoring_Cuts_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Low-Temperature_Cooking_Cold_Storage_Mode_Preview.gif",
-                        "caption": "Cold Storage Mode",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Low-Temperature_Cooking_Cold_Storage_Mode_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Low-Temperature_Cooking_Off-the-Cuff_Cookery_Mode_Preview.gif",
-                        "caption": "Off-the-Cuff Cookery",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Low-Temperature_Cooking_Off-the-Cuff_Cookery_Mode_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "33\n+\n40.33",
+          "35.69\n+\n43.62",
+          "38.37\n+\n46.9",
+          "42.21\n+\n51.59",
+          "44.89\n+\n54.87",
+          "47.96\n+\n58.62",
+          "52.19\n+\n63.78",
+          "56.41\n+\n68.94",
+          "60.63\n+\n74.1",
+          "65.23\n+\n79.73",
+          "69.84\n+\n85.36"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Escoffier_Character_Details_1.png",
-                "caption": "Escoffier Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Escoffier_Character_Details_2.png",
-                "caption": "Escoffier Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Escoffier_Character_Details_3.gif",
-                "caption": "Escoffier Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Escoffier_Character_Details_4.png",
-                "caption": "Escoffier Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Escoffier_Character_Details_5.png",
-                "caption": "Escoffier Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Escoffier_Character_Details_6.png",
-                "caption": "Escoffier Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Escoffier_Character_Details_7.png",
-                "caption": "Escoffier Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Escoffier_Character_Details_8.gif",
-                "caption": "Escoffier Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Escoffier_Character_Details_9.gif",
-                "caption": "Escoffier Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Escoffier_Character_Details_10.gif",
-                "caption": "Escoffier Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Escoffier_Character_Details_11.gif",
-                "caption": "Escoffier Details 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Escoffier_Character_Details_12.gif",
-                "caption": "Escoffier Details 12"
-            }
+        "Charged Attack DMG (%)": [
+          "115.41",
+          "124.81",
+          "134.2",
+          "147.62",
+          "157.01",
+          "167.75",
+          "182.51",
+          "197.27",
+          "212.04",
+          "228.14",
+          "244.24"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Icon_Emoji_Paimon%27s_Paintings_41_Escoffier_1.png",
-                "caption": "Really good Set 41"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Icon_Emoji_Paimon%27s_Paintings_41_Escoffier_2.png",
-                "caption": "That's wrong, right? Set 41"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Icon_Emoji_Paimon%27s_Paintings_41_Escoffier_3.png",
-                "caption": "The Chef from Hell Set 41"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Icon_Emoji_Paimon%27s_Paintings_41_Escoffier_4.png",
-                "caption": "Enjoy Set 41"
-            }
+        "Charged Attack Stamina Cost": ["25"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Low-Temperature_Cooking.png",
+      "talentName": "Low-Temperature Cooking",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nBehold the true meaning of \"cooking\"! Escoffier will demonstrate different cooking techniques when you Tap or Hold this skill, but rest assured, each of them is Fontaine's pride and joy.\n\nTap\nActivates her All-Spectrum Multi-Use Cooking Mek in its Cold Storage mode and deals AoE Cryo DMG to nearby opponents.\n\nCooking Mek: Cold Storage Mode\nFollows the current active character and fires Frosty Parfaits at nearby opponents at intervals, dealing Cryo DMG.\n\nArkhe: Ousia\nAt intervals, Escoffier will summon a Surging Blade when activating her Cooking Mek in Cold Storage mode, dealing Ousia-aligned AoE Cryo DMG.\n\nHold\nActivates her All-Spectrum Multi-Use Cooking Mek's Off-the-Cuff Cookery Mode\n\n.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Low-Temperature_Cooking_Cold_Storage_Mode_Preview.gif",
+          "caption": "Cold Storage Mode"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Low-Temperature_Cooking_Off-the-Cuff_Cookery_Mode_Preview.gif",
+          "caption": "Off-the-Cuff Cookery"
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "50.4",
+          "54.18",
+          "57.96",
+          "63",
+          "66.78",
+          "70.56",
+          "75.6",
+          "80.64",
+          "85.68",
+          "90.72",
+          "95.76",
+          "100.8",
+          "107.1"
+        ],
+        "Frosty Parfait DMG (%)": [
+          "120",
+          "129",
+          "138",
+          "150",
+          "159",
+          "168",
+          "180",
+          "192",
+          "204",
+          "216",
+          "228",
+          "240",
+          "255"
+        ],
+        "Cold Storage Mode Duration": ["20s"],
+        "Surging Blade DMG (%)": [
+          "33.6",
+          "36.12",
+          "38.64",
+          "42",
+          "44.52",
+          "47.04",
+          "50.4",
+          "53.76",
+          "57.12",
+          "60.48",
+          "63.84",
+          "67.2",
+          "71.4"
+        ],
+        "Surging Blade CD Interval": ["10s"],
+        "Press CD": ["15s"],
+        "Hold CD": ["6s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Talent_Scoring_Cuts.png",
+      "talentName": "Scoring Cuts",
+      "talentType": "Elemental Burst",
+      "description": "Displaying her exceptional knife skills, Escoffier deals AoE Cryo DMG and restores HP to all nearby party members based on her ATK",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Scoring_Cuts_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "592.8",
+          "637.26",
+          "681.72",
+          "741",
+          "785.46",
+          "829.92",
+          "889.2",
+          "948.48",
+          "1007.76",
+          "1067.04",
+          "1126.32",
+          "1185.6",
+          "1259.7"
+        ],
+        "Healing": [
+          "172.03% ATK\n+\n1079",
+          "184.93% ATK\n+\n1186",
+          "197.84% ATK\n+\n1303",
+          "215.04% ATK\n+\n1429",
+          "227.94% ATK\n+\n1564",
+          "240.84% ATK\n+\n1708",
+          "258.05% ATK\n+\n1861",
+          "275.25% ATK\n+\n2022",
+          "292.45% ATK\n+\n2193",
+          "309.66% ATK\n+\n2373",
+          "326.86% ATK\n+\n2562",
+          "344.06% ATK\n+\n2759",
+          "365.57% ATK\n+\n2966"
+        ],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_Better_to_Salivate_Than_Medicate.png",
+      "talentName": "Better to Salivate Than Medicate",
+      "talentType": "1st Ascension Passive",
+      "description": "After using the Elemental Burst Scoring Cuts, Escoffier will obtain the Rehab Diet effect for 9s: Restores HP for nearby active characters every 1s based on 138.24% of Escoffier's ATK.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Better_to_Salivate_Than_Medicate_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Inspiration-Immersed_Seasoning.png",
+      "talentName": "Inspiration-Immersed Seasoning",
+      "talentType": "4th Ascension Passive",
+      "description": "When there are 1/2/3/4 Hydro or Cryo characters in the party, Escoffier will decrease the Hydro RES and Cryo RES of any opponents hit by her Elemental Skill, Low-Temperature Cooking, or her Elemental Burst, Scoring Cuts, by 5%/10%/15%/55% for 12s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Constant_Off-the-Cuff_Cookery.png",
+      "talentName": "Constant Off-the-Cuff Cookery",
+      "talentType": "Utility Passive",
+      "description": "Description\nGameplay Notes\nWhen using the Hold form of her Elemental Skill Low-Temperature Cooking, Escoffier will activate her All-Spectrum Multi-Use Cooking Mek in its Off-the-Cuff Cookery mode.\n\nCooking Mek: Off-the-Cuff Cookery Mode\nPlaces the Cooking Mek on the field. The Cooking Mek can absorb elemental attacks. When the absorbed elemental energy hits a certain limit, Escoffier can convert the ingredients placed within it into wonderful food.\nEscoffier needs time to purchase new ingredients, so she can only make a certain number of dishes like this each week. The number of dishes Escoffier can make resets every Monday at 4:00 AM.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Constellation_Pre-Dinner_Dance_for_Your_Taste_Buds.png",
+      "name": "Pre-Dinner Dance for Your Taste Buds",
+      "level": 1,
+      "description": "When 4 party members are Hydro or Cryo, all nearby party members will have their Cryo DMG CRIT DMG increased by 60% for 15s after Escoffier uses her Elemental Skill Low-Temperature Cooking or Elemental Burst Scoring Cuts.\nYou must first unlock the Ascension Talent \"Inspiration-Immersed Seasoning.\""
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Constellation_Fresh%2C_Fragrant_Stew_Is_an_Art.png",
+      "name": "Fresh, Fragrant Stew Is an Art",
+      "level": 2,
+      "description": "When Escoffier activates her Cooking Mek in its Cold Storage Mode\n\n\n\n\n, she will gain the \"Freshly-Prepped Delicacy\" effect for 15s. During this time, Escoffier will gain 5 Cold Dish stacks. When nearby active characters apart from Escoffier deal Cryo DMG with a Normal, Charged, or Plunging Attack, or an Elemental Skill or Elemental Burst, they will expend 1 Cold Dish stack to increase their DMG dealt by 240% of Escoffier's ATK.\nIf you hit multiple opponents with a single instance of Cryo DMG, Cold Dish stacks will be consumed based on the number of opponents hit."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Constellation_The_Bakery_Magic_of_Caramel_Browning.png",
+      "name": "The Bakery Magic of Caramel Browning",
+      "level": 3,
+      "description": "Increases the Level of Low-Temperature Cooking by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Constellation_Secret_Rosemary_Recipe.png",
+      "name": "Secret Rosemary Recipe",
+      "level": 4,
+      "description": "Rehab Diet lasts 6 more seconds. While it is active, you have a chance of healing 100% extra HP and restoring 2 Energy to Escoffier when you trigger healing through Rehab Diet. This chance corresponds to Escoffier's CRIT Rate. You can trigger this effect 7 times during any one Rehab Diet's duration.\nYou must first unlock the Ascension Talent \"Better to Salivate Than Medicate.\""
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Constellation_Symphony_of_a_Thousand_Sauces.png",
+      "name": "Symphony of a Thousand Sauces",
+      "level": 5,
+      "description": "Increases the Level of Scoring Cuts by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Constellation_Tea_Parties_Bursting_With_Color.png",
+      "name": "Tea Parties Bursting With Color",
+      "level": 6,
+      "description": "Description\nAdvanced Properties\nCooking Mek: Cold Storage Mode\n\n\n\n\nis enhanced:\nWhen your party's active character's Normal, Charged, or Plunging Attacks hit opponents, Cooking Mek: Cold Storage Mode will fire off another Special-Grade Frosty Parfait, dealing 500% of Escoffier's ATK as AoE Cryo DMG. This DMG is considered Elemental Skill DMG.\nThis effect can be triggered once every 0.5s, and this effect can be triggered 6 times within the duration of one Cooking Mek: Cold Storage Mode."
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.6",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Idle_Escoffier_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Idle_Escoffier_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Idle_Escoffier_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Idle_Escoffier_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Talent_Menu_Escoffier.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Talent_Menu_Escoffier.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Weapon_Menu_Escoffier.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Weapon_Menu_Escoffier.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Party_Setup_Escoffier.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Party_Setup_Escoffier.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Escoffier_Charm.png",
+        "caption": "Escoffier: Charm Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Escoffier_Charm.png",
+        "caption": "Escoffier: Charm Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Namecard_Banner_Escoffier_Charm.png",
+        "caption": "Escoffier: Charm Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Kitchen_Skills_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Kitchen_Skills_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Kitchen_Skills_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Kitchen_Skills_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Scoring_Cuts_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Scoring_Cuts_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Low-Temperature_Cooking_Cold_Storage_Mode_Preview.gif",
+            "caption": "Cold Storage Mode",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Low-Temperature_Cooking_Cold_Storage_Mode_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Low-Temperature_Cooking_Off-the-Cuff_Cookery_Mode_Preview.gif",
+            "caption": "Off-the-Cuff Cookery",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Low-Temperature_Cooking_Off-the-Cuff_Cookery_Mode_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Escoffier_Character_Details_1.png",
+        "caption": "Escoffier Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Escoffier_Character_Details_2.png",
+        "caption": "Escoffier Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Escoffier_Character_Details_3.gif",
+        "caption": "Escoffier Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Escoffier_Character_Details_4.png",
+        "caption": "Escoffier Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Escoffier_Character_Details_5.png",
+        "caption": "Escoffier Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Escoffier_Character_Details_6.png",
+        "caption": "Escoffier Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Escoffier_Character_Details_7.png",
+        "caption": "Escoffier Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Escoffier_Character_Details_8.gif",
+        "caption": "Escoffier Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Escoffier_Character_Details_9.gif",
+        "caption": "Escoffier Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Escoffier_Character_Details_10.gif",
+        "caption": "Escoffier Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Escoffier_Character_Details_11.gif",
+        "caption": "Escoffier Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Escoffier_Character_Details_12.gif",
+        "caption": "Escoffier Details 12"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Icon_Emoji_Paimon%27s_Paintings_41_Escoffier_1.png",
+        "caption": "Really good Set 41"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Icon_Emoji_Paimon%27s_Paintings_41_Escoffier_2.png",
+        "caption": "That's wrong, right? Set 41"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Icon_Emoji_Paimon%27s_Paintings_41_Escoffier_3.png",
+        "caption": "The Chef from Hell Set 41"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Icon_Emoji_Paimon%27s_Paintings_41_Escoffier_4.png",
+        "caption": "Enjoy Set 41"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

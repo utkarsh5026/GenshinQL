@@ -564,5 +564,42 @@
         "caption": "生气 \"Angry\" Set OnePlus"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Aggravate DPS",
+      "sets": [
+        {
+          "name": "Thundering Fury",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Electro DPS",
+      "sets": [
+        {
+          "name": "Thundering Fury",
+          "pieces": 2
+        },
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Physical DPS",
+      "sets": [
+        {
+          "name": "Pale Flame",
+          "pieces": 2
+        },
+        {
+          "name": "Bloodstained Chivalry",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

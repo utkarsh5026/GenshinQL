@@ -1,564 +1,571 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Charlotte_Icon.png",
-    "name": "Charlotte",
-    "rarity": "4 Stars",
-    "element": "Cryo",
-    "weaponType": "Catalyst",
-    "region": "Fontaine",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Charlotte_Icon.png",
+  "name": "Charlotte",
+  "rarity": "4 Stars",
+  "element": "Cryo",
+  "weaponType": "Catalyst",
+  "region": "Fontaine",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Catalyst_Cryo.png",
+      "talentName": "Cool-Color Capture",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nTaking aim at targets using Monsieur Verite, her custom Kamera, Charlotte performs up to 3 consecutive attacks, dealing Cryo DMG.\n\nCharged Attack\nConsumes a fixed amount of Stamina, and after a moment's preparation, will deploy Monsieur Verite to deal AoE Cryo DMG.\n\nPlunging Attack\nGathering the power of Cryo, Charlotte plunges toward the ground, dealing DMG to all opponents in her path and dealing AoE Cryo DMG upon landing.\n\nArkhe: Pneuma\nAt certain intervals, upon using a Charged Attack, Charlotte will cause a Spiritbreath Thorn to descend and pierce opponents, dealing Pneuma-aligned AoE Cryo DMG.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Catalyst_Cryo.png",
-            "talentName": "Cool-Color Capture",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nTaking aim at targets using Monsieur Verite, her custom Kamera, Charlotte performs up to 3 consecutive attacks, dealing Cryo DMG.\n\nCharged Attack\nConsumes a fixed amount of Stamina, and after a moment's preparation, will deploy Monsieur Verite to deal AoE Cryo DMG.\n\nPlunging Attack\nGathering the power of Cryo, Charlotte plunges toward the ground, dealing DMG to all opponents in her path and dealing AoE Cryo DMG upon landing.\n\nArkhe: Pneuma\nAt certain intervals, upon using a Charged Attack, Charlotte will cause a Spiritbreath Thorn to descend and pierce opponents, dealing Pneuma-aligned AoE Cryo DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Cool-Color_Capture_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Cool-Color_Capture_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Cool-Color_Capture_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "49.85",
-                    "53.58",
-                    "57.32",
-                    "62.31",
-                    "66.05",
-                    "69.78",
-                    "74.77",
-                    "79.75",
-                    "84.74",
-                    "89.72",
-                    "94.71"
-                ],
-                "2-Hit DMG (%)": [
-                    "43.38",
-                    "46.63",
-                    "49.88",
-                    "54.22",
-                    "57.47",
-                    "60.73",
-                    "65.06",
-                    "69.4",
-                    "73.74",
-                    "78.08",
-                    "82.41"
-                ],
-                "3-Hit DMG (%)": [
-                    "64.6",
-                    "69.45",
-                    "74.29",
-                    "80.75",
-                    "85.6",
-                    "90.44",
-                    "96.9",
-                    "103.36",
-                    "109.82",
-                    "116.28",
-                    "122.74"
-                ],
-                "Charged Attack DMG (%)": [
-                    "100.51",
-                    "108.05",
-                    "115.59",
-                    "125.64",
-                    "133.18",
-                    "140.72",
-                    "150.77",
-                    "160.82",
-                    "170.87",
-                    "180.92",
-                    "190.97"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "50"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.16",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37"
-                ],
-                "Spiritbreath Thorn DMG (%)": [
-                    "11.17",
-                    "12.01",
-                    "12.84",
-                    "13.96",
-                    "14.8",
-                    "15.64",
-                    "16.75",
-                    "17.87",
-                    "18.99",
-                    "20.1",
-                    "21.22"
-                ],
-                "Spiritbreath Thorn DMG Interval": [
-                    "6s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Cool-Color_Capture_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Talent_Framing_Freezing_Point_Composition.png",
-            "talentName": "Framing: Freezing Point Composition",
-            "talentType": "Elemental Skill",
-            "description": "Using the keen instincts of an ace reporter, Charlotte uses her photography skills to produce different effects based on whether the ability is Tapped or Held.\n\nTap\nTakes a snapshot using Monsieur Verite, dealing AoE Cryo DMG to opponents in front of her and applying Snappy Silhouette to a maximum of 5 opponents. During this effect's duration, it will deal Cryo DMG to affected opponents at intervals.\n\nHold\nPopping Monsieur Verite's viewfinder open, Charlotte enters Composition Mode, and during this time, the viewfinder will expand as you hold until you reach a Finisher Frame state. In this state, Charlotte can move and change direction freely.\nWhen the hold state ends, Monsieur Verite will deal Cryo DMG to all opponents locked on within the viewfinder, and apply the same Snappy Silhouette as Tap Mode does to them. If you unleash this ability only after reaching Finisher Frame, you will instead apply Focused Impression, which lasts longer and deals more DMG, although the Skill CD will be longer.\nComposition Mode lasts a maximum of 15s and allows a maximum of 5 opponents to be selected.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Framing_Freezing_Point_Composition_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Framing_Freezing_Point_Composition_Short_Hold_Preview.gif",
-                    "caption": "Hold (Short)"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Framing_Freezing_Point_Composition_Long_Hold_Preview.gif",
-                    "caption": "Hold (Long)"
-                }
-            ],
-            "scaling": {
-                "Photo DMG (Press) (%)": [
-                    "67.2",
-                    "72.24",
-                    "77.28",
-                    "84",
-                    "89.04",
-                    "94.08",
-                    "100.8",
-                    "107.52",
-                    "114.24",
-                    "120.96",
-                    "127.68",
-                    "134.4",
-                    "142.8"
-                ],
-                "Photo DMG (Hold) (%)": [
-                    "139.2",
-                    "149.64",
-                    "160.08",
-                    "174",
-                    "184.44",
-                    "194.88",
-                    "208.8",
-                    "222.72",
-                    "236.64",
-                    "250.56",
-                    "264.48",
-                    "278.4",
-                    "295.8"
-                ],
-                "\"Snappy Silhouette\" Mark DMG (%)": [
-                    "39.2",
-                    "42.14",
-                    "45.08",
-                    "49",
-                    "51.94",
-                    "54.88",
-                    "58.8",
-                    "62.72",
-                    "66.64",
-                    "70.56",
-                    "74.48",
-                    "78.4",
-                    "83.3"
-                ],
-                "\"Snappy Silhouette\" Mark Trigger Interval": [
-                    "1.5s"
-                ],
-                "\"Snappy Silhouette\" Mark Duration": [
-                    "6s"
-                ],
-                "\"Focused Impression\" Mark DMG (%)": [
-                    "40.6",
-                    "43.65",
-                    "46.69",
-                    "50.75",
-                    "53.79",
-                    "56.84",
-                    "60.9",
-                    "64.96",
-                    "69.02",
-                    "73.08",
-                    "77.14",
-                    "81.2",
-                    "86.27"
-                ],
-                "\"Focused Impression\" Mark Trigger Interval": [
-                    "1.5s"
-                ],
-                "\"Focused Impression\" Mark Duration": [
-                    "12s"
-                ],
-                "CD": [
-                    "12s"
-                ],
-                "Finisher Frame Cast CD": [
-                    "18s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Cool-Color_Capture_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Talent_Still_Photo_Comprehensive_Confirmation.png",
-            "talentName": "Still Photo: Comprehensive Confirmation",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nCondensing ice to create The Steambird's signature, Charlotte creates a Newsflash Field that will deal AoE Cryo DMG and restores HP for all nearby party members based on Charlotte's ATK.\nNewsflash Field\nWhile the ability is active, Monsieur Verite will deal Cryo DMG at intervals to opponents within its AoE.\nWill continuously restore HP to active character(s) within its AoE based on Charlotte's ATK.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Still_Photo_Comprehensive_Confirmation_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Cast Healing": [
-                    "256.57% ATK\n+\n1,608",
-                    "275.82% ATK\n+\n1,769",
-                    "295.06% ATK\n+\n1,944",
-                    "320.72% ATK\n+\n2,131",
-                    "339.96% ATK\n+\n2,332",
-                    "359.2% ATK\n+\n2,547",
-                    "384.86% ATK\n+\n2,775",
-                    "410.52% ATK\n+\n3,016",
-                    "436.17% ATK\n+\n3,271",
-                    "461.83% ATK\n+\n3,539",
-                    "487.49% ATK\n+\n3,820",
-                    "513.15% ATK\n+\n4,115",
-                    "545.22% ATK\n+\n4,424"
-                ],
-                "Skill DMG (%)": [
-                    "77.62",
-                    "83.44",
-                    "89.26",
-                    "97.02",
-                    "102.84",
-                    "108.66",
-                    "116.42",
-                    "124.19",
-                    "131.95",
-                    "139.71",
-                    "147.47",
-                    "155.23",
-                    "164.93"
-                ],
-                "Kamera Continuous Regeneration": [
-                    "9.22% ATK\n+\n57",
-                    "9.91% ATK\n+\n63",
-                    "10.6% ATK\n+\n69",
-                    "11.52% ATK\n+\n76",
-                    "12.21% ATK\n+\n83",
-                    "12.9% ATK\n+\n91",
-                    "13.82% ATK\n+\n99",
-                    "14.75% ATK\n+\n108",
-                    "15.67% ATK\n+\n117",
-                    "16.59% ATK\n+\n126",
-                    "17.51% ATK\n+\n136",
-                    "18.43% ATK\n+\n147",
-                    "19.58% ATK\n+\n158"
-                ],
-                "Kamera DMG (%)": [
-                    "6.47",
-                    "6.95",
-                    "7.44",
-                    "8.08",
-                    "8.57",
-                    "9.06",
-                    "9.7",
-                    "10.35",
-                    "11",
-                    "11.64",
-                    "12.29",
-                    "12.94",
-                    "13.74"
-                ],
-                "Newsflash Field Duration": [
-                    "4s"
-                ],
-                "CD": [
-                    "20s"
-                ],
-                "Energy Cost": [
-                    "80"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Talent_Moment_of_Impact.png",
-            "talentName": "Moment of Impact",
-            "talentType": "1st Ascension Passive",
-            "description": "When opponents marked by \"Focused Impression\" are defeated, Framing: Freezing Point Composition's CD will be decreased by 2s. This CD decrease can be triggered 4 times every 12s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Diversified_Investigation.png",
-            "talentName": "Diversified Investigation",
-            "talentType": "4th Ascension Passive",
-            "description": "When the party contains 1/2/3 Fontainians other than herself, Charlotte gains a 5%/10%/15% Healing Bonus. When the party contains 1/2/3 non-Fontainians, Charlotte gains a 5%/10%/15% Cryo DMG Bonus.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Talent_First-Person_Shutter.png",
-            "talentName": "First-Person Shutter",
-            "talentType": "Utility Passive",
-            "description": "After activating the Special Analysis Zoom Lens, Charlotte's \"Framing: Freezing Point Composition\" Hold Mode cannot trigger its original effects, but instead enables her to take photos in a rather unique manner...",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Cool-Color_Capture_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "49.85",
+          "53.58",
+          "57.32",
+          "62.31",
+          "66.05",
+          "69.78",
+          "74.77",
+          "79.75",
+          "84.74",
+          "89.72",
+          "94.71"
+        ],
+        "2-Hit DMG (%)": [
+          "43.38",
+          "46.63",
+          "49.88",
+          "54.22",
+          "57.47",
+          "60.73",
+          "65.06",
+          "69.4",
+          "73.74",
+          "78.08",
+          "82.41"
+        ],
+        "3-Hit DMG (%)": [
+          "64.6",
+          "69.45",
+          "74.29",
+          "80.75",
+          "85.6",
+          "90.44",
+          "96.9",
+          "103.36",
+          "109.82",
+          "116.28",
+          "122.74"
+        ],
+        "Charged Attack DMG (%)": [
+          "100.51",
+          "108.05",
+          "115.59",
+          "125.64",
+          "133.18",
+          "140.72",
+          "150.77",
+          "160.82",
+          "170.87",
+          "180.92",
+          "190.97"
+        ],
+        "Charged Attack Stamina Cost": ["50"],
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.16",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37"
+        ],
+        "Spiritbreath Thorn DMG (%)": [
+          "11.17",
+          "12.01",
+          "12.84",
+          "13.96",
+          "14.8",
+          "15.64",
+          "16.75",
+          "17.87",
+          "18.99",
+          "20.1",
+          "21.22"
+        ],
+        "Spiritbreath Thorn DMG Interval": ["6s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Talent_Framing_Freezing_Point_Composition.png",
+      "talentName": "Framing: Freezing Point Composition",
+      "talentType": "Elemental Skill",
+      "description": "Using the keen instincts of an ace reporter, Charlotte uses her photography skills to produce different effects based on whether the ability is Tapped or Held.\n\nTap\nTakes a snapshot using Monsieur Verite, dealing AoE Cryo DMG to opponents in front of her and applying Snappy Silhouette to a maximum of 5 opponents. During this effect's duration, it will deal Cryo DMG to affected opponents at intervals.\n\nHold\nPopping Monsieur Verite's viewfinder open, Charlotte enters Composition Mode, and during this time, the viewfinder will expand as you hold until you reach a Finisher Frame state. In this state, Charlotte can move and change direction freely.\nWhen the hold state ends, Monsieur Verite will deal Cryo DMG to all opponents locked on within the viewfinder, and apply the same Snappy Silhouette as Tap Mode does to them. If you unleash this ability only after reaching Finisher Frame, you will instead apply Focused Impression, which lasts longer and deals more DMG, although the Skill CD will be longer.\nComposition Mode lasts a maximum of 15s and allows a maximum of 5 opponents to be selected.",
+      "figureUrls": [
         {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Constellation_A_Need_to_Verify_Facts.png",
-            "name": "A Need to Verify Facts",
-            "level": 1,
-            "description": "After Still Photo: Comprehensive Confirmation heals a character, it will mark them with Verification, which will heal them once every 2s for 80% of Charlotte's ATK. This effect lasts 6s."
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Framing_Freezing_Point_Composition_Press_Preview.gif",
+          "caption": "Press"
         },
         {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Constellation_A_Duty_to_Pursue_Truth.png",
-            "name": "A Duty to Pursue Truth",
-            "level": 2,
-            "description": "When using Framing: Freezing Point Composition, when Monsieur Verite hits 1/2/3 (or more) opponents, Charlotte's own ATK will be increased by 10%/20%/30% for 12s."
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Framing_Freezing_Point_Composition_Short_Hold_Preview.gif",
+          "caption": "Hold (Short)"
         },
         {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Constellation_An_Imperative_to_Independence.png",
-            "name": "An Imperative to Independence",
-            "level": 3,
-            "description": "Increases the Level of Still Photo: Comprehensive Confirmation by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Constellation_A_Responsibility_to_Oversee.png",
-            "name": "A Responsibility to Oversee",
-            "level": 4,
-            "description": "When Still Photo: Comprehensive Confirmation hits an opponent marked by Snappy Silhouette or Focused Impression, it will deal 10% more DMG and restore 2 Energy to Charlotte. This restoration can be triggered 5 times every 20s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Constellation_A_Principle_of_Conscience.png",
-            "name": "A Principle of Conscience",
-            "level": 5,
-            "description": "Increases the Level of Framing: Freezing Point Composition by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Constellation_A_Summation_of_Interest.png",
-            "name": "A Summation of Interest",
-            "level": 6,
-            "description": "Description\nAdvanced Properties\nWhen the active character's Normal and Charged Attacks hit an opponent marked by Framing: Freezing Point Composition's Focused Impression, Monsieur Verite will initiate a coordinated attack that deals 180% of Charlotte's ATK as AoE Cryo DMG and heals active character(s) within the AoE for 42% of Charlotte's ATK. This effect can be triggered once every 6s and both DMG and healing dealt in this way will be considered as having been done by Charlotte's Elemental Burst."
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Framing_Freezing_Point_Composition_Long_Hold_Preview.gif",
+          "caption": "Hold (Long)"
         }
-    ],
-    "imageUrls": {},
-    "version": "4.2",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Idle_Charlotte_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Idle_Charlotte_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Idle_Charlotte_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Idle_Charlotte_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Menu_Charlotte.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Talent_Menu_Charlotte.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Weapon_Menu_Charlotte.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Weapon_Menu_Charlotte.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Party_Setup_Charlotte.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Party_Setup_Charlotte.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "Photo DMG (Press) (%)": [
+          "67.2",
+          "72.24",
+          "77.28",
+          "84",
+          "89.04",
+          "94.08",
+          "100.8",
+          "107.52",
+          "114.24",
+          "120.96",
+          "127.68",
+          "134.4",
+          "142.8"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Namecard_Background_Charlotte_Exclusive.png",
-                "caption": "Charlotte: Exclusive Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Item_Charlotte_Exclusive.png",
-                "caption": "Charlotte: Exclusive Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Namecard_Banner_Charlotte_Exclusive.png",
-                "caption": "Charlotte: Exclusive Banner"
-            }
+        "Photo DMG (Hold) (%)": [
+          "139.2",
+          "149.64",
+          "160.08",
+          "174",
+          "184.44",
+          "194.88",
+          "208.8",
+          "222.72",
+          "236.64",
+          "250.56",
+          "264.48",
+          "278.4",
+          "295.8"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Cool-Color_Capture_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Cool-Color_Capture_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Cool-Color_Capture_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Cool-Color_Capture_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Cool-Color_Capture_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Cool-Color_Capture_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Still_Photo_Comprehensive_Confirmation_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Still_Photo_Comprehensive_Confirmation_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Framing_Freezing_Point_Composition_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Framing_Freezing_Point_Composition_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Framing_Freezing_Point_Composition_Short_Hold_Preview.gif",
-                        "caption": "Hold (Short)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Framing_Freezing_Point_Composition_Short_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Framing_Freezing_Point_Composition_Long_Hold_Preview.gif",
-                        "caption": "Hold (Long)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Framing_Freezing_Point_Composition_Long_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "\"Snappy Silhouette\" Mark DMG (%)": [
+          "39.2",
+          "42.14",
+          "45.08",
+          "49",
+          "51.94",
+          "54.88",
+          "58.8",
+          "62.72",
+          "66.64",
+          "70.56",
+          "74.48",
+          "78.4",
+          "83.3"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Charlotte_Character_Details_1.png",
-                "caption": "Charlotte Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Charlotte_Character_Details_2.png",
-                "caption": "Charlotte Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Charlotte_Character_Details_3.gif",
-                "caption": "Charlotte Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Charlotte_Character_Details_4.gif",
-                "caption": "Charlotte Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Charlotte_Character_Details_5.gif",
-                "caption": "Charlotte Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Charlotte_Character_Details_6.gif",
-                "caption": "Charlotte Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Charlotte_Character_Details_7.png",
-                "caption": "Charlotte Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Charlotte_Character_Details_8.png",
-                "caption": "Charlotte Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Charlotte_Character_Details_9.png",
-                "caption": "Charlotte Details 9"
-            }
+        "\"Snappy Silhouette\" Mark Trigger Interval": ["1.5s"],
+        "\"Snappy Silhouette\" Mark Duration": ["6s"],
+        "\"Focused Impression\" Mark DMG (%)": [
+          "40.6",
+          "43.65",
+          "46.69",
+          "50.75",
+          "53.79",
+          "56.84",
+          "60.9",
+          "64.96",
+          "69.02",
+          "73.08",
+          "77.14",
+          "81.2",
+          "86.27"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Icon_Emoji_Paimon%27s_Paintings_24_Charlotte_1.png",
-                "caption": "Do Go On Set 24"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_24_Charlotte_2.png",
-                "caption": "Amazing— Set 24"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Icon_Emoji_Paimon%27s_Paintings_28_Charlotte_1.png",
-                "caption": "Explosive News Set 28"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Icon_Emoji_Paimon%27s_Paintings_28_Charlotte_2.png",
-                "caption": "In a Rush Set 28"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Icon_Emoji_Paimon%27s_Paintings_28_Charlotte_3.png",
-                "caption": "Professional Squad Set 28"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Icon_Emoji_Paimon%27s_Paintings_28_Charlotte_4.png",
-                "caption": "Watch Your Words! Set 28"
-            }
-        ]
+        "\"Focused Impression\" Mark Trigger Interval": ["1.5s"],
+        "\"Focused Impression\" Mark Duration": ["12s"],
+        "CD": ["12s"],
+        "Finisher Frame Cast CD": ["18s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Talent_Still_Photo_Comprehensive_Confirmation.png",
+      "talentName": "Still Photo: Comprehensive Confirmation",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nCondensing ice to create The Steambird's signature, Charlotte creates a Newsflash Field that will deal AoE Cryo DMG and restores HP for all nearby party members based on Charlotte's ATK.\nNewsflash Field\nWhile the ability is active, Monsieur Verite will deal Cryo DMG at intervals to opponents within its AoE.\nWill continuously restore HP to active character(s) within its AoE based on Charlotte's ATK.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Still_Photo_Comprehensive_Confirmation_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Cast Healing": [
+          "256.57% ATK\n+\n1,608",
+          "275.82% ATK\n+\n1,769",
+          "295.06% ATK\n+\n1,944",
+          "320.72% ATK\n+\n2,131",
+          "339.96% ATK\n+\n2,332",
+          "359.2% ATK\n+\n2,547",
+          "384.86% ATK\n+\n2,775",
+          "410.52% ATK\n+\n3,016",
+          "436.17% ATK\n+\n3,271",
+          "461.83% ATK\n+\n3,539",
+          "487.49% ATK\n+\n3,820",
+          "513.15% ATK\n+\n4,115",
+          "545.22% ATK\n+\n4,424"
+        ],
+        "Skill DMG (%)": [
+          "77.62",
+          "83.44",
+          "89.26",
+          "97.02",
+          "102.84",
+          "108.66",
+          "116.42",
+          "124.19",
+          "131.95",
+          "139.71",
+          "147.47",
+          "155.23",
+          "164.93"
+        ],
+        "Kamera Continuous Regeneration": [
+          "9.22% ATK\n+\n57",
+          "9.91% ATK\n+\n63",
+          "10.6% ATK\n+\n69",
+          "11.52% ATK\n+\n76",
+          "12.21% ATK\n+\n83",
+          "12.9% ATK\n+\n91",
+          "13.82% ATK\n+\n99",
+          "14.75% ATK\n+\n108",
+          "15.67% ATK\n+\n117",
+          "16.59% ATK\n+\n126",
+          "17.51% ATK\n+\n136",
+          "18.43% ATK\n+\n147",
+          "19.58% ATK\n+\n158"
+        ],
+        "Kamera DMG (%)": [
+          "6.47",
+          "6.95",
+          "7.44",
+          "8.08",
+          "8.57",
+          "9.06",
+          "9.7",
+          "10.35",
+          "11",
+          "11.64",
+          "12.29",
+          "12.94",
+          "13.74"
+        ],
+        "Newsflash Field Duration": ["4s"],
+        "CD": ["20s"],
+        "Energy Cost": ["80"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Talent_Moment_of_Impact.png",
+      "talentName": "Moment of Impact",
+      "talentType": "1st Ascension Passive",
+      "description": "When opponents marked by \"Focused Impression\" are defeated, Framing: Freezing Point Composition's CD will be decreased by 2s. This CD decrease can be triggered 4 times every 12s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Diversified_Investigation.png",
+      "talentName": "Diversified Investigation",
+      "talentType": "4th Ascension Passive",
+      "description": "When the party contains 1/2/3 Fontainians other than herself, Charlotte gains a 5%/10%/15% Healing Bonus. When the party contains 1/2/3 non-Fontainians, Charlotte gains a 5%/10%/15% Cryo DMG Bonus.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Talent_First-Person_Shutter.png",
+      "talentName": "First-Person Shutter",
+      "talentType": "Utility Passive",
+      "description": "After activating the Special Analysis Zoom Lens, Charlotte's \"Framing: Freezing Point Composition\" Hold Mode cannot trigger its original effects, but instead enables her to take photos in a rather unique manner...",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Constellation_A_Need_to_Verify_Facts.png",
+      "name": "A Need to Verify Facts",
+      "level": 1,
+      "description": "After Still Photo: Comprehensive Confirmation heals a character, it will mark them with Verification, which will heal them once every 2s for 80% of Charlotte's ATK. This effect lasts 6s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Constellation_A_Duty_to_Pursue_Truth.png",
+      "name": "A Duty to Pursue Truth",
+      "level": 2,
+      "description": "When using Framing: Freezing Point Composition, when Monsieur Verite hits 1/2/3 (or more) opponents, Charlotte's own ATK will be increased by 10%/20%/30% for 12s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Constellation_An_Imperative_to_Independence.png",
+      "name": "An Imperative to Independence",
+      "level": 3,
+      "description": "Increases the Level of Still Photo: Comprehensive Confirmation by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Constellation_A_Responsibility_to_Oversee.png",
+      "name": "A Responsibility to Oversee",
+      "level": 4,
+      "description": "When Still Photo: Comprehensive Confirmation hits an opponent marked by Snappy Silhouette or Focused Impression, it will deal 10% more DMG and restore 2 Energy to Charlotte. This restoration can be triggered 5 times every 20s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Constellation_A_Principle_of_Conscience.png",
+      "name": "A Principle of Conscience",
+      "level": 5,
+      "description": "Increases the Level of Framing: Freezing Point Composition by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Constellation_A_Summation_of_Interest.png",
+      "name": "A Summation of Interest",
+      "level": 6,
+      "description": "Description\nAdvanced Properties\nWhen the active character's Normal and Charged Attacks hit an opponent marked by Framing: Freezing Point Composition's Focused Impression, Monsieur Verite will initiate a coordinated attack that deals 180% of Charlotte's ATK as AoE Cryo DMG and heals active character(s) within the AoE for 42% of Charlotte's ATK. This effect can be triggered once every 6s and both DMG and healing dealt in this way will be considered as having been done by Charlotte's Elemental Burst."
+    }
+  ],
+  "imageUrls": {},
+  "version": "4.2",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Idle_Charlotte_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Idle_Charlotte_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Idle_Charlotte_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Idle_Charlotte_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Menu_Charlotte.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Talent_Menu_Charlotte.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Weapon_Menu_Charlotte.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Weapon_Menu_Charlotte.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Party_Setup_Charlotte.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Party_Setup_Charlotte.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Namecard_Background_Charlotte_Exclusive.png",
+        "caption": "Charlotte: Exclusive Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Item_Charlotte_Exclusive.png",
+        "caption": "Charlotte: Exclusive Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Namecard_Banner_Charlotte_Exclusive.png",
+        "caption": "Charlotte: Exclusive Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Cool-Color_Capture_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Cool-Color_Capture_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Cool-Color_Capture_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Cool-Color_Capture_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Cool-Color_Capture_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Cool-Color_Capture_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Still_Photo_Comprehensive_Confirmation_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Still_Photo_Comprehensive_Confirmation_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Framing_Freezing_Point_Composition_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Framing_Freezing_Point_Composition_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Framing_Freezing_Point_Composition_Short_Hold_Preview.gif",
+            "caption": "Hold (Short)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Framing_Freezing_Point_Composition_Short_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Framing_Freezing_Point_Composition_Long_Hold_Preview.gif",
+            "caption": "Hold (Long)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Framing_Freezing_Point_Composition_Long_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Charlotte_Character_Details_1.png",
+        "caption": "Charlotte Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Charlotte_Character_Details_2.png",
+        "caption": "Charlotte Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Charlotte_Character_Details_3.gif",
+        "caption": "Charlotte Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Charlotte_Character_Details_4.gif",
+        "caption": "Charlotte Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Charlotte_Character_Details_5.gif",
+        "caption": "Charlotte Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Charlotte_Character_Details_6.gif",
+        "caption": "Charlotte Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Charlotte_Character_Details_7.png",
+        "caption": "Charlotte Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Charlotte_Character_Details_8.png",
+        "caption": "Charlotte Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Charlotte_Character_Details_9.png",
+        "caption": "Charlotte Details 9"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Icon_Emoji_Paimon%27s_Paintings_24_Charlotte_1.png",
+        "caption": "Do Go On Set 24"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_24_Charlotte_2.png",
+        "caption": "Amazing— Set 24"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Icon_Emoji_Paimon%27s_Paintings_28_Charlotte_1.png",
+        "caption": "Explosive News Set 28"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Icon_Emoji_Paimon%27s_Paintings_28_Charlotte_2.png",
+        "caption": "In a Rush Set 28"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Icon_Emoji_Paimon%27s_Paintings_28_Charlotte_3.png",
+        "caption": "Professional Squad Set 28"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Icon_Emoji_Paimon%27s_Paintings_28_Charlotte_4.png",
+        "caption": "Watch Your Words! Set 28"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Healer",
+      "sets": [
+        {
+          "name": "Ocean-Hued Clam",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Cryo Support",
+      "sets": [
+        {
+          "name": "Blizzard Strayer",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

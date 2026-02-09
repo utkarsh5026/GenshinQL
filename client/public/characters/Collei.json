@@ -473,5 +473,34 @@
         "caption": "晚安 \"Good Night\" Set Kiehl's"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Deepwood Memories",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Gilded Dreams",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Burst Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

@@ -1,515 +1,532 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Neuvillette_Icon.png",
-    "name": "Neuvillette",
-    "rarity": "5 Stars",
-    "element": "Hydro",
-    "weaponType": "Catalyst",
-    "region": "Fontaine",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
-    "modelType": "Tall Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Neuvillette_Icon.png",
+  "name": "Neuvillette",
+  "rarity": "5 Stars",
+  "element": "Hydro",
+  "weaponType": "Catalyst",
+  "region": "Fontaine",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+  "modelType": "Tall Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png",
+      "talentName": "As Water Seeks Equilibrium",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nWith light flourishes, Neuvillette commands the tides to unleash a maximum of 3 attacks, dealing Hydro DMG.\n\nCharged Attack Empowerment: Legal Evaluation\nWhile charging up, Neuvillette will gather the power of water, forming it into a Seal of Arbitration. In this state, Neuvillette can move and change facing, and also absorb any Sourcewater Droplets in a certain AoE.\nEvery Droplet he absorbs will increase the formation speed of the Seal, and will heal Neuvillette.\nWhen the charging is stopped, if the Symbol has yet to be formed, then a Charged Attack will be unleashed. If it has been formed, then a Charged Attack: Equitable Judgment will be unleashed.\n\nCharged Attack\nConsumes a fixed amount of Stamina to attack opponents with a rupturing blast of water, dealing AoE Hydro DMG.\n\nCharged Attack: Equitable Judgment\nUnleashes surging torrents, dealing continuous AoE Hydro DMG to all opponents in a straight-line area in front of him.\nEquitable Judgment will not consume any Stamina and lasts 3s.\nIf Neuvillette's HP is above 50%, he will continuously lose HP while using this attack.\n\nPlunging Attack\nGathering the might of Hydro, Neuvillette plunges towards the ground from mid-air, damaging all opponents in his path. Deals AoE Hydro DMG upon impact with the ground.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png",
-            "talentName": "As Water Seeks Equilibrium",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nWith light flourishes, Neuvillette commands the tides to unleash a maximum of 3 attacks, dealing Hydro DMG.\n\nCharged Attack Empowerment: Legal Evaluation\nWhile charging up, Neuvillette will gather the power of water, forming it into a Seal of Arbitration. In this state, Neuvillette can move and change facing, and also absorb any Sourcewater Droplets in a certain AoE.\nEvery Droplet he absorbs will increase the formation speed of the Seal, and will heal Neuvillette.\nWhen the charging is stopped, if the Symbol has yet to be formed, then a Charged Attack will be unleashed. If it has been formed, then a Charged Attack: Equitable Judgment will be unleashed.\n\nCharged Attack\nConsumes a fixed amount of Stamina to attack opponents with a rupturing blast of water, dealing AoE Hydro DMG.\n\nCharged Attack: Equitable Judgment\nUnleashes surging torrents, dealing continuous AoE Hydro DMG to all opponents in a straight-line area in front of him.\nEquitable Judgment will not consume any Stamina and lasts 3s.\nIf Neuvillette's HP is above 50%, he will continuously lose HP while using this attack.\n\nPlunging Attack\nGathering the might of Hydro, Neuvillette plunges towards the ground from mid-air, damaging all opponents in his path. Deals AoE Hydro DMG upon impact with the ground.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/As_Water_Seeks_Equilibrium_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/As_Water_Seeks_Equilibrium_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/As_Water_Seeks_Equilibrium_Equitable_Judgment_Preview.gif",
-                    "caption": "Charged Attack Empowerment: Legal Evaluation and Charged Attack: Equitable Judgment"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/As_Water_Seeks_Equilibrium_Sourcewater_Droplet_Preview.gif",
-                    "caption": "Absorbing Sourcewater Droplets"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/As_Water_Seeks_Equilibrium_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "54.58",
-                    "58.67",
-                    "62.76",
-                    "68.22",
-                    "72.31",
-                    "76.41",
-                    "81.87",
-                    "87.32",
-                    "92.78",
-                    "98.24",
-                    "103.7",
-                    "109.15",
-                    "115.98"
-                ],
-                "2-Hit DMG (%)": [
-                    "46.25",
-                    "49.71",
-                    "53.18",
-                    "57.81",
-                    "61.28",
-                    "64.74",
-                    "69.37",
-                    "73.99",
-                    "78.62",
-                    "83.24",
-                    "87.87",
-                    "92.49",
-                    "98.27"
-                ],
-                "3-Hit DMG (%)": [
-                    "72.34",
-                    "77.76",
-                    "83.19",
-                    "90.42",
-                    "95.85",
-                    "101.27",
-                    "108.51",
-                    "115.74",
-                    "122.97",
-                    "130.21",
-                    "137.44",
-                    "144.68",
-                    "153.72"
-                ],
-                "Charged Attack DMG (%)": [
-                    "136.8",
-                    "147.06",
-                    "157.32",
-                    "171",
-                    "181.26",
-                    "191.52",
-                    "205.2",
-                    "218.88",
-                    "232.56",
-                    "246.24",
-                    "259.92",
-                    "273.6",
-                    "290.7"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "50"
-                ],
-                "Charged Attack: Equitable Judgment (% Max HP)": [
-                    "7.32",
-                    "7.91",
-                    "8.51",
-                    "9.36",
-                    "9.96",
-                    "10.64",
-                    "11.57",
-                    "12.51",
-                    "13.45",
-                    "14.47",
-                    "15.49",
-                    "16.51",
-                    "17.53"
-                ],
-                "HP Restored": [
-                    "16% Max HP/Droplet"
-                ],
-                "HP Loss": [
-                    "8% Max HP/0.5s"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27",
-                    "128.2",
-                    "136.12"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.16",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48",
-                    "256.34",
-                    "272.19"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37",
-                    "320.18",
-                    "339.98"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/As_Water_Seeks_Equilibrium_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_O_Tears%2C_I_Shall_Repay.png",
-            "talentName": "O Tears, I Shall Repay",
-            "talentType": "Elemental Skill",
-            "description": "Summons a Raging Waterfall that will deal AoE Hydro DMG to opponents in front of Neuvillette based on his Max HP. After hitting an opponent, this skill will generate 3 Sourcewater Droplets near that opponent.\n\nArkhe: Pneuma\nAt certain intervals, when the Raging Waterfall descends, a Spiritbreath Thorn will descend that will pierce opponents, dealing Pneuma-aligned Hydro DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/O_Tears%2C_I_Shall_Repay_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (% Max HP)": [
-                    "12.86",
-                    "13.83",
-                    "14.79",
-                    "16.08",
-                    "17.04",
-                    "18.01",
-                    "19.3",
-                    "20.58",
-                    "21.87",
-                    "23.16",
-                    "24.44"
-                ],
-                "Spiritbreath Thorn DMG (%)": [
-                    "20.8",
-                    "22.36",
-                    "23.92",
-                    "26",
-                    "27.56",
-                    "29.12",
-                    "31.2",
-                    "33.28",
-                    "35.36",
-                    "37.44",
-                    "39.5"
-                ],
-                "Spiritbreath Thorn Interval": [
-                    "10s"
-                ],
-                "Sourcewater Droplet Duration": [
-                    "15s"
-                ],
-                "CD": [
-                    "12s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/As_Water_Seeks_Equilibrium_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Talent_O_Tides%2C_I_Have_Returned.png",
-            "talentName": "O Tides, I Have Returned",
-            "talentType": "Elemental Burst",
-            "description": "Unleashes waves that will deal AoE Hydro DMG based on Neuvillette's Max HP. After a short interval, 2 waterfalls will descend and deal Hydro DMG in a somewhat smaller AoE, and will generate 6 Sourcewater Droplets within an area in front.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/O_Tides%2C_I_Have_Returned_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (% Max HP)": [
-                    "22.26",
-                    "23.93",
-                    "25.6",
-                    "27.82",
-                    "29.49",
-                    "31.16",
-                    "33.39",
-                    "35.61",
-                    "37.84",
-                    "40.06",
-                    "42.29",
-                    "44.52",
-                    "47.3"
-                ],
-                "Waterfall DMG (% Max HP)": [
-                    "9.11",
-                    "9.79",
-                    "10.47",
-                    "11.38",
-                    "12.06",
-                    "12.75",
-                    "13.66",
-                    "14.57",
-                    "15.48",
-                    "16.39",
-                    "17.3",
-                    "18.21",
-                    "19.35"
-                ],
-                "CD": [
-                    "18s"
-                ],
-                "Energy Cost": [
-                    "70"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/As_Water_Seeks_Equilibrium_Equitable_Judgment_Preview.gif",
+          "caption": "Charged Attack Empowerment: Legal Evaluation and Charged Attack: Equitable Judgment"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Talent_Heir_to_the_Ancient_Sea%27s_Authority.png",
-            "talentName": "Heir to the Ancient Sea's Authority",
-            "talentType": "1st Ascension Passive",
-            "description": "When a party member triggers a Vaporize, Frozen, Electro-Charged, Lunar-Charged, Bloom, Lunar-Bloom, Hydro Swirl, Hydro Crystallize or a Lunar-Crystallize reaction on opponents, 1 stack of Past Draconic Glories will be granted to Neuvillette for 30s. Max 3 stacks. Past Draconic Glories causes Charged Attack: Equitable Judgment to deal 110%/125%/160% of its original DMG.\nThe stacks of Past Draconic Glories created by each kind of Elemental Reaction exist independently.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/As_Water_Seeks_Equilibrium_Sourcewater_Droplet_Preview.gif",
+          "caption": "Absorbing Sourcewater Droplets"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Talent_Discipline_of_the_Supreme_Arbitration.png",
-            "talentName": "Discipline of the Supreme Arbitration",
-            "talentType": "4th Ascension Passive",
-            "description": "For each 1% of Neuvillette's current HP greater than 30% of Max HP, he will gain 0.6% Hydro DMG Bonus. A maximum bonus of 30% can be obtained this way.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Gather_Like_the_Tide.png",
-            "talentName": "Gather Like the Tide",
-            "talentType": "Utility Passive",
-            "description": "Increases underwater Sprint SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/As_Water_Seeks_Equilibrium_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_Venerable_Institution.png",
-            "name": "Venerable Institution",
-            "level": 1,
-            "description": "When Neuvillette takes the field, he will obtain 1 stack of Past Draconic Glories from the Ascension Talent \"Heir to the Ancient Sea's Authority.\" You must first unlock the Ascension Talent \"Heir to the Ancient Sea's Authority.\"\nAdditionally, his interruption resistance will be increased while using the Charged Attack Empowerment: Legal Evaluation and the Charged Attack: Equitable Judgment."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Constellation_Juridical_Exhortation.png",
-            "name": "Juridical Exhortation",
-            "level": 2,
-            "description": "The Ascension Talent \"Heir to the Ancient Sea's Authority\" will be enhanced: Each stack of Past Draconic Glories will increase the CRIT DMG of Charged Attack: Equitable Judgment by 14%. The maximum increase that can be achieved this way is 42%.\nYou must first unlock the Ascension Talent \"Heir to the Ancient Sea's Authority.\""
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Constellation_Ancient_Postulation.png",
-            "name": "Ancient Postulation",
-            "level": 3,
-            "description": "Increases the Level of Normal Attack: As Water Seeks Equilibrium by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Constellation_Crown_of_Commiseration.png",
-            "name": "Crown of Commiseration",
-            "level": 4,
-            "description": "Description\nGameplay Notes\nWhen Neuvillette is on the field and is healed, 1 Sourcewater Droplet will be generated. This effect can occur once every 4s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Constellation_Axiomatic_Judgment.png",
-            "name": "Axiomatic Judgment",
-            "level": 5,
-            "description": "Increases the Level of O Tides, I Have Returned by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Constellation_Wrathful_Recompense.png",
-            "name": "Wrathful Recompense",
-            "level": 6,
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nPreview\nWhen using Charged Attack: Equitable Judgment, Neuvillette can absorb nearby Sourcewater Droplets in an AoE. Each absorbed Droplet will increase the duration of Charged Attack: Equitable Judgment by 1s.\nAdditionally, when Equitable Judgment hits opponents, it will fire off 2 additional currents every 2s, each of which will deal 10% of Neuvillette's Max HP as Hydro DMG. DMG dealt this way will count as DMG dealt by Equitable Judgment."
-        }
-    ],
-    "imageUrls": {},
-    "version": "4.1",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Idle_Neuvillette_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Idle_Neuvillette_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Idle_Neuvillette_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Idle_Neuvillette_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Menu_Neuvillette.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Talent_Menu_Neuvillette.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Weapon_Menu_Neuvillette.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Menu_Neuvillette.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Party_Setup_Neuvillette.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Party_Setup_Neuvillette.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "54.58",
+          "58.67",
+          "62.76",
+          "68.22",
+          "72.31",
+          "76.41",
+          "81.87",
+          "87.32",
+          "92.78",
+          "98.24",
+          "103.7",
+          "109.15",
+          "115.98"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Namecard_Background_Neuvillette_Surge.png",
-                "caption": "Neuvillette: Surge Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Item_Neuvillette_Surge.png",
-                "caption": "Neuvillette: Surge Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Namecard_Banner_Neuvillette_Surge.png",
-                "caption": "Neuvillette: Surge Banner"
-            }
+        "2-Hit DMG (%)": [
+          "46.25",
+          "49.71",
+          "53.18",
+          "57.81",
+          "61.28",
+          "64.74",
+          "69.37",
+          "73.99",
+          "78.62",
+          "83.24",
+          "87.87",
+          "92.49",
+          "98.27"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/As_Water_Seeks_Equilibrium_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/As_Water_Seeks_Equilibrium_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/As_Water_Seeks_Equilibrium_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/As_Water_Seeks_Equilibrium_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/As_Water_Seeks_Equilibrium_Equitable_Judgment_Preview.gif",
-                        "caption": "Charged Attack Empowerment: Legal Evaluation and Charged Attack: Equitable Judgment",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/As_Water_Seeks_Equilibrium_Equitable_Judgment_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/As_Water_Seeks_Equilibrium_Sourcewater_Droplet_Preview.gif",
-                        "caption": "Absorbing Sourcewater Droplets",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/As_Water_Seeks_Equilibrium_Sourcewater_Droplet_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/As_Water_Seeks_Equilibrium_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/As_Water_Seeks_Equilibrium_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/O_Tides%2C_I_Have_Returned_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/O_Tides%2C_I_Have_Returned_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/O_Tears%2C_I_Shall_Repay_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/O_Tears%2C_I_Shall_Repay_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "72.34",
+          "77.76",
+          "83.19",
+          "90.42",
+          "95.85",
+          "101.27",
+          "108.51",
+          "115.74",
+          "122.97",
+          "130.21",
+          "137.44",
+          "144.68",
+          "153.72"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Neuvillette_Character_Details_1.png",
-                "caption": "Neuvillette Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Neuvillette_Character_Details_2.png",
-                "caption": "Neuvillette Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Neuvillette_Character_Details_3.gif",
-                "caption": "Neuvillette Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Neuvillette_Character_Details_4.gif",
-                "caption": "Neuvillette Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Neuvillette_Character_Details_5.gif",
-                "caption": "Neuvillette Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Neuvillette_Character_Details_6.gif",
-                "caption": "Neuvillette Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Neuvillette_Character_Details_7.gif",
-                "caption": "Neuvillette Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Neuvillette_Character_Details_8.png",
-                "caption": "Neuvillette Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Neuvillette_Character_Details_9.png",
-                "caption": "Neuvillette Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Neuvillette_Character_Details_10.png",
-                "caption": "Neuvillette Details 10"
-            }
+        "Charged Attack DMG (%)": [
+          "136.8",
+          "147.06",
+          "157.32",
+          "171",
+          "181.26",
+          "191.52",
+          "205.2",
+          "218.88",
+          "232.56",
+          "246.24",
+          "259.92",
+          "273.6",
+          "290.7"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Icon_Emoji_Paimon%27s_Paintings_26_Neuvillette_1.png",
-                "caption": "Refined Set 26"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Icon_Emoji_Paimon%27s_Paintings_27_Neuvillette_1.png",
-                "caption": "Maintain distance Set 27"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Icon_Emoji_Paimon%27s_Paintings_27_Neuvillette_2.png",
-                "caption": "Headpat Set 27"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Icon_Emoji_Paimon%27s_Paintings_27_Neuvillette_3.png",
-                "caption": "Guilty Set 27"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Icon_Emoji_Paimon%27s_Paintings_27_Neuvillette_4.png",
-                "caption": "It's raining Set 27"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Icon_Emoji_Paimon%27s_Paintings_42_Neuvillette_1.png",
-                "caption": "Gathering Set 42"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Icon_Emoji_Paimon%27s_Paintings_47_Neuvillette_1.png",
-                "caption": "Set 47"
-            }
+        "Charged Attack Stamina Cost": ["50"],
+        "Charged Attack: Equitable Judgment (% Max HP)": [
+          "7.32",
+          "7.91",
+          "8.51",
+          "9.36",
+          "9.96",
+          "10.64",
+          "11.57",
+          "12.51",
+          "13.45",
+          "14.47",
+          "15.49",
+          "16.51",
+          "17.53"
+        ],
+        "HP Restored": ["16% Max HP/Droplet"],
+        "HP Loss": ["8% Max HP/0.5s"],
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27",
+          "128.2",
+          "136.12"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.16",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48",
+          "256.34",
+          "272.19"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37",
+          "320.18",
+          "339.98"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_O_Tears%2C_I_Shall_Repay.png",
+      "talentName": "O Tears, I Shall Repay",
+      "talentType": "Elemental Skill",
+      "description": "Summons a Raging Waterfall that will deal AoE Hydro DMG to opponents in front of Neuvillette based on his Max HP. After hitting an opponent, this skill will generate 3 Sourcewater Droplets near that opponent.\n\nArkhe: Pneuma\nAt certain intervals, when the Raging Waterfall descends, a Spiritbreath Thorn will descend that will pierce opponents, dealing Pneuma-aligned Hydro DMG.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/O_Tears%2C_I_Shall_Repay_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (% Max HP)": [
+          "12.86",
+          "13.83",
+          "14.79",
+          "16.08",
+          "17.04",
+          "18.01",
+          "19.3",
+          "20.58",
+          "21.87",
+          "23.16",
+          "24.44"
+        ],
+        "Spiritbreath Thorn DMG (%)": [
+          "20.8",
+          "22.36",
+          "23.92",
+          "26",
+          "27.56",
+          "29.12",
+          "31.2",
+          "33.28",
+          "35.36",
+          "37.44",
+          "39.5"
+        ],
+        "Spiritbreath Thorn Interval": ["10s"],
+        "Sourcewater Droplet Duration": ["15s"],
+        "CD": ["12s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Talent_O_Tides%2C_I_Have_Returned.png",
+      "talentName": "O Tides, I Have Returned",
+      "talentType": "Elemental Burst",
+      "description": "Unleashes waves that will deal AoE Hydro DMG based on Neuvillette's Max HP. After a short interval, 2 waterfalls will descend and deal Hydro DMG in a somewhat smaller AoE, and will generate 6 Sourcewater Droplets within an area in front.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/O_Tides%2C_I_Have_Returned_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (% Max HP)": [
+          "22.26",
+          "23.93",
+          "25.6",
+          "27.82",
+          "29.49",
+          "31.16",
+          "33.39",
+          "35.61",
+          "37.84",
+          "40.06",
+          "42.29",
+          "44.52",
+          "47.3"
+        ],
+        "Waterfall DMG (% Max HP)": [
+          "9.11",
+          "9.79",
+          "10.47",
+          "11.38",
+          "12.06",
+          "12.75",
+          "13.66",
+          "14.57",
+          "15.48",
+          "16.39",
+          "17.3",
+          "18.21",
+          "19.35"
+        ],
+        "CD": ["18s"],
+        "Energy Cost": ["70"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Talent_Heir_to_the_Ancient_Sea%27s_Authority.png",
+      "talentName": "Heir to the Ancient Sea's Authority",
+      "talentType": "1st Ascension Passive",
+      "description": "When a party member triggers a Vaporize, Frozen, Electro-Charged, Lunar-Charged, Bloom, Lunar-Bloom, Hydro Swirl, Hydro Crystallize or a Lunar-Crystallize reaction on opponents, 1 stack of Past Draconic Glories will be granted to Neuvillette for 30s. Max 3 stacks. Past Draconic Glories causes Charged Attack: Equitable Judgment to deal 110%/125%/160% of its original DMG.\nThe stacks of Past Draconic Glories created by each kind of Elemental Reaction exist independently.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Talent_Discipline_of_the_Supreme_Arbitration.png",
+      "talentName": "Discipline of the Supreme Arbitration",
+      "talentType": "4th Ascension Passive",
+      "description": "For each 1% of Neuvillette's current HP greater than 30% of Max HP, he will gain 0.6% Hydro DMG Bonus. A maximum bonus of 30% can be obtained this way.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Gather_Like_the_Tide.png",
+      "talentName": "Gather Like the Tide",
+      "talentType": "Utility Passive",
+      "description": "Increases underwater Sprint SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_Venerable_Institution.png",
+      "name": "Venerable Institution",
+      "level": 1,
+      "description": "When Neuvillette takes the field, he will obtain 1 stack of Past Draconic Glories from the Ascension Talent \"Heir to the Ancient Sea's Authority.\" You must first unlock the Ascension Talent \"Heir to the Ancient Sea's Authority.\"\nAdditionally, his interruption resistance will be increased while using the Charged Attack Empowerment: Legal Evaluation and the Charged Attack: Equitable Judgment."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Constellation_Juridical_Exhortation.png",
+      "name": "Juridical Exhortation",
+      "level": 2,
+      "description": "The Ascension Talent \"Heir to the Ancient Sea's Authority\" will be enhanced: Each stack of Past Draconic Glories will increase the CRIT DMG of Charged Attack: Equitable Judgment by 14%. The maximum increase that can be achieved this way is 42%.\nYou must first unlock the Ascension Talent \"Heir to the Ancient Sea's Authority.\""
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Constellation_Ancient_Postulation.png",
+      "name": "Ancient Postulation",
+      "level": 3,
+      "description": "Increases the Level of Normal Attack: As Water Seeks Equilibrium by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Constellation_Crown_of_Commiseration.png",
+      "name": "Crown of Commiseration",
+      "level": 4,
+      "description": "Description\nGameplay Notes\nWhen Neuvillette is on the field and is healed, 1 Sourcewater Droplet will be generated. This effect can occur once every 4s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Constellation_Axiomatic_Judgment.png",
+      "name": "Axiomatic Judgment",
+      "level": 5,
+      "description": "Increases the Level of O Tides, I Have Returned by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Constellation_Wrathful_Recompense.png",
+      "name": "Wrathful Recompense",
+      "level": 6,
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nPreview\nWhen using Charged Attack: Equitable Judgment, Neuvillette can absorb nearby Sourcewater Droplets in an AoE. Each absorbed Droplet will increase the duration of Charged Attack: Equitable Judgment by 1s.\nAdditionally, when Equitable Judgment hits opponents, it will fire off 2 additional currents every 2s, each of which will deal 10% of Neuvillette's Max HP as Hydro DMG. DMG dealt this way will count as DMG dealt by Equitable Judgment."
+    }
+  ],
+  "imageUrls": {},
+  "version": "4.1",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Idle_Neuvillette_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Idle_Neuvillette_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Idle_Neuvillette_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Idle_Neuvillette_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Menu_Neuvillette.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Talent_Menu_Neuvillette.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Weapon_Menu_Neuvillette.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Menu_Neuvillette.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Party_Setup_Neuvillette.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Party_Setup_Neuvillette.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Namecard_Background_Neuvillette_Surge.png",
+        "caption": "Neuvillette: Surge Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Item_Neuvillette_Surge.png",
+        "caption": "Neuvillette: Surge Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Namecard_Banner_Neuvillette_Surge.png",
+        "caption": "Neuvillette: Surge Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/As_Water_Seeks_Equilibrium_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/As_Water_Seeks_Equilibrium_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/As_Water_Seeks_Equilibrium_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/As_Water_Seeks_Equilibrium_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/As_Water_Seeks_Equilibrium_Equitable_Judgment_Preview.gif",
+            "caption": "Charged Attack Empowerment: Legal Evaluation and Charged Attack: Equitable Judgment",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/As_Water_Seeks_Equilibrium_Equitable_Judgment_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/As_Water_Seeks_Equilibrium_Sourcewater_Droplet_Preview.gif",
+            "caption": "Absorbing Sourcewater Droplets",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/As_Water_Seeks_Equilibrium_Sourcewater_Droplet_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/As_Water_Seeks_Equilibrium_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/As_Water_Seeks_Equilibrium_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/O_Tides%2C_I_Have_Returned_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/O_Tides%2C_I_Have_Returned_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/O_Tears%2C_I_Shall_Repay_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/O_Tears%2C_I_Shall_Repay_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Neuvillette_Character_Details_1.png",
+        "caption": "Neuvillette Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Neuvillette_Character_Details_2.png",
+        "caption": "Neuvillette Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Neuvillette_Character_Details_3.gif",
+        "caption": "Neuvillette Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Neuvillette_Character_Details_4.gif",
+        "caption": "Neuvillette Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Neuvillette_Character_Details_5.gif",
+        "caption": "Neuvillette Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Neuvillette_Character_Details_6.gif",
+        "caption": "Neuvillette Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Neuvillette_Character_Details_7.gif",
+        "caption": "Neuvillette Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Neuvillette_Character_Details_8.png",
+        "caption": "Neuvillette Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Neuvillette_Character_Details_9.png",
+        "caption": "Neuvillette Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Neuvillette_Character_Details_10.png",
+        "caption": "Neuvillette Details 10"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Icon_Emoji_Paimon%27s_Paintings_26_Neuvillette_1.png",
+        "caption": "Refined Set 26"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Icon_Emoji_Paimon%27s_Paintings_27_Neuvillette_1.png",
+        "caption": "Maintain distance Set 27"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Icon_Emoji_Paimon%27s_Paintings_27_Neuvillette_2.png",
+        "caption": "Headpat Set 27"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Icon_Emoji_Paimon%27s_Paintings_27_Neuvillette_3.png",
+        "caption": "Guilty Set 27"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Icon_Emoji_Paimon%27s_Paintings_27_Neuvillette_4.png",
+        "caption": "It's raining Set 27"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Icon_Emoji_Paimon%27s_Paintings_42_Neuvillette_1.png",
+        "caption": "Gathering Set 42"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Icon_Emoji_Paimon%27s_Paintings_47_Neuvillette_1.png",
+        "caption": "Set 47"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Marechaussee Hunter",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Heart of Depth",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Hydro DPS",
+      "sets": [
+        {
+          "name": "Heart of Depth",
+          "pieces": 2
+        },
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

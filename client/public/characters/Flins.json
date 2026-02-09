@@ -601,5 +601,16 @@
         "caption": "Illuminate Set 44"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

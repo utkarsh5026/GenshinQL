@@ -1,483 +1,500 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Jean_Icon.png",
-    "name": "Jean",
-    "rarity": "5 Stars",
-    "element": "Anemo",
-    "weaponType": "Sword",
-    "region": "Mondstadt",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Tall Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Jean_Icon.png",
+  "name": "Jean",
+  "rarity": "5 Stars",
+  "element": "Anemo",
+  "weaponType": "Sword",
+  "region": "Mondstadt",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+  "modelType": "Tall Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png",
+      "talentName": "Favonius Bladework",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 5 consecutive strikes.\n\nCharged Attack\nConsumes a certain amount of stamina to launch an opponent using the power of wind.\nLaunched opponents will slowly fall to the ground.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png",
-            "talentName": "Favonius Bladework",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 5 consecutive strikes.\n\nCharged Attack\nConsumes a certain amount of stamina to launch an opponent using the power of wind.\nLaunched opponents will slowly fall to the ground.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Favonius_Bladework_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Favonius_Bladework_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Favonius_Bladework_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "48.33",
-                    "52.27",
-                    "56.2",
-                    "61.82",
-                    "65.75",
-                    "70.25",
-                    "76.43",
-                    "82.61",
-                    "88.8",
-                    "95.54",
-                    "103.27"
-                ],
-                "2-Hit DMG (%)": [
-                    "45.58",
-                    "49.29",
-                    "53",
-                    "58.3",
-                    "62.01",
-                    "66.25",
-                    "72.08",
-                    "77.91",
-                    "83.74",
-                    "90.1",
-                    "97.39"
-                ],
-                "3-Hit DMG (%)": [
-                    "60.29",
-                    "65.19",
-                    "70.1",
-                    "77.11",
-                    "82.02",
-                    "87.63",
-                    "95.34",
-                    "103.05",
-                    "110.76",
-                    "119.17",
-                    "128.81"
-                ],
-                "4-Hit DMG (%)": [
-                    "65.88",
-                    "71.24",
-                    "76.6",
-                    "84.26",
-                    "89.62",
-                    "95.75",
-                    "104.18",
-                    "112.6",
-                    "121.03",
-                    "130.22",
-                    "140.75"
-                ],
-                "5-Hit DMG (%)": [
-                    "79.21",
-                    "85.65",
-                    "92.1",
-                    "101.31",
-                    "107.76",
-                    "115.13",
-                    "125.26",
-                    "135.39",
-                    "145.52",
-                    "156.57",
-                    "169.23"
-                ],
-                "Charged Attack DMG (%)": [
-                    "162.02",
-                    "175.21",
-                    "188.4",
-                    "207.24",
-                    "220.43",
-                    "235.5",
-                    "256.22",
-                    "276.95",
-                    "297.67",
-                    "320.28",
-                    "346.19"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "20"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Favonius_Bladework_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Gale_Blade.png",
-            "talentName": "Gale Blade",
-            "talentType": "Elemental Skill",
-            "description": "Focusing the might of the formless wind around her blade, Jean releases a miniature storm, launching opponents in the direction she aims at, dealing massive Anemo DMG.\n\nHold\nAt the cost of continued stamina consumption, Jean can command the whirlwind to pull surrounding opponents and objects towards her front.\nDirection can be adjusted.\nCharacter is immobile during skill duration.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Gale_Blade_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Gale_Blade_Hold_Preview.gif",
-                    "caption": "Hold"
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "292",
-                    "313.9",
-                    "335.8",
-                    "365",
-                    "386.9",
-                    "408.8",
-                    "438",
-                    "467.2",
-                    "496.4",
-                    "525.6",
-                    "554.8",
-                    "584",
-                    "620.5",
-                    "657"
-                ],
-                "Stamina Consumption": [
-                    "20 Per Second"
-                ],
-                "Max Duration": [
-                    "5s"
-                ],
-                "CD": [
-                    "6s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Favonius_Bladework_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Talent_Dandelion_Breeze.png",
-            "talentName": "Dandelion Breeze",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nCalling upon the wind's protection, Jean creates a swirling Dandelion Field, launching surrounding opponents and dealing Anemo DMG.\nAt the same time, she instantly regenerates a large amount of HP for all party members. The amount of HP restored scales off Jean's ATK.\n\nDandelion Field\nContinuously regenerates HP of characters within the AoE and continuously imbues them with Anemo.\nDeals Anemo DMG to opponents entering or exiting the Dandelion Field.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Dandelion_Breeze_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Elemental Burst DMG (%)": [
-                    "424.8",
-                    "456.66",
-                    "488.52",
-                    "531",
-                    "562.86",
-                    "594.72",
-                    "637.2",
-                    "679.68",
-                    "722.16",
-                    "764.64",
-                    "807.12",
-                    "849.6",
-                    "902.7",
-                    "956"
-                ],
-                "Field Entering/Exiting DMG (%)": [
-                    "78.4",
-                    "84.28",
-                    "90.16",
-                    "98",
-                    "103.88",
-                    "109.76",
-                    "117.6",
-                    "125.44",
-                    "133.28",
-                    "141.12",
-                    "148.96",
-                    "156.8",
-                    "166.6",
-                    "176"
-                ],
-                "Field Activation Healing": [
-                    "251.2% ATK\n+\n1,540",
-                    "270.04% ATK\n+\n1,694",
-                    "288.88% ATK\n+\n1,861",
-                    "314% ATK\n+\n2,041",
-                    "332.84% ATK\n+\n2,233",
-                    "351.68% ATK\n+\n2,438",
-                    "376.8% ATK\n+\n2,657",
-                    "401.92% ATK\n+\n2,888",
-                    "427.04% ATK\n+\n3,132",
-                    "452.16% ATK\n+\n3,388",
-                    "477.28% ATK\n+\n3,658",
-                    "502.4% ATK\n+\n3,940",
-                    "533.8% ATK\n+\n4,236",
-                    "565% ATK\n+\n4,544"
-                ],
-                "Continuous Regeneration": [
-                    "25.12% ATK\n+\n154/s",
-                    "27% ATK\n+\n169/s",
-                    "28.89% ATK\n+\n186/s",
-                    "31.4% ATK\n+\n204.1/s",
-                    "33.28% ATK\n+\n223/s",
-                    "35.17% ATK\n+\n243/s",
-                    "37.68% ATK\n+\n265/s",
-                    "40.19% ATK\n+\n288/s",
-                    "42.7% ATK\n+\n313/s",
-                    "45.22% ATK\n+\n338/s",
-                    "47.73% ATK\n+\n365/s",
-                    "50.24% ATK\n+\n394/s",
-                    "53.38% ATK\n+\n423/s",
-                    "56.52% ATK\n+\n454/s"
-                ],
-                "CD": [
-                    "20s"
-                ],
-                "Energy Cost": [
-                    "80"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Wind_Companion.png",
-            "talentName": "Wind Companion",
-            "talentType": "1st Ascension Passive",
-            "description": "On hit, Jean's Normal Attacks have a 50% chance to regenerate HP equal to 15% of Jean's ATK for all party members.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Talent_Let_the_Wind_Lead.png",
-            "talentName": "Let the Wind Lead",
-            "talentType": "4th Ascension Passive",
-            "description": "Using Dandelion Breeze will regenerate 20% of its Energy.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Talent_Guiding_Breeze.png",
-            "talentName": "Guiding Breeze",
-            "talentType": "Utility Passive",
-            "description": "When a Perfect Cooking is achieved on a dish with restorative effects, there is a 12% chance to obtain double the product.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Favonius_Bladework_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Constellation_Spiraling_Tempest.png",
-            "name": "Spiraling Tempest",
-            "level": 1,
-            "description": "Increases the pulling speed of Gale Blade after holding for more than 1s, and increases the DMG dealt by 40%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Constellation_People%27s_Aegis.png",
-            "name": "People's Aegis",
-            "level": 2,
-            "description": "When Jean picks up an Elemental Orb/Particle, all party members have their Movement SPD and ATK SPD increased by 15% for 15s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Constellation_When_the_West_Wind_Arises.png",
-            "name": "When the West Wind Arises",
-            "level": 3,
-            "description": "Increases the Level of Dandelion Breeze by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Constellation_Lands_of_Dandelion.png",
-            "name": "Lands of Dandelion",
-            "level": 4,
-            "description": "Within the Field created by Dandelion Breeze, all opponents have their Anemo RES decreased by 40%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Constellation_Outbursting_Gust.png",
-            "name": "Outbursting Gust",
-            "level": 5,
-            "description": "Increases the Level of Gale Blade by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_Lion%27s_Fang%2C_Fair_Protector_of_Mondstadt.png",
-            "name": "Lion's Fang, Fair Protector of Mondstadt",
-            "level": 6,
-            "description": "Description\nPreview\nIncoming DMG is decreased by 35% within the Field created by Dandelion Breeze. Upon leaving the Dandelion Field, this effect lasts for 3 attacks or 10s."
-        }
-    ],
-    "imageUrls": {},
-    "version": "4.5",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Idle_Jean_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Idle_Jean_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Idle_Jean_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Idle_Jean_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Talent_Menu_Jean.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Talent_Menu_Jean.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Weapon_Menu_Jean.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Weapon_Menu_Jean.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Party_Setup_Jean.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Party_Setup_Jean.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "48.33",
+          "52.27",
+          "56.2",
+          "61.82",
+          "65.75",
+          "70.25",
+          "76.43",
+          "82.61",
+          "88.8",
+          "95.54",
+          "103.27"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Namecard_Background_Jean_The_Winds%27_Course.png",
-                "caption": "Jean: The Winds' Course Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Item_Jean_The_Winds%27_Course.png",
-                "caption": "Jean: The Winds' Course Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Namecard_Banner_Jean_The_Winds%27_Course.png",
-                "caption": "Jean: The Winds' Course Banner"
-            }
+        "2-Hit DMG (%)": [
+          "45.58",
+          "49.29",
+          "53",
+          "58.3",
+          "62.01",
+          "66.25",
+          "72.08",
+          "77.91",
+          "83.74",
+          "90.1",
+          "97.39"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Favonius_Bladework_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Favonius_Bladework_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Favonius_Bladework_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Favonius_Bladework_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Favonius_Bladework_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Favonius_Bladework_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Dandelion_Breeze_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Dandelion_Breeze_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Gale_Blade_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Gale_Blade_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Gale_Blade_Hold_Preview.gif",
-                        "caption": "Hold",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Gale_Blade_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "60.29",
+          "65.19",
+          "70.1",
+          "77.11",
+          "82.02",
+          "87.63",
+          "95.34",
+          "103.05",
+          "110.76",
+          "119.17",
+          "128.81"
         ],
-        "detailedImages": [],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Icon_Emoji_Paimon%27s_Paintings_01_Jean_1.png",
-                "caption": "Oh... Set 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Icon_Emoji_Paimon%27s_Paintings_07_Jean_1.png",
-                "caption": "Praise Set 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Icon_Emoji_Paimon%27s_Paintings_07_Jean_2.png",
-                "caption": "Angry Set 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Icon_Emoji_Paimon%27s_Paintings_07_Jean_3.png",
-                "caption": "Wry Smile Set 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Icon_Emoji_Paimon%27s_Paintings_07_Jean_4.png",
-                "caption": "Pensive Set 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Icon_Emoji_Paimon%27s_Paintings_13_Jean_1.png",
-                "caption": "Approval Set 13"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Icon_Emoji_Paimon%27s_Paintings_31_Jean_1.png",
-                "caption": "Time for Work Set 31"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Icon_Emoji_Paimon%27s_Paintings_41_Jean_1.png",
-                "caption": "Deep in thought Set 41"
-            }
+        "4-Hit DMG (%)": [
+          "65.88",
+          "71.24",
+          "76.6",
+          "84.26",
+          "89.62",
+          "95.75",
+          "104.18",
+          "112.6",
+          "121.03",
+          "130.22",
+          "140.75"
+        ],
+        "5-Hit DMG (%)": [
+          "79.21",
+          "85.65",
+          "92.1",
+          "101.31",
+          "107.76",
+          "115.13",
+          "125.26",
+          "135.39",
+          "145.52",
+          "156.57",
+          "169.23"
+        ],
+        "Charged Attack DMG (%)": [
+          "162.02",
+          "175.21",
+          "188.4",
+          "207.24",
+          "220.43",
+          "235.5",
+          "256.22",
+          "276.95",
+          "297.67",
+          "320.28",
+          "346.19"
+        ],
+        "Charged Attack Stamina Cost": ["20"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Gale_Blade.png",
+      "talentName": "Gale Blade",
+      "talentType": "Elemental Skill",
+      "description": "Focusing the might of the formless wind around her blade, Jean releases a miniature storm, launching opponents in the direction she aims at, dealing massive Anemo DMG.\n\nHold\nAt the cost of continued stamina consumption, Jean can command the whirlwind to pull surrounding opponents and objects towards her front.\nDirection can be adjusted.\nCharacter is immobile during skill duration.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Gale_Blade_Press_Preview.gif",
+          "caption": "Press"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Gale_Blade_Hold_Preview.gif",
+          "caption": "Hold"
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "292",
+          "313.9",
+          "335.8",
+          "365",
+          "386.9",
+          "408.8",
+          "438",
+          "467.2",
+          "496.4",
+          "525.6",
+          "554.8",
+          "584",
+          "620.5",
+          "657"
+        ],
+        "Stamina Consumption": ["20 Per Second"],
+        "Max Duration": ["5s"],
+        "CD": ["6s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Talent_Dandelion_Breeze.png",
+      "talentName": "Dandelion Breeze",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nCalling upon the wind's protection, Jean creates a swirling Dandelion Field, launching surrounding opponents and dealing Anemo DMG.\nAt the same time, she instantly regenerates a large amount of HP for all party members. The amount of HP restored scales off Jean's ATK.\n\nDandelion Field\nContinuously regenerates HP of characters within the AoE and continuously imbues them with Anemo.\nDeals Anemo DMG to opponents entering or exiting the Dandelion Field.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Dandelion_Breeze_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Elemental Burst DMG (%)": [
+          "424.8",
+          "456.66",
+          "488.52",
+          "531",
+          "562.86",
+          "594.72",
+          "637.2",
+          "679.68",
+          "722.16",
+          "764.64",
+          "807.12",
+          "849.6",
+          "902.7",
+          "956"
+        ],
+        "Field Entering/Exiting DMG (%)": [
+          "78.4",
+          "84.28",
+          "90.16",
+          "98",
+          "103.88",
+          "109.76",
+          "117.6",
+          "125.44",
+          "133.28",
+          "141.12",
+          "148.96",
+          "156.8",
+          "166.6",
+          "176"
+        ],
+        "Field Activation Healing": [
+          "251.2% ATK\n+\n1,540",
+          "270.04% ATK\n+\n1,694",
+          "288.88% ATK\n+\n1,861",
+          "314% ATK\n+\n2,041",
+          "332.84% ATK\n+\n2,233",
+          "351.68% ATK\n+\n2,438",
+          "376.8% ATK\n+\n2,657",
+          "401.92% ATK\n+\n2,888",
+          "427.04% ATK\n+\n3,132",
+          "452.16% ATK\n+\n3,388",
+          "477.28% ATK\n+\n3,658",
+          "502.4% ATK\n+\n3,940",
+          "533.8% ATK\n+\n4,236",
+          "565% ATK\n+\n4,544"
+        ],
+        "Continuous Regeneration": [
+          "25.12% ATK\n+\n154/s",
+          "27% ATK\n+\n169/s",
+          "28.89% ATK\n+\n186/s",
+          "31.4% ATK\n+\n204.1/s",
+          "33.28% ATK\n+\n223/s",
+          "35.17% ATK\n+\n243/s",
+          "37.68% ATK\n+\n265/s",
+          "40.19% ATK\n+\n288/s",
+          "42.7% ATK\n+\n313/s",
+          "45.22% ATK\n+\n338/s",
+          "47.73% ATK\n+\n365/s",
+          "50.24% ATK\n+\n394/s",
+          "53.38% ATK\n+\n423/s",
+          "56.52% ATK\n+\n454/s"
+        ],
+        "CD": ["20s"],
+        "Energy Cost": ["80"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Wind_Companion.png",
+      "talentName": "Wind Companion",
+      "talentType": "1st Ascension Passive",
+      "description": "On hit, Jean's Normal Attacks have a 50% chance to regenerate HP equal to 15% of Jean's ATK for all party members.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Talent_Let_the_Wind_Lead.png",
+      "talentName": "Let the Wind Lead",
+      "talentType": "4th Ascension Passive",
+      "description": "Using Dandelion Breeze will regenerate 20% of its Energy.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Talent_Guiding_Breeze.png",
+      "talentName": "Guiding Breeze",
+      "talentType": "Utility Passive",
+      "description": "When a Perfect Cooking is achieved on a dish with restorative effects, there is a 12% chance to obtain double the product.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Constellation_Spiraling_Tempest.png",
+      "name": "Spiraling Tempest",
+      "level": 1,
+      "description": "Increases the pulling speed of Gale Blade after holding for more than 1s, and increases the DMG dealt by 40%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Constellation_People%27s_Aegis.png",
+      "name": "People's Aegis",
+      "level": 2,
+      "description": "When Jean picks up an Elemental Orb/Particle, all party members have their Movement SPD and ATK SPD increased by 15% for 15s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Constellation_When_the_West_Wind_Arises.png",
+      "name": "When the West Wind Arises",
+      "level": 3,
+      "description": "Increases the Level of Dandelion Breeze by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Constellation_Lands_of_Dandelion.png",
+      "name": "Lands of Dandelion",
+      "level": 4,
+      "description": "Within the Field created by Dandelion Breeze, all opponents have their Anemo RES decreased by 40%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Constellation_Outbursting_Gust.png",
+      "name": "Outbursting Gust",
+      "level": 5,
+      "description": "Increases the Level of Gale Blade by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_Lion%27s_Fang%2C_Fair_Protector_of_Mondstadt.png",
+      "name": "Lion's Fang, Fair Protector of Mondstadt",
+      "level": 6,
+      "description": "Description\nPreview\nIncoming DMG is decreased by 35% within the Field created by Dandelion Breeze. Upon leaving the Dandelion Field, this effect lasts for 3 attacks or 10s."
+    }
+  ],
+  "imageUrls": {},
+  "version": "4.5",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Idle_Jean_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Idle_Jean_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Idle_Jean_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Idle_Jean_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Talent_Menu_Jean.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Talent_Menu_Jean.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Weapon_Menu_Jean.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Weapon_Menu_Jean.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Party_Setup_Jean.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Party_Setup_Jean.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Namecard_Background_Jean_The_Winds%27_Course.png",
+        "caption": "Jean: The Winds' Course Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Item_Jean_The_Winds%27_Course.png",
+        "caption": "Jean: The Winds' Course Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Namecard_Banner_Jean_The_Winds%27_Course.png",
+        "caption": "Jean: The Winds' Course Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Favonius_Bladework_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Favonius_Bladework_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Favonius_Bladework_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Favonius_Bladework_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Favonius_Bladework_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Favonius_Bladework_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Dandelion_Breeze_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Dandelion_Breeze_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Gale_Blade_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Gale_Blade_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Gale_Blade_Hold_Preview.gif",
+            "caption": "Hold",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Gale_Blade_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Icon_Emoji_Paimon%27s_Paintings_01_Jean_1.png",
+        "caption": "Oh... Set 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Icon_Emoji_Paimon%27s_Paintings_07_Jean_1.png",
+        "caption": "Praise Set 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Icon_Emoji_Paimon%27s_Paintings_07_Jean_2.png",
+        "caption": "Angry Set 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Icon_Emoji_Paimon%27s_Paintings_07_Jean_3.png",
+        "caption": "Wry Smile Set 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Icon_Emoji_Paimon%27s_Paintings_07_Jean_4.png",
+        "caption": "Pensive Set 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Icon_Emoji_Paimon%27s_Paintings_13_Jean_1.png",
+        "caption": "Approval Set 13"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Icon_Emoji_Paimon%27s_Paintings_31_Jean_1.png",
+        "caption": "Time for Work Set 31"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Icon_Emoji_Paimon%27s_Paintings_41_Jean_1.png",
+        "caption": "Deep in thought Set 41"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Healer",
+      "sets": [
+        {
+          "name": "Ocean-Hued Clam",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Burst Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

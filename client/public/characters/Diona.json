@@ -489,5 +489,34 @@
         "caption": "\"Mixing\" Set 31"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Shield Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Healer",
+      "sets": [
+        {
+          "name": "Maiden Beloved",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Shield Support (Alternative)",
+      "sets": [
+        {
+          "name": "Tenacity of the Millelith",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

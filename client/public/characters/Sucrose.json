@@ -307,5 +307,38 @@
         "caption": "Keep Trying! Set 31"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "EM Support",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 2
+        },
+        {
+          "name": "Wanderer's Troupe",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Taser Driver",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

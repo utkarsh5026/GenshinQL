@@ -537,5 +537,38 @@
         "caption": "Chill Set 43"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "HP DPS",
+      "sets": [
+        {
+          "name": "Tenacity of the Millelith",
+          "pieces": 2
+        },
+        {
+          "name": "Heart of Depth",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Nuke Build",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

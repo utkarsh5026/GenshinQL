@@ -1,611 +1,634 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Sayu_Icon.png",
-    "name": "Sayu",
-    "rarity": "4 Stars",
-    "element": "Anemo",
-    "weaponType": "Claymore",
-    "region": "Inazuma",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
-    "modelType": "Short Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Sayu_Icon.png",
+  "name": "Sayu",
+  "rarity": "4 Stars",
+  "element": "Anemo",
+  "weaponType": "Claymore",
+  "region": "Inazuma",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+  "modelType": "Short Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Claymore_Anemo.png",
+      "talentName": "Shuumatsuban Ninja Blade",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Claymore_Anemo.png",
-            "talentName": "Shuumatsuban Ninja Blade",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Shuumatsuban_Ninja_Blade_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Shuumatsuban_Ninja_Blade_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Shuumatsuban_Ninja_Blade_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "72.24",
-                    "78.12",
-                    "84",
-                    "92.4",
-                    "98.28",
-                    "105",
-                    "114.24",
-                    "123.48",
-                    "132.72",
-                    "142.8",
-                    "154.35"
-                ],
-                "2-Hit DMG (%)": [
-                    "71.38",
-                    "77.19",
-                    "83",
-                    "91.3",
-                    "97.11",
-                    "103.75",
-                    "112.88",
-                    "122.01",
-                    "131.14",
-                    "141.1",
-                    "152.51"
-                ],
-                "3-Hit DMG (%)": [
-                    "43.43\n+\n43.43",
-                    "46.97\n+\n46.97",
-                    "50.5\n+\n50.5",
-                    "55.55\n+\n55.55",
-                    "59.09\n+\n59.09",
-                    "63.13\n+\n63.13",
-                    "68.68\n+\n68.68",
-                    "74.23\n+\n74.23",
-                    "79.79\n+\n79.79",
-                    "85.85\n+\n85.85",
-                    "92.79\n+\n92.79"
-                ],
-                "4-Hit DMG (%)": [
-                    "98.13",
-                    "106.11",
-                    "114.1",
-                    "125.51",
-                    "133.5",
-                    "142.63",
-                    "155.18",
-                    "167.73",
-                    "180.28",
-                    "193.97",
-                    "209.66"
-                ],
-                "Charged Attack Spinning DMG (%)": [
-                    "62.55",
-                    "67.64",
-                    "72.73",
-                    "80",
-                    "85.09",
-                    "90.91",
-                    "98.91",
-                    "106.91",
-                    "114.91",
-                    "123.64",
-                    "133.64"
-                ],
-                "Charged Attack Final DMG (%)": [
-                    "113.09",
-                    "122.3",
-                    "131.5",
-                    "144.65",
-                    "153.86",
-                    "164.38",
-                    "178.84",
-                    "193.31",
-                    "207.77",
-                    "223.55",
-                    "241.63"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "40/s"
-                ],
-                "Max Duration": [
-                    "5s"
-                ],
-                "Plunge DMG (%)": [
-                    "74.59",
-                    "80.66",
-                    "86.73",
-                    "95.4",
-                    "101.47",
-                    "108.41",
-                    "117.95",
-                    "127.49",
-                    "137.03",
-                    "147.44",
-                    "157.85"
-                ],
-                "Low Plunge DMG (%)": [
-                    "149.14",
-                    "161.28",
-                    "173.42",
-                    "190.77",
-                    "202.91",
-                    "216.78",
-                    "235.86",
-                    "254.93",
-                    "274.01",
-                    "294.82",
-                    "315.63"
-                ],
-                "High Plunge DMG (%)": [
-                    "186.29",
-                    "201.45",
-                    "216.62",
-                    "238.28",
-                    "253.44",
-                    "270.77",
-                    "294.6",
-                    "318.42",
-                    "342.25",
-                    "368.25",
-                    "394.24"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Shuumatsuban_Ninja_Blade_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_Yoohoo_Art_Fuuin_Dash.png",
-            "talentName": "Yoohoo Art: Fuuin Dash",
-            "talentType": "Elemental Skill",
-            "description": "The special technique of the Yoohoo Ninja Arts!\nSayu curls up into a rolling Fuufuu Windwheel and smashes into opponents at high speed, dealing Anemo DMG. When the duration ends, she unleashes a Fuufuu Whirlwind Kick, dealing AoE Anemo DMG.\n\n(‍Press‍/‍Tap‍)\nEnters the Fuufuu Windwheel state, rolling forward a short distance before using the Fuufuu Whirlwind Kick.\n\nHold\nRolls about continuously in the Fuufuu Windwheel state, increasing Sayu's resistance to interruption while within that state.\nDuring this time, Sayu can control the direction of her roll, and can use the skill again to end her Windwheel state early and unleash a stronger version of the Fuufuu Whirlwind Kick.\nThe Hold version of this skill can trigger Elemental Absorption.\n\nThis skill has a maximum duration of 10s and enters CD once its effects end.\nThe longer Sayu remains in her Windwheel state, the longer the CD.\n\nElemental Absorption\nIf Sayu comes into contact with Hydro/Pyro/Cryo/Electro while in her Windwheel state, she will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use of this skill.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Yoohoo_Art_Fuuin_Dash_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Yoohoo_Art_Fuuin_Dash_Hold_Preview.gif",
-                    "caption": "Hold"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Yoohoo_Art_Fuuin_Dash_Elemental_Absorption_Preview.gif",
-                    "caption": "Elemental Absorption (Pyro)"
-                }
-            ],
-            "scaling": {
-                "Fuufuu Windwheel DMG (%)": [
-                    "36.0",
-                    "38.7",
-                    "41.4",
-                    "45",
-                    "47.7",
-                    "50.4",
-                    "54",
-                    "57.6",
-                    "61.2",
-                    "64.8",
-                    "68.4",
-                    "72",
-                    "76.5"
-                ],
-                "Fuufuu Whirlwind Kick Press DMG (%)": [
-                    "158.4",
-                    "170.3",
-                    "182.2",
-                    "198",
-                    "209.88",
-                    "221.76",
-                    "237.6",
-                    "253.44",
-                    "269.28",
-                    "285.12",
-                    "300.96",
-                    "316.8",
-                    "336.6"
-                ],
-                "Fuufuu Whirlwind Kick Hold DMG (%)": [
-                    "217.6",
-                    "233.9",
-                    "250.2",
-                    "272",
-                    "288.32",
-                    "304.64",
-                    "326.4",
-                    "348.16",
-                    "369.92",
-                    "391.68",
-                    "413.44",
-                    "435.2",
-                    "462.4"
-                ],
-                "Fuufuu Windwheel Elemental DMG (%)": [
-                    "16.8",
-                    "18.1",
-                    "19.3",
-                    "21",
-                    "22.26",
-                    "23.52",
-                    "25.2",
-                    "26.88",
-                    "28.56",
-                    "30.24",
-                    "31.92",
-                    "33.6",
-                    "35.7"
-                ],
-                "Fuufuu Whirlwind Kick Elemental DMG (%)": [
-                    "76.2",
-                    "81.9",
-                    "87.6",
-                    "95.2",
-                    "100.91",
-                    "106.62",
-                    "114.24",
-                    "121.86",
-                    "129.47",
-                    "137.09",
-                    "144.7",
-                    "152.32",
-                    "161.84"
-                ],
-                "Duration": [
-                    "10s"
-                ],
-                "CD": [
-                    "6-11s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Shuumatsuban_Ninja_Blade_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Yoohoo_Art_Mujina_Flurry.png",
-            "talentName": "Yoohoo Art: Mujina Flurry",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nThe other super special technique of the Yoohoo Ninja Arts! It summons a pair of helping hands for Sayu.\nDeals Anemo DMG to nearby opponents and heals all nearby party members. The amount of HP restored is based on Sayu's ATK. This skill then summons a Muji-Muji Daruma.\n\nMuji-Muji Daruma\nAt specific intervals, the Daruma will take one of several actions based on the situation around it:\nIf the HP of nearby characters is above 70%, it will attack a nearby opponent, dealing Anemo DMG.\nIf there are active characters with 70% or less HP nearby, it will heal the active character with the lowest percentage HP left. If there are no opponents nearby, it will heal active characters nearby even if they have 70% HP or more.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Yoohoo_Art_Mujina_Flurry_Preview.gif",
-                    "caption": "Healing nearby characters"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Yoohoo_Art_Mujina_Flurry_Muji-Muji_Daruma_Attack_Preview.gif",
-                    "caption": "Muji-Muji Daruma attacking nearby opponents"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Yoohoo_Art_Mujina_Flurry_No_Opponents_Preview.gif",
-                    "caption": "No opponents nearby"
-                }
-            ],
-            "scaling": {
-                "Skill Activation DMG (%)": [
-                    "117",
-                    "126",
-                    "134",
-                    "146",
-                    "154.76",
-                    "163.52",
-                    "175.2",
-                    "186.88",
-                    "198.56",
-                    "210.24",
-                    "221.92",
-                    "233.6",
-                    "248.2"
-                ],
-                "Skill Activation Healing": [
-                    "92.2% ATK\n+\n577",
-                    "99.1% ATK\n+\n635",
-                    "106.0% ATK\n+\n698",
-                    "115.2% ATK\n+\n765",
-                    "122.11% ATK\n+\n837.2",
-                    "129.02% ATK\n+\n914.2",
-                    "138.24% ATK\n+\n996",
-                    "147.46% ATK\n+\n1,082",
-                    "156.67% ATK\n+\n1,174",
-                    "165.89% ATK\n+\n1,270",
-                    "175.1% ATK\n+\n1,371",
-                    "184.32% ATK\n+\n1,477",
-                    "195.84% ATK\n+\n1,587"
-                ],
-                "Muji-Muji Daruma DMG (%)": [
-                    "52",
-                    "56",
-                    "60",
-                    "65",
-                    "68.9",
-                    "72.8",
-                    "78",
-                    "83.2",
-                    "88.4",
-                    "93.6",
-                    "98.8",
-                    "104",
-                    "110.5"
-                ],
-                "Muji-Muji Daruma Healing": [
-                    "79.9% ATK\n+\n500",
-                    "85.9% ATK\n+\n550",
-                    "91.9% ATK\n+\n605",
-                    "99.8% ATK\n+\n663",
-                    "105.83% ATK\n+\n725",
-                    "111.82% ATK\n+\n792",
-                    "119.81% ATK\n+\n863",
-                    "127.8% ATK\n+\n938",
-                    "135.78% ATK\n+\n1,017",
-                    "143.77% ATK\n+\n1,100",
-                    "151.76% ATK\n+\n1,188",
-                    "159.74% ATK\n+\n1,280",
-                    "169.73% ATK\n+\n1,376"
-                ],
-                "Duration": [
-                    "12s"
-                ],
-                "CD": [
-                    "20s"
-                ],
-                "Energy Cost": [
-                    "80"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Talent_Someone_More_Capable.png",
-            "talentName": "Someone More Capable",
-            "talentType": "1st Ascension Passive",
-            "description": "When Sayu triggers a Swirl reaction while active, she heals all your characters and nearby allies for 300 HP. She will also heal an additional 1.2 HP for every point of Elemental Mastery she has.\nThis effect can be triggered once every 2s.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Someone_More_Capable_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Talent_No_Work_Today%21.png",
-            "talentName": "No Work Today!",
-            "talentType": "4th Ascension Passive",
-            "description": "The Muji-Muji Daruma created by Yoohoo Art: Mujina Flurry gains the following effects:",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/No_Work_Today_Heal_Preview.gif",
-                    "caption": "Healing nearby characters"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/No_Work_Today_Attack_Preview.gif",
-                    "caption": "Increased AoE"
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Talent_Yoohoo_Art_Silencer%27s_Secret.png",
-            "talentName": "Yoohoo Art: Silencer's Secret",
-            "talentType": "Utility Passive",
-            "description": "When Sayu is in the party, your characters will not startle Crystalflies and certain other animals when getting near them.\nCheck the \"Other\" sub-category of the \"Living Beings / Wildlife\" section in the Archive for creatures this skill works on.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Yoohoo_Art_Silencer%27s_Secret_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Shuumatsuban_Ninja_Blade_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Constellation_Multi-Task_no_Jutsu.png",
-            "name": "Multi-Task no Jutsu",
-            "level": 1,
-            "description": "The Muji-Muji Daruma created by Yoohoo Art: Mujina Flurry will ignore HP limits and can simultaneously attack nearby opponents and heal characters."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_Egress_Prep.png",
-            "name": "Egress Prep",
-            "level": 2,
-            "description": "Yoohoo Art: Fuuin Dash gains the following effects:\nDMG of Fuufuu Whirlwind Kick in (‍Press‍/‍Tapping‍) Mode increased by 3.3%.\nEvery 0.5s in the Fuufuu Windwheel state will increase the DMG of this Fuufuu Whirlwind Kick by 3.3%. The maximum DMG increase possible through this method is 66%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Constellation_Eh%2C_the_Bunshin_Can_Handle_It.png",
-            "name": "Eh, the Bunshin Can Handle It",
-            "level": 3,
-            "description": "Increases the Level of Yoohoo Art: Mujina Flurry by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Constellation_Skiving_New_and_Improved.png",
-            "name": "Skiving: New and Improved",
-            "level": 4,
-            "description": "Description\nGameplay Notes\nSayu recovers 1.2 Energy when she triggers a Swirl reaction.\nThis effect occurs once every 2s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Constellation_Speed_Comes_First.png",
-            "name": "Speed Comes First",
-            "level": 5,
-            "description": "Increases the Level of Yoohoo Art: Fuuin Dash by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Constellation_Sleep_O%27Clock.png",
-            "name": "Sleep O'Clock",
-            "level": 6,
-            "description": "Description\nGameplay Notes\nThe Muji-Muji Daruma created by Sayu's Yoohoo Art: Mujina Flurry will now also benefit from her Elemental Mastery. Each point of Sayu's Elemental Mastery will produce the following effects:\nIncreases the damage dealt by the Muji-Muji Daruma's attacks by 0.2% ATK. A maximum DMG increase of 400% ATK can be gained via this method.\nIncreases the HP restored by the Muji-Muji Daruma by 3. A maximum of 6,000 additional HP can be restored in this manner."
-        }
-    ],
-    "imageUrls": {},
-    "version": "2.0",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Idle_Sayu_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Idle_Sayu_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Idle_Sayu_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Idle_Sayu_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Menu_Sayu.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Talent_Menu_Sayu.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Weapon_Menu_Sayu.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Weapon_Menu_Sayu.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Party_Setup_Sayu.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Party_Setup_Sayu.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "72.24",
+          "78.12",
+          "84",
+          "92.4",
+          "98.28",
+          "105",
+          "114.24",
+          "123.48",
+          "132.72",
+          "142.8",
+          "154.35"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Namecard_Background_Sayu_Muji-Muji_Daruma.png",
-                "caption": "Sayu: Muji-Muji Daruma Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Item_Sayu_Muji-Muji_Daruma.png",
-                "caption": "Sayu: Muji-Muji Daruma Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Namecard_Banner_Sayu_Muji-Muji_Daruma.png",
-                "caption": "Sayu: Muji-Muji Daruma Banner"
-            }
+        "2-Hit DMG (%)": [
+          "71.38",
+          "77.19",
+          "83",
+          "91.3",
+          "97.11",
+          "103.75",
+          "112.88",
+          "122.01",
+          "131.14",
+          "141.1",
+          "152.51"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Shuumatsuban_Ninja_Blade_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Shuumatsuban_Ninja_Blade_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Shuumatsuban_Ninja_Blade_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Shuumatsuban_Ninja_Blade_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Shuumatsuban_Ninja_Blade_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Shuumatsuban_Ninja_Blade_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Yoohoo_Art_Mujina_Flurry_Preview.gif",
-                        "caption": "Healing nearby characters",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Yoohoo_Art_Mujina_Flurry_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Yoohoo_Art_Mujina_Flurry_Muji-Muji_Daruma_Attack_Preview.gif",
-                        "caption": "Muji-Muji Daruma attacking nearby opponents",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Yoohoo_Art_Mujina_Flurry_Muji-Muji_Daruma_Attack_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Yoohoo_Art_Mujina_Flurry_No_Opponents_Preview.gif",
-                        "caption": "No opponents nearby",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Yoohoo_Art_Mujina_Flurry_No_Opponents_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Yoohoo_Art_Fuuin_Dash_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Yoohoo_Art_Fuuin_Dash_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Yoohoo_Art_Fuuin_Dash_Hold_Preview.gif",
-                        "caption": "Hold",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Yoohoo_Art_Fuuin_Dash_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Yoohoo_Art_Fuuin_Dash_Elemental_Absorption_Preview.gif",
-                        "caption": "Elemental Absorption (Pyro)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Yoohoo_Art_Fuuin_Dash_Elemental_Absorption_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "43.43\n+\n43.43",
+          "46.97\n+\n46.97",
+          "50.5\n+\n50.5",
+          "55.55\n+\n55.55",
+          "59.09\n+\n59.09",
+          "63.13\n+\n63.13",
+          "68.68\n+\n68.68",
+          "74.23\n+\n74.23",
+          "79.79\n+\n79.79",
+          "85.85\n+\n85.85",
+          "92.79\n+\n92.79"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Sayu_Character_Details_1.jpg",
-                "caption": "Sayu Details 1 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Sayu_Character_Details_2.gif",
-                "caption": "Sayu Details 2 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Sayu_Character_Details_3.gif",
-                "caption": "Sayu Details 3 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Sayu_Character_Details_4.gif",
-                "caption": "Sayu Details 4 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Sayu_Character_Details_5.gif",
-                "caption": "Sayu Details 5 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Sayu_Character_Details_6.jpg",
-                "caption": "Sayu Details 6 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Sayu_Character_Details_7.jpg",
-                "caption": "Sayu Details 7 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Sayu_Character_Details_8.jpg",
-                "caption": "Sayu Details 8 Official HoYoLAB Post"
-            }
+        "4-Hit DMG (%)": [
+          "98.13",
+          "106.11",
+          "114.1",
+          "125.51",
+          "133.5",
+          "142.63",
+          "155.18",
+          "167.73",
+          "180.28",
+          "193.97",
+          "209.66"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Icon_Emoji_Paimon%27s_Paintings_08_Sayu_1.png",
-                "caption": "Sleepy Set 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Icon_Emoji_Paimon%27s_Paintings_08_Sayu_2.png",
-                "caption": "Angry Set 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Icon_Emoji_Paimon%27s_Paintings_08_Sayu_3.png",
-                "caption": "Watch This Set 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Icon_Emoji_Paimon%27s_Paintings_08_Sayu_4.png",
-                "caption": "Alert Set 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Icon_Emoji_Paimon%27s_Paintings_39_Sayu.png",
-                "caption": "Busted Set 39"
-            }
+        "Charged Attack Spinning DMG (%)": [
+          "62.55",
+          "67.64",
+          "72.73",
+          "80",
+          "85.09",
+          "90.91",
+          "98.91",
+          "106.91",
+          "114.91",
+          "123.64",
+          "133.64"
+        ],
+        "Charged Attack Final DMG (%)": [
+          "113.09",
+          "122.3",
+          "131.5",
+          "144.65",
+          "153.86",
+          "164.38",
+          "178.84",
+          "193.31",
+          "207.77",
+          "223.55",
+          "241.63"
+        ],
+        "Charged Attack Stamina Cost": ["40/s"],
+        "Max Duration": ["5s"],
+        "Plunge DMG (%)": [
+          "74.59",
+          "80.66",
+          "86.73",
+          "95.4",
+          "101.47",
+          "108.41",
+          "117.95",
+          "127.49",
+          "137.03",
+          "147.44",
+          "157.85"
+        ],
+        "Low Plunge DMG (%)": [
+          "149.14",
+          "161.28",
+          "173.42",
+          "190.77",
+          "202.91",
+          "216.78",
+          "235.86",
+          "254.93",
+          "274.01",
+          "294.82",
+          "315.63"
+        ],
+        "High Plunge DMG (%)": [
+          "186.29",
+          "201.45",
+          "216.62",
+          "238.28",
+          "253.44",
+          "270.77",
+          "294.6",
+          "318.42",
+          "342.25",
+          "368.25",
+          "394.24"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_Yoohoo_Art_Fuuin_Dash.png",
+      "talentName": "Yoohoo Art: Fuuin Dash",
+      "talentType": "Elemental Skill",
+      "description": "The special technique of the Yoohoo Ninja Arts!\nSayu curls up into a rolling Fuufuu Windwheel and smashes into opponents at high speed, dealing Anemo DMG. When the duration ends, she unleashes a Fuufuu Whirlwind Kick, dealing AoE Anemo DMG.\n\n(‍Press‍/‍Tap‍)\nEnters the Fuufuu Windwheel state, rolling forward a short distance before using the Fuufuu Whirlwind Kick.\n\nHold\nRolls about continuously in the Fuufuu Windwheel state, increasing Sayu's resistance to interruption while within that state.\nDuring this time, Sayu can control the direction of her roll, and can use the skill again to end her Windwheel state early and unleash a stronger version of the Fuufuu Whirlwind Kick.\nThe Hold version of this skill can trigger Elemental Absorption.\n\nThis skill has a maximum duration of 10s and enters CD once its effects end.\nThe longer Sayu remains in her Windwheel state, the longer the CD.\n\nElemental Absorption\nIf Sayu comes into contact with Hydro/Pyro/Cryo/Electro while in her Windwheel state, she will deal additional elemental DMG of that type.\nElemental Absorption may only occur once per use of this skill.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Yoohoo_Art_Fuuin_Dash_Press_Preview.gif",
+          "caption": "Press"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Yoohoo_Art_Fuuin_Dash_Hold_Preview.gif",
+          "caption": "Hold"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Yoohoo_Art_Fuuin_Dash_Elemental_Absorption_Preview.gif",
+          "caption": "Elemental Absorption (Pyro)"
+        }
+      ],
+      "scaling": {
+        "Fuufuu Windwheel DMG (%)": [
+          "36.0",
+          "38.7",
+          "41.4",
+          "45",
+          "47.7",
+          "50.4",
+          "54",
+          "57.6",
+          "61.2",
+          "64.8",
+          "68.4",
+          "72",
+          "76.5"
+        ],
+        "Fuufuu Whirlwind Kick Press DMG (%)": [
+          "158.4",
+          "170.3",
+          "182.2",
+          "198",
+          "209.88",
+          "221.76",
+          "237.6",
+          "253.44",
+          "269.28",
+          "285.12",
+          "300.96",
+          "316.8",
+          "336.6"
+        ],
+        "Fuufuu Whirlwind Kick Hold DMG (%)": [
+          "217.6",
+          "233.9",
+          "250.2",
+          "272",
+          "288.32",
+          "304.64",
+          "326.4",
+          "348.16",
+          "369.92",
+          "391.68",
+          "413.44",
+          "435.2",
+          "462.4"
+        ],
+        "Fuufuu Windwheel Elemental DMG (%)": [
+          "16.8",
+          "18.1",
+          "19.3",
+          "21",
+          "22.26",
+          "23.52",
+          "25.2",
+          "26.88",
+          "28.56",
+          "30.24",
+          "31.92",
+          "33.6",
+          "35.7"
+        ],
+        "Fuufuu Whirlwind Kick Elemental DMG (%)": [
+          "76.2",
+          "81.9",
+          "87.6",
+          "95.2",
+          "100.91",
+          "106.62",
+          "114.24",
+          "121.86",
+          "129.47",
+          "137.09",
+          "144.7",
+          "152.32",
+          "161.84"
+        ],
+        "Duration": ["10s"],
+        "CD": ["6-11s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Yoohoo_Art_Mujina_Flurry.png",
+      "talentName": "Yoohoo Art: Mujina Flurry",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nThe other super special technique of the Yoohoo Ninja Arts! It summons a pair of helping hands for Sayu.\nDeals Anemo DMG to nearby opponents and heals all nearby party members. The amount of HP restored is based on Sayu's ATK. This skill then summons a Muji-Muji Daruma.\n\nMuji-Muji Daruma\nAt specific intervals, the Daruma will take one of several actions based on the situation around it:\nIf the HP of nearby characters is above 70%, it will attack a nearby opponent, dealing Anemo DMG.\nIf there are active characters with 70% or less HP nearby, it will heal the active character with the lowest percentage HP left. If there are no opponents nearby, it will heal active characters nearby even if they have 70% HP or more.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Yoohoo_Art_Mujina_Flurry_Preview.gif",
+          "caption": "Healing nearby characters"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Yoohoo_Art_Mujina_Flurry_Muji-Muji_Daruma_Attack_Preview.gif",
+          "caption": "Muji-Muji Daruma attacking nearby opponents"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Yoohoo_Art_Mujina_Flurry_No_Opponents_Preview.gif",
+          "caption": "No opponents nearby"
+        }
+      ],
+      "scaling": {
+        "Skill Activation DMG (%)": [
+          "117",
+          "126",
+          "134",
+          "146",
+          "154.76",
+          "163.52",
+          "175.2",
+          "186.88",
+          "198.56",
+          "210.24",
+          "221.92",
+          "233.6",
+          "248.2"
+        ],
+        "Skill Activation Healing": [
+          "92.2% ATK\n+\n577",
+          "99.1% ATK\n+\n635",
+          "106.0% ATK\n+\n698",
+          "115.2% ATK\n+\n765",
+          "122.11% ATK\n+\n837.2",
+          "129.02% ATK\n+\n914.2",
+          "138.24% ATK\n+\n996",
+          "147.46% ATK\n+\n1,082",
+          "156.67% ATK\n+\n1,174",
+          "165.89% ATK\n+\n1,270",
+          "175.1% ATK\n+\n1,371",
+          "184.32% ATK\n+\n1,477",
+          "195.84% ATK\n+\n1,587"
+        ],
+        "Muji-Muji Daruma DMG (%)": [
+          "52",
+          "56",
+          "60",
+          "65",
+          "68.9",
+          "72.8",
+          "78",
+          "83.2",
+          "88.4",
+          "93.6",
+          "98.8",
+          "104",
+          "110.5"
+        ],
+        "Muji-Muji Daruma Healing": [
+          "79.9% ATK\n+\n500",
+          "85.9% ATK\n+\n550",
+          "91.9% ATK\n+\n605",
+          "99.8% ATK\n+\n663",
+          "105.83% ATK\n+\n725",
+          "111.82% ATK\n+\n792",
+          "119.81% ATK\n+\n863",
+          "127.8% ATK\n+\n938",
+          "135.78% ATK\n+\n1,017",
+          "143.77% ATK\n+\n1,100",
+          "151.76% ATK\n+\n1,188",
+          "159.74% ATK\n+\n1,280",
+          "169.73% ATK\n+\n1,376"
+        ],
+        "Duration": ["12s"],
+        "CD": ["20s"],
+        "Energy Cost": ["80"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Talent_Someone_More_Capable.png",
+      "talentName": "Someone More Capable",
+      "talentType": "1st Ascension Passive",
+      "description": "When Sayu triggers a Swirl reaction while active, she heals all your characters and nearby allies for 300 HP. She will also heal an additional 1.2 HP for every point of Elemental Mastery she has.\nThis effect can be triggered once every 2s.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Someone_More_Capable_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Talent_No_Work_Today%21.png",
+      "talentName": "No Work Today!",
+      "talentType": "4th Ascension Passive",
+      "description": "The Muji-Muji Daruma created by Yoohoo Art: Mujina Flurry gains the following effects:",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/No_Work_Today_Heal_Preview.gif",
+          "caption": "Healing nearby characters"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/No_Work_Today_Attack_Preview.gif",
+          "caption": "Increased AoE"
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Talent_Yoohoo_Art_Silencer%27s_Secret.png",
+      "talentName": "Yoohoo Art: Silencer's Secret",
+      "talentType": "Utility Passive",
+      "description": "When Sayu is in the party, your characters will not startle Crystalflies and certain other animals when getting near them.\nCheck the \"Other\" sub-category of the \"Living Beings / Wildlife\" section in the Archive for creatures this skill works on.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Yoohoo_Art_Silencer%27s_Secret_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Constellation_Multi-Task_no_Jutsu.png",
+      "name": "Multi-Task no Jutsu",
+      "level": 1,
+      "description": "The Muji-Muji Daruma created by Yoohoo Art: Mujina Flurry will ignore HP limits and can simultaneously attack nearby opponents and heal characters."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_Egress_Prep.png",
+      "name": "Egress Prep",
+      "level": 2,
+      "description": "Yoohoo Art: Fuuin Dash gains the following effects:\nDMG of Fuufuu Whirlwind Kick in (‍Press‍/‍Tapping‍) Mode increased by 3.3%.\nEvery 0.5s in the Fuufuu Windwheel state will increase the DMG of this Fuufuu Whirlwind Kick by 3.3%. The maximum DMG increase possible through this method is 66%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Constellation_Eh%2C_the_Bunshin_Can_Handle_It.png",
+      "name": "Eh, the Bunshin Can Handle It",
+      "level": 3,
+      "description": "Increases the Level of Yoohoo Art: Mujina Flurry by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Constellation_Skiving_New_and_Improved.png",
+      "name": "Skiving: New and Improved",
+      "level": 4,
+      "description": "Description\nGameplay Notes\nSayu recovers 1.2 Energy when she triggers a Swirl reaction.\nThis effect occurs once every 2s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Constellation_Speed_Comes_First.png",
+      "name": "Speed Comes First",
+      "level": 5,
+      "description": "Increases the Level of Yoohoo Art: Fuuin Dash by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Constellation_Sleep_O%27Clock.png",
+      "name": "Sleep O'Clock",
+      "level": 6,
+      "description": "Description\nGameplay Notes\nThe Muji-Muji Daruma created by Sayu's Yoohoo Art: Mujina Flurry will now also benefit from her Elemental Mastery. Each point of Sayu's Elemental Mastery will produce the following effects:\nIncreases the damage dealt by the Muji-Muji Daruma's attacks by 0.2% ATK. A maximum DMG increase of 400% ATK can be gained via this method.\nIncreases the HP restored by the Muji-Muji Daruma by 3. A maximum of 6,000 additional HP can be restored in this manner."
+    }
+  ],
+  "imageUrls": {},
+  "version": "2.0",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Idle_Sayu_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Idle_Sayu_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Idle_Sayu_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Idle_Sayu_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Menu_Sayu.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Talent_Menu_Sayu.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Weapon_Menu_Sayu.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Weapon_Menu_Sayu.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Party_Setup_Sayu.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Party_Setup_Sayu.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Namecard_Background_Sayu_Muji-Muji_Daruma.png",
+        "caption": "Sayu: Muji-Muji Daruma Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Item_Sayu_Muji-Muji_Daruma.png",
+        "caption": "Sayu: Muji-Muji Daruma Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Namecard_Banner_Sayu_Muji-Muji_Daruma.png",
+        "caption": "Sayu: Muji-Muji Daruma Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Shuumatsuban_Ninja_Blade_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Shuumatsuban_Ninja_Blade_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Shuumatsuban_Ninja_Blade_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Shuumatsuban_Ninja_Blade_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Shuumatsuban_Ninja_Blade_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Shuumatsuban_Ninja_Blade_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Yoohoo_Art_Mujina_Flurry_Preview.gif",
+            "caption": "Healing nearby characters",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Yoohoo_Art_Mujina_Flurry_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Yoohoo_Art_Mujina_Flurry_Muji-Muji_Daruma_Attack_Preview.gif",
+            "caption": "Muji-Muji Daruma attacking nearby opponents",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Yoohoo_Art_Mujina_Flurry_Muji-Muji_Daruma_Attack_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Yoohoo_Art_Mujina_Flurry_No_Opponents_Preview.gif",
+            "caption": "No opponents nearby",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Yoohoo_Art_Mujina_Flurry_No_Opponents_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Yoohoo_Art_Fuuin_Dash_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Yoohoo_Art_Fuuin_Dash_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Yoohoo_Art_Fuuin_Dash_Hold_Preview.gif",
+            "caption": "Hold",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Yoohoo_Art_Fuuin_Dash_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Yoohoo_Art_Fuuin_Dash_Elemental_Absorption_Preview.gif",
+            "caption": "Elemental Absorption (Pyro)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Yoohoo_Art_Fuuin_Dash_Elemental_Absorption_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Sayu_Character_Details_1.jpg",
+        "caption": "Sayu Details 1 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Sayu_Character_Details_2.gif",
+        "caption": "Sayu Details 2 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Sayu_Character_Details_3.gif",
+        "caption": "Sayu Details 3 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Sayu_Character_Details_4.gif",
+        "caption": "Sayu Details 4 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Sayu_Character_Details_5.gif",
+        "caption": "Sayu Details 5 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Sayu_Character_Details_6.jpg",
+        "caption": "Sayu Details 6 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Sayu_Character_Details_7.jpg",
+        "caption": "Sayu Details 7 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Sayu_Character_Details_8.jpg",
+        "caption": "Sayu Details 8 Official HoYoLAB Post"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Icon_Emoji_Paimon%27s_Paintings_08_Sayu_1.png",
+        "caption": "Sleepy Set 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Icon_Emoji_Paimon%27s_Paintings_08_Sayu_2.png",
+        "caption": "Angry Set 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Icon_Emoji_Paimon%27s_Paintings_08_Sayu_3.png",
+        "caption": "Watch This Set 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Icon_Emoji_Paimon%27s_Paintings_08_Sayu_4.png",
+        "caption": "Alert Set 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Icon_Emoji_Paimon%27s_Paintings_39_Sayu.png",
+        "caption": "Busted Set 39"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Healer",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 2
+        },
+        {
+          "name": "Maiden Beloved",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "EM Support",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 2
+        },
+        {
+          "name": "Wanderer's Troupe",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

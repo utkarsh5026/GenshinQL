@@ -518,5 +518,38 @@
         "caption": "Venting Set 46"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Desert Pavilion Chronicle",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Shimenawa's Reminiscence",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Anemo DPS",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 2
+        },
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

@@ -498,5 +498,34 @@
         "caption": "Guidance Set 45"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Bloom DPS",
+      "sets": [
+        {
+          "name": "Flower of Paradise Lost",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "EM DPS",
+      "sets": [
+        {
+          "name": "Gilded Dreams",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Deepwood Memories",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

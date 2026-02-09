@@ -445,5 +445,34 @@
         "caption": "Time to Rest Set 31"
       }
     ]
-  }
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Aggravate DPS",
+      "sets": [
+        {
+          "name": "Thundering Fury",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

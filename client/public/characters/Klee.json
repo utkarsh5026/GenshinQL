@@ -1,423 +1,444 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Klee_Icon.png",
-    "name": "Klee",
-    "rarity": "5 Stars",
-    "element": "Pyro",
-    "weaponType": "Catalyst",
-    "region": "Mondstadt",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Short Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Klee_Icon.png",
+  "name": "Klee",
+  "rarity": "5 Stars",
+  "element": "Pyro",
+  "weaponType": "Catalyst",
+  "region": "Mondstadt",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+  "modelType": "Short Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Catalyst_Pyro.png",
+      "talentName": "Kaboom!",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nThrows things that go boom when they hit things! Performs up to 3 explosive attacks, dealing AoE Pyro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina and deals AoE Pyro DMG to opponents after a short casting time.\n\nPlunging Attack\nGathering the power of Pyro, Klee plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Pyro DMG upon impact with the ground.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Catalyst_Pyro.png",
-            "talentName": "Kaboom!",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nThrows things that go boom when they hit things! Performs up to 3 explosive attacks, dealing AoE Pyro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina and deals AoE Pyro DMG to opponents after a short casting time.\n\nPlunging Attack\nGathering the power of Pyro, Klee plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Pyro DMG upon impact with the ground.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Kaboom%21_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Kaboom%21_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Kaboom%21_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "72.16",
-                    "77.57",
-                    "82.98",
-                    "90.2",
-                    "95.61",
-                    "101.02",
-                    "108.24",
-                    "115.46",
-                    "122.67",
-                    "129.89",
-                    "137.39"
-                ],
-                "2-Hit DMG (%)": [
-                    "62.4",
-                    "67.08",
-                    "71.76",
-                    "78",
-                    "82.68",
-                    "87.36",
-                    "93.6",
-                    "99.84",
-                    "106.08",
-                    "112.32",
-                    "118.81"
-                ],
-                "3-Hit DMG (%)": [
-                    "89.92",
-                    "96.66",
-                    "103.41",
-                    "112.4",
-                    "119.14",
-                    "125.89",
-                    "134.88",
-                    "143.87",
-                    "152.86",
-                    "161.86",
-                    "171.21"
-                ],
-                "Charged Attack DMG (%)": [
-                    "157.36",
-                    "169.16",
-                    "180.96",
-                    "196.7",
-                    "208.5",
-                    "220.3",
-                    "236.04",
-                    "251.78",
-                    "267.51",
-                    "283.25",
-                    "299.61"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "50"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.17",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Kaboom%21_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Jumpy_Dumpty.png",
-            "talentName": "Jumpy Dumpty",
-            "talentType": "Elemental Skill",
-            "description": "Jumpy Dumpty is tons of boom-bang-fun!\nWhen thrown, Jumpy Dumpty bounces thrice, igniting and dealing AoE Pyro DMG with every bounce.\n\nOn the third bounce, the bomb splits into many mines.\nThe mines will explode upon contact with opponents, or after a short period of time, dealing AoE Pyro DMG.\n\nStarts with 2 charges.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Jumpy_Dumpty_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Jumpy Dumpty DMG (%)": [
-                    "95.20",
-                    "102.34",
-                    "109.48",
-                    "119.00",
-                    "126.14",
-                    "133.28",
-                    "142.80",
-                    "152.32",
-                    "161.84",
-                    "171.36",
-                    "180.88",
-                    "190.40",
-                    "202.30",
-                    "214.20"
-                ],
-                "Mine DMG (%)": [
-                    "32.80",
-                    "35.26",
-                    "37.72",
-                    "41.00",
-                    "43.46",
-                    "45.92",
-                    "49.20",
-                    "52.48",
-                    "55.76",
-                    "59.04",
-                    "62.32",
-                    "65.60",
-                    "69.70",
-                    "73.80"
-                ],
-                "Mine Duration": [
-                    "15s"
-                ],
-                "CD": [
-                    "20s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Kaboom%21_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Sparks_%27n%27_Splash.png",
-            "talentName": "Sparks 'n' Splash",
-            "talentType": "Elemental Burst",
-            "description": "Klee's Blazing Delight! For the duration of this ability, continuously summons Sparks 'n' Splash to attack nearby opponents, dealing AoE Pyro DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Sparks_%27n%27_Splash_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Sparks 'n' Splash DMG (%)": [
-                    "42.64",
-                    "45.84",
-                    "49.04",
-                    "53.30",
-                    "56.50",
-                    "59.70",
-                    "63.96",
-                    "68.22",
-                    "72.49",
-                    "76.75",
-                    "81.02",
-                    "85.28",
-                    "90.61",
-                    "95.94"
-                ],
-                "Duration": [
-                    "10s"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Talent_Pounding_Surprise.png",
-            "talentName": "Pounding Surprise",
-            "talentType": "1st Ascension Passive",
-            "description": "When Jumpy Dumpty and Normal Attacks deal DMG, Klee has a 50% chance to obtain an Explosive Spark. This Explosive Spark is consumed by the next Charged Attack, which costs no Stamina and deals 50% increased DMG.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Talent_Sparkling_Burst.png",
-            "talentName": "Sparkling Burst",
-            "talentType": "4th Ascension Passive",
-            "description": "When Klee's Charged Attack results in a CRIT Hit, all party members gain 2 Elemental Energy.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Sparkborne_Magic.png",
-            "talentName": "Sparkborne Magic",
-            "talentType": "Witch's Eve Rite Passive",
-            "description": "After completing Witch's Homework: Of Leaves That Spark, Klee will become a Hexerei character. When the party includes at least 2 Hexerei characters, you will gain the Hexerei: Secret Rite effect, which enhances Hexerei characters.\n\nHexerei: Secret Rite\nWhen Klee deals DMG with Normal Attacks, Elemental Skills, or Elemental Bursts, she gains 1 Boom Badge, lasting 20s. Each type of attack can grant at most 1 Boom Badge this way, and each badge has its own independent timer. While Klee has 1/2/3 Boom Badges, her special Charged Attack Boom-Boom Strike deals 115%/130%/150% of its original DMG.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Talent_All_Of_My_Treasures%21.png",
-            "talentName": "All Of My Treasures!",
-            "talentType": "Utility Passive",
-            "description": "Displays the location of nearby resources unique to Mondstadt on the mini-map.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Kaboom%21_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Constellation_Chained_Reactions.png",
-            "name": "Chained Reactions",
-            "level": 1,
-            "description": "Description\nHexerei Buff\nGameplay Notes\nAdvanced Properties\nAttacks and Skills have a certain chance to summon sparks that bombard opponents, dealing DMG equal to 120% of Sparks 'n' Splash's DMG."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Constellation_Explosive_Frags.png",
-            "name": "Explosive Frags",
-            "level": 2,
-            "description": "Description\nHexerei Buff\nBeing hit by Jumpy Dumpty's mines decreases opponents' DEF by 23% for 10s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Constellation_Exquisite_Compound.png",
-            "name": "Exquisite Compound",
-            "level": 3,
-            "description": "Increases the Level of Jumpy Dumpty by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Constellation_Sparkly_Explosion.png",
-            "name": "Sparkly Explosion",
-            "level": 4,
-            "description": "Description\nHexerei Buff\nPreview\nIf Klee leaves the field during the duration of Sparks 'n' Splash, her departure triggers an explosion that deals 555% of her ATK as AoE Pyro DMG."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Constellation_Nova_Burst.png",
-            "name": "Nova Burst",
-            "level": 5,
-            "description": "Increases the Level of Sparks 'n' Splash by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Constellation_Blazing_Delight.png",
-            "name": "Blazing Delight",
-            "level": 6,
-            "description": "Description\nHexerei Buff\nWhile under the effects of Sparks 'n' Splash, Klee will regenerate 3 Energy for all members of the party (excluding Klee) every 3s.\nWhen Sparks 'n' Splash is used, all party members will gain a 10% Pyro DMG Bonus for 25s."
-        }
-    ],
-    "imageUrls": {},
-    "version": "1.0",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Idle_Klee_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Idle_Klee_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Idle_Klee_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Idle_Klee_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Talent_Menu_Klee.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Talent_Menu_Klee.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Weapon_Menu_Klee.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Weapon_Menu_Klee.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Party_Setup_Klee.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Party_Setup_Klee.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "72.16",
+          "77.57",
+          "82.98",
+          "90.2",
+          "95.61",
+          "101.02",
+          "108.24",
+          "115.46",
+          "122.67",
+          "129.89",
+          "137.39"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Namecard_Background_Klee_Explosive.png",
-                "caption": "Klee: Explosive Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Klee_Explosive.png",
-                "caption": "Klee: Explosive Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Namecard_Banner_Klee_Explosive.png",
-                "caption": "Klee: Explosive Banner"
-            }
+        "2-Hit DMG (%)": [
+          "62.4",
+          "67.08",
+          "71.76",
+          "78",
+          "82.68",
+          "87.36",
+          "93.6",
+          "99.84",
+          "106.08",
+          "112.32",
+          "118.81"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Kaboom%21_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Kaboom%21_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Kaboom%21_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Kaboom%21_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Kaboom%21_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Kaboom%21_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Sparks_%27n%27_Splash_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Sparks_%27n%27_Splash_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Jumpy_Dumpty_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Jumpy_Dumpty_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "89.92",
+          "96.66",
+          "103.41",
+          "112.4",
+          "119.14",
+          "125.89",
+          "134.88",
+          "143.87",
+          "152.86",
+          "161.86",
+          "171.21"
         ],
-        "detailedImages": [],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Icon_Emoji_Paimon%27s_Paintings_07_Klee_1.png",
-                "caption": "Play With Me Set 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Icon_Emoji_Paimon%27s_Paintings_07_Klee_2.png",
-                "caption": "Pleeeease Set 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Icon_Emoji_Paimon%27s_Paintings_07_Klee_3.png",
-                "caption": "Nice! Set 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Icon_Emoji_Paimon%27s_Paintings_07_Klee_4.png",
-                "caption": "Shame Set 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Icon_Emoji_Paimon%27s_Paintings_25_Klee_1.png",
-                "caption": "It's you Set 25"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Icon_Emoji_Paimon%27s_Paintings_25_Klee_2.png",
-                "caption": "Go! Set 25"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Icon_Emoji_Paimon%27s_Paintings_25_Klee_3.png",
-                "caption": "Little Mage Set 25"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Icon_Emoji_Paimon%27s_Paintings_46_Klee_1.png",
-                "caption": "Let's Go Set 46"
-            }
+        "Charged Attack DMG (%)": [
+          "157.36",
+          "169.16",
+          "180.96",
+          "196.7",
+          "208.5",
+          "220.3",
+          "236.04",
+          "251.78",
+          "267.51",
+          "283.25",
+          "299.61"
+        ],
+        "Charged Attack Stamina Cost": ["50"],
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.17",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Jumpy_Dumpty.png",
+      "talentName": "Jumpy Dumpty",
+      "talentType": "Elemental Skill",
+      "description": "Jumpy Dumpty is tons of boom-bang-fun!\nWhen thrown, Jumpy Dumpty bounces thrice, igniting and dealing AoE Pyro DMG with every bounce.\n\nOn the third bounce, the bomb splits into many mines.\nThe mines will explode upon contact with opponents, or after a short period of time, dealing AoE Pyro DMG.\n\nStarts with 2 charges.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Jumpy_Dumpty_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Jumpy Dumpty DMG (%)": [
+          "95.20",
+          "102.34",
+          "109.48",
+          "119.00",
+          "126.14",
+          "133.28",
+          "142.80",
+          "152.32",
+          "161.84",
+          "171.36",
+          "180.88",
+          "190.40",
+          "202.30",
+          "214.20"
+        ],
+        "Mine DMG (%)": [
+          "32.80",
+          "35.26",
+          "37.72",
+          "41.00",
+          "43.46",
+          "45.92",
+          "49.20",
+          "52.48",
+          "55.76",
+          "59.04",
+          "62.32",
+          "65.60",
+          "69.70",
+          "73.80"
+        ],
+        "Mine Duration": ["15s"],
+        "CD": ["20s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Sparks_%27n%27_Splash.png",
+      "talentName": "Sparks 'n' Splash",
+      "talentType": "Elemental Burst",
+      "description": "Klee's Blazing Delight! For the duration of this ability, continuously summons Sparks 'n' Splash to attack nearby opponents, dealing AoE Pyro DMG.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Sparks_%27n%27_Splash_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Sparks 'n' Splash DMG (%)": [
+          "42.64",
+          "45.84",
+          "49.04",
+          "53.30",
+          "56.50",
+          "59.70",
+          "63.96",
+          "68.22",
+          "72.49",
+          "76.75",
+          "81.02",
+          "85.28",
+          "90.61",
+          "95.94"
+        ],
+        "Duration": ["10s"],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Talent_Pounding_Surprise.png",
+      "talentName": "Pounding Surprise",
+      "talentType": "1st Ascension Passive",
+      "description": "When Jumpy Dumpty and Normal Attacks deal DMG, Klee has a 50% chance to obtain an Explosive Spark. This Explosive Spark is consumed by the next Charged Attack, which costs no Stamina and deals 50% increased DMG.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Talent_Sparkling_Burst.png",
+      "talentName": "Sparkling Burst",
+      "talentType": "4th Ascension Passive",
+      "description": "When Klee's Charged Attack results in a CRIT Hit, all party members gain 2 Elemental Energy.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Sparkborne_Magic.png",
+      "talentName": "Sparkborne Magic",
+      "talentType": "Witch's Eve Rite Passive",
+      "description": "After completing Witch's Homework: Of Leaves That Spark, Klee will become a Hexerei character. When the party includes at least 2 Hexerei characters, you will gain the Hexerei: Secret Rite effect, which enhances Hexerei characters.\n\nHexerei: Secret Rite\nWhen Klee deals DMG with Normal Attacks, Elemental Skills, or Elemental Bursts, she gains 1 Boom Badge, lasting 20s. Each type of attack can grant at most 1 Boom Badge this way, and each badge has its own independent timer. While Klee has 1/2/3 Boom Badges, her special Charged Attack Boom-Boom Strike deals 115%/130%/150% of its original DMG.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Talent_All_Of_My_Treasures%21.png",
+      "talentName": "All Of My Treasures!",
+      "talentType": "Utility Passive",
+      "description": "Displays the location of nearby resources unique to Mondstadt on the mini-map.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Constellation_Chained_Reactions.png",
+      "name": "Chained Reactions",
+      "level": 1,
+      "description": "Description\nHexerei Buff\nGameplay Notes\nAdvanced Properties\nAttacks and Skills have a certain chance to summon sparks that bombard opponents, dealing DMG equal to 120% of Sparks 'n' Splash's DMG."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Constellation_Explosive_Frags.png",
+      "name": "Explosive Frags",
+      "level": 2,
+      "description": "Description\nHexerei Buff\nBeing hit by Jumpy Dumpty's mines decreases opponents' DEF by 23% for 10s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Constellation_Exquisite_Compound.png",
+      "name": "Exquisite Compound",
+      "level": 3,
+      "description": "Increases the Level of Jumpy Dumpty by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Constellation_Sparkly_Explosion.png",
+      "name": "Sparkly Explosion",
+      "level": 4,
+      "description": "Description\nHexerei Buff\nPreview\nIf Klee leaves the field during the duration of Sparks 'n' Splash, her departure triggers an explosion that deals 555% of her ATK as AoE Pyro DMG."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Constellation_Nova_Burst.png",
+      "name": "Nova Burst",
+      "level": 5,
+      "description": "Increases the Level of Sparks 'n' Splash by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Constellation_Blazing_Delight.png",
+      "name": "Blazing Delight",
+      "level": 6,
+      "description": "Description\nHexerei Buff\nWhile under the effects of Sparks 'n' Splash, Klee will regenerate 3 Energy for all members of the party (excluding Klee) every 3s.\nWhen Sparks 'n' Splash is used, all party members will gain a 10% Pyro DMG Bonus for 25s."
+    }
+  ],
+  "imageUrls": {},
+  "version": "1.0",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Idle_Klee_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Idle_Klee_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Idle_Klee_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Idle_Klee_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Talent_Menu_Klee.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Talent_Menu_Klee.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Weapon_Menu_Klee.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Weapon_Menu_Klee.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Party_Setup_Klee.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Party_Setup_Klee.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Namecard_Background_Klee_Explosive.png",
+        "caption": "Klee: Explosive Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Klee_Explosive.png",
+        "caption": "Klee: Explosive Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Namecard_Banner_Klee_Explosive.png",
+        "caption": "Klee: Explosive Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Kaboom%21_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Kaboom%21_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Kaboom%21_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Kaboom%21_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Kaboom%21_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Kaboom%21_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Sparks_%27n%27_Splash_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Sparks_%27n%27_Splash_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Jumpy_Dumpty_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Jumpy_Dumpty_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Icon_Emoji_Paimon%27s_Paintings_07_Klee_1.png",
+        "caption": "Play With Me Set 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Icon_Emoji_Paimon%27s_Paintings_07_Klee_2.png",
+        "caption": "Pleeeease Set 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Icon_Emoji_Paimon%27s_Paintings_07_Klee_3.png",
+        "caption": "Nice! Set 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Icon_Emoji_Paimon%27s_Paintings_07_Klee_4.png",
+        "caption": "Shame Set 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Icon_Emoji_Paimon%27s_Paintings_25_Klee_1.png",
+        "caption": "It's you Set 25"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Icon_Emoji_Paimon%27s_Paintings_25_Klee_2.png",
+        "caption": "Go! Set 25"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Icon_Emoji_Paimon%27s_Paintings_25_Klee_3.png",
+        "caption": "Little Mage Set 25"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Icon_Emoji_Paimon%27s_Paintings_46_Klee_1.png",
+        "caption": "Let's Go Set 46"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Crimson Witch of Flames",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Lavawalker",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Vaporize DPS",
+      "sets": [
+        {
+          "name": "Crimson Witch of Flames",
+          "pieces": 2
+        },
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 2
+        }
+      ]
+    }
+  ]
 }

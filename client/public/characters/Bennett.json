@@ -475,5 +475,34 @@
     ],
     "detailedImages": [],
     "stickers": []
-  }
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Healer",
+      "sets": [
+        {
+          "name": "Maiden Beloved",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "DPS",
+      "sets": [
+        {
+          "name": "Crimson Witch of Flames",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }
