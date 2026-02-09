@@ -8,12 +8,12 @@ import {
   getDifficultyConfig,
   getRandomStickersForGame,
   preloadStickers,
-} from '../services/stickerService';
+} from '../services';
 import {
   useMemoryGameDifficulty,
   useMemoryGameStatus,
   useMemoryGameStore,
-} from '../store/useMemoryGameStore';
+} from '../stores';
 import { GameBoard } from './game-board';
 import { GameHeader } from './game-header';
 import { GameOverModal } from './game-over-modal';

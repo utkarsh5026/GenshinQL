@@ -4,10 +4,7 @@ import { memo, useCallback, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import type { GameMode } from '@/types';
 
-import {
-  useMemoryGameMode,
-  useMemoryGameStore,
-} from '../store/useMemoryGameStore';
+import { useMemoryGameMode, useMemoryGameStore } from '../stores';
 import { DifficultySelector } from './difficulty-selector';
 import { GameModeSelector } from './game-mode-selector';
 import styles from './MemoryGame.module.css';

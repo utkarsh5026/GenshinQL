@@ -17,7 +17,7 @@ import {
   useMemoryGameScoreEvents,
   useMemoryGameStore,
   useMemoryGameTiles,
-} from '../store/useMemoryGameStore';
+} from '../stores';
 import { ComboIndicator } from './combo-indicator';
 import { MatchParticles } from './match-particles';
 import { MemoryTile } from './memory-tile';

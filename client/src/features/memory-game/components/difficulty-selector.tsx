@@ -4,10 +4,7 @@ import { memo } from 'react';
 import { cn } from '@/lib/utils';
 import type { GameDifficulty } from '@/types';
 
-import {
-  useMemoryGameDifficulty,
-  useMemoryGameStore,
-} from '../store/useMemoryGameStore';
+import { useMemoryGameDifficulty, useMemoryGameStore } from '../stores';
 
 interface DifficultyConfig {
   value: GameDifficulty;

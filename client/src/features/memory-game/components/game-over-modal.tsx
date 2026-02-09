@@ -9,7 +9,7 @@ import {
   useMemoryGameMode,
   useMemoryGameStats,
   useMemoryGameStatus,
-} from '../store/useMemoryGameStore';
+} from '../stores';
 import styles from './MemoryGame.module.css';
 
 type ColorScheme =

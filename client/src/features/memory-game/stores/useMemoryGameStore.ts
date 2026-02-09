@@ -17,7 +17,7 @@ import {
   getRandomStickersForGame,
   PEEK_CONFIG,
   TIME_ATTACK_LIMITS,
-} from '../services/stickerService';
+} from '../services';
 
 interface MemoryGameState {
   tiles: MemoryTile[];
