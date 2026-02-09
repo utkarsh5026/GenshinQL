@@ -5,9 +5,10 @@ import Confetti from 'react-confetti';
 import { Card, CardContent } from '@/components/ui/card';
 import SearchBar from '@/components/utils/SearchBar';
 import { cn } from '@/lib/utils';
-import { useCharactersStore, useGenshinGuesserStore } from '@/stores';
+import { useCharactersStore } from '@/stores';
 import type { Character } from '@/types';
 
+import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
 import GuessTable from './GuessTable';
 
 interface GuessSearchTableProps {

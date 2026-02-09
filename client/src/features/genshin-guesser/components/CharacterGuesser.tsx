@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useRef } from 'react';
 
-import { useCharactersStore, useGenshinGuesserStore } from '@/stores';
+import { useCharactersStore } from '@/stores';
 import { Character } from '@/types';
 
+import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
 import GameOverDisplay from './GameOverDisplay';
 import GuessSearchTable from './GuessSearchTable';
 

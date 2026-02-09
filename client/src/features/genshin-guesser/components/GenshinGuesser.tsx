@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useCharactersStore } from '@/stores';
 
-import CharacterGuesser from '../characters/CharacterGuesser';
+import CharacterGuesser from './CharacterGuesser';
 
 const GenshinGuesser: React.FC = () => {
   const { characters } = useCharactersStore();

@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import AnimatedCover from '@/components/utils/AnimatedCover';
 import { cn } from '@/lib/utils';
-import { useGenshinGuesserStore } from '@/stores';
 import { Character } from '@/types';
 
+import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
 import GameStats from './GameStats';
 
 const MAX_GUESSES = 5;
