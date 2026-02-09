@@ -25,6 +25,7 @@
     "check-characters": "npx tsx scripts/scrape/characters.ts --check",
     "check-gallery": "npx tsx scripts/scrape/gallery.ts --check",
     "consolidate": "npx tsx scripts/consolidate.ts",
+    "add-idle-animations": "npx tsx scripts/addIdleAnimations.ts",
     "generate-primitives": "npx tsx scripts/scrape/primitives.ts",
     "r2:status": "npx tsx scripts/r2/index.ts status",
     "r2:download": "npx tsx scripts/r2/index.ts download",
@@ -32,7 +33,8 @@
     "r2:migrate": "npx tsx scripts/r2/index.ts migrate",
     "r2:verify": "npx tsx scripts/r2/index.ts verify",
     "r2:sync": "npx tsx scripts/r2/index.ts sync",
-    "r2:sync-r2": "npx tsx scripts/r2/index.ts sync-r2"
+    "r2:sync-r2": "npx tsx scripts/r2/index.ts sync-r2",
+    "feature": "npx tsx scripts/create-feature.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.978.0",
@@ -43,6 +45,7 @@
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-hover-card": "^1.1.15",
     "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slider": "^1.3.6",
     "@radix-ui/react-slot": "^1.2.4",
@@ -60,6 +63,7 @@
     "react-confetti": "^6.4.0",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.13.0",
+    "react-use": "^17.6.0",
     "tailwind-merge": "^3.4.0",
     "tailwind-scrollbar-hide": "^4.0.0",
     "tailwindcss-animate": "^1.0.7",
