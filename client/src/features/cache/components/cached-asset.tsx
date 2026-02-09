@@ -1,10 +1,9 @@
 import React, { useCallback, useRef, useState } from 'react';
 
 import { ImageSkeleton } from '@/components/utils/ImageSkeleton';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { cn } from '@/lib/utils';
 
-import { useCachedAsset, useLazyCachedAsset } from '../hooks/useCachedAsset';
+import { useCachedAssetLoader } from '../hooks/useCachedAssetLoader';
 
 interface CachedImageProps extends Omit<
   React.ImgHTMLAttributes<HTMLImageElement>,
@@ -41,16 +40,15 @@ export const CachedImage: React.FC<CachedImageProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
-  const isIntersecting = useIntersectionObserver(containerRef, {
-    rootMargin,
-    enabled: lazy,
-  });
 
-  const lazyAsset = useLazyCachedAsset(src, lazy ? isIntersecting : true);
-  const eagerCachedSrc = useCachedAsset(lazy ? null : src);
-
-  const cachedSrc = lazy ? lazyAsset.url : eagerCachedSrc;
-  const isFetchingUrl = lazy ? lazyAsset.isLoading : false;
+  const { url: cachedSrc, isLoading: isFetchingUrl } = useCachedAssetLoader(
+    src,
+    {
+      lazy,
+      rootMargin,
+      elementRef: containerRef,
+    }
+  );
 
   const handleImageLoad = useCallback(() => {
     setIsImageLoaded(true);
@@ -130,16 +128,12 @@ export const CachedVideo: React.FC<CachedVideoProps> = ({
   ...props
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const isIntersecting = useIntersectionObserver(videoRef, {
+
+  const { url: cachedSrc, isLoading } = useCachedAssetLoader(src, {
+    lazy,
     rootMargin,
-    enabled: lazy,
+    elementRef: videoRef,
   });
-
-  const lazyAsset = useLazyCachedAsset(src, lazy ? isIntersecting : true);
-  const eagerCachedSrc = useCachedAsset(lazy ? null : src);
-
-  const cachedSrc = lazy ? lazyAsset.url : eagerCachedSrc;
-  const isLoading = lazy ? lazyAsset.isLoading : false;
 
   if (lazy && showSkeleton && isLoading) {
     return (
