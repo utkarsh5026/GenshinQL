@@ -10,8 +10,6 @@ import {
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Avatar, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
 import {
   Command,
   CommandEmpty,
@@ -30,18 +28,15 @@ import type {
   SearchResult,
   WeaponResult,
 } from '../types';
+import {
+  CharacterSearchResult,
+  ElementBadge,
+  NavigationSearchResult,
+  SearchResultAvatar,
+  SectionHeading,
+  WeaponSearchResult,
+} from './commons';
 
-const elementColors: Record<string, string> = {
-  anemo: 'bg-anemo-500/20 text-anemo-400 border-anemo-500/30',
-  pyro: 'bg-pyro-500/20 text-pyro-400 border-pyro-500/30',
-  hydro: 'bg-hydro-500/20 text-hydro-400 border-hydro-500/30',
-  electro: 'bg-electro-500/20 text-electro-400 border-electro-500/30',
-  cryo: 'bg-cryo-500/20 text-cryo-400 border-cryo-500/30',
-  geo: 'bg-geo-500/20 text-geo-400 border-geo-500/30',
-  dendro: 'bg-dendro-500/20 text-dendro-400 border-dendro-500/30',
-};
-
-// Map icon names to components
 const iconComponents: Record<string, React.ElementType> = {
   Calendar,
   Users,
@@ -131,23 +126,20 @@ const GlobalSearchContent: React.FC<GlobalSearchContentProps> = ({
                       style={{ color: recent.iconColor }}
                     />
                   ) : (
-                    <Avatar className="w-8 h-8">
-                      <AvatarImage src={recent.iconUrl} alt={recent.name} />
-                    </Avatar>
+                    <SearchResultAvatar
+                      src={recent.iconUrl || ''}
+                      alt={recent.name}
+                    />
                   )}
                   <div className="flex flex-col">
                     <span className="font-medium">
                       {recent.label || recent.name}
                     </span>
-                    {recent.type === 'character' && (
+                    {recent.type === 'character' && recent.element && (
                       <span className="text-xs text-muted-foreground">
                         {recent.rarity}★ •{' '}
-                        <span
-                          className={`${elementColors[recent.element?.toLowerCase() || ''] || ''} px-1 rounded`}
-                        >
-                          {recent.element}
-                        </span>{' '}
-                        • {recent.weaponType}
+                        <ElementBadge element={recent.element} /> •{' '}
+                        {recent.weaponType}
                       </span>
                     )}
                     {recent.type === 'weapon' && (
@@ -165,27 +157,19 @@ const GlobalSearchContent: React.FC<GlobalSearchContentProps> = ({
         {results.navigation.length > 0 && (
           <CommandGroup
             heading={
-              <span className="flex items-center gap-2">
-                <span>Quick Navigation</span>
-                <Badge variant="outline" className="text-xs">
-                  {results.navigation.length}
-                </Badge>
-              </span>
+              <SectionHeading
+                title="Quick Navigation"
+                count={results.navigation.length}
+              />
             }
           >
             {results.navigation.slice(0, 6).map((item: NavigationItem) => (
-              <CommandItem
+              <NavigationSearchResult
                 key={item.route}
-                value={item.label}
-                onSelect={() => handleSelect(item)}
+                item={item}
+                onSelect={handleSelect}
                 className={itemClassName}
-              >
-                <item.icon
-                  className="h-5 w-5"
-                  style={{ color: item.iconColor }}
-                />
-                <span className="font-medium">{item.label}</span>
-              </CommandItem>
+              />
             ))}
           </CommandGroup>
         )}
@@ -193,39 +177,21 @@ const GlobalSearchContent: React.FC<GlobalSearchContentProps> = ({
         {results.characters.length > 0 && (
           <CommandGroup
             heading={
-              <span className="flex items-center gap-2">
-                <span>Characters</span>
-                <Badge variant="outline" className="text-xs">
-                  {results.characters.length}
-                </Badge>
-              </span>
+              <SectionHeading
+                title="Characters"
+                count={results.characters.length}
+              />
             }
           >
             {results.characters
               .slice(0, 6)
               .map((character: CharacterResult) => (
-                <CommandItem
+                <CharacterSearchResult
                   key={character.name}
-                  value={character.name}
-                  onSelect={() => handleSelect(character)}
+                  character={character}
+                  onSelect={handleSelect}
                   className={itemClassName}
-                >
-                  <Avatar className="w-8 h-8">
-                    <AvatarImage src={character.iconUrl} alt={character.name} />
-                  </Avatar>
-                  <div className="flex flex-col">
-                    <span className="font-medium">{character.name}</span>
-                    <span className="text-xs text-muted-foreground">
-                      {character.rarity}★ •{' '}
-                      <span
-                        className={`${elementColors[character.element.toLowerCase()] || ''} px-1 rounded`}
-                      >
-                        {character.element}
-                      </span>{' '}
-                      • {character.weaponType}
-                    </span>
-                  </div>
-                </CommandItem>
+                />
               ))}
           </CommandGroup>
         )}
@@ -233,31 +199,16 @@ const GlobalSearchContent: React.FC<GlobalSearchContentProps> = ({
         {results.weapons.length > 0 && (
           <CommandGroup
             heading={
-              <span className="flex items-center gap-2">
-                <span>Weapons</span>
-                <Badge variant="outline" className="text-xs">
-                  {results.weapons.length}
-                </Badge>
-              </span>
+              <SectionHeading title="Weapons" count={results.weapons.length} />
             }
           >
             {results.weapons.slice(0, 6).map((weapon: WeaponResult) => (
-              <CommandItem
+              <WeaponSearchResult
                 key={weapon.name}
-                value={weapon.name}
-                onSelect={() => handleSelect(weapon)}
+                weapon={weapon}
+                onSelect={handleSelect}
                 className={itemClassName}
-              >
-                <Avatar className="w-8 h-8">
-                  <AvatarImage src={weapon.iconUrl} alt={weapon.name} />
-                </Avatar>
-                <div className="flex flex-col">
-                  <span className="font-medium">{weapon.name}</span>
-                  <span className="text-xs text-muted-foreground">
-                    {weapon.rarity}★ • {weapon.weaponType}
-                  </span>
-                </div>
-              </CommandItem>
+              />
             ))}
           </CommandGroup>
         )}
