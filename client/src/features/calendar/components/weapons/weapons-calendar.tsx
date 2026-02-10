@@ -1,10 +1,10 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useState } from 'react';
 
 import { ElementDisplay } from '@/components/character/utils/DisplayComponents';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { parseSubstat } from '@/features/weapons/utils/substat-utils';
 import { useRegions, useWeaponTypes } from '@/stores/usePrimitivesStore';
 
+import { useWeaponFilter } from '../../hooks';
 import {
   useWeaponMaterialError,
   useWeaponMaterialLoading,
@@ -21,115 +21,19 @@ const WeaponCalendar: React.FC = () => {
   const loading = useWeaponMaterialLoading();
   const error = useWeaponMaterialError();
 
-  const [selectedWeaponTypes, setSelectedWeaponTypes] = useState<string[]>([]);
-  const [selectedRarities, setSelectedRarities] = useState<number[]>([]);
-  const [selectedSubstats, setSelectedSubstats] = useState<string[]>([]);
-
-  const regions = useRegions();
+  const nations = useRegions();
   const weaponTypes = useWeaponTypes();
 
-  const nations = useMemo(() => {
-    if (weaponMaterialSchedule === null || regions.length === 0) return [];
-    return regions.filter((region) =>
-      weaponMaterialSchedule.some((s) => s.nation === region.name)
-    );
-  }, [weaponMaterialSchedule, regions]);
-
-  // Compute unique filter options from schedule data
-  const { uniqueRarities, uniqueSubstats } = useMemo(() => {
-    if (!weaponMaterialSchedule)
-      return { uniqueRarities: [], uniqueSubstats: [] };
-
-    const raritySet = new Set<number>();
-    const substatSet = new Set<string>();
-
-    weaponMaterialSchedule.forEach((schedule) => {
-      schedule.materials.forEach((material) => {
-        material.weapons.forEach((weapon) => {
-          raritySet.add(weapon.rarity);
-          const parsed = parseSubstat(weapon.subStat);
-          if (parsed.type !== 'None' && parsed.type !== 'Physical DMG Bonus') {
-            substatSet.add(parsed.type);
-          }
-        });
-      });
-    });
-
-    return {
-      uniqueRarities: Array.from(raritySet).sort((a, b) => b - a), // 5→1
-      uniqueSubstats: Array.from(substatSet).sort(),
-    };
-  }, [weaponMaterialSchedule]);
-
-  // Toggle functions
-  const toggleWeaponType = useCallback((type: string) => {
-    setSelectedWeaponTypes((prev) =>
-      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
-    );
-  }, []);
-
-  const toggleRarity = useCallback((rarity: number) => {
-    setSelectedRarities((prev) =>
-      prev.includes(rarity)
-        ? prev.filter((r) => r !== rarity)
-        : [...prev, rarity]
-    );
-  }, []);
-
-  const toggleSubstat = useCallback((substat: string) => {
-    setSelectedSubstats((prev) =>
-      prev.includes(substat)
-        ? prev.filter((s) => s !== substat)
-        : [...prev, substat]
-    );
-  }, []);
-
-  const clearAllFilters = useCallback(() => {
-    setSelectedWeaponTypes([]);
-    setSelectedRarities([]);
-    setSelectedSubstats([]);
-  }, []);
-
-  // Filter schedule data
-  const filteredSchedule = useMemo(() => {
-    if (!weaponMaterialSchedule) return null;
-
-    const hasActiveFilters =
-      selectedWeaponTypes.length > 0 ||
-      selectedRarities.length > 0 ||
-      selectedSubstats.length > 0;
-
-    if (!hasActiveFilters) return weaponMaterialSchedule;
-
-    return weaponMaterialSchedule.map((schedule) => ({
-      ...schedule,
-      materials: schedule.materials.map((material) => ({
-        ...material,
-        weapons: material.weapons.filter((weapon) => {
-          const matchesType =
-            selectedWeaponTypes.length === 0 ||
-            selectedWeaponTypes.includes(weapon.weaponType);
-
-          const matchesRarity =
-            selectedRarities.length === 0 ||
-            selectedRarities.includes(weapon.rarity);
-
-          let matchesSubstat = true;
-          if (selectedSubstats.length > 0) {
-            const parsed = parseSubstat(weapon.subStat);
-            matchesSubstat = selectedSubstats.includes(parsed.type);
-          }
-
-          return matchesType && matchesRarity && matchesSubstat;
-        }),
-      })),
-    }));
-  }, [
-    weaponMaterialSchedule,
-    selectedWeaponTypes,
-    selectedRarities,
-    selectedSubstats,
-  ]);
+  const {
+    filters,
+    filteredSchedule,
+    uniqueRarities,
+    uniqueSubstats,
+    toggleWeaponType,
+    toggleRarity,
+    toggleSubstat,
+    clearAllFilters,
+  } = useWeaponFilter(weaponMaterialSchedule || []);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -141,9 +45,9 @@ const WeaponCalendar: React.FC = () => {
     <div>
       {/* Filters */}
       <WeaponCalendarFilters
-        selectedWeaponTypes={selectedWeaponTypes}
-        selectedRarities={selectedRarities}
-        selectedSubstats={selectedSubstats}
+        selectedWeaponTypes={filters.weaponTypes}
+        selectedRarities={filters.rarities}
+        selectedSubstats={filters.substats}
         weaponTypes={weaponTypes}
         uniqueRarities={uniqueRarities}
         uniqueSubstats={uniqueSubstats}
