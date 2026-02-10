@@ -1,9 +1,18 @@
 export {
+  useWeaponMap,
+  useWeapons,
+  useWeaponsError,
+  useWeaponsLoading,
+  useWeaponsStore,
+  useWeaponTypeMap,
+} from '../features/weapons/stores/useWeaponsStore';
+export {
   useCharacterMap,
   useCharacters,
   useCharactersError,
   useCharactersLoading,
   useCharactersStore,
+  useCharacterTalents,
 } from './useCharactersStore';
 export {
   useGenshinGuesserCurrentChar,
@@ -13,30 +22,6 @@ export {
   useGenshinGuesserStore,
   useGenshinGuesserStreak,
 } from './useGenshinGuesserStore';
-export type { TalentBook } from './useTalentBooksStore';
-export {
-  useTalentBooksError,
-  useTalentBooksLoading,
-  useTalentBooksStore,
-  useTalentCalendar,
-  useTalentCharMap,
-} from './useTalentBooksStore';
-export type { WeaponMaterial } from './useWeaponMaterialStore';
-export {
-  useWeaponMapFromMaterials,
-  useWeaponMaterialError,
-  useWeaponMaterialLoading,
-  useWeaponMaterialSchedule,
-  useWeaponMaterialStore,
-} from './useWeaponMaterialStore';
-export {
-  useWeaponMap,
-  useWeapons,
-  useWeaponsError,
-  useWeaponsLoading,
-  useWeaponsStore,
-  useWeaponTypeMap,
-} from './useWeaponsStore';
 
 // Primitives Store
 export {
@@ -50,11 +35,4 @@ export {
 } from './usePrimitivesStore';
 
 // Re-export common types for convenience
-export type {
-  Character,
-  PrimitiveItem,
-  Primitives,
-  TalentBookCalendar,
-  Weapon,
-  WeaponMaterialSchedule,
-} from '@/types';
+export type { Character, PrimitiveItem, Primitives } from '@/types';
