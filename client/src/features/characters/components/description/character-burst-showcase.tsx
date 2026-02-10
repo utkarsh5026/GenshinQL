@@ -2,11 +2,11 @@ import { Clock, Zap } from 'lucide-react';
 import React from 'react';
 
 import { TextProcessor } from '@/components/utils';
-import { AnimatedCover } from '@/components/utils/AnimatedCover.tsx';
-import { CachedImage } from '@/components/utils/CachedImage.tsx';
-import { useCharacterTalents } from '@/stores/useCharactersStore.ts';
+import AnimatedCover from '@/components/utils/AnimatedCover';
+import { CachedImage } from '@/features/cache';
+import { useCharacterTalents } from '@/stores/useCharactersStore';
 import { CharacterDetailed, CharacterMenuItem } from '@/types';
-import { formatDescription } from '@/utils/text-sanitize.ts';
+import { formatDescription } from '@/utils/text-sanitize';
 
 /* Elemental Burst Showcase Component */
 interface ElementalBurstShowcaseProps {

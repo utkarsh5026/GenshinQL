@@ -1,101 +1,46 @@
 import React, { useMemo } from 'react';
 
-import { AbilityTag } from '@/components/character/utils/AbilityTag.tsx';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card.tsx';
-import { CachedImage } from '@/components/utils/CachedImage';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { AbilityTag } from '@/components/utils';
+import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
+import { CachedImage } from '@/features/cache';
 import { extractConstellationTags } from '@/lib/constellationTags';
-import { Talent } from '@/types';
 
-import ListSplitter from '../../utils/list-splitter.tsx';
+import type { Talent } from '../../types';
+import { getPassiveStyles, sortPassives } from '../../utils';
 
 interface CharacterPassivesProps {
   passives: Talent[];
+  characterName: string;
 }
 
 /**
  * CharacterPassives component displays a list of passive talents for a character.
- *
- * @param {CharacterPassivesProps} props - The props for the component.
- * @param {Talent[]} props.passives - An array of passive talents to be displayed.
- * @returns {JSX.Element} A React component that renders the passive talents in a card format.
  */
-const CharacterPassives: React.FC<CharacterPassivesProps> = ({ passives }) => {
-  const sortPassives = (a: Talent, b: Talent): number => {
-    const order = {
-      '1st Ascension Passive': 1,
-      '4th Ascension Passive': 2,
-      'Utility Passive': 3,
-    };
-
-    return (
-      (order[a.talentType as keyof typeof order] || 999) -
-      (order[b.talentType as keyof typeof order] || 999)
-    );
-  };
-
-  const getPassiveStyles = (talentType: string) => {
-    switch (talentType) {
-      case '1st Ascension Passive':
-        return {
-          borderClass: 'border-celestial-500/30 hover:border-celestial-400/50',
-          bgClass: 'bg-gradient-to-br from-celestial-950/20 to-transparent',
-          iconBgClass: 'bg-celestial-900/40',
-          tagClass:
-            'bg-celestial-900/50 text-celestial-200 border-celestial-700/50',
-          glowClass: 'shadow-celestial-500/10',
-        };
-      case '4th Ascension Passive':
-        return {
-          borderClass: 'border-legendary-500/30 hover:border-legendary-400/50',
-          bgClass: 'bg-gradient-to-br from-legendary-950/20 to-transparent',
-          iconBgClass: 'bg-legendary-900/40',
-          tagClass:
-            'bg-legendary-900/50 text-legendary-200 border-legendary-700/50',
-          glowClass: 'shadow-legendary-500/10',
-        };
-      case 'Utility Passive':
-        return {
-          borderClass: 'border-starlight-500/30 hover:border-starlight-400/50',
-          bgClass: 'bg-gradient-to-br from-starlight-950/20 to-transparent',
-          iconBgClass: 'bg-starlight-900/40',
-          tagClass:
-            'bg-starlight-900/50 text-starlight-200 border-starlight-700/50',
-          glowClass: 'shadow-starlight-500/10',
-        };
-      default:
-        return {
-          borderClass: 'border-midnight-500/30 hover:border-midnight-400/50',
-          bgClass: 'bg-gradient-to-br from-midnight-950/20 to-transparent',
-          iconBgClass: 'bg-midnight-900/40',
-          tagClass:
-            'bg-midnight-900/50 text-midnight-200 border-midnight-700/50',
-          glowClass: 'shadow-midnight-500/10',
-        };
-    }
-  };
+const CharacterPassives: React.FC<CharacterPassivesProps> = ({
+  passives,
+  characterName,
+}) => {
+  const passivesWithTags = useMemo(() => {
+    return passives.sort(sortPassives).map((passive) => {
+      return {
+        ...passive,
+        tags: extractConstellationTags(passive.description),
+      };
+    });
+  }, [passives]);
 
   return (
     <div className="flex flex-col gap-5">
-      {passives.sort(sortPassives).map((passive) => {
+      {passivesWithTags.map((passive) => {
         const styles = getPassiveStyles(passive.talentType);
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        const tags = useMemo(
-          () => extractConstellationTags(passive.description),
-          [passive.description]
-        );
-
         return (
           <Card
             key={passive.talentName}
             className={`
               group relative overflow-hidden border-2 transition-all duration-300
               ${styles.borderClass} ${styles.bgClass} ${styles.glowClass}
-              hover:shadow-lg hover:scale-[1.01] hover:translate-y-[-2px]
+              hover:shadow-lg hover:scale-[1.01] hover:-translate-y-0.5
             `}
           >
             {/* Decorative corner accent */}
@@ -138,9 +83,9 @@ const CharacterPassives: React.FC<CharacterPassivesProps> = ({ passives }) => {
                     {passive.talentType}
                   </span>
                   {/* Tags */}
-                  {tags.length > 0 && (
+                  {passive.tags.length > 0 && (
                     <div className="flex flex-wrap gap-1 mt-2">
-                      {tags.map((tagId) => (
+                      {passive.tags.map((tagId) => (
                         <AbilityTag key={tagId} tagId={tagId} size="xs" />
                       ))}
                     </div>
@@ -155,7 +100,10 @@ const CharacterPassives: React.FC<CharacterPassivesProps> = ({ passives }) => {
 
               {/* Description with better typography */}
               <div className="text-sm leading-relaxed text-foreground/80">
-                <ListSplitter text={passive.description} />
+                <EnhancedListSplitter
+                  text={passive.description}
+                  characterName={characterName}
+                />
               </div>
             </CardContent>
           </Card>

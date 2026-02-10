@@ -1,10 +1,11 @@
 import React, { useMemo } from 'react';
 
-import { AbilityTag } from '@/components/character/utils/AbilityTag';
-import { ListSplitter } from '@/components/utils';
-import { CachedImage } from '@/components/utils/CachedImage';
+import { AbilityTag } from '@/components/utils';
+import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
+import { CachedImage } from '@/features/cache';
 import { extractConstellationTags } from '@/lib/constellationTags';
-import { Constellation } from '@/types';
+
+import type { Constellation } from '../../types';
 
 const getElementClasses = (element?: string) => {
   const elementLower = element?.toLowerCase() ?? '';
@@ -91,11 +92,13 @@ const getConstellationStyles = (level: number) => {
 interface CharacterConstellationsProps {
   constellations: Constellation[];
   element?: string;
+  characterName: string;
 }
 
 const CharacterConstellations: React.FC<CharacterConstellationsProps> = ({
   constellations,
   element,
+  characterName,
 }) => {
   const elementClasses = getElementClasses(element);
 
@@ -106,6 +109,7 @@ const CharacterConstellations: React.FC<CharacterConstellationsProps> = ({
           key={constellation.name}
           constellation={constellation}
           elementClasses={elementClasses}
+          characterName={characterName}
         />
       ))}
     </div>
@@ -118,11 +122,13 @@ const CharacterConstellations: React.FC<CharacterConstellationsProps> = ({
 interface ConstellationItemProps {
   constellation: Constellation;
   elementClasses: ReturnType<typeof getElementClasses>;
+  characterName: string;
 }
 
 const ConstellationItem: React.FC<ConstellationItemProps> = ({
   constellation,
   elementClasses,
+  characterName,
 }) => {
   const styles = getConstellationStyles(constellation.level);
   const tags = useMemo(
@@ -183,7 +189,10 @@ const ConstellationItem: React.FC<ConstellationItemProps> = ({
 
         {/* Description */}
         <div className="text-xs leading-relaxed text-muted-foreground/80">
-          <ListSplitter text={constellation.description} />
+          <EnhancedListSplitter
+            text={constellation.description}
+            characterName={characterName}
+          />
         </div>
       </div>
     </div>

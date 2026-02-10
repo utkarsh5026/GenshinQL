@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import { Card } from '@/components/ui/card.tsx';
-import { CachedImage } from '@/components/utils/CachedImage.tsx';
-import { usePrimitives } from '@/stores/usePrimitivesStore.ts';
-import { CharacterDetailed, CharacterMenuItem } from '@/types';
-import { decideColor } from '@/utils/color.ts';
+import { Card } from '@/components/ui/card';
+import { CachedImage } from '@/features/cache';
+import { usePrimitives } from '@/stores/usePrimitivesStore';
+import { decideColor } from '@/utils/color';
 
-import CharacterRoutineDetailed from '../routine/CharacterRoutineDetailed.tsx';
-import TalentShowcase from '../talents/TalentShowcase.tsx';
-import ElementalBurstShowcase from './character-burst-showcase.tsx';
-import CharacterConstellations from './constellations.tsx';
-import CharacterPassives from './passives.tsx';
-import ProfileHeader from './profile-header.tsx';
+import { useCharacterAbilitiesStore } from '../../stores';
+import { CharacterDetailed, CharacterMenuItem } from '../../types';
+import ElementalBurstShowcase from './character-burst-showcase';
+import CharacterConstellations from './constellations';
+import CharacterPassives from './passives';
+import ProfileHeader from './profile-header';
+import CharacterRoutineDetailed from './routine/CharacterRoutineDetailed';
+import TalentShowcase from './talents/talent-showcase';
 
 interface CharacterDetailedProps {
   character: CharacterDetailed | null;
@@ -23,7 +24,8 @@ const menuItems: CharacterMenuItem[] = [
   'Constellations',
   'Passives',
   'Routine',
-];
+  'Builds',
+] as const;
 
 /**
  * Returns element-specific Tailwind classes for menu items based on character element
@@ -89,6 +91,14 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
 }) => {
   const [selectedMenuItem, setSelectedMenuItem] =
     useState<CharacterMenuItem>('Profile');
+
+  // Populate ability cache when character loads
+  useEffect(() => {
+    if (!character) return;
+
+    const { setCharacterAbilities } = useCharacterAbilitiesStore.getState();
+    setCharacterAbilities(character.name, character.talents, character.element);
+  }, [character]);
 
   if (!character)
     return (
@@ -194,6 +204,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
               <CharacterConstellations
                 constellations={character.constellations}
                 element={character.element}
+                characterName={character.name}
               />
             </CharacterCard>
           )}
@@ -207,6 +218,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                     'Elemental Burst',
                   ].includes(talent.talentType);
                 })}
+                characterName={character.name}
               />
             </CharacterCard>
           )}

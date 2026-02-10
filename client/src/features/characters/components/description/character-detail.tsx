@@ -1,64 +1,53 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
 import { ItemNavigation } from '@/components/utils';
-import { useCharacters, useFetchCharacter } from '@/stores/useCharactersStore';
+import { useCharacters } from '@/stores/useCharactersStore';
 import { useCharacterMap } from '@/stores/useCharactersStore';
-import type { CharacterDetailed as CharacterDetailedType } from '@/types';
 import { decideColor } from '@/utils/color';
 
+import {
+  useCharacterProfile,
+  useCharacterProfileError,
+  useCharacterProfileLoading,
+  useFetchCharacterProfile,
+} from '../../stores';
 import CharacterDescription from './character-description';
 
 const CharacterDetail = () => {
   const { characterName } = useParams<{ characterName: string }>();
   const characters = useCharacters();
-  const fetchCharacter = useFetchCharacter();
-  const [character, setCharacter] = useState<CharacterDetailedType | null>(
-    null
-  );
-  const [loading, setLoading] = useState(!!characterName);
-  const [error, setError] = useState(!characterName);
+  const profile = useCharacterProfile(characterName || '');
+  const loading = useCharacterProfileLoading(characterName || '');
+  const error = useCharacterProfileError(characterName || '');
+  const fetchProfile = useFetchCharacterProfile();
 
   useEffect(() => {
-    if (!characterName) {
-      return;
-    }
-
-    const loadCharacter = async () => {
-      setLoading(true);
-      setError(false);
-
-      const charData = await fetchCharacter(characterName);
-      if (charData) setCharacter(charData);
-      else setError(true);
-
-      setLoading(false);
-    };
-
-    loadCharacter();
-  }, [characterName, fetchCharacter]);
+    if (!characterName) return;
+    fetchProfile(characterName);
+  }, [characterName, fetchProfile]);
 
   if (loading) {
     return <CharacterLoadingState characterName={characterName!} />;
   }
 
-  if (error || !character) {
+  if (error || !profile) {
     return <Navigate to="/talents" replace />;
   }
 
-  const elementColor = decideColor(character.element);
+  const elementColor = decideColor(profile.element);
 
   return (
     <div className="flex flex-col h-full gap-3">
       <ItemNavigation
         items={characters}
-        currentItemName={character.name}
+        currentItemName={profile.name}
         routePrefix="/characters"
         accentColor={elementColor}
         labelSingular="character"
       />
-      <CharacterDescription character={character} />
+      <CharacterDescription character={profile} />
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import { ChevronRight } from 'lucide-react';
 import React, { useState } from 'react';
 
-import { Avatar, AvatarImage } from '@/components/ui/avatar.tsx';
+import { Avatar } from '@/components/ui/avatar';
 import { AnimatedCover } from '@/components/utils';
+import { CachedImage } from '@/features/cache/components/cached-asset';
 import { AnimationMedia } from '@/types';
 
 interface ProfileHeaderProps {
@@ -56,7 +57,13 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
           style={{ boxShadow: '0 0 20px rgba(255, 200, 100, 0.3)' }}
         >
           <Avatar className="h-20 w-20 border-2 border-midnight-900 bg-midnight-800">
-            <AvatarImage src={avatarUrl} className="object-cover" />
+            <CachedImage
+              src={avatarUrl}
+              alt={name}
+              className="object-cover rounded-full"
+              skeletonShape="circle"
+              skeletonSize="lg"
+            />
           </Avatar>
         </div>
       </div>
