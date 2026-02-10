@@ -1,4 +1,12 @@
 /* Export all stores from characters feature */
+export {
+  useArtifactLinks,
+  useArtifactLinksError,
+  useArtifactLinksLoading,
+  useArtifactLinksRaw,
+  useFetchArtifactLinks,
+  useResetArtifactLinks,
+} from './useArtifactStore';
 export type { CharacterAbilityData } from './useCharacterAbilitiesStore';
 export {
   useAbilityMap,
