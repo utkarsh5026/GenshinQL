@@ -10,3 +10,5 @@ export const DAYS = [
 ] as const;
 
 export type DayName = (typeof DAYS)[number];
+
+export { TALENT_CALENDAR_THEME, WEAPON_CALENDAR_THEME } from './theme';

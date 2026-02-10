@@ -5,7 +5,7 @@ import type {
   CalendarEntry,
   CalendarTheme,
   ScheduleEntry,
-} from '../types';
+} from '../../types';
 
 interface SundayBadgeProps {
   message: string;

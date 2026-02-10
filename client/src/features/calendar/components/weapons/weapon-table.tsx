@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { ScheduleTable } from '@/features/calendar';
+import WeaponShowCase from '@/features/weapons/components/shared/weapons-showcase';
 
 import { WEAPON_CALENDAR_THEME } from '../../constants';
 import type { WeaponMaterialSchedule } from '../../stores/useWeaponMaterialStore';
-import WeaponShowCase from '../shared/weapons-showcase';
+import { ScheduleTable } from '../shared';
 import MaterialImageList from './material-image-list';
 
 interface WeaponTableProps {

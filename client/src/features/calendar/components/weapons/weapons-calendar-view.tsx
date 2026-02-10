@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { CalendarGrid } from '@/features/calendar';
+import WeaponShowCase from '@/features/weapons/components/shared/weapons-showcase';
 
 import { WEAPON_CALENDAR_THEME } from '../../constants';
 import { useWeaponCalendar } from '../../hooks/useWeaponCalendar';
 import type { WeaponMaterialSchedule } from '../../stores/useWeaponMaterialStore';
-import WeaponShowCase from '../shared/weapons-showcase';
+import { CalendarGrid } from '../shared';
 import MaterialImageList from './material-image-list';
 
 interface WeaponCalendarViewProps {

@@ -2,7 +2,6 @@ import React, { useCallback, useMemo, useState } from 'react';
 
 import { ElementDisplay } from '@/components/character/utils/DisplayComponents';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ViewToggle } from '@/features/calendar';
 import { parseSubstat } from '@/features/weapons/utils/substat-utils';
 import { useRegions, useWeaponTypes } from '@/stores/usePrimitivesStore';
 
@@ -11,17 +10,17 @@ import {
   useWeaponMaterialLoading,
   useWeaponMaterialSchedule,
 } from '../../stores/useWeaponMaterialStore';
-import WeaponCalendarFilters from './weapon-calender-filters';
+import { ViewToggle } from '../shared';
+import WeaponCalendarFilters from './weapon-calendar-filters';
 import WeaponTable from './weapon-table';
 import WeaponCalendarView from './weapons-calendar-view';
 
-const WeaponCalender: React.FC = () => {
+const WeaponCalendar: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
   const weaponMaterialSchedule = useWeaponMaterialSchedule();
   const loading = useWeaponMaterialLoading();
   const error = useWeaponMaterialError();
 
-  // Filter state
   const [selectedWeaponTypes, setSelectedWeaponTypes] = useState<string[]>([]);
   const [selectedRarities, setSelectedRarities] = useState<number[]>([]);
   const [selectedSubstats, setSelectedSubstats] = useState<string[]>([]);
@@ -195,4 +194,4 @@ const WeaponCalender: React.FC = () => {
   );
 };
 
-export default WeaponCalender;
+export default WeaponCalendar;

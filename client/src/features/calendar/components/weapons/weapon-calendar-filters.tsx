@@ -1,9 +1,8 @@
 import React from 'react';
 
+import { ActiveFilters } from '@/features/weapons/components/filters/ActiveFilters';
+import { WeaponFilterBar } from '@/features/weapons/components/filters/WeaponFilterBar';
 import type { PrimitiveItem } from '@/types';
-
-import { ActiveFilters } from '../filters/ActiveFilters';
-import { WeaponFilterBar } from '../filters/WeaponFilterBar';
 
 interface WeaponCalendarFiltersProps {
   selectedWeaponTypes: string[];

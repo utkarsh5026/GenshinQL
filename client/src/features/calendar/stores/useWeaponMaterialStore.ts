@@ -1,11 +1,10 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
+import { useWeaponsStore } from '@/features/weapons/stores/useWeaponsStore';
+import { WeaponMaterial, WeaponSummary } from '@/features/weapons/types';
 import { fetchWeaponCalendarOnly } from '@/services/dataService';
 import type { ImageUrl } from '@/types';
-
-import { WeaponMaterial, WeaponSummary } from '../types';
-import { useWeaponsStore } from './useWeaponsStore';
 
 export type WeaponMaterialSchedule = {
   nation: string;

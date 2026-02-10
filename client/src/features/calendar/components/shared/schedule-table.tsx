@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-import { DAYS } from '../constants';
-import type { ScheduleEntry, ScheduleTableProps } from '../types';
+import { DAYS } from '../../constants';
+import type { ScheduleEntry, ScheduleTableProps } from '../../types';
 
 const getTodayDayOfWeek = (): string => {
   const date = new Date();

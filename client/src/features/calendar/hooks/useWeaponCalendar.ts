@@ -1,6 +1,5 @@
-import { useCalendar } from '@/features/calendar';
-
 import type { WeaponMaterialSchedule } from '../stores/useWeaponMaterialStore';
+import { useCalendar } from './useCalendar';
 
 export const useWeaponCalendar = (
   nDays: number,

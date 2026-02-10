@@ -1,34 +1,22 @@
-import { Aperture, CalendarDays } from 'lucide-react';
 import React, { useEffect, useMemo, useState } from 'react';
 
-import { Button } from '@/components/ui/button.tsx';
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from '@/components/ui/tabs.tsx';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CachedImage } from '@/features/cache';
-import TalentCalendarView from '@/features/talent-calender/components/talent-calendar-view';
-import TalentTable from '@/features/talent-calender/components/talents-table';
 import { usePrimitivesStore } from '@/stores';
 
-import { useTalentBooksStore } from '../stores';
+import { useTalentBooksStore } from '../../stores';
+import { ViewToggle } from '../shared';
+import TalentCalendarView from './talent-calendar-view';
+import TalentTable from './talents-table';
 
-/**
- * TalentCalender component displays a calendar or table view of talent books.
- *
- * @returns {JSX.Element | null} The rendered component.
- */
 const TalentCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
   const { calendar, fetchBooks } = useTalentBooksStore();
-  const { primitives, fetchPrimitives } = usePrimitivesStore();
+  const { primitives } = usePrimitivesStore();
 
   useEffect(() => {
     fetchBooks();
-    fetchPrimitives();
-  }, [fetchBooks, fetchPrimitives]);
+  }, [fetchBooks]);
 
   const locations = useMemo(() => {
     const books = calendar || [];
@@ -81,29 +69,10 @@ const TalentCalender: React.FC = () => {
             const books = talentBooks.find((book) => book.location === loc);
             return (
               <TabsContent key={loc} value={loc}>
-                <div className="w-full flex justify-end my-3 md:my-5">
-                  <Button
-                    className="bg-success-200 text-success-900 border-2 text-xs md:text-sm h-9 md:h-10"
-                    onClick={() => {
-                      setIsCalendar(!isCalendar);
-                    }}
-                  >
-                    <div className={'flex gap-1.5 md:gap-2'}>
-                      {isCalendar ? (
-                        <CalendarDays size={16} className="md:w-5 md:h-5" />
-                      ) : (
-                        <Aperture size={16} className="md:w-5 md:h-5" />
-                      )}
-
-                      <div className="hidden sm:block">
-                        {isCalendar ? 'Switch to Table' : 'Switch to Calendar'}
-                      </div>
-                      <div className="sm:hidden">
-                        {isCalendar ? 'Table' : 'Calendar'}
-                      </div>
-                    </div>
-                  </Button>
-                </div>
+                <ViewToggle
+                  isCalendar={isCalendar}
+                  onToggle={() => setIsCalendar(!isCalendar)}
+                />
                 {books &&
                   (isCalendar ? (
                     <TalentCalendarView nDays={7} talent={books} />
