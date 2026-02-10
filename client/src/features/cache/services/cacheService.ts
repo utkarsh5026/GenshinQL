@@ -107,6 +107,29 @@ export async function setCached<T>(key: string, data: T): Promise<void> {
 }
 
 /**
+ * Options for simple URL-based fetch mode.
+ */
+export interface FetchCacheOptions<T> {
+  /** Custom cache key. If not provided, URL will be sanitized and used */
+  cacheKey?: string;
+
+  /** Cache version for busting. Appended as `-v{version}` */
+  version?: number | string;
+
+  /** Callback when background revalidation brings new data */
+  onUpdate?: (newData: T) => void;
+
+  /** Transform fetched data before caching */
+  transform?: (data: unknown) => T;
+
+  /** Custom fetch options (headers, method, etc.) */
+  fetchOptions?: RequestInit;
+
+  /** Base URL for relative paths. Default: '/' */
+  baseUrl?: string;
+}
+
+/**
  * Result from fetchWithCache including data and optional update callback.
  */
 export interface CacheResult<T> {
@@ -117,21 +140,76 @@ export interface CacheResult<T> {
 }
 
 /**
+ * Sanitizes a URL to a valid cache key format.
+ * @example
+ * '/artifacts-links.json' → 'artifacts-links'
+ * 'https://api.example.com/data' → 'api.example.com-data'
+ */
+function sanitizeUrlToCacheKey(url: string): string {
+  return url
+    .replace(/^https?:\/\//, '')
+    .replace(/^\/+/, '')
+    .replace(/\//g, '-')
+    .replace(/\.json$/, '');
+}
+
+/**
+ * Generates a cache key from URL and options.
+ * @example
+ * generateCacheKey('/artifacts-links.json', { version: 1 })
+ * → 'artifacts-links-v1'
+ */
+function generateCacheKey(
+  url: string,
+  options: Pick<FetchCacheOptions<unknown>, 'cacheKey' | 'version'>
+): string {
+  const baseKey = options.cacheKey ?? sanitizeUrlToCacheKey(url);
+  const version = options.version ? `-v${options.version}` : '';
+  return `${baseKey}${version}`;
+}
+
+/**
  * Fetches data with stale-while-revalidate strategy.
+ * Automatically handles fetch, response checking, and JSON parsing.
  *
  * 1. Returns cached data immediately if available
  * 2. Fires background fetch to revalidate
  * 3. Updates cache if data has changed
  *
- * @param key - Cache key
- * @param fetchFn - Function that fetches fresh data
- * @param onUpdate - Optional callback when background fetch brings new data
+ * @example
+ * ```ts
+ * fetchWithCache('/artifacts.json', { version: 1, onUpdate: updateStore })
+ * ```
  */
 export async function fetchWithCache<T>(
-  key: string,
-  fetchFn: () => Promise<T>,
-  onUpdate?: (newData: T) => void
+  url: string,
+  options: FetchCacheOptions<T> = {}
 ): Promise<CacheResult<T>> {
+  const {
+    cacheKey,
+    version,
+    onUpdate,
+    transform,
+    fetchOptions = {},
+    baseUrl = '/',
+  } = options;
+
+  const key = generateCacheKey(url, { cacheKey, version });
+  const fullUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+
+  const fetchFn = async (): Promise<T> => {
+    const response = await fetch(fullUrl, fetchOptions);
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch ${url}: ${response.status} ${response.statusText}`
+      );
+    }
+
+    const rawData = await response.json();
+    return transform ? transform(rawData) : (rawData as T);
+  };
+
   const cached = await getCached<T>(key);
 
   const revalidate = async (): Promise<boolean> => {

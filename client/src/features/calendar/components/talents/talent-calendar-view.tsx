@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CharacterGrid from '@/components/character/utils/CharacterGrid';
+import CharacterGrid from '@/features/characters/components/utils/characters-grid';
 
 import { TALENT_CALENDAR_THEME } from '../../constants';
 import { useTalentCalendar } from '../../hooks';
@@ -24,7 +24,9 @@ const TalentCalendarView: React.FC<TalentCalendarViewProps> = ({
       entries={calendar}
       columns={{ first: 'Date', middle: 'Talent Books', right: 'Characters' }}
       renderMiddle={(data) => <TalentBooks books={data.books} />}
-      renderRight={(data) => <CharacterGrid characters={data.characters} />}
+      renderRight={(data) => (
+        <CharacterGrid characterNames={data.characters.map((c) => c.name)} />
+      )}
       sundayMiddleMessage="All books can be farmed"
       sundayRightMessage="All characters can be farmed"
       theme={TALENT_CALENDAR_THEME}

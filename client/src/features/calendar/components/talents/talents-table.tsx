@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CharacterGrid from '@/components/character/utils/CharacterGrid';
+import CharacterGrid from '@/features/characters/components/utils/characters-grid';
 
 import { TALENT_CALENDAR_THEME } from '../../constants';
 import type { TalentBookCalendar } from '../../types';
@@ -18,7 +18,9 @@ const TalentTable: React.FC<TalentTableProps> = ({ talent }) => {
       columns={{ first: 'Day', middle: 'Talent Books', right: 'Characters' }}
       renderDay={(d) => d.day}
       renderMiddle={(d) => <TalentBooks books={d.books} />}
-      renderRight={(d) => <CharacterGrid characters={d.characters} />}
+      renderRight={(d) => (
+        <CharacterGrid characterNames={d.characters.map((c) => c.name)} />
+      )}
       theme={TALENT_CALENDAR_THEME}
     />
   );
