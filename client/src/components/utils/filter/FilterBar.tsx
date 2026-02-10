@@ -11,15 +11,11 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { Separator } from '@/components/ui/separator';
-import { CachedImage } from '@/components/utils/CachedImage';
+import { CachedImage } from '@/features/cache';
+import { useElements, useRegions } from '@/stores';
 
 import styles from './FilterBar.module.css';
 import FilterChip from './FilterChip';
-
-interface FilterOption {
-  name: string;
-  iconUrl: string;
-}
 
 interface FilterBarProps {
   searchQuery: string;
@@ -27,9 +23,7 @@ interface FilterBarProps {
   selectedElements: string[];
   selectedRarities: string[];
   selectedRegions: string[];
-  uniqueElements: FilterOption[];
   uniqueRarities: string[];
-  uniqueRegions: FilterOption[];
   onToggleElement: (element: string) => void;
   onToggleRarity: (rarity: string) => void;
   onToggleRegion: (region: string) => void;
@@ -42,14 +36,15 @@ const FilterBar: React.FC<FilterBarProps> = ({
   selectedElements,
   selectedRarities,
   selectedRegions,
-  uniqueElements,
   uniqueRarities,
-  uniqueRegions,
   onToggleElement,
   onToggleRarity,
   onToggleRegion,
   onClearAll,
 }) => {
+  const elements = useElements();
+  const regions = useRegions();
+
   const activeFilterCount =
     selectedElements.length + selectedRarities.length + selectedRegions.length;
 
@@ -155,7 +150,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                   Element
                 </label>
                 <div className="space-y-2">
-                  {uniqueElements.map((element) => (
+                  {elements.map((element) => (
                     <div
                       key={element.name}
                       className={`flex items-center space-x-2 ${styles.filterItem} cursor-pointer`}
@@ -183,7 +178,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                           className={`${styles.iconContainer} ${getElementAnimationClass(element.name)}`}
                         >
                           <CachedImage
-                            src={element.iconUrl}
+                            src={element.url}
                             alt={element.name}
                             width={20}
                             height={20}
@@ -244,7 +239,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                   Region
                 </label>
                 <div className="space-y-2">
-                  {uniqueRegions.map((region) => (
+                  {regions.map((region) => (
                     <div
                       key={region.name}
                       className={`flex items-center space-x-2 ${styles.filterItem} cursor-pointer`}
@@ -272,7 +267,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                           className={`${styles.iconContainer} ${styles.regionIcon}`}
                         >
                           <CachedImage
-                            src={region.iconUrl}
+                            src={region.url}
                             alt={region.name}
                             width={20}
                             height={20}
@@ -299,12 +294,12 @@ const FilterBar: React.FC<FilterBarProps> = ({
 
           {/* Element chips */}
           {selectedElements.map((element) => {
-            const elementData = uniqueElements.find((e) => e.name === element);
+            const elementData = elements.find((e) => e.name === element);
             return (
               <FilterChip
                 key={element}
                 label={element}
-                icon={elementData?.iconUrl}
+                icon={elementData?.url}
                 type="element"
                 onRemove={() => onToggleElement(element)}
               />
@@ -323,12 +318,12 @@ const FilterBar: React.FC<FilterBarProps> = ({
 
           {/* Region chips */}
           {selectedRegions.map((region) => {
-            const regionData = uniqueRegions.find((r) => r.name === region);
+            const regionData = regions.find((r) => r.name === region);
             return (
               <FilterChip
                 key={region}
                 label={region}
-                icon={regionData?.iconUrl}
+                icon={regionData?.url}
                 type="region"
                 onRemove={() => onToggleRegion(region)}
               />

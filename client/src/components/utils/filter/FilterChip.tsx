@@ -1,12 +1,12 @@
 import { X } from 'lucide-react';
 import React from 'react';
 
-import { CachedImage } from '@/components/utils/CachedImage';
+import { CachedImage } from '@/features/cache';
 
 interface FilterChipProps {
   label: string;
   icon?: string;
-  type: 'element' | 'rarity' | 'region';
+  type: 'element' | 'rarity' | 'region' | 'weaponType' | 'substat';
   onRemove: () => void;
 }
 
