@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import { GlobalSearch } from '../global-search';
+import { GlobalSearch } from '@/features/command-palette';
+
 import { Sidebar } from './sidebar';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({

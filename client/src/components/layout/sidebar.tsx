@@ -13,8 +13,6 @@ import {
 import React, { useMemo } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
-import type { RecentItem } from '@/components/global-search/hooks/types';
-import { useRecents } from '@/components/global-search/hooks/use-recents';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
@@ -24,6 +22,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { useRecents } from '@/features/command-palette/stores/useRecentsStore';
+import type { RecentItem } from '@/features/command-palette/types';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 interface NavItem {
@@ -220,7 +220,7 @@ const RecentItemComponent: React.FC<RecentItemComponentProps> = ({
       </Avatar>
       {(showLabel || showLabelOnHover) && (
         <span
-          className={`text-sm font-medium whitespace-nowrap truncate max-w-[140px] transition-opacity duration-300 ${
+          className={`text-sm font-medium whitespace-nowrap truncate max-w-35 transition-opacity duration-300 ${
             showLabelOnHover ? 'opacity-0' : ''
           }`}
         >
@@ -408,7 +408,7 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onOpenChange }) => {
   const location = useLocation();
   const isMobile = useIsMobile();
-  const { recents } = useRecents();
+  const recents = useRecents();
 
   const isRouteActive = (route: string) => {
     if (route === '/') {

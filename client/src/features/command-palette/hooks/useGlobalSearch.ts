@@ -1,10 +1,10 @@
 import { Calendar, Gamepad2, Star, Swords, Target, Users } from 'lucide-react';
 import { useMemo } from 'react';
 
+import { useWeapons } from '@/features/weapons/stores/useWeaponsStore';
 import { useCharacters } from '@/stores/useCharactersStore';
-import { useWeapons } from '@/stores/useWeaponsStore';
 
-import type { CharacterResult, NavigationItem, WeaponResult } from './types';
+import type { CharacterResult, NavigationItem, WeaponResult } from '../types';
 
 const navigationItems: NavigationItem[] = [
   {
@@ -56,7 +56,7 @@ const navigationItems: NavigationItem[] = [
     icon: Gamepad2,
     iconColor: 'var(--color-epic-400)',
   },
-];
+] as const;
 
 export interface GlobalSearchResults {
   navigation: NavigationItem[];
@@ -74,7 +74,6 @@ export function useGlobalSearch(query: string): {
   const results = useMemo(() => {
     const normalizedQuery = query.toLowerCase().trim();
 
-    // Empty query: show navigation only
     if (!normalizedQuery) {
       return {
         navigation: navigationItems,
@@ -83,7 +82,6 @@ export function useGlobalSearch(query: string): {
       };
     }
 
-    // Filter navigation items
     const filteredNavigation = navigationItems.filter((item) =>
       item.label.toLowerCase().includes(normalizedQuery)
     );

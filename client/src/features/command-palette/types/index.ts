@@ -1,3 +1,4 @@
+/* Export all types from command-palette feature */
 import type { LucideIcon } from 'lucide-react';
 
 export type SearchResultType = 'navigation' | 'character' | 'weapon';
@@ -14,7 +15,7 @@ export interface CharacterResult {
   type: 'character';
   name: string;
   iconUrl: string;
-  rarity: number;
+  rarity: string;
   element: string;
   weaponType: string;
 }

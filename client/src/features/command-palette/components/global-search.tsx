@@ -16,7 +16,6 @@ const GlobalSearch: React.FC = () => {
   const [open, setOpen] = useState(false);
   const isMobile = useIsMobile();
 
-  // Keyboard shortcut to open search (desktop only)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (

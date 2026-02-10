@@ -21,15 +21,15 @@ import {
   CommandList,
 } from '@/components/ui/command';
 
+import { useGlobalSearch } from '../hooks';
+import { useAddRecent, useRecents } from '../stores';
 import type {
   CharacterResult,
   NavigationItem,
   RecentItem,
   SearchResult,
   WeaponResult,
-} from '../hooks/types';
-import { useGlobalSearch } from '../hooks/use-global-search';
-import { useRecents } from '../hooks/use-recents';
+} from '../types';
 
 const elementColors: Record<string, string> = {
   anemo: 'bg-anemo-500/20 text-anemo-400 border-anemo-500/30',
@@ -62,7 +62,8 @@ const GlobalSearchContent: React.FC<GlobalSearchContentProps> = ({
 }) => {
   const [query, setQuery] = useState('');
   const { results } = useGlobalSearch(query);
-  const { recents, addRecent } = useRecents();
+  const recents = useRecents();
+  const addRecent = useAddRecent();
   const navigate = useNavigate();
 
   const handleSelect = (result: SearchResult) => {
@@ -100,7 +101,7 @@ const GlobalSearchContent: React.FC<GlobalSearchContentProps> = ({
         value={query}
         onValueChange={setQuery}
       />
-      <CommandList className={isMobile ? 'max-h-[70vh]' : 'max-h-[400px]'}>
+      <CommandList className={isMobile ? 'max-h-[70vh]' : 'max-h-100'}>
         <CommandEmpty>No results found.</CommandEmpty>
 
         {/* Recents Section - shown when no query */}
