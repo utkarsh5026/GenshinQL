@@ -1,9 +1,9 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-import { fetchWithCache } from '@/features/cache/services/cacheService';
-import { fetchCharacterDetailed } from '@/services/dataService';
+import { usePrimitivesStore } from '@/stores/usePrimitivesStore';
 
+import { fetchCharacterProfile } from '../services';
 import type { CharacterDetailed } from '../types';
 
 interface CharacterProfileState {
@@ -64,25 +64,19 @@ export const useCharacterProfileStore = create<CharacterProfileState>()(
         setError(name, null);
 
         try {
-          const result = await fetchWithCache<CharacterDetailed>(
-            `character-profile-v1-${name}`,
-            async () => {
-              const data = await fetchCharacterDetailed(name);
-              if (!data) {
-                throw new Error(`Character ${name} not found`);
-              }
-              return data;
-            },
-            (freshData) => {
-              if (freshData) {
-                setProfile(name, freshData);
-              }
-            }
-          );
+          const primitives = await usePrimitivesStore
+            .getState()
+            .loadPrimitives();
 
-          setProfile(name, result.data);
+          const profile = await fetchCharacterProfile(name, primitives);
+
+          if (!profile) {
+            throw new Error(`Character profile not found for: ${name}`);
+          }
+
+          setProfile(name, profile);
           setLoading(name, false);
-          return result.data;
+          return profile;
         } catch (error) {
           const err =
             error instanceof Error
@@ -101,30 +95,11 @@ export const useCharacterProfileStore = create<CharacterProfileState>()(
           errorStates: new Map(),
         });
       },
-
-      removeProfile: (name) => {
-        set((state) => {
-          const newProfiles = new Map(state.profiles);
-          const newLoadingStates = new Map(state.loadingStates);
-          const newErrorStates = new Map(state.errorStates);
-
-          newProfiles.delete(name);
-          newLoadingStates.delete(name);
-          newErrorStates.delete(name);
-
-          return {
-            profiles: newProfiles,
-            loadingStates: newLoadingStates,
-            errorStates: newErrorStates,
-          };
-        });
-      },
     }),
     { name: 'CharacterProfileStore' }
   )
 );
 
-// Selector hooks with stable empty constants
 export const useCharacterProfile = (characterName: string) =>
   useCharacterProfileStore(
     (state) => state.profiles.get(characterName) || null
