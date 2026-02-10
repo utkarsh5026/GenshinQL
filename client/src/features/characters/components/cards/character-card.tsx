@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { CachedImage } from '@/features/cache';
 import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
 import {
   getElementAnimationClass,
@@ -10,9 +11,9 @@ import {
   getElementGlassClass,
   getElementGlowClass,
 } from '@/lib/elementColors';
-import { AnimationMedia, Character } from '@/types';
+import { AnimationMedia } from '@/types';
 
-import { ElementDisplay, RarityDisplay } from '../utils/DisplayComponents';
+import { Character } from '../../types';
 import CharacterMediaAvatar from './character-media-avatar';
 import styles from './CharacterCard.module.css';
 
@@ -35,7 +36,6 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
 
   const staggerDelay = isMounted ? Math.min(index * 0.05, 0.8) : 0;
 
-  // Memoize class calculations to avoid recalculating on every render
   const elementClasses = useMemo(
     () => ({
       border: getElementBorderClass(character.element),
@@ -156,3 +156,79 @@ export default React.memo(CharacterCard, (prevProps, nextProps) => {
     prevProps.index === nextProps.index
   );
 });
+
+type DisplaySize = 'sm' | 'md' | 'lg';
+
+interface ElementDisplayProps {
+  element: string;
+  elementUrl: string;
+  size?: DisplaySize;
+  showLabel?: boolean;
+}
+
+const ElementDisplay: React.FC<ElementDisplayProps> = ({
+  element,
+  elementUrl,
+  size = 'md',
+  showLabel = true,
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+  };
+
+  const iconSize = {
+    sm: 16,
+    md: 24,
+    lg: 32,
+  };
+
+  const textSize = {
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base',
+  };
+
+  return (
+    <div className="flex items-center space-x-2">
+      <CachedImage
+        src={elementUrl}
+        alt={element}
+        width={iconSize[size]}
+        height={iconSize[size]}
+        className={`rounded-full ${sizeClasses[size]}`}
+      />
+      {showLabel && <span className={textSize[size]}>{element}</span>}
+    </div>
+  );
+};
+
+interface RarityDisplayProps {
+  rarity: string;
+  size?: DisplaySize;
+}
+
+const RarityDisplay: React.FC<RarityDisplayProps> = ({
+  rarity,
+  size = 'md',
+}) => {
+  const rarityNum = Number.parseInt(rarity, 10);
+  const starColor = rarityNum === 5 ? 'text-yellow-500' : 'text-violet-500';
+
+  const sizeClasses = {
+    sm: 'text-sm',
+    md: 'text-lg',
+    lg: 'text-xl',
+  };
+
+  return (
+    <div className="flex items-center justify-center">
+      {Array.from({ length: rarityNum }).map((_, index) => (
+        <span key={index} className={`${starColor} ${sizeClasses[size]}`}>
+          ★
+        </span>
+      ))}
+    </div>
+  );
+};

@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 
-import { Avatar, AvatarImage } from '@/components/ui/avatar.tsx';
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
 import { Skeleton } from '@/components/ui/skeleton';
-import { useLazyCachedAsset } from '@/hooks/useCachedAsset';
+import { useLazyCachedAsset } from '@/features/cache';
 import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
 import { cn } from '@/lib/utils';
 import { AnimationMedia } from '@/types';
@@ -34,28 +34,23 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Only load when avatar is visible in viewport - using shared observer
   const isVisible = useSharedIntersectionObserver(containerRef, {
     rootMargin: '200px',
   });
 
-  // Load fallback image (character icon) immediately when visible
   const { url: cachedFallbackUrl, isLoading: fallbackLoading } =
     useLazyCachedAsset(media.fallbackUrl || media.imageUrl, isVisible);
 
-  // Load main image (GIF) when visible
   const { url: cachedImageUrl } = useLazyCachedAsset(
     media.imageUrl,
     isVisible && !!media.fallbackUrl
   );
 
-  // Only load video when both visible AND hovered
   const { url: cachedVideoUrl } = useLazyCachedAsset(
     media.videoUrl,
     isVisible && isHovered
   );
 
-  // Show skeleton while fallback is loading
   if (fallbackLoading) {
     return (
       <div ref={containerRef} className={cn('relative', containerClassName)}>
@@ -64,7 +59,6 @@ const CharacterMediaAvatar: React.FC<CharacterMediaAvatarProps> = ({
     );
   }
 
-  // Determine which image to show: GIF if loaded, otherwise fallback
   const displayImageUrl = cachedImageUrl || cachedFallbackUrl;
 
   return (
