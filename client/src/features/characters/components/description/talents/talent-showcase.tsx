@@ -1,16 +1,17 @@
 import { ChevronDown, ChevronUp, Clock, Zap } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
-import { CachedImage } from '@/components/utils/CachedImage';
-import ListSplitter from '@/components/utils/list-splitter';
+import { AbilityTag } from '@/components/utils';
+import { AnimatedCover } from '@/components/utils';
+import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
+import { CachedImage } from '@/features/cache';
 import { extractConstellationTags } from '@/lib/constellationTags';
 import { useCharacterTalents } from '@/stores/useCharactersStore';
-import type { AnimationMedia, CharacterDetailed, Talent } from '@/types';
+import { AnimationMedia } from '@/types';
 import { decideColor } from '@/utils/color';
 
-import { AnimatedCover } from '../../utils/AnimatedCover';
-import { AbilityTag } from '../utils/AbilityTag';
-import { TalentScalingTable } from './TalentScalingTable';
+import type { CharacterDetailed, Talent } from '../../../types';
+import { TalentScalingTable } from './scaling-table';
 
 interface TalentShowcaseProps {
   character: CharacterDetailed;
@@ -37,13 +38,12 @@ const TalentShowcase: React.FC<TalentShowcaseProps> = ({ character }) => {
           cooldown={cooldown}
           elementColor={elementColor}
           loading={loading}
+          characterName={character.name}
         />
       ))}
     </div>
   );
 };
-
-/* ===================== Talent Showcase Card ===================== */
 
 interface TalentShowcaseCardProps {
   talent: Talent;
@@ -52,6 +52,7 @@ interface TalentShowcaseCardProps {
   cooldown?: string;
   elementColor: string;
   loading: boolean;
+  characterName: string;
 }
 
 const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
@@ -61,6 +62,7 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
   cooldown,
   elementColor,
   loading,
+  characterName,
 }) => {
   const [currentAnimationIndex, setCurrentAnimationIndex] = useState(0);
   const [showScaling, setShowScaling] = useState(false);
@@ -151,8 +153,6 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
                 <AnimatedCover
                   animation={currentAnimation}
                   fallbackUrl={currentAnimation?.imageUrl}
-                  aspectRatio="16/9"
-                  showLoadingIndicator={true}
                 />
               </div>
 
@@ -195,9 +195,12 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
 
         {/* Description Section */}
         <div className="p-5 bg-midnight-800/20 flex flex-col">
-          <div className="flex-1 overflow-auto max-h-[300px] scrollbar-hide">
+          <div className="flex-1 overflow-auto max-h-75 scrollbar-hide">
             <div className="text-sm text-starlight-300 leading-relaxed">
-              <ListSplitter text={talent.description} />
+              <EnhancedListSplitter
+                text={talent.description}
+                characterName={characterName}
+              />
             </div>
           </div>
         </div>
@@ -228,8 +231,6 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
     </div>
   );
 };
-
-/* ===================== Animation Skeleton ===================== */
 
 const AnimationSkeleton: React.FC = () => (
   <div className="space-y-3 animate-pulse">

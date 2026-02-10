@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 
-import { Slider } from '@/components/ui/slider.tsx';
+import { Slider } from '@/components/ui/slider';
 import {
   Table,
   TableBody,
@@ -8,8 +8,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table.tsx';
-import type { Talent } from '@/types';
+} from '@/components/ui/table';
+
+import type { Talent } from '../../../types';
 
 interface CharacterTalentScalingProps {
   talent: Talent;
@@ -56,7 +57,7 @@ const CharacterTalentScaling: React.FC<CharacterTalentScalingProps> = ({
           className="transition-all duration-300 ease-in-out"
         />
       </div>
-      <Table className="rounded-lg border-1 w-full table-fixed">
+      <Table className="rounded-lg border w-full table-fixed">
         <TableHeader>
           <TableRow>
             <TableHead
@@ -71,10 +72,10 @@ const CharacterTalentScaling: React.FC<CharacterTalentScalingProps> = ({
           {talent.scaling.map((s) => {
             return (
               <TableRow className="text-sm" key={s.key}>
-                <TableHead className="font-thin border-r-2 border-gray-500 w-1/2 whitespace-normal break-words p-2">
+                <TableHead className="font-thin border-r-2 border-gray-500 w-1/2 whitespace-normal wrap-break-word p-2">
                   {s.key}
                 </TableHead>
-                <TableCell className="font-normal w-1/2 whitespace-normal break-words">
+                <TableCell className="font-normal w-1/2 whitespace-normal wrap-break-word">
                   {s.value[Math.min(level - 1, s.value.length - 1)]}
                 </TableCell>
               </TableRow>

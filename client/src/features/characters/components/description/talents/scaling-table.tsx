@@ -9,8 +9,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import type { Talent } from '@/types';
 import { getScalingComparison } from '@/utils/scalingParser';
+
+import type { Talent } from '../../../types';
 
 interface TalentScalingTableProps {
   talent: Talent;
@@ -40,7 +41,6 @@ export const TalentScalingTable: React.FC<TalentScalingTableProps> = ({
     }
   };
 
-  // Filter out non-scaling entries (like CD, Energy Cost)
   const scalingEntries = talent.scaling.filter(
     (s) =>
       !s.key.toLowerCase().includes('energy') &&
@@ -110,8 +110,6 @@ export const TalentScalingTable: React.FC<TalentScalingTableProps> = ({
     </div>
   );
 };
-
-/* ===================== Scaling Value Cell ===================== */
 
 interface ScalingValueCellProps {
   values: string[];
