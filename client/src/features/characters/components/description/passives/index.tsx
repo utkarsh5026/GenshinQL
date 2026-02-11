@@ -4,10 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { AbilityTag } from '@/components/utils';
 import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
 import { CachedImage } from '@/features/cache';
-import { extractConstellationTags } from '@/lib/constellationTags';
-
-import type { Talent } from '../../types';
-import { getPassiveStyles, sortPassives } from '../../utils';
+import { Talent } from '@/features/characters/types';
+import { getPassiveStyles, sortPassives } from '@/features/characters/utils';
+import { extractConstellationTags } from '@/features/characters/utils/constellationTags';
 
 interface CharacterPassivesProps {
   passives: Talent[];
@@ -17,7 +16,7 @@ interface CharacterPassivesProps {
 /**
  * CharacterPassives component displays a list of passive talents for a character.
  */
-const CharacterPassives: React.FC<CharacterPassivesProps> = ({
+export const CharacterPassives: React.FC<CharacterPassivesProps> = ({
   passives,
   characterName,
 }) => {
@@ -112,5 +111,3 @@ const CharacterPassives: React.FC<CharacterPassivesProps> = ({
     </div>
   );
 };
-
-export default CharacterPassives;

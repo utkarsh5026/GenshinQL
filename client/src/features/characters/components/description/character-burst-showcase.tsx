@@ -4,9 +4,10 @@ import React from 'react';
 import { TextProcessor } from '@/components/utils';
 import AnimatedCover from '@/components/utils/AnimatedCover';
 import { CachedImage } from '@/features/cache';
-import { useCharacterTalents } from '@/stores/useCharactersStore';
-import { CharacterDetailed, CharacterMenuItem } from '@/types';
 import { formatDescription } from '@/utils/text-sanitize';
+
+import { useCharacterTalents } from '../../hooks';
+import { CharacterDetailed, CharacterMenuItem } from '../../types';
 
 /* Elemental Burst Showcase Component */
 interface ElementalBurstShowcaseProps {
@@ -111,8 +112,6 @@ const ElementalBurstShowcase: React.FC<ElementalBurstShowcaseProps> = ({
             <AnimatedCover
               animation={currentAnimation}
               fallbackUrl={currentAnimation?.imageUrl}
-              aspectRatio="16/9"
-              showLoadingIndicator={true}
             />
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-linear-to-r from-transparent via-transparent to-midnight-900/80 pointer-events-none md:block hidden" />

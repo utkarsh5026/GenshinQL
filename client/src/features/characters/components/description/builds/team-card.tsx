@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { CachedImage } from '@/features/cache';
-import { useCharacters } from '@/stores/useCharactersStore';
+import { useCharacters } from '@/features/characters/stores';
 import { TeamComp } from '@/types';
 
 interface TeamCardProps {

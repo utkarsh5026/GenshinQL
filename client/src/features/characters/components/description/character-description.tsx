@@ -7,9 +7,11 @@ import { decideColor } from '@/utils/color';
 
 import { useCharacterAbilitiesStore } from '../../stores';
 import { CharacterDetailed, CharacterMenuItem } from '../../types';
+import { BuildsDetailed } from './builds/builds-detailed';
+import { BuildsSummary } from './builds-summary';
 import ElementalBurstShowcase from './character-burst-showcase';
-import CharacterConstellations from './constellations';
-import CharacterPassives from './passives';
+import { CharacterConstellations } from './constellations';
+import { CharacterPassives } from './passives';
 import ProfileHeader from './profile-header';
 import CharacterRoutineDetailed from './routine/CharacterRoutineDetailed';
 import TalentShowcase from './talents/talent-showcase';
@@ -92,7 +94,6 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   const [selectedMenuItem, setSelectedMenuItem] =
     useState<CharacterMenuItem>('Profile');
 
-  // Populate ability cache when character loads
   useEffect(() => {
     if (!character) return;
 
@@ -227,6 +228,14 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
               <CharacterRoutineDetailed character={character} />
             </CharacterCard>
           )}
+          {selectedMenuItem === 'Builds' && (
+            <CharacterCard elementColor={elementColor}>
+              <BuildsDetailed
+                character={character}
+                elementColor={elementColor}
+              />
+            </CharacterCard>
+          )}
         </div>
       </div>
     </div>
@@ -350,6 +359,22 @@ const ProfileContent: React.FC<ProfileContentProps> = ({
           )}
         </div>
       </section>
+
+      {/* Builds Summary Section */}
+      {character.buildGuide && (
+        <section>
+          <SectionHeader
+            title="Recommended Build"
+            elementColor={elementColor}
+          />
+          <BuildsSummary
+            characterName={character.name}
+            elementColor={elementColor}
+            onNavigate={onNavigate}
+            buildData={character.buildGuide}
+          />
+        </section>
+      )}
 
       {/* Elemental Burst Showcase */}
       <section>

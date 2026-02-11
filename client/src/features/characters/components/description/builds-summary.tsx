@@ -1,8 +1,7 @@
 import { ArrowRight } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import { CachedImage } from '@/features/cache';
-import { fetchCharacterBuild } from '@/services/dataService';
 
 import { useArtifactLinks, useFetchArtifactLinks } from '../../stores';
 import type {
@@ -19,46 +18,21 @@ interface BuildsSummaryProps {
   characterName: string;
   elementColor: string;
   onNavigate: (menuItem: CharacterMenuItem) => void;
+  buildData?: CharacterBuild;
 }
 
 export const BuildsSummary: React.FC<BuildsSummaryProps> = ({
   characterName,
   elementColor,
   onNavigate,
+  buildData,
 }) => {
-  const [buildData, setBuildData] = useState<CharacterBuild | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  // Use artifact store
   const artifactsData = useArtifactLinks();
   const fetchArtifactLinks = useFetchArtifactLinks();
 
   useEffect(() => {
-    const loadData = async () => {
-      try {
-        setLoading(true);
-
-        const [build] = await Promise.all([
-          fetchCharacterBuild(characterName),
-          fetchArtifactLinks(),
-        ]);
-
-        setBuildData(build);
-      } catch (err) {
-        console.error('Failed to load build data:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadData();
+    fetchArtifactLinks();
   }, [characterName, fetchArtifactLinks]);
-
-  if (loading) {
-    return (
-      <div className="p-4 rounded-xl bg-midnight-800/40 animate-pulse h-24" />
-    );
-  }
 
   if (!buildData || !buildData.artifacts.recommended) {
     return null;

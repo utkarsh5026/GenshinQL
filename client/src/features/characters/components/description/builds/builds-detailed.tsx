@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { fetchCharacterBuild } from '@/services/dataService';
-
 import { useArtifactLinks, useFetchArtifactLinks } from '../../../stores';
-import { CharacterBuild, CharacterDetailed } from '../../../types';
+import { CharacterDetailed } from '../../../types';
 import { ArtifactSetsDisplay } from './artifact-sets-display';
 import { ConstellationInfo } from './constellation-info';
 import { StatsDisplay } from './stats-display';
@@ -19,61 +17,31 @@ export const BuildsDetailed: React.FC<BuildsDetailedProps> = ({
   character,
   elementColor,
 }) => {
-  const [buildData, setBuildData] = useState<CharacterBuild | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [artifactsLoading, setArtifactsLoading] = useState(true);
 
   const artifactsData = useArtifactLinks();
   const fetchArtifactLinks = useFetchArtifactLinks();
 
   useEffect(() => {
-    const loadData = async () => {
+    const loadArtifacts = async () => {
       try {
-        setLoading(true);
-        setError(null);
-
-        const [build] = await Promise.all([
-          fetchCharacterBuild(character.name),
-          fetchArtifactLinks(),
-        ]);
-
-        setBuildData(build);
-      } catch (err) {
-        console.error('Failed to load build data:', err);
-        setError('Failed to load build data');
+        await fetchArtifactLinks();
       } finally {
-        setLoading(false);
+        setArtifactsLoading(false);
       }
     };
 
-    loadData();
-  }, [character.name, fetchArtifactLinks]);
+    loadArtifacts();
+  }, [fetchArtifactLinks]);
 
-  if (loading) {
+  const buildData = character.buildGuide;
+
+  if (artifactsLoading) {
     return (
       <div className="space-y-6">
         <div className="h-48 bg-midnight-800/40 rounded-xl animate-pulse" />
         <div className="h-64 bg-midnight-800/40 rounded-xl animate-pulse" />
         <div className="h-96 bg-midnight-800/40 rounded-xl animate-pulse" />
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="p-12 text-center">
-        <p className="text-lg text-destructive mb-4">{error}</p>
-        <button
-          onClick={() => window.location.reload()}
-          className="px-4 py-2 rounded-lg font-medium transition-colors"
-          style={{
-            backgroundColor: `${elementColor}20`,
-            color: elementColor,
-            border: `1px solid ${elementColor}40`,
-          }}
-        >
-          Try Again
-        </button>
       </div>
     );
   }

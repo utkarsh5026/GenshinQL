@@ -3,14 +3,14 @@ import { Navigate, useParams } from 'react-router-dom';
 
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
 import { ItemNavigation } from '@/components/utils';
-import { useCharacters } from '@/stores/useCharactersStore';
-import { useCharacterMap } from '@/stores/useCharactersStore';
 import { decideColor } from '@/utils/color';
 
 import {
+  useCharacterMap,
   useCharacterProfile,
   useCharacterProfileError,
   useCharacterProfileLoading,
+  useCharacters,
   useFetchCharacterProfile,
 } from '../../stores';
 import CharacterDescription from './character-description';
@@ -28,11 +28,11 @@ const CharacterDetail = () => {
     fetchProfile(characterName);
   }, [characterName, fetchProfile]);
 
-  if (loading) {
+  if (loading || !profile) {
     return <CharacterLoadingState characterName={characterName!} />;
   }
 
-  if (error || !profile) {
+  if (error || (!loading && !profile)) {
     return <Navigate to="/talents" replace />;
   }
 

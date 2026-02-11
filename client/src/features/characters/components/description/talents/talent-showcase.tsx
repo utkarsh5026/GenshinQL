@@ -5,14 +5,13 @@ import { AbilityTag } from '@/components/utils';
 import { AnimatedCover } from '@/components/utils';
 import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
 import { CachedImage } from '@/features/cache';
-import { extractConstellationTags } from '@/lib/constellationTags';
-import { useCharacterTalents } from '@/stores/useCharactersStore';
+import { useCharacterTalents } from '@/features/characters/hooks';
+import { extractConstellationTags } from '@/features/characters/utils/constellationTags';
 import { AnimationMedia } from '@/types';
 import { decideColor } from '@/utils/color';
 
 import type { CharacterDetailed, Talent } from '../../../types';
 import { TalentScalingTable } from './scaling-table';
-
 interface TalentShowcaseProps {
   character: CharacterDetailed;
 }
@@ -24,7 +23,7 @@ interface TalentShowcaseProps {
  * Uses the useCharacterTalents hook for centralized talent + animation data access
  */
 const TalentShowcase: React.FC<TalentShowcaseProps> = ({ character }) => {
-  const { mainTalents, loading } = useCharacterTalents(character);
+  const { mainTalents } = useCharacterTalents(character);
   const elementColor = decideColor(character.element);
 
   return (
@@ -37,7 +36,6 @@ const TalentShowcase: React.FC<TalentShowcaseProps> = ({ character }) => {
           energyCost={energyCost}
           cooldown={cooldown}
           elementColor={elementColor}
-          loading={loading}
           characterName={character.name}
         />
       ))}
@@ -51,7 +49,6 @@ interface TalentShowcaseCardProps {
   energyCost?: string;
   cooldown?: string;
   elementColor: string;
-  loading: boolean;
   characterName: string;
 }
 
@@ -61,7 +58,6 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
   energyCost,
   cooldown,
   elementColor,
-  loading,
   characterName,
 }) => {
   const [currentAnimationIndex, setCurrentAnimationIndex] = useState(0);
@@ -144,9 +140,7 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
         {/* Animation Section */}
         <div className="bg-midnight-900/40 p-4">
-          {loading ? (
-            <AnimationSkeleton />
-          ) : animations.length > 0 ? (
+          {animations.length > 0 ? (
             <div className="space-y-3">
               {/* Main Animation */}
               <div className="rounded-lg overflow-hidden border border-midnight-600/30">
@@ -231,16 +225,5 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
     </div>
   );
 };
-
-const AnimationSkeleton: React.FC = () => (
-  <div className="space-y-3 animate-pulse">
-    <div className="aspect-video bg-midnight-700/50 rounded-lg" />
-    <div className="flex gap-2">
-      {[1, 2, 3].map((i) => (
-        <div key={i} className="w-20 h-12 bg-midnight-700/40 rounded-md" />
-      ))}
-    </div>
-  </div>
-);
 
 export default TalentShowcase;
