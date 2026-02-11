@@ -78,6 +78,24 @@ const tasks = {
     category: 'Characters',
     action: () => runTsxScript('characters.ts', ['--roles']),
   },
+  'characters-optimize': {
+    description: 'Optimize characters.json by removing redundant URL fields',
+    category: 'Characters',
+    action: () => runTsxScript('characters.ts', ['--optimize']),
+  },
+  'characters-optimize-files': {
+    description: 'Optimize individual character files by removing redundant URLs',
+    category: 'Characters',
+    action: () => runTsxScript('characters.ts', ['--optimize-files']),
+  },
+  'characters-optimize-all': {
+    description: 'Optimize both characters.json and individual character files',
+    category: 'Characters',
+    action: async () => {
+      await runTsxScript('characters.ts', ['--optimize']);
+      await runTsxScript('characters.ts', ['--optimize-files']);
+    },
+  },
 
   gallery: {
     description: 'Scrape and merge gallery data for characters',

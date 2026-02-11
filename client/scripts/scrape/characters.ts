@@ -1055,6 +1055,227 @@ export async function scrapeCharacterRoles(): Promise<void> {
   logger.success('\n=== Character roles scraping complete! ===\n');
 }
 
+/**
+ * Optimizes characters.json with index-based structure.
+ * Extracts unique values into lookup arrays and replaces strings with numeric indices.
+ * Similar structure to weapons.json for maximum file size reduction.
+ */
+export async function optimizeCharactersJson(): Promise<void> {
+  logger.cyan('\n=== Optimizing characters.json ===\n');
+
+  try {
+    const characters =
+      await loadFromPublic<BaseCharacterSchema[]>(CHARACTERS_FILE_NAME);
+    const primitives = await loadFromPublic<Primitives>('primitives');
+
+    if (!characters || !primitives) {
+      logger.error('Failed to load characters or primitives data');
+      return;
+    }
+
+    const originalSize = JSON.stringify(characters).length;
+    logger.info(`Original size: ${(originalSize / 1024).toFixed(2)} KB`);
+
+    // Step 1: Extract unique values for all indexable fields
+    const elements = [...new Set(characters.map((c) => c.element))].sort();
+    const regions = [...new Set(characters.map((c) => c.region))].sort();
+    const weaponTypes = [
+      ...new Set(characters.map((c) => c.weaponType)),
+    ].sort();
+    const rarities = [...new Set(characters.map((c) => c.rarity))].sort();
+    const modelTypes = [...new Set(characters.map((c) => c.modelType))].sort();
+
+    logger.info('Extracted lookup arrays:');
+    logger.info(
+      `  - Elements: ${elements.length} unique values (${elements.join(', ')})`
+    );
+    logger.info(
+      `  - Regions: ${regions.length} unique values (${regions.join(', ')})`
+    );
+    logger.info(
+      `  - Weapon Types: ${weaponTypes.length} unique values (${weaponTypes.join(', ')})`
+    );
+    logger.info(
+      `  - Rarities: ${rarities.length} unique values (${rarities.join(', ')})`
+    );
+    logger.info(
+      `  - Model Types: ${modelTypes.length} unique values (${modelTypes.join(', ')})`
+    );
+
+    // Step 2: Validate that all characters can be correctly indexed
+    let validationErrors = 0;
+    for (const char of characters) {
+      const elementIdx = elements.indexOf(char.element);
+      const regionIdx = regions.indexOf(char.region);
+      const weaponIdx = weaponTypes.indexOf(char.weaponType);
+      const rarityIdx = rarities.indexOf(char.rarity);
+      const modelIdx = modelTypes.indexOf(char.modelType);
+
+      if (
+        elementIdx === -1 ||
+        regionIdx === -1 ||
+        weaponIdx === -1 ||
+        rarityIdx === -1 ||
+        modelIdx === -1
+      ) {
+        logger.error(
+          `Validation failed for ${char.name}: missing index mapping`
+        );
+        if (elementIdx === -1)
+          logger.error(`  - Element "${char.element}" not found`);
+        if (regionIdx === -1)
+          logger.error(`  - Region "${char.region}" not found`);
+        if (weaponIdx === -1)
+          logger.error(`  - Weapon "${char.weaponType}" not found`);
+        if (rarityIdx === -1)
+          logger.error(`  - Rarity "${char.rarity}" not found`);
+        if (modelIdx === -1)
+          logger.error(`  - ModelType "${char.modelType}" not found`);
+        validationErrors++;
+      }
+    }
+
+    if (validationErrors > 0) {
+      logger.error(
+        `Validation failed for ${validationErrors} characters. Aborting optimization.`
+      );
+      return;
+    }
+
+    logger.success('Validation passed! All values can be indexed.');
+
+    // Step 3: Transform characters to indexed format
+    const optimizedCharacters = characters.map((char) => {
+      // Remove URL fields and string fields that will be indexed
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const {
+        element,
+        region,
+        weaponType,
+        rarity,
+        modelType,
+        elementUrl,
+        weaponUrl,
+        regionUrl,
+        ...rest
+      } = char as BaseCharacterSchema & {
+        elementUrl?: string;
+        weaponUrl?: string;
+        regionUrl?: string;
+      };
+
+      return {
+        ...rest,
+        element: elements.indexOf(char.element),
+        region: regions.indexOf(char.region),
+        weaponType: weaponTypes.indexOf(char.weaponType),
+        rarity: rarities.indexOf(char.rarity),
+        modelType: modelTypes.indexOf(char.modelType),
+      };
+    });
+
+    // Step 4: Create final optimized structure with lookup arrays
+    const optimizedData = {
+      elements,
+      regions,
+      weaponTypes,
+      rarities,
+      modelTypes,
+      characters: optimizedCharacters,
+    };
+
+    const optimizedSize = JSON.stringify(optimizedData).length;
+    const savings = originalSize - optimizedSize;
+    const savingsPercent = ((savings / originalSize) * 100).toFixed(2);
+
+    logger.success(`Optimized size: ${(optimizedSize / 1024).toFixed(2)} KB`);
+    logger.success(
+      `Savings: ${(savings / 1024).toFixed(2)} KB (${savingsPercent}%)`
+    );
+
+    // Save optimized data
+    await saveToPublic(optimizedData, CHARACTERS_FILE_NAME);
+    logger.success('Saved optimized characters.json');
+
+    logger.success('\n=== Optimization complete! ===\n');
+  } catch (error) {
+    logger.error('Error optimizing characters.json:', error);
+  }
+}
+
+/**
+ * Optimizes individual character files by removing redundant URL fields.
+ */
+export async function optimizeCharacterFiles(): Promise<void> {
+  logger.cyan('\n=== Optimizing Individual Character Files ===\n');
+
+  try {
+    const primitives = await loadFromPublic<Primitives>('primitives');
+    if (!primitives) {
+      logger.error('Failed to load primitives data');
+      return;
+    }
+
+    const detailedDir = path.join(PUBLIC_DIR, 'characters');
+    const files = await listFiles(detailedDir);
+    const jsonFiles = files.filter((f) => f.endsWith('.json'));
+
+    logger.info(`Found ${jsonFiles.length} character files`);
+
+    let totalOriginalSize = 0;
+    let totalOptimizedSize = 0;
+    let filesOptimized = 0;
+
+    for (const fileName of jsonFiles) {
+      try {
+        const filePath = path.join(detailedDir, fileName);
+        const content = await fs.readFile(filePath, 'utf-8');
+        const character = JSON.parse(content);
+
+        const originalSize = content.length;
+        totalOriginalSize += originalSize;
+
+        // Remove URL fields
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { elementUrl, weaponUrl, regionUrl, ...optimized } =
+          character as Record<string, unknown>;
+
+        const optimizedContent = JSON.stringify(optimized, null, 4);
+        const optimizedSize = optimizedContent.length;
+        totalOptimizedSize += optimizedSize;
+
+        await fs.writeFile(filePath, optimizedContent, 'utf-8');
+        filesOptimized++;
+
+        const savings = originalSize - optimizedSize;
+        logger.debug(
+          `${fileName}: saved ${savings} bytes (${((savings / originalSize) * 100).toFixed(1)}%)`
+        );
+      } catch (error) {
+        logger.error(`Error optimizing ${fileName}:`, error);
+      }
+    }
+
+    const totalSavings = totalOriginalSize - totalOptimizedSize;
+    const totalPercent = ((totalSavings / totalOriginalSize) * 100).toFixed(2);
+
+    logger.success(`Optimized ${filesOptimized} character files`);
+    logger.success(
+      `Total original size: ${(totalOriginalSize / 1024).toFixed(2)} KB`
+    );
+    logger.success(
+      `Total optimized size: ${(totalOptimizedSize / 1024).toFixed(2)} KB`
+    );
+    logger.success(
+      `Total savings: ${(totalSavings / 1024).toFixed(2)} KB (${totalPercent}%)`
+    );
+
+    logger.success('\n=== Individual file optimization complete! ===\n');
+  } catch (error) {
+    logger.error('Error optimizing character files:', error);
+  }
+}
+
 async function main() {
   logger.info('Starting character scraping script...');
   const args = process.argv.slice(2);
@@ -1097,6 +1318,14 @@ async function main() {
 
   if (args.includes('--roles')) {
     await scrapeCharacterRoles();
+  }
+
+  if (args.includes('--optimize')) {
+    await optimizeCharactersJson();
+  }
+
+  if (args.includes('--optimize-files')) {
+    await optimizeCharacterFiles();
   }
 }
 
