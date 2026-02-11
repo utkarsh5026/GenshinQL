@@ -5,7 +5,6 @@ import {
   Sparkles,
   Star,
   Swords,
-  Theater,
 } from 'lucide-react';
 import React, { useEffect, useMemo, useState } from 'react';
 
@@ -34,6 +33,7 @@ import {
 import type { RecommendedCharacter } from '@/types';
 
 import { ELEMENT_COLORS, PRIORITY_COLORS } from '../constants';
+import { ImaginariumCard } from './game-modes/imaginarium-theater';
 
 interface RecommendedCharacterCardProps {
   character: RecommendedCharacter;
@@ -222,157 +222,6 @@ const SpiralAbyssCard: React.FC = () => {
                           {team.description}
                         </p>
                       )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </CollapsibleContent>
-        </Collapsible>
-      </CardContent>
-    </Card>
-  );
-};
-
-const ImaginariumCard: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const imaginarium = useImaginarium();
-  const characterMap = useCharacterMap();
-  const trackedCharacters = useTrackedCharacters();
-
-  const trackedNames = useMemo(
-    () => new Set(trackedCharacters.map((c) => c.name)),
-    [trackedCharacters]
-  );
-
-  if (!imaginarium) return null;
-
-  const {
-    season,
-    allowedElements,
-    specialGuests,
-    recommendedCharacters,
-    difficultyNotes,
-  } = imaginarium;
-
-  return (
-    <Card>
-      <CardHeader className="pb-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Theater className="w-5 h-5 text-rose-500" />
-            <CardTitle className="text-lg">Imaginarium Theater</CardTitle>
-          </div>
-          <Badge variant="outline" className="text-xs">
-            Season {season}
-          </Badge>
-        </div>
-        <CardDescription>
-          <div className="flex flex-wrap items-center gap-2 mt-1">
-            <span className="text-xs">Allowed Elements:</span>
-            {allowedElements.map((element) => (
-              <Badge
-                key={element}
-                variant="outline"
-                className={cn('text-xs', ELEMENT_COLORS[element])}
-              >
-                {element}
-              </Badge>
-            ))}
-          </div>
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        {/* Special Guests */}
-        {specialGuests && specialGuests.length > 0 && (
-          <div>
-            <h4 className="text-sm font-medium mb-2 flex items-center gap-1">
-              <Sparkles className="w-3 h-3 text-amber-400" />
-              Special Guests (Boosted Stats)
-            </h4>
-            <div className="flex gap-2">
-              {specialGuests.map((guest) => {
-                const charData = characterMap[guest.name];
-                return (
-                  <div
-                    key={guest.name}
-                    className="flex items-center gap-2 p-2 rounded-lg bg-amber-500/10 border border-amber-500/30"
-                  >
-                    {charData && (
-                      <CachedImage
-                        src={charData.iconUrl}
-                        alt={guest.name}
-                        width={36}
-                        height={36}
-                        className="w-9 h-9 rounded-lg"
-                      />
-                    )}
-                    <span className="text-sm font-medium">{guest.name}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* Recommended Characters */}
-        <div>
-          <h4 className="text-sm font-medium mb-2 flex items-center gap-1">
-            <Star className="w-3 h-3 text-amber-400" />
-            Recommended Characters
-          </h4>
-          <div className="grid gap-2">
-            {recommendedCharacters.slice(0, 4).map((char) => {
-              const charData = characterMap[char.name];
-              return (
-                <RecommendedCharacterCard
-                  key={char.name}
-                  character={char}
-                  iconUrl={charData?.iconUrl}
-                  isTracked={trackedNames.has(char.name)}
-                />
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Collapsible section */}
-        <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-          <CollapsibleTrigger className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">
-            {isOpen ? (
-              <ChevronUp className="w-4 h-4" />
-            ) : (
-              <ChevronDown className="w-4 h-4" />
-            )}
-            {isOpen ? 'Show less' : 'Show more characters & tips'}
-          </CollapsibleTrigger>
-          <CollapsibleContent className="space-y-4 pt-4">
-            <div className="grid gap-2">
-              {recommendedCharacters.slice(4).map((char) => {
-                const charData = characterMap[char.name];
-                return (
-                  <RecommendedCharacterCard
-                    key={char.name}
-                    character={char}
-                    iconUrl={charData?.iconUrl}
-                    isTracked={trackedNames.has(char.name)}
-                  />
-                );
-              })}
-            </div>
-
-            {/* Difficulty Notes */}
-            {difficultyNotes && Object.keys(difficultyNotes).length > 0 && (
-              <div>
-                <h4 className="text-sm font-medium mb-2">Stage Tips</h4>
-                <div className="space-y-1">
-                  {Object.entries(difficultyNotes).map(([act, note]) => (
-                    <div
-                      key={act}
-                      className="text-xs text-muted-foreground flex gap-2"
-                    >
-                      <span className="font-medium capitalize">{act}:</span>
-                      <span>{note}</span>
                     </div>
                   ))}
                 </div>

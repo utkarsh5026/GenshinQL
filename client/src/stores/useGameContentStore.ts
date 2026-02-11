@@ -58,7 +58,7 @@ export const useGameContentStore = create<GameContentState>()(
 
         try {
           const { data } = await fetchWithCache<ImaginariumData>(
-            'gameContent/imaginarium.json'
+            'imaginarium-theater.json'
           );
           set({ imaginarium: data, loading: false });
         } catch (err) {
