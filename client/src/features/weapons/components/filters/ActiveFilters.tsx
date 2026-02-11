@@ -1,8 +1,8 @@
 import { X } from 'lucide-react';
 import React, { useMemo } from 'react';
 
-import FilterChip from '@/components/character/table/FilterChip';
 import { Button } from '@/components/ui/button';
+import FilterChip from '@/components/utils/filter/FilterChip';
 
 import type { WeaponFilterOption } from '../../types';
 

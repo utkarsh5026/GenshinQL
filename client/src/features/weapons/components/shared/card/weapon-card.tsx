@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { ListSplitter } from '@/components/utils';
 import { AbilityTag } from '@/components/utils/AbilityTag';
 import { CachedImage } from '@/features/cache';
+import { extractConstellationTags } from '@/features/characters/utils/ability-tags';
 import { WeaponSummary } from '@/features/weapons/types';
 import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
-import { extractConstellationTags } from '@/lib/constellationTags';
 
 import {
   getRarityColor,

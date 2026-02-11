@@ -1,4 +1,4 @@
-import { loadDataForFile } from '@/services/dataService';
+import { fetchWithCache } from '@/features/cache';
 
 import { WeaponRaw, WeaponSummary } from '../types';
 
@@ -9,7 +9,8 @@ type WeaponsData = {
 };
 
 export async function fetchWeaponsFile(): Promise<Array<WeaponSummary>> {
-  const weaponsData = await loadDataForFile<WeaponsData>('weapons.json', null);
+  const { data: weaponsData } =
+    await fetchWithCache<WeaponsData>('weapons.json');
   const { nations, days, weapons } = weaponsData;
   const finalWeapons: Array<WeaponSummary> = [];
   for (const [wepType, weaponList] of Object.entries(weapons)) {
