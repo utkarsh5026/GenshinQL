@@ -3,8 +3,8 @@ import { memo, useCallback, useMemo } from 'react';
 import type { Character } from '@/types';
 
 import type { LinkerDifficulty } from '../../types';
+import styles from '../LinkerGame.module.css';
 import { CharacterTile } from './character-tile';
-import styles from './LinkerGame.module.css';
 
 interface CharacterGridProps {
   characters: Character[];

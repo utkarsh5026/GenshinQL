@@ -3,7 +3,7 @@ import { memo, useCallback, useMemo } from 'react';
 
 import type { Character } from '@/types';
 
-import styles from './LinkerGame.module.css';
+import styles from '../LinkerGame.module.css';
 
 interface CharacterTileProps {
   character: Character;
