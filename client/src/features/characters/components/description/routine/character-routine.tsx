@@ -41,7 +41,7 @@ export const CharacterRoutine: React.FC<CharacterRoutineDetailedProps> = ({
       </div>
 
       {/* Results table - always visible */}
-      <RoutineTable character={character} selectedWeapons={selectedWeapons} />
+      <RoutineTable characters={[character]} weapons={selectedWeapons} />
     </div>
   );
 };

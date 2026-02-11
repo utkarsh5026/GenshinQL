@@ -15,15 +15,15 @@ import type { Character } from '../../../types';
 import MaterialsCell, { type DailyRoutine } from './materials-cell';
 
 interface RoutineTableProps {
-  character: Character;
-  selectedWeapons: WeaponSummary[];
+  characters: Character[];
+  weapons: WeaponSummary[];
 }
 
 /**
- * Builds a daily routine schedule combining talent and weapon materials
+ * Builds a daily routine schedule combining talent and weapon materials for multiple characters
  */
 function buildDailyRoutines(
-  character: Character,
+  characters: Character[],
   selectedWeapons: WeaponSummary[],
   talentCharMap: Record<string, TalentBook>,
   weaponMap: Record<string, WeaponMaterial>
@@ -73,17 +73,21 @@ function buildDailyRoutines(
     },
   };
 
-  const talentBook = talentCharMap[character.name];
-  if (talentBook) {
-    [talentBook.dayOne, talentBook.dayTwo].forEach((day) => {
-      const cleanDay = day?.replace(/\/$/, '').trim();
-      if (cleanDay && routineMap[cleanDay as Day]) {
-        routineMap[cleanDay as Day].talentMaterials = talentBook;
-        routineMap[cleanDay as Day].hasFarming = true;
-      }
-    });
-  }
+  // Process talent materials for all characters
+  characters.forEach((character) => {
+    const talentBook = talentCharMap[character.name];
+    if (talentBook) {
+      [talentBook.dayOne, talentBook.dayTwo].forEach((day) => {
+        const cleanDay = day?.replace(/\/$/, '').trim();
+        if (cleanDay && routineMap[cleanDay as Day]) {
+          routineMap[cleanDay as Day].talentMaterials = talentBook;
+          routineMap[cleanDay as Day].hasFarming = true;
+        }
+      });
+    }
+  });
 
+  // Process weapon materials
   selectedWeapons.forEach((weapon) => {
     const material = weaponMap[weapon.name];
     if (material) {
@@ -120,10 +124,7 @@ function buildDailyRoutines(
  * RoutineTable component displays a 2-column weekly schedule showing
  * what materials can be farmed each day for the selected character and weapons.
  */
-const RoutineTable: React.FC<RoutineTableProps> = ({
-  character,
-  selectedWeapons,
-}) => {
+const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
   const currentDay = getCurrentDay();
   const { talentCharMap, fetchBooks } = useTalentBooksStore();
   const { weaponMap, fetchWeaponMaterials } = useWeaponMaterialStore();
@@ -134,9 +135,8 @@ const RoutineTable: React.FC<RoutineTableProps> = ({
   }, [fetchBooks, fetchWeaponMaterials]);
 
   const dailyRoutines = useMemo(
-    () =>
-      buildDailyRoutines(character, selectedWeapons, talentCharMap, weaponMap),
-    [character, selectedWeapons, talentCharMap, weaponMap]
+    () => buildDailyRoutines(characters, weapons, talentCharMap, weaponMap),
+    [characters, weapons, talentCharMap, weaponMap]
   );
 
   return (
