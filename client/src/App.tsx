@@ -1,17 +1,17 @@
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 
-import { useAutoClearOldCache } from '@/hooks/useCacheManager';
-import {
-  useCharactersStore,
-  usePrimitivesStore,
-  useTalentBooksStore,
-  useWeaponMaterialStore,
-  useWeaponsStore,
-} from '@/stores';
+import { usePrimitivesStore, useWeaponsStore } from '@/stores';
 
 import ErrorBoundary from './components/ErrorBoundary';
 import { Layout } from './components/layout';
+import { RouteLoadingFallback } from './components/utils/RouteLoadingFallback';
+import { useAutoClearOldCache } from './features/cache';
+import {
+  useTalentBooksStore,
+  useWeaponMaterialStore,
+} from './features/calendar';
+import { useCharactersStore } from './features/characters';
 import { routes } from './routes';
 
 function App() {
@@ -47,7 +47,9 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <Layout>{routing}</Layout>
+      <Suspense fallback={<RouteLoadingFallback />}>
+        <Layout>{routing}</Layout>
+      </Suspense>
     </ErrorBoundary>
   );
 }
