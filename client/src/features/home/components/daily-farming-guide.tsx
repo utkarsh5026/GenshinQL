@@ -8,49 +8,24 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { CachedImage } from '@/components/utils/CachedImage';
-import { cn } from '@/lib/utils';
-import {
-  useTalentCalendar,
-  useTrackedCharacters,
-  useTrackedWeapons,
-  useWeaponMaterialSchedule,
-} from '@/stores';
+import { CachedImage } from '@/features/cache';
 import type {
-  ImageUrl,
   TalentBookCalendar,
   WeaponMaterialSchedule,
-} from '@/types';
+} from '@/features/calendar';
+import {
+  useTalentCalendar,
+  useWeaponMaterialSchedule,
+} from '@/features/calendar';
+import { cn } from '@/lib/utils';
+import {
+  useTrackedCharacters,
+  useTrackedWeapons,
+} from '@/stores/useTrackerStore';
+import type { ImageUrl } from '@/types';
 
-type DayType = 0 | 1 | 2 | 'all';
-
-const DAY_NAMES = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-];
-
-const DAY_SCHEDULE = [
-  'Monday/Thursday',
-  'Tuesday/Friday',
-  'Wednesday/Saturday',
-];
-
-function getDayType(): DayType {
-  const day = new Date().getDay();
-  if (day === 0) return 'all'; // Sunday - all materials available
-  if ([1, 4].includes(day)) return 0; // Mon/Thu
-  if ([2, 5].includes(day)) return 1; // Tue/Fri
-  return 2; // Wed/Sat
-}
-
-function getCurrentDayName(): string {
-  return DAY_NAMES[new Date().getDay()];
-}
+import { DAY_SCHEDULE } from '../constants';
+import { type DayType, getCurrentDayName, getDayType } from '../utils';
 
 interface MaterialItemProps {
   name: string;

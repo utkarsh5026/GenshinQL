@@ -1,50 +1,15 @@
 import { Calendar, Home as HomeIcon, Sparkles } from 'lucide-react';
 import React, { useEffect, useMemo } from 'react';
 
-import {
-  useCharactersStore,
-  usePrimitivesStore,
-  useTalentBooksStore,
-  useWeaponMaterialStore,
-  useWeaponsStore,
-} from '@/stores';
+import { useTalentBooksStore } from '@/features/calendar';
+import { useCharactersStore } from '@/features/characters';
+import { useWeaponMaterialStore, useWeaponsStore } from '@/features/weapons';
+import { usePrimitivesStore } from '@/stores';
 
-import { DailyFarmingGuide } from './daily-farming/DailyFarmingGuide';
-import { GameModesSection } from './game-modes/GameModesSection';
-import { TrackerSection } from './tracker/TrackerSection';
-
-const DAY_NAMES = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-];
-
-const MONTH_NAMES = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-
-function getFormattedDate(): string {
-  const now = new Date();
-  const day = DAY_NAMES[now.getDay()];
-  const month = MONTH_NAMES[now.getMonth()];
-  const date = now.getDate();
-  return `${day}, ${month} ${date}`;
-}
+import { getFormattedDate } from '../utils';
+import { DailyFarmingGuide } from './daily-farming-guide';
+import { GameModesSection } from './game-modes-section';
+import { TrackerSection } from './tracker-section';
 
 const DashboardHeader: React.FC = () => {
   const formattedDate = useMemo(() => getFormattedDate(), []);
@@ -68,7 +33,6 @@ const DashboardHeader: React.FC = () => {
 };
 
 export const Home: React.FC = () => {
-  // Fetch all required data on mount
   const { fetchCharacters } = useCharactersStore();
   const { fetchWeapons } = useWeaponsStore();
   const { fetchBooks } = useTalentBooksStore();
@@ -76,7 +40,6 @@ export const Home: React.FC = () => {
   const { fetchWeaponMaterials } = useWeaponMaterialStore();
 
   useEffect(() => {
-    // Fetch data that's needed for the home page
     fetchCharacters();
     fetchWeapons();
     fetchBooks();

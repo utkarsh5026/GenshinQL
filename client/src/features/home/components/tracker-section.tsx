@@ -20,7 +20,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CachedImage } from '@/components/utils/CachedImage';
+import { CachedImage } from '@/features/cache';
 import { cn } from '@/lib/utils';
 import {
   useCharacterMap,
@@ -31,17 +31,7 @@ import {
 } from '@/stores';
 import type { TrackingReason } from '@/types';
 
-const REASON_COLORS: Record<TrackingReason, string> = {
-  building: 'bg-blue-500/20 text-blue-400 border-blue-500/50',
-  farming: 'bg-green-500/20 text-green-400 border-green-500/50',
-  wishlist: 'bg-purple-500/20 text-purple-400 border-purple-500/50',
-};
-
-const REASON_LABELS: Record<TrackingReason, string> = {
-  building: 'Building',
-  farming: 'Farming',
-  wishlist: 'Wishlist',
-};
+import { REASON_COLORS, REASON_LABELS } from '../constants';
 
 interface TrackedItemCardProps {
   name: string;

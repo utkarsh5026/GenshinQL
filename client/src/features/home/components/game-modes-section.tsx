@@ -22,7 +22,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
-import { CachedImage } from '@/components/utils/CachedImage';
+import { CachedImage } from '@/features/cache';
 import { cn } from '@/lib/utils';
 import {
   useCharacterMap,
@@ -31,24 +31,9 @@ import {
   useSpiralAbyss,
   useTrackedCharacters,
 } from '@/stores';
-import type { CharacterPriority, RecommendedCharacter } from '@/types';
+import type { RecommendedCharacter } from '@/types';
 
-const PRIORITY_COLORS: Record<CharacterPriority, string> = {
-  S: 'bg-amber-500/20 text-amber-400 border-amber-500/50',
-  A: 'bg-purple-500/20 text-purple-400 border-purple-500/50',
-  B: 'bg-blue-500/20 text-blue-400 border-blue-500/50',
-  C: 'bg-slate-500/20 text-slate-400 border-slate-500/50',
-};
-
-const ELEMENT_COLORS: Record<string, string> = {
-  Pyro: 'text-red-400',
-  Hydro: 'text-blue-400',
-  Electro: 'text-purple-400',
-  Cryo: 'text-cyan-400',
-  Anemo: 'text-teal-400',
-  Geo: 'text-amber-400',
-  Dendro: 'text-green-400',
-};
+import { ELEMENT_COLORS, PRIORITY_COLORS } from '../constants';
 
 interface RecommendedCharacterCardProps {
   character: RecommendedCharacter;
