@@ -1,2 +1,5 @@
 /* Export all services from characters feature */
-export { fetchCharacterProfile } from './fetchCharacterProfile';
+export {
+  fetchCharacterProfile,
+  fetchCharacters,
+} from './fetchCharacterProfile';

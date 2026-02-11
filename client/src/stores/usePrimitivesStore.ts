@@ -1,19 +1,39 @@
 import { create } from 'zustand';
 import { useShallow } from 'zustand/react/shallow';
 
-import { loadDataForFile } from '@/services/dataService';
+import { fetchWithCache } from '@/features/cache';
 import type { PrimitiveItem, Primitives } from '@/types';
 
+/**
+ * State interface for the primitives store.
+ * Manages loading and storage of game primitives (elements, regions, weapon types).
+ */
 interface PrimitivesState {
+  /** The cached primitives data */
   primitives: Primitives | null;
+
+  /** Loading state indicator */
   loading: boolean;
+
+  /** Error message if fetch fails */
   error: string | null;
 
+  /** Sets the primitives data and processes region names */
   setPrimitives: (primitives: Primitives) => void;
+
+  /** Fetches primitives from cache if not already loaded */
   fetchPrimitives: () => Promise<void>;
+
+  /** Loads primitives, fetching if necessary, and returns the data */
   loadPrimitives: () => Promise<Primitives>;
+
+  /** Sets the loading state */
   setLoading: (loading: boolean) => void;
+
+  /** Sets the error state */
   setError: (error: string | null) => void;
+
+  /** Resets the store to initial state */
   reset: () => void;
 }
 
@@ -48,7 +68,7 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
       const { primitives, setPrimitives } = get();
       if (primitives !== null) return;
 
-      const data = await loadDataForFile<Primitives>('primitives.json', null);
+      const { data } = await fetchWithCache<Primitives>('primitives.json');
       setPrimitives(data);
     } catch (err) {
       const errorMessage =
@@ -77,33 +97,50 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
   reset: () => set(initialState),
 }));
 
+/**
+ * Hook to get the primitives data.
+ * @returns The primitives object or null if not loaded
+ */
 export const usePrimitives = () =>
-  usePrimitivesStore((state) => state.primitives);
+  usePrimitivesStore(({ primitives }) => primitives);
 
+/**
+ * Hook to get the elements array from primitives.
+ * @returns Array of element primitives or empty array if not loaded
+ */
 export const useElements = () =>
-  usePrimitivesStore((state) => state.primitives?.elements || EMPTY_ELEMENTS);
-
-export const useRegions = () =>
-  usePrimitivesStore((state) => state.primitives?.regions || EMPTY_REGIONS);
-
-export const useWeaponTypes = () =>
   usePrimitivesStore(
-    (state) => state.primitives?.weaponTypes || EMPTY_WEAPON_TYPES
+    ({ primitives }) => primitives?.elements || EMPTY_ELEMENTS
   );
 
-export const usePrimitivesLoading = () =>
-  usePrimitivesStore((state) => state.loading);
+/**
+ * Hook to get the regions array from primitives.
+ * @returns Array of region primitives or empty array if not loaded
+ */
+export const useRegions = () =>
+  usePrimitivesStore(({ primitives }) => primitives?.regions || EMPTY_REGIONS);
 
-export const usePrimitivesError = () =>
-  usePrimitivesStore((state) => state.error);
+/**
+ * Hook to get the weapon types array from primitives.
+ * @returns Array of weapon type primitives or empty array if not loaded
+ */
+export const useWeaponTypes = () =>
+  usePrimitivesStore(
+    ({ primitives }) => primitives?.weaponTypes || EMPTY_WEAPON_TYPES
+  );
 
-const EMPTY_ELEMENTS: Primitives['elements'] = [];
-const EMPTY_REGIONS: Primitives['regions'] = [];
-const EMPTY_WEAPON_TYPES: Primitives['weaponTypes'] = [];
+const EMPTY_ELEMENTS: Primitives['elements'] = [] as const;
+const EMPTY_REGIONS: Primitives['regions'] = [] as const;
+const EMPTY_WEAPON_TYPES: Primitives['weaponTypes'] = [] as const;
 
-const EMPTY_ITEMS: readonly PrimitiveItem[] = [];
-const EMPTY_URL_MAP: Record<string, string> = {};
+const EMPTY_ITEMS: readonly PrimitiveItem[] = [] as const;
+const EMPTY_URL_MAP: Record<string, string> = {} as const;
 
+/**
+ * Hook to get a specific primitive array and its URL mapping.
+ * @param mapOf - The key of the primitives object to retrieve (elements, regions, or weaponTypes)
+ * @returns Object containing the items array and a mapping of item names to their URLs
+ */
 export function usePrimitivesMap(mapOf: keyof Primitives) {
   return usePrimitivesStore(
     useShallow(({ primitives }) => {
