@@ -1,4 +1,4 @@
-import { loadDataForFile } from '@/services/dataService';
+import { fetchWithCache } from '@/features/cache';
 
 import type { TalentBookCalendar } from '../types';
 
@@ -10,9 +10,12 @@ let talentsCache: { talentBooks: TalentBookCalendar[] } | null = null;
 export async function loadTalentsData() {
   if (talentsCache) return talentsCache;
 
-  const rawData = await loadDataForFile<
-    Record<string, TalentBookCalendar['days']>
-  >('dailyTalents.json', null);
+  const { data: rawData } =
+    await fetchWithCache<Record<string, TalentBookCalendar['days']>>(
+      'dailyTalents.json'
+    );
+
+  console.log('Fetched talent book calendar data:', rawData);
 
   const talentBooks = Object.entries(rawData).map(([location, days]) => ({
     location,
