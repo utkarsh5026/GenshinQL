@@ -34,6 +34,8 @@ export type Character = {
   weaponUrl: string;
   /** Region icon URL - populated at runtime from primitives.json */
   regionUrl: string;
+  /** Namecard background URL - from character's nameCards gallery */
+  namecardURL?: string;
   modelType: string;
   version?: string;
   idleOne?: AnimationMedia;

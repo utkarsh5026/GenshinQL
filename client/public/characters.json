@@ -29,7 +29,8 @@
       "region": 5,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Namecard_Background_Aino_Whoopsie_Ducksie.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Albedo_Icon.png",
@@ -61,7 +62,8 @@
       "region": 3,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Namecard_Background_Albedo_Sun_Blossom.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Alhaitham_Icon.png",
@@ -93,7 +95,8 @@
       "region": 8,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Namecard_Background_Alhaitham_Enlightenment.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Amber_Icon.png",
@@ -125,7 +128,8 @@
       "region": 3,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Namecard_Background_Amber_Bunny.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Arataki_Itto_Icon.png",
@@ -157,7 +161,8 @@
       "region": 1,
       "weaponType": 2,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Namecard_Background_Itto_Oni_Face.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Arlecchino_Icon.png",
@@ -189,7 +194,8 @@
       "region": 7,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Namecard_Background_Arlecchino_Edict.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Baizhu_Icon.png",
@@ -221,7 +227,8 @@
       "region": 2,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Namecard_Background_Baizhu_Relief.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Barbara_Icon.png",
@@ -253,7 +260,8 @@
       "region": 3,
       "weaponType": 1,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Namecard_Background_Barbara_Flow.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Beidou_Icon.png",
@@ -285,7 +293,8 @@
       "region": 2,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Namecard_Background_Beidou_Weighing_Anchor.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Bennett_Icon.png",
@@ -317,7 +326,8 @@
       "region": 3,
       "weaponType": 4,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Namecard_Background_Bennett_Recognition.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Candace_Icon.png",
@@ -349,7 +359,8 @@
       "region": 8,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Namecard_Background_Candace_Gray_Heron.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Charlotte_Icon.png",
@@ -381,7 +392,8 @@
       "region": 0,
       "weaponType": 1,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Namecard_Background_Charlotte_Exclusive.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Chasca_Icon.png",
@@ -413,7 +425,8 @@
       "region": 4,
       "weaponType": 0,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Namecard_Background_Chasca_Fully_Loaded.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Chevreuse_Icon.png",
@@ -445,7 +458,8 @@
       "region": 0,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Namecard_Background_Chevreuse_Type_II.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Chiori_Icon.png",
@@ -477,7 +491,8 @@
       "region": 1,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Namecard_Background_Chiori_Spectacular_Sleeves.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Chongyun_Icon.png",
@@ -509,7 +524,8 @@
       "region": 2,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Namecard_Background_Chongyun_Spirit_Blade.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Citlali_Icon.png",
@@ -541,7 +557,8 @@
       "region": 4,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Namecard_Background_Citlali_Opalstar.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Clorinde_Icon.png",
@@ -573,7 +590,8 @@
       "region": 0,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Namecard_Background_Clorinde_Roleplay.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Collei_Icon.png",
@@ -605,7 +623,8 @@
       "region": 8,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Namecard_Background_Collei_Good_Virtue.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Columbina_Icon.png",
@@ -630,7 +649,8 @@
       "region": 5,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 5
+      "modelType": 5,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Namecard_Background_Columbina_Someday.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cyno_Icon.png",
@@ -662,7 +682,8 @@
       "region": 8,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Cyno_Silence.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Dahlia_Icon.png",
@@ -694,7 +715,8 @@
       "region": 3,
       "weaponType": 4,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Namecard_Background_Dahlia_Sacred_Duty.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Dehya_Icon.png",
@@ -726,7 +748,8 @@
       "region": 8,
       "weaponType": 2,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Namecard_Background_Dehya_Purifying_Flame.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Diluc_Icon.png",
@@ -758,7 +781,8 @@
       "region": 3,
       "weaponType": 2,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Namecard_Background_Diluc_Flames.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Diona_Icon.png",
@@ -790,7 +814,8 @@
       "region": 3,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Namecard_Background_Diona_Meow%21.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Dori_Icon.png",
@@ -822,7 +847,8 @@
       "region": 8,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Namecard_Background_Dori_Jinni.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Durin_Icon.png",
@@ -831,7 +857,8 @@
       "region": 3,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Namecard_Background_Durin_Radiant_Heart.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Emilie_Icon.png",
@@ -863,7 +890,8 @@
       "region": 0,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Namecard_Background_Emilie_Base_Note.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Escoffier_Icon.png",
@@ -895,7 +923,8 @@
       "region": 0,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Escoffier_Charm.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Eula_Icon.png",
@@ -927,7 +956,8 @@
       "region": 3,
       "weaponType": 2,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Namecard_Background_Eula_Ice-Sealed.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Faruzan_Icon.png",
@@ -959,7 +989,8 @@
       "region": 8,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Namecard_Background_Faruzan_Sealed_Secret.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Fischl_Icon.png",
@@ -991,7 +1022,8 @@
       "region": 3,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Namecard_Background_Fischl_Night_Raven.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Flins_Icon.png",
@@ -1016,7 +1048,8 @@
       "region": 5,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Namecard_Background_Flins_Oathkeeper%27s_Lantern.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Freminet_Icon.png",
@@ -1048,7 +1081,8 @@
       "region": 0,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Namecard_Background_Freminet_Progress.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Furina_Icon.png",
@@ -1080,7 +1114,8 @@
       "region": 0,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Namecard_Background_Furina_Banquet.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Gaming_Icon.png",
@@ -1112,7 +1147,8 @@
       "region": 2,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Namecard_Background_Gaming_Man_Chai.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Ganyu_Icon.png",
@@ -1144,7 +1180,8 @@
       "region": 2,
       "weaponType": 0,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Namecard_Background_Ganyu_Qilin.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Gorou_Icon.png",
@@ -1176,7 +1213,8 @@
       "region": 1,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Namecard_Background_Gorou_Leisurely_Hound.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Hu_Tao_Icon.png",
@@ -1208,7 +1246,8 @@
       "region": 2,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Namecard_Background_Hu_Tao_Spirit_Soother.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Iansan_Icon.png",
@@ -1240,7 +1279,8 @@
       "region": 4,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Namecard_Background_Iansan_Unyielding.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Ifa_Icon.png",
@@ -1272,7 +1312,8 @@
       "region": 4,
       "weaponType": 1,
       "rarity": 0,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Namecard_Background_Ifa_Bro.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Ineffa_Icon.png",
@@ -1304,7 +1345,8 @@
       "region": 5,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Namecard_Background_Ineffa_Command.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Jahoda_Icon.png",
@@ -1313,7 +1355,8 @@
       "region": 5,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Namecard_Background_Jahoda_Helping_Hand.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Jean_Icon.png",
@@ -1345,7 +1388,8 @@
       "region": 3,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Namecard_Background_Jean_The_Winds%27_Course.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Kachina_Icon.png",
@@ -1377,7 +1421,8 @@
       "region": 4,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Namecard_Background_Kachina_Twirly.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Kaedehara_Kazuha_Icon.png",
@@ -1409,7 +1454,8 @@
       "region": 1,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Namecard_Background_Kaedehara_Kazuha_Autumn_Maple-Viewing.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kaeya_Icon.png",
@@ -1441,7 +1487,8 @@
       "region": 3,
       "weaponType": 4,
       "rarity": 0,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Namecard_Background_Kaeya_Pavo_Ocellus.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Kamisato_Ayaka_Icon.png",
@@ -1473,7 +1520,8 @@
       "region": 1,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Namecard_Background_Kamisato_Ayaka_Folding_Fan.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Kamisato_Ayato_Icon.png",
@@ -1505,7 +1553,8 @@
       "region": 1,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Namecard_Background_Kamisato_Ayato_Ripple.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Kaveh_Icon.png",
@@ -1537,7 +1586,8 @@
       "region": 8,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Namecard_Background_Kaveh_Domed_Court.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Keqing_Icon.png",
@@ -1569,7 +1619,8 @@
       "region": 2,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Namecard_Background_Keqing_Lightning_Stiletto.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Kinich_Icon.png",
@@ -1601,7 +1652,8 @@
       "region": 4,
       "weaponType": 2,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Namecard_Background_Kinich_Ajaw.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kirara_Icon.png",
@@ -1633,7 +1685,8 @@
       "region": 1,
       "weaponType": 4,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Namecard_Background_Kirara_Neko_Box.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Klee_Icon.png",
@@ -1665,7 +1718,8 @@
       "region": 3,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Namecard_Background_Klee_Explosive.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Kujou_Sara_Icon.png",
@@ -1697,7 +1751,8 @@
       "region": 1,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Namecard_Background_Kujou_Sara_Tengu.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Kuki_Shinobu_Icon.png",
@@ -1729,7 +1784,8 @@
       "region": 1,
       "weaponType": 4,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Namecard_Background_Kuki_Shinobu_Net.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Lan_Yan_Icon.png",
@@ -1761,7 +1817,8 @@
       "region": 2,
       "weaponType": 1,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Namecard_Background_Lan_Yan_Silver_Swallow.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Lauma_Icon.png",
@@ -1770,7 +1827,8 @@
       "region": 5,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Namecard_Background_Lauma_Branched_Antlers.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Layla_Icon.png",
@@ -1802,7 +1860,8 @@
       "region": 8,
       "weaponType": 4,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Namecard_Background_Layla_Daydream.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lisa_Icon.png",
@@ -1834,7 +1893,8 @@
       "region": 3,
       "weaponType": 1,
       "rarity": 0,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Namecard_Background_Lisa_Tempus_Fugit.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Lynette_Icon.png",
@@ -1866,7 +1926,8 @@
       "region": 0,
       "weaponType": 4,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Namecard_Background_Lynette_Earnestness.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Lyney_Icon.png",
@@ -1898,7 +1959,8 @@
       "region": 0,
       "weaponType": 0,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Namecard_Background_Lyney_Pretense.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Mavuika_Icon.png",
@@ -1930,7 +1992,8 @@
       "region": 4,
       "weaponType": 2,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Namecard_Background_Mavuika_Sun-Crowned.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Mika_Icon.png",
@@ -1962,7 +2025,8 @@
       "region": 3,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Namecard_Background_Mika_Index.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Mona_Icon.png",
@@ -1994,7 +2058,8 @@
       "region": 3,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Namecard_Background_Mona_Starry_Sky.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Mualani_Icon.png",
@@ -2026,7 +2091,8 @@
       "region": 4,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Namecard_Background_Mualani_Sharky.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Nahida_Icon.png",
@@ -2058,7 +2124,8 @@
       "region": 8,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Namecard_Background_Nahida_Crescent.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Navia_Icon.png",
@@ -2090,7 +2157,8 @@
       "region": 0,
       "weaponType": 2,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Namecard_Background_Navia_Rosula.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Nefer_Icon.png",
@@ -2099,7 +2167,8 @@
       "region": 5,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Namecard_Background_Nefer_Secrets.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Neuvillette_Icon.png",
@@ -2131,7 +2200,8 @@
       "region": 0,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Namecard_Background_Neuvillette_Surge.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Nilou_Icon.png",
@@ -2163,7 +2233,8 @@
       "region": 8,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Namecard_Background_Nilou_Lotus_Dance.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Ningguang_Icon.png",
@@ -2195,7 +2266,8 @@
       "region": 2,
       "weaponType": 1,
       "rarity": 0,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Namecard_Background_Ningguang_Phoenix.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Noelle_Icon.png",
@@ -2227,7 +2299,8 @@
       "region": 3,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Namecard_Background_Noelle_Protector.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Ororon_Icon.png",
@@ -2259,7 +2332,8 @@
       "region": 4,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Namecard_Background_Ororon_Nightshade.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Qiqi_Icon.png",
@@ -2291,7 +2365,8 @@
       "region": 2,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Namecard_Background_Qiqi_Cold_Storage.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Raiden_Shogun_Icon.png",
@@ -2323,7 +2398,8 @@
       "region": 1,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Namecard_Background_Raiden_Shogun_Enlightenment.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Razor_Icon.png",
@@ -2355,7 +2431,8 @@
       "region": 3,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Namecard_Background_Razor_Wolvensprint.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Rosaria_Icon.png",
@@ -2387,7 +2464,8 @@
       "region": 3,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Namecard_Background_Rosaria_Indenture.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Sangonomiya_Kokomi_Icon.png",
@@ -2419,7 +2497,8 @@
       "region": 1,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Namecard_Background_Sangonomiya_Kokomi_The_Deep.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Sayu_Icon.png",
@@ -2451,7 +2530,8 @@
       "region": 1,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Namecard_Background_Sayu_Muji-Muji_Daruma.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Sethos_Icon.png",
@@ -2483,7 +2563,8 @@
       "region": 8,
       "weaponType": 0,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Namecard_Background_Sethos_Ba_Fragment.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Shenhe_Icon.png",
@@ -2515,7 +2596,8 @@
       "region": 2,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Namecard_Background_Shenhe_Comb.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Shikanoin_Heizou_Icon.png",
@@ -2547,7 +2629,8 @@
       "region": 1,
       "weaponType": 1,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Namecard_Background_Shikanoin_Heizou_Temari.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Sigewinne_Icon.png",
@@ -2579,7 +2662,8 @@
       "region": 0,
       "weaponType": 0,
       "rarity": 1,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Namecard_Background_Sigewinne_Treatment.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Skirk_Icon.png",
@@ -2611,7 +2695,8 @@
       "region": 6,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Namecard_Background_Skirk_Lone_Shadow.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Sucrose_Icon.png",
@@ -2643,7 +2728,8 @@
       "region": 3,
       "weaponType": 1,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Namecard_Background_Sucrose_Bio-Alchemy.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Tartaglia_Icon.png",
@@ -2675,7 +2761,8 @@
       "region": 7,
       "weaponType": 0,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Namecard_Background_Childe_Foul_Legacy.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Thoma_Icon.png",
@@ -2707,7 +2794,8 @@
       "region": 1,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Namecard_Background_Thoma_Blazing_Guard.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Tighnari_Icon.png",
@@ -2739,7 +2827,8 @@
       "region": 8,
       "weaponType": 0,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Namecard_Background_Tighnari_Dew-Kissed.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Varesa_Icon.png",
@@ -2771,7 +2860,8 @@
       "region": 4,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Namecard_Background_Varesa_Powerhouse.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Venti_Icon.png",
@@ -2803,7 +2893,8 @@
       "region": 3,
       "weaponType": 0,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Namecard_Background_Venti_Azure_Sky.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Wanderer_Icon.png",
@@ -2835,7 +2926,8 @@
       "region": 8,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Namecard_Background_Wanderer_Drifter%27s_Ballad.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Wriothesley_Icon.png",
@@ -2867,7 +2959,8 @@
       "region": 0,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/7d/Namecard_Background_Wriothesley_Detention.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Xiangling_Icon.png",
@@ -2899,7 +2992,8 @@
       "region": 2,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Namecard_Background_Xiangling_Fresh_from_the_Pan.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Xianyun_Icon.png",
@@ -2931,7 +3025,8 @@
       "region": 2,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Namecard_Background_Xianyun_White_Clouds.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Xiao_Icon.png",
@@ -2963,7 +3058,8 @@
       "region": 2,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Namecard_Background_Xiao_Mask.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Xilonen_Icon.png",
@@ -2995,7 +3091,8 @@
       "region": 4,
       "weaponType": 4,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Namecard_Background_Xilonen_Cue_Point.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Xingqiu_Icon.png",
@@ -3027,7 +3124,8 @@
       "region": 2,
       "weaponType": 4,
       "rarity": 0,
-      "modelType": 1
+      "modelType": 1,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Namecard_Background_Xingqiu_Rainbow.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Xinyan_Icon.png",
@@ -3059,7 +3157,8 @@
       "region": 2,
       "weaponType": 2,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Namecard_Background_Xinyan_Song%27s_End.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Yae_Miko_Icon.png",
@@ -3091,7 +3190,8 @@
       "region": 1,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Namecard_Background_Yae_Miko_Kitsune_Dreaming.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Yanfei_Icon.png",
@@ -3123,7 +3223,8 @@
       "region": 2,
       "weaponType": 1,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Namecard_Background_Yanfei_Impartial.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Yaoyao_Icon.png",
@@ -3155,7 +3256,8 @@
       "region": 2,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 2
+      "modelType": 2,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Namecard_Background_Yaoyao_Yuegui.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png",
@@ -3187,7 +3289,8 @@
       "region": 2,
       "weaponType": 0,
       "rarity": 1,
-      "modelType": 3
+      "modelType": 3,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Namecard_Background_Yelan_Throw.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Yoimiya_Icon.png",
@@ -3219,7 +3322,8 @@
       "region": 1,
       "weaponType": 0,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Namecard_Background_Yoimiya_Auratus_Spark.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Yumemizuki_Mizuki_Icon.png",
@@ -3251,7 +3355,8 @@
       "region": 1,
       "weaponType": 1,
       "rarity": 1,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Namecard_Background_Yumemizuki_Mizuki_Nightmare_Devourer.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Yun_Jin_Icon.png",
@@ -3283,7 +3388,8 @@
       "region": 2,
       "weaponType": 3,
       "rarity": 0,
-      "modelType": 0
+      "modelType": 0,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Namecard_Background_Yun_Jin_Rhyme.png"
     },
     {
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Zhongli_Icon.png",
@@ -3315,7 +3421,8 @@
       "region": 2,
       "weaponType": 3,
       "rarity": 1,
-      "modelType": 4
+      "modelType": 4,
+      "namecardURL": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Namecard_Background_Zhongli_Planet_Befall.png"
     }
   ]
 }

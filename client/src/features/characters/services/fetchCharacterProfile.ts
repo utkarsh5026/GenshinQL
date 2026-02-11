@@ -31,6 +31,7 @@ type CharactersJson = {
     weaponType: number;
     rarity: number;
     modelType: number;
+    namecardURL?: string;
     idleAnimations?: AnimationMedia[];
     partyJoinAnimation?: AnimationMedia;
     version?: string;

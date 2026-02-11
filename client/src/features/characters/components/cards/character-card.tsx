@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { CachedImage } from '@/features/cache';
+import { useLazyCachedAsset } from '@/features/cache';
 import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
 import {
   getElementAnimationClass,
@@ -33,6 +34,12 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
     rootMargin: '100px',
     threshold: 0.1,
   });
+
+  const hasNamecard = !!character.namecardURL;
+  const { url: namecardUrl, isLoading: namecardLoading } = useLazyCachedAsset(
+    character.namecardURL,
+    isVisible && hasNamecard
+  );
 
   const staggerDelay = isMounted ? Math.min(index * 0.05, 0.8) : 0;
 
@@ -70,20 +77,45 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
         >
           <Card
             className={`
-              cursor-pointer
+              cursor-pointer overflow-hidden
               ${elementClasses.border}
               ${elementClasses.glass}
               ${styles.cardHover}
               ${styles[elementClasses.glow]}
             `}
           >
-            <CardContent className="p-4">
+            {/* Namecard Banner */}
+            {hasNamecard && (
+              <div className={styles.namecardBanner}>
+                {namecardLoading ? (
+                  <div className={styles.namecardSkeleton} />
+                ) : (
+                  <>
+                    <img
+                      src={namecardUrl}
+                      alt=""
+                      className={styles.namecardImage}
+                      onError={(e) => {
+                        (
+                          e.currentTarget.parentElement as HTMLElement
+                        ).style.display = 'none';
+                      }}
+                    />
+                    <div className={styles.namecardOverlay} />
+                  </>
+                )}
+              </div>
+            )}
+
+            <CardContent
+              className={`p-4 ${hasNamecard ? styles.cardContent : ''} ${hasNamecard ? 'pt-16 md:pt-20' : ''}`}
+            >
               {/* Mobile: Horizontal Layout, Desktop: Vertical Layout */}
               <div className="flex md:flex-col gap-4 md:gap-3 items-start md:items-center">
                 {/* Character Avatar */}
                 <CharacterMediaAvatar
                   media={characterMedia}
-                  containerClassName="h-24 w-24 md:h-28 md:w-28 shrink-0"
+                  containerClassName={`h-24 w-24 md:h-28 md:w-28 shrink-0 ${hasNamecard ? 'ring-2 ring-background/50 rounded-full' : ''}`}
                   hoverScale={1.15}
                 />
 
