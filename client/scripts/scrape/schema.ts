@@ -226,6 +226,27 @@ export const artifactSetSchema = z.object({
   fourPieceBonus: z.string(),
 });
 
+// Imaginarium Theater schemas
+export const theaterCharacterSchema = z.object({
+  name: z.string(),
+  iconUrl: z.string(),
+});
+
+export const theaterElementSchema = z.object({
+  name: z.string(),
+  iconUrl: z.string(),
+});
+
+export const imaginariamTheaterSeasonSchema = z.object({
+  seasonNumber: z.number(),
+  dateRange: z.string(),
+  versionName: z.string().optional(),
+  openingCharacters: z.array(theaterCharacterSchema),
+  theaterEffect: z.string(),
+  elements: z.array(theaterElementSchema),
+  specialGuestCharacters: z.array(theaterCharacterSchema),
+});
+
 export type WeaponMaterialSchema = z.infer<typeof weapMaterialSchema>;
 export type ImageSchema = z.infer<typeof imageSchema>;
 export type WeaponSchema = z.infer<typeof weaponSchema>;
@@ -246,3 +267,8 @@ export type UpgradeMaterial = z.infer<typeof upgradeMaterialSchema>;
 export type TalentUpgrade = z.infer<typeof talentUpgradeSchema>;
 export type VersionRelease = z.infer<typeof versionReleaseSchema>;
 export type CharacterRole = z.infer<typeof characterRoleSchema>;
+export type TheaterCharacter = z.infer<typeof theaterCharacterSchema>;
+export type TheaterElement = z.infer<typeof theaterElementSchema>;
+export type ImaginariamTheaterSeason = z.infer<
+  typeof imaginariamTheaterSeasonSchema
+>;

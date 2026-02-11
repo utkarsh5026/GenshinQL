@@ -7,7 +7,7 @@
 .PHONY: help characters-base characters-detailed characters-check characters-roles characters \
         characters-optimize characters-optimize-files characters-optimize-all \
         gallery gallery-check talents weapons-base weapons-detailed \
-        weapons-calendar weapons-full weapons primitives artifacts all
+        weapons-calendar weapons-full weapons primitives artifacts imaginarium-theater all
 
 # Default target
 .DEFAULT_GOAL := help
@@ -89,6 +89,13 @@ weapons:
 
 artifacts:
 	@node makefile.mjs artifacts
+
+#------------------------------------------------------------------------------
+# Imaginarium Theater Scraping
+#------------------------------------------------------------------------------
+
+imaginarium-theater:
+	@node makefile.mjs imaginarium-theater
 
 #------------------------------------------------------------------------------
 # Data Processing

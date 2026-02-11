@@ -18,6 +18,7 @@
  *   weapons-detailed      - Scrape detailed weapon data
  *   weapons-calendar      - Scrape weapon material calendar
  *   weapons-full          - Scrape all weapon data (base + calendar + optimize)
+ *   imaginarium-theater   - Scrape current Imaginarium Theater season
  *   primitives            - Generate primitives from characters data
  *   all                   - Run all scraping tasks
  */
@@ -147,6 +148,12 @@ const tasks = {
     description: 'Scrape artifact set data from wiki',
     category: 'Artifacts',
     action: () => runTsxScript('artifacts.ts', []),
+  },
+
+  'imaginarium-theater': {
+    description: 'Scrape current Imaginarium Theater season data',
+    category: 'Imaginarium Theater',
+    action: () => runTsxScript('imaginarium-theater.ts', []),
   },
 
   primitives: {
