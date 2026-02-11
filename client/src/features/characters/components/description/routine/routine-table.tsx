@@ -1,5 +1,7 @@
+import { CheckCircle2, Coins, Package, Sparkles, Swords } from 'lucide-react';
 import React, { useEffect, useMemo } from 'react';
 
+import { DAYS_OF_WEEK } from '@/constants';
 import {
   type TalentBook,
   useTalentBooksStore,
@@ -17,23 +19,13 @@ interface RoutineTableProps {
   selectedWeapons: WeaponSummary[];
 }
 
-const DAYS_OF_WEEK: Day[] = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
-];
-
 /**
  * Parses a day string like "Monday/Thursday" or "Monday/\nThursday" into an array of days
  */
 function parseDays(dayString: string): Day[] {
   return dayString
     .split(/\s*\/\s*|\n/)
-    .map((day) => day.trim())
+    .map((day) => day.trim().replace(/,$/, ''))
     .filter((day) => day.length > 0) as Day[];
 }
 
@@ -91,31 +83,49 @@ function buildDailyRoutines(
     },
   };
 
-  // Add talent materials for character
   const talentBook = talentCharMap[character.name];
   if (talentBook) {
     [talentBook.dayOne, talentBook.dayTwo].forEach((day) => {
-      if (day && routineMap[day as Day]) {
-        routineMap[day as Day].talentMaterials = talentBook;
-        routineMap[day as Day].hasFarming = true;
+      const cleanDay = day?.replace(/\/$/, '').trim();
+      if (cleanDay && routineMap[cleanDay as Day]) {
+        routineMap[cleanDay as Day].talentMaterials = talentBook;
+        routineMap[cleanDay as Day].hasFarming = true;
       }
     });
   }
 
-  // Add weapon materials for selected weapons
   selectedWeapons.forEach((weapon) => {
     const material = weaponMap[weapon.name];
     if (material) {
       parseDays(material.day).forEach((day) => {
         if (routineMap[day]) {
-          routineMap[day].weaponMaterials.push(material);
+          // Find existing material group with matching material images
+          const existingGroup = routineMap[day].weaponMaterials.find(
+            (group) =>
+              // Compare by checking if material images match
+              group.materialImages.length === material.materialImages.length &&
+              group.materialImages.every(
+                (img, idx) => img.url === material.materialImages[idx]?.url
+              )
+          );
+
+          if (existingGroup) {
+            // Add weapon to existing group (handles multiple weapons with same material)
+            existingGroup.weapons.push(weapon);
+          } else {
+            // Create new material group
+            routineMap[day].weaponMaterials.push({
+              day: material.day,
+              materialImages: material.materialImages,
+              weapons: [weapon],
+            });
+          }
           routineMap[day].hasFarming = true;
         }
       });
     }
   });
 
-  // Convert to ordered array
   return DAYS_OF_WEEK.map((day) => routineMap[day]);
 }
 
@@ -201,18 +211,58 @@ const RoutineTable: React.FC<RoutineTableProps> = ({
  * Provides helpful suggestions for alternative farming activities.
  */
 const EmptyDaySuggestions: React.FC = () => {
+  const suggestions = [
+    {
+      icon: Coins,
+      title: 'Mora',
+      color: 'text-amber-400/70',
+      hoverColor: 'group-hover:text-amber-400',
+    },
+    {
+      icon: Sparkles,
+      title: 'Character EXP',
+      color: 'text-purple-400/70',
+      hoverColor: 'group-hover:text-purple-400',
+    },
+    {
+      icon: Swords,
+      title: 'Weekly Bosses',
+      color: 'text-red-400/70',
+      hoverColor: 'group-hover:text-red-400',
+    },
+    {
+      icon: Package,
+      title: 'Artifacts',
+      color: 'text-blue-400/70',
+      hoverColor: 'group-hover:text-blue-400',
+    },
+    {
+      icon: CheckCircle2,
+      title: 'Commissions',
+      color: 'text-green-400/70',
+      hoverColor: 'group-hover:text-green-400',
+    },
+  ];
+
   return (
-    <div className="text-muted-foreground">
-      <p className="text-sm mb-2">No farming today! Consider:</p>
-      <ul className="text-xs space-y-1 pl-4">
-        <li>• Farm Mora (Ley Line Outcrops - Blossom of Wealth)</li>
-        <li>
-          • Farm Character EXP Materials (Ley Line Blossoms of Revelation)
-        </li>
-        <li>• Farm Weekly Bosses for talent materials</li>
-        <li>• Farm Artifact Domains</li>
-        <li>• Complete Daily Commissions</li>
-      </ul>
+    <div className="flex flex-wrap items-center gap-3">
+      <span className="text-xs text-muted-foreground/60">No farming •</span>
+      {suggestions.map((suggestion) => {
+        const Icon = suggestion.icon;
+        return (
+          <div
+            key={suggestion.title}
+            className="group flex items-center gap-1.5 transition-all"
+          >
+            <Icon
+              className={`w-3.5 h-3.5 ${suggestion.color} ${suggestion.hoverColor} transition-colors`}
+            />
+            <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">
+              {suggestion.title}
+            </span>
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useState } from 'react';
 
 import ChipSearchBar from '@/components/utils/ChipSearchBar';
-import { WeaponSummary } from '@/features/weapons';
-import { useWeaponsStore } from '@/stores';
+import { useWeaponMap, useWeaponType, WeaponSummary } from '@/features/weapons';
+import { WeaponType } from '@/types';
 
 import type { Character } from '../../../types';
 import RoutineTable from './routine-table';
@@ -14,21 +14,12 @@ interface CharacterRoutineDetailedProps {
 export const CharacterRoutine: React.FC<CharacterRoutineDetailedProps> = ({
   character,
 }) => {
-  const { fetchWeapons, weapons, weaponMap } = useWeaponsStore();
-
-  const weaponsOfType = useMemo(() => {
-    return weapons.filter(
-      (weapon) => weapon.weaponType === character.weaponType
-    );
-  }, [weapons, character.weaponType]);
+  const { weapons: weaponsOfType } = useWeaponType(
+    character.weaponType as WeaponType
+  );
+  const weaponMap = useWeaponMap();
 
   const [selectedWeapons, setSelectedWeapons] = useState<WeaponSummary[]>([]);
-
-  useEffect(() => {
-    if (weapons.length === 0) {
-      fetchWeapons();
-    }
-  }, [weapons.length, fetchWeapons]);
 
   return (
     <div>
