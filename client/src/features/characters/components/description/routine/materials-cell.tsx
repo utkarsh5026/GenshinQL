@@ -8,7 +8,8 @@ import TalentBooksShowCase from './talent-books';
 import WeaponMaterialsDisplay from './weapon-materials-display';
 
 export type WeaponMaterialGroup = {
-  day: string;
+  dayOne: string;
+  dayTwo: string;
   materialImages: ImageUrl[];
   weapons: WeaponSummary[];
 };

@@ -20,16 +20,6 @@ interface RoutineTableProps {
 }
 
 /**
- * Parses a day string like "Monday/Thursday" or "Monday/\nThursday" into an array of days
- */
-function parseDays(dayString: string): Day[] {
-  return dayString
-    .split(/\s*\/\s*|\n/)
-    .map((day) => day.trim().replace(/,$/, ''))
-    .filter((day) => day.length > 0) as Day[];
-}
-
-/**
  * Builds a daily routine schedule combining talent and weapon materials
  */
 function buildDailyRoutines(
@@ -97,12 +87,10 @@ function buildDailyRoutines(
   selectedWeapons.forEach((weapon) => {
     const material = weaponMap[weapon.name];
     if (material) {
-      parseDays(material.day).forEach((day) => {
-        if (routineMap[day]) {
-          // Find existing material group with matching material images
-          const existingGroup = routineMap[day].weaponMaterials.find(
+      [material.dayOne, material.dayTwo].forEach((day) => {
+        if (routineMap[day as Day]) {
+          const existingGroup = routineMap[day as Day].weaponMaterials.find(
             (group) =>
-              // Compare by checking if material images match
               group.materialImages.length === material.materialImages.length &&
               group.materialImages.every(
                 (img, idx) => img.url === material.materialImages[idx]?.url
@@ -110,17 +98,16 @@ function buildDailyRoutines(
           );
 
           if (existingGroup) {
-            // Add weapon to existing group (handles multiple weapons with same material)
             existingGroup.weapons.push(weapon);
           } else {
-            // Create new material group
-            routineMap[day].weaponMaterials.push({
-              day: material.day,
+            routineMap[day as Day].weaponMaterials.push({
+              dayOne: material.dayOne,
+              dayTwo: material.dayTwo,
               materialImages: material.materialImages,
               weapons: [weapon],
             });
           }
-          routineMap[day].hasFarming = true;
+          routineMap[day as Day].hasFarming = true;
         }
       });
     }

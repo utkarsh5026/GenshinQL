@@ -29,7 +29,7 @@ const WeaponMaterialsDisplay: React.FC<WeaponMaterialsDisplayProps> = ({
     <div className="flex flex-col gap-3">
       {materialGroups.map((group, index) => (
         <div
-          key={`${group.day}-${index}`}
+          key={`${group.dayOne}-${group.dayTwo}-${index}`}
           className="flex flex-col md:flex-row md:items-start gap-3 md:gap-4"
         >
           {/* Material Images Section */}
