@@ -13,7 +13,7 @@ import ElementalBurstShowcase from './character-burst-showcase';
 import { CharacterConstellations } from './constellations';
 import { CharacterPassives } from './passives';
 import ProfileHeader from './profile-header';
-import CharacterRoutineDetailed from './routine/CharacterRoutineDetailed';
+import { CharacterRoutine } from './routine/character-routine';
 import TalentShowcase from './talents/talent-showcase';
 
 interface CharacterDetailedProps {
@@ -84,7 +84,7 @@ function getElementClasses(element: string) {
 
 /** Generates star string for rarity display */
 const getRarityStars = (rarity: string) => {
-  const numStars = parseInt(rarity) || 5;
+  const numStars = Number.parseInt(rarity) || 5;
   return '★'.repeat(numStars);
 };
 
@@ -225,7 +225,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           )}
           {selectedMenuItem === 'Routine' && (
             <CharacterCard elementColor={elementColor}>
-              <CharacterRoutineDetailed character={character} />
+              <CharacterRoutine character={character} />
             </CharacterCard>
           )}
           {selectedMenuItem === 'Builds' && (

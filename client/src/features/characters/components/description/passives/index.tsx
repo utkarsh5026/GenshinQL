@@ -6,7 +6,7 @@ import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
 import { CachedImage } from '@/features/cache';
 import { Talent } from '@/features/characters/types';
 import { getPassiveStyles, sortPassives } from '@/features/characters/utils';
-import { extractConstellationTags } from '@/features/characters/utils/constellationTags';
+import { extractConstellationTags } from '@/features/characters/utils/ability-tags';
 
 interface CharacterPassivesProps {
   passives: Talent[];

@@ -6,7 +6,7 @@ import { AnimatedCover } from '@/components/utils';
 import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
 import { CachedImage } from '@/features/cache';
 import { useCharacterTalents } from '@/features/characters/hooks';
-import { extractConstellationTags } from '@/features/characters/utils/constellationTags';
+import { extractConstellationTags } from '@/features/characters/utils/ability-tags';
 import { AnimationMedia } from '@/types';
 import { decideColor } from '@/utils/color';
 
