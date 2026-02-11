@@ -1,9 +1,9 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
+import { fetchWithCache } from '@/features/cache';
 import { useWeaponsStore } from '@/features/weapons/stores/useWeaponsStore';
 import { WeaponMaterial, WeaponSummary } from '@/features/weapons/types';
-import { fetchWeaponCalendarOnly } from '@/services/dataService';
 import type { ImageUrl } from '@/types';
 
 export type WeaponMaterialSchedule = {
@@ -129,8 +129,17 @@ export const useWeaponMaterialStore = create<WeaponMaterialState>()(
             await useWeaponsStore.getState().fetchWeapons();
           }
 
-          const calendarData = await fetchWeaponCalendarOnly();
-          get().setWeaponCalendarData(calendarData);
+          const calendarData = await fetchWithCache<
+            Record<
+              string,
+              Array<{
+                day: string;
+                images: ImageUrl[];
+                weapons: Array<{ name: string; url: string }>;
+              }>
+            >
+          >(`weaponCalendar.json`);
+          get().setWeaponCalendarData(calendarData.data);
         } catch (err) {
           const errorMessage =
             err instanceof Error

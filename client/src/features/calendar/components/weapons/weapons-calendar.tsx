@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { ElementDisplay } from '@/components/character/utils/DisplayComponents';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { TabDisplay } from '@/components/utils/tab-display';
 import { useRegions, useWeaponTypes } from '@/stores/usePrimitivesStore';
 
 import { useWeaponFilter } from '../../hooks';
@@ -65,7 +65,7 @@ const WeaponCalendar: React.FC = () => {
               value={nation.name}
               className="text-xs md:text-sm px-3 md:px-4"
             >
-              <ElementDisplay
+              <TabDisplay
                 element={nation.name}
                 elementUrl={nation.url}
                 size="sm"
