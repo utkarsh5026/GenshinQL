@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Initiate",
+    "url": "https://genshin-impact.fandom.com/wiki/Initiate",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Initiate%27s_Flower.png"
+  },
+  {
+    "name": "Adventurer",
+    "url": "https://genshin-impact.fandom.com/wiki/Adventurer",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Adventurer%27s_Flower.png"
+  },
+  {
+    "name": "Lucky Dog",
+    "url": "https://genshin-impact.fandom.com/wiki/Lucky_Dog",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Lucky_Dog%27s_Clover.png"
+  },
+  {
+    "name": "Traveling Doctor",
+    "url": "https://genshin-impact.fandom.com/wiki/Traveling_Doctor",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Traveling_Doctor%27s_Silver_Lotus.png"
+  },
+  {
+    "name": "Resolution of Sojourner",
+    "url": "https://genshin-impact.fandom.com/wiki/Resolution_of_Sojourner",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Item_Heart_of_Comradeship.png"
+  },
+  {
+    "name": "Tiny Miracle",
+    "url": "https://genshin-impact.fandom.com/wiki/Tiny_Miracle",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Item_Tiny_Miracle%27s_Flower.png"
+  },
+  {
+    "name": "Berserker",
+    "url": "https://genshin-impact.fandom.com/wiki/Berserker",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Item_Berserker%27s_Rose.png"
+  },
+  {
+    "name": "Instructor",
+    "url": "https://genshin-impact.fandom.com/wiki/Instructor",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Instructor%27s_Brooch.png"
+  },
+  {
+    "name": "The Exile",
+    "url": "https://genshin-impact.fandom.com/wiki/The_Exile",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Item_Exile%27s_Flower.png"
+  },
+  {
+    "name": "Defender's Will",
+    "url": "https://genshin-impact.fandom.com/wiki/Defender%27s_Will",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Item_Guardian%27s_Flower.png"
+  },
+  {
+    "name": "Brave Heart",
+    "url": "https://genshin-impact.fandom.com/wiki/Brave_Heart",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Item_Medal_of_the_Brave.png"
+  },
+  {
+    "name": "Martial Artist",
+    "url": "https://genshin-impact.fandom.com/wiki/Martial_Artist",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Martial_Artist%27s_Red_Flower.png"
+  },
+  {
+    "name": "Gambler",
+    "url": "https://genshin-impact.fandom.com/wiki/Gambler",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Gambler%27s_Brooch.png"
+  },
+  {
+    "name": "Scholar",
+    "url": "https://genshin-impact.fandom.com/wiki/Scholar",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Item_Scholar%27s_Bookmark.png"
+  },
+  {
+    "name": "Prayers for Wisdom",
+    "url": "https://genshin-impact.fandom.com/wiki/Prayers_for_Wisdom",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Tiara_of_Thunder.png"
+  },
+  {
+    "name": "Prayers for Destiny",
+    "url": "https://genshin-impact.fandom.com/wiki/Prayers_for_Destiny",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Item_Tiara_of_Torrents.png"
+  },
+  {
+    "name": "Prayers for Illumination",
+    "url": "https://genshin-impact.fandom.com/wiki/Prayers_for_Illumination",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Item_Tiara_of_Flame.png"
+  },
+  {
+    "name": "Prayers to Springtime",
+    "url": "https://genshin-impact.fandom.com/wiki/Prayers_to_Springtime",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Item_Tiara_of_Frost.png"
+  },
+  {
+    "name": "Gladiator's Finale",
+    "url": "https://genshin-impact.fandom.com/wiki/Gladiator%27s_Finale",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Gladiator%27s_Nostalgia.png"
+  },
+  {
+    "name": "Wanderer's Troupe",
+    "url": "https://genshin-impact.fandom.com/wiki/Wanderer%27s_Troupe",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Troupe%27s_Dawnlight.png"
+  },
+  {
+    "name": "Noblesse Oblige",
+    "url": "https://genshin-impact.fandom.com/wiki/Noblesse_Oblige",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Royal_Flora.png"
+  },
+  {
+    "name": "Bloodstained Chivalry",
+    "url": "https://genshin-impact.fandom.com/wiki/Bloodstained_Chivalry",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Item_Bloodstained_Flower_of_Iron.png"
+  },
+  {
+    "name": "Maiden Beloved",
+    "url": "https://genshin-impact.fandom.com/wiki/Maiden_Beloved",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Item_Maiden%27s_Distant_Love.png"
+  },
+  {
+    "name": "Viridescent Venerer",
+    "url": "https://genshin-impact.fandom.com/wiki/Viridescent_Venerer",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_In_Remembrance_of_Viridescent_Fields.png"
+  },
+  {
+    "name": "Archaic Petra",
+    "url": "https://genshin-impact.fandom.com/wiki/Archaic_Petra",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Flower_of_Creviced_Cliff.png"
+  },
+  {
+    "name": "Retracing Bolide",
+    "url": "https://genshin-impact.fandom.com/wiki/Retracing_Bolide",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Summer_Night%27s_Bloom.png"
+  },
+  {
+    "name": "Thundersoother",
+    "url": "https://genshin-impact.fandom.com/wiki/Thundersoother",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Item_Thundersoother%27s_Heart.png"
+  },
+  {
+    "name": "Thundering Fury",
+    "url": "https://genshin-impact.fandom.com/wiki/Thundering_Fury",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Thunderbird%27s_Mercy.png"
+  },
+  {
+    "name": "Lavawalker",
+    "url": "https://genshin-impact.fandom.com/wiki/Lavawalker",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Lavawalker%27s_Resolution.png"
+  },
+  {
+    "name": "Crimson Witch of Flames",
+    "url": "https://genshin-impact.fandom.com/wiki/Crimson_Witch_of_Flames",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Witch%27s_Flower_of_Blaze.png"
+  },
+  {
+    "name": "Blizzard Strayer",
+    "url": "https://genshin-impact.fandom.com/wiki/Blizzard_Strayer",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Snowswept_Memory.png"
+  },
+  {
+    "name": "Heart of Depth",
+    "url": "https://genshin-impact.fandom.com/wiki/Heart_of_Depth",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Gilded_Corsage.png"
+  },
+  {
+    "name": "Tenacity of the Millelith",
+    "url": "https://genshin-impact.fandom.com/wiki/Tenacity_of_the_Millelith",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Flower_of_Accolades.png"
+  },
+  {
+    "name": "Pale Flame",
+    "url": "https://genshin-impact.fandom.com/wiki/Pale_Flame",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Stainless_Bloom.png"
+  },
+  {
+    "name": "Shimenawa's Reminiscence",
+    "url": "https://genshin-impact.fandom.com/wiki/Shimenawa%27s_Reminiscence",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Item_Entangling_Bloom.png"
+  },
+  {
+    "name": "Emblem of Severed Fate",
+    "url": "https://genshin-impact.fandom.com/wiki/Emblem_of_Severed_Fate",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Magnificent_Tsuba.png"
+  },
+  {
+    "name": "Husk of Opulent Dreams",
+    "url": "https://genshin-impact.fandom.com/wiki/Husk_of_Opulent_Dreams",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Bloom_Times.png"
+  },
+  {
+    "name": "Ocean-Hued Clam",
+    "url": "https://genshin-impact.fandom.com/wiki/Ocean-Hued_Clam",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Sea-Dyed_Blossom.png"
+  },
+  {
+    "name": "Vermillion Hereafter",
+    "url": "https://genshin-impact.fandom.com/wiki/Vermillion_Hereafter",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Item_Flowering_Life.png"
+  },
+  {
+    "name": "Echoes of an Offering",
+    "url": "https://genshin-impact.fandom.com/wiki/Echoes_of_an_Offering",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Soulscent_Bloom.png"
+  },
+  {
+    "name": "Deepwood Memories",
+    "url": "https://genshin-impact.fandom.com/wiki/Deepwood_Memories",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Item_Labyrinth_Wayfarer.png"
+  },
+  {
+    "name": "Gilded Dreams",
+    "url": "https://genshin-impact.fandom.com/wiki/Gilded_Dreams",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Dreaming_Steelbloom.png"
+  },
+  {
+    "name": "Desert Pavilion Chronicle",
+    "url": "https://genshin-impact.fandom.com/wiki/Desert_Pavilion_Chronicle",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_The_First_Days_of_the_City_of_Kings.png"
+  },
+  {
+    "name": "Flower of Paradise Lost",
+    "url": "https://genshin-impact.fandom.com/wiki/Flower_of_Paradise_Lost",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Item_Ay-Khanoum%27s_Myriad.png"
+  },
+  {
+    "name": "Nymph's Dream",
+    "url": "https://genshin-impact.fandom.com/wiki/Nymph%27s_Dream",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Item_Odyssean_Flower.png"
+  },
+  {
+    "name": "Vourukasha's Glow",
+    "url": "https://genshin-impact.fandom.com/wiki/Vourukasha%27s_Glow",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Stamen_of_Khvarena%27s_Origin.png"
+  },
+  {
+    "name": "Marechaussee Hunter",
+    "url": "https://genshin-impact.fandom.com/wiki/Marechaussee_Hunter",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Item_Hunter%27s_Brooch.png"
+  },
+  {
+    "name": "Golden Troupe",
+    "url": "https://genshin-impact.fandom.com/wiki/Golden_Troupe",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Item_Golden_Song%27s_Variation.png"
+  },
+  {
+    "name": "Song of Days Past",
+    "url": "https://genshin-impact.fandom.com/wiki/Song_of_Days_Past",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Forgotten_Oath_of_Days_Past.png"
+  },
+  {
+    "name": "Nighttime Whispers in the Echoing Woods",
+    "url": "https://genshin-impact.fandom.com/wiki/Nighttime_Whispers_in_the_Echoing_Woods",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Selfless_Floral_Accessory.png"
+  },
+  {
+    "name": "Fragment of Harmonic Whimsy",
+    "url": "https://genshin-impact.fandom.com/wiki/Fragment_of_Harmonic_Whimsy",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Harmonious_Symphony_Prelude.png"
+  },
+  {
+    "name": "Unfinished Reverie",
+    "url": "https://genshin-impact.fandom.com/wiki/Unfinished_Reverie",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Dark_Fruit_of_Bright_Flowers.png"
+  },
+  {
+    "name": "Scroll of the Hero of Cinder City",
+    "url": "https://genshin-impact.fandom.com/wiki/Scroll_of_the_Hero_of_Cinder_City",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Beast_Tamer%27s_Talisman.png"
+  },
+  {
+    "name": "Obsidian Codex",
+    "url": "https://genshin-impact.fandom.com/wiki/Obsidian_Codex",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Item_Reckoning_of_the_Xenogenic.png"
+  },
+  {
+    "name": "Long Night's Oath",
+    "url": "https://genshin-impact.fandom.com/wiki/Long_Night%27s_Oath",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Lightkeeper%27s_Pledge.png"
+  },
+  {
+    "name": "Finale of the Deep Galleries",
+    "url": "https://genshin-impact.fandom.com/wiki/Finale_of_the_Deep_Galleries",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Deep_Gallery%27s_Echoing_Song.png"
+  },
+  {
+    "name": "Night of the Sky's Unveiling",
+    "url": "https://genshin-impact.fandom.com/wiki/Night_of_the_Sky%27s_Unveiling",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Item_Bloom_of_the_Mind%27s_Desire.png"
+  },
+  {
+    "name": "Silken Moon's Serenade",
+    "url": "https://genshin-impact.fandom.com/wiki/Silken_Moon%27s_Serenade",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Crystal_Tear_of_the_Wanderer.png"
+  },
+  {
+    "name": "A Day Carved From Rising Winds",
+    "url": "https://genshin-impact.fandom.com/wiki/A_Day_Carved_From_Rising_Winds",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Item_Windborne_Flower%27s_Spruchdichtung.png"
+  },
+  {
+    "name": "Aubade of Morningstar and Moon",
+    "url": "https://genshin-impact.fandom.com/wiki/Aubade_of_Morningstar_and_Moon",
+    "flowerIconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Moonlit_Offering%27s_Opulent_Dream.png"
+  }
+]

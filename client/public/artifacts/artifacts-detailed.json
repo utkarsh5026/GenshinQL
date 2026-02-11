@@ -1,0 +1,1222 @@
+{
+  "Brave Heart": {
+    "name": "Brave Heart",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Medal of the Brave",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Item_Medal_of_the_Brave.png"
+      },
+      {
+        "type": "plume",
+        "name": "Prospect of the Brave",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Prospect_of_the_Brave.png"
+      },
+      {
+        "type": "sands",
+        "name": "Fortitude of the Brave",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Fortitude_of_the_Brave.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Outset of the Brave",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Item_Outset_of_the_Brave.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Crown of the Brave",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Crown_of_the_Brave.png"
+      }
+    ],
+    "twoPieceBonus": "ATK +18%.",
+    "fourPieceBonus": "Increases DMG by 30% against opponents with more than 50% HP."
+  },
+  "Scholar": {
+    "name": "Scholar",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Scholar's Bookmark",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Item_Scholar%27s_Bookmark.png"
+      },
+      {
+        "type": "plume",
+        "name": "Scholar's Quill Pen",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Item_Scholar%27s_Quill_Pen.png"
+      },
+      {
+        "type": "sands",
+        "name": "Scholar's Clock",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Scholar%27s_Clock.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Scholar's Ink Cup",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Item_Scholar%27s_Ink_Cup.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Scholar's Lens",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Scholar%27s_Lens.png"
+      }
+    ],
+    "twoPieceBonus": "Energy Recharge +20%",
+    "fourPieceBonus": "Gaining Elemental Particles or Orbs gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occur once every 3s."
+  },
+  "Prayers for Destiny": {
+    "name": "Prayers for Destiny",
+    "pieces": [
+      {
+        "type": "circlet",
+        "name": "Tiara of Torrents",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Item_Tiara_of_Torrents.png"
+      }
+    ],
+    "twoPieceBonus": "",
+    "fourPieceBonus": ""
+  },
+  "Archaic Petra": {
+    "name": "Archaic Petra",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Flower of Creviced Cliff",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Flower_of_Creviced_Cliff.png"
+      },
+      {
+        "type": "plume",
+        "name": "Feather of Jagged Peaks",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Feather_of_Jagged_Peaks.png"
+      },
+      {
+        "type": "sands",
+        "name": "Sundial of Enduring Jade",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Item_Sundial_of_Enduring_Jade.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Goblet of Chiseled Crag",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Goblet_of_Chiseled_Crag.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Mask of Solitude Basalt",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Mask_of_Solitude_Basalt.png"
+      }
+    ],
+    "twoPieceBonus": "Geo DMG Bonus +15%.",
+    "fourPieceBonus": "Upon obtaining an Elemental Shard created through Crystallize or triggering a Lunar-Crystallize reaction, all party members gain 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time."
+  },
+  "Retracing Bolide": {
+    "name": "Retracing Bolide",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Summer Night's Bloom",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Summer_Night%27s_Bloom.png"
+      },
+      {
+        "type": "plume",
+        "name": "Summer Night's Finale",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Summer_Night%27s_Finale.png"
+      },
+      {
+        "type": "sands",
+        "name": "Summer Night's Moment",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Item_Summer_Night%27s_Moment.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Summer Night's Waterballoon",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Item_Summer_Night%27s_Waterballoon.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Summer Night's Mask",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Summer_Night%27s_Mask.png"
+      }
+    ],
+    "twoPieceBonus": "Increases Shield Strength by 35%.",
+    "fourPieceBonus": "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG."
+  },
+  "Thundersoother": {
+    "name": "Thundersoother",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Thundersoother's Heart",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Item_Thundersoother%27s_Heart.png"
+      },
+      {
+        "type": "plume",
+        "name": "Thundersoother's Plume",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Thundersoother%27s_Plume.png"
+      },
+      {
+        "type": "sands",
+        "name": "Hour of Soothing Thunder",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Hour_of_Soothing_Thunder.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Thundersoother's Goblet",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Thundersoother%27s_Goblet.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Thundersoother's Diadem",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Item_Thundersoother%27s_Diadem.png"
+      }
+    ],
+    "twoPieceBonus": "Electro RES increased by 40%.",
+    "fourPieceBonus": "Increases DMG against opponents affected by Electro by 35%."
+  },
+  "Thundering Fury": {
+    "name": "Thundering Fury",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Thunderbird's Mercy",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Thunderbird%27s_Mercy.png"
+      },
+      {
+        "type": "plume",
+        "name": "Survivor of Catastrophe",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Item_Survivor_of_Catastrophe.png"
+      },
+      {
+        "type": "sands",
+        "name": "Hourglass of Thunder",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Hourglass_of_Thunder.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Omen of Thunderstorm",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Item_Omen_of_Thunderstorm.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Thunder Summoner's Crown",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Thunder_Summoner%27s_Crown.png"
+      }
+    ],
+    "twoPieceBonus": "Electro DMG Bonus +15%",
+    "fourPieceBonus": "Increases DMG caused by Overloaded, Electro-Charged, Superconduct, and Hyperbloom by 40%, and the DMG Bonus conferred by Aggravate is increased by 20%, and the DMG caused by Lunar-Charged by 20%. When Quicken or the aforementioned Elemental Reactions are triggered, Elemental Skill CD is decreased by 1s. Can only occur once every 0.8s."
+  },
+  "Lavawalker": {
+    "name": "Lavawalker",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Lavawalker's Resolution",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Lavawalker%27s_Resolution.png"
+      },
+      {
+        "type": "plume",
+        "name": "Lavawalker's Salvation",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Item_Lavawalker%27s_Salvation.png"
+      },
+      {
+        "type": "sands",
+        "name": "Lavawalker's Torment",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Item_Lavawalker%27s_Torment.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Lavawalker's Epiphany",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Item_Lavawalker%27s_Epiphany.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Lavawalker's Wisdom",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Item_Lavawalker%27s_Wisdom.png"
+      }
+    ],
+    "twoPieceBonus": "Pyro RES increased by 40%.",
+    "fourPieceBonus": "Increases DMG against opponents affected by Pyro by 35%."
+  },
+  "Crimson Witch of Flames": {
+    "name": "Crimson Witch of Flames",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Witch's Flower of Blaze",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Witch%27s_Flower_of_Blaze.png"
+      },
+      {
+        "type": "plume",
+        "name": "Witch's Ever-Burning Plume",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Witch%27s_Ever-Burning_Plume.png"
+      },
+      {
+        "type": "sands",
+        "name": "Witch's End Time",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Item_Witch%27s_End_Time.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Witch's Heart Flames",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Witch%27s_Heart_Flames.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Witch's Scorching Hat",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Witch%27s_Scorching_Hat.png"
+      }
+    ],
+    "twoPieceBonus": "Pyro DMG Bonus +15%",
+    "fourPieceBonus": "Increases Overloaded and Burning, and Burgeon DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 3 stacks."
+  },
+  "Blizzard Strayer": {
+    "name": "Blizzard Strayer",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Snowswept Memory",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Snowswept_Memory.png"
+      },
+      {
+        "type": "plume",
+        "name": "Icebreaker's Resolve",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Item_Icebreaker%27s_Resolve.png"
+      },
+      {
+        "type": "sands",
+        "name": "Frozen Homeland's Demise",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Frozen_Homeland%27s_Demise.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Frost-Weaved Dignity",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Item_Frost-Weaved_Dignity.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Broken Rime's Echo",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Broken_Rime%27s_Echo.png"
+      }
+    ],
+    "twoPieceBonus": "Cryo DMG Bonus +15%",
+    "fourPieceBonus": "When a character attacks an opponent affected by Cryo, their CRIT Rate is increased by 20%. If the opponent is Frozen, CRIT Rate is increased by an additional 20%."
+  },
+  "Heart of Depth": {
+    "name": "Heart of Depth",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Gilded Corsage",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Gilded_Corsage.png"
+      },
+      {
+        "type": "plume",
+        "name": "Gust of Nostalgia",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Item_Gust_of_Nostalgia.png"
+      },
+      {
+        "type": "sands",
+        "name": "Copper Compass",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Item_Copper_Compass.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Goblet of Thundering Deep",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Item_Goblet_of_Thundering_Deep.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Wine-Stained Tricorne",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Wine-Stained_Tricorne.png"
+      }
+    ],
+    "twoPieceBonus": "Hydro DMG Bonus +15%",
+    "fourPieceBonus": "After using an Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s."
+  },
+  "Pale Flame": {
+    "name": "Pale Flame",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Stainless Bloom",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Stainless_Bloom.png"
+      },
+      {
+        "type": "plume",
+        "name": "Wise Doctor's Pinion",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Item_Wise_Doctor%27s_Pinion.png"
+      },
+      {
+        "type": "sands",
+        "name": "Moment of Cessation",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Moment_of_Cessation.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Surpassing Cup",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Surpassing_Cup.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Mocking Mask",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Mocking_Mask.png"
+      }
+    ],
+    "twoPieceBonus": "Physical DMG Bonus +25%.",
+    "fourPieceBonus": "When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%."
+  },
+  "Ocean-Hued Clam": {
+    "name": "Ocean-Hued Clam",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Sea-Dyed Blossom",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Sea-Dyed_Blossom.png"
+      },
+      {
+        "type": "plume",
+        "name": "Deep Palace's Plume",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Deep_Palace%27s_Plume.png"
+      },
+      {
+        "type": "sands",
+        "name": "Cowry of Parting",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Cowry_of_Parting.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Pearl Cage",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Item_Pearl_Cage.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Crown of Watatsumi",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Item_Crown_of_Watatsumi.png"
+      }
+    ],
+    "twoPieceBonus": "Healing Bonus +15%.",
+    "fourPieceBonus": "When the character equipping this artifact set heals a character in the party, a Sea-Dyed Foam will appear for 3 seconds, accumulating the amount of HP recovered from healing (including overflow healing).\nAt the end of the duration, the Sea-Dyed Foam will explode, dealing DMG to nearby opponents based on 90% of the accumulated healing.\n(This DMG is calculated similarly to Reactions such as Electro-Charged, and Superconduct, but it is not affected by Elemental Mastery, Character Levels, or Reaction DMG Bonuses).\nOnly one Sea-Dyed Foam can be produced every 3.5 seconds.\nEach Sea-Dyed Foam can accumulate up to 30,000 HP (including overflow healing).\nThere can be no more than one Sea-Dyed Foam active at any given time.\nThis effect can still be triggered even when the character who is using this artifact set is not on the field."
+  },
+  "Vermillion Hereafter": {
+    "name": "Vermillion Hereafter",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Flowering Life",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Item_Flowering_Life.png"
+      },
+      {
+        "type": "plume",
+        "name": "Feather of Nascent Light",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Feather_of_Nascent_Light.png"
+      },
+      {
+        "type": "sands",
+        "name": "Solar Relic",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Item_Solar_Relic.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Moment of the Pact",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Item_Moment_of_the_Pact.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Thundering Poise",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Item_Thundering_Poise.png"
+      }
+    ],
+    "twoPieceBonus": "ATK +18%.",
+    "fourPieceBonus": "After using an Elemental Burst, this character will gain the Nascent Light effect, increasing their ATK by 8% for 16s. When the character's HP decreases, their ATK will further increase by 10%. This increase can occur this way maximum of 4 times. This effect can be triggered once every 0.8s. Nascent Light will be dispelled when the character leaves the field. If an Elemental Burst is used again during the duration of Nascent Light, the original Nascent Light will be dispelled."
+  },
+  "Echoes of an Offering": {
+    "name": "Echoes of an Offering",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Soulscent Bloom",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Soulscent_Bloom.png"
+      },
+      {
+        "type": "plume",
+        "name": "Jade Leaf",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Jade_Leaf.png"
+      },
+      {
+        "type": "sands",
+        "name": "Symbol of Felicitation",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Item_Symbol_of_Felicitation.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Chalice of the Font",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Chalice_of_the_Font.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Flowing Rings",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Flowing_Rings.png"
+      }
+    ],
+    "twoPieceBonus": "ATK +18%.",
+    "fourPieceBonus": "When Normal Attacks hit opponents, there is a 36% chance that it will trigger Valley Rite, which will increase Normal Attack DMG by 70% of ATK.\nThis effect will be dispelled 0.05s after a Normal Attack deals DMG.\nIf a Normal Attack fails to trigger Valley Rite, the odds of it triggering the next time will increase by 20%.\nThis trigger can occur once every 0.2s."
+  },
+  "Aubade of Morningstar and Moon": {
+    "name": "Aubade of Morningstar and Moon",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Moonlit Offering's Opulent Dream",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Moonlit_Offering%27s_Opulent_Dream.png"
+      },
+      {
+        "type": "plume",
+        "name": "Moonlit Offering's Parting Light",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Item_Moonlit_Offering%27s_Parting_Light.png"
+      },
+      {
+        "type": "sands",
+        "name": "Moonlit Offering's Final Hour",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Moonlit_Offering%27s_Final_Hour.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Moonlit Offering's Libation",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Item_Moonlit_Offering%27s_Libation.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Moonlit Offering's Silver Crown",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Moonlit_Offering%27s_Silver_Crown.png"
+      }
+    ],
+    "twoPieceBonus": "Increases Elemental Mastery by 80.",
+    "fourPieceBonus": "When the equipping character is off-field, Lunar Reaction DMG is increased by 20%. When the party's Moonsign Level is at least Ascendant Gleam, Lunar Reaction DMG will be further increased by 40%. This effect will disappear after the equipping character is active for 3s."
+  },
+  "The Exile": {
+    "name": "The Exile",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Exile's Flower",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Item_Exile%27s_Flower.png"
+      },
+      {
+        "type": "plume",
+        "name": "Exile's Feather",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Item_Exile%27s_Feather.png"
+      },
+      {
+        "type": "sands",
+        "name": "Exile's Pocket Watch",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Item_Exile%27s_Pocket_Watch.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Exile's Goblet",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Item_Exile%27s_Goblet.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Exile's Circlet",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Exile%27s_Circlet.png"
+      }
+    ],
+    "twoPieceBonus": "Energy Recharge +20%",
+    "fourPieceBonus": "Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack."
+  },
+  "Defender's Will": {
+    "name": "Defender's Will",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Guardian's Flower",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Item_Guardian%27s_Flower.png"
+      },
+      {
+        "type": "plume",
+        "name": "Guardian's Sigil",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Guardian%27s_Sigil.png"
+      },
+      {
+        "type": "sands",
+        "name": "Guardian's Clock",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Guardian%27s_Clock.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Guardian's Vessel",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Guardian%27s_Vessel.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Guardian's Band",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Item_Guardian%27s_Band.png"
+      }
+    ],
+    "twoPieceBonus": "DEF +30%",
+    "fourPieceBonus": "For each different element present in your own party, the wearer's Elemental RES to that corresponding element is increased by 30%."
+  },
+  "Martial Artist": {
+    "name": "Martial Artist",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Martial Artist's Red Flower",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Martial_Artist%27s_Red_Flower.png"
+      },
+      {
+        "type": "plume",
+        "name": "Martial Artist's Feather Accessory",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Martial_Artist%27s_Feather_Accessory.png"
+      },
+      {
+        "type": "sands",
+        "name": "Martial Artist's Water Hourglass",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Item_Martial_Artist%27s_Water_Hourglass.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Martial Artist's Wine Cup",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Item_Martial_Artist%27s_Wine_Cup.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Martial Artist's Bandana",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Item_Martial_Artist%27s_Bandana.png"
+      }
+    ],
+    "twoPieceBonus": "Normal and Charged Attack DMG +15%",
+    "fourPieceBonus": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s."
+  },
+  "Gambler": {
+    "name": "Gambler",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Gambler's Brooch",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Gambler%27s_Brooch.png"
+      },
+      {
+        "type": "plume",
+        "name": "Gambler's Feather Accessory",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Item_Gambler%27s_Feather_Accessory.png"
+      },
+      {
+        "type": "sands",
+        "name": "Gambler's Pocket Watch",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Item_Gambler%27s_Pocket_Watch.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Gambler's Dice Cup",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Item_Gambler%27s_Dice_Cup.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Gambler's Earrings",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Item_Gambler%27s_Earrings.png"
+      }
+    ],
+    "twoPieceBonus": "Increases Elemental Skill DMG by 20%.",
+    "fourPieceBonus": "Defeating an opponent has a 100% chance to remove Elemental Skill CD. Can only occur once every 15s."
+  },
+  "Prayers for Wisdom": {
+    "name": "Prayers for Wisdom",
+    "pieces": [
+      {
+        "type": "circlet",
+        "name": "Tiara of Thunder",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Tiara_of_Thunder.png"
+      }
+    ],
+    "twoPieceBonus": "",
+    "fourPieceBonus": ""
+  },
+  "Prayers for Illumination": {
+    "name": "Prayers for Illumination",
+    "pieces": [
+      {
+        "type": "circlet",
+        "name": "Tiara of Flame",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Item_Tiara_of_Flame.png"
+      }
+    ],
+    "twoPieceBonus": "",
+    "fourPieceBonus": ""
+  },
+  "Gladiator's Finale": {
+    "name": "Gladiator's Finale",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Gladiator's Nostalgia",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Gladiator%27s_Nostalgia.png"
+      },
+      {
+        "type": "plume",
+        "name": "Gladiator's Destiny",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Gladiator%27s_Destiny.png"
+      },
+      {
+        "type": "sands",
+        "name": "Gladiator's Longing",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Gladiator%27s_Longing.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Gladiator's Intoxication",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Item_Gladiator%27s_Intoxication.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Gladiator's Triumphus",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Gladiator%27s_Triumphus.png"
+      }
+    ],
+    "twoPieceBonus": "ATK +18%.",
+    "fourPieceBonus": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%."
+  },
+  "Noblesse Oblige": {
+    "name": "Noblesse Oblige",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Royal Flora",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Royal_Flora.png"
+      },
+      {
+        "type": "plume",
+        "name": "Royal Plume",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Royal_Plume.png"
+      },
+      {
+        "type": "sands",
+        "name": "Royal Pocket Watch",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Item_Royal_Pocket_Watch.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Royal Silver Urn",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Item_Royal_Silver_Urn.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Royal Masque",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Item_Royal_Masque.png"
+      }
+    ],
+    "twoPieceBonus": "Elemental Burst DMG +20%",
+    "fourPieceBonus": "Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack."
+  },
+  "Bloodstained Chivalry": {
+    "name": "Bloodstained Chivalry",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Bloodstained Flower of Iron",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Item_Bloodstained_Flower_of_Iron.png"
+      },
+      {
+        "type": "plume",
+        "name": "Bloodstained Black Plume",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Item_Bloodstained_Black_Plume.png"
+      },
+      {
+        "type": "sands",
+        "name": "Bloodstained Final Hour",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Item_Bloodstained_Final_Hour.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Bloodstained Chevalier's Goblet",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Item_Bloodstained_Chevalier%27s_Goblet.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Bloodstained Iron Mask",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Bloodstained_Iron_Mask.png"
+      }
+    ],
+    "twoPieceBonus": "Physical DMG Bonus +25%",
+    "fourPieceBonus": "After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s."
+  },
+  "Tenacity of the Millelith": {
+    "name": "Tenacity of the Millelith",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Flower of Accolades",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Flower_of_Accolades.png"
+      },
+      {
+        "type": "plume",
+        "name": "Ceremonial War-Plume",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Item_Ceremonial_War-Plume.png"
+      },
+      {
+        "type": "sands",
+        "name": "Orichalceous Time-Dial",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Item_Orichalceous_Time-Dial.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Noble's Pledging Vessel",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Noble%27s_Pledging_Vessel.png"
+      },
+      {
+        "type": "circlet",
+        "name": "General's Ancient Helm",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_General%27s_Ancient_Helm.png"
+      }
+    ],
+    "twoPieceBonus": "HP +20%",
+    "fourPieceBonus": "When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s. This effect can be triggered once every 0.5s. This effect can still be triggered even when the character who is using this artifact set is not on the field."
+  },
+  "Emblem of Severed Fate": {
+    "name": "Emblem of Severed Fate",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Magnificent Tsuba",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Magnificent_Tsuba.png"
+      },
+      {
+        "type": "plume",
+        "name": "Sundered Feather",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Item_Sundered_Feather.png"
+      },
+      {
+        "type": "sands",
+        "name": "Storm Cage",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Item_Storm_Cage.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Scarlet Vessel",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Item_Scarlet_Vessel.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Ornate Kabuto",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Ornate_Kabuto.png"
+      }
+    ],
+    "twoPieceBonus": "Energy Recharge +20%",
+    "fourPieceBonus": "Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way."
+  },
+  "Husk of Opulent Dreams": {
+    "name": "Husk of Opulent Dreams",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Bloom Times",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Bloom_Times.png"
+      },
+      {
+        "type": "plume",
+        "name": "Plume of Luxury",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Item_Plume_of_Luxury.png"
+      },
+      {
+        "type": "sands",
+        "name": "Song of Life",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Item_Song_of_Life.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Calabash of Awakening",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Item_Calabash_of_Awakening.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Skeletal Hat",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Skeletal_Hat.png"
+      }
+    ],
+    "twoPieceBonus": "DEF +30%",
+    "fourPieceBonus": "A character equipped with this Artifact set will obtain the Curiosity effect in the following conditions:\nWhen on the field, the character gains 1 stack after hitting an opponent with a Geo attack, triggering a maximum of once every 0.3s.\nWhen off the field, the character gains 1 stack every 3s.\nCuriosity can stack up to 4 times, each providing 6% DEF and a 6% Geo DMG Bonus.\nWhen 6 seconds pass without gaining a Curiosity stack, 1 stack is lost."
+  },
+  "Deepwood Memories": {
+    "name": "Deepwood Memories",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Labyrinth Wayfarer",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Item_Labyrinth_Wayfarer.png"
+      },
+      {
+        "type": "plume",
+        "name": "Scholar of Vines",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Scholar_of_Vines.png"
+      },
+      {
+        "type": "sands",
+        "name": "A Time of Insight",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Item_A_Time_of_Insight.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Lamp of the Lost",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Item_Lamp_of_the_Lost.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Laurel Coronet",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Laurel_Coronet.png"
+      }
+    ],
+    "twoPieceBonus": "Dendro DMG Bonus +15%.",
+    "fourPieceBonus": "After Elemental Skills or Bursts hit opponents, the targets' Dendro RES will be decreased by 30% for 8s. This effect can be triggered even if the equipping character is not on the field."
+  },
+  "Gilded Dreams": {
+    "name": "Gilded Dreams",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Dreaming Steelbloom",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Dreaming_Steelbloom.png"
+      },
+      {
+        "type": "plume",
+        "name": "Feather of Judgment",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Item_Feather_of_Judgment.png"
+      },
+      {
+        "type": "sands",
+        "name": "The Sunken Years",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Item_The_Sunken_Years.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Honeyed Final Feast",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Honeyed_Final_Feast.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Shadow of the Sand King",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Shadow_of_the_Sand_King.png"
+      }
+    ],
+    "twoPieceBonus": "Increases Elemental Mastery by 80.",
+    "fourPieceBonus": "Within 8s of triggering an Elemental Reaction, the character equipping this will obtain buffs based on the Elemental Type of the other party members. ATK is increased by 14% for each party member whose Elemental Type is the same as the equipping character, and Elemental Mastery is increased by 50 for every party member with a different Elemental Type. Each of the aforementioned buffs will count up to 3 characters. This effect can be triggered once every 8s. The character who equips this can still trigger its effects when not on the field."
+  },
+  "Flower of Paradise Lost": {
+    "name": "Flower of Paradise Lost",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Ay-Khanoum's Myriad",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Item_Ay-Khanoum%27s_Myriad.png"
+      },
+      {
+        "type": "plume",
+        "name": "Wilting Feast",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Wilting_Feast.png"
+      },
+      {
+        "type": "sands",
+        "name": "A Moment Congealed",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_A_Moment_Congealed.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Secret-Keeper's Magic Bottle",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Item_Secret-Keeper%27s_Magic_Bottle.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Amethyst Crown",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Amethyst_Crown.png"
+      }
+    ],
+    "twoPieceBonus": "Increases Elemental Mastery by 80.",
+    "fourPieceBonus": "The equipping character's Bloom, Hyperbloom, and Burgeon reaction DMG are increased by 40%, and their Lunar-Bloom reaction DMG is increased by 10%. Additionally, after the equipping character triggers Bloom, Hyperbloom, Lunar-Bloom, or Burgeon, they will gain another 25% bonus to the effect mentioned prior. Each stack of this lasts 10s. Max 4 stacks simultaneously. This effect can only be triggered once per second. The character who equips this can still trigger its effects when not on the field."
+  },
+  "Nymph's Dream": {
+    "name": "Nymph's Dream",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Odyssean Flower",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Item_Odyssean_Flower.png"
+      },
+      {
+        "type": "plume",
+        "name": "Wicked Mage's Plumule",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Wicked_Mage%27s_Plumule.png"
+      },
+      {
+        "type": "sands",
+        "name": "Nymph's Constancy",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Item_Nymph%27s_Constancy.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Heroes' Tea Party",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Heroes%27_Tea_Party.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Fell Dragon's Monocle",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Fell_Dragon%27s_Monocle.png"
+      }
+    ],
+    "twoPieceBonus": "Hydro DMG Bonus +15%",
+    "fourPieceBonus": "After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered, lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG will be increased by 4%/9%/15%. Mirrored Nymph created by Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts exist independently."
+  },
+  "Vourukasha's Glow": {
+    "name": "Vourukasha's Glow",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Stamen of Khvarena's Origin",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Stamen_of_Khvarena%27s_Origin.png"
+      },
+      {
+        "type": "plume",
+        "name": "Vibrant Pinion",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Item_Vibrant_Pinion.png"
+      },
+      {
+        "type": "sands",
+        "name": "Ancient Abscission",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Ancient_Abscission.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Feast of Boundless Joy",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Feast_of_Boundless_Joy.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Heart of Khvarena's Brilliance",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Heart_of_Khvarena%27s_Brilliance.png"
+      }
+    ],
+    "twoPieceBonus": "HP +20%",
+    "fourPieceBonus": "Elemental Skill and Elemental Burst DMG will be increased by 10%. After the equipping character takes DMG, the aforementioned DMG Bonus is increased by 80% for 5s. This effect increase can have 5 stacks. The duration of each stack is counted independently. These effects can be triggered even when the equipping character is not on the field."
+  },
+  "Song of Days Past": {
+    "name": "Song of Days Past",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Forgotten Oath of Days Past",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Forgotten_Oath_of_Days_Past.png"
+      },
+      {
+        "type": "plume",
+        "name": "Recollection of Days Past",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Item_Recollection_of_Days_Past.png"
+      },
+      {
+        "type": "sands",
+        "name": "Echoing Sound From Days Past",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Item_Echoing_Sound_From_Days_Past.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Promised Dream of Days Past",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Promised_Dream_of_Days_Past.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Poetry of Days Past",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Item_Poetry_of_Days_Past.png"
+      }
+    ],
+    "twoPieceBonus": "Healing Bonus +15%.",
+    "fourPieceBonus": "When the equipping character heals a party member, the Yearning effect will be created for 6s, which records the total amount of healing provided (including overflow healing). When the duration expires, the Yearning effect will be transformed into the \"Waves of Days Past\" effect: When your active party member hits an opponent with a Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, or Elemental Burst, the DMG dealt will be increased by 8% of the total healing amount recorded by the Yearning effect. The \"Waves of Days Past\" effect is removed after it has taken effect 5 times or after 10s. A single instance of the Yearning effect can record up to 15,000 healing, and only a single instance can exist at once, but it can record the healing from multiple equipping characters. Equipping characters on standby can still trigger this effect."
+  },
+  "Unfinished Reverie": {
+    "name": "Unfinished Reverie",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Dark Fruit of Bright Flowers",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Dark_Fruit_of_Bright_Flowers.png"
+      },
+      {
+        "type": "plume",
+        "name": "Faded Emerald Tail",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Item_Faded_Emerald_Tail.png"
+      },
+      {
+        "type": "sands",
+        "name": "Moment of Attainment",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Item_Moment_of_Attainment.png"
+      },
+      {
+        "type": "goblet",
+        "name": "The Wine-Flask Over Which the Plan Was Hatched",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Item_The_Wine-Flask_Over_Which_the_Plan_Was_Hatched.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Crownless Crown",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Item_Crownless_Crown.png"
+      }
+    ],
+    "twoPieceBonus": "ATK +18%.",
+    "fourPieceBonus": "After leaving combat for 3s, DMG dealt increased by 50%. In combat, if no Burning opponents are nearby for more than 6s, this DMG Bonus will decrease by 10% per second until it reaches 0%. When a Burning opponent exists, it will increase by 10% instead until it reaches 50%. This effect still triggers if the equipping character is off-field."
+  },
+  "Long Night's Oath": {
+    "name": "Long Night's Oath",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Lightkeeper's Pledge",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Lightkeeper%27s_Pledge.png"
+      },
+      {
+        "type": "plume",
+        "name": "Nightingale's Tail Feather",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Item_Nightingale%27s_Tail_Feather.png"
+      },
+      {
+        "type": "sands",
+        "name": "Undying One's Mourning Bell",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Item_Undying_One%27s_Mourning_Bell.png"
+      },
+      {
+        "type": "goblet",
+        "name": "A Horn Unwinded",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_A_Horn_Unwinded.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Dyed Tassel",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Dyed_Tassel.png"
+      }
+    ],
+    "twoPieceBonus": "Plunging Attack DMG increased by 25%.",
+    "fourPieceBonus": "After the equipping character's Plunging Attack/Charged Attack/Elemental Skill hits an opponent, they will gain 1/2/2 stack(s) of \"Radiance Everlasting.\" Plunging Attacks, Charged Attacks or Elemental Skills can each trigger this effect once every 1s. Radiance Everlasting: Plunging Attacks deal 15% increased DMG for 6s. Max 5 stacks. Each stack's duration is counted independently."
+  },
+  "Finale of the Deep Galleries": {
+    "name": "Finale of the Deep Galleries",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Deep Gallery's Echoing Song",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Deep_Gallery%27s_Echoing_Song.png"
+      },
+      {
+        "type": "plume",
+        "name": "Deep Gallery's Distant Pact",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Item_Deep_Gallery%27s_Distant_Pact.png"
+      },
+      {
+        "type": "sands",
+        "name": "Deep Gallery's Moment of Oblivion",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Item_Deep_Gallery%27s_Moment_of_Oblivion.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Deep Gallery's Bestowed Banquet",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Item_Deep_Gallery%27s_Bestowed_Banquet.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Deep Gallery's Lost Crown",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Deep_Gallery%27s_Lost_Crown.png"
+      }
+    ],
+    "twoPieceBonus": "Cryo DMG Bonus +15%",
+    "fourPieceBonus": "When the equipping character has 0 Elemental Energy, Normal Attack DMG is increased by 60% and Elemental Burst DMG is increased by 60%. After the equipping character deals Normal Attack DMG, the aforementioned Elemental Burst effect will stop applying for 6s. After the equipping character deals Elemental Burst DMG, the aforementioned Normal Attack effect will stop applying for 6s. This effect can trigger even if the equipping character is off the field."
+  },
+  "Night of the Sky's Unveiling": {
+    "name": "Night of the Sky's Unveiling",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Bloom of the Mind's Desire",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Item_Bloom_of_the_Mind%27s_Desire.png"
+      },
+      {
+        "type": "plume",
+        "name": "Feather of Indelible Sin",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Item_Feather_of_Indelible_Sin.png"
+      },
+      {
+        "type": "sands",
+        "name": "Revelation's Toll",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Item_Revelation%27s_Toll.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Vessel of Plenty",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Item_Vessel_of_Plenty.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Crown of the Befallen",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Crown_of_the_Befallen.png"
+      }
+    ],
+    "twoPieceBonus": "Increases Elemental Mastery by 80.",
+    "fourPieceBonus": "When nearby party members trigger Lunar Reactions, if the equipping character is on the field, gain the Gleaming Moon: Intent effect for 4s: Increases CRIT Rate by 15%/30% when the party's Moonsign is Nascent Gleam/Ascendant Gleam. All party members' Lunar Reaction DMG is increased by 10% for each different Gleaming Moon effect that party members have. Effects from Gleaming Moon cannot stack."
+  },
+  "Silken Moon's Serenade": {
+    "name": "Silken Moon's Serenade",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Crystal Tear of the Wanderer",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Crystal_Tear_of_the_Wanderer.png"
+      },
+      {
+        "type": "plume",
+        "name": "Pristine Plume of the Blessed",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Pristine_Plume_of_the_Blessed.png"
+      },
+      {
+        "type": "sands",
+        "name": "Frost Devotee's Delirium",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Item_Frost_Devotee%27s_Delirium.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Joyous Glory of the Pure",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Joyous_Glory_of_the_Pure.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Holy Crown of the Believer",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Item_Holy_Crown_of_the_Believer.png"
+      }
+    ],
+    "twoPieceBonus": "Energy Recharge +20%.",
+    "fourPieceBonus": "When dealing Elemental DMG, gain the Gleaming Moon: Devotion effect for 8s: Increases all party members' Elemental Mastery by 60/120 when the party's Moonsign is Nascent Gleam/Ascendant Gleam. The equipping character can trigger this effect while off-field. All party members' Lunar Reaction DMG is increased by 10% for each different Gleaming Moon effect that party members have. Effects from Gleaming Moon cannot stack."
+  },
+  "A Day Carved From Rising Winds": {
+    "name": "A Day Carved From Rising Winds",
+    "pieces": [
+      {
+        "type": "flower",
+        "name": "Windborne Flower's Spruchdichtung",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Item_Windborne_Flower%27s_Spruchdichtung.png"
+      },
+      {
+        "type": "plume",
+        "name": "Dawn's Brilliant Oath",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Item_Dawn%27s_Brilliant_Oath.png"
+      },
+      {
+        "type": "sands",
+        "name": "A Note in Spring's Leich",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Item_A_Note_in_Spring%27s_Leich.png"
+      },
+      {
+        "type": "goblet",
+        "name": "Heldenepos's Unspoken Tale",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Heldenepos%27s_Unspoken_Tale.png"
+      },
+      {
+        "type": "circlet",
+        "name": "Minnesang of Love and Lament",
+        "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Item_Minnesang_of_Love_and_Lament.png"
+      }
+    ],
+    "twoPieceBonus": "ATK +18%.",
+    "fourPieceBonus": "After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, gain the Blessing of Pastoral Winds effect for 6s: ATK is increased by 25%. If the equipping character has completed Witch's Homework, Blessing of Pastoral Winds will be upgraded to Resolve of Pastoral Winds, which also increases the CRIT Rate of the equipping character by an additional 20%. This effect can be triggered even when the character is off-field."
+  }
+}
