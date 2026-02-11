@@ -1,12 +1,9 @@
-import { useCallback } from 'react';
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-import {
-  fetchCharacterDetailed,
-  fetchCharacters as fetchCharactersService,
-} from '@/services/dataService';
+import { usePrimitivesStore } from '@/stores/usePrimitivesStore';
 
+import { fetchCharacters as fetchCharactersService } from '../services';
 import type { Character } from '../types';
 
 interface CharactersState {
@@ -59,7 +56,12 @@ export const useCharactersStore = create<CharactersState>()(
         set({ loading: true, error: null });
 
         try {
-          const data = await fetchCharactersService();
+          const primitives = await usePrimitivesStore
+            .getState()
+            .loadPrimitives();
+
+          const data = await fetchCharactersService(primitives);
+
           set({
             characters: data || [],
             characterMap: createCharacterMap(data || []),
@@ -86,11 +88,5 @@ export const useCharacters = () =>
   useCharactersStore((state) => state.characters);
 export const useCharacterMap = () =>
   useCharactersStore((state) => state.characterMap);
-export const useCharactersLoading = () =>
-  useCharactersStore((state) => state.loading);
 export const useCharactersError = () =>
   useCharactersStore((state) => state.error);
-
-export const useFetchCharacter = () => {
-  return useCallback((name: string) => fetchCharacterDetailed(name), []);
-};

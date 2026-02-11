@@ -35,7 +35,7 @@ export const useArtifactLinksStore = create<ArtifactLinksState>()(
 
         try {
           const result = await fetchWithCache<ArtifactLink[]>(
-            '/artifacts-links.json',
+            'artifacts/artifacts-links.json',
             {
               cacheKey: 'artifact-links',
               version: 1,
