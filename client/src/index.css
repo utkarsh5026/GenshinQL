@@ -3,7 +3,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: 'Source Code Pro', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans:
+    'Google Sans Code', 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Base theme colors */
   --color-background: oklch(100% 0 0);
