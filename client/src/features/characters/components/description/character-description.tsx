@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 import { Card } from '@/components/ui/card';
-import { CachedImage } from '@/features/cache';
-import { usePrimitives } from '@/stores/usePrimitivesStore';
 import { decideColor } from '@/utils/color';
 
 import { useCharacterAbilitiesStore } from '../../stores';
 import { CharacterDetailed, CharacterMenuItem } from '../../types';
 import { BuildsDetailed } from './builds/builds-detailed';
-import { BuildsSummary } from './builds-summary';
 import ElementalBurstShowcase from './character-burst-showcase';
+import { CharacterStatsCompact } from './character-info';
 import { CharacterConstellations } from './constellations';
 import { CharacterPassives } from './passives';
 import ProfileHeader from './profile-header';
@@ -82,11 +80,7 @@ function getElementClasses(element: string) {
   );
 }
 
-/** Generates star string for rarity display */
-const getRarityStars = (rarity: string) => {
-  const numStars = Number.parseInt(rarity) || 5;
-  return '★'.repeat(numStars);
-};
+/* getRarityStars moved to character-stats-compact.tsx */
 
 const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   character,
@@ -242,66 +236,6 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   );
 };
 
-/* Enhanced Stat Item Component with optional icon */
-interface StatItemProps {
-  label: string;
-  value: string;
-  iconUrl?: string;
-  highlight?: boolean;
-}
-
-const StatItem: React.FC<StatItemProps> = ({
-  label,
-  value,
-  iconUrl,
-  highlight,
-}) => (
-  <div className="group p-3 rounded-lg bg-midnight-800/40 border border-midnight-600/30 hover:border-starlight-500/30 transition-all duration-300">
-    <h3 className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-1.5">
-      {label}
-    </h3>
-    <div className="flex items-center gap-2">
-      {iconUrl && (
-        <CachedImage
-          src={iconUrl}
-          alt={value}
-          className="w-6 h-6 object-contain"
-        />
-      )}
-      <p
-        className={`text-lg font-semibold ${highlight ? 'text-celestial-400' : 'text-foreground'}`}
-      >
-        {value}
-      </p>
-    </div>
-  </div>
-);
-
-/* Section Header for Profile */
-interface SectionHeaderProps {
-  title: string;
-  elementColor?: string;
-}
-
-const SectionHeader: React.FC<SectionHeaderProps> = ({
-  title,
-  elementColor,
-}) => (
-  <div className="flex items-center gap-3 mb-4">
-    <h3 className="text-sm font-semibold uppercase tracking-wider text-starlight-300">
-      {title}
-    </h3>
-    <div
-      className="flex-1 h-px"
-      style={{
-        background: elementColor
-          ? `linear-gradient(to right, ${elementColor}40, transparent)`
-          : 'linear-gradient(to right, rgba(255,255,255,0.1), transparent)',
-      }}
-    />
-  </div>
-);
-
 /* Profile Content Component */
 interface ProfileContentProps {
   character: CharacterDetailed;
@@ -312,73 +246,21 @@ const ProfileContent: React.FC<ProfileContentProps> = ({
   character,
   onNavigate,
 }) => {
-  const primitives = usePrimitives();
-
-  // Get icons from primitives
-  const elementIcon = primitives?.elements.find(
-    (e) => e.name.toLowerCase() === character.element.toLowerCase()
-  )?.url;
-  const weaponIcon = primitives?.weaponTypes.find(
-    (w) => w.name.toLowerCase() === character.weaponType.toLowerCase()
-  )?.url;
-  const regionIcon = primitives?.regions.find(
-    (r) => r.name.toLowerCase() === character.region.toLowerCase()
-  )?.url;
-
   const elementColor = decideColor(character.element);
 
   return (
     <div className="space-y-8">
-      {/* Character Info Section */}
+      {/* Character Stats, Farming, and Build Section */}
       <section>
-        <SectionHeader title="Character Info" elementColor={elementColor} />
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
-          <StatItem
-            label="Rarity"
-            value={getRarityStars(character.rarity)}
-            highlight
-          />
-          <StatItem
-            label="Element"
-            value={character.element}
-            iconUrl={elementIcon || character.elementUrl}
-          />
-          <StatItem
-            label="Weapon"
-            value={character.weaponType}
-            iconUrl={weaponIcon || character.weaponUrl}
-          />
-          <StatItem
-            label="Region"
-            value={character.region}
-            iconUrl={regionIcon || character.regionUrl}
-          />
-          <StatItem label="Model Type" value={character.modelType} />
-          {character.version && (
-            <StatItem label="Version" value={`v${character.version}`} />
-          )}
-        </div>
+        <CharacterStatsCompact
+          character={character}
+          elementColor={elementColor}
+          onNavigate={onNavigate}
+        />
       </section>
-
-      {/* Builds Summary Section */}
-      {character.buildGuide && (
-        <section>
-          <SectionHeader
-            title="Recommended Build"
-            elementColor={elementColor}
-          />
-          <BuildsSummary
-            characterName={character.name}
-            elementColor={elementColor}
-            onNavigate={onNavigate}
-            buildData={character.buildGuide}
-          />
-        </section>
-      )}
 
       {/* Elemental Burst Showcase */}
       <section>
-        <SectionHeader title="Elemental Burst" elementColor={elementColor} />
         <ElementalBurstShowcase
           character={character}
           elementColor={elementColor}
