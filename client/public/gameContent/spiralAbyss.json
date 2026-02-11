@@ -1,0 +1,184 @@
+{
+  "version": "6.3",
+  "phase": 1,
+  "lastUpdated": "2026-02-11T00:00:00Z",
+  "blessing": {
+    "name": "Blessing of the Abyssal Moon: Frozen Wastes",
+    "description": "When characters hit opponents with Normal or Charged Attacks, there is a 50% chance to unleash a Frigid Cascade at the opponent's location, dealing True DMG. Can be triggered once every 0.3s.",
+    "iconUrl": ""
+  },
+  "floors": [
+    {
+      "floor": 12,
+      "chambers": [
+        {
+          "chamber": 1,
+          "firstHalf": {
+            "enemies": ["Perpetual Mechanical Array", "Ruin Guards"],
+            "tips": "Bring strong single-target DPS and AOE capabilities"
+          },
+          "secondHalf": {
+            "enemies": ["Maguu Kenki", "Kairagi"],
+            "tips": "High burst damage recommended"
+          }
+        },
+        {
+          "chamber": 2,
+          "firstHalf": {
+            "enemies": ["Consecrated Beasts"],
+            "tips": "Bring shielders or strong healers"
+          },
+          "secondHalf": {
+            "enemies": ["Rifthound Whelps", "Rifthounds"],
+            "tips": "Geo or Anemo characters help with corrosion"
+          }
+        },
+        {
+          "chamber": 3,
+          "firstHalf": {
+            "enemies": ["Hydro Tulpa"],
+            "tips": "Cryo or Electro DPS recommended"
+          },
+          "secondHalf": {
+            "enemies": ["Thunder Manifestation"],
+            "tips": "Ranged characters or strong bow users"
+          }
+        }
+      ]
+    }
+  ],
+  "recommendedCharacters": [
+    {
+      "name": "Neuvillette",
+      "role": "Main DPS",
+      "priority": "S",
+      "reason": "Exceptional hydro damage, excellent against most chambers. Strong sustain and AOE capabilities.",
+      "element": "Hydro"
+    },
+    {
+      "name": "Arlecchino",
+      "role": "Main DPS",
+      "priority": "S",
+      "reason": "Top-tier pyro DPS with self-sustain. Excellent for current blessing and chamber layouts.",
+      "element": "Pyro"
+    },
+    {
+      "name": "Nahida",
+      "role": "Sub DPS / Support",
+      "priority": "S",
+      "reason": "Core enabler for dendro teams. Essential for Hyperbloom and Spread compositions.",
+      "element": "Dendro"
+    },
+    {
+      "name": "Kazuha",
+      "role": "Support",
+      "priority": "S",
+      "reason": "Universal support with crowd control and elemental damage boost. Works in most team comps.",
+      "element": "Anemo"
+    },
+    {
+      "name": "Furina",
+      "role": "Sub DPS / Support",
+      "priority": "S",
+      "reason": "Versatile support with massive damage boost. Pairs excellently with Neuvillette and most DPS.",
+      "element": "Hydro"
+    },
+    {
+      "name": "Raiden Shogun",
+      "role": "Main DPS / Sub DPS",
+      "priority": "A",
+      "reason": "Solid electro DPS and energy battery. Great for Hyperbloom and national teams.",
+      "element": "Electro"
+    },
+    {
+      "name": "Xingqiu",
+      "role": "Sub DPS / Support",
+      "priority": "A",
+      "reason": "Consistent hydro application and damage reduction. Core for many reaction teams.",
+      "element": "Hydro"
+    },
+    {
+      "name": "Bennett",
+      "role": "Support / Healer",
+      "priority": "A",
+      "reason": "Universal ATK buffer and healer. Essential for most pyro and physical teams.",
+      "element": "Pyro"
+    },
+    {
+      "name": "Fischl",
+      "role": "Sub DPS",
+      "priority": "A",
+      "reason": "Consistent off-field electro damage. Excellent for electrocharged and aggravate teams.",
+      "element": "Electro"
+    },
+    {
+      "name": "Zhongli",
+      "role": "Support / Shielder",
+      "priority": "A",
+      "reason": "Universal shielder with resistance shred. Makes chambers significantly easier.",
+      "element": "Geo"
+    },
+    {
+      "name": "Kuki Shinobu",
+      "role": "Healer / Support",
+      "priority": "A",
+      "reason": "Best Hyperbloom trigger with healing. Strong in dendro reaction teams.",
+      "element": "Electro"
+    },
+    {
+      "name": "Yelan",
+      "role": "Sub DPS / Support",
+      "priority": "A",
+      "reason": "Alternative to Xingqiu with higher personal damage. Excellent hydro application.",
+      "element": "Hydro"
+    },
+    {
+      "name": "Xiangling",
+      "role": "Sub DPS",
+      "priority": "B",
+      "reason": "Strong off-field pyro damage. Core for national team variants.",
+      "element": "Pyro"
+    },
+    {
+      "name": "Sucrose",
+      "role": "Support",
+      "priority": "B",
+      "reason": "Budget alternative to Kazuha. Good EM sharing and crowd control.",
+      "element": "Anemo"
+    },
+    {
+      "name": "Mona",
+      "role": "Support",
+      "priority": "B",
+      "reason": "Omen buff for burst damage teams. Good hydro application.",
+      "element": "Hydro"
+    }
+  ],
+  "recommendedTeams": [
+    {
+      "name": "Neuvillette Hypercarry",
+      "characters": ["Neuvillette", "Furina", "Kazuha", "Zhongli"],
+      "description": "Top-tier team with exceptional damage and survivability. Furina amplifies Neuvillette's damage while Kazuha provides grouping and resistance shred. Zhongli ensures safety."
+    },
+    {
+      "name": "Arlecchino Vape",
+      "characters": ["Arlecchino", "Xingqiu", "Yelan", "Bennett"],
+      "description": "High damage vaporize team. Double hydro ensures consistent reactions while Bennett provides ATK buff and healing."
+    },
+    {
+      "name": "Hyperbloom Core",
+      "characters": ["Nahida", "Xingqiu", "Kuki Shinobu", "Kazuha"],
+      "description": "Powerful reaction-based team. Nahida enables dendro cores while Kuki triggers hyperbloom. Kazuha provides crowd control."
+    },
+    {
+      "name": "Raiden National",
+      "characters": ["Raiden Shogun", "Xingqiu", "Xiangling", "Bennett"],
+      "description": "Classic strong team with consistent damage. Raiden solves energy issues while triggering powerful reactions."
+    },
+    {
+      "name": "Freeze Team",
+      "characters": ["Neuvillette", "Furina", "Mona", "Kazuha"],
+      "description": "Alternative freeze comp leveraging Neuvillette's hydro application. Strong crowd control and sustained damage."
+    }
+  ]
+}
