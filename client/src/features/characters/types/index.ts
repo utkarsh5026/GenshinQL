@@ -97,6 +97,7 @@ export type CharacterDetailed = Character & {
   screenAnimation: ScreenAnimation;
   gallery?: GalleryRaw;
   buildGuide?: CharacterBuild;
+  attackAnimations?: AttackAnimation;
 };
 
 export type AttackTalentType =
