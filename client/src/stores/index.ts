@@ -6,14 +6,9 @@ export {
   useWeaponsStore,
   useWeaponTypeMap,
 } from '../features/weapons/stores/useWeaponsStore';
-export {
-  useCharacterMap,
-  useCharacters,
-  useCharactersError,
-  useCharactersLoading,
-  useCharactersStore,
-  useCharacterTalents,
-} from './useCharactersStore';
+
+// Character Store exports
+export { useCharacterMap } from '../features/characters/stores/useCharacterStore';
 export {
   useGenshinGuesserCurrentChar,
   useGenshinGuesserGameOver,
@@ -27,12 +22,22 @@ export {
 export {
   useElements,
   usePrimitives,
-  usePrimitivesError,
-  usePrimitivesLoading,
   usePrimitivesStore,
   useRegions,
   useWeaponTypes,
 } from './usePrimitivesStore';
 
-// Re-export common types for convenience
-export type { Character, PrimitiveItem, Primitives } from '@/types';
+// Tracker Store
+export {
+  useTrackedCharacters,
+  useTrackedTeams,
+  useTrackedWeapons,
+  useTrackerStore,
+} from './useTrackerStore';
+
+// Game Content Store
+export {
+  useGameContentStore,
+  useImaginarium,
+  useSpiralAbyss,
+} from './useGameContentStore';
