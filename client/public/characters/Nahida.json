@@ -599,5 +599,77 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Deepwood Memories"],
+        "notes": "4pc for Dendro RES shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gilded Dreams"],
+          "notes": "EM focused damage"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "A Thousand Floating Dreams",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Sacrificial Fragments",
+          "notes": "EM + skill reset"
+        },
+        {
+          "name": "Wandering Evenstar",
+          "notes": "EM buff"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM"],
+      "goblet": ["Dendro DMG", "EM"],
+      "circlet": ["CRIT Rate", "CRIT DMG", "EM"]
+    },
+    "substats": ["EM", "CRIT Rate", "CRIT DMG", "ER"],
+    "constellations": {
+      "c0": "Best Dendro applicator and buffer",
+      "breakpoints": [
+        "C1: Extra skill mark",
+        "C2: Huge buff for reaction teams"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Hyperbloom",
+        "characters": ["Nahida", "Xingqiu", "Kuki Shinobu", "Yelan"],
+        "roles": {
+          "Nahida": "Dendro/Driver",
+          "Xingqiu": "Hydro",
+          "Kuki Shinobu": "Hyperbloom trigger",
+          "Yelan": "Hydro"
+        },
+        "rotation": "Nahida E → Kuki E → Xingqiu EQ → Yelan EQ → Nahida on-field"
+      },
+      {
+        "name": "Quicken",
+        "characters": ["Nahida", "Fischl", "Keqing", "Kazuha"],
+        "roles": {
+          "Nahida": "Dendro",
+          "Fischl": "Electro",
+          "Keqing": "Main DPS",
+          "Kazuha": "VV"
+        },
+        "rotation": "Nahida E → Fischl E → Kazuha tEP Q → Keqing combo"
+      }
+    ]
+  }
 }

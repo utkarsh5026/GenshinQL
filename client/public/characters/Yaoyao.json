@@ -491,5 +491,63 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Healer"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Deepwood Memories"],
+        "notes": "4pc for Dendro RES shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Tenacity of the Millelith"],
+          "notes": "HP buff to team"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Staff of Homa",
+          "notes": "HP scaling"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Lance",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Kitain Cross Spear",
+          "notes": "EM option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "ER"],
+      "goblet": ["HP%"],
+      "circlet": ["HP%", "Healing Bonus"]
+    },
+    "substats": ["HP%", "ER", "Flat HP", "EM"],
+    "constellations": {
+      "c0": "Dendro healer with Yuegui",
+      "breakpoints": ["C1: Extra Yuegui throw", "C4: EM buff to party"]
+    },
+    "teams": [
+      {
+        "name": "Hyperbloom Healer",
+        "characters": ["Nahida", "Xingqiu", "Kuki Shinobu", "Yaoyao"],
+        "roles": {
+          "Nahida": "Dendro/Driver",
+          "Xingqiu": "Hydro",
+          "Kuki Shinobu": "Hyperbloom",
+          "Yaoyao": "Healer/Dendro"
+        },
+        "rotation": "Yaoyao EQ → Nahida E → Kuki E → Xingqiu EQ → Nahida on-field"
+      }
+    ]
+  }
 }

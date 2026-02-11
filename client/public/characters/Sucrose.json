@@ -340,5 +340,77 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Viridescent Venerer"],
+        "notes": "4pc mandatory for VV"
+      },
+      "alternatives": [
+        {
+          "sets": ["Instructor"],
+          "notes": "EM share"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "A Thousand Floating Dreams",
+          "notes": "EM sharing"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Sacrificial Fragments",
+          "notes": "EM + double skill"
+        },
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "notes": "ATK buff"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM"],
+      "goblet": ["EM"],
+      "circlet": ["EM"]
+    },
+    "substats": ["EM", "ER", "CRIT Rate", "ATK%"],
+    "constellations": {
+      "c0": "EM buffer and VV holder",
+      "breakpoints": [
+        "C1: Extra skill charge",
+        "C6: +20% elemental DMG during burst"
+      ]
+    },
+    "teams": [
+      {
+        "name": "National",
+        "characters": ["Xiangling", "Xingqiu", "Bennett", "Sucrose"],
+        "roles": {
+          "Xiangling": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Bennett": "Buffer",
+          "Sucrose": "VV/EM"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Sucrose E → Xiangling EQ"
+      },
+      {
+        "name": "Taser Driver",
+        "characters": ["Sucrose", "Fischl", "Beidou", "Xingqiu"],
+        "roles": {
+          "Sucrose": "Driver/VV",
+          "Fischl": "Electro",
+          "Beidou": "Electro",
+          "Xingqiu": "Hydro"
+        },
+        "rotation": "Xingqiu EQ → Fischl E → Beidou EQ → Sucrose NA spam"
+      }
+    ]
+  }
 }

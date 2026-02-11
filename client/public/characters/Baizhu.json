@@ -485,5 +485,63 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Healer"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Deepwood Memories"],
+        "notes": "4pc for Dendro RES shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Ocean-Hued Clam"],
+          "notes": "Healing damage"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Jadefall's Splendor",
+          "notes": "HP scaling"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Prototype Amber",
+          "notes": "ER + team energy"
+        },
+        {
+          "name": "Favonius Codex",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "ER"],
+      "goblet": ["HP%"],
+      "circlet": ["HP%", "Healing Bonus"]
+    },
+    "substats": ["HP%", "ER", "Flat HP"],
+    "constellations": {
+      "c0": "Dendro healer with shields",
+      "breakpoints": ["C1: Extra skill cast", "C2: Burning/Bloom reaction buff"]
+    },
+    "teams": [
+      {
+        "name": "Cyno Support",
+        "characters": ["Cyno", "Fischl", "Nahida", "Baizhu"],
+        "roles": {
+          "Cyno": "Main DPS",
+          "Fischl": "Electro",
+          "Nahida": "Dendro",
+          "Baizhu": "Healer/Dendro"
+        },
+        "rotation": "Baizhu EQ → Nahida E → Fischl E → Cyno Q → combo"
+      }
+    ]
+  }
 }

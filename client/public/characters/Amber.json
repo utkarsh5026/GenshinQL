@@ -475,5 +475,74 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige"],
+        "notes": "4pc for team ATK buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Instructor"],
+          "notes": "EM buff for reaction teams"
+        },
+        {
+          "sets": ["Wanderer's Troupe"],
+          "notes": "Charged shot build"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Elegy for the End",
+          "notes": "Team EM buff"
+        },
+        {
+          "name": "Amos' Bow",
+          "notes": "Charged shot damage"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Warbow",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Prototype Crescent",
+          "notes": "Charged shot bonus"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "ER"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["ER", "CRIT Rate", "CRIT DMG", "ATK%", "EM"],
+    "constellations": {
+      "c0": "Weakest character in game, but usable as Pyro applicator",
+      "breakpoints": [
+        "C2: Baron Bunny manual detonation",
+        "C6: ATK/SPD buff on burst"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Melt Ganyu Budget",
+        "characters": ["Ganyu", "Amber", "Bennett", "Zhongli"],
+        "roles": {
+          "Ganyu": "Main DPS",
+          "Amber": "Pyro applicator",
+          "Bennett": "ATK Buffer",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Bennett EQ → Amber EQ → Ganyu charged shots"
+      }
+    ]
+  }
 }

@@ -650,5 +650,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Marechaussee Hunter"],
+        "notes": "4pc BiS with Furina"
+      },
+      "alternatives": [
+        {
+          "sets": ["Blizzard Strayer"],
+          "notes": "Freeze without Furina"
+        },
+        {
+          "sets": ["Finale of the Deep Galleries"],
+          "notes": "Non-Furina teams"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Absolution",
+          "notes": "BiS, signature weapon"
+        },
+        {
+          "name": "Primordial Jade Cutter",
+          "notes": "Universal CRIT sword"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Black Sword",
+          "notes": "Battle Pass option"
+        },
+        {
+          "name": "Amenoma Kageuchi",
+          "notes": "F2P with ER"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Cryo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ER"],
+    "constellations": {
+      "c0": "Top tier Freeze DPS, competitive with Lunar meta",
+      "breakpoints": [
+        "C1: Increased Normal Attack multiplier",
+        "C2: DMG bonus during Tide state"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Skirk Freeze",
+        "characters": ["Skirk", "Furina", "Escoffier", "Shenhe"],
+        "roles": {
+          "Skirk": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Escoffier": "Healer/Cryo",
+          "Shenhe": "Cryo buffer"
+        },
+        "rotation": "Shenhe EQ → Escoffier EQ → Furina EQ → Skirk E → combo → Q"
+      },
+      {
+        "name": "Skirk Budget Freeze",
+        "characters": ["Skirk", "Xingqiu", "Rosaria", "Kazuha"],
+        "roles": {
+          "Skirk": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Rosaria": "Cryo battery/CRIT",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Rosaria EQ → Xingqiu EQ → Kazuha tEP Q → Skirk E combo"
+      }
+    ]
+  }
 }

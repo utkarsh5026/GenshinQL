@@ -563,5 +563,63 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Gilded Dreams"],
+        "notes": "4pc for EM"
+      },
+      "alternatives": [
+        {
+          "sets": ["Wanderer's Troupe"],
+          "notes": "Charged attack focus"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Hunter's Path",
+          "notes": "BiS, charged attack + EM"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Stringless",
+          "notes": "EM option"
+        },
+        {
+          "name": "Prototype Crescent",
+          "notes": "Charged shot bonus"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM", "ATK%"],
+      "goblet": ["Dendro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "EM", "ATK%"],
+    "constellations": {
+      "c0": "Quick swap Spread DPS",
+      "breakpoints": ["C2: Creates Dendro field", "C6: Extra charged shot"]
+    },
+    "teams": [
+      {
+        "name": "Tighnari Quicken",
+        "characters": ["Tighnari", "Fischl", "Yae Miko", "Zhongli"],
+        "roles": {
+          "Tighnari": "Main DPS",
+          "Fischl": "Electro",
+          "Yae Miko": "Electro Sub-DPS",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Yae EEE → Fischl E → Tighnari E → charged shots → Q"
+      }
+    ]
+  }
 }

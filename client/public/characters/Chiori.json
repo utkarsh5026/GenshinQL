@@ -464,5 +464,59 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Husk of Opulent Dreams"],
+        "notes": "4pc for DEF scaling"
+      },
+      "alternatives": [
+        {
+          "sets": ["Golden Troupe"],
+          "notes": "Off-field damage"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Uraku Misugiri",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Harbinger of Dawn",
+          "notes": "CRIT stats"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["DEF%"],
+      "goblet": ["Geo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ATK%"],
+    "constellations": {
+      "c0": "Strong Geo Sub-DPS for double Geo",
+      "breakpoints": ["C1: Extra doll", "C2: Geo buff to team"]
+    },
+    "teams": [
+      {
+        "name": "Navia Support",
+        "characters": ["Navia", "Chiori", "Furina", "Bennett"],
+        "roles": {
+          "Navia": "Main DPS",
+          "Chiori": "Geo Sub-DPS",
+          "Furina": "Sub-DPS",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Furina EQ → Chiori E → Navia E combo"
+      }
+    ]
+  }
 }

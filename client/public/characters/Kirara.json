@@ -566,5 +566,66 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Shielder"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Deepwood Memories"],
+        "notes": "4pc for Dendro RES shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gilded Dreams"],
+          "notes": "EM focused"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Key of Khaj-Nisut",
+          "notes": "HP + EM sharing"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Iron Sting",
+          "notes": "EM option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "EM"],
+      "goblet": ["HP%", "Dendro DMG"],
+      "circlet": ["HP%", "CRIT Rate"]
+    },
+    "substats": ["HP%", "EM", "ER", "CRIT Rate"],
+    "constellations": {
+      "c0": "Dendro shielder with cardboard box",
+      "breakpoints": [
+        "C2: Extra shield strength",
+        "C4: Extra Dendro application"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Kirara Shield",
+        "characters": ["Alhaitham", "Fischl", "Kirara", "Kazuha"],
+        "roles": {
+          "Alhaitham": "Main DPS",
+          "Fischl": "Electro",
+          "Kirara": "Shield/Dendro",
+          "Kazuha": "VV"
+        },
+        "rotation": "Kirara E (hold) → Fischl E → Kazuha tEP Q → Alhaitham combo"
+      }
+    ]
+  }
 }

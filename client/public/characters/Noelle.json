@@ -527,5 +527,63 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS", "Healer"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Husk of Opulent Dreams"],
+        "notes": "4pc BiS for DEF scaling"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gladiator's Finale"],
+          "notes": "General option"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Redhorn Stonethresher",
+          "notes": "BiS"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Battle Pass"
+        },
+        {
+          "name": "Whiteblind",
+          "notes": "F2P DEF"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["DEF%"],
+      "goblet": ["Geo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ER"],
+    "constellations": {
+      "c0": "Shield + healer, needs C6 for DPS",
+      "breakpoints": ["C6: DEF to ATK conversion, unlocks DPS"]
+    },
+    "teams": [
+      {
+        "name": "Noelle Carry",
+        "characters": ["Noelle", "Gorou", "Yun Jin", "Albedo"],
+        "roles": {
+          "Noelle": "Main DPS",
+          "Gorou": "DEF buffer",
+          "Yun Jin": "NA buffer",
+          "Albedo": "Off-field/Battery"
+        },
+        "rotation": "Albedo E → Gorou EQ → Yun Jin EQ → Noelle Q → sweep combo"
+      }
+    ]
+  }
 }

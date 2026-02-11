@@ -570,5 +570,59 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Nighttime Whispers in the Echoing Woods"],
+        "notes": "4pc BiS"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gladiator's Finale"],
+          "notes": "General damage"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Verdict",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Battle Pass BiS"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Geo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ER"],
+    "constellations": {
+      "c0": "Strong Geo DPS with crystallize synergy",
+      "breakpoints": ["C1: Extra crystal shards", "C2: CRIT Rate boost"]
+    },
+    "teams": [
+      {
+        "name": "Navia Double Geo",
+        "characters": ["Navia", "Chiori", "Furina", "Bennett"],
+        "roles": {
+          "Navia": "Main DPS",
+          "Chiori": "Geo Sub-DPS",
+          "Furina": "Sub-DPS",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Furina EQ → Chiori E → Navia E → charged attack"
+      }
+    ]
+  }
 }

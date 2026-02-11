@@ -527,5 +527,66 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Flower of Paradise Lost"],
+        "notes": "4pc for Bloom damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Deepwood Memories"],
+          "notes": "Dendro RES shred"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Beacon of the Reed Sea",
+          "notes": "HP/ATK scaling"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Mailed Flower",
+          "notes": "EM + ATK"
+        },
+        {
+          "name": "Favonius Greatsword",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM"],
+      "goblet": ["EM"],
+      "circlet": ["EM"]
+    },
+    "substats": ["EM", "ER", "HP%", "ATK%"],
+    "constellations": {
+      "c0": "Bloom DPS with self-damage mechanic",
+      "breakpoints": [
+        "C2: Extra Dendro Core explosion DMG",
+        "C6: Damage increase during burst"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Kaveh Bloom",
+        "characters": ["Kaveh", "Nilou", "Kokomi", "Nahida"],
+        "roles": {
+          "Kaveh": "Bloom DPS/Driver",
+          "Nilou": "Bloom enabler",
+          "Kokomi": "Hydro/Healer",
+          "Nahida": "Dendro"
+        },
+        "rotation": "Nilou EQ → Nahida E → Kokomi E → Kaveh Q → on-field combo"
+      }
+    ]
+  }
 }

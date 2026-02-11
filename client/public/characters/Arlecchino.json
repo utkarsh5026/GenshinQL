@@ -648,5 +648,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Gladiator's Finale"],
+        "notes": "4pc for normal attack focus"
+      },
+      "alternatives": [
+        {
+          "sets": ["Crimson Witch of Flames"],
+          "notes": "Vaporize teams"
+        },
+        {
+          "sets": ["Echoes of an Offering"],
+          "notes": "Alternative if good substats"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Crimson Moon's Semblance",
+          "notes": "BiS, signature weapon"
+        },
+        {
+          "name": "Staff of Homa",
+          "notes": "Universal strong option"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Deathmatch",
+          "notes": "Consistent CRIT Rate"
+        },
+        {
+          "name": "Dragon's Bane",
+          "notes": "For Vaporize teams"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "EM"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM", "ER"],
+    "constellations": {
+      "c0": "Top tier Pyro DPS, no healing requirement unique",
+      "breakpoints": [
+        "C1: Absorb Blood-Debt without killing",
+        "C2: Major DPS increase, extra Blood-Debt"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Arlecchino Vaporize",
+        "characters": ["Arlecchino", "Yelan", "Zhongli", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Yelan": "Hydro/Sub-DPS",
+          "Zhongli": "Shielder",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Zhongli hE → Bennett E (don't burst) → Yelan EQ → Arlecchino E → N combo → E finisher"
+      },
+      {
+        "name": "Furina Team",
+        "characters": ["Arlecchino", "Furina", "Xilonen", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Xilonen": "Shred",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Xilonen E → Furina EQ → Arlecchino E → N combo"
+      },
+      {
+        "name": "Overload Chevreuse",
+        "characters": ["Arlecchino", "Fischl", "Chevreuse", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Fischl": "Electro applicator",
+          "Chevreuse": "Support/Healer",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Chevreuse EQ → Fischl E → Arlecchino E → N combo"
+      }
+    ]
+  }
 }

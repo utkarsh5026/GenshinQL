@@ -518,5 +518,67 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Healer"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige"],
+        "notes": "4pc for team ATK buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Tenacity of the Millelith"],
+          "notes": "HP buff to team"
+        },
+        {
+          "sets": ["Maiden Beloved"],
+          "notes": "Pure healing focus"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Elegy for the End",
+          "notes": "Team EM buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Warbow",
+          "notes": "Best option, team energy"
+        },
+        {
+          "name": "Sacrificial Bow",
+          "notes": "Double shield cast"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER", "HP%"],
+      "goblet": ["HP%"],
+      "circlet": ["Healing Bonus", "HP%"]
+    },
+    "substats": ["ER", "HP%", "Flat HP", "CRIT Rate"],
+    "constellations": {
+      "c0": "Solid shielder/healer for Cryo teams",
+      "breakpoints": ["C2: Team shield on skill", "C6: EM buff in burst field"]
+    },
+    "teams": [
+      {
+        "name": "Morgana",
+        "characters": ["Ganyu", "Mona", "Venti", "Diona"],
+        "roles": {
+          "Ganyu": "DPS",
+          "Mona": "Buffer",
+          "Venti": "Grouping",
+          "Diona": "Shield/Battery"
+        },
+        "rotation": "Diona EQ → Mona EQ → Venti EQ → Ganyu EQ → charged shots"
+      }
+    ]
+  }
 }

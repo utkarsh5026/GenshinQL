@@ -437,5 +437,70 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Healer", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Ocean-Hued Clam"],
+        "notes": "4pc for healing damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Flower of Paradise Lost"],
+          "notes": "Bloom trigger build"
+        },
+        {
+          "sets": ["Maiden Beloved"],
+          "notes": "Pure healing focus"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Everlasting Moonglow",
+          "notes": "HP scaling + NA"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "notes": "Team ATK buff, BiS"
+        },
+        {
+          "name": "Prototype Amber",
+          "notes": "ER + team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "ER"],
+      "goblet": ["HP%"],
+      "circlet": ["Healing Bonus", "HP%"]
+    },
+    "substats": ["HP%", "ER", "Flat HP", "EM"],
+    "constellations": {
+      "c0": "Free healer, basic but functional",
+      "breakpoints": [
+        "C2: Increases Hydro DMG during skill",
+        "C6: Full revival once per 15 min"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Barbara Bloom",
+        "characters": ["Barbara", "Nahida", "Collei", "Kuki Shinobu"],
+        "roles": {
+          "Barbara": "Driver/Hydro",
+          "Nahida": "Dendro",
+          "Collei": "Dendro",
+          "Kuki Shinobu": "Hyperbloom"
+        },
+        "rotation": "Collei EQ → Nahida E → Kuki E → Barbara E → on-field NA"
+      }
+    ]
+  }
 }

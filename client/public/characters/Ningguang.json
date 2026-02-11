@@ -422,5 +422,66 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS", "Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Archaic Petra"],
+        "notes": "4pc or 2pc + 2pc ATK"
+      },
+      "alternatives": [
+        {
+          "sets": ["Noblesse Oblige", "Archaic Petra"],
+          "notes": "2pc+2pc"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Lost Prayer to the Sacred Winds",
+          "notes": "CRIT catalyst"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Solar Pearl",
+          "notes": "Battle Pass"
+        },
+        {
+          "name": "The Widsith",
+          "notes": "Burst damage"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Geo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ER"],
+    "constellations": {
+      "c0": "Budget Geo DPS",
+      "breakpoints": [
+        "C2: Reset screen on shatter",
+        "C6: Extra star jades on burst"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Ningguang Double Geo",
+        "characters": ["Ningguang", "Zhongli", "Xiangling", "Bennett"],
+        "roles": {
+          "Ningguang": "Main DPS",
+          "Zhongli": "Shield/Res shred",
+          "Xiangling": "Off-field Pyro",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Zhongli hE → Bennett EQ → Xiangling EQ → Ningguang E → Q → charged attacks"
+      }
+    ]
+  }
 }

@@ -494,5 +494,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige"],
+        "notes": "4pc for team buff + Omen"
+      },
+      "alternatives": [
+        {
+          "sets": ["Emblem of Severed Fate"],
+          "notes": "Burst damage focus"
+        },
+        {
+          "sets": ["Tenacity of the Millelith"],
+          "notes": "Team HP buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Skyward Atlas",
+          "notes": "ATK% with passive"
+        },
+        {
+          "name": "Lost Prayer to the Sacred Winds",
+          "notes": "CRIT Rate catalyst"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "notes": "Best support option, ATK buff"
+        },
+        {
+          "name": "Favonius Codex",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER", "ATK%"],
+      "goblet": ["Hydro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["ER", "CRIT Rate", "CRIT DMG", "ATK%", "HP%"],
+    "constellations": {
+      "c0": "Excellent freeze support, Omen damage amp",
+      "breakpoints": [
+        "C1: Freeze duration boost",
+        "C4: CRIT Rate buff to party"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Morgana",
+        "characters": ["Ganyu", "Mona", "Venti", "Diona"],
+        "roles": {
+          "Ganyu": "Main DPS",
+          "Mona": "Omen buffer/Hydro",
+          "Venti": "Grouping",
+          "Diona": "Shield/Battery"
+        },
+        "rotation": "Diona EQ → Mona EQ → Venti EQ → Ganyu EQ → charged shots"
+      },
+      {
+        "name": "Ayaka Freeze",
+        "characters": ["Ayaka", "Mona", "Kazuha", "Rosaria"],
+        "roles": {
+          "Ayaka": "Main DPS",
+          "Mona": "Omen/Hydro",
+          "Kazuha": "VV",
+          "Rosaria": "Cryo battery"
+        },
+        "rotation": "Rosaria EQ → Mona EQ → Kazuha tEP Q → Ayaka dash EQ"
+      }
+    ]
+  }
 }

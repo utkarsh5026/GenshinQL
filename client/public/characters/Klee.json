@@ -440,5 +440,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Crimson Witch of Flames"],
+        "notes": "4pc for Vaporize/Melt"
+      },
+      "alternatives": [
+        {
+          "sets": ["Lavawalker"],
+          "notes": "Mono Pyro teams"
+        },
+        {
+          "sets": ["Wanderer's Troupe"],
+          "notes": "Charged attack focus"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Lost Prayer to the Sacred Winds",
+          "notes": "On-field CRIT catalyst"
+        },
+        {
+          "name": "Skyward Atlas",
+          "notes": "ATK% with passive damage"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Solar Pearl",
+          "notes": "Battle Pass, balanced stats"
+        },
+        {
+          "name": "Dodoco Tales",
+          "notes": "Her signature event weapon"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM", "ER"],
+    "constellations": {
+      "c0": "Fun but clunky, outclassed by newer Pyro DPS",
+      "breakpoints": [
+        "C2: DEF shred on skill hit",
+        "C4: Burst explosion on swap"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Klee Mono Pyro",
+        "characters": ["Klee", "Xiangling", "Bennett", "Kazuha"],
+        "roles": {
+          "Klee": "Main DPS",
+          "Xiangling": "Off-field Pyro",
+          "Bennett": "ATK Buffer",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q → Xiangling EQ → Klee N1C spam"
+      },
+      {
+        "name": "Klee Vaporize",
+        "characters": ["Klee", "Xingqiu", "Bennett", "Sucrose"],
+        "roles": {
+          "Klee": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Bennett": "ATK Buffer",
+          "Sucrose": "VV/EM"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Sucrose E → Klee N1C spam"
+      }
+    ]
+  }
 }

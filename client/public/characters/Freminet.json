@@ -648,5 +648,71 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Blizzard Strayer", "Gladiator's Finale"],
+        "notes": "2pc+2pc combo"
+      },
+      "alternatives": [
+        {
+          "sets": ["Pale Flame"],
+          "notes": "Physical focus"
+        },
+        {
+          "sets": ["Blizzard Strayer"],
+          "notes": "Full Cryo damage"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Wolf's Gravestone",
+          "notes": "ATK% with buff"
+        },
+        {
+          "name": "Song of Broken Pines",
+          "notes": "ATK SPD utility"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Battle Pass option"
+        },
+        {
+          "name": "Tidal Shadow",
+          "notes": "Healing buff synergy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Cryo DMG", "Physical DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ER"],
+    "constellations": {
+      "c0": "Niche underwater diving DPS",
+      "breakpoints": ["C2: Extra Pers Timer stacks", "C6: CRIT DMG buff"]
+    },
+    "teams": [
+      {
+        "name": "Freminet Shatter",
+        "characters": ["Freminet", "Xingqiu", "Fischl", "Bennett"],
+        "roles": {
+          "Freminet": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Fischl": "Electro",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Fischl E → Freminet E → diving combo"
+      }
+    ]
+  }
 }

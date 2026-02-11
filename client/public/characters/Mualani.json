@@ -503,5 +503,81 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Obsidian Codex"],
+        "notes": "4pc BiS, Nightsoul synergy"
+      },
+      "alternatives": [
+        {
+          "sets": ["Heart of Depth"],
+          "notes": "Hydro damage focus"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Surf's Up",
+          "notes": "BiS, signature weapon"
+        },
+        {
+          "name": "A Thousand Floating Dreams",
+          "notes": "EM option for reactions"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Sacrificial Fragments",
+          "notes": "EM + skill reset"
+        },
+        {
+          "name": "Wandering Evenstar",
+          "notes": "EM buff to team"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%"],
+      "goblet": ["Hydro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "HP%", "Flat HP", "ER"],
+    "constellations": {
+      "c0": "Strong Hydro DPS with surfing mechanic",
+      "breakpoints": [
+        "C1: Extra wave stacks",
+        "C2: Passive buff during Nightsoul"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Mualani Vaporize",
+        "characters": ["Mualani", "Xilonen", "Xiangling", "Bennett"],
+        "roles": {
+          "Mualani": "Main DPS",
+          "Xilonen": "Shred",
+          "Xiangling": "Pyro",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xiangling EQ → Xilonen E → Mualani E surfing combo"
+      },
+      {
+        "name": "Mualani Furina",
+        "characters": ["Mualani", "Furina", "Kazuha", "Bennett"],
+        "roles": {
+          "Mualani": "Main DPS",
+          "Furina": "Sub-DPS",
+          "Kazuha": "VV",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q → Furina EQ → Mualani E surfing"
+      }
+    ]
+  }
 }

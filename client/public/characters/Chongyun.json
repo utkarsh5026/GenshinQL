@@ -431,5 +431,71 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige"],
+        "notes": "4pc for team ATK buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Emblem of Severed Fate"],
+          "notes": "Burst focused"
+        },
+        {
+          "sets": ["Blizzard Strayer"],
+          "notes": "Cryo damage option"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Wolf's Gravestone",
+          "notes": "ATK% with team buff"
+        },
+        {
+          "name": "Skyward Pride",
+          "notes": "ER option"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Sacrificial Greatsword",
+          "notes": "Double infusion field"
+        },
+        {
+          "name": "Favonius Greatsword",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "ER"],
+      "goblet": ["Cryo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["ER", "CRIT Rate", "CRIT DMG", "ATK%"],
+    "constellations": {
+      "c0": "Cryo infusion support for some teams",
+      "breakpoints": ["C2: CD reduction in field", "C6: Burst scaling increase"]
+    },
+    "teams": [
+      {
+        "name": "Freeze Kaeya",
+        "characters": ["Kaeya", "Xingqiu", "Chongyun", "Sucrose"],
+        "roles": {
+          "Kaeya": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Chongyun": "Cryo infusion",
+          "Sucrose": "VV"
+        },
+        "rotation": "Xingqiu EQ → Chongyun E → Sucrose E → Kaeya EQ → NA spam"
+      }
+    ]
+  }
 }

@@ -594,5 +594,93 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS", "Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Gladiator's Finale"],
+        "notes": "4pc for NA damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Heart of Depth"],
+          "notes": "Hydro damage focus"
+        },
+        {
+          "sets": ["Echoes of an Offering"],
+          "notes": "NA focused alternative"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Haran Geppaku Futsu",
+          "notes": "BiS, signature weapon"
+        },
+        {
+          "name": "Primordial Jade Cutter",
+          "notes": "Universal CRIT sword"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Black Sword",
+          "notes": "Battle Pass, CRIT Rate"
+        },
+        {
+          "name": "Amenoma Kageuchi",
+          "notes": "F2P, ER utility"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Hydro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "HP%", "ER"],
+    "constellations": {
+      "c0": "Solid Hydro DPS with flexible teams",
+      "breakpoints": ["C2: Extra Namisen stacks", "C6: Shunsuiken extra hits"]
+    },
+    "teams": [
+      {
+        "name": "Ayato Hyperbloom",
+        "characters": ["Ayato", "Nahida", "Kuki Shinobu", "Kazuha"],
+        "roles": {
+          "Ayato": "On-field/Hydro",
+          "Nahida": "Dendro",
+          "Kuki Shinobu": "Hyperbloom trigger",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Nahida E → Kuki E → Kazuha tEP Q → Ayato EQ → NA spam"
+      },
+      {
+        "name": "Ayato Vaporize",
+        "characters": ["Ayato", "Xiangling", "Bennett", "Kazuha"],
+        "roles": {
+          "Ayato": "Main DPS",
+          "Xiangling": "Pyro",
+          "Bennett": "Buffer",
+          "Kazuha": "VV"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q → Xiangling EQ → Ayato E NA spam"
+      },
+      {
+        "name": "Ayato Freeze",
+        "characters": ["Ayato", "Ganyu", "Venti", "Diona"],
+        "roles": {
+          "Ayato": "Hydro applicator",
+          "Ganyu": "Cryo DPS",
+          "Venti": "Grouping",
+          "Diona": "Shield/Battery"
+        },
+        "rotation": "Diona EQ → Ayato Q → Venti EQ → Ganyu EQ → charged shots"
+      }
+    ]
+  }
 }

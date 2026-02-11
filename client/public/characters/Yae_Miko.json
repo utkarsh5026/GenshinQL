@@ -562,5 +562,59 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Golden Troupe"],
+        "notes": "4pc BiS for off-field"
+      },
+      "alternatives": [
+        {
+          "sets": ["Emblem of Severed Fate"],
+          "notes": "Burst focused"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Kagura's Verity",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Widsith",
+          "notes": "Burst damage"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "EM"],
+      "goblet": ["Electro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM", "ER"],
+    "constellations": {
+      "c0": "Strong off-field Electro DPS",
+      "breakpoints": ["C6: Totem ignore DEF"]
+    },
+    "teams": [
+      {
+        "name": "Yae Aggravate",
+        "characters": ["Yae Miko", "Fischl", "Nahida", "Kazuha"],
+        "roles": {
+          "Yae Miko": "Sub-DPS",
+          "Fischl": "Electro",
+          "Nahida": "Driver",
+          "Kazuha": "VV"
+        },
+        "rotation": "Kazuha tEP Q → Fischl E → Yae EEE → Nahida E → on-field → Yae Q"
+      }
+    ]
+  }
 }

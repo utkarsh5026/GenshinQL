@@ -502,5 +502,63 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Deepwood Memories"],
+        "notes": "4pc for Dendro RES shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gilded Dreams"],
+          "notes": "EM focused"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Elegy for the End",
+          "notes": "Team EM buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Warbow",
+          "notes": "Team energy"
+        },
+        {
+          "name": "The Stringless",
+          "notes": "EM + skill"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER", "EM"],
+      "goblet": ["Dendro DMG", "EM"],
+      "circlet": ["CRIT Rate", "EM"]
+    },
+    "substats": ["ER", "EM", "CRIT Rate", "ATK%"],
+    "constellations": {
+      "c0": "Free Dendro applicator",
+      "breakpoints": ["C2: Extends skill duration", "C4: EM buff on burst cast"]
+    },
+    "teams": [
+      {
+        "name": "Budget Hyperbloom",
+        "characters": ["Collei", "Xingqiu", "Kuki Shinobu", "Sucrose"],
+        "roles": {
+          "Collei": "Dendro",
+          "Xingqiu": "Hydro",
+          "Kuki Shinobu": "Hyperbloom trigger",
+          "Sucrose": "Driver"
+        },
+        "rotation": "Collei EQ → Xingqiu EQ → Kuki E → Sucrose on-field"
+      }
+    ]
+  }
 }

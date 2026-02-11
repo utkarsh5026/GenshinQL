@@ -567,5 +567,70 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Healer", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige"],
+        "notes": "4pc for team ATK buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Tenacity of the Millelith"],
+          "notes": "Team HP buff"
+        },
+        {
+          "sets": ["Ocean-Hued Clam"],
+          "notes": "Healing damage"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Kagura's Verity",
+          "notes": "Skill damage stacking"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Codex",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Prototype Amber",
+          "notes": "Extra healing + energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER", "ATK%"],
+      "goblet": ["ATK%"],
+      "circlet": ["Healing Bonus", "ATK%"]
+    },
+    "substats": ["ER", "ATK%", "Flat ATK", "CRIT Rate"],
+    "constellations": {
+      "c0": "Cryo healer alternative to Diona",
+      "breakpoints": [
+        "C2: Longer skill mark duration",
+        "C6: Team healing on burst"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Wanderer Support",
+        "characters": ["Wanderer", "Faruzan", "Bennett", "Charlotte"],
+        "roles": {
+          "Wanderer": "Main DPS",
+          "Faruzan": "Anemo buffer",
+          "Bennett": "ATK buffer",
+          "Charlotte": "Healer"
+        },
+        "rotation": "Bennett EQ → Charlotte EQ → Faruzan EQ → Wanderer E → hover DPS"
+      }
+    ]
+  }
 }

@@ -545,5 +545,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Scroll of the Hero of Cinder City"],
+        "notes": "4pc for team shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Blizzard Strayer"],
+          "notes": "Cryo damage focus"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "A Thousand Floating Dreams",
+          "notes": "EM sharing"
+        },
+        {
+          "name": "Cashflow Supervision",
+          "notes": "CRIT option"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Sacrificial Fragments",
+          "notes": "EM + skill reset"
+        },
+        {
+          "name": "Hakushin Ring",
+          "notes": "Team Electro buff"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM", "ATK%"],
+      "goblet": ["Cryo DMG", "EM"],
+      "circlet": ["CRIT Rate", "CRIT DMG", "EM"]
+    },
+    "substats": ["EM", "CRIT Rate", "CRIT DMG", "ER", "ATK%"],
+    "constellations": {
+      "c0": "Strong Cryo support for Melt teams",
+      "breakpoints": [
+        "C2: Increased Itzpapa duration",
+        "C6: Extra Nightsoul effects"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Mavuika Melt",
+        "characters": ["Mavuika", "Citlali", "Xilonen", "Bennett"],
+        "roles": {
+          "Mavuika": "Main DPS",
+          "Citlali": "Cryo applicator",
+          "Xilonen": "Shred",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xilonen E → Citlali EQ → Mavuika Q → bike combo"
+      },
+      {
+        "name": "Arlecchino Melt",
+        "characters": ["Arlecchino", "Citlali", "Xilonen", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Citlali": "Cryo",
+          "Xilonen": "Shred",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xilonen E → Citlali EQ → Arlecchino E combo"
+      }
+    ]
+  }
 }

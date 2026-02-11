@@ -692,5 +692,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Healer", "Support", "Driver"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Ocean-Hued Clam"],
+        "notes": "4pc for healing + damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Tenacity of the Millelith"],
+          "notes": "Team buff focus"
+        },
+        {
+          "sets": ["Flower of Paradise Lost"],
+          "notes": "Bloom trigger build"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Everlasting Moonglow",
+          "notes": "Signature, healing + NA boost"
+        },
+        {
+          "name": "Kagura's Verity",
+          "notes": "Damage focused"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "notes": "Team ATK buff"
+        },
+        {
+          "name": "Prototype Amber",
+          "notes": "ER + team healing"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "ER"],
+      "goblet": ["HP%", "Hydro DMG"],
+      "circlet": ["Healing Bonus", "HP%"]
+    },
+    "substats": ["HP%", "ER", "Flat HP", "EM", "ATK%"],
+    "constellations": {
+      "c0": "Best healer + consistent Hydro application",
+      "breakpoints": [
+        "C1: Extra jellyfish damage",
+        "C2: HP bonus based on healing"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Ayaka Freeze",
+        "characters": ["Ayaka", "Shenhe", "Kokomi", "Kazuha"],
+        "roles": {
+          "Ayaka": "Main DPS",
+          "Shenhe": "Cryo buffer",
+          "Kokomi": "Hydro/Healer",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Kokomi E → Shenhe EQ → Kazuha tEP Q → Ayaka dash EQ → charged attacks"
+      },
+      {
+        "name": "Nilou Bloom",
+        "characters": ["Nilou", "Kokomi", "Nahida", "Collei"],
+        "roles": {
+          "Nilou": "Bloom enabler",
+          "Kokomi": "Driver/Healer",
+          "Nahida": "Dendro",
+          "Collei": "Dendro"
+        },
+        "rotation": "Nilou EQ → Collei EQ → Nahida E → Kokomi EQ → on-field driver"
+      },
+      {
+        "name": "Sukokomon",
+        "characters": ["Sucrose", "Kokomi", "Fischl", "Xiangling"],
+        "roles": {
+          "Sucrose": "Driver",
+          "Kokomi": "Hydro",
+          "Fischl": "Electro",
+          "Xiangling": "Pyro"
+        },
+        "rotation": "Kokomi E → Fischl E → Xiangling EQ → Sucrose N1 swirl spam"
+      }
+    ]
+  }
 }

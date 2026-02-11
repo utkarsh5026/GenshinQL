@@ -490,5 +490,70 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Healer"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Tenacity of the Millelith", "Vourukasha's Glow"],
+        "notes": "2pc+2pc HP stacking"
+      },
+      "alternatives": [
+        {
+          "sets": ["Ocean-Hued Clam"],
+          "notes": "Healing damage"
+        },
+        {
+          "sets": ["Song of Days Past"],
+          "notes": "Team buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Silvershower Heartstrings",
+          "notes": "Signature, HP scaling"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Warbow",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Recurve Bow",
+          "notes": "HP% scaling"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%"],
+      "goblet": ["HP%"],
+      "circlet": ["HP%", "Healing Bonus"]
+    },
+    "substats": ["HP%", "ER", "Flat HP", "CRIT Rate"],
+    "constellations": {
+      "c0": "Solid healer with damage bonus utility",
+      "breakpoints": [
+        "C1: Max HP increase",
+        "C2: Increased Bond of Life conversion"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Clorinde Support",
+        "characters": ["Clorinde", "Sigewinne", "Fischl", "Nahida"],
+        "roles": {
+          "Clorinde": "Main DPS",
+          "Sigewinne": "Healer/Buffer",
+          "Fischl": "Electro",
+          "Nahida": "Dendro"
+        },
+        "rotation": "Nahida E → Fischl E → Sigewinne EQ → Clorinde E combo"
+      }
+    ]
+  }
 }

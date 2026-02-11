@@ -648,5 +648,92 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Viridescent Venerer"],
+        "notes": "4pc mandatory for VV shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Instructor"],
+          "notes": "Budget EM share option"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Freedom-Sworn",
+          "notes": "BiS for support"
+        },
+        {
+          "name": "Xiphos' Moonlight",
+          "notes": "ER sharing utility"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy support"
+        },
+        {
+          "name": "Iron Sting",
+          "notes": "F2P EM option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM"],
+      "goblet": ["EM"],
+      "circlet": ["EM"]
+    },
+    "substats": ["EM", "ER", "CRIT Rate", "ATK%"],
+    "constellations": {
+      "c0": "Top tier support, no constellations needed",
+      "breakpoints": [
+        "C2: Massive EM boost to team (+200 EM)",
+        "C6: Anemo infusion DPS build unlocked"
+      ]
+    },
+    "teams": [
+      {
+        "name": "International",
+        "characters": ["Tartaglia", "Xiangling", "Bennett", "Kazuha"],
+        "roles": {
+          "Tartaglia": "Main DPS/Enabler",
+          "Xiangling": "Off-field Pyro",
+          "Bennett": "ATK Buffer/Healer",
+          "Kazuha": "VV Shred/Buffer"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q (swirl Pyro) → Xiangling EQ → Tartaglia E → melee combo"
+      },
+      {
+        "name": "Ayaka Freeze",
+        "characters": ["Ayaka", "Shenhe", "Kokomi", "Kazuha"],
+        "roles": {
+          "Ayaka": "Main DPS",
+          "Shenhe": "Cryo Buffer",
+          "Kokomi": "Hydro/Healer",
+          "Kazuha": "VV Shred/Grouping"
+        },
+        "rotation": "Kokomi E → Shenhe EQ → Kazuha tEP Q → Ayaka dash → EQ → charged attacks"
+      },
+      {
+        "name": "Neuvillette Support",
+        "characters": ["Neuvillette", "Furina", "Kazuha", "Zhongli"],
+        "roles": {
+          "Neuvillette": "Main DPS",
+          "Furina": "Buffer",
+          "Kazuha": "VV Shred",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Furina EQ → Kazuha tEP Q → Neuvillette charged attacks"
+      }
+    ]
+  }
 }

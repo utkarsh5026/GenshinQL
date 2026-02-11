@@ -533,5 +533,81 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Enabler"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Tenacity of the Millelith", "Vourukasha's Glow"],
+        "notes": "2pc+2pc HP stacking"
+      },
+      "alternatives": [
+        {
+          "sets": ["Flower of Paradise Lost"],
+          "notes": "Bloom damage if triggering"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Key of Khaj-Nisut",
+          "notes": "BiS, HP + EM sharing"
+        },
+        {
+          "name": "Freedom-Sworn",
+          "notes": "EM + team buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Iron Sting",
+          "notes": "EM + passive damage"
+        },
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%"],
+      "goblet": ["HP%"],
+      "circlet": ["HP%"]
+    },
+    "substats": ["HP%", "Flat HP", "EM", "ER"],
+    "constellations": {
+      "c0": "Unique Bloom support, requires Dendro/Hydro only teams",
+      "breakpoints": [
+        "C2: Hydro RES shred + HP buff",
+        "C6: CRIT capability for Bountiful Cores"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Nilou Bloom",
+        "characters": ["Nilou", "Nahida", "Kokomi", "Baizhu"],
+        "roles": {
+          "Nilou": "Bloom enabler",
+          "Nahida": "Dendro DPS",
+          "Kokomi": "Hydro/Healer",
+          "Baizhu": "Dendro/Shield"
+        },
+        "rotation": "Nilou EQ → Baizhu EQ → Nahida E → Kokomi E → Nahida on-field"
+      },
+      {
+        "name": "Triple Hydro",
+        "characters": ["Nilou", "Xingqiu", "Nahida", "Yaoyao"],
+        "roles": {
+          "Nilou": "Bloom enabler",
+          "Xingqiu": "Hydro",
+          "Nahida": "Dendro DPS",
+          "Yaoyao": "Healer"
+        },
+        "rotation": "Nilou EQ → Yaoyao EQ → Xingqiu EQ → Nahida E → on-field"
+      }
+    ]
+  }
 }

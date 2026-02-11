@@ -562,5 +562,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Scroll of the Hero of Cinder City"],
+        "notes": "4pc for elemental shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Archaic Petra"],
+          "notes": "Geo buff alternative"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "ATK buff to team"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Peak Patrol Song",
+          "notes": "BiS, DEF scaling + team buff"
+        },
+        {
+          "name": "Uraku Misugiri",
+          "notes": "DEF alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Sword",
+          "notes": "Energy for team"
+        },
+        {
+          "name": "Sword of Narzissenkreuz",
+          "notes": "F2P option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["DEF%", "ER"],
+      "goblet": ["DEF%"],
+      "circlet": ["DEF%", "CRIT Rate"]
+    },
+    "substats": ["DEF%", "ER", "CRIT Rate", "Flat DEF"],
+    "constellations": {
+      "c0": "Universal shred support, excellent at C0",
+      "breakpoints": [
+        "C1: Extra element shred slot",
+        "C2: Major boost, Geo DMG buff to team"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Mavuika Support",
+        "characters": ["Mavuika", "Citlali", "Xilonen", "Bennett"],
+        "roles": {
+          "Mavuika": "Main DPS",
+          "Citlali": "Cryo",
+          "Xilonen": "Shred",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xilonen E → Citlali EQ → Mavuika combo"
+      },
+      {
+        "name": "Neuvillette Support",
+        "characters": ["Neuvillette", "Furina", "Xilonen", "Zhongli"],
+        "roles": {
+          "Neuvillette": "Main DPS",
+          "Furina": "Buffer",
+          "Xilonen": "Shred",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Xilonen E → Furina EQ → Neuvillette charged attacks"
+      },
+      {
+        "name": "Arlecchino Support",
+        "characters": ["Arlecchino", "Furina", "Xilonen", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Furina": "Buffer",
+          "Xilonen": "Shred",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xilonen E → Furina EQ → Arlecchino E combo"
+      }
+    ]
+  }
 }

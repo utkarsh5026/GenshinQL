@@ -584,5 +584,63 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Gilded Dreams"],
+        "notes": "4pc BiS for EM"
+      },
+      "alternatives": [
+        {
+          "sets": ["Deepwood Memories"],
+          "notes": "If no one else has it"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Light of Foliar Incision",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Iron Sting",
+          "notes": "EM option"
+        },
+        {
+          "name": "Festering Desire",
+          "notes": "ER + skill"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM", "ATK%"],
+      "goblet": ["Dendro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "EM", "ATK%", "ER"],
+    "constellations": {
+      "c0": "Strong Spread DPS",
+      "breakpoints": ["C2: Extra mirror generation", "C6: CRIT stats buff"]
+    },
+    "teams": [
+      {
+        "name": "Alhaitham Quicken",
+        "characters": ["Alhaitham", "Fischl", "Nahida", "Zhongli"],
+        "roles": {
+          "Alhaitham": "Main DPS",
+          "Fischl": "Electro",
+          "Nahida": "Dendro",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Nahida E → Fischl E → Alhaitham E → combo"
+      }
+    ]
+  }
 }

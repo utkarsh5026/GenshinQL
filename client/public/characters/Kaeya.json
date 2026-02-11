@@ -438,5 +438,71 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Blizzard Strayer"],
+        "notes": "4pc for Freeze teams"
+      },
+      "alternatives": [
+        {
+          "sets": ["Emblem of Severed Fate"],
+          "notes": "Burst focused"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team buff support"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Primordial Jade Cutter",
+          "notes": "Universal CRIT sword"
+        },
+        {
+          "name": "Mistsplitter Reforged",
+          "notes": "Elemental damage"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Amenoma Kageuchi",
+          "notes": "F2P with ER utility"
+        },
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "ER"],
+      "goblet": ["Cryo DMG"],
+      "circlet": ["CRIT DMG"]
+    },
+    "substats": ["CRIT DMG", "ATK%", "ER", "CRIT Rate"],
+    "constellations": {
+      "c0": "Decent Cryo applicator, free starter",
+      "breakpoints": ["C2: Burst duration extension", "C6: Extra burst sword"]
+    },
+    "teams": [
+      {
+        "name": "Kaeya Freeze",
+        "characters": ["Kaeya", "Xingqiu", "Chongyun", "Sucrose"],
+        "roles": {
+          "Kaeya": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Chongyun": "Cryo infusion",
+          "Sucrose": "VV"
+        },
+        "rotation": "Xingqiu EQ → Chongyun E → Sucrose E → Kaeya EQ → NA spam"
+      }
+    ]
+  }
 }

@@ -496,5 +496,59 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Golden Troupe"],
+        "notes": "4pc BiS for Oz"
+      },
+      "alternatives": [
+        {
+          "sets": ["Thundering Fury"],
+          "notes": "Aggravate"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Polar Star",
+          "notes": "Best damage"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Stringless",
+          "notes": "EM + skill bonus"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "EM"],
+      "goblet": ["Electro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM"],
+    "constellations": {
+      "c0": "Excellent off-field Electro",
+      "breakpoints": ["C6: Oz attacks with character"]
+    },
+    "teams": [
+      {
+        "name": "Aggravate",
+        "characters": ["Fischl", "Keqing", "Nahida", "Kazuha"],
+        "roles": {
+          "Fischl": "Electro",
+          "Keqing": "Main DPS",
+          "Nahida": "Dendro",
+          "Kazuha": "VV"
+        },
+        "rotation": "Nahida E → Fischl E → Kazuha tEP Q → Keqing combo"
+      }
+    ]
+  }
 }

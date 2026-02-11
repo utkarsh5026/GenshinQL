@@ -599,5 +599,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Pale Flame"],
+        "notes": "4pc for Physical damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Pale Flame", "Bloodstained Chivalry"],
+          "notes": "2pc+2pc Physical"
+        },
+        {
+          "sets": ["Gladiator's Finale"],
+          "notes": "General DPS option"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Song of Broken Pines",
+          "notes": "Signature, ATK SPD buff"
+        },
+        {
+          "name": "Wolf's Gravestone",
+          "notes": "ATK% with team buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Battle Pass BiS"
+        },
+        {
+          "name": "Prototype Archaic",
+          "notes": "F2P option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Physical DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "ER", "Flat ATK"],
+    "constellations": {
+      "c0": "Nuke playstyle Physical DPS, timing dependent",
+      "breakpoints": [
+        "C1: Extra Physical shred",
+        "C6: Lightfall Sword stacks faster"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Eula Raiden",
+        "characters": ["Eula", "Raiden Shogun", "Rosaria", "Zhongli"],
+        "roles": {
+          "Eula": "Main DPS",
+          "Raiden Shogun": "Electro/Sub-DPS",
+          "Rosaria": "Cryo battery/CRIT",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Rosaria EQ → Raiden E → Eula E → Q → combo → Raiden Q"
+      },
+      {
+        "name": "Eula Fischl",
+        "characters": ["Eula", "Fischl", "Diona", "Beidou"],
+        "roles": {
+          "Eula": "Main DPS",
+          "Fischl": "Electro",
+          "Diona": "Battery/Shield",
+          "Beidou": "Electro Sub-DPS"
+        },
+        "rotation": "Diona EQ → Fischl E → Beidou EQ → Eula E → Q → combo"
+      }
+    ]
+  }
 }

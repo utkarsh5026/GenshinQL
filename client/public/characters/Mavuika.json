@@ -710,5 +710,97 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Obsidian Codex"],
+        "notes": "4pc BiS, Nightsoul synergy"
+      },
+      "alternatives": [
+        {
+          "sets": ["Crimson Witch of Flames"],
+          "notes": "Melt focused"
+        },
+        {
+          "sets": ["Lavawalker"],
+          "notes": "Mono Pyro teams"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "A Thousand Blazing Suns",
+          "notes": "BiS, signature weapon"
+        },
+        {
+          "name": "Redhorn Stonethresher",
+          "notes": "CRIT DMG alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Best 4★, Battle Pass"
+        },
+        {
+          "name": "Luxurious Sea-Lord",
+          "notes": "F2P ATK option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT DMG", "CRIT Rate"]
+    },
+    "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "ER"],
+    "constellations": {
+      "c0": "Top Pyro DPS, damage ceiling comp viable",
+      "breakpoints": [
+        "C1: Fighting Spirit generation",
+        "C2: Major DPS boost, +40% Pyro DMG"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Mavuika Melt",
+        "characters": ["Mavuika", "Citlali", "Xilonen", "Bennett"],
+        "roles": {
+          "Mavuika": "Main DPS",
+          "Citlali": "Cryo Applicator",
+          "Xilonen": "Shred",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Xilonen E → Citlali EQ → Mavuika Q → E → bike combo → double cancel tech",
+        "notes": "Damage ceiling comp, 150-160k DPS with optimal execution"
+      },
+      {
+        "name": "Mono Pyro",
+        "characters": ["Mavuika", "Xilonen", "Bennett", "Xiangling"],
+        "roles": {
+          "Mavuika": "Main DPS",
+          "Xilonen": "Shred",
+          "Bennett": "ATK Buffer",
+          "Xiangling": "Off-field Pyro"
+        },
+        "rotation": "Bennett EQ → Xiangling EQ → Xilonen E → Mavuika Q → E → bike combo"
+      },
+      {
+        "name": "Furina Vaporize",
+        "characters": ["Mavuika", "Furina", "Xilonen", "Bennett"],
+        "roles": {
+          "Mavuika": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Xilonen": "Shred",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Xilonen E → Furina EQ → Mavuika Q → E → bike combo"
+      }
+    ]
+  }
 }

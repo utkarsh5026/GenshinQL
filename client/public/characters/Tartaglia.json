@@ -654,5 +654,93 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS", "Enabler"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Heart of Depth"],
+        "notes": "4pc for Hydro damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Marechaussee Hunter"],
+          "notes": "With Furina teams"
+        },
+        {
+          "sets": ["Gladiator's Finale", "Heart of Depth"],
+          "notes": "2pc+2pc combo"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Polar Star",
+          "notes": "BiS, stacking damage bonus"
+        },
+        {
+          "name": "Thundering Pulse",
+          "notes": "NA focused alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Viridescent Hunt",
+          "notes": "Battle Pass, grouping utility"
+        },
+        {
+          "name": "Rust",
+          "notes": "NA damage focus"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Hydro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM", "ER"],
+    "constellations": {
+      "c0": "Strong enabler for Xiangling, cooldown management required",
+      "breakpoints": ["C1: CD reduction", "C6: Resets melee CD after burst"]
+    },
+    "teams": [
+      {
+        "name": "International",
+        "characters": ["Tartaglia", "Xiangling", "Bennett", "Kazuha"],
+        "roles": {
+          "Tartaglia": "Enabler/DPS",
+          "Xiangling": "Off-field Pyro",
+          "Bennett": "ATK Buffer",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q (swirl Pyro) → Xiangling EQ → Tartaglia E melee combo"
+      },
+      {
+        "name": "Fireworks",
+        "characters": ["Tartaglia", "Fischl", "Beidou", "Bennett"],
+        "roles": {
+          "Tartaglia": "Enabler",
+          "Fischl": "Electro",
+          "Beidou": "Electro Sub-DPS",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Fischl E → Beidou EQ → Tartaglia E melee spam"
+      },
+      {
+        "name": "Sucrose Variant",
+        "characters": ["Tartaglia", "Xiangling", "Bennett", "Sucrose"],
+        "roles": {
+          "Tartaglia": "Enabler",
+          "Xiangling": "Pyro",
+          "Bennett": "Buffer",
+          "Sucrose": "VV/EM"
+        },
+        "rotation": "Bennett EQ → Sucrose E → Xiangling EQ → Tartaglia E melee"
+      }
+    ]
+  }
 }

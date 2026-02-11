@@ -509,5 +509,66 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Obsidian Codex"],
+        "notes": "4pc BiS for Nightsoul"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gilded Dreams"],
+          "notes": "EM focused"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Fang of the Mountain King",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Battle Pass"
+        },
+        {
+          "name": "Rainslasher",
+          "notes": "EM for reactions"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Dendro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM"],
+    "constellations": {
+      "c0": "Dendro DPS with grappling mechanic",
+      "breakpoints": [
+        "C1: Extra scaling on charged attack",
+        "C2: Nightsoul buff"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Kinich Burning",
+        "characters": ["Kinich", "Emilie", "Thoma", "Bennett"],
+        "roles": {
+          "Kinich": "Main DPS",
+          "Emilie": "Dendro Sub-DPS",
+          "Thoma": "Pyro applicator",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Thoma EQ → Emilie E → Kinich E → grapple combo"
+      }
+    ]
+  }
 }

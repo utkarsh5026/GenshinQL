@@ -442,5 +442,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Emblem of Severed Fate"],
+        "notes": "4pc BiS for burst damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Noblesse Oblige", "Heart of Depth"],
+          "notes": "2pc+2pc combo"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team buff if no one else has it"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Primordial Jade Cutter",
+          "notes": "BiS for damage"
+        },
+        {
+          "name": "Haran Geppaku Futsu",
+          "notes": "CRIT Rate with bonus"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Sacrificial Sword",
+          "notes": "Best 4★, skill reset"
+        },
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy support"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER", "ATK%"],
+      "goblet": ["Hydro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["ER", "CRIT Rate", "CRIT DMG", "ATK%", "HP%"],
+    "constellations": {
+      "c0": "Already excellent Hydro applicator",
+      "breakpoints": [
+        "C2: Extends burst and reduces Hydro RES",
+        "C6: Major DPS boost, energy refund"
+      ]
+    },
+    "teams": [
+      {
+        "name": "National Team",
+        "characters": ["Xiangling", "Xingqiu", "Bennett", "Sucrose"],
+        "roles": {
+          "Xiangling": "Main DPS",
+          "Xingqiu": "Hydro Applicator",
+          "Bennett": "Buffer",
+          "Sucrose": "VV/EM"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Sucrose E → Xiangling EQ"
+      },
+      {
+        "name": "Hu Tao Vape",
+        "characters": ["Hu Tao", "Xingqiu", "Yelan", "Zhongli"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Yelan": "Sub-DPS",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Yelan EQ → Xingqiu EQ → Hu Tao E combo"
+      },
+      {
+        "name": "Raiden National",
+        "characters": ["Raiden Shogun", "Xiangling", "Xingqiu", "Bennett"],
+        "roles": {
+          "Raiden Shogun": "Main DPS",
+          "Xiangling": "Off-field",
+          "Xingqiu": "Hydro",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Xiangling EQ → Raiden Q combo"
+      }
+    ]
+  }
 }

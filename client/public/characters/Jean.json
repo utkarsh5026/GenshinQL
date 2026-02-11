@@ -496,5 +496,63 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Healer"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Viridescent Venerer"],
+        "notes": "4pc for VV shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team ATK buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Primordial Jade Cutter",
+          "notes": "CRIT option"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Amenoma Kageuchi",
+          "notes": "ER utility"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "ER"],
+      "goblet": ["Anemo DMG", "ATK%"],
+      "circlet": ["Healing Bonus", "CRIT Rate"]
+    },
+    "substats": ["ER", "ATK%", "CRIT Rate", "CRIT DMG"],
+    "constellations": {
+      "c0": "Versatile healer and VV holder",
+      "breakpoints": ["C2: ATK SPD buff", "C4: Anemo RES shred in burst"]
+    },
+    "teams": [
+      {
+        "name": "Sunfire",
+        "characters": ["Jean", "Bennett", "Xiao", "Zhongli"],
+        "roles": {
+          "Jean": "Swirl/Healer",
+          "Bennett": "Buffer",
+          "Xiao": "Main DPS",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Bennett Q → Jean Q → Xiao EEQ → plunge"
+      }
+    ]
+  }
 }

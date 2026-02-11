@@ -566,5 +566,93 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Blizzard Strayer"],
+        "notes": "4pc BiS for Freeze teams"
+      },
+      "alternatives": [
+        {
+          "sets": ["Marechaussee Hunter"],
+          "notes": "With Furina teams"
+        },
+        {
+          "sets": ["Gladiator's Finale", "Blizzard Strayer"],
+          "notes": "2pc+2pc general"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Mistsplitter Reforged",
+          "notes": "BiS, elemental damage bonus"
+        },
+        {
+          "name": "Light of Foliar Incision",
+          "notes": "CRIT DMG alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Amenoma Kageuchi",
+          "notes": "F2P BiS, ER utility"
+        },
+        {
+          "name": "The Black Sword",
+          "notes": "Battle Pass, CRIT Rate"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Cryo DMG"],
+      "circlet": ["CRIT DMG", "ATK%"]
+    },
+    "substats": ["CRIT DMG", "ATK%", "CRIT Rate", "ER", "Flat ATK"],
+    "constellations": {
+      "c0": "Top tier Freeze DPS, excellent burst damage",
+      "breakpoints": ["C2: Extra burst damage", "C4: DEF shred on burst hit"]
+    },
+    "teams": [
+      {
+        "name": "Ayaka Freeze",
+        "characters": ["Ayaka", "Shenhe", "Kokomi", "Kazuha"],
+        "roles": {
+          "Ayaka": "Main DPS",
+          "Shenhe": "Cryo buffer",
+          "Kokomi": "Hydro/Healer",
+          "Kazuha": "VV Shred/Grouping"
+        },
+        "rotation": "Kokomi E → Shenhe EQ → Kazuha tEP Q → Ayaka dash → EQ → charged attacks"
+      },
+      {
+        "name": "Ayaka Furina",
+        "characters": ["Ayaka", "Shenhe", "Furina", "Kazuha"],
+        "roles": {
+          "Ayaka": "Main DPS",
+          "Shenhe": "Cryo buffer",
+          "Furina": "Sub-DPS",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Furina EQ → Shenhe EQ → Kazuha tEP Q → Ayaka dash EQ → charged attacks"
+      },
+      {
+        "name": "Morgana Variant",
+        "characters": ["Ayaka", "Mona", "Venti", "Diona"],
+        "roles": {
+          "Ayaka": "Main DPS",
+          "Mona": "Omen buff/Hydro",
+          "Venti": "Grouping",
+          "Diona": "Shield/Battery"
+        },
+        "rotation": "Diona EQ → Mona EQ → Venti EQ → Ayaka dash EQ"
+      }
+    ]
+  }
 }

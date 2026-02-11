@@ -568,5 +568,93 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Shielder"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Tenacity of the Millelith"],
+        "notes": "4pc for shield + team buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Archaic Petra"],
+          "notes": "Elemental buff for reaction teams"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Burst support"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Vortex Vanquisher",
+          "notes": "ATK% with shield bonus"
+        },
+        {
+          "name": "Staff of Homa",
+          "notes": "HP scaling + CRIT"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Black Tassel",
+          "notes": "Best for pure shield, HP%"
+        },
+        {
+          "name": "Favonius Lance",
+          "notes": "Team energy support"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%"],
+      "goblet": ["HP%"],
+      "circlet": ["HP%"]
+    },
+    "substats": ["HP%", "Flat HP", "ER", "CRIT Rate"],
+    "constellations": {
+      "c0": "Best shielder in game, universal team fit",
+      "breakpoints": ["C2: Instant shield from burst", "C6: Healing on hit"]
+    },
+    "teams": [
+      {
+        "name": "Hu Tao Double Hydro",
+        "characters": ["Hu Tao", "Xingqiu", "Yelan", "Zhongli"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Yelan": "Sub-DPS",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Yelan EQ → Xingqiu EQ → Hu Tao E combo"
+      },
+      {
+        "name": "Neuvillette Shield",
+        "characters": ["Neuvillette", "Furina", "Kazuha", "Zhongli"],
+        "roles": {
+          "Neuvillette": "Main DPS",
+          "Furina": "Buffer",
+          "Kazuha": "VV",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Furina EQ → Kazuha EQ → Neuvillette charged attacks"
+      },
+      {
+        "name": "Xiao Geo",
+        "characters": ["Xiao", "Albedo", "Zhongli", "Faruzan"],
+        "roles": {
+          "Xiao": "Main DPS",
+          "Albedo": "Off-field Geo",
+          "Zhongli": "Shielder/Res shred",
+          "Faruzan": "Anemo Buffer"
+        },
+        "rotation": "Zhongli hE → Albedo E → Faruzan EQ → Xiao EQ → plunge spam"
+      }
+    ]
+  }
 }

@@ -529,5 +529,74 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Physical DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Tenacity of the Millelith"],
+        "notes": "4pc for shield support"
+      },
+      "alternatives": [
+        {
+          "sets": ["Pale Flame"],
+          "notes": "Physical DPS build"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team burst buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Redhorn Stonethresher",
+          "notes": "DEF scaling for shield"
+        },
+        {
+          "name": "Wolf's Gravestone",
+          "notes": "If used as DPS"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Sacrificial Greatsword",
+          "notes": "Double shield cast"
+        },
+        {
+          "name": "Whiteblind",
+          "notes": "DEF for shield"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["DEF%", "ATK%"],
+      "goblet": ["DEF%", "Physical DMG"],
+      "circlet": ["DEF%", "CRIT Rate"]
+    },
+    "substats": ["DEF%", "CRIT Rate", "CRIT DMG", "ER", "ATK%"],
+    "constellations": {
+      "c0": "Niche Physical support",
+      "breakpoints": [
+        "C2: Guarantees Lv3 shield on burst",
+        "C4: Physical RES shred"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Eula Support",
+        "characters": ["Eula", "Raiden Shogun", "Xinyan", "Rosaria"],
+        "roles": {
+          "Eula": "Main DPS",
+          "Raiden Shogun": "Sub-DPS/Battery",
+          "Xinyan": "Physical shred",
+          "Rosaria": "Cryo battery"
+        },
+        "rotation": "Rosaria EQ → Xinyan EQ → Raiden E → Eula combo → Raiden Q"
+      }
+    ]
+  }
 }

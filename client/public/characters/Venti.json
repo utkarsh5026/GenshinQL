@@ -596,5 +596,66 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Viridescent Venerer"],
+        "notes": "4pc mandatory for VV shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team ATK buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Elegy for the End",
+          "notes": "Team EM buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Stringless",
+          "notes": "EM + skill bonus"
+        },
+        {
+          "name": "Favonius Warbow",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM"],
+      "goblet": ["EM"],
+      "circlet": ["EM"]
+    },
+    "substats": ["EM", "ER", "CRIT Rate", "ATK%"],
+    "constellations": {
+      "c0": "Best grouper in game for light enemies",
+      "breakpoints": [
+        "C2: Anemo/Physical RES shred",
+        "C6: More Anemo/element RES shred"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Morgana",
+        "characters": ["Ganyu", "Mona", "Venti", "Diona"],
+        "roles": {
+          "Ganyu": "Main DPS",
+          "Mona": "Buffer",
+          "Venti": "Grouping",
+          "Diona": "Shield/Battery"
+        },
+        "rotation": "Diona EQ → Mona EQ → Venti EQ → Ganyu EQ → charged shots"
+      }
+    ]
+  }
 }

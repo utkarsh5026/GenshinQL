@@ -544,5 +544,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Flower of Paradise Lost"],
+        "notes": "4pc for Burgeon teams"
+      },
+      "alternatives": [
+        {
+          "sets": ["Tenacity of the Millelith", "Emblem of Severed Fate"],
+          "notes": "2pc+2pc for shield"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team ATK buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Staff of Homa",
+          "notes": "HP scaling for shield"
+        },
+        {
+          "name": "Engulfing Lightning",
+          "notes": "ER focused"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Kitain Cross Spear",
+          "notes": "EM for Burgeon"
+        },
+        {
+          "name": "Favonius Lance",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM", "HP%", "ER"],
+      "goblet": ["EM", "HP%"],
+      "circlet": ["EM", "HP%"]
+    },
+    "substats": ["EM", "ER", "HP%", "CRIT Rate"],
+    "constellations": {
+      "c0": "Shield stacking support, good for Hu Tao",
+      "breakpoints": [
+        "C4: Reduces burst ER requirement",
+        "C6: NA/CA/Plunge buff to party"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Hu Tao VV Vape",
+        "characters": ["Hu Tao", "Xingqiu", "Sucrose", "Thoma"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Sucrose": "VV Shred",
+          "Thoma": "Shield/Pyro"
+        },
+        "rotation": "Thoma EQ → Xingqiu EQ → Sucrose E (swirl Pyro) → Hu Tao E combo"
+      },
+      {
+        "name": "Thoma Burgeon",
+        "characters": ["Thoma", "Nahida", "Xingqiu", "Yaoyao"],
+        "roles": {
+          "Thoma": "Burgeon trigger",
+          "Nahida": "Dendro",
+          "Xingqiu": "Hydro",
+          "Yaoyao": "Healer/Dendro"
+        },
+        "rotation": "Yaoyao EQ → Nahida E → Xingqiu EQ → Thoma EQ → Nahida on-field"
+      }
+    ]
+  }
 }

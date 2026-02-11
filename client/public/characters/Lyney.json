@@ -600,5 +600,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Marechaussee Hunter"],
+        "notes": "4pc BiS, HP drain synergy"
+      },
+      "alternatives": [
+        {
+          "sets": ["Lavawalker"],
+          "notes": "Mono Pyro teams"
+        },
+        {
+          "sets": ["Wanderer's Troupe"],
+          "notes": "Charged attack focus"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "The First Great Magic",
+          "notes": "BiS, signature weapon"
+        },
+        {
+          "name": "Aqua Simulacra",
+          "notes": "CRIT DMG alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Prototype Crescent",
+          "notes": "F2P option"
+        },
+        {
+          "name": "The Viridescent Hunt",
+          "notes": "Battle Pass, grouping"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT DMG"]
+    },
+    "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "ER", "Flat ATK"],
+    "constellations": {
+      "c0": "Strong Pyro DPS, wants Mono Pyro teams",
+      "breakpoints": [
+        "C1: Extra prop stacks",
+        "C2: CRIT DMG buff per Pyro party member"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Lyney Mono Pyro",
+        "characters": ["Lyney", "Xiangling", "Bennett", "Kazuha"],
+        "roles": {
+          "Lyney": "Main DPS",
+          "Xiangling": "Pyro resonance",
+          "Bennett": "ATK Buffer/Healer",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q → Xiangling E → Lyney charged shots with props"
+      },
+      {
+        "name": "Triple Pyro Zhongli",
+        "characters": ["Lyney", "Xiangling", "Bennett", "Zhongli"],
+        "roles": {
+          "Lyney": "Main DPS",
+          "Xiangling": "Pyro",
+          "Bennett": "ATK Buffer",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Bennett EQ → Xiangling E → Lyney charged shots"
+      }
+    ]
+  }
 }

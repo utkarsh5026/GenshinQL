@@ -490,5 +490,70 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Healer"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Ocean-Hued Clam"],
+        "notes": "4pc for healing damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Tenacity of the Millelith"],
+          "notes": "Team HP buff"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team ATK buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Aquila Favonia",
+          "notes": "ATK% for healing"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Sacrificial Sword",
+          "notes": "Skill reset for more healing"
+        },
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "ER"],
+      "goblet": ["ATK%"],
+      "circlet": ["Healing Bonus", "ATK%"]
+    },
+    "substats": ["ATK%", "ER", "Flat ATK", "CRIT Rate"],
+    "constellations": {
+      "c0": "Overheal specialist, limited utility otherwise",
+      "breakpoints": [
+        "C2: NA/CA damage buff when enemies below 50% HP",
+        "C6: Revive party members"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Qiqi Physical",
+        "characters": ["Qiqi", "Fischl", "Beidou", "Xingqiu"],
+        "roles": {
+          "Qiqi": "Driver/Healer",
+          "Fischl": "Electro",
+          "Beidou": "Electro Sub-DPS",
+          "Xingqiu": "Hydro"
+        },
+        "rotation": "Xingqiu EQ → Fischl E → Beidou EQ → Qiqi E → NA spam"
+      }
+    ]
+  }
 }

@@ -563,5 +563,59 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Fragment of Harmonic Whimsy"],
+        "notes": "4pc BiS"
+      },
+      "alternatives": [
+        {
+          "sets": ["Thundering Fury"],
+          "notes": "Aggravate"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Absolution",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Black Sword",
+          "notes": "Battle Pass"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Electro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM"],
+    "constellations": {
+      "c0": "Strong Electro DPS with pistol playstyle",
+      "breakpoints": ["C2: CRIT Rate buff"]
+    },
+    "teams": [
+      {
+        "name": "Clorinde Aggravate",
+        "characters": ["Clorinde", "Fischl", "Nahida", "Zhongli"],
+        "roles": {
+          "Clorinde": "Main DPS",
+          "Fischl": "Electro",
+          "Nahida": "Dendro",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Nahida E → Fischl E → Clorinde E combo"
+      }
+    ]
+  }
 }

@@ -773,5 +773,78 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS", "Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Emblem of Severed Fate"],
+        "notes": "4pc BiS for burst damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Flower of Paradise Lost"],
+          "notes": "Hyperbloom trigger build"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Engulfing Lightning",
+          "notes": "BiS signature"
+        },
+        {
+          "name": "Staff of Homa",
+          "notes": "CRIT DMG alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Catch",
+          "notes": "F2P BiS"
+        },
+        {
+          "name": "Favonius Lance",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER", "ATK%"],
+      "goblet": ["Electro DMG", "ATK%"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["ER", "CRIT Rate", "CRIT DMG", "ATK%"],
+    "constellations": {
+      "c0": "Top tier burst DPS and battery",
+      "breakpoints": ["C2: DEF ignore, huge DPS boost", "C3: +3 burst levels"]
+    },
+    "teams": [
+      {
+        "name": "Raiden National",
+        "characters": ["Raiden Shogun", "Xiangling", "Xingqiu", "Bennett"],
+        "roles": {
+          "Raiden Shogun": "Main DPS/Battery",
+          "Xiangling": "Pyro",
+          "Xingqiu": "Hydro",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Xiangling EQ → Raiden Q → combo"
+      },
+      {
+        "name": "Raiden Hypercarry",
+        "characters": ["Raiden Shogun", "Kujou Sara", "Kazuha", "Bennett"],
+        "roles": {
+          "Raiden Shogun": "Hypercarry",
+          "Kujou Sara": "Buffer",
+          "Kazuha": "VV",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Sara EQ → Kazuha tEP Q → Raiden Q"
+      }
+    ]
+  }
 }

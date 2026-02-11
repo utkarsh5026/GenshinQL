@@ -495,5 +495,59 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["The Exile"],
+        "notes": "4pc for team energy"
+      },
+      "alternatives": [
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team ATK buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Elegy for the End",
+          "notes": "Team EM buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Warbow",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER"],
+      "goblet": ["Geo DMG", "DEF%"],
+      "circlet": ["CRIT Rate", "DEF%"]
+    },
+    "substats": ["ER", "DEF%", "CRIT Rate"],
+    "constellations": {
+      "c0": "Best buffer for DEF Geo characters",
+      "breakpoints": ["C4: Healing during burst", "C6: CRIT DMG buff for Geo"]
+    },
+    "teams": [
+      {
+        "name": "Itto Support",
+        "characters": ["Itto", "Gorou", "Albedo", "Zhongli"],
+        "roles": {
+          "Itto": "Main DPS",
+          "Gorou": "DEF buffer",
+          "Albedo": "Off-field",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Albedo E → Gorou EQ → Itto Q combo"
+      }
+    ]
+  }
 }

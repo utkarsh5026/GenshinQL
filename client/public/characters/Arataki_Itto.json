@@ -536,5 +536,62 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Husk of Opulent Dreams"],
+        "notes": "4pc BiS for DEF scaling"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gladiator's Finale"],
+          "notes": "General option"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Redhorn Stonethresher",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Battle Pass BiS"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["DEF%"],
+      "goblet": ["Geo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ER"],
+    "constellations": {
+      "c0": "Strong Geo DPS, needs Gorou",
+      "breakpoints": [
+        "C2: Burst CD reduction",
+        "C6: Massive charged attack buff"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Itto Mono Geo",
+        "characters": ["Itto", "Gorou", "Albedo", "Zhongli"],
+        "roles": {
+          "Itto": "Main DPS",
+          "Gorou": "DEF buffer",
+          "Albedo": "Off-field",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Albedo E → Gorou EQ → Itto Q → charged attack combo"
+      }
+    ]
+  }
 }

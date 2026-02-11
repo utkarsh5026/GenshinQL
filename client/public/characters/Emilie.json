@@ -503,5 +503,66 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Unfinished Reverie"],
+        "notes": "4pc for Burning synergy"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gilded Dreams"],
+          "notes": "EM focused"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Lumidouce Elegy",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Kitain Cross Spear",
+          "notes": "EM + energy"
+        },
+        {
+          "name": "Dragon's Bane",
+          "notes": "EM option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Dendro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM"],
+    "constellations": {
+      "c0": "Burning focused Dendro Sub-DPS",
+      "breakpoints": [
+        "C1: Extra scent collection",
+        "C2: Increased scent damage"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Kinich Burgeon",
+        "characters": ["Kinich", "Emilie", "Thoma", "Bennett"],
+        "roles": {
+          "Kinich": "Main DPS",
+          "Emilie": "Dendro Sub-DPS",
+          "Thoma": "Pyro",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Thoma E → Emilie E → Kinich E combo"
+      }
+    ]
+  }
 }

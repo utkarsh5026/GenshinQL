@@ -551,5 +551,63 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Desert Pavilion Chronicle"],
+        "notes": "4pc BiS"
+      },
+      "alternatives": [
+        {
+          "sets": ["Shimenawa's Reminiscence"],
+          "notes": "NA focused"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Tulaytullah's Remembrance",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Widsith",
+          "notes": "Burst damage"
+        },
+        {
+          "name": "Solar Pearl",
+          "notes": "Battle Pass"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Anemo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ER"],
+    "constellations": {
+      "c0": "Strong hovering DPS",
+      "breakpoints": ["C2: Burst buffs hover", "C6: Extra hover attacks"]
+    },
+    "teams": [
+      {
+        "name": "Wanderer Hypercarry",
+        "characters": ["Wanderer", "Faruzan", "Bennett", "Zhongli"],
+        "roles": {
+          "Wanderer": "Main DPS",
+          "Faruzan": "Anemo buffer",
+          "Bennett": "ATK Buffer",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Bennett EQ → Faruzan EQ → Wanderer E → hover NA spam"
+      }
+    ]
+  }
 }

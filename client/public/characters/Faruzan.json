@@ -503,5 +503,59 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige"],
+        "notes": "4pc for team ATK buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Viridescent Venerer"],
+          "notes": "If no one else has VV"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Elegy for the End",
+          "notes": "Team EM buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Warbow",
+          "notes": "Team energy, essential"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER"],
+      "goblet": ["Anemo DMG"],
+      "circlet": ["CRIT Rate"]
+    },
+    "substats": ["ER", "CRIT Rate", "ATK%", "CRIT DMG"],
+    "constellations": {
+      "c0": "Anemo buffer but needs C6",
+      "breakpoints": ["C6: 100% uptime on buff, mandatory for Xiao/Wanderer"]
+    },
+    "teams": [
+      {
+        "name": "Xiao Support",
+        "characters": ["Xiao", "Faruzan", "Zhongli", "Albedo"],
+        "roles": {
+          "Xiao": "Main DPS",
+          "Faruzan": "Anemo buffer",
+          "Zhongli": "Shield",
+          "Albedo": "Off-field"
+        },
+        "rotation": "Zhongli hE → Albedo E → Faruzan EQ → Xiao EEQ → plunge"
+      }
+    ]
+  }
 }

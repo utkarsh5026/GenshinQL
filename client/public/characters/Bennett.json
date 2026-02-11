@@ -504,5 +504,97 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Healer"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige"],
+        "notes": "4pc for team ATK buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Instructor"],
+          "notes": "EM buff for reaction teams"
+        },
+        {
+          "sets": ["Emblem of Severed Fate"],
+          "notes": "Burst damage focus"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Aquila Favonia",
+          "notes": "Highest base ATK"
+        },
+        {
+          "name": "Skyward Blade",
+          "notes": "ER with high base ATK"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Prototype Rancour",
+          "notes": "F2P highest base ATK"
+        },
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER", "HP%"],
+      "goblet": ["HP%"],
+      "circlet": ["Healing Bonus", "HP%"]
+    },
+    "substats": ["ER", "HP%", "Flat HP", "CRIT Rate"],
+    "constellations": {
+      "c0": "Still excellent buffer and healer",
+      "breakpoints": [
+        "C1: Removes HP condition on burst buff",
+        "C5: +3 burst levels, huge ATK buff increase"
+      ],
+      "notes": "Never activate C6 unless you know what you're doing - Pyro infusion can ruin some teams"
+    },
+    "teams": [
+      {
+        "name": "National Team",
+        "characters": ["Xiangling", "Xingqiu", "Bennett", "Sucrose"],
+        "roles": {
+          "Xiangling": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Bennett": "ATK Buffer/Healer",
+          "Sucrose": "VV/EM"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Sucrose E → Xiangling EQ → funnel to Xiangling"
+      },
+      {
+        "name": "Raiden National",
+        "characters": ["Raiden Shogun", "Xiangling", "Xingqiu", "Bennett"],
+        "roles": {
+          "Raiden Shogun": "Main DPS/Battery",
+          "Xiangling": "Off-field Pyro",
+          "Xingqiu": "Hydro",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Xiangling EQ → Raiden Q → combo → repeat"
+      },
+      {
+        "name": "Melt Ganyu",
+        "characters": ["Ganyu", "Xiangling", "Bennett", "Zhongli"],
+        "roles": {
+          "Ganyu": "Main DPS",
+          "Xiangling": "Pyro applicator",
+          "Bennett": "ATK Buffer",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Bennett EQ → Xiangling EQ → Ganyu charged shots"
+      }
+    ]
+  }
 }

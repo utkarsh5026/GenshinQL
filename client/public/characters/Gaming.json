@@ -493,5 +493,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Marechaussee Hunter"],
+        "notes": "4pc BiS, HP drain synergy"
+      },
+      "alternatives": [
+        {
+          "sets": ["Crimson Witch of Flames"],
+          "notes": "Vaporize focus"
+        },
+        {
+          "sets": ["Vermillion Hereafter"],
+          "notes": "HP drain alternative"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Stack maintenance easy with plunges"
+        },
+        {
+          "name": "Wolf's Gravestone",
+          "notes": "ATK% option"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Best option overall"
+        },
+        {
+          "name": "Mailed Flower",
+          "notes": "EM + ATK alternative"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM", "ER"],
+    "constellations": {
+      "c0": "Fun plunge DPS, needs Xianyun for full potential",
+      "breakpoints": [
+        "C2: Extra Man Chai when healing",
+        "C6: CRIT Rate + CRIT DMG buff"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Gaming Plunge",
+        "characters": ["Gaming", "Xianyun", "Furina", "Bennett"],
+        "roles": {
+          "Gaming": "Main DPS",
+          "Xianyun": "Plunge Buffer/Healer",
+          "Furina": "Sub-DPS",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Xianyun EQ → Furina EQ → Gaming E → plunge combo"
+      },
+      {
+        "name": "Gaming Vaporize",
+        "characters": ["Gaming", "Xianyun", "Xingqiu", "Bennett"],
+        "roles": {
+          "Gaming": "Main DPS",
+          "Xianyun": "Plunge Buffer",
+          "Xingqiu": "Hydro",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Xianyun EQ → Xingqiu EQ → Gaming E plunge spam"
+      }
+    ]
+  }
 }

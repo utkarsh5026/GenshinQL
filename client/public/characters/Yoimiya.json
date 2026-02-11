@@ -595,5 +595,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Shimenawa's Reminiscence"],
+        "notes": "4pc BiS for normal attacks"
+      },
+      "alternatives": [
+        {
+          "sets": ["Crimson Witch of Flames"],
+          "notes": "Vaporize focused"
+        },
+        {
+          "sets": ["Echoes of an Offering"],
+          "notes": "Alternative NA set"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Thundering Pulse",
+          "notes": "BiS, NA focused"
+        },
+        {
+          "name": "Aqua Simulacra",
+          "notes": "CRIT DMG option"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Rust",
+          "notes": "Best 4★, NA damage"
+        },
+        {
+          "name": "Slingshot",
+          "notes": "Budget CRIT Rate option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM", "ER"],
+    "constellations": {
+      "c0": "Solid single-target Pyro DPS",
+      "breakpoints": [
+        "C1: ATK buff during burst",
+        "C2: Pyro DMG buff on crit kills"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Yoimiya Vaporize",
+        "characters": ["Yoimiya", "Yelan", "Yun Jin", "Zhongli"],
+        "roles": {
+          "Yoimiya": "Main DPS",
+          "Yelan": "Hydro/Buffer",
+          "Yun Jin": "NA Buffer",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Yun Jin EQ → Yelan EQ → Yoimiya E → N5 strings"
+      },
+      {
+        "name": "Furina Team",
+        "characters": ["Yoimiya", "Furina", "Yun Jin", "Bennett"],
+        "roles": {
+          "Yoimiya": "Main DPS",
+          "Furina": "Sub-DPS",
+          "Yun Jin": "NA Buffer",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Yun Jin EQ → Furina EQ → Yoimiya E → N5 strings"
+      },
+      {
+        "name": "Overload Team",
+        "characters": ["Yoimiya", "Fischl", "Beidou", "Bennett"],
+        "roles": {
+          "Yoimiya": "Main DPS",
+          "Fischl": "Electro",
+          "Beidou": "Electro Sub-DPS",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Beidou EQ → Fischl E → Yoimiya E → N5 strings"
+      }
+    ]
+  }
 }

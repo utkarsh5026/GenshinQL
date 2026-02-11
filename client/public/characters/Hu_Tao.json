@@ -622,5 +622,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Crimson Witch of Flames"],
+        "notes": "4pc for Vaporize teams"
+      },
+      "alternatives": [
+        {
+          "sets": ["Shimenawa's Reminiscence"],
+          "notes": "If energy isn't an issue"
+        },
+        {
+          "sets": ["Gilded Dreams"],
+          "notes": "EM focused vaporize"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Staff of Homa",
+          "notes": "BiS, synergizes with low HP"
+        },
+        {
+          "name": "Crimson Moon's Semblance",
+          "notes": "Strong alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Dragon's Bane",
+          "notes": "Best 4★ for Vaporize"
+        },
+        {
+          "name": "Deathmatch",
+          "notes": "Consistent CRIT Rate"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "EM"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "HP%", "EM", "ATK%"],
+    "constellations": {
+      "c0": "Fully functional, slight stamina management needed",
+      "breakpoints": [
+        "C1: Removes stamina cost from charged attacks",
+        "C6: 100% CRIT Rate when below 25% HP"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Double Hydro",
+        "characters": ["Hu Tao", "Xingqiu", "Yelan", "Zhongli"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Xingqiu": "Hydro Applicator",
+          "Yelan": "Sub-DPS/Buffer",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Yelan EQ → Xingqiu EQ → Hu Tao E → N2C combo → repeat"
+      },
+      {
+        "name": "VV Vape",
+        "characters": ["Hu Tao", "Xingqiu", "Sucrose", "Thoma"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Sucrose": "VV Shred/EM",
+          "Thoma": "Shield/Pyro Resonance"
+        },
+        "rotation": "Thoma EQ → Xingqiu EQ → Sucrose E (swirl Pyro) → Hu Tao E → N2C combo"
+      },
+      {
+        "name": "Furina Vape",
+        "characters": ["Hu Tao", "Furina", "Xianyun", "Yelan"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Xianyun": "Healer/Plunge Buffer",
+          "Yelan": "Sub-DPS"
+        },
+        "rotation": "Xianyun EQ → Furina EQ → Yelan EQ → Hu Tao E → N2CJ combo"
+      }
+    ]
+  }
 }

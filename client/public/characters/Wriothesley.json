@@ -506,5 +506,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Marechaussee Hunter"],
+        "notes": "4pc BiS, HP drain synergy"
+      },
+      "alternatives": [
+        {
+          "sets": ["Blizzard Strayer"],
+          "notes": "Freeze teams"
+        },
+        {
+          "sets": ["Gladiator's Finale"],
+          "notes": "General DPS option"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Cashflow Supervision",
+          "notes": "BiS, designed for him"
+        },
+        {
+          "name": "Tome of the Eternal Flow",
+          "notes": "HP based alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Widsith",
+          "notes": "Burst rotation damage"
+        },
+        {
+          "name": "Flowing Purity",
+          "notes": "HP scaling option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Cryo DMG"],
+      "circlet": ["CRIT DMG"]
+    },
+    "substats": ["CRIT DMG", "ATK%", "CRIT Rate", "ER", "EM"],
+    "constellations": {
+      "c0": "Strong Cryo DPS with boxing playstyle",
+      "breakpoints": [
+        "C1: Extra skill charge",
+        "C2: Increased Crit DMG based on HP lost"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Wriothesley Furina",
+        "characters": ["Wriothesley", "Furina", "Shenhe", "Kazuha"],
+        "roles": {
+          "Wriothesley": "Main DPS",
+          "Furina": "Sub-DPS",
+          "Shenhe": "Cryo buffer",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Shenhe EQ → Furina EQ → Kazuha tEP Q → Wriothesley E → punch combo"
+      },
+      {
+        "name": "Wriothesley Melt",
+        "characters": ["Wriothesley", "Xiangling", "Kazuha", "Bennett"],
+        "roles": {
+          "Wriothesley": "Main DPS",
+          "Xiangling": "Pyro",
+          "Kazuha": "VV",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q → Xiangling EQ → Wriothesley E punch combo"
+      }
+    ]
+  }
 }

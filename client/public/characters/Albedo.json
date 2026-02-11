@@ -548,5 +548,59 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Husk of Opulent Dreams"],
+        "notes": "4pc BiS for DEF scaling"
+      },
+      "alternatives": [
+        {
+          "sets": ["Archaic Petra"],
+          "notes": "Elemental buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Primordial Jade Cutter",
+          "notes": "CRIT option"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Cinnabar Spindle",
+          "notes": "BiS, event weapon"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["DEF%"],
+      "goblet": ["Geo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ER"],
+    "constellations": {
+      "c0": "Excellent off-field Geo damage",
+      "breakpoints": ["C2: Burst DEF scaling", "C4: Plunge damage buff"]
+    },
+    "teams": [
+      {
+        "name": "Double Geo Hu Tao",
+        "characters": ["Hu Tao", "Xingqiu", "Albedo", "Zhongli"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Albedo": "Off-field",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Albedo E → Xingqiu EQ → Hu Tao E combo"
+      }
+    ]
+  }
 }

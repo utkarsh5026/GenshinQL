@@ -547,5 +547,74 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Vermillion Hereafter"],
+        "notes": "4pc BiS"
+      },
+      "alternatives": [
+        {
+          "sets": ["Desert Pavilion Chronicle"],
+          "notes": "NA focused alternative"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Primordial Jade Winged-Spear",
+          "notes": "BiS"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Deathmatch",
+          "notes": "Battle Pass CRIT"
+        },
+        {
+          "name": "Blackcliff Pole",
+          "notes": "CRIT DMG"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Anemo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ER"],
+    "constellations": {
+      "c0": "Strong plunge DPS but demanding",
+      "breakpoints": ["C1: Extra E charge", "C6: Infinite plunge during burst"]
+    },
+    "teams": [
+      {
+        "name": "Xiao Double Geo",
+        "characters": ["Xiao", "Faruzan", "Zhongli", "Albedo"],
+        "roles": {
+          "Xiao": "Main DPS",
+          "Faruzan": "Anemo buffer",
+          "Zhongli": "Shield",
+          "Albedo": "Off-field"
+        },
+        "rotation": "Zhongli hE → Albedo E → Faruzan EQ → Xiao EEQ → plunge spam"
+      },
+      {
+        "name": "Xiao Xianyun",
+        "characters": ["Xiao", "Faruzan", "Xianyun", "Furina"],
+        "roles": {
+          "Xiao": "Main DPS",
+          "Faruzan": "Anemo buffer",
+          "Xianyun": "Plunge buffer",
+          "Furina": "Sub-DPS"
+        },
+        "rotation": "Xianyun EQ → Furina EQ → Faruzan EQ → Xiao EEQ → plunge spam"
+      }
+    ]
+  }
 }

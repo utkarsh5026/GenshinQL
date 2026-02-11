@@ -544,5 +544,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS", "Sub-DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Blizzard Strayer"],
+        "notes": "4pc for Freeze teams"
+      },
+      "alternatives": [
+        {
+          "sets": ["Wanderer's Troupe"],
+          "notes": "Melt teams"
+        },
+        {
+          "sets": ["Shimenawa's Reminiscence"],
+          "notes": "Charged attack focus"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Amos' Bow",
+          "notes": "BiS, charged shot damage"
+        },
+        {
+          "name": "Aqua Simulacra",
+          "notes": "CRIT DMG alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Prototype Crescent",
+          "notes": "F2P charged shot option"
+        },
+        {
+          "name": "Hamayumi",
+          "notes": "If not using burst often"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "EM"],
+      "goblet": ["Cryo DMG"],
+      "circlet": ["CRIT DMG", "CRIT Rate"]
+    },
+    "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "EM", "ER"],
+    "constellations": {
+      "c0": "Excellent Cryo DPS for Freeze/Melt, flexible roles",
+      "breakpoints": [
+        "C1: Cryo RES shred on bloom",
+        "C6: Instant charged shot after skill"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Morgana",
+        "characters": ["Ganyu", "Mona", "Venti", "Diona"],
+        "roles": {
+          "Ganyu": "Main DPS",
+          "Mona": "Omen/Hydro",
+          "Venti": "Grouping",
+          "Diona": "Shield/Battery"
+        },
+        "rotation": "Diona EQ → Mona EQ → Venti EQ → Ganyu EQ → charged shots into vortex"
+      },
+      {
+        "name": "Melt Ganyu",
+        "characters": ["Ganyu", "Xiangling", "Bennett", "Zhongli"],
+        "roles": {
+          "Ganyu": "Main DPS",
+          "Xiangling": "Pyro applicator",
+          "Bennett": "ATK Buffer",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Bennett EQ → Xiangling EQ → Ganyu charged shots"
+      },
+      {
+        "name": "Ganyu Freeze (Kokomi)",
+        "characters": ["Ganyu", "Kokomi", "Venti", "Shenhe"],
+        "roles": {
+          "Ganyu": "Main DPS",
+          "Kokomi": "Hydro/Healer",
+          "Venti": "Grouping",
+          "Shenhe": "Cryo buffer"
+        },
+        "rotation": "Kokomi E → Shenhe EQ → Venti EQ → Ganyu EQ → charged shots"
+      }
+    ]
+  }
 }

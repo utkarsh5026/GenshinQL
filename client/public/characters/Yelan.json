@@ -570,5 +570,93 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Emblem of Severed Fate"],
+        "notes": "4pc BiS for burst damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Tenacity of the Millelith", "Heart of Depth"],
+          "notes": "2pc+2pc for HP builds"
+        },
+        {
+          "sets": ["Nymph's Dream"],
+          "notes": "Hydro damage focused"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Aqua Simulacra",
+          "notes": "BiS, HP% and CRIT DMG"
+        },
+        {
+          "name": "Elegy for the End",
+          "notes": "Team buff support"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Warbow",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Recurve Bow",
+          "notes": "HP% for damage"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "ER"],
+      "goblet": ["Hydro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT DMG", "CRIT Rate", "HP%", "ER", "Flat HP"],
+    "constellations": {
+      "c0": "Top tier sub-DPS, similar to C6 Xingqiu",
+      "breakpoints": ["C1: Extra E charge", "C2: Extra arrow, big DPS boost"]
+    },
+    "teams": [
+      {
+        "name": "Hu Tao Double Hydro",
+        "characters": ["Hu Tao", "Xingqiu", "Yelan", "Zhongli"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Yelan": "Sub-DPS/Buffer",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Yelan EQ → Xingqiu EQ → Hu Tao E combo"
+      },
+      {
+        "name": "Hyperbloom",
+        "characters": ["Yelan", "Xingqiu", "Kuki Shinobu", "Nahida"],
+        "roles": {
+          "Yelan": "Hydro/Sub-DPS",
+          "Xingqiu": "Hydro",
+          "Kuki Shinobu": "Hyperbloom trigger",
+          "Nahida": "Dendro"
+        },
+        "rotation": "Nahida E → Kuki E → Xingqiu EQ → Yelan EQ → Nahida on-field"
+      },
+      {
+        "name": "Arlecchino Support",
+        "characters": ["Arlecchino", "Yelan", "Zhongli", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Yelan": "Hydro/Sub-DPS",
+          "Zhongli": "Shield",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Zhongli hE → Bennett E → Yelan EQ → Arlecchino E combo"
+      }
+    ]
+  }
 }

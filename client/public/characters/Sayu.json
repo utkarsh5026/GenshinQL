@@ -630,5 +630,63 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Healer", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Viridescent Venerer"],
+        "notes": "4pc for VV shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team ATK buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Wolf's Gravestone",
+          "notes": "ATK% option"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Greatsword",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Katsuragikiri Nagamasa",
+          "notes": "ER crafted"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM", "ER"],
+      "goblet": ["EM"],
+      "circlet": ["EM"]
+    },
+    "substats": ["EM", "ER", "ATK%", "CRIT Rate"],
+    "constellations": {
+      "c0": "Rolling healer with VV",
+      "breakpoints": ["C1: Removes healing CD", "C6: Extra scaling on EM"]
+    },
+    "teams": [
+      {
+        "name": "Sayu VV",
+        "characters": ["Yoimiya", "Xingqiu", "Yun Jin", "Sayu"],
+        "roles": {
+          "Yoimiya": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Yun Jin": "NA buffer",
+          "Sayu": "VV/Healer"
+        },
+        "rotation": "Sayu roll (swirl) → Xingqiu EQ → Yun Jin EQ → Yoimiya E → NA combo"
+      }
+    ]
+  }
 }

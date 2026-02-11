@@ -486,5 +486,59 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Healer"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Flower of Paradise Lost"],
+        "notes": "4pc BiS for Hyperbloom"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gilded Dreams"],
+          "notes": "EM stacking"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Key of Khaj-Nisut",
+          "notes": "HP + EM sharing"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Iron Sting",
+          "notes": "EM for Hyperbloom"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["EM"],
+      "goblet": ["EM"],
+      "circlet": ["EM"]
+    },
+    "substats": ["EM", "HP%", "ER"],
+    "constellations": {
+      "c0": "Best Hyperbloom trigger, also heals",
+      "breakpoints": ["C4: Extra AoE on skill end"]
+    },
+    "teams": [
+      {
+        "name": "Hyperbloom",
+        "characters": ["Kuki Shinobu", "Nahida", "Xingqiu", "Yelan"],
+        "roles": {
+          "Kuki Shinobu": "Hyperbloom/Healer",
+          "Nahida": "Dendro",
+          "Xingqiu": "Hydro",
+          "Yelan": "Hydro"
+        },
+        "rotation": "Nahida E → Kuki E → Xingqiu EQ → Yelan EQ → Nahida on-field"
+      }
+    ]
+  }
 }

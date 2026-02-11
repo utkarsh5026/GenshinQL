@@ -559,5 +559,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Tenacity of the Millelith"],
+        "notes": "4pc for team buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Emblem of Severed Fate"],
+          "notes": "Burst DPS focus"
+        },
+        {
+          "sets": ["Crimson Witch of Flames"],
+          "notes": "If used as DPS"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Beacon of the Reed Sea",
+          "notes": "Signature, HP scaling"
+        },
+        {
+          "name": "Wolf's Gravestone",
+          "notes": "ATK% with team buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Sacrificial Greatsword",
+          "notes": "Double skill cast"
+        },
+        {
+          "name": "Favonius Greatsword",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "ATK%"],
+      "goblet": ["HP%", "Pyro DMG"],
+      "circlet": ["HP%", "CRIT Rate"]
+    },
+    "substats": ["HP%", "ER", "CRIT Rate", "ATK%", "EM"],
+    "constellations": {
+      "c0": "Niche unit, damage mitigation utility",
+      "breakpoints": [
+        "C2: Burst duration extension",
+        "C6: Major DPS buff, CRIT Rate increase"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Dehya Burgeon",
+        "characters": ["Dehya", "Nahida", "Xingqiu", "Collei"],
+        "roles": {
+          "Dehya": "Pyro applicator",
+          "Nahida": "Dendro",
+          "Xingqiu": "Hydro",
+          "Collei": "Dendro"
+        },
+        "rotation": "Collei EQ → Nahida E → Xingqiu EQ → Dehya E → Nahida on-field"
+      },
+      {
+        "name": "Support Dehya",
+        "characters": ["Hu Tao", "Xingqiu", "Dehya", "Zhongli"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Dehya": "Interrupt resist",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Dehya E → Xingqiu EQ → Hu Tao E combo"
+      }
+    ]
+  }
 }

@@ -457,5 +457,85 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Crimson Witch of Flames"],
+        "notes": "4pc for Vaporize"
+      },
+      "alternatives": [
+        {
+          "sets": ["Marechaussee Hunter"],
+          "notes": "With Furina teams"
+        },
+        {
+          "sets": ["Gladiator's Finale"],
+          "notes": "General DPS option"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Redhorn Stonethresher",
+          "notes": "High CRIT DMG"
+        },
+        {
+          "name": "Wolf's Gravestone",
+          "notes": "ATK buff to team"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Best 4★, Battle Pass"
+        },
+        {
+          "name": "Rainslasher",
+          "notes": "For Vaporize teams"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "EM"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM", "ER"],
+    "constellations": {
+      "c0": "Decent Pyro DPS, outclassed by newer units",
+      "breakpoints": [
+        "C2: ATK/SPD buff when taking damage",
+        "C6: Massive infused attack buff"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Diluc Vaporize",
+        "characters": ["Diluc", "Xingqiu", "Bennett", "Sucrose"],
+        "roles": {
+          "Diluc": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Bennett": "ATK Buffer",
+          "Sucrose": "VV Shred"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Sucrose E → Diluc E-N-E-N-E-Q combo"
+      },
+      {
+        "name": "Furina Plunge",
+        "characters": ["Diluc", "Furina", "Xianyun", "Bennett"],
+        "roles": {
+          "Diluc": "Main DPS",
+          "Furina": "Sub-DPS",
+          "Xianyun": "Plunge Buffer",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Xianyun EQ → Furina EQ → Diluc plunge combo"
+      }
+    ]
+  }
 }

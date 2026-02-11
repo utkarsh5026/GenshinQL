@@ -473,5 +473,82 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige", "Blizzard Strayer"],
+        "notes": "2pc+2pc for Freeze"
+      },
+      "alternatives": [
+        {
+          "sets": ["Emblem of Severed Fate"],
+          "notes": "Burst focused"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team ATK buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Staff of Homa",
+          "notes": "Universal damage option"
+        },
+        {
+          "name": "Primordial Jade Winged-Spear",
+          "notes": "CRIT Rate with stacks"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Lance",
+          "notes": "Team energy, best for support"
+        },
+        {
+          "name": "Deathmatch",
+          "notes": "CRIT Rate focus"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "ER"],
+      "goblet": ["Cryo DMG"],
+      "circlet": ["CRIT Rate"]
+    },
+    "substats": ["CRIT Rate", "ER", "ATK%", "CRIT DMG"],
+    "constellations": {
+      "c0": "Good Cryo battery and CRIT share support",
+      "breakpoints": ["C1: ATK buff on crit", "C6: Physical RES shred on burst"]
+    },
+    "teams": [
+      {
+        "name": "Eula Support",
+        "characters": ["Eula", "Rosaria", "Raiden Shogun", "Zhongli"],
+        "roles": {
+          "Eula": "Main DPS",
+          "Rosaria": "Battery/CRIT buff",
+          "Raiden Shogun": "Electro",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Rosaria EQ → Raiden E → Eula combo"
+      },
+      {
+        "name": "Reverse Melt",
+        "characters": ["Rosaria", "Xiangling", "Bennett", "Kazuha"],
+        "roles": {
+          "Rosaria": "Main DPS",
+          "Xiangling": "Pyro",
+          "Bennett": "Buffer",
+          "Kazuha": "VV"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q → Xiangling EQ → Rosaria EQ → E"
+      }
+    ]
+  }
 }

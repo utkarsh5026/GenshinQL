@@ -554,5 +554,81 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige"],
+        "notes": "4pc for team ATK buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gladiator's Finale", "Shimenawa's Reminiscence"],
+          "notes": "2pc+2pc ATK stacking"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Calamity Queller",
+          "notes": "BiS, ATK% passive"
+        },
+        {
+          "name": "Engulfing Lightning",
+          "notes": "ER + ATK conversion"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Lance",
+          "notes": "Team energy support"
+        },
+        {
+          "name": "Wavebreaker's Fin",
+          "notes": "Burst damage"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "ER"],
+      "goblet": ["ATK%"],
+      "circlet": ["ATK%"]
+    },
+    "substats": ["ATK%", "ER", "Flat ATK", "CRIT Rate"],
+    "constellations": {
+      "c0": "Best Cryo buffer, mandatory for Ayaka/Ganyu teams",
+      "breakpoints": [
+        "C1: Extra skill charge",
+        "C2: Increased Cryo CRIT DMG in burst field"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Ayaka Freeze",
+        "characters": ["Ayaka", "Shenhe", "Kokomi", "Kazuha"],
+        "roles": {
+          "Ayaka": "Main DPS",
+          "Shenhe": "Cryo buffer",
+          "Kokomi": "Hydro",
+          "Kazuha": "VV"
+        },
+        "rotation": "Kokomi E → Shenhe EQ → Kazuha tEP Q → Ayaka dash EQ"
+      },
+      {
+        "name": "Ganyu Freeze",
+        "characters": ["Ganyu", "Shenhe", "Kokomi", "Venti"],
+        "roles": {
+          "Ganyu": "Main DPS",
+          "Shenhe": "Cryo buffer",
+          "Kokomi": "Hydro",
+          "Venti": "Grouping"
+        },
+        "rotation": "Kokomi E → Shenhe EQ → Venti EQ → Ganyu EQ → charged shots"
+      }
+    ]
+  }
 }

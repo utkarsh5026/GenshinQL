@@ -528,5 +528,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Marechaussee Hunter"],
+        "notes": "4pc BiS for charged attack build"
+      },
+      "alternatives": [
+        {
+          "sets": ["Heart of Depth"],
+          "notes": "Alternative if no Marechaussee"
+        },
+        {
+          "sets": ["Wanderer's Troupe"],
+          "notes": "EM focused build"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Tome of the Eternal Flow",
+          "notes": "BiS, designed for him"
+        },
+        {
+          "name": "Cashflow Supervision",
+          "notes": "Strong alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Prototype Amber",
+          "notes": "F2P with healing utility"
+        },
+        {
+          "name": "The Widsith",
+          "notes": "High burst damage"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%"],
+      "goblet": ["Hydro DMG"],
+      "circlet": ["CRIT DMG"]
+    },
+    "substats": ["CRIT DMG", "HP%", "CRIT Rate", "ER", "Flat HP"],
+    "constellations": {
+      "c0": "Fully functional hypercarry, top meta at C0",
+      "breakpoints": [
+        "C1: Quality of life, faster charged attacks",
+        "C2: Major DPS increase, +42% CRIT DMG"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Neuvillette Hypercarry",
+        "characters": ["Neuvillette", "Furina", "Kazuha", "Zhongli"],
+        "roles": {
+          "Neuvillette": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Kazuha": "VV Shred/Buffer",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Furina EQ → Kazuha tEP Q → Neuvillette E → Charged Attack spam"
+      },
+      {
+        "name": "Double Hydro Electro",
+        "characters": ["Neuvillette", "Furina", "Fischl", "Kazuha"],
+        "roles": {
+          "Neuvillette": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Fischl": "Electro applicator",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Fischl E → Furina EQ → Kazuha tEP Q → Neuvillette E → Charged Attack"
+      },
+      {
+        "name": "Xilonen Variant",
+        "characters": ["Neuvillette", "Furina", "Xilonen", "Zhongli"],
+        "roles": {
+          "Neuvillette": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Xilonen": "Shred/Buffer",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Xilonen E → Furina EQ → Neuvillette E → Charged Attack spam"
+      }
+    ]
+  }
 }

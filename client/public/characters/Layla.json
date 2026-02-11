@@ -464,5 +464,70 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Shielder"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Tenacity of the Millelith"],
+        "notes": "4pc for team buff + shield"
+      },
+      "alternatives": [
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team ATK buff"
+        },
+        {
+          "sets": ["Blizzard Strayer"],
+          "notes": "Cryo damage option"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Key of Khaj-Nisut",
+          "notes": "HP scaling + EM buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Harbinger of Dawn",
+          "notes": "CRIT for off-field"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "ER"],
+      "goblet": ["HP%"],
+      "circlet": ["HP%"]
+    },
+    "substats": ["HP%", "ER", "Flat HP", "CRIT Rate"],
+    "constellations": {
+      "c0": "Budget shielder with Cryo application",
+      "breakpoints": [
+        "C4: Normal attack buff on shield",
+        "C6: Increased shooting stars"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Hu Tao Support",
+        "characters": ["Hu Tao", "Xingqiu", "Yelan", "Layla"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Yelan": "Sub-DPS",
+          "Layla": "Shield"
+        },
+        "rotation": "Layla EQ → Yelan EQ → Xingqiu EQ → Hu Tao E combo"
+      }
+    ]
+  }
 }

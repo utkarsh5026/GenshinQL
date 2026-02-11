@@ -689,5 +689,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Golden Troupe"],
+        "notes": "4pc BiS for off-field damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Tenacity of the Millelith"],
+          "notes": "Team buff focused"
+        },
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Burst support"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Splendor of Tranquil Waters",
+          "notes": "BiS, designed for her"
+        },
+        {
+          "name": "Key of Khaj-Nisut",
+          "notes": "HP scaling alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Festering Desire",
+          "notes": "ER with skill damage"
+        },
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy support"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%"],
+      "goblet": ["HP%", "Hydro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "HP%", "ER", "Flat HP"],
+    "constellations": {
+      "c0": "Already top tier support, universal team fit",
+      "breakpoints": [
+        "C1: Nice QoL, 150 starting Fanfare",
+        "C2: Major buff, +25% HP to party"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Neuvillette Support",
+        "characters": ["Neuvillette", "Furina", "Kazuha", "Zhongli"],
+        "roles": {
+          "Neuvillette": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Kazuha": "VV Shred",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Furina EQ → Kazuha tEP Q → Neuvillette E → Charged Attack"
+      },
+      {
+        "name": "Hu Tao Vaporize",
+        "characters": ["Hu Tao", "Furina", "Xianyun", "Yelan"],
+        "roles": {
+          "Hu Tao": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Xianyun": "Healer/Plunge Buffer",
+          "Yelan": "Sub-DPS"
+        },
+        "rotation": "Xianyun EQ → Furina EQ → Yelan EQ → Hu Tao E → N2CJ combo"
+      },
+      {
+        "name": "Arlecchino Pyro",
+        "characters": ["Arlecchino", "Furina", "Xilonen", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Xilonen": "Shred",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Xilonen E → Furina EQ → Arlecchino E → Normal Attack combo"
+      }
+    ]
+  }
 }

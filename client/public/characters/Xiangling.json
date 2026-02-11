@@ -473,5 +473,96 @@
         }
       ]
     }
-  ]
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Sub-DPS", "Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Emblem of Severed Fate"],
+        "notes": "4pc BiS for burst damage"
+      },
+      "alternatives": [
+        {
+          "sets": ["Crimson Witch of Flames"],
+          "notes": "Vaporize/Melt focused"
+        },
+        {
+          "sets": ["Noblesse Oblige", "Crimson Witch of Flames"],
+          "notes": "2pc+2pc combo"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Staff of the Scarlet Sands",
+          "notes": "High EM scaling"
+        },
+        {
+          "name": "Engulfing Lightning",
+          "notes": "ER with ATK conversion"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Catch",
+          "notes": "F2P BiS, free from fishing"
+        },
+        {
+          "name": "Dragon's Bane",
+          "notes": "For reaction teams"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER", "ATK%", "EM"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["ER", "CRIT Rate", "CRIT DMG", "ATK%", "EM"],
+    "constellations": {
+      "c0": "Good off-field Pyro, needs ER",
+      "breakpoints": [
+        "C4: Extends Pyronado duration by 40%",
+        "C6: +15% Pyro DMG to party during Pyronado"
+      ]
+    },
+    "teams": [
+      {
+        "name": "National Team",
+        "characters": ["Xiangling", "Xingqiu", "Bennett", "Sucrose"],
+        "roles": {
+          "Xiangling": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Bennett": "ATK Buffer/Battery",
+          "Sucrose": "VV/EM"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Sucrose E → Xiangling EQ → funnel particles to Xiangling"
+      },
+      {
+        "name": "Raiden National",
+        "characters": ["Raiden Shogun", "Xiangling", "Xingqiu", "Bennett"],
+        "roles": {
+          "Raiden Shogun": "Burst DPS/Battery",
+          "Xiangling": "Off-field Pyro",
+          "Xingqiu": "Hydro",
+          "Bennett": "Buffer"
+        },
+        "rotation": "Bennett EQ → Xingqiu EQ → Xiangling EQ → Raiden Q → combo"
+      },
+      {
+        "name": "Childe International",
+        "characters": ["Tartaglia", "Xiangling", "Bennett", "Kazuha"],
+        "roles": {
+          "Tartaglia": "Enabler/DPS",
+          "Xiangling": "Off-field Pyro",
+          "Bennett": "Buffer",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q → Xiangling EQ → Tartaglia E melee combo"
+      }
+    ]
+  }
 }
