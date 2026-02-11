@@ -67,6 +67,20 @@ export async function fetchCharacterProfile(
   };
 
   /**
+   * Sanitizes a description by removing section headers without truncating content.
+   * Removes headers like "Description", "Gameplay Notes", "Advanced Properties", etc.
+   * that appear in raw talent and constellation data.
+   */
+  const sanitizeDescription = (desc: string): string => {
+    return desc
+      .replace(
+        /^(Description|Gameplay Notes|Advanced Properties|Attribute Scaling|Preview|Hexerei Buff)\n/gim,
+        ''
+      )
+      .trim();
+  };
+
+  /**
    * Transforms attack animations array to named object structure
    */
   const transformAttackAnimations = (
@@ -107,6 +121,7 @@ export async function fetchCharacterProfile(
 
     const transformedTalents: Talent[] = rawData.talents.map((talent) => ({
       ...talent,
+      description: sanitizeDescription(talent.description),
       talentType: talent.talentType as AttackTalentType,
       figureUrls: talent.figureUrls.map(({ url, caption }) => ({
         url,
@@ -117,6 +132,13 @@ export async function fetchCharacterProfile(
         value,
       })),
     }));
+
+    const transformedConstellations = rawData.constellations?.map(
+      (constellation) => ({
+        ...constellation,
+        description: sanitizeDescription(constellation.description),
+      })
+    );
 
     const { gallery, element, weaponType, region } = rawData;
     const screenAnimation = gallery?.screenAnimations
@@ -137,6 +159,7 @@ export async function fetchCharacterProfile(
         rawData.weaponUrl || lookupUrl('weaponTypes', weaponType, primitives),
       regionUrl: rawData.regionUrl || lookupRegionUrl(region, primitives),
       talents: transformedTalents,
+      constellations: transformedConstellations,
       imageUrls,
       screenAnimation,
       buildGuide: rawData.buildGuide,
