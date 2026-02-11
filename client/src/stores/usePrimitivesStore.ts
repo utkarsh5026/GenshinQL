@@ -1,8 +1,7 @@
 import { create } from 'zustand';
-import { useShallow } from 'zustand/react/shallow';
 
 import { fetchWithCache } from '@/features/cache';
-import type { PrimitiveItem, Primitives } from '@/types';
+import type { Primitives } from '@/types';
 
 /**
  * State interface for the primitives store.
@@ -132,38 +131,3 @@ export const useWeaponTypes = () =>
 const EMPTY_ELEMENTS: Primitives['elements'] = [] as const;
 const EMPTY_REGIONS: Primitives['regions'] = [] as const;
 const EMPTY_WEAPON_TYPES: Primitives['weaponTypes'] = [] as const;
-
-const EMPTY_ITEMS: readonly PrimitiveItem[] = [] as const;
-const EMPTY_URL_MAP: Record<string, string> = {} as const;
-
-/**
- * Hook to get a specific primitive array and its URL mapping.
- * @param mapOf - The key of the primitives object to retrieve (elements, regions, or weaponTypes)
- * @returns Object containing the items array and a mapping of item names to their URLs
- */
-export function usePrimitivesMap(mapOf: keyof Primitives) {
-  return usePrimitivesStore(
-    useShallow(({ primitives }) => {
-      const items = primitives?.[mapOf] || EMPTY_ITEMS;
-
-      if (!items || items.length === 0) {
-        return {
-          items: EMPTY_ITEMS,
-          itemUrlMap: EMPTY_URL_MAP,
-        };
-      }
-
-      const itemUrlMap: Record<string, string> = {};
-      items.forEach((item) => {
-        if (item.name && item.url) {
-          itemUrlMap[item.name] = item.url;
-        }
-      });
-
-      return {
-        items,
-        itemUrlMap,
-      };
-    })
-  );
-}
