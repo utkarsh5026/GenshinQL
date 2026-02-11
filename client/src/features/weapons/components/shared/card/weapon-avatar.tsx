@@ -15,77 +15,138 @@ import {
 import { CachedImage } from '@/features/cache';
 import type { WeaponSummary } from '@/features/weapons/types';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { cn } from '@/lib/utils';
+import {
+  AVATAR_SIZE_CLASSES,
+  AVATAR_TEXT_CLASSES,
+  type AvatarSize,
+  BADGE_POSITION_CLASSES,
+  type BadgePosition,
+  getRarityBgClass,
+  getRarityBorderClass,
+  type NamePosition,
+} from '@/utils/avatar-utils';
 
 import WeaponCard from './weapon-card';
 
-/**
- * Get border class for weapon cards based on rarity
- */
-function getRarityBorderClass(rarity: number): string {
-  const borderMap: Record<number, string> = {
-    5: 'border-2 border-amber-500/60 shadow-lg shadow-amber-500/20',
-    4: 'border-2 border-violet-500/60 shadow-lg shadow-violet-500/20',
-    3: 'border-2 border-blue-500/50 shadow-md shadow-blue-500/15',
-    2: 'border-2 border-green-500/50 shadow-md shadow-green-500/15',
-    1: 'border border-gray-400/40 shadow-sm',
-  };
-  return borderMap[rarity] || borderMap[1];
-}
-
-/**
- * Get background color class for weapon avatar based on rarity
- * Uses theme-consistent rarity colors
- */
-function getRarityBgClass(rarity: number): string {
-  const bgMap: Record<number, string> = {
-    5: 'bg-legendary-600/50 dark:bg-legendary-700/40',
-    4: 'bg-epic-600/50 dark:bg-epic-700/40',
-    3: 'bg-rare-500/40 dark:bg-rare-600/40',
-    2: 'bg-uncommon-500/40 dark:bg-uncommon-600/40',
-    1: 'bg-common-400/30 dark:bg-common-600/30',
-  };
-  return bgMap[rarity] || bgMap[1];
-}
-
 interface WeaponAvatarProps {
   weapon: WeaponSummary;
+
+  size?: AvatarSize; // Default: 'md'
+
+  showName?: boolean; // Default: true
+  namePosition?: NamePosition; // Default: 'bottom'
+
+  interactive?: boolean; // Default: true - enables HoverCard/Drawer
+  onClick?: () => void; // Custom click handler (overrides interactive)
+
+  renderBadge?: () => React.ReactNode;
+  badgePosition?: BadgePosition; // Default: 'top-right'
+
+  className?: string; // Container className
+  avatarClassName?: string; // Avatar image className (merged with defaults)
+  imageClassName?: string; // Inner image className
+  nameClassName?: string; // Name text className
+
+  showSkeleton?: boolean; // Default: true
 }
 
 /**
  * WeaponAvatar component displays a weapon icon with interactive functionality
  * - Desktop: Hover to show detailed weapon information in a HoverCard
  * - Mobile: Click to open detailed weapon information in a Drawer
+ *
+ * Now supports configurable size, name display, badges, and interactivity
  */
-const WeaponAvatar: React.FC<WeaponAvatarProps> = ({ weapon }) => {
+const WeaponAvatar: React.FC<WeaponAvatarProps> = ({
+  weapon,
+  size = 'md',
+  showName = true,
+  namePosition = 'bottom',
+  interactive = true,
+  onClick,
+  renderBadge,
+  badgePosition = 'top-right',
+  className,
+  avatarClassName,
+  imageClassName,
+  nameClassName,
+  showSkeleton = true,
+}) => {
   const { name, iconUrl, rarity } = weapon;
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const isMobile = useIsMobile();
 
-  const triggerElement = (
-    <div key={name} className="flex cursor-pointer flex-col gap-1 sm:gap-2">
+  const finalAvatarClassName = cn(
+    'rounded-full',
+    AVATAR_SIZE_CLASSES[size],
+    getRarityBorderClass(rarity),
+    getRarityBgClass(rarity),
+    avatarClassName
+  );
+
+  const avatarElement = (
+    <div className="relative">
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger>
-            <CachedImage
-              src={iconUrl}
-              alt={name}
-              showSkeleton={true}
-              skeletonShape="circle"
-              className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full ${getRarityBorderClass(rarity)} ${getRarityBgClass(rarity)}`}
-            />
+          <TooltipTrigger asChild>
+            <div>
+              <CachedImage
+                src={iconUrl}
+                alt={name}
+                showSkeleton={showSkeleton}
+                skeletonShape="circle"
+                className={cn(finalAvatarClassName, imageClassName)}
+              />
+            </div>
           </TooltipTrigger>
-          <TooltipContent>{name}</TooltipContent>
+          {(namePosition === 'tooltip' || namePosition === 'none') && (
+            <TooltipContent>{name}</TooltipContent>
+          )}
         </Tooltip>
       </TooltipProvider>
-      <p className="text-[10px] sm:text-xs font-thin text-foreground/80">
-        {name}
-      </p>
+      {renderBadge && (
+        <div className={cn('absolute', BADGE_POSITION_CLASSES[badgePosition])}>
+          {renderBadge()}
+        </div>
+      )}
     </div>
   );
 
+  const nameLabel =
+    showName && namePosition === 'bottom' ? (
+      <p
+        className={cn(
+          AVATAR_TEXT_CLASSES[size],
+          'font-thin text-foreground/80 text-center line-clamp-1',
+          nameClassName
+        )}
+      >
+        {name}
+      </p>
+    ) : null;
+
+  const containerElement = (
+    <div
+      className={cn(
+        'flex flex-col gap-1',
+        onClick || interactive ? 'cursor-pointer' : '',
+        className
+      )}
+      onClick={onClick}
+    >
+      {avatarElement}
+      {nameLabel}
+    </div>
+  );
+
+  if (onClick || !interactive) {
+    return containerElement;
+  }
+
   const desktopView = (
     <HoverCard key={name}>
-      <HoverCardTrigger>{triggerElement}</HoverCardTrigger>
+      <HoverCardTrigger asChild>{containerElement}</HoverCardTrigger>
       <HoverCardContent align="center" side="right" className="w-80 md:w-96">
         <WeaponCard weapon={weapon} />
       </HoverCardContent>
@@ -94,7 +155,7 @@ const WeaponAvatar: React.FC<WeaponAvatarProps> = ({ weapon }) => {
 
   const mobileView = (
     <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-      <DrawerTrigger asChild>{triggerElement}</DrawerTrigger>
+      <DrawerTrigger asChild>{containerElement}</DrawerTrigger>
       <DrawerContent className="max-h-[85vh]">
         <div className="p-3 sm:p-4 overflow-y-auto">
           <WeaponCard weapon={weapon} />
