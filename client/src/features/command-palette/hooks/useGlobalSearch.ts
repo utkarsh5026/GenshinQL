@@ -1,8 +1,8 @@
 import { Calendar, Gamepad2, Star, Swords, Target, Users } from 'lucide-react';
 import { useMemo } from 'react';
 
+import { useCharacters } from '@/features/characters';
 import { useWeapons } from '@/features/weapons/stores/useWeaponsStore';
-import { useCharacters } from '@/stores/useCharactersStore';
 
 import type { CharacterResult, NavigationItem, WeaponResult } from '../types';
 

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { useCharactersStore } from '@/stores/useCharactersStore';
+import { useCharactersStore } from '@/features/characters';
 
 import {
   useLinkerGameDifficulty,

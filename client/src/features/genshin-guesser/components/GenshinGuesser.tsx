@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useCharactersStore } from '@/stores';
+import { useCharactersStore } from '@/features/characters';
 
 import CharacterGuesser from './CharacterGuesser';
 

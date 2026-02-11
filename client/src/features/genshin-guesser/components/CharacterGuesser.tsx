@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useRef } from 'react';
 
-import { useCharactersStore } from '@/stores';
-import { Character } from '@/types';
+import { type Character, useCharactersStore } from '@/features/characters';
 
 import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
 import GameOverDisplay from './GameOverDisplay';
@@ -10,19 +9,6 @@ import GuessSearchTable from './GuessSearchTable';
 /**
  * CharacterGuesser component implements the main game logic for the Genshin character guessing game.
  * It manages the game state, handles character selection, guessing, and displays the game interface.
- *
- * The component features:
- * - A search interface for making character guesses
- * - A table showing previous guesses with visual feedback
- * - A counter showing remaining guesses
- * - Game over states (win/lose) with animations
- * - Character reveal with optional party join animation
- * - Reset functionality to start a new game
- *
- * The game allows players MAX_GUESSES attempts to correctly identify a randomly selected character
- * by comparing region, weapon type, and element attributes.
- *
- * @returns A React component containing the complete game interface
  */
 const CharacterGuesser: React.FC = () => {
   const { characters, characterMap } = useCharactersStore();
