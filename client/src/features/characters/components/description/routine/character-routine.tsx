@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import ChipSearchBar from '@/components/utils/ChipSearchBar';
-import { useWeaponMap, useWeaponType, WeaponSummary } from '@/features/weapons';
+import { useWeaponMap, WeaponSummary } from '@/features/weapons';
 import { WeaponType } from '@/types';
 
 import type { Character } from '../../../types';
 import RoutineTable from './routine-table';
+import { WeaponSelector } from './weapon-selector';
 
 interface CharacterRoutineDetailedProps {
   character: Character;
@@ -14,32 +14,33 @@ interface CharacterRoutineDetailedProps {
 export const CharacterRoutine: React.FC<CharacterRoutineDetailedProps> = ({
   character,
 }) => {
-  const { weapons: weaponsOfType } = useWeaponType(
-    character.weaponType as WeaponType
-  );
   const weaponMap = useWeaponMap();
-
   const [selectedWeapons, setSelectedWeapons] = useState<WeaponSummary[]>([]);
 
   return (
-    <div>
-      <ChipSearchBar
-        items={weaponsOfType}
-        selectedItems={selectedWeapons}
-        onItemSelect={(weapon) => {
-          const selectedWeapon = weaponMap[weapon.name];
+    <div className="space-y-4">
+      {/* Header row: title on left, selector on right */}
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+        <h2 className="text-lg font-semibold">Farming Routine</h2>
+        <WeaponSelector
+          weaponType={character.weaponType as WeaponType}
+          selectedWeapons={selectedWeapons}
+          onWeaponSelect={(weapon) => {
+            const selectedWeapon = weaponMap[weapon.name];
+            if (selectedWeapon) {
+              setSelectedWeapons([...selectedWeapons, selectedWeapon]);
+            }
+          }}
+          onWeaponRemove={(weapon) => {
+            setSelectedWeapons(
+              selectedWeapons.filter((w) => w.name !== weapon.name)
+            );
+          }}
+          characterName={character.name}
+        />
+      </div>
 
-          if (selectedWeapon) {
-            setSelectedWeapons([...selectedWeapons, selectedWeapon]);
-          }
-        }}
-        onItemRemove={(weapon) => {
-          setSelectedWeapons(
-            selectedWeapons.filter((w) => w.name !== weapon.name)
-          );
-        }}
-        placeholder={`Search weapons for ${character.name} 😊`}
-      />
+      {/* Results table - always visible */}
       <RoutineTable character={character} selectedWeapons={selectedWeapons} />
     </div>
   );
