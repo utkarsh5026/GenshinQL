@@ -22,8 +22,10 @@ export function ScheduleTable<T extends ScheduleEntry>({
   const sortedDays = useMemo(() => {
     if (!sortTodayFirst) return days;
     return [...days].sort((a, b) => {
-      const aIsToday = a.day.includes(todayDayOfWeek);
-      const bIsToday = b.day.includes(todayDayOfWeek);
+      const aIsToday =
+        a.dayOne === todayDayOfWeek || a.dayTwo === todayDayOfWeek;
+      const bIsToday =
+        b.dayOne === todayDayOfWeek || b.dayTwo === todayDayOfWeek;
       if (aIsToday && !bIsToday) return -1;
       if (!aIsToday && bIsToday) return 1;
       return 0;
@@ -58,11 +60,12 @@ export function ScheduleTable<T extends ScheduleEntry>({
 
         {/* Table rows */}
         {sortedDays.map((entry) => {
-          const isToday = entry.day.includes(todayDayOfWeek);
+          const isToday =
+            entry.dayOne === todayDayOfWeek || entry.dayTwo === todayDayOfWeek;
 
           return (
             <div
-              key={entry.day}
+              key={`${entry.dayOne}-${entry.dayTwo}`}
               className={`flex flex-col md:grid md:grid-cols-[200px_1fr_2fr] ${theme.row.bg} transition-colors duration-150 border-b ${theme.row.border} last:border-b-0 ${theme.row.hover} ${
                 isToday
                   ? `${theme.highlight.gradient} ${theme.highlight.borderLeft} ${theme.highlight.hoverGradient}`

@@ -10,12 +10,17 @@ let talentsCache: { talentBooks: TalentBookCalendar[] } | null = null;
 export async function loadTalentsData() {
   if (talentsCache) return talentsCache;
 
-  const { data: rawData } =
-    await fetchWithCache<Record<string, TalentBookCalendar['days']>>(
-      'dailyTalents.json'
-    );
-
-  console.log('Fetched talent book calendar data:', rawData);
+  const { data: rawData } = await fetchWithCache<
+    Record<
+      string,
+      Array<{
+        dayOne: string;
+        dayTwo: string;
+        books: { name: string; url: string }[];
+        characters: { name: string; url: string }[];
+      }>
+    >
+  >('dailyTalents.json');
 
   const talentBooks = Object.entries(rawData).map(([location, days]) => ({
     location,

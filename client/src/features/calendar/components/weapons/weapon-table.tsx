@@ -16,7 +16,7 @@ const WeaponTable: React.FC<WeaponTableProps> = ({ schedule }) => {
     <ScheduleTable
       days={schedule.materials}
       columns={{ first: 'Day', middle: 'Materials', right: 'Weapons' }}
-      renderDay={(d) => d.day.replace(/\n/g, ' ')}
+      renderDay={(d) => `${d.dayOne} / ${d.dayTwo}`}
       renderMiddle={(d) => (
         <MaterialImageList materialImages={d.materialImages} />
       )}

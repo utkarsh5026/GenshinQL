@@ -21,8 +21,8 @@ export function useCalendar<T extends ScheduleEntry>(
   const calendar = useMemo(() => {
     return dates.map((date): CalendarEntry<T> => {
       const currDay = DAYS[date.getDay()];
-      const matchedEntry = scheduleEntries.find((entry) =>
-        entry.day.includes(currDay)
+      const matchedEntry = scheduleEntries.find(
+        (entry) => entry.dayOne === currDay || entry.dayTwo === currDay
       );
 
       return {

@@ -2,7 +2,8 @@
 import type { ReactNode } from 'react';
 
 export type ScheduleEntry = {
-  day: string;
+  dayOne: string;
+  dayTwo: string;
 };
 
 export type CalendarEntry<T extends ScheduleEntry> = {
@@ -85,7 +86,8 @@ export type TalentBook = {
 export type TalentBookCalendar = {
   location: string;
   days: {
-    day: string;
+    dayOne: string; // First availability day (e.g., "Monday")
+    dayTwo: string; // Second availability day (e.g., "Thursday")
     books: {
       name: string;
       url: string;

@@ -9,7 +9,8 @@ import type { ImageUrl } from '@/types';
 export type WeaponMaterialSchedule = {
   nation: string;
   materials: Array<{
-    day: string;
+    dayOne: string;
+    dayTwo: string;
     materialImages: ImageUrl[];
     weapons: Array<WeaponSummary>;
   }>;
@@ -19,7 +20,8 @@ interface WeaponMaterialState {
   weaponCalendarData: Record<
     string,
     Array<{
-      day: string;
+      dayOne: string;
+      dayTwo: string;
       images: ImageUrl[];
       weapons: Array<{ name: string; url: string }>;
     }>
@@ -33,7 +35,8 @@ interface WeaponMaterialState {
     data: Record<
       string,
       Array<{
-        day: string;
+        dayOne: string;
+        dayTwo: string;
         images: ImageUrl[];
         weapons: Array<{ name: string; url: string }>;
       }>
@@ -57,7 +60,8 @@ const createWeaponMap = (
   calendarData: Record<
     string,
     Array<{
-      day: string;
+      dayOne: string;
+      dayTwo: string;
       images: ImageUrl[];
       weapons: Array<{ name: string; url: string }>;
     }>
@@ -69,7 +73,8 @@ const createWeaponMap = (
     schedules.forEach((schedule) => {
       schedule.weapons.forEach((weapon) => {
         weaponMap[weapon.name] = {
-          day: schedule.day,
+          dayOne: schedule.dayOne,
+          dayTwo: schedule.dayTwo,
           materialImages: schedule.images,
         };
       });
@@ -93,7 +98,8 @@ export const useWeaponMaterialStore = create<WeaponMaterialState>()(
         ).map(([nation, schedule]) => ({
           nation,
           materials: schedule.map((item) => ({
-            day: item.day,
+            dayOne: item.dayOne,
+            dayTwo: item.dayTwo,
             materialImages: item.images,
             weapons: item.weapons
               .map((weapon) => weaponsStoreMap[weapon.name])
@@ -133,7 +139,8 @@ export const useWeaponMaterialStore = create<WeaponMaterialState>()(
             Record<
               string,
               Array<{
-                day: string;
+                dayOne: string;
+                dayTwo: string;
                 images: ImageUrl[];
                 weapons: Array<{ name: string; url: string }>;
               }>

@@ -16,7 +16,7 @@ const TalentTable: React.FC<TalentTableProps> = ({ talent }) => {
     <ScheduleTable
       days={talent.days}
       columns={{ first: 'Day', middle: 'Talent Books', right: 'Characters' }}
-      renderDay={(d) => d.day}
+      renderDay={(d) => `${d.dayOne} / ${d.dayTwo}`}
       renderMiddle={(d) => <TalentBooks books={d.books} />}
       renderRight={(d) => (
         <CharacterGrid characterNames={d.characters.map((c) => c.name)} />

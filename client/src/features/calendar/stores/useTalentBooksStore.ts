@@ -32,9 +32,7 @@ function createCharTalentMap(
   };
 
   for (const book of calendar) {
-    for (const { books, characters, day } of book.days) {
-      const [dayOne, dayTwo] = day.split(/\s+/);
-
+    for (const { books, characters, dayOne, dayTwo } of book.days) {
       const [guideUrl, philosophyUrl, teachingUrl] = [
         'Guide',
         'Philosophies',
