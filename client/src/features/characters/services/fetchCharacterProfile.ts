@@ -2,6 +2,7 @@ import { fetchWithCache } from '@/features/cache';
 import type { AnimationMedia, Primitives } from '@/types';
 
 import type {
+  AttackAnimation,
   AttackTalentType,
   Character,
   CharacterDetailed,
@@ -65,6 +66,29 @@ export async function fetchCharacterProfile(
     };
   };
 
+  /**
+   * Transforms attack animations array to named object structure
+   */
+  const transformAttackAnimations = (
+    attackAnimations: GalleryRaw['attackAnimations']
+  ): AttackAnimation => {
+    const normalAttack = attackAnimations.find(
+      (a) => a.skill === 'Normal_Attack'
+    );
+    const elementalSkill = attackAnimations.find(
+      (a) => a.skill === 'Elemental_Skill'
+    );
+    const elementalBurst = attackAnimations.find(
+      (a) => a.skill === 'Elemental_Burst'
+    );
+
+    return {
+      normalAttack: normalAttack?.animations.map(parseAnimation) || [],
+      elementalSkill: elementalSkill?.animations.map(parseAnimation) || [],
+      elementalBurst: elementalBurst?.animations.map(parseAnimation) || [],
+    };
+  };
+
   const extractImageUrls = (nameCards: GalleryRaw['nameCards']) => {
     const icon = nameCards[1]?.url || ''; // Icon
     const background = nameCards[0]?.url || ''; // Background
@@ -116,6 +140,9 @@ export async function fetchCharacterProfile(
       imageUrls,
       screenAnimation,
       buildGuide: rawData.buildGuide,
+      attackAnimations: gallery?.attackAnimations
+        ? transformAttackAnimations(gallery.attackAnimations)
+        : undefined,
     };
   } catch (error) {
     console.error('Error fetching character:', character, error);
