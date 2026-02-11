@@ -1,7 +1,8 @@
 {
   "Mondstadt": [
     {
-      "day": "Monday/\nThursday",
+      "dayOne": "Monday",
+      "dayTwo": "Thursday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Tile_of_Decarabian%27s_Tower.png",
@@ -116,7 +117,8 @@
       ]
     },
     {
-      "day": "Tuesday/\nFriday",
+      "dayOne": "Tuesday",
+      "dayTwo": "Friday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Boreal_Wolf%27s_Milk_Tooth.png",
@@ -239,7 +241,8 @@
       ]
     },
     {
-      "day": "Wednesday/\nSaturday",
+      "dayOne": "Wednesday",
+      "dayTwo": "Saturday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Item_Fetters_of_the_Dandelion_Gladiator.png",
@@ -360,7 +363,8 @@
   ],
   "Liyue": [
     {
-      "day": "Monday/\nThursday",
+      "dayOne": "Monday",
+      "dayTwo": "Thursday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Luminous_Sands_from_Guyun.png",
@@ -455,7 +459,8 @@
       ]
     },
     {
-      "day": "Tuesday/\nFriday",
+      "dayOne": "Tuesday",
+      "dayTwo": "Friday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Mist_Veiled_Lead_Elixir.png",
@@ -550,7 +555,8 @@
       ]
     },
     {
-      "day": "Wednesday/\nSaturday",
+      "dayOne": "Wednesday",
+      "dayTwo": "Saturday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Grain_of_Aerosiderite.png",
@@ -643,7 +649,8 @@
   ],
   "Inazuma": [
     {
-      "day": "Monday/\nThursday",
+      "dayOne": "Monday",
+      "dayTwo": "Thursday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Coral_Branch_of_a_Distant_Sea.png",
@@ -694,7 +701,8 @@
       ]
     },
     {
-      "day": "Tuesday/\nFriday",
+      "dayOne": "Tuesday",
+      "dayTwo": "Friday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Narukami%27s_Wisdom.png",
@@ -753,7 +761,8 @@
       ]
     },
     {
-      "day": "Wednesday/\nSaturday",
+      "dayOne": "Wednesday",
+      "dayTwo": "Saturday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Item_Mask_of_the_Wicked_Lieutenant.png",
@@ -810,7 +819,8 @@
   ],
   "Sumeru": [
     {
-      "day": "Monday/\nThursday",
+      "dayOne": "Monday",
+      "dayTwo": "Thursday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Copper_Talisman_of_the_Forest_Dew.png",
@@ -861,7 +871,8 @@
       ]
     },
     {
-      "day": "Tuesday/\nFriday",
+      "dayOne": "Tuesday",
+      "dayTwo": "Friday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Oasis_Garden%27s_Reminiscence.png",
@@ -912,7 +923,8 @@
       ]
     },
     {
-      "day": "Wednesday/\nSaturday",
+      "dayOne": "Wednesday",
+      "dayTwo": "Saturday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Echo_of_Scorching_Might.png",
@@ -965,7 +977,8 @@
   ],
   "Fontaine": [
     {
-      "day": "Monday/\nThursday",
+      "dayOne": "Monday",
+      "dayTwo": "Thursday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Fragment_of_an_Ancient_Chord.png",
@@ -1024,7 +1037,8 @@
       ]
     },
     {
-      "day": "Tuesday/\nFriday",
+      "dayOne": "Tuesday",
+      "dayTwo": "Friday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Dross_of_Pure_Sacred_Dewdrop.png",
@@ -1075,7 +1089,8 @@
       ]
     },
     {
-      "day": "Wednesday/\nSaturday",
+      "dayOne": "Wednesday",
+      "dayTwo": "Saturday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Item_Broken_Goblet_of_the_Pristine_Sea.png",
@@ -1132,7 +1147,8 @@
   ],
   "Natlan": [
     {
-      "day": "Monday/\nThursday",
+      "dayOne": "Monday",
+      "dayTwo": "Thursday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Blazing_Sacrificial_Heart%27s_Terror.png",
@@ -1183,7 +1199,8 @@
       ]
     },
     {
-      "day": "Tuesday/\nFriday",
+      "dayOne": "Tuesday",
+      "dayTwo": "Friday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Item_Delirious_Decadence_of_the_Sacred_Lord.png",
@@ -1238,7 +1255,8 @@
       ]
     },
     {
-      "day": "Wednesday/\nSaturday",
+      "dayOne": "Wednesday",
+      "dayTwo": "Saturday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Item_Night-Wind%27s_Mystic_Consideration.png",
@@ -1295,7 +1313,8 @@
   ],
   "NodKrai": [
     {
-      "day": "Monday/\nThursday",
+      "dayOne": "Monday",
+      "dayTwo": "Thursday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Artful_Device_Fragment.png",
@@ -1334,7 +1353,8 @@
       ]
     },
     {
-      "day": "Tuesday/\nFriday",
+      "dayOne": "Tuesday",
+      "dayTwo": "Friday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Ember_of_Long_Night_Flint.png",
@@ -1373,7 +1393,8 @@
       ]
     },
     {
-      "day": "Wednesday/\nSaturday",
+      "dayOne": "Wednesday",
+      "dayTwo": "Saturday",
       "images": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Item_Sundered_Glory_of_the_Far-North_Scions.png",
