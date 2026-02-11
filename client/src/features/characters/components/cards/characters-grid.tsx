@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Character } from '@/types';
-
+import type { Character } from '../../types';
 import CharacterCard from './character-card';
 
 interface CharacterCardGridProps {

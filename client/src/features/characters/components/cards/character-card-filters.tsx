@@ -2,13 +2,14 @@ import React from 'react';
 
 import { Button } from '@/components/ui/button';
 import FilterBar from '@/components/utils/filter/FilterBar';
-import { useCharactersStore } from '@/stores';
 
 import { useCharacterFilters } from '../../hooks/useCharacterFilters';
+import { useCharactersError, useCharactersStore } from '../../stores';
 import CharacterCardGrid from './characters-grid';
 
 const CharacterCardsWithFilters: React.FC = () => {
-  const { loading, error } = useCharactersStore();
+  const { loading } = useCharactersStore();
+  const error = useCharactersError();
 
   const {
     characters: filteredCharacters,
