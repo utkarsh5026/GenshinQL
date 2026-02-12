@@ -72,7 +72,7 @@ const WeaponMaterialsDisplay: React.FC<WeaponMaterialsDisplayProps> = ({
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {group.weapons.map((weapon) => (
-                  <WeaponAvatar key={weapon.name} weapon={weapon} />
+                  <WeaponAvatar key={weapon.name} weaponName={weapon.name} />
                 ))}
               </div>
             </div>
