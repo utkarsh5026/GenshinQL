@@ -1,11 +1,12 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 
-import type { Character, Weapon } from '@/types';
+import type { WeaponSummary } from '@/features/weapons';
+import type { Character } from '@/types';
 
+import { DEFAULT_TIER_CONFIGS } from '../constants';
 import {
   type CharacterTierListState,
-  DEFAULT_TIER_CONFIGS,
   type TierConfig,
   type WeaponTierListState,
 } from '../types';
@@ -30,7 +31,7 @@ interface CharacterTierListStore extends CharacterTierListState {
   getTierForItem: (itemName: string) => string | null;
 }
 
-// Weapon Tierlist Store
+// WeaponSummary Tierlist Store
 interface WeaponTierListStore extends WeaponTierListState {
   // Tier Management
   addTier: (name: string, color: string) => void;
@@ -43,7 +44,7 @@ interface WeaponTierListStore extends WeaponTierListState {
   assignItem: (itemName: string, tierId: string) => void;
   unassignItem: (itemName: string) => void;
   moveItem: (itemName: string, fromTierId: string, toTierId: string) => void;
-  initializeUnassignedPool: (weapons: Weapon[]) => void;
+  initializeUnassignedPool: (weapons: WeaponSummary[]) => void;
 
   // Utilities
   resetToDefaults: () => void;
@@ -367,12 +368,12 @@ export const useCharacterTierListStore = create<CharacterTierListStore>()(
   )
 );
 
-// Weapon Tierlist Store (similar structure)
+// WeaponSummary Tierlist Store (similar structure)
 export const useWeaponTierListStore = create<WeaponTierListStore>()(
   devtools(
     persist(
       (set, get) => ({
-        ...createInitialState<Weapon>(),
+        ...createInitialState<WeaponSummary>(),
 
         // Tier Management (identical to character store)
         addTier: (name, color) => {
@@ -415,7 +416,7 @@ export const useWeaponTierListStore = create<WeaponTierListStore>()(
 
           const itemsToAdd = itemsToUnassign
             .map((name) => unassignedPool.find((w) => w.name === name))
-            .filter((item): item is Weapon => item !== undefined);
+            .filter((item): item is WeaponSummary => item !== undefined);
 
           const updatedTiers = tiers
             .filter((t) => t.id !== tierId)
@@ -603,7 +604,7 @@ export const useWeaponTierListStore = create<WeaponTierListStore>()(
         resetToDefaults: () => {
           set(
             {
-              ...createInitialState<Weapon>(),
+              ...createInitialState<WeaponSummary>(),
               lastUpdated: Date.now(),
             },
             false,

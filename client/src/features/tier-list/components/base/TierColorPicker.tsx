@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 
-import { PRESET_TIER_COLORS } from '../../types';
+import { PRESET_TIER_COLORS } from '../../constants';
 
 interface TierColorPickerProps {
   color: string;
