@@ -1,17 +1,8 @@
-import { AbilityTag } from './ability-tag';
 import AnimatedCover from './AnimatedCover';
 import AvatarWithSkeleton from './AvatarWithSkeleton';
 import ItemNavigation, { type NavigableItem } from './item-navigation';
-import ListSplitter from './list-splitter';
-import TextProcessor from './text-processor';
+export * from './text';
 
-export {
-  AbilityTag,
-  AnimatedCover,
-  AvatarWithSkeleton,
-  ItemNavigation,
-  ListSplitter,
-  TextProcessor,
-};
+export { AnimatedCover, AvatarWithSkeleton, ItemNavigation };
 
 export type { NavigableItem };

@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { AbilityTag } from '@/components/utils';
-import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
+import EnhancedListSplitter from '@/components/utils/text/abilities-list-splitter';
 import { CachedImage } from '@/features/cache';
 import { Talent } from '@/features/characters/types';
 import { getPassiveStyles, sortPassives } from '@/features/characters/utils';

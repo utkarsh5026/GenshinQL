@@ -3,7 +3,7 @@ import React, { useMemo, useState } from 'react';
 
 import { AbilityTag } from '@/components/utils';
 import { AnimatedCover } from '@/components/utils';
-import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
+import EnhancedListSplitter from '@/components/utils/text/abilities-list-splitter';
 import { CachedImage } from '@/features/cache';
 import { useCharacterTalents } from '@/features/characters/hooks';
 import { extractConstellationTags } from '@/features/characters/utils/ability-tags';

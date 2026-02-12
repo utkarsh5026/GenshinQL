@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
 import { AbilityTag } from '@/components/utils';
-import EnhancedListSplitter from '@/components/utils/EnhancedListSplitter';
+import EnhancedListSplitter from '@/components/utils/text/abilities-list-splitter';
 import { CachedImage } from '@/features/cache';
 import {
   extractConstellationTags,
