@@ -41,14 +41,6 @@
     {
       "name": "Geo",
       "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png"
-    },
-    {
-      "name": "Electro",
-      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png"
-    },
-    {
-      "name": "Dendro",
-      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png"
     }
   ],
   "specialGuestCharacters": [
