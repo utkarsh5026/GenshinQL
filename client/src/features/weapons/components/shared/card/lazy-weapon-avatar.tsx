@@ -24,7 +24,7 @@ const LazyWeaponAvatar: React.FC<LazyWeaponAvatarProps> = ({ weapon }) => {
   return (
     <div ref={ref} className="min-h-20">
       {isVisible ? (
-        <WeaponAvatar weapon={weapon} />
+        <WeaponAvatar weaponName={weapon.name} />
       ) : (
         <div className="flex flex-col gap-2">
           <Skeleton className="h-10 w-10 rounded-full" />

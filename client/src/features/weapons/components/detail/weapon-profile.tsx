@@ -3,7 +3,8 @@ import React, { useMemo, useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
-import TextProcessor from '@/components/utils/text-processor';
+import { TextProcessor } from '@/components/utils';
+import { NATIONS } from '@/constants';
 import { WeaponDetailedType } from '@/types';
 
 interface WeaponProfileProps {
@@ -11,20 +12,9 @@ interface WeaponProfileProps {
 }
 
 const WeaponProfile: React.FC<WeaponProfileProps> = ({ weapon }) => {
-  // State for refinement level
   const [refinementLevel, setRefinementLevel] = useState<number>(1);
 
-  // Get nation and weekday from weapon data
-  const nations = [
-    'N/A',
-    'Mondstadt',
-    'Liyue',
-    'Inazuma',
-    'Sumeru',
-    'Fontaine',
-    'Natlan',
-    'NodKrai',
-  ];
+  const nations = ['N/A', ...NATIONS];
   const days = ['Monday/Thursday', 'Tuesday/Friday', 'Wednesday/Saturday'];
 
   const nation =
@@ -36,7 +26,6 @@ const WeaponProfile: React.FC<WeaponProfileProps> = ({ weapon }) => {
       ? days[weapon.weekdays]
       : 'N/A';
 
-  // Extract effect name from weapon effect
   const effectName = useMemo(() => {
     const firstLine = weapon.effect.split('\n')[0];
     return firstLine || 'Passive Effect';
