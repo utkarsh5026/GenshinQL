@@ -267,8 +267,55 @@ export type UpgradeMaterial = z.infer<typeof upgradeMaterialSchema>;
 export type TalentUpgrade = z.infer<typeof talentUpgradeSchema>;
 export type VersionRelease = z.infer<typeof versionReleaseSchema>;
 export type CharacterRole = z.infer<typeof characterRoleSchema>;
+// Event Wish / Banner schemas
+export const featuredCharacterSchema = z.object({
+  name: z.string(),
+  icon: z.string(),
+  element: z.string().optional(),
+  weaponType: z.string().optional(),
+  rarity: z.number().min(1).max(5).optional(),
+});
+
+export const eventWishSchema = z.object({
+  bannerName: z.string(),
+  bannerUrl: z.string().url(),
+  bannerImage: z.string(),
+  phase: z.enum(['Phase I', 'Phase II']),
+  duration: z.object({
+    start: z.string(),
+    end: z.string(),
+  }),
+  featuredCharacters: z.array(featuredCharacterSchema),
+});
+
+// New Weapon schema for version releases
+export const newWeaponSchema = z.object({
+  name: z.string(),
+  showcaseImage: z.string(),
+});
+
+// Event Reward item (extracted from card containers)
+export const eventRewardSchema = z.object({
+  name: z.string(),
+  icon: z.string(),
+  count: z.number().optional(), // Some rewards may not have counts
+});
+
+// New Event schema
+export const newEventSchema = z.object({
+  name: z.string(),
+  url: z.string().url(),
+  images: z.array(z.string()), // All images from <aside> figures
+  rewards: z.array(ascensionMaterialSchema),
+});
+
 export type TheaterCharacter = z.infer<typeof theaterCharacterSchema>;
 export type TheaterElement = z.infer<typeof theaterElementSchema>;
 export type ImaginariamTheaterSeason = z.infer<
   typeof imaginariamTheaterSeasonSchema
 >;
+export type FeaturedCharacter = z.infer<typeof featuredCharacterSchema>;
+export type EventWish = z.infer<typeof eventWishSchema>;
+export type NewWeapon = z.infer<typeof newWeaponSchema>;
+export type EventReward = z.infer<typeof eventRewardSchema>;
+export type NewEvent = z.infer<typeof newEventSchema>;
