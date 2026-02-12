@@ -1,6 +1,7 @@
 import fs from 'fs';
-import { logger } from 'logger.js';
 import path from 'path';
+
+import { logger } from './logger.js';
 
 const PUBLIC_DIR = path.resolve(import.meta.dirname, '../public');
 const WALLPAPERS_DIR = path.join(PUBLIC_DIR, 'images/wallpapers');

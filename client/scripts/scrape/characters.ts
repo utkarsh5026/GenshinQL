@@ -1146,26 +1146,24 @@ export async function optimizeCharactersJson(): Promise<void> {
 
     // Step 3: Transform characters to indexed format
     const optimizedCharacters = characters.map((char) => {
-      // Remove URL fields and string fields that will be indexed
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const {
-        element,
-        region,
-        weaponType,
-        rarity,
-        modelType,
-        elementUrl,
-        weaponUrl,
-        regionUrl,
-        ...rest
-      } = char as BaseCharacterSchema & {
-        elementUrl?: string;
-        weaponUrl?: string;
-        regionUrl?: string;
-      };
+      // Create new object with indexed fields, excluding URL fields
+      const fieldsToExclude = new Set([
+        'element',
+        'region',
+        'weaponType',
+        'rarity',
+        'modelType',
+        'elementUrl',
+        'weaponUrl',
+        'regionUrl',
+      ]);
+
+      const baseFields = Object.fromEntries(
+        Object.entries(char).filter(([key]) => !fieldsToExclude.has(key))
+      );
 
       return {
-        ...rest,
+        ...baseFields,
         element: elements.indexOf(char.element),
         region: regions.indexOf(char.region),
         weaponType: weaponTypes.indexOf(char.weaponType),
