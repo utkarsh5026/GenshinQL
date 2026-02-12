@@ -79,7 +79,7 @@ const TrackedItemCard: React.FC<TrackedItemCardProps> = ({
         height={56}
         className="w-12 h-12 md:w-14 md:h-14 rounded-lg"
       />
-      <span className="text-xs text-center font-medium line-clamp-1 max-w-[70px]">
+      <span className="text-xs text-center font-medium line-clamp-1 max-w-17.5">
         {name}
       </span>
       <Badge
@@ -226,7 +226,7 @@ const AddTrackingDialog: React.FC<AddTrackingDialogProps> = ({
                     height={48}
                     className="w-10 h-10 rounded-lg"
                   />
-                  <span className="text-[10px] text-center line-clamp-1 max-w-[60px]">
+                  <span className="text-[10px] text-center line-clamp-1 max-w-15">
                     {char.name}
                   </span>
                 </button>
@@ -257,7 +257,7 @@ const AddTrackingDialog: React.FC<AddTrackingDialogProps> = ({
                     height={48}
                     className="w-10 h-10 rounded-lg"
                   />
-                  <span className="text-[10px] text-center line-clamp-1 max-w-[60px]">
+                  <span className="text-[10px] text-center line-clamp-1 max-w-15">
                     {weapon.name}
                   </span>
                 </button>

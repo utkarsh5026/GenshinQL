@@ -1,17 +1,12 @@
 import { BookOpen, Calendar, Sparkles, Sword } from 'lucide-react';
 import React from 'react';
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { GameModeCard } from '@/components/utils/game-mode-card';
 import { CachedImage } from '@/features/cache';
 import CharacterAvatar from '@/features/characters/components/utils/character-avatar';
 import WeaponAvatar from '@/features/weapons/components/shared/card/weapon-avatar';
-import { useWeaponMap } from '@/features/weapons/stores/useWeaponsStore';
+import { useRandomBanner } from '@/hooks/useRandomBanner';
 import { cn } from '@/lib/utils';
 import type { ImageUrl } from '@/types';
 
@@ -51,8 +46,6 @@ const TrackedWeaponAvatar: React.FC<TrackedWeaponAvatarProps> = ({
   name,
   isTracked,
 }) => {
-  const weaponMap = useWeaponMap();
-  const weapon = weaponMap[name];
   return (
     <div
       className={cn(
@@ -60,7 +53,7 @@ const TrackedWeaponAvatar: React.FC<TrackedWeaponAvatarProps> = ({
         isTracked && 'ring-2 ring-amber-500 bg-amber-500/10 p-1'
       )}
     >
-      <WeaponAvatar weapon={weapon} showName={false} />
+      <WeaponAvatar weaponName={name} showName={false} />
       {isTracked && (
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-amber-500 rounded-full border-2 border-background" />
       )}
@@ -127,137 +120,192 @@ const RegionTalentMaterials: React.FC<RegionMaterialsProps> = ({
   );
 };
 
+const DayBadge: React.FC<{ day: string; isBanner: boolean }> = ({
+  day,
+  isBanner,
+}) => (
+  <Badge
+    variant="outline"
+    className={cn(
+      'text-xs gap-1',
+      isBanner && 'border-white/30 text-white/90 bg-black/20 backdrop-blur-sm'
+    )}
+  >
+    <Calendar className="w-3 h-3" />
+    {day}
+  </Badge>
+);
+
 export const DailyFarmingGuide: React.FC = () => {
   const { currentDay, isSunday, talentMaterials, weaponMaterials } =
     useTodayCalendar();
 
+  const talentBanner = useRandomBanner('characters');
+  const weaponBanner = useRandomBanner('weapons');
+
+  const hasTalentBanner = !!talentBanner;
+  const hasWeaponBanner = !!weaponBanner;
+
+  console.log(talentBanner, weaponBanner);
+
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {/* Talent Materials Card */}
-      <Card>
-        <CardHeader className="pb-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-purple-500" />
-              <CardTitle className="text-lg">Talent Materials</CardTitle>
+      <GameModeCard
+        bannerImage={talentBanner}
+        header={
+          <>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <BookOpen
+                  className={cn(
+                    'w-5 h-5',
+                    hasTalentBanner
+                      ? 'text-purple-400 drop-shadow-md'
+                      : 'text-purple-500'
+                  )}
+                />
+                <span
+                  className={cn(
+                    'text-lg font-semibold leading-none tracking-tight',
+                    hasTalentBanner && 'text-white drop-shadow-md'
+                  )}
+                >
+                  Talent Materials
+                </span>
+              </div>
+              <DayBadge day={currentDay} isBanner={hasTalentBanner} />
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Calendar className="w-4 h-4" />
-              <span>{currentDay}</span>
+            <div
+              className={cn(
+                'text-sm',
+                hasTalentBanner ? 'text-white/80' : 'text-muted-foreground'
+              )}
+            >
+              {isSunday ? (
+                <span className="flex items-center gap-1 text-amber-400">
+                  <Sparkles className="w-3 h-3" />
+                  All materials available today!
+                </span>
+              ) : (
+                `Available talent books for ${currentDay}`
+              )}
             </div>
-          </div>
-          <CardDescription>
-            {isSunday ? (
-              <span className="flex items-center gap-1 text-amber-500">
-                <Sparkles className="w-3 h-3" />
-                All materials available today!
-              </span>
-            ) : (
-              `Available talent books for ${currentDay}`
-            )}
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          {talentMaterials.map(
-            ({ region, regionIconUrl, books, characters }) => (
-              <RegionTalentMaterials
-                key={region}
-                region={region}
-                regionIconUrl={regionIconUrl}
-                books={books}
-                characters={characters}
-              />
-            )
-          )}
-        </CardContent>
-      </Card>
+          </>
+        }
+      >
+        {talentMaterials.map(({ region, regionIconUrl, books, characters }) => (
+          <RegionTalentMaterials
+            key={region}
+            region={region}
+            regionIconUrl={regionIconUrl}
+            books={books}
+            characters={characters}
+          />
+        ))}
+      </GameModeCard>
 
       {/* Weapon Materials Card */}
-      <Card>
-        <CardHeader className="pb-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Sword className="w-5 h-5 text-orange-500" />
-              <CardTitle className="text-lg">Weapon Materials</CardTitle>
+      <GameModeCard
+        bannerImage={weaponBanner}
+        header={
+          <>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Sword
+                  className={cn(
+                    'w-5 h-5',
+                    hasWeaponBanner
+                      ? 'text-orange-400 drop-shadow-md'
+                      : 'text-orange-500'
+                  )}
+                />
+                <span
+                  className={cn(
+                    'text-lg font-semibold leading-none tracking-tight',
+                    hasWeaponBanner && 'text-white drop-shadow-md'
+                  )}
+                >
+                  Weapon Materials
+                </span>
+              </div>
+              <DayBadge day={currentDay} isBanner={hasWeaponBanner} />
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Calendar className="w-4 h-4" />
-              <span>{currentDay}</span>
+            <div
+              className={cn(
+                'text-sm',
+                hasWeaponBanner ? 'text-white/80' : 'text-muted-foreground'
+              )}
+            >
+              {isSunday ? (
+                <span className="flex items-center gap-1 text-amber-400">
+                  <Sparkles className="w-3 h-3" />
+                  All materials available today!
+                </span>
+              ) : (
+                `Available weapon materials for ${currentDay}`
+              )}
             </div>
-          </div>
-          <CardDescription>
-            {isSunday ? (
-              <span className="flex items-center gap-1 text-amber-500">
-                <Sparkles className="w-3 h-3" />
-                All materials available today!
-              </span>
-            ) : (
-              `Available weapon materials for ${currentDay}`
-            )}
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          {weaponMaterials.map(
-            ({ nation, nationIconUrl, weapons, materials }) => {
-              if (weapons.length === 0) return null;
+          </>
+        }
+      >
+        {weaponMaterials.map(
+          ({ nation, nationIconUrl, weapons, materials }) => {
+            if (weapons.length === 0) return null;
 
-              const trackedWeapons = weapons.filter((w) => w.isTracked);
-              const otherWeapons = weapons.filter((w) => !w.isTracked);
+            const trackedWeapons = weapons.filter((w) => w.isTracked);
+            const otherWeapons = weapons.filter((w) => !w.isTracked);
 
-              return (
-                <div key={nation} className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    {nationIconUrl && (
+            return (
+              <div key={nation} className="space-y-3">
+                <div className="flex items-center gap-2">
+                  {nationIconUrl && (
+                    <CachedImage
+                      src={nationIconUrl}
+                      alt={nation}
+                      width={20}
+                      height={20}
+                      className="w-5 h-5 rounded"
+                    />
+                  )}
+                  <span className="text-sm font-medium text-foreground">
+                    {nation}
+                  </span>
+                  <div className="flex gap-1">
+                    {materials.slice(0, 4).map((mat: ImageUrl) => (
                       <CachedImage
-                        src={nationIconUrl}
-                        alt={nation}
-                        width={20}
-                        height={20}
-                        className="w-5 h-5 rounded"
-                      />
-                    )}
-                    <span className="text-sm font-medium text-foreground">
-                      {nation}
-                    </span>
-                    <div className="flex gap-1">
-                      {materials.slice(0, 4).map((mat: ImageUrl) => (
-                        <CachedImage
-                          key={mat.caption}
-                          src={mat.url}
-                          alt={mat.caption}
-                          width={24}
-                          height={24}
-                          className="w-5 h-5 md:w-6 md:h-6 rounded"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    {trackedWeapons.map((weapon) => (
-                      <TrackedWeaponAvatar
-                        key={weapon.name}
-                        name={weapon.name}
-                        isTracked
+                        key={mat.caption}
+                        src={mat.url}
+                        alt={mat.caption}
+                        width={24}
+                        height={24}
+                        className="w-5 h-5 md:w-6 md:h-6 rounded"
                       />
                     ))}
-                    {otherWeapons.slice(0, 6).map((weapon) => (
-                      <TrackedWeaponAvatar
-                        key={weapon.name}
-                        name={weapon.name}
-                      />
-                    ))}
-                    {otherWeapons.length > 6 && (
-                      <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-lg bg-muted text-muted-foreground text-xs">
-                        +{otherWeapons.length - 6}
-                      </div>
-                    )}
                   </div>
                 </div>
-              );
-            }
-          )}
-        </CardContent>
-      </Card>
+                <div className="flex flex-wrap gap-1">
+                  {trackedWeapons.map((weapon) => (
+                    <TrackedWeaponAvatar
+                      key={weapon.name}
+                      name={weapon.name}
+                      isTracked
+                    />
+                  ))}
+                  {otherWeapons.slice(0, 6).map((weapon) => (
+                    <TrackedWeaponAvatar key={weapon.name} name={weapon.name} />
+                  ))}
+                  {otherWeapons.length > 6 && (
+                    <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-lg bg-muted text-muted-foreground text-xs">
+                      +{otherWeapons.length - 6}
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          }
+        )}
+      </GameModeCard>
     </div>
   );
 };
