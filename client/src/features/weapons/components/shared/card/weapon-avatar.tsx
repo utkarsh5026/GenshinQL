@@ -13,7 +13,6 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { CachedImage } from '@/features/cache';
-import type { WeaponSummary } from '@/features/weapons/types';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
 import {
@@ -23,14 +22,14 @@ import {
   BADGE_POSITION_CLASSES,
   type BadgePosition,
   getRarityBgClass,
-  getRarityBorderClass,
   type NamePosition,
 } from '@/utils/avatar-utils';
 
+import { useWeaponMap } from '../../../stores/useWeaponsStore';
 import WeaponCard from './weapon-card';
 
 interface WeaponAvatarProps {
-  weapon: WeaponSummary;
+  weaponName: string;
 
   size?: AvatarSize; // Default: 'md'
 
@@ -59,7 +58,7 @@ interface WeaponAvatarProps {
  * Now supports configurable size, name display, badges, and interactivity
  */
 const WeaponAvatar: React.FC<WeaponAvatarProps> = ({
-  weapon,
+  weaponName,
   size = 'md',
   showName = true,
   namePosition = 'bottom',
@@ -73,14 +72,21 @@ const WeaponAvatar: React.FC<WeaponAvatarProps> = ({
   nameClassName,
   showSkeleton = true,
 }) => {
-  const { name, iconUrl, rarity } = weapon;
+  const weaponMap = useWeaponMap();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const isMobile = useIsMobile();
+
+  const weapon = weaponMap[weaponName];
+
+  if (!weapon) {
+    return null;
+  }
+
+  const { name, iconUrl, rarity } = weapon;
 
   const finalAvatarClassName = cn(
     'rounded-full',
     AVATAR_SIZE_CLASSES[size],
-    getRarityBorderClass(rarity),
     getRarityBgClass(rarity),
     avatarClassName
   );

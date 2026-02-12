@@ -15,7 +15,6 @@ import {
   type AvatarSize,
   BADGE_POSITION_CLASSES,
   type BadgePosition,
-  getRarityBgClass,
   getRarityBorderClass,
   type NamePosition,
 } from '@/utils/avatar-utils';
@@ -78,7 +77,6 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
   const finalAvatarClassName = cn(
     AVATAR_SIZE_CLASSES[size],
     getRarityBorderClass(rarity),
-    getRarityBgClass(rarity),
     avatarClassName
   );
 

@@ -22,7 +22,8 @@ export type WeaponSummary = Omit<WeaponRaw, 'nation' | 'weekdays'> & {
 };
 
 export type WeaponMaterial = {
-  day: string;
+  dayOne: string;
+  dayTwo: string;
   materialImages: ImageUrl[];
 };
 
