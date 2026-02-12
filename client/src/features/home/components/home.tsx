@@ -8,7 +8,7 @@ import { usePrimitivesStore } from '@/stores';
 
 import { getFormattedDate } from '../utils';
 import { DailyFarmingGuide } from './daily-farming-guide';
-import { GameModesSection } from './game-modes-section';
+import { GameModesSection } from './game-modes';
 import { TrackerSection } from './tracker-section';
 
 const DashboardHeader: React.FC = () => {
