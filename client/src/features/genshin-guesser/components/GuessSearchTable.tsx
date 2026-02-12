@@ -3,8 +3,8 @@ import React from 'react';
 import Confetti from 'react-confetti';
 
 import { Card, CardContent } from '@/components/ui/card';
-import SearchBar from '@/components/utils/SearchBar';
 import { type Character, useCharactersStore } from '@/features/characters';
+import SearchBar from '@/features/genshin-guesser/components/SearchBar';
 import { cn } from '@/lib/utils';
 
 import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
