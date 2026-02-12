@@ -1,11 +1,11 @@
 import { DndContext } from '@dnd-kit/core';
 import React, { useState } from 'react';
 
+import WeaponAvatar from '@/features/weapons/components/shared/card/weapon-avatar';
 import { useWeaponsStore } from '@/stores';
 import type { Weapon } from '@/types';
 
-import DraggableArea from '../../../tierlist/base/DroppableArea';
-import WeaponAvatar from '../shared/weapon-avatar';
+import DraggableArea from '../base/DroppableArea';
 import WeaponTierLevel from './WeaponTierLevel';
 const tierLevels = ['S', 'A', 'B', 'C', 'D'];
 
@@ -41,7 +41,7 @@ const WeaponsTierList: React.FC = () => {
       ))}
       <DraggableArea id="weapons" className="flex flex-wrap gap-4 border-2">
         {weapons.map((weapon) => (
-          <WeaponAvatar key={weapon.name} weapon={weapon} />
+          <WeaponAvatar key={weapon.name} weaponName={weapon.name} />
         ))}
       </DraggableArea>
     </DndContext>

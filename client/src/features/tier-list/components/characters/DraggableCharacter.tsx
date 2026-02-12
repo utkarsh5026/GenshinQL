@@ -3,7 +3,7 @@ import React from 'react';
 import type { Character } from '@/types';
 
 import AvatarWithSkeleton from '../../utils/AvatarWithSkeleton';
-import DraggableComponent from '../base/DraggableComponent';
+import DraggableComponent from '../base/draggable-component';
 
 interface DraggableCharacterProps {
   character: Character;

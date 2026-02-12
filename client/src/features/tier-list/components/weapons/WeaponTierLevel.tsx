@@ -1,9 +1,9 @@
 import React from 'react';
 
+import WeaponAvatar from '@/features/weapons/components/shared/card/weapon-avatar';
 import type { Weapon } from '@/types';
 
-import TierLevel from '../../../tierlist/base/TierLevel';
-import WeaponAvatar from '../shared/weapon-avatar';
+import TierLevel from '../base/TierLevel';
 
 interface WeaponTierLevelProps {
   initialName: string;
@@ -25,7 +25,7 @@ const WeaponTierLevel: React.FC<WeaponTierLevelProps> = ({
       onNameChange={onNameChange}
     >
       {weapons.map((weapon) => (
-        <WeaponAvatar key={weapon.name} weapon={weapon} />
+        <WeaponAvatar key={weapon.name} weaponName={weapon.name} />
       ))}
     </TierLevel>
   );

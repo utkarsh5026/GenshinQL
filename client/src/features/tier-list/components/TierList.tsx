@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
 import CharacterTierList from './characters/CharacterTierList';
 import WeaponsTierList from './weapons/WeaponsTierList';
 

@@ -1,8 +1,7 @@
 import { DndContext, DragEndEvent } from '@dnd-kit/core';
 import React, { useState } from 'react';
 
-import { useCharactersStore } from '@/stores';
-import { Character } from '@/types';
+import { type Character, useCharactersStore } from '@/features/characters';
 
 import DroppableArea from '../base/DroppableArea';
 import CharacterTierLevel from './CharacterTierLevel';
