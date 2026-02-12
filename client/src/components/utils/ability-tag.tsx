@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import React, { memo } from 'react';
 
-import { getTagConfig } from '@/lib/constellationTags';
+import { getTagConfig } from '@/features/characters/utils/ability-tags';
 
 interface AbilityTagProps {
   tagId: string;

@@ -1,4 +1,4 @@
-import { AbilityTag } from './AbilityTag';
+import { AbilityTag } from './ability-tag';
 import AnimatedCover from './AnimatedCover';
 import AvatarWithSkeleton from './AvatarWithSkeleton';
 import ItemNavigation, { type NavigableItem } from './item-navigation';
