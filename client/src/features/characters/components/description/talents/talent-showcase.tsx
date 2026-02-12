@@ -3,7 +3,7 @@ import React, { useMemo, useState } from 'react';
 
 import { AbilityTag } from '@/components/utils';
 import { AnimatedCover } from '@/components/utils';
-import EnhancedListSplitter from '@/components/utils/text/abilities-list-splitter';
+import { AbilitiesListSplitter } from '@/components/utils';
 import { CachedImage } from '@/features/cache';
 import { useCharacterTalents } from '@/features/characters/hooks';
 import { extractConstellationTags } from '@/features/characters/utils/ability-tags';
@@ -191,7 +191,7 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
         <div className="p-5 bg-midnight-800/20 flex flex-col">
           <div className="flex-1 overflow-auto max-h-75 scrollbar-hide">
             <div className="text-sm text-starlight-300 leading-relaxed">
-              <EnhancedListSplitter
+              <AbilitiesListSplitter
                 text={talent.description}
                 characterName={characterName}
               />

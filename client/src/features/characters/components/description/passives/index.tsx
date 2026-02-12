@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { AbilityTag } from '@/components/utils';
-import EnhancedListSplitter from '@/components/utils/text/abilities-list-splitter';
+import { AbilitiesListSplitter } from '@/components/utils';
 import { CachedImage } from '@/features/cache';
 import { Talent } from '@/features/characters/types';
 import { getPassiveStyles, sortPassives } from '@/features/characters/utils';
@@ -99,7 +99,7 @@ export const CharacterPassives: React.FC<CharacterPassivesProps> = ({
 
               {/* Description with better typography */}
               <div className="text-sm leading-relaxed text-foreground/80">
-                <EnhancedListSplitter
+                <AbilitiesListSplitter
                   text={passive.description}
                   characterName={characterName}
                 />

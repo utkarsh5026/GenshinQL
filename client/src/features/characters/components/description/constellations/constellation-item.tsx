@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
 import { AbilityTag } from '@/components/utils';
-import EnhancedListSplitter from '@/components/utils/text/abilities-list-splitter';
+import { AbilitiesListSplitter } from '@/components/utils';
 import { CachedImage } from '@/features/cache';
 import {
   extractConstellationTags,
@@ -84,7 +84,7 @@ export const ConstellationItem: React.FC<ConstellationItemProps> = ({
 
         {/* Description */}
         <div className="text-xs leading-relaxed text-muted-foreground/80">
-          <EnhancedListSplitter
+          <AbilitiesListSplitter
             text={constellation.description}
             characterName={characterName}
           />
