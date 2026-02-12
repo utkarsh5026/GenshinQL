@@ -30,38 +30,32 @@ export const ImaginariumCard: React.FC = () => {
   return (
     <GameModeCard
       bannerImage={BANNER_IMAGE}
-      header={
+      icon={<Theater className="w-5 h-5 text-rose-400" />}
+      title="Imaginarium Theater"
+      badges={
         <>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Theater className="w-5 h-5 text-rose-400 drop-shadow-md" />
-              <span className="text-lg font-semibold leading-none tracking-tight text-white drop-shadow-md">
-                Imaginarium Theater
-              </span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              {versionName && (
-                <Badge
-                  variant="outline"
-                  className="text-xs border-white/30 text-white/90 bg-black/20 backdrop-blur-sm"
-                >
-                  {versionName}
-                </Badge>
-              )}
-              <Badge
-                variant="outline"
-                className="text-xs border-white/30 text-white/90 bg-black/20 backdrop-blur-sm"
-              >
-                Season {seasonNumber}
-              </Badge>
-            </div>
-          </div>
-          <div className="flex items-start gap-1.5 mt-1">
-            <Calendar className="w-3.5 h-3.5 mt-0.5 shrink-0 text-white/70" />
-            <span className="text-xs whitespace-pre-line text-white/70">
-              {dateRange}
-            </span>
-          </div>
+          {versionName && (
+            <Badge
+              variant="outline"
+              className="text-xs border-white/30 text-white/90 bg-black/20 backdrop-blur-sm"
+            >
+              {versionName}
+            </Badge>
+          )}
+          <Badge
+            variant="outline"
+            className="text-xs border-white/30 text-white/90 bg-black/20 backdrop-blur-sm"
+          >
+            Season {seasonNumber}
+          </Badge>
+        </>
+      }
+      description={
+        <>
+          <Calendar className="w-3.5 h-3.5 mt-0.5 shrink-0 text-white/70" />
+          <span className="text-xs whitespace-pre-line text-white/70">
+            {dateRange}
+          </span>
         </>
       }
     >

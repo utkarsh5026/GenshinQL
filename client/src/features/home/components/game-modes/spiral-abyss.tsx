@@ -27,28 +27,22 @@ export const SpiralAbyssCard: React.FC = () => {
   return (
     <GameModeCard
       bannerImage={BANNER_IMAGE}
-      header={
+      icon={<Swords className="w-5 h-5 text-indigo-400" />}
+      title="Spiral Abyss"
+      badges={
+        <Badge
+          variant="outline"
+          className="text-xs border-white/30 text-white/90 bg-black/20 backdrop-blur-sm"
+        >
+          v{version} Phase {phase}
+        </Badge>
+      }
+      description={
         <>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Swords className="w-5 h-5 text-indigo-400 drop-shadow-md" />
-              <span className="text-lg font-semibold leading-none tracking-tight text-white drop-shadow-md">
-                Spiral Abyss
-              </span>
-            </div>
-            <Badge
-              variant="outline"
-              className="text-xs border-white/30 text-white/90 bg-black/20 backdrop-blur-sm"
-            >
-              v{version} Phase {phase}
-            </Badge>
-          </div>
-          <div className="flex items-start gap-2 mt-1">
-            <Flame className="w-4 h-4 text-amber-400 mt-0.5 shrink-0 drop-shadow-md" />
-            <span className="text-sm text-white/80">
-              <strong>{blessing.name}:</strong> {blessing.description}
-            </span>
-          </div>
+          <Flame className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
+          <span>
+            <strong>{blessing.name}:</strong> {blessing.description}
+          </span>
         </>
       }
     >
