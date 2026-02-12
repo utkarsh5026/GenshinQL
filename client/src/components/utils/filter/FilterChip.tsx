@@ -32,7 +32,7 @@ const FilterChip: React.FC<FilterChipProps> = ({
   };
 
   return (
-    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm border border-primary/20 hover:bg-primary/15 transition-colors">
+    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/5 text-primary  border-none hover:bg-primary/15 transition-colors text-xs">
       {icon && (
         <CachedImage
           src={icon}
