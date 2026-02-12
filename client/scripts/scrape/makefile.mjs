@@ -20,6 +20,7 @@
  *   weapons-full          - Scrape all weapon data (base + calendar + optimize)
  *   imaginarium-theater   - Scrape current Imaginarium Theater season
  *   primitives            - Generate primitives from characters data
+ *   version               - Scrape version data (new characters, events, etc.)
  *   all                   - Run all scraping tasks
  */
 
@@ -160,6 +161,12 @@ const tasks = {
     description: 'Generate primitives from characters data',
     category: 'Data Processing',
     action: () => runTsxScript('primitives.ts', []),
+  },
+
+  version: {
+    description: 'Scrape version data (new characters, events, etc.)',
+    category: 'Version',
+    action: () => runTsxScript('version.ts', []),
   },
 };
 

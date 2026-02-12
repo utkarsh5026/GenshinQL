@@ -7,7 +7,7 @@
 .PHONY: help characters-base characters-detailed characters-check characters-roles characters \
         characters-optimize characters-optimize-files characters-optimize-all \
         gallery gallery-check talents weapons-base weapons-detailed \
-        weapons-calendar weapons-full weapons primitives artifacts imaginarium-theater all
+        weapons-calendar weapons-full weapons primitives artifacts imaginarium-theater all version
 
 # Default target
 .DEFAULT_GOAL := help
@@ -110,3 +110,7 @@ primitives:
 
 all:
 	@node makefile.mjs all
+
+
+version:
+	@node makefile.mjs version
