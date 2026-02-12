@@ -271,3 +271,42 @@ export async function extractAside<T extends Record<string, unknown>>(
     sections: sections as T,
   };
 }
+
+/**
+ * Extracts gallery images from .wikia-gallery-item containers
+ * These are typically found in wiki gallery sections
+ * @param driver - Selenium WebDriver instance
+ * @returns Array of image URLs from gallery items
+ */
+export async function extractGalleryImages(
+  driver: WebDriver
+): Promise<string[]> {
+  try {
+    const galleryItems = await driver.findElements(
+      By.css('.wikia-gallery-item')
+    );
+
+    logger.info(`Found ${galleryItems.length} gallery items`);
+
+    const images: string[] = [];
+
+    for (const item of galleryItems) {
+      try {
+        const img = await item.findElement(By.css('img'));
+        const imageUrl = await getImageUrl(img, 'data-src');
+
+        if (imageUrl) {
+          images.push(imageUrl);
+        }
+      } catch (error) {
+        logger.debug('Failed to extract image from gallery item:', error);
+      }
+    }
+
+    logger.info(`Extracted ${images.length} gallery images`);
+    return images;
+  } catch (error) {
+    logger.warn('Failed to extract gallery images:', error);
+    return [];
+  }
+}

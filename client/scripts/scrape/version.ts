@@ -6,11 +6,14 @@ import { PUBLIC_DIR, saveJson } from './fileio.js';
 import type {
   EventWish,
   FeaturedCharacter,
+  NewArea,
   NewEvent,
   NewWeapon,
+  SpiralAbyssUpdate,
 } from './schema.js';
 import {
   extractAside,
+  extractGalleryImages,
   getImageUrl,
   parseMaterialCards,
   safeExecute,
@@ -19,6 +22,27 @@ import { URL, waitForElementXpath, withWebDriver } from './setup.js';
 import { getTableFromHeading, launchDriverInBatchSafe } from './utils.js';
 
 const TIME_TO_WAIT_FOR_ELEMENT_MS = 10000;
+
+/**
+ * Extracts {name, url} pairs from an array of link WebElements,
+ * normalizing relative URLs and filtering out empty entries.
+ */
+async function extractLinks(
+  linkElements: WebElement[]
+): Promise<{ name: string; url: string }[]> {
+  const links: { name: string; url: string }[] = [];
+  for (const el of linkElements) {
+    const name = (await el.getText()).trim();
+    let href = await el.getAttribute('href');
+    if (!href.startsWith('http')) {
+      href = `${URL}${href}`;
+    }
+    if (name && href) {
+      links.push({ name, url: href });
+    }
+  }
+  return links;
+}
 
 /**
  * Finds a <dt> element by its text content and returns the next sibling of its parent <dl> element
@@ -429,13 +453,9 @@ async function scrapeEventWishes(driver: WebDriver): Promise<EventWish[]> {
         const bannerList = await phaseItem.findElement(By.xpath('./ul[1]'));
         const linkElements = await bannerList.findElements(By.css('li a'));
 
-        for (const link of linkElements) {
-          const name = await link.getText();
-          let href = await link.getAttribute('href');
-          if (!href.startsWith('http')) {
-            href = `${URL}${href}`;
-          }
-          bannerLinks.push({ name, url: href, phase });
+        const links = await extractLinks(linkElements);
+        for (const link of links) {
+          bannerLinks.push({ ...link, phase });
         }
       }
 
@@ -462,14 +482,6 @@ async function scrapeEventWishes(driver: WebDriver): Promise<EventWish[]> {
 }
 
 /**
- * Event link structure for initial extraction
- */
-interface EventLink {
-  name: string;
-  url: string;
-}
-
-/**
  * Scrapes a single event page to extract all event data
  * @param driver - Selenium WebDriver instance
  * @param eventLink - Event link with name and URL
@@ -477,7 +489,7 @@ interface EventLink {
  */
 async function scrapeSingleEvent(
   driver: WebDriver,
-  eventLink: EventLink
+  eventLink: { name: string; url: string }
 ): Promise<NewEvent | null> {
   const extractEventRewards = async () => {
     return await safeExecute(
@@ -535,7 +547,9 @@ async function scrapeSingleEvent(
  * @returns Array of scraped event data
  */
 async function scrapeNewEvents(driver: WebDriver): Promise<NewEvent[]> {
-  const extractEventLinks = async (): Promise<EventLink[]> => {
+  const extractEventLinks = async (): Promise<
+    { name: string; url: string }[]
+  > => {
     return await safeExecute(
       async () => {
         const eventsElement = await getNextElementByDtText(
@@ -544,19 +558,7 @@ async function scrapeNewEvents(driver: WebDriver): Promise<NewEvent[]> {
         );
         const linkElements = await eventsElement.findElements(By.css('li a'));
 
-        const eventLinks: EventLink[] = [];
-        for (const link of linkElements) {
-          const name = (await link.getText()).trim();
-          let href = await link.getAttribute('href');
-
-          if (!href.startsWith('http')) {
-            href = `${URL}${href}`;
-          }
-
-          if (name && href) {
-            eventLinks.push({ name, url: href });
-          }
-        }
+        const eventLinks = await extractLinks(linkElements);
 
         logger.info(`Found ${eventLinks.length} new events`);
         return eventLinks;
@@ -581,24 +583,308 @@ async function scrapeNewEvents(driver: WebDriver): Promise<NewEvent[]> {
 }
 
 /**
+ * Area link structure for initial extraction
+ */
+interface AreaLink {
+  name: string;
+  url: string;
+  nationName: string;
+}
+
+/**
+ * Extracts area links from "New Areas" section
+ * Skips nation-level <li> and extracts nested area <li> elements
+ * @param driver - Selenium WebDriver instance
+ * @returns Array of area links with name, URL, and nation name
+ */
+async function extractAreaLinks(driver: WebDriver): Promise<AreaLink[]> {
+  try {
+    const newAreasElement = await getNextElementByDtText(driver, 'New Areas');
+
+    const nationItems = await newAreasElement.findElements(
+      By.xpath('.//li[a]')
+    );
+
+    const areaLinks: AreaLink[] = [];
+
+    for (const nationItem of nationItems) {
+      try {
+        const nationLink = await nationItem.findElement(By.css('a'));
+        const nationName = (await nationLink.getText()).trim();
+
+        const areaList = await nationItem.findElement(By.xpath('./ul[1]'));
+        const areaLinkElements = await areaList.findElements(By.css('li a'));
+
+        logger.info(`Found ${areaLinkElements.length} areas in ${nationName}`);
+
+        const links = await extractLinks(areaLinkElements);
+        for (const link of links) {
+          areaLinks.push({ ...link, nationName });
+        }
+      } catch (error) {
+        logger.warn('Failed to extract areas from nation item:', error);
+      }
+    }
+
+    logger.info(`Found ${areaLinks.length} total new areas`);
+    return areaLinks;
+  } catch (error) {
+    logger.error('Failed to extract area links:', error);
+    return [];
+  }
+}
+
+/**
+ * Scrapes a single area page to extract area data
+ * @param driver - Selenium WebDriver instance
+ * @param areaLink - Area link with name, URL, and nation name
+ * @returns Complete area data or null if scraping fails
+ */
+async function scrapeSingleArea(
+  driver: WebDriver,
+  areaLink: AreaLink
+): Promise<NewArea | null> {
+  const extractAreaImage = async (): Promise<string> => {
+    return await safeExecute(
+      async () => {
+        const { images } = await extractAside(driver, {});
+        return images[0] || '';
+      },
+      'Failed to extract area image (area may have no aside image)',
+      ''
+    );
+  };
+
+  const extractGalleryImagesForArea = async (): Promise<string[]> => {
+    return await safeExecute(
+      async () => {
+        return await extractGalleryImages(driver);
+      },
+      'Failed to extract gallery images (area may have no gallery)',
+      []
+    );
+  };
+
+  try {
+    await driver.get(areaLink.url);
+    logger.info(`Scraping area: ${areaLink.name} (${areaLink.nationName})`);
+
+    await driver.wait(
+      until.elementLocated(By.css('aside')),
+      TIME_TO_WAIT_FOR_ELEMENT_MS
+    );
+
+    const [areaImage, galleryImages] = await Promise.all([
+      extractAreaImage(),
+      extractGalleryImagesForArea(),
+    ]);
+
+    return {
+      name: areaLink.name,
+      url: areaLink.url,
+      nationName: areaLink.nationName,
+      areaImage: areaImage || undefined,
+      galleryImages,
+    };
+  } catch (error) {
+    logger.error(`Failed to scrape area ${areaLink.name}:`, error);
+    return null;
+  }
+}
+
+/**
+ * Main new areas scraper with concurrent batch processing
+ * @param driver - Selenium WebDriver instance
+ * @returns Array of scraped area data
+ */
+async function scrapeNewAreas(driver: WebDriver): Promise<NewArea[]> {
+  return await safeExecute(
+    async () => {
+      const areaLinks = await extractAreaLinks(driver);
+
+      if (areaLinks.length === 0) {
+        logger.info('No new areas found for this version');
+        return [];
+      }
+
+      return await batchScrapeItems(
+        areaLinks,
+        scrapeSingleArea,
+        6,
+        'new areas'
+      );
+    },
+    'Failed to scrape new areas (section may not exist)',
+    []
+  );
+}
+
+/**
+ * Scrapes Spiral Abyss update data from version page
+ * @param driver - Selenium WebDriver instance
+ * @returns Structured Spiral Abyss update data with both phases
+ */
+async function scrapeSpiralAbyss(
+  driver: WebDriver
+): Promise<SpiralAbyssUpdate | null> {
+  try {
+    logger.info('Scraping Spiral Abyss data...');
+
+    const spiralAbyssElement = await getNextElementByDtText(
+      driver,
+      'Spiral Abyss'
+    );
+
+    // Find all phase items (Update Scheduled for...)
+    const phaseItems = await spiralAbyssElement.findElements(
+      By.xpath('.//li[contains(text(), "Update Scheduled for")]')
+    );
+
+    logger.info(`Found ${phaseItems.length} Spiral Abyss phases`);
+
+    const phases = [];
+
+    for (let i = 0; i < phaseItems.length; i++) {
+      const phaseItem = phaseItems[i];
+
+      try {
+        // Extract update date from "Update Scheduled for [Date]"
+        const phaseHeaderText = await phaseItem.getText();
+        const dateMatch = phaseHeaderText.match(
+          /Update Scheduled for (.+?)(?:\n|$)/
+        );
+        const updateDate = dateMatch ? dateMatch[1].trim() : '';
+
+        // Get nested <ul> containing all phase data
+        const phaseDetailsList = await phaseItem.findElement(
+          By.xpath('./ul[1]')
+        );
+        const detailItems = await phaseDetailsList.findElements(
+          By.xpath('./li')
+        );
+
+        // Initialize data structure
+        let floor11Disorders: string[] = [];
+        const floor12Disorders = { firstHalf: '', secondHalf: '' };
+        const blessing = { name: '', description: '' };
+
+        // Parse each detail item
+        for (const detailItem of detailItems) {
+          const itemText = await detailItem.getText();
+
+          if (itemText.includes('Floor 11 Ley Line Disorder')) {
+            // Extract Floor 11 disorders
+            const disorderList = await detailItem.findElement(
+              By.xpath('./ul[1]')
+            );
+            const disorderItems = await disorderList.findElements(
+              By.xpath('./li')
+            );
+
+            floor11Disorders = await Promise.all(
+              disorderItems.map(async (item) => {
+                const text = await item.getText();
+                return text.trim();
+              })
+            );
+          } else if (itemText.includes('Floor 12 Ley Line Disorders')) {
+            // Extract Floor 12 disorders (first half, second half)
+            const disorderList = await detailItem.findElement(
+              By.xpath('./ul[1]')
+            );
+            const disorderItems = await disorderList.findElements(
+              By.xpath('./li')
+            );
+
+            for (const item of disorderItems) {
+              const text = await item.getText();
+
+              if (text.includes('First half:')) {
+                floor12Disorders.firstHalf = text
+                  .replace('First half:', '')
+                  .trim();
+              } else if (text.includes('Second half:')) {
+                floor12Disorders.secondHalf = text
+                  .replace('Second half:', '')
+                  .trim();
+              }
+            }
+          } else if (itemText.includes('Blessing of the Abyssal Moon:')) {
+            // Extract blessing name and description
+            const blessingMatch = itemText.match(
+              /Blessing of the Abyssal Moon:\s*(.+?)(?:\n|$)/
+            );
+            blessing.name = blessingMatch ? blessingMatch[1].trim() : '';
+
+            // Get blessing description from nested <ul>
+            try {
+              const blessingList = await detailItem.findElement(
+                By.xpath('./ul[1]')
+              );
+              const descItem = await blessingList.findElement(
+                By.xpath('./li[1]')
+              );
+              blessing.description = (await descItem.getText()).trim();
+            } catch (error) {
+              logger.warn('Failed to extract blessing description:', error);
+            }
+          }
+        }
+
+        phases.push({
+          phase: i + 1,
+          updateDate,
+          floor11Disorders,
+          floor12Disorders,
+          blessing,
+        });
+
+        logger.info(`✅ Extracted Phase ${i + 1} data`);
+      } catch (error) {
+        logger.error(`Failed to parse Spiral Abyss Phase ${i + 1}:`, error);
+      }
+    }
+
+    return { phases };
+  } catch (error) {
+    logger.error('Failed to scrape Spiral Abyss data:', error);
+    return null;
+  }
+}
+
+/**
  * Main scraping function
  */
 async function scrapeVersionData(driver: WebDriver) {
   await driver.get(`${URL}/Version/Luna_IV`);
 
-  const [newCharacters, newWeapons, eventWishes, newEvents] = await Promise.all(
-    [
-      scrapeNewCharacters(driver),
-      scrapeNewWeapons(driver),
-      scrapeEventWishes(driver),
-      scrapeNewEvents(driver),
-    ]
-  );
+  const [
+    newCharacters,
+    newWeapons,
+    eventWishes,
+    newEvents,
+    newAreas,
+    spiralAbyss,
+  ] = await Promise.all([
+    scrapeNewCharacters(driver),
+    scrapeNewWeapons(driver),
+    scrapeEventWishes(driver),
+    scrapeNewEvents(driver),
+    scrapeNewAreas(driver),
+    scrapeSpiralAbyss(driver),
+  ]);
 
   // Save combined data
   const versionDir = path.join(PUBLIC_DIR, 'version');
   await saveJson(
-    { newCharacters, newWeapons, eventWishes, newEvents },
+    {
+      newCharacters,
+      newWeapons,
+      eventWishes,
+      newEvents,
+      newAreas,
+      spiralAbyss,
+    },
     versionDir,
     'latest.json'
   );
@@ -607,6 +893,10 @@ async function scrapeVersionData(driver: WebDriver) {
   logger.success(`✅ Scraped ${newWeapons.length} new weapons`);
   logger.success(`✅ Scraped ${eventWishes.length} event wishes`);
   logger.success(`✅ Scraped ${newEvents.length} new events`);
+  logger.success(`✅ Scraped ${newAreas.length} new areas`);
+  logger.success(
+    `✅ Scraped Spiral Abyss data (${spiralAbyss?.phases.length ?? 0} phases)`
+  );
 }
 
 /**

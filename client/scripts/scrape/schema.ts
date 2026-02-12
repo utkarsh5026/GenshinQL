@@ -319,3 +319,35 @@ export type EventWish = z.infer<typeof eventWishSchema>;
 export type NewWeapon = z.infer<typeof newWeaponSchema>;
 export type EventReward = z.infer<typeof eventRewardSchema>;
 export type NewEvent = z.infer<typeof newEventSchema>;
+
+// Spiral Abyss schemas
+export const spiralAbyssPhaseSchema = z.object({
+  phase: z.number().min(1).max(2),
+  updateDate: z.string(), // "January 16, 2026"
+  floor11Disorders: z.array(z.string()),
+  floor12Disorders: z.object({
+    firstHalf: z.string(),
+    secondHalf: z.string(),
+  }),
+  blessing: z.object({
+    name: z.string(), // "Surgestrike Moon"
+    description: z.string(),
+  }),
+});
+
+export const spiralAbyssUpdateSchema = z.object({
+  phases: z.array(spiralAbyssPhaseSchema),
+});
+
+export type SpiralAbyssPhase = z.infer<typeof spiralAbyssPhaseSchema>;
+export type SpiralAbyssUpdate = z.infer<typeof spiralAbyssUpdateSchema>;
+
+export const newAreaSchema = z.object({
+  name: z.string(),
+  url: z.string().url(),
+  nationName: z.string(),
+  areaImage: z.string().optional(),
+  galleryImages: z.array(z.string()),
+});
+
+export type NewArea = z.infer<typeof newAreaSchema>;
