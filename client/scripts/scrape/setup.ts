@@ -64,7 +64,10 @@ export async function setupDriver(
     '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
   );
 
-  // Enhanced anti-detection measures
+  options.addArguments('--log-level=3'); // Only fatal errors
+  options.addArguments('--silent');
+  options.addArguments('--disable-logging');
+
   options.addArguments('--disable-blink-features=AutomationControlled');
   options.excludeSwitches('enable-automation');
   options.addArguments('--disable-web-security');
@@ -75,8 +78,9 @@ export async function setupDriver(
   });
 
   logger.debug('   Initializing ChromeDriver...');
-  const service = new chrome.ServiceBuilder(getChromedriverPath());
-
+  const service = new chrome.ServiceBuilder(getChromedriverPath()).setStdio(
+    'ignore'
+  );
   const driver = await new Builder()
     .forBrowser('chrome')
     .setChromeOptions(options)
