@@ -1,0 +1,20 @@
+{
+  "newQuests": [
+    {
+      "name": "A Traveler on a Winter's Night",
+      "url": "https://genshin-impact.fandom.com/wiki/A_Traveler_on_a_Winter%27s_Night",
+      "type": "Song of the Welkin Moon",
+      "allImages": [],
+      "rewards": [],
+      "actName": "Act VII"
+    },
+    {
+      "name": "True Moon",
+      "url": "https://genshin-impact.fandom.com/wiki/True_Moon",
+      "type": "Song of the Welkin Moon",
+      "allImages": [],
+      "rewards": [],
+      "actName": "Act VIII"
+    }
+  ]
+}
