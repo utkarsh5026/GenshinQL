@@ -68,6 +68,39 @@
       "twoPieceBonus": "ATK +18%.",
       "fourPieceBonus": "After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, gain the Blessing of Pastoral Winds effect for 6s: ATK is increased by 25%. If the equipping character has completed Witch's Homework, Blessing of Pastoral Winds will be upgraded to Resolve of Pastoral Winds, which also increases the CRIT Rate of the equipping character by an additional 20%. This effect can be triggered even when the character is off-field.",
       "showcaseImage": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Version_Luna_IV_Artifacts.png"
+    },
+    {
+      "name": "Aubade of Morningstar and Moon",
+      "pieces": [
+        {
+          "type": "flower",
+          "name": "Moonlit Offering's Opulent Dream",
+          "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Moonlit_Offering%27s_Opulent_Dream.png"
+        },
+        {
+          "type": "plume",
+          "name": "Moonlit Offering's Parting Light",
+          "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Item_Moonlit_Offering%27s_Parting_Light.png"
+        },
+        {
+          "type": "sands",
+          "name": "Moonlit Offering's Final Hour",
+          "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Moonlit_Offering%27s_Final_Hour.png"
+        },
+        {
+          "type": "goblet",
+          "name": "Moonlit Offering's Libation",
+          "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Item_Moonlit_Offering%27s_Libation.png"
+        },
+        {
+          "type": "circlet",
+          "name": "Moonlit Offering's Silver Crown",
+          "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Moonlit_Offering%27s_Silver_Crown.png"
+        }
+      ],
+      "twoPieceBonus": "Increases Elemental Mastery by 80.",
+      "fourPieceBonus": "When the equipping character is off-field, Lunar Reaction DMG is increased by 20%. When the party's Moonsign Level is at least Ascendant Gleam, Lunar Reaction DMG will be further increased by 40%. This effect will disappear after the equipping character is active for 3s.",
+      "showcaseImage": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Version_Luna_IV_Artifacts.png"
     }
   ],
   "eventWishes": [
@@ -234,6 +267,249 @@
   ],
   "newEvents": [
     {
+      "name": "A Lanternlit Ode to the Silver Moon",
+      "url": "https://genshin-impact.fandom.com/wiki/A_Lanternlit_Ode_to_the_Silver_Moon_(Event)",
+      "images": [
+        "https://static.wikia.nocookie.net/gensin-impact/images/7/70/A_Lanternlit_Ode_to_the_Silver_Moon_Event.png"
+      ],
+      "rewards": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Primogem.png",
+          "caption": "Primogem",
+          "count": 1060
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+          "caption": "Mora",
+          "count": 890000
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Crown_of_Insight.png",
+          "caption": "Crown of Insight",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Rainlit_Bamboo_Reverie.png",
+          "caption": "Rainlit Bamboo Reverie",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Hero%27s_Wit.png",
+          "caption": "Hero's Wit",
+          "count": 40
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Adventurer%27s_Experience.png",
+          "caption": "Adventurer's Experience",
+          "count": 32
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Item_Mystic_Enhancement_Ore.png",
+          "caption": "Mystic Enhance­ment Ore",
+          "count": 88
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Guide_to_Diligence.png",
+          "caption": "Guide to Diligence",
+          "count": 9
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Item_Guide_to_Gold.png",
+          "caption": "Guide to Gold",
+          "count": 9
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Guide_to_Prosperity.png",
+          "caption": "Guide to Prosperity",
+          "count": 9
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Item_Philosophies_of_Diligence.png",
+          "caption": "Philosophies of Diligence",
+          "count": 3
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Philosophies_of_Gold.png",
+          "caption": "Philosophies of Gold",
+          "count": 3
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Item_Philosophies_of_Prosperity.png",
+          "caption": "Philosophies of Prosperity",
+          "count": 3
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Sanctifying_Unction.png",
+          "caption": "Sanctifying Unction",
+          "count": 15
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Item_Remnant_of_the_Dreadwing.png",
+          "caption": "Remnant of the Dreadwing",
+          "count": 6
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png",
+          "caption": "Ag­ni­dus A­gate Frag­ment",
+          "count": 3
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png",
+          "caption": "Shivada Jade Fragment",
+          "count": 3
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Item_Nagadus_Emerald_Fragment.png",
+          "caption": "Na­ga­dus Em­er­ald Fragment",
+          "count": 3
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Prithiva_Topaz_Fragment.png",
+          "caption": "Prithiva Topaz Frag­ment",
+          "count": 12
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png",
+          "caption": "Vaj­ra­da A­me­thyst Frag­ment",
+          "count": 3
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Varunada_Lazurite_Fragment.png",
+          "caption": "Va­ru­na­da La­zu­rite Frag­ment",
+          "count": 3
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Vayuda_Turquoise_Fragment.png",
+          "caption": "Va­yu­da Tur­quoise Frag­ment",
+          "count": 3
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+          "caption": "Immaculate Warrant",
+          "count": 12
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+          "caption": "Tattered Warrant",
+          "count": 15
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Item_Glaze_Lily.png",
+          "caption": "Glaze Lily",
+          "count": 30
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Item_Auspicious_Treasure_Tree.png",
+          "caption": "Auspicious Treasure Tree",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Vibrant_Xiao_Lantern_A_Meeting_With_Friends.png",
+          "caption": "Blueprint: Vibrant Xiao Lantern: \"A Meeting With Friends\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Item_Vibrant_Xiao_Lantern_May_My_Wish_Travel_Far.png",
+          "caption": "Blueprint: Vibrant Xiao Lantern: \"May My Wish Travel Far\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Great_Zhanzhu_Lantern_Pathblocker_Maximus.png",
+          "caption": "Great Zhanzhu Lantern: \"Pathblocker Maximus\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Item_Great_Zhanzhu_Lantern_Pathblocker.png",
+          "caption": "Great Zhanzhu Lantern: \"Pathblocker\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Item_Vibrant_Xiao_Lantern_Riff_of_Fortune.png",
+          "caption": "Vibrant Xiao Lantern: \"Riff of Fortune\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Item_Vibrant_Xiao_Lantern_Fortune_and_Good_Tidings.png",
+          "caption": "Vibrant Xiao Lantern: \"Fortune and Good Tidings\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Item_Vibrant_Xiao_Lantern_A_Beautiful_Start_to_Spring.png",
+          "caption": "Vibrant Xiao Lantern: \"A Beautiful Start to Spring\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Item_Vibrant_Xiao_Lantern_Sweet_Scents_in_the_Wind.png",
+          "caption": "Vibrant Xiao Lantern: \"Sweet Scents in the Wind\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Vibrant_Xiao_Lantern_Good_Luck_All_the_Way.png",
+          "caption": "Vibrant Xiao Lantern: \"Good Luck All the Way\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Vibrant_Xiao_Lantern_May_All_Your_Wishes_Come_True.png",
+          "caption": "Vibrant Xiao Lantern: \"May All Your Wishes Come True\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_White_Horse_Galloping.png",
+          "caption": "White Horse Galloping",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Xiao_Lantern_Flight_Manual.png",
+          "caption": "Xiao Lantern Flight Manual",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Item_A_Fragrant_Feast_of_Flavors.png",
+          "caption": "A Fragrant Feast of Flavors",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Extravagant_Slumber.png",
+          "caption": "Extravagant Slumber",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Jade-Cut_Flowers.png",
+          "caption": "Jade-Cut Flowers",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Item_%22Sweet_Dream%22.png",
+          "caption": "\"Sweet Dream\"",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Item_Rockin%27_Riffin%27_Chicken%21.png",
+          "caption": "Rockin' Riffin' Chicken!",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Yummy_Yum_Cha.png",
+          "caption": "Yummy Yum Cha",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Moonlit Patrol Exercise",
+      "url": "https://genshin-impact.fandom.com/wiki/Moonlit_Patrol_Exercise",
+      "images": [
+        "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Moonlit_Patrol_Exercise.png"
+      ],
+      "rewards": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Primogem.png",
+          "caption": "Primogem",
+          "count": 420
+        }
+      ]
+    },
+    {
       "name": "Shutterflash Memory Hunt",
       "url": "https://genshin-impact.fandom.com/wiki/Shutterflash_Memory_Hunt",
       "images": [
@@ -338,9 +614,19 @@
       ]
     },
     {
+      "name": "Ley Line Overflow",
+      "url": "https://genshin-impact.fandom.com/wiki/Ley_Line_Overflow/2026-02-16",
+      "images": [
+        "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Ley_Line_Overflow.png"
+      ],
+      "rewards": []
+    },
+    {
       "name": "May Fortune Find You: Springs Premonition",
       "url": "https://genshin-impact.fandom.com/wiki/May_Fortune_Find_You/2026-01-16",
-      "images": [],
+      "images": [
+        "https://static.wikia.nocookie.net/gensin-impact/images/0/03/May_Fortune_Find_You_Spring%27s_Premonition_2026-01-16.png"
+      ],
       "rewards": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Primogem.png",
@@ -423,6 +709,14 @@
           "count": 5
         }
       ]
+    },
+    {
+      "name": "New Year's Gift",
+      "url": "https://genshin-impact.fandom.com/wiki/New_Year%27s_Gift",
+      "images": [
+        "https://static.wikia.nocookie.net/gensin-impact/images/0/07/New_Year%27s_Gift.png"
+      ],
+      "rewards": []
     }
   ],
   "newAreas": [
