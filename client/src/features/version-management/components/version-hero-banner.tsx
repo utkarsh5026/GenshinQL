@@ -11,7 +11,7 @@ export default function VersionHeroBanner() {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Background Image */}
-      <div className="relative h-[40vh] min-h-[320px] md:h-[60vh] md:min-h-[400px]">
+      <div className="relative h-[40vh] min-h-80 md:h-[60vh] md:min-h-100">
         {wallpaperUrl ? (
           <img
             src={wallpaperUrl}
@@ -33,7 +33,7 @@ export default function VersionHeroBanner() {
             {meta && (
               <Badge
                 variant="outline"
-                className="border-legendary-500/50 bg-legendary-950/40 px-3 py-1.5 text-sm font-semibold text-legendary-200 backdrop-blur-sm"
+                className="border-legendary-500/50 bg-legendary-950/40 px-3 py-1.5 text-sm font-semibold text-legendary-200 backdrop-blur-sm border-4"
               >
                 <Star className="mr-1.5 h-3.5 w-3.5 fill-legendary-400 text-legendary-400" />
                 Version {meta.version}
