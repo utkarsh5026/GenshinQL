@@ -16,6 +16,9 @@ export interface AsideData<T extends Record<string, unknown>> {
 
   /** Parsed section data keyed by section index as string ('0', '1', etc.) */
   sections: T;
+
+  /** Parsed pi-data items keyed by data-source attribute */
+  data: Record<string, unknown>;
 }
 
 /**
@@ -187,14 +190,47 @@ export async function mapElements<T>(
 }
 
 /**
+ * Extracts tab labels paired with their content elements from a tabbed container
+ * Used within section parsers to handle wds-tabber sections
+ * @param container - WebElement containing the wds-tabber (typically a section)
+ * @returns Array of tab label + content WebElement pairs
+ */
+export async function extractTabs(
+  container: WebElement
+): Promise<Array<{ label: string; content: WebElement }>> {
+  const tabItems = await container.findElements(
+    By.css('ul.wds-tabs > li.wds-tabs__tab')
+  );
+  const tabContents = await container.findElements(
+    By.css('div.wds-tab__content')
+  );
+
+  logger.info(
+    `Found ${tabItems.length} tabs and ${tabContents.length} tab contents`
+  );
+
+  return await mapElements(tabItems, async (tab, index) => {
+    const labelEl = await tab.findElement(By.css('div.wds-tabs__tab-label'));
+    const label = (await labelEl.getText()).trim();
+    const content = tabContents[index];
+    if (!content) return null;
+    return { label, content };
+  });
+}
+
+/**
  * Generic function to extract data from wiki page aside elements
- * Automatically extracts title (h2) and images (from figures), plus custom section data
+ * Automatically extracts title (h2) and images (from figures), plus custom section and pi-data
  */
 export async function extractAside<T extends Record<string, unknown>>(
   driver: WebDriver,
   sectionFunctionMap: Record<
     number,
     (section: WebElement) => Promise<unknown>
+  > = {},
+  divPiDataFunctionMap: Record<
+    string,
+    (div: WebElement) => Promise<unknown>
   > = {}
 ): Promise<AsideData<T>> {
   const aside = await driver.findElement(By.css('aside'));
@@ -226,18 +262,49 @@ export async function extractAside<T extends Record<string, unknown>>(
     logger.debug('No figures found in aside:', error);
   }
 
-  // Step 4: Find all sections in aside
+  // Extract div.pi-item.pi-data elements (direct children of aside only)
+  const data: Record<string, unknown> = {};
+  if (Object.keys(divPiDataFunctionMap).length > 0) {
+    try {
+      const piDataItems = await aside.findElements(
+        By.xpath(
+          './div[contains(@class, "pi-item") and contains(@class, "pi-data")]'
+        )
+      );
+      logger.info(`Found ${piDataItems.length} pi-data items in aside`);
+
+      for (const item of piDataItems) {
+        const dataSource = await item.getAttribute('data-source');
+        if (dataSource && divPiDataFunctionMap[dataSource]) {
+          try {
+            data[dataSource] = await divPiDataFunctionMap[dataSource](item);
+          } catch (error) {
+            logger.warn(`Failed to parse pi-data item "${dataSource}":`, error);
+            data[dataSource] = null;
+          }
+        }
+      }
+    } catch (error) {
+      logger.debug('No pi-data items found in aside:', error);
+    }
+  }
+
+  // Find top-level sections in aside (pi-group only, excludes nested sections)
   const sections: Record<string, unknown> = {};
   let allSections: WebElement[] = [];
 
   try {
-    allSections = await aside.findElements(By.css('section'));
+    allSections = await aside.findElements(
+      By.xpath(
+        './section[contains(@class, "pi-item") and contains(@class, "pi-group")]'
+      )
+    );
     logger.info(`Found ${allSections.length} sections in aside`);
   } catch (error) {
     logger.debug('No sections found in aside:', error);
   }
 
-  // Step 5: Process each section based on sectionFunctionMap
+  // Process each section based on sectionFunctionMap
   for (const [indexStr, parseFunction] of Object.entries(sectionFunctionMap)) {
     const index = parseInt(indexStr, 10);
 
@@ -261,6 +328,7 @@ export async function extractAside<T extends Record<string, unknown>>(
     title,
     images,
     sections: sections as T,
+    data,
   };
 }
 

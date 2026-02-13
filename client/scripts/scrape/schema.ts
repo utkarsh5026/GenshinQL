@@ -357,3 +357,25 @@ export const newAreaSchema = z.object({
 });
 
 export type NewArea = z.infer<typeof newAreaSchema>;
+
+// Quest type enumeration
+export const questTypeSchema = z.enum([
+  'Archon Quest',
+  'Story Quest',
+  'World Quest',
+]);
+
+// Quest schema for individual quest data
+export const newQuestSchema = z.object({
+  name: z.string(),
+  url: z.string().url(),
+  type: questTypeSchema,
+  questImage: z.string().optional(), // Primary quest image from aside
+  allImages: z.array(z.string()), // All images from aside figures
+  rewards: z.array(ascensionMaterialSchema), // Quest rewards (reusing existing schema)
+  parentQuestName: z.string().optional(), // For nested quests like "Song of the Welkin Moon"
+  actName: z.string().optional(), // For quests with acts like "Act VII"
+});
+
+export type QuestType = z.infer<typeof questTypeSchema>;
+export type NewQuest = z.infer<typeof newQuestSchema>;

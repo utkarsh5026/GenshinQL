@@ -9,7 +9,9 @@ import type {
   FeaturedCharacter,
   NewArea,
   NewEvent,
+  NewQuest,
   NewWeapon,
+  QuestType,
   SpiralAbyssUpdate,
   VersionArtifact,
 } from './schema.js';
@@ -191,7 +193,7 @@ async function scrapeNewArtifacts(
 
       const linkElements = await secondSib.value.findElements(By.css('li a'));
       return batchScrapeItems(
-        await extractLinks(linkElements),
+        await extractLinks(linkElements.reverse()),
         async (driver, link) => {
           const details = await scrapeArtifactDetails(driver, link.url);
           return details ? { ...details, showcaseImage } : null;
@@ -563,6 +565,115 @@ interface AreaLink {
 }
 
 /**
+ * Quest link structure for initial extraction with metadata
+ */
+interface QuestLink {
+  name: string;
+  url: string;
+  type: QuestType;
+  parentQuestName?: string; // e.g., "Song of the Welkin Moon"
+  actName?: string; // e.g., "Act VII"
+}
+
+/**
+ * Recursively extracts quest links from nested list structures
+ * Extracts only the deepest-level links (actual quests, not parent categories)
+ * @param listElement - The <ul> element to process
+ * @param questType - Type of quest (Archon, Story, World)
+ * @param parentQuestName - Name of parent quest series
+ * @param actName - Act name if applicable
+ * @returns Array of quest links from deepest level
+ */
+async function extractDeepestQuestLinks(
+  listElement: WebElement,
+  questType: QuestType,
+  parentQuestName: string | null,
+  actName: string | null
+): Promise<QuestLink[]> {
+  const questLinks: QuestLink[] = [];
+  const listItems = await listElement.findElements(By.xpath('./li'));
+
+  for (const listItem of listItems) {
+    try {
+      const itemText = await listItem.getText();
+
+      // Check if this item has a nested list (not a leaf node)
+      let nestedList: WebElement | null = null;
+      try {
+        nestedList = await listItem.findElement(By.xpath('./ul[1]'));
+      } catch {
+        // No nested list - this is a leaf node
+      }
+
+      if (nestedList) {
+        // This is a parent node - extract its name and recurse
+        let currentParentName = parentQuestName;
+        let currentActName = actName;
+
+        // Try to find the first link (parent quest name)
+        try {
+          const firstLink = await listItem.findElement(By.xpath('./a[1]'));
+          currentParentName = (await firstLink.getText()).trim();
+        } catch {
+          // No direct link - might have act text
+          const actMatch = itemText.match(/^(Act [IVX]+)\s*-/);
+          if (actMatch) {
+            currentActName = actMatch[1];
+          }
+        }
+
+        // Recurse into nested list
+        const nestedLinks = await extractDeepestQuestLinks(
+          nestedList,
+          questType,
+          currentParentName,
+          currentActName
+        );
+        questLinks.push(...nestedLinks);
+      } else {
+        // This is a leaf node - extract the quest link
+
+        // Skip items that are just descriptive text (no link)
+        let questLink: WebElement;
+        try {
+          questLink = await listItem.findElement(By.css('a'));
+        } catch {
+          logger.debug(`Skipping non-link item: ${itemText}`);
+          continue;
+        }
+
+        const name = (await questLink.getText()).trim();
+        let href = await questLink.getAttribute('href');
+        if (!href.startsWith('http')) {
+          href = `${URL}${href}`;
+        }
+
+        // Extract act name from item text if present
+        let finalActName = actName;
+        const actMatch = itemText.match(/^(Act [IVX]+)\s*-/);
+        if (actMatch) {
+          finalActName = actMatch[1];
+        }
+
+        if (name && href) {
+          questLinks.push({
+            name,
+            url: href,
+            type: questType,
+            parentQuestName: parentQuestName || undefined,
+            actName: finalActName || undefined,
+          });
+        }
+      }
+    } catch (error) {
+      logger.warn('Failed to process quest list item:', error);
+    }
+  }
+
+  return questLinks;
+}
+
+/**
  * Extracts area links from "New Areas" section
  * Skips nation-level <li> and extracts nested area <li> elements
  * @param driver - Selenium WebDriver instance
@@ -601,6 +712,56 @@ async function extractAreaLinks(driver: WebDriver): Promise<AreaLink[]> {
     return areaLinks;
   } catch (error) {
     logger.error('Failed to extract area links:', error);
+    return [];
+  }
+}
+
+/**
+ * Extracts quest links from "New Quests" section
+ * Handles nested structures and extracts deepest-level quest links
+ * @param driver - Selenium WebDriver instance
+ * @returns Array of quest links with type and parent quest information
+ */
+async function extractQuestLinks(driver: WebDriver): Promise<QuestLink[]> {
+  try {
+    const newQuestsElement = await getNextElementByDtText(driver, 'New Quests');
+
+    const questTypeItems = await newQuestsElement.findElements(
+      By.xpath('.//ul[1]/li')
+    );
+
+    const questLinks: QuestLink[] = [];
+
+    for (const typeItem of questTypeItems) {
+      try {
+        const typeLink = await typeItem.findElement(By.css('a'));
+        const questType = (await typeLink.getText()).trim() as QuestType;
+
+        let nestedList: WebElement | null = null;
+        try {
+          nestedList = await typeItem.findElement(By.xpath('./ul[1]'));
+        } catch {
+          logger.info(`No new quests for type: ${questType}`);
+          continue;
+        }
+
+        const links = await extractDeepestQuestLinks(
+          nestedList,
+          questType,
+          null,
+          null
+        );
+
+        questLinks.push(...links);
+      } catch (error) {
+        logger.warn('Failed to extract quests from type item:', error);
+      }
+    }
+
+    logger.info(`Found ${questLinks.length} total new quests`);
+    return questLinks;
+  } catch (error) {
+    logger.error('Failed to extract quest links:', error);
     return [];
   }
 }
@@ -830,6 +991,116 @@ async function scrapeSpiralAbyss(
 }
 
 /**
+ * Main quest scraper with concurrent batch processing
+ * @param driver - Selenium WebDriver instance
+ * @returns Array of scraped quest data
+ */
+async function scrapeNewQuests(driver: WebDriver): Promise<NewQuest[]> {
+  /**
+   * Scrapes a single quest page to extract quest data
+   */
+  const scrapeSingleQuest = async (
+    driver: WebDriver,
+    questLink: QuestLink
+  ): Promise<NewQuest | null> => {
+    /**
+     * Extract quest rewards using parseMaterialCards
+     * Similar to event rewards extraction pattern
+     */
+    const extractQuestRewards = async () => {
+      return await safeExecute(
+        async () => {
+          // Try multiple reward section headings
+          const rewardXpaths = [
+            '//h2[span[@id="Rewards"]]/following-sibling::span[contains(@class, "card-list-container")][1]',
+            '//h2[span[@id="Total_Rewards"]]/following-sibling::span[contains(@class, "card-list-container")][1]',
+            '//h3[span[@id="Rewards"]]/following-sibling::span[contains(@class, "card-list-container")][1]',
+          ];
+
+          for (const xpath of rewardXpaths) {
+            try {
+              await waitForElementXpath(driver, xpath, 5000);
+              return parseMaterialCards(
+                await driver.findElement(By.xpath(xpath))
+              );
+            } catch {
+              // Try next xpath
+            }
+          }
+
+          return [];
+        },
+        'Failed to extract quest rewards (quest may have no rewards)',
+        []
+      );
+    };
+
+    /**
+     * Extract quest images from aside
+     */
+    const extractQuestImages = async (): Promise<string[]> => {
+      return await safeExecute(
+        async () => {
+          const { images } = await extractAside(driver, {});
+          return images;
+        },
+        'Failed to extract quest images (quest may have no images)',
+        []
+      );
+    };
+
+    try {
+      await driver.get(questLink.url);
+      logger.info(`Scraping quest: ${questLink.name} (${questLink.type})`);
+
+      await driver.wait(
+        until.elementLocated(By.css('aside')),
+        TIME_TO_WAIT_FOR_ELEMENT_MS
+      );
+
+      // Extract quest data in parallel
+      const [images, rewards] = await Promise.all([
+        extractQuestImages(),
+        extractQuestRewards(),
+      ]);
+
+      return {
+        name: questLink.name,
+        url: questLink.url,
+        type: questLink.type,
+        questImage: images.length > 0 ? images[0] : undefined,
+        allImages: images,
+        rewards,
+        parentQuestName: questLink.parentQuestName,
+        actName: questLink.actName,
+      };
+    } catch (error) {
+      logger.error(`Failed to scrape quest ${questLink.name}:`, error);
+      return null;
+    }
+  };
+
+  try {
+    const questLinks = await extractQuestLinks(driver);
+
+    if (questLinks.length === 0) {
+      logger.warn('No new quests found');
+      return [];
+    }
+
+    return await batchScrapeItems(
+      questLinks,
+      scrapeSingleQuest,
+      6, // Batch size - moderate concurrency
+      'new quests'
+    );
+  } catch (error) {
+    logger.error('Failed to scrape new quests:', error);
+    return [];
+  }
+}
+
+/**
  * Main scraping function
  */
 async function scrapeVersionData(driver: WebDriver) {
@@ -845,6 +1116,7 @@ async function scrapeVersionData(driver: WebDriver) {
       newEvents: await scrapeNewEvents(driver),
       newAreas: await scrapeNewAreas(driver),
       spiralAbyss: await scrapeSpiralAbyss(driver),
+      newQuests: await scrapeNewQuests(driver),
       gallery: await scrapeVersionGallery(driver),
     },
     versionDir,

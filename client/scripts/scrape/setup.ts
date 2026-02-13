@@ -87,6 +87,19 @@ export async function setupDriver(
     .setChromeService(service)
     .build();
 
+  // Set global timeouts for the driver
+  logger.debug('   Configuring timeouts...');
+  await driver.manage().setTimeouts({
+    // Maximum time to wait for a page to load (5 minutes for slow pages)
+    pageLoad: 300000,
+    // Maximum time for executeScript/executeAsyncScript to complete
+    script: 60000,
+    // Implicit wait time when locating elements (0 recommended, use explicit waits instead)
+    implicit: 0,
+  });
+  logger.cyan('   ↳ Page load timeout: 5 minutes');
+  logger.cyan('   ↳ Script timeout: 60 seconds');
+
   // Enhanced anti-detection JavaScript
   await driver.executeScript(`
     // Override webdriver property
@@ -136,7 +149,7 @@ export async function withWebDriver<T = void>(
 export function waitForElementCss(
   driver: WebDriver,
   css: string,
-  timeout = 40000
+  timeout = 60000 // Increased to 60 seconds
 ) {
   return driver.wait(until.elementLocated(By.css(css)), timeout);
 }
@@ -144,7 +157,7 @@ export function waitForElementCss(
 export function waitForElementXpath(
   driver: WebDriver,
   xpath: string,
-  timeout = 10000
+  timeout = 60000 // Increased to 60 seconds
 ) {
   return driver.wait(until.elementLocated(By.xpath(xpath)), timeout);
 }
@@ -155,7 +168,7 @@ export function waitForElementXpath(
  */
 export async function waitForPageLoad(
   driver: WebDriver,
-  timeout = 30000
+  timeout = 60000 // Increased to 60 seconds
 ): Promise<void> {
   await driver.wait(
     async () => {

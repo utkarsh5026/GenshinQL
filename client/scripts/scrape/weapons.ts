@@ -778,8 +778,6 @@ async function main() {
 
   const scrapeWeaponsBase = async (driver: WebDriver) => {
     const tempLocations: Array<[WeaponType, string]> = [];
-    let totalWeapons = 0;
-
     const scrapeWeaponType = async (weapon: WeaponType) => {
       const data = await scrapeWeaponsTable(driver, weapon);
 
@@ -788,37 +786,29 @@ async function main() {
         return;
       }
 
-      totalWeapons += data.length;
       const tempLoc = await saveToTemp(data, `weapon-${weapon}`);
       tempLocations.push([weapon, tempLoc]);
       logger.debug(`  ↳ Saved to temp: ${tempLoc}`);
     };
 
     logger.info(`🔄 Scraping ${WEAPON_TYPES.length} weapon types...\n`);
-    for (let i = 0; i < WEAPON_TYPES.length; i++) {
-      const wepType = WEAPON_TYPES[i];
-      logger.cyan(`[${i + 1}/${WEAPON_TYPES.length}] ${wepType}`);
-      await scrapeWeaponType(wepType);
-    }
+    await Promise.allSettled(WEAPON_TYPES.map(scrapeWeaponType));
 
-    logger.info(`\n📦 Merging ${tempLocations.length} weapon type files...`);
     const weapons: Record<string, BaseWeaponType[]> = {};
-    for (const [weaponType, location] of tempLocations) {
-      const schema = await loadJsonData<BaseWeaponType[]>(location);
-      if (!schema) continue;
-      weapons[weaponType] = schema;
-      logger.debug(`  ↳ Loaded ${schema.length} ${weaponType} weapons`);
-    }
+    await Promise.allSettled(
+      tempLocations.map(async ([weaponType, loc]) => {
+        const schema = await loadJsonData<BaseWeaponType[]>(loc);
+        if (!schema) {
+          logger.error(`Failed to load data for ${weaponType} from ${loc}`);
+          return;
+        }
+        weapons[weaponType] = schema;
+        logger.debug(`Loaded ${schema.length} ${weaponType} weapons`);
+      })
+    );
 
     await saveToPublic(weapons, WEAPON_FILE_NAME);
-    logger.success(`💾 Saved to public/${WEAPON_FILE_NAME}.json`);
-
     await cleanupTempFiles();
-    logger.debug('🧹 Cleaned up temporary files');
-
-    logger.success(
-      `\n✨ Base scraping complete! Total weapons: ${totalWeapons}\n`
-    );
   };
 
   const saveWeaponsDetailed = async () => {
