@@ -2,6 +2,7 @@ import path from 'path';
 import { By, until, WebDriver, WebElement } from 'selenium-webdriver';
 
 import { logger } from '../logger.js';
+import { scrapeArtifactDetails } from './artifacts.js';
 import { PUBLIC_DIR, saveJson } from './fileio.js';
 import type {
   EventWish,
@@ -10,16 +11,20 @@ import type {
   NewEvent,
   NewWeapon,
   SpiralAbyssUpdate,
+  VersionArtifact,
 } from './schema.js';
 import {
   extractAside,
-  extractGalleryImages,
   getImageUrl,
   parseMaterialCards,
   safeExecute,
 } from './scraping-helpers.ts';
 import { URL, waitForElementXpath, withWebDriver } from './setup.js';
-import { getTableFromHeading, launchDriverInBatchSafe } from './utils.js';
+import {
+  getImagesFromHeading,
+  getTableFromHeading,
+  launchDriverInBatchSafe,
+} from './utils.js';
 
 const TIME_TO_WAIT_FOR_ELEMENT_MS = 10000;
 
@@ -185,6 +190,78 @@ async function scrapeNewWeapons(driver: WebDriver): Promise<NewWeapon[]> {
     logger.error('Failed to scrape new weapons:', error);
     return [];
   }
+}
+
+/**
+ * Scrapes new artifacts from the version page
+ * Extracts showcase image and artifact links, then scrapes each artifact page
+ * @param driver - Selenium WebDriver instance
+ * @returns Array of version artifact data with showcase image
+ */
+async function scrapeNewArtifacts(
+  driver: WebDriver
+): Promise<VersionArtifact[]> {
+  return await safeExecute(
+    async () => {
+      // Get first sibling (gallery with showcase image)
+      const firstNextSibling = await getNextElementByDtText(
+        driver,
+        'New Artifacts'
+      );
+
+      // Extract showcase image from gallery
+      let showcaseImage = '';
+      try {
+        const img = await firstNextSibling.findElement(By.css('img'));
+        showcaseImage = await getImageUrl(img, 'data-src');
+      } catch (error) {
+        logger.warn('Failed to extract artifact showcase image:', error);
+      }
+
+      // Get second sibling (artifact links list)
+      const secondNextSibling = await driver.executeScript<WebElement>(
+        'return arguments[0].nextElementSibling;',
+        firstNextSibling
+      );
+
+      if (!secondNextSibling) {
+        logger.warn('Could not find artifact list element');
+        return [];
+      }
+
+      // Extract artifact links
+      const artifactLinkElements = await secondNextSibling.findElements(
+        By.css('li a')
+      );
+      const artifactLinks = await extractLinks(artifactLinkElements);
+
+      logger.info(`Found ${artifactLinks.length} new artifacts`);
+
+      if (artifactLinks.length === 0) {
+        return [];
+      }
+
+      // Batch scrape artifact details
+      const artifactDetails = await batchScrapeItems(
+        artifactLinks,
+        async (driver, link) => {
+          const details = await scrapeArtifactDetails(driver, link.url);
+          if (!details) return null;
+
+          return {
+            ...details,
+            showcaseImage,
+          };
+        },
+        6,
+        'new artifacts'
+      );
+
+      return artifactDetails;
+    },
+    'Failed to scrape new artifacts (section may not exist)',
+    []
+  );
 }
 
 // ============================================================================
@@ -658,7 +735,8 @@ async function scrapeSingleArea(
   const extractGalleryImagesForArea = async (): Promise<string[]> => {
     return await safeExecute(
       async () => {
-        return await extractGalleryImages(driver);
+        const images = await getImagesFromHeading(driver, 'Gallery', 'h2');
+        return images.map((img) => img.url);
       },
       'Failed to extract gallery images (area may have no gallery)',
       []
@@ -715,6 +793,23 @@ async function scrapeNewAreas(driver: WebDriver): Promise<NewArea[]> {
       );
     },
     'Failed to scrape new areas (section may not exist)',
+    []
+  );
+}
+
+/**
+ * Scrapes gallery images from the version page
+ * @param driver - Selenium WebDriver instance
+ * @returns Array of gallery images with URLs and captions
+ */
+async function scrapeVersionGallery(driver: WebDriver) {
+  return await safeExecute(
+    async () => {
+      const images = await getImagesFromHeading(driver, 'Gallery', 'h2');
+      logger.info(`Found ${images.length} gallery images`);
+      return images;
+    },
+    'Failed to scrape version gallery (section may not exist)',
     []
   );
 }
@@ -861,17 +956,21 @@ async function scrapeVersionData(driver: WebDriver) {
   const [
     newCharacters,
     newWeapons,
+    newArtifacts,
     eventWishes,
     newEvents,
     newAreas,
     spiralAbyss,
+    gallery,
   ] = await Promise.all([
     scrapeNewCharacters(driver),
     scrapeNewWeapons(driver),
+    scrapeNewArtifacts(driver),
     scrapeEventWishes(driver),
     scrapeNewEvents(driver),
     scrapeNewAreas(driver),
     scrapeSpiralAbyss(driver),
+    scrapeVersionGallery(driver),
   ]);
 
   // Save combined data
@@ -880,10 +979,12 @@ async function scrapeVersionData(driver: WebDriver) {
     {
       newCharacters,
       newWeapons,
+      newArtifacts,
       eventWishes,
       newEvents,
       newAreas,
       spiralAbyss,
+      gallery,
     },
     versionDir,
     'latest.json'
@@ -891,12 +992,14 @@ async function scrapeVersionData(driver: WebDriver) {
 
   logger.success(`✅ Scraped ${newCharacters.length} new characters`);
   logger.success(`✅ Scraped ${newWeapons.length} new weapons`);
+  logger.success(`✅ Scraped ${newArtifacts.length} new artifacts`);
   logger.success(`✅ Scraped ${eventWishes.length} event wishes`);
   logger.success(`✅ Scraped ${newEvents.length} new events`);
   logger.success(`✅ Scraped ${newAreas.length} new areas`);
   logger.success(
     `✅ Scraped Spiral Abyss data (${spiralAbyss?.phases.length ?? 0} phases)`
   );
+  logger.success(`✅ Scraped ${gallery.length} gallery images`);
 }
 
 /**

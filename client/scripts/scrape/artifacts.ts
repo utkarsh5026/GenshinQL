@@ -152,7 +152,7 @@ async function extractSetBonuses(
 /**
  * Scrapes detailed information for a single artifact set
  */
-async function scrapeArtifactDetails(
+export async function scrapeArtifactDetails(
   driver: WebDriver,
   artifactUrl: string
 ): Promise<ArtifactSet | null> {

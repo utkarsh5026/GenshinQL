@@ -294,6 +294,11 @@ export const newWeaponSchema = z.object({
   showcaseImage: z.string(),
 });
 
+// Version Artifact schema (extends artifact set with showcase image)
+export const versionArtifactSchema = artifactSetSchema.extend({
+  showcaseImage: z.string(),
+});
+
 // Event Reward item (extracted from card containers)
 export const eventRewardSchema = z.object({
   name: z.string(),
@@ -317,6 +322,7 @@ export type ImaginariamTheaterSeason = z.infer<
 export type FeaturedCharacter = z.infer<typeof featuredCharacterSchema>;
 export type EventWish = z.infer<typeof eventWishSchema>;
 export type NewWeapon = z.infer<typeof newWeaponSchema>;
+export type VersionArtifact = z.infer<typeof versionArtifactSchema>;
 export type EventReward = z.infer<typeof eventRewardSchema>;
 export type NewEvent = z.infer<typeof newEventSchema>;
 
