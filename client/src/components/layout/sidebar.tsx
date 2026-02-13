@@ -3,9 +3,9 @@ import {
   Clock,
   Gamepad2,
   Grid3x3,
-  History,
   Home,
   Link2,
+  Sparkles,
   Star,
   Swords,
   Target,
@@ -106,14 +106,18 @@ const navItems: NavItem[] = [
     color: 'epic',
     iconColor: 'oklch(60% 0.24 290)', // epic-500
   },
-  {
-    route: '/version',
-    label: 'Version History',
-    icon: History,
-    color: 'amber',
-    iconColor: 'oklch(68% 0.20 45)', // amber-500
-  },
 ];
+
+const versionItem: NavItem = {
+  route: '/version',
+  label: 'LUNA IV',
+  icon: Sparkles,
+  color: 'celestial',
+  iconColor: 'oklch(80% 0.18 70)', // warm gold
+};
+
+const VERSION_IMAGE_URL =
+  'https://static.wikia.nocookie.net/gensin-impact/images/8/86/Version_Luna_IV_Wallpaper_2.png';
 
 interface NavItemComponentProps {
   item: NavItem;
@@ -172,6 +176,94 @@ const NavItemComponent: React.FC<NavItemComponentProps> = ({
         <TooltipTrigger asChild>{navContent}</TooltipTrigger>
         <TooltipContent side="right" className="font-medium">
           {item.label}
+        </TooltipContent>
+      </Tooltip>
+    );
+  }
+
+  return navContent;
+};
+
+interface VersionNavItemProps {
+  item: NavItem;
+  isActive: boolean;
+  showLabel: boolean;
+  showLabelOnHover?: boolean;
+  showTooltip: boolean;
+  onClick?: () => void;
+}
+
+const VersionNavItem: React.FC<VersionNavItemProps> = ({
+  item,
+  isActive,
+  showLabel,
+  showLabelOnHover = false,
+  showTooltip,
+  onClick,
+}) => {
+  const goldColor = item.iconColor;
+
+  const navContent = (
+    <NavLink
+      to={item.route}
+      onClick={onClick}
+      className={`
+        relative flex items-center gap-3
+        px-3 py-2.5 rounded-lg mx-2 my-1
+        transition-all duration-300
+        group/version cursor-pointer
+        border
+        ${isActive ? 'border-amber-500/40' : 'border-amber-500/20 hover:border-amber-500/40'}
+      `}
+      style={{
+        background: isActive
+          ? `linear-gradient(135deg, ${goldColor}25, ${goldColor}10)`
+          : `linear-gradient(135deg, ${goldColor}0a, ${goldColor}05)`,
+        color: isActive ? goldColor : undefined,
+        boxShadow: isActive
+          ? `0 0 12px ${goldColor}20, inset 0 1px 0 ${goldColor}15`
+          : undefined,
+      }}
+    >
+      <Avatar
+        className={`w-7 h-7 shrink-0 transition-all duration-300 ${
+          isActive ? 'ring-2 ring-amber-500/60' : 'ring-1 ring-amber-500/30'
+        }`}
+        style={{
+          boxShadow: isActive ? `0 0 8px ${goldColor}40` : undefined,
+        }}
+      >
+        <AvatarImage
+          src={VERSION_IMAGE_URL}
+          alt={item.label}
+          className="object-cover"
+          style={{
+            filter: isActive ? `brightness(1.1)` : 'brightness(0.95)',
+          }}
+        />
+        <AvatarFallback className="text-xs bg-gradient-to-br from-amber-500/20 to-amber-600/10">
+          {item.label.slice(0, 2)}
+        </AvatarFallback>
+      </Avatar>
+      {(showLabel || showLabelOnHover) && (
+        <span
+          className={`text-sm font-semibold tracking-wide whitespace-nowrap transition-opacity duration-300 ${
+            showLabelOnHover ? 'opacity-0' : ''
+          }`}
+          style={{ color: goldColor }}
+        >
+          {item.label}
+        </span>
+      )}
+    </NavLink>
+  );
+
+  if (showTooltip && !showLabel) {
+    return (
+      <Tooltip delayDuration={200}>
+        <TooltipTrigger asChild>{navContent}</TooltipTrigger>
+        <TooltipContent side="right" className="font-semibold">
+          <span style={{ color: goldColor }}>{item.label}</span>
         </TooltipContent>
       </Tooltip>
     );
@@ -337,7 +429,26 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
       {/* Navigation Items */}
       <nav className="flex-1 py-4 overflow-y-auto">
         <TooltipProvider>
-          {navItems.map((item) => (
+          {/* Home */}
+          <NavItemComponent
+            item={navItems[0]}
+            isActive={isRouteActive(navItems[0].route)}
+            showLabel={false}
+            showLabelOnHover={true}
+            showTooltip={true}
+          />
+
+          {/* LUNA IV — highlighted version link */}
+          <VersionNavItem
+            item={versionItem}
+            isActive={isRouteActive(versionItem.route)}
+            showLabel={false}
+            showLabelOnHover={true}
+            showTooltip={true}
+          />
+
+          {/* Remaining nav items */}
+          {navItems.slice(1).map((item) => (
             <NavItemComponent
               key={item.route}
               item={item}
@@ -385,7 +496,26 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
       <SheetContent side="left" className="w-72 p-0">
         {/* Navigation Items */}
         <nav className="py-4">
-          {navItems.map((item) => (
+          {/* Home */}
+          <NavItemComponent
+            item={navItems[0]}
+            isActive={isRouteActive(navItems[0].route)}
+            showLabel={true}
+            showTooltip={false}
+            onClick={() => onOpenChange(false)}
+          />
+
+          {/* LUNA IV — highlighted version link */}
+          <VersionNavItem
+            item={versionItem}
+            isActive={isRouteActive(versionItem.route)}
+            showLabel={true}
+            showTooltip={false}
+            onClick={() => onOpenChange(false)}
+          />
+
+          {/* Remaining nav items */}
+          {navItems.slice(1).map((item) => (
             <NavItemComponent
               key={item.route}
               item={item}
