@@ -10,6 +10,7 @@ export {
   GRID_CONFIG,
   PEEK_CONFIG,
   preloadStickers,
+  shuffleArray,
   TIME_ATTACK_LIMITS,
   TIME_BONUS_PER_SECOND,
 } from './stickerService';

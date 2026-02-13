@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import {
@@ -12,9 +12,32 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import GlobalSearchContent from './global-search-content';
 import GlobalSearchTrigger from './global-search-trigger';
 
-const GlobalSearch: React.FC = () => {
-  const [open, setOpen] = useState(false);
+interface GlobalSearchProps {
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  showFloatingTrigger?: boolean;
+}
+
+const GlobalSearch: React.FC<GlobalSearchProps> = ({
+  open: controlledOpen,
+  onOpenChange: controlledOnOpenChange,
+  showFloatingTrigger = true,
+}) => {
+  const [internalOpen, setInternalOpen] = useState(false);
   const isMobile = useIsMobile();
+
+  const open = controlledOpen !== undefined ? controlledOpen : internalOpen;
+  const setOpen = useCallback(
+    (value: boolean | ((prev: boolean) => boolean)) => {
+      if (controlledOnOpenChange !== undefined) {
+        const newValue = typeof value === 'function' ? value(open) : value;
+        controlledOnOpenChange(newValue);
+      } else {
+        setInternalOpen(value);
+      }
+    },
+    [controlledOnOpenChange, open]
+  );
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -31,14 +54,16 @@ const GlobalSearch: React.FC = () => {
     window.addEventListener('keydown', handleKeyDown, { capture: true });
     return () =>
       window.removeEventListener('keydown', handleKeyDown, { capture: true });
-  }, []);
+  }, [setOpen]);
 
   const handleClose = () => setOpen(false);
 
   return (
     <>
-      {/* Mobile trigger button */}
-      <GlobalSearchTrigger onClick={() => setOpen(true)} />
+      {/* Mobile trigger button - only show if not controlled or explicitly requested */}
+      {showFloatingTrigger && (
+        <GlobalSearchTrigger onClick={() => setOpen(true)} />
+      )}
 
       {/* Desktop: Dialog */}
       {!isMobile && (
