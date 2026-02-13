@@ -56,11 +56,11 @@ export function enrichTrackedCharacters(
         .map((name) => weaponMap[name])
         .filter((w) => w !== undefined);
 
-      return {
+      const enriched: EnrichedCharacter = {
         // Core character data
         name: character.name,
         iconUrl: character.iconUrl,
-        rarity: character.rarity,
+        rarity: parseInt(character.rarity, 10),
         weaponType: character.weaponType,
 
         // Tracking context
@@ -78,6 +78,8 @@ export function enrichTrackedCharacters(
         reasonBadgeClass: REASON_COLORS[tracked.reason],
         reasonLabel: REASON_LABELS[tracked.reason],
       };
+
+      return enriched;
     })
     .filter((char): char is EnrichedCharacter => char !== null);
 }

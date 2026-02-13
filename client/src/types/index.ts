@@ -81,6 +81,8 @@ export interface MemoryTile {
   sticker: GameSticker;
   isFlipped: boolean;
   isMatched: boolean;
+  isBomb?: boolean;
+  bombTriggered?: boolean;
 }
 
 export interface MemoryGameStats {
@@ -91,12 +93,53 @@ export interface MemoryGameStats {
   characterMatches: number;
   startTime: number | null;
   endTime: number | null;
+  comboBonus: number;
+  timeBonus: number;
+  bombPenalty: number;
+  maxCombo: number;
+  lastMatchTime: number | null;
 }
 
-export type GameDifficulty = 'easy' | 'medium' | 'hard';
-export type GameStatus = 'idle' | 'playing' | 'won';
+export type GameDifficulty =
+  | 'easy'
+  | 'medium'
+  | 'hard'
+  | 'expert_wide'
+  | 'expert_square';
+export type GameStatus = 'idle' | 'peeking' | 'playing' | 'won' | 'lost';
+export type GameMode = 'classic' | 'time_attack' | 'bomb_mode';
 
-export type { WeaponProfile as WeaponDetailedType } from '@/features/weapons/types';
+export interface ScoreEvent {
+  id: string;
+  type: 'match' | 'combo' | 'bomb' | 'time_bonus';
+  points: number;
+  position: { x: number; y: number };
+  timestamp: number;
+  comboLevel?: number;
+  characterName?: string;
+}
+
+export interface DifficultyConfig {
+  cols: number;
+  rows: number;
+  pairs: number;
+  bombCount: number;
+}
+
+export interface PeekConfig {
+  duration: number;
+  theme: string;
+}
+
+export interface ComboConfig {
+  windowMs: number;
+  multipliers: number[];
+}
+
+export type {
+  WeaponSummary as Weapon,
+  WeaponProfile as WeaponDetailedType,
+} from '@/features/weapons/types';
 
 // Calendar types re-exported for convenience
 export type {

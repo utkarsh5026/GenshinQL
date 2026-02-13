@@ -21,29 +21,11 @@ const ElementalBurstShowcase: React.FC<ElementalBurstShowcaseProps> = ({
   elementColor,
   onNavigate,
 }) => {
-  const { elementalBurst, loading } = useCharacterTalents(character);
+  const { elementalBurst } = useCharacterTalents(character);
   if (!elementalBurst) return null;
 
   const { talent, animations, energyCost, cooldown } = elementalBurst;
   const currentAnimation = animations[0];
-
-  if (loading) {
-    return (
-      <div
-        className="rounded-xl overflow-hidden border transition-all duration-300"
-        style={{
-          borderColor: `${elementColor}40`,
-          boxShadow: `0 4px 20px ${elementColor}15`,
-        }}
-      >
-        <div className="aspect-video bg-midnight-900/50 animate-pulse flex items-center justify-center">
-          <p className="text-sm text-muted-foreground">
-            Loading burst details...
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div

@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
 import { ItemNavigation } from '@/components/utils';
+import { fetchWeaponProfile } from '@/features/weapons/services';
 import { useWeapons } from '@/features/weapons/stores/useWeaponsStore';
 import { getRarityHexColor } from '@/features/weapons/utils/color-map';
-import { fetchWeaponDetailed } from '@/services/dataService';
 import type { WeaponDetailedType } from '@/types';
 
 import WeaponDescription from './weapon-description';
@@ -25,7 +25,7 @@ const WeaponDetail = () => {
 
       // Transform URL param to filename: "Skyward Blade" → "Skyward_Blade"
       const fileName = weaponName.split(' ').join('_');
-      const weaponData = await fetchWeaponDetailed(fileName);
+      const weaponData = await fetchWeaponProfile(fileName);
 
       if (weaponData) {
         setWeapon(weaponData);

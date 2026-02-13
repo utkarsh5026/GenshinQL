@@ -371,8 +371,7 @@ export const useTrackerStore = create<TrackerState>()(
       {
         name: 'genshinql-tracker',
         // Migration logic for old data
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        migrate: (persistedState: unknown, version: number) => {
+        migrate: (persistedState: unknown) => {
           const state = persistedState as TrackerState;
 
           // Migrate pairedWeapon to pairedWeapons array
