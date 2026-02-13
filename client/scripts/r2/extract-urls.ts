@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 import { logger } from '../logger.js';
-import { PATHS } from './config.js';
+import { resolvePath } from './path-resolver.js';
 import { isValidUrl, isWikiaUrl } from './utils.js';
 
 /**
@@ -45,11 +45,14 @@ export function extractUrlsFromObject(
 }
 
 /**
- * Extract URLs from all character JSON files
+ * Extract URLs from JSON files at the specified path
  *
- * @returns Set of unique URLs from all character files
+ * @param targetPath - Relative path from public/ (defaults to 'characters')
+ * @returns Set of unique URLs from all JSON files
  */
-export async function extractAllUrls(): Promise<Set<string>> {
+export async function extractAllUrls(
+  targetPath?: string
+): Promise<Set<string>> {
   const allUrls = new Set<string>();
   let processed = 0;
 
@@ -68,8 +71,7 @@ export async function extractAllUrls(): Promise<Set<string>> {
   };
 
   const processJsonFiles = async (jsonFiles: string[]) => {
-    for (const file of jsonFiles) {
-      const filePath = path.join(PATHS.charactersDir, file);
+    for (const filePath of jsonFiles) {
       const urls = await extractUrlsFromFile(filePath);
 
       for (const url of urls) {
@@ -84,13 +86,28 @@ export async function extractAllUrls(): Promise<Set<string>> {
   };
 
   try {
-    const files = await fs.readdir(PATHS.charactersDir);
-    const jsonFiles = files.filter((file) => file.endsWith('.json'));
+    // Resolve target path (defaults to 'characters')
+    const resolved = await resolvePath(targetPath);
 
-    logger.info(`Found ${jsonFiles.length} character JSON files`);
+    logger.info(
+      resolved.isDirectory
+        ? `Scanning directory: ${resolved.relativePath}`
+        : `Scanning file: ${resolved.relativePath}`
+    );
+
+    const jsonFiles = resolved.jsonFiles;
+
+    if (jsonFiles.length === 0) {
+      logger.warn('No JSON files found in target path');
+      return allUrls;
+    }
+
+    logger.info(
+      `Found ${jsonFiles.length} JSON file${jsonFiles.length === 1 ? '' : 's'}`
+    );
     await processJsonFiles(jsonFiles);
     logger.success(
-      `Extracted ${allUrls.size} unique URLs from ${jsonFiles.length} files`
+      `Extracted ${allUrls.size} unique URL${allUrls.size === 1 ? '' : 's'} from ${jsonFiles.length} file${jsonFiles.length === 1 ? '' : 's'}`
     );
   } catch (error) {
     logger.error('Error extracting URLs:', error);

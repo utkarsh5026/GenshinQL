@@ -25,6 +25,9 @@ export const R2_CONFIG = {
  * Paths configuration
  */
 export const PATHS = {
+  // Base public directory for path resolution
+  publicDir: path.resolve(__dirname, '../../public'),
+
   // Character JSON files directory
   charactersDir: path.resolve(__dirname, '../../public/characters'),
 
@@ -39,6 +42,9 @@ export const PATHS = {
 
   // Root scripts directory
   scriptsDir: path.resolve(__dirname, '..'),
+
+  // Local assets directory (flat structure in public)
+  assetsDir: path.resolve(__dirname, '../../public/assets'),
 } as const;
 
 /**

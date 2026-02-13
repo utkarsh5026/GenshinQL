@@ -36,7 +36,7 @@ import {
 } from './mapping.js';
 import { showStatus } from './status.js';
 import { syncMappingWithR2 } from './sync.js';
-import { restoreFromBackup, updateCharacterJsons } from './update-json.js';
+import { restoreFromBackup, updateJsonFiles } from './update-json.js';
 import { retryFailedUploads, uploadAssets, verifyUploads } from './upload.js';
 import { hashUrl } from './utils.ts';
 
@@ -63,30 +63,45 @@ async function checkInternetConnection(): Promise<boolean> {
 /**
  * Run full migration process
  */
-async function runFullMigration(): Promise<void> {
+async function runFullMigration(
+  targetPath?: string,
+  useLocalAssets: boolean = false
+): Promise<void> {
   console.log(chalk.bold.cyan('\n╔══════════════════════════════════════╗'));
   console.log(chalk.bold.cyan('║     R2 Full Migration Process        ║'));
   console.log(chalk.bold.cyan('╚══════════════════════════════════════╝\n'));
 
+  if (targetPath) {
+    console.log(chalk.cyan(`📂 Target Path: ${targetPath}\n`));
+  }
+
   try {
     console.log(chalk.bold('\n📥 Step 1/3: Download Assets\n'));
-    const urls = await extractAllUrls();
-    await downloadAssets(urls);
+    const urls = await extractAllUrls(targetPath);
+    await downloadAssets(urls, useLocalAssets);
 
-    // Step 2: Upload to R2
-    console.log(chalk.bold('\n☁️  Step 2/3: Upload to R2\n'));
-    await uploadAssets();
+    if (!useLocalAssets) {
+      // Step 2: Upload to R2 (skip for local mode)
+      console.log(chalk.bold('\n☁️  Step 2/3: Upload to R2\n'));
+      await uploadAssets();
+    } else {
+      console.log(
+        chalk.yellow('\n⏭️  Step 2/3: Skipping R2 upload (local mode)\n')
+      );
+    }
 
     // Step 3: Update JSONs
-    console.log(chalk.bold('\n📝 Step 3/3: Update Character JSONs\n'));
-    await updateCharacterJsons(true);
+    console.log(chalk.bold('\n📝 Step 3/3: Update JSONs\n'));
+    await updateJsonFiles(targetPath, true, useLocalAssets);
 
     console.log(chalk.bold.green('\n✨ Migration Complete!\n'));
-    console.log(
-      chalk.dim('Run ') +
-        chalk.cyan('npm run r2:verify') +
-        chalk.dim(' to verify uploads.')
-    );
+    if (!useLocalAssets) {
+      console.log(
+        chalk.dim('Run ') +
+          chalk.cyan('npm run r2:verify') +
+          chalk.dim(' to verify uploads.')
+      );
+    }
   } catch (error) {
     console.error(chalk.red('\n❌ Migration failed:'), error);
     process.exit(1);
@@ -96,11 +111,18 @@ async function runFullMigration(): Promise<void> {
 /**
  * Sync new assets (for re-scraping workflow)
  */
-async function syncNewAssets(): Promise<void> {
+async function syncNewAssets(
+  targetPath?: string,
+  useLocalAssets: boolean = false
+): Promise<void> {
   console.log(chalk.bold('\n🔄 Syncing New Assets\n'));
 
+  if (targetPath) {
+    console.log(chalk.cyan(`📂 Target Path: ${targetPath}\n`));
+  }
+
   try {
-    const allUrls = await extractAllUrls();
+    const allUrls = await extractAllUrls(targetPath);
     const mapping = await loadMapping();
 
     const newUrls = Array.from(allUrls).filter((url) => {
@@ -118,13 +140,15 @@ async function syncNewAssets(): Promise<void> {
     console.log(chalk.yellow(`Found ${newUrls.length} new assets\n`));
 
     console.log(chalk.bold('Downloading new assets...'));
-    await downloadAssets(newUrls);
+    await downloadAssets(newUrls, useLocalAssets);
 
-    console.log(chalk.bold('\nUploading new assets...'));
-    await uploadAssets();
+    if (!useLocalAssets) {
+      console.log(chalk.bold('\nUploading new assets...'));
+      await uploadAssets();
+    }
 
-    console.log(chalk.bold('\nUpdating character JSONs...'));
-    await updateCharacterJsons(true);
+    console.log(chalk.bold('\nUpdating JSONs...'));
+    await updateJsonFiles(targetPath, true, useLocalAssets);
 
     console.log(chalk.green('\n✓ Sync complete!'));
   } catch (error) {
@@ -138,6 +162,19 @@ async function syncNewAssets(): Promise<void> {
  */
 async function main(): Promise<void> {
   const command = process.argv[2];
+  const args = process.argv.slice(3);
+  const useLocalAssets = args.includes('--local');
+
+  const pathIndex = args.indexOf('--path');
+  const targetPath = pathIndex !== -1 ? args[pathIndex + 1] : undefined;
+
+  if (pathIndex !== -1 && !targetPath) {
+    console.log(chalk.red('\n❌ --path requires a value\n'));
+    console.log(chalk.dim('Example: --path version/latest.json'));
+    console.log(chalk.dim('         --path characters'));
+    process.exit(1);
+  }
+
   console.log(chalk.dim('Checking internet connection...'));
   const isConnected = await checkInternetConnection();
 
@@ -156,8 +193,14 @@ async function main(): Promise<void> {
 
       case 'download': {
         console.log(chalk.bold('\n📥 Download Phase\n'));
-        const urls = await extractAllUrls();
-        await downloadAssets(urls);
+        if (useLocalAssets) {
+          console.log(chalk.yellow('Using LOCAL ASSETS mode\n'));
+        }
+        if (targetPath) {
+          console.log(chalk.cyan(`Target: ${targetPath}\n`));
+        }
+        const urls = await extractAllUrls(targetPath);
+        await downloadAssets(urls, useLocalAssets);
         break;
       }
 
@@ -168,12 +211,12 @@ async function main(): Promise<void> {
 
       case 'update':
         console.log(chalk.bold('\n📝 Update Phase\n'));
-        await updateCharacterJsons(true);
+        await updateJsonFiles(targetPath, true, useLocalAssets);
         break;
 
       case 'migrate':
       case 'all':
-        await runFullMigration();
+        await runFullMigration(targetPath, useLocalAssets);
         break;
 
       case 'verify':
@@ -182,7 +225,7 @@ async function main(): Promise<void> {
         break;
 
       case 'sync':
-        await syncNewAssets();
+        await syncNewAssets(targetPath, useLocalAssets);
         break;
 
       case 'sync-r2':

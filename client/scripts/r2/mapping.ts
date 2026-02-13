@@ -26,6 +26,9 @@ export interface AssetMapping {
   /** Public R2 URL */
   r2Url?: string;
 
+  /** Local asset path (e.g., '/assets/7f8a9b2c.webp') */
+  localPath?: string;
+
   /** Asset category */
   category: AssetCategory;
 
@@ -40,6 +43,9 @@ export interface AssetMapping {
 
   /** Timestamp when uploaded to R2 */
   uploadedAt?: string;
+
+  /** Timestamp when saved to local assets */
+  localSavedAt?: string;
 }
 
 /**

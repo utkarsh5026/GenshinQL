@@ -77,23 +77,22 @@ export async function fetchWithRetry(
 }
 
 /**
- * Save downloaded content to local cache with actual file type detection
+ * Save downloaded content to local cache or public assets
  *
  * @param buffer - File content
- * @param category - Asset category
+ * @param category - Asset category (used for downloads/ structure only)
  * @param hash - URL hash
  * @param urlExtension - File extension from URL
- * @returns Actual extension used for the file
+ * @param useLocalAssets - If true, save to public/assets/ (flat)
+ * @returns Object with { actualExtension, localPath? }
  */
 async function saveToLocal(
   buffer: Buffer,
   category: string,
   hash: string,
-  urlExtension: string
-): Promise<string> {
-  const categoryDir = path.join(PATHS.downloadsDir, category);
-  await fs.mkdir(categoryDir, { recursive: true });
-
+  urlExtension: string,
+  useLocalAssets: boolean = false
+): Promise<{ actualExtension: string; localPath?: string }> {
   const detectedType = detectFileType(buffer);
   const actualExtension = detectedType || urlExtension;
 
@@ -103,10 +102,26 @@ async function saveToLocal(
     );
   }
 
-  const filePath = path.join(categoryDir, `${hash}.${actualExtension}`);
-  await fs.writeFile(filePath, buffer);
+  let localPath: string | undefined;
 
-  return actualExtension;
+  if (useLocalAssets) {
+    // Save to public/assets/ (flat structure)
+    await fs.mkdir(PATHS.assetsDir, { recursive: true });
+    const filePath = path.join(PATHS.assetsDir, `${hash}.${actualExtension}`);
+    await fs.writeFile(filePath, buffer);
+
+    // Return web-accessible path (absolute from public root)
+    localPath = `/assets/${hash}.${actualExtension}`;
+    logger.debug(`Saved to local assets: ${localPath}`);
+  } else {
+    // Save to downloads/{category}/ (existing behavior)
+    const categoryDir = path.join(PATHS.downloadsDir, category);
+    await fs.mkdir(categoryDir, { recursive: true });
+    const filePath = path.join(categoryDir, `${hash}.${actualExtension}`);
+    await fs.writeFile(filePath, buffer);
+  }
+
+  return { actualExtension, localPath };
 }
 
 /**
@@ -152,7 +167,8 @@ export async function existsInLocal(
  */
 async function downloadAsset(
   url: string,
-  mapping: MappingDatabase
+  mapping: MappingDatabase,
+  useLocalAssets: boolean = false
 ): Promise<AssetMapping> {
   const hash = hashUrl(url);
   const category = categorizeUrl(url);
@@ -160,22 +176,24 @@ async function downloadAsset(
 
   const buffer = await fetchWithRetry(url);
 
-  // Save with actual detected file type
-  const actualExtension = await saveToLocal(
+  const { actualExtension, localPath } = await saveToLocal(
     buffer,
     category,
     hash,
-    urlExtension
+    urlExtension,
+    useLocalAssets
   );
 
   const asset: AssetMapping = {
     originalUrl: url,
     r2Key: '', // Will be set during upload
     r2Url: '', // Will be set during upload
+    localPath, // Set if useLocalAssets = true
     category,
-    extension: actualExtension, // Use actual extension, not URL extension
+    extension: actualExtension,
     size: buffer.length,
     downloadedAt: formatTimestamp(),
+    localSavedAt: localPath ? formatTimestamp() : undefined,
   };
 
   upsertAsset(mapping, hash, asset);
@@ -186,20 +204,37 @@ async function downloadAsset(
  * Download assets with deduplication
  *
  * @param urls - Array of URLs to download
+ * @param useLocalAssets - If true, save to public/assets/ instead of downloads/
  */
 export async function downloadAssets(
-  urls: string[] | Set<string>
+  urls: string[] | Set<string>,
+  useLocalAssets: boolean = false
 ): Promise<void> {
   logger.log('\n=== Starting Download Phase ===\n');
+
+  if (useLocalAssets) {
+    logger.log('Mode: LOCAL ASSETS (saving to public/assets/)');
+  } else {
+    logger.log('Mode: R2 MIGRATION (saving to downloads/)');
+  }
+
   await downloadMappingFromR2();
 
   const urlArray = Array.isArray(urls) ? urls : Array.from(urls);
   const mapping = await loadMapping();
 
+  // Filter logic: skip if already downloaded (check appropriate field)
   const newUrls = urlArray.filter((url) => {
     const hash = hashUrl(url);
     const existing = mapping.mappings[hash];
-    return !existing?.downloadedAt;
+
+    if (useLocalAssets) {
+      // Skip if already saved locally
+      return !existing?.localSavedAt;
+    } else {
+      // Skip if already downloaded to downloads/
+      return !existing?.downloadedAt;
+    }
   });
 
   const cachedCount = urlArray.length - newUrls.length;
@@ -262,7 +297,7 @@ export async function downloadAssets(
     const batch = newUrls.slice(i, i + batchSize);
 
     const results = await Promise.allSettled(
-      batch.map((url) => downloadAsset(url, mapping))
+      batch.map((url) => downloadAsset(url, mapping, useLocalAssets))
     );
 
     updateProgress(results, batch);

@@ -3,20 +3,23 @@ import path from 'node:path';
 
 import { PATHS } from './config.js';
 import { getAsset, loadMapping, MappingDatabase } from './mapping.js';
+import { resolvePath } from './path-resolver.js';
 import { hashUrl, isWikiaUrl } from './utils.js';
 
 /**
- * Replace Wikia URLs with R2 URLs recursively in an object
+ * Replace Wikia URLs with R2 URLs or local paths recursively in an object
  *
  * @param obj - Object to process
  * @param mapping - Mapping database
  * @param stats - Statistics tracker
- * @returns Processed object with R2 URLs
+ * @param useLocalAssets - If true, prefer local paths over R2 URLs
+ * @returns Processed object with R2 URLs or local paths
  */
 function replaceUrlsRecursive(
   obj: unknown,
   mapping: MappingDatabase,
-  stats: { replaced: number; notFound: number }
+  stats: { replaced: number; notFound: number },
+  useLocalAssets: boolean = false
 ): unknown {
   if (obj == null) {
     return obj;
@@ -26,24 +29,43 @@ function replaceUrlsRecursive(
     const hash = hashUrl(obj);
     const asset = getAsset(mapping, hash);
 
-    if (asset?.r2Url) {
+    if (!asset) {
+      stats.notFound++;
+      console.warn(`No mapping for: ${obj}`);
+      return obj;
+    }
+
+    // Priority: localPath (if useLocalAssets) > r2Url > original
+    let replacementUrl: string | undefined;
+
+    if (useLocalAssets && asset.localPath) {
+      replacementUrl = asset.localPath;
+    } else if (asset.r2Url) {
+      replacementUrl = asset.r2Url;
+    }
+
+    if (replacementUrl) {
       stats.replaced++;
-      return asset.r2Url;
+      return replacementUrl;
     } else {
       stats.notFound++;
-      console.warn(`No R2 URL for: ${obj}`);
+      console.warn(
+        useLocalAssets ? `No local path for: ${obj}` : `No R2 URL for: ${obj}`
+      );
       return obj;
     }
   }
 
   if (Array.isArray(obj)) {
-    return obj.map((item) => replaceUrlsRecursive(item, mapping, stats));
+    return obj.map((item) =>
+      replaceUrlsRecursive(item, mapping, stats, useLocalAssets)
+    );
   }
 
   if (typeof obj === 'object' && obj !== null) {
     const result: Record<string, unknown> = {};
     for (const [key, value] of Object.entries(obj)) {
-      result[key] = replaceUrlsRecursive(value, mapping, stats);
+      result[key] = replaceUrlsRecursive(value, mapping, stats, useLocalAssets);
     }
     return result;
   }
@@ -52,34 +74,42 @@ function replaceUrlsRecursive(
 }
 
 /**
- * Create backup of a character JSON file
+ * Create backup of a JSON file with subdirectory structure preserved
  *
- * @param filePath - Path to original file
+ * @param filePath - Absolute path to original file
  * @returns Path to backup file
  */
 async function backupFile(filePath: string): Promise<string> {
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
   const fileName = path.basename(filePath);
-  const backupPath = path.join(PATHS.backupsDir, `${timestamp}_${fileName}`);
+  const relativePath = path.relative(PATHS.publicDir, filePath);
 
-  await fs.mkdir(PATHS.backupsDir, { recursive: true });
+  // Create nested backup structure to preserve context
+  // e.g., backups/version/2026-02-13_latest.json instead of flat structure
+  const backupSubDir = path.dirname(relativePath);
+  const backupDir = path.join(PATHS.backupsDir, backupSubDir);
+  const backupPath = path.join(backupDir, `${timestamp}_${fileName}`);
+
+  await fs.mkdir(backupDir, { recursive: true });
   await fs.copyFile(filePath, backupPath);
 
   return backupPath;
 }
 
 /**
- * Update a single character JSON file with R2 URLs
+ * Update a single JSON file with R2 URLs or local paths
  *
- * @param filePath - Path to character JSON file
+ * @param filePath - Absolute path to JSON file
  * @param mapping - Mapping database
  * @param createBackup - Whether to create backup before updating
+ * @param useLocalAssets - If true, prefer local paths over R2 URLs
  * @returns Update statistics
  */
-async function updateCharacterFile(
+async function updateJsonFile(
   filePath: string,
   mapping: MappingDatabase,
-  createBackup: boolean = true
+  createBackup: boolean = true,
+  useLocalAssets: boolean = false
 ): Promise<{ replaced: number; notFound: number }> {
   const content = await fs.readFile(filePath, 'utf-8');
   const character = JSON.parse(content);
@@ -89,7 +119,12 @@ async function updateCharacterFile(
   }
 
   const stats = { replaced: 0, notFound: 0 };
-  const updated = replaceUrlsRecursive(character, mapping, stats);
+  const updated = replaceUrlsRecursive(
+    character,
+    mapping,
+    stats,
+    useLocalAssets
+  );
 
   const updatedContent = JSON.stringify(updated, null, 4);
   await fs.writeFile(filePath, updatedContent, 'utf-8');
@@ -98,14 +133,24 @@ async function updateCharacterFile(
 }
 
 /**
- * Update all character JSON files with R2 URLs
+ * Update JSON files at the specified path with R2 URLs or local paths
  *
+ * @param targetPath - Relative path from public/ (defaults to 'characters')
  * @param createBackups - Whether to create backups before updating
+ * @param useLocalAssets - If true, prefer local paths over R2 URLs
  */
-export async function updateCharacterJsons(
-  createBackups: boolean = true
+export async function updateJsonFiles(
+  targetPath?: string,
+  createBackups: boolean = true,
+  useLocalAssets: boolean = false
 ): Promise<void> {
   console.log('\n=== Starting JSON Update Phase ===\n');
+
+  if (useLocalAssets) {
+    console.log('Mode: Using LOCAL ASSET PATHS\n');
+  } else {
+    console.log('Mode: Using R2 URLS\n');
+  }
 
   if (createBackups) {
     console.log('Backups will be created before updating files.\n');
@@ -114,46 +159,77 @@ export async function updateCharacterJsons(
   // Load mapping
   const mapping = await loadMapping();
 
-  const uploadedCount = Object.values(mapping.mappings).filter(
-    (asset) => asset.uploadedAt
-  ).length;
+  // Validation: check if assets are available
+  const availableCount = Object.values(mapping.mappings).filter((asset) => {
+    if (useLocalAssets) {
+      return asset.localSavedAt && asset.localPath;
+    } else {
+      return asset.uploadedAt && asset.r2Url;
+    }
+  }).length;
 
-  if (uploadedCount === 0) {
-    console.log('No assets uploaded to R2 yet. Run upload first.');
-    console.log('Command: npm run r2:upload');
+  if (availableCount === 0) {
+    if (useLocalAssets) {
+      console.log('No local assets found. Run download with --local first.');
+      console.log('Command: npm run r2:download -- --local');
+    } else {
+      console.log('No assets uploaded to R2 yet. Run upload first.');
+      console.log('Command: npm run r2:upload');
+    }
     return;
   }
 
-  console.log(`Using ${uploadedCount} R2 URLs for replacement.\n`);
+  console.log(
+    useLocalAssets
+      ? `Using ${availableCount} local asset paths for replacement.\n`
+      : `Using ${availableCount} R2 URLs for replacement.\n`
+  );
 
-  // Get all character JSON files
-  const files = await fs.readdir(PATHS.charactersDir);
-  const jsonFiles = files.filter((file) => file.endsWith('.json'));
+  // Resolve target path (defaults to 'characters')
+  const resolved = await resolvePath(targetPath);
 
-  console.log(`Found ${jsonFiles.length} character JSON files.\n`);
+  console.log(
+    `\n=== Updating ${resolved.isDirectory ? 'directory' : 'file'}: ${resolved.relativePath} ===\n`
+  );
+
+  const jsonFiles = resolved.jsonFiles;
+
+  if (jsonFiles.length === 0) {
+    console.log('No JSON files found in target path.');
+    return;
+  }
+
+  console.log(
+    `Found ${jsonFiles.length} JSON file${jsonFiles.length === 1 ? '' : 's'}.\n`
+  );
 
   // Process each file
   let totalReplaced = 0;
   let totalNotFound = 0;
   let filesUpdated = 0;
 
-  for (const file of jsonFiles) {
-    const filePath = path.join(PATHS.charactersDir, file);
+  for (const filePath of jsonFiles) {
+    const fileName = path.basename(filePath);
 
     try {
-      const stats = await updateCharacterFile(filePath, mapping, createBackups);
+      const stats = await updateJsonFile(
+        filePath,
+        mapping,
+        createBackups,
+        useLocalAssets
+      );
 
       if (stats.replaced > 0) {
         filesUpdated++;
-        console.log(`✓ ${file}: ${stats.replaced} URLs replaced`);
+        console.log(`✓ ${fileName}: ${stats.replaced} URLs replaced`);
       } else {
-        console.log(`- ${file}: No URLs to replace`);
+        console.log(`- ${fileName}: No URLs to replace`);
       }
 
       totalReplaced += stats.replaced;
       totalNotFound += stats.notFound;
     } catch (error) {
-      console.error(`✗ Error updating ${file}:`, error);
+      console.error(`✗ Error updating ${fileName}:`, error);
     }
   }
 
@@ -177,6 +253,19 @@ export async function updateCharacterJsons(
     console.log('  3. New assets added since last download');
     console.log('\nRun download and upload again to sync all assets.');
   }
+}
+
+/**
+ * Update all character JSON files with R2 URLs or local paths
+ * @deprecated Use updateJsonFiles instead
+ * @param createBackups - Whether to create backups before updating
+ * @param useLocalAssets - If true, prefer local paths over R2 URLs
+ */
+export async function updateCharacterJsons(
+  createBackups: boolean = true,
+  useLocalAssets: boolean = false
+): Promise<void> {
+  return updateJsonFiles(undefined, createBackups, useLocalAssets);
 }
 
 /**
