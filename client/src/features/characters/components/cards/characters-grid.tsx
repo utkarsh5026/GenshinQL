@@ -1,0 +1,26 @@
+import React from 'react';
+
+import type { Character } from '../../types';
+import CharacterCard from './character-card';
+
+interface CharacterCardGridProps {
+  characters: Character[];
+}
+
+const CharacterCardGrid: React.FC<CharacterCardGridProps> = ({
+  characters,
+}) => {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
+      {characters.map((character, index) => (
+        <CharacterCard
+          key={character.name}
+          character={character}
+          index={index}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default CharacterCardGrid;

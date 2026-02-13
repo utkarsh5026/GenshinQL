@@ -1,0 +1,264 @@
+{
+  "name": "Blackmarrow Lantern",
+  "rarity": 4,
+  "attack": 454,
+  "subStat": "Elemental Mastery 221",
+  "effect": "Token of Covenant\nBloom DMG is increased by 48~96%, and Lunar-Bloom DMG is increased by 12~24%. Moonsign: Ascendant Gleam: Lunar-Bloom DMG is increased by an additional 12~24%.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Weapon_Blackmarrow_Lantern.png",
+  "nation": 6,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Artful_Device_Fragment.png",
+      "caption": "Artful Device Fragment"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Artful_Device_Replica.png",
+      "caption": "Artful Device Replica"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Artful_Device_Inheritance.png",
+      "caption": "Artful Device Inheritance"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Item_Artful_Device_Wish.png",
+      "caption": "Artful Device Wish"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Frostnight%27s_Glimmer.png",
+      "caption": "Frostnight's Glimmer"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Frostnight%27s_Glow.png",
+      "caption": "Frostnight's Glow"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Item_Frostnight%27s_Glory.png",
+      "caption": "Frostnight's Glory"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+      "caption": "Tattered Warrant"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+      "caption": "Immaculate Warrant"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Frost-Etched_Warrant.png",
+      "caption": "Frost-Etched Warrant"
+    }
+  ],
+  "passives": [
+    "Bloom DMG is increased by 48%, and Lunar-Bloom DMG is increased by 12%. Moonsign: Ascendant Gleam: Lunar-Bloom DMG is increased by an additional 12%.",
+    "Bloom DMG is increased by 60%, and Lunar-Bloom DMG is increased by 15%. Moonsign: Ascendant Gleam: Lunar-Bloom DMG is increased by an additional 15%.",
+    "Bloom DMG is increased by 72%, and Lunar-Bloom DMG is increased by 18%. Moonsign: Ascendant Gleam: Lunar-Bloom DMG is increased by an additional 18%.",
+    "Bloom DMG is increased by 84%, and Lunar-Bloom DMG is increased by 21%. Moonsign: Ascendant Gleam: Lunar-Bloom DMG is increased by an additional 21%.",
+    "Bloom DMG is increased by 96%, and Lunar-Bloom DMG is increased by 24%. Moonsign: Ascendant Gleam: Lunar-Bloom DMG is increased by an additional 24%."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Weapon_Blackmarrow_Lantern.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Weapon_Blackmarrow_Lantern_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Weapon_Card_Blackmarrow_Lantern.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 41,
+          "max": 99
+        },
+        "subStat": {
+          "min": 48,
+          "max": 85
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Artful_Device_Fragment.png",
+            "caption": "Artful Device Fragment",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Frostnight%27s_Glimmer.png",
+            "caption": "Frostnight's Glimmer",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+            "caption": "Tattered Warrant",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 125,
+          "max": 184
+        },
+        "subStat": {
+          "min": 85,
+          "max": 124
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Artful_Device_Replica.png",
+            "caption": "Artful Device Replica",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Item_Frostnight%27s_Glimmer.png",
+            "caption": "Frostnight's Glimmer",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
+            "caption": "Tattered Warrant",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 210,
+          "max": 238
+        },
+        "subStat": {
+          "min": 124,
+          "max": 143
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Artful_Device_Replica.png",
+            "caption": "Artful Device Replica",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Frostnight%27s_Glow.png",
+            "caption": "Frostnight's Glow",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+            "caption": "Immaculate Warrant",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 264,
+          "max": 293
+        },
+        "subStat": {
+          "min": 143,
+          "max": 162
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Artful_Device_Inheritance.png",
+            "caption": "Artful Device Inheritance",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Frostnight%27s_Glow.png",
+            "caption": "Frostnight's Glow",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
+            "caption": "Immaculate Warrant",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 319,
+          "max": 347
+        },
+        "subStat": {
+          "min": 162,
+          "max": 182
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Artful_Device_Inheritance.png",
+            "caption": "Artful Device Inheritance",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Item_Frostnight%27s_Glory.png",
+            "caption": "Frostnight's Glory",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Frost-Etched_Warrant.png",
+            "caption": "Frost-Etched Warrant",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 373,
+          "max": 401
+        },
+        "subStat": {
+          "min": 182,
+          "max": 201
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Item_Artful_Device_Wish.png",
+            "caption": "Artful Device Wish",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Item_Frostnight%27s_Glory.png",
+            "caption": "Frostnight's Glory",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Frost-Etched_Warrant.png",
+            "caption": "Frost-Etched Warrant",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 427,
+          "max": 454
+        },
+        "subStat": {
+          "min": 201,
+          "max": 221
+        }
+      }
+    ]
+  }
+}

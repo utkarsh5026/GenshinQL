@@ -1,555 +1,631 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kirara_Icon.png",
-    "name": "Kirara",
-    "rarity": "4 Stars",
-    "element": "Dendro",
-    "weaponType": "Sword",
-    "region": "Inazuma",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Kirara_Icon.png",
+  "name": "Kirara",
+  "rarity": "4 Stars",
+  "element": "Dendro",
+  "weaponType": "Sword",
+  "region": "Inazuma",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Sword_Dendro.png",
+      "talentName": "Boxcutter",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 3 rapid claw strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Sword_Dendro.png",
-            "talentName": "Boxcutter",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 3 rapid claw strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Boxcutter_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Boxcutter_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Boxcutter_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG": [
-                    "47.9",
-                    "51.8",
-                    "55.7",
-                    "61.27",
-                    "65.17",
-                    "69.63",
-                    "75.75",
-                    "81.88",
-                    "88.01",
-                    "94.69",
-                    "101.37"
-                ],
-                "2-Hit DMG": [
-                    "46.35",
-                    "50.13",
-                    "53.9",
-                    "59.29",
-                    "63.06",
-                    "67.38",
-                    "73.3",
-                    "79.23",
-                    "85.16",
-                    "91.63",
-                    "98.1"
-                ],
-                "3-Hit DMG": [
-                    "25.42\n+\n38.13",
-                    "27.49\n+\n41.24",
-                    "29.56\n+\n44.34",
-                    "32.52\n+\n48.77",
-                    "34.59\n+\n51.88",
-                    "36.95\n+\n55.43",
-                    "40.2\n+\n60.3",
-                    "43.45\n+\n65.18",
-                    "46.7\n+\n70.06",
-                    "50.25\n+\n75.38",
-                    "53.8\n+\n80.7"
-                ],
-                "4-Hit DMG": [
-                    "73.27",
-                    "79.24",
-                    "85.2",
-                    "93.72",
-                    "99.68",
-                    "106.5",
-                    "115.87",
-                    "125.24",
-                    "134.62",
-                    "144.84",
-                    "155.06"
-                ],
-                "Charged Attack DMG": [
-                    "22.38\n+\n44.75\n+\n44.75",
-                    "24.2\n+\n48.4\n+\n48.4",
-                    "26.02\n+\n52.04\n+\n52.04",
-                    "28.62\n+\n57.24\n+\n57.24",
-                    "30.44\n+\n60.89\n+\n60.89",
-                    "32.52\n+\n65.05\n+\n65.05",
-                    "35.39\n+\n70.77\n+\n70.77",
-                    "38.25\n+\n76.5\n+\n76.5",
-                    "41.11\n+\n82.22\n+\n82.22",
-                    "44.23\n+\n88.47\n+\n88.47",
-                    "47.36\n+\n94.71\n+\n94.71"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "20"
-                ],
-                "Plunge DMG": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Boxcutter_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png",
-            "talentName": "Meow-teor Kick",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\n(‍Press\n‍/‍Tap\n‍)\nLeaps into the air with all the agility of a cat passing through the bushes, and thwacks her foes with a flying kick that deals AoE Dendro DMG while creating a Shield of Safe Transport. This will also briefly apply Dendro to Kirara.\nThe shield will absorb Dendro DMG with 250% effectiveness. The shield's DMG absorption will be based on Kirara's Max HP and will not exceed a certain percentage of that Max HP. The remaining DMG absorption on a Shield of Safe Transport will stack on a new one when it is created, and its duration will reset.\n\nHold\nOut of her desire to \"deliver within half a day,\" Kirara deploys a Shield of Safe Transport identical to the one that can be created by (‍pressing\n‍/‍tapping\n‍) the skill. She will also curl up into a special express delivery box, entering the Urgent Neko Parcel state in order to move and fight more swiftly.\n\nUrgent Neko Parcel\nDeals Dendro DMG to opponents she crashes into. This effect can be triggered once on each opponent every 0.5s.\nWhen in this state, Kirara's movement speed, climbing speed, and jumping power are all increased, and her Stamina Consumption from climbing is increased.\nWhen the duration ends or the skill is used again, a Flipclaw Strike more powerful than the attack in the (‍Press\n‍/‍Tap\n‍) Mode will be unleashed, dealing AoE Dendro DMG.\nThe Urgent Neko Parcel state lasts a maximum of 10s. When the state ends, the skill will enter CD. The longer Kirara spends in this state, the longer the CD will be.\nSprinting or actively canceling climbing will end this state early.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Meow-teor_Kick_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Meow-teor_Kick_Hold_Preview.gif",
-                    "caption": "Hold"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Meow-teor_Kick_Jump_Preview.gif",
-                    "caption": "Hold (Jumping)"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Meow-teor_Kick_Climb_Preview.gif",
-                    "caption": "Hold (Climbing)"
-                }
-            ],
-            "scaling": {
-                "Tail-Flicking Flying Kick DMG": [
-                    "104",
-                    "111.8",
-                    "119.6",
-                    "130",
-                    "137.8",
-                    "145.6",
-                    "156",
-                    "166.4",
-                    "176.8",
-                    "187.2",
-                    "197.6",
-                    "208",
-                    "221"
-                ],
-                "Shield DMG Absorption": [
-                    "10% Max HP\n+\n962.2313",
-                    "10.75% Max HP\n+\n1058.4679",
-                    "11.5% Max HP\n+\n1162.7241",
-                    "12.5% Max HP\n+\n1275",
-                    "13.25% Max HP\n+\n1395.2957",
-                    "14% Max HP\n+\n1523.611",
-                    "15% Max HP\n+\n1659.946",
-                    "16% Max HP\n+\n1804.3008",
-                    "17% Max HP\n+\n1956.6753",
-                    "18% Max HP\n+\n2117.0693",
-                    "19% Max HP\n+\n2285.4834",
-                    "20% Max HP\n+\n2461.917",
-                    "21.25% Max HP\n+\n2646.3704"
-                ],
-                "Max Shield DMG Absorption": [
-                    "16% Max HP\n+\n1541.0796",
-                    "17.2% Max HP\n+\n1695.2089",
-                    "18.4% Max HP\n+\n1862.1824",
-                    "20% Max HP\n+\n2042",
-                    "21.2% Max HP\n+\n2234.6616",
-                    "22.4% Max HP\n+\n2440.1675",
-                    "24% Max HP\n+\n2658.5176",
-                    "25.6% Max HP\n+\n2889.7117",
-                    "27.2% Max HP\n+\n3133.7498",
-                    "28.8% Max HP\n+\n3390.632",
-                    "30.4% Max HP\n+\n3660.3584",
-                    "32% Max HP\n+\n3942.929",
-                    "34% Max HP\n+\n4238.3438"
-                ],
-                "Shield Duration": [
-                    "12s"
-                ],
-                "Urgent Neko Parcel Hit DMG": [
-                    "33.6",
-                    "36.12",
-                    "38.64",
-                    "42",
-                    "44.52",
-                    "47.04",
-                    "50.4",
-                    "53.76",
-                    "57.12",
-                    "60.48",
-                    "63.84",
-                    "67.2",
-                    "71.4"
-                ],
-                "Max Urgent Neko Parcel Duration": [
-                    "10s"
-                ],
-                "Flipclaw Strike DMG": [
-                    "144",
-                    "154.8",
-                    "165.6",
-                    "180",
-                    "190.8",
-                    "201.6",
-                    "216",
-                    "230.4",
-                    "244.8",
-                    "259.2",
-                    "273.6",
-                    "288",
-                    "306"
-                ],
-                "CD": [
-                    "8s – 12s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Boxcutter_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Secret_Art_Surprise_Dispatch.png",
-            "talentName": "Secret Art: Surprise Dispatch",
-            "talentType": "Elemental Burst",
-            "description": "Smash opponents with a Special Delivery Package used for punishing parcel thieves, dealing AoE Dendro DMG. After the Special Delivery Package explodes, it will split up into many Cat Grass Cardamoms that will explode either upon contact with opponents or after a period of time, dealing AoE Dendro DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Art_Surprise_Dispatch_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG": [
-                    "570.24",
-                    "613.01",
-                    "655.78",
-                    "712.8",
-                    "755.57",
-                    "798.34",
-                    "855.36",
-                    "912.38",
-                    "969.41",
-                    "1026.43",
-                    "1083.46",
-                    "1140.48",
-                    "1211.76"
-                ],
-                "Cat Grass Cardamom Explosion DMG": [
-                    "35.64",
-                    "38.31",
-                    "40.99",
-                    "44.55",
-                    "47.22",
-                    "49.9",
-                    "53.46",
-                    "57.02",
-                    "60.59",
-                    "64.15",
-                    "67.72",
-                    "71.28",
-                    "75.73"
-                ],
-                "Cat Grass Cardamom Duration": [
-                    "12s"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Talent_Bewitching%2C_Betwitching_Tails.png",
-            "talentName": "Bewitching, Betwitching Tails",
-            "talentType": "1st Ascension Passive",
-            "description": "When Kirara is in the Urgent Neko Parcel state of Meow-teor Kick, each impact against an opponent will grant her a stack of Reinforced Packaging. This effect can be triggered once for each opponent hit every 0.5s. Max 3 stacks. When the Urgent Neko Parcel state ends, each stack of Reinforced Packaging will create 1 Shield of Safe Transport for Kirara. The shields that are created this way will have 20% of the DMG absorption that the Shield of Safe Transport produced by Meow-teor Kick would have. If Kirara is already protected by a Shield of Safe Transport created by Meow-teor Kick, its DMG absorption will stack with these shields and its duration will reset.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Talent_Pupillary_Variance.png",
-            "talentName": "Pupillary Variance",
-            "talentType": "4th Ascension Passive",
-            "description": "Every 1,000 Max HP Kirara possesses will increase the DMG dealt by Meow-teor Kick by 0.4%, and the DMG dealt by Secret Art: Surprise Dispatch by 0.3%.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Cat%27s_Creeping_Carriage.png",
-            "talentName": "Cat's Creeping Carriage",
-            "talentType": "Utility Passive",
-            "description": "When Kirara is in the party, animals who produce Fowl, Raw Meat, or Chilled Meat will not be startled when party members approach them.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Boxcutter_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Constellation_Material_Circulation.png",
-            "name": "Material Circulation",
-            "level": 1,
-            "description": "Every 8,000 Max HP Kirara possesses will cause her to create 1 extra Cat Grass Cardamom when she uses Secret Art: Surprise Dispatch. A maximum of 4 extra can be created this way."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Constellation_Perfectly_Packaged.png",
-            "name": "Perfectly Packaged",
-            "level": 2,
-            "description": "When Kirara is in the Urgent Neko Parcel state of Meow-teor Kick, she will grant other party members she crashes into Critical Transport Shields.\nThe DMG absorption of Critical Transport Shield is 40% of the maximum absorption Meow-teor Kick's normal Shields of Safe Transport are capable of, and will absorb Dendro DMG with 250% effectiveness.\nCritical Transport Shields last 12s and can be triggered once on each character every 10s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Constellation_Universal_Recognition.png",
-            "name": "Universal Recognition",
-            "level": 3,
-            "description": "Increases the Level of Meow-teor Kick by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Constellation_Steed_of_Skanda.png",
-            "name": "Steed of Skanda",
-            "level": 4,
-            "description": "Description\nAdvanced Properties\nAfter active character(s) protected by Shields of Safe Transport or Critical Transport Shields hit opponents with Normal, Charged, or Plunging Attacks, Kirara will perform a coordinated attack with them using Small Cat Grass Cardamoms, dealing 200% of her ATK as Dendro DMG. DMG dealt this way is considered Elemental Burst DMG. This effect can be triggered once every 3.8s. This CD is shared between all party members."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_A_Thousand_Miles_in_a_Day.png",
-            "name": "A Thousand Miles in a Day",
-            "level": 5,
-            "description": "Increases the Level of Secret Art: Surprise Dispatch by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Constellation_Countless_Sights_to_See.png",
-            "name": "Countless Sights to See",
-            "level": 6,
-            "description": "All nearby party members will gain 12% All Elemental DMG Bonus within 15s after Kirara uses her Elemental Skill or Burst."
-        }
-    ],
-    "imageUrls": {},
-    "version": "3.7",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Idle_Kirara_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Idle_Kirara_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Idle_Kirara_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Idle_Kirara_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Menu_Kirara.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Talent_Menu_Kirara.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Weapon_Menu_Kirara.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Weapon_Menu_Kirara.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Party_Setup_Kirara.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Party_Setup_Kirara.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG": [
+          "47.9",
+          "51.8",
+          "55.7",
+          "61.27",
+          "65.17",
+          "69.63",
+          "75.75",
+          "81.88",
+          "88.01",
+          "94.69",
+          "101.37"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Namecard_Background_Kirara_Neko_Box.png",
-                "caption": "Kirara: Neko Box Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Kirara_Neko_Box.png",
-                "caption": "Kirara: Neko Box Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Namecard_Banner_Kirara_Neko_Box.png",
-                "caption": "Kirara: Neko Box Banner"
-            }
+        "2-Hit DMG": [
+          "46.35",
+          "50.13",
+          "53.9",
+          "59.29",
+          "63.06",
+          "67.38",
+          "73.3",
+          "79.23",
+          "85.16",
+          "91.63",
+          "98.1"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Boxcutter_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Boxcutter_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Boxcutter_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Boxcutter_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Boxcutter_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Boxcutter_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Art_Surprise_Dispatch_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Secret_Art_Surprise_Dispatch_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Meow-teor_Kick_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Meow-teor_Kick_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Meow-teor_Kick_Hold_Preview.gif",
-                        "caption": "Hold",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Meow-teor_Kick_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Meow-teor_Kick_Jump_Preview.gif",
-                        "caption": "Hold (Jumping)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Meow-teor_Kick_Jump_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Meow-teor_Kick_Climb_Preview.gif",
-                        "caption": "Hold (Climbing)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Meow-teor_Kick_Climb_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG": [
+          "25.42\n+\n38.13",
+          "27.49\n+\n41.24",
+          "29.56\n+\n44.34",
+          "32.52\n+\n48.77",
+          "34.59\n+\n51.88",
+          "36.95\n+\n55.43",
+          "40.2\n+\n60.3",
+          "43.45\n+\n65.18",
+          "46.7\n+\n70.06",
+          "50.25\n+\n75.38",
+          "53.8\n+\n80.7"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Kirara_Character_Details_1.png",
-                "caption": "Kirara Details 1 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Kirara_Character_Details_2.png",
-                "caption": "Kirara Details 2 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Kirara_Character_Details_3.gif",
-                "caption": "Kirara Details 3 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Kirara_Character_Details_4.gif",
-                "caption": "Kirara Details 4 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Kirara_Character_Details_5.gif",
-                "caption": "Kirara Details 5 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Kirara_Character_Details_6.gif",
-                "caption": "Kirara Details 6 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Kirara_Character_Details_7.png",
-                "caption": "Kirara Details 7 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Kirara_Character_Details_8.png",
-                "caption": "Kirara Details 8 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Kirara_Character_Details_9.png",
-                "caption": "Kirara Details 9 Official HoYoLAB Post"
-            }
+        "4-Hit DMG": [
+          "73.27",
+          "79.24",
+          "85.2",
+          "93.72",
+          "99.68",
+          "106.5",
+          "115.87",
+          "125.24",
+          "134.62",
+          "144.84",
+          "155.06"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Icon_Emoji_Paimon%27s_Paintings_24_Kirara_1.png",
-                "caption": "Five Star Rating, Purr-ease~ Set 24"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Icon_Emoji_Paimon%27s_Paintings_24_Kirara_2.png",
-                "caption": "Please Take It Set 24"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Icon_Emoji_Paimon%27s_Paintings_24_Kirara_3.png",
-                "caption": "Right Away! Set 24"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Icon_Emoji_Paimon%27s_Paintings_24_Kirara_4.png",
-                "caption": "I'm Serious! Set 24"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Icon_Emoji_Paimon%27s_Paintings_31_Kirara_1.png",
-                "caption": "Protecc Set 31"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Icon_Emoji_Paimon%27s_Paintings_34_Kirara_1.png",
-                "caption": "Sweet dreams Set 34"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Icon_Emoji_Paimon%27s_Paintings_34_Kirara_2.png",
-                "caption": "Confident Set 34"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Icon_Emoji_Paimon%27s_Paintings_42_Kirara_1.png",
-                "caption": "Sad Set 42"
-            }
+        "Charged Attack DMG": [
+          "22.38\n+\n44.75\n+\n44.75",
+          "24.2\n+\n48.4\n+\n48.4",
+          "26.02\n+\n52.04\n+\n52.04",
+          "28.62\n+\n57.24\n+\n57.24",
+          "30.44\n+\n60.89\n+\n60.89",
+          "32.52\n+\n65.05\n+\n65.05",
+          "35.39\n+\n70.77\n+\n70.77",
+          "38.25\n+\n76.5\n+\n76.5",
+          "41.11\n+\n82.22\n+\n82.22",
+          "44.23\n+\n88.47\n+\n88.47",
+          "47.36\n+\n94.71\n+\n94.71"
+        ],
+        "Charged Attack Stamina Cost": ["20"],
+        "Plunge DMG": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png",
+      "talentName": "Meow-teor Kick",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\n(‍Press\n‍/‍Tap\n‍)\nLeaps into the air with all the agility of a cat passing through the bushes, and thwacks her foes with a flying kick that deals AoE Dendro DMG while creating a Shield of Safe Transport. This will also briefly apply Dendro to Kirara.\nThe shield will absorb Dendro DMG with 250% effectiveness. The shield's DMG absorption will be based on Kirara's Max HP and will not exceed a certain percentage of that Max HP. The remaining DMG absorption on a Shield of Safe Transport will stack on a new one when it is created, and its duration will reset.\n\nHold\nOut of her desire to \"deliver within half a day,\" Kirara deploys a Shield of Safe Transport identical to the one that can be created by (‍pressing\n‍/‍tapping\n‍) the skill. She will also curl up into a special express delivery box, entering the Urgent Neko Parcel state in order to move and fight more swiftly.\n\nUrgent Neko Parcel\nDeals Dendro DMG to opponents she crashes into. This effect can be triggered once on each opponent every 0.5s.\nWhen in this state, Kirara's movement speed, climbing speed, and jumping power are all increased, and her Stamina Consumption from climbing is increased.\nWhen the duration ends or the skill is used again, a Flipclaw Strike more powerful than the attack in the (‍Press\n‍/‍Tap\n‍) Mode will be unleashed, dealing AoE Dendro DMG.\nThe Urgent Neko Parcel state lasts a maximum of 10s. When the state ends, the skill will enter CD. The longer Kirara spends in this state, the longer the CD will be.\nSprinting or actively canceling climbing will end this state early.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Meow-teor_Kick_Press_Preview.gif",
+          "caption": "Press"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Meow-teor_Kick_Hold_Preview.gif",
+          "caption": "Hold"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Meow-teor_Kick_Jump_Preview.gif",
+          "caption": "Hold (Jumping)"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Meow-teor_Kick_Climb_Preview.gif",
+          "caption": "Hold (Climbing)"
+        }
+      ],
+      "scaling": {
+        "Tail-Flicking Flying Kick DMG": [
+          "104",
+          "111.8",
+          "119.6",
+          "130",
+          "137.8",
+          "145.6",
+          "156",
+          "166.4",
+          "176.8",
+          "187.2",
+          "197.6",
+          "208",
+          "221"
+        ],
+        "Shield DMG Absorption": [
+          "10% Max HP\n+\n962.2313",
+          "10.75% Max HP\n+\n1058.4679",
+          "11.5% Max HP\n+\n1162.7241",
+          "12.5% Max HP\n+\n1275",
+          "13.25% Max HP\n+\n1395.2957",
+          "14% Max HP\n+\n1523.611",
+          "15% Max HP\n+\n1659.946",
+          "16% Max HP\n+\n1804.3008",
+          "17% Max HP\n+\n1956.6753",
+          "18% Max HP\n+\n2117.0693",
+          "19% Max HP\n+\n2285.4834",
+          "20% Max HP\n+\n2461.917",
+          "21.25% Max HP\n+\n2646.3704"
+        ],
+        "Max Shield DMG Absorption": [
+          "16% Max HP\n+\n1541.0796",
+          "17.2% Max HP\n+\n1695.2089",
+          "18.4% Max HP\n+\n1862.1824",
+          "20% Max HP\n+\n2042",
+          "21.2% Max HP\n+\n2234.6616",
+          "22.4% Max HP\n+\n2440.1675",
+          "24% Max HP\n+\n2658.5176",
+          "25.6% Max HP\n+\n2889.7117",
+          "27.2% Max HP\n+\n3133.7498",
+          "28.8% Max HP\n+\n3390.632",
+          "30.4% Max HP\n+\n3660.3584",
+          "32% Max HP\n+\n3942.929",
+          "34% Max HP\n+\n4238.3438"
+        ],
+        "Shield Duration": ["12s"],
+        "Urgent Neko Parcel Hit DMG": [
+          "33.6",
+          "36.12",
+          "38.64",
+          "42",
+          "44.52",
+          "47.04",
+          "50.4",
+          "53.76",
+          "57.12",
+          "60.48",
+          "63.84",
+          "67.2",
+          "71.4"
+        ],
+        "Max Urgent Neko Parcel Duration": ["10s"],
+        "Flipclaw Strike DMG": [
+          "144",
+          "154.8",
+          "165.6",
+          "180",
+          "190.8",
+          "201.6",
+          "216",
+          "230.4",
+          "244.8",
+          "259.2",
+          "273.6",
+          "288",
+          "306"
+        ],
+        "CD": ["8s – 12s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Secret_Art_Surprise_Dispatch.png",
+      "talentName": "Secret Art: Surprise Dispatch",
+      "talentType": "Elemental Burst",
+      "description": "Smash opponents with a Special Delivery Package used for punishing parcel thieves, dealing AoE Dendro DMG. After the Special Delivery Package explodes, it will split up into many Cat Grass Cardamoms that will explode either upon contact with opponents or after a period of time, dealing AoE Dendro DMG.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Art_Surprise_Dispatch_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG": [
+          "570.24",
+          "613.01",
+          "655.78",
+          "712.8",
+          "755.57",
+          "798.34",
+          "855.36",
+          "912.38",
+          "969.41",
+          "1026.43",
+          "1083.46",
+          "1140.48",
+          "1211.76"
+        ],
+        "Cat Grass Cardamom Explosion DMG": [
+          "35.64",
+          "38.31",
+          "40.99",
+          "44.55",
+          "47.22",
+          "49.9",
+          "53.46",
+          "57.02",
+          "60.59",
+          "64.15",
+          "67.72",
+          "71.28",
+          "75.73"
+        ],
+        "Cat Grass Cardamom Duration": ["12s"],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Talent_Bewitching%2C_Betwitching_Tails.png",
+      "talentName": "Bewitching, Betwitching Tails",
+      "talentType": "1st Ascension Passive",
+      "description": "When Kirara is in the Urgent Neko Parcel state of Meow-teor Kick, each impact against an opponent will grant her a stack of Reinforced Packaging. This effect can be triggered once for each opponent hit every 0.5s. Max 3 stacks. When the Urgent Neko Parcel state ends, each stack of Reinforced Packaging will create 1 Shield of Safe Transport for Kirara. The shields that are created this way will have 20% of the DMG absorption that the Shield of Safe Transport produced by Meow-teor Kick would have. If Kirara is already protected by a Shield of Safe Transport created by Meow-teor Kick, its DMG absorption will stack with these shields and its duration will reset.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Talent_Pupillary_Variance.png",
+      "talentName": "Pupillary Variance",
+      "talentType": "4th Ascension Passive",
+      "description": "Every 1,000 Max HP Kirara possesses will increase the DMG dealt by Meow-teor Kick by 0.4%, and the DMG dealt by Secret Art: Surprise Dispatch by 0.3%.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Cat%27s_Creeping_Carriage.png",
+      "talentName": "Cat's Creeping Carriage",
+      "talentType": "Utility Passive",
+      "description": "When Kirara is in the party, animals who produce Fowl, Raw Meat, or Chilled Meat will not be startled when party members approach them.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Constellation_Material_Circulation.png",
+      "name": "Material Circulation",
+      "level": 1,
+      "description": "Every 8,000 Max HP Kirara possesses will cause her to create 1 extra Cat Grass Cardamom when she uses Secret Art: Surprise Dispatch. A maximum of 4 extra can be created this way."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Constellation_Perfectly_Packaged.png",
+      "name": "Perfectly Packaged",
+      "level": 2,
+      "description": "When Kirara is in the Urgent Neko Parcel state of Meow-teor Kick, she will grant other party members she crashes into Critical Transport Shields.\nThe DMG absorption of Critical Transport Shield is 40% of the maximum absorption Meow-teor Kick's normal Shields of Safe Transport are capable of, and will absorb Dendro DMG with 250% effectiveness.\nCritical Transport Shields last 12s and can be triggered once on each character every 10s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Constellation_Universal_Recognition.png",
+      "name": "Universal Recognition",
+      "level": 3,
+      "description": "Increases the Level of Meow-teor Kick by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Constellation_Steed_of_Skanda.png",
+      "name": "Steed of Skanda",
+      "level": 4,
+      "description": "Description\nAdvanced Properties\nAfter active character(s) protected by Shields of Safe Transport or Critical Transport Shields hit opponents with Normal, Charged, or Plunging Attacks, Kirara will perform a coordinated attack with them using Small Cat Grass Cardamoms, dealing 200% of her ATK as Dendro DMG. DMG dealt this way is considered Elemental Burst DMG. This effect can be triggered once every 3.8s. This CD is shared between all party members."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_A_Thousand_Miles_in_a_Day.png",
+      "name": "A Thousand Miles in a Day",
+      "level": 5,
+      "description": "Increases the Level of Secret Art: Surprise Dispatch by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Constellation_Countless_Sights_to_See.png",
+      "name": "Countless Sights to See",
+      "level": 6,
+      "description": "All nearby party members will gain 12% All Elemental DMG Bonus within 15s after Kirara uses her Elemental Skill or Burst."
+    }
+  ],
+  "imageUrls": {},
+  "version": "3.7",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Idle_Kirara_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Idle_Kirara_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Idle_Kirara_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Idle_Kirara_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Menu_Kirara.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Talent_Menu_Kirara.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Weapon_Menu_Kirara.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Weapon_Menu_Kirara.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Party_Setup_Kirara.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Party_Setup_Kirara.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Namecard_Background_Kirara_Neko_Box.png",
+        "caption": "Kirara: Neko Box Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Kirara_Neko_Box.png",
+        "caption": "Kirara: Neko Box Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Namecard_Banner_Kirara_Neko_Box.png",
+        "caption": "Kirara: Neko Box Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Boxcutter_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Boxcutter_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Boxcutter_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Boxcutter_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Boxcutter_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Boxcutter_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Secret_Art_Surprise_Dispatch_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Secret_Art_Surprise_Dispatch_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Meow-teor_Kick_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Meow-teor_Kick_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Meow-teor_Kick_Hold_Preview.gif",
+            "caption": "Hold",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Meow-teor_Kick_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Meow-teor_Kick_Jump_Preview.gif",
+            "caption": "Hold (Jumping)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Meow-teor_Kick_Jump_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Meow-teor_Kick_Climb_Preview.gif",
+            "caption": "Hold (Climbing)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Meow-teor_Kick_Climb_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Kirara_Character_Details_1.png",
+        "caption": "Kirara Details 1 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Kirara_Character_Details_2.png",
+        "caption": "Kirara Details 2 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Kirara_Character_Details_3.gif",
+        "caption": "Kirara Details 3 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Kirara_Character_Details_4.gif",
+        "caption": "Kirara Details 4 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Kirara_Character_Details_5.gif",
+        "caption": "Kirara Details 5 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Kirara_Character_Details_6.gif",
+        "caption": "Kirara Details 6 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Kirara_Character_Details_7.png",
+        "caption": "Kirara Details 7 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Kirara_Character_Details_8.png",
+        "caption": "Kirara Details 8 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Kirara_Character_Details_9.png",
+        "caption": "Kirara Details 9 Official HoYoLAB Post"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Icon_Emoji_Paimon%27s_Paintings_24_Kirara_1.png",
+        "caption": "Five Star Rating, Purr-ease~ Set 24"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Icon_Emoji_Paimon%27s_Paintings_24_Kirara_2.png",
+        "caption": "Please Take It Set 24"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Icon_Emoji_Paimon%27s_Paintings_24_Kirara_3.png",
+        "caption": "Right Away! Set 24"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Icon_Emoji_Paimon%27s_Paintings_24_Kirara_4.png",
+        "caption": "I'm Serious! Set 24"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Icon_Emoji_Paimon%27s_Paintings_31_Kirara_1.png",
+        "caption": "Protecc Set 31"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Icon_Emoji_Paimon%27s_Paintings_34_Kirara_1.png",
+        "caption": "Sweet dreams Set 34"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Icon_Emoji_Paimon%27s_Paintings_34_Kirara_2.png",
+        "caption": "Confident Set 34"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Icon_Emoji_Paimon%27s_Paintings_42_Kirara_1.png",
+        "caption": "Sad Set 42"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Shield Support",
+      "sets": [
+        {
+          "name": "Tenacity of the Millelith",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Dendro Support",
+      "sets": [
+        {
+          "name": "Deepwood Memories",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "HP Support",
+      "sets": [
+        {
+          "name": "Vourukasha's Glow",
+          "pieces": 4
+        }
+      ]
+    }
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support", "Shielder"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Deepwood Memories"],
+        "notes": "4pc for Dendro RES shred"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gilded Dreams"],
+          "notes": "EM focused"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Key of Khaj-Nisut",
+          "notes": "HP + EM sharing"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Sword",
+          "notes": "Team energy"
+        },
+        {
+          "name": "Iron Sting",
+          "notes": "EM option"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["HP%", "EM"],
+      "goblet": ["HP%", "Dendro DMG"],
+      "circlet": ["HP%", "CRIT Rate"]
+    },
+    "substats": ["HP%", "EM", "ER", "CRIT Rate"],
+    "constellations": {
+      "c0": "Dendro shielder with cardboard box",
+      "breakpoints": [
+        "C2: Extra shield strength",
+        "C4: Extra Dendro application"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Kirara Shield",
+        "characters": ["Alhaitham", "Fischl", "Kirara", "Kazuha"],
+        "roles": {
+          "Alhaitham": "Main DPS",
+          "Fischl": "Electro",
+          "Kirara": "Shield/Dendro",
+          "Kazuha": "VV"
+        },
+        "rotation": "Kirara E (hold) → Fischl E → Kazuha tEP Q → Alhaitham combo"
+      }
+    ]
+  }
 }

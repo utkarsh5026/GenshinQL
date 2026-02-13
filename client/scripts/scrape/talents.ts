@@ -1,13 +1,13 @@
 import * as path from 'node:path';
 
-import { By, WebDriver } from 'selenium-webdriver';
+import { By, WebDriver, WebElement } from 'selenium-webdriver';
 
 import { logger } from '../logger.js';
 import { saveToPublic } from './fileio.js';
 import { TalentDaySchema } from './schema.js';
+import { getImageUrl, safeExecute, scrapeTable } from './scraping-helpers.js';
 import { withWebDriver } from './setup.js';
 import { BASE_URL } from './urls.js';
-import { getTableFromHeading } from './utils.js';
 
 const TALENT_FILE = 'dailyTalents';
 
@@ -25,8 +25,6 @@ const locations = [
   'Natlan',
   'Nod-Krai',
 ] as const;
-
-const parseUrl = (url: string) => url.split('/revision/')[0];
 
 /**
  * Loads talent materials for all specified locations and saves them to a JSON file.
@@ -82,70 +80,72 @@ export async function findTalentsForRegion(
   driver: WebDriver
 ): Promise<TalentDaySchema[]> {
   logger.info(`   📖 Finding table for ${region}...`);
-  const table = await getTableFromHeading(driver, region, 'h3');
   logger.success(`   ✓ Table found for ${region}`);
 
-  const tableBody = await table.findElement(By.css('tbody'));
-  const rows = await tableBody.findElements(By.css('tr'));
-  logger.info(`   📊 Processing ${rows.length} rows...`);
-
-  const talents: TalentDaySchema[] = [];
-
-  for (let i = 0; i < rows.length; i++) {
-    const row = rows[i];
+  const parseRow = async (
+    row: WebElement,
+    index: number
+  ): Promise<TalentDaySchema | null> => {
     const cells = await row.findElements(By.css('td'));
     if (cells.length !== 3) {
       logger.warn(
-        `   ⚠ Skipping row ${i + 1}: Expected 3 cells, found ${cells.length}`
+        `   ⚠ Skipping row ${index + 1}: Expected 3 cells, found ${cells.length}`
       );
-      continue;
+      return null;
     }
 
     const day = await cells[0].getText();
     logger.info(`   🗓️  Processing ${day}...`);
 
-    try {
-      const bookImages = await cells[1]
-        .findElement(By.css('span.card-list-container'))
-        .findElements(By.css('span.card-image-container img'));
+    return await safeExecute(
+      async () => {
+        const bookImages = await cells[1]
+          .findElement(By.css('span.card-list-container'))
+          .findElements(By.css('span.card-image-container img'));
 
-      const books = await Promise.all(
-        bookImages.map(async (book) => {
-          const name = await book.getAttribute('alt');
-          const url = await book.getAttribute('data-src');
-          return { name, url: parseUrl(url) };
-        })
-      );
-      logger.success(`      ✓ Found ${books.length} talent books`);
+        const books = await Promise.all(
+          bookImages.map(async (book) => {
+            const name = await book.getAttribute('alt');
+            const url = await getImageUrl(book);
+            return { name, url };
+          })
+        );
+        logger.success(`      ✓ Found ${books.length} talent books`);
 
-      const characterContainers = await cells[2].findElements(
-        By.css('span.card-body')
-      );
-      logger.info(
-        `      🔍 Extracting ${characterContainers.length} characters...`
-      );
+        const characterContainers = await cells[2].findElements(
+          By.css('span.card-body')
+        );
+        logger.info(
+          `      🔍 Extracting ${characterContainers.length} characters...`
+        );
 
-      const characters = await Promise.all(
-        characterContainers.map(async (container) => {
-          const img = await container.findElement(
-            By.css('span.card-image-container img')
-          );
-          const name = await img.getAttribute('alt');
-          const url = await img.getAttribute('data-src');
-          return { name, url: parseUrl(url) };
-        })
-      );
-      logger.success(
-        `      ✓ Found ${characters.length} characters for ${day}`
-      );
+        const characters = await Promise.all(
+          characterContainers.map(async (container) => {
+            const img = await container.findElement(
+              By.css('span.card-image-container img')
+            );
+            const name = await img.getAttribute('alt');
+            const url = await getImageUrl(img);
+            return { name, url };
+          })
+        );
+        logger.success(
+          `      ✓ Found ${characters.length} characters for ${day}`
+        );
 
-      talents.push({ day, books, characters });
-    } catch (error) {
-      logger.error(`      ✗ Error processing ${day}:`);
-      logger.error(`        ${error}`);
-      throw error;
-    }
-  }
+        return { day, books, characters };
+      },
+      `Error processing ${day}`,
+      null
+    );
+  };
+
+  const talents = await scrapeTable<TalentDaySchema>(
+    driver,
+    region,
+    'h3',
+    parseRow
+  );
 
   logger.success(
     `   ✓ Completed ${region}: ${talents.length} talent schedules extracted\n`
@@ -154,15 +154,9 @@ export async function findTalentsForRegion(
 }
 
 async function main() {
-  logger.info('🚀 Starting talent materials scraper...\n');
-
   await withWebDriver(async (driver) => {
-    logger.info(`🌍 Navigating to ${TALENT_URL}`);
     await driver.get(TALENT_URL);
-    logger.success('✓ Page loaded successfully\n');
-
     await loadTalents(driver);
-
     logger.success('\n✅ Talent scraping completed successfully!');
   });
 }

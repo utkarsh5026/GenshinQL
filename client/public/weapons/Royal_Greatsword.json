@@ -1,0 +1,263 @@
+{
+  "name": "Royal Greatsword",
+  "rarity": 4,
+  "attack": 565,
+  "subStat": "ATK 27.6%",
+  "effect": "Focus\nUpon dealing damage to an opponent, increases CRIT Rate by 8~16%. Max 5 stacks. A CRIT hit removes all existing stacks.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Weapon_Royal_Greatsword.png",
+  "nation": 0,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Item_Fetters_of_the_Dandelion_Gladiator.png",
+      "caption": "Fetters of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+      "caption": "Chains of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+      "caption": "Shackles of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Dream_of_the_Dandelion_Gladiator.png",
+      "caption": "Dream of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+      "caption": "Chaos Device"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+      "caption": "Chaos Circuit"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+      "caption": "Chaos Core"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Slime_Condensate.png",
+      "caption": "Sli­me Con­den­sate"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Slime_Secretions.png",
+      "caption": "Slime Secretions"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Item_Slime_Concentrate.png",
+      "caption": "Sli­me Con­cen­trate"
+    }
+  ],
+  "passives": [
+    "Upon dealing damage to an opponent, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all existing stacks.",
+    "Upon dealing damage to an opponent, increases CRIT Rate by 10%. Max 5 stacks. A CRIT hit removes all existing stacks.",
+    "Upon dealing damage to an opponent, increases CRIT Rate by 12%. Max 5 stacks. A CRIT hit removes all existing stacks.",
+    "Upon dealing damage to an opponent, increases CRIT Rate by 14%. Max 5 stacks. A CRIT hit removes all existing stacks.",
+    "Upon dealing damage to an opponent, increases CRIT Rate by 16%. Max 5 stacks. A CRIT hit removes all existing stacks."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Weapon_Royal_Greatsword.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Weapon_Royal_Greatsword_2nd.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 119
+        },
+        "subStat": {
+          "min": 6,
+          "max": 10.6
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Item_Fetters_of_the_Dandelion_Gladiator.png",
+            "caption": "Fetters of the Dandelion Gladiator",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+            "caption": "Chaos Device",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Slime_Condensate.png",
+            "caption": "Slime Condensate",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 144,
+          "max": 226
+        },
+        "subStat": {
+          "min": 10.6,
+          "max": 15.5
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+            "caption": "Chains of the Dandelion Gladiator",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+            "caption": "Chaos Device",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Slime_Condensate.png",
+            "caption": "Slime Condensate",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 252,
+          "max": 293
+        },
+        "subStat": {
+          "min": 15.5,
+          "max": 17.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+            "caption": "Chains of the Dandelion Gladiator",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+            "caption": "Chaos Circuit",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Slime_Secretions.png",
+            "caption": "Slime Secretions",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 319,
+          "max": 361
+        },
+        "subStat": {
+          "min": 17.9,
+          "max": 20.3
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+            "caption": "Shackles of the Dandelion Gladiator",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+            "caption": "Chaos Circuit",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Slime_Secretions.png",
+            "caption": "Slime Secretions",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 387,
+          "max": 429
+        },
+        "subStat": {
+          "min": 20.3,
+          "max": 22.7
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+            "caption": "Shackles of the Dandelion Gladiator",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+            "caption": "Chaos Core",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Item_Slime_Concentrate.png",
+            "caption": "Slime Concentrate",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 455,
+          "max": 497
+        },
+        "subStat": {
+          "min": 22.7,
+          "max": 25.1
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Dream_of_the_Dandelion_Gladiator.png",
+            "caption": "Dream of the Dandelion Gladiator",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+            "caption": "Chaos Core",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Item_Slime_Concentrate.png",
+            "caption": "Slime Concentrate",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 523,
+          "max": 565
+        },
+        "subStat": {
+          "min": 25.1,
+          "max": 27.6
+        }
+      }
+    ]
+  }
+}

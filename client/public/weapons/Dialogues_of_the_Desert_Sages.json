@@ -1,0 +1,264 @@
+{
+  "name": "Dialogues of the Desert Sages",
+  "rarity": 4,
+  "attack": 510,
+  "subStat": "HP 41.3%",
+  "effect": "Principle of Equilibrium\nWhen the wielder performs healing, restore 8~16 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Weapon_Dialogues_of_the_Desert_Sages.png",
+  "nation": 3,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Copper_Talisman_of_the_Forest_Dew.png",
+      "caption": "Copper Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+      "caption": "Iron Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+      "caption": "Silver Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Golden_Talisman_of_the_Forest_Dew.png",
+      "caption": "Golden Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Item_Feathery_Fin.png",
+      "caption": "Feathery Fin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Lunar_Fin.png",
+      "caption": "Lunar Fin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Chasmlight_Fin.png",
+      "caption": "Chasmlight Fin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+      "caption": "Spectral Husk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+      "caption": "Spectral Heart"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+      "caption": "Spectral Nucleus"
+    }
+  ],
+  "passives": [
+    "When the wielder performs healing, restore 8 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.",
+    "When the wielder performs healing, restore 8 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.",
+    "When the wielder performs healing, restore 8 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.",
+    "When the wielder performs healing, restore 8 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field.",
+    "When the wielder performs healing, restore 8 Energy. This effect can be triggered once every 10s and can occur even when the character is not on the field."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Weapon_Dialogues_of_the_Desert_Sages.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Weapon_Dialogues_of_the_Desert_Sages_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Card_Dialogues_of_the_Desert_Sages.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 42,
+          "max": 109
+        },
+        "subStat": {
+          "min": 9,
+          "max": 15.9
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Copper_Talisman_of_the_Forest_Dew.png",
+            "caption": "Copper Talisman of the Forest Dew",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Item_Feathery_Fin.png",
+            "caption": "Feathery Fin",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 135,
+          "max": 205
+        },
+        "subStat": {
+          "min": 15.9,
+          "max": 23.2
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+            "caption": "Iron Talisman of the Forest Dew",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Item_Feathery_Fin.png",
+            "caption": "Feathery Fin",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 231,
+          "max": 266
+        },
+        "subStat": {
+          "min": 23.2,
+          "max": 26.8
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+            "caption": "Iron Talisman of the Forest Dew",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Lunar_Fin.png",
+            "caption": "Lunar Fin",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 292,
+          "max": 327
+        },
+        "subStat": {
+          "min": 26.8,
+          "max": 30.4
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+            "caption": "Silver Talisman of the Forest Dew",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Lunar_Fin.png",
+            "caption": "Lunar Fin",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 353,
+          "max": 388
+        },
+        "subStat": {
+          "min": 30.4,
+          "max": 34.1
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+            "caption": "Silver Talisman of the Forest Dew",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Chasmlight_Fin.png",
+            "caption": "Chasmlight Fin",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 414,
+          "max": 449
+        },
+        "subStat": {
+          "min": 34.1,
+          "max": 37.7
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Golden_Talisman_of_the_Forest_Dew.png",
+            "caption": "Golden Talisman of the Forest Dew",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Chasmlight_Fin.png",
+            "caption": "Chasmlight Fin",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 475,
+          "max": 510
+        },
+        "subStat": {
+          "min": 37.7,
+          "max": 41.3
+        }
+      }
+    ]
+  }
+}

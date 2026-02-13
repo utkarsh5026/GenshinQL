@@ -1,0 +1,823 @@
+{
+  "newCharacters": [
+    {
+      "name": "Columbina",
+      "icon": "/assets/b5423c67661ad914.webp",
+      "description": "Welkin Moon’s Homecoming",
+      "rarity": "5-Star",
+      "element": "Hydro",
+      "weaponType": "Catalyst"
+    },
+    {
+      "name": "Zibai",
+      "icon": "/assets/a4c4fe3125a3c522.webp",
+      "description": "White Horse's Fleeting Spring",
+      "rarity": "5-Star",
+      "element": "Geo",
+      "weaponType": "Sword"
+    },
+    {
+      "name": "Illuga",
+      "icon": "/assets/ebcd619834256404.webp",
+      "description": "Nightmare's Burning Heart",
+      "rarity": "4-Star",
+      "element": "Geo",
+      "weaponType": "Polearm"
+    }
+  ],
+  "newWeapons": [
+    {
+      "name": "Nocturne's Curtain Call",
+      "showcaseImage": "/assets/e2f72eab49bb1bbf.webp"
+    },
+    {
+      "name": "Lightbearing Moonshard",
+      "showcaseImage": "/assets/a914ceb2e892c472.webp"
+    }
+  ],
+  "newArtifacts": [
+    {
+      "name": "A Day Carved From Rising Winds",
+      "pieces": [
+        {
+          "type": "flower",
+          "name": "Windborne Flower's Spruchdichtung",
+          "iconUrl": "/assets/1d1c91a70fdbe09a.webp"
+        },
+        {
+          "type": "plume",
+          "name": "Dawn's Brilliant Oath",
+          "iconUrl": "/assets/a788a2ae29b8ff9f.webp"
+        },
+        {
+          "type": "sands",
+          "name": "A Note in Spring's Leich",
+          "iconUrl": "/assets/67418c86b7fda7f3.webp"
+        },
+        {
+          "type": "goblet",
+          "name": "Heldenepos's Unspoken Tale",
+          "iconUrl": "/assets/dcce0bc68e02e8d2.webp"
+        },
+        {
+          "type": "circlet",
+          "name": "Minnesang of Love and Lament",
+          "iconUrl": "/assets/b2b5d5d88b844008.webp"
+        }
+      ],
+      "twoPieceBonus": "ATK +18%.",
+      "fourPieceBonus": "After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, gain the Blessing of Pastoral Winds effect for 6s: ATK is increased by 25%. If the equipping character has completed Witch's Homework, Blessing of Pastoral Winds will be upgraded to Resolve of Pastoral Winds, which also increases the CRIT Rate of the equipping character by an additional 20%. This effect can be triggered even when the character is off-field.",
+      "showcaseImage": "/assets/163ffa24783be85a.webp"
+    },
+    {
+      "name": "Aubade of Morningstar and Moon",
+      "pieces": [
+        {
+          "type": "flower",
+          "name": "Moonlit Offering's Opulent Dream",
+          "iconUrl": "/assets/619473837f1cd960.webp"
+        },
+        {
+          "type": "plume",
+          "name": "Moonlit Offering's Parting Light",
+          "iconUrl": "/assets/af61ec69d5a03908.webp"
+        },
+        {
+          "type": "sands",
+          "name": "Moonlit Offering's Final Hour",
+          "iconUrl": "/assets/5ea56bb06d1032ab.webp"
+        },
+        {
+          "type": "goblet",
+          "name": "Moonlit Offering's Libation",
+          "iconUrl": "/assets/273d56b40e9b2055.webp"
+        },
+        {
+          "type": "circlet",
+          "name": "Moonlit Offering's Silver Crown",
+          "iconUrl": "/assets/09273ebed7269eee.webp"
+        }
+      ],
+      "twoPieceBonus": "Increases Elemental Mastery by 80.",
+      "fourPieceBonus": "When the equipping character is off-field, Lunar Reaction DMG is increased by 20%. When the party's Moonsign Level is at least Ascendant Gleam, Lunar Reaction DMG will be further increased by 40%. This effect will disappear after the equipping character is active for 3s.",
+      "showcaseImage": "/assets/163ffa24783be85a.webp"
+    }
+  ],
+  "eventWishes": [
+    {
+      "bannerName": "Somnias a Luna",
+      "bannerUrl": "https://genshin-impact.fandom.com/wiki/Somnias_a_Luna/2026-01-14",
+      "bannerImage": "/assets/e6216fe54fde6a7c.webp",
+      "phase": "Phase I",
+      "duration": {
+        "start": "January 14, 2026 11:00 GMT+8",
+        "end": "February 3, 2026 17:59 (Server Time)"
+      },
+      "featuredCharacters": [
+        {
+          "name": "Co­lum­bi­na",
+          "icon": "/assets/b5423c67661ad914.webp",
+          "element": "hydro",
+          "weaponType": "catalyst",
+          "rarity": 5
+        },
+        {
+          "name": "Se­thos",
+          "icon": "/assets/bce10ff9ad9f7d36.webp",
+          "element": "electro",
+          "weaponType": "bow",
+          "rarity": 4
+        },
+        {
+          "name": "Fis­chl",
+          "icon": "/assets/f5f10ffbf74d66b2.webp",
+          "element": "electro",
+          "weaponType": "bow",
+          "rarity": 4
+        },
+        {
+          "name": "Ifa",
+          "icon": "/assets/3d6e82e4628f821d.webp",
+          "element": "anemo",
+          "weaponType": "catalyst",
+          "rarity": 4
+        }
+      ]
+    },
+    {
+      "bannerName": "Astral Actuation",
+      "bannerUrl": "https://genshin-impact.fandom.com/wiki/Astral_Actuation/2026-01-14",
+      "bannerImage": "/assets/ffb8ca757f78e2b0.webp",
+      "phase": "Phase I",
+      "duration": {
+        "start": "January 14, 2026 11:00 GMT+8",
+        "end": "February 3, 2026 17:59"
+      },
+      "featuredCharacters": [
+        {
+          "name": "I­nef­fa",
+          "icon": "/assets/bd75f751ae62ff6e.webp",
+          "element": "electro",
+          "weaponType": "polearm",
+          "rarity": 5
+        },
+        {
+          "name": "Se­thos",
+          "icon": "/assets/bce10ff9ad9f7d36.webp",
+          "element": "electro",
+          "weaponType": "bow",
+          "rarity": 4
+        },
+        {
+          "name": "Fis­chl",
+          "icon": "/assets/f5f10ffbf74d66b2.webp",
+          "element": "electro",
+          "weaponType": "bow",
+          "rarity": 4
+        },
+        {
+          "name": "Ifa",
+          "icon": "/assets/3d6e82e4628f821d.webp",
+          "element": "anemo",
+          "weaponType": "catalyst",
+          "rarity": 4
+        }
+      ]
+    },
+    {
+      "bannerName": "Harmonious Abundance",
+      "bannerUrl": "https://genshin-impact.fandom.com/wiki/Harmonious_Abundance/2026-02-03",
+      "bannerImage": "/assets/ff53b086ad6c69ff.webp",
+      "phase": "Phase II",
+      "duration": {
+        "start": "February 3, 2026 18:00 (Server Time)",
+        "end": "February 24, 2026 14:59 (Server Time)"
+      },
+      "featuredCharacters": [
+        {
+          "name": "Zi­bai",
+          "icon": "/assets/a4c4fe3125a3c522.webp",
+          "element": "geo",
+          "weaponType": "sword",
+          "rarity": 5
+        },
+        {
+          "name": "Il­lu­ga",
+          "icon": "/assets/ebcd619834256404.webp",
+          "element": "geo",
+          "weaponType": "polearm",
+          "rarity": 4
+        },
+        {
+          "name": "Ai­no",
+          "icon": "/assets/2cd7804529570a47.webp",
+          "element": "hydro",
+          "weaponType": "claymore",
+          "rarity": 4
+        },
+        {
+          "name": "Go­rou",
+          "icon": "/assets/061308c7e8596566.webp",
+          "element": "geo",
+          "weaponType": "bow",
+          "rarity": 4
+        }
+      ]
+    },
+    {
+      "bannerName": "Decree of the Deeps",
+      "bannerUrl": "https://genshin-impact.fandom.com/wiki/Decree_of_the_Deeps/2026-02-03",
+      "bannerImage": "/assets/224a3ca1d40a4616.webp",
+      "phase": "Phase II",
+      "duration": {
+        "start": "February 3, 2026 18:00 (Server Time)",
+        "end": "February 24, 2026 14:59 (Server Time)"
+      },
+      "featuredCharacters": [
+        {
+          "name": "Neu­vil­lette",
+          "icon": "/assets/586092f6d48ce329.webp",
+          "element": "hydro",
+          "weaponType": "catalyst",
+          "rarity": 5
+        },
+        {
+          "name": "Il­lu­ga",
+          "icon": "/assets/ebcd619834256404.webp",
+          "element": "geo",
+          "weaponType": "polearm",
+          "rarity": 4
+        },
+        {
+          "name": "Ai­no",
+          "icon": "/assets/2cd7804529570a47.webp",
+          "element": "hydro",
+          "weaponType": "claymore",
+          "rarity": 4
+        },
+        {
+          "name": "Go­rou",
+          "icon": "/assets/061308c7e8596566.webp",
+          "element": "geo",
+          "weaponType": "bow",
+          "rarity": 4
+        }
+      ]
+    }
+  ],
+  "newEvents": [
+    {
+      "name": "A Lanternlit Ode to the Silver Moon",
+      "url": "https://genshin-impact.fandom.com/wiki/A_Lanternlit_Ode_to_the_Silver_Moon_(Event)",
+      "images": ["/assets/3a1a481ad0a422f4.webp"],
+      "rewards": [
+        {
+          "url": "/assets/8ecd6fa06eadd84d.webp",
+          "caption": "Primogem",
+          "count": 1060
+        },
+        {
+          "url": "/assets/3138f0e682707574.webp",
+          "caption": "Mora",
+          "count": 890000
+        },
+        {
+          "url": "/assets/db39a57d5bedef87.webp",
+          "caption": "Crown of Insight",
+          "count": 1
+        },
+        {
+          "url": "/assets/e60edfe8c3f4f140.webp",
+          "caption": "Rainlit Bamboo Reverie",
+          "count": 1
+        },
+        {
+          "url": "/assets/538aab704d5fdc8c.webp",
+          "caption": "Hero's Wit",
+          "count": 40
+        },
+        {
+          "url": "/assets/ad847fc5aeb38f65.webp",
+          "caption": "Adventurer's Experience",
+          "count": 32
+        },
+        {
+          "url": "/assets/76bc7b07658a152e.webp",
+          "caption": "Mystic Enhance­ment Ore",
+          "count": 88
+        },
+        {
+          "url": "/assets/79b6f0c69ba2de9a.webp",
+          "caption": "Guide to Diligence",
+          "count": 9
+        },
+        {
+          "url": "/assets/94d5551e6e577627.webp",
+          "caption": "Guide to Gold",
+          "count": 9
+        },
+        {
+          "url": "/assets/fc00a1e8474a34ad.webp",
+          "caption": "Guide to Prosperity",
+          "count": 9
+        },
+        {
+          "url": "/assets/11f9965a4331c302.webp",
+          "caption": "Philosophies of Diligence",
+          "count": 3
+        },
+        {
+          "url": "/assets/47139d644ea3d6c7.webp",
+          "caption": "Philosophies of Gold",
+          "count": 3
+        },
+        {
+          "url": "/assets/112da12eb8886eee.webp",
+          "caption": "Philosophies of Prosperity",
+          "count": 3
+        },
+        {
+          "url": "/assets/3a6d65d63f5eb884.webp",
+          "caption": "Sanctifying Unction",
+          "count": 15
+        },
+        {
+          "url": "/assets/c46de42cfb5765f2.webp",
+          "caption": "Remnant of the Dreadwing",
+          "count": 6
+        },
+        {
+          "url": "/assets/173571da26222cc5.webp",
+          "caption": "Ag­ni­dus A­gate Frag­ment",
+          "count": 3
+        },
+        {
+          "url": "/assets/5e8981089bb769d9.webp",
+          "caption": "Shivada Jade Fragment",
+          "count": 3
+        },
+        {
+          "url": "/assets/319ef5b3105a502b.webp",
+          "caption": "Na­ga­dus Em­er­ald Fragment",
+          "count": 3
+        },
+        {
+          "url": "/assets/3922281c8da6e905.webp",
+          "caption": "Prithiva Topaz Frag­ment",
+          "count": 12
+        },
+        {
+          "url": "/assets/cd98980bd7106758.webp",
+          "caption": "Vaj­ra­da A­me­thyst Frag­ment",
+          "count": 3
+        },
+        {
+          "url": "/assets/6dcf264cbcb3f077.webp",
+          "caption": "Va­ru­na­da La­zu­rite Frag­ment",
+          "count": 3
+        },
+        {
+          "url": "/assets/8eef9a12a84046de.webp",
+          "caption": "Va­yu­da Tur­quoise Frag­ment",
+          "count": 3
+        },
+        {
+          "url": "/assets/776871fe5beab374.webp",
+          "caption": "Immaculate Warrant",
+          "count": 12
+        },
+        {
+          "url": "/assets/c4620fbb91439e06.webp",
+          "caption": "Tattered Warrant",
+          "count": 15
+        },
+        {
+          "url": "/assets/d77d99990f2522d3.webp",
+          "caption": "Glaze Lily",
+          "count": 30
+        },
+        {
+          "url": "/assets/6a4614c16c18c5f8.webp",
+          "caption": "Auspicious Treasure Tree",
+          "count": 1
+        },
+        {
+          "url": "/assets/7a45c0f2c55ee840.webp",
+          "caption": "Blueprint: Vibrant Xiao Lantern: \"A Meeting With Friends\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/76df45312e0a7ad2.webp",
+          "caption": "Blueprint: Vibrant Xiao Lantern: \"May My Wish Travel Far\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/874da2a35fff8fc5.webp",
+          "caption": "Great Zhanzhu Lantern: \"Pathblocker Maximus\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/4b2a5b1e449b5ee6.webp",
+          "caption": "Great Zhanzhu Lantern: \"Pathblocker\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/dbdfc93aed51e845.webp",
+          "caption": "Vibrant Xiao Lantern: \"Riff of Fortune\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/5db5701899ceda22.webp",
+          "caption": "Vibrant Xiao Lantern: \"Fortune and Good Tidings\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/a25dbed29ec95438.webp",
+          "caption": "Vibrant Xiao Lantern: \"A Beautiful Start to Spring\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/3356818a238a1f61.webp",
+          "caption": "Vibrant Xiao Lantern: \"Sweet Scents in the Wind\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/e8c2fda3fb5061cf.webp",
+          "caption": "Vibrant Xiao Lantern: \"Good Luck All the Way\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/cbe6fc2259f03ce9.webp",
+          "caption": "Vibrant Xiao Lantern: \"May All Your Wishes Come True\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/3bbb99eb1de70708.webp",
+          "caption": "White Horse Galloping",
+          "count": 1
+        },
+        {
+          "url": "/assets/2297fb2c59516cd8.webp",
+          "caption": "Xiao Lantern Flight Manual",
+          "count": 1
+        },
+        {
+          "url": "/assets/3a58c07933009a38.webp",
+          "caption": "A Fragrant Feast of Flavors",
+          "count": 1
+        },
+        {
+          "url": "/assets/d11058665d5d70a5.webp",
+          "caption": "Extravagant Slumber",
+          "count": 1
+        },
+        {
+          "url": "/assets/f20b16af7e0b9aa4.webp",
+          "caption": "Jade-Cut Flowers",
+          "count": 1
+        },
+        {
+          "url": "/assets/30df7e07f53af375.webp",
+          "caption": "\"Sweet Dream\"",
+          "count": 1
+        },
+        {
+          "url": "/assets/ce06a4d93e497a5e.webp",
+          "caption": "Rockin' Riffin' Chicken!",
+          "count": 1
+        },
+        {
+          "url": "/assets/b06cc28099fce090.webp",
+          "caption": "Yummy Yum Cha",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Moonlit Patrol Exercise",
+      "url": "https://genshin-impact.fandom.com/wiki/Moonlit_Patrol_Exercise",
+      "images": ["/assets/ff05eb2b3bbda9d3.webp"],
+      "rewards": [
+        {
+          "url": "/assets/8ecd6fa06eadd84d.webp",
+          "caption": "Primogem",
+          "count": 420
+        }
+      ]
+    },
+    {
+      "name": "Shutterflash Memory Hunt",
+      "url": "https://genshin-impact.fandom.com/wiki/Shutterflash_Memory_Hunt",
+      "images": ["/assets/8393b2ababd9befe.webp"],
+      "rewards": [
+        {
+          "url": "/assets/8ecd6fa06eadd84d.webp",
+          "caption": "Primogem",
+          "count": 420
+        },
+        {
+          "url": "/assets/3138f0e682707574.webp",
+          "caption": "Mora",
+          "count": 140000
+        },
+        {
+          "url": "/assets/ad847fc5aeb38f65.webp",
+          "caption": "Adventurer's Experience",
+          "count": 8
+        },
+        {
+          "url": "/assets/538aab704d5fdc8c.webp",
+          "caption": "Hero's Wit",
+          "count": 2
+        },
+        {
+          "url": "/assets/b6f39a8ab3c49e07.webp",
+          "caption": "Guide to Freedom",
+          "count": 2
+        },
+        {
+          "url": "/assets/3e266e3f39d5d3e4.webp",
+          "caption": "Guide to Resistance",
+          "count": 2
+        },
+        {
+          "url": "/assets/8e4d1788ae90ba4d.webp",
+          "caption": "Guide to Ballad",
+          "count": 2
+        },
+        {
+          "url": "/assets/0b86286a2097a7d9.webp",
+          "caption": "Guide to Transience",
+          "count": 2
+        },
+        {
+          "url": "/assets/6ab31487661c00a0.webp",
+          "caption": "Guide to Elegance",
+          "count": 2
+        },
+        {
+          "url": "/assets/31917828b5f6c950.webp",
+          "caption": "Guide to Light",
+          "count": 2
+        },
+        {
+          "url": "/assets/38e1b2d6d014eca5.webp",
+          "caption": "Guide to Admonition",
+          "count": 2
+        },
+        {
+          "url": "/assets/8ebc3f8e5758abaa.webp",
+          "caption": "Guide to Ingenuity",
+          "count": 2
+        },
+        {
+          "url": "/assets/24ab112b2dcc39b4.webp",
+          "caption": "Guide to Praxis",
+          "count": 2
+        },
+        {
+          "url": "/assets/97aec9135c287042.webp",
+          "caption": "Guide to Equity",
+          "count": 2
+        },
+        {
+          "url": "/assets/2f850f890eb75aa7.webp",
+          "caption": "Guide to Justice",
+          "count": 2
+        },
+        {
+          "url": "/assets/d1e681a40a95c46b.webp",
+          "caption": "Guide to Order",
+          "count": 2
+        },
+        {
+          "url": "/assets/db48514510a820fa.webp",
+          "caption": "Guide to Contention",
+          "count": 2
+        },
+        {
+          "url": "/assets/b81471a81e8b63e7.webp",
+          "caption": "Guide to Kindling",
+          "count": 2
+        },
+        {
+          "url": "/assets/ec05c6af087b7ee4.webp",
+          "caption": "Guide to Conflict",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "Ley Line Overflow",
+      "url": "https://genshin-impact.fandom.com/wiki/Ley_Line_Overflow/2026-02-16",
+      "images": ["/assets/303f76703c71d5bf.webp"],
+      "rewards": []
+    },
+    {
+      "name": "May Fortune Find You: Springs Premonition",
+      "url": "https://genshin-impact.fandom.com/wiki/May_Fortune_Find_You/2026-01-16",
+      "images": ["/assets/79ef10f865a6d1eb.webp"],
+      "rewards": [
+        {
+          "url": "/assets/8ecd6fa06eadd84d.webp",
+          "caption": "Primogem",
+          "count": 1600
+        },
+        {
+          "url": "/assets/03f15a6fedd1ff85.webp",
+          "caption": "Intertwined Fate",
+          "count": 10
+        },
+        {
+          "url": "/assets/db39a57d5bedef87.webp",
+          "caption": "Crown of Insight",
+          "count": 1
+        },
+        {
+          "url": "/assets/ebd704ef341b5350.webp",
+          "caption": "Dust of En­light­en­ment",
+          "count": 1
+        },
+        {
+          "url": "/assets/e147225269b23fe7.webp",
+          "caption": "Sanctifying Elixir",
+          "count": 1
+        },
+        {
+          "url": "/assets/c3faf6cf8cd1c8b8.webp",
+          "caption": "Fragile Resin",
+          "count": 2
+        },
+        {
+          "url": "/assets/538aab704d5fdc8c.webp",
+          "caption": "Hero's Wit",
+          "count": 13
+        },
+        {
+          "url": "/assets/76bc7b07658a152e.webp",
+          "caption": "Mystic Enhance­ment Ore",
+          "count": 10
+        },
+        {
+          "url": "/assets/3138f0e682707574.webp",
+          "caption": "Mora",
+          "count": 130000
+        },
+        {
+          "url": "/assets/3a6d65d63f5eb884.webp",
+          "caption": "Sanctifying Unction",
+          "count": 12
+        },
+        {
+          "url": "/assets/79b6f0c69ba2de9a.webp",
+          "caption": "Guide to Diligence",
+          "count": 3
+        },
+        {
+          "url": "/assets/94d5551e6e577627.webp",
+          "caption": "Guide to Gold",
+          "count": 3
+        },
+        {
+          "url": "/assets/fc00a1e8474a34ad.webp",
+          "caption": "Guide to Prosperity",
+          "count": 3
+        },
+        {
+          "url": "/assets/b9f9bdc18470000a.webp",
+          "caption": "Slow-Cooked Bamboo Shoot Soup",
+          "count": 5
+        },
+        {
+          "url": "/assets/b8d1fc1b346ff994.webp",
+          "caption": "\"My Way\"",
+          "count": 5
+        },
+        {
+          "url": "/assets/c6aaa2ca433ab146.webp",
+          "caption": "Eight-Treasure Duck",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "name": "New Year's Gift",
+      "url": "https://genshin-impact.fandom.com/wiki/New_Year%27s_Gift",
+      "images": ["/assets/8b964be62eda9bac.webp"],
+      "rewards": []
+    }
+  ],
+  "newAreas": [
+    {
+      "name": "Voidsea Outlook",
+      "url": "https://genshin-impact.fandom.com/wiki/Voidsea_Outlook",
+      "nationName": "Nod-Krai",
+      "areaImage": "/assets/7f380c1a8dbd5d43.webp",
+      "galleryImages": []
+    },
+    {
+      "name": "Wavechaser Plain",
+      "url": "https://genshin-impact.fandom.com/wiki/Wavechaser_Plain",
+      "nationName": "Nod-Krai",
+      "areaImage": "/assets/aa301548c7b493b6.webp",
+      "galleryImages": []
+    },
+    {
+      "name": "Ashveil Peak",
+      "url": "https://genshin-impact.fandom.com/wiki/Ashveil_Peak",
+      "nationName": "Nod-Krai",
+      "areaImage": "/assets/68a3cf37931930cf.webp",
+      "galleryImages": []
+    }
+  ],
+  "spiralAbyss": {
+    "phases": [
+      {
+        "phase": 1,
+        "updateDate": "January 16",
+        "floor11Disorders": [
+          "All party members gain a 60% Electro DMG Bonus.",
+          "All party members gain a 60% Hydro DMG Bonus."
+        ],
+        "floor12Disorders": {
+          "firstHalf": "The active character's Charged Attack DMG is increased by 75%.",
+          "secondHalf": "Lunar Reaction DMG is increased by 75%."
+        },
+        "blessing": {
+          "name": "Surgestrike Moon",
+          "description": "When a character triggers a Lunar reaction (Lunar-Bloom, Lunar-Charged, or Lunar-Crystallize) on an opponent, a shockwave will be unleashed at the opponent's position, dealing True DMG. This effect can be triggered once every 3s."
+        }
+      },
+      {
+        "phase": 2,
+        "updateDate": "February 16",
+        "floor11Disorders": [
+          "All party members gain a 60% Geo DMG Bonus.",
+          "All party members gain a 60% Hydro DMG Bonus."
+        ],
+        "floor12Disorders": {
+          "firstHalf": "Lunar-Charged DMG is increased by 75%.",
+          "secondHalf": "Lunar-Crystallize DMG is increased by 75%."
+        },
+        "blessing": {
+          "name": "Stonehold Moon",
+          "description": "When a character deals Lunar-Crystallize DMG to an opponent, a shockwave will be unleashed at the opponent's position, dealing True DMG. This effect can be triggered once every 3s."
+        }
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "url": "/assets/47fefadc9257df7d.webp",
+      "caption": "Special Program Announcement"
+    },
+    {
+      "url": "/assets/8dd9521c98b11a7c.webp",
+      "caption": "Special Program Announcement 2"
+    },
+    {
+      "url": "/assets/f433eacd8c02a981.webp",
+      "caption": "Special Program Coming Soon"
+    },
+    {
+      "url": "/assets/bd4132b4ea2d5450.webp",
+      "caption": "Special Program Already Ended"
+    },
+    {
+      "url": "/assets/6780db8216eb541c.webp",
+      "caption": "Upcoming Characters"
+    },
+    {
+      "url": "/assets/726b9192c8fbf0fd.webp",
+      "caption": "Event Calendar"
+    },
+    {
+      "url": "/assets/8e7b780c88445ae5.webp",
+      "caption": "Content Preview 1"
+    },
+    {
+      "url": "/assets/780f8f26807f4c36.webp",
+      "caption": "Content Preview 2"
+    },
+    {
+      "url": "/assets/b1de1f54506504db.webp",
+      "caption": "New \"Quest Overview\" Interface Goes Live Alongside the New \"Recollection\" Feature"
+    },
+    {
+      "url": "/assets/8001d41925ad4d0b.webp",
+      "caption": "Update Details"
+    },
+    {
+      "url": "/assets/c36963c5dc0a16af.webp",
+      "caption": "Wallpaper 1"
+    },
+    {
+      "url": "/assets/0a55760bfe9687e5.webp",
+      "caption": "Wallpaper 2"
+    },
+    {
+      "url": "/assets/037359da7f0bc063.webp",
+      "caption": "Wallpaper 3"
+    }
+  ]
+}

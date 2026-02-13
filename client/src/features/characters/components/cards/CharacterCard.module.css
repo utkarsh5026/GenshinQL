@@ -1,0 +1,315 @@
+/* Optimized element-themed styles - animations only on hover for better performance */
+
+/* Card fade-in animation for initial load */
+.cardFadeIn {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition:
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cardFadeIn.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Element icon wrapper - no animations by default for performance */
+.elementIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  /* GPU acceleration hint */
+  will-change: transform;
+}
+
+/* Card hover base class with GPU acceleration */
+.cardHover {
+  position: relative;
+  /* Use transform3d for GPU acceleration */
+  transform: translate3d(0, 0, 0);
+  will-change: transform, box-shadow;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Simplified hover effect with GPU acceleration */
+.cardHover:hover {
+  transform: translate3d(0, -4px, 0) scale(1.02);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 768px) {
+  .cardHover:hover {
+    transform: translate3d(0, -4px, 0) scale(1.03);
+  }
+}
+
+/* Pseudo-element for hover glow effect */
+.cardHover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Only animate element icons on card hover for performance */
+.cardHover:hover .elementIcon {
+  transform: scale(1.05);
+}
+
+/* Anemo - Wind/Air: Gentle hover effect */
+.cardHover:hover .anemo {
+  animation: float 2s ease-in-out;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -3px, 0);
+  }
+}
+
+/* Pyro - Fire: Subtle brightness on hover */
+.cardHover:hover .pyro {
+  animation: flicker 1.5s ease-in-out;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.15);
+  }
+}
+
+/* Hydro - Water: Gentle scale on hover */
+.cardHover:hover .hydro {
+  animation: wave 2s ease-in-out;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* Electro - Electric: Quick pulse on hover */
+.cardHover:hover .electro {
+  animation: pulse 1s ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+/* Cryo - Ice: Shimmer on hover */
+.cardHover:hover .cryo {
+  animation: shimmer 2s ease-in-out;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.15);
+  }
+}
+
+/* Geo - Rock: Stable pulse on hover */
+.cardHover:hover .geo {
+  animation: solidPulse 2s ease-in-out;
+}
+
+@keyframes solidPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Dendro - Nature: Gentle grow on hover */
+.cardHover:hover .dendro {
+  animation: bloom 2s ease-in-out;
+}
+
+@keyframes bloom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Element-specific hover glows - reduced opacity for subtlety */
+.anemoGlow:hover::before {
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(100, 210, 255, 0.3);
+}
+
+.pyroGlow:hover::before {
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(255, 100, 50, 0.3);
+}
+
+.hydroGlow:hover::before {
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(50, 150, 255, 0.3);
+}
+
+.electroGlow:hover::before {
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(150, 100, 255, 0.3);
+}
+
+.cryoGlow:hover::before {
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(150, 220, 255, 0.3);
+}
+
+.geoGlow:hover::before {
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(255, 200, 50, 0.3);
+}
+
+.dendroGlow:hover::before {
+  opacity: 0.1;
+  box-shadow: 0 0 15px 3px rgba(100, 200, 50, 0.3);
+}
+
+/* Namecard banner - absolutely positioned at top of card */
+.namecardBanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .namecardBanner {
+    height: 70px;
+  }
+}
+
+/* Namecard image with GPU acceleration */
+.namecardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.6;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtle zoom on card hover */
+.cardHover:hover .namecardImage {
+  transform: translate3d(0, 0, 0) scale(1.05);
+}
+
+/* Gradient overlay for depth */
+.namecardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.15) 40%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+/* Loading skeleton shimmer */
+.namecardSkeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  background-size: 200% 100%;
+  animation: namecardShimmer 1.5s infinite;
+}
+
+@keyframes namecardShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Card content sits above the namecard banner */
+.cardContent {
+  position: relative;
+  z-index: 1;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .anemo,
+  .pyro,
+  .hydro,
+  .electro,
+  .cryo,
+  .geo,
+  .dendro,
+  .elementIcon {
+    animation: none !important;
+  }
+
+  .cardFadeIn,
+  .cardHover,
+  .cardHover::before,
+  .elementIcon,
+  .namecardImage {
+    transition: none;
+    will-change: auto;
+  }
+
+  .namecardSkeleton {
+    animation: none !important;
+  }
+
+  .cardFadeIn {
+    opacity: 1;
+    transform: none;
+  }
+}

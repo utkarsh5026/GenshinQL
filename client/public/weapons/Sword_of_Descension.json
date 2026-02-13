@@ -1,0 +1,259 @@
+{
+  "name": "Sword of Descension",
+  "rarity": 4,
+  "attack": 440,
+  "subStat": "ATK 35.2%",
+  "effect": "Descension\nEffective only on the following platform:\n\"PlayStation Network\"\nHitting enemies with Normal or Charged Attacks grants a 50% chance to deal 200% ATK as DMG in a small AoE. This effect can only occur once every 10s.\nAdditionally, if the Traveler equips the Sword of Descension, their ATK is increased by 66.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Sword_of_Descension.png",
+  "nation": 0,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Boreal_Wolf%27s_Milk_Tooth.png",
+      "caption": "Boreal Wolf's Milk Tooth"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png",
+      "caption": "Boreal Wolf's Cracked Tooth"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Boreal_Wolf%27s_Broken_Fang.png",
+      "caption": "Boreal Wolf's Broken Fang"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Boreal_Wolf%27s_Nostalgia.png",
+      "caption": "Boreal Wolf's Nostalgia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Item_Dead_Ley_Line_Branch.png",
+      "caption": "Dead Ley Line Branch"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Dead_Ley_Line_Leaves.png",
+      "caption": "Dead Ley Line Leaves"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Item_Ley_Line_Sprout.png",
+      "caption": "Ley Line Sprout"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Treasure_Hoarder_Insignia.png",
+      "caption": "Treasure Hoarder Insignia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Item_Silver_Raven_Insignia.png",
+      "caption": "Silver Raven Insignia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Golden_Raven_Insignia.png",
+      "caption": "Golden Raven Insignia"
+    }
+  ],
+  "passives": [
+    "Effective only on the following platform:\n\"PlayStation Network\"\nHitting enemies with Normal or Charged Attacks grants a 50% chance to deal 200% ATK as DMG in a small AoE. This effect can only occur once every 10s.\nAdditionally, if the Traveler equips the Sword of Descension, their ATK is increased by 66."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Sword_of_Descension.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Weapon_Sword_of_Descension_2nd.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 39,
+          "max": 94
+        },
+        "subStat": {
+          "min": 7.7,
+          "max": 13.5
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Boreal_Wolf%27s_Milk_Tooth.png",
+            "caption": "Boreal Wolf's Milk Tooth",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Item_Dead_Ley_Line_Branch.png",
+            "caption": "Dead Ley Line Branch",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Treasure_Hoarder_Insignia.png",
+            "caption": "Treasure Hoarder Insignia",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 120,
+          "max": 176
+        },
+        "subStat": {
+          "min": 13.5,
+          "max": 19.7
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png",
+            "caption": "Boreal Wolf's Cracked Tooth",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Item_Dead_Ley_Line_Branch.png",
+            "caption": "Dead Ley Line Branch",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Treasure_Hoarder_Insignia.png",
+            "caption": "Treasure Hoarder Insignia",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 202,
+          "max": 229
+        },
+        "subStat": {
+          "min": 19.7,
+          "max": 22.8
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png",
+            "caption": "Boreal Wolf's Cracked Tooth",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Dead_Ley_Line_Leaves.png",
+            "caption": "Dead Ley Line Leaves",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Item_Silver_Raven_Insignia.png",
+            "caption": "Silver Raven Insignia",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 255,
+          "max": 282
+        },
+        "subStat": {
+          "min": 22.8,
+          "max": 25.9
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Boreal_Wolf%27s_Broken_Fang.png",
+            "caption": "Boreal Wolf's Broken Fang",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Dead_Ley_Line_Leaves.png",
+            "caption": "Dead Ley Line Leaves",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Item_Silver_Raven_Insignia.png",
+            "caption": "Silver Raven Insignia",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 308,
+          "max": 335
+        },
+        "subStat": {
+          "min": 25.9,
+          "max": 29
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Boreal_Wolf%27s_Broken_Fang.png",
+            "caption": "Boreal Wolf's Broken Fang",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Item_Ley_Line_Sprout.png",
+            "caption": "Ley Line Sprout",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Golden_Raven_Insignia.png",
+            "caption": "Golden Raven Insignia",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 361,
+          "max": 388
+        },
+        "subStat": {
+          "min": 29,
+          "max": 32.1
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Boreal_Wolf%27s_Nostalgia.png",
+            "caption": "Boreal Wolf's Nostalgia",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Item_Ley_Line_Sprout.png",
+            "caption": "Ley Line Sprout",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Golden_Raven_Insignia.png",
+            "caption": "Golden Raven Insignia",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 414,
+          "max": 440
+        },
+        "subStat": {
+          "min": 32.1,
+          "max": 35.2
+        }
+      }
+    ]
+  }
+}

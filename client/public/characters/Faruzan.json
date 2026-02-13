@@ -1,494 +1,561 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Faruzan_Icon.png",
-    "name": "Faruzan",
-    "rarity": "4 Stars",
-    "element": "Anemo",
-    "weaponType": "Bow",
-    "region": "Sumeru",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Faruzan_Icon.png",
+  "name": "Faruzan",
+  "rarity": "4 Stars",
+  "element": "Anemo",
+  "weaponType": "Bow",
+  "region": "Sumeru",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Sumeru_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Bow_Anemo.png",
+      "talentName": "Parthian Shot",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, mighty winds will accumulate on the arrowhead. A fully charged wind arrow will deal Anemo DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, hitting opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Bow_Anemo.png",
-            "talentName": "Parthian Shot",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, mighty winds will accumulate on the arrowhead. A fully charged wind arrow will deal Anemo DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, hitting opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Parthian_Shot_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Parthian_Shot_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Parthian_Shot_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "44.73",
-                    "48.37",
-                    "52.01",
-                    "57.21",
-                    "60.85",
-                    "65.01",
-                    "70.73",
-                    "76.46",
-                    "82.18",
-                    "88.42",
-                    "94.66"
-                ],
-                "2-Hit DMG (%)": [
-                    "42.19",
-                    "45.62",
-                    "49.05",
-                    "53.96",
-                    "57.39",
-                    "61.32",
-                    "66.71",
-                    "72.11",
-                    "77.51",
-                    "83.39",
-                    "89.28"
-                ],
-                "3-Hit DMG (%)": [
-                    "53.16",
-                    "57.49",
-                    "61.82",
-                    "68",
-                    "72.33",
-                    "77.27",
-                    "84.07",
-                    "90.87",
-                    "97.67",
-                    "105.09",
-                    "112.51"
-                ],
-                "4-Hit DMG (%)": [
-                    "70.62",
-                    "76.37",
-                    "82.12",
-                    "90.33",
-                    "96.08",
-                    "102.65",
-                    "111.68",
-                    "120.71",
-                    "129.74",
-                    "139.6",
-                    "149.45"
-                ],
-                "Aimed Shot": [
-                    "43.86",
-                    "47.43",
-                    "51",
-                    "56.1",
-                    "59.67",
-                    "63.75",
-                    "69.36",
-                    "74.97",
-                    "80.58",
-                    "86.7",
-                    "92.82"
-                ],
-                "Fully-Charged Aimed Shot": [
-                    "124",
-                    "133.3",
-                    "142.6",
-                    "155",
-                    "164.3",
-                    "173.6",
-                    "186",
-                    "198.4",
-                    "210.8",
-                    "223.2",
-                    "235.6"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.17",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Parthian_Shot_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Talent_Wind_Realm_of_Nasamjnin.png",
-            "talentName": "Wind Realm of Nasamjnin",
-            "talentType": "Elemental Skill",
-            "description": "Faruzan deploys a polyhedron that deals AoE Anemo DMG to nearby opponents. She will also enter the Manifest Gale state.\nWhile in the Manifest Gale state, Faruzan's next fully charged shot will consume this state and will become a Hurricane Arrow that contains high-pressure currents. This arrow deals Anemo DMG based on the DMG of a fully charged Aimed Shot from \"Normal Attack: Parthian Shot.\"\n\nPressurized Collapse\nThe Hurricane Arrow will apply a Pressurized Collapse effect to the opponent or character hit. This effect will be removed after a short delay, creating a vortex that deals AoE Anemo DMG and pulls nearby objects and opponents in. If the Hurricane Arrow does not hit any opponent or character, it will create a Pressurized Collapse effect at its point of impact.\nThe vortex DMG is considered Elemental Skill DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Wind_Realm_of_Nasamjnin_Preview.gif",
-                    "caption": "Wind Realm of Nasamjnin"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Wind_Realm_of_Nasamjnin_Pressurized_Collapse_Preview.gif",
-                    "caption": "Pressurized Collapse"
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "148.8",
-                    "159.96",
-                    "171.12",
-                    "186",
-                    "197.16",
-                    "208.32",
-                    "223.2",
-                    "238.08",
-                    "252.96",
-                    "267.84",
-                    "282.72",
-                    "297.6",
-                    "316.2"
-                ],
-                "Pressurized Collapse Vortex DMG (%)": [
-                    "108",
-                    "116.1",
-                    "124.2",
-                    "135",
-                    "143.1",
-                    "151.2",
-                    "162",
-                    "172.8",
-                    "183.6",
-                    "194.4",
-                    "205.2",
-                    "216",
-                    "229.5"
-                ],
-                "Manifest Gale Duration": [
-                    "18s"
-                ],
-                "CD": [
-                    "6s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Parthian_Shot_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Talent_The_Wind%27s_Secret_Ways.png",
-            "talentName": "The Wind's Secret Ways",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nFaruzan deploys a Dazzling Polyhedron that unleashes a Whirlwind Pulse and deals AoE Anemo DMG.\nWhile the Dazzling Polyhedron persists, it will continuously move along a triangular path. Once it reaches each corner of that triangular path, it will unleash 1 more Whirlwind Pulse.\n\nWhirlwind Pulse\nWhen the Whirlwind Pulse is unleashed, it will apply Perfidious Wind's Bale to nearby opponents, decreasing their Anemo RES.\nThe Whirlwind Pulse will also apply Prayerful Wind's Benefit to all nearby party members when it is unleashed, granting them an Anemo DMG Bonus.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/The_Wind%27s_Secret_Ways_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "377.6",
-                    "405.92",
-                    "434.24",
-                    "472",
-                    "500.32",
-                    "528.64",
-                    "566.4",
-                    "604.16",
-                    "641.92",
-                    "679.68",
-                    "717.44",
-                    "755.2",
-                    "802.4"
-                ],
-                "Anemo DMG Bonus (%)": [
-                    "18",
-                    "19.35",
-                    "20.7",
-                    "22.5",
-                    "23.85",
-                    "25.2",
-                    "27",
-                    "28.8",
-                    "30.6",
-                    "32.4",
-                    "34.2",
-                    "36",
-                    "38.25"
-                ],
-                "Prayerful Wind's Benefit Duration": [
-                    "4s"
-                ],
-                "Anemo RES Decrease (%)": [
-                    "30"
-                ],
-                "Perfidious Wind's Bale Duration": [
-                    "4s"
-                ],
-                "Duration": [
-                    "12s"
-                ],
-                "CD": [
-                    "20s"
-                ],
-                "Energy Cost": [
-                    "80"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Talent_Impetuous_Flow.png",
-            "talentName": "Impetuous Flow",
-            "talentType": "1st Ascension Passive",
-            "description": "When Faruzan is in the Manifest Gale state created by Wind Realm of Nasamjnin, the amount of time taken to charge a shot is decreased by 60%, and she can apply The Wind's Secret Ways' Perfidious Wind's Bale to opponents who are hit by the vortex created by Pressurized Collapse.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Talent_Lost_Wisdom_of_the_Seven_Caverns.png",
-            "talentName": "Lost Wisdom of the Seven Caverns",
-            "talentType": "4th Ascension Passive",
-            "description": "When characters affected by The Wind's Secret Ways' Prayerful Wind's Benefit deal Anemo DMG using Normal, Charged, Plunging Attacks, Elemental Skills, or Elemental Bursts to opponents, they will gain the Hurricane Guard effect: This DMG will be increased based on 32% of Faruzan's Base ATK. 1 instance of Hurricane Guard can occur once every 0.8s. This DMG Bonus will be cleared after Prayerful Wind's Benefit expires or after the effect is triggered once.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Tomes_Light_the_Path.png",
-            "talentName": "Tomes Light the Path",
-            "talentType": "Utility Passive",
-            "description": "Gains 25% more rewards when dispatched on a Sumeru Expedition for 20 hours.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Parthian_Shot_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Constellation_Truth_by_Any_Means.png",
-            "name": "Truth by Any Means",
-            "level": 1,
-            "description": "Description\nPreview\nFaruzan can fire off a maximum of 2 Hurricane Arrows using fully charged Aimed Shots while under the effect of a single Manifest Gale created by Wind Realm of Nasamjnin."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Constellation_Overzealous_Intellect.png",
-            "name": "Overzealous Intellect",
-            "level": 2,
-            "description": "The duration of the Dazzling Polyhedron created by The Wind's Secret Ways is increased by 6s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Constellation_Spirit-Orchard_Stroll.png",
-            "name": "Spirit-Orchard Stroll",
-            "level": 3,
-            "description": "Increases the Level of Wind Realm of Nasamjnin by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Constellation_Divine_Comprehension.png",
-            "name": "Divine Comprehension",
-            "level": 4,
-            "description": "The vortex created by Pressurized Collapses will restore Energy to Faruzan based on the number of opponents hit: If it hits 1 opponent, it will restore 2 Energy for Faruzan. Each additional opponent hit will restore 0.5 more Energy for Faruzan.\nA maximum of 4 Energy can be restored to her per vortex."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Constellation_Wonderland_of_Rumination.png",
-            "name": "Wonderland of Rumination",
-            "level": 5,
-            "description": "Increases the Level of The Wind's Secret Ways by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Constellation_The_Wondrous_Path_of_Truth.png",
-            "name": "The Wondrous Path of Truth",
-            "level": 6,
-            "description": "Characters affected by The Wind's Secret Ways' Prayerful Wind's Benefit have 40% increased CRIT DMG when they deal Anemo DMG. When the active character deals DMG while affected by Prayerful Wind's Benefit, they will apply Pressurized Collapse to the opponent damaged. This effect can be triggered once every 3s. This CD is shared between all party members."
-        }
-    ],
-    "imageUrls": {},
-    "version": "3.3",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Idle_Faruzan_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Idle_Faruzan_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Idle_Faruzan_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Idle_Faruzan_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Talent_Menu_Faruzan.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Menu_Faruzan.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Weapon_Menu_Faruzan.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon_Menu_Faruzan.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Party_Setup_Faruzan.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Party_Setup_Faruzan.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "44.73",
+          "48.37",
+          "52.01",
+          "57.21",
+          "60.85",
+          "65.01",
+          "70.73",
+          "76.46",
+          "82.18",
+          "88.42",
+          "94.66"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Namecard_Background_Faruzan_Sealed_Secret.png",
-                "caption": "Faruzan: Sealed Secret Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Faruzan_Sealed_Secret.png",
-                "caption": "Faruzan: Sealed Secret Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Namecard_Banner_Faruzan_Sealed_Secret.png",
-                "caption": "Faruzan: Sealed Secret Banner"
-            }
+        "2-Hit DMG (%)": [
+          "42.19",
+          "45.62",
+          "49.05",
+          "53.96",
+          "57.39",
+          "61.32",
+          "66.71",
+          "72.11",
+          "77.51",
+          "83.39",
+          "89.28"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Parthian_Shot_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Parthian_Shot_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Parthian_Shot_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Parthian_Shot_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Parthian_Shot_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Parthian_Shot_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/The_Wind%27s_Secret_Ways_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/The_Wind%27s_Secret_Ways_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Wind_Realm_of_Nasamjnin_Preview.gif",
-                        "caption": "Wind Realm of Nasamjnin",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Wind_Realm_of_Nasamjnin_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Wind_Realm_of_Nasamjnin_Pressurized_Collapse_Preview.gif",
-                        "caption": "Pressurized Collapse",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Wind_Realm_of_Nasamjnin_Pressurized_Collapse_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "53.16",
+          "57.49",
+          "61.82",
+          "68",
+          "72.33",
+          "77.27",
+          "84.07",
+          "90.87",
+          "97.67",
+          "105.09",
+          "112.51"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Faruzan_Character_Details_1.png",
-                "caption": "Faruzan Details 1 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Faruzan_Character_Details_2.png",
-                "caption": "Faruzan Details 2 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Faruzan_Character_Details_3.gif",
-                "caption": "Faruzan Details 3 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Faruzan_Character_Details_4.gif",
-                "caption": "Faruzan Details 4 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Faruzan_Character_Details_5.gif",
-                "caption": "Faruzan Details 5 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Faruzan_Character_Details_6.png",
-                "caption": "Faruzan Details 6 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Faruzan_Character_Details_7.png",
-                "caption": "Faruzan Details 7 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Faruzan_Character_Details_8.png",
-                "caption": "Faruzan Details 8 Official HoYoLAB Post"
-            }
+        "4-Hit DMG (%)": [
+          "70.62",
+          "76.37",
+          "82.12",
+          "90.33",
+          "96.08",
+          "102.65",
+          "111.68",
+          "120.71",
+          "129.74",
+          "139.6",
+          "149.45"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Icon_Emoji_Paimon%27s_Paintings_20_Faruzan_1.png",
-                "caption": "Thinking Set 20"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Icon_Emoji_Paimon%27s_Paintings_20_Faruzan_2.png",
-                "caption": "Blush Set 20"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Icon_Emoji_Paimon%27s_Paintings_20_Faruzan_3.png",
-                "caption": "Welcome! Set 20"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Icon_Emoji_Paimon%27s_Paintings_20_Faruzan_4.png",
-                "caption": "Come Again? Set 20"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Icon_Emoji_Paimon%27s_Paintings_23_Faruzan_1.png",
-                "caption": "Watch Me! Set 23"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Icon_Emoji_Paimon%27s_Paintings_36_Faruzan_1.png",
-                "caption": "Nice! Set 36"
-            }
+        "Aimed Shot": [
+          "43.86",
+          "47.43",
+          "51",
+          "56.1",
+          "59.67",
+          "63.75",
+          "69.36",
+          "74.97",
+          "80.58",
+          "86.7",
+          "92.82"
+        ],
+        "Fully-Charged Aimed Shot": [
+          "124",
+          "133.3",
+          "142.6",
+          "155",
+          "164.3",
+          "173.6",
+          "186",
+          "198.4",
+          "210.8",
+          "223.2",
+          "235.6"
+        ],
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.17",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Talent_Wind_Realm_of_Nasamjnin.png",
+      "talentName": "Wind Realm of Nasamjnin",
+      "talentType": "Elemental Skill",
+      "description": "Faruzan deploys a polyhedron that deals AoE Anemo DMG to nearby opponents. She will also enter the Manifest Gale state.\nWhile in the Manifest Gale state, Faruzan's next fully charged shot will consume this state and will become a Hurricane Arrow that contains high-pressure currents. This arrow deals Anemo DMG based on the DMG of a fully charged Aimed Shot from \"Normal Attack: Parthian Shot.\"\n\nPressurized Collapse\nThe Hurricane Arrow will apply a Pressurized Collapse effect to the opponent or character hit. This effect will be removed after a short delay, creating a vortex that deals AoE Anemo DMG and pulls nearby objects and opponents in. If the Hurricane Arrow does not hit any opponent or character, it will create a Pressurized Collapse effect at its point of impact.\nThe vortex DMG is considered Elemental Skill DMG.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Wind_Realm_of_Nasamjnin_Preview.gif",
+          "caption": "Wind Realm of Nasamjnin"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Wind_Realm_of_Nasamjnin_Pressurized_Collapse_Preview.gif",
+          "caption": "Pressurized Collapse"
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "148.8",
+          "159.96",
+          "171.12",
+          "186",
+          "197.16",
+          "208.32",
+          "223.2",
+          "238.08",
+          "252.96",
+          "267.84",
+          "282.72",
+          "297.6",
+          "316.2"
+        ],
+        "Pressurized Collapse Vortex DMG (%)": [
+          "108",
+          "116.1",
+          "124.2",
+          "135",
+          "143.1",
+          "151.2",
+          "162",
+          "172.8",
+          "183.6",
+          "194.4",
+          "205.2",
+          "216",
+          "229.5"
+        ],
+        "Manifest Gale Duration": ["18s"],
+        "CD": ["6s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Talent_The_Wind%27s_Secret_Ways.png",
+      "talentName": "The Wind's Secret Ways",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nFaruzan deploys a Dazzling Polyhedron that unleashes a Whirlwind Pulse and deals AoE Anemo DMG.\nWhile the Dazzling Polyhedron persists, it will continuously move along a triangular path. Once it reaches each corner of that triangular path, it will unleash 1 more Whirlwind Pulse.\n\nWhirlwind Pulse\nWhen the Whirlwind Pulse is unleashed, it will apply Perfidious Wind's Bale to nearby opponents, decreasing their Anemo RES.\nThe Whirlwind Pulse will also apply Prayerful Wind's Benefit to all nearby party members when it is unleashed, granting them an Anemo DMG Bonus.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/The_Wind%27s_Secret_Ways_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "377.6",
+          "405.92",
+          "434.24",
+          "472",
+          "500.32",
+          "528.64",
+          "566.4",
+          "604.16",
+          "641.92",
+          "679.68",
+          "717.44",
+          "755.2",
+          "802.4"
+        ],
+        "Anemo DMG Bonus (%)": [
+          "18",
+          "19.35",
+          "20.7",
+          "22.5",
+          "23.85",
+          "25.2",
+          "27",
+          "28.8",
+          "30.6",
+          "32.4",
+          "34.2",
+          "36",
+          "38.25"
+        ],
+        "Prayerful Wind's Benefit Duration": ["4s"],
+        "Anemo RES Decrease (%)": ["30"],
+        "Perfidious Wind's Bale Duration": ["4s"],
+        "Duration": ["12s"],
+        "CD": ["20s"],
+        "Energy Cost": ["80"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Talent_Impetuous_Flow.png",
+      "talentName": "Impetuous Flow",
+      "talentType": "1st Ascension Passive",
+      "description": "When Faruzan is in the Manifest Gale state created by Wind Realm of Nasamjnin, the amount of time taken to charge a shot is decreased by 60%, and she can apply The Wind's Secret Ways' Perfidious Wind's Bale to opponents who are hit by the vortex created by Pressurized Collapse.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Talent_Lost_Wisdom_of_the_Seven_Caverns.png",
+      "talentName": "Lost Wisdom of the Seven Caverns",
+      "talentType": "4th Ascension Passive",
+      "description": "When characters affected by The Wind's Secret Ways' Prayerful Wind's Benefit deal Anemo DMG using Normal, Charged, Plunging Attacks, Elemental Skills, or Elemental Bursts to opponents, they will gain the Hurricane Guard effect: This DMG will be increased based on 32% of Faruzan's Base ATK. 1 instance of Hurricane Guard can occur once every 0.8s. This DMG Bonus will be cleared after Prayerful Wind's Benefit expires or after the effect is triggered once.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Tomes_Light_the_Path.png",
+      "talentName": "Tomes Light the Path",
+      "talentType": "Utility Passive",
+      "description": "Gains 25% more rewards when dispatched on a Sumeru Expedition for 20 hours.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Constellation_Truth_by_Any_Means.png",
+      "name": "Truth by Any Means",
+      "level": 1,
+      "description": "Description\nPreview\nFaruzan can fire off a maximum of 2 Hurricane Arrows using fully charged Aimed Shots while under the effect of a single Manifest Gale created by Wind Realm of Nasamjnin."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Constellation_Overzealous_Intellect.png",
+      "name": "Overzealous Intellect",
+      "level": 2,
+      "description": "The duration of the Dazzling Polyhedron created by The Wind's Secret Ways is increased by 6s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Constellation_Spirit-Orchard_Stroll.png",
+      "name": "Spirit-Orchard Stroll",
+      "level": 3,
+      "description": "Increases the Level of Wind Realm of Nasamjnin by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Constellation_Divine_Comprehension.png",
+      "name": "Divine Comprehension",
+      "level": 4,
+      "description": "The vortex created by Pressurized Collapses will restore Energy to Faruzan based on the number of opponents hit: If it hits 1 opponent, it will restore 2 Energy for Faruzan. Each additional opponent hit will restore 0.5 more Energy for Faruzan.\nA maximum of 4 Energy can be restored to her per vortex."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Constellation_Wonderland_of_Rumination.png",
+      "name": "Wonderland of Rumination",
+      "level": 5,
+      "description": "Increases the Level of The Wind's Secret Ways by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Constellation_The_Wondrous_Path_of_Truth.png",
+      "name": "The Wondrous Path of Truth",
+      "level": 6,
+      "description": "Characters affected by The Wind's Secret Ways' Prayerful Wind's Benefit have 40% increased CRIT DMG when they deal Anemo DMG. When the active character deals DMG while affected by Prayerful Wind's Benefit, they will apply Pressurized Collapse to the opponent damaged. This effect can be triggered once every 3s. This CD is shared between all party members."
+    }
+  ],
+  "imageUrls": {},
+  "version": "3.3",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Idle_Faruzan_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Idle_Faruzan_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Idle_Faruzan_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Idle_Faruzan_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Talent_Menu_Faruzan.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Menu_Faruzan.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Weapon_Menu_Faruzan.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon_Menu_Faruzan.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Party_Setup_Faruzan.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Party_Setup_Faruzan.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Namecard_Background_Faruzan_Sealed_Secret.png",
+        "caption": "Faruzan: Sealed Secret Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Faruzan_Sealed_Secret.png",
+        "caption": "Faruzan: Sealed Secret Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Namecard_Banner_Faruzan_Sealed_Secret.png",
+        "caption": "Faruzan: Sealed Secret Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Parthian_Shot_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Parthian_Shot_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Parthian_Shot_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Parthian_Shot_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Parthian_Shot_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Parthian_Shot_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/The_Wind%27s_Secret_Ways_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/The_Wind%27s_Secret_Ways_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Wind_Realm_of_Nasamjnin_Preview.gif",
+            "caption": "Wind Realm of Nasamjnin",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Wind_Realm_of_Nasamjnin_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Wind_Realm_of_Nasamjnin_Pressurized_Collapse_Preview.gif",
+            "caption": "Pressurized Collapse",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Wind_Realm_of_Nasamjnin_Pressurized_Collapse_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Faruzan_Character_Details_1.png",
+        "caption": "Faruzan Details 1 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Faruzan_Character_Details_2.png",
+        "caption": "Faruzan Details 2 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Faruzan_Character_Details_3.gif",
+        "caption": "Faruzan Details 3 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Faruzan_Character_Details_4.gif",
+        "caption": "Faruzan Details 4 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Faruzan_Character_Details_5.gif",
+        "caption": "Faruzan Details 5 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Faruzan_Character_Details_6.png",
+        "caption": "Faruzan Details 6 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Faruzan_Character_Details_7.png",
+        "caption": "Faruzan Details 7 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Faruzan_Character_Details_8.png",
+        "caption": "Faruzan Details 8 Official HoYoLAB Post"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Icon_Emoji_Paimon%27s_Paintings_20_Faruzan_1.png",
+        "caption": "Thinking Set 20"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Icon_Emoji_Paimon%27s_Paintings_20_Faruzan_2.png",
+        "caption": "Blush Set 20"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Icon_Emoji_Paimon%27s_Paintings_20_Faruzan_3.png",
+        "caption": "Welcome! Set 20"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Icon_Emoji_Paimon%27s_Paintings_20_Faruzan_4.png",
+        "caption": "Come Again? Set 20"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Icon_Emoji_Paimon%27s_Paintings_23_Faruzan_1.png",
+        "caption": "Watch Me! Set 23"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Icon_Emoji_Paimon%27s_Paintings_36_Faruzan_1.png",
+        "caption": "Nice! Set 36"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Viridescent Venerer",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Burst Support",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "ATK Buffer",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Noblesse Oblige"],
+        "notes": "4pc for team ATK buff"
+      },
+      "alternatives": [
+        {
+          "sets": ["Viridescent Venerer"],
+          "notes": "If no one else has VV"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Elegy for the End",
+          "notes": "Team EM buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Warbow",
+          "notes": "Team energy, essential"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER"],
+      "goblet": ["Anemo DMG"],
+      "circlet": ["CRIT Rate"]
+    },
+    "substats": ["ER", "CRIT Rate", "ATK%", "CRIT DMG"],
+    "constellations": {
+      "c0": "Anemo buffer but needs C6",
+      "breakpoints": ["C6: 100% uptime on buff, mandatory for Xiao/Wanderer"]
+    },
+    "teams": [
+      {
+        "name": "Xiao Support",
+        "characters": ["Xiao", "Faruzan", "Zhongli", "Albedo"],
+        "roles": {
+          "Xiao": "Main DPS",
+          "Faruzan": "Anemo buffer",
+          "Zhongli": "Shield",
+          "Albedo": "Off-field"
+        },
+        "rotation": "Zhongli hE → Albedo E → Faruzan EQ → Xiao EEQ → plunge"
+      }
+    ]
+  }
 }

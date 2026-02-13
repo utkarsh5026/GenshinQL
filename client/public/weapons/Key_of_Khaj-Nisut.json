@@ -1,0 +1,262 @@
+{
+  "name": "Key of Khaj-Nisut",
+  "rarity": 5,
+  "attack": 542,
+  "subStat": "HP 66.2%",
+  "effect": "Sunken Song of the Sands\nHP increased by 20~40%. When an Elemental Skill hits opponents, you gain the Grand Hymn effect for 20s. This effect increases the equipping character's Elemental Mastery by 0.12~0.24% of their Max HP. This effect can trigger once every 0.3s. Max 3 stacks. When this effect gains 3 stacks, or when the third stack's duration is refreshed, the Elemental Mastery of all nearby party members will be increased by 0.2~0.4% of the equipping character's max HP for 20s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Weapon_Key_of_Khaj-Nisut.png",
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Copper_Talisman_of_the_Forest_Dew.png",
+      "caption": "Copper Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+      "caption": "Iron Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+      "caption": "Silver Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Golden_Talisman_of_the_Forest_Dew.png",
+      "caption": "Golden Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+      "caption": "Damaged Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+      "caption": "Turbid Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+      "caption": "Radiant Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+      "caption": "Faded Red Satin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+      "caption": "Trimmed Red Silk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+      "caption": "Rich Red Brocade"
+    }
+  ],
+  "passives": [
+    "HP increased by 20%. When an Elemental Skill hits opponents, you gain the Grand Hymn effect for 20s. This effect increases the equipping character's Elemental Mastery by 0.12% of their Max HP. This effect can trigger once every 0.3s. Max 3 stacks. When this effect gains 3 stacks, or when the third stack's duration is refreshed, the Elemental Mastery of all nearby party members will be increased by 0.2% of the equipping character's max HP for 20s.",
+    "HP increased by 25%. When an Elemental Skill hits opponents, you gain the Grand Hymn effect for 20s. This effect increases the equipping character's Elemental Mastery by 0.15% of their Max HP. This effect can trigger once every 0.3s. Max 3 stacks. When this effect gains 3 stacks, or when the third stack's duration is refreshed, the Elemental Mastery of all nearby party members will be increased by 0.25% of the equipping character's max HP for 20s.",
+    "HP increased by 30%. When an Elemental Skill hits opponents, you gain the Grand Hymn effect for 20s. This effect increases the equipping character's Elemental Mastery by 0.18% of their Max HP. This effect can trigger once every 0.3s. Max 3 stacks. When this effect gains 3 stacks, or when the third stack's duration is refreshed, the Elemental Mastery of all nearby party members will be increased by 0.3% of the equipping character's max HP for 20s.",
+    "HP increased by 35%. When an Elemental Skill hits opponents, you gain the Grand Hymn effect for 20s. This effect increases the equipping character's Elemental Mastery by 0.21% of their Max HP. This effect can trigger once every 0.3s. Max 3 stacks. When this effect gains 3 stacks, or when the third stack's duration is refreshed, the Elemental Mastery of all nearby party members will be increased by 0.35% of the equipping character's max HP for 20s.",
+    "HP increased by 40%. When an Elemental Skill hits opponents, you gain the Grand Hymn effect for 20s. This effect increases the equipping character's Elemental Mastery by 0.24% of their Max HP. This effect can trigger once every 0.3s. Max 3 stacks. When this effect gains 3 stacks, or when the third stack's duration is refreshed, the Elemental Mastery of all nearby party members will be increased by 0.4% of the equipping character's max HP for 20s."
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 110
+        },
+        "subStat": {
+          "min": 14.4,
+          "max": 25.4
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Copper_Talisman_of_the_Forest_Dew.png",
+            "caption": "Copper Talisman of the Forest Dew",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+            "caption": "Damaged Prism",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 141,
+          "max": 210
+        },
+        "subStat": {
+          "min": 25.4,
+          "max": 37.1
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+            "caption": "Iron Talisman of the Forest Dew",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+            "caption": "Damaged Prism",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 241,
+          "max": 275
+        },
+        "subStat": {
+          "min": 37.1,
+          "max": 42.9
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+            "caption": "Iron Talisman of the Forest Dew",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+            "caption": "Turbid Prism",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 307,
+          "max": 341
+        },
+        "subStat": {
+          "min": 42.9,
+          "max": 48.7
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+            "caption": "Silver Talisman of the Forest Dew",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+            "caption": "Turbid Prism",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 373,
+          "max": 408
+        },
+        "subStat": {
+          "min": 48.7,
+          "max": 54.5
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+            "caption": "Silver Talisman of the Forest Dew",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+            "caption": "Radiant Prism",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 439,
+          "max": 475
+        },
+        "subStat": {
+          "min": 54.5,
+          "max": 60.3
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Golden_Talisman_of_the_Forest_Dew.png",
+            "caption": "Golden Talisman of the Forest Dew",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+            "caption": "Radiant Prism",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 506,
+          "max": 542
+        },
+        "subStat": {
+          "min": 60.3,
+          "max": 66.2
+        }
+      }
+    ]
+  },
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Weapon_Key_of_Khaj-Nisut.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Weapon_Key_of_Khaj-Nisut_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Weapon_Card_Key_of_Khaj-Nisut.png"
+  ]
+}

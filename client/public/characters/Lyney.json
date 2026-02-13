@@ -1,587 +1,684 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Lyney_Icon.png",
-    "name": "Lyney",
-    "rarity": "5 Stars",
-    "element": "Pyro",
-    "weaponType": "Bow",
-    "region": "Fontaine",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
-    "modelType": "Medium Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Lyney_Icon.png",
+  "name": "Lyney",
+  "rarity": "5 Stars",
+  "element": "Pyro",
+  "weaponType": "Bow",
+  "region": "Fontaine",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Fontaine_Emblem_Night.png",
+  "modelType": "Medium Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Bow_Pyro.png",
+      "talentName": "Card Force Translocation",
+      "talentType": "Normal Attack",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nNormal Attack\nPerforms up to 4 consecutive shots with a bow.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, flames will run across the arrowhead before being fired. Different effects will occur based on the time spent charging.\nCharge Level 1: Fires off a Pyro-infused arrow, dealing Pyro DMG.\nCharge Level 2: Fires off a Prop Arrow that deals Pyro DMG, and upon hit, it will summon a Grin-Malkin Hat.\nWhen firing the Prop Arrow, and when Lyney has more than 60% HP, he will consume a portion of his HP to obtain 1 Prop Surplus stack. Max 5 stacks. The effect will be removed after the character spends 30s out of combat.\nThe lowest Lyney can drop to through this method is 60% of his Max HP.\n\nGrin-Malkin Hat\nCan taunt nearby opponents and attract their attacks. Each opponent can only be taunted by the Hat once every 5s.\nThe Hat will inherit a percentage of Lyney's Max HP.\nIf destroyed, or if its duration expires, it will fire off a Pyrotechnic Strike at 1 nearby opponent, dealing Pyro DMG.\nOnly 1 Hat can exist at any given time.\n\nArkhe: Pneuma\nAt certain intervals, the Prop Arrow will cause a Spiritbreath Thorn to descend upon its hit location, dealing Pneuma-aligned Pyro DMG.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Bow_Pyro.png",
-            "talentName": "Card Force Translocation",
-            "talentType": "Normal Attack",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nNormal Attack\nPerforms up to 4 consecutive shots with a bow.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, flames will run across the arrowhead before being fired. Different effects will occur based on the time spent charging.\nCharge Level 1: Fires off a Pyro-infused arrow, dealing Pyro DMG.\nCharge Level 2: Fires off a Prop Arrow that deals Pyro DMG, and upon hit, it will summon a Grin-Malkin Hat.\nWhen firing the Prop Arrow, and when Lyney has more than 60% HP, he will consume a portion of his HP to obtain 1 Prop Surplus stack. Max 5 stacks. The effect will be removed after the character spends 30s out of combat.\nThe lowest Lyney can drop to through this method is 60% of his Max HP.\n\nGrin-Malkin Hat\nCan taunt nearby opponents and attract their attacks. Each opponent can only be taunted by the Hat once every 5s.\nThe Hat will inherit a percentage of Lyney's Max HP.\nIf destroyed, or if its duration expires, it will fire off a Pyrotechnic Strike at 1 nearby opponent, dealing Pyro DMG.\nOnly 1 Hat can exist at any given time.\n\nArkhe: Pneuma\nAt certain intervals, the Prop Arrow will cause a Spiritbreath Thorn to descend upon its hit location, dealing Pneuma-aligned Pyro DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Card_Force_Translocation_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Card_Force_Translocation_Grin-Malkin_Hat_Preview.gif",
-                    "caption": "Grin-Malkin Hat"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Card_Force_Translocation_Arkhe_Pneuma_Preview.gif",
-                    "caption": "Arkhe: Pneuma"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG": [
-                    "38.79",
-                    "41.94",
-                    "45.1",
-                    "49.61",
-                    "52.77",
-                    "56.38",
-                    "61.34",
-                    "66.3",
-                    "71.26",
-                    "76.67",
-                    "82.08",
-                    "87.49",
-                    "92.91",
-                    "98.32"
-                ],
-                "2-Hit DMG": [
-                    "38.01",
-                    "41.11",
-                    "44.2",
-                    "48.62",
-                    "51.71",
-                    "55.25",
-                    "60.11",
-                    "64.97",
-                    "69.84",
-                    "75.14",
-                    "80.44",
-                    "85.75",
-                    "91.05",
-                    "96.36"
-                ],
-                "3-Hit DMG": [
-                    "27.26\n+\n27.26",
-                    "29.48\n+\n29.48",
-                    "31.7\n+\n31.7",
-                    "34.87\n+\n34.87",
-                    "37.09\n+\n37.09",
-                    "39.63\n+\n39.63",
-                    "43.11\n+\n43.11",
-                    "46.6\n+\n46.6",
-                    "50.09\n+\n50.09",
-                    "53.89\n+\n53.89",
-                    "57.69\n+\n57.69",
-                    "61.5\n+\n61.5",
-                    "65.3\n+\n65.3",
-                    "69.11\n+\n69.11"
-                ],
-                "4-Hit DMG": [
-                    "56.93",
-                    "61.57",
-                    "66.2",
-                    "72.82",
-                    "77.45",
-                    "82.75",
-                    "90.03",
-                    "97.31",
-                    "104.6",
-                    "112.54",
-                    "120.48",
-                    "128.43",
-                    "136.37",
-                    "144.32"
-                ],
-                "Plunge DMG": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27",
-                    "128.2",
-                    "136.12",
-                    "144.05"
-                ],
-                "Low Plunge DMG": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.16",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48",
-                    "256.34",
-                    "272.19",
-                    "288.05"
-                ],
-                "High Plunge DMG": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37",
-                    "320.18",
-                    "339.98",
-                    "359.79"
-                ],
-                "Aimed Shot": [
-                    "43.86",
-                    "47.43",
-                    "51",
-                    "56.1",
-                    "59.67",
-                    "63.75",
-                    "69.36",
-                    "74.97",
-                    "80.58",
-                    "86.7",
-                    "92.82",
-                    "98.94",
-                    "105.06",
-                    "111.18"
-                ],
-                "Aimed Shot Charge Level 1": [
-                    "124",
-                    "133.3",
-                    "142.6",
-                    "155",
-                    "164.3",
-                    "173.6",
-                    "186",
-                    "198.4",
-                    "210.8",
-                    "223.2",
-                    "235.6",
-                    "248",
-                    "263.5",
-                    "279"
-                ],
-                "Prop Arrow DMG": [
-                    "172.8",
-                    "185.76",
-                    "198.72",
-                    "216",
-                    "228.96",
-                    "241.92",
-                    "259.2",
-                    "276.48",
-                    "293.76",
-                    "311.04",
-                    "328.32",
-                    "345.6",
-                    "367.2",
-                    "388.8"
-                ],
-                "HP Cost": [
-                    "20% Max HP"
-                ],
-                "Grin-Malkin Hat Inherited HP": [
-                    "64",
-                    "68.8",
-                    "73.6",
-                    "80",
-                    "84.8",
-                    "89.6",
-                    "96",
-                    "102.4",
-                    "108.8",
-                    "115.2",
-                    "121.6",
-                    "128",
-                    "136",
-                    "144"
-                ],
-                "Grin-Malkin Hat Duration": [
-                    "4s"
-                ],
-                "Pyrotechnic Strike DMG": [
-                    "212",
-                    "227.9",
-                    "243.8",
-                    "265",
-                    "280.9",
-                    "296.8",
-                    "318",
-                    "339.2",
-                    "360.4",
-                    "381.6",
-                    "402.8",
-                    "424",
-                    "450.5",
-                    "477"
-                ],
-                "Spiritbreath Thorn DMG": [
-                    "27.55",
-                    "29.62",
-                    "31.68",
-                    "34.44",
-                    "36.51",
-                    "38.57",
-                    "41.33",
-                    "44.08",
-                    "46.84",
-                    "49.59",
-                    "52.35",
-                    "55.1",
-                    "58.55",
-                    "61.99"
-                ],
-                "Spiritbreath Thorn Interval": [
-                    "6s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Card_Force_Translocation_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Talent_Bewildering_Lights.png",
-            "talentName": "Bewildering Lights",
-            "talentType": "Elemental Skill",
-            "description": "Lyney does a flourish with his hat, unleashing a firework surprise!\nWhen used, he will clear all current Prop Surplus stacks and deal AoE Pyro DMG to opponents in front of him. DMG will be increased according to the stacks cleared, and this will also regenerate Lyney's HP based on his Max HP.\n\nWhen a Grin-Malkin Hat created by Lyney is on the field, the fireworks will cause it to explode, dealing AoE Pyro DMG equal to that of a Pyrotechnic Strike.\nThe DMG dealt through the Grin-Malkin Hat in this way is considered Charged Attack DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Bewildering_Lights_Preview.gif",
-                    "caption": ""
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Bewildering_Lights_Grin-Malkin_Hat_Preview.gif",
-                    "caption": "Detonating Grin-Malkin Hat"
-                }
-            ],
-            "scaling": {
-                "Skill DMG": [
-                    "167.2",
-                    "179.74",
-                    "192.28",
-                    "209",
-                    "221.54",
-                    "234.08",
-                    "250.8",
-                    "267.52",
-                    "284.24",
-                    "300.96"
-                ],
-                "Skill DMG Bonus": [
-                    "53.2 ATK/Stack",
-                    "57.19 ATK/Stack",
-                    "61.18 ATK/Stack",
-                    "66.5 ATK/Stack",
-                    "70.49 ATK/Stack",
-                    "74.48 ATK/Stack",
-                    "79.8 ATK/Stack",
-                    "85.12 ATK/Stack",
-                    "90.44 ATK/Stack",
-                    "95.76 ATK/Stack"
-                ],
-                "HP Regeneration": [
-                    "20%/Stack"
-                ],
-                "CD": [
-                    "15s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Card_Force_Translocation_Grin-Malkin_Hat_Preview.gif",
+          "caption": "Grin-Malkin Hat"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Wondrous_Trick_Miracle_Parade.png",
-            "talentName": "Wondrous Trick: Miracle Parade",
-            "talentType": "Elemental Burst",
-            "description": "Unleashing his magic, Lyney turns himself into a Grin-Malkin Cat that can move around quickly. (Not to be mistaken for the Grin-Malkin Hat. They're two different props!)\nWhen the Grin-Malkin Cat gets close to opponents, it will send flames falling down on them, dealing at most 1 instance of Pyro DMG to each opponent. When the duration ends, he will dismiss the Grin-Malkin Cat and ignite fireworks that deal AoE Pyro DMG, summon 1 Grin-Malkin Hat, and grant himself 1 Prop Surplus stack.\n\nGrin-Malkin Cat can be actively canceled.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Wondrous_Trick_Miracle_Parade_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG": [
-                    "154",
-                    "165.55",
-                    "177.1",
-                    "192.5",
-                    "204.05",
-                    "215.6",
-                    "231",
-                    "246.4",
-                    "261.8",
-                    "277.2",
-                    "292.6",
-                    "308",
-                    "327.25"
-                ],
-                "Explosive Firework DMG": [
-                    "414",
-                    "445.05",
-                    "476.1",
-                    "517.5",
-                    "548.55",
-                    "579.6",
-                    "621",
-                    "662.4",
-                    "703.8",
-                    "745.2",
-                    "786.6",
-                    "828",
-                    "879.75"
-                ],
-                "Duration": [
-                    "3s"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Talent_Perilous_Performance.png",
-            "talentName": "Perilous Performance",
-            "talentType": "1st Ascension Passive",
-            "description": "If Lyney consumes HP when firing off a Prop Arrow, the Grin-Malkin hat summoned by the arrow will, upon hitting an opponent, restore 3 Energy to Lyney and increase DMG dealt by 80% of his ATK.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Talent_Conclusive_Ovation.png",
-            "talentName": "Conclusive Ovation",
-            "talentType": "4th Ascension Passive",
-            "description": "The DMG Lyney deals to opponents affected by Pyro will receive the following buffs:\nIncreases the DMG dealt by 60%.\nEach Pyro party member other than Lyney will cause the DMG dealt to increase by an additional 20%.\nLyney can deal up to 100% increased DMG to opponents affected by Pyro in this way.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Talent_Trivial_Observations.png",
-            "talentName": "Trivial Observations",
-            "talentType": "Utility Passive",
-            "description": "Displays the location of nearby resources unique to Fontaine on the mini-map.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Card_Force_Translocation_Arkhe_Pneuma_Preview.gif",
+          "caption": "Arkhe: Pneuma"
         }
-    ],
-    "constellations": [
+      ],
+      "scaling": {
+        "1-Hit DMG": [
+          "38.79",
+          "41.94",
+          "45.1",
+          "49.61",
+          "52.77",
+          "56.38",
+          "61.34",
+          "66.3",
+          "71.26",
+          "76.67",
+          "82.08",
+          "87.49",
+          "92.91",
+          "98.32"
+        ],
+        "2-Hit DMG": [
+          "38.01",
+          "41.11",
+          "44.2",
+          "48.62",
+          "51.71",
+          "55.25",
+          "60.11",
+          "64.97",
+          "69.84",
+          "75.14",
+          "80.44",
+          "85.75",
+          "91.05",
+          "96.36"
+        ],
+        "3-Hit DMG": [
+          "27.26\n+\n27.26",
+          "29.48\n+\n29.48",
+          "31.7\n+\n31.7",
+          "34.87\n+\n34.87",
+          "37.09\n+\n37.09",
+          "39.63\n+\n39.63",
+          "43.11\n+\n43.11",
+          "46.6\n+\n46.6",
+          "50.09\n+\n50.09",
+          "53.89\n+\n53.89",
+          "57.69\n+\n57.69",
+          "61.5\n+\n61.5",
+          "65.3\n+\n65.3",
+          "69.11\n+\n69.11"
+        ],
+        "4-Hit DMG": [
+          "56.93",
+          "61.57",
+          "66.2",
+          "72.82",
+          "77.45",
+          "82.75",
+          "90.03",
+          "97.31",
+          "104.6",
+          "112.54",
+          "120.48",
+          "128.43",
+          "136.37",
+          "144.32"
+        ],
+        "Plunge DMG": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27",
+          "128.2",
+          "136.12",
+          "144.05"
+        ],
+        "Low Plunge DMG": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.16",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48",
+          "256.34",
+          "272.19",
+          "288.05"
+        ],
+        "High Plunge DMG": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37",
+          "320.18",
+          "339.98",
+          "359.79"
+        ],
+        "Aimed Shot": [
+          "43.86",
+          "47.43",
+          "51",
+          "56.1",
+          "59.67",
+          "63.75",
+          "69.36",
+          "74.97",
+          "80.58",
+          "86.7",
+          "92.82",
+          "98.94",
+          "105.06",
+          "111.18"
+        ],
+        "Aimed Shot Charge Level 1": [
+          "124",
+          "133.3",
+          "142.6",
+          "155",
+          "164.3",
+          "173.6",
+          "186",
+          "198.4",
+          "210.8",
+          "223.2",
+          "235.6",
+          "248",
+          "263.5",
+          "279"
+        ],
+        "Prop Arrow DMG": [
+          "172.8",
+          "185.76",
+          "198.72",
+          "216",
+          "228.96",
+          "241.92",
+          "259.2",
+          "276.48",
+          "293.76",
+          "311.04",
+          "328.32",
+          "345.6",
+          "367.2",
+          "388.8"
+        ],
+        "HP Cost": ["20% Max HP"],
+        "Grin-Malkin Hat Inherited HP": [
+          "64",
+          "68.8",
+          "73.6",
+          "80",
+          "84.8",
+          "89.6",
+          "96",
+          "102.4",
+          "108.8",
+          "115.2",
+          "121.6",
+          "128",
+          "136",
+          "144"
+        ],
+        "Grin-Malkin Hat Duration": ["4s"],
+        "Pyrotechnic Strike DMG": [
+          "212",
+          "227.9",
+          "243.8",
+          "265",
+          "280.9",
+          "296.8",
+          "318",
+          "339.2",
+          "360.4",
+          "381.6",
+          "402.8",
+          "424",
+          "450.5",
+          "477"
+        ],
+        "Spiritbreath Thorn DMG": [
+          "27.55",
+          "29.62",
+          "31.68",
+          "34.44",
+          "36.51",
+          "38.57",
+          "41.33",
+          "44.08",
+          "46.84",
+          "49.59",
+          "52.35",
+          "55.1",
+          "58.55",
+          "61.99"
+        ],
+        "Spiritbreath Thorn Interval": ["6s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Talent_Bewildering_Lights.png",
+      "talentName": "Bewildering Lights",
+      "talentType": "Elemental Skill",
+      "description": "Lyney does a flourish with his hat, unleashing a firework surprise!\nWhen used, he will clear all current Prop Surplus stacks and deal AoE Pyro DMG to opponents in front of him. DMG will be increased according to the stacks cleared, and this will also regenerate Lyney's HP based on his Max HP.\n\nWhen a Grin-Malkin Hat created by Lyney is on the field, the fireworks will cause it to explode, dealing AoE Pyro DMG equal to that of a Pyrotechnic Strike.\nThe DMG dealt through the Grin-Malkin Hat in this way is considered Charged Attack DMG.",
+      "figureUrls": [
         {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Constellation_Whimsical_Wonders.png",
-            "name": "Whimsical Wonders",
-            "level": 1,
-            "description": "Description\nPreview\nLyney can have 2 Grin-Malkin Hats present at once.\nAdditionally, Prop Arrows will summon 2 Grin-Malkin Hats and grant Lyney 1 extra stack of Prop Surplus. This effect can occur once every 15s."
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Bewildering_Lights_Preview.gif",
+          "caption": ""
         },
         {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Constellation_Loquacious_Cajoling.png",
-            "name": "Loquacious Cajoling",
-            "level": 2,
-            "description": "When Lyney is on the field, he will gain a stack of Crisp Focus every 2s. This will increase his CRIT DMG by 20%. Max 3 stacks. This effect will be canceled when Lyney leaves the field."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Constellation_Prestidigitation.png",
-            "name": "Prestidigitation",
-            "level": 3,
-            "description": "Increases the Level of Normal Attack: Card Force Translocation by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Constellation_Well-Versed%2C_Well-Rehearsed.png",
-            "name": "Well-Versed, Well-Rehearsed",
-            "level": 4,
-            "description": "After an opponent is hit by Lyney's Pyro Charged Attack, this opponent's Pyro RES will be decreased by 20% for 6s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Constellation_To_Pierce_Enigmas.png",
-            "name": "To Pierce Enigmas",
-            "level": 5,
-            "description": "Increases the Level of Wondrous Trick: Miracle Parade by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Constellation_Guarded_Smile.png",
-            "name": "Guarded Smile",
-            "level": 6,
-            "description": "Description\nAdvanced Properties\nWhen Lyney fires a Prop Arrow, he will fire a Pyrotechnic Strike: Reprised that will deal 80% of a Pyrotechnic Strike's DMG. This DMG is considered Charged Attack DMG."
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Bewildering_Lights_Grin-Malkin_Hat_Preview.gif",
+          "caption": "Detonating Grin-Malkin Hat"
         }
-    ],
-    "imageUrls": {},
-    "version": "4.0",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            }
+      ],
+      "scaling": {
+        "Skill DMG": [
+          "167.2",
+          "179.74",
+          "192.28",
+          "209",
+          "221.54",
+          "234.08",
+          "250.8",
+          "267.52",
+          "284.24",
+          "300.96"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Namecard_Background_Lyney_Pretense.png",
-                "caption": "Lyney: Pretense Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Item_Lyney_Pretense.png",
-                "caption": "Lyney: Pretense Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Namecard_Banner_Lyney_Pretense.png",
-                "caption": "Lyney: Pretense Banner"
-            }
+        "Skill DMG Bonus": [
+          "53.2 ATK/Stack",
+          "57.19 ATK/Stack",
+          "61.18 ATK/Stack",
+          "66.5 ATK/Stack",
+          "70.49 ATK/Stack",
+          "74.48 ATK/Stack",
+          "79.8 ATK/Stack",
+          "85.12 ATK/Stack",
+          "90.44 ATK/Stack",
+          "95.76 ATK/Stack"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    },
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    },
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    },
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            }
+        "HP Regeneration": ["20%/Stack"],
+        "CD": ["15s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Wondrous_Trick_Miracle_Parade.png",
+      "talentName": "Wondrous Trick: Miracle Parade",
+      "talentType": "Elemental Burst",
+      "description": "Unleashing his magic, Lyney turns himself into a Grin-Malkin Cat that can move around quickly. (Not to be mistaken for the Grin-Malkin Hat. They're two different props!)\nWhen the Grin-Malkin Cat gets close to opponents, it will send flames falling down on them, dealing at most 1 instance of Pyro DMG to each opponent. When the duration ends, he will dismiss the Grin-Malkin Cat and ignite fireworks that deal AoE Pyro DMG, summon 1 Grin-Malkin Hat, and grant himself 1 Prop Surplus stack.\n\nGrin-Malkin Cat can be actively canceled.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Wondrous_Trick_Miracle_Parade_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG": [
+          "154",
+          "165.55",
+          "177.1",
+          "192.5",
+          "204.05",
+          "215.6",
+          "231",
+          "246.4",
+          "261.8",
+          "277.2",
+          "292.6",
+          "308",
+          "327.25"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Lyney_Character_Details_1.png",
-                "caption": "Lyney Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Lyney_Character_Details_2.png",
-                "caption": "Lyney Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Lyney_Character_Details_3.gif",
-                "caption": "Lyney Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Lyney_Character_Details_4.gif",
-                "caption": "Lyney Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Lyney_Character_Details_5.gif",
-                "caption": "Lyney Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Lyney_Character_Details_6.gif",
-                "caption": "Lyney Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Lyney_Character_Details_7.gif",
-                "caption": "Lyney Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Lyney_Character_Details_8.png",
-                "caption": "Lyney Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Lyney_Character_Details_9.png",
-                "caption": "Lyney Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Lyney_Character_Details_10.png",
-                "caption": "Lyney Details 10"
-            }
+        "Explosive Firework DMG": [
+          "414",
+          "445.05",
+          "476.1",
+          "517.5",
+          "548.55",
+          "579.6",
+          "621",
+          "662.4",
+          "703.8",
+          "745.2",
+          "786.6",
+          "828",
+          "879.75"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Icon_Emoji_Paimon%27s_Paintings_26_Lyney_1.png",
-                "caption": "Salute Set 26"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Icon_Emoji_Paimon%27s_Paintings_26_Lyney_2.png",
-                "caption": "Debut Set 26"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Icon_Emoji_Paimon%27s_Paintings_26_Lyney_3.png",
-                "caption": "Nervous Set 26"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Icon_Emoji_Paimon%27s_Paintings_26_Lyney_4.png",
-                "caption": "Surprise Set 26"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Icon_Emoji_Paimon%27s_Paintings_28_Lyney_1.png",
-                "caption": "Have a Look! Set 28"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Icon_Emoji_Paimon%27s_Paintings_32_Lyney_1.png",
-                "caption": "Not okay, hear me? Set 32"
-            }
-        ]
+        "Duration": ["3s"],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Talent_Perilous_Performance.png",
+      "talentName": "Perilous Performance",
+      "talentType": "1st Ascension Passive",
+      "description": "If Lyney consumes HP when firing off a Prop Arrow, the Grin-Malkin hat summoned by the arrow will, upon hitting an opponent, restore 3 Energy to Lyney and increase DMG dealt by 80% of his ATK.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Talent_Conclusive_Ovation.png",
+      "talentName": "Conclusive Ovation",
+      "talentType": "4th Ascension Passive",
+      "description": "The DMG Lyney deals to opponents affected by Pyro will receive the following buffs:\nIncreases the DMG dealt by 60%.\nEach Pyro party member other than Lyney will cause the DMG dealt to increase by an additional 20%.\nLyney can deal up to 100% increased DMG to opponents affected by Pyro in this way.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Talent_Trivial_Observations.png",
+      "talentName": "Trivial Observations",
+      "talentType": "Utility Passive",
+      "description": "Displays the location of nearby resources unique to Fontaine on the mini-map.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Constellation_Whimsical_Wonders.png",
+      "name": "Whimsical Wonders",
+      "level": 1,
+      "description": "Description\nPreview\nLyney can have 2 Grin-Malkin Hats present at once.\nAdditionally, Prop Arrows will summon 2 Grin-Malkin Hats and grant Lyney 1 extra stack of Prop Surplus. This effect can occur once every 15s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Constellation_Loquacious_Cajoling.png",
+      "name": "Loquacious Cajoling",
+      "level": 2,
+      "description": "When Lyney is on the field, he will gain a stack of Crisp Focus every 2s. This will increase his CRIT DMG by 20%. Max 3 stacks. This effect will be canceled when Lyney leaves the field."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Constellation_Prestidigitation.png",
+      "name": "Prestidigitation",
+      "level": 3,
+      "description": "Increases the Level of Normal Attack: Card Force Translocation by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Constellation_Well-Versed%2C_Well-Rehearsed.png",
+      "name": "Well-Versed, Well-Rehearsed",
+      "level": 4,
+      "description": "After an opponent is hit by Lyney's Pyro Charged Attack, this opponent's Pyro RES will be decreased by 20% for 6s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Constellation_To_Pierce_Enigmas.png",
+      "name": "To Pierce Enigmas",
+      "level": 5,
+      "description": "Increases the Level of Wondrous Trick: Miracle Parade by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Constellation_Guarded_Smile.png",
+      "name": "Guarded Smile",
+      "level": 6,
+      "description": "Description\nAdvanced Properties\nWhen Lyney fires a Prop Arrow, he will fire a Pyrotechnic Strike: Reprised that will deal 80% of a Pyrotechnic Strike's DMG. This DMG is considered Charged Attack DMG."
+    }
+  ],
+  "imageUrls": {},
+  "version": "4.0",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Idle_Lyney_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Idle_Lyney_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Talent_Menu_Lyney.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Weapon_Menu_Lyney.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Party_Setup_Lyney.gif",
+        "caption": "Party Setup",
+        "videoUrl": "",
+        "videoType": ""
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Namecard_Background_Lyney_Pretense.png",
+        "caption": "Lyney: Pretense Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Item_Lyney_Pretense.png",
+        "caption": "Lyney: Pretense Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Namecard_Banner_Lyney_Pretense.png",
+        "caption": "Lyney: Pretense Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Card_Force_Translocation_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "",
+            "videoType": ""
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Card_Force_Translocation_Grin-Malkin_Hat_Preview.gif",
+            "caption": "Grin-Malkin Hat",
+            "videoUrl": "",
+            "videoType": ""
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Card_Force_Translocation_Arkhe_Pneuma_Preview.gif",
+            "caption": "Arkhe: Pneuma",
+            "videoUrl": "",
+            "videoType": ""
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Wondrous_Trick_Miracle_Parade_Preview.gif",
+            "caption": "",
+            "videoUrl": "",
+            "videoType": ""
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Bewildering_Lights_Preview.gif",
+            "caption": "",
+            "videoUrl": "",
+            "videoType": ""
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Bewildering_Lights_Grin-Malkin_Hat_Preview.gif",
+            "caption": "Detonating Grin-Malkin Hat",
+            "videoUrl": "",
+            "videoType": ""
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Lyney_Character_Details_1.png",
+        "caption": "Lyney Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Lyney_Character_Details_2.png",
+        "caption": "Lyney Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Lyney_Character_Details_3.gif",
+        "caption": "Lyney Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Lyney_Character_Details_4.gif",
+        "caption": "Lyney Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Lyney_Character_Details_5.gif",
+        "caption": "Lyney Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Lyney_Character_Details_6.gif",
+        "caption": "Lyney Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Lyney_Character_Details_7.gif",
+        "caption": "Lyney Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Lyney_Character_Details_8.png",
+        "caption": "Lyney Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Lyney_Character_Details_9.png",
+        "caption": "Lyney Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Lyney_Character_Details_10.png",
+        "caption": "Lyney Details 10"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Icon_Emoji_Paimon%27s_Paintings_26_Lyney_1.png",
+        "caption": "Salute Set 26"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Icon_Emoji_Paimon%27s_Paintings_26_Lyney_2.png",
+        "caption": "Debut Set 26"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Icon_Emoji_Paimon%27s_Paintings_26_Lyney_3.png",
+        "caption": "Nervous Set 26"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Icon_Emoji_Paimon%27s_Paintings_26_Lyney_4.png",
+        "caption": "Surprise Set 26"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Icon_Emoji_Paimon%27s_Paintings_28_Lyney_1.png",
+        "caption": "Have a Look! Set 28"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Icon_Emoji_Paimon%27s_Paintings_32_Lyney_1.png",
+        "caption": "Not okay, hear me? Set 32"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Marechaussee Hunter",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Mono Pyro DPS",
+      "sets": [
+        {
+          "name": "Lavawalker",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Crimson Witch of Flames",
+          "pieces": 2
+        },
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 2
+        }
+      ]
+    }
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Marechaussee Hunter"],
+        "notes": "4pc BiS, HP drain synergy"
+      },
+      "alternatives": [
+        {
+          "sets": ["Lavawalker"],
+          "notes": "Mono Pyro teams"
+        },
+        {
+          "sets": ["Wanderer's Troupe"],
+          "notes": "Charged attack focus"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "The First Great Magic",
+          "notes": "BiS, signature weapon"
+        },
+        {
+          "name": "Aqua Simulacra",
+          "notes": "CRIT DMG alternative"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Prototype Crescent",
+          "notes": "F2P option"
+        },
+        {
+          "name": "The Viridescent Hunt",
+          "notes": "Battle Pass, grouping"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT DMG"]
+    },
+    "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "ER", "Flat ATK"],
+    "constellations": {
+      "c0": "Strong Pyro DPS, wants Mono Pyro teams",
+      "breakpoints": [
+        "C1: Extra prop stacks",
+        "C2: CRIT DMG buff per Pyro party member"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Lyney Mono Pyro",
+        "characters": ["Lyney", "Xiangling", "Bennett", "Kazuha"],
+        "roles": {
+          "Lyney": "Main DPS",
+          "Xiangling": "Pyro resonance",
+          "Bennett": "ATK Buffer/Healer",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Bennett EQ → Kazuha tEP Q → Xiangling E → Lyney charged shots with props"
+      },
+      {
+        "name": "Triple Pyro Zhongli",
+        "characters": ["Lyney", "Xiangling", "Bennett", "Zhongli"],
+        "roles": {
+          "Lyney": "Main DPS",
+          "Xiangling": "Pyro",
+          "Bennett": "ATK Buffer",
+          "Zhongli": "Shielder"
+        },
+        "rotation": "Zhongli hE → Bennett EQ → Xiangling E → Lyney charged shots"
+      }
+    ]
+  }
 }

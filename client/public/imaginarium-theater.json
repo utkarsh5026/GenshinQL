@@ -1,0 +1,64 @@
+{
+  "seasonNumber": 20,
+  "dateRange": "February 1, 2026 (Luna IV) –\nFebruary 28, 2026 (Luna IV)",
+  "versionName": "Luna IV",
+  "openingCharacters": [
+    {
+      "name": "Yoimiya",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Yoimiya_Icon.png"
+    },
+    {
+      "name": "Gaming",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Gaming_Icon.png"
+    },
+    {
+      "name": "Yelan",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Yelan_Icon.png"
+    },
+    {
+      "name": "Barbara",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Barbara_Icon.png"
+    },
+    {
+      "name": "Chiori",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Chiori_Icon.png"
+    },
+    {
+      "name": "Yun Jin",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Yun_Jin_Icon.png"
+    }
+  ],
+  "theaterEffect": "After the above characters join your party, Max HP, ATK, and DEF are increased by 20%.",
+  "elements": [
+    {
+      "name": "Pyro",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png"
+    },
+    {
+      "name": "Hydro",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png"
+    },
+    {
+      "name": "Geo",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png"
+    }
+  ],
+  "specialGuestCharacters": [
+    {
+      "name": "Ineffa",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Ineffa_Icon.png"
+    },
+    {
+      "name": "Flins",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Flins_Icon.png"
+    },
+    {
+      "name": "Nefer",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Nefer_Icon.png"
+    },
+    {
+      "name": "Lauma",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Lauma_Icon.png"
+    }
+  ]
+}

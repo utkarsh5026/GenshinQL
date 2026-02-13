@@ -1,491 +1,512 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Ororon_Icon.png",
-    "name": "Ororon",
-    "rarity": "4 Stars",
-    "element": "Electro",
-    "weaponType": "Bow",
-    "region": "Natlan",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Tall Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Ororon_Icon.png",
+  "name": "Ororon",
+  "rarity": "4 Stars",
+  "element": "Electro",
+  "weaponType": "Bow",
+  "region": "Natlan",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
+  "modelType": "Tall Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Bow_Electro.png",
+      "talentName": "Spiritvessel Snapshot",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 3 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, Electro energy will accumulate on the arrowhead. A fully charged arrow will deal immense Electro DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Bow_Electro.png",
-            "talentName": "Spiritvessel Snapshot",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 3 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, Electro energy will accumulate on the arrowhead. A fully charged arrow will deal immense Electro DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Spiritvessel_Snapshot_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Spiritvessel_Snapshot_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "50.64",
-                    "54.76",
-                    "58.89",
-                    "64.77",
-                    "68.9",
-                    "73.61",
-                    "80.08",
-                    "86.56",
-                    "93.04",
-                    "100.11",
-                    "107.17"
-                ],
-                "2-Hit DMG (%)": [
-                    "44.37",
-                    "47.99",
-                    "51.6",
-                    "56.76",
-                    "60.37",
-                    "64.5",
-                    "70.17",
-                    "75.85",
-                    "81.52",
-                    "87.71",
-                    "93.91"
-                ],
-                "3-Hit DMG (%)": [
-                    "69.82",
-                    "75.5",
-                    "81.19",
-                    "89.31",
-                    "94.99",
-                    "101.48",
-                    "110.41",
-                    "119.34",
-                    "128.28",
-                    "138.02",
-                    "147.76"
-                ],
-                "Aimed Shot (%)": [
-                    "43.86",
-                    "47.43",
-                    "51",
-                    "56.1",
-                    "59.67",
-                    "63.75",
-                    "69.36",
-                    "74.97",
-                    "80.58",
-                    "86.7",
-                    "92.82"
-                ],
-                "Fully-Charged Aimed Shot (%)": [
-                    "124",
-                    "133.3",
-                    "142.6",
-                    "155",
-                    "164.3",
-                    "173.6",
-                    "186",
-                    "198.4",
-                    "210.8",
-                    "223.2",
-                    "235.6"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.17",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Spiritvessel_Snapshot_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Talent_Night%27s_Sling.png",
-            "talentName": "Night's Sling",
-            "talentType": "Elemental Skill",
-            "description": "Ororon manifests an ancient mystical technique from the Masters of the Night-Wind as a Spirit Orb of midnight shade and throws it at his foe, dealing Nightsoul-aligned Electro DMG.\nWhen other opponents are nearby, the Spirit Orb will bounce between them, dealing Nightsoul-aligned Electro DMG. Each time Night's Sling is used, each opponent can only be selected as a target once.\nAfter 3 bounces, or if there are no eligible targets left, the Orb will disappear.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Night%27s_Sling_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Spirit Orb DMG (%)": [
-                    "197.6",
-                    "212.42",
-                    "227.24",
-                    "247",
-                    "261.82",
-                    "276.64",
-                    "296.4",
-                    "316.16",
-                    "335.92",
-                    "355.68",
-                    "375.44",
-                    "395.2",
-                    "419.9"
-                ],
-                "CD": [
-                    "15s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Talent_Dark_Voices_Echo.png",
-            "talentName": "Dark Voices Echo",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nOroron works an ancient ritual, dealing Nightsoul-aligned AoE Electro DMG, summoning forth a Supersonic Oculus.\n\nSupersonic Oculus\nContinuously taunts nearby opponents and attracts attacks from them.\nContinuously rotates and fires off sonic waves that deal Nightsoul-aligned Electro DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Dark_Voices_Echo_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Ritual DMG (%)": [
-                    "174.38",
-                    "187.46",
-                    "200.54",
-                    "217.98",
-                    "231.06",
-                    "244.14",
-                    "261.58",
-                    "279.01",
-                    "296.45",
-                    "313.89",
-                    "331.33",
-                    "348.77",
-                    "370.57"
-                ],
-                "Soundwave Collision DMG (%)": [
-                    "33.2",
-                    "35.69",
-                    "38.18",
-                    "41.5",
-                    "43.99",
-                    "46.48",
-                    "49.8",
-                    "53.12",
-                    "56.44",
-                    "59.76",
-                    "63.08",
-                    "66.4",
-                    "70.55"
-                ],
-                "Duration": [
-                    "9s"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Talent_Nightshade_Synesthesia.png",
-            "talentName": "Nightshade Synesthesia",
-            "talentType": "1st Ascension Passive",
-            "description": "After a nearby party member triggers Nightsoul Burst, Ororon will gain 40 Nightsoul points. Within 15s after using his Elemental Skill, when other party members' Hydro or Electro attacks hit opponents, Ororon will gain 5 Nightsoul points, an effect that can occur every 0.3s for a maximum of 10 times during this 15s duration.\nOroron can have a maximum of 80 Nightsoul points.\n\nAlso, when nearby opponents take Electro-Charged or Lunar-Charged reaction DMG or Nightsoul-aligned DMG dealt by other nearby characters, Ororon will consume 10 Nightsoul points (provided he has at least that amount), entering the Nightsoul's Blessing state and triggering the Hypersense effect: Deal Nightsoul-aligned Electro DMG based on 160% of Ororon's ATK to at most 4 nearby opponents. The aforementioned effect can trigger once every 1.8s.\n\nNightsoul's Blessing: Ororon\nOroron's Nightsoul's Blessing state lasts 6s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Talent_Aspect_Catalyst.png",
-            "talentName": "Aspect Catalyst",
-            "talentType": "4th Ascension Passive",
-            "description": "After the Elemental Skill Night's Sling's Spirit Orb hits an opponent, Ororon will gain the Aspect Sigil effect for 15s.\n\nAspect Sigil\nWhen a nearby active party member hits an opponent with Normal, Charged, or Plunging Attacks, that character will restore 3 Energy. If Ororon is off-field, Ororon will also restore 3 Energy. This effect can trigger once every 1s, and can trigger 3 times per duration.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Talent_Flowing_Fog%2C_Spritely_Shadows.png",
-            "talentName": "Flowing Fog, Spritely Shadows",
-            "talentType": "Night Realm's Gift Passive",
-            "description": "While in an area with Phlogiston Mechanics within Natlan, he can use Nightsoul Transmission: Ororon. When the active character is currently in the air, the following will trigger when switching to Ororon: Ororon will leap up high. Nightsoul Transmission can be triggered once every 10s by your party.\n\nHolding Aiming Mode will cause Ororon to enter the \"Spiritspeaker\" state, which will allow him to interact with \"Nightspirit Graffiti\" and \"Nightspirit Sigils,\" extracting information and power from them. The rules for interacting with these objects follow the same rules as those governing Iktomisaurus interactions.\n\nAdditionally, holding the jump button will cause Ororon to consume 75 Stamina and leap. In areas within Natlan where Phlogiston mechanics are present, Ororon will prioritize consuming 5 Phlogiston to leap to a height higher still.\nWhen in the air, Ororon can Hold his Normal Attack to consume Phlogiston or Stamina and enter Aiming Mode.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Flowing_Fog%2C_Spritely_Shadows_Nightsoul_Transmission_Preview.gif",
-                    "caption": "Nightsoul Transmission"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Flowing_Fog%2C_Spritely_Shadows_Holding_Aim_Preview.gif",
-                    "caption": "Holding Aim"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Flowing_Fog%2C_Spritely_Shadows_Holding_Jump_Preview.gif",
-                    "caption": "Holding Jump"
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Talent_The_Art_of_Skinchanging.png",
-            "talentName": "The Art of Skinchanging",
-            "talentType": "Utility Passive",
-            "description": "Increases gliding SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Spiritvessel_Snapshot_Charged_Preview.gif",
+          "caption": "Charged Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Constellation_Trails_Amidst_the_Forest_Fog.png",
-            "name": "Trails Amidst the Forest Fog",
-            "level": 1,
-            "description": "The Elemental Skill Night's Sling's Spirit Orb can bounce 2 additional times.\nAdditionally, after the Spirit Orb hits an opponent, it will apply the Nighttide effect to them for 12s. Opponents affected by Nighttide take 50% increased DMG from Hypersense triggered by the Ascension Talent, \"Nightshade Synesthesia.\" You must first unlock the Ascension Talent \"Nightshade Synesthesia.\""
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Constellation_King_Bee_of_the_Hidden_Honeyed_Wine.png",
-            "name": "King Bee of the Hidden Honeyed Wine",
-            "level": 2,
-            "description": "After using his Elemental Burst, Dark Voices Echo, Ororon will obtain the Spiritual Supersense effect for 9s.\nSpiritual Supersense\nGain 8% Electro DMG Bonus.\nAdditionally, during this time, every additional opponent hit by the Elemental Burst Dark Voices Echo or Supersonic Oculus will grant Ororon a further 8% Electro DMG Bonus. The maximum that can be gained this way is 32% Electro DMG Bonus."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Constellation_Roosting_Bat%27s_Spiritcage.png",
-            "name": "Roosting Bat's Spiritcage",
-            "level": 3,
-            "description": "Increases the Level of Dark Voices Echo by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Constellation_As_the_Mysteries_of_the_Night_Wind.png",
-            "name": "As the Mysteries of the Night Wind",
-            "level": 4,
-            "description": "The Supersonic Oculus summoned by the Elemental Burst Dark Voices Echo rotates 25% faster.\nAdditionally, Ororon will restore 8 Energy to himself after using Dark Voices Echo."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Constellation_A_Gift_For_the_Soul.png",
-            "name": "A Gift For the Soul",
-            "level": 5,
-            "description": "Increases the Level of Night's Sling by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Constellation_Ode_to_Deep_Springs.png",
-            "name": "Ode to Deep Springs",
-            "level": 6,
-            "description": "After triggering Hypersense through the Ascension Talent, Nightshade Synesthesia, your current active character's ATK is increased by 10% for 9s. Max 3 stacks, each stack is counted independently.\nAdditionally, when you use the Elemental Burst Dark Voices Echo, you will trigger one instance of an effect equivalent to Hypersense, dealing 200% of its original DMG.\nYou must first unlock the Ascension Talent \"Nightshade Synesthesia.\""
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.2",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "50.64",
+          "54.76",
+          "58.89",
+          "64.77",
+          "68.9",
+          "73.61",
+          "80.08",
+          "86.56",
+          "93.04",
+          "100.11",
+          "107.17"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Namecard_Background_Ororon_Nightshade.png",
-                "caption": "Ororon: Nightshade Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Ororon_Nightshade.png",
-                "caption": "Ororon: Nightshade Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Namecard_Banner_Ororon_Nightshade.png",
-                "caption": "Ororon: Nightshade Banner"
-            }
+        "2-Hit DMG (%)": [
+          "44.37",
+          "47.99",
+          "51.6",
+          "56.76",
+          "60.37",
+          "64.5",
+          "70.17",
+          "75.85",
+          "81.52",
+          "87.71",
+          "93.91"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Spiritvessel_Snapshot_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Spiritvessel_Snapshot_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Spiritvessel_Snapshot_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Spiritvessel_Snapshot_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Dark_Voices_Echo_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Dark_Voices_Echo_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Night%27s_Sling_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Night%27s_Sling_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "69.82",
+          "75.5",
+          "81.19",
+          "89.31",
+          "94.99",
+          "101.48",
+          "110.41",
+          "119.34",
+          "128.28",
+          "138.02",
+          "147.76"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Ororon_Character_Details_1.png",
-                "caption": "Ororon Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Ororon_Character_Details_2.png",
-                "caption": "Ororon Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Ororon_Character_Details_3.gif",
-                "caption": "Ororon Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Ororon_Character_Details_4.png",
-                "caption": "Ororon Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Ororon_Character_Details_5.png",
-                "caption": "Ororon Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Ororon_Character_Details_6.png",
-                "caption": "Ororon Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Ororon_Character_Details_7.png",
-                "caption": "Ororon Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Ororon_Character_Details_8.gif",
-                "caption": "Ororon Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Ororon_Character_Details_9.gif",
-                "caption": "Ororon Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Ororon_Character_Details_10.gif",
-                "caption": "Ororon Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Ororon_Character_Details_11.gif",
-                "caption": "Ororon Details 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Ororon_Character_Details_12.gif",
-                "caption": "Ororon Details 12"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Ororon_Character_Details_13.gif",
-                "caption": "Ororon Details 13"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Ororon_Character_Details_14.png",
-                "caption": "Ororon Details 14"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Ororon_Character_Details_15.png",
-                "caption": "Ororon Details 15"
-            }
+        "Aimed Shot (%)": [
+          "43.86",
+          "47.43",
+          "51",
+          "56.1",
+          "59.67",
+          "63.75",
+          "69.36",
+          "74.97",
+          "80.58",
+          "86.7",
+          "92.82"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Icon_Emoji_Paimon%27s_Paintings_36_Ororon_1.png",
-                "caption": "Sorry Set 36"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_1.png",
-                "caption": "I'm Off Set 37"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_2.png",
-                "caption": "You Got This Set 37"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_3.png",
-                "caption": "Can't Sleep... Set 37"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_4.png",
-                "caption": "Veggie Buddies! Set 37"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Icon_Emoji_Paimon%27s_Paintings_40_Ororon_1.png",
-                "caption": "Roger That Set 40"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Icon_Emoji_Paimon%27s_Paintings_41_Ororon_1.png",
-                "caption": "Open Up! Set 41"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Icon_Emoji_Paimon%27s_Paintings_43_Ifa_Ororon_1.png",
-                "caption": "Happy Birthday Set 43"
-            }
+        "Fully-Charged Aimed Shot (%)": [
+          "124",
+          "133.3",
+          "142.6",
+          "155",
+          "164.3",
+          "173.6",
+          "186",
+          "198.4",
+          "210.8",
+          "223.2",
+          "235.6"
+        ],
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.17",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Talent_Night%27s_Sling.png",
+      "talentName": "Night's Sling",
+      "talentType": "Elemental Skill",
+      "description": "Ororon manifests an ancient mystical technique from the Masters of the Night-Wind as a Spirit Orb of midnight shade and throws it at his foe, dealing Nightsoul-aligned Electro DMG.\nWhen other opponents are nearby, the Spirit Orb will bounce between them, dealing Nightsoul-aligned Electro DMG. Each time Night's Sling is used, each opponent can only be selected as a target once.\nAfter 3 bounces, or if there are no eligible targets left, the Orb will disappear.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Night%27s_Sling_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Spirit Orb DMG (%)": [
+          "197.6",
+          "212.42",
+          "227.24",
+          "247",
+          "261.82",
+          "276.64",
+          "296.4",
+          "316.16",
+          "335.92",
+          "355.68",
+          "375.44",
+          "395.2",
+          "419.9"
+        ],
+        "CD": ["15s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Talent_Dark_Voices_Echo.png",
+      "talentName": "Dark Voices Echo",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nOroron works an ancient ritual, dealing Nightsoul-aligned AoE Electro DMG, summoning forth a Supersonic Oculus.\n\nSupersonic Oculus\nContinuously taunts nearby opponents and attracts attacks from them.\nContinuously rotates and fires off sonic waves that deal Nightsoul-aligned Electro DMG.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Dark_Voices_Echo_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Ritual DMG (%)": [
+          "174.38",
+          "187.46",
+          "200.54",
+          "217.98",
+          "231.06",
+          "244.14",
+          "261.58",
+          "279.01",
+          "296.45",
+          "313.89",
+          "331.33",
+          "348.77",
+          "370.57"
+        ],
+        "Soundwave Collision DMG (%)": [
+          "33.2",
+          "35.69",
+          "38.18",
+          "41.5",
+          "43.99",
+          "46.48",
+          "49.8",
+          "53.12",
+          "56.44",
+          "59.76",
+          "63.08",
+          "66.4",
+          "70.55"
+        ],
+        "Duration": ["9s"],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Talent_Nightshade_Synesthesia.png",
+      "talentName": "Nightshade Synesthesia",
+      "talentType": "1st Ascension Passive",
+      "description": "After a nearby party member triggers Nightsoul Burst, Ororon will gain 40 Nightsoul points. Within 15s after using his Elemental Skill, when other party members' Hydro or Electro attacks hit opponents, Ororon will gain 5 Nightsoul points, an effect that can occur every 0.3s for a maximum of 10 times during this 15s duration.\nOroron can have a maximum of 80 Nightsoul points.\n\nAlso, when nearby opponents take Electro-Charged or Lunar-Charged reaction DMG or Nightsoul-aligned DMG dealt by other nearby characters, Ororon will consume 10 Nightsoul points (provided he has at least that amount), entering the Nightsoul's Blessing state and triggering the Hypersense effect: Deal Nightsoul-aligned Electro DMG based on 160% of Ororon's ATK to at most 4 nearby opponents. The aforementioned effect can trigger once every 1.8s.\n\nNightsoul's Blessing: Ororon\nOroron's Nightsoul's Blessing state lasts 6s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Talent_Aspect_Catalyst.png",
+      "talentName": "Aspect Catalyst",
+      "talentType": "4th Ascension Passive",
+      "description": "After the Elemental Skill Night's Sling's Spirit Orb hits an opponent, Ororon will gain the Aspect Sigil effect for 15s.\n\nAspect Sigil\nWhen a nearby active party member hits an opponent with Normal, Charged, or Plunging Attacks, that character will restore 3 Energy. If Ororon is off-field, Ororon will also restore 3 Energy. This effect can trigger once every 1s, and can trigger 3 times per duration.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Talent_Flowing_Fog%2C_Spritely_Shadows.png",
+      "talentName": "Flowing Fog, Spritely Shadows",
+      "talentType": "Night Realm's Gift Passive",
+      "description": "While in an area with Phlogiston Mechanics within Natlan, he can use Nightsoul Transmission: Ororon. When the active character is currently in the air, the following will trigger when switching to Ororon: Ororon will leap up high. Nightsoul Transmission can be triggered once every 10s by your party.\n\nHolding Aiming Mode will cause Ororon to enter the \"Spiritspeaker\" state, which will allow him to interact with \"Nightspirit Graffiti\" and \"Nightspirit Sigils,\" extracting information and power from them. The rules for interacting with these objects follow the same rules as those governing Iktomisaurus interactions.\n\nAdditionally, holding the jump button will cause Ororon to consume 75 Stamina and leap. In areas within Natlan where Phlogiston mechanics are present, Ororon will prioritize consuming 5 Phlogiston to leap to a height higher still.\nWhen in the air, Ororon can Hold his Normal Attack to consume Phlogiston or Stamina and enter Aiming Mode.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Flowing_Fog%2C_Spritely_Shadows_Nightsoul_Transmission_Preview.gif",
+          "caption": "Nightsoul Transmission"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Flowing_Fog%2C_Spritely_Shadows_Holding_Aim_Preview.gif",
+          "caption": "Holding Aim"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Flowing_Fog%2C_Spritely_Shadows_Holding_Jump_Preview.gif",
+          "caption": "Holding Jump"
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Talent_The_Art_of_Skinchanging.png",
+      "talentName": "The Art of Skinchanging",
+      "talentType": "Utility Passive",
+      "description": "Increases gliding SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Constellation_Trails_Amidst_the_Forest_Fog.png",
+      "name": "Trails Amidst the Forest Fog",
+      "level": 1,
+      "description": "The Elemental Skill Night's Sling's Spirit Orb can bounce 2 additional times.\nAdditionally, after the Spirit Orb hits an opponent, it will apply the Nighttide effect to them for 12s. Opponents affected by Nighttide take 50% increased DMG from Hypersense triggered by the Ascension Talent, \"Nightshade Synesthesia.\" You must first unlock the Ascension Talent \"Nightshade Synesthesia.\""
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Constellation_King_Bee_of_the_Hidden_Honeyed_Wine.png",
+      "name": "King Bee of the Hidden Honeyed Wine",
+      "level": 2,
+      "description": "After using his Elemental Burst, Dark Voices Echo, Ororon will obtain the Spiritual Supersense effect for 9s.\nSpiritual Supersense\nGain 8% Electro DMG Bonus.\nAdditionally, during this time, every additional opponent hit by the Elemental Burst Dark Voices Echo or Supersonic Oculus will grant Ororon a further 8% Electro DMG Bonus. The maximum that can be gained this way is 32% Electro DMG Bonus."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Constellation_Roosting_Bat%27s_Spiritcage.png",
+      "name": "Roosting Bat's Spiritcage",
+      "level": 3,
+      "description": "Increases the Level of Dark Voices Echo by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Constellation_As_the_Mysteries_of_the_Night_Wind.png",
+      "name": "As the Mysteries of the Night Wind",
+      "level": 4,
+      "description": "The Supersonic Oculus summoned by the Elemental Burst Dark Voices Echo rotates 25% faster.\nAdditionally, Ororon will restore 8 Energy to himself after using Dark Voices Echo."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Constellation_A_Gift_For_the_Soul.png",
+      "name": "A Gift For the Soul",
+      "level": 5,
+      "description": "Increases the Level of Night's Sling by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Constellation_Ode_to_Deep_Springs.png",
+      "name": "Ode to Deep Springs",
+      "level": 6,
+      "description": "After triggering Hypersense through the Ascension Talent, Nightshade Synesthesia, your current active character's ATK is increased by 10% for 9s. Max 3 stacks, each stack is counted independently.\nAdditionally, when you use the Elemental Burst Dark Voices Echo, you will trigger one instance of an effect equivalent to Hypersense, dealing 200% of its original DMG.\nYou must first unlock the Ascension Talent \"Nightshade Synesthesia.\""
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.2",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Idle_Ororon_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Idle_Ororon_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Talent_Menu_Ororon.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Weapon_Menu_Ororon.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Party_Setup_Ororon.gif",
+        "caption": "Party Setup",
+        "videoUrl": "",
+        "videoType": ""
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Namecard_Background_Ororon_Nightshade.png",
+        "caption": "Ororon: Nightshade Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Ororon_Nightshade.png",
+        "caption": "Ororon: Nightshade Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Namecard_Banner_Ororon_Nightshade.png",
+        "caption": "Ororon: Nightshade Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Spiritvessel_Snapshot_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Spiritvessel_Snapshot_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Spiritvessel_Snapshot_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Spiritvessel_Snapshot_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Dark_Voices_Echo_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Dark_Voices_Echo_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Night%27s_Sling_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Night%27s_Sling_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Ororon_Character_Details_1.png",
+        "caption": "Ororon Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Ororon_Character_Details_2.png",
+        "caption": "Ororon Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Ororon_Character_Details_3.gif",
+        "caption": "Ororon Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Ororon_Character_Details_4.png",
+        "caption": "Ororon Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Ororon_Character_Details_5.png",
+        "caption": "Ororon Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Ororon_Character_Details_6.png",
+        "caption": "Ororon Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Ororon_Character_Details_7.png",
+        "caption": "Ororon Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Ororon_Character_Details_8.gif",
+        "caption": "Ororon Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Ororon_Character_Details_9.gif",
+        "caption": "Ororon Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Ororon_Character_Details_10.gif",
+        "caption": "Ororon Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Ororon_Character_Details_11.gif",
+        "caption": "Ororon Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Ororon_Character_Details_12.gif",
+        "caption": "Ororon Details 12"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Ororon_Character_Details_13.gif",
+        "caption": "Ororon Details 13"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Ororon_Character_Details_14.png",
+        "caption": "Ororon Details 14"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Ororon_Character_Details_15.png",
+        "caption": "Ororon Details 15"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Icon_Emoji_Paimon%27s_Paintings_36_Ororon_1.png",
+        "caption": "Sorry Set 36"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_1.png",
+        "caption": "I'm Off Set 37"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_2.png",
+        "caption": "You Got This Set 37"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_3.png",
+        "caption": "Can't Sleep... Set 37"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Icon_Emoji_Paimon%27s_Paintings_37_Ororon_4.png",
+        "caption": "Veggie Buddies! Set 37"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Icon_Emoji_Paimon%27s_Paintings_40_Ororon_1.png",
+        "caption": "Roger That Set 40"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Icon_Emoji_Paimon%27s_Paintings_41_Ororon_1.png",
+        "caption": "Open Up! Set 41"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Icon_Emoji_Paimon%27s_Paintings_43_Ifa_Ororon_1.png",
+        "caption": "Happy Birthday Set 43"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Scroll of the Hero of Cinder City",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Electro Support",
+      "sets": [
+        {
+          "name": "Thundering Fury",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Burst Support",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

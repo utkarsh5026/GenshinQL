@@ -1,0 +1,263 @@
+{
+  "name": "Ferrous Shadow",
+  "rarity": 3,
+  "attack": 401,
+  "subStat": "HP 35.2%",
+  "effect": "Unbending\nWhen HP falls below 70~90%, increases Charged Attack DMG by 30~50%, and Charged Attacks become much harder to interrupt.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Weapon_Ferrous_Shadow.png",
+  "nation": 0,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Tile_of_Decarabian%27s_Tower.png",
+      "caption": "Tile of Decarabian's Tower"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Item_Debris_of_Decarabian%27s_City.png",
+      "caption": "Debris of Decarabian's City"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Fragment_of_Decarabian%27s_Epic.png",
+      "caption": "Fragment of Decarabian's Epic"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Item_Scattered_Piece_of_Decarabian%27s_Dream.png",
+      "caption": "Scattered Piece of Decarabian's Dream"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+      "caption": "Heavy Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+      "caption": "Black Bronze Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+      "caption": "Black Crystal Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+      "caption": "Whopper­flower Nectar"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+      "caption": "Shimmering Nectar"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+      "caption": "Energy Nectar"
+    }
+  ],
+  "passives": [
+    "When HP falls below 70%, increases Charged Attack DMG by 30%, and Charged Attacks become much harder to interrupt.",
+    "When HP falls below 75%, increases Charged Attack DMG by 35%, and Charged Attacks become much harder to interrupt.",
+    "When HP falls below 80%, increases Charged Attack DMG by 40%, and Charged Attacks become much harder to interrupt.",
+    "When HP falls below 85%, increases Charged Attack DMG by 45%, and Charged Attacks become much harder to interrupt.",
+    "When HP falls below 90%, increases Charged Attack DMG by 50%, and Charged Attacks become much harder to interrupt."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Weapon_Ferrous_Shadow.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Weapon_Ferrous_Shadow_2nd.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 39,
+          "max": 94
+        },
+        "subStat": {
+          "min": 7.7,
+          "max": 13.5
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Tile_of_Decarabian%27s_Tower.png",
+            "caption": "Tile of Decarabian's Tower",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+            "caption": "Heavy Horn",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+            "caption": "Whopperflower Nectar",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 113,
+          "max": 169
+        },
+        "subStat": {
+          "min": 13.5,
+          "max": 19.7
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Item_Debris_of_Decarabian%27s_City.png",
+            "caption": "Debris of Decarabian's City",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+            "caption": "Heavy Horn",
+            "count": 8
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+            "caption": "Whopperflower Nectar",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 189,
+          "max": 216
+        },
+        "subStat": {
+          "min": 19.7,
+          "max": 22.8
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Item_Debris_of_Decarabian%27s_City.png",
+            "caption": "Debris of Decarabian's City",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+            "caption": "Black Bronze Horn",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+            "caption": "Shimmering Nectar",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 236,
+          "max": 263
+        },
+        "subStat": {
+          "min": 22.8,
+          "max": 25.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Fragment_of_Decarabian%27s_Epic.png",
+            "caption": "Fragment of Decarabian's Epic",
+            "count": 2
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+            "caption": "Black Bronze Horn",
+            "count": 8
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+            "caption": "Shimmering Nectar",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 282,
+          "max": 309
+        },
+        "subStat": {
+          "min": 25.9,
+          "max": 29
+        },
+        "mora": 25000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Fragment_of_Decarabian%27s_Epic.png",
+            "caption": "Fragment of Decarabian's Epic",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+            "caption": "Black Crystal Horn",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+            "caption": "Energy Nectar",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 329,
+          "max": 355
+        },
+        "subStat": {
+          "min": 29,
+          "max": 32.1
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Item_Scattered_Piece_of_Decarabian%27s_Dream.png",
+            "caption": "Scattered Piece of Decarabian's Dream",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+            "caption": "Black Crystal Horn",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+            "caption": "Energy Nectar",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 375,
+          "max": 401
+        },
+        "subStat": {
+          "min": 32.1,
+          "max": 35.2
+        }
+      }
+    ]
+  }
+}

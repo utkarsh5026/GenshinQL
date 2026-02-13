@@ -15,7 +15,12 @@ import {
 import {
   advancedCharacterSchema,
   BaseCharacterSchema,
+  CharacterRole,
+  Primitives,
   TalentSchema,
+  TalentUpgrade,
+  UpgradeMaterial,
+  VersionRelease,
 } from './schema.js';
 import { URL, withWebDriver } from './setup.js';
 import {
@@ -105,6 +110,81 @@ export async function scrapeCharacterDetailed(character: string) {
     const version = await lastCell.getText();
     logger.success(`Release version: ${version}`);
     return version;
+  };
+
+  /**
+   * Scrapes all version releases/banners from the Character Event Wishes table
+   * Each row contains: banner image (skipped), featured characters, duration, version
+   */
+  const getVersionReleases = async (
+    driver: WebDriver
+  ): Promise<VersionRelease[]> => {
+    try {
+      const table = await getTableFromHeading(
+        driver,
+        'Character Event Wishes',
+        'h3'
+      );
+      const rows = await table.findElements(By.css('tbody tr'));
+      const releases: VersionRelease[] = [];
+
+      for (const row of rows) {
+        try {
+          const cells = await row.findElements(By.css('td'));
+          if (cells.length < 4) {
+            continue;
+          }
+
+          const [, charactersCell, durationCell, versionCell] = cells;
+
+          const characterCards = await charactersCell.findElements(
+            By.css('.card-container.mini-card')
+          );
+
+          const characters: string[] = [];
+          for (const card of characterCards) {
+            try {
+              const caption = await card.findElement(By.css('.card-caption'));
+              const name = (await caption.getText()).trim();
+              if (name) characters.push(name);
+            } catch {
+              try {
+                const img = await card.findElement(By.css('a img'));
+                const name = await img.getAttribute('alt');
+                if (name) characters.push(name.trim());
+              } catch {
+                // Skip this card if we can't get the name
+              }
+            }
+          }
+
+          const duration = (await durationCell.getText()).trim();
+
+          let version = '';
+          try {
+            const versionLink = await versionCell.findElement(By.css('a'));
+            version = (await versionLink.getText()).trim();
+          } catch {
+            version = (await versionCell.getText()).trim();
+          }
+
+          if (characters.length > 0 && duration && version) {
+            releases.push({
+              characters,
+              duration,
+              version,
+            });
+          }
+        } catch (error) {
+          logger.error('Error parsing version release row:', error);
+        }
+      }
+
+      return releases;
+    } catch (error) {
+      logger.warn('Version releases table not found or error:', error);
+      return [];
+    }
   };
 
   const getCharacterImages = async (driver: WebDriver) => {
@@ -220,25 +300,150 @@ export async function scrapeCharacterDetailed(character: string) {
     return constellations.filter((c) => c !== null);
   };
 
+  /**
+   * Parses a single talent upgrade row containing level info and materials
+   */
+  const parseTalentUpgradeRow = async (
+    row: WebElement
+  ): Promise<TalentUpgrade | null> => {
+    const cells = await row.findElements(By.css('td'));
+
+    // Each upgrade row has exactly 2 tds
+    if (cells.length !== 2) {
+      return null;
+    }
+
+    const [levelCell, materialsCell] = cells;
+
+    // Parse level range from first cell
+    // HTML: "7 → 8<br>(5✦)" or just "1 → 2"
+    const levelText = await levelCell.getText();
+    const levelRange = levelText.split('\n')[0].trim(); // "7 → 8"
+
+    // Extract ascension requirement if present (e.g., "(5✦)")
+    const ascensionMatch = levelText.match(/\((\d+)✦\)/);
+    const requiredAscension = ascensionMatch
+      ? parseInt(ascensionMatch[1])
+      : undefined;
+
+    // Parse materials from second cell
+    const materialCards = await materialsCell.findElements(
+      By.css('div.card-container.mini-card')
+    );
+
+    const materials: UpgradeMaterial[] = [];
+
+    for (const card of materialCards) {
+      try {
+        // Get material name from the image title attribute
+        const img = await card.findElement(By.css('a img'));
+        const name = await img.getAttribute('title');
+        const iconUrl = parseUrl(await img.getAttribute('data-src'));
+
+        // Get count from .card-text
+        const countText = await card
+          .findElement(By.css('.card-text'))
+          .getText();
+        const count = parseInt(countText.replace(/,/g, ''), 10);
+
+        // Get cumulative total from .card-caption small if present
+        let cumulative: number | undefined;
+        try {
+          const captionText = await card
+            .findElement(By.css('.card-caption small'))
+            .getText();
+          // Extract number from "[502,500]"
+          const cumulativeMatch = captionText.match(/\[([\d,]+)\]/);
+          if (cumulativeMatch) {
+            cumulative = parseInt(cumulativeMatch[1].replace(/,/g, ''), 10);
+          }
+        } catch {
+          // Caption is optional
+        }
+
+        materials.push({
+          name,
+          iconUrl,
+          count,
+          ...(cumulative !== undefined && { cumulative }),
+        });
+      } catch (error) {
+        logger.error('Error parsing material card:', error);
+      }
+    }
+
+    return {
+      levelRange,
+      ...(requiredAscension !== undefined && { requiredAscension }),
+      materials,
+    };
+  };
+
+  /**
+   * Scrapes all talent upgrade levels from the talent upgrade table
+   */
+  const getTalentUpgrades = async (
+    driver: WebDriver
+  ): Promise<TalentUpgrade[]> => {
+    logger.info(`Scraping talent upgrades for ${character}...`);
+
+    try {
+      const table = await getTableFromHeading(
+        driver,
+        'Talent Level-Up Materials',
+        'h3'
+      );
+
+      const rows = await table.findElements(By.css('tbody tr'));
+      const upgrades: TalentUpgrade[] = [];
+
+      for (const row of rows) {
+        const upgrade = await parseTalentUpgradeRow(row);
+        if (upgrade && upgrade.materials.length > 0) {
+          logger.debug(
+            `  - Level ${upgrade.levelRange}: ${upgrade.materials.length} materials`
+          );
+          upgrades.push(upgrade);
+        }
+      }
+
+      logger.success(`Scraped ${upgrades.length} talent upgrade levels`);
+      return upgrades;
+    } catch (error) {
+      logger.warn('Talent upgrades table not found or error:', error);
+      return [];
+    }
+  };
+
   const scrapeCharacter = async (driver: WebDriver) => {
     const characterUrl = `${URL}/${character}`;
     logger.cyan(`\n=== Starting scrape for ${character} ===`);
-    logger.info(`Navigating to ${characterUrl}`);
 
     try {
       await driver.get(characterUrl);
 
-      const [imageUrls, talents, constellations, version] = await Promise.all([
+      const [
+        imageUrls,
+        talents,
+        constellations,
+        version,
+        talentUpgrades,
+        versionReleases,
+      ] = await Promise.all([
         getCharacterImages(driver),
         getTalents(driver),
         getConstellations(driver),
         getCharacterReleaseVersion(driver),
+        getTalentUpgrades(driver),
+        getVersionReleases(driver),
       ]);
 
       logger.success(`\n=== Completed scrape for ${character} ===\n`);
       return {
         talents,
         constellations,
+        talentUpgrades,
+        versionReleases,
         imageUrls,
         version,
       };
@@ -653,6 +858,422 @@ export async function checkCharacterCoverage(): Promise<void> {
   }
 }
 
+/**
+ * Scrapes character roles from the Character_Role wiki page.
+ * Updates primitives.json with role definitions and character files with their roles.
+ */
+export async function scrapeCharacterRoles(): Promise<void> {
+  const ROLE_URL = `${URL}/Character_Role`;
+
+  const scrapeRoles = async (driver: WebDriver) => {
+    logger.cyan('\n=== Scraping Character Roles ===\n');
+    await driver.get(ROLE_URL);
+    await driver.sleep(2000);
+
+    // Step 1: Scrape role definitions from "List of Character Roles" table
+    logger.info('Scraping role definitions...');
+    const roleDefinitions: CharacterRole[] = [];
+
+    try {
+      const rolesTable = await getTableFromHeading(
+        driver,
+        'List of Character Roles',
+        'h2'
+      );
+      const roleRows = await rolesTable.findElements(By.css('tbody tr'));
+
+      for (const row of roleRows) {
+        try {
+          const cells = await row.findElements(By.css('td'));
+          if (cells.length < 2) continue;
+
+          // First cell has the icon
+          const iconImg = await cells[0].findElement(By.css('img'));
+          let iconUrl = await iconImg.getAttribute('data-src');
+          if (!iconUrl) {
+            iconUrl = await iconImg.getAttribute('src');
+          }
+          iconUrl = iconUrl?.split('/revision/')[0] || '';
+
+          // Second cell has the role name
+          const roleName = (await cells[1].getText()).trim();
+
+          if (roleName && iconUrl) {
+            roleDefinitions.push({ name: roleName, iconUrl });
+            logger.debug(`  - Found role: ${roleName}`);
+          }
+        } catch (error) {
+          logger.error('Error parsing role definition row:', error);
+        }
+      }
+
+      logger.success(`Scraped ${roleDefinitions.length} role definitions`);
+    } catch (error) {
+      logger.error('Error scraping role definitions:', error);
+    }
+
+    // Step 2: Scrape character-role mappings from "Characters by Role" table
+    logger.info('Scraping character role assignments...');
+    const characterRolesMap = new Map<string, string[]>();
+
+    try {
+      const charactersTable = await getTableFromHeading(
+        driver,
+        'Characters by Role',
+        'h2'
+      );
+
+      // Get header to determine role column indices
+      const headerRow = await charactersTable.findElement(By.css('thead tr'));
+      const headerCells = await headerRow.findElements(By.css('th'));
+      const roleHeaders: string[] = [];
+
+      // Skip first 2 columns (character name and element)
+      for (let i = 2; i < headerCells.length; i++) {
+        const headerText = (await headerCells[i].getText()).trim();
+        roleHeaders.push(headerText);
+      }
+
+      logger.debug(`Role columns: ${roleHeaders.join(', ')}`);
+
+      // Parse character rows
+      const characterRows = await charactersTable.findElements(
+        By.css('tbody tr')
+      );
+
+      for (const row of characterRows) {
+        try {
+          const cells = await row.findElements(By.css('td'));
+          if (cells.length < 3) continue;
+
+          // Get character name from first cell
+          const characterCell = cells[0];
+          const characterLink = await characterCell.findElement(By.css('a'));
+          const characterName = (await characterLink.getText()).trim();
+
+          // Skip Traveler characters
+          if (
+            characterName.toLowerCase().includes('traveler') ||
+            characterName.toLowerCase().includes('aloy')
+          ) {
+            logger.debug(`  - Skipping: ${characterName}`);
+            continue;
+          }
+
+          // Check role columns (skip element column at index 1)
+          const roles: string[] = [];
+          for (let i = 2; i < cells.length && i - 2 < roleHeaders.length; i++) {
+            const cell = cells[i];
+            const cellHtml = await cell.getAttribute('innerHTML');
+
+            // Check for checkmark (✔) or "check-yes" class
+            if (
+              cellHtml.includes('check-yes') ||
+              cellHtml.includes('✔') ||
+              cellHtml.includes('data-sort-value="1"')
+            ) {
+              roles.push(roleHeaders[i - 2]);
+            }
+          }
+
+          if (roles.length > 0) {
+            characterRolesMap.set(characterName, roles);
+            logger.debug(`  - ${characterName}: ${roles.join(', ')}`);
+          }
+        } catch (error) {
+          logger.error('Error parsing character role row:', error);
+        }
+      }
+
+      logger.success(`Scraped roles for ${characterRolesMap.size} characters`);
+    } catch (error) {
+      logger.error('Error scraping character roles:', error);
+    }
+
+    return { roleDefinitions, characterRolesMap };
+  };
+
+  const { roleDefinitions, characterRolesMap } =
+    await withWebDriver(scrapeRoles);
+
+  // Step 3: Update primitives.json with role definitions
+  logger.info('Updating primitives.json with role definitions...');
+  try {
+    const primitives = await loadFromPublic<Primitives>('primitives');
+    if (primitives) {
+      primitives.roles = roleDefinitions;
+      await saveToPublic(primitives, 'primitives');
+      logger.success('Updated primitives.json with roles');
+    }
+  } catch (error) {
+    logger.error('Error updating primitives.json:', error);
+  }
+
+  // Step 4: Update individual character files and characters.json
+  logger.info('Updating character files with roles...');
+  const detailedDir = path.join(PUBLIC_DIR, 'characters');
+
+  // Update individual character files
+  for (const [characterName, roles] of characterRolesMap) {
+    const fileName = parseCharacterName(characterName);
+    const filePath = path.join(detailedDir, `${fileName}.json`);
+
+    try {
+      const content = await fs.readFile(filePath, 'utf-8');
+      const data = JSON.parse(content);
+      data.roles = roles;
+      await fs.writeFile(filePath, JSON.stringify(data, null, 4));
+      logger.debug(`  - Updated ${fileName}.json`);
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+        logger.error(`Error updating ${fileName}.json:`, error);
+      }
+    }
+  }
+
+  logger.info('Updating characters.json with roles...');
+  try {
+    const characters =
+      await loadFromPublic<BaseCharacterSchema[]>(CHARACTERS_FILE_NAME);
+
+    if (characters) {
+      const updatedCharacters = characters.map((char) => {
+        const roles = characterRolesMap.get(char.name);
+        if (roles) {
+          return { ...char, roles };
+        }
+        return char;
+      });
+
+      await saveToPublic(updatedCharacters, CHARACTERS_FILE_NAME);
+      logger.success('Updated characters.json with roles');
+    }
+  } catch (error) {
+    logger.error('Error updating characters.json:', error);
+  }
+
+  logger.success('\n=== Character roles scraping complete! ===\n');
+}
+
+/**
+ * Optimizes characters.json with index-based structure.
+ * Extracts unique values into lookup arrays and replaces strings with numeric indices.
+ * Similar structure to weapons.json for maximum file size reduction.
+ */
+export async function optimizeCharactersJson(): Promise<void> {
+  logger.cyan('\n=== Optimizing characters.json ===\n');
+
+  try {
+    const characters =
+      await loadFromPublic<BaseCharacterSchema[]>(CHARACTERS_FILE_NAME);
+    const primitives = await loadFromPublic<Primitives>('primitives');
+
+    if (!characters || !primitives) {
+      logger.error('Failed to load characters or primitives data');
+      return;
+    }
+
+    const originalSize = JSON.stringify(characters).length;
+    logger.info(`Original size: ${(originalSize / 1024).toFixed(2)} KB`);
+
+    // Step 1: Extract unique values for all indexable fields
+    const elements = [...new Set(characters.map((c) => c.element))].sort();
+    const regions = [...new Set(characters.map((c) => c.region))].sort();
+    const weaponTypes = [
+      ...new Set(characters.map((c) => c.weaponType)),
+    ].sort();
+    const rarities = [...new Set(characters.map((c) => c.rarity))].sort();
+    const modelTypes = [...new Set(characters.map((c) => c.modelType))].sort();
+
+    logger.info('Extracted lookup arrays:');
+    logger.info(
+      `  - Elements: ${elements.length} unique values (${elements.join(', ')})`
+    );
+    logger.info(
+      `  - Regions: ${regions.length} unique values (${regions.join(', ')})`
+    );
+    logger.info(
+      `  - Weapon Types: ${weaponTypes.length} unique values (${weaponTypes.join(', ')})`
+    );
+    logger.info(
+      `  - Rarities: ${rarities.length} unique values (${rarities.join(', ')})`
+    );
+    logger.info(
+      `  - Model Types: ${modelTypes.length} unique values (${modelTypes.join(', ')})`
+    );
+
+    // Step 2: Validate that all characters can be correctly indexed
+    let validationErrors = 0;
+    for (const char of characters) {
+      const elementIdx = elements.indexOf(char.element);
+      const regionIdx = regions.indexOf(char.region);
+      const weaponIdx = weaponTypes.indexOf(char.weaponType);
+      const rarityIdx = rarities.indexOf(char.rarity);
+      const modelIdx = modelTypes.indexOf(char.modelType);
+
+      if (
+        elementIdx === -1 ||
+        regionIdx === -1 ||
+        weaponIdx === -1 ||
+        rarityIdx === -1 ||
+        modelIdx === -1
+      ) {
+        logger.error(
+          `Validation failed for ${char.name}: missing index mapping`
+        );
+        if (elementIdx === -1)
+          logger.error(`  - Element "${char.element}" not found`);
+        if (regionIdx === -1)
+          logger.error(`  - Region "${char.region}" not found`);
+        if (weaponIdx === -1)
+          logger.error(`  - Weapon "${char.weaponType}" not found`);
+        if (rarityIdx === -1)
+          logger.error(`  - Rarity "${char.rarity}" not found`);
+        if (modelIdx === -1)
+          logger.error(`  - ModelType "${char.modelType}" not found`);
+        validationErrors++;
+      }
+    }
+
+    if (validationErrors > 0) {
+      logger.error(
+        `Validation failed for ${validationErrors} characters. Aborting optimization.`
+      );
+      return;
+    }
+
+    logger.success('Validation passed! All values can be indexed.');
+
+    // Step 3: Transform characters to indexed format
+    const optimizedCharacters = characters.map((char) => {
+      // Create new object with indexed fields, excluding URL fields
+      const fieldsToExclude = new Set([
+        'element',
+        'region',
+        'weaponType',
+        'rarity',
+        'modelType',
+        'elementUrl',
+        'weaponUrl',
+        'regionUrl',
+      ]);
+
+      const baseFields = Object.fromEntries(
+        Object.entries(char).filter(([key]) => !fieldsToExclude.has(key))
+      );
+
+      return {
+        ...baseFields,
+        element: elements.indexOf(char.element),
+        region: regions.indexOf(char.region),
+        weaponType: weaponTypes.indexOf(char.weaponType),
+        rarity: rarities.indexOf(char.rarity),
+        modelType: modelTypes.indexOf(char.modelType),
+      };
+    });
+
+    // Step 4: Create final optimized structure with lookup arrays
+    const optimizedData = {
+      elements,
+      regions,
+      weaponTypes,
+      rarities,
+      modelTypes,
+      characters: optimizedCharacters,
+    };
+
+    const optimizedSize = JSON.stringify(optimizedData).length;
+    const savings = originalSize - optimizedSize;
+    const savingsPercent = ((savings / originalSize) * 100).toFixed(2);
+
+    logger.success(`Optimized size: ${(optimizedSize / 1024).toFixed(2)} KB`);
+    logger.success(
+      `Savings: ${(savings / 1024).toFixed(2)} KB (${savingsPercent}%)`
+    );
+
+    // Save optimized data
+    await saveToPublic(optimizedData, CHARACTERS_FILE_NAME);
+    logger.success('Saved optimized characters.json');
+
+    logger.success('\n=== Optimization complete! ===\n');
+  } catch (error) {
+    logger.error('Error optimizing characters.json:', error);
+  }
+}
+
+/**
+ * Optimizes individual character files by removing redundant URL fields.
+ */
+export async function optimizeCharacterFiles(): Promise<void> {
+  logger.cyan('\n=== Optimizing Individual Character Files ===\n');
+
+  try {
+    const primitives = await loadFromPublic<Primitives>('primitives');
+    if (!primitives) {
+      logger.error('Failed to load primitives data');
+      return;
+    }
+
+    const detailedDir = path.join(PUBLIC_DIR, 'characters');
+    const files = await listFiles(detailedDir);
+    const jsonFiles = files.filter((f) => f.endsWith('.json'));
+
+    logger.info(`Found ${jsonFiles.length} character files`);
+
+    let totalOriginalSize = 0;
+    let totalOptimizedSize = 0;
+    let filesOptimized = 0;
+
+    for (const fileName of jsonFiles) {
+      try {
+        const filePath = path.join(detailedDir, fileName);
+        const content = await fs.readFile(filePath, 'utf-8');
+        const character = JSON.parse(content);
+
+        const originalSize = content.length;
+        totalOriginalSize += originalSize;
+
+        // Remove URL fields
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { elementUrl, weaponUrl, regionUrl, ...optimized } =
+          character as Record<string, unknown>;
+
+        const optimizedContent = JSON.stringify(optimized, null, 4);
+        const optimizedSize = optimizedContent.length;
+        totalOptimizedSize += optimizedSize;
+
+        await fs.writeFile(filePath, optimizedContent, 'utf-8');
+        filesOptimized++;
+
+        const savings = originalSize - optimizedSize;
+        logger.debug(
+          `${fileName}: saved ${savings} bytes (${((savings / originalSize) * 100).toFixed(1)}%)`
+        );
+      } catch (error) {
+        logger.error(`Error optimizing ${fileName}:`, error);
+      }
+    }
+
+    const totalSavings = totalOriginalSize - totalOptimizedSize;
+    const totalPercent = ((totalSavings / totalOriginalSize) * 100).toFixed(2);
+
+    logger.success(`Optimized ${filesOptimized} character files`);
+    logger.success(
+      `Total original size: ${(totalOriginalSize / 1024).toFixed(2)} KB`
+    );
+    logger.success(
+      `Total optimized size: ${(totalOptimizedSize / 1024).toFixed(2)} KB`
+    );
+    logger.success(
+      `Total savings: ${(totalSavings / 1024).toFixed(2)} KB (${totalPercent}%)`
+    );
+
+    logger.success('\n=== Individual file optimization complete! ===\n');
+  } catch (error) {
+    logger.error('Error optimizing character files:', error);
+  }
+}
+
 async function main() {
   logger.info('Starting character scraping script...');
   const args = process.argv.slice(2);
@@ -664,17 +1285,15 @@ async function main() {
       colors: true,
     });
 
-    logger.info('Usage: node characters.js --base --detailed --check');
+    logger.info('Usage: node characters.js --base --detailed --check --roles');
     return;
   }
 
   const scrapeCharactersBase = async (driver: WebDriver) => {
-    logger.info('Starting base character scraping...');
     await saveToPublic(
       await scrapeBaseCharactersTable(driver),
       CHARACTERS_FILE_NAME
     );
-    logger.info('Base character scraping complete');
   };
 
   const saveCharactersDetailed = async () => {
@@ -693,6 +1312,18 @@ async function main() {
 
   if (args.includes('--check')) {
     await checkCharacterCoverage();
+  }
+
+  if (args.includes('--roles')) {
+    await scrapeCharacterRoles();
+  }
+
+  if (args.includes('--optimize')) {
+    await optimizeCharactersJson();
+  }
+
+  if (args.includes('--optimize-files')) {
+    await optimizeCharacterFiles();
   }
 }
 

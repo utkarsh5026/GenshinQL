@@ -13,7 +13,7 @@ export const talentSchema = z.object({
       videoType: z.string().optional(), // Add video type
     })
   ),
-  scaling: z.record(z.array(z.string())),
+  scaling: z.record(z.string(), z.array(z.string())),
 });
 
 export const constellationSchema = z.object({
@@ -21,6 +21,28 @@ export const constellationSchema = z.object({
   description: z.string(),
   level: z.number(),
   iconUrl: z.string(),
+});
+
+// Material used in a talent upgrade
+export const upgradeMaterialSchema = z.object({
+  name: z.string(), // "Mora", "Rich Red Brocade", etc.
+  iconUrl: z.string(), // URL to icon image
+  count: z.number(), // Amount needed for this level
+  cumulative: z.number().optional(), // Total needed up to this level
+});
+
+// Single talent level upgrade (e.g., 7 → 8)
+export const talentUpgradeSchema = z.object({
+  levelRange: z.string(), // "7 → 8"
+  requiredAscension: z.number().optional(), // 5 (from "5✦")
+  materials: z.array(upgradeMaterialSchema),
+});
+
+// Version release/banner information
+export const versionReleaseSchema = z.object({
+  characters: z.array(z.string()), // Featured character names
+  duration: z.string(), // "September 30, 2025 – October 21, 2025"
+  version: z.string(), // "Luna I"
 });
 
 export const imageUrlsSchema = z.object({
@@ -105,8 +127,11 @@ export const gallerySchema = z.object({
 export const advancedCharacterSchema = baseCharacterSchema.extend({
   talents: z.array(talentSchema),
   constellations: z.array(constellationSchema),
-  version: z.string().optional(),
-  gallery: gallerySchema.optional(), // Add gallery to character JSON
+  talentUpgrades: z.array(talentUpgradeSchema),
+  versionReleases: z.array(versionReleaseSchema).optional(),
+  version: z.string(),
+  gallery: gallerySchema.optional(),
+  roles: z.array(z.string()).optional(), // ["On-Field", "Sub DPS"]
 });
 
 export const talentBookTypeSchema = z.union([
@@ -168,10 +193,58 @@ export const primitiveItemSchema = z.object({
   url: z.string(),
 });
 
+export const characterRoleSchema = z.object({
+  name: z.string(),
+  iconUrl: z.string(),
+});
+
 export const primitivesSchema = z.object({
   elements: z.array(primitiveItemSchema),
   regions: z.array(primitiveItemSchema),
   weaponTypes: z.array(primitiveItemSchema),
+  roles: z.array(characterRoleSchema).optional(),
+});
+
+export const artifactPieceTypeSchema = z.enum([
+  'flower',
+  'plume',
+  'sands',
+  'goblet',
+  'circlet',
+]);
+
+export const artifactPieceSchema = z.object({
+  type: artifactPieceTypeSchema,
+  name: z.string(),
+  iconUrl: z.string(),
+});
+
+export const artifactSetSchema = z.object({
+  name: z.string(),
+  pieces: z.array(artifactPieceSchema),
+  twoPieceBonus: z.string(),
+  fourPieceBonus: z.string(),
+});
+
+// Imaginarium Theater schemas
+export const theaterCharacterSchema = z.object({
+  name: z.string(),
+  iconUrl: z.string(),
+});
+
+export const theaterElementSchema = z.object({
+  name: z.string(),
+  iconUrl: z.string(),
+});
+
+export const imaginariamTheaterSeasonSchema = z.object({
+  seasonNumber: z.number(),
+  dateRange: z.string(),
+  versionName: z.string().optional(),
+  openingCharacters: z.array(theaterCharacterSchema),
+  theaterEffect: z.string(),
+  elements: z.array(theaterElementSchema),
+  specialGuestCharacters: z.array(theaterCharacterSchema),
 });
 
 export type WeaponMaterialSchema = z.infer<typeof weapMaterialSchema>;
@@ -190,3 +263,119 @@ export type TalentSchema = z.infer<typeof talentSchema>;
 export type ConstellationSchema = z.infer<typeof constellationSchema>;
 export type PrimitiveItem = z.infer<typeof primitiveItemSchema>;
 export type Primitives = z.infer<typeof primitivesSchema>;
+export type UpgradeMaterial = z.infer<typeof upgradeMaterialSchema>;
+export type TalentUpgrade = z.infer<typeof talentUpgradeSchema>;
+export type VersionRelease = z.infer<typeof versionReleaseSchema>;
+export type CharacterRole = z.infer<typeof characterRoleSchema>;
+// Event Wish / Banner schemas
+export const featuredCharacterSchema = z.object({
+  name: z.string(),
+  icon: z.string(),
+  element: z.string().optional(),
+  weaponType: z.string().optional(),
+  rarity: z.number().min(1).max(5).optional(),
+});
+
+export const eventWishSchema = z.object({
+  bannerName: z.string(),
+  bannerUrl: z.string().url(),
+  bannerImage: z.string(),
+  phase: z.enum(['Phase I', 'Phase II']),
+  duration: z.object({
+    start: z.string(),
+    end: z.string(),
+  }),
+  featuredCharacters: z.array(featuredCharacterSchema),
+});
+
+// New Weapon schema for version releases
+export const newWeaponSchema = z.object({
+  name: z.string(),
+  showcaseImage: z.string(),
+});
+
+// Version Artifact schema (extends artifact set with showcase image)
+export const versionArtifactSchema = artifactSetSchema.extend({
+  showcaseImage: z.string(),
+});
+
+// Event Reward item (extracted from card containers)
+export const eventRewardSchema = z.object({
+  name: z.string(),
+  icon: z.string(),
+  count: z.number().optional(), // Some rewards may not have counts
+});
+
+// New Event schema
+export const newEventSchema = z.object({
+  name: z.string(),
+  url: z.string().url(),
+  images: z.array(z.string()), // All images from <aside> figures
+  rewards: z.array(ascensionMaterialSchema),
+});
+
+export type TheaterCharacter = z.infer<typeof theaterCharacterSchema>;
+export type TheaterElement = z.infer<typeof theaterElementSchema>;
+export type ImaginariamTheaterSeason = z.infer<
+  typeof imaginariamTheaterSeasonSchema
+>;
+export type FeaturedCharacter = z.infer<typeof featuredCharacterSchema>;
+export type EventWish = z.infer<typeof eventWishSchema>;
+export type NewWeapon = z.infer<typeof newWeaponSchema>;
+export type VersionArtifact = z.infer<typeof versionArtifactSchema>;
+export type EventReward = z.infer<typeof eventRewardSchema>;
+export type NewEvent = z.infer<typeof newEventSchema>;
+
+// Spiral Abyss schemas
+export const spiralAbyssPhaseSchema = z.object({
+  phase: z.number().min(1).max(2),
+  updateDate: z.string(), // "January 16, 2026"
+  floor11Disorders: z.array(z.string()),
+  floor12Disorders: z.object({
+    firstHalf: z.string(),
+    secondHalf: z.string(),
+  }),
+  blessing: z.object({
+    name: z.string(), // "Surgestrike Moon"
+    description: z.string(),
+  }),
+});
+
+export const spiralAbyssUpdateSchema = z.object({
+  phases: z.array(spiralAbyssPhaseSchema),
+});
+
+export type SpiralAbyssPhase = z.infer<typeof spiralAbyssPhaseSchema>;
+export type SpiralAbyssUpdate = z.infer<typeof spiralAbyssUpdateSchema>;
+
+export const newAreaSchema = z.object({
+  name: z.string(),
+  url: z.string().url(),
+  nationName: z.string(),
+  areaImage: z.string().optional(),
+  galleryImages: z.array(z.string()),
+});
+
+export type NewArea = z.infer<typeof newAreaSchema>;
+
+// Quest type enumeration
+export const questTypeSchema = z.enum([
+  'Archon Quest',
+  'Story Quest',
+  'World Quest',
+]);
+
+// Quest schema for individual quest data
+export const newQuestSchema = z.object({
+  name: z.string(),
+  url: z.string().url(),
+  type: questTypeSchema,
+  questImage: z.string().optional(), // Primary quest image from aside
+  allImages: z.array(z.string()), // All images from aside figures
+  rewards: z.array(ascensionMaterialSchema), // Quest rewards (reusing existing schema)
+  parentQuestName: z.string().optional(), // For nested quests like "Song of the Welkin Moon"
+  actName: z.string().optional(), // For quests with acts like "Act VII"
+});
+
+export type QuestType = z.infer<typeof questTypeSchema>;
+export type NewQuest = z.infer<typeof newQuestSchema>;

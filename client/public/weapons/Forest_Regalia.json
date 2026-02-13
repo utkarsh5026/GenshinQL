@@ -1,0 +1,264 @@
+{
+  "name": "Forest Regalia",
+  "rarity": 4,
+  "attack": 565,
+  "subStat": "Energy Recharge 30.6%",
+  "effect": "Forest Sanctuary\nAfter triggering Burning, Quicken, Aggravate, Spread, Bloom, Lunar-Bloom, Hyperbloom, or Burgeon, a Leaf of Consciousness will be created around the character for a maximum of 10s. When picked up, the Leaf will grant the character 60~120 Elemental Mastery for 12s. Only 1 Leaf can be generated this way every 20s. This effect can still be triggered if the character is not on the field. The Leaf of Consciousness' effect cannot stack.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon_Forest_Regalia.png",
+  "nation": 3,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Copper_Talisman_of_the_Forest_Dew.png",
+      "caption": "Copper Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+      "caption": "Iron Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+      "caption": "Silver Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Golden_Talisman_of_the_Forest_Dew.png",
+      "caption": "Golden Talisman of the Forest Dew"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Chaos_Storage.png",
+      "caption": "Chaos Storage"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Module.png",
+      "caption": "Chaos Module"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Item_Chaos_Bolt.png",
+      "caption": "Chaos Bolt"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+      "caption": "Faded Red Satin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+      "caption": "Trimmed Red Silk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+      "caption": "Rich Red Brocade"
+    }
+  ],
+  "passives": [
+    "After triggering Burning, Quicken, Aggravate, Spread, Bloom, Lunar-Bloom, Hyperbloom, or Burgeon, a Leaf of Consciousness will be created around the character for a maximum of 10s. When picked up, the Leaf will grant the character 60 Elemental Mastery for 12s. Only 1 Leaf can be generated this way every 20s. This effect can still be triggered if the character is not on the field. The Leaf of Consciousness' effect cannot stack.",
+    "After triggering Burning, Quicken, Aggravate, Spread, Bloom, Lunar-Bloom, Hyperbloom, or Burgeon, a Leaf of Consciousness will be created around the character for a maximum of 10s. When picked up, the Leaf will grant the character 75 Elemental Mastery for 12s. Only 1 Leaf can be generated this way every 20s. This effect can still be triggered if the character is not on the field. The Leaf of Consciousness' effect cannot stack.",
+    "After triggering Burning, Quicken, Aggravate, Spread, Bloom, Lunar-Bloom, Hyperbloom, or Burgeon, a Leaf of Consciousness will be created around the character for a maximum of 10s. When picked up, the Leaf will grant the character 90 Elemental Mastery for 12s. Only 1 Leaf can be generated this way every 20s. This effect can still be triggered if the character is not on the field. The Leaf of Consciousness' effect cannot stack.",
+    "After triggering Burning, Quicken, Aggravate, Spread, Bloom, Lunar-Bloom, Hyperbloom, or Burgeon, a Leaf of Consciousness will be created around the character for a maximum of 10s. When picked up, the Leaf will grant the character 105 Elemental Mastery for 12s. Only 1 Leaf can be generated this way every 20s. This effect can still be triggered if the character is not on the field. The Leaf of Consciousness' effect cannot stack.",
+    "After triggering Burning, Quicken, Aggravate, Spread, Bloom, Lunar-Bloom, Hyperbloom, or Burgeon, a Leaf of Consciousness will be created around the character for a maximum of 10s. When picked up, the Leaf will grant the character 120 Elemental Mastery for 12s. Only 1 Leaf can be generated this way every 20s. This effect can still be triggered if the character is not on the field. The Leaf of Consciousness' effect cannot stack."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon_Forest_Regalia.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Weapon_Forest_Regalia_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Weapon_Card_Forest_Regalia.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 119
+        },
+        "subStat": {
+          "min": 6.7,
+          "max": 11.8
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Copper_Talisman_of_the_Forest_Dew.png",
+            "caption": "Copper Talisman of the Forest Dew",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Chaos_Storage.png",
+            "caption": "Chaos Storage",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 144,
+          "max": 226
+        },
+        "subStat": {
+          "min": 11.8,
+          "max": 17.2
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+            "caption": "Iron Talisman of the Forest Dew",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Chaos_Storage.png",
+            "caption": "Chaos Storage",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 252,
+          "max": 293
+        },
+        "subStat": {
+          "min": 17.2,
+          "max": 19.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Iron_Talisman_of_the_Forest_Dew.png",
+            "caption": "Iron Talisman of the Forest Dew",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Module.png",
+            "caption": "Chaos Module",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 319,
+          "max": 361
+        },
+        "subStat": {
+          "min": 19.9,
+          "max": 22.6
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+            "caption": "Silver Talisman of the Forest Dew",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Module.png",
+            "caption": "Chaos Module",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 387,
+          "max": 429
+        },
+        "subStat": {
+          "min": 22.6,
+          "max": 25.2
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Item_Silver_Talisman_of_the_Forest_Dew.png",
+            "caption": "Silver Talisman of the Forest Dew",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Item_Chaos_Bolt.png",
+            "caption": "Chaos Bolt",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 455,
+          "max": 497
+        },
+        "subStat": {
+          "min": 25.2,
+          "max": 27.9
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Golden_Talisman_of_the_Forest_Dew.png",
+            "caption": "Golden Talisman of the Forest Dew",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Item_Chaos_Bolt.png",
+            "caption": "Chaos Bolt",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 523,
+          "max": 565
+        },
+        "subStat": {
+          "min": 27.9,
+          "max": 30.6
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "name": "Calamity Queller",
+  "rarity": 5,
+  "attack": 741,
+  "subStat": "ATK 16.5%",
+  "effect": "Extinguishing Precept\nGain 12~24% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 3.2~6.4% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Weapon_Calamity_Queller.png",
+  "nation": 1,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Mist_Veiled_Lead_Elixir.png",
+      "caption": "Mist Veiled Lead Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+      "caption": "Mist Veiled Mercury Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+      "caption": "Mist Veiled Gold Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Mist_Veiled_Primo_Elixir.png",
+      "caption": "Mist Veiled Primo Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+      "caption": "Mist Grass Pollen"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+      "caption": "Mist Grass"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+      "caption": "Mist Grass Wick"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+      "caption": "Whopper­flower Nectar"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+      "caption": "Shimmering Nectar"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+      "caption": "Energy Nectar"
+    }
+  ],
+  "passives": [
+    "Gain 15% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 4% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.",
+    "Gain 18% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 4.8% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.",
+    "Gain 21% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 5.6% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled.",
+    "Gain 24% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, causing ATK to increase by 6.4% per second. This ATK increase has a maximum of 6 stacks. When the character equipped with this weapon is not on the field, Consummation's ATK increase is doubled."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Weapon_Calamity_Queller.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Weapon_Calamity_Queller_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Weapon_Card_Calamity_Queller.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 49,
+          "max": 145
+        },
+        "subStat": {
+          "min": 3.6,
+          "max": 6.4
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Mist_Veiled_Lead_Elixir.png",
+            "caption": "Mist Veiled Lead Elixir",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+            "caption": "Mist Grass Pollen",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+            "caption": "Whopperflower Nectar",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 176,
+          "max": 286
+        },
+        "subStat": {
+          "min": 6.4,
+          "max": 7.8
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+            "caption": "Mist Veiled Mercury Elixir",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+            "caption": "Mist Grass Pollen",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+            "caption": "Whopperflower Nectar",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 317,
+          "max": 374
+        },
+        "subStat": {
+          "min": 7.8,
+          "max": 10.7
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+            "caption": "Mist Veiled Mercury Elixir",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+            "caption": "Mist Grass",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+            "caption": "Shimmering Nectar",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 406,
+          "max": 464
+        },
+        "subStat": {
+          "min": 10.7,
+          "max": 12.2
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+            "caption": "Mist Veiled Gold Elixir",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+            "caption": "Mist Grass",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+            "caption": "Shimmering Nectar",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 495,
+          "max": 555
+        },
+        "subStat": {
+          "min": 12.2,
+          "max": 13.6
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+            "caption": "Mist Veiled Gold Elixir",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+            "caption": "Mist Grass Wick",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+            "caption": "Energy Nectar",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 586,
+          "max": 648
+        },
+        "subStat": {
+          "min": 13.6,
+          "max": 15.1
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Mist_Veiled_Primo_Elixir.png",
+            "caption": "Mist Veiled Primo Elixir",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+            "caption": "Mist Grass Wick",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+            "caption": "Energy Nectar",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 679,
+          "max": 741
+        },
+        "subStat": {
+          "min": 15.1,
+          "max": 16.5
+        }
+      }
+    ]
+  }
+}

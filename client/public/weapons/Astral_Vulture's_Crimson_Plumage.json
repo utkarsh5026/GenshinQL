@@ -1,0 +1,264 @@
+{
+  "name": "Astral Vulture's Crimson Plumage",
+  "rarity": 5,
+  "attack": 608,
+  "subStat": "CRIT DMG 66.2%",
+  "effect": "The Moonring Sighted\nFor 12s after triggering a Swirl reaction, ATK increases by 24~48%. In addition, when 1/2 or more characters in the party are of a different Elemental Type from the equipping character, the DMG dealt by the equipping character's Charged Attacks is increased by 20/48~40/96% and Elemental Burst DMG dealt is increased by 10/24~20/48%.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon_Astral_Vulture%27s_Crimson_Plumage.png",
+  "nation": 5,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Item_Night-Wind%27s_Mystic_Consideration.png",
+      "caption": "Night-Wind's Mystic Consideration"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+      "caption": "Night-Wind's Mystic Premonition"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+      "caption": "Night-Wind's Mystic Augury"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Night-Wind%27s_Mystic_Revelation.png",
+      "caption": "Night-Wind's Mystic Revelation"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Refractive_Bud.png",
+      "caption": "Refractive Bud"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Bewildering_Broadleaf.png",
+      "caption": "Bewildering Broadleaf"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Illusory_Leafcoil.png",
+      "caption": "Illusory Leafcoil"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+      "caption": "Sentry's Wooden Whistle"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+      "caption": "Warrior's Metal Whistle"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+      "caption": "Saurian-Crowned Warrior's Golden Whistle"
+    }
+  ],
+  "passives": [
+    "For 12s after triggering a Swirl reaction, ATK increases by 24%. In addition, when 1/2 or more characters in the party are of a different Elemental Type from the equipping character, the DMG dealt by the equipping character's Charged Attacks is increased by 20/48% and Elemental Burst DMG dealt is increased by 10/24%.",
+    "For 12s after triggering a Swirl reaction, ATK increases by 30%. In addition, when 1/2 or more characters in the party are of a different Elemental Type from the equipping character, the DMG dealt by the equipping character's Charged Attacks is increased by 25/60% and Elemental Burst DMG dealt is increased by 12.5/30%.",
+    "For 12s after triggering a Swirl reaction, ATK increases by 36%. In addition, when 1/2 or more characters in the party are of a different Elemental Type from the equipping character, the DMG dealt by the equipping character's Charged Attacks is increased by 30/72% and Elemental Burst DMG dealt is increased by 15/36%.",
+    "For 12s after triggering a Swirl reaction, ATK increases by 42%. In addition, when 1/2 or more characters in the party are of a different Elemental Type from the equipping character, the DMG dealt by the equipping character's Charged Attacks is increased by 35/84% and Elemental Burst DMG dealt is increased by 17.5/42%.",
+    "For 12s after triggering a Swirl reaction, ATK increases by 48%. In addition, when 1/2 or more characters in the party are of a different Elemental Type from the equipping character, the DMG dealt by the equipping character's Charged Attacks is increased by 40/96% and Elemental Burst DMG dealt is increased by 20/48%."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon_Astral_Vulture%27s_Crimson_Plumage.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Weapon_Astral_Vulture%27s_Crimson_Plumage_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Weapon_Card_Astral_Vulture%27s_Crimson_Plumage.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 46,
+          "max": 122
+        },
+        "subStat": {
+          "min": 14.4,
+          "max": 25.4
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Item_Night-Wind%27s_Mystic_Consideration.png",
+            "caption": "Night-Wind's Mystic Consideration",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Refractive_Bud.png",
+            "caption": "Refractive Bud",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+            "caption": "Sentry's Wooden Whistle",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 153,
+          "max": 235
+        },
+        "subStat": {
+          "min": 25.4,
+          "max": 37.1
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+            "caption": "Night-Wind's Mystic Premonition",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Item_Refractive_Bud.png",
+            "caption": "Refractive Bud",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Sentry%27s_Wooden_Whistle.png",
+            "caption": "Sentry's Wooden Whistle",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 266,
+          "max": 308
+        },
+        "subStat": {
+          "min": 37.1,
+          "max": 42.9
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+            "caption": "Night-Wind's Mystic Premonition",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Bewildering_Broadleaf.png",
+            "caption": "Bewildering Broadleaf",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+            "caption": "Warrior's Metal Whistle",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 340,
+          "max": 382
+        },
+        "subStat": {
+          "min": 42.9,
+          "max": 48.7
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+            "caption": "Night-Wind's Mystic Augury",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Bewildering_Broadleaf.png",
+            "caption": "Bewildering Broadleaf",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Item_Warrior%27s_Metal_Whistle.png",
+            "caption": "Warrior's Metal Whistle",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 414,
+          "max": 457
+        },
+        "subStat": {
+          "min": 48.7,
+          "max": 54.5
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+            "caption": "Night-Wind's Mystic Augury",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Illusory_Leafcoil.png",
+            "caption": "Illusory Leafcoil",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+            "caption": "Saurian-Crowned Warrior's Golden Whistle",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 488,
+          "max": 532
+        },
+        "subStat": {
+          "min": 54.5,
+          "max": 60.3
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Night-Wind%27s_Mystic_Revelation.png",
+            "caption": "Night-Wind's Mystic Revelation",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Illusory_Leafcoil.png",
+            "caption": "Illusory Leafcoil",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Saurian-Crowned_Warrior%27s_Golden_Whistle.png",
+            "caption": "Saurian-Crowned Warrior's Golden Whistle",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 563,
+          "max": 608
+        },
+        "subStat": {
+          "min": 60.3,
+          "max": 66.2
+        }
+      }
+    ]
+  }
+}

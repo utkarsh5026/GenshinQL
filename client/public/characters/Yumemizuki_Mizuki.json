@@ -1,183 +1,203 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Yumemizuki_Mizuki_Icon.png",
-    "name": "Yumemizuki Mizuki",
-    "rarity": "5 Stars",
-    "element": "Anemo",
-    "weaponType": "Catalyst",
-    "region": "Inazuma",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Idle_Yumemizuki_Mizuki_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Idle_Yumemizuki_Mizuki_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Idle_Yumemizuki_Mizuki_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Idle_Yumemizuki_Mizuki_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Talent_Menu_Yumemizuki_Mizuki.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Menu_Yumemizuki_Mizuki.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Weapon_Menu_Yumemizuki_Mizuki.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Weapon_Menu_Yumemizuki_Mizuki.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Party_Setup_Yumemizuki_Mizuki.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Party_Setup_Yumemizuki_Mizuki.mp4",
-                "videoType": "video/mp4"
-            }
-        ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Namecard_Background_Yumemizuki_Mizuki_Nightmare_Devourer.png",
-                "caption": "Yumemizuki Mizuki: Nightmare Devourer Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Yumemizuki_Mizuki_Nightmare_Devourer.png",
-                "caption": "Yumemizuki Mizuki: Nightmare Devourer Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Namecard_Banner_Yumemizuki_Mizuki_Nightmare_Devourer.png",
-                "caption": "Yumemizuki Mizuki: Nightmare Devourer Banner"
-            }
-        ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Pure_Heart%2C_Pure_Dreams_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Pure_Heart%2C_Pure_Dreams_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Pure_Heart%2C_Pure_Dreams_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Pure_Heart%2C_Pure_Dreams_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Anraku_Secret_Spring_Therapy_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Anraku_Secret_Spring_Therapy_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Aisa_Utamakura_Pilgrimage_Combat_Preview.gif",
-                        "caption": "Combat",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Aisa_Utamakura_Pilgrimage_Combat_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Aisa_Utamakura_Pilgrimage_Movement_Preview.gif",
-                        "caption": "Movement",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Aisa_Utamakura_Pilgrimage_Movement_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
-        ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Yumemizuki_Mizuki_Character_Details_1.png",
-                "caption": "Yumemizuki Mizuki Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Yumemizuki_Mizuki_Character_Details_2.png",
-                "caption": "Yumemizuki Mizuki Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Yumemizuki_Mizuki_Character_Details_3.gif",
-                "caption": "Yumemizuki Mizuki Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Yumemizuki_Mizuki_Character_Details_4.png",
-                "caption": "Yumemizuki Mizuki Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Yumemizuki_Mizuki_Character_Details_5.png",
-                "caption": "Yumemizuki Mizuki Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Yumemizuki_Mizuki_Character_Details_6.png",
-                "caption": "Yumemizuki Mizuki Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Yumemizuki_Mizuki_Character_Details_7.png",
-                "caption": "Yumemizuki Mizuki Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Yumemizuki_Mizuki_Character_Details_8.gif",
-                "caption": "Yumemizuki Mizuki Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Yumemizuki_Mizuki_Character_Details_9.gif",
-                "caption": "Yumemizuki Mizuki Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Yumemizuki_Mizuki_Character_Details_10.gif",
-                "caption": "Yumemizuki Mizuki Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Yumemizuki_Mizuki_Character_Details_11.gif",
-                "caption": "Yumemizuki Mizuki Details 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Yumemizuki_Mizuki_Character_Details_12.png",
-                "caption": "Yumemizuki Mizuki Details 12"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Yumemizuki_Mizuki_Character_Details_13.png",
-                "caption": "Yumemizuki Mizuki Details 13"
-            }
-        ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_1.png",
-                "caption": "Happy Set 39"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_2.png",
-                "caption": "Sad Set 39"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_3.png",
-                "caption": "Come Here Set 39"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_4.png",
-                "caption": "Surprised Set 39"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_5.png",
-                "caption": "Helpless Set 39"
-            }
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Yumemizuki_Mizuki_Icon.png",
+  "name": "Yumemizuki Mizuki",
+  "rarity": "5 Stars",
+  "element": "Anemo",
+  "weaponType": "Catalyst",
+  "region": "Inazuma",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Idle_Yumemizuki_Mizuki_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Idle_Yumemizuki_Mizuki_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Idle_Yumemizuki_Mizuki_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Idle_Yumemizuki_Mizuki_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Talent_Menu_Yumemizuki_Mizuki.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Menu_Yumemizuki_Mizuki.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Weapon_Menu_Yumemizuki_Mizuki.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Weapon_Menu_Yumemizuki_Mizuki.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Party_Setup_Yumemizuki_Mizuki.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Party_Setup_Yumemizuki_Mizuki.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Namecard_Background_Yumemizuki_Mizuki_Nightmare_Devourer.png",
+        "caption": "Yumemizuki Mizuki: Nightmare Devourer Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Yumemizuki_Mizuki_Nightmare_Devourer.png",
+        "caption": "Yumemizuki Mizuki: Nightmare Devourer Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Namecard_Banner_Yumemizuki_Mizuki_Nightmare_Devourer.png",
+        "caption": "Yumemizuki Mizuki: Nightmare Devourer Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Pure_Heart%2C_Pure_Dreams_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Pure_Heart%2C_Pure_Dreams_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Pure_Heart%2C_Pure_Dreams_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Pure_Heart%2C_Pure_Dreams_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          }
         ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Anraku_Secret_Spring_Therapy_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Anraku_Secret_Spring_Therapy_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Aisa_Utamakura_Pilgrimage_Combat_Preview.gif",
+            "caption": "Combat",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Aisa_Utamakura_Pilgrimage_Combat_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Aisa_Utamakura_Pilgrimage_Movement_Preview.gif",
+            "caption": "Movement",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Aisa_Utamakura_Pilgrimage_Movement_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Yumemizuki_Mizuki_Character_Details_1.png",
+        "caption": "Yumemizuki Mizuki Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Yumemizuki_Mizuki_Character_Details_2.png",
+        "caption": "Yumemizuki Mizuki Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Yumemizuki_Mizuki_Character_Details_3.gif",
+        "caption": "Yumemizuki Mizuki Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Yumemizuki_Mizuki_Character_Details_4.png",
+        "caption": "Yumemizuki Mizuki Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Yumemizuki_Mizuki_Character_Details_5.png",
+        "caption": "Yumemizuki Mizuki Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Yumemizuki_Mizuki_Character_Details_6.png",
+        "caption": "Yumemizuki Mizuki Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Yumemizuki_Mizuki_Character_Details_7.png",
+        "caption": "Yumemizuki Mizuki Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Yumemizuki_Mizuki_Character_Details_8.gif",
+        "caption": "Yumemizuki Mizuki Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Yumemizuki_Mizuki_Character_Details_9.gif",
+        "caption": "Yumemizuki Mizuki Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Yumemizuki_Mizuki_Character_Details_10.gif",
+        "caption": "Yumemizuki Mizuki Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Yumemizuki_Mizuki_Character_Details_11.gif",
+        "caption": "Yumemizuki Mizuki Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Yumemizuki_Mizuki_Character_Details_12.png",
+        "caption": "Yumemizuki Mizuki Details 12"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Yumemizuki_Mizuki_Character_Details_13.png",
+        "caption": "Yumemizuki Mizuki Details 13"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_1.png",
+        "caption": "Happy Set 39"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_2.png",
+        "caption": "Sad Set 39"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_3.png",
+        "caption": "Come Here Set 39"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_4.png",
+        "caption": "Surprised Set 39"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Icon_Emoji_Paimon%27s_Paintings_39_Yumemizuki_Mizuki_5.png",
+        "caption": "Helpless Set 39"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Night of the Sky's Unveiling",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "EM Support",
+      "sets": [
+        {
+          "name": "Gilded Dreams",
+          "pieces": 4
+        }
+      ]
     }
+  ]
 }

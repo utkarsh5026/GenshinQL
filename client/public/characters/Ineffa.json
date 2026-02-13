@@ -1,496 +1,504 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Ineffa_Icon.png",
-    "name": "Ineffa",
-    "rarity": "5 Stars",
-    "element": "Electro",
-    "weaponType": "Polearm",
-    "region": "Nod-Krai",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Ineffa_Icon.png",
+  "name": "Ineffa",
+  "rarity": "5 Stars",
+  "element": "Electro",
+  "weaponType": "Polearm",
+  "region": "Nod-Krai",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png",
+      "talentName": "Cyclonic Duster",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to perform a spinning attack.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png",
-            "talentName": "Cyclonic Duster",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 consecutive spear strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to perform a spinning attack.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Cyclonic_Duster_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Cyclonic_Duster_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "34.84",
-                    "37.67",
-                    "40.51",
-                    "44.56",
-                    "47.39",
-                    "50.63",
-                    "55.09",
-                    "59.54",
-                    "64",
-                    "68.86",
-                    "73.72"
-                ],
-                "2-Hit DMG (%)": [
-                    "34.22",
-                    "37.01",
-                    "39.79",
-                    "43.77",
-                    "46.56",
-                    "49.74",
-                    "54.12",
-                    "58.49",
-                    "62.87",
-                    "67.65",
-                    "72.42"
-                ],
-                "3-Hit DMG (%)": [
-                    "22.76\n+\n22.76",
-                    "24.61\n+\n24.61",
-                    "26.46\n+\n26.46",
-                    "29.11\n+\n29.11",
-                    "30.96\n+\n30.96",
-                    "33.07\n+\n33.07",
-                    "35.99\n+\n35.99",
-                    "38.9\n+\n38.9",
-                    "41.81\n+\n41.81",
-                    "44.98\n+\n44.98",
-                    "48.16\n+\n48.16"
-                ],
-                "4-Hit DMG (%)": [
-                    "56.07",
-                    "60.63",
-                    "65.2",
-                    "71.71",
-                    "76.28",
-                    "81.49",
-                    "88.67",
-                    "95.84",
-                    "103.01",
-                    "110.83",
-                    "118.65"
-                ],
-                "Charged Attack DMG (%)": [
-                    "94.94",
-                    "102.67",
-                    "110.4",
-                    "121.44",
-                    "129.17",
-                    "138",
-                    "150.14",
-                    "162.29",
-                    "174.43",
-                    "187.68",
-                    "200.93"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "25"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Cyclonic_Duster_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Cleaning_Mode_Carrier_Frequency.png",
-            "talentName": "Cleaning Mode: Carrier Frequency",
-            "talentType": "Elemental Skill",
-            "description": "Ineffa engages her Enhanced Cleaning Module, dealing a single instance of AoE Electro DMG to nearby opponents, activating her Optical Flow Shield Barrier, and summoning the Multipurpose Smart Assistance Unit, Birgitta\n\n\n\n\n.\nThe Optical Flow Shield Barrier absorbs DMG based on Ineffa's ATK, and it will absorb Electro DMG with 250% effectiveness.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cleaning_Mode_Carrier_Frequency_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "86.4",
-                    "92.88",
-                    "99.36",
-                    "108",
-                    "114.48",
-                    "120.96",
-                    "129.6",
-                    "138.24",
-                    "146.88",
-                    "155.52",
-                    "164.16",
-                    "172.8",
-                    "183.6"
-                ],
-                "Shield DMG Absorption": [
-                    "221.18 ATK\n+\n1387",
-                    "237.77 ATK\n+\n1525",
-                    "254.36 ATK\n+\n1676",
-                    "276.48 ATK\n+\n1837",
-                    "293.07 ATK\n+\n2011",
-                    "309.66 ATK\n+\n2196",
-                    "331.78 ATK\n+\n2392",
-                    "353.89 ATK\n+\n2600",
-                    "376.01 ATK\n+\n2820",
-                    "398.13 ATK\n+\n3051",
-                    "420.25 ATK\n+\n3294",
-                    "442.37 ATK\n+\n3548",
-                    "470.02 ATK\n+\n3814"
-                ],
-                "Shield Duration": [
-                    "20s"
-                ],
-                "Birgitta Discharge DMG (%)": [
-                    "96",
-                    "103.2",
-                    "110.4",
-                    "120",
-                    "127.2",
-                    "134.4",
-                    "144",
-                    "153.6",
-                    "163.2",
-                    "172.8",
-                    "182.4",
-                    "192",
-                    "204"
-                ],
-                "Birgitta Duration": [
-                    "20s"
-                ],
-                "CD": [
-                    "16s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Talent_Supreme_Instruction_Cyclonic_Exterminator.png",
-            "talentName": "Supreme Instruction: Cyclonic Exterminator",
-            "talentType": "Elemental Burst",
-            "description": "The Multipurpose Smart Assistance Unit, Birgitta, can use Rocket Punches to quickly clean up opponents! Ineffa shoots Birgitta into the fray, dealing AoE Electro DMG and allowing Birgitta to remain on the field.\n\nIf Birgitta is already on the field, having been summoned by Ineffa, this Skill will re-summon Birgitta at the target's location and reset her duration.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Supreme_Instruction_Cyclonic_Exterminator_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "676.8",
-                    "727.56",
-                    "778.32",
-                    "846",
-                    "896.76",
-                    "947.52",
-                    "1015.2",
-                    "1082.88",
-                    "1150.56",
-                    "1218.24",
-                    "1285.92",
-                    "1353.6",
-                    "1438.2"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Talent_Overclocking_Circuit.png",
-            "talentName": "Overclocking Circuit",
-            "talentType": "1st Ascension Passive",
-            "description": "If there are thunderclouds created by Lunar-Charged reactions nearby when Birgitta unleashes Discharge attacks, she will initiate an additional attack, dealing AoE Electro DMG equal to 65% of Ineffa's ATK. This DMG is considered Lunar-Charged DMG.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Overclocking_Circuit_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Talent_Panoramic_Permutation_Protocol.png",
-            "talentName": "Panoramic Permutation Protocol",
-            "talentType": "4th Ascension Passive",
-            "description": "When using the Elemental Burst Supreme Instruction: Cyclonic Exterminator, all your party members will gain the Parameter Permutation effect: Increases Ineffa and your own active party member's Elemental Mastery by 6% of Ineffa's ATK for 20s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Electro_Moonsign_Lunar-Charged.png",
-            "talentName": "Assemblage Hub",
-            "talentType": "Moonsign Benediction Passive",
-            "description": "When a party member triggers the Electro-Charged reaction, it will be converted into the Lunar-Charged reaction, with every 100 ATK that Ineffa has increasing Lunar-Charged's Base DMG by 0.7%, up to a maximum of 14%.\n\nAdditionally, when Ineffa is in the party, the party's Moonsign will increase by 1 level.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Talent_Flavor_Synthesis_Unit.png",
-            "talentName": "Flavor Synthesis Unit",
-            "talentType": "Utility Passive",
-            "description": "When Ineffa uses food, there is a 30% chance of gaining a seasoning ingredient.\n\nAdditionally, in Nod-Krai, it seems you'll be able to change Birgitta's appearance through certain means...",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Cyclonic_Duster_Charged_Preview.gif",
+          "caption": "Charged Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Constellation_Rectifying_Processor.png",
-            "name": "Rectifying Processor",
-            "level": 1,
-            "description": "When Ineffa activates her Optical Flow Shield Barrier, all nearby party members will gain the Carrier Flow Composite effect for 20s: Increases Lunar-Charged DMG by 2.5% for every 100 ATK that Ineffa has, up to a maximum of 50%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Constellation_Support_Cleaning_Module.png",
-            "name": "Support Cleaning Module",
-            "level": 2,
-            "description": "Description\nAdvanced Properties\nAfter the Elemental Burst Supreme Instruction: Cyclonic Exterminator hits opponents, it will inflict the Punishment Edict status on one of those hit opponents: After a brief delay, or when this opponent is attacked, nearby opponents will take AoE Electro DMG equal to 300% of Ineffa's ATK. This DMG is considered Lunar-Charged DMG. Additionally, when the Elemental Burst Supreme Instruction: Cyclonic Exterminator is unleashed, nearby party members will gain Optical Flow Shield Barriers."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Constellation_Enhanced_Emotion_Emulator.png",
-            "name": "Enhanced Emotion Emulator",
-            "level": 3,
-            "description": "Increases the Level of Cleaning Mode: Carrier Frequency by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Constellation_The_Edictless_Path.png",
-            "name": "The Edictless Path",
-            "level": 4,
-            "description": "When your own party members trigger Lunar-Charged reactions, recover 5 Elemental Energy. This effect can occur once every 4s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Constellation_Mirror%27s_Dream_Transcension.png",
-            "name": "Mirror's Dream Transcension",
-            "level": 5,
-            "description": "Increases the Level of Supreme Instruction: Cyclonic Exterminator by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Constellation_A_Dawning_Morn_for_You.png",
-            "name": "A Dawning Morn for You",
-            "level": 6,
-            "description": "Description\nAdvanced Properties\nWhen Ineffa is affected by the Carrier Flow Composite effect, she will deal AoE Electro DMG equal to 135% of her ATK to opponents in the current active character's vicinity after nearby thunderclouds release bursts of lightning at opponents. This DMG is considered Lunar-Charged DMG. The aforementioned effect can trigger once every 3.5s."
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.8",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Idle_Ineffa_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Idle_Ineffa_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Idle_Ineffa_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Idle_Ineffa_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Talent_Menu_Ineffa.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Menu_Ineffa.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Weapon_Menu_Ineffa.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Weapon_Menu_Ineffa.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Party_Setup_Ineffa.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Party_Setup_Ineffa.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "34.84",
+          "37.67",
+          "40.51",
+          "44.56",
+          "47.39",
+          "50.63",
+          "55.09",
+          "59.54",
+          "64",
+          "68.86",
+          "73.72"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Namecard_Background_Ineffa_Command.png",
-                "caption": "Ineffa: Command Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Item_Ineffa_Command.png",
-                "caption": "Ineffa: Command Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Namecard_Banner_Ineffa_Command.png",
-                "caption": "Ineffa: Command Banner"
-            }
+        "2-Hit DMG (%)": [
+          "34.22",
+          "37.01",
+          "39.79",
+          "43.77",
+          "46.56",
+          "49.74",
+          "54.12",
+          "58.49",
+          "62.87",
+          "67.65",
+          "72.42"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Cyclonic_Duster_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Cyclonic_Duster_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Cyclonic_Duster_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Cyclonic_Duster_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Supreme_Instruction_Cyclonic_Exterminator_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Supreme_Instruction_Cyclonic_Exterminator_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cleaning_Mode_Carrier_Frequency_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Cleaning_Mode_Carrier_Frequency_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "22.76\n+\n22.76",
+          "24.61\n+\n24.61",
+          "26.46\n+\n26.46",
+          "29.11\n+\n29.11",
+          "30.96\n+\n30.96",
+          "33.07\n+\n33.07",
+          "35.99\n+\n35.99",
+          "38.9\n+\n38.9",
+          "41.81\n+\n41.81",
+          "44.98\n+\n44.98",
+          "48.16\n+\n48.16"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Ineffa_Character_Details_1.png",
-                "caption": "Ineffa Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Ineffa_Character_Details_2.png",
-                "caption": "Ineffa Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Ineffa_Character_Details_3.gif",
-                "caption": "Ineffa Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Ineffa_Character_Details_4.png",
-                "caption": "Ineffa Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Ineffa_Character_Details_5.png",
-                "caption": "Ineffa Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Ineffa_Character_Details_6.png",
-                "caption": "Ineffa Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Ineffa_Character_Details_7.png",
-                "caption": "Ineffa Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Ineffa_Character_Details_8.gif",
-                "caption": "Ineffa Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Ineffa_Character_Details_9.png",
-                "caption": "Ineffa Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Ineffa_Character_Details_10.png",
-                "caption": "Ineffa Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Ineffa_Character_Details_11.gif",
-                "caption": "Ineffa Details 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Ineffa_Character_Details_12.gif",
-                "caption": "Ineffa Details 12"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Ineffa_Character_Details_13.gif",
-                "caption": "Ineffa Details 13"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Ineffa_Character_Details_14.gif",
-                "caption": "Ineffa Details 14"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Ineffa_Character_Details_15.png",
-                "caption": "Ineffa Details 15"
-            }
+        "4-Hit DMG (%)": [
+          "56.07",
+          "60.63",
+          "65.2",
+          "71.71",
+          "76.28",
+          "81.49",
+          "88.67",
+          "95.84",
+          "103.01",
+          "110.83",
+          "118.65"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_1.png",
-                "caption": "Received Set 43"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_2.png",
-                "caption": "Clean Up Set 43"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_3.png",
-                "caption": "Blank Set 43"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_4.png",
-                "caption": "Target Locked Set 43"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_5.png",
-                "caption": "Power Off Set 43"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Icon_Emoji_Paimon%27s_Paintings_44_Aino_3.png",
-                "caption": "Sneaky Snacking Set 44"
-            }
+        "Charged Attack DMG (%)": [
+          "94.94",
+          "102.67",
+          "110.4",
+          "121.44",
+          "129.17",
+          "138",
+          "150.14",
+          "162.29",
+          "174.43",
+          "187.68",
+          "200.93"
+        ],
+        "Charged Attack Stamina Cost": ["25"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Cleaning_Mode_Carrier_Frequency.png",
+      "talentName": "Cleaning Mode: Carrier Frequency",
+      "talentType": "Elemental Skill",
+      "description": "Ineffa engages her Enhanced Cleaning Module, dealing a single instance of AoE Electro DMG to nearby opponents, activating her Optical Flow Shield Barrier, and summoning the Multipurpose Smart Assistance Unit, Birgitta\n\n\n\n\n.\nThe Optical Flow Shield Barrier absorbs DMG based on Ineffa's ATK, and it will absorb Electro DMG with 250% effectiveness.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cleaning_Mode_Carrier_Frequency_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "86.4",
+          "92.88",
+          "99.36",
+          "108",
+          "114.48",
+          "120.96",
+          "129.6",
+          "138.24",
+          "146.88",
+          "155.52",
+          "164.16",
+          "172.8",
+          "183.6"
+        ],
+        "Shield DMG Absorption": [
+          "221.18 ATK\n+\n1387",
+          "237.77 ATK\n+\n1525",
+          "254.36 ATK\n+\n1676",
+          "276.48 ATK\n+\n1837",
+          "293.07 ATK\n+\n2011",
+          "309.66 ATK\n+\n2196",
+          "331.78 ATK\n+\n2392",
+          "353.89 ATK\n+\n2600",
+          "376.01 ATK\n+\n2820",
+          "398.13 ATK\n+\n3051",
+          "420.25 ATK\n+\n3294",
+          "442.37 ATK\n+\n3548",
+          "470.02 ATK\n+\n3814"
+        ],
+        "Shield Duration": ["20s"],
+        "Birgitta Discharge DMG (%)": [
+          "96",
+          "103.2",
+          "110.4",
+          "120",
+          "127.2",
+          "134.4",
+          "144",
+          "153.6",
+          "163.2",
+          "172.8",
+          "182.4",
+          "192",
+          "204"
+        ],
+        "Birgitta Duration": ["20s"],
+        "CD": ["16s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Talent_Supreme_Instruction_Cyclonic_Exterminator.png",
+      "talentName": "Supreme Instruction: Cyclonic Exterminator",
+      "talentType": "Elemental Burst",
+      "description": "The Multipurpose Smart Assistance Unit, Birgitta, can use Rocket Punches to quickly clean up opponents! Ineffa shoots Birgitta into the fray, dealing AoE Electro DMG and allowing Birgitta to remain on the field.\n\nIf Birgitta is already on the field, having been summoned by Ineffa, this Skill will re-summon Birgitta at the target's location and reset her duration.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Supreme_Instruction_Cyclonic_Exterminator_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "676.8",
+          "727.56",
+          "778.32",
+          "846",
+          "896.76",
+          "947.52",
+          "1015.2",
+          "1082.88",
+          "1150.56",
+          "1218.24",
+          "1285.92",
+          "1353.6",
+          "1438.2"
+        ],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Talent_Overclocking_Circuit.png",
+      "talentName": "Overclocking Circuit",
+      "talentType": "1st Ascension Passive",
+      "description": "If there are thunderclouds created by Lunar-Charged reactions nearby when Birgitta unleashes Discharge attacks, she will initiate an additional attack, dealing AoE Electro DMG equal to 65% of Ineffa's ATK. This DMG is considered Lunar-Charged DMG.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Overclocking_Circuit_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Talent_Panoramic_Permutation_Protocol.png",
+      "talentName": "Panoramic Permutation Protocol",
+      "talentType": "4th Ascension Passive",
+      "description": "When using the Elemental Burst Supreme Instruction: Cyclonic Exterminator, all your party members will gain the Parameter Permutation effect: Increases Ineffa and your own active party member's Elemental Mastery by 6% of Ineffa's ATK for 20s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Electro_Moonsign_Lunar-Charged.png",
+      "talentName": "Assemblage Hub",
+      "talentType": "Moonsign Benediction Passive",
+      "description": "When a party member triggers the Electro-Charged reaction, it will be converted into the Lunar-Charged reaction, with every 100 ATK that Ineffa has increasing Lunar-Charged's Base DMG by 0.7%, up to a maximum of 14%.\n\nAdditionally, when Ineffa is in the party, the party's Moonsign will increase by 1 level.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Talent_Flavor_Synthesis_Unit.png",
+      "talentName": "Flavor Synthesis Unit",
+      "talentType": "Utility Passive",
+      "description": "When Ineffa uses food, there is a 30% chance of gaining a seasoning ingredient.\n\nAdditionally, in Nod-Krai, it seems you'll be able to change Birgitta's appearance through certain means...",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Constellation_Rectifying_Processor.png",
+      "name": "Rectifying Processor",
+      "level": 1,
+      "description": "When Ineffa activates her Optical Flow Shield Barrier, all nearby party members will gain the Carrier Flow Composite effect for 20s: Increases Lunar-Charged DMG by 2.5% for every 100 ATK that Ineffa has, up to a maximum of 50%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Constellation_Support_Cleaning_Module.png",
+      "name": "Support Cleaning Module",
+      "level": 2,
+      "description": "Description\nAdvanced Properties\nAfter the Elemental Burst Supreme Instruction: Cyclonic Exterminator hits opponents, it will inflict the Punishment Edict status on one of those hit opponents: After a brief delay, or when this opponent is attacked, nearby opponents will take AoE Electro DMG equal to 300% of Ineffa's ATK. This DMG is considered Lunar-Charged DMG. Additionally, when the Elemental Burst Supreme Instruction: Cyclonic Exterminator is unleashed, nearby party members will gain Optical Flow Shield Barriers."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Constellation_Enhanced_Emotion_Emulator.png",
+      "name": "Enhanced Emotion Emulator",
+      "level": 3,
+      "description": "Increases the Level of Cleaning Mode: Carrier Frequency by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Constellation_The_Edictless_Path.png",
+      "name": "The Edictless Path",
+      "level": 4,
+      "description": "When your own party members trigger Lunar-Charged reactions, recover 5 Elemental Energy. This effect can occur once every 4s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Constellation_Mirror%27s_Dream_Transcension.png",
+      "name": "Mirror's Dream Transcension",
+      "level": 5,
+      "description": "Increases the Level of Supreme Instruction: Cyclonic Exterminator by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Constellation_A_Dawning_Morn_for_You.png",
+      "name": "A Dawning Morn for You",
+      "level": 6,
+      "description": "Description\nAdvanced Properties\nWhen Ineffa is affected by the Carrier Flow Composite effect, she will deal AoE Electro DMG equal to 135% of her ATK to opponents in the current active character's vicinity after nearby thunderclouds release bursts of lightning at opponents. This DMG is considered Lunar-Charged DMG. The aforementioned effect can trigger once every 3.5s."
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.8",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Idle_Ineffa_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Idle_Ineffa_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Idle_Ineffa_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Idle_Ineffa_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Talent_Menu_Ineffa.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Menu_Ineffa.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Weapon_Menu_Ineffa.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Weapon_Menu_Ineffa.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Party_Setup_Ineffa.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Party_Setup_Ineffa.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Namecard_Background_Ineffa_Command.png",
+        "caption": "Ineffa: Command Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Item_Ineffa_Command.png",
+        "caption": "Ineffa: Command Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Namecard_Banner_Ineffa_Command.png",
+        "caption": "Ineffa: Command Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Cyclonic_Duster_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Cyclonic_Duster_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Cyclonic_Duster_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Cyclonic_Duster_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Supreme_Instruction_Cyclonic_Exterminator_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Supreme_Instruction_Cyclonic_Exterminator_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Cleaning_Mode_Carrier_Frequency_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Cleaning_Mode_Carrier_Frequency_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Ineffa_Character_Details_1.png",
+        "caption": "Ineffa Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Ineffa_Character_Details_2.png",
+        "caption": "Ineffa Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Ineffa_Character_Details_3.gif",
+        "caption": "Ineffa Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Ineffa_Character_Details_4.png",
+        "caption": "Ineffa Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Ineffa_Character_Details_5.png",
+        "caption": "Ineffa Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Ineffa_Character_Details_6.png",
+        "caption": "Ineffa Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Ineffa_Character_Details_7.png",
+        "caption": "Ineffa Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Ineffa_Character_Details_8.gif",
+        "caption": "Ineffa Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Ineffa_Character_Details_9.png",
+        "caption": "Ineffa Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Ineffa_Character_Details_10.png",
+        "caption": "Ineffa Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Ineffa_Character_Details_11.gif",
+        "caption": "Ineffa Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Ineffa_Character_Details_12.gif",
+        "caption": "Ineffa Details 12"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Ineffa_Character_Details_13.gif",
+        "caption": "Ineffa Details 13"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Ineffa_Character_Details_14.gif",
+        "caption": "Ineffa Details 14"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Ineffa_Character_Details_15.png",
+        "caption": "Ineffa Details 15"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_1.png",
+        "caption": "Received Set 43"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_2.png",
+        "caption": "Clean Up Set 43"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_3.png",
+        "caption": "Blank Set 43"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_4.png",
+        "caption": "Target Locked Set 43"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Icon_Emoji_Paimon%27s_Paintings_43_Ineffa_5.png",
+        "caption": "Power Off Set 43"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Icon_Emoji_Paimon%27s_Paintings_44_Aino_3.png",
+        "caption": "Sneaky Snacking Set 44"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

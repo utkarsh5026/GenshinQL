@@ -1,0 +1,264 @@
+{
+  "name": "Crimson Moon's Semblance",
+  "rarity": 5,
+  "attack": 674,
+  "subStat": "CRIT Rate 22.1%",
+  "effect": "Ashen Sun's Shadow\nGrants a Bond of Life equal to 25% of Max HP when a Charged Attack hits an opponent. This effect can be triggered up to once every 14s. In addition, when the equipping character has a Bond of Life, they gain a 12~28% DMG Bonus; if the value of the Bond of Life is greater than or equal to 30% of Max HP, then gain an additional 24~56% DMG.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Weapon_Crimson_Moon%27s_Semblance.png",
+  "nation": 4,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Item_Broken_Goblet_of_the_Pristine_Sea.png",
+      "caption": "Broken Goblet of the Pristine Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Item_Wine_Goblet_of_the_Pristine_Sea.png",
+      "caption": "Wine Goblet of the Pristine Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Silver_Goblet_of_the_Pristine_Sea.png",
+      "caption": "Silver Goblet of the Pristine Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Golden_Goblet_of_the_Pristine_Sea.png",
+      "caption": "Golden Goblet of the Pristine Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Ruined_Hilt.png",
+      "caption": "Ruined Hilt"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Item_Splintered_Hilt.png",
+      "caption": "Splintered Hilt"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Still-Smoldering_Hilt.png",
+      "caption": "Still-Smoldering Hilt"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Meshing_Gear.png",
+      "caption": "Meshing Gear"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Item_Mechanical_Spur_Gear.png",
+      "caption": "Mechanical Spur Gear"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Item_Artificed_Dynamic_Gear.png",
+      "caption": "Artificed Dynamic Gear"
+    }
+  ],
+  "passives": [
+    "Grants a Bond of Life equal to 25% of Max HP when a Charged Attack hits an opponent. This effect can be triggered up to once every 14s. In addition, when the equipping character has a Bond of Life, they gain a 12% DMG Bonus; if the value of the Bond of Life is greater than or equal to 30% of Max HP, then gain an additional 24% DMG.",
+    "Grants a Bond of Life equal to 25% of Max HP when a Charged Attack hits an opponent. This effect can be triggered up to once every 14s. In addition, when the equipping character has a Bond of Life, they gain a 16% DMG Bonus; if the value of the Bond of Life is greater than or equal to 30% of Max HP, then gain an additional 32% DMG.",
+    "Grants a Bond of Life equal to 25% of Max HP when a Charged Attack hits an opponent. This effect can be triggered up to once every 14s. In addition, when the equipping character has a Bond of Life, they gain a 20% DMG Bonus; if the value of the Bond of Life is greater than or equal to 30% of Max HP, then gain an additional 40% DMG.",
+    "Grants a Bond of Life equal to 25% of Max HP when a Charged Attack hits an opponent. This effect can be triggered up to once every 14s. In addition, when the equipping character has a Bond of Life, they gain a 24% DMG Bonus; if the value of the Bond of Life is greater than or equal to 30% of Max HP, then gain an additional 48% DMG.",
+    "Grants a Bond of Life equal to 25% of Max HP when a Charged Attack hits an opponent. This effect can be triggered up to once every 14s. In addition, when the equipping character has a Bond of Life, they gain a 28% DMG Bonus; if the value of the Bond of Life is greater than or equal to 30% of Max HP, then gain an additional 56% DMG."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Weapon_Crimson_Moon%27s_Semblance.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Weapon_Crimson_Moon%27s_Semblance_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Weapon_Card_Crimson_Moon%27s_Semblance.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 48,
+          "max": 133
+        },
+        "subStat": {
+          "min": 4.8,
+          "max": 8.5
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Item_Broken_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Broken Goblet of the Pristine Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Ruined_Hilt.png",
+            "caption": "Ruined Hilt",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Meshing_Gear.png",
+            "caption": "Meshing Gear",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 164,
+          "max": 261
+        },
+        "subStat": {
+          "min": 8.5,
+          "max": 12.4
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Item_Wine_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Wine Goblet of the Pristine Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Ruined_Hilt.png",
+            "caption": "Ruined Hilt",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Meshing_Gear.png",
+            "caption": "Meshing Gear",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 292,
+          "max": 341
+        },
+        "subStat": {
+          "min": 12.4,
+          "max": 14.3
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Item_Wine_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Wine Goblet of the Pristine Sea",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Item_Splintered_Hilt.png",
+            "caption": "Splintered Hilt",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Item_Mechanical_Spur_Gear.png",
+            "caption": "Mechanical Spur Gear",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 373,
+          "max": 423
+        },
+        "subStat": {
+          "min": 14.3,
+          "max": 16.2
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Silver_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Silver Goblet of the Pristine Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Item_Splintered_Hilt.png",
+            "caption": "Splintered Hilt",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Item_Mechanical_Spur_Gear.png",
+            "caption": "Mechanical Spur Gear",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 455,
+          "max": 506
+        },
+        "subStat": {
+          "min": 16.2,
+          "max": 18.2
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Silver_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Silver Goblet of the Pristine Sea",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Still-Smoldering_Hilt.png",
+            "caption": "Still-Smoldering Hilt",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Item_Artificed_Dynamic_Gear.png",
+            "caption": "Artificed Dynamic Gear",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 537,
+          "max": 590
+        },
+        "subStat": {
+          "min": 18.2,
+          "max": 20.1
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Golden_Goblet_of_the_Pristine_Sea.png",
+            "caption": "Golden Goblet of the Pristine Sea",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Still-Smoldering_Hilt.png",
+            "caption": "Still-Smoldering Hilt",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Item_Artificed_Dynamic_Gear.png",
+            "caption": "Artificed Dynamic Gear",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 621,
+          "max": 674
+        },
+        "subStat": {
+          "min": 20.1,
+          "max": 22.1
+        }
+      }
+    ]
+  }
+}

@@ -1,496 +1,574 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Kinich_Icon.png",
-    "name": "Kinich",
-    "rarity": "5 Stars",
-    "element": "Dendro",
-    "weaponType": "Claymore",
-    "region": "Natlan",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Medium Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Kinich_Icon.png",
+  "name": "Kinich",
+  "rarity": "5 Stars",
+  "element": "Dendro",
+  "weaponType": "Claymore",
+  "region": "Natlan",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
+  "modelType": "Medium Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Claymore_Dendro.png",
+      "talentName": "Nightsun Style",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 3 rapid strikes.\nAfter using his Elemental Skill \"Canopy Hunter: Riding High\"'s mid-air swing, he can perform a Normal Attack in mid-air before landing.\n\nCharged Attack\nConsumes a certain amount to spin and throw his Claymore forward to attack opponents.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Claymore_Dendro.png",
-            "talentName": "Nightsun Style",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 3 rapid strikes.\nAfter using his Elemental Skill \"Canopy Hunter: Riding High\"'s mid-air swing, he can perform a Normal Attack in mid-air before landing.\n\nCharged Attack\nConsumes a certain amount to spin and throw his Claymore forward to attack opponents.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Nightsun_Style_Normal_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "98.99",
-                    "107.04",
-                    "115.1",
-                    "126.61",
-                    "134.67",
-                    "143.88",
-                    "156.54",
-                    "169.2",
-                    "181.86",
-                    "195.67",
-                    "209.48"
-                ],
-                "2-Hit DMG (%)": [
-                    "82.9",
-                    "89.65",
-                    "96.4",
-                    "106.04",
-                    "112.79",
-                    "120.5",
-                    "131.1",
-                    "141.71",
-                    "152.31",
-                    "163.88",
-                    "175.45"
-                ],
-                "3-Hit DMG (%)": [
-                    "123.5",
-                    "133.55",
-                    "143.6",
-                    "157.96",
-                    "168.01",
-                    "179.5",
-                    "195.3",
-                    "211.09",
-                    "226.89",
-                    "244.12",
-                    "261.35"
-                ],
-                "Mid-Air Normal Attack DMG (%)": [
-                    "167.7",
-                    "181.35",
-                    "195",
-                    "214.5",
-                    "228.15",
-                    "243.75",
-                    "265.2",
-                    "286.65",
-                    "308.1",
-                    "331.5",
-                    "354.9"
-                ],
-                "Charged Attack DMG (%)": [
-                    "48.42×3",
-                    "52.36×3",
-                    "56.3×3",
-                    "61.93×3",
-                    "65.87×3",
-                    "70.38×3",
-                    "76.57×3",
-                    "82.76×3",
-                    "88.95×3",
-                    "95.71×3",
-                    "102.47×3"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "50"
-                ],
-                "Plunge DMG (%)": [
-                    "74.59",
-                    "80.66",
-                    "86.73",
-                    "95.4",
-                    "101.47",
-                    "108.41",
-                    "117.95",
-                    "127.49",
-                    "137.03",
-                    "147.44",
-                    "157.85"
-                ],
-                "Low Plunge DMG (%)": [
-                    "149.14",
-                    "161.28",
-                    "173.42",
-                    "190.77",
-                    "202.91",
-                    "216.78",
-                    "235.86",
-                    "254.93",
-                    "274.01",
-                    "294.82",
-                    "315.63"
-                ],
-                "High Plunge DMG (%)": [
-                    "186.29",
-                    "201.45",
-                    "216.62",
-                    "238.28",
-                    "253.44",
-                    "270.77",
-                    "294.6",
-                    "318.42",
-                    "342.25",
-                    "368.25",
-                    "394.24"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Talent_Canopy_Hunter_Riding_High.png",
-            "talentName": "Canopy Hunter: Riding High",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nKinich uses his big-game hunting skills to either move swiftly or attack his opponent.\nWhen there is an opponent or object that can be attacked nearby, he will attach a grappling hook to the target and enter Nightsoul's Blessing with 0 Nightsoul points. If neither is nearby, he fires a grappling hook forward and swings in mid-air, and this Skill's CD is decreased by 60%.\nThis skill can be Held to release. When it is Held, Kinich can aim the grappling hook.\n\nNightsoul's Blessing: Kinich\nKinich's Nightsoul's Blessing lasts 10s and generates 2 Nightsoul points every second.\nIn this state, Kinich will hook onto a nearby opponent and perform a variable attack:\nWhen using a Normal Attack, Kinich will fire Loop Shots as he loops around the grappled target based on his current movement direction, dealing Nightsoul-aligned Dendro DMG and generating 3 Nightsoul points. Loop Shot DMG is considered Elemental Skill DMG.\nWhen Nightsoul points are at max, he can use the Elemental Skill \"Scalespiker Cannon\": Consume all Nightsoul points to deal Nightsoul-aligned Dendro DMG. When \"Scalespiker Cannon\" is Held, Kinich can aim this shot. After firing the Cannon, Kinich will try to grapple to its target.\nWhile in Nightsoul's Blessing, after grappling an opponent or firing \"Scalespiker Cannon,\" a Blind Spot will be generated next to the opponent. When Kinich enters this Blind Spot, it will disappear and he will generate 4 Nightsoul points.\nIf the grapple connection should snap due to exceeding the maximum distance or some other reason, using a Normal Attack will establish a new connection with a nearby opponent before performing Loop Shots.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Canopy_Hunter_Riding_High_Movement_Preview.gif",
-                    "caption": "Movement"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Canopy_Hunter_Riding_High_Combat_Preview.gif",
-                    "caption": "Combat"
-                }
-            ],
-            "scaling": {
-                "Loop Shot DMG (%)": [
-                    "57.28×2",
-                    "61.58×2",
-                    "65.87×2",
-                    "71.6×2",
-                    "75.9×2",
-                    "80.19×2",
-                    "85.92×2",
-                    "91.65×2",
-                    "97.38×2",
-                    "103.1×2",
-                    "108.83×2",
-                    "114.56×2",
-                    "121.72×2"
-                ],
-                "Scalespiker Cannon DMG (%)": [
-                    "687.44",
-                    "739",
-                    "790.56",
-                    "859.3",
-                    "910.86",
-                    "962.42",
-                    "1031.16",
-                    "1099.9",
-                    "1168.65",
-                    "1237.39",
-                    "1306.14",
-                    "1374.88",
-                    "1460.81"
-                ],
-                "Nightsoul Point Limit": [
-                    "20"
-                ],
-                "CD": [
-                    "18s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Hail_to_the_Almighty_Dragonlord.png",
-            "talentName": "Hail to the Almighty Dragonlord",
-            "talentType": "Elemental Burst",
-            "description": "Unleashes the power of the Almighty Dragonlord, K'uhul Ajaw (on a limited, conditional, restricted, contractual, partial, temporary basis), dealing Nightsoul-aligned AoE Dendro DMG. Ajaw will unleash his Dragon Breath at intervals, dealing Nightsoul-aligned AoE Dendro DMG.\nIf Kinich is in Nightsoul's Blessing when this is used, this Blessing's duration is extended by 1.7s.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Hail_to_the_Almighty_Dragonlord_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "134",
-                    "144.05",
-                    "154.1",
-                    "167.5",
-                    "177.55",
-                    "187.6",
-                    "201",
-                    "214.4",
-                    "227.8",
-                    "241.2",
-                    "254.6",
-                    "268",
-                    "284.75"
-                ],
-                "Dragon Breath DMG (%)": [
-                    "120.74",
-                    "129.79",
-                    "138.85",
-                    "150.92",
-                    "159.98",
-                    "169.03",
-                    "181.1",
-                    "193.18",
-                    "205.25",
-                    "217.32",
-                    "229.4",
-                    "241.47",
-                    "256.56"
-                ],
-                "Duration": [
-                    "15s"
-                ],
-                "CD": [
-                    "18s"
-                ],
-                "Energy Cost": [
-                    "70"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Talent_The_Price_of_Desolation.png",
-            "talentName": "The Price of Desolation",
-            "talentType": "1st Ascension Passive",
-            "description": "When Kinich is in Nightsoul's Blessing state, opponents hit by his Elemental Skill will enter the Desolation state, and when affected by Burning or Burgeon reaction DMG, they will restore 7 Nightsoul points to him. Nightsoul points can be gained this way once every 0.8s. The Desolation state will persist until this instance of Kinich's Nightsoul's Blessing state ends.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Talent_Flame_Spirit_Pact.png",
-            "talentName": "Flame Spirit Pact",
-            "talentType": "4th Ascension Passive",
-            "description": "After a nearby party member triggers a Nightsoul Burst, Kinich will gain 1 stack of Hunter's Experience that lasts 15s. Max 2 stacks. When Kinich uses Canopy Hunter: Riding High's Scalespiker Cannon, all stacks of Hunter's Experience will be consumed, with each stack consumed increasing the DMG dealt by this Cannon shot by 320% of Kinich's ATK.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Talent_Repaid_in_Full.png",
-            "talentName": "Repaid in Full",
-            "talentType": "Night Realm's Gift Passive",
-            "description": "Description\nGameplay Notes\nPreview\nWhen Kinich is in the air following Canopy Hunter: Riding High's mid-air swing, he can consume 10 Phlogiston points to perform another mid-air swing.\nWhile in an area with Phlogiston Mechanics within Natlan, he can use Nightsoul Transmission: Kinich. When the current active character is sprinting, in movement states that result from specific Talents, or in the air, when you switch to Kinich: Kinich will perform one of the following actions depending on the conditions met:\nWhen facing a Coilgrass Sigil that can be interacted with: He will fire a grappling hook towards it to move;\nWhen there are nearby opponents and you are in combat: Kinich will use Canopy Hunter: Riding High in the direction of the opponents;\nOtherwise, Kinich will fire a grappling hook and swing, prioritizing valid Coilgrass Sigils as grapple targets.\nNightsoul Transmission can be triggered once every 10s by your own party.\n\nWhen interacting with Coilgrass Sigils and other items that Yumkasaurs can interact with, \"Canopy Hunter: Riding High\" will be converted to \"Yumkasaur Mimesis,\" which causes interactions with such items to follow rules applicable to Yumkasaurs, and which will not put Canopy Hunter: Riding High on CD.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Repaid_in_Full_Nightsoul_Transmission_Preview.gif",
-                    "caption": "Nightsoul Transmission"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Repaid_in_Full_Yumkasaur_Mimesis_Preview.gif",
-                    "caption": "Yumkasaur Mimesis"
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Swift_Envoy.png",
-            "talentName": "Swift Envoy",
-            "talentType": "Utility Passive",
-            "description": "While in an area with Phlogiston Mechanics within Natlan, interacting with some harvestable items will increase your own party members' Movement SPD by 15% for 10s. Additionally, the location of nearby resources unique to Natlan will appear on your mini-map.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Nightsun_Style_Normal_Preview.gif",
+          "caption": ""
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Constellation_Parrot%27s_Beak.png",
-            "name": "Parrot's Beak",
-            "level": 1,
-            "description": "After Kinich lands from Canopy Hunter: Riding High's mid-air swing, his Movement SPD will increase by 30% for 6s.\nAdditionally, Scalespiker Cannon's CRIT DMG is increased by 100%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Constellation_Tiger_Beetle%27s_Palm.png",
-            "name": "Tiger Beetle's Palm",
-            "level": 2,
-            "description": "When Kinich's Elemental Skill hits an opponent, it will decrease their Dendro RES by 30% for 6s.\nAdditionally, the first Scalespiker Cannon Kinich fires after entering Nightsoul's Blessing has increased AoE, and its DMG increases by 100%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Constellation_Protosuchian%27s_Claw.png",
-            "name": "Protosuchian's Claw",
-            "level": 3,
-            "description": "Increases the Level of Canopy Hunter: Riding High by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Constellation_Hummingbird%27s_Feather.png",
-            "name": "Hummingbird's Feather",
-            "level": 4,
-            "description": "When in Nightsoul's Blessing, Kinich will restore 5 Energy after using his Loop Shots or after unleashing the Scalespiker Cannon. Energy can be regenerated this way once every 2.8s.\nAdditionally, Hail to the Almighty Dragonlord deals 70% more DMG."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Constellation_Howler_Monkey%27s_Tail.png",
-            "name": "Howler Monkey's Tail",
-            "level": 5,
-            "description": "Increases the Level of Hail to the Almighty Dragonlord by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Constellation_Auspicious_Beast%27s_Shape.png",
-            "name": "Auspicious Beast's Shape",
-            "level": 6,
-            "description": "Description\nAdvanced Properties\nAfter Scalespiker Cannon hits an opponent, it will bounce between opponents once, dealing 700% of Kinich's ATK as Dendro DMG.\nIf this Scalespiker Cannon triggers the buffs that Ascension Talent \"Flame Spirit Pact\" or the Constellation \"Tiger Beetle's Palm\" grant to the Cannon, the bouncing attack will also obtain the relevant buffs."
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.0",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "98.99",
+          "107.04",
+          "115.1",
+          "126.61",
+          "134.67",
+          "143.88",
+          "156.54",
+          "169.2",
+          "181.86",
+          "195.67",
+          "209.48"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Namecard_Background_Kinich_Ajaw.png",
-                "caption": "Kinich: Ajaw Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Kinich_Ajaw.png",
-                "caption": "Kinich: Ajaw Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Namecard_Banner_Kinich_Ajaw.png",
-                "caption": "Kinich: Ajaw Banner"
-            }
+        "2-Hit DMG (%)": [
+          "82.9",
+          "89.65",
+          "96.4",
+          "106.04",
+          "112.79",
+          "120.5",
+          "131.1",
+          "141.71",
+          "152.31",
+          "163.88",
+          "175.45"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Nightsun_Style_Normal_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Nightsun_Style_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Hail_to_the_Almighty_Dragonlord_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Hail_to_the_Almighty_Dragonlord_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Canopy_Hunter_Riding_High_Movement_Preview.gif",
-                        "caption": "Movement",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Canopy_Hunter_Riding_High_Movement_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Canopy_Hunter_Riding_High_Combat_Preview.gif",
-                        "caption": "Combat",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Canopy_Hunter_Riding_High_Combat_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "123.5",
+          "133.55",
+          "143.6",
+          "157.96",
+          "168.01",
+          "179.5",
+          "195.3",
+          "211.09",
+          "226.89",
+          "244.12",
+          "261.35"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Kinich_Character_Details_1.png",
-                "caption": "Kinich Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Kinich_Character_Details_2.png",
-                "caption": "Kinich Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Kinich_Character_Details_3.gif",
-                "caption": "Kinich Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Kinich_Character_Details_4.png",
-                "caption": "Kinich Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Kinich_Character_Details_5.png",
-                "caption": "Kinich Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Kinich_Character_Details_6.png",
-                "caption": "Kinich Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Kinich_Character_Details_7.png",
-                "caption": "Kinich Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Kinich_Character_Details_8.gif",
-                "caption": "Kinich Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Kinich_Character_Details_9.gif",
-                "caption": "Kinich Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Kinich_Character_Details_10.gif",
-                "caption": "Kinich Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Kinich_Character_Details_11.gif",
-                "caption": "Kinich Details 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Kinich_Character_Details_12.gif",
-                "caption": "Kinich Details 12"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Kinich_Character_Details_13.gif",
-                "caption": "Kinich Details 13"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Kinich_Character_Details_14.png",
-                "caption": "Kinich Details 14"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Kinich_Character_Details_15.png",
-                "caption": "Kinich Details 15"
-            }
+        "Mid-Air Normal Attack DMG (%)": [
+          "167.7",
+          "181.35",
+          "195",
+          "214.5",
+          "228.15",
+          "243.75",
+          "265.2",
+          "286.65",
+          "308.1",
+          "331.5",
+          "354.9"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Icon_Emoji_Paimon%27s_Paintings_35_Kinich_1.png",
-                "caption": "Appraising Set 35"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Icon_Emoji_Paimon%27s_Paintings_35_Kinich_2.png",
-                "caption": "\"Disguised\" Set 35"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Icon_Emoji_Paimon%27s_Paintings_35_Kinich_3.png",
-                "caption": "Rejected! Set 35"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Icon_Emoji_Paimon%27s_Paintings_35_Kinich_4.png",
-                "caption": "Gogogo! Set 35"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Icon_Emoji_Paimon%27s_Paintings_41_Kinich_1.png",
-                "caption": "Blush Set 41"
-            }
+        "Charged Attack DMG (%)": [
+          "48.42×3",
+          "52.36×3",
+          "56.3×3",
+          "61.93×3",
+          "65.87×3",
+          "70.38×3",
+          "76.57×3",
+          "82.76×3",
+          "88.95×3",
+          "95.71×3",
+          "102.47×3"
+        ],
+        "Charged Attack Stamina Cost": ["50"],
+        "Plunge DMG (%)": [
+          "74.59",
+          "80.66",
+          "86.73",
+          "95.4",
+          "101.47",
+          "108.41",
+          "117.95",
+          "127.49",
+          "137.03",
+          "147.44",
+          "157.85"
+        ],
+        "Low Plunge DMG (%)": [
+          "149.14",
+          "161.28",
+          "173.42",
+          "190.77",
+          "202.91",
+          "216.78",
+          "235.86",
+          "254.93",
+          "274.01",
+          "294.82",
+          "315.63"
+        ],
+        "High Plunge DMG (%)": [
+          "186.29",
+          "201.45",
+          "216.62",
+          "238.28",
+          "253.44",
+          "270.77",
+          "294.6",
+          "318.42",
+          "342.25",
+          "368.25",
+          "394.24"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Talent_Canopy_Hunter_Riding_High.png",
+      "talentName": "Canopy Hunter: Riding High",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nKinich uses his big-game hunting skills to either move swiftly or attack his opponent.\nWhen there is an opponent or object that can be attacked nearby, he will attach a grappling hook to the target and enter Nightsoul's Blessing with 0 Nightsoul points. If neither is nearby, he fires a grappling hook forward and swings in mid-air, and this Skill's CD is decreased by 60%.\nThis skill can be Held to release. When it is Held, Kinich can aim the grappling hook.\n\nNightsoul's Blessing: Kinich\nKinich's Nightsoul's Blessing lasts 10s and generates 2 Nightsoul points every second.\nIn this state, Kinich will hook onto a nearby opponent and perform a variable attack:\nWhen using a Normal Attack, Kinich will fire Loop Shots as he loops around the grappled target based on his current movement direction, dealing Nightsoul-aligned Dendro DMG and generating 3 Nightsoul points. Loop Shot DMG is considered Elemental Skill DMG.\nWhen Nightsoul points are at max, he can use the Elemental Skill \"Scalespiker Cannon\": Consume all Nightsoul points to deal Nightsoul-aligned Dendro DMG. When \"Scalespiker Cannon\" is Held, Kinich can aim this shot. After firing the Cannon, Kinich will try to grapple to its target.\nWhile in Nightsoul's Blessing, after grappling an opponent or firing \"Scalespiker Cannon,\" a Blind Spot will be generated next to the opponent. When Kinich enters this Blind Spot, it will disappear and he will generate 4 Nightsoul points.\nIf the grapple connection should snap due to exceeding the maximum distance or some other reason, using a Normal Attack will establish a new connection with a nearby opponent before performing Loop Shots.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Canopy_Hunter_Riding_High_Movement_Preview.gif",
+          "caption": "Movement"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Canopy_Hunter_Riding_High_Combat_Preview.gif",
+          "caption": "Combat"
+        }
+      ],
+      "scaling": {
+        "Loop Shot DMG (%)": [
+          "57.28×2",
+          "61.58×2",
+          "65.87×2",
+          "71.6×2",
+          "75.9×2",
+          "80.19×2",
+          "85.92×2",
+          "91.65×2",
+          "97.38×2",
+          "103.1×2",
+          "108.83×2",
+          "114.56×2",
+          "121.72×2"
+        ],
+        "Scalespiker Cannon DMG (%)": [
+          "687.44",
+          "739",
+          "790.56",
+          "859.3",
+          "910.86",
+          "962.42",
+          "1031.16",
+          "1099.9",
+          "1168.65",
+          "1237.39",
+          "1306.14",
+          "1374.88",
+          "1460.81"
+        ],
+        "Nightsoul Point Limit": ["20"],
+        "CD": ["18s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Hail_to_the_Almighty_Dragonlord.png",
+      "talentName": "Hail to the Almighty Dragonlord",
+      "talentType": "Elemental Burst",
+      "description": "Unleashes the power of the Almighty Dragonlord, K'uhul Ajaw (on a limited, conditional, restricted, contractual, partial, temporary basis), dealing Nightsoul-aligned AoE Dendro DMG. Ajaw will unleash his Dragon Breath at intervals, dealing Nightsoul-aligned AoE Dendro DMG.\nIf Kinich is in Nightsoul's Blessing when this is used, this Blessing's duration is extended by 1.7s.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Hail_to_the_Almighty_Dragonlord_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "134",
+          "144.05",
+          "154.1",
+          "167.5",
+          "177.55",
+          "187.6",
+          "201",
+          "214.4",
+          "227.8",
+          "241.2",
+          "254.6",
+          "268",
+          "284.75"
+        ],
+        "Dragon Breath DMG (%)": [
+          "120.74",
+          "129.79",
+          "138.85",
+          "150.92",
+          "159.98",
+          "169.03",
+          "181.1",
+          "193.18",
+          "205.25",
+          "217.32",
+          "229.4",
+          "241.47",
+          "256.56"
+        ],
+        "Duration": ["15s"],
+        "CD": ["18s"],
+        "Energy Cost": ["70"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Talent_The_Price_of_Desolation.png",
+      "talentName": "The Price of Desolation",
+      "talentType": "1st Ascension Passive",
+      "description": "When Kinich is in Nightsoul's Blessing state, opponents hit by his Elemental Skill will enter the Desolation state, and when affected by Burning or Burgeon reaction DMG, they will restore 7 Nightsoul points to him. Nightsoul points can be gained this way once every 0.8s. The Desolation state will persist until this instance of Kinich's Nightsoul's Blessing state ends.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Talent_Flame_Spirit_Pact.png",
+      "talentName": "Flame Spirit Pact",
+      "talentType": "4th Ascension Passive",
+      "description": "After a nearby party member triggers a Nightsoul Burst, Kinich will gain 1 stack of Hunter's Experience that lasts 15s. Max 2 stacks. When Kinich uses Canopy Hunter: Riding High's Scalespiker Cannon, all stacks of Hunter's Experience will be consumed, with each stack consumed increasing the DMG dealt by this Cannon shot by 320% of Kinich's ATK.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Talent_Repaid_in_Full.png",
+      "talentName": "Repaid in Full",
+      "talentType": "Night Realm's Gift Passive",
+      "description": "Description\nGameplay Notes\nPreview\nWhen Kinich is in the air following Canopy Hunter: Riding High's mid-air swing, he can consume 10 Phlogiston points to perform another mid-air swing.\nWhile in an area with Phlogiston Mechanics within Natlan, he can use Nightsoul Transmission: Kinich. When the current active character is sprinting, in movement states that result from specific Talents, or in the air, when you switch to Kinich: Kinich will perform one of the following actions depending on the conditions met:\nWhen facing a Coilgrass Sigil that can be interacted with: He will fire a grappling hook towards it to move;\nWhen there are nearby opponents and you are in combat: Kinich will use Canopy Hunter: Riding High in the direction of the opponents;\nOtherwise, Kinich will fire a grappling hook and swing, prioritizing valid Coilgrass Sigils as grapple targets.\nNightsoul Transmission can be triggered once every 10s by your own party.\n\nWhen interacting with Coilgrass Sigils and other items that Yumkasaurs can interact with, \"Canopy Hunter: Riding High\" will be converted to \"Yumkasaur Mimesis,\" which causes interactions with such items to follow rules applicable to Yumkasaurs, and which will not put Canopy Hunter: Riding High on CD.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Repaid_in_Full_Nightsoul_Transmission_Preview.gif",
+          "caption": "Nightsoul Transmission"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Repaid_in_Full_Yumkasaur_Mimesis_Preview.gif",
+          "caption": "Yumkasaur Mimesis"
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Swift_Envoy.png",
+      "talentName": "Swift Envoy",
+      "talentType": "Utility Passive",
+      "description": "While in an area with Phlogiston Mechanics within Natlan, interacting with some harvestable items will increase your own party members' Movement SPD by 15% for 10s. Additionally, the location of nearby resources unique to Natlan will appear on your mini-map.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Constellation_Parrot%27s_Beak.png",
+      "name": "Parrot's Beak",
+      "level": 1,
+      "description": "After Kinich lands from Canopy Hunter: Riding High's mid-air swing, his Movement SPD will increase by 30% for 6s.\nAdditionally, Scalespiker Cannon's CRIT DMG is increased by 100%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Constellation_Tiger_Beetle%27s_Palm.png",
+      "name": "Tiger Beetle's Palm",
+      "level": 2,
+      "description": "When Kinich's Elemental Skill hits an opponent, it will decrease their Dendro RES by 30% for 6s.\nAdditionally, the first Scalespiker Cannon Kinich fires after entering Nightsoul's Blessing has increased AoE, and its DMG increases by 100%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Constellation_Protosuchian%27s_Claw.png",
+      "name": "Protosuchian's Claw",
+      "level": 3,
+      "description": "Increases the Level of Canopy Hunter: Riding High by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Constellation_Hummingbird%27s_Feather.png",
+      "name": "Hummingbird's Feather",
+      "level": 4,
+      "description": "When in Nightsoul's Blessing, Kinich will restore 5 Energy after using his Loop Shots or after unleashing the Scalespiker Cannon. Energy can be regenerated this way once every 2.8s.\nAdditionally, Hail to the Almighty Dragonlord deals 70% more DMG."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Constellation_Howler_Monkey%27s_Tail.png",
+      "name": "Howler Monkey's Tail",
+      "level": 5,
+      "description": "Increases the Level of Hail to the Almighty Dragonlord by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Constellation_Auspicious_Beast%27s_Shape.png",
+      "name": "Auspicious Beast's Shape",
+      "level": 6,
+      "description": "Description\nAdvanced Properties\nAfter Scalespiker Cannon hits an opponent, it will bounce between opponents once, dealing 700% of Kinich's ATK as Dendro DMG.\nIf this Scalespiker Cannon triggers the buffs that Ascension Talent \"Flame Spirit Pact\" or the Constellation \"Tiger Beetle's Palm\" grant to the Cannon, the bouncing attack will also obtain the relevant buffs."
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.0",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Idle_Kinich_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Idle_Kinich_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Menu_Kinich.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Weapon_Menu_Kinich.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Party_Setup_Kinich.gif",
+        "caption": "Party Setup",
+        "videoUrl": "",
+        "videoType": ""
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Namecard_Background_Kinich_Ajaw.png",
+        "caption": "Kinich: Ajaw Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Kinich_Ajaw.png",
+        "caption": "Kinich: Ajaw Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Namecard_Banner_Kinich_Ajaw.png",
+        "caption": "Kinich: Ajaw Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Nightsun_Style_Normal_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Nightsun_Style_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Hail_to_the_Almighty_Dragonlord_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Hail_to_the_Almighty_Dragonlord_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Canopy_Hunter_Riding_High_Movement_Preview.gif",
+            "caption": "Movement",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Canopy_Hunter_Riding_High_Movement_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Canopy_Hunter_Riding_High_Combat_Preview.gif",
+            "caption": "Combat",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Canopy_Hunter_Riding_High_Combat_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Kinich_Character_Details_1.png",
+        "caption": "Kinich Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Kinich_Character_Details_2.png",
+        "caption": "Kinich Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Kinich_Character_Details_3.gif",
+        "caption": "Kinich Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Kinich_Character_Details_4.png",
+        "caption": "Kinich Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Kinich_Character_Details_5.png",
+        "caption": "Kinich Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Kinich_Character_Details_6.png",
+        "caption": "Kinich Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Kinich_Character_Details_7.png",
+        "caption": "Kinich Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Kinich_Character_Details_8.gif",
+        "caption": "Kinich Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Kinich_Character_Details_9.gif",
+        "caption": "Kinich Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Kinich_Character_Details_10.gif",
+        "caption": "Kinich Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Kinich_Character_Details_11.gif",
+        "caption": "Kinich Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Kinich_Character_Details_12.gif",
+        "caption": "Kinich Details 12"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Kinich_Character_Details_13.gif",
+        "caption": "Kinich Details 13"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Kinich_Character_Details_14.png",
+        "caption": "Kinich Details 14"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Kinich_Character_Details_15.png",
+        "caption": "Kinich Details 15"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Icon_Emoji_Paimon%27s_Paintings_35_Kinich_1.png",
+        "caption": "Appraising Set 35"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Icon_Emoji_Paimon%27s_Paintings_35_Kinich_2.png",
+        "caption": "\"Disguised\" Set 35"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Icon_Emoji_Paimon%27s_Paintings_35_Kinich_3.png",
+        "caption": "Rejected! Set 35"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Icon_Emoji_Paimon%27s_Paintings_35_Kinich_4.png",
+        "caption": "Gogogo! Set 35"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Icon_Emoji_Paimon%27s_Paintings_41_Kinich_1.png",
+        "caption": "Blush Set 41"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Obsidian Codex",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Burning DPS",
+      "sets": [
+        {
+          "name": "Unfinished Reverie",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Nightsoul DPS",
+      "sets": [
+        {
+          "name": "Scroll of the Hero of Cinder City",
+          "pieces": 4
+        }
+      ]
+    }
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Obsidian Codex"],
+        "notes": "4pc BiS for Nightsoul"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gilded Dreams"],
+          "notes": "EM focused"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Fang of the Mountain King",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Battle Pass"
+        },
+        {
+          "name": "Rainslasher",
+          "notes": "EM for reactions"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Dendro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM"],
+    "constellations": {
+      "c0": "Dendro DPS with grappling mechanic",
+      "breakpoints": [
+        "C1: Extra scaling on charged attack",
+        "C2: Nightsoul buff"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Kinich Burning",
+        "characters": ["Kinich", "Emilie", "Thoma", "Bennett"],
+        "roles": {
+          "Kinich": "Main DPS",
+          "Emilie": "Dendro Sub-DPS",
+          "Thoma": "Pyro applicator",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Thoma EQ → Emilie E → Kinich E → grapple combo"
+      }
+    ]
+  }
 }

@@ -1,0 +1,130 @@
+{
+  "season": 3,
+  "version": "6.3",
+  "lastUpdated": "2026-02-11T00:00:00Z",
+  "allowedElements": ["Pyro", "Hydro", "Cryo", "Anemo"],
+  "specialGuests": [
+    {
+      "name": "Neuvillette",
+      "iconUrl": ""
+    },
+    {
+      "name": "Arlecchino",
+      "iconUrl": ""
+    }
+  ],
+  "recommendedCharacters": [
+    {
+      "name": "Neuvillette",
+      "role": "Main DPS",
+      "priority": "S",
+      "reason": "Special guest with bonus stats. Exceptional hydro damage and self-sustain make him ideal for Theater challenges.",
+      "element": "Hydro",
+      "isSpecialGuest": true
+    },
+    {
+      "name": "Arlecchino",
+      "role": "Main DPS",
+      "priority": "S",
+      "reason": "Special guest with bonus stats. Top-tier pyro DPS with self-sustain perfect for Theater's endurance format.",
+      "element": "Pyro",
+      "isSpecialGuest": true
+    },
+    {
+      "name": "Furina",
+      "role": "Sub DPS / Support",
+      "priority": "S",
+      "reason": "Best-in-slot support for most Theater teams. Massive damage boost and works with all DPS options.",
+      "element": "Hydro"
+    },
+    {
+      "name": "Kazuha",
+      "role": "Support",
+      "priority": "S",
+      "reason": "Universal anemo support with crowd control. Essential for multiple team compositions in Theater.",
+      "element": "Anemo"
+    },
+    {
+      "name": "Xingqiu",
+      "role": "Sub DPS / Support",
+      "priority": "A",
+      "reason": "Consistent hydro application and damage reduction. Core enabler for vape and freeze teams.",
+      "element": "Hydro"
+    },
+    {
+      "name": "Yelan",
+      "role": "Sub DPS / Support",
+      "priority": "A",
+      "reason": "Alternative to Xingqiu with higher personal damage. Excellent for Theater's multi-team format.",
+      "element": "Hydro"
+    },
+    {
+      "name": "Bennett",
+      "role": "Support / Healer",
+      "priority": "A",
+      "reason": "Universal ATK buffer and healer. Essential for pyro teams and provides sustain.",
+      "element": "Pyro"
+    },
+    {
+      "name": "Mona",
+      "role": "Support",
+      "priority": "A",
+      "reason": "Omen buff for burst windows. Good hydro application and works well in freeze comps.",
+      "element": "Hydro"
+    },
+    {
+      "name": "Ayaka",
+      "role": "Main DPS",
+      "priority": "A",
+      "reason": "Strong cryo DPS for freeze teams. High burst damage for Theater challenges.",
+      "element": "Cryo"
+    },
+    {
+      "name": "Ganyu",
+      "role": "Main DPS / Sub DPS",
+      "priority": "A",
+      "reason": "Versatile cryo DPS. Can work as main DPS or sub DPS in freeze teams.",
+      "element": "Cryo"
+    },
+    {
+      "name": "Xiangling",
+      "role": "Sub DPS",
+      "priority": "B",
+      "reason": "Strong off-field pyro damage. Core for vaporize teams.",
+      "element": "Pyro"
+    },
+    {
+      "name": "Sucrose",
+      "role": "Support",
+      "priority": "B",
+      "reason": "Budget alternative to Kazuha. Good EM sharing for reaction teams.",
+      "element": "Anemo"
+    },
+    {
+      "name": "Diona",
+      "role": "Support / Healer",
+      "priority": "B",
+      "reason": "Cryo battery with shielding and healing. Good for freeze teams.",
+      "element": "Cryo"
+    },
+    {
+      "name": "Rosaria",
+      "role": "Sub DPS / Support",
+      "priority": "B",
+      "reason": "Cryo support with crit rate sharing. Flexible for freeze and melt teams.",
+      "element": "Cryo"
+    },
+    {
+      "name": "Chongyun",
+      "role": "Support",
+      "priority": "C",
+      "reason": "Cryo infusion support. Niche use in specific freeze setups.",
+      "element": "Cryo"
+    }
+  ],
+  "difficultyNotes": {
+    "visionary": "Bring 3-4 well-built teams. Focus on special guests for maximum bonus.",
+    "hard": "2-3 teams needed. Special guests provide significant advantage.",
+    "normal": "1-2 teams sufficient. Good for testing team compositions."
+  }
+}

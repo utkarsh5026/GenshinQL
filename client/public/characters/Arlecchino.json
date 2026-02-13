@@ -1,635 +1,743 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Arlecchino_Icon.png",
-    "name": "Arlecchino",
-    "rarity": "5 Stars",
-    "element": "Pyro",
-    "weaponType": "Polearm",
-    "region": "Snezhnaya",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Emblem_Nation_Unknown.png",
-    "modelType": "Tall Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Arlecchino_Icon.png",
+  "name": "Arlecchino",
+  "rarity": "5 Stars",
+  "element": "Pyro",
+  "weaponType": "Polearm",
+  "region": "Snezhnaya",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Emblem_Nation_Unknown.png",
+  "modelType": "Tall Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png",
+      "talentName": "Invitation to a Beheading",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 6 consecutive spear strikes.\n\nCharged Attack\nConsumes a fixed amount of Stamina, dashing toward a nearby opponent and cleaving once.\nContinuously holding this button will cause Arlecchino to consume Stamina and engage in up to 5s of high-speed movement.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n\nMasque of the Red Death\nWhen Arlecchino has a Bond of Life equal to or greater than 30% of her Max HP, she will enter the \"Masque of the Red Death\" state, where her Normal, Charged, and Plunging Attacks will be converted to deal Pyro DMG. This cannot be overridden.\nWhen in the \"Masque of the Red Death\" state, Arlecchino's Normal Attacks will deal extra DMG to opponents on hit that scales off her ATK multiplied by a certain ratio of her current Bond of Life percentage. This will consume 7.5% of said current Bond of Life. Her Bond of Life can be consumed this way every 0.03s. When her Bond of Life is consumed in this manner, All Is Ash's CD will decrease by 0.8s.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png",
-            "talentName": "Invitation to a Beheading",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 6 consecutive spear strikes.\n\nCharged Attack\nConsumes a fixed amount of Stamina, dashing toward a nearby opponent and cleaving once.\nContinuously holding this button will cause Arlecchino to consume Stamina and engage in up to 5s of high-speed movement.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.\n\nMasque of the Red Death\nWhen Arlecchino has a Bond of Life equal to or greater than 30% of her Max HP, she will enter the \"Masque of the Red Death\" state, where her Normal, Charged, and Plunging Attacks will be converted to deal Pyro DMG. This cannot be overridden.\nWhen in the \"Masque of the Red Death\" state, Arlecchino's Normal Attacks will deal extra DMG to opponents on hit that scales off her ATK multiplied by a certain ratio of her current Bond of Life percentage. This will consume 7.5% of said current Bond of Life. Her Bond of Life can be consumed this way every 0.03s. When her Bond of Life is consumed in this manner, All Is Ash's CD will decrease by 0.8s.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Invitation_to_a_Beheading_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Invitation_to_a_Beheading_Normal_2_Preview.gif",
-                    "caption": "Normal Attack (Crimson Moon's Semblance)"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Invitation_to_a_Beheading_Normal_3_Preview.gif",
-                    "caption": "Normal Attack (Converted)"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Invitation_to_a_Beheading_Normal_4_Preview.gif",
-                    "caption": "Normal Attack (Converted, Crimson Moon's Semblance)"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Invitation_to_a_Beheading_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Invitation_to_a_Beheading_Charged_2_Preview.gif",
-                    "caption": "Charged Attack (Crimson Moon's Semblance)"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Invitation_to_a_Beheading_Charged_3_Preview.gif",
-                    "caption": "Charged Attack (Converted)"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Invitation_to_a_Beheading_Charged_4_Preview.gif",
-                    "caption": "Charged Attack (Converted, Crimson Moon's Semblance)"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Invitation_to_a_Beheading_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Invitation_to_a_Beheading_Plunging_2_Preview.gif",
-                    "caption": "Plunging Attack (Converted)"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Invitation_to_a_Beheading_High_Speed_Movement_Preview.gif",
-                    "caption": "High Speed Movement"
-                }
-            ],
-            "scaling": {
-                "Masque of the Red Death Increase (%)": [
-                    "120.4",
-                    "130.2",
-                    "140",
-                    "154",
-                    "163.8",
-                    "175",
-                    "190.4",
-                    "205.8",
-                    "221.2",
-                    "238",
-                    "254.8",
-                    "271.6",
-                    "288.4",
-                    "305.2"
-                ],
-                "1-Hit DMG (%)": [
-                    "47.5",
-                    "51.37",
-                    "55.23",
-                    "60.76",
-                    "64.62",
-                    "69.04",
-                    "75.12",
-                    "81.19",
-                    "87.27",
-                    "93.9",
-                    "100.52",
-                    "107.15",
-                    "113.78",
-                    "120.41"
-                ],
-                "2-Hit DMG (%)": [
-                    "52.11",
-                    "56.35",
-                    "60.59",
-                    "66.65",
-                    "70.89",
-                    "75.73",
-                    "82.4",
-                    "89.06",
-                    "95.73",
-                    "103",
-                    "110.27",
-                    "117.54",
-                    "124.81",
-                    "132.08"
-                ],
-                "3-Hit DMG (%)": [
-                    "65.39",
-                    "70.71",
-                    "76.03",
-                    "83.63",
-                    "88.96",
-                    "95.04",
-                    "103.4",
-                    "111.76",
-                    "120.13",
-                    "129.25",
-                    "138.37",
-                    "147.5",
-                    "156.62",
-                    "165.75"
-                ],
-                "4-Hit DMG (%)": [
-                    "37.15\n+\n37.15",
-                    "40.17\n+\n40.17",
-                    "43.19\n+\n43.19",
-                    "47.51\n+\n47.51",
-                    "50.53\n+\n50.53",
-                    "53.99\n+\n53.99",
-                    "58.74\n+\n58.74",
-                    "63.49\n+\n63.49",
-                    "68.24\n+\n68.24",
-                    "73.43\n+\n73.43",
-                    "78.61\n+\n78.61",
-                    "83.79\n+\n83.79",
-                    "88.98\n+\n88.98",
-                    "94.16\n+\n94.16"
-                ],
-                "5-Hit DMG (%)": [
-                    "69.98",
-                    "75.68",
-                    "81.37",
-                    "89.51",
-                    "95.21",
-                    "101.72",
-                    "110.67",
-                    "119.62",
-                    "128.57",
-                    "138.34",
-                    "148.1",
-                    "157.87",
-                    "167.63",
-                    "177.4"
-                ],
-                "6-Hit DMG (%)": [
-                    "85.38",
-                    "92.33",
-                    "99.28",
-                    "109.2",
-                    "116.15",
-                    "124.1",
-                    "135.02",
-                    "145.94",
-                    "156.86",
-                    "168.77",
-                    "180.68",
-                    "192.6",
-                    "204.51",
-                    "216.42"
-                ],
-                "Charged Attack DMG (%)": [
-                    "90.82",
-                    "98.21",
-                    "105.6",
-                    "116.16",
-                    "123.55",
-                    "132",
-                    "143.62",
-                    "155.23",
-                    "166.85",
-                    "179.52",
-                    "192.19",
-                    "204.86",
-                    "217.54",
-                    "230.21"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "25"
-                ],
-                "High-Speed Movement Stamina Cost": [
-                    "40/s"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3",
-                    "144.22",
-                    "153.14",
-                    "162.06"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54",
-                    "288.38",
-                    "306.22",
-                    "324.05"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92",
-                    "360.2",
-                    "382.48",
-                    "404.76"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Invitation_to_a_Beheading_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Talent_All_Is_Ash.png",
-            "talentName": "All Is Ash",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nSummons forth Balemoon Bloodfire, dealing Pyro DMG to multiple nearby opponents and performing a dash-cleave against one of them, dealing AoE Pyro DMG.\nOpponents hit by the aforementioned attack will have a Blood-Debt Directive applied to them.\n\nBlood-Debt Directive\nLasts 30s. Every 5s, it will deal 1 instance of Pyro DMG to the opponent. Max 2 instances. This DMG will be considered Elemental Skill DMG.\nWhen Arlecchino uses a Charged Attack or her Elemental Burst, Balemoon Rising, she will absorb and clear nearby Blood-Debt Directives. Each Directive absorbed grants her a Bond of Life worth 65% of her Max HP.\nThe maximum value of the Bond of Life she can be granted through Blood-Debt Directives within 35s after using her Elemental Skill is 145% of her Max HP. Using the Elemental Skill again during this duration will restart the count on duration and the limit on the value of Bond of Life she may gain from Blood-Debt Directives.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/All_Is_Ash_Preview.gif",
-                    "caption": ""
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/All_Is_Ash_2_Preview.gif",
-                    "caption": "With Crimson Moon's Semblance"
-                }
-            ],
-            "scaling": {
-                "Spike DMG (%)": [
-                    "14.84",
-                    "15.95",
-                    "17.07",
-                    "18.55",
-                    "19.66",
-                    "20.78",
-                    "22.26",
-                    "23.74",
-                    "25.23",
-                    "26.71"
-                ],
-                "Cleave DMG (%)": [
-                    "133.56",
-                    "143.58",
-                    "153.59",
-                    "166.95",
-                    "176.97",
-                    "186.98",
-                    "200.34",
-                    "213.7",
-                    "227.05",
-                    "240.41"
-                ],
-                "Blood-Debt Directive DMG (%)": [
-                    "31.8",
-                    "34.19",
-                    "36.57",
-                    "39.75",
-                    "42.13",
-                    "44.52",
-                    "47.7",
-                    "50.88",
-                    "54.06",
-                    "57.24"
-                ],
-                "CD": [
-                    "30s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Invitation_to_a_Beheading_Normal_2_Preview.gif",
+          "caption": "Normal Attack (Crimson Moon's Semblance)"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Talent_Balemoon_Rising.png",
-            "talentName": "Balemoon Rising",
-            "talentType": "Elemental Burst",
-            "description": "Arlecchino's great wing of Balemoon Bloodfire beats as she absorbs and clears Blood-Debt Directives around her. She deals AoE Pyro DMG before clearing the CD of All Is Ash and healing herself. The healing is based on her Bond of Life value and ATK.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Balemoon_Rising_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "370.4",
-                    "398.18",
-                    "425.96",
-                    "463",
-                    "490.78",
-                    "518.56",
-                    "555.6",
-                    "592.64",
-                    "629.68",
-                    "666.72",
-                    "703.76",
-                    "740.8",
-                    "787.1"
-                ],
-                "Amount of HP Restored": [
-                    "150% Bond of Life\n+\n150% ATK"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Invitation_to_a_Beheading_Normal_3_Preview.gif",
+          "caption": "Normal Attack (Converted)"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Agony_Alone_May_Be_Repaid.png",
-            "talentName": "Agony Alone May Be Repaid",
-            "talentType": "1st Ascension Passive",
-            "description": "Description\nPreview\nBlood-Debt Directives have the following characteristics:\nArlecchino will be granted a Bond of Life worth 130% of her Max HP when an opponent to which she herself applied a Directive is defeated.\n5s after a Directive is applied, it will be upgraded to a Blood-Debt Due. When absorbed, it will instead grant Arlecchino a Bond of Life worth 130%.\nA Bond of Life created in the aforementioned ways cannot exceed the original limit on the value of Bonds of Life obtained through All Is Ash.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Agony_Alone_May_Be_Repaid_Preview.png",
-                    "caption": "Blood-Debt Directive and Blood-Debt Due"
-                }
-            ],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Invitation_to_a_Beheading_Normal_4_Preview.gif",
+          "caption": "Normal Attack (Converted, Crimson Moon's Semblance)"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Talent_Strength_Alone_Can_Defend.png",
-            "talentName": "Strength Alone Can Defend",
-            "talentType": "4th Ascension Passive",
-            "description": "Arlecchino gains 1% All Elemental and Physical RES for every 100 ATK she has in excess of 1,000. The maximum RES increase she can gain this way for each is 20%.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Invitation_to_a_Beheading_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Talent_The_Balemoon_Alone_May_Know.png",
-            "talentName": "The Balemoon Alone May Know",
-            "talentType": "Utility Passive",
-            "description": "While in combat, Arlecchino gains a 40% Pyro DMG Bonus and can only be healed through Balemoon Rising.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Invitation_to_a_Beheading_Charged_2_Preview.gif",
+          "caption": "Charged Attack (Crimson Moon's Semblance)"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Invitation_to_a_Beheading_Charged_3_Preview.gif",
+          "caption": "Charged Attack (Converted)"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Invitation_to_a_Beheading_Charged_4_Preview.gif",
+          "caption": "Charged Attack (Converted, Crimson Moon's Semblance)"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Invitation_to_a_Beheading_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Invitation_to_a_Beheading_Plunging_2_Preview.gif",
+          "caption": "Plunging Attack (Converted)"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Invitation_to_a_Beheading_High_Speed_Movement_Preview.gif",
+          "caption": "High Speed Movement"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Constellation_All_Reprisals_and_Arrears%2C_Mine_to_Bear....png",
-            "name": "\"All Reprisals and Arrears, Mine to Bear...\"",
-            "level": 1,
-            "description": "Masque of the Red Death is further enhanced, the value of the increase is 100%. Additionally, Arlecchino's interruption resistance is increased when she performs Normal or Charged Attacks while affected by the Masque of the Red Death."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Constellation_All_Rewards_and_Retribution%2C_Mine_to_Bestow....png",
-            "name": "\"All Rewards and Retribution, Mine to Bestow...\"",
-            "level": 2,
-            "description": "Description\nAdvanced Properties\nBlood-Debt Directives are now already Blood-Debt Due when first applied.\nWhen Arlecchino absorbs such a Due, she unleashes Balemoon Bloodfire in front of her, dealing 900% of her ATK as AoE Pyro DMG and increasing her All Elemental RES and Physical RES by 20% for 15s. This effect can trigger once every 10s.\nYou must first unlock the Ascension Talent \"Agony Alone May Be Repaid.\""
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Constellation_You_Shall_Become_a_New_Member_of_Our_Family....png",
-            "name": "\"You Shall Become a New Member of Our Family...\"",
-            "level": 3,
-            "description": "Increases the Level of Normal Attack: Invitation to a Beheading by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_You_Shall_Love_and_Protect_Each_Other_Henceforth....png",
-            "name": "\"You Shall Love and Protect Each Other Henceforth...\"",
-            "level": 4,
-            "description": "When Arlecchino successfully absorbs a Blood-Debt Directive, Balemoon Rising's CD will decrease by 2s and 15 Elemental Energy will be restored to her. This effect can occur once every 10s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Constellation_For_Alone%2C_We_Are_as_Good_as_Dead....png",
-            "name": "\"For Alone, We Are as Good as Dead...\"",
-            "level": 5,
-            "description": "Increases the Level of Balemoon Rising by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Constellation_From_This_Day_On%2C_We_Shall_Delight_in_New_Life_Together..png",
-            "name": "\"From This Day On, We Shall Delight in New Life Together.\"",
-            "level": 6,
-            "description": "Description\nGameplay Notes\nThe DMG of Balemoon Rising is increased by Arlecchino's ATK multiplied by 700% of Arlecchino's current Bond of Life percentage.\nFor 20s after Arlecchino uses All Is Ash, both her Normal Attacks and Elemental Burst gain 10% increased CRIT Rate and 70% increased CRIT DMG. This effect can be triggered up to once every 15s."
-        }
-    ],
-    "imageUrls": {},
-    "version": "4.6",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Idle_Arlecchino_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Idle_Arlecchino_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Idle_Arlecchino_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Idle_Arlecchino_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Talent_Menu_Arlecchino.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Talent_Menu_Arlecchino.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Weapon_Menu_Arlecchino.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Weapon_Menu_Arlecchino.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Party_Setup_Arlecchino.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Party_Setup_Arlecchino.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "Masque of the Red Death Increase (%)": [
+          "120.4",
+          "130.2",
+          "140",
+          "154",
+          "163.8",
+          "175",
+          "190.4",
+          "205.8",
+          "221.2",
+          "238",
+          "254.8",
+          "271.6",
+          "288.4",
+          "305.2"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Namecard_Background_Arlecchino_Edict.png",
-                "caption": "Arlecchino: Edict Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Arlecchino_Edict.png",
-                "caption": "Arlecchino: Edict Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Namecard_Banner_Arlecchino_Edict.png",
-                "caption": "Arlecchino: Edict Banner"
-            }
+        "1-Hit DMG (%)": [
+          "47.5",
+          "51.37",
+          "55.23",
+          "60.76",
+          "64.62",
+          "69.04",
+          "75.12",
+          "81.19",
+          "87.27",
+          "93.9",
+          "100.52",
+          "107.15",
+          "113.78",
+          "120.41"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Invitation_to_a_Beheading_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Invitation_to_a_Beheading_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Invitation_to_a_Beheading_Normal_2_Preview.gif",
-                        "caption": "Normal Attack (Crimson Moon's Semblance)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Invitation_to_a_Beheading_Normal_2_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Invitation_to_a_Beheading_Normal_3_Preview.gif",
-                        "caption": "Normal Attack (Converted)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Invitation_to_a_Beheading_Normal_3_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Invitation_to_a_Beheading_Normal_4_Preview.gif",
-                        "caption": "Normal Attack (Converted, Crimson Moon's Semblance)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Invitation_to_a_Beheading_Normal_4_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Invitation_to_a_Beheading_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Invitation_to_a_Beheading_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Invitation_to_a_Beheading_Charged_2_Preview.gif",
-                        "caption": "Charged Attack (Crimson Moon's Semblance)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Invitation_to_a_Beheading_Charged_2_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Invitation_to_a_Beheading_Charged_3_Preview.gif",
-                        "caption": "Charged Attack (Converted)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Invitation_to_a_Beheading_Charged_3_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Invitation_to_a_Beheading_Charged_4_Preview.gif",
-                        "caption": "Charged Attack (Converted, Crimson Moon's Semblance)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Invitation_to_a_Beheading_Charged_4_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Invitation_to_a_Beheading_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Invitation_to_a_Beheading_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Invitation_to_a_Beheading_Plunging_2_Preview.gif",
-                        "caption": "Plunging Attack (Converted)",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Invitation_to_a_Beheading_Plunging_2_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Invitation_to_a_Beheading_High_Speed_Movement_Preview.gif",
-                        "caption": "High Speed Movement",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Invitation_to_a_Beheading_High_Speed_Movement_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Balemoon_Rising_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Balemoon_Rising_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/All_Is_Ash_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/All_Is_Ash_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/All_Is_Ash_2_Preview.gif",
-                        "caption": "With Crimson Moon's Semblance",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/All_Is_Ash_2_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "2-Hit DMG (%)": [
+          "52.11",
+          "56.35",
+          "60.59",
+          "66.65",
+          "70.89",
+          "75.73",
+          "82.4",
+          "89.06",
+          "95.73",
+          "103",
+          "110.27",
+          "117.54",
+          "124.81",
+          "132.08"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Arlecchino_Character_Details_1.png",
-                "caption": "Arlecchino Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Arlecchino_Character_Details_2.png",
-                "caption": "Arlecchino Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Arlecchino_Character_Details_3.gif",
-                "caption": "Arlecchino Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Arlecchino_Character_Details_4.gif",
-                "caption": "Arlecchino Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Arlecchino_Character_Details_5.gif",
-                "caption": "Arlecchino Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Arlecchino_Character_Details_6.gif",
-                "caption": "Arlecchino Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Arlecchino_Character_Details_7.png",
-                "caption": "Arlecchino Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Arlecchino_Character_Details_8.png",
-                "caption": "Arlecchino Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Arlecchino_Character_Details_9.png",
-                "caption": "Arlecchino Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Arlecchino_Character_Details_10.png",
-                "caption": "Arlecchino Details 10"
-            }
+        "3-Hit DMG (%)": [
+          "65.39",
+          "70.71",
+          "76.03",
+          "83.63",
+          "88.96",
+          "95.04",
+          "103.4",
+          "111.76",
+          "120.13",
+          "129.25",
+          "138.37",
+          "147.5",
+          "156.62",
+          "165.75"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Icon_Emoji_Paimon%27s_Paintings_28_Arlecchino_1.png",
-                "caption": "Round of Applause Set 28"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_1.png",
-                "caption": "Shh! Set 32"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_2.png",
-                "caption": "No tears, now Set 32"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_3.png",
-                "caption": "Pleasure doing business Set 32"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_4.png",
-                "caption": "Scorn Set 32"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_5.png",
-                "caption": "Unworthy Set 32"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Icon_Emoji_Paimon%27s_Paintings_45_Arlecchino_1.png",
-                "caption": "Calm Set 45"
-            }
+        "4-Hit DMG (%)": [
+          "37.15\n+\n37.15",
+          "40.17\n+\n40.17",
+          "43.19\n+\n43.19",
+          "47.51\n+\n47.51",
+          "50.53\n+\n50.53",
+          "53.99\n+\n53.99",
+          "58.74\n+\n58.74",
+          "63.49\n+\n63.49",
+          "68.24\n+\n68.24",
+          "73.43\n+\n73.43",
+          "78.61\n+\n78.61",
+          "83.79\n+\n83.79",
+          "88.98\n+\n88.98",
+          "94.16\n+\n94.16"
+        ],
+        "5-Hit DMG (%)": [
+          "69.98",
+          "75.68",
+          "81.37",
+          "89.51",
+          "95.21",
+          "101.72",
+          "110.67",
+          "119.62",
+          "128.57",
+          "138.34",
+          "148.1",
+          "157.87",
+          "167.63",
+          "177.4"
+        ],
+        "6-Hit DMG (%)": [
+          "85.38",
+          "92.33",
+          "99.28",
+          "109.2",
+          "116.15",
+          "124.1",
+          "135.02",
+          "145.94",
+          "156.86",
+          "168.77",
+          "180.68",
+          "192.6",
+          "204.51",
+          "216.42"
+        ],
+        "Charged Attack DMG (%)": [
+          "90.82",
+          "98.21",
+          "105.6",
+          "116.16",
+          "123.55",
+          "132",
+          "143.62",
+          "155.23",
+          "166.85",
+          "179.52",
+          "192.19",
+          "204.86",
+          "217.54",
+          "230.21"
+        ],
+        "Charged Attack Stamina Cost": ["25"],
+        "High-Speed Movement Stamina Cost": ["40/s"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3",
+          "144.22",
+          "153.14",
+          "162.06"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54",
+          "288.38",
+          "306.22",
+          "324.05"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92",
+          "360.2",
+          "382.48",
+          "404.76"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Talent_All_Is_Ash.png",
+      "talentName": "All Is Ash",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nSummons forth Balemoon Bloodfire, dealing Pyro DMG to multiple nearby opponents and performing a dash-cleave against one of them, dealing AoE Pyro DMG.\nOpponents hit by the aforementioned attack will have a Blood-Debt Directive applied to them.\n\nBlood-Debt Directive\nLasts 30s. Every 5s, it will deal 1 instance of Pyro DMG to the opponent. Max 2 instances. This DMG will be considered Elemental Skill DMG.\nWhen Arlecchino uses a Charged Attack or her Elemental Burst, Balemoon Rising, she will absorb and clear nearby Blood-Debt Directives. Each Directive absorbed grants her a Bond of Life worth 65% of her Max HP.\nThe maximum value of the Bond of Life she can be granted through Blood-Debt Directives within 35s after using her Elemental Skill is 145% of her Max HP. Using the Elemental Skill again during this duration will restart the count on duration and the limit on the value of Bond of Life she may gain from Blood-Debt Directives.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/All_Is_Ash_Preview.gif",
+          "caption": ""
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/All_Is_Ash_2_Preview.gif",
+          "caption": "With Crimson Moon's Semblance"
+        }
+      ],
+      "scaling": {
+        "Spike DMG (%)": [
+          "14.84",
+          "15.95",
+          "17.07",
+          "18.55",
+          "19.66",
+          "20.78",
+          "22.26",
+          "23.74",
+          "25.23",
+          "26.71"
+        ],
+        "Cleave DMG (%)": [
+          "133.56",
+          "143.58",
+          "153.59",
+          "166.95",
+          "176.97",
+          "186.98",
+          "200.34",
+          "213.7",
+          "227.05",
+          "240.41"
+        ],
+        "Blood-Debt Directive DMG (%)": [
+          "31.8",
+          "34.19",
+          "36.57",
+          "39.75",
+          "42.13",
+          "44.52",
+          "47.7",
+          "50.88",
+          "54.06",
+          "57.24"
+        ],
+        "CD": ["30s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Talent_Balemoon_Rising.png",
+      "talentName": "Balemoon Rising",
+      "talentType": "Elemental Burst",
+      "description": "Arlecchino's great wing of Balemoon Bloodfire beats as she absorbs and clears Blood-Debt Directives around her. She deals AoE Pyro DMG before clearing the CD of All Is Ash and healing herself. The healing is based on her Bond of Life value and ATK.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Balemoon_Rising_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "370.4",
+          "398.18",
+          "425.96",
+          "463",
+          "490.78",
+          "518.56",
+          "555.6",
+          "592.64",
+          "629.68",
+          "666.72",
+          "703.76",
+          "740.8",
+          "787.1"
+        ],
+        "Amount of HP Restored": ["150% Bond of Life\n+\n150% ATK"],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Agony_Alone_May_Be_Repaid.png",
+      "talentName": "Agony Alone May Be Repaid",
+      "talentType": "1st Ascension Passive",
+      "description": "Description\nPreview\nBlood-Debt Directives have the following characteristics:\nArlecchino will be granted a Bond of Life worth 130% of her Max HP when an opponent to which she herself applied a Directive is defeated.\n5s after a Directive is applied, it will be upgraded to a Blood-Debt Due. When absorbed, it will instead grant Arlecchino a Bond of Life worth 130%.\nA Bond of Life created in the aforementioned ways cannot exceed the original limit on the value of Bonds of Life obtained through All Is Ash.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Agony_Alone_May_Be_Repaid_Preview.png",
+          "caption": "Blood-Debt Directive and Blood-Debt Due"
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Talent_Strength_Alone_Can_Defend.png",
+      "talentName": "Strength Alone Can Defend",
+      "talentType": "4th Ascension Passive",
+      "description": "Arlecchino gains 1% All Elemental and Physical RES for every 100 ATK she has in excess of 1,000. The maximum RES increase she can gain this way for each is 20%.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Talent_The_Balemoon_Alone_May_Know.png",
+      "talentName": "The Balemoon Alone May Know",
+      "talentType": "Utility Passive",
+      "description": "While in combat, Arlecchino gains a 40% Pyro DMG Bonus and can only be healed through Balemoon Rising.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Constellation_All_Reprisals_and_Arrears%2C_Mine_to_Bear....png",
+      "name": "\"All Reprisals and Arrears, Mine to Bear...\"",
+      "level": 1,
+      "description": "Masque of the Red Death is further enhanced, the value of the increase is 100%. Additionally, Arlecchino's interruption resistance is increased when she performs Normal or Charged Attacks while affected by the Masque of the Red Death."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Constellation_All_Rewards_and_Retribution%2C_Mine_to_Bestow....png",
+      "name": "\"All Rewards and Retribution, Mine to Bestow...\"",
+      "level": 2,
+      "description": "Description\nAdvanced Properties\nBlood-Debt Directives are now already Blood-Debt Due when first applied.\nWhen Arlecchino absorbs such a Due, she unleashes Balemoon Bloodfire in front of her, dealing 900% of her ATK as AoE Pyro DMG and increasing her All Elemental RES and Physical RES by 20% for 15s. This effect can trigger once every 10s.\nYou must first unlock the Ascension Talent \"Agony Alone May Be Repaid.\""
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Constellation_You_Shall_Become_a_New_Member_of_Our_Family....png",
+      "name": "\"You Shall Become a New Member of Our Family...\"",
+      "level": 3,
+      "description": "Increases the Level of Normal Attack: Invitation to a Beheading by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_You_Shall_Love_and_Protect_Each_Other_Henceforth....png",
+      "name": "\"You Shall Love and Protect Each Other Henceforth...\"",
+      "level": 4,
+      "description": "When Arlecchino successfully absorbs a Blood-Debt Directive, Balemoon Rising's CD will decrease by 2s and 15 Elemental Energy will be restored to her. This effect can occur once every 10s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Constellation_For_Alone%2C_We_Are_as_Good_as_Dead....png",
+      "name": "\"For Alone, We Are as Good as Dead...\"",
+      "level": 5,
+      "description": "Increases the Level of Balemoon Rising by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Constellation_From_This_Day_On%2C_We_Shall_Delight_in_New_Life_Together..png",
+      "name": "\"From This Day On, We Shall Delight in New Life Together.\"",
+      "level": 6,
+      "description": "Description\nGameplay Notes\nThe DMG of Balemoon Rising is increased by Arlecchino's ATK multiplied by 700% of Arlecchino's current Bond of Life percentage.\nFor 20s after Arlecchino uses All Is Ash, both her Normal Attacks and Elemental Burst gain 10% increased CRIT Rate and 70% increased CRIT DMG. This effect can be triggered up to once every 15s."
+    }
+  ],
+  "imageUrls": {},
+  "version": "4.6",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Idle_Arlecchino_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Idle_Arlecchino_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Idle_Arlecchino_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Idle_Arlecchino_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Talent_Menu_Arlecchino.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Talent_Menu_Arlecchino.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Weapon_Menu_Arlecchino.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Weapon_Menu_Arlecchino.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Party_Setup_Arlecchino.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Party_Setup_Arlecchino.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Namecard_Background_Arlecchino_Edict.png",
+        "caption": "Arlecchino: Edict Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Arlecchino_Edict.png",
+        "caption": "Arlecchino: Edict Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Namecard_Banner_Arlecchino_Edict.png",
+        "caption": "Arlecchino: Edict Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Invitation_to_a_Beheading_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Invitation_to_a_Beheading_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Invitation_to_a_Beheading_Normal_2_Preview.gif",
+            "caption": "Normal Attack (Crimson Moon's Semblance)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Invitation_to_a_Beheading_Normal_2_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Invitation_to_a_Beheading_Normal_3_Preview.gif",
+            "caption": "Normal Attack (Converted)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Invitation_to_a_Beheading_Normal_3_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Invitation_to_a_Beheading_Normal_4_Preview.gif",
+            "caption": "Normal Attack (Converted, Crimson Moon's Semblance)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Invitation_to_a_Beheading_Normal_4_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Invitation_to_a_Beheading_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Invitation_to_a_Beheading_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Invitation_to_a_Beheading_Charged_2_Preview.gif",
+            "caption": "Charged Attack (Crimson Moon's Semblance)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Invitation_to_a_Beheading_Charged_2_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3f/Invitation_to_a_Beheading_Charged_3_Preview.gif",
+            "caption": "Charged Attack (Converted)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Invitation_to_a_Beheading_Charged_3_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Invitation_to_a_Beheading_Charged_4_Preview.gif",
+            "caption": "Charged Attack (Converted, Crimson Moon's Semblance)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Invitation_to_a_Beheading_Charged_4_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Invitation_to_a_Beheading_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Invitation_to_a_Beheading_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Invitation_to_a_Beheading_Plunging_2_Preview.gif",
+            "caption": "Plunging Attack (Converted)",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Invitation_to_a_Beheading_Plunging_2_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Invitation_to_a_Beheading_High_Speed_Movement_Preview.gif",
+            "caption": "High Speed Movement",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Invitation_to_a_Beheading_High_Speed_Movement_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Balemoon_Rising_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Balemoon_Rising_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/All_Is_Ash_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/All_Is_Ash_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/All_Is_Ash_2_Preview.gif",
+            "caption": "With Crimson Moon's Semblance",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/All_Is_Ash_2_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Arlecchino_Character_Details_1.png",
+        "caption": "Arlecchino Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Arlecchino_Character_Details_2.png",
+        "caption": "Arlecchino Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Arlecchino_Character_Details_3.gif",
+        "caption": "Arlecchino Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Arlecchino_Character_Details_4.gif",
+        "caption": "Arlecchino Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Arlecchino_Character_Details_5.gif",
+        "caption": "Arlecchino Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Arlecchino_Character_Details_6.gif",
+        "caption": "Arlecchino Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Arlecchino_Character_Details_7.png",
+        "caption": "Arlecchino Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Arlecchino_Character_Details_8.png",
+        "caption": "Arlecchino Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Arlecchino_Character_Details_9.png",
+        "caption": "Arlecchino Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Arlecchino_Character_Details_10.png",
+        "caption": "Arlecchino Details 10"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Icon_Emoji_Paimon%27s_Paintings_28_Arlecchino_1.png",
+        "caption": "Round of Applause Set 28"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_1.png",
+        "caption": "Shh! Set 32"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_2.png",
+        "caption": "No tears, now Set 32"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_3.png",
+        "caption": "Pleasure doing business Set 32"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_4.png",
+        "caption": "Scorn Set 32"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Icon_Emoji_Paimon%27s_Paintings_32_Arlecchino_5.png",
+        "caption": "Unworthy Set 32"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/86/Icon_Emoji_Paimon%27s_Paintings_45_Arlecchino_1.png",
+        "caption": "Calm Set 45"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Fragment of Harmonic Whimsy",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Vaporize DPS",
+      "sets": [
+        {
+          "name": "Crimson Witch of Flames",
+          "pieces": 4
+        }
+      ]
+    }
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Gladiator's Finale"],
+        "notes": "4pc for normal attack focus"
+      },
+      "alternatives": [
+        {
+          "sets": ["Crimson Witch of Flames"],
+          "notes": "Vaporize teams"
+        },
+        {
+          "sets": ["Echoes of an Offering"],
+          "notes": "Alternative if good substats"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Crimson Moon's Semblance",
+          "notes": "BiS, signature weapon"
+        },
+        {
+          "name": "Staff of Homa",
+          "notes": "Universal strong option"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Deathmatch",
+          "notes": "Consistent CRIT Rate"
+        },
+        {
+          "name": "Dragon's Bane",
+          "notes": "For Vaporize teams"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%", "EM"],
+      "goblet": ["Pyro DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "EM", "ER"],
+    "constellations": {
+      "c0": "Top tier Pyro DPS, no healing requirement unique",
+      "breakpoints": [
+        "C1: Absorb Blood-Debt without killing",
+        "C2: Major DPS increase, extra Blood-Debt"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Arlecchino Vaporize",
+        "characters": ["Arlecchino", "Yelan", "Zhongli", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Yelan": "Hydro/Sub-DPS",
+          "Zhongli": "Shielder",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Zhongli hE → Bennett E (don't burst) → Yelan EQ → Arlecchino E → N combo → E finisher"
+      },
+      {
+        "name": "Furina Team",
+        "characters": ["Arlecchino", "Furina", "Xilonen", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Xilonen": "Shred",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Xilonen E → Furina EQ → Arlecchino E → N combo"
+      },
+      {
+        "name": "Overload Chevreuse",
+        "characters": ["Arlecchino", "Fischl", "Chevreuse", "Bennett"],
+        "roles": {
+          "Arlecchino": "Main DPS",
+          "Fischl": "Electro applicator",
+          "Chevreuse": "Support/Healer",
+          "Bennett": "ATK Buffer"
+        },
+        "rotation": "Bennett EQ → Chevreuse EQ → Fischl E → Arlecchino E → N combo"
+      }
+    ]
+  }
 }

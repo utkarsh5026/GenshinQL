@@ -1,0 +1,263 @@
+{
+  "name": "Favonius Warbow",
+  "rarity": 4,
+  "attack": 454,
+  "subStat": "Energy Recharge 61.3%",
+  "effect": "Windfall\nCRIT hits have a 60~100% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 12~6s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Weapon_Favonius_Warbow.png",
+  "nation": 0,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Item_Fetters_of_the_Dandelion_Gladiator.png",
+      "caption": "Fetters of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+      "caption": "Chains of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+      "caption": "Shackles of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Dream_of_the_Dandelion_Gladiator.png",
+      "caption": "Dream of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+      "caption": "Chaos Device"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+      "caption": "Chaos Circuit"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+      "caption": "Chaos Core"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+      "caption": "Whopper­flower Nectar"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+      "caption": "Shimmering Nectar"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+      "caption": "Energy Nectar"
+    }
+  ],
+  "passives": [
+    "CRIT hits have a 60% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 12s.",
+    "CRIT hits have a 70% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 10.5s.",
+    "CRIT hits have a 80% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 9s.",
+    "CRIT hits have a 90% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 7.5s.",
+    "CRIT hits have a 100% chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every 6s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Weapon_Favonius_Warbow.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Weapon_Favonius_Warbow_2nd.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 41,
+          "max": 99
+        },
+        "subStat": {
+          "min": 13.3,
+          "max": 23.6
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Item_Fetters_of_the_Dandelion_Gladiator.png",
+            "caption": "Fetters of the Dandelion Gladiator",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+            "caption": "Chaos Device",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+            "caption": "Whopperflower Nectar",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 125,
+          "max": 184
+        },
+        "subStat": {
+          "min": 23.6,
+          "max": 34.3
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+            "caption": "Chains of the Dandelion Gladiator",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+            "caption": "Chaos Device",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+            "caption": "Whopperflower Nectar",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 210,
+          "max": 238
+        },
+        "subStat": {
+          "min": 34.3,
+          "max": 39.7
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+            "caption": "Chains of the Dandelion Gladiator",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+            "caption": "Chaos Circuit",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+            "caption": "Shimmering Nectar",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 264,
+          "max": 293
+        },
+        "subStat": {
+          "min": 39.7,
+          "max": 45.1
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+            "caption": "Shackles of the Dandelion Gladiator",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+            "caption": "Chaos Circuit",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+            "caption": "Shimmering Nectar",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 319,
+          "max": 347
+        },
+        "subStat": {
+          "min": 45.1,
+          "max": 50.5
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+            "caption": "Shackles of the Dandelion Gladiator",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+            "caption": "Chaos Core",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+            "caption": "Energy Nectar",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 373,
+          "max": 401
+        },
+        "subStat": {
+          "min": 50.5,
+          "max": 55.9
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Dream_of_the_Dandelion_Gladiator.png",
+            "caption": "Dream of the Dandelion Gladiator",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+            "caption": "Chaos Core",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+            "caption": "Energy Nectar",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 427,
+          "max": 454
+        },
+        "subStat": {
+          "min": 55.9,
+          "max": 61.3
+        }
+      }
+    ]
+  }
+}

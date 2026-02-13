@@ -1,0 +1,264 @@
+{
+  "name": "Song of Broken Pines",
+  "rarity": 5,
+  "attack": 741,
+  "subStat": "Physical DMG Bonus 20.7%",
+  "effect": "Rebel's Banner-Hymn\nA part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases ATK by 16~32%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s.\nWhen you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Banner-Hymn\" effect for 12s.\n\"Millennial Movement: Banner-Hymn\" increases Normal ATK SPD by 12~24% and increases ATK by 20~40%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s.\nOf the many effects of the \"Millennial Movement\", buffs of the same type will not stack.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Weapon_Song_of_Broken_Pines.png",
+  "nation": 0,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Tile_of_Decarabian%27s_Tower.png",
+      "caption": "Tile of Decarabian's Tower"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Item_Debris_of_Decarabian%27s_City.png",
+      "caption": "Debris of Decarabian's City"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Fragment_of_Decarabian%27s_Epic.png",
+      "caption": "Fragment of Decarabian's Epic"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Item_Scattered_Piece_of_Decarabian%27s_Dream.png",
+      "caption": "Scattered Piece of Decarabian's Dream"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+      "caption": "Heavy Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+      "caption": "Black Bronze Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+      "caption": "Black Crystal Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Damaged_Mask.png",
+      "caption": "Damaged Mask"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Stained_Mask.png",
+      "caption": "Stained Mask"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Ominous_Mask.png",
+      "caption": "Ominous Mask"
+    }
+  ],
+  "passives": [
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases ATK by 16%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s.\nWhen you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Banner-Hymn\" effect for 12s.\n\"Millennial Movement: Banner-Hymn\" increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s.\nOf the many effects of the \"Millennial Movement\", buffs of the same type will not stack.",
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases ATK by 20%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s.\nWhen you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Banner-Hymn\" effect for 12s.\n\"Millennial Movement: Banner-Hymn\" increases Normal ATK SPD by 15% and increases ATK by 25%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s.\nOf the many effects of the \"Millennial Movement\", buffs of the same type will not stack.",
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases ATK by 24%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s.\nWhen you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Banner-Hymn\" effect for 12s.\n\"Millennial Movement: Banner-Hymn\" increases Normal ATK SPD by 18% and increases ATK by 30%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s.\nOf the many effects of the \"Millennial Movement\", buffs of the same type will not stack.",
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases ATK by 28%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s.\nWhen you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Banner-Hymn\" effect for 12s.\n\"Millennial Movement: Banner-Hymn\" increases Normal ATK SPD by 21% and increases ATK by 35%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s.\nOf the many effects of the \"Millennial Movement\", buffs of the same type will not stack.",
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases ATK by 32%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s.\nWhen you possess four Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Banner-Hymn\" effect for 12s.\n\"Millennial Movement: Banner-Hymn\" increases Normal ATK SPD by 24% and increases ATK by 40%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s.\nOf the many effects of the \"Millennial Movement\", buffs of the same type will not stack."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Weapon_Song_of_Broken_Pines.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Weapon_Song_of_Broken_Pines_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Weapon_Card_Song_of_Broken_Pines.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 49,
+          "max": 145
+        },
+        "subStat": {
+          "min": 4.5,
+          "max": 8
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Tile_of_Decarabian%27s_Tower.png",
+            "caption": "Tile of Decarabian's Tower",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+            "caption": "Heavy Horn",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Damaged_Mask.png",
+            "caption": "Damaged Mask",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 176,
+          "max": 286
+        },
+        "subStat": {
+          "min": 8,
+          "max": 11.6
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Item_Debris_of_Decarabian%27s_City.png",
+            "caption": "Debris of Decarabian's City",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+            "caption": "Heavy Horn",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Damaged_Mask.png",
+            "caption": "Damaged Mask",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 317,
+          "max": 374
+        },
+        "subStat": {
+          "min": 11.6,
+          "max": 13.4
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Item_Debris_of_Decarabian%27s_City.png",
+            "caption": "Debris of Decarabian's City",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+            "caption": "Black Bronze Horn",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Stained_Mask.png",
+            "caption": "Stained Mask",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 406,
+          "max": 464
+        },
+        "subStat": {
+          "min": 13.4,
+          "max": 15.2
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Fragment_of_Decarabian%27s_Epic.png",
+            "caption": "Fragment of Decarabian's Epic",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+            "caption": "Black Bronze Horn",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Stained_Mask.png",
+            "caption": "Stained Mask",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 495,
+          "max": 555
+        },
+        "subStat": {
+          "min": 15.2,
+          "max": 17
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Fragment_of_Decarabian%27s_Epic.png",
+            "caption": "Fragment of Decarabian's Epic",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+            "caption": "Black Crystal Horn",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Ominous_Mask.png",
+            "caption": "Ominous Mask",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 586,
+          "max": 648
+        },
+        "subStat": {
+          "min": 17,
+          "max": 18.9
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Item_Scattered_Piece_of_Decarabian%27s_Dream.png",
+            "caption": "Scattered Piece of Decarabian's Dream",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+            "caption": "Black Crystal Horn",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Ominous_Mask.png",
+            "caption": "Ominous Mask",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 679,
+          "max": 741
+        },
+        "subStat": {
+          "min": 18.9,
+          "max": 20.7
+        }
+      }
+    ]
+  }
+}

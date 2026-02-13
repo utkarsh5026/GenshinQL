@@ -1,0 +1,264 @@
+{
+  "name": "Beacon of the Reed Sea",
+  "rarity": 5,
+  "attack": 608,
+  "subStat": "CRIT Rate 33.1%",
+  "effect": "Desert Watch\nAfter the character's Elemental Skill hits an opponent, their ATK will be increased by 20~40% for 8s. After the character takes DMG, their ATK will be increased by 20~40% for 8s. The 2 aforementioned effects can be triggered even when the character is not on the field. Additionally, when not protected by a shield, the character's Max HP will be increased by 32~64%.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Weapon_Beacon_of_the_Reed_Sea.png",
+  "nation": 3,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Echo_of_Scorching_Might.png",
+      "caption": "Echo of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+      "caption": "Remnant Glow of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+      "caption": "Dream of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Olden_Days_of_Scorching_Might.png",
+      "caption": "Olden Days of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Desiccated_Shell.png",
+      "caption": "Desiccated Shell"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Sturdy_Shell.png",
+      "caption": "Sturdy Shell"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Item_Marked_Shell.png",
+      "caption": "Marked Shell"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+      "caption": "Faded Red Satin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+      "caption": "Trimmed Red Silk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+      "caption": "Rich Red Brocade"
+    }
+  ],
+  "passives": [
+    "After the character's Elemental Skill hits an opponent, their ATK will be increased by 20% for 8s. After the character takes DMG, their ATK will be increased by 20% for 8s. The 2 aforementioned effects can be triggered even when the character is not on the field. Additionally, when not protected by a shield, the character's Max HP will be increased by 32%.",
+    "After the character's Elemental Skill hits an opponent, their ATK will be increased by 25% for 8s. After the character takes DMG, their ATK will be increased by 25% for 8s. The 2 aforementioned effects can be triggered even when the character is not on the field. Additionally, when not protected by a shield, the character's Max HP will be increased by 40%.",
+    "After the character's Elemental Skill hits an opponent, their ATK will be increased by 30% for 8s. After the character takes DMG, their ATK will be increased by 30% for 8s. The 2 aforementioned effects can be triggered even when the character is not on the field. Additionally, when not protected by a shield, the character's Max HP will be increased by 48%.",
+    "After the character's Elemental Skill hits an opponent, their ATK will be increased by 35% for 8s. After the character takes DMG, their ATK will be increased by 35% for 8s. The 2 aforementioned effects can be triggered even when the character is not on the field. Additionally, when not protected by a shield, the character's Max HP will be increased by 56%.",
+    "After the character's Elemental Skill hits an opponent, their ATK will be increased by 40% for 8s. After the character takes DMG, their ATK will be increased by 40% for 8s. The 2 aforementioned effects can be triggered even when the character is not on the field. Additionally, when not protected by a shield, the character's Max HP will be increased by 64%."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Weapon_Beacon_of_the_Reed_Sea.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Weapon_Beacon_of_the_Reed_Sea_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Weapon_Card_Beacon_of_the_Reed_Sea.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 46,
+          "max": 122
+        },
+        "subStat": {
+          "min": 7.2,
+          "max": 12.7
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Echo_of_Scorching_Might.png",
+            "caption": "Echo of Scorching Might",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Desiccated_Shell.png",
+            "caption": "Desiccated Shell",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 153,
+          "max": 235
+        },
+        "subStat": {
+          "min": 12.7,
+          "max": 18.5
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+            "caption": "Remnant Glow of Scorching Might",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Desiccated_Shell.png",
+            "caption": "Desiccated Shell",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Faded_Red_Satin.png",
+            "caption": "Faded Red Satin",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 266,
+          "max": 308
+        },
+        "subStat": {
+          "min": 18.5,
+          "max": 21.4
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+            "caption": "Remnant Glow of Scorching Might",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Sturdy_Shell.png",
+            "caption": "Sturdy Shell",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 340,
+          "max": 382
+        },
+        "subStat": {
+          "min": 21.4,
+          "max": 24.4
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+            "caption": "Dream of Scorching Might",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Sturdy_Shell.png",
+            "caption": "Sturdy Shell",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Item_Trimmed_Red_Silk.png",
+            "caption": "Trimmed Red Silk",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 414,
+          "max": 457
+        },
+        "subStat": {
+          "min": 24.4,
+          "max": 27.3
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+            "caption": "Dream of Scorching Might",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Item_Marked_Shell.png",
+            "caption": "Marked Shell",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 488,
+          "max": 532
+        },
+        "subStat": {
+          "min": 27.3,
+          "max": 30.2
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Olden_Days_of_Scorching_Might.png",
+            "caption": "Olden Days of Scorching Might",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Item_Marked_Shell.png",
+            "caption": "Marked Shell",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Item_Rich_Red_Brocade.png",
+            "caption": "Rich Red Brocade",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 563,
+          "max": 608
+        },
+        "subStat": {
+          "min": 30.2,
+          "max": 33.1
+        }
+      }
+    ]
+  }
+}

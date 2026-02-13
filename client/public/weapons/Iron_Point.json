@@ -1,0 +1,52 @@
+{
+  "name": "Iron Point",
+  "rarity": 2,
+  "attack": 243,
+  "subStat": "None",
+  "effect": "None",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Weapon_Iron_Point.png",
+  "nation": 0,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Item_Fetters_of_the_Dandelion_Gladiator.png",
+      "caption": "Fetters of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+      "caption": "Chains of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+      "caption": "Shackles of the Dandelion Gladiator"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+      "caption": "Chaos Device"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+      "caption": "Chaos Circuit"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Item_Divining_Scroll.png",
+      "caption": "Divining Scroll"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Sealed_Scroll.png",
+      "caption": "Sealed Scroll"
+    }
+  ],
+  "passives": [],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Weapon_Iron_Point.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Weapon_Iron_Point_2nd.png"
+  ],
+  "ascension": {
+    "phases": []
+  }
+}

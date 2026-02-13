@@ -1,482 +1,553 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Gorou_Icon.png",
-    "name": "Gorou",
-    "rarity": "4 Stars",
-    "element": "Geo",
-    "weaponType": "Bow",
-    "region": "Inazuma",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
-    "modelType": "Medium Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Gorou_Icon.png",
+  "name": "Gorou",
+  "rarity": "4 Stars",
+  "element": "Geo",
+  "weaponType": "Bow",
+  "region": "Inazuma",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+  "modelType": "Medium Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Bow_Geo.png",
+      "talentName": "Ripping Fang Fletching",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 consecutive shots with a bow.\n\nCharged Attack\nPerform a more precise Aimed Shot with increased DMG.\nWhile aiming, stone crystals will accumulate on the arrowhead. A fully charged crystalline arrow will deal Geo DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Bow_Geo.png",
-            "talentName": "Ripping Fang Fletching",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 consecutive shots with a bow.\n\nCharged Attack\nPerform a more precise Aimed Shot with increased DMG.\nWhile aiming, stone crystals will accumulate on the arrowhead. A fully charged crystalline arrow will deal Geo DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Ripping_Fang_Fletching_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Ripping_Fang_Fletching_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Ripping_Fang_Fletching_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "37.75",
-                    "40.83",
-                    "43.9",
-                    "48.29",
-                    "51.36",
-                    "54.87",
-                    "59.7",
-                    "64.53",
-                    "69.36",
-                    "74.63",
-                    "79.9"
-                ],
-                "2-Hit DMG (%)": [
-                    "37.15",
-                    "40.18",
-                    "43.2",
-                    "47.52",
-                    "50.54",
-                    "54",
-                    "58.75",
-                    "63.5",
-                    "68.26",
-                    "73.44",
-                    "78.62"
-                ],
-                "3-Hit DMG (%)": [
-                    "49.45",
-                    "53.47",
-                    "57.5",
-                    "63.25",
-                    "67.27",
-                    "71.88",
-                    "78.2",
-                    "84.52",
-                    "90.85",
-                    "97.75",
-                    "104.65"
-                ],
-                "4-Hit DMG (%)": [
-                    "59",
-                    "63.8",
-                    "68.6",
-                    "75.46",
-                    "80.26",
-                    "85.75",
-                    "93.3",
-                    "100.84",
-                    "108.39",
-                    "116.62",
-                    "124.85"
-                ],
-                "Aimed Shot (%)": [
-                    "43.86",
-                    "47.43",
-                    "51",
-                    "56.1",
-                    "59.67",
-                    "63.75",
-                    "69.36",
-                    "74.97",
-                    "80.58",
-                    "86.7",
-                    "92.82"
-                ],
-                "Fully-Charged Aimed Shot (%)": [
-                    "124",
-                    "133.3",
-                    "142.6",
-                    "155",
-                    "164.3",
-                    "173.6",
-                    "186",
-                    "198.4",
-                    "210.8",
-                    "223.2",
-                    "235.6"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.17",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Ripping_Fang_Fletching_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Talent_Inuzaka_All-Round_Defense.png",
-            "talentName": "Inuzaka All-Round Defense",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nDeals AoE Geo DMG and sets up a General's War Banner.\n\nGeneral's War Banner\nProvides up to 3 buffs to active characters within the skill's AoE based on the number of Geo characters in the party at the time of casting:\n1 Geo character: Adds \"Standing Firm\" - DEF Bonus.\n2 Geo characters: Adds \"Impregnable\" - Increased resistance to interruption.\n3 Geo characters: Adds \"Crunch\" - Geo DMG Bonus.\n\nGorou can deploy only 1 General's War Banner on the field at any one time.\nCharacters can only benefit from 1 General's War Banner at a time. When a party member leaves the field, the active buff will last for 2s.\n\nHold\nAdjust the location of the skill.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Inuzaka_All-Round_Defense_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Inuzaka_All-Round_Defense_Hold_Preview.gif",
-                    "caption": "Hold"
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "107.2",
-                    "115.24",
-                    "123.28",
-                    "134",
-                    "142.04",
-                    "150.08",
-                    "160.8",
-                    "171.52",
-                    "182.24",
-                    "192.96",
-                    "203.68",
-                    "214.4",
-                    "227.8",
-                    "241.2"
-                ],
-                "DEF Increase": [
-                    "206.16",
-                    "221.62",
-                    "237.08",
-                    "257.7",
-                    "273.16",
-                    "288.62",
-                    "309.24",
-                    "329.85",
-                    "350.47",
-                    "371.08",
-                    "391.70",
-                    "412.32",
-                    "438.09",
-                    "464"
-                ],
-                "Geo DMG Bonus": [
-                    "15%"
-                ],
-                "Duration": [
-                    "10s"
-                ],
-                "CD": [
-                    "10s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Ripping_Fang_Fletching_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Juuga_Forward_Unto_Victory.png",
-            "talentName": "Juuga: Forward Unto Victory",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nDisplaying his valor as a general, Gorou deals Aoe Geo DMG and creates a field known as General's Glory to embolden his comrades.\n\nGeneral's Glory\nThis field has the following properties:\nLike the General's War Banner created by Inuzaka All-Round Defense, provides buffs to active characters within the skill's AoE based on the number of Geo characters in the party. Also moves together with your active character.\nGenerates 1 Crystal Collapse every 1.5s that deals AoE Geo DMG to 1 opponent within the skill's AoE.\nPulls 1 elemental shard in the skill's AoE to your active character's position every 1.5s (elemental shards are created by Crystallize reactions).\n\nIf a General's War Banner created by Gorou currently exists on the field when his ability is used, it will be destroyed. In addition, for the duration of General's Glory, Gorou's Elemental Skill \"Inuzaka All-Round Defense\" will not create the General's War Banner.\nIf Gorou falls, the effects of General's Glory will be cleared.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Juuga_Forward_Unto_Victory_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (% DEF)": [
-                    "98.22",
-                    "105.58",
-                    "112.95",
-                    "122.77",
-                    "130.14",
-                    "137.5",
-                    "147.32",
-                    "157.15",
-                    "166.97",
-                    "176.79",
-                    "186.61",
-                    "196.43",
-                    "208.71"
-                ],
-                "Crystal Collapse DMG (% DEF)": [
-                    "61.3",
-                    "65.9",
-                    "70.49",
-                    "76.63",
-                    "81.22",
-                    "85.82",
-                    "91.95",
-                    "98.08",
-                    "104.21",
-                    "110.34",
-                    "116.47",
-                    "122.6",
-                    "130.26"
-                ],
-                "Duration": [
-                    "9s"
-                ],
-                "CD": [
-                    "20s"
-                ],
-                "Energy Cost": [
-                    "80"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Talent_Heedless_of_the_Wind_and_Weather.png",
-            "talentName": "Heedless of the Wind and Weather",
-            "talentType": "1st Ascension Passive",
-            "description": "After using Juuga: Forward Unto Victory, all nearby party members' DEF is increased by 25% for 12s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Talent_A_Favor_Repaid.png",
-            "talentName": "A Favor Repaid",
-            "talentType": "4th Ascension Passive",
-            "description": "Gorou receives the following DMG Bonuses to his attacks based on his DEF:\nInuzaka All-Round Defense: Skill DMG increased by 156% of DEF\nJuuga: Forward Unto Victory: Skill DMG and Crystal Collapse DMG increased by 15.6% of DEF",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Talent_Seeker_of_Shinies.png",
-            "talentName": "Seeker of Shinies",
-            "talentType": "Utility Passive",
-            "description": "Displays the location of nearby resources unique to Inazuma on the mini-map.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Ripping_Fang_Fletching_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_Rushing_Hound_Swift_as_the_Wind.png",
-            "name": "Rushing Hound: Swift as the Wind",
-            "level": 1,
-            "description": "When characters (other than Gorou) within the AoE of Gorou's General's War Banner or General's Glory deal Geo DMG to opponents, the CD of Gorou's Inuzaka All-Round Defense is decreased by 2s. This effect can occur once every 10s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Constellation_Sitting_Hound_Steady_as_a_Clock.png",
-            "name": "Sitting Hound: Steady as a Clock",
-            "level": 2,
-            "description": "While General's Glory is in effect, its duration is extended by 1s when a nearby active character obtains an Elemental Shard from a Crystallize reaction, or triggers a Lunar-Crystallize reaction. This effect can occur once every 0.1s. Max extension is 3s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Constellation_Mauling_Hound_Fierce_as_Fire.png",
-            "name": "Mauling Hound: Fierce as Fire",
-            "level": 3,
-            "description": "Increases the Level of Inuzaka All-Round Defense by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Constellation_Lapping_Hound_Warm_as_Water.png",
-            "name": "Lapping Hound: Warm as Water",
-            "level": 4,
-            "description": "When General's Glory is in the \"Impregnable\" or \"Crunch\" states, it will also heal active characters within its AoE by 50% of Gorou's own DEF every 1.5s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Constellation_Striking_Hound_Thunderous_Force.png",
-            "name": "Striking Hound: Thunderous Force",
-            "level": 5,
-            "description": "Increases the Level of Juuga: Forward Unto Victory by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Constellation_Valiant_Hound_Mountainous_Fealty.png",
-            "name": "Valiant Hound: Mountainous Fealty",
-            "level": 6,
-            "description": "Description\nGameplay Notes\nFor 12s after using Inuzaka All-Round Defense or Juuga: Forward Unto Victory, increases the CRIT DMG of all nearby party members' Geo DMG based on the buff level of the skill's field at the time of use:\n\"Standing Firm\": +10%\n\"Impregnable\": +20%\n\"Crunch\": +40%\n\nThis effect cannot stack and will take reference from the last instance of the effect that is triggered."
-        }
-    ],
-    "imageUrls": {},
-    "version": "2.3",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Idle_Gorou_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Idle_Gorou_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Idle_Gorou_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Idle_Gorou_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Menu_Gorou.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Talent_Menu_Gorou.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Weapon_Menu_Gorou.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Weapon_Menu_Gorou.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Party_Setup_Gorou.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Party_Setup_Gorou.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "37.75",
+          "40.83",
+          "43.9",
+          "48.29",
+          "51.36",
+          "54.87",
+          "59.7",
+          "64.53",
+          "69.36",
+          "74.63",
+          "79.9"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Namecard_Background_Gorou_Leisurely_Hound.png",
-                "caption": "Gorou: Leisurely Hound Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Item_Gorou_Leisurely_Hound.png",
-                "caption": "Gorou: Leisurely Hound Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Namecard_Banner_Gorou_Leisurely_Hound.png",
-                "caption": "Gorou: Leisurely Hound Banner"
-            }
+        "2-Hit DMG (%)": [
+          "37.15",
+          "40.18",
+          "43.2",
+          "47.52",
+          "50.54",
+          "54",
+          "58.75",
+          "63.5",
+          "68.26",
+          "73.44",
+          "78.62"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Ripping_Fang_Fletching_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Ripping_Fang_Fletching_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Ripping_Fang_Fletching_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Ripping_Fang_Fletching_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Ripping_Fang_Fletching_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Ripping_Fang_Fletching_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Juuga_Forward_Unto_Victory_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Juuga_Forward_Unto_Victory_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Inuzaka_All-Round_Defense_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Inuzaka_All-Round_Defense_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Inuzaka_All-Round_Defense_Hold_Preview.gif",
-                        "caption": "Hold",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Inuzaka_All-Round_Defense_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "49.45",
+          "53.47",
+          "57.5",
+          "63.25",
+          "67.27",
+          "71.88",
+          "78.2",
+          "84.52",
+          "90.85",
+          "97.75",
+          "104.65"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Gorou_Character_Details_1.png",
-                "caption": "Gorou Details 1 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Gorou_Character_Details_2.gif",
-                "caption": "Gorou Details 2 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Gorou_Character_Details_3.gif",
-                "caption": "Gorou Details 3 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Gorou_Character_Details_4.gif",
-                "caption": "Gorou Details 4 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Gorou_Character_Details_5.png",
-                "caption": "Gorou Details 5 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Gorou_Character_Details_6.png",
-                "caption": "Gorou Details 6 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Gorou_Character_Details_7.png",
-                "caption": "Gorou Details 7 Official HoYoLAB Post"
-            }
+        "4-Hit DMG (%)": [
+          "59",
+          "63.8",
+          "68.6",
+          "75.46",
+          "80.26",
+          "85.75",
+          "93.3",
+          "100.84",
+          "108.39",
+          "116.62",
+          "124.85"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Icon_Emoji_Paimon%27s_Paintings_11_Gorou_1.png",
-                "caption": "Grin Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Icon_Emoji_Paimon%27s_Paintings_11_Gorou_2.png",
-                "caption": "Cry Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Icon_Emoji_Paimon%27s_Paintings_11_Gorou_3.png",
-                "caption": "Happy Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Icon_Emoji_Paimon%27s_Paintings_11_Gorou_4.png",
-                "caption": "Starry-Eyed Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Icon_Emoji_Paimon%27s_Paintings_32_Gorou_1.png",
-                "caption": "Stumped Set 32"
-            }
+        "Aimed Shot (%)": [
+          "43.86",
+          "47.43",
+          "51",
+          "56.1",
+          "59.67",
+          "63.75",
+          "69.36",
+          "74.97",
+          "80.58",
+          "86.7",
+          "92.82"
+        ],
+        "Fully-Charged Aimed Shot (%)": [
+          "124",
+          "133.3",
+          "142.6",
+          "155",
+          "164.3",
+          "173.6",
+          "186",
+          "198.4",
+          "210.8",
+          "223.2",
+          "235.6"
+        ],
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.17",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Talent_Inuzaka_All-Round_Defense.png",
+      "talentName": "Inuzaka All-Round Defense",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nDeals AoE Geo DMG and sets up a General's War Banner.\n\nGeneral's War Banner\nProvides up to 3 buffs to active characters within the skill's AoE based on the number of Geo characters in the party at the time of casting:\n1 Geo character: Adds \"Standing Firm\" - DEF Bonus.\n2 Geo characters: Adds \"Impregnable\" - Increased resistance to interruption.\n3 Geo characters: Adds \"Crunch\" - Geo DMG Bonus.\n\nGorou can deploy only 1 General's War Banner on the field at any one time.\nCharacters can only benefit from 1 General's War Banner at a time. When a party member leaves the field, the active buff will last for 2s.\n\nHold\nAdjust the location of the skill.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Inuzaka_All-Round_Defense_Press_Preview.gif",
+          "caption": "Press"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Inuzaka_All-Round_Defense_Hold_Preview.gif",
+          "caption": "Hold"
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "107.2",
+          "115.24",
+          "123.28",
+          "134",
+          "142.04",
+          "150.08",
+          "160.8",
+          "171.52",
+          "182.24",
+          "192.96",
+          "203.68",
+          "214.4",
+          "227.8",
+          "241.2"
+        ],
+        "DEF Increase": [
+          "206.16",
+          "221.62",
+          "237.08",
+          "257.7",
+          "273.16",
+          "288.62",
+          "309.24",
+          "329.85",
+          "350.47",
+          "371.08",
+          "391.70",
+          "412.32",
+          "438.09",
+          "464"
+        ],
+        "Geo DMG Bonus": ["15%"],
+        "Duration": ["10s"],
+        "CD": ["10s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Juuga_Forward_Unto_Victory.png",
+      "talentName": "Juuga: Forward Unto Victory",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nDisplaying his valor as a general, Gorou deals Aoe Geo DMG and creates a field known as General's Glory to embolden his comrades.\n\nGeneral's Glory\nThis field has the following properties:\nLike the General's War Banner created by Inuzaka All-Round Defense, provides buffs to active characters within the skill's AoE based on the number of Geo characters in the party. Also moves together with your active character.\nGenerates 1 Crystal Collapse every 1.5s that deals AoE Geo DMG to 1 opponent within the skill's AoE.\nPulls 1 elemental shard in the skill's AoE to your active character's position every 1.5s (elemental shards are created by Crystallize reactions).\n\nIf a General's War Banner created by Gorou currently exists on the field when his ability is used, it will be destroyed. In addition, for the duration of General's Glory, Gorou's Elemental Skill \"Inuzaka All-Round Defense\" will not create the General's War Banner.\nIf Gorou falls, the effects of General's Glory will be cleared.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Juuga_Forward_Unto_Victory_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (% DEF)": [
+          "98.22",
+          "105.58",
+          "112.95",
+          "122.77",
+          "130.14",
+          "137.5",
+          "147.32",
+          "157.15",
+          "166.97",
+          "176.79",
+          "186.61",
+          "196.43",
+          "208.71"
+        ],
+        "Crystal Collapse DMG (% DEF)": [
+          "61.3",
+          "65.9",
+          "70.49",
+          "76.63",
+          "81.22",
+          "85.82",
+          "91.95",
+          "98.08",
+          "104.21",
+          "110.34",
+          "116.47",
+          "122.6",
+          "130.26"
+        ],
+        "Duration": ["9s"],
+        "CD": ["20s"],
+        "Energy Cost": ["80"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Talent_Heedless_of_the_Wind_and_Weather.png",
+      "talentName": "Heedless of the Wind and Weather",
+      "talentType": "1st Ascension Passive",
+      "description": "After using Juuga: Forward Unto Victory, all nearby party members' DEF is increased by 25% for 12s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Talent_A_Favor_Repaid.png",
+      "talentName": "A Favor Repaid",
+      "talentType": "4th Ascension Passive",
+      "description": "Gorou receives the following DMG Bonuses to his attacks based on his DEF:\nInuzaka All-Round Defense: Skill DMG increased by 156% of DEF\nJuuga: Forward Unto Victory: Skill DMG and Crystal Collapse DMG increased by 15.6% of DEF",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Talent_Seeker_of_Shinies.png",
+      "talentName": "Seeker of Shinies",
+      "talentType": "Utility Passive",
+      "description": "Displays the location of nearby resources unique to Inazuma on the mini-map.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Constellation_Rushing_Hound_Swift_as_the_Wind.png",
+      "name": "Rushing Hound: Swift as the Wind",
+      "level": 1,
+      "description": "When characters (other than Gorou) within the AoE of Gorou's General's War Banner or General's Glory deal Geo DMG to opponents, the CD of Gorou's Inuzaka All-Round Defense is decreased by 2s. This effect can occur once every 10s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Constellation_Sitting_Hound_Steady_as_a_Clock.png",
+      "name": "Sitting Hound: Steady as a Clock",
+      "level": 2,
+      "description": "While General's Glory is in effect, its duration is extended by 1s when a nearby active character obtains an Elemental Shard from a Crystallize reaction, or triggers a Lunar-Crystallize reaction. This effect can occur once every 0.1s. Max extension is 3s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Constellation_Mauling_Hound_Fierce_as_Fire.png",
+      "name": "Mauling Hound: Fierce as Fire",
+      "level": 3,
+      "description": "Increases the Level of Inuzaka All-Round Defense by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Constellation_Lapping_Hound_Warm_as_Water.png",
+      "name": "Lapping Hound: Warm as Water",
+      "level": 4,
+      "description": "When General's Glory is in the \"Impregnable\" or \"Crunch\" states, it will also heal active characters within its AoE by 50% of Gorou's own DEF every 1.5s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Constellation_Striking_Hound_Thunderous_Force.png",
+      "name": "Striking Hound: Thunderous Force",
+      "level": 5,
+      "description": "Increases the Level of Juuga: Forward Unto Victory by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Constellation_Valiant_Hound_Mountainous_Fealty.png",
+      "name": "Valiant Hound: Mountainous Fealty",
+      "level": 6,
+      "description": "Description\nGameplay Notes\nFor 12s after using Inuzaka All-Round Defense or Juuga: Forward Unto Victory, increases the CRIT DMG of all nearby party members' Geo DMG based on the buff level of the skill's field at the time of use:\n\"Standing Firm\": +10%\n\"Impregnable\": +20%\n\"Crunch\": +40%\n\nThis effect cannot stack and will take reference from the last instance of the effect that is triggered."
+    }
+  ],
+  "imageUrls": {},
+  "version": "2.3",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Idle_Gorou_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Idle_Gorou_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Idle_Gorou_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Idle_Gorou_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Menu_Gorou.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Talent_Menu_Gorou.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Weapon_Menu_Gorou.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Weapon_Menu_Gorou.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Party_Setup_Gorou.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Party_Setup_Gorou.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Namecard_Background_Gorou_Leisurely_Hound.png",
+        "caption": "Gorou: Leisurely Hound Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Item_Gorou_Leisurely_Hound.png",
+        "caption": "Gorou: Leisurely Hound Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Namecard_Banner_Gorou_Leisurely_Hound.png",
+        "caption": "Gorou: Leisurely Hound Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Ripping_Fang_Fletching_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Ripping_Fang_Fletching_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Ripping_Fang_Fletching_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Ripping_Fang_Fletching_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Ripping_Fang_Fletching_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Ripping_Fang_Fletching_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Juuga_Forward_Unto_Victory_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Juuga_Forward_Unto_Victory_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Inuzaka_All-Round_Defense_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Inuzaka_All-Round_Defense_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Inuzaka_All-Round_Defense_Hold_Preview.gif",
+            "caption": "Hold",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Inuzaka_All-Round_Defense_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Gorou_Character_Details_1.png",
+        "caption": "Gorou Details 1 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Gorou_Character_Details_2.gif",
+        "caption": "Gorou Details 2 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Gorou_Character_Details_3.gif",
+        "caption": "Gorou Details 3 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Gorou_Character_Details_4.gif",
+        "caption": "Gorou Details 4 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Gorou_Character_Details_5.png",
+        "caption": "Gorou Details 5 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Gorou_Character_Details_6.png",
+        "caption": "Gorou Details 6 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Gorou_Character_Details_7.png",
+        "caption": "Gorou Details 7 Official HoYoLAB Post"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Icon_Emoji_Paimon%27s_Paintings_11_Gorou_1.png",
+        "caption": "Grin Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Icon_Emoji_Paimon%27s_Paintings_11_Gorou_2.png",
+        "caption": "Cry Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Icon_Emoji_Paimon%27s_Paintings_11_Gorou_3.png",
+        "caption": "Happy Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Icon_Emoji_Paimon%27s_Paintings_11_Gorou_4.png",
+        "caption": "Starry-Eyed Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Icon_Emoji_Paimon%27s_Paintings_32_Gorou_1.png",
+        "caption": "Stumped Set 32"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Husk of Opulent Dreams",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Burst Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "ER Support",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    }
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Support"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["The Exile"],
+        "notes": "4pc for team energy"
+      },
+      "alternatives": [
+        {
+          "sets": ["Noblesse Oblige"],
+          "notes": "Team ATK buff"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Elegy for the End",
+          "notes": "Team EM buff"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Favonius Warbow",
+          "notes": "Team energy"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ER"],
+      "goblet": ["Geo DMG", "DEF%"],
+      "circlet": ["CRIT Rate", "DEF%"]
+    },
+    "substats": ["ER", "DEF%", "CRIT Rate"],
+    "constellations": {
+      "c0": "Best buffer for DEF Geo characters",
+      "breakpoints": ["C4: Healing during burst", "C6: CRIT DMG buff for Geo"]
+    },
+    "teams": [
+      {
+        "name": "Itto Support",
+        "characters": ["Itto", "Gorou", "Albedo", "Zhongli"],
+        "roles": {
+          "Itto": "Main DPS",
+          "Gorou": "DEF buffer",
+          "Albedo": "Off-field",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Albedo E → Gorou EQ → Itto Q combo"
+      }
+    ]
+  }
 }

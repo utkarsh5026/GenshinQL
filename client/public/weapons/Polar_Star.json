@@ -1,0 +1,264 @@
+{
+  "name": "Polar Star",
+  "rarity": 5,
+  "attack": 608,
+  "subStat": "CRIT Rate 33.1%",
+  "effect": "Daylight's Augury\nElemental Skill and Elemental Burst DMG increased by 12~24%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 10/20/30/48~20/40/60/96%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Weapon_Polar_Star.png",
+  "nation": 2,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Item_Mask_of_the_Wicked_Lieutenant.png",
+      "caption": "Mask of the Wicked Lieutenant"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Mask_of_the_Tiger%27s_Bite.png",
+      "caption": "Mask of the Tiger's Bite"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Item_Mask_of_the_One-Horned.png",
+      "caption": "Mask of the One-Horned"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Mask_of_the_Kijin.png",
+      "caption": "Mask of the Kijin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Concealed_Claw.png",
+      "caption": "Concealed Claw"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Concealed_Unguis.png",
+      "caption": "Concealed Unguis"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Item_Concealed_Talon.png",
+      "caption": "Concealed Talon"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+      "caption": "Spectral Husk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+      "caption": "Spectral Heart"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+      "caption": "Spectral Nucleus"
+    }
+  ],
+  "passives": [
+    "Elemental Skill and Elemental Burst DMG increased by 12%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 10/20/30/48%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.",
+    "Elemental Skill and Elemental Burst DMG increased by 15%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 12.5/25/37.5/60%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.",
+    "Elemental Skill and Elemental Burst DMG increased by 18%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 15/30/45/72%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.",
+    "Elemental Skill and Elemental Burst DMG increased by 21%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 17.5/35/52.5/84%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.",
+    "Elemental Skill and Elemental Burst DMG increased by 24%. After a Normal Attack, Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ATK is increased by 20/40/60/96%. The stack of Ashen Nightstar created by the Normal Attack, Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Weapon_Polar_Star.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Weapon_Polar_Star_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Weapon_Polar_Star_Card.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 46,
+          "max": 122
+        },
+        "subStat": {
+          "min": 7.2,
+          "max": 12.7
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Item_Mask_of_the_Wicked_Lieutenant.png",
+            "caption": "Mask of the Wicked Lieutenant",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Concealed_Claw.png",
+            "caption": "Concealed Claw",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 153,
+          "max": 235
+        },
+        "subStat": {
+          "min": 12.7,
+          "max": 18.5
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Mask_of_the_Tiger%27s_Bite.png",
+            "caption": "Mask of the Tiger's Bite",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Concealed_Claw.png",
+            "caption": "Concealed Claw",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 266,
+          "max": 308
+        },
+        "subStat": {
+          "min": 18.5,
+          "max": 21.4
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Mask_of_the_Tiger%27s_Bite.png",
+            "caption": "Mask of the Tiger's Bite",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Concealed_Unguis.png",
+            "caption": "Concealed Unguis",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 340,
+          "max": 382
+        },
+        "subStat": {
+          "min": 21.4,
+          "max": 24.4
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Item_Mask_of_the_One-Horned.png",
+            "caption": "Mask of the One-Horned",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Concealed_Unguis.png",
+            "caption": "Concealed Unguis",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 414,
+          "max": 457
+        },
+        "subStat": {
+          "min": 24.4,
+          "max": 27.3
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Item_Mask_of_the_One-Horned.png",
+            "caption": "Mask of the One-Horned",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Item_Concealed_Talon.png",
+            "caption": "Concealed Talon",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 488,
+          "max": 532
+        },
+        "subStat": {
+          "min": 27.3,
+          "max": 30.2
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Mask_of_the_Kijin.png",
+            "caption": "Mask of the Kijin",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Item_Concealed_Talon.png",
+            "caption": "Concealed Talon",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 563,
+          "max": 608
+        },
+        "subStat": {
+          "min": 30.2,
+          "max": 33.1
+        }
+      }
+    ]
+  }
+}

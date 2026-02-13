@@ -64,7 +64,10 @@ export async function setupDriver(
     '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
   );
 
-  // Enhanced anti-detection measures
+  options.addArguments('--log-level=3'); // Only fatal errors
+  options.addArguments('--silent');
+  options.addArguments('--disable-logging');
+
   options.addArguments('--disable-blink-features=AutomationControlled');
   options.excludeSwitches('enable-automation');
   options.addArguments('--disable-web-security');
@@ -75,13 +78,27 @@ export async function setupDriver(
   });
 
   logger.debug('   Initializing ChromeDriver...');
-  const service = new chrome.ServiceBuilder(getChromedriverPath());
-
+  const service = new chrome.ServiceBuilder(getChromedriverPath()).setStdio(
+    'ignore'
+  );
   const driver = await new Builder()
     .forBrowser('chrome')
     .setChromeOptions(options)
     .setChromeService(service)
     .build();
+
+  // Set global timeouts for the driver
+  logger.debug('   Configuring timeouts...');
+  await driver.manage().setTimeouts({
+    // Maximum time to wait for a page to load (5 minutes for slow pages)
+    pageLoad: 300000,
+    // Maximum time for executeScript/executeAsyncScript to complete
+    script: 60000,
+    // Implicit wait time when locating elements (0 recommended, use explicit waits instead)
+    implicit: 0,
+  });
+  logger.cyan('   ↳ Page load timeout: 5 minutes');
+  logger.cyan('   ↳ Script timeout: 60 seconds');
 
   // Enhanced anti-detection JavaScript
   await driver.executeScript(`
@@ -132,7 +149,7 @@ export async function withWebDriver<T = void>(
 export function waitForElementCss(
   driver: WebDriver,
   css: string,
-  timeout = 40000
+  timeout = 60000 // Increased to 60 seconds
 ) {
   return driver.wait(until.elementLocated(By.css(css)), timeout);
 }
@@ -140,7 +157,7 @@ export function waitForElementCss(
 export function waitForElementXpath(
   driver: WebDriver,
   xpath: string,
-  timeout = 10000
+  timeout = 60000 // Increased to 60 seconds
 ) {
   return driver.wait(until.elementLocated(By.xpath(xpath)), timeout);
 }
@@ -151,7 +168,7 @@ export function waitForElementXpath(
  */
 export async function waitForPageLoad(
   driver: WebDriver,
-  timeout = 30000
+  timeout = 60000 // Increased to 60 seconds
 ): Promise<void> {
   await driver.wait(
     async () => {

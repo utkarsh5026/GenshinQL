@@ -1,460 +1,470 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Dahlia_Icon.png",
-    "name": "Dahlia",
-    "rarity": "4 Stars",
-    "element": "Hydro",
-    "weaponType": "Sword",
-    "region": "Mondstadt",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Medium Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Dahlia_Icon.png",
+  "name": "Dahlia",
+  "rarity": "4 Stars",
+  "element": "Hydro",
+  "weaponType": "Sword",
+  "region": "Mondstadt",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+  "modelType": "Medium Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png",
+      "talentName": "Favonius Bladework - Ritual",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png",
-            "talentName": "Favonius Bladework - Ritual",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 rapid strikes.\n\nCharged Attack\nConsumes a certain amount of Stamina to unleash 2 rapid sword strikes.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Favonius_Bladework_-_Ritual_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Favonius_Bladework_-_Ritual_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "43.55",
-                    "47.09",
-                    "50.64",
-                    "55.7",
-                    "59.24",
-                    "63.3",
-                    "68.86",
-                    "74.43",
-                    "80",
-                    "86.08",
-                    "92.16"
-                ],
-                "2-Hit DMG (%)": [
-                    "40.1",
-                    "43.36",
-                    "46.63",
-                    "51.29",
-                    "54.55",
-                    "58.28",
-                    "63.41",
-                    "68.54",
-                    "73.67",
-                    "79.27",
-                    "84.86"
-                ],
-                "3-Hit DMG (%)": [
-                    "23.74\n+\n29.02",
-                    "25.68\n+\n31.38",
-                    "27.61\n+\n33.74",
-                    "30.37\n+\n37.11",
-                    "32.3\n+\n39.48",
-                    "34.51\n+\n42.18",
-                    "37.55\n+\n45.89",
-                    "40.59\n+\n49.6",
-                    "43.62\n+\n53.31",
-                    "46.94\n+\n57.36",
-                    "50.25\n+\n61.41"
-                ],
-                "4-Hit DMG (%)": [
-                    "65.66",
-                    "71",
-                    "76.35",
-                    "83.98",
-                    "89.32",
-                    "95.43",
-                    "103.83",
-                    "112.23",
-                    "120.63",
-                    "129.79",
-                    "138.95"
-                ],
-                "Charged Attack DMG (%)": [
-                    "39.88\n+\n55.07",
-                    "43.12\n+\n59.55",
-                    "46.37\n+\n64.03",
-                    "51\n+\n70.44",
-                    "54.25\n+\n74.92",
-                    "57.96\n+\n80.04",
-                    "63.06\n+\n87.08",
-                    "68.16\n+\n94.13",
-                    "73.26\n+\n101.17",
-                    "78.83\n+\n108.85",
-                    "84.39\n+\n116.54"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "20"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Favonius_Bladework_-_Ritual_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Talent_Immersive_Ordinance.png",
-            "talentName": "Immersive Ordinance",
-            "talentType": "Elemental Skill",
-            "description": "Time for a fun little trick! Summons the Sacramental Shower in different ways depending on whether you Tap or Hold it.\n\nTap\nAfter a short prayer, summons the Sacramental Shower in front.\n\nHold\nEngages in continuous prayer, and when done, summons forth a Sacramental Shower in the designated position.\n\nSacramental Shower\nWhen opponents or nearby party members touch the Sacramental Shower, different effects will occur depending on the one who touches it:\nIf an opponent touches the Shower, it will explode and deal AoE Hydro DMG to nearby opponents.\nIf a nearby party member touches it, it will bounce the one who touches it high in the air.\n\nOnly 1 Sacramental Shower summoned by Dahlia himself can be on the field at once.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Immersive_Ordinance_Opponents_Preview.gif",
-                    "caption": "Opponents"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Immersive_Ordinance_Party_Member_Preview.gif",
-                    "caption": "Party Member"
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "232.8",
-                    "250.26",
-                    "267.72",
-                    "291",
-                    "308.46",
-                    "325.92",
-                    "349.2",
-                    "372.48",
-                    "395.76",
-                    "419.04",
-                    "442.32",
-                    "465.6",
-                    "494.7",
-                    "523.8"
-                ],
-                "Skill CD": [
-                    "9s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Radiant_Psalter.png",
-            "talentName": "Radiant Psalter",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nAppeals to the divine with earnestness and song, dealing AoE Hydro DMG to nearby opponents and granting his party members Favonian Favor, summoning a Shield of Sacred Favor.\nThe Shield of Sacred Favor's DMG absorption is based on Dahlia's Max HP, and it will absorb Hydro DMG with 250% effectiveness.\n\nFavonian Favor\nWhile this effect is active, 1 Benison stack may be consumed to summon a new Shield of Sacred Favor when an existing Shield is broken via DMG.\n\nDahlia can obtain Benison via the following methods:\nHe will gain 1 Benison stack when his own active party member hits opponents 4 times with Normal Attacks while affected by Favonian Favor.\nAfter triggering the effect of his Ascension Talent, \"The Wind's Gentle Grace\" (You must first unlock this Ascension Talent.)\nDahlia can gain a maximum of 4 Benison stacks per Favonian Favor duration.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Radiant_Psalter_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "406.4",
-                    "436.88",
-                    "467.36",
-                    "508",
-                    "538.48",
-                    "568.96",
-                    "609.6",
-                    "650.24",
-                    "690.88",
-                    "731.52",
-                    "772.16",
-                    "812.8",
-                    "863.6"
-                ],
-                "Shield of Sacred Favor DMG Absorption": [
-                    "3.36% Max HP\n+\n324",
-                    "3.61% Max HP\n+\n356",
-                    "3.86% Max HP\n+\n391",
-                    "4.2% Max HP\n+\n429",
-                    "4.45% Max HP\n+\n469",
-                    "4.7% Max HP\n+\n512",
-                    "5.04% Max HP\n+\n558",
-                    "5.38% Max HP\n+\n607",
-                    "5.71% Max HP\n+\n658",
-                    "6.05% Max HP\n+\n712",
-                    "6.38% Max HP\n+\n769",
-                    "6.72% Max HP\n+\n828",
-                    "7.14% Max HP\n+\n890"
-                ],
-                "Favonian Favor Duration": [
-                    "12s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ],
-                "CD": [
-                    "15s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Talent_The_Wind%27s_Gentle_Grace.png",
-            "talentName": "The Wind's Gentle Grace",
-            "talentType": "1st Ascension Passive",
-            "description": "When characters affected by the Favonian Favor effect of the Elemental Burst Radiant Psalter trigger Frozen reactions on opponents, they will grant Dahlia 2 Benison stacks. This effect can trigger once every 8s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Talent_Prayer_of_Well-Wrought_Joy.png",
-            "talentName": "Prayer of Well-Wrought Joy",
-            "talentType": "4th Ascension Passive",
-            "description": "When your active party member is affected by the Favonian Favor effect of the Elemental Burst \"Radiant Psalter,\"\n\n\n\n\n\n\ntheir ATK SPD will increase based on Dahlia's Max HP: Every 1,000 Max HP will cause an increase of 0.5%, up to a maximum of 20%.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Talent_Pilgrimage_Upon_Returning_Winds.png",
-            "talentName": "Pilgrimage Upon Returning Winds",
-            "talentType": "Utility Passive",
-            "description": "During the day (06:00 - 18:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%. Does not take effect in Domains, Trounce Domains, or the Spiral Abyss. Swift Stride does not stack.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Favonius_Bladework_-_Ritual_Charged_Preview.gif",
+          "caption": "Charged Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Constellation_Infallible_Procession.png",
-            "name": "Infallible Procession",
-            "level": 1,
-            "description": "Each time Dahlia gains 1 of his Elemental Burst Radiant Psalter's Benison stacks, he will regain 2.5 Elemental Energy."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Constellation_Revelation_of_Mercy.png",
-            "name": "Revelation of Mercy",
-            "level": 2,
-            "description": "After Dahlia consumes his Elemental Burst Radiant Psalter's Benison stacks to summon a Shield of Sacred Favor, the character protected by said Shield will gain 25% increased Shield Strength for 12s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Constellation_Windblume_Offertory.png",
-            "name": "Windblume Offertory",
-            "level": 3,
-            "description": "Increases the Level of Radiant Psalter by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Constellation_Collect_of_the_Assembly.png",
-            "name": "Collect of the Assembly",
-            "level": 4,
-            "description": "The Favonian Favor from Dahlia's Elemental Burst Radiant Psalter lasts 3 more seconds."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Constellation_Let_It_Be_Subtly_So.png",
-            "name": "Let It Be Subtly So",
-            "level": 5,
-            "description": "Increases the Level of Immersive Ordinance by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Constellation_You_Shall_Go_Out_With_Joy.png",
-            "name": "You Shall Go Out With Joy",
-            "level": 6,
-            "description": "The current active character affected by the Elemental Burst Radiant Psalter's Favonian Favor has their ATK SPD increased by 10%.\nAdditionally, when an active character affected by Favonian Favor falls, immediately:\nRevive them.\nRestore their HP to 100%.\nThis effect can trigger once every 15 minutes."
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.7",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Idle_Dahlia_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Idle_Dahlia_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Idle_Dahlia_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Idle_Dahlia_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Talent_Menu_Dahlia.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Talent_Menu_Dahlia.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Weapon_Menu_Dahlia.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Weapon_Menu_Dahlia.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Party_Setup_Dahlia.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Party_Setup_Dahlia.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "43.55",
+          "47.09",
+          "50.64",
+          "55.7",
+          "59.24",
+          "63.3",
+          "68.86",
+          "74.43",
+          "80",
+          "86.08",
+          "92.16"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Namecard_Background_Dahlia_Sacred_Duty.png",
-                "caption": "Dahlia: Sacred Duty Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Item_Dahlia_Sacred_Duty.png",
-                "caption": "Dahlia: Sacred Duty Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Namecard_Banner_Dahlia_Sacred_Duty.png",
-                "caption": "Dahlia: Sacred Duty Banner"
-            }
+        "2-Hit DMG (%)": [
+          "40.1",
+          "43.36",
+          "46.63",
+          "51.29",
+          "54.55",
+          "58.28",
+          "63.41",
+          "68.54",
+          "73.67",
+          "79.27",
+          "84.86"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Favonius_Bladework_-_Ritual_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Favonius_Bladework_-_Ritual_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Favonius_Bladework_-_Ritual_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Favonius_Bladework_-_Ritual_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Radiant_Psalter_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Radiant_Psalter_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Immersive_Ordinance_Opponents_Preview.gif",
-                        "caption": "Opponents",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Immersive_Ordinance_Opponents_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Immersive_Ordinance_Party_Member_Preview.gif",
-                        "caption": "Party Member",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Immersive_Ordinance_Party_Member_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "23.74\n+\n29.02",
+          "25.68\n+\n31.38",
+          "27.61\n+\n33.74",
+          "30.37\n+\n37.11",
+          "32.3\n+\n39.48",
+          "34.51\n+\n42.18",
+          "37.55\n+\n45.89",
+          "40.59\n+\n49.6",
+          "43.62\n+\n53.31",
+          "46.94\n+\n57.36",
+          "50.25\n+\n61.41"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Dahlia_Character_Details_1.png",
-                "caption": "Dahlia Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Dahlia_Character_Details_2.png",
-                "caption": "Dahlia Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Dahlia_Character_Details_3.gif",
-                "caption": "Dahlia Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Dahlia_Character_Details_4.png",
-                "caption": "Dahlia Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Dahlia_Character_Details_5.png",
-                "caption": "Dahlia Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Dahlia_Character_Details_6.png",
-                "caption": "Dahlia Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Dahlia_Character_Details_7.png",
-                "caption": "Dahlia Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Dahlia_Character_Details_8.gif",
-                "caption": "Dahlia Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Dahlia_Character_Details_9.gif",
-                "caption": "Dahlia Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Dahlia_Character_Details_10.gif",
-                "caption": "Dahlia Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Dahlia_Character_Details_11.gif",
-                "caption": "Dahlia Details 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Dahlia_Character_Details_12.png",
-                "caption": "Dahlia Details 12"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Dahlia_Character_Details_13.png",
-                "caption": "Dahlia Details 13"
-            }
+        "4-Hit DMG (%)": [
+          "65.66",
+          "71",
+          "76.35",
+          "83.98",
+          "89.32",
+          "95.43",
+          "103.83",
+          "112.23",
+          "120.63",
+          "129.79",
+          "138.95"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Icon_Emoji_Paimon%27s_Paintings_42_Dahlia_1.png",
-                "caption": "Grab the Popcorn Set 42"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Icon_Emoji_Paimon%27s_Paintings_42_Dahlia_2.png",
-                "caption": "Hahaha Set 42"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_42_Dahlia_3.png",
-                "caption": "Ahem Set 42"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Icon_Emoji_Paimon%27s_Paintings_42_Dahlia_4.png",
-                "caption": "Blessings Set 42"
-            }
+        "Charged Attack DMG (%)": [
+          "39.88\n+\n55.07",
+          "43.12\n+\n59.55",
+          "46.37\n+\n64.03",
+          "51\n+\n70.44",
+          "54.25\n+\n74.92",
+          "57.96\n+\n80.04",
+          "63.06\n+\n87.08",
+          "68.16\n+\n94.13",
+          "73.26\n+\n101.17",
+          "78.83\n+\n108.85",
+          "84.39\n+\n116.54"
+        ],
+        "Charged Attack Stamina Cost": ["20"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Talent_Immersive_Ordinance.png",
+      "talentName": "Immersive Ordinance",
+      "talentType": "Elemental Skill",
+      "description": "Time for a fun little trick! Summons the Sacramental Shower in different ways depending on whether you Tap or Hold it.\n\nTap\nAfter a short prayer, summons the Sacramental Shower in front.\n\nHold\nEngages in continuous prayer, and when done, summons forth a Sacramental Shower in the designated position.\n\nSacramental Shower\nWhen opponents or nearby party members touch the Sacramental Shower, different effects will occur depending on the one who touches it:\nIf an opponent touches the Shower, it will explode and deal AoE Hydro DMG to nearby opponents.\nIf a nearby party member touches it, it will bounce the one who touches it high in the air.\n\nOnly 1 Sacramental Shower summoned by Dahlia himself can be on the field at once.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Immersive_Ordinance_Opponents_Preview.gif",
+          "caption": "Opponents"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Immersive_Ordinance_Party_Member_Preview.gif",
+          "caption": "Party Member"
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "232.8",
+          "250.26",
+          "267.72",
+          "291",
+          "308.46",
+          "325.92",
+          "349.2",
+          "372.48",
+          "395.76",
+          "419.04",
+          "442.32",
+          "465.6",
+          "494.7",
+          "523.8"
+        ],
+        "Skill CD": ["9s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Radiant_Psalter.png",
+      "talentName": "Radiant Psalter",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nAppeals to the divine with earnestness and song, dealing AoE Hydro DMG to nearby opponents and granting his party members Favonian Favor, summoning a Shield of Sacred Favor.\nThe Shield of Sacred Favor's DMG absorption is based on Dahlia's Max HP, and it will absorb Hydro DMG with 250% effectiveness.\n\nFavonian Favor\nWhile this effect is active, 1 Benison stack may be consumed to summon a new Shield of Sacred Favor when an existing Shield is broken via DMG.\n\nDahlia can obtain Benison via the following methods:\nHe will gain 1 Benison stack when his own active party member hits opponents 4 times with Normal Attacks while affected by Favonian Favor.\nAfter triggering the effect of his Ascension Talent, \"The Wind's Gentle Grace\" (You must first unlock this Ascension Talent.)\nDahlia can gain a maximum of 4 Benison stacks per Favonian Favor duration.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Radiant_Psalter_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "406.4",
+          "436.88",
+          "467.36",
+          "508",
+          "538.48",
+          "568.96",
+          "609.6",
+          "650.24",
+          "690.88",
+          "731.52",
+          "772.16",
+          "812.8",
+          "863.6"
+        ],
+        "Shield of Sacred Favor DMG Absorption": [
+          "3.36% Max HP\n+\n324",
+          "3.61% Max HP\n+\n356",
+          "3.86% Max HP\n+\n391",
+          "4.2% Max HP\n+\n429",
+          "4.45% Max HP\n+\n469",
+          "4.7% Max HP\n+\n512",
+          "5.04% Max HP\n+\n558",
+          "5.38% Max HP\n+\n607",
+          "5.71% Max HP\n+\n658",
+          "6.05% Max HP\n+\n712",
+          "6.38% Max HP\n+\n769",
+          "6.72% Max HP\n+\n828",
+          "7.14% Max HP\n+\n890"
+        ],
+        "Favonian Favor Duration": ["12s"],
+        "Energy Cost": ["60"],
+        "CD": ["15s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Talent_The_Wind%27s_Gentle_Grace.png",
+      "talentName": "The Wind's Gentle Grace",
+      "talentType": "1st Ascension Passive",
+      "description": "When characters affected by the Favonian Favor effect of the Elemental Burst Radiant Psalter trigger Frozen reactions on opponents, they will grant Dahlia 2 Benison stacks. This effect can trigger once every 8s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Talent_Prayer_of_Well-Wrought_Joy.png",
+      "talentName": "Prayer of Well-Wrought Joy",
+      "talentType": "4th Ascension Passive",
+      "description": "When your active party member is affected by the Favonian Favor effect of the Elemental Burst \"Radiant Psalter,\"\n\n\n\n\n\n\ntheir ATK SPD will increase based on Dahlia's Max HP: Every 1,000 Max HP will cause an increase of 0.5%, up to a maximum of 20%.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Talent_Pilgrimage_Upon_Returning_Winds.png",
+      "talentName": "Pilgrimage Upon Returning Winds",
+      "talentType": "Utility Passive",
+      "description": "During the day (06:00 - 18:00), your party members gain the Swift Stride effect: Movement SPD increased by 10%. Does not take effect in Domains, Trounce Domains, or the Spiral Abyss. Swift Stride does not stack.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Constellation_Infallible_Procession.png",
+      "name": "Infallible Procession",
+      "level": 1,
+      "description": "Each time Dahlia gains 1 of his Elemental Burst Radiant Psalter's Benison stacks, he will regain 2.5 Elemental Energy."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Constellation_Revelation_of_Mercy.png",
+      "name": "Revelation of Mercy",
+      "level": 2,
+      "description": "After Dahlia consumes his Elemental Burst Radiant Psalter's Benison stacks to summon a Shield of Sacred Favor, the character protected by said Shield will gain 25% increased Shield Strength for 12s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Constellation_Windblume_Offertory.png",
+      "name": "Windblume Offertory",
+      "level": 3,
+      "description": "Increases the Level of Radiant Psalter by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Constellation_Collect_of_the_Assembly.png",
+      "name": "Collect of the Assembly",
+      "level": 4,
+      "description": "The Favonian Favor from Dahlia's Elemental Burst Radiant Psalter lasts 3 more seconds."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Constellation_Let_It_Be_Subtly_So.png",
+      "name": "Let It Be Subtly So",
+      "level": 5,
+      "description": "Increases the Level of Immersive Ordinance by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Constellation_You_Shall_Go_Out_With_Joy.png",
+      "name": "You Shall Go Out With Joy",
+      "level": 6,
+      "description": "The current active character affected by the Elemental Burst Radiant Psalter's Favonian Favor has their ATK SPD increased by 10%.\nAdditionally, when an active character affected by Favonian Favor falls, immediately:\nRevive them.\nRestore their HP to 100%.\nThis effect can trigger once every 15 minutes."
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.7",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d0/Idle_Dahlia_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Idle_Dahlia_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Idle_Dahlia_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Idle_Dahlia_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Talent_Menu_Dahlia.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Talent_Menu_Dahlia.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Weapon_Menu_Dahlia.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Weapon_Menu_Dahlia.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Party_Setup_Dahlia.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Party_Setup_Dahlia.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Namecard_Background_Dahlia_Sacred_Duty.png",
+        "caption": "Dahlia: Sacred Duty Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Item_Dahlia_Sacred_Duty.png",
+        "caption": "Dahlia: Sacred Duty Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Namecard_Banner_Dahlia_Sacred_Duty.png",
+        "caption": "Dahlia: Sacred Duty Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Favonius_Bladework_-_Ritual_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Favonius_Bladework_-_Ritual_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Favonius_Bladework_-_Ritual_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Favonius_Bladework_-_Ritual_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Radiant_Psalter_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Radiant_Psalter_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Immersive_Ordinance_Opponents_Preview.gif",
+            "caption": "Opponents",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Immersive_Ordinance_Opponents_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Immersive_Ordinance_Party_Member_Preview.gif",
+            "caption": "Party Member",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Immersive_Ordinance_Party_Member_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Dahlia_Character_Details_1.png",
+        "caption": "Dahlia Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Dahlia_Character_Details_2.png",
+        "caption": "Dahlia Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Dahlia_Character_Details_3.gif",
+        "caption": "Dahlia Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Dahlia_Character_Details_4.png",
+        "caption": "Dahlia Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Dahlia_Character_Details_5.png",
+        "caption": "Dahlia Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Dahlia_Character_Details_6.png",
+        "caption": "Dahlia Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Dahlia_Character_Details_7.png",
+        "caption": "Dahlia Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Dahlia_Character_Details_8.gif",
+        "caption": "Dahlia Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Dahlia_Character_Details_9.gif",
+        "caption": "Dahlia Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Dahlia_Character_Details_10.gif",
+        "caption": "Dahlia Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Dahlia_Character_Details_11.gif",
+        "caption": "Dahlia Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Dahlia_Character_Details_12.png",
+        "caption": "Dahlia Details 12"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Dahlia_Character_Details_13.png",
+        "caption": "Dahlia Details 13"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Icon_Emoji_Paimon%27s_Paintings_42_Dahlia_1.png",
+        "caption": "Grab the Popcorn Set 42"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Icon_Emoji_Paimon%27s_Paintings_42_Dahlia_2.png",
+        "caption": "Hahaha Set 42"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_42_Dahlia_3.png",
+        "caption": "Ahem Set 42"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Icon_Emoji_Paimon%27s_Paintings_42_Dahlia_4.png",
+        "caption": "Blessings Set 42"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

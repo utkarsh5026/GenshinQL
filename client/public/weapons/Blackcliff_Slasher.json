@@ -1,0 +1,263 @@
+{
+  "name": "Blackcliff Slasher",
+  "rarity": 4,
+  "attack": 510,
+  "subStat": "CRIT DMG 55.1%",
+  "effect": "Press the Advantage\nAfter defeating an opponent, ATK is increased by 12~24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Weapon_Blackcliff_Slasher.png",
+  "nation": 1,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Mist_Veiled_Lead_Elixir.png",
+      "caption": "Mist Veiled Lead Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+      "caption": "Mist Veiled Mercury Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+      "caption": "Mist Veiled Gold Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Mist_Veiled_Primo_Elixir.png",
+      "caption": "Mist Veiled Primo Elixir"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+      "caption": "Mist Grass Pollen"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+      "caption": "Mist Grass"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+      "caption": "Mist Grass Wick"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Item_Recruit%27s_Insignia.png",
+      "caption": "Recruit's Insignia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Sergeant%27s_Insignia.png",
+      "caption": "Sergeant's Insignia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Item_Lieutenant%27s_Insignia.png",
+      "caption": "Lieutenant's Insignia"
+    }
+  ],
+  "passives": [
+    "After defeating an opponent, ATK is increased by 12% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
+    "After defeating an opponent, ATK is increased by 15% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
+    "After defeating an opponent, ATK is increased by 18% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
+    "After defeating an opponent, ATK is increased by 21% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
+    "After defeating an opponent, ATK is increased by 24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Weapon_Blackcliff_Slasher.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Weapon_Blackcliff_Slasher_2nd.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 42,
+          "max": 109
+        },
+        "subStat": {
+          "min": 12,
+          "max": 21.2
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Mist_Veiled_Lead_Elixir.png",
+            "caption": "Mist Veiled Lead Elixir",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+            "caption": "Mist Grass Pollen",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Item_Recruit%27s_Insignia.png",
+            "caption": "Recruit's Insignia",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 135,
+          "max": 205
+        },
+        "subStat": {
+          "min": 21.2,
+          "max": 30.9
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+            "caption": "Mist Veiled Mercury Elixir",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+            "caption": "Mist Grass Pollen",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Item_Recruit%27s_Insignia.png",
+            "caption": "Recruit's Insignia",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 231,
+          "max": 266
+        },
+        "subStat": {
+          "min": 30.9,
+          "max": 35.7
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+            "caption": "Mist Veiled Mercury Elixir",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+            "caption": "Mist Grass",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Sergeant%27s_Insignia.png",
+            "caption": "Sergeant's Insignia",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 292,
+          "max": 327
+        },
+        "subStat": {
+          "min": 35.7,
+          "max": 40.6
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+            "caption": "Mist Veiled Gold Elixir",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+            "caption": "Mist Grass",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Sergeant%27s_Insignia.png",
+            "caption": "Sergeant's Insignia",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 353,
+          "max": 388
+        },
+        "subStat": {
+          "min": 40.6,
+          "max": 45.4
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+            "caption": "Mist Veiled Gold Elixir",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+            "caption": "Mist Grass Wick",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Item_Lieutenant%27s_Insignia.png",
+            "caption": "Lieutenant's Insignia",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 414,
+          "max": 449
+        },
+        "subStat": {
+          "min": 45.4,
+          "max": 50.3
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Mist_Veiled_Primo_Elixir.png",
+            "caption": "Mist Veiled Primo Elixir",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+            "caption": "Mist Grass Wick",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Item_Lieutenant%27s_Insignia.png",
+            "caption": "Lieutenant's Insignia",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 475,
+          "max": 510
+        },
+        "subStat": {
+          "min": 50.3,
+          "max": 55.1
+        }
+      }
+    ]
+  }
+}

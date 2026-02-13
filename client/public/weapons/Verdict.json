@@ -1,0 +1,263 @@
+{
+  "name": "Verdict",
+  "rarity": 5,
+  "attack": 674,
+  "subStat": "CRIT Rate 22.1%",
+  "effect": "Many Oaths of Dawn and Dusk\nIncreases ATK by 20~40%. When characters in your party obtain Elemental Shards from Crystallize or trigger Lunar-Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by 18~36%. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG. Up to 1 Seal may be obtained every second through the Lunar-Crystallize reaction.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Weapon_Verdict.png",
+  "nation": 4,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Fragment_of_an_Ancient_Chord.png",
+      "caption": "Fragment of an Ancient Chord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Chapter_of_an_Ancient_Chord.png",
+      "caption": "Chapter of an Ancient Chord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Movement_of_an_Ancient_Chord.png",
+      "caption": "Movement of an Ancient Chord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Echo_of_an_Ancient_Chord.png",
+      "caption": "Echo of an Ancient Chord"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Rift_Core.png",
+      "caption": "Rift Core"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Foreign_Synapse.png",
+      "caption": "Foreign Synapse"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Alien_Life_Core.png",
+      "caption": "Alien Life Core"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Meshing_Gear.png",
+      "caption": "Meshing Gear"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Item_Mechanical_Spur_Gear.png",
+      "caption": "Mechanical Spur Gear"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Item_Artificed_Dynamic_Gear.png",
+      "caption": "Artificed Dynamic Gear"
+    }
+  ],
+  "passives": [
+    "Increases ATK by 25%. When characters in your party obtain Elemental Shards from Crystallize or trigger Lunar-Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by 22.5%. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG. Up to 1 Seal may be obtained every second through the Lunar-Crystallize reaction.",
+    "Increases ATK by 30%. When characters in your party obtain Elemental Shards from Crystallize or trigger Lunar-Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by 27%. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG. Up to 1 Seal may be obtained every second through the Lunar-Crystallize reaction.",
+    "Increases ATK by 35%. When characters in your party obtain Elemental Shards from Crystallize or trigger Lunar-Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by 31.5%. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG. Up to 1 Seal may be obtained every second through the Lunar-Crystallize reaction.",
+    "Increases ATK by 40%. When characters in your party obtain Elemental Shards from Crystallize or trigger Lunar-Crystallize reactions, the equipping character will gain 1 Seal, increasing Elemental Skill DMG by 36%. The Seal lasts for 15s, and the equipped may have up to 2 Seals at once. All of the equipper's Seals will disappear 0.2s after their Elemental Skill deals DMG. Up to 1 Seal may be obtained every second through the Lunar-Crystallize reaction."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Weapon_Verdict.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Weapon_Verdict_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Weapon_Card_Verdict.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 48,
+          "max": 133
+        },
+        "subStat": {
+          "min": 4.8,
+          "max": 8.5
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Fragment_of_an_Ancient_Chord.png",
+            "caption": "Fragment of an Ancient Chord",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Rift_Core.png",
+            "caption": "Rift Core",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Meshing_Gear.png",
+            "caption": "Meshing Gear",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 164,
+          "max": 261
+        },
+        "subStat": {
+          "min": 8.5,
+          "max": 12.4
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Chapter_of_an_Ancient_Chord.png",
+            "caption": "Chapter of an Ancient Chord",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Item_Rift_Core.png",
+            "caption": "Rift Core",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Meshing_Gear.png",
+            "caption": "Meshing Gear",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 292,
+          "max": 341
+        },
+        "subStat": {
+          "min": 12.4,
+          "max": 14.3
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Item_Chapter_of_an_Ancient_Chord.png",
+            "caption": "Chapter of an Ancient Chord",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Foreign_Synapse.png",
+            "caption": "Foreign Synapse",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Item_Mechanical_Spur_Gear.png",
+            "caption": "Mechanical Spur Gear",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 373,
+          "max": 423
+        },
+        "subStat": {
+          "min": 14.3,
+          "max": 16.2
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Movement_of_an_Ancient_Chord.png",
+            "caption": "Movement of an Ancient Chord",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Foreign_Synapse.png",
+            "caption": "Foreign Synapse",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Item_Mechanical_Spur_Gear.png",
+            "caption": "Mechanical Spur Gear",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 455,
+          "max": 506
+        },
+        "subStat": {
+          "min": 16.2,
+          "max": 18.2
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Movement_of_an_Ancient_Chord.png",
+            "caption": "Movement of an Ancient Chord",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Alien_Life_Core.png",
+            "caption": "Alien Life Core",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Item_Artificed_Dynamic_Gear.png",
+            "caption": "Artificed Dynamic Gear",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 537,
+          "max": 590
+        },
+        "subStat": {
+          "min": 18.2,
+          "max": 20.1
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Item_Echo_of_an_Ancient_Chord.png",
+            "caption": "Echo of an Ancient Chord",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Alien_Life_Core.png",
+            "caption": "Alien Life Core",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Item_Artificed_Dynamic_Gear.png",
+            "caption": "Artificed Dynamic Gear",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 621,
+          "max": 674
+        },
+        "subStat": {
+          "min": 20.1,
+          "max": 22.1
+        }
+      }
+    ]
+  }
+}

@@ -5,45 +5,12 @@ import { fileURLToPath } from 'node:url';
 
 import chalk from 'chalk';
 
+import { logger } from '../logger.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export const DIRECTORIES = {
-  CHARACTERS: 'characters',
-  WEAPONS: 'weapons',
-  TALENTS: 'talents',
-} as const;
-
-export const FILES = {
-  GALLERY: 'gallery_op_latest',
-  BASE_CHARACTERS: 'baseCharacters',
-  ADVANCED_CHARACTERS: 'advancedCharacters',
-  TALENTS: 'dailyTalents',
-  WEAPONS_DETAILED: 'weaponsDetailed',
-} as const;
-
-export const CHARACTER_DIR_NAME = 'characters';
-export const WEAPON_DIR_NAME = 'weapons';
-export const TALENT_DIR_NAME = 'talents';
-
-export const GALLERY_FILE = 'gallery_op_latest';
-export const BASE_CHARACTERS_FILE = 'baseCharacters';
-export const ADVANCED_CHARACTERS_FILE = 'advancedCharacters';
-export const TALENT_FILE = 'dailyTalents';
-export const WEAPONS_DETAILED_FILE = 'weaponsDetailed';
-
 export const PUBLIC_DIR = path.join(__dirname, '..', '..', 'public');
-export const BASE_DIR = path.join(
-  __dirname,
-  '..',
-  '..',
-  'public',
-  'data',
-  'raw'
-);
-export const CHARACTER_DIR = path.join(BASE_DIR, CHARACTER_DIR_NAME);
-export const WEAPONS_DIR = path.join(BASE_DIR, WEAPON_DIR_NAME);
-export const TALENT_DIR = path.join(BASE_DIR, TALENT_DIR_NAME);
 
 /**
  * Loads and parses JSON data from a file with detailed logging.
@@ -87,53 +54,8 @@ export const loadJsonData = async <T>(filepath: string): Promise<T | null> => {
 };
 
 /**
- * Gets the filename for the latest version of a file in a directory.
- * If toCreate is true, returns filename for next version. Otherwise returns current latest.
- * @param {string} dir - The directory to search in
- * @param {string} fileStartsWith - The prefix of the files to search for
- * @param {boolean} toCreate - Whether to return next version number (true) or current latest (false)
- * @returns {Promise<string>} The filename with version number and .json extension
- */
-export const getLatestVersionFile = async (
-  dir: string,
-  fileStartsWith: string,
-  toCreate: boolean = false
-): Promise<string> => {
-  let maxVersion = 0;
-
-  try {
-    await fs.access(dir);
-  } catch {
-    await fs.mkdir(dir, { recursive: true });
-    return `${fileStartsWith}1.json`;
-  }
-
-  const files = await fs.readdir(dir);
-  for (const file of files) {
-    if (!file.startsWith(fileStartsWith)) continue;
-
-    try {
-      const onlyVer = file.replace(fileStartsWith, '').split('.')[0];
-      const ver = Number.parseInt(onlyVer);
-
-      if (ver > maxVersion) maxVersion = ver;
-    } catch {
-      console.warn(`Could not parse version from file: ${file}`);
-    }
-  }
-
-  maxVersion = toCreate ? maxVersion + 1 : maxVersion;
-  return maxVersion > 0
-    ? `${fileStartsWith}${maxVersion}.json`
-    : `${fileStartsWith}.json`;
-};
-
-/**
  * Saves the scraped weapon data to a JSON file.
  * if fileName does not end with .json, it will be added.
- * @param {any} data - The weapon data to save.
- * @param {string} fullPath - The full path to the directory to save the data in.
- * @param {string} fileName - The filename to save the data as.
  */
 export async function saveJson(
   data: unknown,
@@ -156,32 +78,13 @@ export async function saveJson(
 }
 
 /**
- * Saves data to a JSON file with an auto-incrementing version number in the filename.
- * Gets the next version number and saves the data with that version.
- */
-export async function saveFileWithNewVersion(
-  data: unknown,
-  fullPath: string,
-  fileStartsWith: string
-): Promise<void> {
-  const newFile = await getLatestVersionFile(fullPath, fileStartsWith, true);
-  await saveJson(data, fullPath, newFile);
-}
-
-/**
  * Lists only files (not directories) in a directory
- *
- * @param fullPath - Path to the directory
- * @returns Promise resolving to array of filenames
  */
 export async function listFiles(fullPath: string): Promise<string[]> {
   try {
     await fs.access(fullPath);
     const entries = await fs.readdir(fullPath, { withFileTypes: true });
-    const files = entries
-      .filter((entry) => entry.isFile())
-      .map((entry) => entry.name);
-    return files;
+    return entries.filter((e) => e.isFile()).map((e) => e.name);
   } catch (error) {
     console.error(`Error reading directory ${fullPath}:`, error);
     return [];
@@ -193,16 +96,6 @@ export async function listFiles(fullPath: string): Promise<string[]> {
  */
 function normalizeFileName(fileName: string): string {
   return fileName.endsWith('.json') ? fileName : `${fileName}.json`;
-}
-
-/**
- * Ensures directory exists, creating it if necessary
- */
-async function ensureDirectoryExists(dir: string): Promise<void> {
-  await fs.access(dir).catch(async () => {
-    await fs.mkdir(dir, { recursive: true });
-    console.log(chalk.blue('📁 Created directory:'), chalk.gray(dir));
-  });
 }
 
 interface WriteJsonFileOptions {
@@ -259,7 +152,7 @@ export async function saveToPublic(
   fileName = normalizeFileName(fileName);
 
   try {
-    await ensureDirectoryExists(PUBLIC_DIR);
+    await ensureDir(PUBLIC_DIR);
     const filePath = path.join(PUBLIC_DIR, fileName);
     await writeJsonFile({ data, filePath, fileName });
   } catch (error) {
@@ -294,7 +187,7 @@ export async function saveToTemp(
   const tempDir = path.join(os.tmpdir(), subDir);
 
   try {
-    await fs.mkdir(tempDir, { recursive: true });
+    await ensureDir(tempDir);
     const tempFilePath = path.join(tempDir, uniqueFileName);
 
     await writeJsonFile({
@@ -312,9 +205,6 @@ export async function saveToTemp(
 /**
  * Cleans up temporary files created by saveToTemp function.
  * Removes all files from the temp subdirectory.
- *
- * @param subDir - The subdirectory name within temp folder (should match saveToTemp call)
- * @returns Promise that resolves when cleanup is complete
  */
 export async function cleanupTempFiles(
   subDir: string = 'genshin-scraper'
@@ -342,4 +232,20 @@ export async function cleanupTempFiles(
       console.error(chalk.red('❌ Error during temp cleanup:'), error);
     }
   }
+}
+
+/**
+ * Ensures a directory exists by creating it if necessary.
+ * If the directory already exists, it will be used without modification.
+ * Creates parent directories recursively if needed.
+ */
+export async function ensureDir(dir: string) {
+  try {
+    await fs.access(dir);
+    logger.debug(`📁 Using existing directory: ${dir}`);
+  } catch {
+    await fs.mkdir(dir, { recursive: true });
+    logger.info(`📁 Created directory: ${dir}`);
+  }
+  return dir;
 }

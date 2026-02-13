@@ -1,455 +1,497 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Razor_Icon.png",
-    "name": "Razor",
-    "rarity": "4 Stars",
-    "element": "Electro",
-    "weaponType": "Claymore",
-    "region": "Mondstadt",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
-    "modelType": "Medium Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Razor_Icon.png",
+  "name": "Razor",
+  "rarity": "4 Stars",
+  "element": "Electro",
+  "weaponType": "Claymore",
+  "region": "Mondstadt",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Mondstadt_Emblem_Night.png",
+  "modelType": "Medium Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Claymore_Electro.png",
+      "talentName": "Steel Fang",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Claymore_Electro.png",
-            "talentName": "Steel Fang",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\n\nCharged Attack\nDrains Stamina over time to perform continuous spinning attacks against all nearby opponents.\nAt the end of the sequence, performs a more powerful slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Steel_Fang_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Steel_Fang_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Steel_Fang_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "95.92",
-                    "102.46",
-                    "109",
-                    "117.72",
-                    "124.26",
-                    "131.89",
-                    "141.7",
-                    "151.51",
-                    "161.32",
-                    "171.13",
-                    "180.94"
-                ],
-                "2-Hit DMG (%)": [
-                    "82.63",
-                    "88.27",
-                    "93.9",
-                    "101.41",
-                    "107.05",
-                    "113.62",
-                    "122.07",
-                    "130.52",
-                    "138.97",
-                    "147.42",
-                    "155.87"
-                ],
-                "3-Hit DMG (%)": [
-                    "103.31",
-                    "110.36",
-                    "117.4",
-                    "126.79",
-                    "133.84",
-                    "142.05",
-                    "152.62",
-                    "163.19",
-                    "173.75",
-                    "184.32",
-                    "194.88"
-                ],
-                "4-Hit DMG (%)": [
-                    "136.05",
-                    "145.32",
-                    "154.6",
-                    "166.97",
-                    "176.24",
-                    "187.07",
-                    "200.98",
-                    "214.89",
-                    "228.81",
-                    "242.72",
-                    "256.64"
-                ],
-                "Charged Attack Cyclic DMG (%)": [
-                    "62.54",
-                    "67.63",
-                    "72.72",
-                    "79.99",
-                    "85.08",
-                    "90.9",
-                    "98.9",
-                    "106.9",
-                    "114.9",
-                    "123.62",
-                    "132.35"
-                ],
-                "Charged Attack Final DMG (%)": [
-                    "113.09",
-                    "122.3",
-                    "131.5",
-                    "144.65",
-                    "153.86",
-                    "164.38",
-                    "178.84",
-                    "193.31",
-                    "207.77",
-                    "223.55",
-                    "239.33"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "40/s"
-                ],
-                "Max Duration": [
-                    "5s"
-                ],
-                "Plunge DMG (%)": [
-                    "82.05",
-                    "88.72",
-                    "95.4",
-                    "104.94",
-                    "111.62",
-                    "119.25",
-                    "129.75",
-                    "140.24",
-                    "150.74",
-                    "162.19",
-                    "173.63"
-                ],
-                "Low Plunge DMG (%)": [
-                    "164.06",
-                    "177.41",
-                    "190.77",
-                    "209.84",
-                    "223.2",
-                    "238.46",
-                    "259.44",
-                    "280.43",
-                    "301.41",
-                    "324.3",
-                    "347.19"
-                ],
-                "High Plunge DMG (%)": [
-                    "204.92",
-                    "221.6",
-                    "238.28",
-                    "262.1",
-                    "278.78",
-                    "297.85",
-                    "324.06",
-                    "350.27",
-                    "376.48",
-                    "405.07",
-                    "433.66"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Steel_Fang_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Claw_and_Thunder.png",
-            "talentName": "Claw and Thunder",
-            "talentType": "Elemental Skill",
-            "description": "Hunts his prey using the techniques taught to him by his master and his lupical.\n\n(‍Press\n‍/‍Tap\n‍)\nSwings the Thunder Wolf Claw, dealing Electro DMG to opponents in front of Razor.\nUpon striking an opponent, Razor will gain an Electro Sigil, which increases his Energy Recharge rate.\nRazor can have up to 3 Electro Sigils simultaneously, and gaining a new Electro Sigil refreshes their duration.\n\nHold\nGathers Electro energy to unleash a lightning storm over a small AoE, causing massive Electro DMG, and clears all of Razor's Electro Sigils.\nEach Electro Sigil cleared in this manner will be converted into Energy for Razor.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Claw_and_Thunder_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Claw_and_Thunder_Hold_Preview.gif",
-                    "caption": "Hold"
-                }
-            ],
-            "scaling": {
-                "Press Skill DMG (%)": [
-                    "199.2",
-                    "214.14",
-                    "229.08",
-                    "249",
-                    "263.94",
-                    "278.88",
-                    "298.8",
-                    "318.72",
-                    "338.64",
-                    "358.56",
-                    "378.48",
-                    "398.4",
-                    "423.3",
-                    "448"
-                ],
-                "Hold Skill DMG (%)": [
-                    "295.2",
-                    "317.34",
-                    "339.48",
-                    "369",
-                    "391.14",
-                    "413.28",
-                    "442.8",
-                    "472.32",
-                    "501.84",
-                    "531.36",
-                    "560.88",
-                    "590.4",
-                    "627.3",
-                    "664"
-                ],
-                "Energy Recharge Bonus": [
-                    "ᕀ20% per Electro Sigil"
-                ],
-                "Energy Regenerated": [
-                    "5 per Electro Sigil Absorbed"
-                ],
-                "Electro Sigil duration": [
-                    "18s"
-                ],
-                "Press CD": [
-                    "6s"
-                ],
-                "CD (hold)": [
-                    "10s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Steel_Fang_Charged_Preview.gif",
+          "caption": "Charged Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Talent_Lightning_Fang.png",
-            "talentName": "Lightning Fang",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nSummons the Wolf Within, which deals Electro DMG to all nearby opponents. This clears all of Razor's Electro Sigils, which will be converted into Elemental Energy for him.\nThe Wolf Within will fight alongside Razor for the skill's duration.\n\nThe Wolf Within\nStrikes alongside Razor's normal attacks, dealing Electro DMG.\nRaises Razor's ATK SPD and Electro RES.\nCauses Razor to be immune to DMG inflicted by the Electro-Charged status.\nDisables Razor's Charged Attacks.\nIncreases Razor's resistance to interruption.\n\nThese effects end when Razor leaves the battlefield.\nWhen Razor leaves the field, a maximum of 10 Energy will be returned to him based off the duration remaining on this skill.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Lightning_Fang_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Elemental Burst DMG (%)": [
-                    "160",
-                    "172",
-                    "184",
-                    "200",
-                    "212",
-                    "224",
-                    "240",
-                    "256",
-                    "272",
-                    "288",
-                    "304",
-                    "320",
-                    "340",
-                    "360"
-                ],
-                "Soul Companion DMG (% Normal Attack DMG)": [
-                    "24",
-                    "25.8",
-                    "27.6",
-                    "30",
-                    "31.8",
-                    "33.6",
-                    "36",
-                    "38.4",
-                    "40.8",
-                    "43.2",
-                    "45.6",
-                    "48",
-                    "51",
-                    "54"
-                ],
-                "Normal ATK SPD Bonus": [
-                    "26",
-                    "28",
-                    "30",
-                    "32",
-                    "34",
-                    "36",
-                    "37",
-                    "38",
-                    "39",
-                    "40"
-                ],
-                "Electro RES Bonus (%)": [
-                    "80%"
-                ],
-                "Duration": [
-                    "15s"
-                ],
-                "CD": [
-                    "20s"
-                ],
-                "Energy Cost": [
-                    "80"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Talent_Awakening.png",
-            "talentName": "Awakening",
-            "talentType": "1st Ascension Passive",
-            "description": "Decreases Claw and Thunder's CD by 18%. Using Lightning Fang resets the CD of Claw and Thunder.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Hunger.png",
-            "talentName": "Hunger",
-            "talentType": "4th Ascension Passive",
-            "description": "When Razor's Energy is below 50%, increases Energy Recharge by 30%.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Talent_Surge_of_Lightning.png",
-            "talentName": "Surge of Lightning",
-            "talentType": "Witch's Eve Rite Passive",
-            "description": "After completing Witch's Homework: Of the Little Wolf Pack, Razor will become a Hexerei character. When the party includes at least 2 Hexerei characters, you will gain the Hexerei: Secret Rite effect, which enhances Hexerei characters.\nAdditionally, Razor's Elemental Burst Lightning Fang is enhanced: The Wolf Within's DMG dealt is increased by 70% of Razor's ATK.\n\nHexerei: Secret Rite\nWhile the Wolf Within summoned by Razor's Elemental Burst Lightning Fang is active, if the Electro Sigils from Razor's Elemental Skill Claw and Thunder overflow, the Wolf Within will call down a lightning strike on nearby enemies, dealing AoE Electro DMG equal to 150% of Razor's ATK and restoring 7 Energy to Razor. This effect can be triggered once every 1s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Wolvensprint.png",
-            "talentName": "Wolvensprint",
-            "talentType": "Utility Passive",
-            "description": "Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Steel_Fang_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Constellation_Wolf%27s_Instinct.png",
-            "name": "Wolf's Instinct",
-            "level": 1,
-            "description": "Picking up an Elemental Orb or Particle increases Razor's DMG by 10% for 8s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Constellation_Suppression.png",
-            "name": "Suppression",
-            "level": 2,
-            "description": "Increases CRIT Rate against opponents with less than 30% HP by 10%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Constellation_Soul_Companion.png",
-            "name": "Soul Companion",
-            "level": 3,
-            "description": "Increases the Level of Lightning Fang by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Constellation_Bite.png",
-            "name": "Bite",
-            "level": 4,
-            "description": "When casting Claw and Thunder ((‍Press\n‍/‍Tap\n‍)), opponents hit will have their DEF decreased by 15% for 7s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Constellation_Sharpened_Claws.png",
-            "name": "Sharpened Claws",
-            "level": 5,
-            "description": "Increases the Level of Claw and Thunder by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Constellation_Lupus_Fulguris.png",
-            "name": "Lupus Fulguris",
-            "level": 6,
-            "description": "Description\nHexerei Buff\nAdvanced Properties\nPreview\nEvery 10s, Razor's sword charges up, causing the next Normal Attack to release lightning that deals 100% of Razor's ATK as Electro DMG.\nWhen Razor is not using Lightning Fang, a lightning strike on an opponent will grant Razor an Electro Sigil for Claw and Thunder."
-        }
-    ],
-    "imageUrls": {},
-    "version": "1.1",
-    "gallery": {
-        "screenAnimations": [],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Namecard_Background_Razor_Wolvensprint.png",
-                "caption": "Razor: Wolvensprint Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Razor_Wolvensprint.png",
-                "caption": "Razor: Wolvensprint Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Namecard_Banner_Razor_Wolvensprint.png",
-                "caption": "Razor: Wolvensprint Banner"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "95.92",
+          "102.46",
+          "109",
+          "117.72",
+          "124.26",
+          "131.89",
+          "141.7",
+          "151.51",
+          "161.32",
+          "171.13",
+          "180.94"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Steel_Fang_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Steel_Fang_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Steel_Fang_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Steel_Fang_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Steel_Fang_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Steel_Fang_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Lightning_Fang_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Lightning_Fang_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Claw_and_Thunder_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Claw_and_Thunder_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Claw_and_Thunder_Hold_Preview.gif",
-                        "caption": "Hold",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Claw_and_Thunder_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "2-Hit DMG (%)": [
+          "82.63",
+          "88.27",
+          "93.9",
+          "101.41",
+          "107.05",
+          "113.62",
+          "122.07",
+          "130.52",
+          "138.97",
+          "147.42",
+          "155.87"
         ],
-        "detailedImages": [],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Icon_Emoji_Paimon%27s_Paintings_18_Razor_1.png",
-                "caption": "Silly Grin Set 18"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Icon_Emoji_Paimon%27s_Paintings_18_Razor_2.png",
-                "caption": "Awoo! Set 18"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Icon_Emoji_Paimon%27s_Paintings_18_Razor_3.png",
-                "caption": "Hunting Set 18"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Icon_Emoji_Paimon%27s_Paintings_18_Razor_4.png",
-                "caption": "Overwhelmed Set 18"
-            }
+        "3-Hit DMG (%)": [
+          "103.31",
+          "110.36",
+          "117.4",
+          "126.79",
+          "133.84",
+          "142.05",
+          "152.62",
+          "163.19",
+          "173.75",
+          "184.32",
+          "194.88"
+        ],
+        "4-Hit DMG (%)": [
+          "136.05",
+          "145.32",
+          "154.6",
+          "166.97",
+          "176.24",
+          "187.07",
+          "200.98",
+          "214.89",
+          "228.81",
+          "242.72",
+          "256.64"
+        ],
+        "Charged Attack Cyclic DMG (%)": [
+          "62.54",
+          "67.63",
+          "72.72",
+          "79.99",
+          "85.08",
+          "90.9",
+          "98.9",
+          "106.9",
+          "114.9",
+          "123.62",
+          "132.35"
+        ],
+        "Charged Attack Final DMG (%)": [
+          "113.09",
+          "122.3",
+          "131.5",
+          "144.65",
+          "153.86",
+          "164.38",
+          "178.84",
+          "193.31",
+          "207.77",
+          "223.55",
+          "239.33"
+        ],
+        "Charged Attack Stamina Cost": ["40/s"],
+        "Max Duration": ["5s"],
+        "Plunge DMG (%)": [
+          "82.05",
+          "88.72",
+          "95.4",
+          "104.94",
+          "111.62",
+          "119.25",
+          "129.75",
+          "140.24",
+          "150.74",
+          "162.19",
+          "173.63"
+        ],
+        "Low Plunge DMG (%)": [
+          "164.06",
+          "177.41",
+          "190.77",
+          "209.84",
+          "223.2",
+          "238.46",
+          "259.44",
+          "280.43",
+          "301.41",
+          "324.3",
+          "347.19"
+        ],
+        "High Plunge DMG (%)": [
+          "204.92",
+          "221.6",
+          "238.28",
+          "262.1",
+          "278.78",
+          "297.85",
+          "324.06",
+          "350.27",
+          "376.48",
+          "405.07",
+          "433.66"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Claw_and_Thunder.png",
+      "talentName": "Claw and Thunder",
+      "talentType": "Elemental Skill",
+      "description": "Hunts his prey using the techniques taught to him by his master and his lupical.\n\n(‍Press\n‍/‍Tap\n‍)\nSwings the Thunder Wolf Claw, dealing Electro DMG to opponents in front of Razor.\nUpon striking an opponent, Razor will gain an Electro Sigil, which increases his Energy Recharge rate.\nRazor can have up to 3 Electro Sigils simultaneously, and gaining a new Electro Sigil refreshes their duration.\n\nHold\nGathers Electro energy to unleash a lightning storm over a small AoE, causing massive Electro DMG, and clears all of Razor's Electro Sigils.\nEach Electro Sigil cleared in this manner will be converted into Energy for Razor.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Claw_and_Thunder_Press_Preview.gif",
+          "caption": "Press"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Claw_and_Thunder_Hold_Preview.gif",
+          "caption": "Hold"
+        }
+      ],
+      "scaling": {
+        "Press Skill DMG (%)": [
+          "199.2",
+          "214.14",
+          "229.08",
+          "249",
+          "263.94",
+          "278.88",
+          "298.8",
+          "318.72",
+          "338.64",
+          "358.56",
+          "378.48",
+          "398.4",
+          "423.3",
+          "448"
+        ],
+        "Hold Skill DMG (%)": [
+          "295.2",
+          "317.34",
+          "339.48",
+          "369",
+          "391.14",
+          "413.28",
+          "442.8",
+          "472.32",
+          "501.84",
+          "531.36",
+          "560.88",
+          "590.4",
+          "627.3",
+          "664"
+        ],
+        "Energy Recharge Bonus": ["ᕀ20% per Electro Sigil"],
+        "Energy Regenerated": ["5 per Electro Sigil Absorbed"],
+        "Electro Sigil duration": ["18s"],
+        "Press CD": ["6s"],
+        "CD (hold)": ["10s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Talent_Lightning_Fang.png",
+      "talentName": "Lightning Fang",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nSummons the Wolf Within, which deals Electro DMG to all nearby opponents. This clears all of Razor's Electro Sigils, which will be converted into Elemental Energy for him.\nThe Wolf Within will fight alongside Razor for the skill's duration.\n\nThe Wolf Within\nStrikes alongside Razor's normal attacks, dealing Electro DMG.\nRaises Razor's ATK SPD and Electro RES.\nCauses Razor to be immune to DMG inflicted by the Electro-Charged status.\nDisables Razor's Charged Attacks.\nIncreases Razor's resistance to interruption.\n\nThese effects end when Razor leaves the battlefield.\nWhen Razor leaves the field, a maximum of 10 Energy will be returned to him based off the duration remaining on this skill.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Lightning_Fang_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Elemental Burst DMG (%)": [
+          "160",
+          "172",
+          "184",
+          "200",
+          "212",
+          "224",
+          "240",
+          "256",
+          "272",
+          "288",
+          "304",
+          "320",
+          "340",
+          "360"
+        ],
+        "Soul Companion DMG (% Normal Attack DMG)": [
+          "24",
+          "25.8",
+          "27.6",
+          "30",
+          "31.8",
+          "33.6",
+          "36",
+          "38.4",
+          "40.8",
+          "43.2",
+          "45.6",
+          "48",
+          "51",
+          "54"
+        ],
+        "Normal ATK SPD Bonus": [
+          "26",
+          "28",
+          "30",
+          "32",
+          "34",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40"
+        ],
+        "Electro RES Bonus (%)": ["80%"],
+        "Duration": ["15s"],
+        "CD": ["20s"],
+        "Energy Cost": ["80"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Talent_Awakening.png",
+      "talentName": "Awakening",
+      "talentType": "1st Ascension Passive",
+      "description": "Decreases Claw and Thunder's CD by 18%. Using Lightning Fang resets the CD of Claw and Thunder.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Hunger.png",
+      "talentName": "Hunger",
+      "talentType": "4th Ascension Passive",
+      "description": "When Razor's Energy is below 50%, increases Energy Recharge by 30%.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Talent_Surge_of_Lightning.png",
+      "talentName": "Surge of Lightning",
+      "talentType": "Witch's Eve Rite Passive",
+      "description": "After completing Witch's Homework: Of the Little Wolf Pack, Razor will become a Hexerei character. When the party includes at least 2 Hexerei characters, you will gain the Hexerei: Secret Rite effect, which enhances Hexerei characters.\nAdditionally, Razor's Elemental Burst Lightning Fang is enhanced: The Wolf Within's DMG dealt is increased by 70% of Razor's ATK.\n\nHexerei: Secret Rite\nWhile the Wolf Within summoned by Razor's Elemental Burst Lightning Fang is active, if the Electro Sigils from Razor's Elemental Skill Claw and Thunder overflow, the Wolf Within will call down a lightning strike on nearby enemies, dealing AoE Electro DMG equal to 150% of Razor's ATK and restoring 7 Energy to Razor. This effect can be triggered once every 1s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Wolvensprint.png",
+      "talentName": "Wolvensprint",
+      "talentType": "Utility Passive",
+      "description": "Decreases sprinting Stamina consumption for your own party members by 20%.\nNot stackable with Passive Talents that provide the exact same effects.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Constellation_Wolf%27s_Instinct.png",
+      "name": "Wolf's Instinct",
+      "level": 1,
+      "description": "Picking up an Elemental Orb or Particle increases Razor's DMG by 10% for 8s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Constellation_Suppression.png",
+      "name": "Suppression",
+      "level": 2,
+      "description": "Increases CRIT Rate against opponents with less than 30% HP by 10%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Constellation_Soul_Companion.png",
+      "name": "Soul Companion",
+      "level": 3,
+      "description": "Increases the Level of Lightning Fang by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Constellation_Bite.png",
+      "name": "Bite",
+      "level": 4,
+      "description": "When casting Claw and Thunder ((‍Press\n‍/‍Tap\n‍)), opponents hit will have their DEF decreased by 15% for 7s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Constellation_Sharpened_Claws.png",
+      "name": "Sharpened Claws",
+      "level": 5,
+      "description": "Increases the Level of Claw and Thunder by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Constellation_Lupus_Fulguris.png",
+      "name": "Lupus Fulguris",
+      "level": 6,
+      "description": "Description\nHexerei Buff\nAdvanced Properties\nPreview\nEvery 10s, Razor's sword charges up, causing the next Normal Attack to release lightning that deals 100% of Razor's ATK as Electro DMG.\nWhen Razor is not using Lightning Fang, a lightning strike on an opponent will grant Razor an Electro Sigil for Claw and Thunder."
+    }
+  ],
+  "imageUrls": {},
+  "version": "1.1",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Idle_Razor_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Idle_Razor_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Idle_Razor_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Idle_Razor_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Talent_Menu_Razor.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Talent_Menu_Razor.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Weapon_Menu_Razor.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Weapon_Menu_Razor.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Party_Setup_Razor.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Party_Setup_Razor.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Namecard_Background_Razor_Wolvensprint.png",
+        "caption": "Razor: Wolvensprint Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Razor_Wolvensprint.png",
+        "caption": "Razor: Wolvensprint Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Namecard_Banner_Razor_Wolvensprint.png",
+        "caption": "Razor: Wolvensprint Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Steel_Fang_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Steel_Fang_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Steel_Fang_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Steel_Fang_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Steel_Fang_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Steel_Fang_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Lightning_Fang_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Lightning_Fang_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Claw_and_Thunder_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Claw_and_Thunder_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Claw_and_Thunder_Hold_Preview.gif",
+            "caption": "Hold",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Claw_and_Thunder_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Icon_Emoji_Paimon%27s_Paintings_18_Razor_1.png",
+        "caption": "Silly Grin Set 18"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Icon_Emoji_Paimon%27s_Paintings_18_Razor_2.png",
+        "caption": "Awoo! Set 18"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Icon_Emoji_Paimon%27s_Paintings_18_Razor_3.png",
+        "caption": "Hunting Set 18"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Icon_Emoji_Paimon%27s_Paintings_18_Razor_4.png",
+        "caption": "Overwhelmed Set 18"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Physical DPS",
+      "sets": [
+        {
+          "name": "Pale Flame",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Physical DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Pale Flame",
+          "pieces": 2
+        },
+        {
+          "name": "Bloodstained Chivalry",
+          "pieces": 2
+        }
+      ]
+    },
+    {
+      "role": "Electro DPS",
+      "sets": [
+        {
+          "name": "Gladiator's Finale",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

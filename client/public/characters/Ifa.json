@@ -1,327 +1,500 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Ifa_Icon.png",
-    "name": "Ifa",
-    "rarity": "4 Stars",
-    "element": "Anemo",
-    "weaponType": "Catalyst",
-    "region": "Natlan",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
-    "modelType": "Tall Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Ifa_Icon.png",
+  "name": "Ifa",
+  "rarity": "4 Stars",
+  "element": "Anemo",
+  "weaponType": "Catalyst",
+  "region": "Natlan",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Natlan_Emblem_Night.png",
+  "modelType": "Tall Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png",
+      "talentName": "Rite of Dispelling Winds",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 3 attacks, dealing Anemo DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina and fires off a shot, dealing AoE Anemo DMG.\n\nPlunging Attack\nPlunges towards the ground from mid-air, damaging all opponents along the path. Deals AoE Anemo DMG upon impact with the ground.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png",
-            "talentName": "Rite of Dispelling Winds",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 3 attacks, dealing Anemo DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina and fires off a shot, dealing AoE Anemo DMG.\n\nPlunging Attack\nPlunges towards the ground from mid-air, damaging all opponents along the path. Deals AoE Anemo DMG upon impact with the ground.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Rite_of_Dispelling_Winds_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Rite_of_Dispelling_Winds_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "53.61",
-                    "57.63",
-                    "61.65",
-                    "67.01",
-                    "71.03",
-                    "75.05",
-                    "80.41",
-                    "85.77",
-                    "91.13",
-                    "96.49",
-                    "101.85"
-                ],
-                "2-Hit DMG (%)": [
-                    "47.47",
-                    "51.03",
-                    "54.59",
-                    "59.33",
-                    "62.89",
-                    "66.45",
-                    "71.2",
-                    "75.95",
-                    "80.69",
-                    "85.44",
-                    "90.19"
-                ],
-                "3-Hit DMG (%)": [
-                    "74.76",
-                    "80.37",
-                    "85.97",
-                    "93.45",
-                    "99.05",
-                    "104.66",
-                    "112.14",
-                    "119.61",
-                    "127.09",
-                    "134.57",
-                    "142.04"
-                ],
-                "Charged Attack DMG (%)": [
-                    "147.04",
-                    "158.07",
-                    "169.1",
-                    "183.8",
-                    "194.83",
-                    "205.86",
-                    "220.56",
-                    "235.26",
-                    "249.97",
-                    "264.67",
-                    "279.38"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "50"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.17",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Rite_of_Dispelling_Winds_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Airborne_Disease_Prevention.png",
-            "talentName": "Airborne Disease Prevention",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nIt's time for the real bash bros to step up! Ifa calls Cacucu in as backup.\nAfter using this skill, Ifa gains 80 Nightsoul points and enters the Nightsoul's Blessing\n\nstate. In the Nightsoul's Blessing state, Ifa will hover with Cacucu's help. When he uses Normal Attacks in this state, he will use different kinds of Supporting Fire\n\n\n\n\n\n\ndepending on whether you Tap or Hold, firing Tonicshots that are capable of healing all party members.\n\nAdditionally, Holding the Elemental Skill Airborne Disease Prevention while Ifa is in Nightsoul's Blessing will cause him to use a Nightsoul-aligned Plunging Attack. Letting go of the skill button will interrupt this Plunging Attack to maintain his hover. If Ifa lands due to this Plunging Attack, his Nightsoul's Blessing state will end.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Airborne_Disease_Prevention_Movement_Preview.gif",
-                    "caption": "Movement"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Airborne_Disease_Prevention_Tonicshot_Preview.gif",
-                    "caption": "Tonicshot"
-                }
-            ],
-            "scaling": {
-                "Tonicshot DMG (%)": [
-                    "133.36",
-                    "143.36",
-                    "153.36",
-                    "166.7",
-                    "176.7",
-                    "186.7",
-                    "200.04",
-                    "213.38",
-                    "226.71",
-                    "240.05",
-                    "253.38",
-                    "266.72",
-                    "283.39"
-                ],
-                "Tonicshot Healing On Hit": [
-                    "20.16% Elemental Mastery\n+\n48.15",
-                    "21.67% Elemental Mastery\n+\n52.96",
-                    "23.18% Elemental Mastery\n+\n58.18",
-                    "25.2% Elemental Mastery\n+\n63.8",
-                    "26.71% Elemental Mastery\n+\n69.82",
-                    "28.22% Elemental Mastery\n+\n76.24",
-                    "30.24% Elemental Mastery\n+\n83.06",
-                    "32.26% Elemental Mastery\n+\n90.28",
-                    "34.27% Elemental Mastery\n+\n97.91",
-                    "36.29% Elemental Mastery\n+\n105.93",
-                    "38.3% Elemental Mastery\n+\n114.36",
-                    "40.32% Elemental Mastery\n+\n123.19",
-                    "42.84% Elemental Mastery\n+\n132.42"
-                ],
-                "Nightsoul Point Limit": [
-                    "80"
-                ],
-                "CD": [
-                    "7.5s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Compound_Sedation_Field.png",
-            "talentName": "Compound Sedation Field",
-            "talentType": "Elemental Burst",
-            "description": "Fires a Therapeutic Sedative at a (temporarily aggressive) opponent. The sedative will explode on impact, creating a restraining wind current that pulls nearby objects and opponents in while dealing Nightsoul-aligned AoE Anemo DMG.\nWhen the Therapeutic Sedative hits an opponent affected by Hydro/Pyro/Cryo/Electro, it will apply a Sedation Mark\nto them.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Compound_Sedation_Field_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "508.48",
-                    "546.62",
-                    "584.75",
-                    "635.6",
-                    "673.74",
-                    "711.87",
-                    "762.72",
-                    "813.57",
-                    "864.42",
-                    "915.26",
-                    "966.11",
-                    "1016.96",
-                    "1080.52"
-                ],
-                "Sedation Mark DMG (%)": [
-                    "108.96",
-                    "117.13",
-                    "125.3",
-                    "136.2",
-                    "144.37",
-                    "152.54",
-                    "163.44",
-                    "174.34",
-                    "185.23",
-                    "196.13",
-                    "207.02",
-                    "217.92",
-                    "231.54"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Field_Medic%27s_Vision.png",
-            "talentName": "Field Medic's Vision",
-            "talentType": "1st Ascension Passive",
-            "description": "When Ifa is in the Nightsoul's Blessing state, every 1 Nightsoul point out of the total in his entire party will grant him 1 Rescue Essentials\npoint. Rescue Essentials will increase the Swirl, Electro-Charged, and Lunar-Charged DMG dealt by all nearby party members.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Talent_Mutual_Aid_Agreement.png",
-            "talentName": "Mutual Aid Agreement",
-            "talentType": "4th Ascension Passive",
-            "description": "When nearby party members trigger Nightsoul Bursts, Ifa's Elemental Mastery increases by 80 for 10s.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Talent_Focused_Emergency_Rescue.png",
-            "talentName": "Focused Emergency Rescue",
-            "talentType": "Night Realm's Gift Passive",
-            "description": "After his Nightsoul points are exhausted, Ifa will switch to consuming Phlogiston to maintain his Nightsoul's Blessing.\nWhile in an area with Phlogiston Mechanics within Natlan, he can use Nightsoul Transmission: Ifa. When the active character is a certain height in the air, the following will occur when switching to Ifa: Ifa will enter the Nightsoul's Blessing state and gain 32 Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own team.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Focused_Emergency_Rescue_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Tactical_Warm_Compress_Bandaging.png",
-            "talentName": "Tactical Warm Compress Bandaging",
-            "talentType": "Utility Passive",
-            "description": "While in an area with Phlogiston Mechanics within Natlan, when the current active party member or indwelt saurian has less than 40% HP, Ifa will consume 10 Phlogiston and restore 40% of their HP. This effect can trigger once every 10s, and does not take effect in Domains, Trounce Domains, or the Spiral Abyss.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Rite_of_Dispelling_Winds_Charged_Preview.gif",
+          "caption": "Charged Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Constellation_Vitiferous_Elixir%27s_Concoction.png",
-            "name": "Vitiferous Elixir's Concoction",
-            "level": 1,
-            "description": "When Supporting Fire\n\n\n\n\n\n\nhits an opponent, it will restore 6 Energy for Ifa. One such Energy restoration can be triggered once every 8s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Constellation_Guiding_Spirit_of_Ballistic_Prayer.png",
-            "name": "Guiding Spirit of Ballistic Prayer",
-            "level": 2,
-            "description": "When Ifa is in the Nightsoul's Blessing state, every Nightsoul point the party has above a total of 60 will grant Ifa 4 additional Rescue Essentials\npoints.\nAdditionally, Ifa's Rescue Essentials limit is increased by 50.\nYou must first unlock the Ascension Talent Field Medic's Vision."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Constellation_Rebuttal_in_Negotiations_With_the_Night.png",
-            "name": "Rebuttal in Negotiations With the Night",
-            "level": 3,
-            "description": "Increases the Level of Airborne Disease Prevention by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Constellation_Decayed_Vessel%27s_Permutation.png",
-            "name": "Decayed Vessel's Permutation",
-            "level": 4,
-            "description": "The restraining wind current created by the Elemental Burst Compound Sedation Field has its duration extended to 3s.\nAdditionally, Ifa gains 100 Elemental Mastery for 15s after using his Elemental Burst Compound Sedation Field."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Constellation_Vow_of_Universal_Coexistence.png",
-            "name": "Vow of Universal Coexistence",
-            "level": 5,
-            "description": "Increases the Level of Compound Sedation Field by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Constellation_Oath_on_a_Feathered_Knot.png",
-            "name": "Oath on a Feathered Knot",
-            "level": 6,
-            "description": "When Ifa uses the Hold version of his Supporting Fire\n\n\n\n\n\n\n, there is a 50% chance that he will fire an additional Tonicshot that deals 120% of Ifa's ATK as Anemo DMG. This DMG is considered Normal Attack DMG.\nAdditionally, when he is not in combat, Ifa will consume 20% less Nightsoul points and Phlogiston in his Nightsoul's Blessing state."
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.6",
-    "gallery": {
-        "screenAnimations": [],
-        "nameCards": [],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": []
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": []
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": []
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "53.61",
+          "57.63",
+          "61.65",
+          "67.01",
+          "71.03",
+          "75.05",
+          "80.41",
+          "85.77",
+          "91.13",
+          "96.49",
+          "101.85"
         ],
-        "detailedImages": [],
-        "stickers": []
+        "2-Hit DMG (%)": [
+          "47.47",
+          "51.03",
+          "54.59",
+          "59.33",
+          "62.89",
+          "66.45",
+          "71.2",
+          "75.95",
+          "80.69",
+          "85.44",
+          "90.19"
+        ],
+        "3-Hit DMG (%)": [
+          "74.76",
+          "80.37",
+          "85.97",
+          "93.45",
+          "99.05",
+          "104.66",
+          "112.14",
+          "119.61",
+          "127.09",
+          "134.57",
+          "142.04"
+        ],
+        "Charged Attack DMG (%)": [
+          "147.04",
+          "158.07",
+          "169.1",
+          "183.8",
+          "194.83",
+          "205.86",
+          "220.56",
+          "235.26",
+          "249.97",
+          "264.67",
+          "279.38"
+        ],
+        "Charged Attack Stamina Cost": ["50"],
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.17",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37"
+        ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Airborne_Disease_Prevention.png",
+      "talentName": "Airborne Disease Prevention",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nIt's time for the real bash bros to step up! Ifa calls Cacucu in as backup.\nAfter using this skill, Ifa gains 80 Nightsoul points and enters the Nightsoul's Blessing\n\nstate. In the Nightsoul's Blessing state, Ifa will hover with Cacucu's help. When he uses Normal Attacks in this state, he will use different kinds of Supporting Fire\n\n\n\n\n\n\ndepending on whether you Tap or Hold, firing Tonicshots that are capable of healing all party members.\n\nAdditionally, Holding the Elemental Skill Airborne Disease Prevention while Ifa is in Nightsoul's Blessing will cause him to use a Nightsoul-aligned Plunging Attack. Letting go of the skill button will interrupt this Plunging Attack to maintain his hover. If Ifa lands due to this Plunging Attack, his Nightsoul's Blessing state will end.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Airborne_Disease_Prevention_Movement_Preview.gif",
+          "caption": "Movement"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Airborne_Disease_Prevention_Tonicshot_Preview.gif",
+          "caption": "Tonicshot"
+        }
+      ],
+      "scaling": {
+        "Tonicshot DMG (%)": [
+          "133.36",
+          "143.36",
+          "153.36",
+          "166.7",
+          "176.7",
+          "186.7",
+          "200.04",
+          "213.38",
+          "226.71",
+          "240.05",
+          "253.38",
+          "266.72",
+          "283.39"
+        ],
+        "Tonicshot Healing On Hit": [
+          "20.16% Elemental Mastery\n+\n48.15",
+          "21.67% Elemental Mastery\n+\n52.96",
+          "23.18% Elemental Mastery\n+\n58.18",
+          "25.2% Elemental Mastery\n+\n63.8",
+          "26.71% Elemental Mastery\n+\n69.82",
+          "28.22% Elemental Mastery\n+\n76.24",
+          "30.24% Elemental Mastery\n+\n83.06",
+          "32.26% Elemental Mastery\n+\n90.28",
+          "34.27% Elemental Mastery\n+\n97.91",
+          "36.29% Elemental Mastery\n+\n105.93",
+          "38.3% Elemental Mastery\n+\n114.36",
+          "40.32% Elemental Mastery\n+\n123.19",
+          "42.84% Elemental Mastery\n+\n132.42"
+        ],
+        "Nightsoul Point Limit": ["80"],
+        "CD": ["7.5s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Compound_Sedation_Field.png",
+      "talentName": "Compound Sedation Field",
+      "talentType": "Elemental Burst",
+      "description": "Fires a Therapeutic Sedative at a (temporarily aggressive) opponent. The sedative will explode on impact, creating a restraining wind current that pulls nearby objects and opponents in while dealing Nightsoul-aligned AoE Anemo DMG.\nWhen the Therapeutic Sedative hits an opponent affected by Hydro/Pyro/Cryo/Electro, it will apply a Sedation Mark\nto them.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Compound_Sedation_Field_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "508.48",
+          "546.62",
+          "584.75",
+          "635.6",
+          "673.74",
+          "711.87",
+          "762.72",
+          "813.57",
+          "864.42",
+          "915.26",
+          "966.11",
+          "1016.96",
+          "1080.52"
+        ],
+        "Sedation Mark DMG (%)": [
+          "108.96",
+          "117.13",
+          "125.3",
+          "136.2",
+          "144.37",
+          "152.54",
+          "163.44",
+          "174.34",
+          "185.23",
+          "196.13",
+          "207.02",
+          "217.92",
+          "231.54"
+        ],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Field_Medic%27s_Vision.png",
+      "talentName": "Field Medic's Vision",
+      "talentType": "1st Ascension Passive",
+      "description": "When Ifa is in the Nightsoul's Blessing state, every 1 Nightsoul point out of the total in his entire party will grant him 1 Rescue Essentials\npoint. Rescue Essentials will increase the Swirl, Electro-Charged, and Lunar-Charged DMG dealt by all nearby party members.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Talent_Mutual_Aid_Agreement.png",
+      "talentName": "Mutual Aid Agreement",
+      "talentType": "4th Ascension Passive",
+      "description": "When nearby party members trigger Nightsoul Bursts, Ifa's Elemental Mastery increases by 80 for 10s.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Talent_Focused_Emergency_Rescue.png",
+      "talentName": "Focused Emergency Rescue",
+      "talentType": "Night Realm's Gift Passive",
+      "description": "After his Nightsoul points are exhausted, Ifa will switch to consuming Phlogiston to maintain his Nightsoul's Blessing.\nWhile in an area with Phlogiston Mechanics within Natlan, he can use Nightsoul Transmission: Ifa. When the active character is a certain height in the air, the following will occur when switching to Ifa: Ifa will enter the Nightsoul's Blessing state and gain 32 Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own team.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Focused_Emergency_Rescue_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Tactical_Warm_Compress_Bandaging.png",
+      "talentName": "Tactical Warm Compress Bandaging",
+      "talentType": "Utility Passive",
+      "description": "While in an area with Phlogiston Mechanics within Natlan, when the current active party member or indwelt saurian has less than 40% HP, Ifa will consume 10 Phlogiston and restore 40% of their HP. This effect can trigger once every 10s, and does not take effect in Domains, Trounce Domains, or the Spiral Abyss.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Constellation_Vitiferous_Elixir%27s_Concoction.png",
+      "name": "Vitiferous Elixir's Concoction",
+      "level": 1,
+      "description": "When Supporting Fire\n\n\n\n\n\n\nhits an opponent, it will restore 6 Energy for Ifa. One such Energy restoration can be triggered once every 8s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Constellation_Guiding_Spirit_of_Ballistic_Prayer.png",
+      "name": "Guiding Spirit of Ballistic Prayer",
+      "level": 2,
+      "description": "When Ifa is in the Nightsoul's Blessing state, every Nightsoul point the party has above a total of 60 will grant Ifa 4 additional Rescue Essentials\npoints.\nAdditionally, Ifa's Rescue Essentials limit is increased by 50.\nYou must first unlock the Ascension Talent Field Medic's Vision."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Constellation_Rebuttal_in_Negotiations_With_the_Night.png",
+      "name": "Rebuttal in Negotiations With the Night",
+      "level": 3,
+      "description": "Increases the Level of Airborne Disease Prevention by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Constellation_Decayed_Vessel%27s_Permutation.png",
+      "name": "Decayed Vessel's Permutation",
+      "level": 4,
+      "description": "The restraining wind current created by the Elemental Burst Compound Sedation Field has its duration extended to 3s.\nAdditionally, Ifa gains 100 Elemental Mastery for 15s after using his Elemental Burst Compound Sedation Field."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Constellation_Vow_of_Universal_Coexistence.png",
+      "name": "Vow of Universal Coexistence",
+      "level": 5,
+      "description": "Increases the Level of Compound Sedation Field by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Constellation_Oath_on_a_Feathered_Knot.png",
+      "name": "Oath on a Feathered Knot",
+      "level": 6,
+      "description": "When Ifa uses the Hold version of his Supporting Fire\n\n\n\n\n\n\n, there is a 50% chance that he will fire an additional Tonicshot that deals 120% of Ifa's ATK as Anemo DMG. This DMG is considered Normal Attack DMG.\nAdditionally, when he is not in combat, Ifa will consume 20% less Nightsoul points and Phlogiston in his Nightsoul's Blessing state."
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.6",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Idle_Ifa_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Idle_Ifa_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Talent_Menu_Ifa.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Weapon_Menu_Ifa.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Party_Setup_Ifa.gif",
+        "caption": "Party Setup",
+        "videoUrl": "",
+        "videoType": ""
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Namecard_Background_Ifa_Bro.png",
+        "caption": "Ifa: Bro Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Item_Ifa_Bro.png",
+        "caption": "Ifa: Bro Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Namecard_Banner_Ifa_Bro.png",
+        "caption": "Ifa: Bro Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Rite_of_Dispelling_Winds_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Rite_of_Dispelling_Winds_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Rite_of_Dispelling_Winds_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Rite_of_Dispelling_Winds_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Compound_Sedation_Field_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Compound_Sedation_Field_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Airborne_Disease_Prevention_Movement_Preview.gif",
+            "caption": "Movement",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Airborne_Disease_Prevention_Movement_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Airborne_Disease_Prevention_Tonicshot_Preview.gif",
+            "caption": "Tonicshot",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fb/Airborne_Disease_Prevention_Tonicshot_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Ifa_Character_Details_1.png",
+        "caption": "Ifa Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Ifa_Character_Details_2.png",
+        "caption": "Ifa Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Ifa_Character_Details_3.gif",
+        "caption": "Ifa Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Ifa_Character_Details_4.png",
+        "caption": "Ifa Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Ifa_Character_Details_5.png",
+        "caption": "Ifa Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Ifa_Character_Details_6.png",
+        "caption": "Ifa Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Ifa_Character_Details_7.png",
+        "caption": "Ifa Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/58/Ifa_Character_Details_8.gif",
+        "caption": "Ifa Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Ifa_Character_Details_9.gif",
+        "caption": "Ifa Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Ifa_Character_Details_10.gif",
+        "caption": "Ifa Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Ifa_Character_Details_11.gif",
+        "caption": "Ifa Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Ifa_Character_Details_12.gif",
+        "caption": "Ifa Details 12"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Ifa_Character_Details_13.png",
+        "caption": "Ifa Details 13"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Ifa_Character_Details_14.png",
+        "caption": "Ifa Details 14"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b6/Ifa_Character_Details_15.png",
+        "caption": "Ifa Details 15"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Icon_Emoji_Paimon%27s_Paintings_40_Ifa_1.png",
+        "caption": "Soothing Set 40"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Icon_Emoji_Paimon%27s_Paintings_41_Ifa_1.png",
+        "caption": "Frustrated Set 41"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Icon_Emoji_Paimon%27s_Paintings_41_Ifa_2.png",
+        "caption": "Surprise Set 41"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Icon_Emoji_Paimon%27s_Paintings_41_Ifa_3.png",
+        "caption": "Worried Set 41"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Icon_Emoji_Paimon%27s_Paintings_41_Ifa_4.png",
+        "caption": "Relaxed Set 41"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Icon_Emoji_Paimon%27s_Paintings_43_Ifa_Ororon_1.png",
+        "caption": "Happy Birthday Set 43"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Support",
+      "sets": [
+        {
+          "name": "Noblesse Oblige",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

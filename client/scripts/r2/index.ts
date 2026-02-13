@@ -1,0 +1,302 @@
+#!/usr/bin/env node
+
+/**
+ * R2 Asset Migration CLI
+ *
+ * Main orchestrator for managing Genshin Impact asset migration to Cloudflare R2
+ *
+ * Commands:
+ *   status       - Show migration status
+ *   download     - Download assets from Wikia
+ *   upload       - Upload assets to R2
+ *   update       - Update character JSONs with R2 URLs
+ *   migrate      - Run full migration (download + upload + update)
+ *   verify       - Verify uploaded assets
+ *   sync         - Sync new assets (post-scraping)
+ *   sync-r2      - Sync mapping database with R2 state
+ *   push-mapping - Upload url-mapping.json to R2
+ *   pull-mapping - Download url-mapping.json from R2
+ *   clean        - Clean download cache
+ */
+
+import https from 'node:https';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import chalk from 'chalk';
+
+import { auditR2 } from './audit.js';
+import { clearDownloadCache, downloadAssets } from './download.js';
+import { extractAllUrls } from './extract-urls.js';
+import { fixFileMismatches } from './fix-file-types.js';
+import {
+  downloadMappingFromR2,
+  loadMapping,
+  uploadMappingToR2,
+} from './mapping.js';
+import { showStatus } from './status.js';
+import { syncMappingWithR2 } from './sync.js';
+import { restoreFromBackup, updateJsonFiles } from './update-json.js';
+import { retryFailedUploads, uploadAssets, verifyUploads } from './upload.js';
+import { hashUrl } from './utils.ts';
+
+/**
+ * Check internet connectivity
+ */
+async function checkInternetConnection(): Promise<boolean> {
+  return new Promise((resolve) => {
+    const req = https.get('https://www.cloudflare.com', (res) => {
+      resolve(res.statusCode === 200);
+    });
+
+    req.on('error', () => {
+      resolve(false);
+    });
+
+    req.setTimeout(5000, () => {
+      req.destroy();
+      resolve(false);
+    });
+  });
+}
+
+/**
+ * Run full migration process
+ */
+async function runFullMigration(
+  targetPath?: string,
+  useLocalAssets: boolean = false
+): Promise<void> {
+  console.log(chalk.bold.cyan('\n╔══════════════════════════════════════╗'));
+  console.log(chalk.bold.cyan('║     R2 Full Migration Process        ║'));
+  console.log(chalk.bold.cyan('╚══════════════════════════════════════╝\n'));
+
+  if (targetPath) {
+    console.log(chalk.cyan(`📂 Target Path: ${targetPath}\n`));
+  }
+
+  try {
+    console.log(chalk.bold('\n📥 Step 1/3: Download Assets\n'));
+    const urls = await extractAllUrls(targetPath);
+    await downloadAssets(urls, useLocalAssets);
+
+    if (!useLocalAssets) {
+      // Step 2: Upload to R2 (skip for local mode)
+      console.log(chalk.bold('\n☁️  Step 2/3: Upload to R2\n'));
+      await uploadAssets();
+    } else {
+      console.log(
+        chalk.yellow('\n⏭️  Step 2/3: Skipping R2 upload (local mode)\n')
+      );
+    }
+
+    // Step 3: Update JSONs
+    console.log(chalk.bold('\n📝 Step 3/3: Update JSONs\n'));
+    await updateJsonFiles(targetPath, true, useLocalAssets);
+
+    console.log(chalk.bold.green('\n✨ Migration Complete!\n'));
+    if (!useLocalAssets) {
+      console.log(
+        chalk.dim('Run ') +
+          chalk.cyan('npm run r2:verify') +
+          chalk.dim(' to verify uploads.')
+      );
+    }
+  } catch (error) {
+    console.error(chalk.red('\n❌ Migration failed:'), error);
+    process.exit(1);
+  }
+}
+
+/**
+ * Sync new assets (for re-scraping workflow)
+ */
+async function syncNewAssets(
+  targetPath?: string,
+  useLocalAssets: boolean = false
+): Promise<void> {
+  console.log(chalk.bold('\n🔄 Syncing New Assets\n'));
+
+  if (targetPath) {
+    console.log(chalk.cyan(`📂 Target Path: ${targetPath}\n`));
+  }
+
+  try {
+    const allUrls = await extractAllUrls(targetPath);
+    const mapping = await loadMapping();
+
+    const newUrls = Array.from(allUrls).filter((url) => {
+      const hash = hashUrl(url);
+      return !mapping.mappings[hash];
+    });
+
+    if (newUrls.length === 0) {
+      console.log(
+        chalk.green('✓ No new assets detected. Everything is up to date!')
+      );
+      return;
+    }
+
+    console.log(chalk.yellow(`Found ${newUrls.length} new assets\n`));
+
+    console.log(chalk.bold('Downloading new assets...'));
+    await downloadAssets(newUrls, useLocalAssets);
+
+    if (!useLocalAssets) {
+      console.log(chalk.bold('\nUploading new assets...'));
+      await uploadAssets();
+    }
+
+    console.log(chalk.bold('\nUpdating JSONs...'));
+    await updateJsonFiles(targetPath, true, useLocalAssets);
+
+    console.log(chalk.green('\n✓ Sync complete!'));
+  } catch (error) {
+    console.error(chalk.red('\n❌ Sync failed:'), error);
+    process.exit(1);
+  }
+}
+
+/**
+ * Main CLI entry point
+ */
+async function main(): Promise<void> {
+  const command = process.argv[2];
+  const args = process.argv.slice(3);
+  const useLocalAssets = args.includes('--local');
+
+  const pathIndex = args.indexOf('--path');
+  const targetPath = pathIndex !== -1 ? args[pathIndex + 1] : undefined;
+
+  if (pathIndex !== -1 && !targetPath) {
+    console.log(chalk.red('\n❌ --path requires a value\n'));
+    console.log(chalk.dim('Example: --path version/latest.json'));
+    console.log(chalk.dim('         --path characters'));
+    process.exit(1);
+  }
+
+  console.log(chalk.dim('Checking internet connection...'));
+  const isConnected = await checkInternetConnection();
+
+  if (isConnected) {
+    console.log(chalk.green('✓ Internet connection available\n'));
+  } else {
+    console.log(chalk.red('✗ No internet connection detected'));
+    return;
+  }
+
+  try {
+    switch (command) {
+      case 'status':
+        await showStatus();
+        break;
+
+      case 'download': {
+        console.log(chalk.bold('\n📥 Download Phase\n'));
+        if (useLocalAssets) {
+          console.log(chalk.yellow('Using LOCAL ASSETS mode\n'));
+        }
+        if (targetPath) {
+          console.log(chalk.cyan(`Target: ${targetPath}\n`));
+        }
+        const urls = await extractAllUrls(targetPath);
+        await downloadAssets(urls, useLocalAssets);
+        break;
+      }
+
+      case 'upload':
+        console.log(chalk.bold('\n☁️  Upload Phase\n'));
+        await uploadAssets();
+        break;
+
+      case 'update':
+        console.log(chalk.bold('\n📝 Update Phase\n'));
+        await updateJsonFiles(targetPath, true, useLocalAssets);
+        break;
+
+      case 'migrate':
+      case 'all':
+        await runFullMigration(targetPath, useLocalAssets);
+        break;
+
+      case 'verify':
+        console.log(chalk.bold('\n🔍 Verifying Uploads\n'));
+        await verifyUploads();
+        break;
+
+      case 'sync':
+        await syncNewAssets(targetPath, useLocalAssets);
+        break;
+
+      case 'sync-r2':
+      case 'sync-db':
+      case 'reconcile':
+        console.log(chalk.bold('\n🔄 Syncing Database with R2\n'));
+        await syncMappingWithR2();
+        break;
+
+      case 'audit':
+        console.log(chalk.bold('\n🔍 R2 Storage Audit\n'));
+        await auditR2();
+        break;
+
+      case 'retry-up':
+      case 'retry-upload':
+        await retryFailedUploads();
+        break;
+
+      case 'clean':
+        console.log(chalk.bold('\n🧹 Cleaning Download Cache\n'));
+        await clearDownloadCache();
+        console.log(chalk.green('✓ Cache cleared'));
+        break;
+
+      case 'restore': {
+        const timestamp = process.argv[3];
+        await restoreFromBackup(timestamp);
+        break;
+      }
+
+      case 'fix':
+      case 'fix-types':
+        console.log(chalk.bold('\n🔧 Fixing File Type Mismatches\n'));
+        await fixFileMismatches();
+        break;
+
+      case 'push-mapping':
+      case 'upload-mapping':
+      case 'mapping-up':
+        console.log(chalk.bold('\n📤 Uploading Mapping Database to R2\n'));
+        await uploadMappingToR2();
+        break;
+
+      case 'pull-mapping':
+      case 'download-mapping':
+      case 'mapping-down':
+        console.log(chalk.bold('\n📥 Downloading Mapping Database from R2\n'));
+        await downloadMappingFromR2();
+        break;
+
+      default:
+        if (!command) {
+          await showStatus();
+        } else {
+          console.log(chalk.red(`\nUnknown command: ${command}\n`));
+          process.exit(1);
+        }
+    }
+  } catch (error) {
+    console.error(chalk.red('\n❌ Error:'), error);
+    process.exit(1);
+  }
+}
+
+const currentFile = fileURLToPath(import.meta.url);
+const argv1File = path.resolve(process.argv[1] || '');
+
+if (currentFile === argv1File) {
+  main().catch((error) => {
+    console.error(chalk.red('\n❌ Fatal error:'), error);
+    process.exit(1);
+  });
+}

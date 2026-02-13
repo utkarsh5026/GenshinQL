@@ -1,0 +1,1141 @@
+/* Tile Container */
+.tile {
+  perspective: 1000px;
+  cursor: pointer;
+  aspect-ratio: 1;
+}
+
+.tileDisabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Preview tile (empty, non-interactive) */
+.tilePreview {
+  cursor: default;
+  pointer-events: none;
+  animation: tileEntrance 0.4s ease-out both;
+}
+
+.tilePreview .tileFront::after {
+  content: '';
+  opacity: 0;
+}
+
+@keyframes tileEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotateY(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+/* Game board loading state */
+.gameBoardLoading {
+  opacity: 0.7;
+}
+
+/* Inner tile wrapper for 3D flip */
+.tileInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.tileFlipped .tileInner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.tileFront,
+.tileBack {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Card back (hidden state) - Midnight theme */
+.tileFront {
+  background: linear-gradient(
+    135deg,
+    oklch(16% 0.025 260) 0%,
+    oklch(22% 0.025 260) 100%
+  );
+  border: 2px solid oklch(28% 0.03 260);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.tileFront::after {
+  content: '?';
+  font-size: 2rem;
+  font-weight: bold;
+  color: oklch(75% 0.15 85);
+  opacity: 0.7;
+}
+
+/* Card face (revealed state) */
+.tileBack {
+  transform: rotateY(180deg);
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--border));
+}
+
+.tileBack img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+/* Matched states - Element themed */
+.tileExactMatch .tileBack {
+  border-color: oklch(65% 0.17 145);
+  box-shadow: 0 0 20px oklch(55% 0.18 145 / 0.5);
+  animation: matchPulse 0.5s ease-out;
+}
+
+.tileCharacterMatch .tileBack {
+  border-color: oklch(68% 0.17 250);
+  box-shadow: 0 0 20px oklch(58% 0.19 250 / 0.5);
+  animation: matchPulse 0.5s ease-out;
+}
+
+/* Hover effect for unflipped tiles - Celestial gold */
+.tile:not(.tileFlipped):not(.tileDisabled):hover .tileFront {
+  transform: translate3d(0, -4px, 0) scale(1.02);
+  border-color: oklch(75% 0.15 85);
+  box-shadow: 0 8px 16px -4px oklch(75% 0.15 85 / 0.3);
+  transition: all 0.2s ease-out;
+}
+
+.tile:not(.tileFlipped):not(.tileDisabled):hover .tileFront::after {
+  color: oklch(80% 0.16 85);
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes matchPulse {
+  0% {
+    transform: rotateY(180deg) scale(1);
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.08);
+  }
+  100% {
+    transform: rotateY(180deg) scale(1);
+  }
+}
+
+/* Game Board Grid - Midnight theme */
+.gameBoard {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    oklch(12% 0.02 260 / 0.5) 0%,
+    oklch(16% 0.025 260 / 0.5) 100%
+  );
+  border: 1px solid oklch(28% 0.03 260 / 0.3);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  width: fit-content;
+  justify-self: center;
+}
+
+/* Easy: 3x4 grid (6 pairs = 12 tiles) */
+.gameBoardEasy {
+  grid-template-columns: repeat(3, var(--tile-size, 100px));
+  grid-template-rows: repeat(4, var(--tile-size, 100px));
+}
+
+/* Medium: 4x4 grid (8 pairs = 16 tiles) */
+.gameBoardMedium {
+  grid-template-columns: repeat(4, var(--tile-size, 80px));
+  grid-template-rows: repeat(4, var(--tile-size, 80px));
+}
+
+/* Hard: 6x4 grid (12 pairs = 24 tiles) */
+.gameBoardHard {
+  grid-template-columns: repeat(6, var(--tile-size, 70px));
+  grid-template-rows: repeat(4, var(--tile-size, 70px));
+}
+
+/* Game Header */
+.gameHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: hsl(var(--card));
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--muted-foreground));
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+/* Difficulty Selector */
+.difficultySelector {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.difficultyBtn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.difficultyBtn:hover:not(.difficultyBtnActive) {
+  background: hsl(var(--muted));
+}
+
+.difficultyBtnActive {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Game Over Modal */
+.gameOverOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.gameOverModal {
+  background: linear-gradient(
+    135deg,
+    oklch(16% 0.025 260) 0%,
+    oklch(12% 0.02 260) 100%
+  );
+  border: 1px solid oklch(75% 0.15 85 / 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 40px oklch(75% 0.15 85 / 0.2);
+}
+
+.gameOverTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, hsl(142, 76%, 45%), hsl(199, 89%, 48%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.statBox {
+  padding: 1rem;
+  background: hsl(var(--muted));
+  border-radius: 0.5rem;
+}
+
+.statBoxLabel {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.25rem;
+}
+
+.statBoxValue {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Confetti Animation */
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  animation: confettiFall 3s ease-out forwards;
+  pointer-events: none;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Game Layout - Two column design */
+.gameLayout {
+  display: grid;
+  grid-template-columns: 650px 260px;
+  gap: 1.5rem;
+  flex: 1;
+  min-height: 0;
+  align-items: start;
+  justify-content: center;
+}
+
+/* Game board area - constrained to viewport */
+.gameBoardArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 180px);
+  min-height: 400px;
+  width: 100%;
+}
+
+/* Sidebar area for future use */
+.gameSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    oklch(12% 0.02 260 / 0.5) 0%,
+    oklch(16% 0.025 260 / 0.5) 100%
+  );
+  border: 1px solid oklch(28% 0.03 260 / 0.3);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: fit-content;
+}
+
+.startButton {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  transition: all 0.2s;
+}
+
+.startButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   EXPERT MODE GRIDS
+   ============================================ */
+
+/* Expert Wide: 8x4 grid (16 pairs = 32 tiles) */
+.gameBoardExpertWide {
+  grid-template-columns: repeat(8, var(--tile-size, 60px));
+  grid-template-rows: repeat(4, var(--tile-size, 60px));
+}
+
+/* Expert Square: 6x6 grid (18 pairs = 36 tiles) */
+.gameBoardExpertSquare {
+  grid-template-columns: repeat(6, var(--tile-size, 65px));
+  grid-template-rows: repeat(6, var(--tile-size, 65px));
+}
+
+/* ============================================
+   PEEK MODE (Spooky Theme)
+   ============================================ */
+
+.tilePeeking .tileInner {
+  transform: rotateY(180deg);
+  animation: peekReveal 0.4s ease-out;
+}
+
+@keyframes peekReveal {
+  0% {
+    transform: rotateY(0deg);
+    filter: brightness(0.3);
+  }
+  100% {
+    transform: rotateY(180deg);
+    filter: brightness(1);
+  }
+}
+
+/* Spooky vignette overlay during peek */
+.gameBoardPeeking {
+  position: relative;
+}
+
+.gameBoardPeeking::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 20%,
+    oklch(8% 0.04 280 / 0.6) 80%,
+    oklch(5% 0.05 280 / 0.9) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+  animation: spookyPulse 2s ease-in-out;
+  border-radius: 1.5rem;
+}
+
+@keyframes spookyPulse {
+  0% {
+    opacity: 0;
+    filter: hue-rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    filter: hue-rotate(-20deg);
+  }
+}
+
+/* Spooky glow on tiles during peek */
+.gameBoardPeeking .tileBack {
+  box-shadow: 0 0 15px oklch(50% 0.15 280 / 0.4);
+}
+
+/* ============================================
+   BOMB TILES
+   ============================================ */
+
+.tileBomb .tileBack {
+  border-color: oklch(55% 0.22 25);
+  position: relative;
+}
+
+.tileBomb .tileBack::before {
+  content: '💣';
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 0.875rem;
+  opacity: 0.9;
+  z-index: 5;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.tileBombTriggered .tileBack {
+  animation: bombExplode 0.6s ease-out forwards;
+}
+
+@keyframes bombExplode {
+  0% {
+    transform: rotateY(180deg) scale(1);
+    filter: brightness(1);
+  }
+  25% {
+    transform: rotateY(180deg) scale(1.3);
+    filter: brightness(2) saturate(2);
+    box-shadow: 0 0 50px oklch(65% 0.28 25);
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.1);
+    filter: brightness(1.5) saturate(1.5);
+  }
+  100% {
+    transform: rotateY(180deg) scale(0.95);
+    filter: brightness(0.6) saturate(0.6) grayscale(0.3);
+    opacity: 0.7;
+  }
+}
+
+/* ============================================
+   SCORE POP-UPS
+   ============================================ */
+
+.scorePopup {
+  position: absolute;
+  font-size: 1.25rem;
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 100;
+  animation: scoreFloat 1s ease-out forwards;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+.scorePopupMatch {
+  color: oklch(65% 0.17 145);
+}
+
+.scorePopupCombo {
+  color: oklch(80% 0.16 85);
+  font-size: 1.5rem;
+}
+
+.scorePopupBomb {
+  color: oklch(60% 0.24 25);
+}
+
+.scorePopupTimeBonus {
+  color: oklch(70% 0.15 220);
+}
+
+@keyframes scoreFloat {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(0.8);
+  }
+  20% {
+    transform: translate(-50%, -15px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50px) scale(1);
+  }
+}
+
+/* ============================================
+   COMBO INDICATOR
+   ============================================ */
+
+.comboIndicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 200;
+  pointer-events: none;
+  animation: comboAppear 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.comboNumber {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, oklch(85% 0.18 85), oklch(75% 0.2 45));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px oklch(75% 0.15 85 / 0.6));
+}
+
+.comboText {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: oklch(85% 0.12 85);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px oklch(75% 0.15 85 / 0.5);
+}
+
+.comboMedium .comboNumber {
+  font-size: 2.5rem;
+}
+
+.comboLarge .comboNumber {
+  font-size: 3.5rem;
+}
+
+.comboHuge .comboNumber {
+  font-size: 4.5rem;
+  animation: comboShake 0.1s ease-in-out 3;
+}
+
+@keyframes comboAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) rotate(-10deg);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3) rotate(5deg);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(0.95) rotate(-2deg);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9) rotate(0deg);
+  }
+}
+
+@keyframes comboShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+
+/* ============================================
+   COUNTDOWN TIMER
+   ============================================ */
+
+.countdownTimer {
+  position: relative;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timerValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.timerUrgent .timerValue {
+  color: oklch(70% 0.18 80);
+  animation: timerPulse 0.5s ease-in-out infinite;
+}
+
+.timerCritical .timerValue {
+  color: oklch(60% 0.24 25);
+  animation: timerPulse 0.25s ease-in-out infinite;
+}
+
+@keyframes timerPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.timerRing {
+  position: absolute;
+  inset: -6px;
+  border: 2px solid oklch(60% 0.24 25);
+  border-radius: 8px;
+  animation: timerRing 0.6s ease-out infinite;
+}
+
+@keyframes timerRing {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}
+
+/* ============================================
+   MATCH PARTICLES
+   ============================================ */
+
+.particleContainer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 150;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: particleBurst 0.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.particleExact .particle {
+  background: oklch(65% 0.17 145);
+  box-shadow: 0 0 6px oklch(65% 0.17 145);
+}
+
+.particleCharacter .particle {
+  background: oklch(68% 0.17 250);
+  box-shadow: 0 0 6px oklch(68% 0.17 250);
+}
+
+.particleBomb .particle {
+  background: oklch(60% 0.24 25);
+  box-shadow: 0 0 6px oklch(60% 0.24 25);
+}
+
+@keyframes particleBurst {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(0.3);
+  }
+}
+
+/* ============================================
+   GAME MODE SELECTOR
+   ============================================ */
+
+.modeSelector {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  background: oklch(16% 0.025 260 / 0.5);
+  border-radius: 0.5rem;
+  border: 1px solid oklch(28% 0.03 260 / 0.3);
+  margin-bottom: 1rem;
+}
+
+.modeBtn {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+  color: oklch(65% 0.02 260);
+  text-align: center;
+}
+
+.modeBtn:hover:not(.modeBtnActive) {
+  background: oklch(22% 0.025 260);
+  color: oklch(85% 0.01 260);
+}
+
+.modeBtnActive {
+  background: oklch(75% 0.15 85);
+  color: oklch(15% 0.02 85);
+  font-weight: 600;
+}
+
+.modeBtnClassic.modeBtnActive {
+  background: oklch(65% 0.12 145);
+  color: oklch(98% 0.01 145);
+}
+
+.modeBtnTimeAttack.modeBtnActive {
+  background: oklch(65% 0.15 220);
+  color: oklch(98% 0.01 220);
+}
+
+.modeBtnBomb.modeBtnActive {
+  background: oklch(60% 0.2 25);
+  color: oklch(98% 0.01 25);
+}
+
+/* ============================================
+   GAME LOST STATE
+   ============================================ */
+
+.gameOverTitleLost {
+  background: linear-gradient(135deg, oklch(60% 0.24 25), oklch(50% 0.2 15));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gray confetti for loss */
+.confettiLost {
+  filter: grayscale(0.7) brightness(0.6);
+}
+
+/* ============================================
+   STAT BOX COLORS
+   ============================================ */
+
+.statBoxLegendary {
+  border-left: 3px solid oklch(75% 0.15 85);
+}
+
+.statBoxCryo {
+  border-left: 3px solid oklch(70% 0.12 220);
+}
+
+.statBoxElectro {
+  border-left: 3px solid oklch(65% 0.18 285);
+}
+
+.statBoxSuccess {
+  border-left: 3px solid oklch(65% 0.17 145);
+}
+
+.statBoxDendro {
+  border-left: 3px solid oklch(70% 0.18 140);
+}
+
+.statBoxHydro {
+  border-left: 3px solid oklch(68% 0.15 230);
+}
+
+.statBoxPyro {
+  border-left: 3px solid oklch(60% 0.22 25);
+}
+
+.statBoxWarning {
+  border-left: 3px solid oklch(70% 0.18 80);
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .gameLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .gameBoardExpertWide,
+  .gameBoardExpertSquare {
+    gap: 0.375rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .comboNumber {
+    font-size: 2rem;
+  }
+
+  .comboLarge .comboNumber {
+    font-size: 2.5rem;
+  }
+
+  .comboHuge .comboNumber {
+    font-size: 3rem;
+  }
+
+  .scorePopup {
+    font-size: 1rem;
+  }
+
+  .scorePopupCombo {
+    font-size: 1.25rem;
+  }
+}
+
+/* ============================================
+   GAME SETUP WIZARD
+   ============================================ */
+
+.setupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+
+/* Step Indicators */
+.stepIndicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.stepIndicatorWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.stepIndicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: default;
+}
+
+.stepIndicatorActive {
+  background: linear-gradient(135deg, oklch(75% 0.15 85), oklch(70% 0.18 70));
+  color: oklch(15% 0.02 85);
+  box-shadow: 0 0 20px oklch(75% 0.15 85 / 0.5);
+}
+
+.stepIndicatorCompleted {
+  background: oklch(55% 0.15 145);
+  color: oklch(98% 0.01 145);
+  cursor: pointer;
+}
+
+.stepIndicatorCompleted:hover {
+  transform: scale(1.1);
+}
+
+.stepIndicatorInactive {
+  background: oklch(22% 0.025 260);
+  color: oklch(55% 0.02 260);
+  border-color: oklch(30% 0.03 260);
+}
+
+.stepLabel {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: oklch(55% 0.02 260);
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.stepLabelActive {
+  color: oklch(85% 0.12 85);
+  font-weight: 500;
+}
+
+.stepConnector {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 80px;
+  height: 2px;
+  background: oklch(30% 0.03 260);
+  transition: background 0.3s;
+}
+
+.stepConnectorCompleted {
+  background: oklch(55% 0.15 145);
+}
+
+/* Step Content */
+.setupContent {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.stepContent {
+  animation: stepFadeIn 0.4s ease-out;
+}
+
+@keyframes stepFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: oklch(95% 0.01 260);
+}
+
+.stepDescription {
+  text-align: center;
+  color: oklch(65% 0.02 260);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+/* Mode Cards */
+.modeCards {
+  margin-bottom: 1.5rem;
+}
+
+.modeDescription {
+  text-align: center;
+  padding: 1rem;
+  background: oklch(16% 0.025 260 / 0.5);
+  border-radius: 0.75rem;
+  border: 1px solid oklch(28% 0.03 260 / 0.3);
+}
+
+.modeTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Difficulty Wrapper */
+.difficultyWrapper {
+  margin-bottom: 1.5rem;
+}
+
+/* Scoring Info */
+.scoringInfo {
+  padding: 1rem;
+  background: oklch(16% 0.025 260 / 0.5);
+  border-radius: 0.75rem;
+  border: 1px solid oklch(28% 0.03 260 / 0.3);
+}
+
+/* Navigation */
+.setupNavigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.navButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.navButtonPrimary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, oklch(65% 0.12 260), oklch(55% 0.15 280));
+  color: white;
+  transition: all 0.2s;
+}
+
+.navButtonPrimary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px oklch(60% 0.15 270 / 0.4);
+}
+
+/* Override startButton for setup wizard */
+.setupContainer .startButton {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, oklch(75% 0.15 85), oklch(70% 0.18 70));
+  color: oklch(15% 0.02 85);
+  box-shadow: 0 4px 20px oklch(75% 0.15 85 / 0.4);
+  transition: all 0.2s;
+}
+
+.setupContainer .startButton:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px oklch(75% 0.15 85 / 0.5);
+}
+
+.setupContainer .startButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Game Over Modal Buttons */
+.gameOverButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.backToMenuButton {
+  padding: 0.875rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background: transparent;
+  border: 2px solid oklch(45% 0.03 260);
+  color: oklch(75% 0.02 260);
+  transition: all 0.2s;
+}
+
+.backToMenuButton:hover {
+  border-color: oklch(60% 0.03 260);
+  background: oklch(22% 0.025 260);
+  color: oklch(90% 0.01 260);
+}

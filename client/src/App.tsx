@@ -1,37 +1,56 @@
-import './App.css';
-
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 
-import { useAutoClearOldCache } from '@/hooks/useCacheManager';
+import { usePrimitivesStore, useWeaponsStore } from '@/stores';
+
+import ErrorBoundary from './components/ErrorBoundary';
+import { Layout } from './components/layout';
+import { RouteLoadingFallback } from './components/utils/RouteLoadingFallback';
+import { useAutoClearOldCache } from './features/cache';
 import {
-  usePrimitivesStore,
   useTalentBooksStore,
   useWeaponMaterialStore,
-} from '@/stores';
-
-import { AppSideBar, Layout } from './components/layout';
-import { SidebarProvider } from './components/ui/sidebar';
+} from './features/calendar';
+import { useCharactersStore } from './features/characters';
 import { routes } from './routes';
 
 function App() {
   const { fetchPrimitives } = usePrimitivesStore();
   const { fetchWeaponMaterials } = useWeaponMaterialStore();
   const { fetchBooks } = useTalentBooksStore();
+  const { fetchWeapons } = useWeaponsStore();
+  const { fetchCharacters } = useCharactersStore();
 
   useAutoClearOldCache(7);
 
   useEffect(() => {
-    Promise.all([fetchPrimitives(), fetchWeaponMaterials(), fetchBooks()]);
-  }, [fetchPrimitives, fetchWeaponMaterials, fetchBooks]);
+    const loadData = async () => {
+      await Promise.all([
+        fetchPrimitives(),
+        fetchWeapons(),
+        fetchBooks(),
+        fetchCharacters(),
+      ]);
+      await fetchWeaponMaterials();
+    };
+
+    loadData();
+  }, [
+    fetchPrimitives,
+    fetchWeapons,
+    fetchWeaponMaterials,
+    fetchBooks,
+    fetchCharacters,
+  ]);
 
   const routing = useRoutes(routes);
 
   return (
-    <SidebarProvider>
-      <AppSideBar />
-      <Layout>{routing}</Layout>
-    </SidebarProvider>
+    <ErrorBoundary>
+      <Suspense fallback={<RouteLoadingFallback />}>
+        <Layout>{routing}</Layout>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 

@@ -1,0 +1,264 @@
+{
+  "name": "Chain Breaker",
+  "rarity": 4,
+  "attack": 565,
+  "subStat": "ATK 27.6%",
+  "effect": "Flower—Feather Song\nFor every party member from Natlan or who has a different Elemental Type from the equipping character, the equipping character gains 4.8~9.6% increased ATK. When there are no less than 3 of the aforementioned characters, the equipping character gains 24~48 Elemental Mastery.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Weapon_Chain_Breaker.png",
+  "nation": 5,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Item_Night-Wind%27s_Mystic_Consideration.png",
+      "caption": "Night-Wind's Mystic Consideration"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+      "caption": "Night-Wind's Mystic Premonition"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+      "caption": "Night-Wind's Mystic Augury"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Night-Wind%27s_Mystic_Revelation.png",
+      "caption": "Night-Wind's Mystic Revelation"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Item_Feathery_Fin.png",
+      "caption": "Feathery Fin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Lunar_Fin.png",
+      "caption": "Lunar Fin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Chasmlight_Fin.png",
+      "caption": "Chasmlight Fin"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Juvenile_Fang.png",
+      "caption": "Juvenile Fang"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Seasoned_Fang.png",
+      "caption": "Seasoned Fang"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Tyrant%27s_Fang.png",
+      "caption": "Tyrant's Fang"
+    }
+  ],
+  "passives": [
+    "For every party member from Natlan or who has a different Elemental Type from the equipping character, the equipping character gains 4.8% increased ATK. When there are no less than 3 of the aforementioned characters, the equipping character gains 24 Elemental Mastery.",
+    "For every party member from Natlan or who has a different Elemental Type from the equipping character, the equipping character gains 6% increased ATK. When there are no less than 3 of the aforementioned characters, the equipping character gains 30 Elemental Mastery.",
+    "For every party member from Natlan or who has a different Elemental Type from the equipping character, the equipping character gains 7.2% increased ATK. When there are no less than 3 of the aforementioned characters, the equipping character gains 36 Elemental Mastery.",
+    "For every party member from Natlan or who has a different Elemental Type from the equipping character, the equipping character gains 8.4% increased ATK. When there are no less than 3 of the aforementioned characters, the equipping character gains 42 Elemental Mastery.",
+    "For every party member from Natlan or who has a different Elemental Type from the equipping character, the equipping character gains 9.6% increased ATK. When there are no less than 3 of the aforementioned characters, the equipping character gains 48 Elemental Mastery."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Weapon_Chain_Breaker.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Weapon_Chain_Breaker_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Weapon_Card_Chain_Breaker.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 119
+        },
+        "subStat": {
+          "min": 6,
+          "max": 10.6
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Item_Night-Wind%27s_Mystic_Consideration.png",
+            "caption": "Night-Wind's Mystic Consideration",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Item_Feathery_Fin.png",
+            "caption": "Feathery Fin",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Juvenile_Fang.png",
+            "caption": "Juvenile Fang",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 144,
+          "max": 226
+        },
+        "subStat": {
+          "min": 10.6,
+          "max": 15.5
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+            "caption": "Night-Wind's Mystic Premonition",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Item_Feathery_Fin.png",
+            "caption": "Feathery Fin",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Juvenile_Fang.png",
+            "caption": "Juvenile Fang",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 252,
+          "max": 293
+        },
+        "subStat": {
+          "min": 15.5,
+          "max": 17.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+            "caption": "Night-Wind's Mystic Premonition",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Lunar_Fin.png",
+            "caption": "Lunar Fin",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Seasoned_Fang.png",
+            "caption": "Seasoned Fang",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 319,
+          "max": 361
+        },
+        "subStat": {
+          "min": 17.9,
+          "max": 20.3
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+            "caption": "Night-Wind's Mystic Augury",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Lunar_Fin.png",
+            "caption": "Lunar Fin",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Seasoned_Fang.png",
+            "caption": "Seasoned Fang",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 387,
+          "max": 429
+        },
+        "subStat": {
+          "min": 20.3,
+          "max": 22.7
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+            "caption": "Night-Wind's Mystic Augury",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Chasmlight_Fin.png",
+            "caption": "Chasmlight Fin",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Tyrant%27s_Fang.png",
+            "caption": "Tyrant's Fang",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 455,
+          "max": 497
+        },
+        "subStat": {
+          "min": 22.7,
+          "max": 25.1
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Night-Wind%27s_Mystic_Revelation.png",
+            "caption": "Night-Wind's Mystic Revelation",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Chasmlight_Fin.png",
+            "caption": "Chasmlight Fin",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Tyrant%27s_Fang.png",
+            "caption": "Tyrant's Fang",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 523,
+          "max": 565
+        },
+        "subStat": {
+          "min": 25.1,
+          "max": 27.6
+        }
+      }
+    ]
+  }
+}

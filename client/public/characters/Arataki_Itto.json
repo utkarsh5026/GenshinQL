@@ -1,534 +1,597 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Arataki_Itto_Icon.png",
-    "name": "Arataki Itto",
-    "rarity": "5 Stars",
-    "element": "Geo",
-    "weaponType": "Claymore",
-    "region": "Inazuma",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
-    "modelType": "Tall Male",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Arataki_Itto_Icon.png",
+  "name": "Arataki Itto",
+  "rarity": "5 Stars",
+  "element": "Geo",
+  "weaponType": "Claymore",
+  "region": "Inazuma",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Inazuma_Emblem_Night.png",
+  "modelType": "Tall Male",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Claymore_Geo.png",
+      "talentName": "Fight Club Legend",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\nWhen the 2nd and 4th strikes hit opponents, Itto will gain 1 and 2 stacks of Superlative Superstrength, respectively.\nMax 5 stacks. Triggering this effect will refresh the current duration of any existing stacks.\n\nAdditionally, Itto's Normal Attack combo does not immediately reset after sprinting or using his Elemental Skill, \"Masatsu Zetsugi: Akaushi Burst!\"\n\nCharged Attack\nWhen holding to perform a Charged Attack, Itto unleashes a series of Arataki Kesagiri slashes without consuming Stamina. Instead, each Arataki Kesagiri slash consumes 1 stack of Superlative Superstrength. When the final stack is consumed, Itto delivers a powerful final slash.\nIf no stacks of Superlative Superstrength are available, Itto will perform a single Saichimonji Slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Claymore_Geo.png",
-            "talentName": "Fight Club Legend",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 4 consecutive strikes.\nWhen the 2nd and 4th strikes hit opponents, Itto will gain 1 and 2 stacks of Superlative Superstrength, respectively.\nMax 5 stacks. Triggering this effect will refresh the current duration of any existing stacks.\n\nAdditionally, Itto's Normal Attack combo does not immediately reset after sprinting or using his Elemental Skill, \"Masatsu Zetsugi: Akaushi Burst!\"\n\nCharged Attack\nWhen holding to perform a Charged Attack, Itto unleashes a series of Arataki Kesagiri slashes without consuming Stamina. Instead, each Arataki Kesagiri slash consumes 1 stack of Superlative Superstrength. When the final stack is consumed, Itto delivers a powerful final slash.\nIf no stacks of Superlative Superstrength are available, Itto will perform a single Saichimonji Slash.\n\nPlunging Attack\nPlunges from mid-air to strike the ground, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Fight_Club_Legend_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Fight_Club_Legend_Normal_Chain_Preview.gif",
-                    "caption": "Normal Attack Combo, no reset after sprinting"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Fight_Club_Legend_Charged_Saichimonji_Slash_Preview.gif",
-                    "caption": "Charged Attack, Saichimonji Slash"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Fight_Club_Legend_Charged_Arataki_Kesagiri_Preview.gif",
-                    "caption": "Charged Attack, Arataki Kesagiri"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Fight_Club_Legend_Superlative_Superstrength_Max_Preview.gif",
-                    "caption": "Superlative Superstrength, Max Stacks"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Fight_Club_Legend_Plunging_Preview.gif",
-                    "caption": "Plunging Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "79.23",
-                    "85.68",
-                    "92.13",
-                    "101.34",
-                    "107.79",
-                    "115.16",
-                    "125.3",
-                    "135.43",
-                    "145.57",
-                    "156.62",
-                    "169.29"
-                ],
-                "2-Hit DMG (%)": [
-                    "76.37",
-                    "82.58",
-                    "88.8",
-                    "97.68",
-                    "103.9",
-                    "111",
-                    "120.77",
-                    "130.54",
-                    "140.3",
-                    "150.96",
-                    "163.17"
-                ],
-                "3-Hit DMG (%)": [
-                    "91.64",
-                    "99.1",
-                    "106.56",
-                    "117.22",
-                    "124.68",
-                    "133.2",
-                    "144.92",
-                    "156.64",
-                    "168.36",
-                    "181.15",
-                    "195.8"
-                ],
-                "4-Hit DMG (%)": [
-                    "117.22",
-                    "126.77",
-                    "136.31",
-                    "149.94",
-                    "159.48",
-                    "170.39",
-                    "185.38",
-                    "200.37",
-                    "215.37",
-                    "231.72",
-                    "250.47"
-                ],
-                "Arataki Kesagiri Combo Slash DMG (%)": [
-                    "91.16",
-                    "98.58",
-                    "106",
-                    "116.6",
-                    "124.02",
-                    "132.5",
-                    "144.16",
-                    "155.82",
-                    "167.48",
-                    "180.2",
-                    "194.78"
-                ],
-                "Arataki Kesagiri Final Slash DMG (%)": [
-                    "190.92",
-                    "206.46",
-                    "222",
-                    "244.2",
-                    "259.74",
-                    "277.5",
-                    "301.92",
-                    "326.34",
-                    "350.76",
-                    "377.4",
-                    "407.93"
-                ],
-                "Superlative Superstrength Duration": [
-                    "60s"
-                ],
-                "Saichimonji Slash DMG (%)": [
-                    "90.47",
-                    "97.84",
-                    "105.2",
-                    "115.72",
-                    "123.08",
-                    "131.5",
-                    "143.07",
-                    "154.64",
-                    "166.22",
-                    "178.84",
-                    "193.31"
-                ],
-                "Saichimonji Slash Stamina Cost": [
-                    "20"
-                ],
-                "Plunge DMG (%)": [
-                    "81.83",
-                    "88.49",
-                    "95.16",
-                    "104.67",
-                    "111.33",
-                    "118.94",
-                    "129.41",
-                    "139.88",
-                    "150.35",
-                    "161.76",
-                    "173.18"
-                ],
-                "Low Plunge DMG (%)": [
-                    "163.63",
-                    "176.95",
-                    "190.27",
-                    "209.3",
-                    "222.62",
-                    "237.84",
-                    "258.77",
-                    "279.7",
-                    "300.63",
-                    "323.46",
-                    "346.29"
-                ],
-                "High Plunge DMG (%)": [
-                    "204.39",
-                    "221.02",
-                    "237.66",
-                    "261.42",
-                    "278.06",
-                    "297.07",
-                    "323.21",
-                    "349.36",
-                    "375.5",
-                    "404.02",
-                    "432.54"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Fight_Club_Legend_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Masatsu_Zetsugi_Akaushi_Burst%21.png",
-            "talentName": "Masatsu Zetsugi: Akaushi Burst!",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nHurls Ushi, the young akaushi bull and auxiliary member of the Arataki Gang, dealing Geo DMG to opponents on hit.\nWhen Ushi hits opponents, Arataki Itto gains 1 stack of Superlative Superstrength.\n\nUshi will remain on the field and provide support in the following ways:\nTaunts surrounding opponents and draws their attacks.\nInherits HP based on a percentage of Arataki Itto's Max HP.\nWhen Ushi takes DMG, Arataki Itto gains 1 stack of Superlative Superstrength. Only 1 stack can be gained in this way every 2s.\nUshi will flee when its HP reaches 0 or its duration ends. It will grant Arataki Itto 1 stack of Superlative Superstrength when it leaves.\n\nHold\nAdjust throwing angle.\n\nUshi is considered a Geo construct. Arataki Itto can only deploy 1 Ushi on the field at any one time.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Masatsu_Zetsugi_Akaushi_Burst%21_Press_Preview.gif",
-                    "caption": "Press"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Masatsu_Zetsugi_Akaushi_Burst%21_Hold_Preview.gif",
-                    "caption": "Hold"
-                }
-            ],
-            "scaling": {
-                "Skill DMG (%)": [
-                    "307.2",
-                    "330.24",
-                    "353.28",
-                    "384",
-                    "407.04",
-                    "430.08",
-                    "460.8",
-                    "491.52",
-                    "522.24",
-                    "552.96",
-                    "583.68",
-                    "614.4",
-                    "652.8",
-                    "691"
-                ],
-                "Inherited HP": [
-                    "100% Max HP"
-                ],
-                "Duration": [
-                    "6s"
-                ],
-                "CD": [
-                    "10s"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Fight_Club_Legend_Normal_Chain_Preview.gif",
+          "caption": "Normal Attack Combo, no reset after sprinting"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Talent_Royal_Descent_Behold%2C_Itto_the_Evil%21.png",
-            "talentName": "Royal Descent: Behold, Itto the Evil!",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAttribute Scaling\nPreview\nTime to show 'em the might of the Arataki Gang! For a time, Itto lets out his inner Raging Oni King, wielding his Oni King's Kanabou in battle.\nThis state has the following special properties:\nConverts Itto's Normal, Charged, and Plunging Attacks to Geo DMG. This cannot be overridden.\nIncreases Itto's Normal Attack SPD. Also increases his ATK based on his DEF.\nOn hit, the 1st and 3rd strikes of his attack combo will each grant Arataki Itto 1 stack of Superlative Superstrength.\nDecreases Itto's Elemental and Physical RES by 20%.\n\nThe Raging Oni King state will be cleared when Itto leaves the field.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Royal_Descent_Behold%2C_Itto_the_Evil%21_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "ATK Bonus (% DEF)": [
-                    "57.6",
-                    "61.92",
-                    "66.24",
-                    "72",
-                    "76.32",
-                    "80.64",
-                    "86.4",
-                    "92.16",
-                    "97.92",
-                    "103.68",
-                    "109.44",
-                    "115.2",
-                    "122.4",
-                    "129.6"
-                ],
-                "ATK SPD Bonus": [
-                    "10%"
-                ],
-                "Duration": [
-                    "11s"
-                ],
-                "CD": [
-                    "18s"
-                ],
-                "Energy Cost": [
-                    "70"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Fight_Club_Legend_Charged_Saichimonji_Slash_Preview.gif",
+          "caption": "Charged Attack, Saichimonji Slash"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Talent_Arataki_Ichiban.png",
-            "talentName": "Arataki Ichiban",
-            "talentType": "1st Ascension Passive",
-            "description": "Description\nPreview\nWhen Arataki Itto uses consecutive Arataki Kesagiri, he obtains the following effects:\nEach slash increases the ATK SPD of the next slash by 10%. Max ATK SPD increase is 30%.\nIncreases his resistance to interruption.\n\nThese effects will be cleared once he stops performing consecutive slashes.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Arataki_Ichiban_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Fight_Club_Legend_Charged_Arataki_Kesagiri_Preview.gif",
+          "caption": "Charged Attack, Arataki Kesagiri"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Talent_Bloodline_of_the_Crimson_Oni.png",
-            "talentName": "Bloodline of the Crimson Oni",
-            "talentType": "4th Ascension Passive",
-            "description": "Arataki Kesagiri DMG is increased by 35% of Arataki Itto's DEF.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Fight_Club_Legend_Superlative_Superstrength_Max_Preview.gif",
+          "caption": "Superlative Superstrength, Max Stacks"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Woodchuck_Chucked.png",
-            "talentName": "Woodchuck Chucked",
-            "talentType": "Utility Passive",
-            "description": "When a party member uses attacks to obtain wood from a tree, they have a 25% chance to get an additional log of wood.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Woodchuck_Chucked_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Fight_Club_Legend_Plunging_Preview.gif",
+          "caption": "Plunging Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Constellation_Stay_a_While_and_Listen_Up.png",
-            "name": "Stay a While and Listen Up",
-            "level": 1,
-            "description": "After using Royal Descent: Behold, Itto the Evil!, Arataki Itto gains 2 stacks of Superlative Superstrength. After 1s, Itto will gain 1 stack of Superlative Superstrength every 0.5s for 1.5s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Constellation_Gather_%27Round%2C_It%27s_a_Brawl%21.png",
-            "name": "Gather 'Round, It's a Brawl!",
-            "level": 2,
-            "description": "After using Royal Descent: Behold, Itto the Evil!, each party member whose Element is Geo will decrease that skill's CD by 1.5s and restore 6 Energy to Arataki Itto.\nCD can be decreased by up to 4.5s in this manner. Max 18 Energy can be restored in this manner."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Constellation_Horns_Lowered%2C_Coming_Through.png",
-            "name": "Horns Lowered, Coming Through",
-            "level": 3,
-            "description": "Increases the Level of Masatsu Zetsugi: Akaushi Burst! by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Constellation_Jailhouse_Bread_and_Butter.png",
-            "name": "Jailhouse Bread and Butter",
-            "level": 4,
-            "description": "When the Raging Oni King state caused by Royal Descent: Behold, Itto the Evil! ends, all nearby party members gain 20% DEF and 20% ATK for 10s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Constellation_10_Years_of_Hanamizaka_Fame.png",
-            "name": "10 Years of Hanamizaka Fame",
-            "level": 5,
-            "description": "Increases the Level of Royal Descent: Behold, Itto the Evil! by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Constellation_Arataki_Itto%2C_Present%21.png",
-            "name": "Arataki Itto, Present!",
-            "level": 6,
-            "description": "Description\nGameplay Notes\nPreview\nArataki Itto's Charged Attacks deal +70% Crit DMG. Additionally, when he uses Arataki Kesagiri, he has a 50% chance to not consume stacks of Superlative Superstrength."
-        }
-    ],
-    "imageUrls": {},
-    "version": "2.3",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Idle_Arataki_Itto_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Idle_Arataki_Itto_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Idle_Arataki_Itto_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Idle_Arataki_Itto_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Talent_Menu_Arataki_Itto.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Talent_Menu_Arataki_Itto.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Weapon_Menu_Arataki_Itto.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Weapon_Menu_Arataki_Itto.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Party_Setup_Arataki_Itto.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Party_Setup_Arataki_Itto.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "79.23",
+          "85.68",
+          "92.13",
+          "101.34",
+          "107.79",
+          "115.16",
+          "125.3",
+          "135.43",
+          "145.57",
+          "156.62",
+          "169.29"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Namecard_Background_Itto_Oni_Face.png",
-                "caption": "Itto: Oni Face Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Item_Itto_Oni_Face.png",
-                "caption": "Itto: Oni Face Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Namecard_Banner_Itto_Oni_Face.png",
-                "caption": "Itto: Oni Face Banner"
-            }
+        "2-Hit DMG (%)": [
+          "76.37",
+          "82.58",
+          "88.8",
+          "97.68",
+          "103.9",
+          "111",
+          "120.77",
+          "130.54",
+          "140.3",
+          "150.96",
+          "163.17"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Fight_Club_Legend_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Fight_Club_Legend_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Fight_Club_Legend_Normal_Chain_Preview.gif",
-                        "caption": "Normal Attack Combo, no reset after sprinting",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Fight_Club_Legend_Normal_Chain_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Fight_Club_Legend_Charged_Saichimonji_Slash_Preview.gif",
-                        "caption": "Charged Attack, Saichimonji Slash",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Fight_Club_Legend_Charged_Saichimonji_Slash_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Fight_Club_Legend_Charged_Arataki_Kesagiri_Preview.gif",
-                        "caption": "Charged Attack, Arataki Kesagiri",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Fight_Club_Legend_Charged_Arataki_Kesagiri_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Fight_Club_Legend_Superlative_Superstrength_Max_Preview.gif",
-                        "caption": "Superlative Superstrength, Max Stacks",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Fight_Club_Legend_Superlative_Superstrength_Max_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Fight_Club_Legend_Plunging_Preview.gif",
-                        "caption": "Plunging Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Fight_Club_Legend_Plunging_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Royal_Descent_Behold%2C_Itto_the_Evil%21_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Royal_Descent_Behold%2C_Itto_the_Evil%21_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Masatsu_Zetsugi_Akaushi_Burst%21_Press_Preview.gif",
-                        "caption": "Press",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Masatsu_Zetsugi_Akaushi_Burst%21_Press_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Masatsu_Zetsugi_Akaushi_Burst%21_Hold_Preview.gif",
-                        "caption": "Hold",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Masatsu_Zetsugi_Akaushi_Burst%21_Hold_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "91.64",
+          "99.1",
+          "106.56",
+          "117.22",
+          "124.68",
+          "133.2",
+          "144.92",
+          "156.64",
+          "168.36",
+          "181.15",
+          "195.8"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Arataki_Itto_Character_Details_1.png",
-                "caption": "Arataki Itto Details 1 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Arataki_Itto_Character_Details_2.gif",
-                "caption": "Arataki Itto Details 2 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Arataki_Itto_Character_Details_3.gif",
-                "caption": "Arataki Itto Details 3 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Arataki_Itto_Character_Details_4.gif",
-                "caption": "Arataki Itto Details 4 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Arataki_Itto_Character_Details_5.png",
-                "caption": "Arataki Itto Details 5 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Arataki_Itto_Character_Details_6.png",
-                "caption": "Arataki Itto Details 6 Official HoYoLAB Post"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Arataki_Itto_Character_Details_7.png",
-                "caption": "Arataki Itto Details 7 Official HoYoLAB Post"
-            }
+        "4-Hit DMG (%)": [
+          "117.22",
+          "126.77",
+          "136.31",
+          "149.94",
+          "159.48",
+          "170.39",
+          "185.38",
+          "200.37",
+          "215.37",
+          "231.72",
+          "250.47"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Icon_Emoji_Paimon%27s_Paintings_11_Arataki_Itto_2.png",
-                "caption": "Hearty Laughter Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Icon_Emoji_Paimon%27s_Paintings_11_Arataki_Itto_1.png",
-                "caption": "Taunt Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Icon_Emoji_Paimon%27s_Paintings_11_Arataki_Itto_4.png",
-                "caption": "Eating Sweets Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Icon_Emoji_Paimon%27s_Paintings_11_Arataki_Itto_3.png",
-                "caption": "Perplexed Set 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Icon_Emoji_Paimon%27s_Paintings_15_Arataki_Itto_1.png",
-                "caption": "Pleased Set 15"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Icon_Emoji_Paimon%27s_Paintings_15_Arataki_Itto_2.png",
-                "caption": "Challenge Set 15"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Icon_Emoji_Paimon%27s_Paintings_15_Arataki_Itto_3.png",
-                "caption": "Lend a Hand Set 15"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Icon_Emoji_Paimon%27s_Paintings_15_Arataki_Itto_4.png",
-                "caption": "Agh! Set 15"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Icon_Emoji_Paimon%27s_Paintings_32_Arataki_Itto_1.png",
-                "caption": "Ohhh yeahhh! Set 32"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Icon_Emoji_Paimon%27s_Paintings_32_Arataki_Itto_2.png",
-                "caption": "Toiling away Set 32"
-            }
+        "Arataki Kesagiri Combo Slash DMG (%)": [
+          "91.16",
+          "98.58",
+          "106",
+          "116.6",
+          "124.02",
+          "132.5",
+          "144.16",
+          "155.82",
+          "167.48",
+          "180.2",
+          "194.78"
+        ],
+        "Arataki Kesagiri Final Slash DMG (%)": [
+          "190.92",
+          "206.46",
+          "222",
+          "244.2",
+          "259.74",
+          "277.5",
+          "301.92",
+          "326.34",
+          "350.76",
+          "377.4",
+          "407.93"
+        ],
+        "Superlative Superstrength Duration": ["60s"],
+        "Saichimonji Slash DMG (%)": [
+          "90.47",
+          "97.84",
+          "105.2",
+          "115.72",
+          "123.08",
+          "131.5",
+          "143.07",
+          "154.64",
+          "166.22",
+          "178.84",
+          "193.31"
+        ],
+        "Saichimonji Slash Stamina Cost": ["20"],
+        "Plunge DMG (%)": [
+          "81.83",
+          "88.49",
+          "95.16",
+          "104.67",
+          "111.33",
+          "118.94",
+          "129.41",
+          "139.88",
+          "150.35",
+          "161.76",
+          "173.18"
+        ],
+        "Low Plunge DMG (%)": [
+          "163.63",
+          "176.95",
+          "190.27",
+          "209.3",
+          "222.62",
+          "237.84",
+          "258.77",
+          "279.7",
+          "300.63",
+          "323.46",
+          "346.29"
+        ],
+        "High Plunge DMG (%)": [
+          "204.39",
+          "221.02",
+          "237.66",
+          "261.42",
+          "278.06",
+          "297.07",
+          "323.21",
+          "349.36",
+          "375.5",
+          "404.02",
+          "432.54"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Masatsu_Zetsugi_Akaushi_Burst%21.png",
+      "talentName": "Masatsu Zetsugi: Akaushi Burst!",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nHurls Ushi, the young akaushi bull and auxiliary member of the Arataki Gang, dealing Geo DMG to opponents on hit.\nWhen Ushi hits opponents, Arataki Itto gains 1 stack of Superlative Superstrength.\n\nUshi will remain on the field and provide support in the following ways:\nTaunts surrounding opponents and draws their attacks.\nInherits HP based on a percentage of Arataki Itto's Max HP.\nWhen Ushi takes DMG, Arataki Itto gains 1 stack of Superlative Superstrength. Only 1 stack can be gained in this way every 2s.\nUshi will flee when its HP reaches 0 or its duration ends. It will grant Arataki Itto 1 stack of Superlative Superstrength when it leaves.\n\nHold\nAdjust throwing angle.\n\nUshi is considered a Geo construct. Arataki Itto can only deploy 1 Ushi on the field at any one time.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Masatsu_Zetsugi_Akaushi_Burst%21_Press_Preview.gif",
+          "caption": "Press"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Masatsu_Zetsugi_Akaushi_Burst%21_Hold_Preview.gif",
+          "caption": "Hold"
+        }
+      ],
+      "scaling": {
+        "Skill DMG (%)": [
+          "307.2",
+          "330.24",
+          "353.28",
+          "384",
+          "407.04",
+          "430.08",
+          "460.8",
+          "491.52",
+          "522.24",
+          "552.96",
+          "583.68",
+          "614.4",
+          "652.8",
+          "691"
+        ],
+        "Inherited HP": ["100% Max HP"],
+        "Duration": ["6s"],
+        "CD": ["10s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Talent_Royal_Descent_Behold%2C_Itto_the_Evil%21.png",
+      "talentName": "Royal Descent: Behold, Itto the Evil!",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAttribute Scaling\nPreview\nTime to show 'em the might of the Arataki Gang! For a time, Itto lets out his inner Raging Oni King, wielding his Oni King's Kanabou in battle.\nThis state has the following special properties:\nConverts Itto's Normal, Charged, and Plunging Attacks to Geo DMG. This cannot be overridden.\nIncreases Itto's Normal Attack SPD. Also increases his ATK based on his DEF.\nOn hit, the 1st and 3rd strikes of his attack combo will each grant Arataki Itto 1 stack of Superlative Superstrength.\nDecreases Itto's Elemental and Physical RES by 20%.\n\nThe Raging Oni King state will be cleared when Itto leaves the field.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Royal_Descent_Behold%2C_Itto_the_Evil%21_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "ATK Bonus (% DEF)": [
+          "57.6",
+          "61.92",
+          "66.24",
+          "72",
+          "76.32",
+          "80.64",
+          "86.4",
+          "92.16",
+          "97.92",
+          "103.68",
+          "109.44",
+          "115.2",
+          "122.4",
+          "129.6"
+        ],
+        "ATK SPD Bonus": ["10%"],
+        "Duration": ["11s"],
+        "CD": ["18s"],
+        "Energy Cost": ["70"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Talent_Arataki_Ichiban.png",
+      "talentName": "Arataki Ichiban",
+      "talentType": "1st Ascension Passive",
+      "description": "Description\nPreview\nWhen Arataki Itto uses consecutive Arataki Kesagiri, he obtains the following effects:\nEach slash increases the ATK SPD of the next slash by 10%. Max ATK SPD increase is 30%.\nIncreases his resistance to interruption.\n\nThese effects will be cleared once he stops performing consecutive slashes.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Arataki_Ichiban_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Talent_Bloodline_of_the_Crimson_Oni.png",
+      "talentName": "Bloodline of the Crimson Oni",
+      "talentType": "4th Ascension Passive",
+      "description": "Arataki Kesagiri DMG is increased by 35% of Arataki Itto's DEF.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Woodchuck_Chucked.png",
+      "talentName": "Woodchuck Chucked",
+      "talentType": "Utility Passive",
+      "description": "When a party member uses attacks to obtain wood from a tree, they have a 25% chance to get an additional log of wood.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Woodchuck_Chucked_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Constellation_Stay_a_While_and_Listen_Up.png",
+      "name": "Stay a While and Listen Up",
+      "level": 1,
+      "description": "After using Royal Descent: Behold, Itto the Evil!, Arataki Itto gains 2 stacks of Superlative Superstrength. After 1s, Itto will gain 1 stack of Superlative Superstrength every 0.5s for 1.5s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/09/Constellation_Gather_%27Round%2C_It%27s_a_Brawl%21.png",
+      "name": "Gather 'Round, It's a Brawl!",
+      "level": 2,
+      "description": "After using Royal Descent: Behold, Itto the Evil!, each party member whose Element is Geo will decrease that skill's CD by 1.5s and restore 6 Energy to Arataki Itto.\nCD can be decreased by up to 4.5s in this manner. Max 18 Energy can be restored in this manner."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Constellation_Horns_Lowered%2C_Coming_Through.png",
+      "name": "Horns Lowered, Coming Through",
+      "level": 3,
+      "description": "Increases the Level of Masatsu Zetsugi: Akaushi Burst! by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Constellation_Jailhouse_Bread_and_Butter.png",
+      "name": "Jailhouse Bread and Butter",
+      "level": 4,
+      "description": "When the Raging Oni King state caused by Royal Descent: Behold, Itto the Evil! ends, all nearby party members gain 20% DEF and 20% ATK for 10s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Constellation_10_Years_of_Hanamizaka_Fame.png",
+      "name": "10 Years of Hanamizaka Fame",
+      "level": 5,
+      "description": "Increases the Level of Royal Descent: Behold, Itto the Evil! by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Constellation_Arataki_Itto%2C_Present%21.png",
+      "name": "Arataki Itto, Present!",
+      "level": 6,
+      "description": "Description\nGameplay Notes\nPreview\nArataki Itto's Charged Attacks deal +70% Crit DMG. Additionally, when he uses Arataki Kesagiri, he has a 50% chance to not consume stacks of Superlative Superstrength."
+    }
+  ],
+  "imageUrls": {},
+  "version": "2.3",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Idle_Arataki_Itto_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0c/Idle_Arataki_Itto_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Idle_Arataki_Itto_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Idle_Arataki_Itto_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Talent_Menu_Arataki_Itto.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Talent_Menu_Arataki_Itto.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Weapon_Menu_Arataki_Itto.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Weapon_Menu_Arataki_Itto.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Party_Setup_Arataki_Itto.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Party_Setup_Arataki_Itto.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/75/Namecard_Background_Itto_Oni_Face.png",
+        "caption": "Itto: Oni Face Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Item_Itto_Oni_Face.png",
+        "caption": "Itto: Oni Face Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Namecard_Banner_Itto_Oni_Face.png",
+        "caption": "Itto: Oni Face Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Fight_Club_Legend_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Fight_Club_Legend_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Fight_Club_Legend_Normal_Chain_Preview.gif",
+            "caption": "Normal Attack Combo, no reset after sprinting",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Fight_Club_Legend_Normal_Chain_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Fight_Club_Legend_Charged_Saichimonji_Slash_Preview.gif",
+            "caption": "Charged Attack, Saichimonji Slash",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Fight_Club_Legend_Charged_Saichimonji_Slash_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Fight_Club_Legend_Charged_Arataki_Kesagiri_Preview.gif",
+            "caption": "Charged Attack, Arataki Kesagiri",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Fight_Club_Legend_Charged_Arataki_Kesagiri_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Fight_Club_Legend_Superlative_Superstrength_Max_Preview.gif",
+            "caption": "Superlative Superstrength, Max Stacks",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Fight_Club_Legend_Superlative_Superstrength_Max_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Fight_Club_Legend_Plunging_Preview.gif",
+            "caption": "Plunging Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Fight_Club_Legend_Plunging_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Royal_Descent_Behold%2C_Itto_the_Evil%21_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Royal_Descent_Behold%2C_Itto_the_Evil%21_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Masatsu_Zetsugi_Akaushi_Burst%21_Press_Preview.gif",
+            "caption": "Press",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Masatsu_Zetsugi_Akaushi_Burst%21_Press_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Masatsu_Zetsugi_Akaushi_Burst%21_Hold_Preview.gif",
+            "caption": "Hold",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Masatsu_Zetsugi_Akaushi_Burst%21_Hold_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Arataki_Itto_Character_Details_1.png",
+        "caption": "Arataki Itto Details 1 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Arataki_Itto_Character_Details_2.gif",
+        "caption": "Arataki Itto Details 2 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Arataki_Itto_Character_Details_3.gif",
+        "caption": "Arataki Itto Details 3 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Arataki_Itto_Character_Details_4.gif",
+        "caption": "Arataki Itto Details 4 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Arataki_Itto_Character_Details_5.png",
+        "caption": "Arataki Itto Details 5 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Arataki_Itto_Character_Details_6.png",
+        "caption": "Arataki Itto Details 6 Official HoYoLAB Post"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Arataki_Itto_Character_Details_7.png",
+        "caption": "Arataki Itto Details 7 Official HoYoLAB Post"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Icon_Emoji_Paimon%27s_Paintings_11_Arataki_Itto_2.png",
+        "caption": "Hearty Laughter Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Icon_Emoji_Paimon%27s_Paintings_11_Arataki_Itto_1.png",
+        "caption": "Taunt Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Icon_Emoji_Paimon%27s_Paintings_11_Arataki_Itto_4.png",
+        "caption": "Eating Sweets Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Icon_Emoji_Paimon%27s_Paintings_11_Arataki_Itto_3.png",
+        "caption": "Perplexed Set 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Icon_Emoji_Paimon%27s_Paintings_15_Arataki_Itto_1.png",
+        "caption": "Pleased Set 15"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Icon_Emoji_Paimon%27s_Paintings_15_Arataki_Itto_2.png",
+        "caption": "Challenge Set 15"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Icon_Emoji_Paimon%27s_Paintings_15_Arataki_Itto_3.png",
+        "caption": "Lend a Hand Set 15"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Icon_Emoji_Paimon%27s_Paintings_15_Arataki_Itto_4.png",
+        "caption": "Agh! Set 15"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Icon_Emoji_Paimon%27s_Paintings_32_Arataki_Itto_1.png",
+        "caption": "Ohhh yeahhh! Set 32"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b7/Icon_Emoji_Paimon%27s_Paintings_32_Arataki_Itto_2.png",
+        "caption": "Toiling away Set 32"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Husk of Opulent Dreams",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Main DPS (Alternative)",
+      "sets": [
+        {
+          "name": "Husk of Opulent Dreams",
+          "pieces": 2
+        },
+        {
+          "name": "Archaic Petra",
+          "pieces": 2
+        }
+      ]
+    }
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Husk of Opulent Dreams"],
+        "notes": "4pc BiS for DEF scaling"
+      },
+      "alternatives": [
+        {
+          "sets": ["Gladiator's Finale"],
+          "notes": "General option"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Redhorn Stonethresher",
+          "notes": "BiS signature"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "Serpent Spine",
+          "notes": "Battle Pass BiS"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["DEF%"],
+      "goblet": ["Geo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ER"],
+    "constellations": {
+      "c0": "Strong Geo DPS, needs Gorou",
+      "breakpoints": [
+        "C2: Burst CD reduction",
+        "C6: Massive charged attack buff"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Itto Mono Geo",
+        "characters": ["Itto", "Gorou", "Albedo", "Zhongli"],
+        "roles": {
+          "Itto": "Main DPS",
+          "Gorou": "DEF buffer",
+          "Albedo": "Off-field",
+          "Zhongli": "Shield"
+        },
+        "rotation": "Zhongli hE → Albedo E → Gorou EQ → Itto Q → charged attack combo"
+      }
+    ]
+  }
 }

@@ -1,0 +1,264 @@
+{
+  "name": "Toukabou Shigure",
+  "rarity": 4,
+  "attack": 510,
+  "subStat": "Elemental Mastery 165",
+  "effect": "Kaidan: Rainfall Earthbinder\nAfter an attack hits opponents, it will inflict an instance of Cursed Parasol upon one of them for 10s. This effect can be triggered once every 15s. If this opponent is defeated during Cursed Parasol's duration, Cursed Parasol's CD will be refreshed immediately. The character wielding this weapon will deal 16~32% more DMG to the opponent affected by Cursed Parasol.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Weapon_Toukabou_Shigure.png",
+  "nation": 2,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Narukami%27s_Wisdom.png",
+      "caption": "Narukami's Wisdom"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Narukami%27s_Joy.png",
+      "caption": "Narukami's Joy"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Narukami%27s_Affection.png",
+      "caption": "Narukami's Affection"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Narukami%27s_Valor.png",
+      "caption": "Narukami's Valor"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+      "caption": "Damaged Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+      "caption": "Turbid Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+      "caption": "Radiant Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Item_Old_Handguard.png",
+      "caption": "Old Handguard"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Kageuchi_Handguard.png",
+      "caption": "Kageuchi Handguard"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Famed_Handguard.png",
+      "caption": "Famed Handguard"
+    }
+  ],
+  "passives": [
+    "After an attack hits opponents, it will inflict an instance of Cursed Parasol upon one of them for 10s. This effect can be triggered once every 15s. If this opponent is defeated during Cursed Parasol's duration, Cursed Parasol's CD will be refreshed immediately. The character wielding this weapon will deal 16% more DMG to the opponent affected by Cursed Parasol.",
+    "After an attack hits opponents, it will inflict an instance of Cursed Parasol upon one of them for 10s. This effect can be triggered once every 15s. If this opponent is defeated during Cursed Parasol's duration, Cursed Parasol's CD will be refreshed immediately. The character wielding this weapon will deal 20% more DMG to the opponent affected by Cursed Parasol.",
+    "After an attack hits opponents, it will inflict an instance of Cursed Parasol upon one of them for 10s. This effect can be triggered once every 15s. If this opponent is defeated during Cursed Parasol's duration, Cursed Parasol's CD will be refreshed immediately. The character wielding this weapon will deal 24% more DMG to the opponent affected by Cursed Parasol.",
+    "After an attack hits opponents, it will inflict an instance of Cursed Parasol upon one of them for 10s. This effect can be triggered once every 15s. If this opponent is defeated during Cursed Parasol's duration, Cursed Parasol's CD will be refreshed immediately. The character wielding this weapon will deal 28% more DMG to the opponent affected by Cursed Parasol.",
+    "After an attack hits opponents, it will inflict an instance of Cursed Parasol upon one of them for 10s. This effect can be triggered once every 15s. If this opponent is defeated during Cursed Parasol's duration, Cursed Parasol's CD will be refreshed immediately. The character wielding this weapon will deal 32% more DMG to the opponent affected by Cursed Parasol."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Weapon_Toukabou_Shigure.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Weapon_Toukabou_Shigure_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Weapon_Card_Toukabou_Shigure.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 42,
+          "max": 109
+        },
+        "subStat": {
+          "min": 36,
+          "max": 64
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Narukami%27s_Wisdom.png",
+            "caption": "Narukami's Wisdom",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+            "caption": "Damaged Prism",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Item_Old_Handguard.png",
+            "caption": "Old Handguard",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 135,
+          "max": 205
+        },
+        "subStat": {
+          "min": 64,
+          "max": 93
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Narukami%27s_Joy.png",
+            "caption": "Narukami's Joy",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+            "caption": "Damaged Prism",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Item_Old_Handguard.png",
+            "caption": "Old Handguard",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 231,
+          "max": 266
+        },
+        "subStat": {
+          "min": 93,
+          "max": 107
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Narukami%27s_Joy.png",
+            "caption": "Narukami's Joy",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+            "caption": "Turbid Prism",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Kageuchi_Handguard.png",
+            "caption": "Kageuchi Handguard",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 292,
+          "max": 327
+        },
+        "subStat": {
+          "min": 107,
+          "max": 122
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Narukami%27s_Affection.png",
+            "caption": "Narukami's Affection",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+            "caption": "Turbid Prism",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Kageuchi_Handguard.png",
+            "caption": "Kageuchi Handguard",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 353,
+          "max": 388
+        },
+        "subStat": {
+          "min": 122,
+          "max": 136
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Narukami%27s_Affection.png",
+            "caption": "Narukami's Affection",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+            "caption": "Radiant Prism",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Famed_Handguard.png",
+            "caption": "Famed Handguard",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 414,
+          "max": 449
+        },
+        "subStat": {
+          "min": 136,
+          "max": 151
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Narukami%27s_Valor.png",
+            "caption": "Narukami's Valor",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+            "caption": "Radiant Prism",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Famed_Handguard.png",
+            "caption": "Famed Handguard",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 475,
+          "max": 510
+        },
+        "subStat": {
+          "min": 151,
+          "max": 165
+        }
+      }
+    ]
+  }
+}

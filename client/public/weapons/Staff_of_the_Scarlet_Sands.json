@@ -1,0 +1,264 @@
+{
+  "name": "Staff of the Scarlet Sands",
+  "rarity": 5,
+  "attack": 542,
+  "subStat": "CRIT Rate 44.1%",
+  "effect": "Heat Haze at Horizon's End\nThe equipping character gains 52~104% of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain 28~56% of their Elemental Mastery as bonus ATK. Max 3 stacks.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Weapon_Staff_of_the_Scarlet_Sands.png",
+  "nation": 3,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Oasis_Garden%27s_Reminiscence.png",
+      "caption": "Oasis Garden's Reminiscence"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+      "caption": "Oasis Garden's Kindness"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+      "caption": "Oasis Garden's Mourning"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Oasis_Garden%27s_Truth.png",
+      "caption": "Oasis Garden's Truth"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Chaos_Storage.png",
+      "caption": "Chaos Storage"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Module.png",
+      "caption": "Chaos Module"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Item_Chaos_Bolt.png",
+      "caption": "Chaos Bolt"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+      "caption": "Fungal Spores"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+      "caption": "Luminescent Pollen"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+      "caption": "Crystalline Cyst Dust"
+    }
+  ],
+  "passives": [
+    "The equipping character gains 52% of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain 28% of their Elemental Mastery as bonus ATK. Max 3 stacks.",
+    "The equipping character gains 65% of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain 35% of their Elemental Mastery as bonus ATK. Max 3 stacks.",
+    "The equipping character gains 78% of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain 42% of their Elemental Mastery as bonus ATK. Max 3 stacks.",
+    "The equipping character gains 91% of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain 49% of their Elemental Mastery as bonus ATK. Max 3 stacks.",
+    "The equipping character gains 104% of their Elemental Mastery as bonus ATK. When an Elemental Skill hits opponents, the Dream of the Scarlet Sands effect will be gained for 10s: The equipping character will gain 56% of their Elemental Mastery as bonus ATK. Max 3 stacks."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Weapon_Staff_of_the_Scarlet_Sands.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Weapon_Staff_of_the_Scarlet_Sands_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Weapon_Card_Staff_of_the_Scarlet_Sands.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 110
+        },
+        "subStat": {
+          "min": 9.6,
+          "max": 17
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Oasis_Garden%27s_Reminiscence.png",
+            "caption": "Oasis Garden's Reminiscence",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Chaos_Storage.png",
+            "caption": "Chaos Storage",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 141,
+          "max": 210
+        },
+        "subStat": {
+          "min": 17,
+          "max": 24.7
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+            "caption": "Oasis Garden's Kindness",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Chaos_Storage.png",
+            "caption": "Chaos Storage",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 241,
+          "max": 275
+        },
+        "subStat": {
+          "min": 24.7,
+          "max": 28.6
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+            "caption": "Oasis Garden's Kindness",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Module.png",
+            "caption": "Chaos Module",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 307,
+          "max": 341
+        },
+        "subStat": {
+          "min": 28.6,
+          "max": 32.5
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+            "caption": "Oasis Garden's Mourning",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Module.png",
+            "caption": "Chaos Module",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 373,
+          "max": 408
+        },
+        "subStat": {
+          "min": 32.5,
+          "max": 36.4
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+            "caption": "Oasis Garden's Mourning",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Item_Chaos_Bolt.png",
+            "caption": "Chaos Bolt",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 439,
+          "max": 475
+        },
+        "subStat": {
+          "min": 36.4,
+          "max": 40.2
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Oasis_Garden%27s_Truth.png",
+            "caption": "Oasis Garden's Truth",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Item_Chaos_Bolt.png",
+            "caption": "Chaos Bolt",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 506,
+          "max": 542
+        },
+        "subStat": {
+          "min": 40.2,
+          "max": 44.1
+        }
+      }
+    ]
+  }
+}

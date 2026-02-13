@@ -1,0 +1,264 @@
+{
+  "name": "A Thousand Floating Dreams",
+  "rarity": 5,
+  "attack": 542,
+  "subStat": "Elemental Mastery 265",
+  "effect": "A Thousand Nights' Dawnsong\nParty members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 32~64. If not, increase the equipping character's DMG Bonus from their Elemental Type by 10~26%. Each of the aforementioned effects can have up to 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 40~48. Multiple such effects from multiple such weapons can stack.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Weapon_A_Thousand_Floating_Dreams.png",
+  "nation": 3,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Oasis_Garden%27s_Reminiscence.png",
+      "caption": "Oasis Garden's Reminiscence"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+      "caption": "Oasis Garden's Kindness"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+      "caption": "Oasis Garden's Mourning"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Oasis_Garden%27s_Truth.png",
+      "caption": "Oasis Garden's Truth"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+      "caption": "Damaged Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+      "caption": "Turbid Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+      "caption": "Radiant Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+      "caption": "Fungal Spores"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+      "caption": "Luminescent Pollen"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+      "caption": "Crystalline Cyst Dust"
+    }
+  ],
+  "passives": [
+    "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 32. If not, increase the equipping character's DMG Bonus from their Elemental Type by 10%. Each of the aforementioned effects can have up to 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 40. Multiple such effects from multiple such weapons can stack.",
+    "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 32. If not, increase the equipping character's DMG Bonus from their Elemental Type by 10%. Each of the aforementioned effects can have up to 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 40. Multiple such effects from multiple such weapons can stack.",
+    "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 32. If not, increase the equipping character's DMG Bonus from their Elemental Type by 10%. Each of the aforementioned effects can have up to 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 40. Multiple such effects from multiple such weapons can stack.",
+    "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 32. If not, increase the equipping character's DMG Bonus from their Elemental Type by 10%. Each of the aforementioned effects can have up to 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 40. Multiple such effects from multiple such weapons can stack.",
+    "Party members other than the equipping character will provide the equipping character with buffs based on whether their Elemental Type is the same as the latter or not. If their Elemental Types are the same, increase Elemental Mastery by 32. If not, increase the equipping character's DMG Bonus from their Elemental Type by 10%. Each of the aforementioned effects can have up to 3 stacks. Additionally, all nearby party members other than the equipping character will have their Elemental Mastery increased by 40. Multiple such effects from multiple such weapons can stack."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Weapon_A_Thousand_Floating_Dreams.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Weapon_A_Thousand_Floating_Dreams_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Weapon_Card_A_Thousand_Floating_Dreams.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 110
+        },
+        "subStat": {
+          "min": 58,
+          "max": 102
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Oasis_Garden%27s_Reminiscence.png",
+            "caption": "Oasis Garden's Reminiscence",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+            "caption": "Damaged Prism",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 141,
+          "max": 210
+        },
+        "subStat": {
+          "min": 102,
+          "max": 148
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+            "caption": "Oasis Garden's Kindness",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Damaged_Prism.png",
+            "caption": "Damaged Prism",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 241,
+          "max": 275
+        },
+        "subStat": {
+          "min": 148,
+          "max": 172
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Item_Oasis_Garden%27s_Kindness.png",
+            "caption": "Oasis Garden's Kindness",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+            "caption": "Turbid Prism",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 307,
+          "max": 341
+        },
+        "subStat": {
+          "min": 172,
+          "max": 195
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+            "caption": "Oasis Garden's Mourning",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Item_Turbid_Prism.png",
+            "caption": "Turbid Prism",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 373,
+          "max": 408
+        },
+        "subStat": {
+          "min": 195,
+          "max": 218
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Item_Oasis_Garden%27s_Mourning.png",
+            "caption": "Oasis Garden's Mourning",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+            "caption": "Radiant Prism",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 439,
+          "max": 475
+        },
+        "subStat": {
+          "min": 218,
+          "max": 241
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Oasis_Garden%27s_Truth.png",
+            "caption": "Oasis Garden's Truth",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Radiant_Prism.png",
+            "caption": "Radiant Prism",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 506,
+          "max": 542
+        },
+        "subStat": {
+          "min": 241,
+          "max": 265
+        }
+      }
+    ]
+  }
+}

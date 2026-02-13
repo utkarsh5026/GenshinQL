@@ -1,0 +1,262 @@
+{
+  "name": "Peak Patrol Song",
+  "rarity": 5,
+  "attack": 542,
+  "subStat": "DEF 82.7%",
+  "effect": "Halcyon Years Unending\nGain \"Ode to Flowers\" after Normal or Plunging Attacks hit an opponent: DEF increases by 8~16% and gain a 10~20% All Elemental DMG Bonus for 6s. Max 2 stacks. Can trigger once per 0.1s. When this effect reaches 2 stacks or the 2nd stack's duration is refreshed, increase all nearby party members' All Elemental DMG Bonus by 8~16% for every 1,000 DEF the equipping character has, up to a maximum of 25.6~51.2%, for 15s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Weapon_Peak_Patrol_Song.png",
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Item_Night-Wind%27s_Mystic_Consideration.png",
+      "caption": "Night-Wind's Mystic Consideration"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+      "caption": "Night-Wind's Mystic Premonition"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+      "caption": "Night-Wind's Mystic Augury"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Night-Wind%27s_Mystic_Revelation.png",
+      "caption": "Night-Wind's Mystic Revelation"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Axis_of_the_Secret_Source.png",
+      "caption": "Axis of the Secret Source"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Item_Sheath_of_the_Secret_Source.png",
+      "caption": "Sheath of the Secret Source"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Item_Heart_of_the_Secret_Source.png",
+      "caption": "Heart of the Secret Source"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Juvenile_Fang.png",
+      "caption": "Juvenile Fang"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Seasoned_Fang.png",
+      "caption": "Seasoned Fang"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Tyrant%27s_Fang.png",
+      "caption": "Tyrant's Fang"
+    }
+  ],
+  "passives": [
+    "Gain \"Ode to Flowers\" after Normal or Plunging Attacks hit an opponent: DEF increases by 8% and gain a 10% All Elemental DMG Bonus for 6s. Max 2 stacks. Can trigger once per 0.1s. When this effect reaches 2 stacks or the 2nd stack's duration is refreshed, increase all nearby party members' All Elemental DMG Bonus by 8% for every 1,000 DEF the equipping character has, up to a maximum of 25.6%, for 15s.",
+    "Gain \"Ode to Flowers\" after Normal or Plunging Attacks hit an opponent: DEF increases by 10% and gain a 12.5% All Elemental DMG Bonus for 6s. Max 2 stacks. Can trigger once per 0.1s. When this effect reaches 2 stacks or the 2nd stack's duration is refreshed, increase all nearby party members' All Elemental DMG Bonus by 10% for every 1,000 DEF the equipping character has, up to a maximum of 32%, for 15s.",
+    "Gain \"Ode to Flowers\" after Normal or Plunging Attacks hit an opponent: DEF increases by 12% and gain a 15% All Elemental DMG Bonus for 6s. Max 2 stacks. Can trigger once per 0.1s. When this effect reaches 2 stacks or the 2nd stack's duration is refreshed, increase all nearby party members' All Elemental DMG Bonus by 12% for every 1,000 DEF the equipping character has, up to a maximum of 38.4%, for 15s.",
+    "Gain \"Ode to Flowers\" after Normal or Plunging Attacks hit an opponent: DEF increases by 14% and gain a 17.5% All Elemental DMG Bonus for 6s. Max 2 stacks. Can trigger once per 0.1s. When this effect reaches 2 stacks or the 2nd stack's duration is refreshed, increase all nearby party members' All Elemental DMG Bonus by 14% for every 1,000 DEF the equipping character has, up to a maximum of 44.8%, for 15s.",
+    "Gain \"Ode to Flowers\" after Normal or Plunging Attacks hit an opponent: DEF increases by 16% and gain a 20% All Elemental DMG Bonus for 6s. Max 2 stacks. Can trigger once per 0.1s. When this effect reaches 2 stacks or the 2nd stack's duration is refreshed, increase all nearby party members' All Elemental DMG Bonus by 16% for every 1,000 DEF the equipping character has, up to a maximum of 51.2%, for 15s."
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 110
+        },
+        "subStat": {
+          "min": 18,
+          "max": 31.8
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Item_Night-Wind%27s_Mystic_Consideration.png",
+            "caption": "Night-Wind's Mystic Consideration",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Axis_of_the_Secret_Source.png",
+            "caption": "Axis of the Secret Source",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Juvenile_Fang.png",
+            "caption": "Juvenile Fang",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 141,
+          "max": 210
+        },
+        "subStat": {
+          "min": 31.8,
+          "max": 46.4
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+            "caption": "Night-Wind's Mystic Premonition",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Axis_of_the_Secret_Source.png",
+            "caption": "Axis of the Secret Source",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Juvenile_Fang.png",
+            "caption": "Juvenile Fang",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 241,
+          "max": 275
+        },
+        "subStat": {
+          "min": 46.4,
+          "max": 53.6
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Item_Night-Wind%27s_Mystic_Premonition.png",
+            "caption": "Night-Wind's Mystic Premonition",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Item_Sheath_of_the_Secret_Source.png",
+            "caption": "Sheath of the Secret Source",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Seasoned_Fang.png",
+            "caption": "Seasoned Fang",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 307,
+          "max": 341
+        },
+        "subStat": {
+          "min": 53.6,
+          "max": 60.9
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+            "caption": "Night-Wind's Mystic Augury",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Item_Sheath_of_the_Secret_Source.png",
+            "caption": "Sheath of the Secret Source",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Seasoned_Fang.png",
+            "caption": "Seasoned Fang",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 373,
+          "max": 408
+        },
+        "subStat": {
+          "min": 60.9,
+          "max": 68.1
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_Night-Wind%27s_Mystic_Augury.png",
+            "caption": "Night-Wind's Mystic Augury",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Item_Heart_of_the_Secret_Source.png",
+            "caption": "Heart of the Secret Source",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Tyrant%27s_Fang.png",
+            "caption": "Tyrant's Fang",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 439,
+          "max": 475
+        },
+        "subStat": {
+          "min": 68.1,
+          "max": 75.4
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Night-Wind%27s_Mystic_Revelation.png",
+            "caption": "Night-Wind's Mystic Revelation",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Item_Heart_of_the_Secret_Source.png",
+            "caption": "Heart of the Secret Source",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Tyrant%27s_Fang.png",
+            "caption": "Tyrant's Fang",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 506,
+          "max": 542
+        },
+        "subStat": {
+          "min": 75.4,
+          "max": 82.7
+        }
+      }
+    ]
+  },
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Weapon_Peak_Patrol_Song.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Weapon_Peak_Patrol_Song_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Weapon_Card_Peak_Patrol_Song.png"
+  ]
+}

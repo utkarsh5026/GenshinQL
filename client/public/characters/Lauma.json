@@ -1,517 +1,500 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Lauma_Icon.png",
-    "name": "Lauma",
-    "rarity": "5 Stars",
-    "element": "Dendro",
-    "weaponType": "Catalyst",
-    "region": "Nod-Krai",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
-    "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
-    "modelType": "Tall Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Lauma_Icon.png",
+  "name": "Lauma",
+  "rarity": "5 Stars",
+  "element": "Dendro",
+  "weaponType": "Catalyst",
+  "region": "Nod-Krai",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+  "regionUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Nod-Krai_Emblem_Night.png",
+  "modelType": "Tall Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Catalyst_Dendro.png",
+      "talentName": "Peregrination of Linnunrata",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 3 attacks that deal Dendro DMG\n\nCharged Attack\nLauma undergoes Spirit Envoy Metamorphosis, transforming into an envoy of the tranquil forest and consuming Stamina to charge forward for up to 10s. While in this state, Lauma's interruption resistance is increased, and she can consume additional Stamina to perform up to two consecutive jumps.\nWhen exiting the Spirit Envoy state, Spirit Envoy Metamorphosis will enter cooldown, during which time, Lauma's Charged Attack will be transformed into Spiritcall Prayer: Consumes a certain amount of Stamina to deal AoE Dendro DMG to opponents in front of her after a short casting time.\n\nPlunging Attack\nCalling upon the might of Dendro, Lauma plunges towards the ground from mid-air, damaging all opponents in her path and dealing AoE Dendro DMG upon impact with the ground.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Catalyst_Dendro.png",
-            "talentName": "Peregrination of Linnunrata",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 3 attacks that deal Dendro DMG\n\nCharged Attack\nLauma undergoes Spirit Envoy Metamorphosis, transforming into an envoy of the tranquil forest and consuming Stamina to charge forward for up to 10s. While in this state, Lauma's interruption resistance is increased, and she can consume additional Stamina to perform up to two consecutive jumps.\nWhen exiting the Spirit Envoy state, Spirit Envoy Metamorphosis will enter cooldown, during which time, Lauma's Charged Attack will be transformed into Spiritcall Prayer: Consumes a certain amount of Stamina to deal AoE Dendro DMG to opponents in front of her after a short casting time.\n\nPlunging Attack\nCalling upon the might of Dendro, Lauma plunges towards the ground from mid-air, damaging all opponents in her path and dealing AoE Dendro DMG upon impact with the ground.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Peregrination_of_Linnunrata_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "33.7",
-                    "36.23",
-                    "38.76",
-                    "42.13",
-                    "44.66",
-                    "47.18",
-                    "50.55",
-                    "53.92",
-                    "57.29",
-                    "60.66",
-                    "64.03"
-                ],
-                "2-Hit DMG (%)": [
-                    "31.8",
-                    "34.19",
-                    "36.58",
-                    "39.76",
-                    "42.14",
-                    "44.53",
-                    "47.71",
-                    "50.89",
-                    "54.07",
-                    "57.25",
-                    "60.43"
-                ],
-                "3-Hit DMG (%)": [
-                    "44.5",
-                    "47.83",
-                    "51.17",
-                    "55.62",
-                    "58.96",
-                    "62.3",
-                    "66.75",
-                    "71.19",
-                    "75.64",
-                    "80.09",
-                    "84.54"
-                ],
-                "Spirit Envoy Form Movement Stamina Cost": [
-                    "25/s"
-                ],
-                "Spirit Envoy Form Jumping Stamina Cost": [
-                    "10"
-                ],
-                "Spirit Envoy Form Max Duration": [
-                    "10s"
-                ],
-                "Spirit Envoy Metamorphosis CD": [
-                    "4s"
-                ],
-                "Spiritcall Prayer Stamina Cost": [
-                    "50"
-                ],
-                "Spiritcall Prayer DMG (%)": [
-                    "129.04",
-                    "138.72",
-                    "148.4",
-                    "161.3",
-                    "170.98",
-                    "180.66",
-                    "193.56",
-                    "206.46",
-                    "219.37",
-                    "232.27",
-                    "245.18"
-                ],
-                "Plunge DMG (%)": [
-                    "56.83",
-                    "61.45",
-                    "66.08",
-                    "72.69",
-                    "77.31",
-                    "82.6",
-                    "89.87",
-                    "97.14",
-                    "104.41",
-                    "112.34",
-                    "120.27"
-                ],
-                "Low Plunge DMG (%)": [
-                    "113.63",
-                    "122.88",
-                    "132.13",
-                    "145.35",
-                    "154.59",
-                    "165.17",
-                    "179.7",
-                    "194.23",
-                    "208.77",
-                    "224.62",
-                    "240.48"
-                ],
-                "High Plunge DMG (%)": [
-                    "141.93",
-                    "153.49",
-                    "165.04",
-                    "181.54",
-                    "193.1",
-                    "206.3",
-                    "224.45",
-                    "242.61",
-                    "260.76",
-                    "280.57",
-                    "300.37"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Talent_Runo_Dawnless_Rest_of_Karsikko.png",
-            "talentName": "Runo: Dawnless Rest of Karsikko",
-            "talentType": "Elemental Skill",
-            "description": "Silently incants an ancient hymn, summoning a Frostgrove Sanctuary\n\nwith different effects depending on whether you Tap or Hold.\n\nTap\nIntone a Hymn of Hunting, dealing AoE Dendro DMG.\n\nHold\nCan be unleashed when you have at least 1 Verdant Dew\n\n. Lauma consumes all Verdant Dew and intones a Hymn of Eternal Rest, dealing one regular instance of AoE Dendro DMG and another instance of AoE Dendro DMG that is considered Lunar-Bloom DMG. Each Verdant Dew consumed will give Lauma one stack of Moon Song\n\n. Each time you Hold to cast an Elemental Skill, a maximum of 3 Verdant Dew can be consumed in this way.\n\nAdditionally, when Lauma's Elemental Skill or attacks from Frostgrove Sanctuary hit an opponent, that opponent's Dendro RES and Hydro RES will be decreased for 10s.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Runo_Dawnless_Rest_of_Karsikko_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Press DMG (%)": [
-                    "121.6",
-                    "130.72",
-                    "139.84",
-                    "152",
-                    "161.12",
-                    "170.24",
-                    "182.4",
-                    "194.56",
-                    "206.72",
-                    "218.88",
-                    "231.04",
-                    "243.2",
-                    "258.4"
-                ],
-                "1-Hit Hold DMG (%)": [
-                    "158.08",
-                    "169.94",
-                    "181.79",
-                    "197.6",
-                    "209.46",
-                    "221.31",
-                    "237.12",
-                    "252.93",
-                    "268.74",
-                    "284.54",
-                    "300.35",
-                    "316.16",
-                    "335.92"
-                ],
-                "2-Hit Hold DMG (%)": [
-                    "152% Elemental Mastery Per Verdant Dew",
-                    "163.4% Elemental Mastery Per Verdant Dew",
-                    "174.8% Elemental Mastery Per Verdant Dew",
-                    "190% Elemental Mastery Per Verdant Dew",
-                    "201.4% Elemental Mastery Per Verdant Dew",
-                    "212.8% Elemental Mastery Per Verdant Dew",
-                    "228% Elemental Mastery Per Verdant Dew",
-                    "243.2% Elemental Mastery Per Verdant Dew",
-                    "258.4% Elemental Mastery Per Verdant Dew",
-                    "273.6% Elemental Mastery Per Verdant Dew",
-                    "288.8% Elemental Mastery Per Verdant Dew",
-                    "304% Elemental Mastery Per Verdant Dew",
-                    "323% Elemental Mastery Per Verdant Dew"
-                ],
-                "Frostgrove Sanctuary Attack DMG (%)": [
-                    "96% ATK\n+\n192% Elemental Mastery",
-                    "103.2% ATK\n+\n206.4% Elemental Mastery",
-                    "110.4% ATK\n+\n220.8% Elemental Mastery",
-                    "120% ATK\n+\n240% Elemental Mastery",
-                    "127.2% ATK\n+\n254.4% Elemental Mastery",
-                    "134.4% ATK\n+\n268.8% Elemental Mastery",
-                    "144% ATK\n+\n288% Elemental Mastery",
-                    "153.6% ATK\n+\n307.2% Elemental Mastery",
-                    "163.2% ATK\n+\n326.4% Elemental Mastery",
-                    "172.8% ATK\n+\n345.6% Elemental Mastery",
-                    "182.4% ATK\n+\n364.8% Elemental Mastery",
-                    "192% ATK\n+\n384% Elemental Mastery",
-                    "204% ATK\n+\n408% Elemental Mastery"
-                ],
-                "Frostgrove Sanctuary Duration": [
-                    "15s"
-                ],
-                "Moon Song Duration": [
-                    "15s"
-                ],
-                "Elemental RES Decrease (%)": [
-                    "2.5",
-                    "5",
-                    "7.5",
-                    "10",
-                    "12.5",
-                    "15",
-                    "17.5",
-                    "20",
-                    "22.5",
-                    "25",
-                    "28",
-                    "31",
-                    "34"
-                ],
-                "Elemental RES Decrease Duration": [
-                    "10s"
-                ],
-                "CD": [
-                    "12s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Runo_All_Hearts_Become_the_Beating_Moon.png",
-            "talentName": "Runo: All Hearts Become the Beating Moon",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAttribute Scaling\nPreview\nLet the wishes of all beings become as moonlight that bathes the earth. Lauma incants a sacred song of the far north, gaining 18 stacks of Pale Hymn\n\n\n\n\n\n.\nAdditionally, if Lauma uses her Elemental Burst while she has Moon Song\n\n, or she gains Moon Song within 15s of using her Elemental Burst, she will consume all Moon Song stacks and gain 6 stacks of Pale Hymn for every Moon Song stack consumed. This effect can only be triggered once for each Elemental Burst used, including the 15 seconds following its use.\n\nPale Hymn\nWhen nearby party members deal Bloom, Hyperbloom, Burgeon, or Lunar-Bloom DMG, 1 stack of Pale Hymn will be consumed and the DMG dealt will be increased based on Lauma's Elemental Mastery. If this DMG hits multiple opponents at once, then multiple stacks of Pale Hymn will be consumed, depending on how many opponents are hit.\nThe duration for each stack of Pale Hymn is counted independently.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Runo_All_Hearts_Become_the_Beating_Moon_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "Pale Hymn Stacks Gained From Elemental Burst": [
-                    "18"
-                ],
-                "Moon Song to Pale Hymn Conversion": [
-                    "6 Stacks Per Moon Song"
-                ],
-                "Bloom, Hyperbloom, and Burgeon DMG Increase": [
-                    "277.76% Elemental Mastery",
-                    "298.59% Elemental Mastery",
-                    "319.42% Elemental Mastery",
-                    "347.2% Elemental Mastery",
-                    "368.03% Elemental Mastery",
-                    "388.86% Elemental Mastery",
-                    "416.64% Elemental Mastery",
-                    "444.42% Elemental Mastery",
-                    "472.19% Elemental Mastery",
-                    "499.97% Elemental Mastery",
-                    "527.74% Elemental Mastery",
-                    "555.52% Elemental Mastery",
-                    "590.24% Elemental Mastery"
-                ],
-                "Lunar-Bloom DMG Increase": [
-                    "222.24% Elemental Mastery",
-                    "238.91% Elemental Mastery",
-                    "255.58% Elemental Mastery",
-                    "277.8% Elemental Mastery",
-                    "294.47% Elemental Mastery",
-                    "311.14% Elemental Mastery",
-                    "333.36% Elemental Mastery",
-                    "355.58% Elemental Mastery",
-                    "377.81% Elemental Mastery",
-                    "400.03% Elemental Mastery",
-                    "422.26% Elemental Mastery",
-                    "444.48% Elemental Mastery",
-                    "472.26% Elemental Mastery"
-                ],
-                "Pale Hymn Duration": [
-                    "15s"
-                ],
-                "CD": [
-                    "15s"
-                ],
-                "Energy Cost": [
-                    "60"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Light_for_the_Frosty_Night.png",
-            "talentName": "Light for the Frosty Night",
-            "talentType": "1st Ascension Passive",
-            "description": "For the next 20s after Lauma uses her Elemental Skill Runo: Dawnless Rest of Karsikko, corresponding differing buff effects will be granted depending on the party's Moonsign. The buffs provided by different Moonsign levels cannot stack.\n\nMoonsign: Nascent Gleam\nBloom, Hyperbloom, and Burgeon DMG dealt by all nearby party members can score CRIT Hits, with CRIT Rate fixed at 15%, and CRIT DMG fixed at 100%. CRIT Rate from this effect stacks with CRIT Rate from similar effects that allow these Elemental Reactions to CRIT.\n\nMoonsign: Ascendant Gleam\nAll nearby party members' Lunar-Bloom DMG CRIT Rate +10%, CRIT DMG +20%.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Talent_Cleansing_for_the_Spring.png",
-            "talentName": "Cleansing for the Spring",
-            "talentType": "4th Ascension Passive",
-            "description": "Each point of Elemental Mastery Lauma has will give her the following bonuses:\nDMG dealt by her Elemental Skill is increased by 0.04%. The maximum increase obtainable this way is 32%.\nThe cooldown of her Charged Attack Spirit Envoy Metamorphosis is reduced by 0.02%. The maximum reduction obtainable this way is 20%.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Dendro_Moonsign_Lunar-Bloom.png",
-            "talentName": "Nature's Chorus",
-            "talentType": "Moonsign Benediction Passive",
-            "description": "When a Bloom reaction is triggered by a party member, it will be converted into the Lunar-Bloom reaction, with every point of Elemental Mastery that Lauma has increasing Lunar-Bloom's Base DMG by 0.0175%, up to a maximum of 14%.\n\nAdditionally, when Lauma is in the party, the party's Moonsign will increase by 1 level.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Talent_Prayers_for_the_Forest.png",
-            "talentName": "Prayers for the Forest",
-            "talentType": "Utility Passive",
-            "description": "Displays the location of nearby resources unique to Nod-Krai on the mini-map.\nAdditionally, Lauma appears to have a special affinity with some small animals affected by kuuvahki...",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Peregrination_of_Linnunrata_Normal_Preview.gif",
+          "caption": "Normal Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Constellation_O_Lips%2C_Weave_Me_Songs_and_Psalms.png",
-            "name": "\"O Lips, Weave Me Songs and Psalms\"",
-            "level": 1,
-            "description": "After Lauma uses her Elemental Skill Runo: Dawnless Rest of Karsikko or her Elemental Burst Runo: All Hearts Become the Beating Moon, she will gain Threads of Life for 20s.\nDuring this time, when nearby party members trigger Lunar-Bloom reactions, nearby active characters will recover HP equal to 500% of Lauma's Elemental Mastery. This effect can be triggered once every 1.9s.\nAdditionally, the Stamina cost for Lauma's Spirit Envoy Form will be reduced by 40%, and its Max Duration will be extended by 5s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Constellation_Twine_Warnings_and_Tales_From_the_North.png",
-            "name": "\"Twine Warnings and Tales From the North\"",
-            "level": 2,
-            "description": "The Elemental Burst Runo: All Hearts Become the Beating Moon is enhanced:\nPale Hymn\n\n\n\n\n\neffects are increased: All nearby party members' Bloom, Hyperbloom, and Burgeon DMG is further increased by 500% of Lauma's Elemental Mastery, and their Lunar-Bloom DMG is further increased by 400% of Lauma's Elemental Mastery.\n\nMoonsign: Ascendant Gleam: All nearby party members' Lunar-Bloom DMG is increased by 40%."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Constellation_Seek_Not_to_Tread_the_Sly_Fox%27s_Path.png",
-            "name": "\"Seek Not to Tread the Sly Fox's Path\"",
-            "level": 3,
-            "description": "Increases the Level of Runo: All Hearts Become the Beating Moon by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Constellation_Nor_Yearn_for_the_Great_Bear%27s_Might.png",
-            "name": "\"Nor Yearn for the Great Bear's Might\"",
-            "level": 4,
-            "description": "When attacks from the Frostgrove Sanctuary\n\nsummoned by her Elemental Skill Runo: Dawnless Rest of Karsikko hit opponents, Lauma will regain 4 Elemental Energy. This effect can be triggered once every 5s."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Constellation_If_Truth_May_Be_Subject_to_Witness.png",
-            "name": "\"If Truth May Be Subject to Witness\"",
-            "level": 5,
-            "description": "Increases the level of Runo: Dawnless Rest of Karsikko by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_I_Offer_Blood_and_Tears_to_the_Moonlight.png",
-            "name": "\"I Offer Blood and Tears to the Moonlight\"",
-            "level": 6,
-            "description": "When the Frostgrove Sanctuary attacks opponents, it will deal 1 additional instance of AOE Dendro DMG equal to 185% of Lauma's Elemental Mastery. This DMG is considered Lunar-Bloom DMG.\nThis instance of DMG will not consume any Pale Hymn stacks and will provide Lauma with 2 stacks of Pale Hymn, as well as refreshing the duration of Pale Hymn stacks gained in this manner.\nThis effect can occur up to 8 times during each Frostgrove Sanctuary. When using the Elemental Skill Runo: Dawnless Rest of Karsikko, all Pale Hymn stacks gained in this manner will be removed.\n\nAdditionally, when Lauma uses a Normal Attack while she has Pale Hymn stacks, she will consume 1 stack to convert this to deal Dendro DMG equal to 150% of her Elemental Mastery. This DMG is considered Lunar-Bloom DMG.\n\nMoonsign: Ascendant Gleam: All nearby party members' Lunar-Bloom DMG is elevated\nby 25%."
-        }
-    ],
-    "imageUrls": {},
-    "version": "Luna I",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            },
-            {
-                "url": "",
-                "caption": "",
-                "videoUrl": "",
-                "videoType": ""
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "33.7",
+          "36.23",
+          "38.76",
+          "42.13",
+          "44.66",
+          "47.18",
+          "50.55",
+          "53.92",
+          "57.29",
+          "60.66",
+          "64.03"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Namecard_Background_Lauma_Branched_Antlers.png",
-                "caption": "Lauma: Branched Antlers Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Lauma_Branched_Antlers.png",
-                "caption": "Lauma: Branched Antlers Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Namecard_Banner_Lauma_Branched_Antlers.png",
-                "caption": "Lauma: Branched Antlers Banner"
-            }
+        "2-Hit DMG (%)": [
+          "31.8",
+          "34.19",
+          "36.58",
+          "39.76",
+          "42.14",
+          "44.53",
+          "47.71",
+          "50.89",
+          "54.07",
+          "57.25",
+          "60.43"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Peregrination_of_Linnunrata_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Peregrination_of_Linnunrata_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "",
-                        "caption": "",
-                        "videoUrl": "",
-                        "videoType": ""
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "44.5",
+          "47.83",
+          "51.17",
+          "55.62",
+          "58.96",
+          "62.3",
+          "66.75",
+          "71.19",
+          "75.64",
+          "80.09",
+          "84.54"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Lauma_Character_Details_1.png",
-                "caption": "Lauma Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Lauma_Character_Details_2.png",
-                "caption": "Lauma Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Lauma_Character_Details_3.gif",
-                "caption": "Lauma Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Lauma_Character_Details_4.png",
-                "caption": "Lauma Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Lauma_Character_Details_5.png",
-                "caption": "Lauma Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Lauma_Character_Details_6.gif",
-                "caption": "Lauma Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Lauma_Character_Details_7.gif",
-                "caption": "Lauma Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Lauma_Character_Details_8.gif",
-                "caption": "Lauma Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lauma_Character_Details_9.gif",
-                "caption": "Lauma Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Lauma_Character_Details_10.png",
-                "caption": "Lauma Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Lauma_Character_Details_11.png",
-                "caption": "Lauma Details 11"
-            }
+        "Spirit Envoy Form Movement Stamina Cost": ["25/s"],
+        "Spirit Envoy Form Jumping Stamina Cost": ["10"],
+        "Spirit Envoy Form Max Duration": ["10s"],
+        "Spirit Envoy Metamorphosis CD": ["4s"],
+        "Spiritcall Prayer Stamina Cost": ["50"],
+        "Spiritcall Prayer DMG (%)": [
+          "129.04",
+          "138.72",
+          "148.4",
+          "161.3",
+          "170.98",
+          "180.66",
+          "193.56",
+          "206.46",
+          "219.37",
+          "232.27",
+          "245.18"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Icon_Emoji_Paimon%27s_Paintings_43_Lauma_1.png",
-                "caption": "Blessings Set 43"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Icon_Emoji_Paimon%27s_Paintings_44_Lauma_1.png",
-                "caption": "Meeting Set 44"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Icon_Emoji_Paimon%27s_Paintings_44_Lauma_2.png",
-                "caption": "Praise Set 44"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Icon_Emoji_Paimon%27s_Paintings_44_Lauma_3.png",
-                "caption": "Awkward... Set 44"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Icon_Emoji_Paimon%27s_Paintings_44_Lauma_4.png",
-                "caption": "Protect Set 44"
-            }
+        "Plunge DMG (%)": [
+          "56.83",
+          "61.45",
+          "66.08",
+          "72.69",
+          "77.31",
+          "82.6",
+          "89.87",
+          "97.14",
+          "104.41",
+          "112.34",
+          "120.27"
+        ],
+        "Low Plunge DMG (%)": [
+          "113.63",
+          "122.88",
+          "132.13",
+          "145.35",
+          "154.59",
+          "165.17",
+          "179.7",
+          "194.23",
+          "208.77",
+          "224.62",
+          "240.48"
+        ],
+        "High Plunge DMG (%)": [
+          "141.93",
+          "153.49",
+          "165.04",
+          "181.54",
+          "193.1",
+          "206.3",
+          "224.45",
+          "242.61",
+          "260.76",
+          "280.57",
+          "300.37"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Talent_Runo_Dawnless_Rest_of_Karsikko.png",
+      "talentName": "Runo: Dawnless Rest of Karsikko",
+      "talentType": "Elemental Skill",
+      "description": "Silently incants an ancient hymn, summoning a Frostgrove Sanctuary\n\nwith different effects depending on whether you Tap or Hold.\n\nTap\nIntone a Hymn of Hunting, dealing AoE Dendro DMG.\n\nHold\nCan be unleashed when you have at least 1 Verdant Dew\n\n. Lauma consumes all Verdant Dew and intones a Hymn of Eternal Rest, dealing one regular instance of AoE Dendro DMG and another instance of AoE Dendro DMG that is considered Lunar-Bloom DMG. Each Verdant Dew consumed will give Lauma one stack of Moon Song\n\n. Each time you Hold to cast an Elemental Skill, a maximum of 3 Verdant Dew can be consumed in this way.\n\nAdditionally, when Lauma's Elemental Skill or attacks from Frostgrove Sanctuary hit an opponent, that opponent's Dendro RES and Hydro RES will be decreased for 10s.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Runo_Dawnless_Rest_of_Karsikko_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Press DMG (%)": [
+          "121.6",
+          "130.72",
+          "139.84",
+          "152",
+          "161.12",
+          "170.24",
+          "182.4",
+          "194.56",
+          "206.72",
+          "218.88",
+          "231.04",
+          "243.2",
+          "258.4"
+        ],
+        "1-Hit Hold DMG (%)": [
+          "158.08",
+          "169.94",
+          "181.79",
+          "197.6",
+          "209.46",
+          "221.31",
+          "237.12",
+          "252.93",
+          "268.74",
+          "284.54",
+          "300.35",
+          "316.16",
+          "335.92"
+        ],
+        "2-Hit Hold DMG (%)": [
+          "152% Elemental Mastery Per Verdant Dew",
+          "163.4% Elemental Mastery Per Verdant Dew",
+          "174.8% Elemental Mastery Per Verdant Dew",
+          "190% Elemental Mastery Per Verdant Dew",
+          "201.4% Elemental Mastery Per Verdant Dew",
+          "212.8% Elemental Mastery Per Verdant Dew",
+          "228% Elemental Mastery Per Verdant Dew",
+          "243.2% Elemental Mastery Per Verdant Dew",
+          "258.4% Elemental Mastery Per Verdant Dew",
+          "273.6% Elemental Mastery Per Verdant Dew",
+          "288.8% Elemental Mastery Per Verdant Dew",
+          "304% Elemental Mastery Per Verdant Dew",
+          "323% Elemental Mastery Per Verdant Dew"
+        ],
+        "Frostgrove Sanctuary Attack DMG (%)": [
+          "96% ATK\n+\n192% Elemental Mastery",
+          "103.2% ATK\n+\n206.4% Elemental Mastery",
+          "110.4% ATK\n+\n220.8% Elemental Mastery",
+          "120% ATK\n+\n240% Elemental Mastery",
+          "127.2% ATK\n+\n254.4% Elemental Mastery",
+          "134.4% ATK\n+\n268.8% Elemental Mastery",
+          "144% ATK\n+\n288% Elemental Mastery",
+          "153.6% ATK\n+\n307.2% Elemental Mastery",
+          "163.2% ATK\n+\n326.4% Elemental Mastery",
+          "172.8% ATK\n+\n345.6% Elemental Mastery",
+          "182.4% ATK\n+\n364.8% Elemental Mastery",
+          "192% ATK\n+\n384% Elemental Mastery",
+          "204% ATK\n+\n408% Elemental Mastery"
+        ],
+        "Frostgrove Sanctuary Duration": ["15s"],
+        "Moon Song Duration": ["15s"],
+        "Elemental RES Decrease (%)": [
+          "2.5",
+          "5",
+          "7.5",
+          "10",
+          "12.5",
+          "15",
+          "17.5",
+          "20",
+          "22.5",
+          "25",
+          "28",
+          "31",
+          "34"
+        ],
+        "Elemental RES Decrease Duration": ["10s"],
+        "CD": ["12s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Runo_All_Hearts_Become_the_Beating_Moon.png",
+      "talentName": "Runo: All Hearts Become the Beating Moon",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAttribute Scaling\nPreview\nLet the wishes of all beings become as moonlight that bathes the earth. Lauma incants a sacred song of the far north, gaining 18 stacks of Pale Hymn\n\n\n\n\n\n.\nAdditionally, if Lauma uses her Elemental Burst while she has Moon Song\n\n, or she gains Moon Song within 15s of using her Elemental Burst, she will consume all Moon Song stacks and gain 6 stacks of Pale Hymn for every Moon Song stack consumed. This effect can only be triggered once for each Elemental Burst used, including the 15 seconds following its use.\n\nPale Hymn\nWhen nearby party members deal Bloom, Hyperbloom, Burgeon, or Lunar-Bloom DMG, 1 stack of Pale Hymn will be consumed and the DMG dealt will be increased based on Lauma's Elemental Mastery. If this DMG hits multiple opponents at once, then multiple stacks of Pale Hymn will be consumed, depending on how many opponents are hit.\nThe duration for each stack of Pale Hymn is counted independently.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Runo_All_Hearts_Become_the_Beating_Moon_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "Pale Hymn Stacks Gained From Elemental Burst": ["18"],
+        "Moon Song to Pale Hymn Conversion": ["6 Stacks Per Moon Song"],
+        "Bloom, Hyperbloom, and Burgeon DMG Increase": [
+          "277.76% Elemental Mastery",
+          "298.59% Elemental Mastery",
+          "319.42% Elemental Mastery",
+          "347.2% Elemental Mastery",
+          "368.03% Elemental Mastery",
+          "388.86% Elemental Mastery",
+          "416.64% Elemental Mastery",
+          "444.42% Elemental Mastery",
+          "472.19% Elemental Mastery",
+          "499.97% Elemental Mastery",
+          "527.74% Elemental Mastery",
+          "555.52% Elemental Mastery",
+          "590.24% Elemental Mastery"
+        ],
+        "Lunar-Bloom DMG Increase": [
+          "222.24% Elemental Mastery",
+          "238.91% Elemental Mastery",
+          "255.58% Elemental Mastery",
+          "277.8% Elemental Mastery",
+          "294.47% Elemental Mastery",
+          "311.14% Elemental Mastery",
+          "333.36% Elemental Mastery",
+          "355.58% Elemental Mastery",
+          "377.81% Elemental Mastery",
+          "400.03% Elemental Mastery",
+          "422.26% Elemental Mastery",
+          "444.48% Elemental Mastery",
+          "472.26% Elemental Mastery"
+        ],
+        "Pale Hymn Duration": ["15s"],
+        "CD": ["15s"],
+        "Energy Cost": ["60"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Light_for_the_Frosty_Night.png",
+      "talentName": "Light for the Frosty Night",
+      "talentType": "1st Ascension Passive",
+      "description": "For the next 20s after Lauma uses her Elemental Skill Runo: Dawnless Rest of Karsikko, corresponding differing buff effects will be granted depending on the party's Moonsign. The buffs provided by different Moonsign levels cannot stack.\n\nMoonsign: Nascent Gleam\nBloom, Hyperbloom, and Burgeon DMG dealt by all nearby party members can score CRIT Hits, with CRIT Rate fixed at 15%, and CRIT DMG fixed at 100%. CRIT Rate from this effect stacks with CRIT Rate from similar effects that allow these Elemental Reactions to CRIT.\n\nMoonsign: Ascendant Gleam\nAll nearby party members' Lunar-Bloom DMG CRIT Rate +10%, CRIT DMG +20%.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Talent_Cleansing_for_the_Spring.png",
+      "talentName": "Cleansing for the Spring",
+      "talentType": "4th Ascension Passive",
+      "description": "Each point of Elemental Mastery Lauma has will give her the following bonuses:\nDMG dealt by her Elemental Skill is increased by 0.04%. The maximum increase obtainable this way is 32%.\nThe cooldown of her Charged Attack Spirit Envoy Metamorphosis is reduced by 0.02%. The maximum reduction obtainable this way is 20%.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Dendro_Moonsign_Lunar-Bloom.png",
+      "talentName": "Nature's Chorus",
+      "talentType": "Moonsign Benediction Passive",
+      "description": "When a Bloom reaction is triggered by a party member, it will be converted into the Lunar-Bloom reaction, with every point of Elemental Mastery that Lauma has increasing Lunar-Bloom's Base DMG by 0.0175%, up to a maximum of 14%.\n\nAdditionally, when Lauma is in the party, the party's Moonsign will increase by 1 level.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Talent_Prayers_for_the_Forest.png",
+      "talentName": "Prayers for the Forest",
+      "talentType": "Utility Passive",
+      "description": "Displays the location of nearby resources unique to Nod-Krai on the mini-map.\nAdditionally, Lauma appears to have a special affinity with some small animals affected by kuuvahki...",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Constellation_O_Lips%2C_Weave_Me_Songs_and_Psalms.png",
+      "name": "\"O Lips, Weave Me Songs and Psalms\"",
+      "level": 1,
+      "description": "After Lauma uses her Elemental Skill Runo: Dawnless Rest of Karsikko or her Elemental Burst Runo: All Hearts Become the Beating Moon, she will gain Threads of Life for 20s.\nDuring this time, when nearby party members trigger Lunar-Bloom reactions, nearby active characters will recover HP equal to 500% of Lauma's Elemental Mastery. This effect can be triggered once every 1.9s.\nAdditionally, the Stamina cost for Lauma's Spirit Envoy Form will be reduced by 40%, and its Max Duration will be extended by 5s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Constellation_Twine_Warnings_and_Tales_From_the_North.png",
+      "name": "\"Twine Warnings and Tales From the North\"",
+      "level": 2,
+      "description": "The Elemental Burst Runo: All Hearts Become the Beating Moon is enhanced:\nPale Hymn\n\n\n\n\n\neffects are increased: All nearby party members' Bloom, Hyperbloom, and Burgeon DMG is further increased by 500% of Lauma's Elemental Mastery, and their Lunar-Bloom DMG is further increased by 400% of Lauma's Elemental Mastery.\n\nMoonsign: Ascendant Gleam: All nearby party members' Lunar-Bloom DMG is increased by 40%."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Constellation_Seek_Not_to_Tread_the_Sly_Fox%27s_Path.png",
+      "name": "\"Seek Not to Tread the Sly Fox's Path\"",
+      "level": 3,
+      "description": "Increases the Level of Runo: All Hearts Become the Beating Moon by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Constellation_Nor_Yearn_for_the_Great_Bear%27s_Might.png",
+      "name": "\"Nor Yearn for the Great Bear's Might\"",
+      "level": 4,
+      "description": "When attacks from the Frostgrove Sanctuary\n\nsummoned by her Elemental Skill Runo: Dawnless Rest of Karsikko hit opponents, Lauma will regain 4 Elemental Energy. This effect can be triggered once every 5s."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Constellation_If_Truth_May_Be_Subject_to_Witness.png",
+      "name": "\"If Truth May Be Subject to Witness\"",
+      "level": 5,
+      "description": "Increases the level of Runo: Dawnless Rest of Karsikko by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Constellation_I_Offer_Blood_and_Tears_to_the_Moonlight.png",
+      "name": "\"I Offer Blood and Tears to the Moonlight\"",
+      "level": 6,
+      "description": "When the Frostgrove Sanctuary attacks opponents, it will deal 1 additional instance of AOE Dendro DMG equal to 185% of Lauma's Elemental Mastery. This DMG is considered Lunar-Bloom DMG.\nThis instance of DMG will not consume any Pale Hymn stacks and will provide Lauma with 2 stacks of Pale Hymn, as well as refreshing the duration of Pale Hymn stacks gained in this manner.\nThis effect can occur up to 8 times during each Frostgrove Sanctuary. When using the Elemental Skill Runo: Dawnless Rest of Karsikko, all Pale Hymn stacks gained in this manner will be removed.\n\nAdditionally, when Lauma uses a Normal Attack while she has Pale Hymn stacks, she will consume 1 stack to convert this to deal Dendro DMG equal to 150% of her Elemental Mastery. This DMG is considered Lunar-Bloom DMG.\n\nMoonsign: Ascendant Gleam: All nearby party members' Lunar-Bloom DMG is elevated\nby 25%."
+    }
+  ],
+  "imageUrls": {},
+  "version": "Luna I",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "",
+        "caption": "",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "",
+        "caption": "",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "",
+        "caption": "",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "",
+        "caption": "",
+        "videoUrl": "",
+        "videoType": ""
+      },
+      {
+        "url": "",
+        "caption": "",
+        "videoUrl": "",
+        "videoType": ""
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Namecard_Background_Lauma_Branched_Antlers.png",
+        "caption": "Lauma: Branched Antlers Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Lauma_Branched_Antlers.png",
+        "caption": "Lauma: Branched Antlers Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Namecard_Banner_Lauma_Branched_Antlers.png",
+        "caption": "Lauma: Branched Antlers Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Peregrination_of_Linnunrata_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Peregrination_of_Linnunrata_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Runo_All_Hearts_Become_the_Beating_Moon_Preview.gif",
+            "caption": "",
+            "videoUrl": "",
+            "videoType": ""
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Runo_Dawnless_Rest_of_Karsikko_Preview.gif",
+            "caption": "",
+            "videoUrl": "",
+            "videoType": ""
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Lauma_Character_Details_1.png",
+        "caption": "Lauma Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Lauma_Character_Details_2.png",
+        "caption": "Lauma Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Lauma_Character_Details_3.gif",
+        "caption": "Lauma Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Lauma_Character_Details_4.png",
+        "caption": "Lauma Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Lauma_Character_Details_5.png",
+        "caption": "Lauma Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Lauma_Character_Details_6.gif",
+        "caption": "Lauma Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Lauma_Character_Details_7.gif",
+        "caption": "Lauma Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Lauma_Character_Details_8.gif",
+        "caption": "Lauma Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Lauma_Character_Details_9.gif",
+        "caption": "Lauma Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Lauma_Character_Details_10.png",
+        "caption": "Lauma Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Lauma_Character_Details_11.png",
+        "caption": "Lauma Details 11"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Icon_Emoji_Paimon%27s_Paintings_43_Lauma_1.png",
+        "caption": "Blessings Set 43"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Icon_Emoji_Paimon%27s_Paintings_44_Lauma_1.png",
+        "caption": "Meeting Set 44"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/78/Icon_Emoji_Paimon%27s_Paintings_44_Lauma_2.png",
+        "caption": "Praise Set 44"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Icon_Emoji_Paimon%27s_Paintings_44_Lauma_3.png",
+        "caption": "Awkward... Set 44"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Icon_Emoji_Paimon%27s_Paintings_44_Lauma_4.png",
+        "caption": "Protect Set 44"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    }
+  ]
 }

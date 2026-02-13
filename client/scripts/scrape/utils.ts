@@ -1,6 +1,8 @@
 import chalk from 'chalk';
 import { By, until, WebDriver, WebElement } from 'selenium-webdriver';
 
+import { GenshinImageSchema } from './schema.js';
+import { getImageUrl } from './scraping-helpers.js';
 import { waitForElementCss } from './setup.js';
 
 const TIME_TO_WAIT_FOR_ELEMENT_MS = 10000;
@@ -97,6 +99,85 @@ export const getTableFromHeading = async (
   );
   console.log(chalk.green('Table found successfully!'));
   return driver.findElement(By.xpath(tableSelector));
+};
+
+/**
+ * Finds a wikia-gallery element after a heading and extracts all image URLs and captions.
+ * Follows the same pattern as getTableFromHeading but targets gallery elements.
+ * Uses Promise.allSettled for durability - continues even if individual items fail to extract.
+ *
+ * @param driver - Selenium WebDriver instance
+ * @param headingTitle - The heading text to search for (e.g., "Character Gallery")
+ * @param heading - The heading level to search for ('h2' or 'h3', defaults to 'h2')
+ * @returns Array of image objects with url and caption properties
+ *
+ * @example
+ * const images = await getImagesFromHeading(driver, 'Gallery', 'h2');
+ * // Returns: [{ url: '...', caption: 'Image 1' }, { url: '...', caption: 'Image 2' }]
+ */
+export const getImagesFromHeading = async (
+  driver: WebDriver,
+  headingTitle: string,
+  heading: 'h2' | 'h3' = 'h2'
+): Promise<GenshinImageSchema[]> => {
+  try {
+    const id = headingTitle.split(' ').join('_');
+    const gallerySelector = `//${heading}[*[@id='${id}'] or normalize-space(.)='${headingTitle}']/following-sibling::*[descendant::div[contains(@class, 'wikia-gallery')]][1]`;
+
+    console.log(
+      chalk.yellow('Looking for gallery with XPath:'),
+      chalk.gray(gallerySelector)
+    );
+
+    await driver.wait(
+      until.elementLocated(By.xpath(gallerySelector)),
+      TIME_TO_WAIT_FOR_ELEMENT_MS
+    );
+
+    console.log(chalk.green('Gallery found successfully!'));
+
+    const container = await driver.findElement(By.xpath(gallerySelector));
+    const galleryItems = await container.findElements(
+      By.css('.wikia-gallery-item')
+    );
+
+    console.log(chalk.cyan(`Found ${galleryItems.length} gallery items`));
+
+    const results = await Promise.allSettled(
+      galleryItems.map(async (item): Promise<GenshinImageSchema> => {
+        const img = await item.findElement(By.css('img'));
+        const url = await getImageUrl(img, 'data-src');
+
+        const captionEl = await item.findElement(By.css('.lightbox-caption'));
+        const caption = await captionEl.getText();
+
+        return {
+          url: parseUrl(url),
+          caption: caption.trim(),
+        };
+      })
+    );
+
+    const images = results
+      .filter(
+        (result): result is PromiseFulfilledResult<GenshinImageSchema> => {
+          if (result.status === 'rejected') {
+            return false;
+          }
+          return true;
+        }
+      )
+      .map((result) => result.value);
+
+    console.log(chalk.green(`Successfully extracted ${images.length} images`));
+    return images;
+  } catch (error) {
+    console.log(
+      chalk.yellow(`Gallery not found for heading "${headingTitle}"`),
+      chalk.gray(error instanceof Error ? error.message : String(error))
+    );
+    return [];
+  }
 };
 
 export async function safeGet<T>(

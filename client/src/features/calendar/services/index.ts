@@ -1,0 +1,1 @@
+export { loadTalentsData } from './talentsFetch';

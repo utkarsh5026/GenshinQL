@@ -1,0 +1,264 @@
+{
+  "name": "Scion of the Blazing Sun",
+  "rarity": 4,
+  "attack": 565,
+  "subStat": "CRIT Rate 18.4%",
+  "effect": "The Way of Sunfire\nAfter a Charged Attack hits an opponent, a Sunfire Arrow will descend upon the opponent hit, dealing 60~120% ATK as DMG, and applying the Heartsearer effect to the opponent damaged by said Arrow for 10s. Opponents affected by Heartsearer take 28~56% more Charged Attack DMG from the wielder. A Sunfire Arrow can be triggered once every 10s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Weapon_Scion_of_the_Blazing_Sun.png",
+  "nation": 3,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Echo_of_Scorching_Might.png",
+      "caption": "Echo of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+      "caption": "Remnant Glow of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+      "caption": "Dream of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Olden_Days_of_Scorching_Might.png",
+      "caption": "Olden Days of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Item_A_Flower_Yet_to_Bloom.png",
+      "caption": "A Flower Yet to Bloom"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Treasured_Flower.png",
+      "caption": "Treasured Flower"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Wanderer%27s_Blooming_Flower.png",
+      "caption": "Wanderer's Blooming Flower"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+      "caption": "Fungal Spores"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+      "caption": "Luminescent Pollen"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+      "caption": "Crystalline Cyst Dust"
+    }
+  ],
+  "passives": [
+    "After a Charged Attack hits an opponent, a Sunfire Arrow will descend upon the opponent hit, dealing 60% ATK as DMG, and applying the Heartsearer effect to the opponent damaged by said Arrow for 10s. Opponents affected by Heartsearer take 28% more Charged Attack DMG from the wielder. A Sunfire Arrow can be triggered once every 10s.",
+    "After a Charged Attack hits an opponent, a Sunfire Arrow will descend upon the opponent hit, dealing 60% ATK as DMG, and applying the Heartsearer effect to the opponent damaged by said Arrow for 10s. Opponents affected by Heartsearer take 28% more Charged Attack DMG from the wielder. A Sunfire Arrow can be triggered once every 10s.",
+    "After a Charged Attack hits an opponent, a Sunfire Arrow will descend upon the opponent hit, dealing 60% ATK as DMG, and applying the Heartsearer effect to the opponent damaged by said Arrow for 10s. Opponents affected by Heartsearer take 28% more Charged Attack DMG from the wielder. A Sunfire Arrow can be triggered once every 10s.",
+    "After a Charged Attack hits an opponent, a Sunfire Arrow will descend upon the opponent hit, dealing 60% ATK as DMG, and applying the Heartsearer effect to the opponent damaged by said Arrow for 10s. Opponents affected by Heartsearer take 28% more Charged Attack DMG from the wielder. A Sunfire Arrow can be triggered once every 10s.",
+    "After a Charged Attack hits an opponent, a Sunfire Arrow will descend upon the opponent hit, dealing 60% ATK as DMG, and applying the Heartsearer effect to the opponent damaged by said Arrow for 10s. Opponents affected by Heartsearer take 28% more Charged Attack DMG from the wielder. A Sunfire Arrow can be triggered once every 10s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Weapon_Scion_of_the_Blazing_Sun.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Weapon_Scion_of_the_Blazing_Sun_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Weapon_Card_Scion_of_the_Blazing_Sun.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 119
+        },
+        "subStat": {
+          "min": 4,
+          "max": 7.1
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Echo_of_Scorching_Might.png",
+            "caption": "Echo of Scorching Might",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Item_A_Flower_Yet_to_Bloom.png",
+            "caption": "A Flower Yet to Bloom",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 144,
+          "max": 226
+        },
+        "subStat": {
+          "min": 7.1,
+          "max": 10.3
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+            "caption": "Remnant Glow of Scorching Might",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Item_A_Flower_Yet_to_Bloom.png",
+            "caption": "A Flower Yet to Bloom",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Fungal_Spores.png",
+            "caption": "Fungal Spores",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 252,
+          "max": 293
+        },
+        "subStat": {
+          "min": 10.3,
+          "max": 11.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+            "caption": "Remnant Glow of Scorching Might",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Treasured_Flower.png",
+            "caption": "Treasured Flower",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 319,
+          "max": 361
+        },
+        "subStat": {
+          "min": 11.9,
+          "max": 13.5
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+            "caption": "Dream of Scorching Might",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Treasured_Flower.png",
+            "caption": "Treasured Flower",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Luminescent_Pollen.png",
+            "caption": "Luminescent Pollen",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 387,
+          "max": 429
+        },
+        "subStat": {
+          "min": 13.5,
+          "max": 15.1
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+            "caption": "Dream of Scorching Might",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Wanderer%27s_Blooming_Flower.png",
+            "caption": "Wanderer's Blooming Flower",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 455,
+          "max": 497
+        },
+        "subStat": {
+          "min": 15.1,
+          "max": 16.8
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Olden_Days_of_Scorching_Might.png",
+            "caption": "Olden Days of Scorching Might",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Wanderer%27s_Blooming_Flower.png",
+            "caption": "Wanderer's Blooming Flower",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Crystalline_Cyst_Dust.png",
+            "caption": "Crystalline Cyst Dust",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 523,
+          "max": 565
+        },
+        "subStat": {
+          "min": 16.8,
+          "max": 18.4
+        }
+      }
+    ]
+  }
+}

@@ -1,17 +1,38 @@
 import { create } from 'zustand';
 
-import { fetchPrimitives as fetchPrimitivesService } from '@/services/dataService';
+import { fetchWithCache } from '@/features/cache';
 import type { Primitives } from '@/types';
 
+/**
+ * State interface for the primitives store.
+ * Manages loading and storage of game primitives (elements, regions, weapon types).
+ */
 interface PrimitivesState {
+  /** The cached primitives data */
   primitives: Primitives | null;
+
+  /** Loading state indicator */
   loading: boolean;
+
+  /** Error message if fetch fails */
   error: string | null;
 
+  /** Sets the primitives data and processes region names */
   setPrimitives: (primitives: Primitives) => void;
+
+  /** Fetches primitives from cache if not already loaded */
   fetchPrimitives: () => Promise<void>;
+
+  /** Loads primitives, fetching if necessary, and returns the data */
+  loadPrimitives: () => Promise<Primitives>;
+
+  /** Sets the loading state */
   setLoading: (loading: boolean) => void;
+
+  /** Sets the error state */
   setError: (error: string | null) => void;
+
+  /** Resets the store to initial state */
   reset: () => void;
 }
 
@@ -26,7 +47,15 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
 
   setPrimitives: (primitives) => {
     set({
-      primitives,
+      primitives: {
+        ...primitives,
+        regions: primitives.regions.map((reg) => {
+          return {
+            ...reg,
+            name: reg.name.split('-').join(''),
+          };
+        }),
+      },
       loading: false,
     });
   },
@@ -35,8 +64,11 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
     set({ loading: true, error: null });
 
     try {
-      const data = await fetchPrimitivesService();
-      get().setPrimitives(data);
+      const { primitives, setPrimitives } = get();
+      if (primitives !== null) return;
+
+      const { data } = await fetchWithCache<Primitives>('primitives.json');
+      setPrimitives(data);
     } catch (err) {
       const errorMessage =
         err instanceof Error ? err.message : 'Failed to fetch primitives';
@@ -44,25 +76,58 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
     }
   },
 
+  loadPrimitives: async () => {
+    const { primitives, fetchPrimitives } = get();
+    if (primitives) {
+      return primitives;
+    }
+
+    await fetchPrimitives();
+
+    const newPrimitives = get().primitives;
+    if (!newPrimitives) {
+      throw new Error('Failed to load primitives');
+    }
+    return newPrimitives;
+  },
+
   setLoading: (loading) => set({ loading }),
   setError: (error) => set({ error }),
   reset: () => set(initialState),
 }));
 
+/**
+ * Hook to get the primitives data.
+ * @returns The primitives object or null if not loaded
+ */
 export const usePrimitives = () =>
-  usePrimitivesStore((state) => state.primitives);
+  usePrimitivesStore(({ primitives }) => primitives);
 
+/**
+ * Hook to get the elements array from primitives.
+ * @returns Array of element primitives or empty array if not loaded
+ */
 export const useElements = () =>
-  usePrimitivesStore((state) => state.primitives?.elements || []);
+  usePrimitivesStore(
+    ({ primitives }) => primitives?.elements || EMPTY_ELEMENTS
+  );
 
+/**
+ * Hook to get the regions array from primitives.
+ * @returns Array of region primitives or empty array if not loaded
+ */
 export const useRegions = () =>
-  usePrimitivesStore((state) => state.primitives?.regions || []);
+  usePrimitivesStore(({ primitives }) => primitives?.regions || EMPTY_REGIONS);
 
+/**
+ * Hook to get the weapon types array from primitives.
+ * @returns Array of weapon type primitives or empty array if not loaded
+ */
 export const useWeaponTypes = () =>
-  usePrimitivesStore((state) => state.primitives?.weaponTypes || []);
+  usePrimitivesStore(
+    ({ primitives }) => primitives?.weaponTypes || EMPTY_WEAPON_TYPES
+  );
 
-export const usePrimitivesLoading = () =>
-  usePrimitivesStore((state) => state.loading);
-
-export const usePrimitivesError = () =>
-  usePrimitivesStore((state) => state.error);
+const EMPTY_ELEMENTS: Primitives['elements'] = [] as const;
+const EMPTY_REGIONS: Primitives['regions'] = [] as const;
+const EMPTY_WEAPON_TYPES: Primitives['weaponTypes'] = [] as const;

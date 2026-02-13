@@ -52,6 +52,11 @@ const tasks = {
     category: 'Quality',
     action: () => runNpmCommand('lint'),
   },
+  autofix: {
+    description: 'Auto-fix linting issues (including import sorting)',
+    category: 'Quality',
+    action: () => runNpmCommand('lint:fix'),
+  },
   typecheck: {
     description: 'Run TypeScript type checking',
     category: 'Quality',

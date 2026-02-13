@@ -1,0 +1,264 @@
+{
+  "name": "Sunny Morning Sleep-In",
+  "rarity": 5,
+  "attack": 542,
+  "subStat": "Elemental Mastery 265",
+  "effect": "Bathhouses, Hawks, and Narukami\nElemental Mastery increases by 120~240 for 6s after triggering Swirl. Elemental Mastery increases by 96~192 for 9s after the wielder's Elemental Skill hits an opponent. Elemental Mastery increases by 32~64 for 30s after the wielder's Elemental Burst hits an opponent.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon_Sunny_Morning_Sleep-In.png",
+  "nation": 2,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Narukami%27s_Wisdom.png",
+      "caption": "Narukami's Wisdom"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Narukami%27s_Joy.png",
+      "caption": "Narukami's Joy"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Narukami%27s_Affection.png",
+      "caption": "Narukami's Affection"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Narukami%27s_Valor.png",
+      "caption": "Narukami's Valor"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Ignited_Stone.png",
+      "caption": "Ignited Stone"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Ignited_Seed_of_Life.png",
+      "caption": "Ignited Seed of Life"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Ignited_Seeing_Eye.png",
+      "caption": "Ignited Seeing Eye"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+      "caption": "Spectral Husk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+      "caption": "Spectral Heart"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+      "caption": "Spectral Nucleus"
+    }
+  ],
+  "passives": [
+    "Elemental Mastery increases by 120 for 6s after triggering Swirl. Elemental Mastery increases by 96 for 9s after the wielder's Elemental Skill hits an opponent. Elemental Mastery increases by 32 for 30s after the wielder's Elemental Burst hits an opponent.",
+    "Elemental Mastery increases by 150 for 6s after triggering Swirl. Elemental Mastery increases by 120 for 9s after the wielder's Elemental Skill hits an opponent. Elemental Mastery increases by 40 for 30s after the wielder's Elemental Burst hits an opponent.",
+    "Elemental Mastery increases by 180 for 6s after triggering Swirl. Elemental Mastery increases by 144 for 9s after the wielder's Elemental Skill hits an opponent. Elemental Mastery increases by 48 for 30s after the wielder's Elemental Burst hits an opponent.",
+    "Elemental Mastery increases by 210 for 6s after triggering Swirl. Elemental Mastery increases by 168 for 9s after the wielder's Elemental Skill hits an opponent. Elemental Mastery increases by 56 for 30s after the wielder's Elemental Burst hits an opponent.",
+    "Elemental Mastery increases by 240 for 6s after triggering Swirl. Elemental Mastery increases by 192 for 9s after the wielder's Elemental Skill hits an opponent. Elemental Mastery increases by 64 for 30s after the wielder's Elemental Burst hits an opponent."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon_Sunny_Morning_Sleep-In.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Weapon_Sunny_Morning_Sleep-In_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Weapon_Card_Sunny_Morning_Sleep-In.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 110
+        },
+        "subStat": {
+          "min": 58,
+          "max": 102
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Narukami%27s_Wisdom.png",
+            "caption": "Narukami's Wisdom",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Ignited_Stone.png",
+            "caption": "Ignited Stone",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 141,
+          "max": 210
+        },
+        "subStat": {
+          "min": 102,
+          "max": 148
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Narukami%27s_Joy.png",
+            "caption": "Narukami's Joy",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Ignited_Stone.png",
+            "caption": "Ignited Stone",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 241,
+          "max": 275
+        },
+        "subStat": {
+          "min": 148,
+          "max": 172
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Narukami%27s_Joy.png",
+            "caption": "Narukami's Joy",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Ignited_Seed_of_Life.png",
+            "caption": "Ignited Seed of Life",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 307,
+          "max": 341
+        },
+        "subStat": {
+          "min": 172,
+          "max": 195
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Narukami%27s_Affection.png",
+            "caption": "Narukami's Affection",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Ignited_Seed_of_Life.png",
+            "caption": "Ignited Seed of Life",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 373,
+          "max": 408
+        },
+        "subStat": {
+          "min": 195,
+          "max": 218
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Narukami%27s_Affection.png",
+            "caption": "Narukami's Affection",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Ignited_Seeing_Eye.png",
+            "caption": "Ignited Seeing Eye",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 439,
+          "max": 475
+        },
+        "subStat": {
+          "min": 218,
+          "max": 241
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Narukami%27s_Valor.png",
+            "caption": "Narukami's Valor",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Ignited_Seeing_Eye.png",
+            "caption": "Ignited Seeing Eye",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 506,
+          "max": 542
+        },
+        "subStat": {
+          "min": 241,
+          "max": 265
+        }
+      }
+    ]
+  }
+}

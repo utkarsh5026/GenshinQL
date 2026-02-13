@@ -1,0 +1,263 @@
+{
+  "name": "Elegy for the End",
+  "rarity": 5,
+  "attack": 608,
+  "subStat": "Energy Recharge 55.1%",
+  "effect": "The Parting Refrain\nA part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases Elemental Mastery by 60~120.\nWhen the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field.\nWhen you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Farewell Song\" effect for 12s.\n\"Millennial Movement: Farewell Song\" increases Elemental Mastery by 100~200 and increases ATK by 20~40%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s.\nOf the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Weapon_Elegy_for_the_End.png",
+  "nation": 0,
+  "weekdays": 1,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Boreal_Wolf%27s_Milk_Tooth.png",
+      "caption": "Boreal Wolf's Milk Tooth"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png",
+      "caption": "Boreal Wolf's Cracked Tooth"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Boreal_Wolf%27s_Broken_Fang.png",
+      "caption": "Boreal Wolf's Broken Fang"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Boreal_Wolf%27s_Nostalgia.png",
+      "caption": "Boreal Wolf's Nostalgia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+      "caption": "Heavy Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+      "caption": "Black Bronze Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+      "caption": "Black Crystal Horn"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Item_Recruit%27s_Insignia.png",
+      "caption": "Recruit's Insignia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Sergeant%27s_Insignia.png",
+      "caption": "Sergeant's Insignia"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Item_Lieutenant%27s_Insignia.png",
+      "caption": "Lieutenant's Insignia"
+    }
+  ],
+  "passives": [
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases Elemental Mastery by 60.\nWhen the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field.\nWhen you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Farewell Song\" effect for 12s.\n\"Millennial Movement: Farewell Song\" increases Elemental Mastery by 100 and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s.\nOf the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases Elemental Mastery by 60.\nWhen the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field.\nWhen you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Farewell Song\" effect for 12s.\n\"Millennial Movement: Farewell Song\" increases Elemental Mastery by 100 and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s.\nOf the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases Elemental Mastery by 60.\nWhen the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field.\nWhen you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Farewell Song\" effect for 12s.\n\"Millennial Movement: Farewell Song\" increases Elemental Mastery by 100 and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s.\nOf the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases Elemental Mastery by 60.\nWhen the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field.\nWhen you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Farewell Song\" effect for 12s.\n\"Millennial Movement: Farewell Song\" increases Elemental Mastery by 100 and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s.\nOf the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+    "A part of the \"Millennial Movement\" that wanders amidst the winds.\nIncreases Elemental Mastery by 60.\nWhen the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field.\nWhen you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Farewell Song\" effect for 12s.\n\"Millennial Movement: Farewell Song\" increases Elemental Mastery by 100 and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s.\nOf the many effects of the \"Millennial Movement,\" buffs of the same type will not stack."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Weapon_Elegy_for_the_End.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Weapon_Elegy_for_the_End_2nd.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 46,
+          "max": 122
+        },
+        "subStat": {
+          "min": 12,
+          "max": 21.2
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Boreal_Wolf%27s_Milk_Tooth.png",
+            "caption": "Boreal Wolf's Milk Tooth",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+            "caption": "Heavy Horn",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Item_Recruit%27s_Insignia.png",
+            "caption": "Recruit's Insignia",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 153,
+          "max": 235
+        },
+        "subStat": {
+          "min": 21.2,
+          "max": 30.9
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png",
+            "caption": "Boreal Wolf's Cracked Tooth",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+            "caption": "Heavy Horn",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Item_Recruit%27s_Insignia.png",
+            "caption": "Recruit's Insignia",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 266,
+          "max": 308
+        },
+        "subStat": {
+          "min": 30.9,
+          "max": 35.7
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png",
+            "caption": "Boreal Wolf's Cracked Tooth",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+            "caption": "Black Bronze Horn",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Sergeant%27s_Insignia.png",
+            "caption": "Sergeant's Insignia",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 340,
+          "max": 382
+        },
+        "subStat": {
+          "min": 35.7,
+          "max": 40.6
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Boreal_Wolf%27s_Broken_Fang.png",
+            "caption": "Boreal Wolf's Broken Fang",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+            "caption": "Black Bronze Horn",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Sergeant%27s_Insignia.png",
+            "caption": "Sergeant's Insignia",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 414,
+          "max": 457
+        },
+        "subStat": {
+          "min": 40.6,
+          "max": 45.4
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Boreal_Wolf%27s_Broken_Fang.png",
+            "caption": "Boreal Wolf's Broken Fang",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+            "caption": "Black Crystal Horn",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Item_Lieutenant%27s_Insignia.png",
+            "caption": "Lieutenant's Insignia",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 488,
+          "max": 532
+        },
+        "subStat": {
+          "min": 45.4,
+          "max": 50.3
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Boreal_Wolf%27s_Nostalgia.png",
+            "caption": "Boreal Wolf's Nostalgia",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+            "caption": "Black Crystal Horn",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Item_Lieutenant%27s_Insignia.png",
+            "caption": "Lieutenant's Insignia",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 563,
+          "max": 608
+        },
+        "subStat": {
+          "min": 50.3,
+          "max": 55.1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "name": "Uraku Misugiri",
+  "rarity": 5,
+  "attack": 542,
+  "subStat": "CRIT DMG 88.2%",
+  "effect": "Brocade Bloom, Shrine Sword\nNormal Attack DMG is increased by 16~32% and Elemental Skill DMG is increased by 24~48%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 20~40%.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Weapon_Uraku_Misugiri.png",
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Coral_Branch_of_a_Distant_Sea.png",
+      "caption": "Coral Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+      "caption": "Jeweled Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+      "caption": "Jade Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Golden_Branch_of_a_Distant_Sea.png",
+      "caption": "Golden Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Chaos_Gear.png",
+      "caption": "Chaos Gear"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Chaos_Axis.png",
+      "caption": "Chaos Axis"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Item_Chaos_Oculus.png",
+      "caption": "Chaos Oculus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Item_Old_Handguard.png",
+      "caption": "Old Handguard"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Kageuchi_Handguard.png",
+      "caption": "Kageuchi Handguard"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Famed_Handguard.png",
+      "caption": "Famed Handguard"
+    }
+  ],
+  "passives": [
+    "Normal Attack DMG is increased by 16% and Elemental Skill DMG is increased by 24%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 20%.",
+    "Normal Attack DMG is increased by 20% and Elemental Skill DMG is increased by 30%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 25%.",
+    "Normal Attack DMG is increased by 24% and Elemental Skill DMG is increased by 36%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 30%.",
+    "Normal Attack DMG is increased by 28% and Elemental Skill DMG is increased by 42%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 35%.",
+    "Normal Attack DMG is increased by 32% and Elemental Skill DMG is increased by 48%. After a nearby active character deals Geo DMG, the aforementioned effects increase by 100% for 15s. Additionally, the wielder's DEF is increased by 40%."
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 44,
+          "max": 110
+        },
+        "subStat": {
+          "min": 19.2,
+          "max": 33.9
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Coral_Branch_of_a_Distant_Sea.png",
+            "caption": "Coral Branch of a Distant Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Chaos_Gear.png",
+            "caption": "Chaos Gear",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Item_Old_Handguard.png",
+            "caption": "Old Handguard",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 141,
+          "max": 210
+        },
+        "subStat": {
+          "min": 33.9,
+          "max": 49.4
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+            "caption": "Jeweled Branch of a Distant Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Chaos_Gear.png",
+            "caption": "Chaos Gear",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Item_Old_Handguard.png",
+            "caption": "Old Handguard",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 241,
+          "max": 275
+        },
+        "subStat": {
+          "min": 49.4,
+          "max": 57.2
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+            "caption": "Jeweled Branch of a Distant Sea",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Chaos_Axis.png",
+            "caption": "Chaos Axis",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Kageuchi_Handguard.png",
+            "caption": "Kageuchi Handguard",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 307,
+          "max": 341
+        },
+        "subStat": {
+          "min": 57.2,
+          "max": 65
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+            "caption": "Jade Branch of a Distant Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Chaos_Axis.png",
+            "caption": "Chaos Axis",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Kageuchi_Handguard.png",
+            "caption": "Kageuchi Handguard",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 373,
+          "max": 408
+        },
+        "subStat": {
+          "min": 65,
+          "max": 72.7
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+            "caption": "Jade Branch of a Distant Sea",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Item_Chaos_Oculus.png",
+            "caption": "Chaos Oculus",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Famed_Handguard.png",
+            "caption": "Famed Handguard",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 439,
+          "max": 475
+        },
+        "subStat": {
+          "min": 72.7,
+          "max": 80.4
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Golden_Branch_of_a_Distant_Sea.png",
+            "caption": "Golden Branch of a Distant Sea",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Item_Chaos_Oculus.png",
+            "caption": "Chaos Oculus",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Famed_Handguard.png",
+            "caption": "Famed Handguard",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 506,
+          "max": 542
+        },
+        "subStat": {
+          "min": 80.4,
+          "max": 88.2
+        }
+      }
+    ]
+  },
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Weapon_Uraku_Misugiri.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Weapon_Uraku_Misugiri_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Weapon_Card_Uraku_Misugiri.png"
+  ]
+}

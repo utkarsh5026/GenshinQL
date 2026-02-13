@@ -42,12 +42,20 @@ function isGalleryDataComplete(
     return false;
   }
 
-  // Use the validated data from the parse result
   const validatedGallery = result.data;
 
-  // Check for required arrays (should exist even if empty)
   if (!validatedGallery.screenAnimations) {
     logger.warn(`${charName} gallery missing screenAnimations`);
+    return false;
+  }
+
+  const hasCompleteScreenAnimations = validatedGallery.screenAnimations.some(
+    (anim) => anim.url || anim.videoUrl
+  );
+  if (!hasCompleteScreenAnimations) {
+    logger.warn(
+      `${charName} gallery has incomplete screenAnimations (all empty)`
+    );
     return false;
   }
 
@@ -327,21 +335,29 @@ async function parseFigures(
   return await Promise.all(
     figures.map(async (figure) => {
       try {
-        const [img, caption, videoSource] = await Promise.all([
+        // Always get img and caption first (these should always exist)
+        const [img, caption] = await Promise.all([
           figure.findElement(By.css('img')).getAttribute('data-src'),
           figure.findElement(By.css('figcaption')).getText(),
-          figure.findElement(By.css('video source')),
         ]);
 
-        const [videoUrl, videoType] = await Promise.all([
-          videoSource.getAttribute('data-src'),
-          videoSource.getAttribute('type'),
-        ]);
+        let videoUrl = '';
+        let videoType = '';
+
+        try {
+          const videoSource = await figure.findElement(By.css('video source'));
+          [videoUrl, videoType] = await Promise.all([
+            videoSource.getAttribute('data-src'),
+            videoSource.getAttribute('type'),
+          ]);
+        } catch {
+          logger.debug('No video source found, using GIF only');
+        }
 
         return {
           url: parseUrl(img),
           caption,
-          videoUrl: parseUrl(videoUrl),
+          videoUrl: videoUrl ? parseUrl(videoUrl) : '',
           videoType,
         };
       } catch {

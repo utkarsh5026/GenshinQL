@@ -1,0 +1,264 @@
+{
+  "name": "King's Squire",
+  "rarity": 4,
+  "attack": 454,
+  "subStat": "ATK 55.1%",
+  "effect": "Labyrinth Lord's Instruction\nObtain the Teachings of the Forest effect when unleashing Elemental Skills and Elemental Burst, increasing Elemental Mastery by 60~140 for 12s. This effect will be removed when switching characters. When the Teachings of the Forest effect ends or is removed, it will deal 100~180% of ATK as DMG to 1 nearby opponent. The Teachings of the Forest effect can be triggered once every 20s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Weapon_King%27s_Squire.png",
+  "nation": 3,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Echo_of_Scorching_Might.png",
+      "caption": "Echo of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+      "caption": "Remnant Glow of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+      "caption": "Dream of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Olden_Days_of_Scorching_Might.png",
+      "caption": "Olden Days of Scorching Might"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Inactivated_Fungal_Nucleus.png",
+      "caption": "Inactivated Fungal Nucleus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Dormant_Fungal_Nucleus.png",
+      "caption": "Dormant Fungal Nucleus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Robust_Fungal_Nucleus.png",
+      "caption": "Robust Fungal Nucleus"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Firm_Arrowhead.png",
+      "caption": "Firm Arrowhead"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Sharp_Arrowhead.png",
+      "caption": "Sharp Arrowhead"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Item_Weathered_Arrowhead.png",
+      "caption": "Weathered Arrowhead"
+    }
+  ],
+  "passives": [
+    "Obtain the Teachings of the Forest effect when unleashing Elemental Skills and Elemental Burst, increasing Elemental Mastery by 60 for 12s. This effect will be removed when switching characters. When the Teachings of the Forest effect ends or is removed, it will deal 100% of ATK as DMG to 1 nearby opponent. The Teachings of the Forest effect can be triggered once every 20s.",
+    "Obtain the Teachings of the Forest effect when unleashing Elemental Skills and Elemental Burst, increasing Elemental Mastery by 60 for 12s. This effect will be removed when switching characters. When the Teachings of the Forest effect ends or is removed, it will deal 100% of ATK as DMG to 1 nearby opponent. The Teachings of the Forest effect can be triggered once every 20s.",
+    "Obtain the Teachings of the Forest effect when unleashing Elemental Skills and Elemental Burst, increasing Elemental Mastery by 60 for 12s. This effect will be removed when switching characters. When the Teachings of the Forest effect ends or is removed, it will deal 100% of ATK as DMG to 1 nearby opponent. The Teachings of the Forest effect can be triggered once every 20s.",
+    "Obtain the Teachings of the Forest effect when unleashing Elemental Skills and Elemental Burst, increasing Elemental Mastery by 60 for 12s. This effect will be removed when switching characters. When the Teachings of the Forest effect ends or is removed, it will deal 100% of ATK as DMG to 1 nearby opponent. The Teachings of the Forest effect can be triggered once every 20s.",
+    "Obtain the Teachings of the Forest effect when unleashing Elemental Skills and Elemental Burst, increasing Elemental Mastery by 60 for 12s. This effect will be removed when switching characters. When the Teachings of the Forest effect ends or is removed, it will deal 100% of ATK as DMG to 1 nearby opponent. The Teachings of the Forest effect can be triggered once every 20s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Weapon_King%27s_Squire.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Weapon_King%27s_Squire_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Weapon_Card_King%27s_Squire.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 41,
+          "max": 99
+        },
+        "subStat": {
+          "min": 12,
+          "max": 21.2
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Echo_of_Scorching_Might.png",
+            "caption": "Echo of Scorching Might",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Inactivated_Fungal_Nucleus.png",
+            "caption": "Inactivated Fungal Nucleus",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Firm_Arrowhead.png",
+            "caption": "Firm Arrowhead",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 125,
+          "max": 184
+        },
+        "subStat": {
+          "min": 21.2,
+          "max": 30.9
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+            "caption": "Remnant Glow of Scorching Might",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Item_Inactivated_Fungal_Nucleus.png",
+            "caption": "Inactivated Fungal Nucleus",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Firm_Arrowhead.png",
+            "caption": "Firm Arrowhead",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 210,
+          "max": 238
+        },
+        "subStat": {
+          "min": 30.9,
+          "max": 35.7
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Remnant_Glow_of_Scorching_Might.png",
+            "caption": "Remnant Glow of Scorching Might",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Dormant_Fungal_Nucleus.png",
+            "caption": "Dormant Fungal Nucleus",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Sharp_Arrowhead.png",
+            "caption": "Sharp Arrowhead",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 264,
+          "max": 293
+        },
+        "subStat": {
+          "min": 35.7,
+          "max": 40.6
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+            "caption": "Dream of Scorching Might",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Item_Dormant_Fungal_Nucleus.png",
+            "caption": "Dormant Fungal Nucleus",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Sharp_Arrowhead.png",
+            "caption": "Sharp Arrowhead",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 319,
+          "max": 347
+        },
+        "subStat": {
+          "min": 40.6,
+          "max": 45.4
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Item_Dream_of_Scorching_Might.png",
+            "caption": "Dream of Scorching Might",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Robust_Fungal_Nucleus.png",
+            "caption": "Robust Fungal Nucleus",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Item_Weathered_Arrowhead.png",
+            "caption": "Weathered Arrowhead",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 373,
+          "max": 401
+        },
+        "subStat": {
+          "min": 45.4,
+          "max": 50.3
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Olden_Days_of_Scorching_Might.png",
+            "caption": "Olden Days of Scorching Might",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Item_Robust_Fungal_Nucleus.png",
+            "caption": "Robust Fungal Nucleus",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Item_Weathered_Arrowhead.png",
+            "caption": "Weathered Arrowhead",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 427,
+          "max": 454
+        },
+        "subStat": {
+          "min": 50.3,
+          "max": 55.1
+        }
+      }
+    ]
+  }
+}

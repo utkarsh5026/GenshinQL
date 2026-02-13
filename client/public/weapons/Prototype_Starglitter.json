@@ -1,0 +1,263 @@
+{
+  "name": "Prototype Starglitter",
+  "rarity": 4,
+  "attack": 510,
+  "subStat": "Energy Recharge 45.9%",
+  "effect": "Magic Affinity\nAfter using an Elemental Skill, increases Normal and Charged Attack DMG by 8~16% for 12s. Max 2 stacks.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Prototype_Starglitter.png",
+  "nation": 1,
+  "weekdays": 2,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Grain_of_Aerosiderite.png",
+      "caption": "Grain of Aerosiderite"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Piece_of_Aerosiderite.png",
+      "caption": "Piece of Aerosiderite"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Bit_of_Aerosiderite.png",
+      "caption": "Bit of Aerosiderite"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Item_Chunk_of_Aerosiderite.png",
+      "caption": "Chunk of Aerosiderite"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Item_Fragile_Bone_Shard.png",
+      "caption": "Fragile Bone Shard"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Sturdy_Bone_Shard.png",
+      "caption": "Sturdy Bone Shard"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Item_Fossilized_Bone_Shard.png",
+      "caption": "Fossilized Bone Shard"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Damaged_Mask.png",
+      "caption": "Damaged Mask"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Stained_Mask.png",
+      "caption": "Stained Mask"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Ominous_Mask.png",
+      "caption": "Ominous Mask"
+    }
+  ],
+  "passives": [
+    "After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks.",
+    "After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks.",
+    "After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks.",
+    "After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks.",
+    "After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Weapon_Prototype_Starglitter.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Weapon_Prototype_Starglitter_2nd.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 42,
+          "max": 109
+        },
+        "subStat": {
+          "min": 10,
+          "max": 17.7
+        },
+        "mora": 5000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Grain_of_Aerosiderite.png",
+            "caption": "Grain of Aerosiderite",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Item_Fragile_Bone_Shard.png",
+            "caption": "Fragile Bone Shard",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Damaged_Mask.png",
+            "caption": "Damaged Mask",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 135,
+          "max": 205
+        },
+        "subStat": {
+          "min": 17.7,
+          "max": 25.8
+        },
+        "mora": 15000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Piece_of_Aerosiderite.png",
+            "caption": "Piece of Aerosiderite",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Item_Fragile_Bone_Shard.png",
+            "caption": "Fragile Bone Shard",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Damaged_Mask.png",
+            "caption": "Damaged Mask",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 231,
+          "max": 266
+        },
+        "subStat": {
+          "min": 25.8,
+          "max": 29.8
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Piece_of_Aerosiderite.png",
+            "caption": "Piece of Aerosiderite",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Sturdy_Bone_Shard.png",
+            "caption": "Sturdy Bone Shard",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Stained_Mask.png",
+            "caption": "Stained Mask",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 292,
+          "max": 327
+        },
+        "subStat": {
+          "min": 29.8,
+          "max": 33.8
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Bit_of_Aerosiderite.png",
+            "caption": "Bit of Aerosiderite",
+            "count": 3
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Sturdy_Bone_Shard.png",
+            "caption": "Sturdy Bone Shard",
+            "count": 12
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Stained_Mask.png",
+            "caption": "Stained Mask",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 353,
+          "max": 388
+        },
+        "subStat": {
+          "min": 33.8,
+          "max": 37.9
+        },
+        "mora": 35000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Bit_of_Aerosiderite.png",
+            "caption": "Bit of Aerosiderite",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Item_Fossilized_Bone_Shard.png",
+            "caption": "Fossilized Bone Shard",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Ominous_Mask.png",
+            "caption": "Ominous Mask",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 414,
+          "max": 449
+        },
+        "subStat": {
+          "min": 37.9,
+          "max": 41.9
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Item_Chunk_of_Aerosiderite.png",
+            "caption": "Chunk of Aerosiderite",
+            "count": 4
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Item_Fossilized_Bone_Shard.png",
+            "caption": "Fossilized Bone Shard",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Ominous_Mask.png",
+            "caption": "Ominous Mask",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 475,
+          "max": 510
+        },
+        "subStat": {
+          "min": 41.9,
+          "max": 45.9
+        }
+      }
+    ]
+  }
+}

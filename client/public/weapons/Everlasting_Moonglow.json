@@ -1,0 +1,264 @@
+{
+  "name": "Everlasting Moonglow",
+  "rarity": 5,
+  "attack": 608,
+  "subStat": "HP 49.6%",
+  "effect": "Byakuya Kougetsu\nHealing Bonus increased by 10~20%, Normal Attack DMG is increased by 1~3.0% of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s.",
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Weapon_Everlasting_Moonglow.png",
+  "nation": 2,
+  "weekdays": 0,
+  "materials": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+      "caption": "Mora"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Coral_Branch_of_a_Distant_Sea.png",
+      "caption": "Coral Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+      "caption": "Jeweled Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+      "caption": "Jade Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Golden_Branch_of_a_Distant_Sea.png",
+      "caption": "Golden Branch of a Distant Sea"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Dismal_Prism.png",
+      "caption": "Dismal Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Item_Crystal_Prism.png",
+      "caption": "Crystal Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Polarizing_Prism.png",
+      "caption": "Polarizing Prism"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+      "caption": "Spectral Husk"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+      "caption": "Spectral Heart"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+      "caption": "Spectral Nucleus"
+    }
+  ],
+  "passives": [
+    "Healing Bonus increased by 10%, Normal Attack DMG is increased by 1% of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s.",
+    "Healing Bonus increased by 12.5%, Normal Attack DMG is increased by 1.5% of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s.",
+    "Healing Bonus increased by 15%, Normal Attack DMG is increased by 2.0% of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s.",
+    "Healing Bonus increased by 17.5%, Normal Attack DMG is increased by 2.5% of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s.",
+    "Healing Bonus increased by 20%, Normal Attack DMG is increased by 3.0% of the Max HP of the character equipping this weapon. For 12s after using an Elemental Burst, Normal Attacks that hit opponents will restore 0.6 Energy. Energy can be restored this way once every 0.1s."
+  ],
+  "images": [
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Weapon_Everlasting_Moonglow.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Weapon_Everlasting_Moonglow_2nd.png",
+    "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Weapon_Card_Everlasting_Moonglow.png"
+  ],
+  "ascension": {
+    "phases": [
+      {
+        "phase": 0,
+        "levelRange": "1/20/20",
+        "baseAttack": {
+          "min": 46,
+          "max": 122
+        },
+        "subStat": {
+          "min": 10.8,
+          "max": 19.1
+        },
+        "mora": 10000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Coral_Branch_of_a_Distant_Sea.png",
+            "caption": "Coral Branch of a Distant Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Dismal_Prism.png",
+            "caption": "Dismal Prism",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "phase": 1,
+        "levelRange": "20/40/40",
+        "baseAttack": {
+          "min": 153,
+          "max": 235
+        },
+        "subStat": {
+          "min": 19.1,
+          "max": 27.8
+        },
+        "mora": 20000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+            "caption": "Jeweled Branch of a Distant Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Dismal_Prism.png",
+            "caption": "Dismal Prism",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+            "caption": "Spectral Husk",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "levelRange": "40/50/50",
+        "baseAttack": {
+          "min": 266,
+          "max": 308
+        },
+        "subStat": {
+          "min": 27.8,
+          "max": 32.2
+        },
+        "mora": 30000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+            "caption": "Jeweled Branch of a Distant Sea",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Item_Crystal_Prism.png",
+            "caption": "Crystal Prism",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "levelRange": "50/60/60",
+        "baseAttack": {
+          "min": 340,
+          "max": 382
+        },
+        "subStat": {
+          "min": 32.2,
+          "max": 36.5
+        },
+        "mora": 45000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+            "caption": "Jade Branch of a Distant Sea",
+            "count": 5
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Item_Crystal_Prism.png",
+            "caption": "Crystal Prism",
+            "count": 18
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+            "caption": "Spectral Heart",
+            "count": 14
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "levelRange": "60/70/70",
+        "baseAttack": {
+          "min": 414,
+          "max": 457
+        },
+        "subStat": {
+          "min": 36.5,
+          "max": 40.9
+        },
+        "mora": 55000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+            "caption": "Jade Branch of a Distant Sea",
+            "count": 9
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Polarizing_Prism.png",
+            "caption": "Polarizing Prism",
+            "count": 14
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "levelRange": "70/80/80",
+        "baseAttack": {
+          "min": 488,
+          "max": 532
+        },
+        "subStat": {
+          "min": 40.9,
+          "max": 45.3
+        },
+        "mora": 65000,
+        "materials": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Golden_Branch_of_a_Distant_Sea.png",
+            "caption": "Golden Branch of a Distant Sea",
+            "count": 6
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Polarizing_Prism.png",
+            "caption": "Polarizing Prism",
+            "count": 27
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+            "caption": "Spectral Nucleus",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "levelRange": "80/90/90",
+        "baseAttack": {
+          "min": 563,
+          "max": 608
+        },
+        "subStat": {
+          "min": 45.3,
+          "max": 49.6
+        }
+      }
+    ]
+  }
+}

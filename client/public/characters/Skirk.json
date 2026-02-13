@@ -1,646 +1,734 @@
 {
-    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Skirk_Icon.png",
-    "name": "Skirk",
-    "rarity": "5 Stars",
-    "element": "Cryo",
-    "weaponType": "Sword",
-    "region": "None",
-    "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
-    "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
-    "regionUrl": "",
-    "modelType": "Medium Female",
-    "talents": [
+  "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Skirk_Icon.png",
+  "name": "Skirk",
+  "rarity": "5 Stars",
+  "element": "Cryo",
+  "weaponType": "Sword",
+  "region": "None",
+  "elementUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+  "weaponUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+  "regionUrl": "",
+  "modelType": "Medium Female",
+  "talents": [
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png",
+      "talentName": "Havoc: Sunder",
+      "talentType": "Normal Attack",
+      "description": "Normal Attack\nPerforms up to 5 consecutive attacks.\n\nCharged Attack\nConsumes a certain amount of Stamina to hurl a spinning crystal spear, dealing DMG to opponents ahead.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
+      "figureUrls": [
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png",
-            "talentName": "Havoc: Sunder",
-            "talentType": "Normal Attack",
-            "description": "Normal Attack\nPerforms up to 5 consecutive attacks.\n\nCharged Attack\nConsumes a certain amount of Stamina to hurl a spinning crystal spear, dealing DMG to opponents ahead.\n\nPlunging Attack\nPlunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Havoc_Sunder_Normal_Preview.gif",
-                    "caption": "Normal Attack"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Havoc_Sunder_Charged_Preview.gif",
-                    "caption": "Charged Attack"
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "54.52",
-                    "58.96",
-                    "63.4",
-                    "69.74",
-                    "74.18",
-                    "79.25",
-                    "86.22",
-                    "93.2",
-                    "100.17",
-                    "107.78",
-                    "115.39"
-                ],
-                "2-Hit DMG (%)": [
-                    "49.79",
-                    "53.85",
-                    "57.9",
-                    "63.69",
-                    "67.74",
-                    "72.38",
-                    "78.74",
-                    "85.11",
-                    "91.48",
-                    "98.43",
-                    "105.38"
-                ],
-                "3-Hit DMG (%)": [
-                    "32.42\n+\n32.42",
-                    "35.06\n+\n35.06",
-                    "37.7\n+\n37.7",
-                    "41.47\n+\n41.47",
-                    "44.11\n+\n44.11",
-                    "47.13\n+\n47.13",
-                    "51.27\n+\n51.27",
-                    "55.42\n+\n55.42",
-                    "59.57\n+\n59.57",
-                    "64.09\n+\n64.09",
-                    "68.61\n+\n68.61"
-                ],
-                "4-Hit DMG (%)": [
-                    "60.8",
-                    "65.75",
-                    "70.7",
-                    "77.77",
-                    "82.72",
-                    "88.38",
-                    "96.15",
-                    "103.93",
-                    "111.71",
-                    "120.19",
-                    "128.67"
-                ],
-                "5-Hit DMG (%)": [
-                    "82.9",
-                    "89.65",
-                    "96.4",
-                    "106.04",
-                    "112.79",
-                    "120.5",
-                    "131.1",
-                    "141.71",
-                    "152.31",
-                    "163.88",
-                    "175.45"
-                ],
-                "Charged Attack DMG (%)": [
-                    "66.82 × 2",
-                    "72.26 × 2",
-                    "77.7 × 2",
-                    "85.47 × 2",
-                    "90.91 × 2",
-                    "97.13 × 2",
-                    "105.67 × 2",
-                    "114.22 × 2",
-                    "122.77 × 2",
-                    "132.09 × 2",
-                    "141.41 × 2"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "20"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92"
-                ]
-            }
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Havoc_Sunder_Normal_Preview.gif",
+          "caption": "Normal Attack"
         },
         {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Talent_Havoc_Warp.png",
-            "talentName": "Havoc: Warp",
-            "talentType": "Elemental Skill",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nImitates the combat style of \"The Foul.\" Produces different effects depending on whether you Tap or Hold.\n\nTap\nSkirk gains 45 Serpent's Subtlety\n\n\n\n\nand switches to Seven-Phase Flash\n\nmode.\n\nHold\nSkirk gains 45 Serpent's Subtlety and will continuously move at high speed. Her interruption resistance is increased in this state.\nDuring this time, Skirk can control her movement direction and move atop water. She can also use this Skill again to end rapid movement prematurely.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Havoc_Warp_Preview.gif",
-                    "caption": ""
-                }
-            ],
-            "scaling": {
-                "1-Hit DMG (%)": [
-                    "132.82",
-                    "143.64",
-                    "154.45",
-                    "169.89",
-                    "180.7",
-                    "193.06",
-                    "210.05",
-                    "227.04",
-                    "244.03",
-                    "262.56",
-                    "281.09",
-                    "299.63",
-                    "318.16",
-                    "336.69"
-                ],
-                "2-Hit DMG (%)": [
-                    "119.8",
-                    "129.55",
-                    "139.3",
-                    "153.23",
-                    "162.98",
-                    "174.13",
-                    "189.45",
-                    "204.77",
-                    "220.1",
-                    "236.81",
-                    "253.53",
-                    "270.25",
-                    "286.96",
-                    "303.68"
-                ],
-                "3-Hit DMG (%)": [
-                    "75.72\n+\n75.72",
-                    "81.89\n+\n81.89",
-                    "88.05\n+\n88.05",
-                    "96.86\n+\n96.86",
-                    "103.02\n+\n103.02",
-                    "110.06\n+\n110.06",
-                    "119.75\n+\n119.75",
-                    "129.43\n+\n129.43",
-                    "139.12\n+\n139.12",
-                    "149.69\n+\n149.69",
-                    "160.25\n+\n160.25",
-                    "170.82\n+\n170.82",
-                    "181.38\n+\n181.38",
-                    "191.95\n+\n191.95"
-                ],
-                "4-Hit DMG (%)": [
-                    "80.54\n+\n80.54",
-                    "87.09\n+\n87.09",
-                    "93.65\n+\n93.65",
-                    "103.01\n+\n103.01",
-                    "109.57\n+\n109.57",
-                    "117.06\n+\n117.06",
-                    "127.36\n+\n127.36",
-                    "137.67\n+\n137.67",
-                    "147.97\n+\n147.97",
-                    "159.2\n+\n159.2",
-                    "170.44\n+\n170.44",
-                    "181.68\n+\n181.68",
-                    "192.92\n+\n192.92",
-                    "204.16\n+\n204.16"
-                ],
-                "5-Hit DMG (%)": [
-                    "196.62",
-                    "212.63",
-                    "228.63",
-                    "251.5",
-                    "267.5",
-                    "285.79",
-                    "310.94",
-                    "336.09",
-                    "361.24",
-                    "388.68",
-                    "416.11",
-                    "443.55",
-                    "470.98",
-                    "498.42"
-                ],
-                "Charged Attack DMG (%)": [
-                    "44.55 × 3",
-                    "48.17 × 3",
-                    "51.8 × 3",
-                    "56.98 × 3",
-                    "60.61 × 3",
-                    "64.75 × 3",
-                    "70.45 × 3",
-                    "76.15 × 3",
-                    "81.84 × 3",
-                    "88.06 × 3",
-                    "94.28 × 3",
-                    "100.49 × 3",
-                    "106.71 × 3",
-                    "112.92 × 3"
-                ],
-                "Charged Attack Stamina Cost": [
-                    "20"
-                ],
-                "Plunge DMG (%)": [
-                    "63.93",
-                    "69.14",
-                    "74.34",
-                    "81.77",
-                    "86.98",
-                    "92.92",
-                    "101.1",
-                    "109.28",
-                    "117.46",
-                    "126.38",
-                    "135.3",
-                    "144.22",
-                    "153.14",
-                    "162.06"
-                ],
-                "Low Plunge DMG (%)": [
-                    "127.84",
-                    "138.24",
-                    "148.65",
-                    "163.51",
-                    "173.92",
-                    "185.81",
-                    "202.16",
-                    "218.51",
-                    "234.86",
-                    "252.7",
-                    "270.54",
-                    "288.38",
-                    "306.22",
-                    "324.05"
-                ],
-                "High Plunge DMG (%)": [
-                    "159.68",
-                    "172.67",
-                    "185.67",
-                    "204.24",
-                    "217.23",
-                    "232.09",
-                    "252.51",
-                    "272.93",
-                    "293.36",
-                    "315.64",
-                    "337.92",
-                    "360.2",
-                    "382.48",
-                    "404.76"
-                ],
-                "Seven-Phase Flash Mode Duration": [
-                    "12.5s"
-                ],
-                "Max Serpent's Subtlety": [
-                    "100"
-                ],
-                "CD": [
-                    "8s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Talent_Havoc_Ruin.png",
-            "talentName": "Havoc: Ruin",
-            "talentType": "Elemental Burst",
-            "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nSkirk's Elemental Burst is not reliant on Elemental Energy but instead on Serpent's Subtlety\n\n\n\n\n.\nWhen Skirk has at least 50 Serpent's Subtlety, she can expend all her Serpent's Subtlety to unleash her Elemental Burst, ripping the space before her apart and using rapid consecutive slashes that deal AoE Cryo DMG. At the same time, the DMG dealt by an instance of this Elemental Burst will be increased by every point of Serpent's Subtlety over 50 when it is unleashed. Up to 12 points can be counted for this purpose.\n\nWhen Skirk is in Seven-Phase Flash\n\nmode, Havoc: Ruin will be replaced by Havoc: Extinction.\n\nHavoc: Extinction\nA special Elemental Burst that can be used even without consuming Serpent's Subtlety.\nAfter using it, Skirk will gain the \"All Shall Wither\" effect, which will last until Seven-Phase Flash ends. After unlocking the Ascension Talent Reason Beyond Reason\n\n\n\n\n, she can also absorb nearby Void Rifts.\nWhile \"All Shall Wither\" is active, every 0.1s, after Skirk's Normal Attack hits an opponent, that Normal Attack will deal increased DMG. If she absorbed any Void Rifts while using Havoc: Extinction, this Normal Attack's DMG will be further increased based on the number of Rifts absorbed.\nThis effect will be canceled when it has triggered 10 times.",
-            "figureUrls": [
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Havoc_Ruin_Preview.gif",
-                    "caption": "Havoc: Ruin"
-                },
-                {
-                    "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Havoc_Extinction_Preview.gif",
-                    "caption": "Havoc: Extinction"
-                }
-            ],
-            "scaling": {
-                "Slash DMG (%)": [
-                    "122.76 ×5",
-                    "131.97 ×5",
-                    "141.17 ×5",
-                    "153.45 ×5",
-                    "162.66 ×5",
-                    "171.86 ×5",
-                    "184.14 ×5",
-                    "196.42 ×5",
-                    "208.69 ×5",
-                    "220.97 ×5",
-                    "233.24 ×5",
-                    "245.52 ×5",
-                    "260.87 ×5"
-                ],
-                "Final Slash DMG (%)": [
-                    "204.6",
-                    "219.95",
-                    "235.29",
-                    "255.75",
-                    "271.09",
-                    "286.44",
-                    "306.9",
-                    "327.36",
-                    "347.82",
-                    "368.28",
-                    "388.74",
-                    "409.2",
-                    "434.77"
-                ],
-                "Serpent's Subtlety Bonus": [
-                    "19.32% ATK Per Point",
-                    "20.77% ATK Per Point",
-                    "22.22% ATK Per Point",
-                    "24.15% ATK Per Point",
-                    "25.6% ATK Per Point",
-                    "27.05% ATK Per Point",
-                    "28.98% ATK Per Point",
-                    "30.92% ATK Per Point",
-                    "32.85% ATK Per Point",
-                    "34.78% ATK Per Point",
-                    "36.71% ATK Per Point",
-                    "38.65% ATK Per Point",
-                    "41.06% ATK Per Point"
-                ],
-                "0/1/2/3 Void Rift Absorption DMG Bonus (%)": [
-                    "3.5 / 6.6 / 8.8 / 11",
-                    "4 / 7.2 / 9.6 / 12",
-                    "4.5 / 7.8 / 10.4 / 13",
-                    "5 / 8.4 / 11.2 / 14",
-                    "5.5 / 9 / 12 / 15",
-                    "6 / 9.6 / 12.8 / 16",
-                    "6.5 / 10.2 / 13.6 / 17",
-                    "7 / 10.8 / 14.4 / 18",
-                    "7.5 / 11.4 / 15.2 / 19",
-                    "8 / 12 / 16 / 20",
-                    "8.5 / 12.6 / 16.8 / 21",
-                    "9 / 13.2 / 17.6 / 22",
-                    "9.5 / 13.8 / 18.4 / 23"
-                ],
-                "CD": [
-                    "15s"
-                ]
-            }
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Talent_Reason_Beyond_Reason.png",
-            "talentName": "Reason Beyond Reason",
-            "talentType": "1st Ascension Passive",
-            "description": "Description\nGameplay Notes\nWhen nearby party members trigger Frozen, Superconduct, Cryo Swirl, or Cryo Crystallize reactions against opponents, a Void Rift will be created near this opponent. This effect can be triggered once every 2.5s. 3 Void Rifts created by Skirk herself can exist on the field at once.\n\nSkirk can use the following methods to absorb nearby Void Rifts:\nWhen she hits an opponent with a Charged Attack in her Seven-Phase Flash\n\nmode.\nWhen she uses the special Elemental Burst Havoc: Extinction while in Seven-Phase Flash mode.\nWhen she Holds her Elemental Skill Havoc: Warp to engage in rapid movement.\n\nEach Rift absorbed will grant her 8 Serpent's Subtlety\n\n\n\n\npoints.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Talent_Return_to_Oblivion.png",
-            "talentName": "Return to Oblivion",
-            "talentType": "4th Ascension Passive",
-            "description": "Description\nGameplay Notes\nWhen nearby Hydro party members' Hydro attacks hit opponents, or when nearby Cryo party members apart from Skirk hit opponents with Cryo attacks, Skirk will gain the \"Death's Crossing\" effect for 20s. Max 3 stacks, each stack's duration is counted independently.\nEach character can grant Skirk at most 1 \"Death's Crossing\" stack by this means.\nEach \"Death's Crossing\" stack increases the Normal Attack DMG dealt by Skirk in Seven-Phase Flash\n\nmode to 110%/120%/170% of its original DMG and the DMG dealt when using her Elemental Burst Havoc: Ruin to 105%/115%/160% of its original DMG.",
-            "figureUrls": [],
-            "scaling": {}
-        },
-        {
-            "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Talent_Mutual_Weapons_Mentorship.png",
-            "talentName": "Mutual Weapons Mentorship",
-            "talentType": "Utility Passive",
-            "description": "When all party members are either Hydro or Cryo, and if there is at least 1 Hydro and 1 Cryo character, your own party members' Elemental Skill Level is increased by 1.",
-            "figureUrls": [],
-            "scaling": {}
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Havoc_Sunder_Charged_Preview.gif",
+          "caption": "Charged Attack"
         }
-    ],
-    "constellations": [
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Constellation_Far_to_Fall.png",
-            "name": "Far to Fall",
-            "level": 1,
-            "description": "Description\nAdvanced Properties\nEnhances the effects of the Ascension Talent Reason Beyond Reason\n\n\n\n\n: Every Void Rift absorbed will summon a crystal blade to attack nearby opponents, dealing 500% of Skirk's ATK as Cryo DMG. This DMG is considered Charged Attack DMG.\nYou must first unlock the Ascension Talent Reason Beyond Reason."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Constellation_Into_the_Abyss.png",
-            "name": "Into the Abyss",
-            "level": 2,
-            "description": "After unleashing her Elemental Skill Havoc: Warp, Skirk will gain 10 additional Serpent's Subtlety\n\n\n\n\npoints.\nWhen using her Elemental Burst Havoc: Ruin, the DMG of this Elemental Burst instance will be increased by taking up to 10 more Serpent's Subtlety points into account.\nAdditionally, within 12.5s after Skirk unleashes the special Elemental Burst Havoc: Extinction while in her Seven-Phase Flash\n\nmode, her ATK is increased by 70%. This effect will be canceled when she leaves the Seven-Phase Flash mode."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Constellation_Serendipitous_Sin.png",
-            "name": "Serendipitous Sin",
-            "level": 3,
-            "description": "Increases the Level of Havoc: Ruin by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Constellation_Fractured_Flow.png",
-            "name": "Fractured Flow",
-            "level": 4,
-            "description": "Enhances the effects of the Ascension Talent Return to Oblivion\n\n\n: Each Death's Crossing stack also increases Skirk's ATK by 10%/20%/40%.\nYou must first unlock the Ascension Talent Return to Oblivion."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Constellation_End_of_Wishes.png",
-            "name": "End of Wishes",
-            "level": 5,
-            "description": "Increases the Level of Havoc: Warp by 3.\nMaximum upgrade level is 15."
-        },
-        {
-            "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_To_the_Source.png",
-            "name": "To the Source",
-            "level": 6,
-            "description": "Description\nAdvanced Properties\nEach Void Rift Skirk absorbs via the effects of the Ascension Talent Reason Beyond Reason\n\n\n\n\nwill grant her 1 Havoc: Sever stack. She can consume such stacks to initiate coordinated attacks and decrease the DMG she takes while in Seven-Phase Flash\n\nmode. These stacks last for 15s, and each stack's duration is counted independently (max 3 stacks).\nYou must first unlock the Ascension Talent \"Reason Beyond Reason.\"\n\nHavoc: Sever\nWhen Skirk uses the Elemental Burst Havoc: Ruin, she will consume all Havoc: Sever stacks to initiate a coordinated attack in which each Havoc: Sever stack will deal 750% of Skirk's ATK as Cryo DMG. This DMG is considered Elemental Burst DMG.\nWhen she uses Normal Attacks while in Seven-Phase Flash mode, 1 Havoc: Sever stack will be consumed when her third or fifth sequenced attacks hit an opponent to launch 3 coordinated attacks. Each coordinated attack deals 180% of Skirk's ATK as Cryo DMG. This damage is considered Normal Attack DMG.\nWhen Skirk takes DMG while in Seven-Phase Flash mode, 1 Havoc: Sever stack will be consumed to decrease this DMG instance by 80% and attack nearby opponents 3 times, with each attack dealing 180% of Skirk's ATK as Cryo DMG. This DMG is considered Charged Attack DMG."
-        }
-    ],
-    "imageUrls": {},
-    "version": "5.7",
-    "gallery": {
-        "screenAnimations": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Idle_Skirk_1.gif",
-                "caption": "Idle 1",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Idle_Skirk_1.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Idle_Skirk_2.gif",
-                "caption": "Idle 2",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Idle_Skirk_2.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Talent_Menu_Skirk.gif",
-                "caption": "Talent Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Menu_Skirk.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Weapon_Menu_Skirk.gif",
-                "caption": "Weapon Menu",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Weapon_Menu_Skirk.mp4",
-                "videoType": "video/mp4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Party_Setup_Skirk.gif",
-                "caption": "Party Setup",
-                "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Party_Setup_Skirk.mp4",
-                "videoType": "video/mp4"
-            }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "54.52",
+          "58.96",
+          "63.4",
+          "69.74",
+          "74.18",
+          "79.25",
+          "86.22",
+          "93.2",
+          "100.17",
+          "107.78",
+          "115.39"
         ],
-        "nameCards": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Namecard_Background_Skirk_Lone_Shadow.png",
-                "caption": "Skirk: Lone Shadow Background"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Skirk_Lone_Shadow.png",
-                "caption": "Skirk: Lone Shadow Icon"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Namecard_Banner_Skirk_Lone_Shadow.png",
-                "caption": "Skirk: Lone Shadow Banner"
-            }
+        "2-Hit DMG (%)": [
+          "49.79",
+          "53.85",
+          "57.9",
+          "63.69",
+          "67.74",
+          "72.38",
+          "78.74",
+          "85.11",
+          "91.48",
+          "98.43",
+          "105.38"
         ],
-        "attackAnimations": [
-            {
-                "skill": "Normal_Attack",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Havoc_Sunder_Normal_Preview.gif",
-                        "caption": "Normal Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Havoc_Sunder_Normal_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Havoc_Sunder_Charged_Preview.gif",
-                        "caption": "Charged Attack",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Havoc_Sunder_Charged_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Burst",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Havoc_Ruin_Preview.gif",
-                        "caption": "Havoc: Ruin",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Havoc_Ruin_Preview.mp4",
-                        "videoType": "video/mp4"
-                    },
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Havoc_Extinction_Preview.gif",
-                        "caption": "Havoc: Extinction",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Havoc_Extinction_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            },
-            {
-                "skill": "Elemental_Skill",
-                "animations": [
-                    {
-                        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Havoc_Warp_Preview.gif",
-                        "caption": "",
-                        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Havoc_Warp_Preview.mp4",
-                        "videoType": "video/mp4"
-                    }
-                ]
-            }
+        "3-Hit DMG (%)": [
+          "32.42\n+\n32.42",
+          "35.06\n+\n35.06",
+          "37.7\n+\n37.7",
+          "41.47\n+\n41.47",
+          "44.11\n+\n44.11",
+          "47.13\n+\n47.13",
+          "51.27\n+\n51.27",
+          "55.42\n+\n55.42",
+          "59.57\n+\n59.57",
+          "64.09\n+\n64.09",
+          "68.61\n+\n68.61"
         ],
-        "detailedImages": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Skirk_Character_Details_1.png",
-                "caption": "Skirk Details 1"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Skirk_Character_Details_2.png",
-                "caption": "Skirk Details 2"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Skirk_Character_Details_3.gif",
-                "caption": "Skirk Details 3"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Skirk_Character_Details_4.png",
-                "caption": "Skirk Details 4"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Skirk_Character_Details_5.png",
-                "caption": "Skirk Details 5"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Skirk_Character_Details_6.png",
-                "caption": "Skirk Details 6"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Skirk_Character_Details_7.png",
-                "caption": "Skirk Details 7"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Skirk_Character_Details_8.gif",
-                "caption": "Skirk Details 8"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Skirk_Character_Details_9.gif",
-                "caption": "Skirk Details 9"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Skirk_Character_Details_10.gif",
-                "caption": "Skirk Details 10"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Skirk_Character_Details_11.gif",
-                "caption": "Skirk Details 11"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Skirk_Character_Details_12.gif",
-                "caption": "Skirk Details 12"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Skirk_Character_Details_13.gif",
-                "caption": "Skirk Details 13"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Skirk_Character_Details_14.png",
-                "caption": "Skirk Details 14"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Skirk_Character_Details_15.png",
-                "caption": "Skirk Details 15"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Skirk_Character_Details_16.png",
-                "caption": "Skirk Details 16"
-            }
+        "4-Hit DMG (%)": [
+          "60.8",
+          "65.75",
+          "70.7",
+          "77.77",
+          "82.72",
+          "88.38",
+          "96.15",
+          "103.93",
+          "111.71",
+          "120.19",
+          "128.67"
         ],
-        "stickers": [
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Icon_Emoji_Paimon%27s_Paintings_42_Skirk_1.png",
-                "caption": "Observing Set 42"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Icon_Emoji_Paimon%27s_Paintings_42_Skirk_2.png",
-                "caption": "Performing Set 42"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Icon_Emoji_Paimon%27s_Paintings_42_Skirk_3.png",
-                "caption": "Farewell Set 42"
-            },
-            {
-                "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Icon_Emoji_Paimon%27s_Paintings_42_Skirk_4.png",
-                "caption": "Settlement Set 42"
-            }
+        "5-Hit DMG (%)": [
+          "82.9",
+          "89.65",
+          "96.4",
+          "106.04",
+          "112.79",
+          "120.5",
+          "131.1",
+          "141.71",
+          "152.31",
+          "163.88",
+          "175.45"
+        ],
+        "Charged Attack DMG (%)": [
+          "66.82 × 2",
+          "72.26 × 2",
+          "77.7 × 2",
+          "85.47 × 2",
+          "90.91 × 2",
+          "97.13 × 2",
+          "105.67 × 2",
+          "114.22 × 2",
+          "122.77 × 2",
+          "132.09 × 2",
+          "141.41 × 2"
+        ],
+        "Charged Attack Stamina Cost": ["20"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92"
         ]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Talent_Havoc_Warp.png",
+      "talentName": "Havoc: Warp",
+      "talentType": "Elemental Skill",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nImitates the combat style of \"The Foul.\" Produces different effects depending on whether you Tap or Hold.\n\nTap\nSkirk gains 45 Serpent's Subtlety\n\n\n\n\nand switches to Seven-Phase Flash\n\nmode.\n\nHold\nSkirk gains 45 Serpent's Subtlety and will continuously move at high speed. Her interruption resistance is increased in this state.\nDuring this time, Skirk can control her movement direction and move atop water. She can also use this Skill again to end rapid movement prematurely.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Havoc_Warp_Preview.gif",
+          "caption": ""
+        }
+      ],
+      "scaling": {
+        "1-Hit DMG (%)": [
+          "132.82",
+          "143.64",
+          "154.45",
+          "169.89",
+          "180.7",
+          "193.06",
+          "210.05",
+          "227.04",
+          "244.03",
+          "262.56",
+          "281.09",
+          "299.63",
+          "318.16",
+          "336.69"
+        ],
+        "2-Hit DMG (%)": [
+          "119.8",
+          "129.55",
+          "139.3",
+          "153.23",
+          "162.98",
+          "174.13",
+          "189.45",
+          "204.77",
+          "220.1",
+          "236.81",
+          "253.53",
+          "270.25",
+          "286.96",
+          "303.68"
+        ],
+        "3-Hit DMG (%)": [
+          "75.72\n+\n75.72",
+          "81.89\n+\n81.89",
+          "88.05\n+\n88.05",
+          "96.86\n+\n96.86",
+          "103.02\n+\n103.02",
+          "110.06\n+\n110.06",
+          "119.75\n+\n119.75",
+          "129.43\n+\n129.43",
+          "139.12\n+\n139.12",
+          "149.69\n+\n149.69",
+          "160.25\n+\n160.25",
+          "170.82\n+\n170.82",
+          "181.38\n+\n181.38",
+          "191.95\n+\n191.95"
+        ],
+        "4-Hit DMG (%)": [
+          "80.54\n+\n80.54",
+          "87.09\n+\n87.09",
+          "93.65\n+\n93.65",
+          "103.01\n+\n103.01",
+          "109.57\n+\n109.57",
+          "117.06\n+\n117.06",
+          "127.36\n+\n127.36",
+          "137.67\n+\n137.67",
+          "147.97\n+\n147.97",
+          "159.2\n+\n159.2",
+          "170.44\n+\n170.44",
+          "181.68\n+\n181.68",
+          "192.92\n+\n192.92",
+          "204.16\n+\n204.16"
+        ],
+        "5-Hit DMG (%)": [
+          "196.62",
+          "212.63",
+          "228.63",
+          "251.5",
+          "267.5",
+          "285.79",
+          "310.94",
+          "336.09",
+          "361.24",
+          "388.68",
+          "416.11",
+          "443.55",
+          "470.98",
+          "498.42"
+        ],
+        "Charged Attack DMG (%)": [
+          "44.55 × 3",
+          "48.17 × 3",
+          "51.8 × 3",
+          "56.98 × 3",
+          "60.61 × 3",
+          "64.75 × 3",
+          "70.45 × 3",
+          "76.15 × 3",
+          "81.84 × 3",
+          "88.06 × 3",
+          "94.28 × 3",
+          "100.49 × 3",
+          "106.71 × 3",
+          "112.92 × 3"
+        ],
+        "Charged Attack Stamina Cost": ["20"],
+        "Plunge DMG (%)": [
+          "63.93",
+          "69.14",
+          "74.34",
+          "81.77",
+          "86.98",
+          "92.92",
+          "101.1",
+          "109.28",
+          "117.46",
+          "126.38",
+          "135.3",
+          "144.22",
+          "153.14",
+          "162.06"
+        ],
+        "Low Plunge DMG (%)": [
+          "127.84",
+          "138.24",
+          "148.65",
+          "163.51",
+          "173.92",
+          "185.81",
+          "202.16",
+          "218.51",
+          "234.86",
+          "252.7",
+          "270.54",
+          "288.38",
+          "306.22",
+          "324.05"
+        ],
+        "High Plunge DMG (%)": [
+          "159.68",
+          "172.67",
+          "185.67",
+          "204.24",
+          "217.23",
+          "232.09",
+          "252.51",
+          "272.93",
+          "293.36",
+          "315.64",
+          "337.92",
+          "360.2",
+          "382.48",
+          "404.76"
+        ],
+        "Seven-Phase Flash Mode Duration": ["12.5s"],
+        "Max Serpent's Subtlety": ["100"],
+        "CD": ["8s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Talent_Havoc_Ruin.png",
+      "talentName": "Havoc: Ruin",
+      "talentType": "Elemental Burst",
+      "description": "Description\nGameplay Notes\nAdvanced Properties\nAttribute Scaling\nPreview\nSkirk's Elemental Burst is not reliant on Elemental Energy but instead on Serpent's Subtlety\n\n\n\n\n.\nWhen Skirk has at least 50 Serpent's Subtlety, she can expend all her Serpent's Subtlety to unleash her Elemental Burst, ripping the space before her apart and using rapid consecutive slashes that deal AoE Cryo DMG. At the same time, the DMG dealt by an instance of this Elemental Burst will be increased by every point of Serpent's Subtlety over 50 when it is unleashed. Up to 12 points can be counted for this purpose.\n\nWhen Skirk is in Seven-Phase Flash\n\nmode, Havoc: Ruin will be replaced by Havoc: Extinction.\n\nHavoc: Extinction\nA special Elemental Burst that can be used even without consuming Serpent's Subtlety.\nAfter using it, Skirk will gain the \"All Shall Wither\" effect, which will last until Seven-Phase Flash ends. After unlocking the Ascension Talent Reason Beyond Reason\n\n\n\n\n, she can also absorb nearby Void Rifts.\nWhile \"All Shall Wither\" is active, every 0.1s, after Skirk's Normal Attack hits an opponent, that Normal Attack will deal increased DMG. If she absorbed any Void Rifts while using Havoc: Extinction, this Normal Attack's DMG will be further increased based on the number of Rifts absorbed.\nThis effect will be canceled when it has triggered 10 times.",
+      "figureUrls": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Havoc_Ruin_Preview.gif",
+          "caption": "Havoc: Ruin"
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Havoc_Extinction_Preview.gif",
+          "caption": "Havoc: Extinction"
+        }
+      ],
+      "scaling": {
+        "Slash DMG (%)": [
+          "122.76 ×5",
+          "131.97 ×5",
+          "141.17 ×5",
+          "153.45 ×5",
+          "162.66 ×5",
+          "171.86 ×5",
+          "184.14 ×5",
+          "196.42 ×5",
+          "208.69 ×5",
+          "220.97 ×5",
+          "233.24 ×5",
+          "245.52 ×5",
+          "260.87 ×5"
+        ],
+        "Final Slash DMG (%)": [
+          "204.6",
+          "219.95",
+          "235.29",
+          "255.75",
+          "271.09",
+          "286.44",
+          "306.9",
+          "327.36",
+          "347.82",
+          "368.28",
+          "388.74",
+          "409.2",
+          "434.77"
+        ],
+        "Serpent's Subtlety Bonus": [
+          "19.32% ATK Per Point",
+          "20.77% ATK Per Point",
+          "22.22% ATK Per Point",
+          "24.15% ATK Per Point",
+          "25.6% ATK Per Point",
+          "27.05% ATK Per Point",
+          "28.98% ATK Per Point",
+          "30.92% ATK Per Point",
+          "32.85% ATK Per Point",
+          "34.78% ATK Per Point",
+          "36.71% ATK Per Point",
+          "38.65% ATK Per Point",
+          "41.06% ATK Per Point"
+        ],
+        "0/1/2/3 Void Rift Absorption DMG Bonus (%)": [
+          "3.5 / 6.6 / 8.8 / 11",
+          "4 / 7.2 / 9.6 / 12",
+          "4.5 / 7.8 / 10.4 / 13",
+          "5 / 8.4 / 11.2 / 14",
+          "5.5 / 9 / 12 / 15",
+          "6 / 9.6 / 12.8 / 16",
+          "6.5 / 10.2 / 13.6 / 17",
+          "7 / 10.8 / 14.4 / 18",
+          "7.5 / 11.4 / 15.2 / 19",
+          "8 / 12 / 16 / 20",
+          "8.5 / 12.6 / 16.8 / 21",
+          "9 / 13.2 / 17.6 / 22",
+          "9.5 / 13.8 / 18.4 / 23"
+        ],
+        "CD": ["15s"]
+      }
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Talent_Reason_Beyond_Reason.png",
+      "talentName": "Reason Beyond Reason",
+      "talentType": "1st Ascension Passive",
+      "description": "Description\nGameplay Notes\nWhen nearby party members trigger Frozen, Superconduct, Cryo Swirl, or Cryo Crystallize reactions against opponents, a Void Rift will be created near this opponent. This effect can be triggered once every 2.5s. 3 Void Rifts created by Skirk herself can exist on the field at once.\n\nSkirk can use the following methods to absorb nearby Void Rifts:\nWhen she hits an opponent with a Charged Attack in her Seven-Phase Flash\n\nmode.\nWhen she uses the special Elemental Burst Havoc: Extinction while in Seven-Phase Flash mode.\nWhen she Holds her Elemental Skill Havoc: Warp to engage in rapid movement.\n\nEach Rift absorbed will grant her 8 Serpent's Subtlety\n\n\n\n\npoints.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Talent_Return_to_Oblivion.png",
+      "talentName": "Return to Oblivion",
+      "talentType": "4th Ascension Passive",
+      "description": "Description\nGameplay Notes\nWhen nearby Hydro party members' Hydro attacks hit opponents, or when nearby Cryo party members apart from Skirk hit opponents with Cryo attacks, Skirk will gain the \"Death's Crossing\" effect for 20s. Max 3 stacks, each stack's duration is counted independently.\nEach character can grant Skirk at most 1 \"Death's Crossing\" stack by this means.\nEach \"Death's Crossing\" stack increases the Normal Attack DMG dealt by Skirk in Seven-Phase Flash\n\nmode to 110%/120%/170% of its original DMG and the DMG dealt when using her Elemental Burst Havoc: Ruin to 105%/115%/160% of its original DMG.",
+      "figureUrls": [],
+      "scaling": {}
+    },
+    {
+      "talentIcon": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Talent_Mutual_Weapons_Mentorship.png",
+      "talentName": "Mutual Weapons Mentorship",
+      "talentType": "Utility Passive",
+      "description": "When all party members are either Hydro or Cryo, and if there is at least 1 Hydro and 1 Cryo character, your own party members' Elemental Skill Level is increased by 1.",
+      "figureUrls": [],
+      "scaling": {}
     }
+  ],
+  "constellations": [
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Constellation_Far_to_Fall.png",
+      "name": "Far to Fall",
+      "level": 1,
+      "description": "Description\nAdvanced Properties\nEnhances the effects of the Ascension Talent Reason Beyond Reason\n\n\n\n\n: Every Void Rift absorbed will summon a crystal blade to attack nearby opponents, dealing 500% of Skirk's ATK as Cryo DMG. This DMG is considered Charged Attack DMG.\nYou must first unlock the Ascension Talent Reason Beyond Reason."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Constellation_Into_the_Abyss.png",
+      "name": "Into the Abyss",
+      "level": 2,
+      "description": "After unleashing her Elemental Skill Havoc: Warp, Skirk will gain 10 additional Serpent's Subtlety\n\n\n\n\npoints.\nWhen using her Elemental Burst Havoc: Ruin, the DMG of this Elemental Burst instance will be increased by taking up to 10 more Serpent's Subtlety points into account.\nAdditionally, within 12.5s after Skirk unleashes the special Elemental Burst Havoc: Extinction while in her Seven-Phase Flash\n\nmode, her ATK is increased by 70%. This effect will be canceled when she leaves the Seven-Phase Flash mode."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Constellation_Serendipitous_Sin.png",
+      "name": "Serendipitous Sin",
+      "level": 3,
+      "description": "Increases the Level of Havoc: Ruin by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8c/Constellation_Fractured_Flow.png",
+      "name": "Fractured Flow",
+      "level": 4,
+      "description": "Enhances the effects of the Ascension Talent Return to Oblivion\n\n\n: Each Death's Crossing stack also increases Skirk's ATK by 10%/20%/40%.\nYou must first unlock the Ascension Talent Return to Oblivion."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Constellation_End_of_Wishes.png",
+      "name": "End of Wishes",
+      "level": 5,
+      "description": "Increases the Level of Havoc: Warp by 3.\nMaximum upgrade level is 15."
+    },
+    {
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Constellation_To_the_Source.png",
+      "name": "To the Source",
+      "level": 6,
+      "description": "Description\nAdvanced Properties\nEach Void Rift Skirk absorbs via the effects of the Ascension Talent Reason Beyond Reason\n\n\n\n\nwill grant her 1 Havoc: Sever stack. She can consume such stacks to initiate coordinated attacks and decrease the DMG she takes while in Seven-Phase Flash\n\nmode. These stacks last for 15s, and each stack's duration is counted independently (max 3 stacks).\nYou must first unlock the Ascension Talent \"Reason Beyond Reason.\"\n\nHavoc: Sever\nWhen Skirk uses the Elemental Burst Havoc: Ruin, she will consume all Havoc: Sever stacks to initiate a coordinated attack in which each Havoc: Sever stack will deal 750% of Skirk's ATK as Cryo DMG. This DMG is considered Elemental Burst DMG.\nWhen she uses Normal Attacks while in Seven-Phase Flash mode, 1 Havoc: Sever stack will be consumed when her third or fifth sequenced attacks hit an opponent to launch 3 coordinated attacks. Each coordinated attack deals 180% of Skirk's ATK as Cryo DMG. This damage is considered Normal Attack DMG.\nWhen Skirk takes DMG while in Seven-Phase Flash mode, 1 Havoc: Sever stack will be consumed to decrease this DMG instance by 80% and attack nearby opponents 3 times, with each attack dealing 180% of Skirk's ATK as Cryo DMG. This DMG is considered Charged Attack DMG."
+    }
+  ],
+  "imageUrls": {},
+  "version": "5.7",
+  "gallery": {
+    "screenAnimations": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Idle_Skirk_1.gif",
+        "caption": "Idle 1",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Idle_Skirk_1.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Idle_Skirk_2.gif",
+        "caption": "Idle 2",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Idle_Skirk_2.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Talent_Menu_Skirk.gif",
+        "caption": "Talent Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Menu_Skirk.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Weapon_Menu_Skirk.gif",
+        "caption": "Weapon Menu",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Weapon_Menu_Skirk.mp4",
+        "videoType": "video/mp4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Party_Setup_Skirk.gif",
+        "caption": "Party Setup",
+        "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Party_Setup_Skirk.mp4",
+        "videoType": "video/mp4"
+      }
+    ],
+    "nameCards": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Namecard_Background_Skirk_Lone_Shadow.png",
+        "caption": "Skirk: Lone Shadow Background"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Item_Skirk_Lone_Shadow.png",
+        "caption": "Skirk: Lone Shadow Icon"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Namecard_Banner_Skirk_Lone_Shadow.png",
+        "caption": "Skirk: Lone Shadow Banner"
+      }
+    ],
+    "attackAnimations": [
+      {
+        "skill": "Normal_Attack",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/70/Havoc_Sunder_Normal_Preview.gif",
+            "caption": "Normal Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Havoc_Sunder_Normal_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Havoc_Sunder_Charged_Preview.gif",
+            "caption": "Charged Attack",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Havoc_Sunder_Charged_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Burst",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Havoc_Ruin_Preview.gif",
+            "caption": "Havoc: Ruin",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Havoc_Ruin_Preview.mp4",
+            "videoType": "video/mp4"
+          },
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Havoc_Extinction_Preview.gif",
+            "caption": "Havoc: Extinction",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Havoc_Extinction_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      },
+      {
+        "skill": "Elemental_Skill",
+        "animations": [
+          {
+            "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Havoc_Warp_Preview.gif",
+            "caption": "",
+            "videoUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Havoc_Warp_Preview.mp4",
+            "videoType": "video/mp4"
+          }
+        ]
+      }
+    ],
+    "detailedImages": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Skirk_Character_Details_1.png",
+        "caption": "Skirk Details 1"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Skirk_Character_Details_2.png",
+        "caption": "Skirk Details 2"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Skirk_Character_Details_3.gif",
+        "caption": "Skirk Details 3"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Skirk_Character_Details_4.png",
+        "caption": "Skirk Details 4"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Skirk_Character_Details_5.png",
+        "caption": "Skirk Details 5"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Skirk_Character_Details_6.png",
+        "caption": "Skirk Details 6"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Skirk_Character_Details_7.png",
+        "caption": "Skirk Details 7"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Skirk_Character_Details_8.gif",
+        "caption": "Skirk Details 8"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Skirk_Character_Details_9.gif",
+        "caption": "Skirk Details 9"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Skirk_Character_Details_10.gif",
+        "caption": "Skirk Details 10"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Skirk_Character_Details_11.gif",
+        "caption": "Skirk Details 11"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Skirk_Character_Details_12.gif",
+        "caption": "Skirk Details 12"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Skirk_Character_Details_13.gif",
+        "caption": "Skirk Details 13"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Skirk_Character_Details_14.png",
+        "caption": "Skirk Details 14"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/38/Skirk_Character_Details_15.png",
+        "caption": "Skirk Details 15"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Skirk_Character_Details_16.png",
+        "caption": "Skirk Details 16"
+      }
+    ],
+    "stickers": [
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Icon_Emoji_Paimon%27s_Paintings_42_Skirk_1.png",
+        "caption": "Observing Set 42"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8f/Icon_Emoji_Paimon%27s_Paintings_42_Skirk_2.png",
+        "caption": "Performing Set 42"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Icon_Emoji_Paimon%27s_Paintings_42_Skirk_3.png",
+        "caption": "Farewell Set 42"
+      },
+      {
+        "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Icon_Emoji_Paimon%27s_Paintings_42_Skirk_4.png",
+        "caption": "Settlement Set 42"
+      }
+    ]
+  },
+  "builds": [
+    {
+      "role": "Main DPS",
+      "sets": [
+        {
+          "name": "Heart of Depth",
+          "pieces": 4
+        }
+      ]
+    },
+    {
+      "role": "Sub DPS",
+      "sets": [
+        {
+          "name": "Emblem of Severed Fate",
+          "pieces": 4
+        }
+      ]
+    }
+  ],
+  "buildGuide": {
+    "version": "6.3",
+    "lastUpdated": "2026-02-07",
+    "roles": ["Main DPS"],
+    "artifacts": {
+      "recommended": {
+        "sets": ["Marechaussee Hunter"],
+        "notes": "4pc BiS with Furina"
+      },
+      "alternatives": [
+        {
+          "sets": ["Blizzard Strayer"],
+          "notes": "Freeze without Furina"
+        },
+        {
+          "sets": ["Finale of the Deep Galleries"],
+          "notes": "Non-Furina teams"
+        }
+      ]
+    },
+    "weapons": {
+      "fiveStar": [
+        {
+          "name": "Absolution",
+          "notes": "BiS, signature weapon"
+        },
+        {
+          "name": "Primordial Jade Cutter",
+          "notes": "Universal CRIT sword"
+        }
+      ],
+      "fourStar": [
+        {
+          "name": "The Black Sword",
+          "notes": "Battle Pass option"
+        },
+        {
+          "name": "Amenoma Kageuchi",
+          "notes": "F2P with ER"
+        }
+      ]
+    },
+    "mainStats": {
+      "sands": ["ATK%"],
+      "goblet": ["Cryo DMG"],
+      "circlet": ["CRIT Rate", "CRIT DMG"]
+    },
+    "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ER"],
+    "constellations": {
+      "c0": "Top tier Freeze DPS, competitive with Lunar meta",
+      "breakpoints": [
+        "C1: Increased Normal Attack multiplier",
+        "C2: DMG bonus during Tide state"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Skirk Freeze",
+        "characters": ["Skirk", "Furina", "Escoffier", "Shenhe"],
+        "roles": {
+          "Skirk": "Main DPS",
+          "Furina": "Sub-DPS/Buffer",
+          "Escoffier": "Healer/Cryo",
+          "Shenhe": "Cryo buffer"
+        },
+        "rotation": "Shenhe EQ → Escoffier EQ → Furina EQ → Skirk E → combo → Q"
+      },
+      {
+        "name": "Skirk Budget Freeze",
+        "characters": ["Skirk", "Xingqiu", "Rosaria", "Kazuha"],
+        "roles": {
+          "Skirk": "Main DPS",
+          "Xingqiu": "Hydro",
+          "Rosaria": "Cryo battery/CRIT",
+          "Kazuha": "VV Shred"
+        },
+        "rotation": "Rosaria EQ → Xingqiu EQ → Kazuha tEP Q → Skirk E combo"
+      }
+    ]
+  }
 }
