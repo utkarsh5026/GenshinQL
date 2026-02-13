@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import {
@@ -26,9 +26,18 @@ const GlobalSearch: React.FC<GlobalSearchProps> = ({
   const [internalOpen, setInternalOpen] = useState(false);
   const isMobile = useIsMobile();
 
-  // Use controlled state if provided, fallback to internal state
   const open = controlledOpen !== undefined ? controlledOpen : internalOpen;
-  const setOpen = controlledOnOpenChange || setInternalOpen;
+  const setOpen = useCallback(
+    (value: boolean | ((prev: boolean) => boolean)) => {
+      if (controlledOnOpenChange !== undefined) {
+        const newValue = typeof value === 'function' ? value(open) : value;
+        controlledOnOpenChange(newValue);
+      } else {
+        setInternalOpen(value);
+      }
+    },
+    [controlledOnOpenChange, open]
+  );
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
