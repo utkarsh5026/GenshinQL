@@ -1,3 +1,4 @@
+import path from 'path';
 import { By, WebDriver, WebElement } from 'selenium-webdriver';
 import { z } from 'zod';
 
@@ -294,7 +295,7 @@ Usage: npx tsx artifacts.ts [options]
 Options:
   --help           Show this help message
   --batch=N        Number of concurrent browser instances (default: 3)
-  
+
 Examples:
   npx tsx artifacts.ts              # Scrape with 3 concurrent browsers
   npx tsx artifacts.ts --batch=5    # Scrape with 5 concurrent browsers
@@ -312,7 +313,12 @@ Examples:
   await scrapeAllArtifacts(batchSize);
 }
 
-main().catch((error) => {
-  logger.error('Fatal error:', error);
-  process.exit(1);
-});
+const isMainModule =
+  process.argv[1] && import.meta.url.includes(path.basename(process.argv[1]));
+
+if (isMainModule) {
+  main().catch((error) => {
+    logger.error('Fatal error:', error);
+    process.exit(1);
+  });
+}

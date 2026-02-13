@@ -49,8 +49,7 @@ export async function findImageElUrls(
   attr: 'data-src' | 'src' | 'href' = 'data-src'
 ) {
   const images = await container.findElements(By.css('img'));
-  if (!images) return [];
-  return await Promise.all(images.map((img) => getImageUrl(img, attr)));
+  return await mapElements(images, (img) => getImageUrl(img, attr));
 }
 
 /**
@@ -66,44 +65,35 @@ export async function parseMaterialCards(
 ): Promise<Array<{ url: string; caption: string; count: number }>> {
   const cards = await container.findElements(By.css(selector));
 
-  return await Promise.all(
-    cards.map(async (card) => {
-      try {
-        const img = await card.findElement(By.css('img'));
-        const imageUrl = await getImageUrl(img);
-        const caption = await card
-          .findElement(By.css('span.card-caption'))
-          .getText();
+  const parseCount = async (card: WebElement): Promise<number> => {
+    try {
+      const countText = await card
+        .findElement(By.css('span.card-text'))
+        .getText();
+      return Number.parseInt(countText.replace(/,/g, ''), 10);
+    } catch {
+      return 0;
+    }
+  };
 
-        // Try to get count if present
-        let count: number | undefined;
-        try {
-          const countText = await card
-            .findElement(By.css('span.card-text'))
-            .getText();
-          count = parseInt(countText.replace(/,/g, ''), 10);
-        } catch {
-          // Count is optional
-        }
+  return await mapElements(
+    cards,
+    async (card) => {
+      const img = await card.findElement(By.css('img'));
+      const imageUrl = await getImageUrl(img);
+      const caption = await card
+        .findElement(By.css('span.card-caption'))
+        .getText();
 
-        return { url: imageUrl, caption, count: count ?? 0 };
-      } catch (error) {
-        logger.debug('Failed to parse material card:', error);
-        return { url: '', caption: '', count: 0 };
-      }
-    })
+      return { url: imageUrl, caption, count: await parseCount(card) };
+    },
+    { fallback: { url: '', caption: '', count: 0 } }
   );
 }
 
 /**
  * Generic table scraping utility
  * Finds a table by heading, extracts rows, and parses them using the provided parser
- * @param driver - WebDriver instance
- * @param heading - Heading text to locate the table
- * @param headingLevel - HTML heading level ('h2' or 'h3')
- * @param parseRow - Function to parse each row into type T
- * @param filter - Optional filter function to apply to results
- * @returns Array of parsed and filtered results
  */
 export async function scrapeTable<T>(
   driver: WebDriver,
@@ -114,7 +104,7 @@ export async function scrapeTable<T>(
   try {
     const table = await getTableFromHeading(driver, heading, headingLevel);
     const rows = await table.findElements(By.css('tbody tr'));
-    const results = await Promise.all(rows.map(parseRow));
+    const results = await mapElements(rows, parseRow);
     return results.filter((r) => r !== null) as T[];
   } catch (error) {
     logger.warn(`Table "${heading}" not found:`, error);
@@ -162,30 +152,43 @@ export async function safeExecute<T>(
 }
 
 /**
+ * Safely processes an array of WebElements concurrently using Promise.allSettled
+ * Handles errors gracefully and filters out failed results, null values, or uses fallback values
+ */
+export async function mapElements<T>(
+  elements: WebElement[],
+  parseElement: (element: WebElement, index: number) => Promise<T | null>,
+  options?: {
+    fallback?: T;
+    logErrors?: boolean;
+  }
+): Promise<T[]> {
+  const { fallback, logErrors = true } = options ?? {};
+
+  const results = await Promise.allSettled(
+    elements.map((el, idx) => parseElement(el, idx))
+  );
+
+  return results
+    .map((result, idx) => {
+      if (result.status === 'fulfilled') {
+        return result.value;
+      } else {
+        if (logErrors) {
+          logger.debug(
+            `Failed to process element at index ${idx}:`,
+            result.reason
+          );
+        }
+        return fallback;
+      }
+    })
+    .filter((r): r is T => r !== undefined && r !== null);
+}
+
+/**
  * Generic function to extract data from wiki page aside elements
  * Automatically extracts title (h2) and images (from figures), plus custom section data
- *
- * @param driver - Selenium WebDriver instance
- * @param sectionFunctionMap - Map of section index to parser function
- *   - Key: section index as number (0 = first section, 1 = second section, etc.)
- *   - Value: async function that receives the section WebElement and returns parsed data
- * @returns Object containing title, images array, and section data keyed by index
- *
- * @example
- * // Extract only title and images (no sections)
- * const { title, images } = await extractAside(driver, {});
- *
- * @example
- * // Extract banner duration from first section
- * const result = await extractAside<{ '0': { start: string; end: string } }>(driver, {
- *   0: async (section) => {
- *     const tbody = await section.findElement(By.css('table tbody'));
- *     const start = await tbody.findElement(By.css('td[data-source="time_start"]')).getText();
- *     const end = await tbody.findElement(By.css('td[data-source="time_end"]')).getText();
- *     return { start: start.trim(), end: end.trim() };
- *   }
- * });
- * const duration = result.sections['0'];
  */
 export async function extractAside<T extends Record<string, unknown>>(
   driver: WebDriver,
@@ -204,7 +207,7 @@ export async function extractAside<T extends Record<string, unknown>>(
     logger.debug('H2 heading not found in aside:', error);
   }
 
-  const images: string[] = [];
+  let images: string[] = [];
   try {
     const figures = await aside.findElements(
       By.css('figure.pi-item.pi-image[data-source="image"]')
@@ -212,22 +215,11 @@ export async function extractAside<T extends Record<string, unknown>>(
 
     logger.info(`Found ${figures.length} aside figures`);
 
-    for (const figure of figures) {
-      try {
-        // Find the <a class="image image-thumbnail"> child
-        const link = await figure.findElement(
-          By.css('a.image.image-thumbnail')
-        );
-        const href = await link.getAttribute('href');
-
-        if (href) {
-          const cleanUrl = parseUrl(href);
-          images.push(cleanUrl);
-        }
-      } catch (error) {
-        logger.debug('Failed to extract image from figure:', error);
-      }
-    }
+    images = await mapElements(figures, async (figure) => {
+      const link = await figure.findElement(By.css('a.image.image-thumbnail'));
+      const href = await link.getAttribute('href');
+      return parseUrl(href);
+    });
 
     logger.info(`Extracted ${images.length} aside images`);
   } catch (error) {
@@ -276,7 +268,7 @@ export async function extractAside<T extends Record<string, unknown>>(
  * Extracts gallery images from .wikia-gallery-item containers
  * These are typically found in wiki gallery sections
  * @param driver - Selenium WebDriver instance
- * @returns Array of image URLs from gallery items
+ * @returns Array of image URLs from gallery items (full resolution)
  */
 export async function extractGalleryImages(
   driver: WebDriver
@@ -288,20 +280,10 @@ export async function extractGalleryImages(
 
     logger.info(`Found ${galleryItems.length} gallery items`);
 
-    const images: string[] = [];
-
-    for (const item of galleryItems) {
-      try {
-        const img = await item.findElement(By.css('img'));
-        const imageUrl = await getImageUrl(img, 'data-src');
-
-        if (imageUrl) {
-          images.push(imageUrl);
-        }
-      } catch (error) {
-        logger.debug('Failed to extract image from gallery item:', error);
-      }
-    }
+    const images = await mapElements(galleryItems, async (item) => {
+      const img = await item.findElement(By.css('img'));
+      return await getImageUrl(img, 'data-src');
+    });
 
     logger.info(`Extracted ${images.length} gallery images`);
     return images;

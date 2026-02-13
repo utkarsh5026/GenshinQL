@@ -32,7 +32,7 @@
     },
     {
       "name": "Lightbearing Moonshard",
-      "showcaseImage": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Version_Luna_IV_Weapons_1.png"
+      "showcaseImage": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Version_Luna_IV_Weapons_2.png"
     }
   ],
   "newArtifacts": [
@@ -72,10 +72,130 @@
   ],
   "eventWishes": [
     {
+      "bannerName": "Somnias a Luna",
+      "bannerUrl": "https://genshin-impact.fandom.com/wiki/Somnias_a_Luna/2026-01-14",
+      "bannerImage": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Somnias_a_Luna_2026-01-14.png",
+      "phase": "Phase I",
+      "duration": {
+        "start": "January 14, 2026 11:00 GMT+8",
+        "end": "February 3, 2026 17:59 (Server Time)"
+      },
+      "featuredCharacters": [
+        {
+          "name": "Co­lum­bi­na",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Columbina_Icon.png",
+          "element": "hydro",
+          "weaponType": "catalyst",
+          "rarity": 5
+        },
+        {
+          "name": "Se­thos",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Sethos_Icon.png",
+          "element": "electro",
+          "weaponType": "bow",
+          "rarity": 4
+        },
+        {
+          "name": "Fis­chl",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Fischl_Icon.png",
+          "element": "electro",
+          "weaponType": "bow",
+          "rarity": 4
+        },
+        {
+          "name": "Ifa",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Ifa_Icon.png",
+          "element": "anemo",
+          "weaponType": "catalyst",
+          "rarity": 4
+        }
+      ]
+    },
+    {
+      "bannerName": "Astral Actuation",
+      "bannerUrl": "https://genshin-impact.fandom.com/wiki/Astral_Actuation/2026-01-14",
+      "bannerImage": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Astral_Actuation_2026-01-14.png",
+      "phase": "Phase I",
+      "duration": {
+        "start": "January 14, 2026 11:00 GMT+8",
+        "end": "February 3, 2026 17:59"
+      },
+      "featuredCharacters": [
+        {
+          "name": "I­nef­fa",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Ineffa_Icon.png",
+          "element": "electro",
+          "weaponType": "polearm",
+          "rarity": 5
+        },
+        {
+          "name": "Se­thos",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Sethos_Icon.png",
+          "element": "electro",
+          "weaponType": "bow",
+          "rarity": 4
+        },
+        {
+          "name": "Fis­chl",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Fischl_Icon.png",
+          "element": "electro",
+          "weaponType": "bow",
+          "rarity": 4
+        },
+        {
+          "name": "Ifa",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Ifa_Icon.png",
+          "element": "anemo",
+          "weaponType": "catalyst",
+          "rarity": 4
+        }
+      ]
+    },
+    {
+      "bannerName": "Harmonious Abundance",
+      "bannerUrl": "https://genshin-impact.fandom.com/wiki/Harmonious_Abundance/2026-02-03",
+      "bannerImage": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Harmonious_Abundance_2026-02-03.png",
+      "phase": "Phase II",
+      "duration": {
+        "start": "February 3, 2026 18:00 (Server Time)",
+        "end": "February 24, 2026 14:59 (Server Time)"
+      },
+      "featuredCharacters": [
+        {
+          "name": "Zi­bai",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Zibai_Icon.png",
+          "element": "geo",
+          "weaponType": "sword",
+          "rarity": 5
+        },
+        {
+          "name": "Il­lu­ga",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Illuga_Icon.png",
+          "element": "geo",
+          "weaponType": "polearm",
+          "rarity": 4
+        },
+        {
+          "name": "Ai­no",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Aino_Icon.png",
+          "element": "hydro",
+          "weaponType": "claymore",
+          "rarity": 4
+        },
+        {
+          "name": "Go­rou",
+          "icon": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Gorou_Icon.png",
+          "element": "geo",
+          "weaponType": "bow",
+          "rarity": 4
+        }
+      ]
+    },
+    {
       "bannerName": "Decree of the Deeps",
       "bannerUrl": "https://genshin-impact.fandom.com/wiki/Decree_of_the_Deeps/2026-02-03",
       "bannerImage": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Decree_of_the_Deeps_2026-02-03.png",
-      "phase": "Phase I",
+      "phase": "Phase II",
       "duration": {
         "start": "February 3, 2026 18:00 (Server Time)",
         "end": "February 24, 2026 14:59 (Server Time)"
@@ -110,36 +230,127 @@
           "rarity": 4
         }
       ]
-    },
-    {
-      "bannerName": "Neuvillette",
-      "bannerUrl": "https://genshin-impact.fandom.com/wiki/Neuvillette",
-      "bannerImage": "",
-      "phase": "Phase I",
-      "duration": {
-        "start": "",
-        "end": ""
-      },
-      "featuredCharacters": []
     }
   ],
   "newEvents": [
     {
-      "name": "A Lanternlit Ode to the Silver Moon",
-      "url": "https://genshin-impact.fandom.com/wiki/A_Lanternlit_Ode_to_the_Silver_Moon_(Event)",
+      "name": "Shutterflash Memory Hunt",
+      "url": "https://genshin-impact.fandom.com/wiki/Shutterflash_Memory_Hunt",
       "images": [
-        "https://static.wikia.nocookie.net/gensin-impact/images/7/70/A_Lanternlit_Ode_to_the_Silver_Moon_Event.png"
+        "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Shutterflash_Memory_Hunt.png"
       ],
       "rewards": [
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Primogem.png",
           "caption": "Primogem",
-          "count": 1060
+          "count": 420
         },
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
           "caption": "Mora",
-          "count": 890000
+          "count": 140000
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Adventurer%27s_Experience.png",
+          "caption": "Adventurer's Experience",
+          "count": 8
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Hero%27s_Wit.png",
+          "caption": "Hero's Wit",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Item_Guide_to_Freedom.png",
+          "caption": "Guide to Freedom",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Item_Guide_to_Resistance.png",
+          "caption": "Guide to Resistance",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Guide_to_Ballad.png",
+          "caption": "Guide to Ballad",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Item_Guide_to_Transience.png",
+          "caption": "Guide to Transience",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Guide_to_Elegance.png",
+          "caption": "Guide to Elegance",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Item_Guide_to_Light.png",
+          "caption": "Guide to Light",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Item_Guide_to_Admonition.png",
+          "caption": "Guide to Admonition",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Item_Guide_to_Ingenuity.png",
+          "caption": "Guide to Ingenuity",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Item_Guide_to_Praxis.png",
+          "caption": "Guide to Praxis",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Item_Guide_to_Equity.png",
+          "caption": "Guide to Equity",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Guide_to_Justice.png",
+          "caption": "Guide to Justice",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Item_Guide_to_Order.png",
+          "caption": "Guide to Order",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Item_Guide_to_Contention.png",
+          "caption": "Guide to Contention",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Item_Guide_to_Kindling.png",
+          "caption": "Guide to Kindling",
+          "count": 2
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Item_Guide_to_Conflict.png",
+          "caption": "Guide to Conflict",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "May Fortune Find You: Springs Premonition",
+      "url": "https://genshin-impact.fandom.com/wiki/May_Fortune_Find_You/2026-01-16",
+      "images": [],
+      "rewards": [
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Item_Primogem.png",
+          "caption": "Primogem",
+          "count": 1600
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Intertwined_Fate.png",
+          "caption": "Intertwined Fate",
+          "count": 10
         },
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Crown_of_Insight.png",
@@ -147,224 +358,93 @@
           "count": 1
         },
         {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/8e/Item_Rainlit_Bamboo_Reverie.png",
-          "caption": "Rainlit Bamboo Reverie",
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Item_Dust_of_Enlightenment.png",
+          "caption": "Dust of En­light­en­ment",
           "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Item_Sanctifying_Elixir.png",
+          "caption": "Sanctifying Elixir",
+          "count": 1
+        },
+        {
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Item_Fragile_Resin.png",
+          "caption": "Fragile Resin",
+          "count": 2
         },
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Hero%27s_Wit.png",
           "caption": "Hero's Wit",
-          "count": 40
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Adventurer%27s_Experience.png",
-          "caption": "Adventurer's Experience",
-          "count": 32
+          "count": 13
         },
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Item_Mystic_Enhancement_Ore.png",
           "caption": "Mystic Enhance­ment Ore",
-          "count": 88
+          "count": 10
         },
         {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Guide_to_Diligence.png",
-          "caption": "Guide to Diligence",
-          "count": 9
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Item_Guide_to_Gold.png",
-          "caption": "Guide to Gold",
-          "count": 9
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Guide_to_Prosperity.png",
-          "caption": "Guide to Prosperity",
-          "count": 9
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Item_Philosophies_of_Diligence.png",
-          "caption": "Philosophies of Diligence",
-          "count": 3
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Philosophies_of_Gold.png",
-          "caption": "Philosophies of Gold",
-          "count": 3
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Item_Philosophies_of_Prosperity.png",
-          "caption": "Philosophies of Prosperity",
-          "count": 3
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Mora.png",
+          "caption": "Mora",
+          "count": 130000
         },
         {
           "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Sanctifying_Unction.png",
           "caption": "Sanctifying Unction",
-          "count": 15
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Item_Remnant_of_the_Dreadwing.png",
-          "caption": "Remnant of the Dreadwing",
-          "count": 6
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png",
-          "caption": "Ag­ni­dus A­gate Frag­ment",
-          "count": 3
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png",
-          "caption": "Shivada Jade Fragment",
-          "count": 3
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Item_Nagadus_Emerald_Fragment.png",
-          "caption": "Na­ga­dus Em­er­ald Fragment",
-          "count": 3
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Prithiva_Topaz_Fragment.png",
-          "caption": "Prithiva Topaz Frag­ment",
           "count": 12
         },
         {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png",
-          "caption": "Vaj­ra­da A­me­thyst Frag­ment",
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Guide_to_Diligence.png",
+          "caption": "Guide to Diligence",
           "count": 3
         },
         {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Varunada_Lazurite_Fragment.png",
-          "caption": "Va­ru­na­da La­zu­rite Frag­ment",
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Item_Guide_to_Gold.png",
+          "caption": "Guide to Gold",
           "count": 3
         },
         {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Vayuda_Turquoise_Fragment.png",
-          "caption": "Va­yu­da Tur­quoise Frag­ment",
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Guide_to_Prosperity.png",
+          "caption": "Guide to Prosperity",
           "count": 3
         },
         {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Immaculate_Warrant.png",
-          "caption": "Immaculate Warrant",
-          "count": 12
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Item_Slow-Cooked_Bamboo_Shoot_Soup.png",
+          "caption": "Slow-Cooked Bamboo Shoot Soup",
+          "count": 5
         },
         {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Item_Tattered_Warrant.png",
-          "caption": "Tattered Warrant",
-          "count": 15
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Item_My_Way.png",
+          "caption": "\"My Way\"",
+          "count": 5
         },
         {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Item_Glaze_Lily.png",
-          "caption": "Glaze Lily",
-          "count": 30
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Item_Auspicious_Treasure_Tree.png",
-          "caption": "Auspicious Treasure Tree",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Vibrant_Xiao_Lantern_A_Meeting_With_Friends.png",
-          "caption": "Blueprint: Vibrant Xiao Lantern: \"A Meeting With Friends\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Item_Vibrant_Xiao_Lantern_May_My_Wish_Travel_Far.png",
-          "caption": "Blueprint: Vibrant Xiao Lantern: \"May My Wish Travel Far\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Great_Zhanzhu_Lantern_Pathblocker_Maximus.png",
-          "caption": "Great Zhanzhu Lantern: \"Pathblocker Maximus\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Item_Great_Zhanzhu_Lantern_Pathblocker.png",
-          "caption": "Great Zhanzhu Lantern: \"Pathblocker\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Item_Vibrant_Xiao_Lantern_Riff_of_Fortune.png",
-          "caption": "Vibrant Xiao Lantern: \"Riff of Fortune\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Item_Vibrant_Xiao_Lantern_Fortune_and_Good_Tidings.png",
-          "caption": "Vibrant Xiao Lantern: \"Fortune and Good Tidings\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Item_Vibrant_Xiao_Lantern_A_Beautiful_Start_to_Spring.png",
-          "caption": "Vibrant Xiao Lantern: \"A Beautiful Start to Spring\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Item_Vibrant_Xiao_Lantern_Sweet_Scents_in_the_Wind.png",
-          "caption": "Vibrant Xiao Lantern: \"Sweet Scents in the Wind\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Vibrant_Xiao_Lantern_Good_Luck_All_the_Way.png",
-          "caption": "Vibrant Xiao Lantern: \"Good Luck All the Way\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Vibrant_Xiao_Lantern_May_All_Your_Wishes_Come_True.png",
-          "caption": "Vibrant Xiao Lantern: \"May All Your Wishes Come True\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/20/Item_White_Horse_Galloping.png",
-          "caption": "White Horse Galloping",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Xiao_Lantern_Flight_Manual.png",
-          "caption": "Xiao Lantern Flight Manual",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Item_A_Fragrant_Feast_of_Flavors.png",
-          "caption": "A Fragrant Feast of Flavors",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Extravagant_Slumber.png",
-          "caption": "Extravagant Slumber",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Jade-Cut_Flowers.png",
-          "caption": "Jade-Cut Flowers",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Item_%22Sweet_Dream%22.png",
-          "caption": "\"Sweet Dream\"",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Item_Rockin%27_Riffin%27_Chicken%21.png",
-          "caption": "Rockin' Riffin' Chicken!",
-          "count": 1
-        },
-        {
-          "url": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Yummy_Yum_Cha.png",
-          "caption": "Yummy Yum Cha",
-          "count": 1
+          "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c5/Item_Eight-Treasure_Duck.png",
+          "caption": "Eight-Treasure Duck",
+          "count": 5
         }
       ]
-    },
-    {
-      "name": "Ley Line Overflow",
-      "url": "https://genshin-impact.fandom.com/wiki/Ley_Line_Overflow/2026-02-16",
-      "images": [],
-      "rewards": []
     }
   ],
   "newAreas": [
     {
+      "name": "Voidsea Outlook",
+      "url": "https://genshin-impact.fandom.com/wiki/Voidsea_Outlook",
+      "nationName": "Nod-Krai",
+      "areaImage": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Voidsea_Outlook.png",
+      "galleryImages": []
+    },
+    {
       "name": "Wavechaser Plain",
       "url": "https://genshin-impact.fandom.com/wiki/Wavechaser_Plain",
       "nationName": "Nod-Krai",
+      "areaImage": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Wavechaser_Plain.png",
+      "galleryImages": []
+    },
+    {
+      "name": "Ashveil Peak",
+      "url": "https://genshin-impact.fandom.com/wiki/Ashveil_Peak",
+      "nationName": "Nod-Krai",
+      "areaImage": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Ashveil_Peak.png",
       "galleryImages": []
     }
   ],
@@ -405,6 +485,46 @@
     ]
   },
   "gallery": [
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Version_Luna_IV_Special_Program_Announcement.png",
+      "caption": "Special Program Announcement"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Version_Luna_IV_Special_Program_Announcement_2.png",
+      "caption": "Special Program Announcement 2"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Version_Luna_IV_Special_Program_Coming_Soon.png",
+      "caption": "Special Program Coming Soon"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Version_Luna_IV_Special_Program_Already_Ended.png",
+      "caption": "Special Program Already Ended"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Upcoming_Song_of_the_Welkin_Moon_Version_Characters.png",
+      "caption": "Upcoming Characters"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Version_Luna_IV_Event_Calendar.png",
+      "caption": "Event Calendar"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Version_Luna_IV_Content_Preview_1.png",
+      "caption": "Content Preview 1"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/3/36/Version_Luna_IV_Content_Preview_2.png",
+      "caption": "Content Preview 2"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/New_Quest_Overview_Interface_Goes_Live_Alongside_the_New_Recollection_Feature_2026-01-13.png",
+      "caption": "New \"Quest Overview\" Interface Goes Live Alongside the New \"Recollection\" Feature"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Version_Luna_IV_Update_Details.png",
+      "caption": "Update Details"
+    },
     {
       "url": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Version_Luna_IV_Wallpaper_1.png",
       "caption": "Wallpaper 1"
