@@ -1,123 +1,3 @@
-export type Character = {
-  name: string;
-  iconUrl: string;
-  rarity: string;
-  element: string;
-  weaponType: string;
-  region: string;
-  elementUrl: string;
-  weaponUrl: string;
-  regionUrl: string;
-  modelType: string;
-  version?: string;
-  idleOne?: AnimationMedia;
-  idleTwo?: AnimationMedia;
-  partyJoin?: AnimationMedia;
-};
-
-type TalentScale = {
-  key: string;
-  value: string[];
-};
-
-export type Talent = {
-  talentName: string;
-  talentIcon: string;
-  talentType: AttackTalentType;
-  description: string;
-  figureUrls: {
-    url: string;
-    caption: string;
-  }[];
-  scaling: TalentScale[];
-};
-
-export type Constellation = {
-  iconUrl: string;
-  name: string;
-  description: string;
-  level: number;
-};
-
-export type CharacterDetailed = Character & {
-  talents: Talent[];
-  constellations: Constellation[];
-  imageUrls: {
-    card: string;
-    wish: string;
-    inGame: string;
-    nameCard: string;
-  };
-  screenAnimation: ScreenAnimation;
-  gallery?: GalleryRaw;
-};
-
-export type Weapon = {
-  name: string;
-  iconUrl: string;
-  attack: number;
-  rarity: number;
-  subStat: string;
-  effect: string;
-  nation?: number; // index to nations array (-1 if not applicable)
-  weekdays?: number; // index to days array (-1 if not applicable)
-};
-
-export type AscensionMaterial = {
-  url: string;
-  caption: string;
-  count: number;
-};
-
-export type AscensionPhase = {
-  phase: number;
-  levelRange: string;
-  baseAttack: {
-    min: number;
-    max: number;
-  };
-  subStat: {
-    min: number;
-    max: number;
-  };
-  mora?: number;
-  materials?: AscensionMaterial[];
-};
-
-export type WeaponDetailedType = {
-  name: string;
-  rarity: number;
-  attack: number;
-  subStat: string;
-  effect: string;
-  iconUrl: string;
-  nation: number;
-  weekdays: number;
-  materials: ImageUrl[];
-  passives: string[];
-  images: string[];
-  ascension: {
-    phases: AscensionPhase[];
-  };
-};
-
-export type ScreenAnimation = {
-  idleOne?: AnimationMedia;
-  idleTwo?: AnimationMedia;
-  partySetup?: AnimationMedia;
-};
-
-type NameCardAnimation = {
-  background: string;
-  icon: string;
-};
-
-export type CharacterGallery = {
-  attackAnimation: AttackAnimation;
-  screenAnimation: ScreenAnimation;
-  nameCard: NameCardAnimation;
-};
-
 export type AnimationMedia = {
   imageUrl: string;
   videoUrl: string;
@@ -132,15 +12,25 @@ export type AttackAnimation = {
   elementalBurst: AnimationMedia[];
 };
 
-export type AttackTalentType =
-  | 'Normal Attack'
-  | 'Elemental Skill'
-  | 'Elemental Burst';
+export type Element =
+  | 'pyro'
+  | 'hydro'
+  | 'anemo'
+  | 'electro'
+  | 'cryo'
+  | 'geo'
+  | 'dendro';
 
-export type OtherTalentType =
-  | '1st Ascension Passive'
-  | '4th Ascension Passive'
-  | 'Utility Passive';
+export type Nation =
+  | 'Mondstadt'
+  | 'Liyue'
+  | 'Inazuma'
+  | 'Sumeru'
+  | 'Fontaine'
+  | 'Natlan'
+  | 'NodKrai';
+
+export type WeaponType = 'sword' | 'claymore' | 'polearm' | 'bow' | 'catalyst';
 
 export type AvatarRequirement = {
   name: string;
@@ -161,77 +51,6 @@ export type Day =
   | 'Saturday'
   | 'Sunday';
 
-export type WeaponMaterialSchedule = {
-  nation: string;
-  materials: {
-    day: string;
-    materialImages: ImageUrl[];
-    weapons: Weapon[];
-  }[];
-};
-
-export type WeaponMaterial = {
-  day: string;
-  materialImages: ImageUrl[];
-};
-
-// Raw types for JSON structure (before transformation)
-export type GalleryRaw = {
-  screenAnimations: {
-    url: string;
-    caption: string;
-    videoUrl: string;
-    videoType: string;
-  }[];
-  nameCards: {
-    url: string;
-    caption: string;
-  }[];
-  attackAnimations: {
-    skill: 'Normal_Attack' | 'Elemental_Burst' | 'Elemental_Skill';
-    animations: {
-      url: string;
-      caption: string;
-      videoUrl: string;
-      videoType: string;
-    }[];
-  }[];
-  detailedImages?: { url: string; caption: string }[];
-  stickers?: { url: string; caption: string }[];
-};
-
-export type TalentRaw = {
-  talentName: string;
-  talentIcon: string;
-  talentType: string;
-  description: string;
-  figureUrls: {
-    url: string;
-    caption: string;
-    videoUrl?: string;
-    videoType?: string;
-  }[];
-  scaling: Record<string, string[]>; // Object in JSON
-};
-
-export type CharacterRaw = Character & {
-  talents: TalentRaw[];
-  constellations: {
-    iconUrl: string;
-    name: string;
-    description: string;
-    level: number;
-  }[];
-  imageUrls: {
-    card: string;
-    wish: string;
-    inGame: string;
-    nameCard: string;
-  };
-  version?: string;
-  gallery?: GalleryRaw;
-};
-
 export type PrimitiveItem = {
   name: string;
   url: string;
@@ -250,7 +69,6 @@ export type CharacterMenuItem =
   | 'Passives'
   | 'Routine';
 
-// Memory Game Types
 export type StickersData = Record<string, string[]>;
 
 export interface GameSticker {
@@ -277,3 +95,52 @@ export interface MemoryGameStats {
 
 export type GameDifficulty = 'easy' | 'medium' | 'hard';
 export type GameStatus = 'idle' | 'playing' | 'won';
+
+export type { WeaponProfile as WeaponDetailedType } from '@/features/weapons/types';
+
+// Calendar types re-exported for convenience
+export type {
+  TalentBookCalendar,
+  WeaponMaterialSchedule,
+} from '@/features/calendar';
+
+// Character types re-exported for convenience
+export type {
+  ArtifactBuild,
+  ArtifactLink,
+  Character,
+  CharacterBuild,
+  CharacterBuildsData,
+  CharacterDetailed,
+  Constellation,
+  ConstellationInfo,
+  MainStats,
+  Talent,
+  TeamComp,
+  WeaponOption,
+  WeaponRecommendations,
+} from '@/features/characters/types';
+
+// Tracker types
+export type {
+  TrackedCharacter,
+  TrackedTeam,
+  TrackedWeapon,
+  TrackerState,
+  TrackingReason,
+} from './tracker';
+
+// Game content types (Spiral Abyss, Imaginarium Theater)
+export type {
+  AbyssChamber,
+  AbyssChamberHalf,
+  AbyssFloor,
+  CharacterPriority,
+  ImaginariumData,
+  RecommendedCharacter,
+  RecommendedTeam,
+  SpiralAbyssBlessing,
+  SpiralAbyssData,
+  TheaterCharacter,
+  TheaterElement,
+} from './gameContent';

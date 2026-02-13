@@ -41,3 +41,6 @@ export {
   useImaginarium,
   useSpiralAbyss,
 } from './useGameContentStore';
+
+// Wallpaper Store
+export { useWallpaper, useWallpaperStore } from './useWallpaperStore';
