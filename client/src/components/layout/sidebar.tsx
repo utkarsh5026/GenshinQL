@@ -3,6 +3,7 @@ import {
   Clock,
   Gamepad2,
   Grid3x3,
+  History,
   Home,
   Link2,
   Star,
@@ -104,6 +105,13 @@ const navItems: NavItem[] = [
     icon: Link2,
     color: 'epic',
     iconColor: 'oklch(60% 0.24 290)', // epic-500
+  },
+  {
+    route: '/version',
+    label: 'Version History',
+    icon: History,
+    color: 'amber',
+    iconColor: 'oklch(68% 0.20 45)', // amber-500
   },
 ];
 

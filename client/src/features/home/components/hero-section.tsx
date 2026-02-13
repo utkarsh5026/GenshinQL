@@ -2,24 +2,25 @@ import { Calendar, Sparkles, Star } from 'lucide-react';
 import React, { useEffect, useMemo } from 'react';
 
 import { Badge } from '@/components/ui/badge';
-import { useVersionStore } from '@/stores/useVersionStore';
+import { useVersionMeta, useVersionStore } from '@/features/version-management';
 import { useWallpaper } from '@/stores/useWallpaperStore';
 
 import { getFormattedDate } from '../utils';
 
 export const HeroSection: React.FC = () => {
   const heroWallpaper = useWallpaper('home-hero');
-  const { versionData, fetchVersionData } = useVersionStore();
+  const fetchVersionData = useVersionStore((state) => state.fetchVersionData);
+  const versionMeta = useVersionMeta();
   const formattedDate = useMemo(() => getFormattedDate(), []);
 
   useEffect(() => {
     fetchVersionData();
   }, [fetchVersionData]);
 
-  const versionNumber = versionData?.version || '6.3';
-  const versionName = versionData?.name || 'Luna IV';
+  const versionNumber = versionMeta?.version || '6.3';
+  const versionName = versionMeta?.name || 'Luna IV';
   const versionTheme =
-    versionData?.theme || 'Lantern Rite Festival Returns to Liyue';
+    versionMeta?.theme || 'Lantern Rite Festival Returns to Liyue';
 
   return (
     <div className="relative overflow-hidden rounded-xl">
@@ -97,18 +98,6 @@ export const HeroSection: React.FC = () => {
             {versionTheme}
           </Badge>
         </div>
-
-        {/* Version Highlights */}
-        {versionData?.versionOverview?.highlights && (
-          <div className="pt-2">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-linear-to-r from-hydro-950/40 to-epic-950/40 border border-hydro-500/20 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 text-hydro-400 shrink-0" />
-              <p className="text-sm text-hydro-100/90 line-clamp-1">
-                {versionData.versionOverview.highlights[0]}
-              </p>
-            </div>
-          </div>
-        )}
 
         {/* Decorative floating elements */}
         <div className="absolute top-10 right-10 opacity-20 pointer-events-none hidden md:block">

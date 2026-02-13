@@ -94,6 +94,13 @@ const LinkerGame = lazy(() =>
   ).then((module) => ({ default: module.LinkerGame }))
 );
 
+const VersionPage = lazy(() =>
+  import(
+    /* webpackChunkName: "route-version" */
+    '@/features/version-management'
+  ).then((module) => ({ default: module.VersionPage }))
+);
+
 export const routes: RouteObject[] = [
   {
     path: '/',
@@ -142,6 +149,10 @@ export const routes: RouteObject[] = [
   {
     path: '/linker-game',
     element: <LinkerGame />,
+  },
+  {
+    path: '/version',
+    element: <VersionPage />,
   },
   {
     path: '*',
