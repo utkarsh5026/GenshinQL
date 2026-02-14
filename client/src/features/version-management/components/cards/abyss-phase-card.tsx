@@ -1,18 +1,20 @@
 import { ChevronRight, Shield, Sparkles, Swords } from 'lucide-react';
-import { useState } from 'react';
 
+import { Badge } from '@/components/ui/badge';
 import { GameModeCard } from '@/components/utils/game-mode-card';
 import { TextProcessor } from '@/components/utils/text/text-processor';
-import { cn } from '@/lib/utils';
+import { CachedImage } from '@/features/cache';
+import { usePrimitives } from '@/stores/usePrimitivesStore';
+import type { Primitives } from '@/types';
 
 import { useAbyssEnemies } from '../../hooks';
 import { useEventCountdown } from '../../hooks/useEventCountdown';
-import type { SpiralAbyssPhase } from '../../types';
-import {
-  getElementBgClass,
-  getElementBorderClass,
-  getElementTextClass,
-} from '../../utils';
+import type {
+  AbyssChamber,
+  AbyssEnemy,
+  AbyssWave,
+  SpiralAbyssPhase,
+} from '../../types';
 import CountdownBadge from '../countdown-badge';
 
 interface AbyssPhaseCardProps {
@@ -103,227 +105,228 @@ export default function AbyssPhaseCard({ phase }: AbyssPhaseCardProps) {
   );
 }
 
-const AbyssData = () => {
-  const { data, loading } = useAbyssEnemies();
-  const [expandedFloors, setExpandedFloors] = useState<Set<number>>(new Set());
+interface EnemyBadgeProps {
+  enemy: AbyssEnemy;
+  elementUrl?: string;
+}
 
-  const toggleFloor = (floorNumber: number) => {
-    setExpandedFloors((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(floorNumber)) {
-        newSet.delete(floorNumber);
-      } else {
-        newSet.add(floorNumber);
-      }
-      return newSet;
-    });
-  };
+const EnemyBadge: React.FC<EnemyBadgeProps> = ({ enemy, elementUrl }) => (
+  <div className="group relative flex flex-col items-center gap-1.5 p-2 rounded-xl bg-midnight-800/30 hover:bg-midnight-700/50 transition-all duration-200">
+    {/* Avatar */}
+    <div className="relative">
+      <div className="h-12 w-12 rounded-full bg-linear-to-br from-midnight-600/80 to-midnight-800/80 ring-2 ring-white/10 group-hover:ring-celestial-400/50 overflow-hidden flex items-center justify-center shadow-lg transition-all duration-200">
+        <img
+          src={enemy.iconUrl}
+          alt={enemy.name}
+          className="h-10 w-10 object-contain group-hover:scale-110 transition-transform duration-200"
+          loading="lazy"
+        />
+      </div>
 
-  return (
-    <div className="space-y-3">
-      {loading && (
-        <div className="flex items-center justify-center py-6">
-          <div className="h-5 w-5 animate-spin rounded-full border-2 border-celestial-500/30 border-t-celestial-400" />
-          <span className="ml-2 text-xs text-muted-foreground">
-            Loading enemy lineup…
+      {/* Element badge */}
+      {elementUrl && (
+        <div className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-midnight-900 ring-2 ring-midnight-700 flex items-center justify-center shadow-md">
+          <CachedImage
+            src={elementUrl}
+            alt={enemy.element || ''}
+            className="h-3.5 w-3.5 object-contain"
+          />
+        </div>
+      )}
+
+      {/* Count badge */}
+      {enemy.count > 1 && (
+        <div className="absolute -bottom-1 -right-1 h-5 min-w-5 px-1 rounded-full bg-celestial-500 ring-2 ring-midnight-800 flex items-center justify-center shadow-md">
+          <span className="text-[10px] font-bold text-white">
+            ×{enemy.count}
           </span>
         </div>
       )}
-      {data?.floors.map((floor) => (
-        <div
-          key={floor.floorNumber}
-          className="overflow-hidden rounded-lg border border-border/40 bg-midnight-900/10"
-        >
-          {/* Floor header (collapsible) */}
-          <button
-            onClick={() => toggleFloor(floor.floorNumber)}
-            className="flex w-full items-center gap-2 px-4 py-2.5 text-left transition-colors hover:bg-midnight-800/20"
-          >
-            <Swords className="h-3.5 w-3.5 text-celestial-400" />
-            <span className="text-sm font-semibold text-foreground">
-              Floor {floor.floorNumber}
-            </span>
-            <span className="text-[10px] text-muted-foreground">
-              · {floor.chambers.length} chambers
-            </span>
-            <ChevronRight
-              className={cn(
-                'ml-auto h-3.5 w-3.5 text-muted-foreground transition-transform',
-                expandedFloors.has(floor.floorNumber) && 'rotate-90'
-              )}
+    </div>
+
+    {/* Name */}
+    <span className="text-[10px] font-medium text-muted-foreground text-center leading-tight max-w-16 line-clamp-2 group-hover:text-foreground transition-colors duration-200">
+      {enemy.name}
+    </span>
+  </div>
+);
+
+interface WavesListProps {
+  waves: AbyssWave[];
+  getElementUrl: (elementName?: string) => string | undefined;
+}
+
+const WavesList: React.FC<WavesListProps> = ({ waves, getElementUrl }) => (
+  <div className="flex gap-4">
+    {waves.map((wave) => (
+      <div
+        key={wave.waveNumber}
+        className="space-y-1.5 border-none rounded-2xl p-3 bg-midnight-900/20 shadow-sm shadow-accent-foreground/10"
+      >
+        {/* Wave Header (only if multiple waves) */}
+        {waves.length > 1 && (
+          <div className="flex items-center gap-1 text-[9px] font-medium uppercase tracking-wide text-muted-foreground/50">
+            <ChevronRight className="h-2.5 w-2.5" />
+            Wave {wave.waveNumber}
+          </div>
+        )}
+
+        {/* Enemy Badges - Wrap on mobile */}
+        <div className="flex flex-wrap gap-1.5">
+          {wave.enemies.map((enemy, idx) => (
+            <EnemyBadge
+              key={`${enemy.name}-${idx}`}
+              enemy={enemy}
+              elementUrl={getElementUrl(enemy.element)}
             />
-          </button>
-
-          {/* Chambers */}
-          {expandedFloors.has(floor.floorNumber) && (
-            <div className="space-y-3 border-t border-border/30 bg-midnight-900/5 p-3">
-              {floor.chambers.map((chamber) => (
-                <div
-                  key={chamber.chamber}
-                  className="rounded-md border border-border/30 bg-midnight-900/20 p-3"
-                >
-                  {/* Chamber header */}
-                  <div className="mb-2 flex items-center gap-2 text-xs">
-                    <span className="font-semibold text-foreground">
-                      Chamber {chamber.chamber}
-                    </span>
-                    <span className="rounded-full border border-border/30 bg-midnight-900/40 px-1.5 py-0.5 text-[9px] font-medium text-muted-foreground">
-                      Lv.{chamber.level}
-                    </span>
-                  </div>
-
-                  {/* Challenge */}
-                  <div className="mb-3 flex items-start gap-1.5 rounded border border-border/20 bg-midnight-900/20 px-2 py-1.5">
-                    <Shield className="mt-0.5 h-3 w-3 shrink-0 text-muted-foreground/50" />
-                    <p className="text-[10px] leading-relaxed text-muted-foreground">
-                      {chamber.challenge}
-                    </p>
-                  </div>
-
-                  {/* First / Second Half */}
-                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                    {/* First Half */}
-                    <div className="space-y-2">
-                      <h5 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/70">
-                        First Half
-                      </h5>
-                      <div className="space-y-1.5">
-                        {chamber.firstHalf.waves.map((wave) => (
-                          <div key={wave.waveNumber} className="space-y-1">
-                            {chamber.firstHalf.waves.length > 1 && (
-                              <p className="flex items-center gap-0.5 text-[9px] font-medium uppercase tracking-wide text-muted-foreground/50">
-                                <ChevronRight className="h-2.5 w-2.5" />
-                                Wave {wave.waveNumber}
-                              </p>
-                            )}
-                            {wave.enemies.map((enemy, eIdx) => (
-                              <div
-                                key={`${enemy.name}-${eIdx}`}
-                                className={cn(
-                                  'flex items-center gap-2 rounded border px-2 py-1.5',
-                                  enemy.element
-                                    ? getElementBorderClass(enemy.element)
-                                    : 'border-border/40',
-                                  enemy.element
-                                    ? getElementBgClass(enemy.element)
-                                    : 'bg-midnight-900/10'
-                                )}
-                              >
-                                <div
-                                  className={cn(
-                                    'flex h-6 w-6 shrink-0 items-center justify-center rounded border',
-                                    enemy.element
-                                      ? getElementBorderClass(enemy.element)
-                                      : 'border-border/30',
-                                    'bg-midnight-900/30'
-                                  )}
-                                >
-                                  <img
-                                    src={enemy.iconUrl}
-                                    alt={enemy.name}
-                                    className="h-5 w-5 object-contain"
-                                    loading="lazy"
-                                  />
-                                </div>
-                                <div className="min-w-0 flex-1">
-                                  <p
-                                    className={cn(
-                                      'truncate text-[11px] font-medium leading-tight',
-                                      enemy.element
-                                        ? getElementTextClass(enemy.element)
-                                        : 'text-foreground'
-                                    )}
-                                    title={enemy.name}
-                                  >
-                                    {enemy.name}
-                                  </p>
-                                  {enemy.count > 1 && (
-                                    <p className="text-[9px] text-muted-foreground">
-                                      ×{enemy.count}
-                                    </p>
-                                  )}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Second Half */}
-                    <div className="space-y-2">
-                      <h5 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/70">
-                        Second Half
-                      </h5>
-                      <div className="space-y-1.5">
-                        {chamber.secondHalf.waves.map((wave) => (
-                          <div key={wave.waveNumber} className="space-y-1">
-                            {chamber.secondHalf.waves.length > 1 && (
-                              <p className="flex items-center gap-0.5 text-[9px] font-medium uppercase tracking-wide text-muted-foreground/50">
-                                <ChevronRight className="h-2.5 w-2.5" />
-                                Wave {wave.waveNumber}
-                              </p>
-                            )}
-                            {wave.enemies.map((enemy, eIdx) => (
-                              <div
-                                key={`${enemy.name}-${eIdx}`}
-                                className={cn(
-                                  'flex items-center gap-2 rounded border px-2 py-1.5',
-                                  enemy.element
-                                    ? getElementBorderClass(enemy.element)
-                                    : 'border-border/40',
-                                  enemy.element
-                                    ? getElementBgClass(enemy.element)
-                                    : 'bg-midnight-900/10'
-                                )}
-                              >
-                                <div
-                                  className={cn(
-                                    'flex h-6 w-6 shrink-0 items-center justify-center rounded border',
-                                    enemy.element
-                                      ? getElementBorderClass(enemy.element)
-                                      : 'border-border/30',
-                                    'bg-midnight-900/30'
-                                  )}
-                                >
-                                  <img
-                                    src={enemy.iconUrl}
-                                    alt={enemy.name}
-                                    className="h-5 w-5 object-contain"
-                                    loading="lazy"
-                                  />
-                                </div>
-                                <div className="min-w-0 flex-1">
-                                  <p
-                                    className={cn(
-                                      'truncate text-[11px] font-medium leading-tight',
-                                      enemy.element
-                                        ? getElementTextClass(enemy.element)
-                                        : 'text-foreground'
-                                    )}
-                                    title={enemy.name}
-                                  >
-                                    {enemy.name}
-                                  </p>
-                                  {enemy.count > 1 && (
-                                    <p className="text-[9px] text-muted-foreground">
-                                      ×{enemy.count}
-                                    </p>
-                                  )}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+          ))}
         </div>
-      ))}
+      </div>
+    ))}
+  </div>
+);
+
+interface EnemiesCellProps {
+  chamber: AbyssChamber;
+  primitives: Primitives | null;
+}
+
+const EnemiesCell: React.FC<EnemiesCellProps> = ({ chamber, primitives }) => {
+  const getElementUrl = (elementName?: string): string | undefined => {
+    if (!elementName || !primitives) return undefined;
+    return primitives.elements.find(
+      (e) => e.name.toLowerCase() === elementName.toLowerCase()
+    )?.url;
+  };
+
+  return (
+    <div className="px-4 py-4">
+      {/* Mobile Label - Hidden on Desktop */}
+      <div className="mb-3 text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden">
+        Enemies
+      </div>
+
+      {/* Two-column layout for First/Second Half with clear separation */}
+      <div className="grid grid-cols-1 gap-3 ">
+        {/* First Half */}
+        <div className="rounded-lg border  p-3">
+          <h5 className="mb-2.5 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-cyan-400">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-400" />
+            First Half
+          </h5>
+          <WavesList
+            waves={chamber.firstHalf.waves}
+            getElementUrl={getElementUrl}
+          />
+        </div>
+
+        {/* Second Half */}
+        <div className="rounded-lg border  p-3">
+          <h5 className="mb-2.5 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-amber-400">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-400" />
+            Second Half
+          </h5>
+          <WavesList
+            waves={chamber.secondHalf.waves}
+            getElementUrl={getElementUrl}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface ChamberInfoCellProps {
+  floor: number;
+  chamber: AbyssChamber;
+}
+
+const ChamberInfoCell: React.FC<ChamberInfoCellProps> = ({
+  floor,
+  chamber,
+}) => (
+  <div className="space-y-3 bg-midnight-900/10 px-4 py-4 md:border-r md:border-border/30 md:bg-transparent">
+    {/* Chamber Title */}
+    <div className="flex flex-wrap items-center gap-2">
+      <span className="text-sm font-semibold text-foreground">
+        Floor {floor} - Chamber {chamber.chamber}
+      </span>
+      {/* Highlighted Level Badge */}
+      <Badge className="border-celestial-500/50 bg-celestial-500/20 px-2 py-0.5 text-xs font-bold text-celestial-300 border-2 rounded-lg">
+        Lv. {chamber.level}
+      </Badge>
+    </div>
+
+    {/* Challenge Text */}
+    <div className="flex items-start gap-1.5 rounded border border-border/20 bg-midnight-900/20 px-2 py-1.5">
+      <Shield className="mt-0.5 h-3 w-3 shrink-0 text-muted-foreground/50" />
+      <p className="text-[11px] leading-relaxed text-muted-foreground">
+        {chamber.challenge}
+      </p>
+    </div>
+  </div>
+);
+
+interface ChamberRowProps {
+  floor: number;
+  chamber: AbyssChamber;
+  primitives: Primitives | null;
+}
+
+const ChamberRow: React.FC<ChamberRowProps> = ({
+  floor,
+  chamber,
+  primitives,
+}) => (
+  <div className="flex flex-col border-b border-border/30 transition-colors last:border-b-0 hover:bg-midnight-700/20 md:grid md:grid-cols-[200px_1fr]">
+    <ChamberInfoCell floor={floor} chamber={chamber} />
+    <EnemiesCell chamber={chamber} primitives={primitives} />
+  </div>
+);
+
+const AbyssData = () => {
+  const { data, loading } = useAbyssEnemies();
+  const primitives = usePrimitives();
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-8">
+        <div className="h-5 w-5 animate-spin rounded-full border-2 border-celestial-500/30 border-t-celestial-400" />
+        <span className="ml-2 text-xs text-muted-foreground">
+          Loading enemy lineup…
+        </span>
+      </div>
+    );
+  }
+
+  if (!data?.floors) {
+    return null;
+  }
+
+  return (
+    <div className="w-full">
+      <div className="overflow-hidden rounded-lg border border-border/40">
+        <div className="hidden border-b border-border bg-midnight-700/50 md:grid md:grid-cols-[200px_1fr]">
+          <div className="px-4 py-3 text-sm font-semibold text-starlight-200">
+            Chamber Info
+          </div>
+          <div className="px-4 py-3 text-sm font-semibold text-starlight-200">
+            Enemies
+          </div>
+        </div>
+
+        {/* Flatten all floors and chambers into table rows */}
+        {data.floors.flatMap((floor) =>
+          floor.chambers.map((chamber) => (
+            <ChamberRow
+              key={`${floor.floorNumber}-${chamber.chamber}`}
+              floor={floor.floorNumber}
+              chamber={chamber}
+              primitives={primitives}
+            />
+          ))
+        )}
+      </div>
     </div>
   );
 };
