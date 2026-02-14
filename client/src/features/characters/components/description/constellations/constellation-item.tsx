@@ -33,41 +33,43 @@ export const ConstellationItem: React.FC<ConstellationItemProps> = ({
 
   return (
     <div
-      className={`group flex gap-3 p-3 rounded-2xl border-none bg-card hover:bg-card/50 transition-all ${elementClasses.border} ${elementClasses.hoverBorder}`}
+      className={`group flex gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl sm:rounded-2xl border-none bg-card hover:bg-card/50 transition-all ${elementClasses.border} ${elementClasses.hoverBorder}`}
     >
       <div className="relative shrink-0">
         <CachedImage
           lazy
-          className="w-10 h-10 object-contain opacity-90"
+          className="w-8 h-8 sm:w-10 sm:h-10 object-contain opacity-90"
           src={constellation.iconUrl}
           alt={constellation.name}
           skeletonSize="md"
           skeletonShape="circle"
         />
         {styles.isTalentUpgrade && (
-          <div className="absolute -top-0.5 -right-0.5 flex items-center justify-center w-4 h-4 rounded-full bg-success-600 text-white text-[9px] font-bold">
+          <div className="absolute -top-0.5 -right-0.5 flex items-center justify-center w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-success-600 text-white text-[8px] sm:text-[9px] font-bold">
             +3
           </div>
         )}
       </div>
 
       {/* Content */}
-      <div className="flex-1 min-w-0 space-y-1.5">
-        <div className="flex items-center gap-2 flex-wrap">
+      <div className="flex-1 min-w-0 space-y-1 sm:space-y-1.5">
+        <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           <span
             className={`
               shrink-0 flex items-center justify-center
-              w-5 h-5 rounded-full bg-linear-to-br ${elementClasses.levelGradient}
-              text-white text-xs font-bold
+              w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-linear-to-br ${elementClasses.levelGradient}
+              text-white text-[10px] sm:text-xs font-bold
             `}
           >
             {constellation.level}
           </span>
-          <h3 className="text-md font-semibold text-foreground/90">
+          <h3 className="text-xs sm:text-sm md:text-md font-semibold text-foreground/90">
             {constellation.name}
           </h3>
           {styles.isTalentUpgrade && (
-            <span className={`text-xs font-medium ${elementClasses.accent}`}>
+            <span
+              className={`text-[10px] sm:text-xs font-medium ${elementClasses.accent}`}
+            >
               • Talent Lv. +3
             </span>
           )}
@@ -83,7 +85,7 @@ export const ConstellationItem: React.FC<ConstellationItemProps> = ({
         )}
 
         {/* Description */}
-        <div className="text-xs leading-relaxed text-muted-foreground/80">
+        <div className="text-[11px] sm:text-xs leading-relaxed text-muted-foreground/80">
           <AbilitiesListSplitter
             text={constellation.description}
             characterName={characterName}
