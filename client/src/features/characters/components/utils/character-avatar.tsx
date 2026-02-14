@@ -7,6 +7,7 @@ import {
   HoverCardTrigger,
 } from '@/components/ui/hover-card';
 import { AvatarWithSkeleton } from '@/components/utils';
+import { CachedImage } from '@/features/cache';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
 import {
@@ -35,6 +36,9 @@ interface CharacterAvatarProps {
   renderBadge?: () => React.ReactNode;
   badgePosition?: BadgePosition; // Default: 'top-right'
 
+  showElement?: boolean; // Default: false - shows element icon overlay
+  showRarity?: boolean; // Default: false - shows rarity stars overlay
+
   className?: string; // Container className
   avatarClassName?: string; // Avatar image className (merged with defaults)
   imageClassName?: string; // Inner image className
@@ -47,6 +51,7 @@ interface CharacterAvatarProps {
  * - Mobile: Click to open detailed character information in a Drawer
  *
  * Now supports configurable size, name display, badges, and interactivity
+ * Can optionally show element icon and rarity overlays
  */
 const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
   characterName,
@@ -57,6 +62,8 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
   onClick,
   renderBadge,
   badgePosition = 'top-right',
+  showElement = false,
+  showRarity = false,
   className,
   avatarClassName,
   imageClassName,
@@ -72,7 +79,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
     return null;
   }
 
-  const { name, iconUrl, rarity } = character;
+  const { name, iconUrl, rarity, elementUrl } = character;
 
   const finalAvatarClassName = cn(
     AVATAR_SIZE_CLASSES[size],
@@ -80,8 +87,37 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
     avatarClassName
   );
 
+  // Element badge size scales with avatar
+  const elementBadgeSizeMap: Record<AvatarSize, string> = {
+    xs: 'w-3.5 h-3.5',
+    sm: 'w-4 h-4',
+    md: 'w-5 h-5',
+    lg: 'w-6 h-6',
+    xl: 'w-7 h-7',
+  };
+
+  const elementIconSizeMap: Record<AvatarSize, number> = {
+    xs: 10,
+    sm: 12,
+    md: 16,
+    lg: 20,
+    xl: 24,
+  };
+
+  // Rarity star text size scales with avatar
+  const rarityStarSizeMap: Record<AvatarSize, string> = {
+    xs: 'text-[8px]',
+    sm: 'text-[9px]',
+    md: 'text-[10px]',
+    lg: 'text-xs',
+    xl: 'text-sm',
+  };
+
+  const rarityNum = Number.parseInt(rarity, 10);
+  const starColor = rarityNum === 5 ? 'text-amber-400' : 'text-violet-400';
+
   const avatarElement = (
-    <div className="relative">
+    <div className="relative inline-block">
       <AvatarWithSkeleton
         name={namePosition === 'tooltip' ? name : ''}
         avatarClassName={finalAvatarClassName}
@@ -93,8 +129,40 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
           {renderBadge()}
         </div>
       )}
+      {/* Element Icon — small floating circle at bottom-right edge */}
+      {showElement && elementUrl && (
+        <div
+          className={cn(
+            'absolute -bottom-0.5 -right-0.5 rounded-full ring-2 ring-background flex items-center justify-center bg-background/90',
+            elementBadgeSizeMap[size]
+          )}
+        >
+          <CachedImage
+            src={elementUrl}
+            alt={character.element}
+            width={elementIconSizeMap[size]}
+            height={elementIconSizeMap[size]}
+            className="rounded-full"
+          />
+        </div>
+      )}
     </div>
   );
+
+  // Rarity stars — row of ★ above the avatar
+  const rarityStars =
+    showRarity && rarityNum > 0 ? (
+      <div className="flex items-center justify-center gap-0.5 leading-none">
+        {Array.from({ length: Math.min(rarityNum, 5) }).map((_, i) => (
+          <span
+            key={i}
+            className={cn(starColor, rarityStarSizeMap[size], 'drop-shadow-sm')}
+          >
+            ★
+          </span>
+        ))}
+      </div>
+    ) : null;
 
   const nameLabel =
     showName && namePosition === 'bottom' ? (
@@ -112,12 +180,13 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
   const containerElement = (
     <div
       className={cn(
-        'flex flex-col gap-1',
+        'flex flex-col items-center gap-1',
         onClick || interactive ? 'cursor-pointer' : '',
         className
       )}
       onClick={onClick}
     >
+      {rarityStars}
       {avatarElement}
       {nameLabel}
     </div>
