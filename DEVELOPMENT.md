@@ -47,6 +47,7 @@ External:
 
 - **React 18.3.1** - UI library with hooks and functional components
 - **TypeScript 5.6.3** - Static typing and improved developer experience
+- **Bun** - Fast all-in-one JavaScript runtime and package manager
 - **Vite 5.4.8** - Fast build tool and development server
 - **React Router v7.13.0** - Client-side routing
 
@@ -189,6 +190,7 @@ Selenium WebDriver → Parse HTML → Extract Data → Validate → Save JSON
 ```
 
 Scripts use Selenium to:
+
 - Navigate to Genshin wikis
 - Extract character/weapon/talent data
 - Download media assets
@@ -201,6 +203,7 @@ Download Image → Hash URL → Check R2 → Upload if New → Return Public URL
 ```
 
 Cloudflare R2 features:
+
 - Deduplication via URL hashing
 - Public CDN URLs
 - Free tier: 10GB storage, unlimited bandwidth
@@ -212,6 +215,7 @@ User Opens App → Store Checks Cache → Fetch JSON → Update State → Render
 ```
 
 Data is:
+
 - Fetched from `/public` directory
 - Cached in Zustand stores
 - Persisted in localStorage (where applicable)
@@ -222,6 +226,7 @@ Data is:
 ### Tailwind CSS
 
 **Utility-First Approach:**
+
 ```tsx
 <div className="flex items-center gap-4 rounded-lg bg-primary p-4">
   <Avatar className="h-12 w-12" />
@@ -230,19 +235,28 @@ Data is:
 ```
 
 **Custom Theme:**
+
 ```javascript
 // tailwind.config.js
 module.exports = {
   theme: {
     extend: {
       colors: {
-        gold: { /* Genshin gold palette */ },
-        purple: { /* Genshin purple palette */ },
+        gold: {
+          /* Genshin gold palette */
+        },
+        purple: {
+          /* Genshin purple palette */
+        },
         // ...
       },
       keyframes: {
-        woosh: { /* custom animation */ },
-        shimmer: { /* custom animation */ },
+        woosh: {
+          /* custom animation */
+        },
+        shimmer: {
+          /* custom animation */
+        },
       },
     },
   },
@@ -250,6 +264,7 @@ module.exports = {
 ```
 
 **Responsive Design:**
+
 ```tsx
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
   {/* Responsive grid */}
@@ -261,8 +276,8 @@ module.exports = {
 Use shadcn/ui components as building blocks:
 
 ```tsx
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
 
 export function CharacterCard({ character }) {
   return (
@@ -273,9 +288,7 @@ export function CharacterCard({ character }) {
         </Avatar>
         <CardTitle>{character.name}</CardTitle>
       </CardHeader>
-      <CardContent>
-        {/* Content */}
-      </CardContent>
+      <CardContent>{/* Content */}</CardContent>
     </Card>
   );
 }
@@ -286,6 +299,7 @@ export function CharacterCard({ character }) {
 ### Adding a New Route
 
 1. **Create route component:**
+
    ```tsx
    // src/routes/NewFeature.tsx
    export function NewFeature() {
@@ -294,6 +308,7 @@ export function CharacterCard({ character }) {
    ```
 
 2. **Add to router:**
+
    ```tsx
    // src/routes/index.tsx
    import { NewFeature } from './NewFeature';
@@ -309,6 +324,7 @@ export function CharacterCard({ character }) {
 ### Creating a New Component
 
 1. **Create component file:**
+
    ```tsx
    // src/components/feature/MyComponent.tsx
    interface MyComponentProps {
@@ -320,7 +336,9 @@ export function CharacterCard({ character }) {
      return (
        <div className="rounded-lg border p-4">
          <h3 className="text-lg font-semibold">{title}</h3>
-         {description && <p className="text-sm text-muted-foreground">{description}</p>}
+         {description && (
+           <p className="text-sm text-muted-foreground">{description}</p>
+         )}
        </div>
      );
    }
@@ -335,6 +353,7 @@ export function CharacterCard({ character }) {
 ### Adding a Zustand Store
 
 1. **Create store file:**
+
    ```tsx
    // src/stores/useMyStore.ts
    import { create } from 'zustand';
@@ -355,6 +374,7 @@ export function CharacterCard({ character }) {
    ```
 
 2. **Use in component:**
+
    ```tsx
    import { useMyStore } from '@/stores/useMyStore';
 
@@ -372,6 +392,7 @@ export function CharacterCard({ character }) {
 ### Scraping New Data
 
 1. **Create scraper:**
+
    ```tsx
    // client/scripts/scrape/newData.ts
    import { Builder, By } from 'selenium-webdriver';
@@ -397,7 +418,7 @@ export function CharacterCard({ character }) {
 2. **Add to package.json:**
    ```json
    "scripts": {
-     "scrape:new": "npx tsx scripts/scrape/newData.ts"
+     "scrape:new": "bun scripts/scrape/newData.ts"
    }
    ```
 
@@ -429,6 +450,7 @@ Vite automatically code-splits with manual chunks defined in [vite.config.ts](cl
 ### React DevTools
 
 Install [React DevTools](https://react.dev/learn/react-developer-tools) browser extension to inspect:
+
 - Component hierarchy
 - Props and state
 - Performance profiling
@@ -441,9 +463,12 @@ Enable Zustand devtools in development:
 import { devtools } from 'zustand/middleware';
 
 export const useMyStore = create(
-  devtools((set) => ({
-    // store implementation
-  }), { name: 'MyStore' })
+  devtools(
+    (set) => ({
+      // store implementation
+    }),
+    { name: 'MyStore' }
+  )
 );
 ```
 
@@ -457,27 +482,27 @@ export const useMyStore = create(
 
 ```bash
 # Development
-npm run dev                  # Start dev server
-npm run build                # Production build
-npm run preview              # Preview production build
+bun run dev                  # Start dev server
+bun run build                # Production build
+bun run preview              # Preview production build
 
 # Code Quality
-npm run lint                 # Run ESLint
-npm run lint:fix             # Fix ESLint issues
-npm run format               # Format with Prettier
-npm run format:check         # Check formatting
-npm run validate             # Run all checks
-npm run ci:check             # Full CI validation
+bun run lint                 # Run ESLint
+bun run lint:fix             # Fix ESLint issues
+bun run format               # Format with Prettier
+bun run format:check         # Check formatting
+bun run validate             # Run all checks
+bun run ci:check             # Full CI validation
 
 # Analysis
-npm run build:analyze        # Bundle size analysis
+bun run build:analyze        # Bundle size analysis
 
 # Scraping
-npm run scrape:all           # Scrape all data
-npm run scrape:characters    # Scrape characters only
-npm run scrape:weapons       # Scrape weapons only
-npm run scrape:talents       # Scrape talents only
-npm run scrape:gallery       # Scrape gallery media
+bun run scrape:all           # Scrape all data
+bun run scrape:characters    # Scrape characters only
+bun run scrape:weapons       # Scrape weapons only
+bun run scrape:talents       # Scrape talents only
+bun run scrape:gallery       # Scrape gallery media
 ```
 
 ## Additional Resources

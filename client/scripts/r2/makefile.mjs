@@ -93,7 +93,8 @@ const tasks = {
     action: () => runR2Command('update'),
   },
   restore: {
-    description: 'Restore from backup (usage: make restore TIMESTAMP=<timestamp>)',
+    description:
+      'Restore from backup (usage: make restore TIMESTAMP=<timestamp>)',
     category: 'Update',
     action: () => {
       const timestamp = process.env.TIMESTAMP || process.argv[3];
@@ -181,14 +182,14 @@ const tasks = {
  */
 function runR2Command(command, extraArgs = []) {
   return new Promise((resolve, reject) => {
-    console.log(chalk.cyan(`\n▸ Running: npm run r2 ${command}\n`));
+    console.log(chalk.cyan(`\n▸ Running: bun run r2 ${command}\n`));
 
     const isWindows = process.platform === 'win32';
-    const npmCommand = isWindows ? 'npm.cmd' : 'npm';
+    const bunCommand = isWindows ? 'bun.exe' : 'bun';
 
     const args = ['run', 'r2', '--', command, ...extraArgs];
 
-    const child = spawn(npmCommand, args, {
+    const child = spawn(bunCommand, args, {
       cwd: CLIENT_DIR,
       stdio: 'inherit',
       shell: isWindows,

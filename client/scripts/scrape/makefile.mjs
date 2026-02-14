@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 
 /**
  * Makefile-like script for running scrape commands.
@@ -87,7 +87,8 @@ const tasks = {
     action: () => runTsxScript('characters.ts', ['--optimize']),
   },
   'characters-optimize-files': {
-    description: 'Optimize individual character files by removing redundant URLs',
+    description:
+      'Optimize individual character files by removing redundant URLs',
     category: 'Characters',
     action: () => runTsxScript('characters.ts', ['--optimize-files']),
   },
@@ -178,19 +179,19 @@ const tasks = {
 };
 
 /**
- * Run a TypeScript script from the scrape directory using tsx
+ * Run a TypeScript script from the scrape directory using Bun's native TS support
  */
 function runTsxScript(script, args = []) {
   return new Promise((resolve, reject) => {
     const isWindows = process.platform === 'win32';
-    const npxCommand = isWindows ? 'npx.cmd' : 'npx';
+    const bunCommand = isWindows ? 'bun.exe' : 'bun';
     const scriptPath = join(SCRAPE_DIR, script);
 
-    console.log(chalk.cyan(`Running: tsx ${script} ${args.join(' ')}`));
+    console.log(chalk.cyan(`Running: bun ${script} ${args.join(' ')}`));
     console.log();
 
     const quotedPath = isWindows ? `"${scriptPath}"` : scriptPath;
-    const child = spawn(npxCommand, ['tsx', quotedPath, ...args], {
+    const child = spawn(bunCommand, [quotedPath, ...args], {
       cwd: CLIENT_DIR,
       stdio: 'inherit',
       shell: isWindows,

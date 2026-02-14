@@ -19,8 +19,7 @@ A comprehensive Genshin Impact information hub built with React, TypeScript, and
 
 ### Prerequisites
 
-- **Node.js** 20 or higher
-- **npm** (comes with Node.js)
+- **Bun** - Fast all-in-one JavaScript runtime and package manager
 
 ### Installation
 
@@ -30,10 +29,10 @@ git clone https://github.com/username/genshinql.git
 cd genshinql/client
 
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun run dev
 ```
 
 The application will be available at [http://localhost:5173](http://localhost:5173)
@@ -44,6 +43,7 @@ The application will be available at [http://localhost:5173](http://localhost:51
 
 - **[React 18](https://react.dev/)** - UI library
 - **[TypeScript 5.6](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **[Bun](https://bun.sh/)** - Fast all-in-one JavaScript runtime
 - **[Vite 5.4](https://vitejs.dev/)** - Fast build tool and dev server
 - **[React Router v7](https://reactrouter.com/)** - Client-side routing
 
@@ -75,35 +75,40 @@ The application will be available at [http://localhost:5173](http://localhost:51
 ### Available Scripts
 
 **Development:**
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
+
+- `bun run dev` - Start development server
+- `bun run build` - Build for production
+- `bun run preview` - Preview production build
 
 **Code Quality:**
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues automatically
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
-- `npm run validate` - Run lint + format + type check
-- `npm run ci:check` - Run all CI checks locally
+
+- `bun run lint` - Run ESLint
+- `bun run lint:fix` - Fix ESLint issues automatically
+- `bun run format` - Format code with Prettier
+- `bun run format:check` - Check code formatting
+- `bun run validate` - Run lint + format + type check
+- `bun run ci:check` - Run all CI checks locally
 
 **Analysis:**
-- `npm run build:analyze` - Analyze bundle size with visualizer
+
+- `bun run build:analyze` - Analyze bundle size with visualizer
 
 ### Scraping Scripts
 
 **Data Collection:**
-- `npm run scrape:all` - Scrape all data (characters, weapons, talents, gallery)
-- `npm run scrape:characters` - Scrape character data only
-- `npm run scrape:weapons` - Scrape weapon data only
-- `npm run scrape:talents` - Scrape talent schedules only
-- `npm run scrape:gallery` - Scrape character gallery media only
-- `npm run consolidate` - Consolidate scraped data into JSON files
-- `npm run generate-primitives` - Generate game constants (elements, regions, etc.)
+
+- `bun run scrape:all` - Scrape all data (characters, weapons, talents, gallery)
+- `bun run scrape:characters` - Scrape character data only
+- `bun run scrape:weapons` - Scrape weapon data only
+- `bun run scrape:talents` - Scrape talent schedules only
+- `bun run scrape:gallery` - Scrape character gallery media only
+- `bun run consolidate` - Consolidate scraped data into JSON files
+- `bun run generate-primitives` - Generate game constants (elements, regions, etc.)
 
 **Validation:**
-- `npm run check-characters` - Validate character data completeness
-- `npm run check-gallery` - Validate gallery media coverage
+
+- `bun run check-characters` - Validate character data completeness
+- `bun run check-gallery` - Validate gallery media coverage
 
 ## 🤝 Contributing
 
@@ -123,47 +128,57 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Install pre-commit hooks
-npm run prepare
+bun run prepare
 cd client
-npx husky init
+bun x husky init
 
 # Start coding!
-npm run dev
+bun run dev
 ```
 
 ## 📸 Screenshots
 
 ### Weapons Detailed
+
 ![Weapons-Detailed](./images/weapons-detailed.png)
 
 ### Character Attacks
+
 ![Character-Attacks](./images/character-attacks.png)
 
 ### Character Constellations
+
 ![Character-Constellations](./images/character-constellations.png)
 
 ### Character Passives
+
 ![Character-Passives](./images/character-passives.png)
 
 ### Character Routine
+
 ![Character-Single-Routine](./images/character-single-routine.png)
 
 ### Character Table
+
 ![Character-table](./images/character-table.png)
 
 ### Characters Talent Schedule
+
 ![Character-talent-Schedule](./images/character-talent-schedule.png)
 
 ### Character Talents
+
 ![Character-talents](./images/character-talents.png)
 
 ### Weapon Calendar
+
 ![Weapon-Schedule](./images/weapon-schedule.png)
 
 ### Character Tier List Builder
+
 ![Character-Tier-List](./images/character-tier-list.png)
 
 ## 🔮 Future Additions
