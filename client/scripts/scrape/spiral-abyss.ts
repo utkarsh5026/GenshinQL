@@ -29,11 +29,18 @@ async function parseEnemyCard(card: WebElement): Promise<SpiralAbyssEnemy> {
   );
   const iconUrl = await getImageUrl(enemyImg, 'data-src');
 
-  const elementImg = await card.findElement(By.css('span.card-icon img'));
-  const element = await elementImg.getAttribute('alt');
-
   const captionEl = await card.findElement(By.css('span.card-caption a'));
   const name = await captionEl.getText();
+
+  let element: string | undefined;
+  try {
+    const elementImgs = await card.findElements(By.css('span.card-icon img'));
+    if (elementImgs.length > 0) {
+      element = await elementImgs[0].getAttribute('alt');
+    }
+  } catch {
+    logger.debug(`Element not found for enemy ${name}`);
+  }
 
   let count = 1;
   try {
@@ -67,7 +74,6 @@ async function parseWaves(cellElement: WebElement): Promise<SpiralAbyssWave[]> {
         const text = await child.getText();
         const waveMatch = text.match(/Wave (\d+)/);
         if (waveMatch) {
-          // Save previous wave if exists
           if (currentEnemies.length > 0) {
             waves.push({
               waveNumber: currentWaveNumber,
@@ -101,7 +107,6 @@ async function parseWaves(cellElement: WebElement): Promise<SpiralAbyssWave[]> {
       }
     }
 
-    // Push last wave if exists
     if (currentEnemies.length > 0) {
       waves.push({
         waveNumber: currentWaveNumber,
@@ -118,11 +123,12 @@ async function parseWaves(cellElement: WebElement): Promise<SpiralAbyssWave[]> {
 
 /**
  * Parses a chamber block from table rows
- * Chamber occupies 4 consecutive rows:
+ * Chamber occupies 5 consecutive rows:
  * - Row 0: Chamber header
  * - Row 1: Enemy level
- * - Row 2: First Half enemies
- * - Row 3: Second Half enemies
+ * - Row 2: Challenge description
+ * - Row 3: First Half enemies
+ * - Row 4: Second Half enemies
  */
 async function parseChamber(
   rows: WebElement[],
@@ -134,6 +140,12 @@ async function parseChamber(
     return cell.getText();
   };
 
+  const extractWaves = async (index: number) => {
+    const row = rows[index];
+    const cell = await row.findElement(By.css('td'));
+    return parseWaves(cell);
+  };
+
   try {
     const headerRow = rows[startIndex];
     const headerText = await headerRow.getText();
@@ -143,26 +155,14 @@ async function parseChamber(
       return null;
     }
     const chamber = parseInt(chamberMatch[1], 10);
-
     const levelText = await getRowText(startIndex + 1);
-    const level = parseInt(levelText.trim(), 10);
-
-    const challenge = await getRowText(startIndex + 2);
-
-    const firstHalfRow = rows[startIndex + 3];
-    const firstHalfCell = await firstHalfRow.findElement(By.css('td'));
-    const firstHalfWaves = await parseWaves(firstHalfCell);
-
-    const secondHalfRow = rows[startIndex + 4];
-    const secondHalfCell = await secondHalfRow.findElement(By.css('td'));
-    const secondHalfWaves = await parseWaves(secondHalfCell);
 
     return {
       chamber,
-      challenge,
-      level,
-      firstHalf: { waves: firstHalfWaves },
-      secondHalf: { waves: secondHalfWaves },
+      level: parseInt(levelText.trim(), 10),
+      challenge: await getRowText(startIndex + 2),
+      firstHalf: { waves: await extractWaves(startIndex + 3) },
+      secondHalf: { waves: await extractWaves(startIndex + 4) },
     };
   } catch (error) {
     logger.error(`Failed to parse chamber at row ${startIndex}:`, error);
@@ -192,7 +192,7 @@ async function parseFloorTable(
 
     const chambers: SpiralAbyssChamber[] = [];
     for (let chamberNum = 1; chamberNum <= CHAMBERS_PER_FLOOR; chamberNum++) {
-      const startIndex = (chamberNum - 1) * 4;
+      const startIndex = (chamberNum - 1) * 5; // Each chamber occupies 5 rows
       const chamber = await parseChamber(rows, startIndex);
       if (chamber) {
         chambers.push(chamber);
@@ -292,7 +292,6 @@ async function scrapeSpiralAbyssFloors(
       floors,
     };
 
-    // Validate with schema
     const validationResult = spiralAbyssFloorsSchema.safeParse(floorsData);
     if (!validationResult.success) {
       logger.error('❌ Data validation failed:', validationResult.error.issues);
@@ -304,23 +303,20 @@ async function scrapeSpiralAbyssFloors(
       `Floors parsed: ${floors.map((f) => f.floorNumber).join(', ')}`
     );
 
-    // Save to file
     await saveFloorData(floorsData);
-
     return floorsData;
   } finally {
     await driver.quit();
   }
 }
 
-// CLI execution
 if (
   process.argv[1] &&
   import.meta.url.includes(path.basename(process.argv[1]))
 ) {
   const url =
     process.argv[2] ||
-    'https://genshin-impact.fandom.com/wiki/Spiral_Abyss/Floors/2026-01-16';
+    'https://genshin-impact.fandom.com/wiki/Spiral_Abyss/Floors/2026-02-16';
 
   scrapeSpiralAbyssFloors(url)
     .then(() => {

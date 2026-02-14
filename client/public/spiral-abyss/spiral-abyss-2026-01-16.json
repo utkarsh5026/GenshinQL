@@ -1,0 +1,343 @@
+{
+  "updateDate": "2026-01-16",
+  "floors": [
+    {
+      "floorNumber": 11,
+      "chambers": [
+        {
+          "chamber": 1,
+          "challenge": "Target defense progress greater than (20/40/60)%",
+          "level": 88,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Eremite Stone Enchanter",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Eremite_Stone_Enchanter_Icon.png",
+                    "count": 1,
+                    "element": "Geo"
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Eremite Stone Enchanter",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Eremite_Stone_Enchanter_Icon.png",
+                    "count": 1,
+                    "element": "Geo"
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Cutting Edge All-Purpose Storm Landcruiser",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Cutting_Edge_All-Purpose_Storm_Landcruiser_Icon.png",
+                    "count": 1,
+                    "element": "Electro"
+                  },
+                  {
+                    "name": "Cutting Edge All-Purpose Scout Landcruiser",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Cutting_Edge_All-Purpose_Scout_Landcruiser_Icon.png",
+                    "count": 1,
+                    "element": "Cryo"
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Cutting Edge All-Purpose Storm Landcruiser",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Cutting_Edge_All-Purpose_Storm_Landcruiser_Icon.png",
+                    "count": 1,
+                    "element": "Electro"
+                  },
+                  {
+                    "name": "Cutting Edge All-Purpose Scout Landcruiser",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Cutting_Edge_All-Purpose_Scout_Landcruiser_Icon.png",
+                    "count": 1,
+                    "element": "Cryo"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "chamber": 2,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 90,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Ruin Drake: Earthguard",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Ruin_Drake_Icon.png",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Ruin Drake: Earthguard",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Ruin_Drake_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Wilderness Exile",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Wilderness_Exile_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Wilderness Exile",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Wilderness_Exile_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 3,
+                "enemies": [
+                  {
+                    "name": "Wilderness Exile",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Wilderness_Exile_Icon.png",
+                    "count": 3
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "chamber": 3,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 92,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Ruin Grader",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Ruin_Grader_Icon.png",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Ruin Grader",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Ruin_Grader_Icon.png",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "waveNumber": 3,
+                "enemies": [
+                  {
+                    "name": "Ruin Grader",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Ruin_Grader_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Veteran Tainted Water-Splitting Phantasm",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Tainted_Water-Splitting_Phantasm_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "floorNumber": 12,
+      "chambers": [
+        {
+          "chamber": 1,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 95,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Perpetual Mechanical Array",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Perpetual_Mechanical_Array_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Wilderness Exile",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Wilderness_Exile_Icon.png",
+                    "count": 2
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Battle-Hardened Lightkeeper",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Sigurd_%28Local_Legend%29_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "chamber": 2,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 98,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Construction Specialist Mek - Ousia",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Construction_Specialist_Mek_Icon.png",
+                    "count": 1
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Burning-Aflame Wayob Manifestation",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Burning-Aflame_Wayob_Manifestation_Icon.png",
+                    "count": 1,
+                    "element": "Pyro"
+                  }
+                ]
+              },
+              {
+                "waveNumber": 3,
+                "enemies": [
+                  {
+                    "name": "Burning-Aflame Wayob Manifestation",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Burning-Aflame_Wayob_Manifestation_Icon.png",
+                    "count": 1,
+                    "element": "Pyro"
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Battle-Hardened Pipilpan Idol",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Battle-Hardened_Pipilpan_Idol_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "chamber": 3,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 100,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Radiant Antelope",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Radiant_Antelope_Icon.png",
+                    "count": 1,
+                    "element": "Electro"
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Radiant Glacial Wolf",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Radiant_Glacial_Wolf_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Knuckle Duckle",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Knuckle_Duckle_Icon.png",
+                    "count": 1,
+                    "element": "Electro"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

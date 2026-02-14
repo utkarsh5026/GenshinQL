@@ -353,7 +353,7 @@ export const spiralAbyssEnemySchema = z.object({
   name: z.string(),
   iconUrl: z.string(),
   count: z.number(),
-  element: z.string(), // "Geo", "Electro", "Pyro", etc.
+  element: z.string().optional(), // "Geo", "Electro", "Pyro", etc. - optional as some enemies don't have elements
 });
 
 export const spiralAbyssWaveSchema = z.object({
