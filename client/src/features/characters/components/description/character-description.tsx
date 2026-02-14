@@ -130,18 +130,22 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
       {/* Gradient overlay for depth */}
       <div className="absolute inset-0 z-0 bg-linear-to-t from-midnight-950/80 via-transparent to-midnight-900/50" />
 
-      <div className="relative z-10 flex gap-6 p-5 h-full">
-        <div className="w-64 shrink-0 flex flex-col gap-4">
-          <ProfileHeader
-            name={character.name}
-            avatarUrl={character.iconUrl}
-            idleOne={character.screenAnimation?.idleOne}
-            idleTwo={character.screenAnimation?.idleTwo}
-            fallbackCoverUrl={character.imageUrls.nameCard}
-          />
+      <div className="relative z-10 flex flex-col lg:flex-row gap-2 md:gap-4 lg:gap-6 p-2 md:p-4 lg:p-5 h-full">
+        {/* Mobile: Horizontal Menu at Top, Desktop: Sidebar */}
+        <div className="w-full lg:w-64 shrink-0 flex flex-col gap-2 md:gap-4">
+          {/* Profile Header - Hidden on small screens, shown on desktop */}
+          <div className="hidden lg:block">
+            <ProfileHeader
+              name={character.name}
+              avatarUrl={character.iconUrl}
+              idleOne={character.screenAnimation?.idleOne}
+              idleTwo={character.screenAnimation?.idleTwo}
+              fallbackCoverUrl={character.imageUrls.nameCard}
+            />
+          </div>
 
-          {/* Menu Navigation */}
-          <nav className="flex flex-col gap-1.5 mt-2">
+          {/* Menu Navigation - Horizontal on mobile, Vertical on desktop */}
+          <nav className="flex lg:flex-col gap-1 sm:gap-1.5 overflow-x-auto lg:overflow-x-visible scrollbar-hide mt-0 lg:mt-2 pb-1 sm:pb-2 lg:pb-0 -mx-2 px-2 md:mx-0 md:px-0">
             {menuItems.map((item) => {
               const isActive = selectedMenuItem === item;
               return (
@@ -149,7 +153,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                   onClick={() => setSelectedMenuItem(item)}
                   key={item}
                   className={`
-                    relative w-full text-left text-sm font-medium rounded-lg px-4 py-2.5
+                    relative whitespace-nowrap shrink-0 lg:w-full text-left text-[10px] sm:text-xs md:text-sm font-medium rounded-md lg:rounded-lg px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-2.5
                     transition-all duration-300 ease-out
                     border border-transparent
                     ${
@@ -166,10 +170,10 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                       : undefined
                   }
                 >
-                  {/* Active indicator bar */}
+                  {/* Active indicator bar - Bottom on mobile, Left on desktop */}
                   {isActive && (
                     <span
-                      className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-4 rounded-r-full ${elementClasses.indicator}`}
+                      className={`absolute lg:left-0 left-1/2 lg:top-1/2 top-auto bottom-0 lg:-translate-y-1/2 -translate-x-1/2 lg:translate-x-0 lg:w-1 lg:h-4 w-6 sm:w-8 h-0.5 sm:h-1 rounded-t-full lg:rounded-r-full lg:rounded-t-none ${elementClasses.indicator}`}
                     />
                   )}
                   {item}
@@ -180,7 +184,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
         </div>
 
         {/* Main Content Area */}
-        <div className="flex flex-1 min-w-0 overflow-auto h-[calc(100%-1rem)] scrollbar-hide">
+        <div className="flex flex-1 min-w-0 overflow-auto h-full lg:h-[calc(100%-1rem)] scrollbar-hide">
           {selectedMenuItem === 'Profile' && (
             <CharacterCard elementColor={elementColor}>
               <ProfileContent
@@ -282,7 +286,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
 }) => {
   return (
     <Card
-      className="p-5 h-full w-full overflow-auto scrollbar-hide bg-midnight-800/30 backdrop-blur-sm border-midnight-600/40 rounded-xl"
+      className="p-3 sm:p-4 md:p-5 h-full w-full overflow-auto scrollbar-hide bg-midnight-800/30 backdrop-blur-sm border-midnight-600/40 rounded-xl"
       style={{
         boxShadow: elementColor ? `inset 0 1px 0 ${elementColor}10` : undefined,
       }}

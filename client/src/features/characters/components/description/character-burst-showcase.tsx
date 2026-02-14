@@ -29,7 +29,7 @@ const ElementalBurstShowcase: React.FC<ElementalBurstShowcaseProps> = ({
 
   return (
     <div
-      className="rounded-xl overflow-hidden border transition-all duration-300 hover:shadow-lg"
+      className="rounded-lg md:rounded-xl overflow-hidden border transition-all duration-300 hover:shadow-lg"
       style={{
         borderColor: `${elementColor}40`,
         boxShadow: `0 4px 20px ${elementColor}15`,
@@ -37,13 +37,13 @@ const ElementalBurstShowcase: React.FC<ElementalBurstShowcaseProps> = ({
     >
       {/* Header with icon and name */}
       <div
-        className="flex items-center gap-4 p-4"
+        className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 p-3 sm:p-4"
         style={{
           background: `linear-gradient(135deg, ${elementColor}20 0%, transparent 50%)`,
         }}
       >
         <div
-          className="w-14 h-14 rounded-xl p-2 shrink-0"
+          className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg md:rounded-xl p-1.5 sm:p-2 shrink-0"
           style={{
             background: `linear-gradient(135deg, ${elementColor}30, ${elementColor}10)`,
             boxShadow: `0 0 20px ${elementColor}20`,
@@ -56,30 +56,30 @@ const ElementalBurstShowcase: React.FC<ElementalBurstShowcaseProps> = ({
           />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-0.5">
+          <p className="text-[10px] sm:text-xs font-medium uppercase tracking-wider text-muted-foreground mb-0.5">
             {talent.talentType}
           </p>
-          <h4 className="text-lg font-bold text-foreground truncate">
+          <h4 className="text-sm sm:text-base md:text-lg font-bold text-foreground truncate">
             {talent.talentName}
           </h4>
         </div>
         {/* Stats badges */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           {energyCost && (
             <div
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold"
+              className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 md:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold"
               style={{
                 background: `${elementColor}25`,
                 color: elementColor,
               }}
             >
-              <Zap className="w-4 h-4" />
+              <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
               {energyCost}
             </div>
           )}
           {cooldown && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold bg-midnight-700/60 text-starlight-300">
-              <Clock className="w-4 h-4" />
+            <div className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 md:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-midnight-700/60 text-starlight-300">
+              <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
               {cooldown}
             </div>
           )}
@@ -105,14 +105,14 @@ const ElementalBurstShowcase: React.FC<ElementalBurstShowcaseProps> = ({
         )}
 
         {/* Description */}
-        <div className="p-5 flex flex-col justify-center bg-midnight-800/30">
+        <div className="p-3 sm:p-4 md:p-5 flex flex-col justify-center bg-midnight-800/30">
           <TextProcessor
             text={formatDescription(talent.description)}
-            className="text-sm text-starlight-300 leading-relaxed"
+            className="text-xs sm:text-sm text-starlight-300 leading-relaxed"
           />
           <button
             onClick={() => onNavigate('Talents')}
-            className="mt-4 text-xs font-medium uppercase tracking-wider transition-colors self-start px-4 py-2 rounded-lg border hover:bg-midnight-700/50 cursor-pointer"
+            className="mt-3 sm:mt-4 text-[10px] sm:text-xs font-medium uppercase tracking-wider transition-colors self-start px-3 sm:px-4 py-1.5 sm:py-2 rounded-md sm:rounded-lg border hover:bg-midnight-700/50 cursor-pointer"
             style={{
               color: elementColor,
               borderColor: `${elementColor}40`,
