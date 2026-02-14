@@ -161,7 +161,7 @@ const WavesList: React.FC<WavesListProps> = ({ waves, getElementUrl }) => (
     {waves.map((wave) => (
       <div
         key={wave.waveNumber}
-        className="space-y-1.5 border-none rounded-2xl p-3 bg-midnight-900/20 shadow-sm shadow-accent-foreground/10"
+        className="space-y-1.5 border-none rounded-2xl p-3"
       >
         {/* Wave Header (only if multiple waves) */}
         {waves.length > 1 && (
@@ -305,7 +305,7 @@ const AbyssData = () => {
 
   return (
     <div className="w-full">
-      <div className="overflow-hidden rounded-lg border border-border/40">
+      <div className="overflow-hidden rounded-lg border-none border-border/40">
         <div className="hidden border-b border-border bg-midnight-700/50 md:grid md:grid-cols-[200px_1fr]">
           <div className="px-4 py-3 text-sm font-semibold text-starlight-200">
             Chamber Info
