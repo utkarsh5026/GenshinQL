@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 
 import { spawn } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -30,32 +30,32 @@ const tasks = {
   install: {
     description: 'Install dependencies',
     category: 'Development',
-    action: runNpmInstall,
+    action: runBunInstall,
   },
   dev: {
     description: 'Start development server',
     category: 'Development',
-    action: () => runNpmCommand('dev'),
+    action: () => runBunCommand('dev'),
   },
   build: {
     description: 'Build for production',
     category: 'Build',
-    action: () => runNpmCommand('build'),
+    action: () => runBunCommand('build'),
   },
   preview: {
     description: 'Preview production build',
     category: 'Build',
-    action: () => runNpmCommand('preview'),
+    action: () => runBunCommand('preview'),
   },
   lint: {
     description: 'Run ESLint',
     category: 'Quality',
-    action: () => runNpmCommand('lint'),
+    action: () => runBunCommand('lint'),
   },
   autofix: {
     description: 'Auto-fix linting issues (including import sorting)',
     category: 'Quality',
-    action: () => runNpmCommand('lint:fix'),
+    action: () => runBunCommand('lint:fix'),
   },
   typecheck: {
     description: 'Run TypeScript type checking',
@@ -65,12 +65,12 @@ const tasks = {
   format: {
     description: 'Format code with Prettier',
     category: 'Quality',
-    action: () => runNpmCommand('format'),
+    action: () => runBunCommand('format'),
   },
   'format-check': {
     description: 'Check code formatting',
     category: 'Quality',
-    action: () => runNpmCommand('format:check'),
+    action: () => runBunCommand('format:check'),
   },
   'pre-commit': {
     description: 'Run all CI checks (lint, typecheck, build)',
@@ -80,12 +80,12 @@ const tasks = {
   test: {
     description: 'Run all tests',
     category: 'Testing',
-    action: () => runNpmCommand('test'),
+    action: () => runBunCommand('test'),
   },
   'test-watch': {
     description: 'Run tests in watch mode',
     category: 'Testing',
-    action: () => runNpmCommand('test:watch'),
+    action: () => runBunCommand('test:watch'),
   },
   validate: {
     description: 'Run lint, typecheck, and format-check',
@@ -100,22 +100,22 @@ const tasks = {
   update: {
     description: 'Update dependencies',
     category: 'Maintenance',
-    action: () => runCommand('npm', ['update']),
+    action: () => runCommand('bun', ['update']),
   },
   outdated: {
     description: 'Check for outdated dependencies',
     category: 'Maintenance',
-    action: () => runCommand('npm', ['outdated']),
+    action: () => runCommand('bun', ['outdated']),
   },
   audit: {
     description: 'Run security audit',
     category: 'Maintenance',
-    action: () => runCommand('npm', ['audit']),
+    action: () => runCommand('bun', ['pm', 'audit']),
   },
   'audit-fix': {
     description: 'Fix security vulnerabilities',
     category: 'Maintenance',
-    action: () => runCommand('npm', ['audit', 'fix']),
+    action: () => runCommand('bun', ['pm', 'audit', '--fix']),
   },
   clean: {
     description: 'Remove node_modules and dist',
@@ -165,12 +165,12 @@ const tasks = {
   'check-characters': {
     description: 'Check character data coverage',
     category: 'Scraping',
-    action: () => runNpmCommand('check-characters'),
+    action: () => runBunCommand('check-characters'),
   },
   'check-gallery': {
     description: 'Check gallery data coverage',
     category: 'Scraping',
-    action: () => runNpmCommand('check-gallery'),
+    action: () => runBunCommand('check-gallery'),
   },
   consolidate: {
     description: 'Consolidate scraped data',
@@ -180,15 +180,14 @@ const tasks = {
   'generate-primitives': {
     description: 'Generate primitives from characters data',
     category: 'Scraping',
-    action: () => runNpmCommand('generate-primitives'),
+    action: () => runBunCommand('generate-primitives'),
   },
 };
 
-// Helper function to run commands in the app directory
 function runCommand(command, args = [], options = {}) {
   return new Promise((resolve, reject) => {
     const isWindows = process.platform === 'win32';
-    const finalCommand = isWindows && command === 'npm' ? 'npm.cmd' : command;
+    const finalCommand = isWindows && command === 'bun' ? 'bun.exe' : command;
 
     const child = spawn(finalCommand, args, {
       cwd: APP_DIR,
@@ -211,29 +210,27 @@ function runCommand(command, args = [], options = {}) {
   });
 }
 
-// Helper function to run npm install
-async function runNpmInstall() {
+async function runBunInstall() {
   try {
-    console.log(chalk.cyan('Running: npm install...'));
+    console.log(chalk.cyan('Running: bun install...'));
     console.log();
 
-    await runCommand('npm', ['install']);
+    await runCommand('bun', ['install']);
 
     console.log();
     console.log(chalk.green('✓ Dependencies installed!'));
   } catch (error) {
-    throw new Error('npm install failed');
+    throw new Error('bun install failed');
   }
 }
 
-// Helper function to run npm commands in the app directory
-function runNpmCommand(command) {
+function runBunCommand(command) {
   return new Promise(async (resolve, reject) => {
     try {
-      console.log(chalk.cyan(`Running: npm run ${command}...`));
+      console.log(chalk.cyan(`Running: bun run ${command}...`));
       console.log();
 
-      await runCommand('npm', ['run', command]);
+      await runCommand('bun', ['run', command]);
 
       console.log();
       console.log(chalk.green('✓ Done!'));
@@ -246,10 +243,10 @@ function runNpmCommand(command) {
 
 async function runScrapeCommand(command) {
   try {
-    console.log(chalk.cyan(`Running: npm run ${command} (headless mode)...`));
+    console.log(chalk.cyan(`Running: bun run ${command} (headless mode)...`));
     console.log();
 
-    await runCommand('npm', ['run', command], {
+    await runCommand('bun', ['run', command], {
       env: {
         ...process.env,
         NODE_ENV: 'production',
@@ -263,13 +260,12 @@ async function runScrapeCommand(command) {
   }
 }
 
-// Run TypeScript type checking
 async function runTypeCheck() {
   try {
     console.log(chalk.cyan('Running TypeScript type check...'));
     console.log();
 
-    await runCommand('npx', ['tsc', '--noEmit']);
+    await runCommand('bunx', ['tsc', '--noEmit']);
 
     console.log();
     console.log(chalk.green('✓ Type check passed!'));
@@ -279,15 +275,14 @@ async function runTypeCheck() {
   }
 }
 
-// Run pre-commit checks (matches CI workflow)
 async function runPreCommit() {
   console.log(chalk.bold.cyan('Running pre-commit checks...'));
   console.log();
 
   const checks = [
-    { name: 'ESLint', fn: () => runNpmCommand('lint') },
+    { name: 'ESLint', fn: () => runBunCommand('lint') },
     { name: 'TypeScript', fn: runTypeCheck },
-    { name: 'Build', fn: () => runNpmCommand('build') },
+    { name: 'Build', fn: () => runBunCommand('build') },
   ];
 
   for (const check of checks) {
@@ -351,9 +346,9 @@ async function runValidate() {
   console.log();
 
   const checks = [
-    { name: 'ESLint', fn: () => runNpmCommand('lint') },
+    { name: 'ESLint', fn: () => runBunCommand('lint') },
     { name: 'TypeScript', fn: runTypeCheck },
-    { name: 'Format Check', fn: () => runNpmCommand('format:check') },
+    { name: 'Format Check', fn: () => runBunCommand('format:check') },
   ];
 
   for (const check of checks) {
@@ -383,11 +378,11 @@ async function runCI() {
   console.log();
 
   const checks = [
-    { name: 'ESLint', fn: () => runNpmCommand('lint') },
+    { name: 'ESLint', fn: () => runBunCommand('lint') },
     { name: 'TypeScript', fn: runTypeCheck },
-    { name: 'Format Check', fn: () => runNpmCommand('format:check') },
-    { name: 'Tests', fn: () => runNpmCommand('test') },
-    { name: 'Build', fn: () => runNpmCommand('build') },
+    { name: 'Format Check', fn: () => runBunCommand('format:check') },
+    { name: 'Tests', fn: () => runBunCommand('test') },
+    { name: 'Build', fn: () => runBunCommand('build') },
   ];
 
   for (const check of checks) {
@@ -418,14 +413,13 @@ async function runFreshInstall() {
 
   await cleanProject();
   console.log();
-  await runNpmInstall();
+  await runBunInstall();
 }
 
 function showHelp() {
   console.log();
   console.log();
 
-  // Group tasks by category
   const categories = {};
   for (const [name, task] of Object.entries(tasks)) {
     if (!categories[task.category]) {
@@ -434,7 +428,6 @@ function showHelp() {
     categories[task.category].push({ name, ...task });
   }
 
-  // Display each category
   for (const [category, categoryTasks] of Object.entries(categories)) {
     console.log(chalk.bold.yellow(`  ${category}`));
     console.log(chalk.dim('  ─────────────────────────────────────'));
@@ -450,7 +443,6 @@ function showHelp() {
   return Promise.resolve();
 }
 
-// Main execution
 async function main() {
   const args = process.argv.slice(2);
   const taskName = args[0] || 'help';
