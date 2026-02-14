@@ -735,6 +735,10 @@
       {
         "phase": 1,
         "updateDate": "January 16",
+        "duration": {
+          "start": "January 16, 2026 04:00 GMT+8",
+          "end": "February 1, 2026 03:59 GMT+8"
+        },
         "floor11Disorders": [
           "All party members gain a 60% Electro DMG Bonus.",
           "All party members gain a 60% Hydro DMG Bonus."
@@ -751,6 +755,10 @@
       {
         "phase": 2,
         "updateDate": "February 16",
+        "duration": {
+          "start": "February 1, 2026 04:00 GMT+8",
+          "end": "February 16, 2026 03:59 GMT+8"
+        },
         "floor11Disorders": [
           "All party members gain a 60% Geo DMG Bonus.",
           "All party members gain a 60% Hydro DMG Bonus."
