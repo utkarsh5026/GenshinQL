@@ -1,0 +1,319 @@
+{
+  "updateDate": "2026-02-16",
+  "floors": [
+    {
+      "floorNumber": 11,
+      "chambers": [
+        {
+          "chamber": 1,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 95,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 3,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 4,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 5,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Frostnight Herra",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Frostnight_Herra_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "chamber": 2,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 98,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Sternshield Crab",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Sternshield_Crab_Icon.png",
+                    "count": 2,
+                    "element": "Pyro"
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Emperor of Fire and Iron",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Emperor_of_Fire_and_Iron_Icon.png",
+                    "count": 1,
+                    "element": "Pyro"
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Wilderness Hunter",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Wilderness_Hunter_Icon.png",
+                    "count": 4
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "chamber": 3,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 100,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Lord of the Hidden Depths: Whisperer of Nightmares",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Lord_of_the_Hidden_Depths_Whisperer_of_Nightmares_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "\"Statue of Marble and Brass\"",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Statue_of_Marble_and_Brass_Icon.png",
+                    "count": 1,
+                    "element": "Pyro"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "floorNumber": 12,
+      "chambers": [
+        {
+          "chamber": 1,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 95,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 3,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 4,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              },
+              {
+                "waveNumber": 5,
+                "enemies": [
+                  {
+                    "name": "Fisher of Hidden Depths",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Fisher_of_Hidden_Depths_Icon.png",
+                    "count": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Frostnight Herra",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Frostnight_Herra_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "chamber": 2,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 98,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Sternshield Crab",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Sternshield_Crab_Icon.png",
+                    "count": 2,
+                    "element": "Pyro"
+                  }
+                ]
+              },
+              {
+                "waveNumber": 2,
+                "enemies": [
+                  {
+                    "name": "Emperor of Fire and Iron",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Emperor_of_Fire_and_Iron_Icon.png",
+                    "count": 1,
+                    "element": "Pyro"
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Wilderness Hunter",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Wilderness_Hunter_Icon.png",
+                    "count": 4
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "chamber": 3,
+          "challenge": "Remaining challenge time longer than (180/300/420) sec.",
+          "level": 100,
+          "firstHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "Lord of the Hidden Depths: Whisperer of Nightmares",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Lord_of_the_Hidden_Depths_Whisperer_of_Nightmares_Icon.png",
+                    "count": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "secondHalf": {
+            "waves": [
+              {
+                "waveNumber": 1,
+                "enemies": [
+                  {
+                    "name": "\"Statue of Marble and Brass\"",
+                    "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Statue_of_Marble_and_Brass_Icon.png",
+                    "count": 1,
+                    "element": "Pyro"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

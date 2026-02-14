@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
 interface GameModeCardProps {
@@ -60,7 +59,12 @@ export const GameModeCard: React.FC<GameModeCardProps> = ({
   );
 
   return (
-    <Card className={cn('overflow-hidden', className)}>
+    <div
+      className={cn(
+        'overflow-hidden  bg-midnight-900/40 transition-colors hover:bg-midnight-700/60 border border-border/50 rounded-lg',
+        className
+      )}
+    >
       {/* Hero Banner (with image) or plain header */}
       {bannerImage ? (
         <div className={cn('relative', bannerHeight)}>
@@ -88,10 +92,10 @@ export const GameModeCard: React.FC<GameModeCardProps> = ({
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
         )}
-        <CardContent className="relative space-y-4 pt-4">
+        <div className="relative space-y-4 pt-4  bg-midnight-900/40 p-1.5  md:p-2">
           {children}
-        </CardContent>
+        </div>
       </div>
-    </Card>
+    </div>
   );
 };

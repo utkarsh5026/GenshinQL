@@ -348,6 +348,50 @@ export const spiralAbyssUpdateSchema = z.object({
 export type SpiralAbyssPhase = z.infer<typeof spiralAbyssPhaseSchema>;
 export type SpiralAbyssUpdate = z.infer<typeof spiralAbyssUpdateSchema>;
 
+// Spiral Abyss Floors schemas (detailed floor/chamber/enemy data)
+export const spiralAbyssEnemySchema = z.object({
+  name: z.string(),
+  iconUrl: z.string(),
+  count: z.number(),
+  element: z.string().optional(), // "Geo", "Electro", "Pyro", etc. - optional as some enemies don't have elements
+});
+
+export const spiralAbyssWaveSchema = z.object({
+  waveNumber: z.number(),
+  enemies: z.array(spiralAbyssEnemySchema),
+});
+
+export const spiralAbyssChamberHalfSchema = z.object({
+  waves: z.array(spiralAbyssWaveSchema),
+});
+
+export const spiralAbyssChamberSchema = z.object({
+  chamber: z.number(), // 1, 2, 3
+  level: z.number(),
+  challenge: z.string(),
+  firstHalf: spiralAbyssChamberHalfSchema,
+  secondHalf: spiralAbyssChamberHalfSchema,
+});
+
+export const spiralAbyssFloorSchema = z.object({
+  floorNumber: z.number(),
+  chambers: z.array(spiralAbyssChamberSchema),
+});
+
+export const spiralAbyssFloorsSchema = z.object({
+  updateDate: z.string(), // "2026-01-16"
+  floors: z.array(spiralAbyssFloorSchema),
+});
+
+export type SpiralAbyssEnemy = z.infer<typeof spiralAbyssEnemySchema>;
+export type SpiralAbyssWave = z.infer<typeof spiralAbyssWaveSchema>;
+export type SpiralAbyssChamberHalf = z.infer<
+  typeof spiralAbyssChamberHalfSchema
+>;
+export type SpiralAbyssChamber = z.infer<typeof spiralAbyssChamberSchema>;
+export type SpiralAbyssFloor = z.infer<typeof spiralAbyssFloorSchema>;
+export type SpiralAbyssFloors = z.infer<typeof spiralAbyssFloorsSchema>;
+
 export const newAreaSchema = z.object({
   name: z.string(),
   url: z.string().url(),

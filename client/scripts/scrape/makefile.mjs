@@ -19,6 +19,7 @@
  *   weapons-calendar      - Scrape weapon material calendar
  *   weapons-full          - Scrape all weapon data (base + calendar + optimize)
  *   imaginarium-theater   - Scrape current Imaginarium Theater season
+ *   spiral-abyss          - Scrape current Spiral Abyss floors
  *   primitives            - Generate primitives from characters data
  *   version               - Scrape version data (new characters, events, etc.)
  *   all                   - Run all scraping tasks
@@ -155,6 +156,12 @@ const tasks = {
     description: 'Scrape current Imaginarium Theater season data',
     category: 'Imaginarium Theater',
     action: () => runTsxScript('imaginarium-theater.ts', []),
+  },
+
+  'spiral-abyss': {
+    description: 'Scrape current Spiral Abyss floors data',
+    category: 'Spiral Abyss',
+    action: () => runTsxScript('spiral-abyss.ts', []),
   },
 
   primitives: {

@@ -11,7 +11,7 @@ export default function VersionHeroBanner() {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Background Image */}
-      <div className="relative h-[40vh] min-h-80 md:h-[60vh] md:min-h-100">
+      <div className="relative h-[50vh] min-h-80 md:h-[60vh] md:min-h-100">
         {wallpaperUrl ? (
           <img
             src={wallpaperUrl}
@@ -27,21 +27,21 @@ export default function VersionHeroBanner() {
         <div className="absolute inset-0 bg-linear-to-r from-background/40 via-transparent to-background/40" />
 
         {/* Content */}
-        <div className="absolute inset-x-0 bottom-0 z-10 p-6 md:p-12">
-          <div className="mx-auto max-w-7xl space-y-4">
+        <div className="absolute inset-x-0 bottom-0 z-10 p-4 md:p-12">
+          <div className="mx-auto max-w-7xl space-y-3 md:space-y-4">
             {/* Version Badge */}
             {meta && (
               <Badge
                 variant="outline"
-                className="border-legendary-500/50 bg-legendary-950/40 px-3 py-1.5 text-sm font-semibold text-legendary-200 backdrop-blur-sm border-4"
+                className="border-legendary-500/50 bg-legendary-950/40 px-2.5 py-1 text-xs font-semibold text-legendary-200 backdrop-blur-sm border-2 md:border-4 md:px-3 md:py-1.5 md:text-sm"
               >
-                <Star className="mr-1.5 h-3.5 w-3.5 fill-legendary-400 text-legendary-400" />
+                <Star className="mr-1 h-3 w-3 fill-legendary-400 text-legendary-400 md:mr-1.5 md:h-3.5 md:w-3.5" />
                 Version {meta.version}
               </Badge>
             )}
 
             {/* Version Name */}
-            <h1 className="text-4xl font-bold md:text-6xl lg:text-7xl">
+            <h1 className="text-3xl font-bold md:text-6xl lg:text-7xl">
               <span className="bg-linear-to-r from-celestial-200 via-legendary-300 to-celestial-200 bg-clip-text text-transparent drop-shadow-lg">
                 {meta?.name || 'Current Version'}
               </span>
@@ -49,7 +49,7 @@ export default function VersionHeroBanner() {
 
             {/* Theme */}
             {meta?.theme && (
-              <p className="max-w-xl text-lg text-starlight-300 md:text-xl">
+              <p className="max-w-xl text-base text-starlight-300 md:text-lg lg:text-xl">
                 {meta.theme}
               </p>
             )}

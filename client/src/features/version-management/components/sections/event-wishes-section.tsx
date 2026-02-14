@@ -26,11 +26,13 @@ export default function EventWishesSection() {
     <SectionContainer id="banners" title="Event Wishes" icon={Sparkles}>
       {/* Phase I Group */}
       {phaseGroups.phase1.length > 0 && (
-        <div className="mb-10">
-          <div className="mb-4 flex items-center justify-between border-l-2 border-celestial-500/30 pl-4">
-            <h3 className="text-xl font-bold text-celestial-100">Phase I</h3>
+        <div className="mb-8 md:mb-10">
+          <div className="mb-4 flex items-center justify-between border-l-2 border-celestial-500/30 pl-3 md:mb-4 md:pl-4">
+            <h3 className="text-lg font-bold text-celestial-100 md:text-xl">
+              Phase I
+            </h3>
           </div>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
             {phaseGroups.phase1.map((wish) => (
               <BannerCard
                 key={`${wish.bannerName}-${wish.phase}`}
@@ -44,10 +46,12 @@ export default function EventWishesSection() {
       {/* Phase II Group */}
       {phaseGroups.phase2.length > 0 && (
         <div>
-          <div className="mb-4 flex items-center justify-between border-l-2 border-celestial-500/30 pl-4">
-            <h3 className="text-xl font-bold text-celestial-100">Phase II</h3>
+          <div className="mb-4 flex items-center justify-between border-l-2 border-celestial-500/30 pl-3 md:mb-4 md:pl-4">
+            <h3 className="text-lg font-bold text-celestial-100 md:text-xl">
+              Phase II
+            </h3>
           </div>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
             {phaseGroups.phase2.map((wish) => (
               <BannerCard
                 key={`${wish.bannerName}-${wish.phase}`}

@@ -32,10 +32,12 @@ export default function AreaCard({ area }: AreaCardProps) {
         </div>
       )}
 
-      <div className="space-y-3 p-5">
+      <div className="space-y-2.5 p-4 md:space-y-3 md:p-5">
         <div className="flex items-start justify-between gap-2">
           <div className="space-y-1">
-            <h3 className="text-lg font-bold text-foreground">{name}</h3>
+            <h3 className="text-base font-bold text-foreground md:text-lg">
+              {name}
+            </h3>
             <div className="flex items-center gap-1.5 text-sm text-geo-300">
               <MapPin className="h-3.5 w-3.5" />
               <span>{nation}</span>
@@ -58,7 +60,7 @@ export default function AreaCard({ area }: AreaCardProps) {
             {area.galleryImages.slice(1, 4).map((img, i) => (
               <div
                 key={i}
-                className="h-16 w-24 shrink-0 overflow-hidden rounded-lg border border-midnight-600/50"
+                className="h-14 w-20 shrink-0 overflow-hidden rounded-lg border border-midnight-600/50 md:h-16 md:w-24"
               >
                 <img
                   src={img}

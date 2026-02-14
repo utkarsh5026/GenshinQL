@@ -21,8 +21,10 @@ export default function WeaponCard({ weapon }: WeaponCardProps) {
           loading="lazy"
         />
         {/* Name overlay */}
-        <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-midnight-950 via-midnight-950/80 to-transparent p-4 pt-12">
-          <h3 className="text-lg font-bold text-celestial-200">{name}</h3>
+        <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-midnight-950 via-midnight-950/80 to-transparent p-3 pt-12 md:p-4">
+          <h3 className="text-base font-bold text-celestial-200 md:text-lg">
+            {name}
+          </h3>
         </div>
       </div>
     </div>
