@@ -50,7 +50,7 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
       return elementColor ? (
         <span
           key={`${index}-elem-${lowercasePart}`}
-          className="font-bold"
+          className="font-semibold sm:font-bold"
           style={{ color: elementColor }}
         >
           {part}
@@ -143,7 +143,7 @@ function processTextSegment(text: string): React.ReactNode[] {
     return elementColor ? (
       <span
         key={`${index}-elem-${lowercasePart}`}
-        className="font-bold"
+        className="font-semibold sm:font-bold"
         style={{ color: elementColor }}
       >
         {part}

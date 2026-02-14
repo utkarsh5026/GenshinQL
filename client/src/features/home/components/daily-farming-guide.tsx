@@ -50,7 +50,7 @@ const AvatarCell: React.FC<AvatarCellProps> = ({
   const overflowCount = others.length - visibleOthers.length;
 
   return (
-    <div className="flex flex-wrap gap-1 sm:gap-1.5 items-center">
+    <div className="flex flex-wrap gap-2 sm:gap-4 items-center">
       {tracked.map((item) => (
         <div key={item.name}>
           {type === 'character' ? (
@@ -79,6 +79,8 @@ const AvatarCell: React.FC<AvatarCellProps> = ({
             size="md"
             showName={false}
             avatarClassName="border-none"
+            showElement
+            showRarity
           />
         ) : (
           <WeaponAvatar
@@ -138,9 +140,6 @@ const MaterialRow: React.FC<MaterialRowProps> = ({
 
       {/* Materials */}
       <div className="flex items-center gap-2">
-        <span className="text-xs sm:text-sm text-muted-foreground font-medium min-w-[70px] sm:min-w-[80px]">
-          Materials:
-        </span>
         <div className="flex gap-1.5 flex-wrap">
           {materials.slice(0, 4).map((mat) => {
             const matUrl = 'caption' in mat ? mat.url : mat.url;
