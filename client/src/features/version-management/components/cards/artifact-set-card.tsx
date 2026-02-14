@@ -1,7 +1,7 @@
 import { Sparkles } from 'lucide-react';
 import { useMemo } from 'react';
 
-import { TextProcessor } from '@/components/utils/text';
+import { ListSplitter } from '@/components/utils/text';
 
 import type { VersionArtifact } from '../../types';
 import { stripSoftHyphens } from '../../utils';
@@ -18,7 +18,7 @@ export default function ArtifactSetCard({ artifact }: ArtifactSetCardProps) {
       <div className="space-y-4 p-4 md:space-y-5 md:p-6">
         {/* Set Name with Icon */}
         <div className="flex items-center gap-2">
-          <Sparkles className="h-4 w-4 shrink-0 text-legendary-400 md:h-5 md:w-5" />
+          <Sparkles className="h-4 w-4 shrink-0 text-celestial-400 md:h-5 md:w-5" />
           <h3 className="text-base font-semibold text-celestial-200 md:text-lg">
             {name}
           </h3>
@@ -32,7 +32,7 @@ export default function ArtifactSetCard({ artifact }: ArtifactSetCardProps) {
               className="group/piece relative"
               title={stripSoftHyphens(piece.name)}
             >
-              <div className="h-10 w-10 overflow-hidden rounded-lg border border-midnight-600/50 bg-linear-to-br from-midnight-800/80 to-midnight-900/80 p-1.5 transition-all duration-200 group-hover/piece:scale-110 group-hover/piece:border-celestial-500/40 group-hover/piece:shadow-md group-hover/piece:shadow-celestial-500/20 md:h-12 md:w-12">
+              <div className="h-16 w-16 overflow-hidden rounded-lg border border-midnight-600/50 bg-midnight-800/60 p-1.5 transition-all duration-200 group-hover/piece:scale-110 group-hover/piece:border-celestial-500/40 group-hover/piece:shadow-md group-hover/piece:shadow-celestial-500/20 md:h-20 md:w-20">
                 <img
                   src={piece.iconUrl}
                   alt={piece.name}
@@ -49,30 +49,27 @@ export default function ArtifactSetCard({ artifact }: ArtifactSetCardProps) {
         </div>
 
         {/* Bonuses */}
-        <div className="space-y-2.5 md:space-y-3">
-          <div className="rounded-lg border border-success-500/20 bg-success-900/20 p-3 md:p-4">
-            <div className="mb-2 flex items-center gap-2">
-              <div className="h-1 w-1 rounded-full bg-success-400" />
-              <p className="text-xs font-semibold uppercase tracking-wider text-success-300">
+        <div className="space-y-3 md:space-y-4">
+          {/* 2-Piece Bonus */}
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <div className="h-1 w-1 rounded-full bg-celestial-400" />
+              <p className="text-xs font-semibold uppercase tracking-wider text-celestial-300/80">
                 2-Piece Bonus
               </p>
             </div>
-            <TextProcessor
-              text={artifact.twoPieceBonus}
-              className="text-sm leading-relaxed text-success-100/90"
-            />
+            <ListSplitter text={artifact.twoPieceBonus} />
           </div>
-          <div className="rounded-lg border border-legendary-500/20 bg-legendary-900/20 p-3 md:p-4">
-            <div className="mb-2 flex items-center gap-2">
-              <div className="h-1 w-1 rounded-full bg-legendary-400" />
-              <p className="text-xs font-semibold uppercase tracking-wider text-legendary-300">
+
+          {/* 4-Piece Bonus */}
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <div className="h-1 w-1 rounded-full bg-celestial-400" />
+              <p className="text-xs font-semibold uppercase tracking-wider text-celestial-300/80">
                 4-Piece Bonus
               </p>
             </div>
-            <TextProcessor
-              text={artifact.fourPieceBonus}
-              className="text-sm leading-relaxed text-legendary-100/90"
-            />
+            <ListSplitter text={artifact.fourPieceBonus} />
           </div>
         </div>
       </div>
