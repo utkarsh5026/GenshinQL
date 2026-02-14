@@ -106,15 +106,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   const elementClasses = getElementClasses(character.element);
 
   return (
-    <div
-      className="relative flex flex-col h-[90vh] overflow-auto rounded-xl scrollbar-hide bg-linear-to-br from-midnight-900/90 via-midnight-800/80 to-midnight-900/90 backdrop-blur-sm"
-      style={{
-        borderWidth: '2px',
-        borderStyle: 'solid',
-        borderColor: elementColor,
-        boxShadow: `0 0 20px ${elementColor}25, inset 0 1px 0 rgba(255,255,255,0.05)`,
-      }}
-    >
+    <div className="relative flex flex-col h-[90vh] overflow-auto rounded-xl scrollbar-hide bg-linear-to-br from-midnight-900/90 via-midnight-800/80 to-midnight-900/90 backdrop-blur-sm">
       {/* Background namecard with subtle overlay */}
       <div
         className="absolute inset-0 z-0"
@@ -145,7 +137,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           </div>
 
           {/* Menu Navigation - Horizontal on mobile, Vertical on desktop */}
-          <nav className="flex lg:flex-col gap-1 sm:gap-1.5 overflow-x-auto lg:overflow-x-visible scrollbar-hide mt-0 lg:mt-2 pb-1 sm:pb-2 lg:pb-0 -mx-2 px-2 md:mx-0 md:px-0">
+          <nav className="flex lg:flex-col gap-1 sm:gap-1.5 overflow-x-auto lg:overflow-x-visible scrollbar-hide snap-x snap-mandatory lg:snap-none mt-0 lg:mt-2 pb-1 sm:pb-2 lg:pb-0 -mx-2 px-2 md:mx-0 md:px-0 max-w-[calc(100vw-5rem)] lg:max-w-none">
             {menuItems.map((item) => {
               const isActive = selectedMenuItem === item;
               return (
@@ -153,7 +145,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                   onClick={() => setSelectedMenuItem(item)}
                   key={item}
                   className={`
-                    relative whitespace-nowrap shrink-0 lg:w-full text-left text-[10px] sm:text-xs md:text-sm font-medium rounded-md lg:rounded-lg px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-2.5
+                    relative whitespace-nowrap shrink-0 lg:w-full text-left text-[10px] sm:text-xs md:text-sm font-medium rounded-md lg:rounded-lg px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-2.5 snap-start lg:snap-align-none
                     transition-all duration-300 ease-out
                     border border-transparent
                     ${
