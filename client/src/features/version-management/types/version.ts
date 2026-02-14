@@ -70,6 +70,10 @@ export interface NewArea {
 export interface SpiralAbyssPhase {
   phase: number;
   updateDate: string;
+  duration: {
+    start: string;
+    end: string;
+  };
   floor11Disorders: string[];
   floor12Disorders: {
     firstHalf: string;
