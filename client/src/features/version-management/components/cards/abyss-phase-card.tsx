@@ -10,7 +10,7 @@ export default function AbyssPhaseCard({ phase }: AbyssPhaseCardProps) {
   return (
     <div className="overflow-hidden rounded-xl border border-midnight-700/50 bg-midnight-900/40 backdrop-blur-sm">
       {/* Phase Header */}
-      <div className="border-b border-midnight-700/50 bg-midnight-800/40 px-5 py-4">
+      <div className="border-b border-midnight-700/50 bg-midnight-800/40 px-4 py-3 md:px-5 md:py-4">
         <div className="flex items-center justify-between">
           <h3 className="flex items-center gap-2 text-lg font-bold text-foreground">
             <Swords className="h-5 w-5 text-celestial-400" />
@@ -22,9 +22,9 @@ export default function AbyssPhaseCard({ phase }: AbyssPhaseCardProps) {
         </div>
       </div>
 
-      <div className="space-y-4 p-5">
+      <div className="space-y-3 p-4 md:space-y-4 md:p-5">
         {/* Floor 11 */}
-        <div className="rounded-lg border border-electro-500/20 bg-electro-900/15 p-4">
+        <div className="rounded-lg border border-electro-500/20 bg-electro-900/15 p-3 md:p-4">
           <div className="mb-2 flex items-center gap-2">
             <Shield className="h-4 w-4 text-electro-400" />
             <h4 className="text-sm font-semibold text-electro-300">
@@ -45,8 +45,8 @@ export default function AbyssPhaseCard({ phase }: AbyssPhaseCardProps) {
         </div>
 
         {/* Floor 12 */}
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <div className="rounded-lg border border-pyro-500/20 bg-pyro-900/15 p-4">
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:gap-3">
+          <div className="rounded-lg border border-pyro-500/20 bg-pyro-900/15 p-3 md:p-4">
             <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-pyro-300">
               First Half
             </h4>
@@ -54,7 +54,7 @@ export default function AbyssPhaseCard({ phase }: AbyssPhaseCardProps) {
               {phase.floor12Disorders.firstHalf}
             </p>
           </div>
-          <div className="rounded-lg border border-hydro-500/20 bg-hydro-900/15 p-4">
+          <div className="rounded-lg border border-hydro-500/20 bg-hydro-900/15 p-3 md:p-4">
             <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-hydro-300">
               Second Half
             </h4>
@@ -65,7 +65,7 @@ export default function AbyssPhaseCard({ phase }: AbyssPhaseCardProps) {
         </div>
 
         {/* Blessing */}
-        <div className="rounded-lg border border-celestial-500/20 bg-celestial-900/15 p-4">
+        <div className="rounded-lg border border-celestial-500/20 bg-celestial-900/15 p-3 md:p-4">
           <div className="mb-2 flex items-center gap-2">
             <Sparkles className="h-4 w-4 text-celestial-400" />
             <h4 className="text-sm font-semibold text-celestial-300">

@@ -14,7 +14,7 @@ export default function NewArtifactsSection() {
 
   return (
     <SectionContainer id="artifacts" title="New Artifacts" icon={Gem}>
-      <div className="space-y-6">
+      <div className="space-y-4 md:space-y-6">
         {/* Shared Showcase Banner */}
         {showcaseImage && (
           <div className="group/banner relative overflow-hidden rounded-xl border border-midnight-700/50 bg-midnight-900/40">
@@ -32,7 +32,7 @@ export default function NewArtifactsSection() {
         )}
 
         {/* Artifact Set Cards */}
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 md:gap-6 lg:grid-cols-2">
           {artifacts.map((artifact) => (
             <ArtifactSetCard key={artifact.name} artifact={artifact} />
           ))}

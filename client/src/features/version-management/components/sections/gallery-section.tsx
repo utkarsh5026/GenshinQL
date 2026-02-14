@@ -15,11 +15,11 @@ export default function GallerySection() {
 
   return (
     <SectionContainer id="gallery" title="Gallery" icon={Image}>
-      <div className="columns-1 gap-4 md:columns-2 lg:columns-3">
+      <div className="columns-1 gap-3 md:columns-2 md:gap-4 lg:columns-3">
         {galleryImages.map((image, index) => (
           <div
             key={index}
-            className="group relative mb-4 break-inside-avoid overflow-hidden rounded-xl border border-midnight-700/50 transition-all duration-300 hover:border-celestial-500/30 hover:shadow-lg hover:shadow-midnight-950/50"
+            className="group relative mb-3 break-inside-avoid overflow-hidden rounded-xl border border-midnight-700/50 transition-all duration-300 hover:border-celestial-500/30 hover:shadow-lg hover:shadow-midnight-950/50 md:mb-4"
           >
             <img
               src={image.url}

@@ -33,10 +33,12 @@ export default function EventCard({ event }: EventCardProps) {
         </div>
       )}
 
-      <div className="space-y-4 p-5">
+      <div className="space-y-3 p-4 md:space-y-4 md:p-5">
         {/* Event Name + Link */}
         <div className="flex items-start justify-between gap-2">
-          <h3 className="text-lg font-bold text-foreground">{name}</h3>
+          <h3 className="text-base font-bold text-foreground md:text-lg">
+            {name}
+          </h3>
           <a
             href={event.url}
             target="_blank"
@@ -54,14 +56,14 @@ export default function EventCard({ event }: EventCardProps) {
             <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Rewards
             </p>
-            <div className="grid grid-cols-4 gap-2 sm:grid-cols-5">
+            <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
               {visibleRewards.map((reward, i) => (
                 <div
                   key={i}
-                  className="group/reward flex flex-col items-center gap-1 rounded-lg bg-midnight-800/60 p-2 transition-colors hover:bg-midnight-700/60"
+                  className="group/reward flex flex-col items-center gap-1 rounded-lg bg-midnight-800/60 p-1.5 transition-colors hover:bg-midnight-700/60 md:p-2"
                   title={stripSoftHyphens(reward.caption)}
                 >
-                  <div className="relative h-10 w-10">
+                  <div className="relative h-9 w-9 md:h-10 md:w-10">
                     <img
                       src={reward.url}
                       alt={reward.caption}

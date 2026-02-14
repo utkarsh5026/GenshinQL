@@ -18,7 +18,7 @@ export default function NewEventsSection() {
 
   return (
     <SectionContainer id="events" title="Events" icon={CalendarDays}>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
         {visibleEvents.map((event) => (
           <EventCard key={event.name} event={event} />
         ))}

@@ -11,7 +11,7 @@ export default function NewWeaponsSection() {
 
   return (
     <SectionContainer id="weapons" title="New Weapons" icon={Sword}>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
         {weapons.map((weapon) => (
           <WeaponCard key={weapon.name} weapon={weapon} />
         ))}

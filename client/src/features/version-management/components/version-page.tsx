@@ -58,7 +58,7 @@ export default function VersionPage() {
       <VersionHeroBanner />
 
       {/* Content Sections */}
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
+      <div className="mx-auto max-w-7xl px-3 md:px-6">
         <NewCharactersSection />
         <EventWishesSection />
         <NewWeaponsSection />
