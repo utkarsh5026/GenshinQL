@@ -27,7 +27,7 @@ const TalentShowcase: React.FC<TalentShowcaseProps> = ({ character }) => {
   const elementColor = decideColor(character.element);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">
       {mainTalents.map(({ talent, animations, energyCost, cooldown }) => (
         <TalentShowcaseCard
           key={talent.talentName}
@@ -71,7 +71,7 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
 
   return (
     <div
-      className="rounded-xl overflow-hidden border transition-all duration-300"
+      className="rounded-lg sm:rounded-xl overflow-hidden border transition-all duration-300"
       style={{
         borderColor: `${elementColor}30`,
         boxShadow: `0 4px 24px ${elementColor}10`,
@@ -79,13 +79,13 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
     >
       {/* Header */}
       <div
-        className="flex items-center gap-4 p-4"
+        className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 p-3 sm:p-4"
         style={{
           background: `linear-gradient(135deg, ${elementColor}15 0%, transparent 60%)`,
         }}
       >
         <div
-          className="w-14 h-14 rounded-xl p-2 shrink-0"
+          className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl p-1.5 sm:p-2 shrink-0"
           style={{
             background: `linear-gradient(135deg, ${elementColor}25, ${elementColor}10)`,
             boxShadow: `0 0 16px ${elementColor}20`,
@@ -98,15 +98,15 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
           />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-0.5">
+          <p className="text-[10px] sm:text-xs font-medium uppercase tracking-wider text-muted-foreground mb-0.5">
             {talent.talentType}
           </p>
-          <h4 className="text-lg font-bold text-foreground truncate">
+          <h4 className="text-sm sm:text-base md:text-lg font-bold text-foreground truncate">
             {talent.talentName}
           </h4>
           {/* Tags */}
           {tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-2">
+            <div className="flex flex-wrap gap-1 mt-1.5 sm:mt-2">
               {tags.map((tagId) => (
                 <AbilityTag key={tagId} tagId={tagId} size="xs" />
               ))}
@@ -114,22 +114,22 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
           )}
         </div>
         {/* Stats badges */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {energyCost && (
             <div
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold"
+              className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 md:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold"
               style={{
                 background: `${elementColor}20`,
                 color: elementColor,
               }}
             >
-              <Zap className="w-4 h-4" />
+              <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
               {energyCost}
             </div>
           )}
           {cooldown && (
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold bg-midnight-700/60 text-starlight-300">
-              <Clock className="w-4 h-4" />
+            <div className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 md:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-midnight-700/60 text-starlight-300">
+              <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
               {cooldown}
             </div>
           )}
@@ -139,11 +139,11 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
       {/* Content: Animation + Description */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
         {/* Animation Section */}
-        <div className="bg-midnight-900/40 p-4">
+        <div className="bg-midnight-900/40 p-3 sm:p-4">
           {animations.length > 0 ? (
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {/* Main Animation */}
-              <div className="rounded-lg overflow-hidden border border-midnight-600/30">
+              <div className="rounded-md sm:rounded-lg overflow-hidden border border-midnight-600/30">
                 <AnimatedCover
                   animation={currentAnimation}
                   fallbackUrl={currentAnimation?.imageUrl}
@@ -152,12 +152,12 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
 
               {/* Animation Thumbnails */}
               {animations.length > 1 && (
-                <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
+                <div className="flex gap-1.5 sm:gap-2 overflow-x-auto scrollbar-hide pb-1">
                   {animations.map((anim, index) => (
                     <button
                       key={anim.imageUrl || index}
                       onClick={() => setCurrentAnimationIndex(index)}
-                      className={`shrink-0 w-20 h-12 rounded-md overflow-hidden border-2 transition-all duration-200 ${
+                      className={`shrink-0 w-16 h-10 sm:w-20 sm:h-12 rounded-sm sm:rounded-md overflow-hidden border-2 transition-all duration-200 ${
                         index === currentAnimationIndex
                           ? 'border-celestial-400 shadow-lg'
                           : 'border-midnight-600/40 hover:border-starlight-500/50 opacity-70 hover:opacity-100'
@@ -175,22 +175,22 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
 
               {/* Animation Caption */}
               {currentAnimation?.caption && (
-                <p className="text-xs text-muted-foreground text-center">
+                <p className="text-[11px] sm:text-xs text-muted-foreground text-center">
                   {currentAnimation.caption}
                 </p>
               )}
             </div>
           ) : (
-            <div className="aspect-video flex items-center justify-center bg-midnight-800/50 rounded-lg text-muted-foreground text-sm">
+            <div className="aspect-video flex items-center justify-center bg-midnight-800/50 rounded-md sm:rounded-lg text-muted-foreground text-xs sm:text-sm">
               No animation available
             </div>
           )}
         </div>
 
         {/* Description Section */}
-        <div className="p-5 bg-midnight-800/20 flex flex-col">
+        <div className="p-3 sm:p-4 md:p-5 bg-midnight-800/20 flex flex-col">
           <div className="flex-1 overflow-auto max-h-75 scrollbar-hide">
-            <div className="text-sm text-starlight-300 leading-relaxed">
+            <div className="text-xs sm:text-sm text-starlight-300 leading-relaxed">
               <AbilitiesListSplitter
                 text={talent.description}
                 characterName={characterName}
@@ -204,20 +204,20 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
       <div className="border-t border-midnight-600/30">
         <button
           onClick={() => setShowScaling(!showScaling)}
-          className="w-full flex items-center justify-between p-4 hover:bg-midnight-700/30 transition-colors"
+          className="w-full flex items-center justify-between p-3 sm:p-4 hover:bg-midnight-700/30 transition-colors"
         >
-          <span className="text-sm font-semibold text-starlight-300 uppercase tracking-wider">
+          <span className="text-xs sm:text-sm font-semibold text-starlight-300 uppercase tracking-wider">
             Talent Scaling
           </span>
           {showScaling ? (
-            <ChevronUp className="w-5 h-5 text-muted-foreground" />
+            <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
           ) : (
-            <ChevronDown className="w-5 h-5 text-muted-foreground" />
+            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
           )}
         </button>
 
         {showScaling && (
-          <div className="px-8 pb-4">
+          <div className="px-3 sm:px-6 md:px-8 pb-3 sm:pb-4">
             <TalentScalingTable talent={talent} elementColor={elementColor} />
           </div>
         )}

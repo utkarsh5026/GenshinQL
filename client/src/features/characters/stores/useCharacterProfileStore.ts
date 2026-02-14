@@ -55,6 +55,7 @@ export const useCharacterProfileStore = create<CharacterProfileState>()(
       },
 
       fetchProfile: async (name: string) => {
+        const filename = name.split(' ').join('_');
         const { profiles, setProfile, setLoading, setError } = get();
 
         const cached = profiles.get(name);
@@ -68,7 +69,7 @@ export const useCharacterProfileStore = create<CharacterProfileState>()(
             .getState()
             .loadPrimitives();
 
-          const profile = await fetchCharacterProfile(name, primitives);
+          const profile = await fetchCharacterProfile(filename, primitives);
 
           if (!profile) {
             throw new Error(`Character profile not found for: ${name}`);
