@@ -89,6 +89,42 @@ export interface SpiralAbyssUpdate {
   phases: SpiralAbyssPhase[];
 }
 
+// --- Abyss enemy lineup types (from spiral-abyss-latest.json) ---
+
+export interface AbyssEnemy {
+  name: string;
+  iconUrl: string;
+  count: number;
+  element?: string;
+}
+
+export interface AbyssWave {
+  waveNumber: number;
+  enemies: AbyssEnemy[];
+}
+
+export interface AbyssHalf {
+  waves: AbyssWave[];
+}
+
+export interface AbyssChamber {
+  chamber: number;
+  challenge: string;
+  level: number;
+  firstHalf: AbyssHalf;
+  secondHalf: AbyssHalf;
+}
+
+export interface AbyssFloor {
+  floorNumber: number;
+  chambers: AbyssChamber[];
+}
+
+export interface AbyssData {
+  updateDate: string;
+  floors: AbyssFloor[];
+}
+
 export interface GalleryImage {
   url: string;
   caption: string;

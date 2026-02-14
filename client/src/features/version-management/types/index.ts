@@ -1,4 +1,10 @@
 export type {
+  AbyssChamber,
+  AbyssData,
+  AbyssEnemy,
+  AbyssFloor,
+  AbyssHalf,
+  AbyssWave,
   ArtifactPiece,
   EventReward,
   EventWish,

@@ -11,7 +11,7 @@ export default function SpiralAbyssSection() {
 
   return (
     <SectionContainer id="abyss" title="Spiral Abyss" icon={Swords}>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+      <div className="grid grid-cols-1 gap-4  md:gap-6">
         {abyss.phases.map((phase) => (
           <AbyssPhaseCard key={phase.phase} phase={phase} />
         ))}

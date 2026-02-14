@@ -1,3 +1,4 @@
+export { parseAbyssFilename } from './abyss-enemy-utils';
 export {
   getElementBadgeClass,
   getElementBgClass,
