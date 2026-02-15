@@ -1,3 +1,12 @@
+import {
+  Battery,
+  FlaskConical,
+  Heart,
+  Shield,
+  Sparkles,
+  Sword,
+  Target,
+} from 'lucide-react';
 import React, { useMemo } from 'react';
 
 import { AbilityReference } from '@/components/utils/text/ability-reference';
@@ -16,8 +25,44 @@ const ELEMENT_COLORS: Record<Element, string> = {
   cryo: 'var(--color-cryo-500)',
 } as const;
 
+const STAT_COLORS: Record<string, string> = {
+  'CRIT Rate': '#f87171', // red-400
+  'CRIT DMG': '#fb923c', // orange-400
+  ATK: '#fbbf24', // amber-400
+  HP: '#4ade80', // green-400
+  DEF: '#facc15', // yellow-400
+  'Energy Recharge': '#c084fc', // purple-400
+  'Elemental Mastery': '#2dd4bf', // teal-400
+};
+
+const STAT_ICONS: Record<string, React.ElementType> = {
+  'CRIT Rate': Target,
+  'CRIT DMG': Sparkles,
+  ATK: Sword,
+  HP: Heart,
+  DEF: Shield,
+  'Energy Recharge': Battery,
+  'Elemental Mastery': FlaskConical,
+};
+
+interface StatTextProps {
+  stat: string;
+  Icon: React.ElementType;
+  color: string;
+}
+
+const StatText: React.FC<StatTextProps> = ({ stat, Icon, color }) => (
+  <span
+    className="inline-flex items-center gap-1 font-semibold"
+    style={{ color }}
+  >
+    {stat}
+    <Icon className="inline-block h-[0.8em] w-[0.8em]" aria-hidden="true" />
+  </span>
+);
+
 const TEXT_PATTERN =
-  /(\b(?:dendro|pyro|hydro|electro|anemo|geo|cryo)\b)|(\d+%?)/gi;
+  /(Elemental Mastery|Energy Recharge|CRIT Rate|CRIT DMG|ATK|DEF|HP)|\b(dendro|pyro|hydro|electro|anemo|geo|cryo)\b|(\d+%?)/gi;
 
 interface TextProcessorProps {
   text: string;
@@ -36,9 +81,25 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
     const parts = text.split(TEXT_PATTERN).filter(Boolean);
 
     return parts.map((part, index) => {
+      // Check for stat match first (exact case)
+      const statColor = STAT_COLORS[part];
+      const StatIcon = STAT_ICONS[part];
+      if (statColor && StatIcon) {
+        return (
+          <StatText
+            key={`${index}-stat-${part}`}
+            stat={part}
+            Icon={StatIcon}
+            color={statColor}
+          />
+        );
+      }
+
+      // Then check for element match (case-insensitive)
       const lowercasePart = part.toLowerCase() as Element;
       const elementColor = ELEMENT_COLORS[lowercasePart];
 
+      // Then check for numbers
       if (/^\d+%?$/.test(part)) {
         return (
           <span key={`${index}-num-${part}`} className="text-warning-500">
@@ -47,6 +108,7 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
         );
       }
 
+      // Render element with color
       return elementColor ? (
         <span
           key={`${index}-elem-${lowercasePart}`}
@@ -122,16 +184,31 @@ export const TextProcessorWithAbilities: React.FC<
 };
 
 /**
- * Processes a text segment for element keywords and numbers
- * (Same logic as original TextProcessor)
+ * Processes a text segment for stat terms, element keywords, and numbers
  */
 function processTextSegment(text: string): React.ReactNode[] {
   const parts = text.split(TEXT_PATTERN).filter(Boolean);
 
   return parts.map((part, index) => {
+    // Check for stat match first (exact case)
+    const statColor = STAT_COLORS[part];
+    const StatIcon = STAT_ICONS[part];
+    if (statColor && StatIcon) {
+      return (
+        <StatText
+          key={`${index}-stat-${part}`}
+          stat={part}
+          Icon={StatIcon}
+          color={statColor}
+        />
+      );
+    }
+
+    // Then check for element match (case-insensitive)
     const lowercasePart = part.toLowerCase() as Element;
     const elementColor = ELEMENT_COLORS[lowercasePart];
 
+    // Then check for numbers
     if (/^\d+%?$/.test(part)) {
       return (
         <span key={`${index}-num-${part}`} className="text-warning-500">
@@ -140,6 +217,7 @@ function processTextSegment(text: string): React.ReactNode[] {
       );
     }
 
+    // Render element with color
     return elementColor ? (
       <span
         key={`${index}-elem-${lowercasePart}`}

@@ -45,7 +45,7 @@ const navItems: NavItem[] = [
   },
   {
     route: '/talents',
-    label: 'Talents Calendar',
+    label: 'Talents',
     icon: Calendar,
     color: 'pyro',
     iconColor: 'oklch(60% 0.24 25)', // pyro-500
@@ -59,21 +59,21 @@ const navItems: NavItem[] = [
   },
   {
     route: '/characters/routine',
-    label: 'Characters Routine',
+    label: 'Character Routine',
     icon: Target,
     color: 'electro',
     iconColor: 'oklch(60% 0.24 300)', // electro-500
   },
   {
     route: '/weapons/calendar',
-    label: 'Weapons Calendar',
+    label: 'Weapons',
     icon: Calendar,
     color: 'geo',
     iconColor: 'oklch(62% 0.18 80)', // geo-500
   },
   {
     route: '/weapons/grid',
-    label: 'Weapons Detailed',
+    label: 'Weapons Grid',
     icon: Swords,
     color: 'legendary',
     iconColor: 'oklch(75% 0.16 85)', // legendary-500
@@ -87,7 +87,7 @@ const navItems: NavItem[] = [
   },
   {
     route: '/guesser',
-    label: 'Genshin Guesser',
+    label: 'Guesser',
     icon: Gamepad2,
     color: 'anemo',
     iconColor: 'oklch(65% 0.17 195)', // anemo-500
@@ -119,7 +119,7 @@ const versionItem: NavItem = {
 const VERSION_IMAGE_URL =
   'https://static.wikia.nocookie.net/gensin-impact/images/8/86/Version_Luna_IV_Wallpaper_2.png';
 
-interface NavItemComponentProps {
+interface SidebarNavItemProps {
   item: NavItem;
   isActive: boolean;
   showLabel: boolean;
@@ -128,7 +128,7 @@ interface NavItemComponentProps {
   onClick?: () => void;
 }
 
-const NavItemComponent: React.FC<NavItemComponentProps> = ({
+const SidebarNavItem: React.FC<SidebarNavItemProps> = ({
   item,
   isActive,
   showLabel,
@@ -184,7 +184,7 @@ const NavItemComponent: React.FC<NavItemComponentProps> = ({
   return navContent;
 };
 
-interface VersionNavItemProps {
+interface SidebarVersionItemProps {
   item: NavItem;
   isActive: boolean;
   showLabel: boolean;
@@ -193,7 +193,7 @@ interface VersionNavItemProps {
   onClick?: () => void;
 }
 
-const VersionNavItem: React.FC<VersionNavItemProps> = ({
+const SidebarVersionItem: React.FC<SidebarVersionItemProps> = ({
   item,
   isActive,
   showLabel,
@@ -272,7 +272,7 @@ const VersionNavItem: React.FC<VersionNavItemProps> = ({
   return navContent;
 };
 
-interface RecentItemComponentProps {
+interface SidebarRecentItemProps {
   recent: RecentItem;
   showLabel: boolean;
   showLabelOnHover?: boolean;
@@ -280,7 +280,7 @@ interface RecentItemComponentProps {
   onClick?: () => void;
 }
 
-const RecentItemComponent: React.FC<RecentItemComponentProps> = ({
+const SidebarRecentItem: React.FC<SidebarRecentItemProps> = ({
   recent,
   showLabel,
   showLabelOnHover = false,
@@ -350,7 +350,7 @@ const RecentItemComponent: React.FC<RecentItemComponentProps> = ({
   return content;
 };
 
-interface RecentSearchesSectionProps {
+interface SidebarRecentsSectionProps {
   recents: RecentItem[];
   showLabel: boolean;
   showLabelOnHover?: boolean;
@@ -358,7 +358,7 @@ interface RecentSearchesSectionProps {
   onItemClick?: () => void;
 }
 
-const RecentSearchesSection: React.FC<RecentSearchesSectionProps> = ({
+const SidebarRecentsSection: React.FC<SidebarRecentsSectionProps> = ({
   recents,
   showLabel,
   showLabelOnHover = false,
@@ -398,7 +398,7 @@ const RecentSearchesSection: React.FC<RecentSearchesSectionProps> = ({
       )}
 
       {filteredRecents.map((recent) => (
-        <RecentItemComponent
+        <SidebarRecentItem
           key={recent.route}
           recent={recent}
           showLabel={showLabel}
@@ -430,7 +430,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
       <nav className="flex-1 py-4 overflow-y-auto">
         <TooltipProvider>
           {/* Home */}
-          <NavItemComponent
+          <SidebarNavItem
             item={navItems[0]}
             isActive={isRouteActive(navItems[0].route)}
             showLabel={false}
@@ -439,7 +439,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
           />
 
           {/* LUNA IV — highlighted version link */}
-          <VersionNavItem
+          <SidebarVersionItem
             item={versionItem}
             isActive={isRouteActive(versionItem.route)}
             showLabel={false}
@@ -449,7 +449,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
 
           {/* Remaining nav items */}
           {navItems.slice(1).map((item) => (
-            <NavItemComponent
+            <SidebarNavItem
               key={item.route}
               item={item}
               isActive={isRouteActive(item.route)}
@@ -459,7 +459,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
             />
           ))}
 
-          <RecentSearchesSection
+          <SidebarRecentsSection
             recents={recents}
             showLabel={false}
             showLabelOnHover={true}
@@ -497,7 +497,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
         {/* Navigation Items */}
         <nav className="py-4">
           {/* Home */}
-          <NavItemComponent
+          <SidebarNavItem
             item={navItems[0]}
             isActive={isRouteActive(navItems[0].route)}
             showLabel={true}
@@ -506,7 +506,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
           />
 
           {/* LUNA IV — highlighted version link */}
-          <VersionNavItem
+          <SidebarVersionItem
             item={versionItem}
             isActive={isRouteActive(versionItem.route)}
             showLabel={true}
@@ -516,7 +516,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
 
           {/* Remaining nav items */}
           {navItems.slice(1).map((item) => (
-            <NavItemComponent
+            <SidebarNavItem
               key={item.route}
               item={item}
               isActive={isRouteActive(item.route)}
@@ -526,7 +526,7 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
             />
           ))}
 
-          <RecentSearchesSection
+          <SidebarRecentsSection
             recents={recents}
             showLabel={true}
             showTooltip={false}

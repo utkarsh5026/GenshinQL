@@ -1,7 +1,8 @@
-import { BookOpen, Calendar, Sparkles, Sword } from 'lucide-react';
-import React from 'react';
+import { BookOpen, Calendar, Eye, Sparkles, Sword } from 'lucide-react';
+import React, { useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { GameModeCard } from '@/components/utils/game-mode-card';
 import { CachedImage } from '@/features/cache';
 import CharacterAvatar from '@/features/characters/components/utils/character-avatar';
@@ -12,6 +13,7 @@ import type { ImageUrl } from '@/types';
 
 import { useTodayCalendar } from '../hooks';
 import type { MaterialItem } from '../types';
+import { MaterialDetailDialog } from './material-detail-dialog';
 
 const MAX_CHARS = 10;
 const MAX_WEAPONS = 8;
@@ -120,22 +122,35 @@ const MaterialRow: React.FC<MaterialRowProps> = ({
   max,
   type,
 }) => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   return (
     <div className="flex flex-col gap-3 p-3 sm:p-4 bg-card/30 rounded-lg border border-border/40 hover:bg-card/40 transition-colors">
       {/* Region Header */}
-      <div className="flex items-center gap-2">
-        {regionIconUrl && (
-          <CachedImage
-            src={regionIconUrl}
-            alt={regionName}
-            width={24}
-            height={24}
-            className="w-6 h-6 rounded shrink-0"
-          />
-        )}
-        <span className="text-sm sm:text-base font-semibold text-foreground">
-          {regionName}
-        </span>
+      <div className="flex items-center gap-2 justify-between">
+        <div className="flex items-center gap-2">
+          {regionIconUrl && (
+            <CachedImage
+              src={regionIconUrl}
+              alt={regionName}
+              width={24}
+              height={24}
+              className="w-6 h-6 rounded shrink-0"
+            />
+          )}
+          <span className="text-sm sm:text-base font-semibold text-foreground">
+            {regionName}
+          </span>
+        </div>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsDialogOpen(true)}
+          className="text-xs gap-1 shrink-0"
+        >
+          <Eye className="w-3 h-3" />
+          <span className="hidden sm:inline">Show All</span>
+        </Button>
       </div>
 
       {/* Materials */}
@@ -165,6 +180,16 @@ const MaterialRow: React.FC<MaterialRowProps> = ({
         </span>
         <AvatarCell tracked={tracked} others={others} max={max} type={type} />
       </div>
+
+      {/* Material Detail Dialog */}
+      <MaterialDetailDialog
+        open={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+        title={type === 'character' ? 'Talent Materials' : 'Weapon Materials'}
+        regionName={regionName}
+        items={[...tracked, ...others]}
+        type={type}
+      />
     </div>
   );
 };
