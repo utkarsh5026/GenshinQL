@@ -15,7 +15,6 @@ import {
   TierIcon,
 } from '../../../utils';
 import { getWeaponTier, parseSubstat } from '../../../utils/substat-utils';
-import styles from './WeaponCard.module.css';
 
 interface WeaponCardProps {
   weapon: WeaponSummary;
@@ -54,14 +53,16 @@ const WeaponCard: React.FC<WeaponCardProps> = ({
 
   return (
     <Link to={`/weapons/${name}`} className="block no-underline group h-full">
-      <div ref={cardRef} className="max-h-96 overflow-hidden">
+      <div ref={cardRef} className="max-h-96 overflow-auto bg-midnight-400">
         <div
-          className={`h-full dark:bg-card/50 ${styles.cardFadeIn} ${isVisible ? styles.visible : ''}`}
-          style={{ animationDelay: `${staggerDelay}s` }}
+          className={`h-full bg-midnight-400 dark:bg-card transition-all duration-400 ease-out motion-reduce:transition-none ${
+            isVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-3 motion-reduce:opacity-100 motion-reduce:translate-y-0'
+          }`}
+          style={{ transitionDelay: `${staggerDelay}s` }}
         >
-          <div
-            className={`relative overflow-hidden rounded-xl h-full flex flex-col ${styles.cardHover}`}
-          >
+          <div className="relative overflow-hidden rounded-xl h-full flex flex-col will-change-[transform,box-shadow] transition-all duration-300 ease-out border border-white/4 shadow-[0_2px_8px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.02)] group-hover:-translate-y-1 group-hover:border-white/8 group-hover:shadow-[0_8px_24px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.04)] motion-reduce:transition-none motion-reduce:transform-none">
             <div className="p-5 pl-6">
               <div className="flex gap-4 items-start">
                 <div className="relative shrink-0">
