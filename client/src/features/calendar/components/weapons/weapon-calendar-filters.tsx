@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { UnifiedWeaponFilters } from '@/features/weapons/components/filters/UnifiedWeaponFilters';
+import { UnifiedWeaponFilters } from '@/features/weapons/components/filters/weapon-filters';
 import type { PrimitiveItem } from '@/types';
 
 interface WeaponCalendarFiltersProps {
