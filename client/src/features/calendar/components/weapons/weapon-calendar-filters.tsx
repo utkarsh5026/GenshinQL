@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { ActiveFilters } from '@/features/weapons/components/filters/ActiveFilters';
-import { WeaponFilterBar } from '@/features/weapons/components/filters/WeaponFilterBar';
+import { UnifiedWeaponFilters } from '@/features/weapons/components/filters/UnifiedWeaponFilters';
 import type { PrimitiveItem } from '@/types';
 
 interface WeaponCalendarFiltersProps {
@@ -19,6 +18,11 @@ interface WeaponCalendarFiltersProps {
   onClearAll: () => void;
 }
 
+/**
+ * Weapon calendar filter component
+ * Uses UnifiedWeaponFilters in bar mode with all features enabled
+ * (weapon types, rarities, substats, active filter chips)
+ */
 const WeaponCalendarFilters: React.FC<WeaponCalendarFiltersProps> = ({
   selectedWeaponTypes,
   selectedRarities,
@@ -32,35 +36,21 @@ const WeaponCalendarFilters: React.FC<WeaponCalendarFiltersProps> = ({
   onClearAll,
 }) => {
   return (
-    <div className="border-b bg-background/95 backdrop-blur-sm">
-      {/* Horizontal scrolling filter bar */}
-      <div className="p-3 sm:p-4">
-        <WeaponFilterBar
-          selectedWeaponTypes={selectedWeaponTypes}
-          selectedRarities={selectedRarities}
-          selectedSubstats={selectedSubstats}
-          weaponTypes={weaponTypes}
-          uniqueRarities={uniqueRarities}
-          uniqueSubstats={uniqueSubstats}
-          onToggleWeaponType={onToggleWeaponType}
-          onToggleRarity={onToggleRarity}
-          onToggleSubstat={onToggleSubstat}
-          onClearAll={onClearAll}
-        />
-      </div>
-
-      {/* Active filters display */}
-      <ActiveFilters
-        selectedWeaponTypes={selectedWeaponTypes}
-        selectedRarities={selectedRarities}
-        selectedSubstats={selectedSubstats}
-        weaponTypes={weaponTypes}
-        onToggleWeaponType={onToggleWeaponType}
-        onToggleRarity={onToggleRarity}
-        onToggleSubstat={onToggleSubstat}
-        onClearAll={onClearAll}
-      />
-    </div>
+    <UnifiedWeaponFilters
+      selectedWeaponTypes={selectedWeaponTypes}
+      selectedRarities={selectedRarities}
+      selectedSubstats={selectedSubstats}
+      weaponTypes={weaponTypes}
+      availableRarities={uniqueRarities}
+      availableSubstats={uniqueSubstats}
+      onToggleWeaponType={onToggleWeaponType}
+      onToggleRarity={onToggleRarity}
+      onToggleSubstat={onToggleSubstat}
+      onClearAll={onClearAll}
+      displayMode="bar"
+      showActiveFilters={true}
+      // showSubstats={true}
+    />
   );
 };
 

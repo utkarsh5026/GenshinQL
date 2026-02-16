@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WeaponShowCase from '@/features/weapons/components/shared/weapons-showcase';
+import WeaponAvatar from '@/features/weapons/components/shared/card/weapon-avatar';
 
 import { WEAPON_CALENDAR_THEME } from '../../constants';
 import type { WeaponMaterialSchedule } from '../../stores/useWeaponMaterialStore';
@@ -15,17 +15,17 @@ const WeaponTable: React.FC<WeaponTableProps> = ({ schedule }) => {
   return (
     <ScheduleTable
       days={schedule.materials}
-      columns={{ first: 'Day', middle: 'Materials', right: 'Weapons' }}
+      columns={{ left: 'Materials', right: 'Weapons' }}
       renderDay={(d) => `${d.dayOne} / ${d.dayTwo}`}
-      renderMiddle={(d) => (
+      renderLeft={(d) => (
         <MaterialImageList materialImages={d.materialImages} />
       )}
       renderRight={(d) => (
-        <WeaponShowCase
-          weapons={d.weapons}
-          enableFilters={false}
-          enableNavigation={false}
-        />
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-2">
+          {d.weapons.map(({ name }) => (
+            <WeaponAvatar key={name} weaponName={name} showName size="md" />
+          ))}
+        </div>
       )}
       sortTodayFirst
       theme={WEAPON_CALENDAR_THEME}
