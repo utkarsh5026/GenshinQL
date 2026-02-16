@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Tabs, TabsContent } from '@/components/ui/tabs';
 import { usePrimitivesStore, useWeaponsStore, useWeaponTypes } from '@/stores';
 
-import { UnifiedWeaponFilters } from '../filters/UnifiedWeaponFilters';
+import { UnifiedWeaponFilters } from '../filters/weapon-filters';
 import WeaponsDetailedGrid from './weapons-grid';
 
 /**
