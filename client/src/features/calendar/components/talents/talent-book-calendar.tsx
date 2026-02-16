@@ -43,7 +43,7 @@ const TalentCalender: React.FC = () => {
     return (
       <div>
         <Tabs defaultValue={locations[0]}>
-          <TabsList className="flex-wrap md:flex-nowrap justify-start overflow-x-auto">
+          <TabsList className="h-auto md:h-10 flex-wrap md:flex-nowrap justify-start overflow-x-auto gap-1">
             {regionsWithIcons.map((region) => {
               return (
                 <TabsTrigger
