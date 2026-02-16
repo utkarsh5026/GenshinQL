@@ -62,11 +62,16 @@ export type CalendarGridProps<T extends ScheduleEntry> = {
   theme: CalendarTheme;
 };
 
+export type ScheduleColumnHeaders = {
+  left: string;
+  right: string;
+};
+
 export type ScheduleTableProps<T extends ScheduleEntry> = {
   days: T[];
-  columns: CalendarColumnHeaders;
+  columns: ScheduleColumnHeaders;
   renderDay: (entry: T) => string;
-  renderMiddle: (entry: T) => ReactNode;
+  renderLeft: (entry: T) => ReactNode;
   renderRight: (entry: T) => ReactNode;
   sortTodayFirst?: boolean;
   theme: CalendarTheme;
