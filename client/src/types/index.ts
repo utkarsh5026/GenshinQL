@@ -60,6 +60,7 @@ export type Primitives = {
   elements: PrimitiveItem[];
   regions: PrimitiveItem[];
   weaponTypes: PrimitiveItem[];
+  attributes: PrimitiveItem[];
 };
 
 export type CharacterMenuItem =

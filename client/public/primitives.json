@@ -84,5 +84,35 @@
       "name": "Sword",
       "url": "/assets/4c54b412f269887a.webp"
     }
+  ],
+  "attributes": [
+    {
+      "name": "ATK",
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Icon_Attribute_Attack.png"
+    },
+    {
+      "name": "CRIT DMG",
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Icon_Attribute_Critical_Hit.png"
+    },
+    {
+      "name": "CRIT Rate",
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Icon_Attribute_Critical_Hit.png"
+    },
+    {
+      "name": "DEF",
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/8/82/Icon_Attribute_Defense.png"
+    },
+    {
+      "name": "Elemental Mastery",
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Icon_Attribute_Elemental_Mastery.png"
+    },
+    {
+      "name": "Energy Recharge",
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Icon_Attribute_Energy_Recharge.png"
+    },
+    {
+      "name": "HP",
+      "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Icon_Attribute_Health.png"
+    }
   ]
 }
