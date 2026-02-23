@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 import { fetchWithCache } from '@/features/cache';
-import type { Primitives } from '@/types';
+import type { PrimitiveItem, Primitives } from '@/types';
 
 /**
  * State interface for the primitives store.
@@ -55,6 +55,11 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
             name: reg.name.split('-').join(''),
           };
         }),
+        attributes:
+          primitives.attributes?.map((attr) => ({
+            ...attr,
+            name: attr.name.replace('%', ''), // "HP%" -> "HP", "DEF%" -> "DEF"
+          })) || [],
       },
       loading: false,
     });
@@ -128,6 +133,49 @@ export const useWeaponTypes = () =>
     ({ primitives }) => primitives?.weaponTypes || EMPTY_WEAPON_TYPES
   );
 
+/**
+ * Hook to get the attributes array from primitives.
+ * @returns Array of attribute primitives or empty array if not loaded
+ */
+export const useAttributes = () =>
+  usePrimitivesStore(
+    ({ primitives }) => primitives?.attributes || EMPTY_ATTRIBUTES
+  );
+
+// WeakMap cache for attribute URL maps (stable references)
+const attributeUrlMapCache = new WeakMap<
+  readonly PrimitiveItem[],
+  Record<string, string>
+>();
+
+function createAttributeUrlMap(
+  attributes: readonly PrimitiveItem[]
+): Record<string, string> {
+  const cached = attributeUrlMapCache.get(attributes);
+  if (cached) return cached;
+
+  const map: Record<string, string> = {};
+  attributes.forEach((attr) => {
+    map[attr.name] = attr.url;
+  });
+
+  attributeUrlMapCache.set(attributes, map);
+  return map;
+}
+
+/**
+ * Hook to get attributes and their URL mapping.
+ * Uses WeakMap caching to ensure stable object references.
+ */
+export const useAttributesMap = () => {
+  const attributes = useAttributes();
+  return {
+    attributes,
+    attributeUrlMap: createAttributeUrlMap(attributes),
+  };
+};
+
 const EMPTY_ELEMENTS: Primitives['elements'] = [] as const;
 const EMPTY_REGIONS: Primitives['regions'] = [] as const;
 const EMPTY_WEAPON_TYPES: Primitives['weaponTypes'] = [] as const;
+const EMPTY_ATTRIBUTES: Primitives['attributes'] = [] as const;

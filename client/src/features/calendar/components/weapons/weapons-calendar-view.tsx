@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WeaponShowCase from '@/features/weapons/components/shared/weapons-showcase';
+import WeaponAvatar from '@/features/weapons/components/shared/card/weapon-avatar';
 
 import { WEAPON_CALENDAR_THEME } from '../../constants';
 import { useWeaponCalendar } from '../../hooks/useWeaponCalendar';
@@ -27,11 +27,15 @@ const WeaponCalendarView: React.FC<WeaponCalendarViewProps> = ({
         <MaterialImageList materialImages={data.materialImages} />
       )}
       renderRight={(data) => (
-        <WeaponShowCase
-          weapons={data.weapons}
-          enableFilters={false}
-          enableNavigation={false}
-        />
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-2">
+          {data.weapons.map((weapon) => (
+            <WeaponAvatar
+              key={weapon.name}
+              weaponName={weapon.name}
+              size="sm"
+            />
+          ))}
+        </div>
       )}
       sundayMiddleMessage="All materials can be farmed"
       sundayRightMessage="All weapons can be farmed"

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TabDisplay } from '@/components/utils/tab-display';
-import { useRegions, useWeaponTypes } from '@/stores/usePrimitivesStore';
+import { useRegions } from '@/stores/usePrimitivesStore';
 
 import { useWeaponFilter } from '../../hooks';
 import {
@@ -11,7 +11,6 @@ import {
   useWeaponMaterialSchedule,
 } from '../../stores/useWeaponMaterialStore';
 import { ViewToggle } from '../shared';
-import WeaponCalendarFilters from './weapon-calendar-filters';
 import WeaponTable from './weapon-table';
 import WeaponCalendarView from './weapons-calendar-view';
 
@@ -22,18 +21,8 @@ const WeaponCalendar: React.FC = () => {
   const error = useWeaponMaterialError();
 
   const nations = useRegions();
-  const weaponTypes = useWeaponTypes();
 
-  const {
-    filters,
-    filteredSchedule,
-    uniqueRarities,
-    uniqueSubstats,
-    toggleWeaponType,
-    toggleRarity,
-    toggleSubstat,
-    clearAllFilters,
-  } = useWeaponFilter(weaponMaterialSchedule || []);
+  const { filteredSchedule } = useWeaponFilter(weaponMaterialSchedule || []);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -43,22 +32,8 @@ const WeaponCalendar: React.FC = () => {
 
   return (
     <div>
-      {/* Filters */}
-      <WeaponCalendarFilters
-        selectedWeaponTypes={filters.weaponTypes}
-        selectedRarities={filters.rarities}
-        selectedSubstats={filters.substats}
-        weaponTypes={weaponTypes}
-        uniqueRarities={uniqueRarities}
-        uniqueSubstats={uniqueSubstats}
-        onToggleWeaponType={toggleWeaponType}
-        onToggleRarity={toggleRarity}
-        onToggleSubstat={toggleSubstat}
-        onClearAll={clearAllFilters}
-      />
-
       <Tabs defaultValue={nations[0]?.name}>
-        <TabsList className="flex-wrap md:flex-nowrap justify-start overflow-x-auto">
+        <TabsList className="h-auto md:h-10 flex-wrap md:flex-nowrap justify-start overflow-x-auto gap-1">
           {nations.map((nation) => (
             <TabsTrigger
               key={nation.name}
