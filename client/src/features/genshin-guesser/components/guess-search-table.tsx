@@ -4,7 +4,7 @@ import Confetti from 'react-confetti';
 
 import { Card, CardContent } from '@/components/ui/card';
 import { type Character, useCharactersStore } from '@/features/characters';
-import SearchBar from '@/features/genshin-guesser/components/SearchBar';
+import SearchBar from '@/features/genshin-guesser/components/search-bar';
 import { cn } from '@/lib/utils';
 
 import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
@@ -34,7 +34,7 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
 
   return (
     <Card className="border-none bg-card/95 backdrop-blur-sm">
-      <CardContent className="p-8 space-y-6">
+      <CardContent className="p-4 md:p-8 space-y-6">
         {gameWon && (
           <Confetti
             width={window.innerWidth}

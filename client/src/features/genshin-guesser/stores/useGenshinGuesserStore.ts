@@ -56,7 +56,6 @@ const loadStats = (): GameStats => {
   };
 };
 
-// Helper to save stats
 const saveStats = (stats: GameStats) => {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stats));
@@ -80,134 +79,97 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
       ...initialState,
 
       setVictory: () => {
-        set(
-          (state) => ({
-            gameWon: true,
-            gameOver: true,
-            streak: state.streak + 1,
-          }),
-          false,
-          'guesser/setVictory'
-        );
+        set((state) => ({
+          gameWon: true,
+          gameOver: true,
+          streak: state.streak + 1,
+        }));
       },
 
       setDefeat: () => {
-        set(
-          {
-            gameOver: true,
-            gameWon: false,
-            streak: 0,
-          },
-          false,
-          'guesser/setDefeat'
-        );
+        set({
+          gameOver: true,
+          gameWon: false,
+          streak: 0,
+        });
       },
 
       setCurrentChar: (charName) => {
-        set({ currentChar: charName }, false, 'guesser/setCurrentChar');
+        set({ currentChar: charName });
       },
 
       addGuessedChar: (charName) => {
         const { guessedChars, currentChar, updateStats } = get();
-
-        // Prevent duplicate guesses
         if (guessedChars.includes(charName)) return;
 
         const newGuessedChars = [...guessedChars, charName];
         const guessCount = newGuessedChars.length;
 
         if (charName === currentChar) {
-          // Victory!
           updateStats(guessCount, true);
-          set(
-            (state) => ({
-              guessedChars: newGuessedChars,
-              gameWon: true,
-              gameOver: true,
-              streak: state.streak + 1,
-            }),
-            false,
-            'guesser/addGuess/victory'
-          );
+          set((state) => ({
+            guessedChars: newGuessedChars,
+            gameWon: true,
+            gameOver: true,
+            streak: state.streak + 1,
+          }));
         } else if (newGuessedChars.length === MAX_GUESSES) {
-          // Defeat - used all guesses
           updateStats(guessCount, false);
-          set(
-            {
-              guessedChars: newGuessedChars,
-              gameOver: true,
-              gameWon: false,
-              streak: 0,
-            },
-            false,
-            'guesser/addGuess/defeat'
-          );
+          set({
+            guessedChars: newGuessedChars,
+            gameOver: true,
+            gameWon: false,
+            streak: 0,
+          });
         } else {
-          // Continue playing
-          set(
-            {
-              guessedChars: newGuessedChars,
-            },
-            false,
-            'guesser/addGuess'
-          );
+          set({
+            guessedChars: newGuessedChars,
+          });
         }
       },
 
       selectCurrentCharacter: (characters) => {
         if (characters.length === 0) return;
         const randIdx = Math.floor(Math.random() * characters.length);
-        set(
-          { currentChar: characters[randIdx].name },
-          false,
-          'guesser/selectChar'
-        );
+        set({ currentChar: characters[randIdx].name });
       },
 
       resetGame: () => {
         const { streak } = get();
-        set(
-          {
-            guessedChars: [],
-            currentChar: null,
-            gameOver: false,
-            gameWon: false,
-            streak, // Preserve streak across resets
-          },
-          false,
-          'guesser/reset'
-        );
+        set({
+          guessedChars: [],
+          currentChar: null,
+          gameOver: false,
+          gameWon: false,
+          streak, // Preserve streak across resets
+        });
       },
 
       updateStats: (guessCount: number, won: boolean) => {
-        set(
-          (state) => {
-            const newStats = { ...state.stats };
+        set((state) => {
+          const newStats = { ...state.stats };
 
-            newStats.gamesPlayed += 1;
+          newStats.gamesPlayed += 1;
 
-            if (won) {
-              newStats.gamesWon += 1;
-              newStats.currentStreak += 1;
-              newStats.maxStreak = Math.max(
-                newStats.maxStreak,
-                newStats.currentStreak
-              );
-              newStats.guessDistribution[guessCount] =
-                (newStats.guessDistribution[guessCount] || 0) + 1;
-            } else {
-              newStats.currentStreak = 0;
-            }
+          if (won) {
+            newStats.gamesWon += 1;
+            newStats.currentStreak += 1;
+            newStats.maxStreak = Math.max(
+              newStats.maxStreak,
+              newStats.currentStreak
+            );
+            newStats.guessDistribution[guessCount] =
+              (newStats.guessDistribution[guessCount] || 0) + 1;
+          } else {
+            newStats.currentStreak = 0;
+          }
 
-            newStats.lastPlayedDate = new Date().toISOString();
+          newStats.lastPlayedDate = new Date().toISOString();
 
-            saveStats(newStats);
+          saveStats(newStats);
 
-            return { stats: newStats };
-          },
-          false,
-          'guesser/updateStats'
-        );
+          return { stats: newStats };
+        });
       },
 
       resetStats: () => {
@@ -222,14 +184,13 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
 
         saveStats(freshStats);
 
-        set({ stats: freshStats }, false, 'guesser/resetStats');
+        set({ stats: freshStats });
       },
     }),
     { name: 'GenshinGuesserStore' }
   )
 );
 
-// Selector hooks for optimized subscriptions
 export const useGenshinGuesserGuessedChars = () =>
   useGenshinGuesserStore((state) => state.guessedChars);
 export const useGenshinGuesserCurrentChar = () =>
