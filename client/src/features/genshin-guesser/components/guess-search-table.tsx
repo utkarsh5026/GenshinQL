@@ -4,6 +4,7 @@ import Confetti from 'react-confetti';
 
 import { Card, CardContent } from '@/components/ui/card';
 import { type Character, useCharactersStore } from '@/features/characters';
+import CharacterAvatar from '@/features/characters/components/utils/character-avatar';
 import SearchBar from '@/features/genshin-guesser/components/search-bar';
 import { cn } from '@/lib/utils';
 
@@ -49,16 +50,103 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
         {gameOver || gameWon ? (
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            className={cn(
-              'text-center py-4 px-6 rounded-xl text-xl font-bold border-2',
+            animate={
               gameWon
-                ? 'text-game-correct border-game-correct bg-game-correct/10'
-                : 'text-game-wrong border-game-wrong bg-game-wrong/10'
+                ? { scale: 1, opacity: 1 }
+                : { scale: 1, opacity: 1, x: [0, -7, 7, -5, 5, -2, 2, 0] }
+            }
+            transition={
+              gameWon
+                ? { duration: 0.5, ease: 'easeOut' }
+                : {
+                    duration: 0.4,
+                    ease: 'easeOut',
+                    x: { duration: 0.5, delay: 0.35 },
+                  }
+            }
+            className={cn(
+              'relative overflow-hidden flex flex-col items-center gap-4 py-6 px-6 rounded-xl border-2',
+              gameWon
+                ? 'border-game-correct bg-game-correct/10'
+                : 'border-game-wrong bg-game-wrong/5'
             )}
+            style={{
+              boxShadow: gameWon
+                ? '0 0 30px rgba(34,197,94,0.25), 0 0 60px rgba(34,197,94,0.1), inset 0 1px 0 rgba(34,197,94,0.2)'
+                : '0 0 20px rgba(239,68,68,0.15), inset 0 1px 0 rgba(239,68,68,0.1)',
+            }}
           >
-            {gameWon ? 'Perfect! You guessed it! 🎉' : 'Game Over! 🥺'}
+            {/* Shimmer sweep — win only */}
+            {gameWon && (
+              <div
+                className="absolute inset-0 pointer-events-none animate-shimmer"
+                style={{
+                  background:
+                    'linear-gradient(90deg, transparent 0%, rgba(34,197,94,0.1) 50%, transparent 100%)',
+                  backgroundSize: '200% 100%',
+                }}
+              />
+            )}
+
+            {/* Corner sparkles — win only */}
+            {gameWon &&
+              [
+                { style: { top: '0.6rem', left: '1rem' }, delay: 0.4 },
+                { style: { top: '0.6rem', right: '1rem' }, delay: 0.65 },
+                { style: { bottom: '0.6rem', left: '1rem' }, delay: 0.85 },
+                { style: { bottom: '0.6rem', right: '1rem' }, delay: 0.55 },
+              ].map((s, i) => (
+                <motion.span
+                  key={i}
+                  className="absolute text-game-correct/60 text-sm select-none pointer-events-none"
+                  style={s.style}
+                  initial={{ opacity: 0, scale: 0.4 }}
+                  animate={{ opacity: [0, 0.9, 0], scale: [0.4, 1.1, 0.4] }}
+                  transition={{
+                    duration: 2.2,
+                    delay: s.delay,
+                    repeat: Infinity,
+                    repeatDelay: 0.8,
+                  }}
+                >
+                  ✦
+                </motion.span>
+              ))}
+
+            {/* Message */}
+            <p
+              className={cn(
+                'relative z-10 text-xl font-bold tracking-wide',
+                gameWon ? 'text-game-correct' : 'text-game-wrong'
+              )}
+            >
+              {gameWon ? 'Perfect! You guessed it! 🎉' : 'Game Over! 🥺'}
+            </p>
+
+            {/* Character avatar — floats on win, dims on loss */}
+            <motion.div
+              className="relative z-10"
+              animate={gameWon ? { y: [0, -5, 0] } : { opacity: [1, 0.75, 1] }}
+              transition={
+                gameWon
+                  ? { duration: 3, ease: 'easeInOut', repeat: Infinity }
+                  : { duration: 4, ease: 'easeInOut', repeat: Infinity }
+              }
+            >
+              <CharacterAvatar
+                characterName={selectedCharacter.name}
+                size="lg"
+                showElement
+                showRarity
+                avatarClassName={
+                  !gameWon ? 'saturate-50 opacity-80' : undefined
+                }
+                nameClassName={cn(
+                  'font-semibold',
+                  gameWon ? 'text-game-correct' : 'text-game-wrong'
+                )}
+              />
+            </motion.div>
           </motion.div>
         ) : (
           <SearchBar
