@@ -203,6 +203,9 @@ function populateCharacters(optimizedData: CharactersJson): Character[] {
     weaponType: weaponTypes[char.weaponType] || 'Unknown',
     rarity: rarities[char.rarity] || 'Unknown',
     modelType: modelTypes[char.modelType] || 'Unknown',
+    idleOne: char.idleAnimations?.[0],
+    idleTwo: char.idleAnimations?.[1],
+    partyJoin: char.partyJoinAnimation,
   })) as Character[];
 }
 
