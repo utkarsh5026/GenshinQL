@@ -1,16 +1,15 @@
 import React, { useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { CachedImage, useLazyCachedAsset } from '@/features/cache';
 import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
 import {
   getElementAnimationClass,
-  getElementBorderClass,
   getElementGlassClass,
   getElementGlowClass,
 } from '@/lib/elementColors';
+import { cn } from '@/lib/utils';
 import { AnimationMedia } from '@/types';
 
 import { Character } from '../../types';
@@ -46,7 +45,6 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
 
   const elementClasses = useMemo(
     () => ({
-      border: getElementBorderClass(character.element),
       glass: getElementGlassClass(character.element),
       glow: getElementGlowClass(character.element),
       animation: getElementAnimationClass(character.element),
@@ -54,11 +52,25 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
     [character.element]
   );
 
+  const rarityNum = Number.parseInt(character.rarity, 10);
+  const is5star = rarityNum >= 5;
+
+  const rarityClasses = useMemo(
+    () => ({
+      avatarRing: is5star
+        ? 'ring-2 ring-yellow-400 ring-offset-2 ring-offset-background'
+        : 'ring-2 ring-violet-400 ring-offset-2 ring-offset-background',
+      cardGlow: is5star ? styles.fiveStarGlow : styles.fourStarGlow,
+      starColor: is5star ? 'text-yellow-400' : 'text-violet-400',
+      starGlow: is5star ? styles.fiveStarText : styles.fourStarText,
+    }),
+    [is5star]
+  );
+
   const characterMedia: AnimationMedia = useMemo(() => {
     if (character.partyJoin) return character.partyJoin;
     if (character.idleOne) return character.idleOne;
     if (character.idleTwo) return character.idleTwo;
-
     return {
       imageUrl: character.iconUrl,
       videoUrl: '',
@@ -67,28 +79,28 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
     };
   }, [character]);
 
+  const elementTintClass = styles[`${character.element.toLowerCase()}Tint`];
+
   return (
     <Link to={`/characters/${character.name}`} className="block no-underline">
       <div ref={cardRef}>
         <div
           className={`${styles.cardFadeIn} ${isVisible ? styles.visible : ''}`}
-          style={{
-            animationDelay: `${staggerDelay}s`,
-          }}
+          style={{ animationDelay: `${staggerDelay}s` }}
         >
           <Card
-            className={`
-              cursor-pointer overflow-hidden
-              ${elementClasses.border}
-              ${elementClasses.glass}
-              ${styles.cardHover}
-              ${styles[elementClasses.glow]}
-            `}
+            className={cn(
+              'cursor-pointer overflow-hidden relative',
+              elementClasses.glass,
+              styles.cardHover,
+              styles[elementClasses.glow],
+              rarityClasses.cardGlow
+            )}
           >
-            {/* Namecard Banner */}
-            {hasNamecard && (
-              <div className={styles.namecardBanner}>
-                {namecardLoading ? (
+            {/* Namecard Banner — dominant top section */}
+            <div className={styles.namecardBanner}>
+              {hasNamecard ? (
+                namecardLoading ? (
                   <div className={styles.namecardSkeleton} />
                 ) : (
                   <>
@@ -104,94 +116,90 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
                     />
                     <div className={styles.namecardOverlay} />
                   </>
-                )}
-              </div>
-            )}
+                )
+              ) : (
+                <div
+                  className={cn(styles.namecardPlaceholder, elementTintClass)}
+                />
+              )}
+            </div>
 
-            <CardContent
-              className={`p-4 ${hasNamecard ? styles.cardContent : ''} ${hasNamecard ? 'pt-16 md:pt-20' : ''}`}
-            >
-              {/* Mobile: Horizontal Layout, Desktop: Vertical Layout */}
-              <div className="flex md:flex-col gap-4 md:gap-3 items-start md:items-center">
-                {/* Character Avatar */}
+            {/* Avatar — straddles the banner/content boundary */}
+            <div className={styles.avatarWrapper}>
+              <div className={`rounded-full ${rarityClasses.avatarRing}`}>
                 {showAnimation ? (
                   <CharacterMediaAvatar
                     media={characterMedia}
-                    containerClassName={`h-24 w-24 md:h-28 md:w-28 shrink-0 ${hasNamecard ? 'ring-2 ring-background/50 rounded-full' : ''}`}
-                    hoverScale={1.15}
+                    containerClassName="h-20 w-20 rounded-full"
+                    hoverScale={1.1}
                   />
                 ) : (
                   <CachedImage
                     src={character.iconUrl}
                     alt={character.name}
-                    width={112}
-                    height={112}
-                    className={`h-24 w-24 md:h-28 md:w-28 shrink-0 rounded-full object-cover ${hasNamecard ? 'ring-2 ring-background/50' : ''}`}
+                    width={80}
+                    height={80}
+                    className="h-20 w-20 rounded-full object-cover"
                   />
                 )}
-
-                {/* Character Info */}
-                <div className="flex-1 md:w-full space-y-2 md:space-y-3">
-                  {/* Name and Rarity */}
-                  <div className="md:text-center">
-                    <h3 className="font-bold text-base md:text-lg line-clamp-2 mb-1">
-                      {character.name}
-                    </h3>
-                    <RarityDisplay rarity={character.rarity} size="sm" />
-                  </div>
-
-                  {/* Info Grid - 2 columns on mobile, single column centered on desktop */}
-                  <div className="grid grid-cols-1 gap-2 text-sm">
-                    {/* Element */}
-                    <InfoRow>
-                      <div
-                        className={`${styles.elementIcon} ${styles[elementClasses.animation]}`}
-                      >
-                        <ElementDisplay
-                          element={character.element}
-                          elementUrl={character.elementUrl}
-                          size="sm"
-                          showLabel={true}
-                        />
-                      </div>
-                    </InfoRow>
-
-                    {/* Weapon Type */}
-                    <InfoRow>
-                      <ElementDisplay
-                        element={character.weaponType}
-                        elementUrl={character.weaponUrl}
-                        size="sm"
-                        showLabel={true}
-                      />
-                    </InfoRow>
-
-                    {/* Region */}
-                    <InfoRow>
-                      <ElementDisplay
-                        element={character.region}
-                        elementUrl={character.regionUrl}
-                        size="sm"
-                        showLabel={true}
-                      />
-                    </InfoRow>
-
-                    {/* Model Type Badge */}
-                    <InfoRow>
-                      <Badge variant="secondary" className="text-xs">
-                        {character.modelType}
-                      </Badge>
-                    </InfoRow>
-
-                    {/* Version Badge */}
-                    <InfoRow>
-                      <Badge variant="outline" className="text-xs">
-                        v{character.version}
-                      </Badge>
-                    </InfoRow>
-                  </div>
-                </div>
               </div>
+            </div>
+
+            {/* Card Content */}
+            <CardContent
+              className={cn(styles.cardContent, 'pt-[176px] pb-4 px-4')}
+            >
+              {/* Name */}
+              <h3 className="font-bold text-base text-center truncate mb-1">
+                {character.name}
+              </h3>
+
+              {/* Rarity stars */}
+              <div className="flex items-center justify-center gap-px mb-3">
+                {Array.from({ length: rarityNum }).map((_, i) => (
+                  <span
+                    key={i}
+                    className={cn(
+                      'text-sm leading-none',
+                      rarityClasses.starColor,
+                      rarityClasses.starGlow
+                    )}
+                  >
+                    ★
+                  </span>
+                ))}
+              </div>
+
+              {/* Info chips — row 1: element + weapon, row 2: region */}
+              <div className="flex flex-col items-center gap-1.5 mb-2">
+                <div className="flex gap-1.5">
+                  <div
+                    className={cn(
+                      styles.elementIcon,
+                      elementClasses.animation &&
+                        styles[elementClasses.animation]
+                    )}
+                  >
+                    <InfoChip
+                      iconUrl={character.elementUrl}
+                      label={character.element}
+                    />
+                  </div>
+                  <InfoChip
+                    iconUrl={character.weaponUrl}
+                    label={character.weaponType}
+                  />
+                </div>
+                <InfoChip
+                  iconUrl={character.regionUrl}
+                  label={character.region}
+                />
+              </div>
+
+              {/* Model type · Version */}
+              <p className="text-center text-xs text-muted-foreground">
+                {character.modelType} · v{character.version}
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -207,75 +215,22 @@ export default React.memo(CharacterCard, (prevProps, nextProps) => {
   );
 });
 
-const InfoRow: React.FC<React.PropsWithChildren> = ({ children }) => (
-  <div className="flex items-center gap-2 md:justify-center">{children}</div>
+interface InfoChipProps {
+  iconUrl: string;
+  label: string;
+}
+
+const InfoChip: React.FC<InfoChipProps> = ({ iconUrl, label }) => (
+  <div className="flex items-center gap-1 bg-muted/60 rounded-full px-2 py-0.5">
+    <CachedImage
+      src={iconUrl}
+      alt={label}
+      width={14}
+      height={14}
+      className="w-3.5 h-3.5 rounded-full shrink-0"
+    />
+    <span className="text-xs text-muted-foreground truncate max-w-[60px]">
+      {label}
+    </span>
+  </div>
 );
-
-type DisplaySize = 'sm' | 'md' | 'lg';
-
-const SIZE_CONFIG: Record<
-  DisplaySize,
-  { container: string; icon: number; text: string }
-> = {
-  sm: { container: 'w-4 h-4', icon: 16, text: 'text-xs' },
-  md: { container: 'w-6 h-6', icon: 24, text: 'text-sm' },
-  lg: { container: 'w-8 h-8', icon: 32, text: 'text-base' },
-} as const;
-
-interface ElementDisplayProps {
-  element: string;
-  elementUrl: string;
-  size?: DisplaySize;
-  showLabel?: boolean;
-}
-
-const ElementDisplay: React.FC<ElementDisplayProps> = ({
-  element,
-  elementUrl,
-  size = 'md',
-  showLabel = true,
-}) => {
-  const { container, icon, text } = SIZE_CONFIG[size];
-
-  return (
-    <div className="flex items-center space-x-2">
-      <CachedImage
-        src={elementUrl}
-        alt={element}
-        width={icon}
-        height={icon}
-        className={`rounded-full ${container}`}
-      />
-      {showLabel && <span className={text}>{element}</span>}
-    </div>
-  );
-};
-
-interface RarityDisplayProps {
-  rarity: string;
-  size?: DisplaySize;
-}
-
-const RarityDisplay: React.FC<RarityDisplayProps> = ({
-  rarity,
-  size = 'md',
-}) => {
-  const rarityNum = Number.parseInt(rarity, 10);
-  const starColor = rarityNum === 5 ? 'text-yellow-500' : 'text-violet-500';
-
-  const sizeClasses = {
-    sm: 'text-sm',
-    md: 'text-lg',
-    lg: 'text-xl',
-  };
-
-  return (
-    <div className="flex items-center justify-center">
-      {Array.from({ length: rarityNum }).map((_, index) => (
-        <span key={index} className={`${starColor} ${sizeClasses[size]}`}>
-          ★
-        </span>
-      ))}
-    </div>
-  );
-};
