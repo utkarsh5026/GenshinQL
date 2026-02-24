@@ -30,6 +30,68 @@ interface FilterBarProps {
   onClearAll: () => void;
 }
 
+interface FilterRowProps {
+  id: string;
+  checked: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}
+
+const FilterRow: React.FC<FilterRowProps> = ({
+  id,
+  checked,
+  onToggle,
+  children,
+}) => (
+  <div
+    className={`flex items-center space-x-2 ${styles.filterItem} cursor-pointer`}
+    onClick={onToggle}
+    onKeyDown={(e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onToggle();
+      }
+    }}
+    role="checkbox"
+    aria-checked={checked}
+    tabIndex={0}
+  >
+    <Checkbox
+      id={id}
+      checked={checked}
+      onCheckedChange={onToggle}
+      onClick={(e) => e.stopPropagation()}
+    />
+    <div
+      className={`flex items-center gap-2 text-sm flex-1 ${styles.filterLabel}`}
+    >
+      {children}
+    </div>
+  </div>
+);
+
+interface FilterSectionProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+const FilterSection: React.FC<FilterSectionProps> = ({ title, children }) => (
+  <div className="space-y-2">
+    <label className="text-sm font-medium text-foreground">{title}</label>
+    <div className="space-y-2">{children}</div>
+  </div>
+);
+
+const ELEMENT_ANIMATION_CLASSES: Record<string, string> = {
+  anemo: styles.anemo,
+  pyro: styles.pyro,
+  hydro: styles.hydro,
+  electro: styles.electro,
+  cryo: styles.cryo,
+  geo: styles.geo,
+  dendro: styles.dendro,
+};
+
 const FilterBar: React.FC<FilterBarProps> = ({
   searchQuery,
   onSearchChange,
@@ -67,28 +129,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
     );
   };
 
-  const getElementAnimationClass = (elementName: string) => {
-    const normalized = elementName.toLowerCase();
-    switch (normalized) {
-      case 'anemo':
-        return styles.anemo;
-      case 'pyro':
-        return styles.pyro;
-      case 'hydro':
-        return styles.hydro;
-      case 'electro':
-        return styles.electro;
-      case 'cryo':
-        return styles.cryo;
-      case 'geo':
-        return styles.geo;
-      case 'dendro':
-        return styles.dendro;
-      default:
-        return '';
-    }
-  };
-
   return (
     <div className="sticky top-0 z-20 bg-background border-b shadow-sm">
       {/* Controls row */}
@@ -124,7 +164,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           </PopoverTrigger>
 
           <PopoverContent
-            className="w-[calc(100vw-2rem)] sm:w-80 max-h-[70vh] overflow-y-auto"
+            className="w-[calc(100vw-4rem)] sm:w-80 max-h-[70vh] overflow-y-auto"
             align="start"
             side="bottom"
           >
@@ -144,142 +184,70 @@ const FilterBar: React.FC<FilterBarProps> = ({
                 )}
               </div>
 
-              {/* Element Filter Section */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">
-                  Element
-                </label>
-                <div className="space-y-2">
-                  {elements.map((element) => (
+              <FilterSection title="Element">
+                {elements.map((element) => (
+                  <FilterRow
+                    key={element.name}
+                    id={`element-${element.name}`}
+                    checked={selectedElements.includes(element.name)}
+                    onToggle={() => onToggleElement(element.name)}
+                  >
                     <div
-                      key={element.name}
-                      className={`flex items-center space-x-2 ${styles.filterItem} cursor-pointer`}
-                      onClick={() => onToggleElement(element.name)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                          e.preventDefault();
-                          onToggleElement(element.name);
-                        }
-                      }}
-                      role="checkbox"
-                      aria-checked={selectedElements.includes(element.name)}
-                      tabIndex={0}
+                      className={`${styles.iconContainer} ${ELEMENT_ANIMATION_CLASSES[element.name.toLowerCase()] ?? ''}`}
                     >
-                      <Checkbox
-                        id={`element-${element.name}`}
-                        checked={selectedElements.includes(element.name)}
-                        onCheckedChange={() => onToggleElement(element.name)}
-                        onClick={(e) => e.stopPropagation()}
+                      <CachedImage
+                        src={element.url}
+                        alt={element.name}
+                        width={20}
+                        height={20}
+                        className="w-5 h-5 rounded-full"
                       />
-                      <div
-                        className={`flex items-center gap-2 text-sm flex-1 ${styles.filterLabel}`}
-                      >
-                        <div
-                          className={`${styles.iconContainer} ${getElementAnimationClass(element.name)}`}
-                        >
-                          <CachedImage
-                            src={element.url}
-                            alt={element.name}
-                            width={20}
-                            height={20}
-                            className="w-5 h-5 rounded-full"
-                          />
-                        </div>
-                        <span>{element.name}</span>
-                      </div>
                     </div>
-                  ))}
-                </div>
-              </div>
+                    <span>{element.name}</span>
+                  </FilterRow>
+                ))}
+              </FilterSection>
 
               <Separator />
 
-              {/* Rarity Filter Section */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">
-                  Rarity
-                </label>
-                <div className="space-y-2">
-                  {uniqueRarities.map((rarity) => (
-                    <div
-                      key={rarity}
-                      className={`flex items-center space-x-2 ${styles.filterItem} cursor-pointer`}
-                      onClick={() => onToggleRarity(rarity)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                          e.preventDefault();
-                          onToggleRarity(rarity);
-                        }
-                      }}
-                      role="checkbox"
-                      aria-checked={selectedRarities.includes(rarity)}
-                      tabIndex={0}
-                    >
-                      <Checkbox
-                        id={`rarity-${rarity}`}
-                        checked={selectedRarities.includes(rarity)}
-                        onCheckedChange={() => onToggleRarity(rarity)}
-                        onClick={(e) => e.stopPropagation()}
-                      />
-                      <div
-                        className={`flex items-center gap-1 flex-1 ${styles.filterLabel}`}
-                      >
-                        {renderRarityStars(rarity)}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <FilterSection title="Rarity">
+                {uniqueRarities.map((rarity) => (
+                  <FilterRow
+                    key={rarity}
+                    id={`rarity-${rarity}`}
+                    checked={selectedRarities.includes(rarity)}
+                    onToggle={() => onToggleRarity(rarity)}
+                  >
+                    {renderRarityStars(rarity)}
+                  </FilterRow>
+                ))}
+              </FilterSection>
 
               <Separator />
 
-              {/* Region Filter Section */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">
-                  Region
-                </label>
-                <div className="space-y-2">
-                  {regions.map((region) => (
+              <FilterSection title="Region">
+                {regions.map((region) => (
+                  <FilterRow
+                    key={region.name}
+                    id={`region-${region.name}`}
+                    checked={selectedRegions.includes(region.name)}
+                    onToggle={() => onToggleRegion(region.name)}
+                  >
                     <div
-                      key={region.name}
-                      className={`flex items-center space-x-2 ${styles.filterItem} cursor-pointer`}
-                      onClick={() => onToggleRegion(region.name)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                          e.preventDefault();
-                          onToggleRegion(region.name);
-                        }
-                      }}
-                      role="checkbox"
-                      aria-checked={selectedRegions.includes(region.name)}
-                      tabIndex={0}
+                      className={`${styles.iconContainer} ${styles.regionIcon}`}
                     >
-                      <Checkbox
-                        id={`region-${region.name}`}
-                        checked={selectedRegions.includes(region.name)}
-                        onCheckedChange={() => onToggleRegion(region.name)}
-                        onClick={(e) => e.stopPropagation()}
+                      <CachedImage
+                        src={region.url}
+                        alt={region.name}
+                        width={20}
+                        height={20}
+                        className="w-5 h-5 rounded-full"
                       />
-                      <div
-                        className={`flex items-center gap-2 text-sm flex-1 ${styles.filterLabel}`}
-                      >
-                        <div
-                          className={`${styles.iconContainer} ${styles.regionIcon}`}
-                        >
-                          <CachedImage
-                            src={region.url}
-                            alt={region.name}
-                            width={20}
-                            height={20}
-                            className="w-5 h-5 rounded-full"
-                          />
-                        </div>
-                        <span>{region.name}</span>
-                      </div>
                     </div>
-                  ))}
-                </div>
-              </div>
+                    <span>{region.name}</span>
+                  </FilterRow>
+                ))}
+              </FilterSection>
             </div>
           </PopoverContent>
         </Popover>
@@ -292,7 +260,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
             Filters:
           </span>
 
-          {/* Element chips */}
           {selectedElements.map((element) => {
             const elementData = elements.find((e) => e.name === element);
             return (
@@ -306,7 +273,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
             );
           })}
 
-          {/* Rarity chips */}
           {selectedRarities.map((rarity) => (
             <FilterChip
               key={rarity}
@@ -316,7 +282,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
             />
           ))}
 
-          {/* Region chips */}
           {selectedRegions.map((region) => {
             const regionData = regions.find((r) => r.name === region);
             return (
@@ -330,7 +295,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
             );
           })}
 
-          {/* Clear all button */}
           <Button
             variant="ghost"
             size="sm"
