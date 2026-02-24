@@ -1,9 +1,8 @@
-import React, { useMemo, useRef } from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Card, CardContent } from '@/components/ui/card';
 import { CachedImage, useLazyCachedAsset } from '@/features/cache';
-import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
 import {
   getElementAnimationClass,
   getElementGlassClass,
@@ -18,30 +17,18 @@ import styles from './CharacterCard.module.css';
 
 interface CharacterCardProps {
   character: Character;
-  index?: number;
-  isMounted?: boolean;
   showAnimation?: boolean;
 }
 
 const CharacterCard: React.FC<CharacterCardProps> = ({
   character,
-  index = 0,
-  isMounted = true,
   showAnimation = false,
 }) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const isVisible = useSharedIntersectionObserver(cardRef, {
-    rootMargin: '100px',
-    threshold: 0.1,
-  });
-
   const hasNamecard = !!character.namecardURL;
   const { url: namecardUrl, isLoading: namecardLoading } = useLazyCachedAsset(
     character.namecardURL,
-    isVisible && hasNamecard
+    hasNamecard
   );
-
-  const staggerDelay = isMounted ? Math.min(index * 0.05, 0.8) : 0;
 
   const elementClasses = useMemo(
     () => ({
@@ -83,136 +70,117 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
 
   return (
     <Link to={`/characters/${character.name}`} className="block no-underline">
-      <div ref={cardRef}>
-        <div
-          className={`${styles.cardFadeIn} ${isVisible ? styles.visible : ''}`}
-          style={{ animationDelay: `${staggerDelay}s` }}
-        >
-          <Card
-            className={cn(
-              'cursor-pointer overflow-hidden relative',
-              elementClasses.glass,
-              styles.cardHover,
-              styles[elementClasses.glow],
-              rarityClasses.cardGlow
-            )}
-          >
-            {/* Namecard Banner — dominant top section */}
-            <div className={styles.namecardBanner}>
-              {hasNamecard ? (
-                namecardLoading ? (
-                  <div className={styles.namecardSkeleton} />
-                ) : (
-                  <>
-                    <img
-                      src={namecardUrl}
-                      alt=""
-                      className={styles.namecardImage}
-                      onError={(e) => {
-                        (
-                          e.currentTarget.parentElement as HTMLElement
-                        ).style.display = 'none';
-                      }}
-                    />
-                    <div className={styles.namecardOverlay} />
-                  </>
-                )
-              ) : (
-                <div
-                  className={cn(styles.namecardPlaceholder, elementTintClass)}
+      <Card
+        className={cn(
+          'cursor-pointer overflow-hidden relative',
+          elementClasses.glass,
+          styles.cardHover,
+          styles[elementClasses.glow],
+          rarityClasses.cardGlow
+        )}
+      >
+        {/* Namecard Banner */}
+        <div className={styles.namecardBanner}>
+          {hasNamecard ? (
+            namecardLoading ? (
+              <div className={styles.namecardSkeleton} />
+            ) : (
+              <>
+                <img
+                  src={namecardUrl}
+                  alt=""
+                  className={styles.namecardImage}
+                  onError={(e) => {
+                    (
+                      e.currentTarget.parentElement as HTMLElement
+                    ).style.display = 'none';
+                  }}
                 />
-              )}
-            </div>
-
-            {/* Avatar — straddles the banner/content boundary */}
-            <div className={styles.avatarWrapper}>
-              <div className={`rounded-full ${rarityClasses.avatarRing}`}>
-                {showAnimation ? (
-                  <CharacterMediaAvatar
-                    media={characterMedia}
-                    containerClassName="h-20 w-20 rounded-full"
-                    hoverScale={1.1}
-                  />
-                ) : (
-                  <CachedImage
-                    src={character.iconUrl}
-                    alt={character.name}
-                    width={80}
-                    height={80}
-                    className="h-20 w-20 rounded-full object-cover"
-                  />
-                )}
-              </div>
-            </div>
-
-            {/* Card Content */}
-            <CardContent
-              className={cn(styles.cardContent, 'pt-[176px] pb-4 px-4')}
-            >
-              {/* Name */}
-              <h3 className="font-bold text-base text-center truncate mb-1">
-                {character.name}
-              </h3>
-
-              {/* Rarity stars */}
-              <div className="flex items-center justify-center gap-px mb-3">
-                {Array.from({ length: rarityNum }).map((_, i) => (
-                  <span
-                    key={i}
-                    className={cn(
-                      'text-sm leading-none',
-                      rarityClasses.starColor,
-                      rarityClasses.starGlow
-                    )}
-                  >
-                    ★
-                  </span>
-                ))}
-              </div>
-
-              {/* Info chips — row 1: element + weapon, row 2: region */}
-              <div className="flex flex-col items-center gap-1.5 mb-2">
-                <div className="flex gap-1.5">
-                  <div
-                    className={cn(
-                      styles.elementIcon,
-                      elementClasses.animation &&
-                        styles[elementClasses.animation]
-                    )}
-                  >
-                    <InfoChip
-                      iconUrl={character.elementUrl}
-                      label={character.element}
-                    />
-                  </div>
-                  <InfoChip
-                    iconUrl={character.weaponUrl}
-                    label={character.weaponType}
-                  />
-                </div>
-                <InfoChip
-                  iconUrl={character.regionUrl}
-                  label={character.region}
-                />
-              </div>
-
-              {/* Model type · Version */}
-              <p className="text-center text-xs text-muted-foreground">
-                {character.modelType} · v{character.version}
-              </p>
-            </CardContent>
-          </Card>
+                <div className={styles.namecardOverlay} />
+              </>
+            )
+          ) : (
+            <div className={cn(styles.namecardPlaceholder, elementTintClass)} />
+          )}
         </div>
-      </div>
+
+        {/* Avatar */}
+        <div className={styles.avatarWrapper}>
+          <div className={`rounded-full ${rarityClasses.avatarRing}`}>
+            {showAnimation ? (
+              <CharacterMediaAvatar
+                media={characterMedia}
+                containerClassName="h-20 w-20 rounded-full"
+                hoverScale={1.1}
+              />
+            ) : (
+              <CachedImage
+                src={character.iconUrl}
+                alt={character.name}
+                width={80}
+                height={80}
+                className="h-20 w-20 rounded-full object-cover"
+              />
+            )}
+          </div>
+        </div>
+
+        {/* Card Content */}
+        <CardContent className={cn(styles.cardContent, 'pt-[176px] pb-4 px-4')}>
+          <h3 className="font-bold text-base text-center truncate mb-1">
+            {character.name}
+          </h3>
+
+          {/* Rarity stars */}
+          <div className="flex items-center justify-center gap-px mb-3">
+            {Array.from({ length: rarityNum }).map((_, i) => (
+              <span
+                key={i}
+                className={cn(
+                  'text-sm leading-none',
+                  rarityClasses.starColor,
+                  rarityClasses.starGlow
+                )}
+              >
+                ★
+              </span>
+            ))}
+          </div>
+
+          {/* Info chips */}
+          <div className="flex flex-col items-center gap-1.5 mb-2">
+            <div className="flex gap-1.5">
+              <div
+                className={cn(
+                  styles.elementIcon,
+                  elementClasses.animation && styles[elementClasses.animation]
+                )}
+              >
+                <InfoChip
+                  iconUrl={character.elementUrl}
+                  label={character.element}
+                />
+              </div>
+              <InfoChip
+                iconUrl={character.weaponUrl}
+                label={character.weaponType}
+              />
+            </div>
+            <InfoChip iconUrl={character.regionUrl} label={character.region} />
+          </div>
+
+          {/* Model type · Version */}
+          <p className="text-center text-xs text-muted-foreground">
+            {character.modelType} · v{character.version}
+          </p>
+        </CardContent>
+      </Card>
     </Link>
   );
 };
 
 export default React.memo(CharacterCard, (prevProps, nextProps) => {
-  return (
-    prevProps.character.name === nextProps.character.name &&
-    prevProps.index === nextProps.index
-  );
+  return prevProps.character.name === nextProps.character.name;
 });
 
 interface InfoChipProps {
