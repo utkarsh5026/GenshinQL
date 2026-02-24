@@ -88,7 +88,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ items, onItemSelect }) => {
 
       {/* Animated underline */}
       <motion.div
-        className="h-0.5 bg-gradient-to-r from-transparent via-game-hover to-transparent"
+        className="h-0.5 bg-linear-to-r from-transparent via-game-hover to-transparent"
         initial={{ opacity: 0, scaleX: 0 }}
         animate={{
           opacity: inputValue ? 1 : 0,
@@ -97,7 +97,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ items, onItemSelect }) => {
         transition={{ duration: 0.3 }}
       />
 
-      <CommandList className="max-h-[300px] overflow-y-auto scrollbar-hide">
+      <CommandList className="max-h-75 overflow-y-auto scrollbar-hide">
         {showResults && (
           <>
             <CommandEmpty className="py-6 text-center text-sm text-muted-foreground">

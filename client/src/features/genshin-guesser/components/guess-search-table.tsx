@@ -9,7 +9,7 @@ import SearchBar from '@/features/genshin-guesser/components/search-bar';
 import { cn } from '@/lib/utils';
 
 import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
-import GuessTable from './GuessTable';
+import GuessTable from './guess-table';
 
 interface GuessSearchTableProps {
   selectedCharacter: Character;
