@@ -512,7 +512,7 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
 
   return (
     <>
-      <Card className="border-none md:mt-16 bg-card/95 backdrop-blur-sm">
+      <Card className="border-none bg-card/95 backdrop-blur-sm">
         <CardContent className="p-4 md:p-8 flex flex-col space-y-4">
           {/* Streak — always visible */}
           <StreakDisplay streak={streak} bestStreak={bestStreak} />
