@@ -104,7 +104,7 @@ const GuessTable: React.FC<GuessTableProps> = ({
                     <AvatarWithSkeleton
                       name={character.region}
                       url={character.regionUrl}
-                      avatarClassName="w-4 h-4 md:w-6 md:h-6"
+                      avatarClassName="w-5 h-5 md:w-6 md:h-6"
                     />
                   </GuessTableCell>
                 </TableCell>
@@ -119,7 +119,7 @@ const GuessTable: React.FC<GuessTableProps> = ({
                     <AvatarWithSkeleton
                       name={character.weaponType}
                       url={character.weaponUrl}
-                      avatarClassName="w-4 h-4 md:w-6 md:h-6"
+                      avatarClassName="w-5 h-5 md:w-6 md:h-6"
                     />
                   </GuessTableCell>
                 </TableCell>
@@ -134,7 +134,7 @@ const GuessTable: React.FC<GuessTableProps> = ({
                     <AvatarWithSkeleton
                       name={character.element}
                       url={character.elementUrl}
-                      avatarClassName="w-4 h-4 md:w-6 md:h-6"
+                      avatarClassName="w-5 h-5 md:w-6 md:h-6"
                     />
                   </GuessTableCell>
                 </TableCell>
@@ -238,24 +238,20 @@ const VersionTableCell: React.FC<VersionTableCellProps> = ({
   const getVersionIcon = () => {
     switch (version) {
       case -2:
-        return (
-          <ChevronsDown className="w-3 h-3 md:w-4 md:h-4 text-error-400" />
-        );
+        return <ChevronsDown className="w-4 h-4 text-error-400" />;
       case -1:
-        return <ChevronDown className="w-3 h-3 md:w-4 md:h-4 text-error-400" />;
+        return <ChevronDown className="w-4 h-4 text-error-400" />;
       case 0:
         return null;
       case 1:
-        return <ChevronUp className="w-3 h-3 md:w-4 md:h-4 text-success-400" />;
+        return <ChevronUp className="w-4 h-4 text-success-400" />;
       case 2:
-        return (
-          <ChevronsUp className="w-3 h-3 md:w-4 md:h-4 text-success-400" />
-        );
+        return <ChevronsUp className="w-4 h-4 text-success-400" />;
     }
   };
 
   return (
-    <div className="flex items-center justify-center gap-0.5 md:gap-1 text-xs md:text-sm">
+    <div className="flex flex-col items-center justify-center gap-0 md:flex-row md:gap-1 text-xs md:text-sm leading-none">
       {getVersionIcon()}
       <span>{value}</span>
     </div>
