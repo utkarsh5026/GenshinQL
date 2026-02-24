@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { Check, Copy, Heart, RefreshCcw, Zap } from 'lucide-react';
+import { Check, Copy, RefreshCcw, Zap } from 'lucide-react';
 import React, { useState } from 'react';
 
 import { Avatar } from '@/components/ui/avatar';
@@ -23,8 +23,6 @@ import { Character } from '@/types';
 import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
 
 const MAX_GUESSES = 5;
-
-// ── Animation variants ───────────────────────────────────────────────────────
 
 const containerVariants = {
   hidden: { opacity: 0, scale: 0.85, y: 24 },
@@ -89,8 +87,6 @@ const glowRingVariants = {
     },
   },
 };
-
-// ── Hint reveal panel ─────────────────────────────────────────────────────────
 
 const HINT_SCHEDULE = [
   { label: 'Rarity', afterGuess: 1 },
@@ -234,49 +230,6 @@ const HintRevealPanel: React.FC<HintRevealPanelProps> = ({
   );
 };
 
-// ── Lives display ─────────────────────────────────────────────────────────────
-
-interface GuesserLivesDisplayProps {
-  guessCount: number;
-}
-
-const GuesserLivesDisplay: React.FC<GuesserLivesDisplayProps> = ({
-  guessCount,
-}) => {
-  const remaining = MAX_GUESSES - guessCount;
-  return (
-    <div className="flex items-center justify-center gap-2">
-      {Array.from({ length: MAX_GUESSES }).map((_, i) => {
-        const isFilled = i < remaining;
-        const isLastOne = remaining === 1 && i === 0;
-        return (
-          <motion.div
-            key={i}
-            animate={
-              !isFilled ? { scale: [1, 0.5, 0.75], opacity: [1, 0.2, 0.4] } : {}
-            }
-            transition={{ duration: 0.4 }}
-          >
-            <Heart
-              className={cn(
-                'w-6 h-6 transition-colors duration-300',
-                isFilled
-                  ? isLastOne
-                    ? 'text-game-wrong animate-pulse'
-                    : 'text-game-wrong'
-                  : 'text-muted-foreground/30'
-              )}
-              fill={isFilled ? 'currentColor' : 'none'}
-            />
-          </motion.div>
-        );
-      })}
-    </div>
-  );
-};
-
-// ── Streak display ────────────────────────────────────────────────────────────
-
 interface StreakDisplayProps {
   streak: number;
   bestStreak: number;
@@ -311,8 +264,6 @@ const StreakDisplay: React.FC<StreakDisplayProps> = ({
   </div>
 );
 
-// ── Share results ─────────────────────────────────────────────────────────────
-
 function buildShareText(
   guessedChars: string[],
   characterMap: Record<string, Character>,
@@ -344,8 +295,6 @@ function buildShareText(
 
   return [header, '', ...rows].join('\n');
 }
-
-// ── Shared GameOverContent ────────────────────────────────────────────────────
 
 interface GameOverContentProps {
   selectedCharacter: Character;
@@ -501,13 +450,13 @@ const GameOverDrawer: React.FC<GameOverDrawerProps> = ({
   return (
     <Drawer
       open={gameOver}
-      dismissible={false}
       shouldScaleBackground={false}
-      onOpenChange={() => {}}
+      onOpenChange={(open) => {
+        if (!open) onReset();
+      }}
     >
       <DrawerContent
         className={cn(
-          '[&>div:first-child]:hidden',
           'bg-card/98',
           gameWon
             ? 'border-t-2 border-genshin-gold/60'
@@ -558,11 +507,6 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
     <>
       <Card className="border-none md:mt-16 bg-card/95 backdrop-blur-sm">
         <CardContent className="p-4 md:p-8 flex flex-col space-y-4">
-          {/* Lives — always visible */}
-          <GuesserLivesDisplay
-            guessCount={gameOver ? MAX_GUESSES : guessCount}
-          />
-
           {/* Streak — always visible */}
           <StreakDisplay streak={streak} bestStreak={bestStreak} />
 
