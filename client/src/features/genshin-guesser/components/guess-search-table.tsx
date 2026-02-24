@@ -12,8 +12,6 @@ import { cn } from '@/lib/utils';
 import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
 import GuessTable from './guess-table';
 
-// ── Splash screen shown before first guess ────────────────────────────────────
-
 interface GameSplashScreenProps {
   namecardURL?: string;
 }
@@ -71,21 +69,11 @@ const GameSplashScreen: React.FC<GameSplashScreenProps> = ({ namecardURL }) => (
   </motion.div>
 );
 
-// ── Main component ────────────────────────────────────────────────────────────
-
 interface GuessSearchTableProps {
   selectedCharacter: Character;
   onGuess: (character: Character) => void;
 }
 
-/**
- * GuessSearchTable component displays the main game interface for the Genshin character guessing game.
- * It includes a search bar for making guesses, a table showing previous guesses, and win/lose states.
- *
- * @param selectedCharacter - The target character that players need to guess
- * @param onGuess - Callback function triggered when a player makes a guess
- * @returns A card containing the game interface with search functionality and guess history
- */
 const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
   selectedCharacter,
   onGuess,
@@ -139,22 +127,27 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
                 : '0 0 20px rgba(239,68,68,0.15), inset 0 1px 0 rgba(239,68,68,0.1)',
             }}
           >
-            {/* Shimmer sweep — win only */}
-            {gameWon && (
+            {/* Namecard background */}
+            {selectedCharacter.namecardURL && (
               <div
-                className="absolute inset-0 pointer-events-none animate-shimmer"
+                className="absolute inset-0 bg-cover bg-center pointer-events-none"
                 style={{
-                  background:
-                    'linear-gradient(90deg, transparent 0%, rgba(34,197,94,0.1) 50%, transparent 100%)',
-                  backgroundSize: '200% 100%',
+                  backgroundImage: `url(${selectedCharacter.namecardURL})`,
                 }}
-              />
+              >
+                <div
+                  className={cn(
+                    'absolute inset-0',
+                    gameWon ? 'bg-background/75' : 'bg-background/85'
+                  )}
+                />
+              </div>
             )}
 
             {/* Message */}
             <p
               className={cn(
-                'relative z-10 text-xl font-bold tracking-wide',
+                'relative z-10 text-xl font-bold tracking-wide bg-background/50 backdrop-blur-sm rounded-xl px-5 py-2 border border-border/20',
                 gameWon ? 'text-game-correct' : 'text-game-wrong'
               )}
             >
@@ -163,7 +156,7 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
 
             {/* Character avatar — floats on win, dims on loss */}
             <motion.div
-              className="relative z-10"
+              className="relative z-10 drop-shadow-2xl"
               animate={gameWon ? { y: [0, -5, 0] } : { opacity: [1, 0.75, 1] }}
               transition={
                 gameWon
