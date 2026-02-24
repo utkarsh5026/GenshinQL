@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { ChevronDown, ChevronsDown, ChevronsUp, ChevronUp } from 'lucide-react';
 import React from 'react';
 
@@ -14,6 +13,8 @@ import AvatarWithSkeleton from '@/components/utils/AvatarWithSkeleton';
 import CharacterAvatar from '@/features/characters/components/utils/character-avatar';
 import { cn } from '@/lib/utils';
 import { Character } from '@/types';
+
+import styles from './guess-table.module.css';
 
 const MAX_GUESSES = 5;
 
@@ -76,12 +77,10 @@ const GuessTable: React.FC<GuessTableProps> = ({
         <TableBody>
           {slots.map((character, idx) =>
             character ? (
-              <motion.tr
+              <tr
                 key={character.name}
-                initial={{ y: -16, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 24 }}
                 className={cn(
+                  styles.guessRow,
                   'text-left transition-colors duration-200 border-b',
                   idx % 2 === 0 ? 'bg-transparent' : 'bg-muted/30'
                 )}
@@ -158,7 +157,7 @@ const GuessTable: React.FC<GuessTableProps> = ({
                     />
                   </GuessTableCell>
                 </TableCell>
-              </motion.tr>
+              </tr>
             ) : (
               <tr
                 key={`empty-${idx}`}
@@ -199,32 +198,27 @@ const GuessTableCell: React.FC<GuessTableCellProps> = ({
   index,
 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, rotateX: 90, scale: 0.8 }}
-      animate={{ opacity: 1, rotateX: 0, scale: 1 }}
-      transition={{
-        duration: 0.6,
-        delay: index * 0.12,
-        ease: [0.34, 1.56, 0.64, 1],
-      }}
-      whileHover={{ scale: 1.05 }}
+    <div
       className={cn(
-        'relative flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-xl border',
+        styles.flipCard,
+        'relative flex items-center justify-center shadow-md hover:shadow-xl transition-shadow duration-200 border',
         'p-1 rounded-md w-8 h-8 md:p-3 md:rounded-lg md:w-full md:h-full md:min-w-12.5 md:min-h-17.5',
         isCorrect ? 'bg-success-800' : 'bg-error-800'
       )}
+      style={{ animationDelay: `${index * 0.12}s` }}
     >
       <div className="absolute inset-0 rounded-[inherit] opacity-20 pointer-events-none bg-linear-to-br from-white/10 to-transparent" />
       <div className="relative z-10">{children}</div>
       {isCorrect && (
-        <motion.div
-          className="absolute inset-0 rounded-[inherit] border-2 border-success-400"
-          initial={{ opacity: 0.8, scale: 1 }}
-          animate={{ opacity: 0, scale: 1.3 }}
-          transition={{ duration: 0.6, delay: index * 0.12 + 0.3 }}
+        <div
+          className={cn(
+            styles.successPulse,
+            'absolute inset-0 rounded-[inherit] border-2 border-success-400'
+          )}
+          style={{ animationDelay: `${index * 0.12 + 0.3}s` }}
         />
       )}
-    </motion.div>
+    </div>
   );
 };
 
