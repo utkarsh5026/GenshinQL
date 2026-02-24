@@ -7,7 +7,6 @@ import { cn } from '@/lib/utils';
 
 import { useCharacterFilters } from '../../hooks/useCharacterFilters';
 import { useCharactersError, useCharactersStore } from '../../stores';
-import styles from './CharacterCard.module.css';
 import CharacterCardGrid from './characters-grid';
 import CharacterTable from './characters-table';
 
@@ -17,6 +16,8 @@ const CharacterCardsWithFilters: React.FC = () => {
   const { loading } = useCharactersStore();
   const error = useCharactersError();
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  const effectiveViewMode: ViewMode = isMobile ? 'grid' : viewMode;
 
   const {
     characters: filteredCharacters,
@@ -52,12 +53,13 @@ const CharacterCardsWithFilters: React.FC = () => {
           />
         </div>
 
-        <div className={styles.viewToggle}>
+        <div className="hidden md:flex items-center gap-1 p-0.75 bg-muted/50 border border-border rounded-lg">
           <button
             type="button"
             className={cn(
-              styles.viewToggleBtn,
-              viewMode === 'grid' && styles.viewToggleBtnActive
+              'flex items-center justify-center w-8.5 h-8.5 rounded-md bg-transparent border border-transparent text-muted-foreground cursor-pointer transition-all duration-200 ease-out hover:text-foreground hover:bg-muted/80',
+              viewMode === 'grid' &&
+                'bg-background border-border text-foreground shadow-sm'
             )}
             onClick={() => setViewMode('grid')}
             title="Grid view"
@@ -67,8 +69,9 @@ const CharacterCardsWithFilters: React.FC = () => {
           <button
             type="button"
             className={cn(
-              styles.viewToggleBtn,
-              viewMode === 'table' && styles.viewToggleBtnActive
+              'flex items-center justify-center w-8.5 h-8.5 rounded-md bg-transparent border border-transparent text-muted-foreground cursor-pointer transition-all duration-200 ease-out hover:text-foreground hover:bg-muted/80',
+              viewMode === 'table' &&
+                'bg-background border-border text-foreground shadow-sm'
             )}
             onClick={() => setViewMode('table')}
             title="Table view"
@@ -79,7 +82,7 @@ const CharacterCardsWithFilters: React.FC = () => {
       </div>
 
       {filteredCharacters.length > 0 ? (
-        viewMode === 'grid' ? (
+        effectiveViewMode === 'grid' ? (
           <CharacterCardGrid characters={filteredCharacters} />
         ) : (
           <CharacterTable characters={filteredCharacters} />
