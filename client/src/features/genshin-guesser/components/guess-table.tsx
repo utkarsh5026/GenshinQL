@@ -15,28 +15,36 @@ import CharacterAvatar from '@/features/characters/components/utils/character-av
 import { cn } from '@/lib/utils';
 import { Character } from '@/types';
 
+const MAX_GUESSES = 5;
+
+const HEADERS = [
+  { full: 'Character', short: 'Char' },
+  { full: 'Region', short: 'Rgn' },
+  { full: 'Weapon', short: 'Wpn' },
+  { full: 'Element', short: 'Elm' },
+  { full: 'Version', short: 'Ver' },
+];
+
 interface GuessTableProps {
   characters: Character[];
   correctCharacter: Character;
 }
 
-/**
- * GuessTable component displays a table of guessed characters and compares them with the correct character.
- * It shows visual feedback for correct/incorrect guesses for region, weapon, and element.
- *
- * @param characters - Array of Character objects representing the guessed characters
- * @param correctCharacter - The target Character that players need to guess
- * @returns A table showing guessed characters with visual feedback on matches
- */
 const GuessTable: React.FC<GuessTableProps> = ({
   characters,
   correctCharacter,
 }) => {
-  const isCorrect = (correct: string, guess: string) => {
-    return correct === guess;
-  };
+  const slots: (Character | null)[] = Array.from(
+    { length: MAX_GUESSES },
+    (_, i) => characters[i] ?? null
+  );
 
-  const handleVersion = (correct: string, guess: string) => {
+  const isCorrect = (correct: string, guess: string) => correct === guess;
+
+  const handleVersion = (
+    correct: string,
+    guess: string
+  ): -2 | -1 | 0 | 1 | 2 => {
     if (correct === guess) return 0;
 
     const [correctPatch, correctVersion] = correct.split('.');
@@ -50,59 +58,24 @@ const GuessTable: React.FC<GuessTableProps> = ({
   };
 
   return (
-    <div className="w-full">
-      {/* MOBILE: compact single-row list — hidden at md+ */}
-      <div className="md:hidden">
-        {/* Column header labels */}
-        {characters.length > 0 && (
-          <div className="flex items-center gap-1.5 px-2 pb-1 mb-1 border-b border-border">
-            <span className="flex-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-              Character
-            </span>
-            <div className="flex gap-1 shrink-0 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-              <span className="w-8 text-center">Rgn</span>
-              <span className="w-8 text-center">Wpn</span>
-              <span className="w-8 text-center">Elm</span>
-            </div>
-            <span className="w-10 shrink-0 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-              Ver
-            </span>
-          </div>
-        )}
-
-        <div className="space-y-1.5">
-          {characters.map((character, idx) => (
-            <MobileGuessRow
-              key={character.name}
-              character={character}
-              correctCharacter={correctCharacter}
-              isCorrect={isCorrect}
-              handleVersion={handleVersion}
-              idx={idx}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* DESKTOP: table — shown at md+ only */}
-      <div className="hidden md:block w-full overflow-x-auto">
-        <Table className="min-w-120">
-          <TableHeader>
-            <TableRow className="border-b-2 border-border hover:bg-transparent">
-              {['Character', 'Region', 'Weapon', 'Element', 'Version'].map(
-                (header) => (
-                  <TableHead
-                    key={header}
-                    className="text-xs font-bold uppercase tracking-wider text-muted-foreground"
-                  >
-                    {header}
-                  </TableHead>
-                )
-              )}
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {characters.map((character, idx) => (
+    <div className="w-full overflow-x-auto">
+      <Table className="md:min-w-120">
+        <TableHeader>
+          <TableRow className="border-b-2 border-border hover:bg-transparent">
+            {HEADERS.map(({ full, short }) => (
+              <TableHead
+                key={full}
+                className="px-1.5 md:px-4 text-xs font-bold uppercase tracking-wider text-muted-foreground"
+              >
+                <span className="hidden md:inline">{full}</span>
+                <span className="md:hidden">{short}</span>
+              </TableHead>
+            ))}
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {slots.map((character, idx) =>
+            character ? (
               <motion.tr
                 key={character.name}
                 initial={{ y: -16, opacity: 0 }}
@@ -113,14 +86,15 @@ const GuessTable: React.FC<GuessTableProps> = ({
                   idx % 2 === 0 ? 'bg-transparent' : 'bg-muted/30'
                 )}
               >
-                <TableCell>
+                <TableCell className="px-1.5 md:px-4">
                   <CharacterAvatar
                     characterName={character.name}
                     showName
-                    size="md"
+                    size="sm"
+                    nameClassName="max-w-14 truncate md:max-w-none"
                   />
                 </TableCell>
-                <TableCell>
+                <TableCell className="px-1.5 md:px-4">
                   <GuessTableCell
                     isCorrect={isCorrect(
                       character.region,
@@ -131,10 +105,11 @@ const GuessTable: React.FC<GuessTableProps> = ({
                     <AvatarWithSkeleton
                       name={character.region}
                       url={character.regionUrl}
+                      avatarClassName="w-4 h-4 md:w-6 md:h-6"
                     />
                   </GuessTableCell>
                 </TableCell>
-                <TableCell>
+                <TableCell className="px-1.5 md:px-4">
                   <GuessTableCell
                     isCorrect={isCorrect(
                       character.weaponType,
@@ -145,10 +120,11 @@ const GuessTable: React.FC<GuessTableProps> = ({
                     <AvatarWithSkeleton
                       name={character.weaponType}
                       url={character.weaponUrl}
+                      avatarClassName="w-4 h-4 md:w-6 md:h-6"
                     />
                   </GuessTableCell>
                 </TableCell>
-                <TableCell>
+                <TableCell className="px-1.5 md:px-4">
                   <GuessTableCell
                     isCorrect={isCorrect(
                       character.element,
@@ -159,10 +135,11 @@ const GuessTable: React.FC<GuessTableProps> = ({
                     <AvatarWithSkeleton
                       name={character.element}
                       url={character.elementUrl}
+                      avatarClassName="w-4 h-4 md:w-6 md:h-6"
                     />
                   </GuessTableCell>
                 </TableCell>
-                <TableCell>
+                <TableCell className="px-1.5 md:px-4">
                   <GuessTableCell
                     index={3}
                     isCorrect={
@@ -182,10 +159,30 @@ const GuessTable: React.FC<GuessTableProps> = ({
                   </GuessTableCell>
                 </TableCell>
               </motion.tr>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
+            ) : (
+              <tr
+                key={`empty-${idx}`}
+                className={cn(
+                  'border-b',
+                  idx % 2 === 0 ? 'bg-transparent' : 'bg-muted/30'
+                )}
+              >
+                <TableCell className="px-1.5 md:px-4">
+                  <div className="flex items-center gap-2 py-1">
+                    <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-muted/20 border border-dashed border-muted-foreground/20 shrink-0" />
+                    <div className="w-12 md:w-16 h-2.5 rounded bg-muted/20" />
+                  </div>
+                </TableCell>
+                {[0, 1, 2, 3].map((i) => (
+                  <TableCell key={i} className="px-1.5 md:px-4">
+                    <PlaceholderCell />
+                  </TableCell>
+                ))}
+              </tr>
+            )
+          )}
+        </TableBody>
+      </Table>
     </div>
   );
 };
@@ -194,14 +191,12 @@ type GuessTableCellProps = {
   isCorrect: boolean;
   children: React.ReactNode;
   index: number;
-  compact?: boolean;
 };
 
 const GuessTableCell: React.FC<GuessTableCellProps> = ({
   isCorrect,
   children,
   index,
-  compact = false,
 }) => {
   return (
     <motion.div
@@ -215,19 +210,12 @@ const GuessTableCell: React.FC<GuessTableCellProps> = ({
       whileHover={{ scale: 1.05 }}
       className={cn(
         'relative flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-xl border',
-        compact
-          ? 'p-1 rounded-md w-8 h-8'
-          : 'w-full h-full p-3 rounded-lg min-w-0 md:min-w-12.5 min-h-17.5',
+        'p-1 rounded-md w-8 h-8 md:p-3 md:rounded-lg md:w-full md:h-full md:min-w-12.5 md:min-h-17.5',
         isCorrect ? 'bg-success-800' : 'bg-error-800'
       )}
     >
-      {/* Subtle gradient overlay for depth */}
       <div className="absolute inset-0 rounded-[inherit] opacity-20 pointer-events-none bg-linear-to-br from-white/10 to-transparent" />
-
-      {/* Content */}
       <div className="relative z-10">{children}</div>
-
-      {/* Pulse effect for correct answers */}
       {isCorrect && (
         <motion.div
           className="absolute inset-0 rounded-[inherit] border-2 border-success-400"
@@ -240,129 +228,40 @@ const GuessTableCell: React.FC<GuessTableCellProps> = ({
   );
 };
 
-interface MobileGuessRowProps {
-  character: Character;
-  correctCharacter: Character;
-  isCorrect: (correct: string, guess: string) => boolean;
-  handleVersion: (correct: string, guess: string) => -2 | -1 | 0 | 1 | 2;
-  idx: number;
-}
-
-const MobileGuessRow: React.FC<MobileGuessRowProps> = ({
-  character,
-  correctCharacter,
-  isCorrect,
-  handleVersion,
-  idx,
-}) => {
-  return (
-    <motion.div
-      initial={{ y: -12, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-      className={cn(
-        'flex items-center gap-1.5 px-2 py-1.5 rounded-lg border border-border',
-        idx % 2 === 0 ? 'bg-transparent' : 'bg-muted/30'
-      )}
-    >
-      {/* Character avatar + name */}
-      <CharacterAvatar
-        characterName={character.name}
-        showName
-        size="xs"
-        nameClassName="max-w-14 truncate"
-      />
-
-      {/* Region | Weapon | Element — compact cells */}
-      <div className="flex gap-1 shrink-0">
-        <GuessTableCell
-          isCorrect={isCorrect(character.region, correctCharacter.region)}
-          index={0}
-          compact
-        >
-          <AvatarWithSkeleton
-            name={character.region}
-            url={character.regionUrl}
-            avatarClassName="w-4 h-4"
-          />
-        </GuessTableCell>
-        <GuessTableCell
-          isCorrect={isCorrect(
-            character.weaponType,
-            correctCharacter.weaponType
-          )}
-          index={1}
-          compact
-        >
-          <AvatarWithSkeleton
-            name={character.weaponType}
-            url={character.weaponUrl}
-            avatarClassName="w-4 h-4"
-          />
-        </GuessTableCell>
-        <GuessTableCell
-          isCorrect={isCorrect(character.element, correctCharacter.element)}
-          index={2}
-          compact
-        >
-          <AvatarWithSkeleton
-            name={character.element}
-            url={character.elementUrl}
-            avatarClassName="w-4 h-4"
-          />
-        </GuessTableCell>
-      </div>
-
-      {/* Version — inline text + icon */}
-      <div className="shrink-0 w-10 flex items-center justify-center gap-0.5">
-        <VersionTableCell
-          version={handleVersion(
-            character.version ?? '1.0',
-            correctCharacter.version ?? '1.0'
-          )}
-          value={character.version ?? '?'}
-          compact
-        />
-      </div>
-    </motion.div>
-  );
-};
+const PlaceholderCell: React.FC = () => (
+  <div className="border border-dashed border-muted-foreground/20 rounded-md md:rounded-lg bg-muted/10 w-8 h-8 md:w-full md:min-w-12.5 md:min-h-17.5" />
+);
 
 interface VersionTableCellProps {
   version: -2 | -1 | 0 | 1 | 2;
   value: string;
-  compact?: boolean;
 }
 
 const VersionTableCell: React.FC<VersionTableCellProps> = ({
   version,
   value,
-  compact = false,
 }) => {
-  const iconClass = compact ? 'w-3 h-3' : undefined;
-
   const getVersionIcon = () => {
     switch (version) {
       case -2:
-        return <ChevronsDown className={cn('text-error-400', iconClass)} />;
+        return (
+          <ChevronsDown className="w-3 h-3 md:w-4 md:h-4 text-error-400" />
+        );
       case -1:
-        return <ChevronDown className={cn('text-error-400', iconClass)} />;
+        return <ChevronDown className="w-3 h-3 md:w-4 md:h-4 text-error-400" />;
       case 0:
         return null;
       case 1:
-        return <ChevronUp className={cn('text-success-400', iconClass)} />;
+        return <ChevronUp className="w-3 h-3 md:w-4 md:h-4 text-success-400" />;
       case 2:
-        return <ChevronsUp className={cn('text-success-400', iconClass)} />;
+        return (
+          <ChevronsUp className="w-3 h-3 md:w-4 md:h-4 text-success-400" />
+        );
     }
   };
 
   return (
-    <div
-      className={cn(
-        'flex items-center justify-center gap-1',
-        compact ? 'text-xs' : 'gap-2'
-      )}
-    >
+    <div className="flex items-center justify-center gap-0.5 md:gap-1 text-xs md:text-sm">
       {getVersionIcon()}
       <span>{value}</span>
     </div>
