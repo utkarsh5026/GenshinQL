@@ -1,4 +1,29 @@
-/* Sticker — invisible until the image loads */
+/* ─── Hero text animations ───────────────────────────────────────── */
+
+/* Title row (swords + "Genshin Guesser") */
+.heroTitle {
+  opacity: 0;
+  animation: heroSlideUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Subtitle quirky text — slightly later */
+.heroSubtitle {
+  opacity: 0;
+  animation: heroSlideUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.13s forwards;
+}
+
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Sticker — invisible until the image loads ───────────────────── */
 .sticker {
   pointer-events: none;
   flex-shrink: 0;

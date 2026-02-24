@@ -1,6 +1,7 @@
 import { Swords } from 'lucide-react';
 import React, { useEffect, useMemo, useRef } from 'react';
 
+import { CachedImage } from '@/features/cache/components/cached-asset';
 import { type Character, useCharactersStore } from '@/features/characters';
 import { useStickerStore } from '@/stores/useStickerStore';
 
@@ -101,11 +102,23 @@ const GenshinGuesser: React.FC = () => {
       {/* Hero banner */}
       <div className="relative overflow-hidden rounded-xl h-36 flex items-center justify-center">
         {/* Background — blurred & slightly scaled to hide blur edges */}
-        <img
+        <CachedImage
           src="/images/wallpapers/wordle.png"
           alt=""
           aria-hidden
-          className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-sm"
+          lazy={false}
+          showSkeleton={false}
+          className="w-full h-full object-cover object-center scale-110 blur-sm"
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+            display: 'block',
+            width: '100%',
+            height: '100%',
+          }}
         />
         {/* Base dark tint */}
         <div className="absolute inset-0 bg-black/90" />
@@ -136,7 +149,10 @@ const GenshinGuesser: React.FC = () => {
             />
           )}
           <div className="flex flex-col items-center gap-0.5">
-            <div className="flex items-center gap-2 text-genshin-gold">
+            <div
+              key={`title-${currentChar}`}
+              className={`flex items-center gap-2 text-genshin-gold ${styles.heroTitle}`}
+            >
               <Swords className="w-5 h-5 drop-shadow-[0_0_6px_rgba(251,191,36,0.8)]" />
               <h1
                 className="text-2xl font-bold tracking-tight"
@@ -149,7 +165,12 @@ const GenshinGuesser: React.FC = () => {
               </h1>
               <Swords className="w-5 h-5 scale-x-[-1] drop-shadow-[0_0_6px_rgba(251,191,36,0.8)]" />
             </div>
-            <p className="text-white/55 text-xs tracking-wide">{quirkyText}</p>
+            <p
+              key={`subtitle-${currentChar}`}
+              className={`text-white/55 text-xs tracking-wide ${styles.heroSubtitle}`}
+            >
+              {quirkyText}
+            </p>
           </div>
         </div>
       </div>
