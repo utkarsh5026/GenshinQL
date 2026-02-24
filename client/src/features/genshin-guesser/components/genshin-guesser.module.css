@@ -23,12 +23,37 @@
   }
 }
 
+/* ─── Banner vignette — darkens edges using theme midnight color ──── */
+.bannerVignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 20%,
+    color-mix(in oklch, var(--color-midnight-950) 80%, transparent) 100%
+  );
+}
+
+/* ─── Sword icon glow using legendary gold theme color ───────────── */
+.swordIcon {
+  filter: drop-shadow(
+    0 0 8px color-mix(in oklch, var(--color-legendary-500) 90%, transparent)
+  );
+}
+
+/* ─── Hero title text shadow using legendary gold + midnight ─────── */
+.heroTitleText {
+  text-shadow:
+    0 0 30px color-mix(in oklch, var(--color-legendary-500) 70%, transparent),
+    0 2px 6px color-mix(in oklch, var(--color-midnight-950) 90%, transparent);
+}
+
 /* ─── Sticker — invisible until the image loads ───────────────────── */
 .sticker {
   pointer-events: none;
   flex-shrink: 0;
   opacity: 0;
-  filter: drop-shadow(0 1px 8px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.75));
 }
 
 /* Added via onLoad — fades in then floats gently */
@@ -54,6 +79,6 @@
     translate: 0 0;
   }
   to {
-    translate: 0 -5px;
+    translate: 0 -8px;
   }
 }

@@ -1,8 +1,8 @@
 import { Swords } from 'lucide-react';
 import React, { useEffect, useMemo, useRef } from 'react';
 
-import { CachedImage } from '@/features/cache/components/cached-asset';
 import { type Character, useCharactersStore } from '@/features/characters';
+import { cn } from '@/lib/utils';
 import { useStickerStore } from '@/stores/useStickerStore';
 
 import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
@@ -19,6 +19,22 @@ const QUIRKY_TEXTS = [
   'Name that character, Traveler!',
   'Your vision awaits, Traveler.',
 ];
+
+// Guess heatmap grid for the banner background (deterministic, static)
+type CellState = 'correct' | 'wrong' | 'empty';
+const BANNER_COLS = 28;
+const BANNER_ROWS = 8;
+const BANNER_GRID: CellState[] = Array.from(
+  { length: BANNER_ROWS * BANNER_COLS },
+  (_, i) => {
+    const row = Math.floor(i / BANNER_COLS);
+    const col = i % BANNER_COLS;
+    const h = Math.abs(((row * 7 + col * 13) * 2654435761) | 0) % 10;
+    if (h < 3) return 'correct';
+    if (h < 6) return 'wrong';
+    return 'empty';
+  }
+);
 
 // Deterministic hash — seeds both the sticker and subtitle per game
 function seededIndex(seed: string, offset: number, max: number): number {
@@ -100,82 +116,76 @@ const GenshinGuesser: React.FC = () => {
   return (
     <div className="flex flex-col gap-4">
       {/* Hero banner */}
-      <div className="relative overflow-hidden rounded-xl h-36 flex items-center justify-center">
-        {/* Background — blurred & slightly scaled to hide blur edges */}
-        <CachedImage
-          src="/images/wallpapers/wordle.png"
-          alt=""
-          aria-hidden
-          lazy={false}
-          showSkeleton={false}
-          className="w-full h-full object-cover object-center scale-110 blur-sm"
-          style={{
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0,
-            display: 'block',
-            width: '100%',
-            height: '100%',
-          }}
-        />
-        {/* Base dark tint */}
-        <div className="absolute inset-0 bg-black/90" />
-        {/* Vignette — darkens edges, keeps centre bright */}
+      <div className="relative overflow-hidden rounded-xl h-52 flex items-end justify-center pb-6">
+        {/* Dark base */}
+        <div className="absolute inset-0 bg-midnight-950" />
+        {/* Guess heatmap grid */}
         <div
           className="absolute inset-0"
           style={{
-            background:
-              'radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.65) 100%)',
+            display: 'grid',
+            gridTemplateColumns: `repeat(${BANNER_COLS}, 1fr)`,
+            gridTemplateRows: `repeat(${BANNER_ROWS}, 1fr)`,
+            gap: '4px',
+            padding: '10px',
+            opacity: 0.45,
           }}
-        />
+        >
+          {BANNER_GRID.map((state, i) => (
+            <div
+              key={i}
+              className={cn(
+                'rounded-sm',
+                state === 'correct' && 'bg-success-800',
+                state === 'wrong' && 'bg-error-800',
+                state === 'empty' && 'border border-white/8'
+              )}
+            />
+          ))}
+        </div>
+        {/* Vignette — darkens edges, keeps centre bright */}
+        <div className={styles.bannerVignette} />
+
         {/* Bottom fade into page background */}
         <div className="absolute inset-x-0 bottom-0 h-10 bg-linear-to-t from-background to-transparent" />
 
-        {/* Frosted-glass pill — sticker + title + subtitle */}
-        <div className="relative z-10 flex items-center gap-3 px-5 py-3 rounded-xl backdrop-blur-sm bg-black/20 border border-white/10">
-          {heroSticker && (
-            <img
-              src={heroSticker.url}
-              alt={heroSticker.characterName}
-              draggable={false}
-              width={52}
-              height={52}
-              className={styles.sticker}
-              onLoad={(e) =>
-                e.currentTarget.classList.add(styles.stickerVisible)
-              }
-            />
-          )}
-          <div className="flex flex-col items-center gap-0.5">
-            <div
-              key={`title-${currentChar}`}
-              className={`flex items-center gap-2 text-genshin-gold ${styles.heroTitle}`}
+        {/* Sticker — floats above the title */}
+        {heroSticker && (
+          <img
+            src={heroSticker.url}
+            alt={heroSticker.characterName}
+            draggable={false}
+            width={88}
+            height={88}
+            className={`absolute top-4 left-1/2 -translate-x-1/2 ${styles.sticker}`}
+            onLoad={(e) => e.currentTarget.classList.add(styles.stickerVisible)}
+          />
+        )}
+
+        {/* Title + subtitle — centered at bottom */}
+        <div className="relative z-10 flex flex-col items-center gap-1">
+          <div
+            key={`title-${currentChar}`}
+            className={`flex items-center gap-2 text-genshin-gold ${styles.heroTitle}`}
+          >
+            <Swords className={`w-5 h-5 ${styles.swordIcon}`} />
+            <h1
+              className={`text-3xl font-bold tracking-tight ${styles.heroTitleText}`}
             >
-              <Swords className="w-5 h-5 drop-shadow-[0_0_6px_rgba(251,191,36,0.8)]" />
-              <h1
-                className="text-2xl font-bold tracking-tight"
-                style={{
-                  textShadow:
-                    '0 0 20px rgba(251,191,36,0.6), 0 2px 4px rgba(0,0,0,0.8)',
-                }}
-              >
-                Genshin Guesser
-              </h1>
-              <Swords className="w-5 h-5 scale-x-[-1] drop-shadow-[0_0_6px_rgba(251,191,36,0.8)]" />
-            </div>
-            <p
-              key={`subtitle-${currentChar}`}
-              className={`text-white/55 text-xs tracking-wide ${styles.heroSubtitle}`}
-            >
-              {quirkyText}
-            </p>
+              Genshin Guesser
+            </h1>
+            <Swords className={`w-5 h-5 scale-x-[-1] ${styles.swordIcon}`} />
           </div>
+          <p
+            key={`subtitle-${currentChar}`}
+            className={`text-white/55 text-xs tracking-widest uppercase ${styles.heroSubtitle}`}
+          >
+            {quirkyText}
+          </p>
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col md:flex-row gap-4 items-start">
         <div className="w-full md:w-2/3">
           <GuessSearchTable
             selectedCharacter={selectedCharacter}
