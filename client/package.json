@@ -26,6 +26,7 @@
     "check-gallery": "bun scripts/scrape/gallery.ts --check",
     "consolidate": "bun scripts/consolidate.ts",
     "add-idle-animations": "bun scripts/addIdleAnimations.ts",
+    "add-versions": "bun scripts/add-versions.ts",
     "generate-primitives": "bun scripts/scrape/primitives.ts",
     "r2:status": "bun scripts/r2/index.ts status",
     "r2:download": "bun scripts/r2/index.ts download",
