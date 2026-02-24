@@ -36,7 +36,7 @@ const CharacterCardsWithFilters: React.FC = () => {
     return <div className="p-4 text-destructive">Error: {error.message}</div>;
 
   return (
-    <div className="w-full -m-4 md:-m-6 flex-col gap-8">
+    <div className="-m-4 md:-m-6 flex flex-col gap-8">
       <div className="flex items-center gap-3 px-4 md:px-6 pt-4 md:pt-6">
         <div className="flex-1">
           <FilterBar
