@@ -200,7 +200,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
     <HoverCard key={name}>
       <HoverCardTrigger asChild>{containerElement}</HoverCardTrigger>
       <HoverCardContent align="center" side="right" className="w-80 md:w-96">
-        <CharacterCard character={character} />
+        <CharacterCard character={character} showAnimation />
       </HoverCardContent>
     </HoverCard>
   );
@@ -210,7 +210,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
       <DrawerTrigger asChild>{containerElement}</DrawerTrigger>
       <DrawerContent className="max-h-[85vh]">
         <div className="p-3 sm:p-4 overflow-y-auto">
-          <CharacterCard character={character} />
+          <CharacterCard character={character} showAnimation />
         </div>
       </DrawerContent>
     </Drawer>

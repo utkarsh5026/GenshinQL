@@ -1,51 +1,35 @@
 /* Optimized element-themed styles - animations only on hover for better performance */
 
-/* Card fade-in animation for initial load */
-.cardFadeIn {
-  opacity: 0;
-  transform: translate3d(0, 20px, 0);
-  transition:
-    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cardFadeIn.visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
 /* Element icon wrapper - no animations by default for performance */
 .elementIcon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease;
-  /* GPU acceleration hint */
   will-change: transform;
 }
 
-/* Card hover base class with GPU acceleration */
+/* Card hover with GPU acceleration */
 .cardHover {
   position: relative;
-  /* Use transform3d for GPU acceleration */
   transform: translate3d(0, 0, 0);
   will-change: transform, box-shadow;
   transition:
     transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    outline-color 0.3s ease;
 }
 
-/* Simplified hover effect with GPU acceleration */
 .cardHover:hover {
   transform: translate3d(0, -4px, 0) scale(1.02);
   box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    0 20px 40px -8px rgba(0, 0, 0, 0.25),
+    0 10px 15px -5px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
   .cardHover:hover {
-    transform: translate3d(0, -4px, 0) scale(1.03);
+    transform: translate3d(0, -6px, 0) scale(1.03);
   }
 }
 
@@ -62,10 +46,32 @@
 
 /* Only animate element icons on card hover for performance */
 .cardHover:hover .elementIcon {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* Anemo - Wind/Air: Gentle hover effect */
+/* ─── Rarity glow treatments ─── */
+
+.fiveStarGlow {
+  outline: 1px solid rgba(250, 204, 21, 0.4);
+  box-shadow: 0 4px 24px rgba(250, 204, 21, 0.12);
+}
+
+.fourStarGlow {
+  outline: 1px solid rgba(167, 139, 250, 0.35);
+  box-shadow: 0 4px 24px rgba(167, 139, 250, 0.1);
+}
+
+/* Star text glow */
+.fiveStarText {
+  filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.7));
+}
+
+.fourStarText {
+  filter: drop-shadow(0 0 4px rgba(167, 139, 250, 0.7));
+}
+
+/* ─── Element icon animations on hover ─── */
+
 .cardHover:hover .anemo {
   animation: float 2s ease-in-out;
 }
@@ -80,7 +86,6 @@
   }
 }
 
-/* Pyro - Fire: Subtle brightness on hover */
 .cardHover:hover .pyro {
   animation: flicker 1.5s ease-in-out;
 }
@@ -95,7 +100,6 @@
   }
 }
 
-/* Hydro - Water: Gentle scale on hover */
 .cardHover:hover .hydro {
   animation: wave 2s ease-in-out;
 }
@@ -110,7 +114,6 @@
   }
 }
 
-/* Electro - Electric: Quick pulse on hover */
 .cardHover:hover .electro {
   animation: pulse 1s ease-in-out;
 }
@@ -125,7 +128,6 @@
   }
 }
 
-/* Cryo - Ice: Shimmer on hover */
 .cardHover:hover .cryo {
   animation: shimmer 2s ease-in-out;
 }
@@ -140,7 +142,6 @@
   }
 }
 
-/* Geo - Rock: Stable pulse on hover */
 .cardHover:hover .geo {
   animation: solidPulse 2s ease-in-out;
 }
@@ -155,7 +156,6 @@
   }
 }
 
-/* Dendro - Nature: Gentle grow on hover */
 .cardHover:hover .dendro {
   animation: bloom 2s ease-in-out;
 }
@@ -170,7 +170,8 @@
   }
 }
 
-/* Element-specific hover glows - reduced opacity for subtlety */
+/* ─── Element-specific hover glows ─── */
+
 .anemoGlow:hover::before {
   opacity: 0.1;
   box-shadow: 0 0 15px 3px rgba(100, 210, 255, 0.3);
@@ -206,22 +207,18 @@
   box-shadow: 0 0 15px 3px rgba(100, 200, 50, 0.3);
 }
 
-/* Namecard banner - absolutely positioned at top of card */
+/* ─── Namecard banner ─── */
+
+/* Dominant top section — 130px so it fills roughly 40% of the card */
 .namecardBanner {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 130px;
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
-}
-
-@media (max-width: 767px) {
-  .namecardBanner {
-    height: 70px;
-  }
 }
 
 /* Namecard image with GPU acceleration */
@@ -230,27 +227,104 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.6;
+  opacity: 0.75;
   transform: translate3d(0, 0, 0);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Subtle zoom on card hover */
 .cardHover:hover .namecardImage {
-  transform: translate3d(0, 0, 0) scale(1.05);
+  transform: translate3d(0, 0, 0) scale(1.07);
 }
 
-/* Gradient overlay for depth */
+/* Stronger gradient to smoothly transition into card body */
 .namecardOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(0, 0, 0, 0.15) 40%,
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.65) 100%
   );
   pointer-events: none;
+}
+
+/* Element-tinted placeholder for characters without a namecard */
+.namecardPlaceholder {
+  width: 100%;
+  height: 100%;
+}
+
+.anemoTint {
+  background: linear-gradient(
+    135deg,
+    rgba(100, 210, 255, 0.28) 0%,
+    rgba(100, 210, 255, 0.06) 100%
+  );
+}
+
+.pyroTint {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 100, 50, 0.28) 0%,
+    rgba(255, 100, 50, 0.06) 100%
+  );
+}
+
+.hydroTint {
+  background: linear-gradient(
+    135deg,
+    rgba(50, 150, 255, 0.28) 0%,
+    rgba(50, 150, 255, 0.06) 100%
+  );
+}
+
+.electroTint {
+  background: linear-gradient(
+    135deg,
+    rgba(150, 100, 255, 0.28) 0%,
+    rgba(150, 100, 255, 0.06) 100%
+  );
+}
+
+.cryoTint {
+  background: linear-gradient(
+    135deg,
+    rgba(150, 220, 255, 0.28) 0%,
+    rgba(150, 220, 255, 0.06) 100%
+  );
+}
+
+.geoTint {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 200, 50, 0.28) 0%,
+    rgba(255, 200, 50, 0.06) 100%
+  );
+}
+
+.dendroTint {
+  background: linear-gradient(
+    135deg,
+    rgba(100, 200, 50, 0.28) 0%,
+    rgba(100, 200, 50, 0.06) 100%
+  );
+}
+
+/* ─── Avatar overlap ─── */
+
+/*
+ * Avatar center aligns with the banner's bottom edge.
+ * Banner height: 130px. Avatar height: 80px (h-20). Half: 40px.
+ * top = 130 - 40 = 90px
+ */
+.avatarWrapper {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 /* Loading skeleton shimmer */
@@ -282,6 +356,44 @@
   z-index: 1;
 }
 
+/* ─── View Toggle ─── */
+
+.viewToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 3px;
+  background: hsl(var(--muted) / 0.5);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+}
+
+.viewToggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 0.375rem;
+  background: transparent;
+  border: 1px solid transparent;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.viewToggleBtn:hover {
+  color: hsl(var(--foreground));
+  background: hsl(var(--muted) / 0.8);
+}
+
+.viewToggleBtnActive {
+  background: hsl(var(--background));
+  border-color: hsl(var(--border));
+  color: hsl(var(--foreground));
+  box-shadow: 0 1px 3px hsl(0 0% 0% / 0.1);
+}
+
 /* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .anemo,
@@ -295,7 +407,6 @@
     animation: none !important;
   }
 
-  .cardFadeIn,
   .cardHover,
   .cardHover::before,
   .elementIcon,
@@ -306,10 +417,5 @@
 
   .namecardSkeleton {
     animation: none !important;
-  }
-
-  .cardFadeIn {
-    opacity: 1;
-    transform: none;
   }
 }
