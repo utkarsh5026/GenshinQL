@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Lock } from 'lucide-react';
 import React from 'react';
 import Confetti from 'react-confetti';
 
@@ -10,6 +11,67 @@ import { cn } from '@/lib/utils';
 
 import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
 import GuessTable from './guess-table';
+
+// ── Splash screen shown before first guess ────────────────────────────────────
+
+interface GameSplashScreenProps {
+  namecardURL?: string;
+}
+
+const LOCKED_ATTRS = ['Region', 'Weapon', 'Element', 'Version'] as const;
+
+const GameSplashScreen: React.FC<GameSplashScreenProps> = ({ namecardURL }) => (
+  <motion.div
+    key="splash"
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, scale: 0.95 }}
+    transition={{ duration: 0.3 }}
+    className="relative overflow-hidden rounded-xl border border-border/50 bg-card/60 py-6 px-6 flex flex-col items-center gap-3"
+  >
+    {/* Blurred namecard background */}
+    {namecardURL && (
+      <div
+        className="absolute inset-0 opacity-10 blur-md bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${namecardURL})` }}
+      />
+    )}
+
+    {/* Shimmer sweep */}
+    <div
+      className="absolute inset-0 pointer-events-none animate-shimmer"
+      style={{
+        background:
+          'linear-gradient(90deg, transparent 0%, rgba(251,191,36,0.05) 50%, transparent 100%)',
+        backgroundSize: '200% 100%',
+      }}
+    />
+
+    {/* Floating question mark */}
+    <span className="relative z-10 text-5xl text-genshin-gold animate-float select-none">
+      ?
+    </span>
+
+    <p className="relative z-10 text-sm text-muted-foreground text-center">
+      Guess the Genshin character in 5 tries!
+    </p>
+
+    {/* Locked attribute pills */}
+    <div className="relative z-10 flex flex-wrap gap-2 justify-center">
+      {LOCKED_ATTRS.map((attr) => (
+        <span
+          key={attr}
+          className="flex items-center gap-1 px-3 py-1 rounded-full bg-muted/50 border border-border text-xs text-muted-foreground"
+        >
+          <Lock className="w-3 h-3" />
+          {attr}
+        </span>
+      ))}
+    </div>
+  </motion.div>
+);
+
+// ── Main component ────────────────────────────────────────────────────────────
 
 interface GuessSearchTableProps {
   selectedCharacter: Character;
@@ -32,6 +94,7 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
   const { guessedChars, gameWon, gameOver } = useGenshinGuesserStore();
 
   const guessedCharacters = guessedChars.map((char) => characterMap[char]);
+  const showSplash = guessedChars.length === 0 && !gameOver;
 
   return (
     <Card className="border-none bg-card/95 backdrop-blur-sm">
@@ -149,15 +212,24 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
             </motion.div>
           </motion.div>
         ) : (
-          <SearchBar
-            items={characters.map((character) => ({
-              name: character.name,
-              iconUrl: character.iconUrl,
-            }))}
-            onItemSelect={(item) => {
-              onGuess(characterMap[item.name]);
-            }}
-          />
+          <div className="space-y-4">
+            {/* Splash screen — only before first guess */}
+            <AnimatePresence>
+              {showSplash && (
+                <GameSplashScreen namecardURL={selectedCharacter.namecardURL} />
+              )}
+            </AnimatePresence>
+
+            <SearchBar
+              items={characters.map((character) => ({
+                name: character.name,
+                iconUrl: character.iconUrl,
+              }))}
+              onItemSelect={(item) => {
+                onGuess(characterMap[item.name]);
+              }}
+            />
+          </div>
         )}
 
         <GuessTable

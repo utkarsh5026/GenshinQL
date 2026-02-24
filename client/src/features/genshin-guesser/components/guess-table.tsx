@@ -11,6 +11,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import AvatarWithSkeleton from '@/components/utils/AvatarWithSkeleton';
+import CharacterAvatar from '@/features/characters/components/utils/character-avatar';
 import { cn } from '@/lib/utils';
 import { Character } from '@/types';
 
@@ -55,9 +56,8 @@ const GuessTable: React.FC<GuessTableProps> = ({
         {/* Column header labels */}
         {characters.length > 0 && (
           <div className="flex items-center gap-1.5 px-2 pb-1 mb-1 border-b border-border">
-            <div className="w-8 shrink-0" />
             <span className="flex-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-              Name
+              Character
             </span>
             <div className="flex gap-1 shrink-0 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
               <span className="w-8 text-center">Rgn</span>
@@ -89,42 +89,37 @@ const GuessTable: React.FC<GuessTableProps> = ({
         <Table className="min-w-120">
           <TableHeader>
             <TableRow className="border-b-2 border-border hover:bg-transparent">
-              <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Icon
-              </TableHead>
-              <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Name
-              </TableHead>
-              <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Region
-              </TableHead>
-              <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Weapon
-              </TableHead>
-              <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Element
-              </TableHead>
-              <TableHead className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Version
-              </TableHead>
+              {['Character', 'Region', 'Weapon', 'Element', 'Version'].map(
+                (header) => (
+                  <TableHead
+                    key={header}
+                    className="text-xs font-bold uppercase tracking-wider text-muted-foreground"
+                  >
+                    {header}
+                  </TableHead>
+                )
+              )}
             </TableRow>
           </TableHeader>
           <TableBody>
             {characters.map((character, idx) => (
-              <TableRow
+              <motion.tr
                 key={character.name}
+                initial={{ y: -16, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 24 }}
                 className={cn(
-                  'text-left transition-colors duration-200',
+                  'text-left transition-colors duration-200 border-b',
                   idx % 2 === 0 ? 'bg-transparent' : 'bg-muted/30'
                 )}
               >
                 <TableCell>
-                  <AvatarWithSkeleton
-                    name={character.name}
-                    url={character.iconUrl}
+                  <CharacterAvatar
+                    characterName={character.name}
+                    showName
+                    size="md"
                   />
                 </TableCell>
-                <TableCell>{character.name}</TableCell>
                 <TableCell>
                   <GuessTableCell
                     isCorrect={isCorrect(
@@ -168,14 +163,25 @@ const GuessTable: React.FC<GuessTableProps> = ({
                   </GuessTableCell>
                 </TableCell>
                 <TableCell>
-                  <GuessTableCell index={3} isCorrect={true}>
+                  <GuessTableCell
+                    index={3}
+                    isCorrect={
+                      handleVersion(
+                        character.version ?? '1.0',
+                        correctCharacter.version ?? '1.0'
+                      ) === 0
+                    }
+                  >
                     <VersionTableCell
-                      version={handleVersion('2.4', '2.4')}
-                      value="1.4"
+                      version={handleVersion(
+                        character.version ?? '1.0',
+                        correctCharacter.version ?? '1.0'
+                      )}
+                      value={character.version ?? '?'}
                     />
                   </GuessTableCell>
                 </TableCell>
-              </TableRow>
+              </motion.tr>
             ))}
           </TableBody>
         </Table>
@@ -250,23 +256,22 @@ const MobileGuessRow: React.FC<MobileGuessRowProps> = ({
   idx,
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{ y: -12, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 24 }}
       className={cn(
         'flex items-center gap-1.5 px-2 py-1.5 rounded-lg border border-border',
         idx % 2 === 0 ? 'bg-transparent' : 'bg-muted/30'
       )}
     >
-      {/* Character avatar */}
-      <AvatarWithSkeleton
-        name={character.name}
-        url={character.iconUrl}
-        avatarClassName="w-8 h-8 shrink-0"
+      {/* Character avatar + name */}
+      <CharacterAvatar
+        characterName={character.name}
+        showName
+        size="xs"
+        nameClassName="max-w-14 truncate"
       />
-
-      {/* Name — truncated */}
-      <span className="flex-1 min-w-0 truncate text-xs font-medium">
-        {character.name}
-      </span>
 
       {/* Region | Weapon | Element — compact cells */}
       <div className="flex gap-1 shrink-0">
@@ -311,12 +316,15 @@ const MobileGuessRow: React.FC<MobileGuessRowProps> = ({
       {/* Version — inline text + icon */}
       <div className="shrink-0 w-10 flex items-center justify-center gap-0.5">
         <VersionTableCell
-          version={handleVersion('2.4', '2.4')}
-          value="1.4"
+          version={handleVersion(
+            character.version ?? '1.0',
+            correctCharacter.version ?? '1.0'
+          )}
+          value={character.version ?? '?'}
           compact
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
