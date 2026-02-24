@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { Search, X } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 
 import {
@@ -23,7 +23,7 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ items, onItemSelect }) => {
   const [inputValue, setInputValue] = useState<string>('');
-  const [showResults, setShowResults] = useState<boolean>(true);
+  const [showResults, setShowResults] = useState<boolean>(false);
   const commandRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -57,6 +57,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ items, onItemSelect }) => {
       if (e.key === 'Escape' && document.activeElement === inputRef.current) {
         setInputValue('');
         setShowResults(false);
+        inputRef.current?.blur();
       }
     };
 
@@ -69,60 +70,85 @@ const SearchBar: React.FC<SearchBarProps> = ({ items, onItemSelect }) => {
     setShowResults(true);
   };
 
+  const handleClear = () => {
+    setInputValue('');
+    setShowResults(false);
+    inputRef.current?.focus();
+  };
+
+  const handleSelect = (item: SearchBarItem) => {
+    onItemSelect(item);
+    setInputValue('');
+    setShowResults(false);
+  };
+
   return (
-    <Command
-      className={cn(
-        'rounded-xl border-2 shadow-lg transition-all duration-300',
-        'focus-within:border-game-hover focus-within:shadow-game-hover/30',
-        'bg-card/95 backdrop-blur-sm'
-      )}
-      ref={commandRef}
-    >
-      <CommandInput
-        value={inputValue}
-        onClick={() => setShowResults(true)}
-        onValueChange={handleInputChange}
-        placeholder="Search characters... (Press / to focus)"
-        className="h-12 w-full px-4 py-3 text-base font-medium focus:outline-none transition-all duration-200"
-      />
+    <div className="relative" ref={commandRef}>
+      <Command
+        className={cn(
+          'rounded-xl border border-border/60 bg-card/80 backdrop-blur-sm',
+          'transition-colors duration-200',
+          'focus-within:border-game-hover/70 focus-within:bg-card'
+        )}
+        shouldFilter={true}
+      >
+        {/* Input row */}
+        <div className="relative flex items-center">
+          <Search className="absolute left-3.5 w-4 h-4 text-muted-foreground/60 pointer-events-none shrink-0" />
+          <CommandInput
+            ref={inputRef}
+            value={inputValue}
+            onClick={() => setShowResults(true)}
+            onFocus={() => setShowResults(true)}
+            onValueChange={handleInputChange}
+            placeholder="Search characters…"
+            className="h-11 pl-9 pr-9 w-full text-sm bg-transparent border-none outline-none focus:outline-none focus:ring-0 placeholder:text-muted-foreground/50"
+          />
+          {inputValue && (
+            <button
+              onClick={handleClear}
+              className="absolute right-3 p-0.5 rounded text-muted-foreground/50 hover:text-foreground transition-colors"
+              aria-label="Clear search"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          )}
+        </div>
 
-      {/* Animated underline */}
-      <motion.div
-        className="h-0.5 bg-linear-to-r from-transparent via-game-hover to-transparent"
-        initial={{ opacity: 0, scaleX: 0 }}
-        animate={{
-          opacity: inputValue ? 1 : 0,
-          scaleX: inputValue ? 1 : 0,
-        }}
-        transition={{ duration: 0.3 }}
-      />
-
-      <CommandList className="max-h-75 overflow-y-auto scrollbar-hide">
+        {/* Dropdown */}
         {showResults && (
-          <>
-            <CommandEmpty className="py-6 text-center text-sm text-muted-foreground">
-              No results found.
+          <CommandList className="border-t border-border/40 max-h-52 sm:max-h-64 overflow-y-auto scrollbar-hide">
+            <CommandEmpty className="py-4 text-center text-xs text-muted-foreground">
+              No characters found.
             </CommandEmpty>
-            <CommandGroup heading="Characters">
+            <CommandGroup>
               {items.map((item) => (
                 <CommandItem
                   key={item.name}
-                  onSelect={() => onItemSelect?.(item)}
-                  className="cursor-pointer hover:bg-accent/50 transition-colors duration-200"
+                  value={item.name}
+                  onSelect={() => handleSelect(item)}
+                  className="flex items-center gap-2.5 px-3 py-2 cursor-pointer hover:bg-accent/40 transition-colors duration-150"
                 >
                   <img
                     src={item.iconUrl}
                     alt={item.name}
-                    className="w-10 h-10 rounded-full mr-3 border-2 border-border"
+                    className="w-7 h-7 rounded-full border border-border/60 shrink-0"
                   />
-                  <span className="font-medium">{item.name}</span>
+                  <span className="text-sm font-medium">{item.name}</span>
                 </CommandItem>
               ))}
             </CommandGroup>
-          </>
+          </CommandList>
         )}
-      </CommandList>
-    </Command>
+      </Command>
+
+      {/* Keyboard hint — desktop only */}
+      {!inputValue && (
+        <p className="hidden md:block absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground/35 pointer-events-none select-none">
+          Press /
+        </p>
+      )}
+    </div>
   );
 };
 

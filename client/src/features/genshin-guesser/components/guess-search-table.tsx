@@ -196,10 +196,12 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
             </AnimatePresence>
 
             <SearchBar
-              items={characters.map((character) => ({
-                name: character.name,
-                iconUrl: character.iconUrl,
-              }))}
+              items={characters
+                .filter((character) => !guessedChars.includes(character.name))
+                .map((character) => ({
+                  name: character.name,
+                  iconUrl: character.iconUrl,
+                }))}
               onItemSelect={(item) => {
                 onGuess(characterMap[item.name]);
               }}
