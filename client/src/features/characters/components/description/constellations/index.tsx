@@ -17,7 +17,7 @@ export const CharacterConstellations: React.FC<
   const elementClasses = getElementClasses(element);
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-3 sm:gap-4">
       {constellations.map((constellation) => (
         <ConstellationItem
           key={constellation.name}

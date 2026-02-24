@@ -33,12 +33,12 @@ export const ConstellationItem: React.FC<ConstellationItemProps> = ({
 
   return (
     <div
-      className={`group flex gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl sm:rounded-2xl border-none bg-card hover:bg-card/50 transition-all ${elementClasses.border} ${elementClasses.hoverBorder}`}
+      className={`group flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl border-none bg-card hover:bg-card/50 transition-all ${elementClasses.border} ${elementClasses.hoverBorder}`}
     >
       <div className="relative shrink-0">
         <CachedImage
           lazy
-          className="w-8 h-8 sm:w-10 sm:h-10 object-contain opacity-90"
+          className="w-10 h-10 sm:w-11 sm:h-11 object-contain opacity-90"
           src={constellation.iconUrl}
           alt={constellation.name}
           skeletonSize="md"
@@ -52,7 +52,7 @@ export const ConstellationItem: React.FC<ConstellationItemProps> = ({
       </div>
 
       {/* Content */}
-      <div className="flex-1 min-w-0 space-y-1 sm:space-y-1.5">
+      <div className="flex-1 min-w-0 space-y-1.5 sm:space-y-2">
         <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
           <span
             className={`

@@ -122,7 +122,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
       {/* Gradient overlay for depth */}
       <div className="absolute inset-0 z-0 bg-linear-to-t from-midnight-950/80 via-transparent to-midnight-900/50" />
 
-      <div className="relative z-10 flex flex-col lg:flex-row gap-2 md:gap-4 lg:gap-6 p-2 md:p-4 lg:p-5 h-full">
+      <div className="relative z-10 flex flex-col lg:flex-row gap-2 md:gap-4 lg:gap-6 p-0 md:p-4 lg:p-5 h-full">
         {/* Mobile: Horizontal Menu at Top, Desktop: Sidebar */}
         <div className="w-full lg:w-64 shrink-0 flex flex-col gap-2 md:gap-4">
           {/* Profile Header - Hidden on small screens, shown on desktop */}
@@ -137,7 +137,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           </div>
 
           {/* Menu Navigation - Horizontal on mobile, Vertical on desktop */}
-          <nav className="flex lg:flex-col gap-1 sm:gap-1.5 overflow-x-auto lg:overflow-x-visible scrollbar-hide snap-x snap-mandatory lg:snap-none mt-0 lg:mt-2 pb-1 sm:pb-2 lg:pb-0 -mx-2 px-2 md:mx-0 md:px-0 max-w-[calc(100vw-5rem)] lg:max-w-none">
+          <nav className="flex lg:flex-col gap-1 sm:gap-1.5 overflow-x-auto lg:overflow-x-visible scrollbar-hide snap-x snap-mandatory lg:snap-none mt-0 lg:mt-2 pb-1 sm:pb-2 lg:pb-0 px-2 md:px-0 max-w-[calc(100vw-5rem)] md:max-w-none lg:max-w-none">
             {menuItems.map((item) => {
               const isActive = selectedMenuItem === item;
               return (
@@ -245,7 +245,7 @@ const ProfileContent: React.FC<ProfileContentProps> = ({
   const elementColor = decideColor(character.element);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-4 md:space-y-8">
       {/* Character Stats, Farming, and Build Section */}
       <section>
         <CharacterStatsCompact
@@ -278,7 +278,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
 }) => {
   return (
     <Card
-      className="p-3 sm:p-4 md:p-5 h-full w-full overflow-auto scrollbar-hide bg-midnight-800/30 backdrop-blur-sm border-midnight-600/40 rounded-xl"
+      className="px-2 py-3 md:p-5 h-full w-full overflow-auto scrollbar-hide bg-transparent border-transparent shadow-none md:bg-midnight-800/30 md:backdrop-blur-sm md:border-midnight-600/40 md:rounded-xl md:shadow-sm"
       style={{
         boxShadow: elementColor ? `inset 0 1px 0 ${elementColor}10` : undefined,
       }}

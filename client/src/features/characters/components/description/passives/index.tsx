@@ -30,22 +30,24 @@ export const CharacterPassives: React.FC<CharacterPassivesProps> = ({
   }, [passives]);
 
   return (
-    <div className="flex flex-col gap-3 sm:gap-4 md:gap-5">
+    <div className="flex flex-col divide-y divide-midnight-700/20 sm:divide-y-0 sm:gap-4 md:gap-5">
       {passivesWithTags.map((passive) => {
         const styles = getPassiveStyles(passive.talentType);
         return (
           <Card
             key={passive.talentName}
             className={`
-              group relative overflow-hidden border-2 transition-all duration-300
-              ${styles.borderClass} ${styles.bgClass} ${styles.glowClass}
+              group relative overflow-hidden transition-all duration-300
+              max-sm:bg-transparent max-sm:bg-none max-sm:border-0 max-sm:shadow-none max-sm:rounded-none
+              sm:border-2 ${styles.borderClass} ${styles.bgClass} ${styles.glowClass}
               hover:shadow-lg hover:scale-[1.01] hover:-translate-y-0.5
+              max-sm:hover:scale-100 max-sm:hover:translate-y-0
             `}
           >
-            {/* Decorative corner accent */}
-            <div className="absolute top-0 right-0 w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-linear-to-bl from-white/5 to-transparent pointer-events-none" />
+            {/* Decorative corner accent — desktop only */}
+            <div className="absolute top-0 right-0 w-28 h-28 md:w-32 md:h-32 bg-linear-to-bl from-white/5 to-transparent pointer-events-none max-sm:hidden" />
 
-            <CardHeader className="pb-2 sm:pb-3">
+            <CardHeader className="pb-2 sm:pb-3 max-sm:px-0 max-sm:pt-3">
               <div className="flex items-start gap-2 sm:gap-3">
                 {/* Icon with styled background */}
                 <div
@@ -93,7 +95,7 @@ export const CharacterPassives: React.FC<CharacterPassivesProps> = ({
               </div>
             </CardHeader>
 
-            <CardContent className="pt-0">
+            <CardContent className="pt-0 max-sm:px-0 max-sm:pb-4">
               {/* Subtle divider */}
               <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent mb-3 sm:mb-4" />
 

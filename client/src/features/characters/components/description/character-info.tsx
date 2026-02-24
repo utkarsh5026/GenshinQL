@@ -35,7 +35,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   title,
   elementColor,
 }) => (
-  <div className="flex items-center gap-3 mb-4">
+  <div className="flex items-center gap-3 mb-2 sm:mb-4">
     <h3 className="text-sm font-semibold uppercase tracking-wider text-starlight-300">
       {title}
     </h3>
