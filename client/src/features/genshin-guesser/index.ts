@@ -9,7 +9,6 @@ export { useGenshinGuesserStore } from './stores/useGenshinGuesserStore';
 
 // Component exports (if needed elsewhere)
 export { default as CharacterGuesser } from './components/CharacterGuesser';
-export { default as GameStats } from './components/GameStats';
 
 // Wildcard exports for other features
 export * from './hooks';
