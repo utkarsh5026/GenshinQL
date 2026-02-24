@@ -151,31 +151,6 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
               />
             )}
 
-            {/* Corner sparkles — win only */}
-            {gameWon &&
-              [
-                { style: { top: '0.6rem', left: '1rem' }, delay: 0.4 },
-                { style: { top: '0.6rem', right: '1rem' }, delay: 0.65 },
-                { style: { bottom: '0.6rem', left: '1rem' }, delay: 0.85 },
-                { style: { bottom: '0.6rem', right: '1rem' }, delay: 0.55 },
-              ].map((s, i) => (
-                <motion.span
-                  key={i}
-                  className="absolute text-game-correct/60 text-sm select-none pointer-events-none"
-                  style={s.style}
-                  initial={{ opacity: 0, scale: 0.4 }}
-                  animate={{ opacity: [0, 0.9, 0], scale: [0.4, 1.1, 0.4] }}
-                  transition={{
-                    duration: 2.2,
-                    delay: s.delay,
-                    repeat: Infinity,
-                    repeatDelay: 0.8,
-                  }}
-                >
-                  ✦
-                </motion.span>
-              ))}
-
             {/* Message */}
             <p
               className={cn(
