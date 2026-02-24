@@ -7,12 +7,14 @@ interface AnimatedCoverProps {
   animation?: AnimationMedia;
   fallbackUrl?: string;
   className?: string;
+  muted?: boolean;
 }
 
 export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
   animation,
   fallbackUrl,
   className = '',
+  muted = false,
 }) => {
   const [showVideo, setShowVideo] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
@@ -60,7 +62,7 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
               >
                 <source src={animation.videoUrl} type="video/mp4" />
               </video>
-              {showVideo && (
+              {showVideo && !muted && (
                 <button
                   onClick={handleMuteToggle}
                   className="absolute bottom-2 right-2 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-colors"

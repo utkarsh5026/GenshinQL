@@ -171,6 +171,15 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
                         {character.modelType}
                       </Badge>
                     </div>
+
+                    {/* Version Badge */}
+                    {
+                      <div className="flex items-center gap-2 md:justify-center">
+                        <Badge variant="outline" className="text-xs">
+                          v{character.version}
+                        </Badge>
+                      </div>
+                    }
                   </div>
                 </div>
               </div>
