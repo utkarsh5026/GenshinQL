@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { Lock } from 'lucide-react';
+import { Lock, RefreshCcw } from 'lucide-react';
 import React from 'react';
 import Confetti from 'react-confetti';
 
+import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { type Character, useCharactersStore } from '@/features/characters';
 import CharacterAvatar from '@/features/characters/components/utils/character-avatar';
@@ -46,7 +47,7 @@ const GameSplashScreen: React.FC<GameSplashScreenProps> = ({ namecardURL }) => (
     />
 
     {/* Floating question mark */}
-    <span className="relative z-10 text-5xl text-genshin-gold animate-float select-none">
+    <span className="relative z-10 text-5xl text-legendary-500 animate-float select-none">
       ?
     </span>
 
@@ -72,11 +73,13 @@ const GameSplashScreen: React.FC<GameSplashScreenProps> = ({ namecardURL }) => (
 interface GuessSearchTableProps {
   selectedCharacter: Character;
   onGuess: (character: Character) => void;
+  onReset: () => void;
 }
 
 const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
   selectedCharacter,
   onGuess,
+  onReset,
 }) => {
   const { characters, characterMap } = useCharactersStore();
   const { guessedChars, gameWon, gameOver } = useGenshinGuesserStore();
@@ -117,15 +120,8 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
             }
             className={cn(
               'relative overflow-hidden flex flex-col items-center gap-4 py-6 px-6 rounded-xl border-2',
-              gameWon
-                ? 'border-game-correct bg-game-correct/10'
-                : 'border-game-wrong bg-game-wrong/5'
+              gameWon ? 'bg-success-500/10' : 'bg-error-500/5'
             )}
-            style={{
-              boxShadow: gameWon
-                ? '0 0 30px rgba(34,197,94,0.25), 0 0 60px rgba(34,197,94,0.1), inset 0 1px 0 rgba(34,197,94,0.2)'
-                : '0 0 20px rgba(239,68,68,0.15), inset 0 1px 0 rgba(239,68,68,0.1)',
-            }}
           >
             {/* Namecard background */}
             {selectedCharacter.namecardURL && (
@@ -148,7 +144,7 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
             <p
               className={cn(
                 'relative z-10 text-xl font-bold tracking-wide bg-background/50 backdrop-blur-sm rounded-xl px-5 py-2 border border-border/20',
-                gameWon ? 'text-game-correct' : 'text-game-wrong'
+                gameWon ? 'text-success-500' : 'text-error-500'
               )}
             >
               {gameWon ? 'Perfect! You guessed it! 🎉' : 'Game Over! 🥺'}
@@ -174,10 +170,25 @@ const GuessSearchTable: React.FC<GuessSearchTableProps> = ({
                 }
                 nameClassName={cn(
                   'font-semibold',
-                  gameWon ? 'text-game-correct' : 'text-game-wrong'
+                  gameWon ? 'text-success-500' : 'text-error-500'
                 )}
               />
             </motion.div>
+
+            {/* Restart button */}
+            <Button
+              variant="outline"
+              onClick={onReset}
+              className={cn(
+                'relative z-10 flex items-center gap-2 transition-colors duration-200',
+                gameWon
+                  ? ' text-success-500 hover:bg-success-500/15 hover:border-success-500'
+                  : ' text-error-500 hover:bg-error-500/15 hover:border-error-500'
+              )}
+            >
+              <RefreshCcw className="w-4 h-4" />
+              Play Again
+            </Button>
           </motion.div>
         ) : (
           <div className="space-y-4">

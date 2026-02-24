@@ -14,6 +14,7 @@ import {
 import AnimatedCover from '@/components/utils/AnimatedCover';
 import AvatarWithSkeleton from '@/components/utils/AvatarWithSkeleton';
 import { useCharactersStore } from '@/features/characters';
+import CharacterAvatar from '@/features/characters/components/utils/character-avatar';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { getElementColor } from '@/lib/elementColors';
 import { getRarityStarColor } from '@/lib/rarityColors';
@@ -248,13 +249,13 @@ const StreakDisplay: React.FC<StreakDisplayProps> = ({
       <Zap
         className={cn(
           'w-4 h-4',
-          streak >= 2 ? 'text-genshin-gold' : 'text-muted-foreground'
+          streak >= 2 ? 'text-legendary-500' : 'text-muted-foreground'
         )}
         fill={streak >= 2 ? 'currentColor' : 'none'}
       />
       <span
         className={
-          streak >= 2 ? 'text-genshin-gold font-bold' : 'text-muted-foreground'
+          streak >= 2 ? 'text-legendary-500 font-bold' : 'text-muted-foreground'
         }
       >
         {streak >= 2 ? `${streak}× Streak!` : `Streak: ${streak}`}
@@ -339,7 +340,7 @@ const GameOverContent: React.FC<GameOverContentProps> = ({
       <motion.div variants={avatarVariants} className="relative">
         {gameWon && (
           <motion.div
-            className="absolute inset-0 rounded-full border-4 border-genshin-gold/70 pointer-events-none"
+            className="absolute inset-0 rounded-full border-4 border-legendary-500/70 pointer-events-none"
             style={{ boxShadow: '0 0 20px 4px rgba(251,191,36,0.45)' }}
             variants={glowRingVariants}
             initial="hidden"
@@ -364,7 +365,7 @@ const GameOverContent: React.FC<GameOverContentProps> = ({
         <div
           className={cn(
             'text-xl font-bold tracking-tight',
-            gameWon ? 'text-game-correct' : 'text-game-wrong'
+            gameWon ? 'text-success-500' : 'text-error-500'
           )}
         >
           {gameWon ? 'Congratulations!' : 'Better luck next time!'}
@@ -374,10 +375,9 @@ const GameOverContent: React.FC<GameOverContentProps> = ({
           <span className="font-semibold text-foreground">
             {selectedCharacter.name}
           </span>
-          <img
-            src={selectedCharacter.iconUrl}
-            alt={selectedCharacter.name}
-            className="w-6 h-6 rounded-full border border-border"
+          <CharacterAvatar
+            characterName={selectedCharacter.name}
+            showName={false}
           />
         </div>
       </motion.div>
@@ -390,7 +390,7 @@ const GameOverContent: React.FC<GameOverContentProps> = ({
           className={cn(
             'flex items-center gap-2 transition-colors duration-200',
             gameWon
-              ? 'hover:bg-genshin-gold/20 hover:border-genshin-gold hover:text-genshin-gold'
+              ? 'hover:bg-legendary-500/20 hover:border-legendary-500 hover:text-legendary-500'
               : 'hover:bg-accent/50'
           )}
         >
@@ -411,7 +411,7 @@ const GameOverContent: React.FC<GameOverContentProps> = ({
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.5, opacity: 0 }}
-                className="flex items-center gap-1.5 text-game-correct"
+                className="flex items-center gap-1.5 text-success-500"
               >
                 <Check className="w-3.5 h-3.5" />
                 Copied!
@@ -438,37 +438,43 @@ const GameOverContent: React.FC<GameOverContentProps> = ({
 interface GameOverDrawerProps {
   selectedCharacter: Character;
   gameWon: boolean;
-  gameOver: boolean;
   onReset: () => void;
 }
 
 const GameOverDrawer: React.FC<GameOverDrawerProps> = ({
   selectedCharacter,
   gameWon,
-  gameOver,
   onReset,
 }) => {
+  // Starts open — only mounted when gameOver is true, so no effect needed
+  const [open, setOpen] = useState(true);
+
+  const handleReset = () => {
+    setOpen(false);
+    onReset();
+  };
+
   return (
     <Drawer
-      open={gameOver}
+      open={open}
       shouldScaleBackground={false}
-      onOpenChange={(open) => {
-        if (!open) onReset();
+      onOpenChange={(isOpen) => {
+        if (!isOpen) setOpen(false);
       }}
     >
       <DrawerContent
         className={cn(
           'bg-card/98',
           gameWon
-            ? 'border-t-2 border-genshin-gold/60'
-            : 'border-t-2 border-game-wrong/40'
+            ? 'border-t-2 border-legendary-500/60'
+            : 'border-t-2 border-error-500/40'
         )}
       >
         <DrawerHeader className="pb-0">
           <DrawerTitle
             className={cn(
               'text-center text-lg font-bold tracking-wide',
-              gameWon ? 'text-genshin-gold' : 'text-game-wrong'
+              gameWon ? 'text-legendary-500' : 'text-error-500'
             )}
           >
             {gameWon ? '✦ Victory! ✦' : 'Game Over'}
@@ -479,7 +485,7 @@ const GameOverDrawer: React.FC<GameOverDrawerProps> = ({
           <GameOverContent
             selectedCharacter={selectedCharacter}
             gameWon={gameWon}
-            onReset={onReset}
+            onReset={handleReset}
           />
         </div>
       </DrawerContent>
@@ -511,7 +517,6 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
           {/* Streak — always visible */}
           <StreakDisplay streak={streak} bestStreak={bestStreak} />
 
-          {/* Hint panel — visible only during active gameplay */}
           {!gameOver && (
             <HintRevealPanel
               character={selectedCharacter}
@@ -530,12 +535,10 @@ const GameOverDisplay: React.FC<GameOverDisplayProps> = ({
         </CardContent>
       </Card>
 
-      {/* Mobile bottom drawer — portaled to document.body */}
-      {isMobile && (
+      {isMobile && gameOver && (
         <GameOverDrawer
           selectedCharacter={selectedCharacter}
           gameWon={gameWon}
-          gameOver={gameOver}
           onReset={onReset}
         />
       )}

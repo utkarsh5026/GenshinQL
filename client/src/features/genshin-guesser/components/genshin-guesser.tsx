@@ -180,6 +180,7 @@ const GenshinGuesser: React.FC = () => {
           <GuessSearchTable
             selectedCharacter={selectedCharacter}
             onGuess={handleGuess}
+            onReset={handleReset}
           />
         </div>
         <div className="w-full md:w-1/3">
