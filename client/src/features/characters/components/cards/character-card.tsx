@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { CachedImage } from '@/features/cache';
-import { useLazyCachedAsset } from '@/features/cache';
+import { CachedImage, useLazyCachedAsset } from '@/features/cache';
 import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
 import {
   getElementAnimationClass,
@@ -22,12 +21,14 @@ interface CharacterCardProps {
   character: Character;
   index?: number;
   isMounted?: boolean;
+  showAnimation?: boolean;
 }
 
 const CharacterCard: React.FC<CharacterCardProps> = ({
   character,
   index = 0,
   isMounted = true,
+  showAnimation = false,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const isVisible = useSharedIntersectionObserver(cardRef, {
@@ -113,11 +114,21 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
               {/* Mobile: Horizontal Layout, Desktop: Vertical Layout */}
               <div className="flex md:flex-col gap-4 md:gap-3 items-start md:items-center">
                 {/* Character Avatar */}
-                <CharacterMediaAvatar
-                  media={characterMedia}
-                  containerClassName={`h-24 w-24 md:h-28 md:w-28 shrink-0 ${hasNamecard ? 'ring-2 ring-background/50 rounded-full' : ''}`}
-                  hoverScale={1.15}
-                />
+                {showAnimation ? (
+                  <CharacterMediaAvatar
+                    media={characterMedia}
+                    containerClassName={`h-24 w-24 md:h-28 md:w-28 shrink-0 ${hasNamecard ? 'ring-2 ring-background/50 rounded-full' : ''}`}
+                    hoverScale={1.15}
+                  />
+                ) : (
+                  <CachedImage
+                    src={character.iconUrl}
+                    alt={character.name}
+                    width={112}
+                    height={112}
+                    className={`h-24 w-24 md:h-28 md:w-28 shrink-0 rounded-full object-cover ${hasNamecard ? 'ring-2 ring-background/50' : ''}`}
+                  />
+                )}
 
                 {/* Character Info */}
                 <div className="flex-1 md:w-full space-y-2 md:space-y-3">
@@ -132,7 +143,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
                   {/* Info Grid - 2 columns on mobile, single column centered on desktop */}
                   <div className="grid grid-cols-1 gap-2 text-sm">
                     {/* Element */}
-                    <div className="flex items-center gap-2 md:justify-center">
+                    <InfoRow>
                       <div
                         className={`${styles.elementIcon} ${styles[elementClasses.animation]}`}
                       >
@@ -143,43 +154,41 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
                           showLabel={true}
                         />
                       </div>
-                    </div>
+                    </InfoRow>
 
                     {/* Weapon Type */}
-                    <div className="flex items-center gap-2 md:justify-center">
+                    <InfoRow>
                       <ElementDisplay
                         element={character.weaponType}
                         elementUrl={character.weaponUrl}
                         size="sm"
                         showLabel={true}
                       />
-                    </div>
+                    </InfoRow>
 
                     {/* Region */}
-                    <div className="flex items-center gap-2 md:justify-center">
+                    <InfoRow>
                       <ElementDisplay
                         element={character.region}
                         elementUrl={character.regionUrl}
                         size="sm"
                         showLabel={true}
                       />
-                    </div>
+                    </InfoRow>
 
                     {/* Model Type Badge */}
-                    <div className="flex items-center gap-2 md:justify-center">
+                    <InfoRow>
                       <Badge variant="secondary" className="text-xs">
                         {character.modelType}
                       </Badge>
-                    </div>
+                    </InfoRow>
 
                     {/* Version Badge */}
-                    {
-                      <div className="flex items-center gap-2 md:justify-center">
-                        <Badge variant="outline" className="text-xs">
-                          v{character.version}
-                        </Badge>
-                      </div>
-                    }
+                    <InfoRow>
+                      <Badge variant="outline" className="text-xs">
+                        v{character.version}
+                      </Badge>
+                    </InfoRow>
                   </div>
                 </div>
               </div>
@@ -198,7 +207,20 @@ export default React.memo(CharacterCard, (prevProps, nextProps) => {
   );
 });
 
+const InfoRow: React.FC<React.PropsWithChildren> = ({ children }) => (
+  <div className="flex items-center gap-2 md:justify-center">{children}</div>
+);
+
 type DisplaySize = 'sm' | 'md' | 'lg';
+
+const SIZE_CONFIG: Record<
+  DisplaySize,
+  { container: string; icon: number; text: string }
+> = {
+  sm: { container: 'w-4 h-4', icon: 16, text: 'text-xs' },
+  md: { container: 'w-6 h-6', icon: 24, text: 'text-sm' },
+  lg: { container: 'w-8 h-8', icon: 32, text: 'text-base' },
+} as const;
 
 interface ElementDisplayProps {
   element: string;
@@ -213,34 +235,18 @@ const ElementDisplay: React.FC<ElementDisplayProps> = ({
   size = 'md',
   showLabel = true,
 }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-  };
-
-  const iconSize = {
-    sm: 16,
-    md: 24,
-    lg: 32,
-  };
-
-  const textSize = {
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-base',
-  };
+  const { container, icon, text } = SIZE_CONFIG[size];
 
   return (
     <div className="flex items-center space-x-2">
       <CachedImage
         src={elementUrl}
         alt={element}
-        width={iconSize[size]}
-        height={iconSize[size]}
-        className={`rounded-full ${sizeClasses[size]}`}
+        width={icon}
+        height={icon}
+        className={`rounded-full ${container}`}
       />
-      {showLabel && <span className={textSize[size]}>{element}</span>}
+      {showLabel && <span className={text}>{element}</span>}
     </div>
   );
 };
