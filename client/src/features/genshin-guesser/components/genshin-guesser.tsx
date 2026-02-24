@@ -3,14 +3,10 @@ import React, { useEffect, useMemo, useRef } from 'react';
 import { type Character, useCharactersStore } from '@/features/characters';
 
 import { useGenshinGuesserStore } from '../stores/useGenshinGuesserStore';
-import GameOverDisplay from './GameOverDisplay';
-import GuessSearchTable from './GuessSearchTable';
+import GameOverDisplay from './game-over';
+import GuessSearchTable from './guess-search-table';
 
-/**
- * CharacterGuesser component implements the main game logic for the Genshin character guessing game.
- * It manages the game state, handles character selection, guessing, and displays the game interface.
- */
-const CharacterGuesser: React.FC = () => {
+const GenshinGuesser: React.FC = () => {
   const { characters, characterMap } = useCharactersStore();
   const {
     addGuessedChar,
@@ -59,18 +55,18 @@ const CharacterGuesser: React.FC = () => {
     selectCurrentCharacter(characters);
   };
 
-  if (!selectedCharacter) return null;
+  if (characters.length === 0 || !selectedCharacter) return null;
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex gap-4">
-        <div className="w-2/3">
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="w-full md:w-2/3">
           <GuessSearchTable
             selectedCharacter={selectedCharacter}
             onGuess={handleGuess}
           />
         </div>
-        <div className="w-1/3">
+        <div className="w-full md:w-1/3">
           <GameOverDisplay
             selectedCharacter={selectedCharacter}
             gameWon={gameWon}
@@ -82,4 +78,4 @@ const CharacterGuesser: React.FC = () => {
   );
 };
 
-export default CharacterGuesser;
+export default GenshinGuesser;

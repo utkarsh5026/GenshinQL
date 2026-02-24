@@ -4,6 +4,25 @@ import { devtools } from 'zustand/middleware';
 import type { Character } from '@/types';
 
 const MAX_GUESSES = 5;
+const BEST_STREAK_KEY = 'genshin-guesser-best-streak';
+
+function loadBestStreak(): number {
+  try {
+    const saved = localStorage.getItem(BEST_STREAK_KEY);
+    const parsed = parseInt(saved ?? '0', 10);
+    return isNaN(parsed) ? 0 : parsed;
+  } catch {
+    return 0;
+  }
+}
+
+function saveBestStreak(value: number) {
+  try {
+    localStorage.setItem(BEST_STREAK_KEY, String(value));
+  } catch {
+    // ignore storage errors
+  }
+}
 
 interface GenshinGuesserState {
   // State
@@ -12,8 +31,8 @@ interface GenshinGuesserState {
   gameOver: boolean;
   gameWon: boolean;
   streak: number;
+  bestStreak: number;
 
-  // Actions
   setVictory: () => void;
   setDefeat: () => void;
   setCurrentChar: (charName: string) => void;
@@ -28,6 +47,7 @@ const initialState = {
   gameOver: false,
   gameWon: false,
   streak: 0,
+  bestStreak: loadBestStreak(),
 };
 
 export const useGenshinGuesserStore = create<GenshinGuesserState>()(
@@ -36,11 +56,17 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
       ...initialState,
 
       setVictory: () => {
-        set((state) => ({
-          gameWon: true,
-          gameOver: true,
-          streak: state.streak + 1,
-        }));
+        set((state) => {
+          const newStreak = state.streak + 1;
+          const newBest = Math.max(state.bestStreak, newStreak);
+          if (newBest > state.bestStreak) saveBestStreak(newBest);
+          return {
+            gameWon: true,
+            gameOver: true,
+            streak: newStreak,
+            bestStreak: newBest,
+          };
+        });
       },
 
       setDefeat: () => {
@@ -62,12 +88,18 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
         const newGuessedChars = [...guessedChars, charName];
 
         if (charName === currentChar) {
-          set((state) => ({
-            guessedChars: newGuessedChars,
-            gameWon: true,
-            gameOver: true,
-            streak: state.streak + 1,
-          }));
+          set((state) => {
+            const newStreak = state.streak + 1;
+            const newBest = Math.max(state.bestStreak, newStreak);
+            if (newBest > state.bestStreak) saveBestStreak(newBest);
+            return {
+              guessedChars: newGuessedChars,
+              gameWon: true,
+              gameOver: true,
+              streak: newStreak,
+              bestStreak: newBest,
+            };
+          });
         } else if (newGuessedChars.length === MAX_GUESSES) {
           set({
             guessedChars: newGuessedChars,
@@ -89,13 +121,14 @@ export const useGenshinGuesserStore = create<GenshinGuesserState>()(
       },
 
       resetGame: () => {
-        const { streak } = get();
+        const { streak, bestStreak } = get();
         set({
           guessedChars: [],
           currentChar: null,
           gameOver: false,
           gameWon: false,
           streak, // Preserve streak across resets
+          bestStreak,
         });
       },
     }),
@@ -113,3 +146,5 @@ export const useGenshinGuesserGameWon = () =>
   useGenshinGuesserStore((state) => state.gameWon);
 export const useGenshinGuesserStreak = () =>
   useGenshinGuesserStore((state) => state.streak);
+export const useGenshinGuesserBestStreak = () =>
+  useGenshinGuesserStore((state) => state.bestStreak);
