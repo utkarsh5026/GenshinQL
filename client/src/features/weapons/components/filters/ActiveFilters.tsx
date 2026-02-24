@@ -2,7 +2,7 @@ import { X } from 'lucide-react';
 import React, { useMemo } from 'react';
 
 import { Button } from '@/components/ui/button';
-import FilterChip from '@/components/utils/filter/FilterChip';
+import FilterChip from '@/components/utils/filter/filter-chip';
 
 import type { WeaponFilterOption } from '../../types';
 

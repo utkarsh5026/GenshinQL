@@ -17,7 +17,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { Separator } from '@/components/ui/separator';
-import FilterChip from '@/components/utils/filter/FilterChip';
+import FilterChip from '@/components/utils/filter/filter-chip';
 import { CachedImage } from '@/features/cache';
 import type { WeaponSummary } from '@/features/weapons';
 import { useWeaponType } from '@/features/weapons';

@@ -14,8 +14,8 @@ import { Separator } from '@/components/ui/separator';
 import { CachedImage } from '@/features/cache';
 import { useElements, useRegions } from '@/stores';
 
+import FilterChip from './filter-chip';
 import styles from './FilterBar.module.css';
-import FilterChip from './FilterChip';
 
 interface FilterBarProps {
   searchQuery: string;

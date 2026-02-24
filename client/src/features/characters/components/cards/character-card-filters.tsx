@@ -2,7 +2,7 @@ import { LayoutGrid, List } from 'lucide-react';
 import React, { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
-import FilterBar from '@/components/utils/filter/FilterBar';
+import FilterBar from '@/components/utils/filter/filter-bar';
 import { cn } from '@/lib/utils';
 
 import { useCharacterFilters } from '../../hooks/useCharacterFilters';
