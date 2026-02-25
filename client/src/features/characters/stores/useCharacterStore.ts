@@ -2,6 +2,8 @@ import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
 import { usePrimitivesStore } from '@/stores/usePrimitivesStore';
+import { useStickerStore } from '@/stores/useStickerStore';
+import type { StickersData } from '@/types';
 
 import { fetchCharacters as fetchCharactersService } from '../services';
 import type { Character } from '../types';
@@ -15,6 +17,8 @@ interface CharactersState {
   setCharacters: (characters: Character[]) => void;
   fetchCharacters: (checkCache?: boolean) => Promise<void>;
   reset: () => void;
+  /** @internal Called by cross-store subscription when stickers load */
+  _applyStickers: (stickersByCharacter: StickersData) => void;
 }
 
 const initialState = {
@@ -35,6 +39,39 @@ const createCharacterMap = (
     {} as Record<string, Character>
   );
 };
+
+/**
+ * Merges sticker URLs from StickersData into existing Character objects.
+ * Returns new arrays/maps only if any character actually received stickers.
+ */
+function applyStickersToCharacters(
+  characters: Character[],
+  stickersByCharacter: StickersData
+): { characters: Character[]; characterMap: Record<string, Character> } | null {
+  if (
+    characters.length === 0 ||
+    Object.keys(stickersByCharacter).length === 0
+  ) {
+    return null;
+  }
+
+  let anyChanged = false;
+  const updatedCharacters = characters.map((char) => {
+    const stickerUrls = stickersByCharacter[char.name];
+    if (stickerUrls && stickerUrls.length > 0 && !char.stickers) {
+      anyChanged = true;
+      return { ...char, stickers: stickerUrls };
+    }
+    return char;
+  });
+
+  if (!anyChanged) return null;
+
+  return {
+    characters: updatedCharacters,
+    characterMap: createCharacterMap(updatedCharacters),
+  };
+}
 
 export const useCharactersStore = create<CharactersState>()(
   devtools(
@@ -68,6 +105,11 @@ export const useCharactersStore = create<CharactersState>()(
             loading: false,
             error: null,
           });
+
+          const { stickersByCharacter } = useStickerStore.getState();
+          if (Object.keys(stickersByCharacter).length > 0) {
+            get()._applyStickers(stickersByCharacter);
+          }
         } catch (err) {
           console.error('Error fetching characters:', err);
           const error =
@@ -78,11 +120,38 @@ export const useCharactersStore = create<CharactersState>()(
         }
       },
 
+      _applyStickers: (stickersByCharacter) => {
+        const { characters } = get();
+        const result = applyStickersToCharacters(
+          characters,
+          stickersByCharacter
+        );
+        if (result) {
+          set(result);
+        }
+      },
+
       reset: () => set(initialState),
     }),
     { name: 'CharactersStore' }
   )
 );
+
+/**
+ * Cross-store subscription: when stickers load in useStickerStore,
+ * apply them to characters in useCharactersStore.
+ */
+useStickerStore.subscribe((state, prevState) => {
+  if (
+    state.stickersByCharacter !== prevState.stickersByCharacter &&
+    Object.keys(state.stickersByCharacter).length > 0
+  ) {
+    const store = useCharactersStore.getState();
+    if (store.characters.length > 0) {
+      store._applyStickers(state.stickersByCharacter);
+    }
+  }
+});
 
 export const useCharacters = () =>
   useCharactersStore((state) => state.characters);

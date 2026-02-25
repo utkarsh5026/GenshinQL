@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
 import { usePrimitivesStore } from '@/stores/usePrimitivesStore';
+import { useStickerStore } from '@/stores/useStickerStore';
 
 import { fetchCharacterProfile } from '../services';
 import type { CharacterDetailed } from '../types';
@@ -75,9 +76,15 @@ export const useCharacterProfileStore = create<CharacterProfileState>()(
             throw new Error(`Character profile not found for: ${name}`);
           }
 
-          setProfile(name, profile);
+          const { stickersByCharacter } = useStickerStore.getState();
+          const stickerUrls = stickersByCharacter[name];
+          const enrichedProfile = stickerUrls?.length
+            ? { ...profile, stickers: stickerUrls }
+            : profile;
+
+          setProfile(name, enrichedProfile);
           setLoading(name, false);
-          return profile;
+          return enrichedProfile;
         } catch (error) {
           const err =
             error instanceof Error
@@ -100,6 +107,36 @@ export const useCharacterProfileStore = create<CharacterProfileState>()(
     { name: 'CharacterProfileStore' }
   )
 );
+
+/**
+ * Cross-store subscription: when stickers load in useStickerStore,
+ * backfill stickers onto any already-cached profiles.
+ */
+useStickerStore.subscribe((state, prevState) => {
+  if (
+    state.stickersByCharacter !== prevState.stickersByCharacter &&
+    Object.keys(state.stickersByCharacter).length > 0
+  ) {
+    const { profiles } = useCharacterProfileStore.getState();
+
+    if (profiles.size === 0) return;
+
+    let anyChanged = false;
+    const newProfiles = new Map(profiles);
+
+    for (const [name, profile] of profiles) {
+      const stickerUrls = state.stickersByCharacter[name];
+      if (stickerUrls?.length && !profile.stickers) {
+        newProfiles.set(name, { ...profile, stickers: stickerUrls });
+        anyChanged = true;
+      }
+    }
+
+    if (anyChanged) {
+      useCharacterProfileStore.setState({ profiles: newProfiles });
+    }
+  }
+});
 
 export const useCharacterProfile = (characterName: string) =>
   useCharacterProfileStore(
