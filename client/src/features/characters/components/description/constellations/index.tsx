@@ -5,6 +5,8 @@ import { getElementClasses } from '@/features/characters/utils/constellation-uti
 
 import { ConstellationItem } from './constellation-item';
 
+export { CharacterPassives } from './character-passives';
+
 interface CharacterConstellationsProps {
   constellations: Constellation[];
   element?: string;
