@@ -27,15 +27,6 @@ const menuItems: CharacterMenuItem[] = [
   'Builds',
 ] as const;
 
-const menuItemMobileLabels: Record<CharacterMenuItem, string> = {
-  Builds: 'Builds',
-  Constellations: 'Const.',
-  Passives: 'Passives',
-  Profile: 'Profile',
-  Routine: 'Routine',
-  Talents: 'Talents',
-};
-
 /**
  * Returns element-specific Tailwind classes for menu items based on character element
  */
@@ -97,11 +88,14 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
 
   const scrollTabItems = useMemo<ScrollTabItem<CharacterMenuItem>[]>(
     () =>
-      menuItems.map((item) => ({
+      menuItems.map((item, i) => ({
         id: item,
-        label: menuItemMobileLabels[item],
+        label: item,
+        imageUrl: character?.stickers?.length
+          ? character.stickers[i % character.stickers.length]
+          : undefined,
       })),
-    []
+    [character]
   );
 
   useEffect(() => {
