@@ -16,9 +16,9 @@ interface ScrollTabsProps<T extends string = string> {
   items: ScrollTabItem<T>[];
   activeId: T;
   onChange: (id: T) => void;
-  /** Color applied to the active tab text and indicator (e.g. element color) */
+  /** Color applied to the active tab text and glass card tint (e.g. element color) */
   activeColor?: string;
-  /** Framer Motion layoutId for the sliding indicator. Must be unique per page. */
+  /** Framer Motion layoutId for the glass card indicator. Must be unique per page. */
   indicatorId?: string;
   className?: string;
 }
@@ -26,7 +26,7 @@ interface ScrollTabsProps<T extends string = string> {
 /**
  * Horizontally scrollable tab bar.
  * Each item can have a label, an optional React icon, or an optional image URL.
- * Provides a sliding underline indicator via Framer Motion.
+ * Provides a frosted glass card indicator via Framer Motion.
  * The active tab is automatically scrolled into view (important on mobile).
  */
 export function ScrollTabs<T extends string = string>({
@@ -40,7 +40,9 @@ export function ScrollTabs<T extends string = string>({
   const scrollRef = useRef<HTMLDivElement>(null);
   const activeButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Scroll the active tab into view whenever activeId changes
+  /**
+   * Scroll the
+   */
   useEffect(() => {
     const button = activeButtonRef.current;
     const container = scrollRef.current;
@@ -63,63 +65,79 @@ export function ScrollTabs<T extends string = string>({
 
   return (
     <div
-      ref={scrollRef}
       className={cn(
-        'w-full min-w-0 overflow-x-auto scrollbar-hide border border-border/40 rounded-2xl',
+        'relative w-full min-w-0',
+        'mask-[linear-gradient(to_right,transparent_0px,black_20px,black_calc(100%-20px),transparent_100%)]',
         className
       )}
     >
-      <div className="relative inline-flex">
-        {items.map((item) => {
-          const isActive = item.id === activeId;
-          return (
-            <button
-              key={item.id}
-              ref={isActive ? activeButtonRef : undefined}
-              onClick={() => onChange(item.id)}
-              className={cn(
-                'relative flex items-center gap-1.5 whitespace-nowrap',
-                'px-4 py-3 text-sm font-medium',
-                'transition-colors duration-200',
-                isActive
-                  ? 'text-foreground'
-                  : 'text-muted-foreground hover:text-foreground/80'
-              )}
-              style={
-                isActive && activeColor ? { color: activeColor } : undefined
-              }
-            >
-              {item.imageUrl ? (
-                <img
-                  src={item.imageUrl}
-                  alt=""
-                  className="h-5 w-5 shrink-0 rounded-full object-cover"
-                  aria-hidden
-                />
-              ) : item.icon ? (
-                <span
-                  className="flex h-4 w-4 shrink-0 items-center justify-center"
-                  aria-hidden
-                >
-                  {item.icon}
+      <div
+        ref={scrollRef}
+        className="overflow-x-auto scrollbar-hide rounded-2xl bg-muted/30 p-1"
+      >
+        <div className="relative inline-flex gap-0.5">
+          {items.map((item) => {
+            const isActive = item.id === activeId;
+            return (
+              <button
+                key={item.id}
+                ref={isActive ? activeButtonRef : undefined}
+                onClick={() => onChange(item.id)}
+                className={cn(
+                  'relative flex items-center gap-1.5 whitespace-nowrap',
+                  'px-4 py-2.5 text-sm font-medium rounded-xl',
+                  'transition-colors duration-200',
+                  isActive
+                    ? 'text-foreground'
+                    : 'text-muted-foreground/60 hover:text-foreground/70 hover:bg-white/5'
+                )}
+                style={
+                  isActive && activeColor ? { color: activeColor } : undefined
+                }
+              >
+                {isActive && (
+                  <motion.span
+                    layoutId={indicatorId}
+                    className="absolute inset-0 rounded-xl border-2 backdrop-blur-sm"
+                    style={
+                      activeColor
+                        ? {
+                            backgroundColor: `color-mix(in srgb, ${activeColor} 12%, hsl(var(--background) / 0.7))`,
+                            borderColor: `color-mix(in srgb, ${activeColor} 28%, hsl(var(--border)))`,
+                          }
+                        : {
+                            backgroundColor: 'hsl(var(--background) / 0.6)',
+                            borderColor: 'hsl(var(--border) / 0.5)',
+                          }
+                    }
+                    transition={{ type: 'spring', stiffness: 500, damping: 40 }}
+                  />
+                )}
+
+                {/* Content layer sits above the glass card */}
+                <span className="relative z-10 flex items-center gap-1.5">
+                  {item.imageUrl ? (
+                    <img
+                      src={item.imageUrl}
+                      alt=""
+                      className="h-5 w-5 shrink-0 rounded-full object-cover"
+                      aria-hidden
+                    />
+                  ) : item.icon ? (
+                    <span
+                      className="flex h-4 w-4 shrink-0 items-center justify-center"
+                      aria-hidden
+                    >
+                      {item.icon}
+                    </span>
+                  ) : null}
+
+                  <span>{item.label}</span>
                 </span>
-              ) : null}
-
-              <span>{item.label}</span>
-
-              {isActive && (
-                <motion.span
-                  layoutId={indicatorId}
-                  className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full"
-                  style={{
-                    backgroundColor: activeColor ?? 'hsl(var(--foreground))',
-                  }}
-                  transition={{ type: 'spring', stiffness: 500, damping: 40 }}
-                />
-              )}
-            </button>
-          );
-        })}
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
