@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { ScrollTabItem, ScrollTabs } from '@/components/ui/scroll-tabs';
 import { CachedImage } from '@/features/cache';
