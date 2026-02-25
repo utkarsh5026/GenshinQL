@@ -61,15 +61,6 @@
   box-shadow: 0 4px 24px rgba(167, 139, 250, 0.1);
 }
 
-/* Star text glow */
-.fiveStarText {
-  filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.7));
-}
-
-.fourStarText {
-  filter: drop-shadow(0 0 4px rgba(167, 139, 250, 0.7));
-}
-
 /* ─── Element icon animations on hover ─── */
 
 .cardHover:hover .anemo {
@@ -209,18 +200,6 @@
 
 /* ─── Namecard banner ─── */
 
-/* Dominant top section — 130px so it fills roughly 40% of the card */
-.namecardBanner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 130px;
-  overflow: hidden;
-  z-index: 0;
-  pointer-events: none;
-}
-
 /* Namecard image with GPU acceleration */
 .namecardImage {
   width: 100%;
@@ -235,25 +214,6 @@
 /* Subtle zoom on card hover */
 .cardHover:hover .namecardImage {
   transform: translate3d(0, 0, 0) scale(1.07);
-}
-
-/* Stronger gradient to smoothly transition into card body */
-.namecardOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.65) 100%
-  );
-  pointer-events: none;
-}
-
-/* Element-tinted placeholder for characters without a namecard */
-.namecardPlaceholder {
-  width: 100%;
-  height: 100%;
 }
 
 .anemoTint {
@@ -312,21 +272,6 @@
   );
 }
 
-/* ─── Avatar overlap ─── */
-
-/*
- * Avatar center aligns with the banner's bottom edge.
- * Banner height: 130px. Avatar height: 80px (h-20). Half: 40px.
- * top = 130 - 40 = 90px
- */
-.avatarWrapper {
-  position: absolute;
-  top: 90px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
 /* Loading skeleton shimmer */
 .namecardSkeleton {
   position: absolute;
@@ -348,12 +293,6 @@
   100% {
     background-position: 200% 0;
   }
-}
-
-/* Card content sits above the namecard banner */
-.cardContent {
-  position: relative;
-  z-index: 1;
 }
 
 /* ─── View Toggle ─── */

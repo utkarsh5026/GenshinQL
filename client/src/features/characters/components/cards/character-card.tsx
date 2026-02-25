@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Card, CardContent } from '@/components/ui/card';
+import { Heading, Text } from '@/components/ui/text';
 import { CachedImage, useLazyCachedAsset } from '@/features/cache';
 import {
   getElementAnimationClass,
@@ -49,7 +50,9 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
         : 'ring-2 ring-violet-400 ring-offset-2 ring-offset-background',
       cardGlow: is5star ? styles.fiveStarGlow : styles.fourStarGlow,
       starColor: is5star ? 'text-yellow-400' : 'text-violet-400',
-      starGlow: is5star ? styles.fiveStarText : styles.fourStarText,
+      starGlow: is5star
+        ? 'drop-shadow-[0_0_4px_rgba(250,204,21,0.7)]'
+        : 'drop-shadow-[0_0_4px_rgba(167,139,250,0.7)]',
     }),
     [is5star]
   );
@@ -80,7 +83,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
         )}
       >
         {/* Namecard Banner */}
-        <div className={styles.namecardBanner}>
+        <div className="absolute inset-x-0 top-0 h-32.5 overflow-hidden z-0 pointer-events-none">
           {hasNamecard ? (
             namecardLoading ? (
               <div className={styles.namecardSkeleton} />
@@ -96,16 +99,17 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
                     ).style.display = 'none';
                   }}
                 />
-                <div className={styles.namecardOverlay} />
+                <div className="absolute inset-0 pointer-events-none bg-linear-to-b from-transparent via-black/20 to-black/65" />
               </>
             )
           ) : (
-            <div className={cn(styles.namecardPlaceholder, elementTintClass)} />
+            <div className={cn('w-full h-full', elementTintClass)} />
           )}
         </div>
 
         {/* Avatar */}
-        <div className={styles.avatarWrapper}>
+        {/* top-[90px]: banner 130px - half avatar 40px = 90px */}
+        <div className="absolute top-22.5 left-1/2 -translate-x-1/2 z-2">
           <div className={`rounded-full ${rarityClasses.avatarRing}`}>
             {showAnimation ? (
               <CharacterMediaAvatar
@@ -126,10 +130,17 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
         </div>
 
         {/* Card Content */}
-        <CardContent className={cn(styles.cardContent, 'pt-[176px] pb-4 px-4')}>
-          <h3 className="font-bold text-base text-center truncate mb-1">
+        <CardContent className="relative z-1 pt-44 pb-4 px-4">
+          <Heading
+            level={3}
+            size="base"
+            weight="bold"
+            align="center"
+            truncate
+            className="mb-1"
+          >
             {character.name}
-          </h3>
+          </Heading>
 
           {/* Rarity stars */}
           <div className="flex items-center justify-center gap-px mb-3">
@@ -170,9 +181,9 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
           </div>
 
           {/* Model type · Version */}
-          <p className="text-center text-xs text-muted-foreground">
+          <Text size="xs" color="muted" align="center">
             {character.modelType} · v{character.version}
-          </p>
+          </Text>
         </CardContent>
       </Card>
     </Link>
@@ -197,8 +208,8 @@ const InfoChip: React.FC<InfoChipProps> = ({ iconUrl, label }) => (
       height={14}
       className="w-3.5 h-3.5 rounded-full shrink-0"
     />
-    <span className="text-xs text-muted-foreground truncate max-w-[60px]">
+    <Text as="span" size="xs" color="muted" truncate className="max-w-15">
       {label}
-    </span>
+    </Text>
   </div>
 );
