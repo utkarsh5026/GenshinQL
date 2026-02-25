@@ -62,22 +62,13 @@ export function ScrollTabs<T extends string = string>({
   }, [activeId]);
 
   return (
-    /*
-     * Outer div: block element — gets a concrete pixel width from its parent,
-     * which lets overflow-x-auto actually trigger scrolling instead of expanding.
-     * (A flex container with overflow-x-auto sized via % can silently expand.)
-     */
     <div
       ref={scrollRef}
       className={cn(
-        'w-full min-w-0 overflow-x-auto scrollbar-hide border-2 border-border/40 rounded-2xl',
+        'w-full min-w-0 overflow-x-auto scrollbar-hide border border-border/40 rounded-2xl',
         className
       )}
     >
-      {/*
-       * Inner div: inline-flex — sizes to its content's natural width,
-       * which is what causes the outer to scroll when tabs exceed available space.
-       */}
       <div className="relative inline-flex">
         {items.map((item) => {
           const isActive = item.id === activeId;

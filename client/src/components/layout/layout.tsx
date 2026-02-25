@@ -25,7 +25,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
           onMenuClick={() => setMobileMenuOpen(true)}
           onSearchClick={() => setSearchOpen(true)}
         />
-        <main className="flex-1 w-screen max-w-svh">{children}</main>
+        <main className="flex-1 w-screen max-w-svh h-full overflow-y-auto p-4 md:p-8">
+          {children}
+        </main>
       </div>
     </div>
   );
