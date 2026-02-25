@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 
 import { Card } from '@/components/ui/card';
@@ -10,7 +11,7 @@ import ElementalBurstShowcase from './character-burst-showcase';
 import { CharacterStatsCompact } from './character-info';
 import { CharacterConstellations } from './constellations';
 import { CharacterPassives } from './passives';
-import ProfileHeader from './profile-header';
+import { MobileProfileHeader, ProfileHeader } from './profile-header';
 import { CharacterRoutine } from './routine/character-routine';
 import TalentShowcase from './talents/talent-showcase';
 
@@ -26,6 +27,15 @@ const menuItems: CharacterMenuItem[] = [
   'Routine',
   'Builds',
 ] as const;
+
+const menuItemMobileLabels: Record<CharacterMenuItem, string> = {
+  Builds: 'Builds',
+  Constellations: 'Const.',
+  Passives: 'Passives',
+  Profile: 'Profile',
+  Routine: 'Routine',
+  Talents: 'Talents',
+};
 
 /**
  * Returns element-specific Tailwind classes for menu items based on character element
@@ -80,8 +90,6 @@ function getElementClasses(element: string) {
   );
 }
 
-/* getRarityStars moved to character-stats-compact.tsx */
-
 const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   character,
 }) => {
@@ -123,9 +131,9 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
       <div className="absolute inset-0 z-0 bg-linear-to-t from-midnight-950/80 via-transparent to-midnight-900/50" />
 
       <div className="relative z-10 flex flex-col lg:flex-row gap-2 md:gap-4 lg:gap-6 p-0 md:p-4 lg:p-5 h-full">
-        {/* Mobile: Horizontal Menu at Top, Desktop: Sidebar */}
-        <div className="w-full lg:w-64 shrink-0 flex flex-col gap-2 md:gap-4">
-          {/* Profile Header - Hidden on small screens, shown on desktop */}
+        {/* Mobile: Profile + Tab Bar at Top, Desktop: Sidebar */}
+        <div className="w-full lg:w-64 shrink-0 flex flex-col gap-0 lg:gap-4">
+          {/* Desktop: Profile Header */}
           <div className="hidden lg:block">
             <ProfileHeader
               name={character.name}
@@ -136,8 +144,40 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
             />
           </div>
 
-          {/* Menu Navigation - Horizontal on mobile, Vertical on desktop */}
-          <nav className="flex lg:flex-col gap-1 sm:gap-1.5 overflow-x-auto lg:overflow-x-visible scrollbar-hide snap-x snap-mandatory lg:snap-none mt-0 lg:mt-2 pb-1 sm:pb-2 lg:pb-0 px-2 md:px-0 max-w-[calc(100vw-5rem)] md:max-w-none lg:max-w-none">
+          <MobileProfileHeader
+            character={character}
+            elementColor={elementColor}
+          />
+
+          <div className="lg:hidden border-b border-border/40">
+            <div className="grid grid-cols-6">
+              {menuItems.map((item) => {
+                const isActive = selectedMenuItem === item;
+                return (
+                  <button
+                    key={item}
+                    onClick={() => setSelectedMenuItem(item)}
+                    className="relative flex items-center justify-center py-3 text-[9px] font-medium transition-colors duration-200"
+                    style={{ color: isActive ? elementColor : undefined }}
+                  >
+                    <span className={isActive ? '' : 'text-muted-foreground'}>
+                      {menuItemMobileLabels[item]}
+                    </span>
+                    {isActive && (
+                      <motion.span
+                        layoutId="mobile-tab-indicator"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full"
+                        style={{ backgroundColor: elementColor }}
+                      />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Desktop: Vertical sidebar nav */}
+          <nav className="hidden lg:flex lg:flex-col gap-1.5 mt-2">
             {menuItems.map((item) => {
               const isActive = selectedMenuItem === item;
               return (
@@ -145,7 +185,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                   onClick={() => setSelectedMenuItem(item)}
                   key={item}
                   className={`
-                    relative whitespace-nowrap shrink-0 lg:w-full text-left text-[10px] sm:text-xs md:text-sm font-medium rounded-md lg:rounded-lg px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-2.5 snap-start lg:snap-align-none
+                    relative w-full text-left text-sm font-medium rounded-lg px-4 py-2.5
                     transition-all duration-300 ease-out
                     border border-transparent
                     ${
@@ -156,16 +196,13 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                   `}
                   style={
                     isActive
-                      ? {
-                          boxShadow: `0 0 12px ${elementColor}20`,
-                        }
+                      ? { boxShadow: `0 0 12px ${elementColor}20` }
                       : undefined
                   }
                 >
-                  {/* Active indicator bar - Bottom on mobile, Left on desktop */}
                   {isActive && (
                     <span
-                      className={`absolute lg:left-0 left-1/2 lg:top-1/2 top-auto bottom-0 lg:-translate-y-1/2 -translate-x-1/2 lg:translate-x-0 lg:w-1 lg:h-4 w-6 sm:w-8 h-0.5 sm:h-1 rounded-t-full lg:rounded-r-full lg:rounded-t-none ${elementClasses.indicator}`}
+                      className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-4 rounded-r-full ${elementClasses.indicator}`}
                     />
                   )}
                   {item}
