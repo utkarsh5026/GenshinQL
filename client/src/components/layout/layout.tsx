@@ -20,12 +20,12 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
         showFloatingTrigger={false}
       />
 
-      <div className="flex flex-col flex-1 md:ml-16">
+      <div className="flex flex-col flex-1 min-w-0 md:ml-16">
         <AppHeader
           onMenuClick={() => setMobileMenuOpen(true)}
           onSearchClick={() => setSearchOpen(true)}
         />
-        <main className="flex-1 w-screen max-w-11/12 h-full overflow-y-auto p-4 md:p-8">
+        <main className="flex-1 w-full h-full overflow-y-auto p-4 md:p-8">
           {children}
         </main>
       </div>
