@@ -21,7 +21,7 @@ const CharacterCardsWithFilters = lazy(
   () =>
     import(
       /* webpackChunkName: "route-characters-table" */
-      '@/features/characters/components/cards/character-card-filters'
+      '@/features/characters/components/cards/characters-catalog'
     )
 );
 

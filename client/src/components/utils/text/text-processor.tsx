@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import React, { useMemo } from 'react';
 
+import { Text } from '@/components/ui/text';
 import { AbilityReference } from '@/components/utils/text/ability-reference';
 import { CachedImage } from '@/features/cache';
 import { useCharacterAbilityData } from '@/features/characters/stores';
@@ -28,13 +29,13 @@ const ELEMENT_COLORS: Record<Element, string> = {
 } as const;
 
 const STAT_COLORS: Record<string, string> = {
-  'CRIT Rate': '#f87171', // red-400
-  'CRIT DMG': '#fb923c', // orange-400
-  ATK: '#fbbf24', // amber-400
-  HP: '#4ade80', // green-400
-  DEF: '#facc15', // yellow-400
-  'Energy Recharge': '#c084fc', // purple-400
-  'Elemental Mastery': '#2dd4bf', // teal-400
+  'CRIT Rate': 'var(--color-error-400)',
+  'CRIT DMG': 'var(--color-warning-400)',
+  ATK: 'var(--color-legendary-400)',
+  HP: 'var(--color-success-400)',
+  DEF: 'var(--color-geo-400)',
+  'Energy Recharge': 'var(--color-electro-400)',
+  'Elemental Mastery': 'var(--color-anemo-400)',
 };
 
 const STAT_ICONS: Record<string, React.ElementType> = {
@@ -63,8 +64,10 @@ const StatText: React.FC<StatTextProps> = ({
   const attributeUrl = attributeUrlMap[stat];
 
   return (
-    <span
-      className="inline-flex items-center gap-1 font-semibold"
+    <Text
+      as="span"
+      weight="semibold"
+      className="inline-flex items-center gap-1"
       style={{ color }}
     >
       {stat}
@@ -84,7 +87,7 @@ const StatText: React.FC<StatTextProps> = ({
           />
         )
       )}
-    </span>
+    </Text>
   );
 };
 
@@ -110,7 +113,6 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
     const parts = text.split(TEXT_PATTERN).filter(Boolean);
 
     return parts.map((part, index) => {
-      // Check for stat match first (exact case)
       const statColor = STAT_COLORS[part];
       const StatIcon = STAT_ICONS[part];
       if (statColor && StatIcon) {
@@ -125,28 +127,27 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
         );
       }
 
-      // Then check for element match (case-insensitive)
       const lowercasePart = part.toLowerCase() as Element;
       const elementColor = ELEMENT_COLORS[lowercasePart];
 
-      // Then check for numbers
       if (/^\d+%?$/.test(part)) {
         return (
-          <span key={`${index}-num-${part}`} className="text-warning-500">
+          <Text as="span" key={`${index}-num-${part}`} color="warning">
             {part}
-          </span>
+          </Text>
         );
       }
 
-      // Render element with color
       return elementColor ? (
-        <span
+        <Text
+          as="span"
           key={`${index}-elem-${lowercasePart}`}
-          className="font-semibold sm:font-bold"
+          weight="semibold"
+          className="sm:font-bold"
           style={{ color: elementColor }}
         >
           {part}
-        </span>
+        </Text>
       ) : (
         <React.Fragment key={`${index}-text`}>{part}</React.Fragment>
       );
@@ -246,21 +247,23 @@ function processTextSegment(
     // Then check for numbers
     if (/^\d+%?$/.test(part)) {
       return (
-        <span key={`${index}-num-${part}`} className="text-warning-500">
+        <Text as="span" key={`${index}-num-${part}`} color="warning">
           {part}
-        </span>
+        </Text>
       );
     }
 
     // Render element with color
     return elementColor ? (
-      <span
+      <Text
+        as="span"
         key={`${index}-elem-${lowercasePart}`}
-        className="font-semibold sm:font-bold"
+        weight="semibold"
+        className="sm:font-bold"
         style={{ color: elementColor }}
       >
         {part}
-      </span>
+      </Text>
     ) : (
       <React.Fragment key={`${index}-text`}>{part}</React.Fragment>
     );

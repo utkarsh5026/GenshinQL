@@ -13,6 +13,7 @@ import {
 } from './features/calendar';
 import { useCharactersStore } from './features/characters';
 import { routes } from './routes';
+import { useStickerStore } from './stores/useStickerStore';
 
 function App() {
   const { fetchPrimitives } = usePrimitivesStore();
@@ -20,16 +21,18 @@ function App() {
   const { fetchBooks } = useTalentBooksStore();
   const { fetchWeapons } = useWeaponsStore();
   const { fetchCharacters } = useCharactersStore();
+  const { fetchStickers } = useStickerStore();
 
   useAutoClearOldCache(7);
 
   useEffect(() => {
     const loadData = async () => {
-      await Promise.all([
+      await Promise.allSettled([
         fetchPrimitives(),
         fetchWeapons(),
         fetchBooks(),
         fetchCharacters(),
+        fetchStickers(),
       ]);
       await fetchWeaponMaterials();
     };
@@ -41,6 +44,7 @@ function App() {
     fetchWeaponMaterials,
     fetchBooks,
     fetchCharacters,
+    fetchStickers,
   ]);
 
   const routing = useRoutes(routes);

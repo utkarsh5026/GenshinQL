@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import { Heading, Text } from '@/components/ui/text';
 import { ItemNavigation } from '@/components/utils';
 import { decideColor } from '@/utils/color';
 
@@ -39,7 +40,7 @@ const CharacterDetail = () => {
   const elementColor = decideColor(profile.element);
 
   return (
-    <div className="flex flex-col h-full gap-3">
+    <div className="flex flex-col lg:h-full gap-3">
       <ItemNavigation
         items={characters}
         currentItemName={profile.name}
@@ -65,7 +66,7 @@ const CharacterLoadingState: React.FC<CharacterLoadingStateProps> = ({
   if (!character) {
     return (
       <div className="flex items-center justify-center h-full">
-        <div className="text-lg">Loading character...</div>
+        <Text size="lg">Loading character...</Text>
       </div>
     );
   }
@@ -125,9 +126,14 @@ const CharacterLoadingState: React.FC<CharacterLoadingStateProps> = ({
 
         {/* Character Name */}
         <div className="text-center space-y-2">
-          <h2 className="text-2xl font-bold" style={{ color: elementColor }}>
+          <Heading
+            level={2}
+            size="2xl"
+            weight="bold"
+            style={{ color: elementColor }}
+          >
             {character.name}
-          </h2>
+          </Heading>
         </div>
 
         <span className="sr-only">

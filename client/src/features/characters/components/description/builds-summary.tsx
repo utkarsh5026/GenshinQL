@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import React, { useEffect } from 'react';
 
+import { Text } from '@/components/ui/text';
 import { CachedImage } from '@/features/cache';
 
 import { useArtifactLinks, useFetchArtifactLinks } from '../../stores';
@@ -59,12 +60,15 @@ export const BuildsSummary: React.FC<BuildsSummaryProps> = ({
                 setName={config.sets[0].name}
                 artifactsData={artifactsData}
               />
-              <span
-                className="text-[10px] font-semibold uppercase tracking-wider"
+              <Text
+                as="span"
+                weight="semibold"
+                uppercase
+                className="text-[10px] tracking-wider"
                 style={{ color: elementColor }}
               >
                 4pc
-              </span>
+              </Text>
             </div>
           )}
 
@@ -75,12 +79,15 @@ export const BuildsSummary: React.FC<BuildsSummaryProps> = ({
                   setName={config.sets[0].name}
                   artifactsData={artifactsData}
                 />
-                <span
-                  className="text-[10px] font-semibold uppercase tracking-wider"
+                <Text
+                  as="span"
+                  weight="semibold"
+                  uppercase
+                  className="text-[10px] tracking-wider"
                   style={{ color: elementColor }}
                 >
                   2pc
-                </span>
+                </Text>
               </div>
               <div className="text-lg font-bold text-muted-foreground">+</div>
               <div className="flex flex-col items-center gap-1.5">
@@ -88,12 +95,15 @@ export const BuildsSummary: React.FC<BuildsSummaryProps> = ({
                   setName={config.sets[1].name}
                   artifactsData={artifactsData}
                 />
-                <span
-                  className="text-[10px] font-semibold uppercase tracking-wider"
+                <Text
+                  as="span"
+                  weight="semibold"
+                  uppercase
+                  className="text-[10px] tracking-wider"
                   style={{ color: elementColor }}
                 >
                   2pc
-                </span>
+                </Text>
               </div>
             </>
           )}
@@ -112,12 +122,15 @@ export const BuildsSummary: React.FC<BuildsSummaryProps> = ({
                       setName={set.name}
                       artifactsData={artifactsData}
                     />
-                    <span
-                      className="text-[9px] font-semibold uppercase tracking-wider"
+                    <Text
+                      as="span"
+                      weight="semibold"
+                      uppercase
+                      className="text-[9px] tracking-wider"
                       style={{ color: elementColor }}
                     >
                       {set.pieces}pc
-                    </span>
+                    </Text>
                   </div>
                 </React.Fragment>
               ))}
@@ -127,13 +140,13 @@ export const BuildsSummary: React.FC<BuildsSummaryProps> = ({
 
         {/* Artifact Info */}
         <div className="flex-1">
-          <div className="font-medium text-sm text-starlight-200">
+          <Text size="sm" weight="medium" className="text-starlight-200">
             {config.sets.map((set) => set.name).join(' + ')}
-          </div>
+          </Text>
           {recommended.notes && (
-            <p className="mt-1 text-xs text-muted-foreground line-clamp-2">
+            <Text as="p" size="xs" color="muted" className="mt-1 line-clamp-2">
               {recommended.notes}
-            </p>
+            </Text>
           )}
         </div>
 

@@ -10,6 +10,7 @@ import type { GameSticker, StickersData } from '@/types';
 
 interface StickerState {
   stickers: GameSticker[];
+  stickersByCharacter: StickersData;
   loading: boolean;
   error: string | null;
 
@@ -19,6 +20,7 @@ interface StickerState {
 
 const initialState = {
   stickers: [] as GameSticker[],
+  stickersByCharacter: {} as StickersData,
   loading: false,
   error: null as string | null,
 };
@@ -38,7 +40,11 @@ export const useStickerStore = create<StickerState>()(
           const data: StickersData = await fetchStickers();
           const flattened = flattenStickers(data);
 
-          set({ stickers: flattened, loading: false });
+          set({
+            stickers: flattened,
+            stickersByCharacter: data,
+            loading: false,
+          });
         } catch (err) {
           const errorMessage =
             err instanceof Error ? err.message : 'Failed to load stickers';
@@ -57,3 +63,10 @@ export const useStickerStore = create<StickerState>()(
     { name: 'StickerStore' }
   )
 );
+
+const EMPTY_STICKERS_BY_CHARACTER: StickersData = {};
+
+export const useStickersByCharacter = () =>
+  useStickerStore(
+    (state) => state.stickersByCharacter || EMPTY_STICKERS_BY_CHARACTER
+  );

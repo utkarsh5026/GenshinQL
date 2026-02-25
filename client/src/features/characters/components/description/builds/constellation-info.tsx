@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Heading, Text } from '@/components/ui/text';
 import { ConstellationInfo as ConstellationInfoType } from '@/types';
 
 interface ConstellationInfoProps {
@@ -22,33 +23,46 @@ export const ConstellationInfo: React.FC<ConstellationInfoProps> = ({
         }}
       >
         <div className="flex items-center gap-2 mb-2">
-          <span
-            className="px-2 py-1 rounded text-xs font-bold uppercase tracking-wider"
+          <Text
+            as="span"
+            size="xs"
+            weight="bold"
+            uppercase
+            className="px-2 py-1 rounded tracking-wider"
             style={{
               backgroundColor: `${elementColor}30`,
               color: elementColor,
             }}
           >
             C0
-          </span>
-          <span className="text-sm font-semibold text-starlight-200">
+          </Text>
+          <Text
+            as="span"
+            size="sm"
+            weight="semibold"
+            className="text-starlight-200"
+          >
             Base Viability
-          </span>
+          </Text>
         </div>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <Text as="p" size="sm" color="muted" leading="relaxed">
           {constellations.c0}
-        </p>
+        </Text>
       </div>
 
       {/* Constellation Breakpoints */}
       {constellations.breakpoints.length > 0 && (
         <div>
-          <h4
-            className="text-sm font-semibold uppercase tracking-wider mb-3"
+          <Heading
+            level={4}
+            size="sm"
+            weight="semibold"
+            uppercase
+            className="tracking-wider mb-3"
             style={{ color: elementColor }}
           >
             Key Breakpoints
-          </h4>
+          </Heading>
           <div className="space-y-3">
             {constellations.breakpoints.map((breakpoint, index) => {
               const match = breakpoint.match(/^(C\d+):\s*(.+)$/);
@@ -66,18 +80,26 @@ export const ConstellationInfo: React.FC<ConstellationInfoProps> = ({
                   }}
                 >
                   <div className="flex items-start gap-3">
-                    <span
-                      className="flex items-center justify-center w-8 h-8 rounded-lg text-xs font-bold shrink-0"
+                    <Text
+                      as="span"
+                      size="xs"
+                      weight="bold"
+                      className="flex items-center justify-center w-8 h-8 rounded-lg shrink-0"
                       style={{
                         backgroundColor: `${elementColor}30`,
                         color: elementColor,
                       }}
                     >
                       {constellation}
-                    </span>
-                    <p className="text-sm text-starlight-200 leading-relaxed pt-1">
+                    </Text>
+                    <Text
+                      as="p"
+                      size="sm"
+                      leading="relaxed"
+                      className="text-starlight-200 pt-1"
+                    >
                       {description}
-                    </p>
+                    </Text>
                   </div>
                 </div>
               );

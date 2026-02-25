@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Text } from '@/components/ui/text';
 import {
   Tooltip,
   TooltipContent,
@@ -34,9 +35,13 @@ const WeaponMaterialsDisplay: React.FC<WeaponMaterialsDisplayProps> = ({
         >
           {/* Material Images Section */}
           <div className="flex flex-col gap-1.5">
-            <div className="md:hidden text-[10px] uppercase tracking-wider text-muted-foreground">
+            <Text
+              color="muted"
+              uppercase
+              className="md:hidden text-[10px] tracking-wider"
+            >
               Materials
-            </div>
+            </Text>
             <div className="flex flex-wrap gap-2">
               {group.materialImages.map((img) => (
                 <TooltipProvider key={img.url}>
@@ -67,9 +72,13 @@ const WeaponMaterialsDisplay: React.FC<WeaponMaterialsDisplayProps> = ({
           {/* Weapons Section */}
           {group.weapons.length > 0 && (
             <div className="flex-1">
-              <div className="md:hidden text-[10px] uppercase tracking-wider text-muted-foreground mb-1.5">
+              <Text
+                color="muted"
+                uppercase
+                className="md:hidden text-[10px] tracking-wider mb-1.5"
+              >
                 Weapons
-              </div>
+              </Text>
               <div className="flex flex-wrap gap-1.5">
                 {group.weapons.map((weapon) => (
                   <WeaponAvatar key={weapon.name} weaponName={weapon.name} />

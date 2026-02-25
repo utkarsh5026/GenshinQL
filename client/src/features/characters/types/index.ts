@@ -41,6 +41,8 @@ export type Character = {
   idleOne?: AnimationMedia;
   idleTwo?: AnimationMedia;
   partyJoin?: AnimationMedia;
+  /** Sticker image URLs from stickers.json, populated at runtime via cross-store subscription */
+  stickers?: string[];
 };
 
 export type GalleryRaw = {

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Heading } from '@/components/ui/text';
 import { ArtifactLink, CharacterBuild } from '@/types';
 
 import { ArtifactSetCard } from './artifact-set-card';
@@ -19,12 +20,16 @@ export const ArtifactSetsDisplay: React.FC<ArtifactSetsDisplayProps> = ({
     <div className="space-y-6">
       {/* Recommended Section */}
       <div>
-        <h4
-          className="text-sm font-semibold uppercase tracking-wider mb-4"
+        <Heading
+          level={4}
+          size="sm"
+          weight="semibold"
+          uppercase
+          className="tracking-wider mb-4"
           style={{ color: elementColor }}
         >
           Recommended
-        </h4>
+        </Heading>
         <ArtifactSetCard
           artifactBuild={artifacts.recommended}
           artifactsData={artifactsData}
@@ -36,12 +41,16 @@ export const ArtifactSetsDisplay: React.FC<ArtifactSetsDisplayProps> = ({
       {/* Alternatives Section */}
       {artifacts.alternatives.length > 0 && (
         <div>
-          <h4
-            className="text-sm font-semibold uppercase tracking-wider mb-4"
+          <Heading
+            level={4}
+            size="sm"
+            weight="semibold"
+            uppercase
+            className="tracking-wider mb-4"
             style={{ color: elementColor }}
           >
             Alternatives
-          </h4>
+          </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {artifacts.alternatives.map((alt, index) => (
               <ArtifactSetCard

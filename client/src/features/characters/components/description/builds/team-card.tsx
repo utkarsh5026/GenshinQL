@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { Heading, Text } from '@/components/ui/text';
 import { CachedImage } from '@/features/cache';
 import { useCharacters } from '@/features/characters/stores';
 import { TeamComp } from '@/types';
@@ -49,12 +50,15 @@ export const TeamCard: React.FC<TeamCardProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Team Name */}
-      <h4
-        className="text-sm font-semibold mb-4"
+      <Heading
+        level={4}
+        size="sm"
+        weight="semibold"
+        className="mb-4"
         style={{ color: elementColor }}
       >
         {team.name}
-      </h4>
+      </Heading>
 
       {/* Character Icons */}
       <div className="flex items-center gap-2 mb-4">
@@ -90,9 +94,15 @@ export const TeamCard: React.FC<TeamCardProps> = ({
                   </div>
                 )}
               </div>
-              <span className="text-[9px] text-muted-foreground text-center max-w-12 truncate">
+              <Text
+                as="span"
+                color="muted"
+                align="center"
+                truncate
+                className="text-[9px] max-w-12"
+              >
                 {charName}
-              </span>
+              </Text>
             </div>
           );
         })}
@@ -100,9 +110,16 @@ export const TeamCard: React.FC<TeamCardProps> = ({
 
       {/* Roles */}
       <div className="mb-4">
-        <h5 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+        <Heading
+          level={5}
+          size="xs"
+          weight="semibold"
+          uppercase
+          color="muted"
+          className="tracking-wider mb-2"
+        >
           Roles
-        </h5>
+        </Heading>
         <ul className="space-y-1.5">
           {Object.entries(team.roles).map(([character, role]) => (
             <li key={character} className="flex items-start gap-2 text-xs">
@@ -110,9 +127,12 @@ export const TeamCard: React.FC<TeamCardProps> = ({
                 className="w-1 h-1 rounded-full mt-1.5 shrink-0"
                 style={{ backgroundColor: elementColor }}
               />
-              <span className="text-starlight-200">
-                <span className="font-medium">{character}:</span> {role}
-              </span>
+              <Text as="span" className="text-starlight-200">
+                <Text as="span" weight="medium">
+                  {character}:
+                </Text>{' '}
+                {role}
+              </Text>
             </li>
           ))}
         </ul>
@@ -120,9 +140,16 @@ export const TeamCard: React.FC<TeamCardProps> = ({
 
       {/* Rotation */}
       <div>
-        <h5 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+        <Heading
+          level={5}
+          size="xs"
+          weight="semibold"
+          uppercase
+          color="muted"
+          className="tracking-wider mb-2"
+        >
           Rotation
-        </h5>
+        </Heading>
         <div
           className="p-2.5 rounded-lg overflow-x-auto scrollbar-thin"
           style={{
@@ -142,7 +169,9 @@ export const TeamCard: React.FC<TeamCardProps> = ({
           className="mt-3 pt-3 border-t"
           style={{ borderColor: `${elementColor}15` }}
         >
-          <p className="text-xs text-muted-foreground italic">{team.notes}</p>
+          <Text as="p" size="xs" color="muted" className="italic">
+            {team.notes}
+          </Text>
         </div>
       )}
     </div>

@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import React, { useEffect, useMemo } from 'react';
 
 import { Badge } from '@/components/ui/badge';
+import { Heading, Text } from '@/components/ui/text';
 import { CachedImage } from '@/features/cache';
 import { useTalentCharMap } from '@/features/calendar/stores/useTalentBooksStore';
 import type { TalentBook } from '@/features/calendar/types';
@@ -35,10 +36,16 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   title,
   elementColor,
 }) => (
-  <div className="flex items-center gap-3 mb-4">
-    <h3 className="text-sm font-semibold uppercase tracking-wider text-starlight-300">
+  <div className="flex items-center gap-3 mb-2 sm:mb-4">
+    <Heading
+      level={3}
+      size="sm"
+      weight="semibold"
+      uppercase
+      className="tracking-wider text-starlight-300"
+    >
       {title}
-    </h3>
+    </Heading>
     <div
       className="flex-1 h-px"
       style={{
@@ -199,12 +206,14 @@ const CompactBuildDisplay: React.FC<CompactBuildDisplayProps> = ({
               setName={config.sets[0].name}
               artifactsData={artifactsData}
             />
-            <span
-              className="text-[10px] font-semibold"
+            <Text
+              as="span"
+              weight="semibold"
+              className="text-[10px]"
               style={{ color: elementColor }}
             >
               4pc
-            </span>
+            </Text>
           </div>
         )}
 
@@ -215,12 +224,14 @@ const CompactBuildDisplay: React.FC<CompactBuildDisplayProps> = ({
                 setName={config.sets[0].name}
                 artifactsData={artifactsData}
               />
-              <span
-                className="text-[10px] font-semibold"
+              <Text
+                as="span"
+                weight="semibold"
+                className="text-[10px]"
                 style={{ color: elementColor }}
               >
                 2pc
-              </span>
+              </Text>
             </div>
             <span className="text-xs text-muted-foreground">+</span>
             <div className="flex items-center gap-1">
@@ -228,12 +239,14 @@ const CompactBuildDisplay: React.FC<CompactBuildDisplayProps> = ({
                 setName={config.sets[1].name}
                 artifactsData={artifactsData}
               />
-              <span
-                className="text-[10px] font-semibold"
+              <Text
+                as="span"
+                weight="semibold"
+                className="text-[10px]"
                 style={{ color: elementColor }}
               >
                 2pc
-              </span>
+              </Text>
             </div>
           </>
         )}
@@ -250,12 +263,14 @@ const CompactBuildDisplay: React.FC<CompactBuildDisplayProps> = ({
                     setName={set.name}
                     artifactsData={artifactsData}
                   />
-                  <span
-                    className="text-[10px] font-semibold"
+                  <Text
+                    as="span"
+                    weight="semibold"
+                    className="text-[10px]"
                     style={{ color: elementColor }}
                   >
                     {set.pieces}pc
-                  </span>
+                  </Text>
                 </div>
               </React.Fragment>
             ))}
@@ -264,9 +279,9 @@ const CompactBuildDisplay: React.FC<CompactBuildDisplayProps> = ({
       </div>
 
       {/* Artifact Name - Compact */}
-      <span className="text-xs text-starlight-300 flex-1 min-w-30">
+      <Text as="span" size="xs" className="text-starlight-300 flex-1 min-w-30">
         {config.sets.map((set) => set.name).join(' + ')}
-      </span>
+      </Text>
 
       {/* View Button - Compact */}
       <button
@@ -359,9 +374,14 @@ export const CharacterStatsCompact: React.FC<CharacterStatsCompactProps> = ({
           {character.buildGuide && (
             <div className="pt-2 border-t border-midnight-600/30">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs font-medium text-starlight-400">
+                <Text
+                  as="span"
+                  size="xs"
+                  weight="medium"
+                  className="text-starlight-400"
+                >
                   Recommended Build
-                </span>
+                </Text>
               </div>
               <CompactBuildDisplay
                 characterName={character.name}

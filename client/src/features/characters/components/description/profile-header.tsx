@@ -2,9 +2,14 @@ import { ChevronRight } from 'lucide-react';
 import React, { useState } from 'react';
 
 import { Avatar } from '@/components/ui/avatar';
+import { Heading, Text } from '@/components/ui/text';
 import { AnimatedCover } from '@/components/utils';
 import { CachedImage } from '@/features/cache/components/cached-asset';
-import { AnimationMedia } from '@/types';
+import { useTalentCharMap } from '@/features/calendar/stores/useTalentBooksStore';
+import { getCurrentDayName } from '@/features/home/utils';
+import type { AnimationMedia, CharacterDetailed } from '@/types';
+
+import CharacterAvatar from '../utils/character-avatar';
 
 interface ProfileHeaderProps {
   name: string;
@@ -14,7 +19,7 @@ interface ProfileHeaderProps {
   fallbackCoverUrl?: string;
 }
 
-const ProfileHeader: React.FC<ProfileHeaderProps> = ({
+export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   name,
   avatarUrl,
   idleOne,
@@ -69,13 +74,156 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
       </div>
 
       <div className="mt-4 pb-4 text-center px-4">
-        <h2 className="text-lg font-semibold text-foreground tracking-wide">
+        <Heading
+          level={2}
+          size="lg"
+          weight="semibold"
+          className="tracking-wide"
+        >
           {name}
-        </h2>
+        </Heading>
         <div className="mt-1.5 w-12 h-0.5 mx-auto bg-linear-to-r from-transparent via-celestial-500/60 to-transparent rounded-full" />
       </div>
     </div>
   );
 };
 
-export default ProfileHeader;
+interface MobileProfileHeaderProps {
+  character: CharacterDetailed;
+  elementColor: string;
+}
+
+export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
+  character,
+  elementColor,
+}) => {
+  const talentCharMap = useTalentCharMap();
+  const talentBook = talentCharMap[character.name];
+  const today = getCurrentDayName();
+
+  const isFarmableToday =
+    today === 'Sunday' ||
+    talentBook?.dayOne === today ||
+    talentBook?.dayTwo === today;
+
+  const abbrevDay = (day?: string) => day?.slice(0, 3) ?? '—';
+  const talentDays = talentBook
+    ? `${abbrevDay(talentBook.dayOne)} / ${abbrevDay(talentBook.dayTwo)}`
+    : '—';
+
+  const rarityNum = parseInt(character.rarity, 10) || 5;
+  const rarityStars = '★'.repeat(rarityNum);
+  const rarityColor = rarityNum === 5 ? '#f59e0b' : '#a78bfa';
+
+  return (
+    <div className="lg:hidden flex flex-col">
+      {/* Namecard cover */}
+      <div
+        className="relative w-full h-28 overflow-hidden"
+        style={{
+          backgroundImage: `url(${character.imageUrls.nameCard})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-midnight-950/95" />
+      </div>
+
+      {/* Avatar + info */}
+      <div className="flex flex-col items-center -mt-10 relative z-10 px-4 pb-4">
+        <CharacterAvatar
+          characterName={character.name}
+          size="xl"
+          showName={false}
+          interactive={false}
+          showElement={true}
+        />
+
+        <Heading
+          level={2}
+          size="lg"
+          weight="semibold"
+          className="tracking-wide mt-2"
+        >
+          {character.name}
+        </Heading>
+        <Text
+          as="span"
+          size="sm"
+          className="tracking-widest mt-0.5"
+          style={{ color: rarityColor }}
+        >
+          {rarityStars}
+        </Text>
+
+        <div className="flex items-stretch divide-x divide-border/60 mt-4 w-full max-w-xs">
+          {/* Nation */}
+          <div className="flex flex-col items-center gap-1 flex-1 px-2">
+            <CachedImage
+              src={character.regionUrl}
+              alt={character.region}
+              className="w-5 h-5 object-contain"
+            />
+            <Text as="span" size="sm" weight="semibold" leading="tight">
+              {character.region}
+            </Text>
+            <Text
+              as="span"
+              color="muted"
+              uppercase
+              className="text-[10px] tracking-wide"
+            >
+              Nation
+            </Text>
+          </div>
+
+          {/* Weapon */}
+          <div className="flex flex-col items-center gap-1 flex-1 px-2">
+            <CachedImage
+              src={character.weaponUrl}
+              alt={character.weaponType}
+              className="w-5 h-5 object-contain"
+            />
+            <Text as="span" size="sm" weight="semibold" leading="tight">
+              {character.weaponType}
+            </Text>
+            <Text
+              as="span"
+              color="muted"
+              uppercase
+              className="text-[10px] tracking-wide"
+            >
+              Weapon
+            </Text>
+          </div>
+
+          {/* Talent Days */}
+          <div className="flex flex-col items-center gap-1 flex-1 px-2">
+            <CachedImage
+              src={character.elementUrl}
+              alt={character.element}
+              className="w-5 h-5 object-contain"
+            />
+            <Text
+              as="span"
+              size="sm"
+              weight="semibold"
+              leading="tight"
+              style={{ color: isFarmableToday ? '#4ade80' : elementColor }}
+            >
+              {talentDays}
+            </Text>
+            <Text
+              as="span"
+              color="muted"
+              uppercase
+              className="text-[10px] tracking-wide"
+            >
+              Talents
+            </Text>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

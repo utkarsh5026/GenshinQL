@@ -18,10 +18,24 @@ interface CharacterTableProps {
   characters: Character[];
 }
 
-const RARITY_STARS: Record<string, string> = {
-  '5': '\u2605\u2605\u2605\u2605\u2605',
-  '4': '\u2605\u2605\u2605\u2605',
-};
+interface IconBadgeProps {
+  src: string;
+  alt: string;
+  label: string;
+}
+
+const IconBadge: React.FC<IconBadgeProps> = ({ src, alt, label }) => (
+  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-muted/40 border border-border/40 rounded-full">
+    <CachedImage
+      src={src}
+      alt={alt}
+      width={20}
+      height={20}
+      className="w-5 h-5 shrink-0"
+    />
+    <span className="text-xs font-medium text-muted-foreground">{label}</span>
+  </div>
+);
 
 const CharacterTable: React.FC<CharacterTableProps> = ({ characters }) => {
   return (
@@ -55,21 +69,16 @@ interface CharacterTableRowProps {
 
 const CharacterTableRow: React.FC<CharacterTableRowProps> = React.memo(
   ({ character }) => {
-    const is5Star = character.rarity === '5';
-
     return (
       <TableRow className="group cursor-pointer">
         <TableCell className="py-3">
           <Link
             to={`/characters/${character.name}`}
-            className="flex items-center gap-3 no-underline text-inherit min-w-[180px]"
+            className="flex items-center gap-3 no-underline text-inherit min-w-45"
           >
             <div
               className={cn(
-                'relative w-11 h-11 rounded-full overflow-hidden shrink-0',
-                is5Star
-                  ? 'ring-2 ring-yellow-400/50 shadow-[0_0_12px_rgba(250,204,21,0.15)]'
-                  : 'ring-2 ring-violet-400/50 shadow-[0_0_12px_rgba(167,139,250,0.15)]'
+                'relative w-11 h-11 rounded-full overflow-hidden shrink-0'
               )}
             >
               <CachedImage
@@ -91,57 +100,29 @@ const CharacterTableRow: React.FC<CharacterTableRowProps> = React.memo(
           </Link>
         </TableCell>
         <TableCell className="text-center py-3">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-muted/40 border border-border/40 rounded-full">
-            <CachedImage
-              src={character.elementUrl}
-              alt={character.element}
-              width={20}
-              height={20}
-              className="w-5 h-5 shrink-0"
-            />
-            <span className="text-xs font-medium text-muted-foreground">
-              {character.element}
-            </span>
-          </div>
+          <IconBadge
+            src={character.elementUrl}
+            alt={character.element}
+            label={character.element}
+          />
         </TableCell>
         <TableCell className="text-center py-3">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-muted/40 border border-border/40 rounded-full">
-            <CachedImage
-              src={character.weaponUrl}
-              alt={character.weaponType}
-              width={20}
-              height={20}
-              className="w-5 h-5 shrink-0"
-            />
-            <span className="text-xs font-medium text-muted-foreground">
-              {character.weaponType}
-            </span>
-          </div>
+          <IconBadge
+            src={character.weaponUrl}
+            alt={character.weaponType}
+            label={character.weaponType}
+          />
         </TableCell>
         <TableCell className="text-center py-3">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-muted/40 border border-border/40 rounded-full">
-            <CachedImage
-              src={character.regionUrl}
-              alt={character.region}
-              width={20}
-              height={20}
-              className="w-5 h-5 shrink-0"
-            />
-            <span className="text-xs font-medium text-muted-foreground">
-              {character.region}
-            </span>
-          </div>
+          <IconBadge
+            src={character.regionUrl}
+            alt={character.region}
+            label={character.region}
+          />
         </TableCell>
         <TableCell className="text-center py-3">
-          <span
-            className={cn(
-              'text-[0.8125rem] tracking-tight',
-              is5Star
-                ? 'text-yellow-400 drop-shadow-[0_0_3px_rgba(250,204,21,0.5)]'
-                : 'text-violet-400 drop-shadow-[0_0_3px_rgba(167,139,250,0.5)]'
-            )}
-          >
-            {RARITY_STARS[character.rarity] ?? character.rarity}
+          <span className={cn('text-[0.8125rem] tracking-tight')}>
+            {character.rarity}
           </span>
         </TableCell>
         <TableCell className="text-center hidden md:table-cell py-3">

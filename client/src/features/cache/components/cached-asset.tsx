@@ -1,6 +1,6 @@
+import { Loader2 } from 'lucide-react';
 import React, { useCallback, useRef, useState } from 'react';
 
-import { ImageSkeleton } from '@/components/utils/ImageSkeleton';
 import { cn } from '@/lib/utils';
 
 import { useCachedAssetLoader } from '../hooks/useCachedAssetLoader';
@@ -151,5 +151,47 @@ export const CachedVideo: React.FC<CachedVideoProps> = ({
       className={className}
       style={style}
     />
+  );
+};
+
+interface ImageSkeletonProps {
+  size?: 'sm' | 'md' | 'lg';
+  shape?: 'circle' | 'rounded' | 'square';
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const sizeMap = {
+  sm: { dimension: 'w-5 h-5', icon: 10 },
+  md: { dimension: 'w-10 h-10', icon: 16 },
+  lg: { dimension: 'w-16 h-16', icon: 24 },
+};
+
+const shapeMap = {
+  circle: 'rounded-full',
+  rounded: 'rounded-lg',
+  square: 'rounded-none',
+};
+
+export const ImageSkeleton: React.FC<ImageSkeletonProps> = ({
+  size = 'md',
+  shape = 'circle',
+  className,
+  style,
+}) => {
+  const { dimension, icon } = sizeMap[size];
+
+  return (
+    <div
+      className={cn(
+        'flex items-center justify-center bg-midnight-800/60',
+        dimension,
+        shapeMap[shape],
+        className
+      )}
+      style={style}
+    >
+      <Loader2 size={icon} className="animate-spin text-green-400" />
+    </div>
   );
 };

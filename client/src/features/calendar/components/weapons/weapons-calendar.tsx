@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { TabDisplay } from '@/components/utils/tab-display';
 import { useRegions } from '@/stores/usePrimitivesStore';
 
 import { useWeaponFilter } from '../../hooks';
@@ -10,17 +8,22 @@ import {
   useWeaponMaterialLoading,
   useWeaponMaterialSchedule,
 } from '../../stores/useWeaponMaterialStore';
-import { ViewToggle } from '../shared';
+import { RegionTabs, ViewToggle } from '../shared';
 import WeaponTable from './weapon-table';
 import WeaponCalendarView from './weapons-calendar-view';
 
 const WeaponCalendar: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
+  const [activeNation, setActiveNation] = useState('');
+
   const weaponMaterialSchedule = useWeaponMaterialSchedule();
   const loading = useWeaponMaterialLoading();
   const error = useWeaponMaterialError();
 
   const nations = useRegions();
+  const nationNames = useMemo(() => nations.map((n) => n.name), [nations]);
+
+  const currentNation = activeNation || nationNames[0] || '';
 
   const { filteredSchedule } = useWeaponFilter(weaponMaterialSchedule || []);
 
@@ -30,45 +33,26 @@ const WeaponCalendar: React.FC = () => {
   if (weaponMaterialSchedule === null || nations.length === 0)
     return <div>No data</div>;
 
+  const schedule = filteredSchedule?.find((s) => s.nation === currentNation);
+
   return (
     <div>
-      <Tabs defaultValue={nations[0]?.name}>
-        <TabsList className="h-auto md:h-10 flex-wrap md:flex-nowrap justify-start overflow-x-auto gap-1">
-          {nations.map((nation) => (
-            <TabsTrigger
-              key={nation.name}
-              value={nation.name}
-              className="text-xs md:text-sm px-3 md:px-4"
-            >
-              <TabDisplay
-                element={nation.name}
-                elementUrl={nation.url}
-                size="sm"
-                showLabel={true}
-              />
-            </TabsTrigger>
-          ))}
-        </TabsList>
-        {nations.map((nation) => {
-          const schedule = filteredSchedule?.find(
-            (s) => s.nation === nation.name
-          );
-          return (
-            <TabsContent key={nation.name} value={nation.name}>
-              <ViewToggle
-                isCalendar={isCalendar}
-                onToggle={() => setIsCalendar(!isCalendar)}
-              />
-              {schedule &&
-                (isCalendar ? (
-                  <WeaponCalendarView nDays={7} schedule={schedule} />
-                ) : (
-                  <WeaponTable schedule={schedule} />
-                ))}
-            </TabsContent>
-          );
-        })}
-      </Tabs>
+      <RegionTabs
+        regions={nationNames}
+        activeRegion={currentNation}
+        onChange={setActiveNation}
+        className="m-2"
+      />
+      <ViewToggle
+        isCalendar={isCalendar}
+        onToggle={() => setIsCalendar(!isCalendar)}
+      />
+      {schedule &&
+        (isCalendar ? (
+          <WeaponCalendarView nDays={7} schedule={schedule} />
+        ) : (
+          <WeaponTable schedule={schedule} />
+        ))}
     </div>
   );
 };

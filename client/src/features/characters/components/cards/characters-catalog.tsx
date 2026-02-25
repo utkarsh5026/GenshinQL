@@ -2,13 +2,13 @@ import { LayoutGrid, List } from 'lucide-react';
 import React, { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
-import FilterBar from '@/components/utils/filter/FilterBar';
+import FilterBar from '@/components/utils/filter/filter-bar';
 import { cn } from '@/lib/utils';
 
+import { Character } from '../..';
 import { useCharacterFilters } from '../../hooks/useCharacterFilters';
 import { useCharactersError, useCharactersStore } from '../../stores';
-import styles from './CharacterCard.module.css';
-import CharacterCardGrid from './characters-grid';
+import CharacterCard from './character-card';
 import CharacterTable from './characters-table';
 
 type ViewMode = 'grid' | 'table';
@@ -17,6 +17,8 @@ const CharacterCardsWithFilters: React.FC = () => {
   const { loading } = useCharactersStore();
   const error = useCharactersError();
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  const effectiveViewMode: ViewMode = isMobile ? 'grid' : viewMode;
 
   const {
     characters: filteredCharacters,
@@ -35,7 +37,7 @@ const CharacterCardsWithFilters: React.FC = () => {
     return <div className="p-4 text-destructive">Error: {error.message}</div>;
 
   return (
-    <div className="w-full -m-4 md:-m-6 flex-col gap-8">
+    <div className="-m-4 md:-m-6 flex flex-col gap-8">
       <div className="flex items-center gap-3 px-4 md:px-6 pt-4 md:pt-6">
         <div className="flex-1">
           <FilterBar
@@ -52,12 +54,13 @@ const CharacterCardsWithFilters: React.FC = () => {
           />
         </div>
 
-        <div className={styles.viewToggle}>
+        <div className="hidden md:flex items-center gap-1 p-0.75 bg-muted/50 border border-border rounded-lg">
           <button
             type="button"
             className={cn(
-              styles.viewToggleBtn,
-              viewMode === 'grid' && styles.viewToggleBtnActive
+              'flex items-center justify-center w-8.5 h-8.5 rounded-md bg-transparent border border-transparent text-muted-foreground cursor-pointer transition-all duration-200 ease-out hover:text-foreground hover:bg-muted/80',
+              viewMode === 'grid' &&
+                'bg-background border-border text-foreground shadow-sm'
             )}
             onClick={() => setViewMode('grid')}
             title="Grid view"
@@ -67,8 +70,9 @@ const CharacterCardsWithFilters: React.FC = () => {
           <button
             type="button"
             className={cn(
-              styles.viewToggleBtn,
-              viewMode === 'table' && styles.viewToggleBtnActive
+              'flex items-center justify-center w-8.5 h-8.5 rounded-md bg-transparent border border-transparent text-muted-foreground cursor-pointer transition-all duration-200 ease-out hover:text-foreground hover:bg-muted/80',
+              viewMode === 'table' &&
+                'bg-background border-border text-foreground shadow-sm'
             )}
             onClick={() => setViewMode('table')}
             title="Table view"
@@ -79,7 +83,7 @@ const CharacterCardsWithFilters: React.FC = () => {
       </div>
 
       {filteredCharacters.length > 0 ? (
-        viewMode === 'grid' ? (
+        effectiveViewMode === 'grid' ? (
           <CharacterCardGrid characters={filteredCharacters} />
         ) : (
           <CharacterTable characters={filteredCharacters} />
@@ -94,6 +98,22 @@ const CharacterCardsWithFilters: React.FC = () => {
           </Button>
         </div>
       )}
+    </div>
+  );
+};
+
+interface CharacterCardGridProps {
+  characters: Character[];
+}
+
+const CharacterCardGrid: React.FC<CharacterCardGridProps> = ({
+  characters,
+}) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+      {characters.map((character) => (
+        <CharacterCard key={character.name} character={character} />
+      ))}
     </div>
   );
 };

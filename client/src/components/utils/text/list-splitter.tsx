@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Text } from '@/components/ui/text';
+
 import { TextProcessor, TextProcessorWithAbilities } from './text-processor';
 
 interface ListSplitterProps {
@@ -16,16 +18,19 @@ export const ListSplitter: React.FC<ListSplitterProps> = ({ text }) => {
     .filter((sentence) => sentence.trim().length > 0);
 
   return (
-    <div className="space-y-3 sm:space-y-4 p-4 sm:p-5 md:p-6 rounded-lg bg-surface-200/30">
-      <ul className="space-y-3 sm:space-y-3.5 md:space-y-4 text-left max-w-4xl">
+    <div className="space-y-2 sm:space-y-4 p-2 sm:p-5 md:p-6 rounded-lg bg-surface-200/30">
+      <ul className="space-y-2 sm:space-y-3.5 md:space-y-4 text-left max-w-4xl">
         {sentences.map((sentence, index) => (
-          <li
+          <Text
+            as="li"
             key={index}
-            className="group flex items-start gap-3 sm:gap-3.5 md:gap-4
-                       text-sm sm:text-base md:text-base
-                       text-foreground/85 leading-relaxed sm:leading-loose
+            size="sm"
+            leading="relaxed"
+            className="group flex items-start gap-2 sm:gap-3.5 md:gap-4
+                       sm:text-base md:text-base
+                       text-foreground/85 sm:leading-loose
                        transition-all duration-200 hover:text-foreground
-                       pl-1 py-2 sm:py-2.5 rounded-md hover:bg-starlight-800/20
+                       pl-1 py-1.5 sm:py-2.5 rounded-md hover:bg-starlight-800/20
                        antialiased"
           >
             <span
@@ -34,10 +39,14 @@ export const ListSplitter: React.FC<ListSplitterProps> = ({ text }) => {
                          shrink-0 transition-transform duration-200
                          group-hover:scale-125 group-hover:bg-celestial-400"
             />
-            <span className="leading-relaxed sm:leading-loose tracking-wide">
+            <Text
+              as="span"
+              leading="relaxed"
+              className="sm:leading-loose tracking-wide"
+            >
               <TextProcessor text={sentence} />
-            </span>
-          </li>
+            </Text>
+          </Text>
         ))}
       </ul>
     </div>
@@ -62,31 +71,36 @@ export const AbilitiesListSplitter: React.FC<AbilitiesListSplitter> = ({
     .filter((sentence) => sentence.trim().length > 0);
 
   return (
-    <div className="space-y-3 sm:space-y-4 p-4 sm:p-5 md:p-6 rounded-lg bg-surface-200/30">
-      <ul className="space-y-3 sm:space-y-3.5 md:space-y-4 text-left max-w-4xl">
+    <div className="space-y-2 sm:space-y-4 p-2 sm:p-5 md:p-6 rounded-lg bg-surface-200/30">
+      <ul className="space-y-2 sm:space-y-3.5 md:space-y-4 text-left max-w-4xl">
         {sentences.map((sentence) => (
-          <li
+          <Text
+            as="li"
             key={sentence}
-            className="group flex items-start gap-3 sm:gap-3.5 md:gap-4
-                       text-sm sm:text-base md:text-base
-                       text-foreground/85 leading-relaxed sm:leading-loose
+            size="sm"
+            leading="relaxed"
+            className="group flex items-start gap-2 sm:gap-3.5 md:gap-4
+                       sm:text-base md:text-base
+                       text-foreground/85 sm:leading-loose
                        transition-all duration-200 hover:text-foreground
-                       pl-1 py-2 sm:py-2.5 rounded-md hover:bg-starlight-800/20
+                       pl-1 py-1.5 sm:py-2.5 rounded-md hover:bg-starlight-800/20
                        antialiased"
           >
             <span
               className="mt-1.5 sm:mt-2 h-1.5 w-1.5 sm:h-2 sm:w-2
-                         rounded-full bg-celestial-500
-                         shrink-0 transition-transform duration-200
-                         group-hover:scale-125 group-hover:bg-celestial-400"
+                         rounded-full bg-celestial-800 shrink-0"
             />
-            <span className="leading-relaxed sm:leading-loose tracking-wide">
+            <Text
+              as="span"
+              leading="relaxed"
+              className="sm:leading-loose tracking-wide"
+            >
               <TextProcessorWithAbilities
                 text={sentence}
                 characterName={characterName}
               />
-            </span>
-          </li>
+            </Text>
+          </Text>
         ))}
       </ul>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Text } from '@/components/ui/text';
 import {
   Tooltip,
   TooltipContent,
@@ -98,9 +99,13 @@ export const TalentBooksWithCharacters: React.FC<
           >
             {/* Talent Books Section */}
             <div className="flex flex-col gap-1.5">
-              <div className="md:hidden text-[10px] uppercase tracking-wider text-muted-foreground">
+              <Text
+                color="muted"
+                uppercase
+                className="md:hidden text-[10px] tracking-wider"
+              >
                 Books
-              </div>
+              </Text>
               <div className="flex flex-row items-center gap-2">
                 <TalentBookCard
                   iconUrl={teachingUrl}
@@ -125,9 +130,13 @@ export const TalentBooksWithCharacters: React.FC<
             {/* Characters Section */}
             {characters.length > 0 && (
               <div className="flex-1">
-                <div className="md:hidden text-[10px] uppercase tracking-wider text-muted-foreground mb-1.5">
+                <Text
+                  color="muted"
+                  uppercase
+                  className="md:hidden text-[10px] tracking-wider mb-1.5"
+                >
                   Characters
-                </div>
+                </Text>
                 <div className="flex flex-wrap gap-1.5">
                   {visibleChars.map((char) => (
                     <CharacterAvatar
@@ -136,12 +145,16 @@ export const TalentBooksWithCharacters: React.FC<
                     />
                   ))}
                   {remainingCount > 0 && (
-                    <div
-                      className="flex items-center justify-center w-10 h-10 text-xs font-medium text-muted-foreground bg-surface-100 rounded-full border border-border cursor-help"
+                    <Text
+                      as="div"
+                      size="xs"
+                      weight="medium"
+                      color="muted"
+                      className="flex items-center justify-center w-10 h-10 bg-surface-100 rounded-full border border-border cursor-help"
                       title={`${remainingCount} more character${remainingCount > 1 ? 's' : ''}`}
                     >
                       +{remainingCount}
-                    </div>
+                    </Text>
                   )}
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Heading } from '@/components/ui/text';
 import type { TalentBook } from '@/features/calendar';
 import type { WeaponSummary } from '@/features/weapons';
 import type { Day, ImageUrl } from '@/types';
@@ -37,9 +38,16 @@ const MaterialsCell: React.FC<MaterialsCellProps> = ({ routine }) => {
       {/* Talent Materials Section */}
       {talentMaterials && (
         <div>
-          <h4 className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wider">
+          <Heading
+            level={4}
+            size="xs"
+            weight="semibold"
+            color="muted"
+            uppercase
+            className="tracking-wider mb-2"
+          >
             Talent Books
-          </h4>
+          </Heading>
           <TalentBooksShowCase talentBooks={[talentMaterials]} />
         </div>
       )}
@@ -47,9 +55,16 @@ const MaterialsCell: React.FC<MaterialsCellProps> = ({ routine }) => {
       {/* Weapon Materials Section */}
       {weaponMaterials.length > 0 && (
         <div>
-          <h4 className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wider">
+          <Heading
+            level={4}
+            size="xs"
+            weight="semibold"
+            color="muted"
+            uppercase
+            className="tracking-wider mb-2"
+          >
             Weapon Materials
-          </h4>
+          </Heading>
           <WeaponMaterialsDisplay materialGroups={weaponMaterials} />
         </div>
       )}

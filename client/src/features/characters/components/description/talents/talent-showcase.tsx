@@ -1,6 +1,7 @@
 import { ChevronDown, ChevronUp, Clock, Zap } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
+import { Heading, Text } from '@/components/ui/text';
 import { AbilityTag } from '@/components/utils';
 import { AnimatedCover } from '@/components/utils';
 import { AbilitiesListSplitter } from '@/components/utils';
@@ -98,12 +99,23 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
           />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-[10px] sm:text-xs font-medium uppercase tracking-wider text-muted-foreground mb-0.5">
+          <Text
+            as="p"
+            weight="medium"
+            uppercase
+            color="muted"
+            className="text-[10px] sm:text-xs tracking-wider mb-0.5"
+          >
             {talent.talentType}
-          </p>
-          <h4 className="text-sm sm:text-base md:text-lg font-bold text-foreground truncate">
+          </Text>
+          <Heading
+            level={4}
+            weight="bold"
+            truncate
+            className="text-sm sm:text-base md:text-lg"
+          >
             {talent.talentName}
-          </h4>
+          </Heading>
           {/* Tags */}
           {tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-1.5 sm:mt-2">
@@ -175,15 +187,24 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
 
               {/* Animation Caption */}
               {currentAnimation?.caption && (
-                <p className="text-[11px] sm:text-xs text-muted-foreground text-center">
+                <Text
+                  as="p"
+                  color="muted"
+                  align="center"
+                  className="text-[11px] sm:text-xs"
+                >
                   {currentAnimation.caption}
-                </p>
+                </Text>
               )}
             </div>
           ) : (
-            <div className="aspect-video flex items-center justify-center bg-midnight-800/50 rounded-md sm:rounded-lg text-muted-foreground text-xs sm:text-sm">
+            <Text
+              as="div"
+              color="muted"
+              className="aspect-video flex items-center justify-center bg-midnight-800/50 rounded-md sm:rounded-lg text-xs sm:text-sm"
+            >
               No animation available
-            </div>
+            </Text>
           )}
         </div>
 
@@ -206,9 +227,14 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
           onClick={() => setShowScaling(!showScaling)}
           className="w-full flex items-center justify-between p-3 sm:p-4 hover:bg-midnight-700/30 transition-colors"
         >
-          <span className="text-xs sm:text-sm font-semibold text-starlight-300 uppercase tracking-wider">
+          <Text
+            as="span"
+            weight="semibold"
+            uppercase
+            className="text-xs sm:text-sm text-starlight-300 tracking-wider"
+          >
             Talent Scaling
-          </span>
+          </Text>
           {showScaling ? (
             <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
           ) : (
@@ -217,7 +243,7 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
         </button>
 
         {showScaling && (
-          <div className="px-3 sm:px-6 md:px-8 pb-3 sm:pb-4">
+          <div className="px-3 sm:px-4 md:px-6 pb-3 sm:pb-4">
             <TalentScalingTable talent={talent} elementColor={elementColor} />
           </div>
         )}

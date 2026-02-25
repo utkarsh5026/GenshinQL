@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { Text } from '@/components/ui/text';
 import { CachedImage } from '@/features/cache';
 import { ArtifactBuild, ArtifactLink } from '@/types';
 
@@ -63,12 +64,16 @@ export const ArtifactSetCard: React.FC<ArtifactSetCardProps> = ({
               artifactsData={artifactsData}
               size="lg"
             />
-            <span
-              className="text-xs font-semibold uppercase tracking-wider"
+            <Text
+              as="span"
+              size="xs"
+              weight="semibold"
+              uppercase
+              className="tracking-wider"
               style={{ color: elementColor }}
             >
               4pc
-            </span>
+            </Text>
           </div>
         )}
 
@@ -80,12 +85,16 @@ export const ArtifactSetCard: React.FC<ArtifactSetCardProps> = ({
                 artifactsData={artifactsData}
                 size="lg"
               />
-              <span
-                className="text-xs font-semibold uppercase tracking-wider"
+              <Text
+                as="span"
+                size="xs"
+                weight="semibold"
+                uppercase
+                className="tracking-wider"
                 style={{ color: elementColor }}
               >
                 2pc
-              </span>
+              </Text>
             </div>
             <div className="text-xl font-bold text-muted-foreground">+</div>
             <div className="flex flex-col items-center gap-2">
@@ -94,12 +103,16 @@ export const ArtifactSetCard: React.FC<ArtifactSetCardProps> = ({
                 artifactsData={artifactsData}
                 size="lg"
               />
-              <span
-                className="text-xs font-semibold uppercase tracking-wider"
+              <Text
+                as="span"
+                size="xs"
+                weight="semibold"
+                uppercase
+                className="tracking-wider"
                 style={{ color: elementColor }}
               >
                 2pc
-              </span>
+              </Text>
             </div>
           </>
         )}
@@ -119,12 +132,15 @@ export const ArtifactSetCard: React.FC<ArtifactSetCardProps> = ({
                     artifactsData={artifactsData}
                     size="md"
                   />
-                  <span
-                    className="text-[10px] font-semibold uppercase tracking-wider"
+                  <Text
+                    as="span"
+                    weight="semibold"
+                    uppercase
+                    className="text-[10px] tracking-wider"
                     style={{ color: elementColor }}
                   >
                     {set.pieces}pc
-                  </span>
+                  </Text>
                 </div>
               </React.Fragment>
             ))}
@@ -133,13 +149,13 @@ export const ArtifactSetCard: React.FC<ArtifactSetCardProps> = ({
 
         {/* Artifact set names */}
         <div className="flex-1">
-          <div className="font-medium text-sm text-starlight-200">
+          <Text size="sm" weight="medium" className="text-starlight-200">
             {config.sets.map((set) => set.name).join(' + ')}
-          </div>
+          </Text>
           {artifactBuild.notes && (
-            <p className="mt-2 text-xs text-muted-foreground">
+            <Text as="p" size="xs" color="muted" className="mt-2">
               {artifactBuild.notes}
-            </p>
+            </Text>
           )}
         </div>
       </div>
