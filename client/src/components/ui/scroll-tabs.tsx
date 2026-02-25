@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
 
+import { Text } from '@/components/ui/text';
 import { cn } from '@/lib/utils';
 
 export interface ScrollTabItem<T extends string = string> {
@@ -85,7 +86,7 @@ export function ScrollTabs<T extends string = string>({
                 onClick={() => onChange(item.id)}
                 className={cn(
                   'relative flex items-center gap-1.5 whitespace-nowrap',
-                  'px-4 py-2.5 text-sm font-medium rounded-xl',
+                  'px-4 py-2.5 rounded-xl',
                   'transition-colors duration-200',
                   isActive
                     ? 'text-foreground'
@@ -132,7 +133,9 @@ export function ScrollTabs<T extends string = string>({
                     </span>
                   ) : null}
 
-                  <span>{item.label}</span>
+                  <Text as="span" size="sm" weight="medium" color="inherit">
+                    {item.label}
+                  </Text>
                 </span>
               </button>
             );
