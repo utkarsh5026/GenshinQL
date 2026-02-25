@@ -5,9 +5,10 @@ import { Button } from '@/components/ui/button';
 import FilterBar from '@/components/utils/filter/filter-bar';
 import { cn } from '@/lib/utils';
 
+import { Character } from '../..';
 import { useCharacterFilters } from '../../hooks/useCharacterFilters';
 import { useCharactersError, useCharactersStore } from '../../stores';
-import CharacterCardGrid from './characters-grid';
+import CharacterCard from './character-card';
 import CharacterTable from './characters-table';
 
 type ViewMode = 'grid' | 'table';
@@ -97,6 +98,22 @@ const CharacterCardsWithFilters: React.FC = () => {
           </Button>
         </div>
       )}
+    </div>
+  );
+};
+
+interface CharacterCardGridProps {
+  characters: Character[];
+}
+
+const CharacterCardGrid: React.FC<CharacterCardGridProps> = ({
+  characters,
+}) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+      {characters.map((character) => (
+        <CharacterCard key={character.name} character={character} />
+      ))}
     </div>
   );
 };
