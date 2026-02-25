@@ -1,4 +1,3 @@
-import { Sparkles } from 'lucide-react';
 import React from 'react';
 
 import {
@@ -33,13 +32,13 @@ export const AbilityReference: React.FC<AbilityReferenceProps> = ({
         <TooltipTrigger asChild>
           <span className="inline-flex items-center gap-0.5 cursor-help">
             <span className="font-medium">{abilityName}</span>
-            <Sparkles
-              className="inline-block opacity-60 shrink-0"
-              style={{
-                width: '8px',
-                height: '8px',
-                color: elementColor,
-              }}
+            <CachedImage
+              src={talent.talentIcon}
+              alt={talent.talentName}
+              className="w-full h-full object-contain opacity-80"
+              lazy={false}
+              showSkeleton={false}
+              style={{ width: '14px', height: '14px' }}
             />
           </span>
         </TooltipTrigger>
