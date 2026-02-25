@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ScrollTabItem, ScrollTabs } from '@/components/ui/scroll-tabs';
+import { Tabs, TabsContent } from '@/components/ui/tabs';
 import { CachedImage } from '@/features/cache';
 import { usePrimitivesStore } from '@/stores';
 
@@ -11,6 +12,7 @@ import TalentTable from './talents-table';
 
 const TalentCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
+  const [activeTab, setActiveTab] = useState('');
   const { calendar, fetchBooks } = useTalentBooksStore();
   const { primitives } = usePrimitivesStore();
 
@@ -37,34 +39,37 @@ const TalentCalender: React.FC = () => {
     });
   }, [locations, primitives]);
 
+  const tabItems = useMemo<ScrollTabItem[]>(
+    () =>
+      regionsWithIcons.map((region) => ({
+        icon: region.iconUrl ? (
+          <CachedImage
+            src={region.iconUrl}
+            alt={region.name}
+            width={20}
+            height={20}
+            className="h-full w-full rounded-full object-cover"
+          />
+        ) : undefined,
+        id: region.name,
+        label: region.name,
+      })),
+    [regionsWithIcons]
+  );
+
   const talentBooks = calendar || [];
+  const currentTab = activeTab || locations[0] || '';
 
   if (locations.length > 0)
     return (
       <div>
-        <Tabs defaultValue={locations[0]}>
-          <TabsList className="h-auto md:h-10 flex-wrap md:flex-nowrap justify-start overflow-x-auto gap-1">
-            {regionsWithIcons.map((region) => {
-              return (
-                <TabsTrigger
-                  key={region.name}
-                  value={region.name}
-                  className="text-xs md:text-sm px-3 md:px-4 flex items-center gap-2"
-                >
-                  {region.iconUrl && (
-                    <CachedImage
-                      src={region.iconUrl}
-                      alt={region.name}
-                      width={20}
-                      height={20}
-                      className="w-4 h-4 md:w-5 md:h-5 rounded-full"
-                    />
-                  )}
-                  <span>{region.name}</span>
-                </TabsTrigger>
-              );
-            })}
-          </TabsList>
+        <ScrollTabs
+          items={tabItems}
+          activeId={currentTab}
+          onChange={setActiveTab}
+          className="m-2"
+        />
+        <Tabs value={currentTab}>
           {locations.map((loc) => {
             const books = talentBooks.find((book) => book.location === loc);
             return (
