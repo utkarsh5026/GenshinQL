@@ -29,13 +29,13 @@ const ELEMENT_COLORS: Record<Element, string> = {
 } as const;
 
 const STAT_COLORS: Record<string, string> = {
-  'CRIT Rate': 'var(--color-error-400)',
-  'CRIT DMG': 'var(--color-warning-400)',
-  ATK: 'var(--color-legendary-400)',
-  HP: 'var(--color-success-400)',
-  DEF: 'var(--color-geo-400)',
-  'Energy Recharge': 'var(--color-electro-400)',
-  'Elemental Mastery': 'var(--color-anemo-400)',
+  'CRIT Rate': 'var(--color-error-500)',
+  'CRIT DMG': 'var(--color-warning-500)',
+  ATK: 'var(--color-legendary-500)',
+  HP: 'var(--color-success-500)',
+  DEF: 'var(--color-geo-500)',
+  'Energy Recharge': 'var(--color-electro-500)',
+  'Elemental Mastery': 'var(--color-anemo-500)',
 };
 
 const STAT_ICONS: Record<string, React.ElementType> = {
@@ -66,9 +66,9 @@ const StatText: React.FC<StatTextProps> = ({
   return (
     <Text
       as="span"
-      weight="semibold"
-      className="inline-flex items-center gap-1"
+      className="inline-flex items-center gap-1 opacity-90"
       style={{ color }}
+      color={'inherit'}
     >
       {stat}
       {attributeUrl ? (
@@ -132,7 +132,7 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
 
       if (/^\d+%?$/.test(part)) {
         return (
-          <Text as="span" key={`${index}-num-${part}`} color="warning">
+          <Text as="span" key={`${index}-num-${part}`} color="gold">
             {part}
           </Text>
         );
@@ -142,8 +142,6 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
         <Text
           as="span"
           key={`${index}-elem-${lowercasePart}`}
-          weight="semibold"
-          className="sm:font-bold"
           style={{ color: elementColor }}
         >
           {part}
@@ -247,7 +245,12 @@ function processTextSegment(
     // Then check for numbers
     if (/^\d+%?$/.test(part)) {
       return (
-        <Text as="span" key={`${index}-num-${part}`} color="warning">
+        <Text
+          as="span"
+          key={`${index}-num-${part}`}
+          color="warning"
+          className="opacity-75"
+        >
           {part}
         </Text>
       );
@@ -258,8 +261,6 @@ function processTextSegment(
       <Text
         as="span"
         key={`${index}-elem-${lowercasePart}`}
-        weight="semibold"
-        className="sm:font-bold"
         style={{ color: elementColor }}
       >
         {part}
