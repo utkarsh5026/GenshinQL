@@ -39,7 +39,7 @@ const CharacterDetail = () => {
   const elementColor = decideColor(profile.element);
 
   return (
-    <div className="flex flex-col h-full gap-3">
+    <div className="flex flex-col lg:h-full gap-3">
       <ItemNavigation
         items={characters}
         currentItemName={profile.name}

@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import { Card } from '@/components/ui/card';
+import { ScrollTabItem, ScrollTabs } from '@/components/ui/scroll-tabs';
 import { decideColor } from '@/utils/color';
 
 import { useCharacterAbilitiesStore } from '../../stores';
@@ -95,6 +95,15 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   const [selectedMenuItem, setSelectedMenuItem] =
     useState<CharacterMenuItem>('Profile');
 
+  const scrollTabItems = useMemo<ScrollTabItem<CharacterMenuItem>[]>(
+    () =>
+      menuItems.map((item) => ({
+        id: item,
+        label: menuItemMobileLabels[item],
+      })),
+    []
+  );
+
   useEffect(() => {
     if (!character) return;
 
@@ -104,7 +113,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
 
   if (!character)
     return (
-      <div className="flex items-center justify-center h-[90vh] text-muted-foreground bg-card/50 rounded-lg border border-border">
+      <div className="flex items-center justify-center min-h-[50vh] lg:h-[90vh] text-muted-foreground bg-card/50 rounded-lg border border-border">
         Character not found
       </div>
     );
@@ -113,24 +122,9 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
   const elementClasses = getElementClasses(character.element);
 
   return (
-    <div className="relative flex flex-col h-[90vh] overflow-auto rounded-xl scrollbar-hide bg-linear-to-br from-midnight-900/90 via-midnight-800/80 to-midnight-900/90 backdrop-blur-sm">
-      {/* Background namecard with subtle overlay */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${character.imageUrls.nameCard})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          opacity: 0.08,
-        }}
-      />
-
-      {/* Gradient overlay for depth */}
-      <div className="absolute inset-0 z-0 bg-linear-to-t from-midnight-950/80 via-transparent to-midnight-900/50" />
-
-      <div className="relative z-10 flex flex-col lg:flex-row gap-2 md:gap-4 lg:gap-6 p-0 md:p-4 lg:p-5 h-full">
-        {/* Mobile: Profile + Tab Bar at Top, Desktop: Sidebar */}
+    <div className="relative flex flex-col lg:h-[90vh] lg:overflow-auto rounded-xl scrollbar-hide bg-linear-to-br from-midnight-900/90 via-midnight-800/80 to-midnight-900/90 backdrop-blur-sm">
+      <div className="relative z-10 flex flex-col lg:flex-row gap-2 md:gap-4 lg:gap-6 p-0 md:p-4 lg:p-5 lg:h-full">
+        {/* Mobile: Profile Header, Desktop: Sidebar */}
         <div className="w-full lg:w-64 shrink-0 flex flex-col gap-0 lg:gap-4">
           {/* Desktop: Profile Header */}
           <div className="hidden lg:block">
@@ -147,33 +141,6 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
             character={character}
             elementColor={elementColor}
           />
-
-          <div className="lg:hidden border-b border-border/40">
-            <div className="grid grid-cols-6">
-              {menuItems.map((item) => {
-                const isActive = selectedMenuItem === item;
-                return (
-                  <button
-                    key={item}
-                    onClick={() => setSelectedMenuItem(item)}
-                    className="relative flex items-center justify-center py-3 text-[9px] font-medium transition-colors duration-200"
-                    style={{ color: isActive ? elementColor : undefined }}
-                  >
-                    <span className={isActive ? '' : 'text-muted-foreground'}>
-                      {menuItemMobileLabels[item]}
-                    </span>
-                    {isActive && (
-                      <motion.span
-                        layoutId="mobile-tab-indicator"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full"
-                        style={{ backgroundColor: elementColor }}
-                      />
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
 
           {/* Desktop: Vertical sidebar nav */}
           <nav className="hidden lg:flex lg:flex-col gap-1.5 mt-2">
@@ -211,8 +178,19 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
           </nav>
         </div>
 
+        {/* Mobile: Sticky ScrollTabs — placed outside sidebar so sticky spans full content height */}
+        <div className="lg:hidden sticky top-0 z-20 bg-midnight-900/95 backdrop-blur-sm">
+          <ScrollTabs
+            items={scrollTabItems}
+            activeId={selectedMenuItem}
+            onChange={setSelectedMenuItem}
+            activeColor={elementColor}
+            indicatorId="character-mobile-tabs"
+          />
+        </div>
+
         {/* Main Content Area */}
-        <div className="flex flex-1 min-w-0 overflow-auto h-full lg:h-[calc(100%-1rem)] scrollbar-hide">
+        <div className="flex flex-1 min-w-0 lg:overflow-auto lg:h-[calc(100%-1rem)] scrollbar-hide">
           {selectedMenuItem === 'Profile' && (
             <CharacterCard elementColor={elementColor}>
               <ProfileContent
@@ -314,7 +292,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
 }) => {
   return (
     <Card
-      className="px-2 py-3 md:p-5 h-full w-full overflow-auto scrollbar-hide bg-transparent border-transparent shadow-none md:bg-midnight-800/30 md:backdrop-blur-sm md:border-midnight-600/40 md:rounded-xl md:shadow-sm"
+      className="px-2 py-3 md:p-5 lg:h-full w-full lg:overflow-auto scrollbar-hide bg-transparent border-transparent shadow-none md:bg-midnight-800/30 md:backdrop-blur-sm md:border-midnight-600/40 md:rounded-xl md:shadow-sm"
       style={{
         boxShadow: elementColor ? `inset 0 1px 0 ${elementColor}10` : undefined,
       }}
