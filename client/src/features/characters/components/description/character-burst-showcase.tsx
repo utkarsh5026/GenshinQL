@@ -1,6 +1,7 @@
 import { Clock, Zap } from 'lucide-react';
 import React from 'react';
 
+import { Heading, Text } from '@/components/ui/text';
 import { TextProcessor } from '@/components/utils';
 import AnimatedCover from '@/components/utils/AnimatedCover';
 import { CachedImage } from '@/features/cache';
@@ -56,12 +57,23 @@ const ElementalBurstShowcase: React.FC<ElementalBurstShowcaseProps> = ({
           />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-[10px] sm:text-xs font-medium uppercase tracking-wider text-muted-foreground mb-0.5">
+          <Text
+            as="p"
+            weight="medium"
+            uppercase
+            color="muted"
+            className="text-[10px] sm:text-xs tracking-wider mb-0.5"
+          >
             {talent.talentType}
-          </p>
-          <h4 className="text-sm sm:text-base md:text-lg font-bold text-foreground truncate">
+          </Text>
+          <Heading
+            level={4}
+            weight="bold"
+            truncate
+            className="text-sm sm:text-base md:text-lg"
+          >
             {talent.talentName}
-          </h4>
+          </Heading>
         </div>
         {/* Stats badges */}
         <div className="flex items-center gap-1.5 sm:gap-2">
@@ -99,9 +111,14 @@ const ElementalBurstShowcase: React.FC<ElementalBurstShowcaseProps> = ({
             <div className="absolute inset-0 bg-linear-to-r from-transparent via-transparent to-midnight-900/80 pointer-events-none md:block hidden" />
           </div>
         ) : (
-          <div className="aspect-video flex items-center justify-center bg-midnight-800/50 text-muted-foreground text-sm">
+          <Text
+            as="div"
+            size="sm"
+            color="muted"
+            className="aspect-video flex items-center justify-center bg-midnight-800/50"
+          >
             No animation available
-          </div>
+          </Text>
         )}
 
         {/* Description */}

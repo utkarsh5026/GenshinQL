@@ -2,6 +2,7 @@ import { ChevronRight } from 'lucide-react';
 import React, { useState } from 'react';
 
 import { Avatar } from '@/components/ui/avatar';
+import { Heading, Text } from '@/components/ui/text';
 import { AnimatedCover } from '@/components/utils';
 import { CachedImage } from '@/features/cache/components/cached-asset';
 import { useTalentCharMap } from '@/features/calendar/stores/useTalentBooksStore';
@@ -73,9 +74,14 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
       </div>
 
       <div className="mt-4 pb-4 text-center px-4">
-        <h2 className="text-lg font-semibold text-foreground tracking-wide">
+        <Heading
+          level={2}
+          size="lg"
+          weight="semibold"
+          className="tracking-wide"
+        >
           {name}
-        </h2>
+        </Heading>
         <div className="mt-1.5 w-12 h-0.5 mx-auto bg-linear-to-r from-transparent via-celestial-500/60 to-transparent rounded-full" />
       </div>
     </div>
@@ -133,15 +139,22 @@ export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
           showElement={true}
         />
 
-        <h2 className="text-foreground font-semibold text-lg tracking-wide mt-2">
+        <Heading
+          level={2}
+          size="lg"
+          weight="semibold"
+          className="tracking-wide mt-2"
+        >
           {character.name}
-        </h2>
-        <span
-          className="text-sm tracking-widest mt-0.5"
+        </Heading>
+        <Text
+          as="span"
+          size="sm"
+          className="tracking-widest mt-0.5"
           style={{ color: rarityColor }}
         >
           {rarityStars}
-        </span>
+        </Text>
 
         <div className="flex items-stretch divide-x divide-border/60 mt-4 w-full max-w-xs">
           {/* Nation */}
@@ -151,12 +164,17 @@ export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
               alt={character.region}
               className="w-5 h-5 object-contain"
             />
-            <span className="text-sm font-semibold text-foreground leading-tight">
+            <Text as="span" size="sm" weight="semibold" leading="tight">
               {character.region}
-            </span>
-            <span className="text-[10px] text-muted-foreground uppercase tracking-wide">
+            </Text>
+            <Text
+              as="span"
+              color="muted"
+              uppercase
+              className="text-[10px] tracking-wide"
+            >
               Nation
-            </span>
+            </Text>
           </div>
 
           {/* Weapon */}
@@ -166,12 +184,17 @@ export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
               alt={character.weaponType}
               className="w-5 h-5 object-contain"
             />
-            <span className="text-sm font-semibold text-foreground leading-tight">
+            <Text as="span" size="sm" weight="semibold" leading="tight">
               {character.weaponType}
-            </span>
-            <span className="text-[10px] text-muted-foreground uppercase tracking-wide">
+            </Text>
+            <Text
+              as="span"
+              color="muted"
+              uppercase
+              className="text-[10px] tracking-wide"
+            >
               Weapon
-            </span>
+            </Text>
           </div>
 
           {/* Talent Days */}
@@ -181,15 +204,23 @@ export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
               alt={character.element}
               className="w-5 h-5 object-contain"
             />
-            <span
-              className="text-sm font-semibold leading-tight"
+            <Text
+              as="span"
+              size="sm"
+              weight="semibold"
+              leading="tight"
               style={{ color: isFarmableToday ? '#4ade80' : elementColor }}
             >
               {talentDays}
-            </span>
-            <span className="text-[10px] text-muted-foreground uppercase tracking-wide">
+            </Text>
+            <Text
+              as="span"
+              color="muted"
+              uppercase
+              className="text-[10px] tracking-wide"
+            >
               Talents
-            </span>
+            </Text>
           </div>
         </div>
       </div>

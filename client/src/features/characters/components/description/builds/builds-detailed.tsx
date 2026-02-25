@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import { Heading } from '@/components/ui/text';
+
 import { useArtifactLinks, useFetchArtifactLinks } from '../../../stores';
 import { CharacterDetailed } from '../../../types';
 import { ArtifactSetsDisplay } from './artifact-sets-display';
@@ -125,9 +127,15 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   elementColor,
 }) => (
   <div className="flex items-center gap-3 mb-4">
-    <h3 className="text-sm font-semibold uppercase tracking-wider text-starlight-300">
+    <Heading
+      level={3}
+      size="sm"
+      weight="semibold"
+      uppercase
+      className="tracking-wider text-starlight-300"
+    >
       {title}
-    </h3>
+    </Heading>
     <div
       className="flex-1 h-px"
       style={{

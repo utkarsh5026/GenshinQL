@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import React, { memo } from 'react';
 
+import { Text } from '@/components/ui/text';
 import { getTagConfig } from '@/features/characters/utils/ability-tags';
 
 interface AbilityTagProps {
@@ -110,16 +111,18 @@ export const AbilityTag: React.FC<AbilityTagProps> = memo(
     const colorClasses = getTagClasses(config.color);
 
     return (
-      <span
+      <Text
+        as="span"
+        weight="medium"
         className={`
-        inline-flex items-center gap-0.5 rounded-lg font-medium border-none
+        inline-flex items-center gap-0.5 rounded-lg border-none
         ${sizeClasses}
         ${colorClasses}
       `}
       >
         <Icon size={iconSize} className="shrink-0 opacity-70" />
         {config.label}
-      </span>
+      </Text>
     );
   }
 );

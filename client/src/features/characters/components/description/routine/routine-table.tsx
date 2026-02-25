@@ -1,6 +1,7 @@
 import { CheckCircle2, Coins, Package, Sparkles, Swords } from 'lucide-react';
 import React, { useEffect, useMemo } from 'react';
 
+import { Text } from '@/components/ui/text';
 import { DAYS_OF_WEEK } from '@/constants';
 import {
   type TalentBook,
@@ -144,12 +145,20 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
       <div className="rounded-lg border border-border overflow-hidden">
         {/* Header */}
         <div className="grid grid-cols-[150px_1fr] bg-midnight-700/50 border-b border-border">
-          <div className="px-4 py-3 font-semibold text-sm text-starlight-200">
+          <Text
+            weight="semibold"
+            size="sm"
+            className="px-4 py-3 text-starlight-200"
+          >
             Day
-          </div>
-          <div className="px-4 py-3 font-semibold text-sm text-starlight-200">
+          </Text>
+          <Text
+            weight="semibold"
+            size="sm"
+            className="px-4 py-3 text-starlight-200"
+          >
             Materials to Farm
-          </div>
+          </Text>
         </div>
 
         {/* Rows */}
@@ -167,13 +176,17 @@ const RoutineTable: React.FC<RoutineTableProps> = ({ characters, weapons }) => {
             >
               {/* Day Cell */}
               <div className="px-4 py-4 flex flex-col gap-2">
-                <span className="font-medium text-foreground">
+                <Text as="span" weight="medium">
                   {routine.day}
-                </span>
+                </Text>
                 {isToday && (
-                  <span className="text-xs bg-celestial-500/20 text-celestial-300 px-2 py-1 rounded w-fit border border-celestial-500/30">
+                  <Text
+                    as="span"
+                    size="xs"
+                    className="bg-celestial-500/20 text-celestial-300 px-2 py-1 rounded w-fit border border-celestial-500/30"
+                  >
                     Today
-                  </span>
+                  </Text>
                 )}
               </div>
 
@@ -233,7 +246,9 @@ const EmptyDaySuggestions: React.FC = () => {
 
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <span className="text-xs text-muted-foreground/60">No farming •</span>
+      <Text as="span" size="xs" className="text-muted-foreground/60">
+        No farming •
+      </Text>
       {suggestions.map((suggestion) => {
         const Icon = suggestion.icon;
         return (
@@ -244,9 +259,14 @@ const EmptyDaySuggestions: React.FC = () => {
             <Icon
               className={`w-3.5 h-3.5 ${suggestion.color} ${suggestion.hoverColor} transition-colors`}
             />
-            <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">
+            <Text
+              as="span"
+              size="xs"
+              color="muted"
+              className="group-hover:text-foreground transition-colors"
+            >
               {suggestion.title}
-            </span>
+            </Text>
           </div>
         );
       })}

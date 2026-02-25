@@ -17,6 +17,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { Separator } from '@/components/ui/separator';
+import { Heading } from '@/components/ui/text';
 import FilterChip from '@/components/utils/filter/filter-chip';
 import { CachedImage } from '@/features/cache';
 import type { WeaponSummary } from '@/features/weapons';
@@ -122,9 +123,9 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
               <Separator />
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <h4 className="text-sm font-medium">
+                  <Heading level={4} size="sm" weight="medium">
                     Selected ({selectedWeapons.length})
-                  </h4>
+                  </Heading>
                   <Button
                     variant="ghost"
                     size="sm"

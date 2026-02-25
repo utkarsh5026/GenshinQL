@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { Heading, Text } from '@/components/ui/text';
 import { CachedImage } from '@/features/cache';
 import { useWeaponsStore } from '@/features/weapons/stores/useWeaponsStore';
 import { CharacterBuild } from '@/types';
@@ -31,12 +32,16 @@ export const WeaponsDisplay: React.FC<WeaponsDisplayProps> = ({
       {/* 5-Star Weapons */}
       {weapons.fiveStar.length > 0 && (
         <div>
-          <h4
-            className="text-sm font-semibold uppercase tracking-wider mb-4"
+          <Heading
+            level={4}
+            size="sm"
+            weight="semibold"
+            uppercase
+            className="tracking-wider mb-4"
             style={{ color: elementColor }}
           >
             5-Star Weapons
-          </h4>
+          </Heading>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {weapons.fiveStar.map((weapon) => (
               <WeaponMiniCard
@@ -55,12 +60,16 @@ export const WeaponsDisplay: React.FC<WeaponsDisplayProps> = ({
       {/* 4-Star Weapons */}
       {weapons.fourStar.length > 0 && (
         <div>
-          <h4
-            className="text-sm font-semibold uppercase tracking-wider mb-4"
+          <Heading
+            level={4}
+            size="sm"
+            weight="semibold"
+            uppercase
+            className="tracking-wider mb-4"
             style={{ color: elementColor }}
           >
             4-Star Weapons
-          </h4>
+          </Heading>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {weapons.fourStar.map((weapon) => (
               <WeaponMiniCard
@@ -131,27 +140,36 @@ const WeaponMiniCard: React.FC<WeaponMiniCardProps> = ({
 
       {/* Rarity */}
       {rarity && (
-        <div
-          className="text-center text-xs mb-1"
+        <Text
+          size="xs"
+          align="center"
+          className="mb-1"
           style={{ color: elementColor }}
         >
           {rarity}
-        </div>
+        </Text>
       )}
 
       {/* Weapon Name */}
-      <div className="text-center text-xs font-medium text-starlight-200 mb-2 line-clamp-2 grow">
+      <Text
+        size="xs"
+        weight="medium"
+        align="center"
+        className="text-starlight-200 mb-2 line-clamp-2 grow"
+      >
         {weaponName}
-      </div>
+      </Text>
 
       {/* Notes */}
       {notes && (
-        <div
-          className="text-[10px] text-muted-foreground text-center line-clamp-2 pt-2 border-t"
+        <Text
+          color="muted"
+          align="center"
+          className="text-[10px] line-clamp-2 pt-2 border-t"
           style={{ borderColor: `${elementColor}15` }}
         >
           {notes}
-        </div>
+        </Text>
       )}
     </div>
   );

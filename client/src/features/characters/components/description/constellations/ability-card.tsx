@@ -1,5 +1,6 @@
 import React, { memo, useMemo } from 'react';
 
+import { Heading } from '@/components/ui/text';
 import { AbilitiesListSplitter, AbilityTag } from '@/components/utils';
 import { CachedImage } from '@/features/cache';
 import { extractConstellationTags } from '@/features/characters/utils';
@@ -63,9 +64,13 @@ export const AbilityCard = memo<AbilityCardProps>(
         <div className="flex-1 min-w-0 space-y-1.5 sm:space-y-2">
           <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
             {badge}
-            <h3 className="text-xs sm:text-sm md:text-md font-semibold text-foreground/90">
+            <Heading
+              level={3}
+              weight="semibold"
+              className="text-xs sm:text-sm md:text-md text-foreground/90"
+            >
               {name}
-            </h3>
+            </Heading>
             {headerExtra}
           </div>
 
