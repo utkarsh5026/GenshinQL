@@ -77,12 +77,10 @@ export const AbilityCard = memo<AbilityCardProps>(
             </div>
           )}
 
-          <div className="text-[11px] sm:text-xs leading-relaxed text-muted-foreground/80">
-            <AbilitiesListSplitter
-              text={description}
-              characterName={characterName}
-            />
-          </div>
+          <AbilitiesListSplitter
+            text={description}
+            characterName={characterName}
+          />
         </div>
       </div>
     );
