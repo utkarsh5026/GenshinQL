@@ -28,6 +28,17 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
         <main className="flex-1 w-full h-full overflow-y-auto p-4 md:p-8">
           {children}
         </main>
+        <footer className="w-full py-2 text-center text-[11px] text-muted-foreground/30 border-t border-border/10">
+          made with ♥ by{' '}
+          <a
+            href="https://github.com/utkarsh5026/GenshinQL"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline hover:text-muted-foreground/50 transition-colors"
+          >
+            Utkarsh Priyadarshi
+          </a>
+        </footer>
       </div>
     </div>
   );
