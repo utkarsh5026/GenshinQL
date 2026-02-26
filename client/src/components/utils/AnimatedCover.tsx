@@ -1,6 +1,7 @@
 import { Loader2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
+import { CachedImage } from '@/features/cache';
 import { AnimationMedia } from '@/types';
 import { addListeners } from '@/utils/listener';
 
@@ -77,11 +78,20 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
     const generation = ++generationRef.current;
     const videoUrl = animation.videoUrl;
 
-    const handleCanPlay = () => {
+    /** Marks the video ready only once the entire file is in the buffer. */
+    const checkFullyDownloaded = () => {
       if (generationRef.current !== generation) return;
-      /** isVideoReady becomes true via derivation */
-      setLoadedVideoUrl(videoUrl);
-      setIsBuffering(false);
+      if (
+        !video.duration ||
+        !isFinite(video.duration) ||
+        !video.buffered.length
+      )
+        return;
+      const bufferedEnd = video.buffered.end(video.buffered.length - 1);
+      if (bufferedEnd >= video.duration - 0.1) {
+        setLoadedVideoUrl(videoUrl);
+        setIsBuffering(false);
+      }
     };
 
     const handleBuffering = () => {
@@ -95,7 +105,8 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
     };
 
     const removeListeners = addListeners(video, {
-      canplaythrough: handleCanPlay,
+      loadedmetadata: checkFullyDownloaded,
+      progress: checkFullyDownloaded,
       error: handleResume,
       playing: handleResume,
       stalled: handleBuffering,
@@ -125,10 +136,13 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
         <>
           {/* Show the GIF/image until the video is fully buffered and ready */}
           {!isVideoReady && animation.imageUrl && (
-            <img
+            <CachedImage
               src={animation.imageUrl}
               alt="Animation Preview"
-              className="w-full h-full object-cover"
+              className="w-full object-cover"
+              style={{ display: 'block', width: '100%' }}
+              skeletonShape="square"
+              skeletonSize="lg"
             />
           )}
 
@@ -140,7 +154,7 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
                 loop
                 muted
                 playsInline
-                preload="none"
+                preload="auto"
               />
 
               {isBuffering && isVideoReady && (
@@ -152,10 +166,13 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
           )}
         </>
       ) : (
-        <img
+        <CachedImage
           src={fallbackUrl}
           alt="Cover"
-          className="w-full h-full object-cover"
+          className="w-full object-cover"
+          style={{ display: 'block', width: '100%' }}
+          skeletonShape="square"
+          skeletonSize="lg"
         />
       )}
     </div>
