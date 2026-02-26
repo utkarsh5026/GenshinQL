@@ -1,15 +1,18 @@
 import {
-  Calendar,
+  Brain,
+  Castle,
+  ChevronLeft,
+  ChevronRight,
   Clock,
-  Gamepad2,
-  Grid3x3,
-  Home,
-  Link2,
+  Crown,
+  Eye,
+  Flame,
+  Gem,
+  ScrollText,
+  Shield,
   Sparkles,
-  Star,
   Swords,
-  Target,
-  Users,
+  Waypoints,
 } from 'lucide-react';
 import React, { useMemo } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
@@ -27,84 +30,106 @@ import { useRecents } from '@/features/command-palette/stores/useRecentsStore';
 import type { RecentItem } from '@/features/command-palette/types';
 import { useIsMobile } from '@/hooks/use-mobile';
 
+import styles from './sidebar.module.css';
+import { useSidebarStore } from './useSidebarStore';
+
 interface NavItem {
   route: string;
   label: string;
   icon: React.ElementType;
-  color: string;
   iconColor: string;
 }
 
-const navItems: NavItem[] = [
+interface NavSection {
+  id: string;
+  label: string;
+  items: NavItem[];
+}
+
+const navSections: NavSection[] = [
   {
-    route: '/',
-    label: 'Home',
-    icon: Home,
-    color: 'celestial',
-    iconColor: 'oklch(75% 0.15 85)', // celestial-500
+    id: 'navigate',
+    label: 'Navigate',
+    items: [
+      {
+        route: '/',
+        label: 'Home',
+        icon: Castle,
+        iconColor: 'oklch(75% 0.15 85)',
+      },
+    ],
   },
   {
-    route: '/talents',
-    label: 'Talents',
-    icon: Calendar,
-    color: 'pyro',
-    iconColor: 'oklch(60% 0.24 25)', // pyro-500
-  },
-  {
-    route: '/characters/table',
+    id: 'characters',
     label: 'Characters',
-    icon: Users,
-    color: 'hydro',
-    iconColor: 'oklch(58% 0.19 250)', // hydro-500
+    items: [
+      {
+        route: '/characters/table',
+        label: 'Characters',
+        icon: Shield,
+        iconColor: 'oklch(58% 0.19 250)',
+      },
+      {
+        route: '/characters/routine',
+        label: 'Routine',
+        icon: ScrollText,
+        iconColor: 'oklch(60% 0.24 300)',
+      },
+    ],
   },
   {
-    route: '/characters/routine',
-    label: 'Character Routine',
-    icon: Target,
-    color: 'electro',
-    iconColor: 'oklch(60% 0.24 300)', // electro-500
-  },
-  {
-    route: '/weapons/calendar',
+    id: 'weapons',
     label: 'Weapons',
-    icon: Calendar,
-    color: 'geo',
-    iconColor: 'oklch(62% 0.18 80)', // geo-500
+    items: [
+      {
+        route: '/weapons/calendar',
+        label: 'Materials',
+        icon: Gem,
+        iconColor: 'oklch(62% 0.18 80)',
+      },
+      {
+        route: '/weapons/grid',
+        label: 'Weapons',
+        icon: Swords,
+        iconColor: 'oklch(75% 0.16 85)',
+      },
+    ],
   },
   {
-    route: '/weapons/grid',
-    label: 'Weapons Grid',
-    icon: Swords,
-    color: 'legendary',
-    iconColor: 'oklch(75% 0.16 85)', // legendary-500
-  },
-  {
-    route: '/tierlist',
-    label: 'Tier List',
-    icon: Star,
-    color: 'dendro',
-    iconColor: 'oklch(58% 0.19 145)', // dendro-500
-  },
-  {
-    route: '/guesser',
-    label: 'Guesser',
-    icon: Gamepad2,
-    color: 'anemo',
-    iconColor: 'oklch(65% 0.17 195)', // anemo-500
-  },
-  {
-    route: '/memory-game',
-    label: 'Memory Game',
-    icon: Grid3x3,
-    color: 'cryo',
-    iconColor: 'oklch(65% 0.14 240)', // cryo-500
-  },
-  {
-    route: '/linker-game',
-    label: 'Linker Game',
-    icon: Link2,
-    color: 'epic',
-    iconColor: 'oklch(60% 0.24 290)', // epic-500
+    id: 'explore',
+    label: 'Explore',
+    items: [
+      {
+        route: '/talents',
+        label: 'Talents',
+        icon: Flame,
+        iconColor: 'oklch(60% 0.24 25)',
+      },
+      {
+        route: '/tierlist',
+        label: 'Tier List',
+        icon: Crown,
+        iconColor: 'oklch(58% 0.19 145)',
+      },
+      {
+        route: '/guesser',
+        label: 'Guesser',
+        icon: Brain,
+        iconColor: 'oklch(65% 0.17 195)',
+      },
+      {
+        route: '/memory-game',
+        label: 'Memory Game',
+        icon: Eye,
+        iconColor: 'oklch(65% 0.14 240)',
+      },
+      {
+        route: '/linker-game',
+        label: 'Linker Game',
+        icon: Waypoints,
+        iconColor: 'oklch(60% 0.24 290)',
+      },
+    ],
   },
 ];
 
@@ -112,8 +137,7 @@ const versionItem: NavItem = {
   route: '/version',
   label: 'LUNA IV',
   icon: Sparkles,
-  color: 'celestial',
-  iconColor: 'oklch(80% 0.18 70)', // warm gold
+  iconColor: 'oklch(80% 0.18 70)',
 };
 
 const VERSION_IMAGE_URL =
@@ -122,58 +146,88 @@ const VERSION_IMAGE_URL =
 interface SidebarNavItemProps {
   item: NavItem;
   isActive: boolean;
-  showLabel: boolean;
-  showLabelOnHover?: boolean;
-  showTooltip: boolean;
+  isExpanded: boolean;
   onClick?: () => void;
 }
 
 const SidebarNavItem: React.FC<SidebarNavItemProps> = ({
   item,
   isActive,
-  showLabel,
-  showLabelOnHover = false,
-  showTooltip,
+  isExpanded,
   onClick,
 }) => {
   const Icon = item.icon;
 
-  const navContent = (
+  const link = (
     <NavLink
       to={item.route}
       onClick={onClick}
       className={`
+        ${styles.navItem}
         relative flex items-center gap-3
-        px-3 py-2.5 rounded-lg mx-2 my-1
-        transition-all duration-200
-        group cursor-pointer
-        ${isActive ? '' : 'hover:bg-accent/50 text-muted-foreground hover:text-foreground'}
+        px-2.5 py-2 rounded-xl mx-2 my-0.5
+        transition-all duration-200 group/navitem cursor-pointer
+        ${isActive ? '' : 'hover:bg-white/3'}
       `}
       style={{
-        backgroundColor: isActive ? `${item.iconColor}33` : undefined,
-        color: isActive ? item.iconColor : undefined,
+        backgroundColor: isActive ? `${item.iconColor}12` : undefined,
       }}
     >
-      <Icon
-        className="w-5 h-5 shrink-0 transition-colors"
-        style={{ color: isActive ? item.iconColor : undefined }}
-      />
-      {(showLabel || showLabelOnHover) && (
-        <span
-          className={`text-sm font-medium whitespace-nowrap transition-opacity duration-300 ${
-            showLabelOnHover ? 'opacity-0' : ''
+      {/* Icon badge */}
+      <div
+        className={`
+          w-9 h-9 rounded-lg flex items-center justify-center shrink-0
+          transition-all duration-200 group-hover/navitem:scale-110
+          ${isActive ? styles.activeBadge : ''}
+        `}
+        style={{
+          background: isActive ? `${item.iconColor}28` : `${item.iconColor}14`,
+          border: `1px solid ${item.iconColor}${isActive ? '45' : '22'}`,
+          ...(isActive
+            ? ({ '--icon-color': item.iconColor } as React.CSSProperties)
+            : {}),
+        }}
+      >
+        <Icon
+          className={`transition-all duration-200 ${
+            isActive ? styles.activeIcon : ''
           }`}
+          style={{
+            width: '1.05rem',
+            height: '1.05rem',
+            color: item.iconColor,
+            opacity: isActive ? 1 : 0.75,
+            filter: isActive
+              ? `drop-shadow(0 0 4px ${item.iconColor}90)`
+              : undefined,
+            strokeWidth: isActive ? 2.2 : 1.8,
+          }}
+        />
+      </div>
+
+      {isExpanded && (
+        <span
+          className="text-sm font-medium whitespace-nowrap overflow-hidden transition-colors duration-200"
+          style={{ color: isActive ? item.iconColor : undefined }}
         >
           {item.label}
         </span>
       )}
+
+      {/* Active left accent bar */}
+      {isActive && (
+        <div
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-5 rounded-r-full"
+          style={{ background: item.iconColor }}
+        />
+      )}
     </NavLink>
   );
 
-  if (showTooltip && !showLabel) {
+  if (!isExpanded) {
     return (
-      <Tooltip delayDuration={200}>
-        <TooltipTrigger asChild>{navContent}</TooltipTrigger>
+      <Tooltip delayDuration={150}>
+        <TooltipTrigger asChild>{link}</TooltipTrigger>
         <TooltipContent side="right" className="font-medium">
           {item.label}
         </TooltipContent>
@@ -181,38 +235,31 @@ const SidebarNavItem: React.FC<SidebarNavItemProps> = ({
     );
   }
 
-  return navContent;
+  return link;
 };
 
 interface SidebarVersionItemProps {
-  item: NavItem;
   isActive: boolean;
-  showLabel: boolean;
-  showLabelOnHover?: boolean;
-  showTooltip: boolean;
+  isExpanded: boolean;
   onClick?: () => void;
 }
 
 const SidebarVersionItem: React.FC<SidebarVersionItemProps> = ({
-  item,
   isActive,
-  showLabel,
-  showLabelOnHover = false,
-  showTooltip,
+  isExpanded,
   onClick,
 }) => {
-  const goldColor = item.iconColor;
+  const goldColor = versionItem.iconColor;
 
-  const navContent = (
+  const link = (
     <NavLink
-      to={item.route}
+      to={versionItem.route}
       onClick={onClick}
       className={`
         relative flex items-center gap-3
-        px-3 py-2.5 rounded-lg mx-2 my-1
+        px-3 py-2.5 rounded-lg mx-2 my-0.5
         transition-all duration-300
-        group/version cursor-pointer
-        border
+        cursor-pointer border
         ${isActive ? 'border-amber-500/40' : 'border-amber-500/20 hover:border-amber-500/40'}
       `}
       style={{
@@ -235,70 +282,64 @@ const SidebarVersionItem: React.FC<SidebarVersionItemProps> = ({
       >
         <AvatarImage
           src={VERSION_IMAGE_URL}
-          alt={item.label}
+          alt={versionItem.label}
           className="object-cover"
-          style={{
-            filter: isActive ? `brightness(1.1)` : 'brightness(0.95)',
-          }}
+          style={{ filter: isActive ? 'brightness(1.1)' : 'brightness(0.95)' }}
         />
-        <AvatarFallback className="text-xs bg-gradient-to-br from-amber-500/20 to-amber-600/10">
-          {item.label.slice(0, 2)}
+        <AvatarFallback className="text-xs bg-linear-to-br from-amber-500/20 to-amber-600/10">
+          {versionItem.label.slice(0, 2)}
         </AvatarFallback>
       </Avatar>
-      {(showLabel || showLabelOnHover) && (
+      {isExpanded && (
         <span
-          className={`text-sm font-semibold tracking-wide whitespace-nowrap transition-opacity duration-300 ${
-            showLabelOnHover ? 'opacity-0' : ''
-          }`}
+          className="text-sm font-semibold tracking-wide whitespace-nowrap"
           style={{ color: goldColor }}
         >
-          {item.label}
+          {versionItem.label}
         </span>
       )}
     </NavLink>
   );
 
-  if (showTooltip && !showLabel) {
+  if (!isExpanded) {
     return (
-      <Tooltip delayDuration={200}>
-        <TooltipTrigger asChild>{navContent}</TooltipTrigger>
+      <Tooltip delayDuration={150}>
+        <TooltipTrigger asChild>{link}</TooltipTrigger>
         <TooltipContent side="right" className="font-semibold">
-          <span style={{ color: goldColor }}>{item.label}</span>
+          <span style={{ color: goldColor }}>{versionItem.label}</span>
         </TooltipContent>
       </Tooltip>
     );
   }
 
-  return navContent;
+  return link;
 };
+
+// ─── Recent Item ─────────────────────────────────────────────────────────────
 
 interface SidebarRecentItemProps {
   recent: RecentItem;
-  showLabel: boolean;
-  showLabelOnHover?: boolean;
-  showTooltip: boolean;
+  isExpanded: boolean;
   onClick?: () => void;
 }
 
+const getRarityRingClass = (rarity: number): string => {
+  const ringMap: Record<number, string> = {
+    5: 'ring-2 ring-amber-500/60',
+    4: 'ring-2 ring-violet-500/60',
+    3: 'ring-1 ring-blue-500/50',
+    2: 'ring-1 ring-green-500/50',
+    1: 'ring-1 ring-gray-400/40',
+  };
+  return ringMap[rarity] ?? ringMap[3];
+};
+
 const SidebarRecentItem: React.FC<SidebarRecentItemProps> = ({
   recent,
-  showLabel,
-  showLabelOnHover = false,
-  showTooltip,
+  isExpanded,
   onClick,
 }) => {
-  const getRarityRingClass = (rarity: number): string => {
-    const ringMap: Record<number, string> = {
-      5: 'ring-2 ring-amber-500/60',
-      4: 'ring-2 ring-violet-500/60',
-      3: 'ring-1 ring-blue-500/50',
-      2: 'ring-1 ring-green-500/50',
-      1: 'ring-1 ring-gray-400/40',
-    };
-    return ringMap[rarity] || ringMap[3];
-  };
-
-  const content = (
+  const link = (
     <NavLink
       to={recent.route}
       onClick={onClick}
@@ -306,34 +347,30 @@ const SidebarRecentItem: React.FC<SidebarRecentItemProps> = ({
         relative flex items-center gap-3
         px-3 py-2 rounded-lg mx-2 my-0.5
         transition-all duration-200
-        group/recent cursor-pointer
+        cursor-pointer
         hover:bg-accent/50 text-muted-foreground hover:text-foreground
       `}
     >
       <Avatar
-        className={`w-7 h-7 shrink-0 ${getRarityRingClass(recent.rarity || 4)}`}
+        className={`w-7 h-7 shrink-0 ${getRarityRingClass(recent.rarity ?? 4)}`}
       >
         <AvatarImage src={recent.iconUrl} alt={recent.name} />
         <AvatarFallback className="text-xs">
           {recent.name.slice(0, 2)}
         </AvatarFallback>
       </Avatar>
-      {(showLabel || showLabelOnHover) && (
-        <span
-          className={`text-sm font-medium whitespace-nowrap truncate max-w-35 transition-opacity duration-300 ${
-            showLabelOnHover ? 'opacity-0' : ''
-          }`}
-        >
+      {isExpanded && (
+        <span className="text-sm font-medium whitespace-nowrap truncate max-w-36">
           {recent.name}
         </span>
       )}
     </NavLink>
   );
 
-  if (showTooltip && !showLabel) {
+  if (!isExpanded) {
     return (
-      <Tooltip delayDuration={200}>
-        <TooltipTrigger asChild>{content}</TooltipTrigger>
+      <Tooltip delayDuration={150}>
+        <TooltipTrigger asChild>{link}</TooltipTrigger>
         <TooltipContent side="right" className="font-medium">
           <div className="flex flex-col">
             <span>{recent.name}</span>
@@ -347,22 +384,30 @@ const SidebarRecentItem: React.FC<SidebarRecentItemProps> = ({
     );
   }
 
-  return content;
+  return link;
 };
+
+// ─── Section Header ───────────────────────────────────────────────────────────
+
+const SectionHeader: React.FC<{ label: string }> = ({ label }) => (
+  <div className="flex items-center gap-2 px-4 pt-4 pb-1">
+    <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-[0.18em]">
+      ◆ {label}
+    </span>
+  </div>
+);
+
+// ─── Recents Section ──────────────────────────────────────────────────────────
 
 interface SidebarRecentsSectionProps {
   recents: RecentItem[];
-  showLabel: boolean;
-  showLabelOnHover?: boolean;
-  showTooltip: boolean;
+  isExpanded: boolean;
   onItemClick?: () => void;
 }
 
 const SidebarRecentsSection: React.FC<SidebarRecentsSectionProps> = ({
   recents,
-  showLabel,
-  showLabelOnHover = false,
-  showTooltip,
+  isExpanded,
   onItemClick,
 }) => {
   const filteredRecents = useMemo(
@@ -376,40 +421,62 @@ const SidebarRecentsSection: React.FC<SidebarRecentsSectionProps> = ({
     [recents]
   );
 
-  if (filteredRecents.length === 0) {
-    return null;
-  }
+  if (filteredRecents.length === 0) return null;
 
   return (
-    <div className="mt-2">
+    <div className="mt-1">
       <Separator className="mx-3 my-2" />
-
-      {showLabel && (
-        <div className="flex items-center gap-2 px-5 py-1 text-xs text-muted-foreground uppercase tracking-wider">
-          <Clock className="w-3 h-3" />
-          <span>Recent</span>
+      {isExpanded && (
+        <div className="flex items-center gap-2 px-5 pb-1 pt-2">
+          <Clock className="w-3 h-3 text-muted-foreground/60" />
+          <span className="text-[10px] font-semibold text-muted-foreground/60 uppercase tracking-widest">
+            Recent
+          </span>
         </div>
       )}
-      {showLabelOnHover && (
-        <div className="flex items-center gap-2 px-5 py-1 text-xs text-muted-foreground uppercase tracking-wider opacity-0 transition-opacity duration-300">
-          <Clock className="w-3 h-3" />
-          <span>Recent</span>
-        </div>
-      )}
-
       {filteredRecents.map((recent) => (
         <SidebarRecentItem
           key={recent.route}
           recent={recent}
-          showLabel={showLabel}
-          showLabelOnHover={showLabelOnHover}
-          showTooltip={showTooltip}
+          isExpanded={isExpanded}
           onClick={onItemClick}
         />
       ))}
     </div>
   );
 };
+
+// ─── Pin Toggle Button ────────────────────────────────────────────────────────
+
+const PinToggle: React.FC<{ isPinned: boolean; onToggle: () => void }> = ({
+  isPinned,
+  onToggle,
+}) => (
+  <Tooltip delayDuration={150}>
+    <TooltipTrigger asChild>
+      <button
+        onClick={onToggle}
+        className="
+          flex items-center justify-center w-7 h-7 rounded-md
+          text-muted-foreground hover:text-foreground
+          hover:bg-accent/60 transition-all duration-200 shrink-0
+        "
+        aria-label={isPinned ? 'Collapse sidebar' : 'Pin sidebar open'}
+      >
+        {isPinned ? (
+          <ChevronLeft className="w-4 h-4" />
+        ) : (
+          <ChevronRight className="w-4 h-4" />
+        )}
+      </button>
+    </TooltipTrigger>
+    <TooltipContent side="right" className="font-medium">
+      {isPinned ? 'Collapse' : 'Pin open'}
+    </TooltipContent>
+  </Tooltip>
+);
+
+// ─── Desktop Sidebar ──────────────────────────────────────────────────────────
 
 interface DesktopSidebarProps {
   isRouteActive: (route: string) => boolean;
@@ -420,60 +487,63 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
   isRouteActive,
   recents,
 }) => {
+  const { isPinned, togglePin } = useSidebarStore();
+
   return (
     <div
-      className="hidden md:flex flex-col fixed left-0 top-0 h-screen
-                 bg-background/95 backdrop-blur-sm border-r border-border/50
-                 w-16 hover:w-60 transition-all duration-300 ease-in-out z-40 group"
+      className={`
+        hidden md:flex flex-col fixed left-0 top-0 h-screen
+        bg-background/95 backdrop-blur-sm border-r border-border/50
+        transition-all duration-300 ease-in-out z-40
+        ${isPinned ? 'w-60' : 'w-16'}
+      `}
     >
-      {/* Navigation Items */}
-      <nav className="flex-1 py-4 overflow-y-auto">
+      {/* Subtle dot-grid background pattern */}
+      <div className={styles.sidebarBg} aria-hidden="true" />
+
+      {/* Top bar with pin toggle */}
+      <div
+        className={`flex items-center py-3 px-3 relative z-10 ${isPinned ? 'justify-end' : 'justify-center'}`}
+      >
         <TooltipProvider>
-          {/* Home */}
-          <SidebarNavItem
-            item={navItems[0]}
-            isActive={isRouteActive(navItems[0].route)}
-            showLabel={false}
-            showLabelOnHover={true}
-            showTooltip={true}
-          />
+          <PinToggle isPinned={isPinned} onToggle={togglePin} />
+        </TooltipProvider>
+      </div>
 
-          {/* LUNA IV — highlighted version link */}
+      <Separator className="mx-3 mb-1 relative z-10" />
+
+      {/* Navigation */}
+      <nav className="flex-1 py-2 overflow-y-auto overflow-x-hidden">
+        <TooltipProvider>
+          {/* Version item at top */}
           <SidebarVersionItem
-            item={versionItem}
             isActive={isRouteActive(versionItem.route)}
-            showLabel={false}
-            showLabelOnHover={true}
-            showTooltip={true}
+            isExpanded={isPinned}
+            onClick={undefined}
           />
 
-          {/* Remaining nav items */}
-          {navItems.slice(1).map((item) => (
-            <SidebarNavItem
-              key={item.route}
-              item={item}
-              isActive={isRouteActive(item.route)}
-              showLabel={false}
-              showLabelOnHover={true}
-              showTooltip={true}
-            />
+          {navSections.map((section) => (
+            <div key={section.id}>
+              {isPinned && <SectionHeader label={section.label} />}
+              {!isPinned && section.id !== 'navigate' && (
+                <div className="my-1 mx-3">
+                  <Separator />
+                </div>
+              )}
+              {section.items.map((item) => (
+                <SidebarNavItem
+                  key={item.route}
+                  item={item}
+                  isActive={isRouteActive(item.route)}
+                  isExpanded={isPinned}
+                />
+              ))}
+            </div>
           ))}
 
-          <SidebarRecentsSection
-            recents={recents}
-            showLabel={false}
-            showLabelOnHover={true}
-            showTooltip={true}
-          />
+          <SidebarRecentsSection recents={recents} isExpanded={isPinned} />
         </TooltipProvider>
       </nav>
-
-      {/* Labels shown on hover */}
-      <style>{`
-        .group:hover .opacity-0 {
-          opacity: 1 !important;
-        }
-      `}</style>
     </div>
   );
 };
@@ -491,46 +561,38 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
   isRouteActive,
   recents,
 }) => {
+  const close = () => onOpenChange(false);
+
   return (
     <Sheet open={isOpen} onOpenChange={onOpenChange}>
       <SheetContent side="left" className="w-72 p-0">
-        {/* Navigation Items */}
-        <nav className="py-4">
-          {/* Home */}
-          <SidebarNavItem
-            item={navItems[0]}
-            isActive={isRouteActive(navItems[0].route)}
-            showLabel={true}
-            showTooltip={false}
-            onClick={() => onOpenChange(false)}
-          />
-
-          {/* LUNA IV — highlighted version link */}
+        <nav className="py-4 overflow-y-auto h-full">
+          {/* Version item */}
           <SidebarVersionItem
-            item={versionItem}
             isActive={isRouteActive(versionItem.route)}
-            showLabel={true}
-            showTooltip={false}
-            onClick={() => onOpenChange(false)}
+            isExpanded={true}
+            onClick={close}
           />
 
-          {/* Remaining nav items */}
-          {navItems.slice(1).map((item) => (
-            <SidebarNavItem
-              key={item.route}
-              item={item}
-              isActive={isRouteActive(item.route)}
-              showLabel={true}
-              showTooltip={false}
-              onClick={() => onOpenChange(false)}
-            />
+          {navSections.map((section) => (
+            <div key={section.id}>
+              <SectionHeader label={section.label} />
+              {section.items.map((item) => (
+                <SidebarNavItem
+                  key={item.route}
+                  item={item}
+                  isActive={isRouteActive(item.route)}
+                  isExpanded={true}
+                  onClick={close}
+                />
+              ))}
+            </div>
           ))}
 
           <SidebarRecentsSection
             recents={recents}
-            showLabel={true}
-            showTooltip={false}
-            onItemClick={() => onOpenChange(false)}
+            isExpanded={true}
+            onItemClick={close}
           />
         </nav>
       </SheetContent>
@@ -549,9 +611,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onOpenChange }) => {
   const recents = useRecents();
 
   const isRouteActive = (route: string) => {
-    if (route === '/') {
-      return location.pathname === '/';
-    }
+    if (route === '/') return location.pathname === '/';
     return location.pathname.startsWith(route);
   };
 
