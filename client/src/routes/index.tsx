@@ -28,7 +28,7 @@ const TalentCalendar = lazyWithPreload(
   () =>
     import(
       /* webpackChunkName: "route-talent-calendar" */
-      '@/features/calendar/components/talents/talent-book-calendar'
+      '@/features/calendar/components/talents'
     )
 );
 
@@ -59,7 +59,7 @@ const WeaponCalendar = lazyWithPreload(
   () =>
     import(
       /* webpackChunkName: "route-weapon-calendar" */
-      '@/features/calendar/components/weapons/weapons-calendar'
+      '@/features/calendar/components/weapons'
     )
 );
 
