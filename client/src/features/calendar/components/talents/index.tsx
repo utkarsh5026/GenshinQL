@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import CharacterGrid from '@/features/characters/components/utils/characters-grid';
+import { useRegions } from '@/stores/usePrimitivesStore';
 
 import { TALENT_CALENDAR_THEME } from '../../constants';
 import { useTalentCalendar } from '../../hooks';
@@ -64,26 +65,21 @@ const TalentCalender: React.FC = () => {
   const [isCalendar, setIsCalendar] = useState(false);
   const [activeTab, setActiveTab] = useState('');
   const { calendar, fetchBooks } = useTalentBooksStore();
+  const regions = useRegions();
 
   useEffect(() => {
     fetchBooks();
   }, [fetchBooks]);
 
-  const locations = useMemo(
-    () => (calendar || []).map(({ location }) => location),
-    [calendar]
-  );
+  const currentTab = activeTab || regions[0]?.name || '';
 
-  const currentTab = activeTab || locations[0] || '';
+  if (!calendar || calendar.length === 0) return null;
 
-  if (locations.length === 0) return null;
-
-  const books = (calendar || []).find((book) => book.location === currentTab);
+  const books = calendar.find((book) => book.location === currentTab);
 
   return (
     <div>
       <RegionTabs
-        regions={locations}
         activeRegion={currentTab}
         onChange={setActiveTab}
         className="m-2"

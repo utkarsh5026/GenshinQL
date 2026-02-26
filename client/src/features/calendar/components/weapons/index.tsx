@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 
 import { CachedImage } from '@/features/cache';
 import WeaponAvatar from '@/features/weapons/components/shared/card/weapon-avatar';
@@ -122,9 +122,7 @@ const WeaponCalendar: React.FC = () => {
   const error = useWeaponMaterialError();
 
   const nations = useRegions();
-  const nationNames = useMemo(() => nations.map((n) => n.name), [nations]);
-
-  const currentNation = activeNation || nationNames[0] || '';
+  const currentNation = activeNation || nations[0]?.name || '';
 
   const { filteredSchedule } = useWeaponFilter(weaponMaterialSchedule || []);
 
@@ -138,12 +136,7 @@ const WeaponCalendar: React.FC = () => {
 
   return (
     <div>
-      <RegionTabs
-        regions={nationNames}
-        activeRegion={currentNation}
-        onChange={setActiveNation}
-        className="m-2"
-      />
+      <RegionTabs activeRegion={currentNation} onChange={setActiveNation} />
       <ViewToggle
         isCalendar={isCalendar}
         onToggle={() => setIsCalendar(!isCalendar)}
