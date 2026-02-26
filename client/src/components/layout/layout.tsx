@@ -4,12 +4,14 @@ import { GlobalSearch } from '@/features/command-palette';
 
 import { AppHeader } from './header';
 import { Sidebar } from './sidebar';
+import { useSidebarStore } from './useSidebarStore';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const { isPinned } = useSidebarStore();
 
   return (
     <div className="flex h-full w-full">
@@ -20,7 +22,11 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({
         showFloatingTrigger={false}
       />
 
-      <div className="flex flex-col flex-1 min-w-0 md:ml-16">
+      <div
+        className={`flex flex-col flex-1 min-w-0 transition-all duration-300 ${
+          isPinned ? 'md:ml-60' : 'md:ml-16'
+        }`}
+      >
         <AppHeader
           onMenuClick={() => setMobileMenuOpen(true)}
           onSearchClick={() => setSearchOpen(true)}

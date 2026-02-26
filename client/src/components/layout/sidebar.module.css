@@ -1,0 +1,124 @@
+/* ─── Sidebar Background Pattern ─────────────────────────────────────────────
+   Subtle dot-grid overlay. Sits on top of the base bg-background/95.
+   Keep opacity very low so it never competes with nav items.
+─────────────────────────────────────────────────────────────────────────── */
+.sidebarBg {
+  /* Tiny dot grid */
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.055) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
+  /* Vignette: fade the pattern out at top + bottom */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 88%,
+    transparent 100%
+  );
+  /* Fill the sidebar container absolutely */
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Glow Pulse ─────────────────────────────────────────────────────────────
+   Active badge breathes its element-color glow in and out.
+   Uses --icon-color CSS variable set inline on the badge element.
+─────────────────────────────────────────────────────────────────────────── */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 10px color-mix(in srgb, var(--icon-color) 32%, transparent),
+      0 0 3px color-mix(in srgb, var(--icon-color) 20%, transparent),
+      inset 0 1px 0 color-mix(in srgb, var(--icon-color) 18%, transparent);
+  }
+  50% {
+    box-shadow:
+      0 0 22px color-mix(in srgb, var(--icon-color) 58%, transparent),
+      0 0 8px color-mix(in srgb, var(--icon-color) 38%, transparent),
+      inset 0 1px 0 color-mix(in srgb, var(--icon-color) 25%, transparent);
+  }
+}
+
+.activeBadge {
+  animation: pulseGlow 2.6s ease-in-out infinite;
+}
+
+/* ─── Icon Float ─────────────────────────────────────────────────────────────
+   Active icon gently bobs up and down — like a floating game UI element.
+─────────────────────────────────────────────────────────────────────────── */
+@keyframes iconFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2.5px);
+  }
+}
+
+.activeIcon {
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+/* ─── Entry slide-in ─────────────────────────────────────────────────────────
+   Nav items fade in from the left on mount with a short delay cascade.
+─────────────────────────────────────────────────────────────────────────── */
+@keyframes navItemEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navItem {
+  animation: navItemEnter 0.28s ease-out both;
+}
+
+/* Stagger delays for each child position (0–9) */
+.navItem:nth-child(1) {
+  animation-delay: 0.02s;
+}
+.navItem:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.navItem:nth-child(3) {
+  animation-delay: 0.08s;
+}
+.navItem:nth-child(4) {
+  animation-delay: 0.11s;
+}
+.navItem:nth-child(5) {
+  animation-delay: 0.14s;
+}
+.navItem:nth-child(6) {
+  animation-delay: 0.17s;
+}
+.navItem:nth-child(7) {
+  animation-delay: 0.2s;
+}
+.navItem:nth-child(8) {
+  animation-delay: 0.23s;
+}
+.navItem:nth-child(9) {
+  animation-delay: 0.26s;
+}
+.navItem:nth-child(10) {
+  animation-delay: 0.29s;
+}

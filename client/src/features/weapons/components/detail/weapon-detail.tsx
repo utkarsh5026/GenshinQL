@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
 import { ItemNavigation } from '@/components/utils';
+import { useAddRecent } from '@/features/command-palette/stores/useRecentsStore';
 import { fetchWeaponProfile } from '@/features/weapons/services';
 import { useWeapons } from '@/features/weapons/stores/useWeaponsStore';
 import { getRarityHexColor } from '@/features/weapons/utils/color-map';
@@ -15,6 +16,7 @@ const WeaponDetail = () => {
   const [weapon, setWeapon] = useState<WeaponDetailedType | null>(null);
   const [loading, setLoading] = useState(!!weaponName);
   const [error, setError] = useState(!weaponName);
+  const addRecent = useAddRecent();
 
   useEffect(() => {
     if (!weaponName) return;
@@ -23,12 +25,17 @@ const WeaponDetail = () => {
       setLoading(true);
       setError(false);
 
-      // Transform URL param to filename: "Skyward Blade" → "Skyward_Blade"
       const fileName = weaponName.split(' ').join('_');
       const weaponData = await fetchWeaponProfile(fileName);
 
       if (weaponData) {
         setWeapon(weaponData);
+        const matchingWeapon = weapons.find((w) => w.name === weaponData.name);
+        addRecent({
+          type: 'weapon',
+          ...weaponData,
+          weaponType: matchingWeapon?.weaponType ?? '',
+        });
       } else {
         setError(true);
       }
@@ -36,7 +43,7 @@ const WeaponDetail = () => {
     };
 
     loadWeapon();
-  }, [weaponName]);
+  }, [weaponName, addRecent, weapons]);
 
   if (loading) {
     return (

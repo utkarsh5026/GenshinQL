@@ -4,6 +4,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
 import { Heading, Text } from '@/components/ui/text';
 import { ItemNavigation } from '@/components/utils';
+import { useAddRecent } from '@/features/command-palette/stores/useRecentsStore';
 import { decideColor } from '@/utils/color';
 
 import {
@@ -23,11 +24,20 @@ const CharacterDetail = () => {
   const loading = useCharacterProfileLoading(characterName || '');
   const error = useCharacterProfileError(characterName || '');
   const fetchProfile = useFetchCharacterProfile();
+  const addRecent = useAddRecent();
 
   useEffect(() => {
     if (!characterName) return;
     fetchProfile(characterName);
   }, [characterName, fetchProfile]);
+
+  useEffect(() => {
+    if (!profile) return;
+    addRecent({
+      type: 'character',
+      ...profile,
+    });
+  }, [profile, addRecent]);
 
   if (loading || !profile) {
     return <CharacterLoadingState characterName={characterName!} />;
