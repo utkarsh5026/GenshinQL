@@ -28,6 +28,40 @@ const ELEMENT_COLORS: Record<Element, string> = {
   cryo: 'var(--color-cryo-500)',
 } as const;
 
+// Reactions and their constituent element color stops (left → right)
+const REACTION_GRADIENTS: Record<string, string[]> = {
+  Vaporize: ['var(--color-hydro-500)', 'var(--color-pyro-500)'],
+  Melt: ['var(--color-pyro-500)', 'var(--color-cryo-500)'],
+
+  Overloaded: ['var(--color-pyro-500)', 'var(--color-electro-500)'],
+  'Electro-Charged': ['var(--color-electro-500)', 'var(--color-hydro-500)'],
+  Superconduct: ['var(--color-cryo-500)', 'var(--color-electro-500)'],
+  Frozen: ['var(--color-hydro-500)', 'var(--color-cryo-500)'],
+  Shatter: ['var(--color-cryo-500)', 'var(--color-geo-500)'],
+  Swirl: [
+    'var(--color-anemo-500)',
+    'var(--color-pyro-500)',
+    'var(--color-anemo-500)',
+  ],
+  Crystallize: [
+    'var(--color-geo-500)',
+    'var(--color-cryo-500)',
+    'var(--color-geo-500)',
+  ],
+
+  Burning: ['var(--color-dendro-500)', 'var(--color-pyro-500)'],
+  Bloom: ['var(--color-dendro-500)', 'var(--color-hydro-500)'],
+  Hyperbloom: ['var(--color-dendro-500)', 'var(--color-electro-500)'],
+  Burgeon: ['var(--color-dendro-500)', 'var(--color-pyro-500)'],
+  Quicken: ['var(--color-dendro-500)', 'var(--color-electro-500)'],
+  Aggravate: ['var(--color-electro-500)', 'var(--color-dendro-500)'],
+  Spread: ['var(--color-dendro-500)', 'var(--color-electro-500)'],
+  // Lunar Reactions (Nod-Krai Moonsign mechanics)
+  'Lunar-Charged': ['var(--color-starlight-200)', 'var(--color-electro-500)'],
+  'Lunar-Bloom': ['var(--color-starlight-200)', 'var(--color-dendro-500)'],
+  'Lunar-Crystallize': ['var(--color-starlight-200)', 'var(--color-geo-500)'],
+} as const;
+
 const STAT_COLORS: Record<string, string> = {
   'CRIT Rate': 'var(--color-error-500)',
   'CRIT DMG': 'var(--color-warning-500)',
@@ -68,6 +102,7 @@ const StatText: React.FC<StatTextProps> = ({
       as="span"
       className="inline-flex items-center gap-1 opacity-90"
       style={{ color }}
+      weight={'bold'}
       color={'inherit'}
     >
       {stat}
@@ -91,8 +126,57 @@ const StatText: React.FC<StatTextProps> = ({
   );
 };
 
-const TEXT_PATTERN =
-  /(Elemental Mastery|Energy Recharge|CRIT Rate|CRIT DMG|ATK|DEF|HP)|\b(dendro|pyro|hydro|electro|anemo|geo|cryo)\b|(\d+%?)/gi;
+const REACTION_NAMES = [
+  'Lunar-Crystallize',
+  'Lunar-Charged',
+  'Lunar-Bloom',
+  'Electro-Charged',
+  'Superconduct',
+  'Crystallize',
+  'Hyperbloom',
+  'Vaporize',
+  'Overloaded',
+  'Shatter',
+  'Burning',
+  'Burgeon',
+  'Quicken',
+  'Aggravate',
+  'Frozen',
+  'Spread',
+  'Swirl',
+  'Bloom',
+  'Melt',
+] as const;
+
+const REACTION_NAMES_PATTERN = REACTION_NAMES.join('|');
+
+const TEXT_PATTERN = new RegExp(
+  `(Elemental Mastery|Energy Recharge|CRIT Rate|CRIT DMG|ATK|DEF|HP)|(${REACTION_NAMES_PATTERN})|\\b(dendro|pyro|hydro|electro|anemo|geo|cryo)\\b|(\\d+%?)`,
+  'gi'
+);
+
+interface ReactionTextProps {
+  name: string;
+  colors: string[];
+}
+
+const ReactionText: React.FC<ReactionTextProps> = ({ name, colors }) => {
+  const gradient = `linear-gradient(to right, ${colors.join(', ')})`;
+  return (
+    <Text
+      as="span"
+      weight="bold"
+      style={{
+        background: gradient,
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+      }}
+    >
+      {name}
+    </Text>
+  );
+};
 
 interface TextProcessorProps {
   text: string;
@@ -125,6 +209,22 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
             attributeUrlMap={attributeUrlMap}
           />
         );
+      }
+
+      const reactionKey = REACTION_NAMES.find(
+        (r) => r.toLowerCase() === part.toLowerCase()
+      );
+      if (reactionKey) {
+        const gradientColors = REACTION_GRADIENTS[reactionKey];
+        if (gradientColors) {
+          return (
+            <ReactionText
+              key={`${index}-reaction-${reactionKey}`}
+              name={part}
+              colors={gradientColors}
+            />
+          );
+        }
       }
 
       const lowercasePart = part.toLowerCase() as Element;
@@ -223,7 +323,6 @@ function processTextSegment(
   const parts = text.split(TEXT_PATTERN).filter(Boolean);
 
   return parts.map((part, index) => {
-    // Check for stat match first (exact case)
     const statColor = STAT_COLORS[part];
     const StatIcon = STAT_ICONS[part];
     if (statColor && StatIcon) {
@@ -238,11 +337,25 @@ function processTextSegment(
       );
     }
 
-    // Then check for element match (case-insensitive)
+    const reactionKey = REACTION_NAMES.find(
+      (r) => r.toLowerCase() === part.toLowerCase()
+    );
+    if (reactionKey) {
+      const gradientColors = REACTION_GRADIENTS[reactionKey];
+      if (gradientColors) {
+        return (
+          <ReactionText
+            key={`${index}-reaction-${reactionKey}`}
+            name={part}
+            colors={gradientColors}
+          />
+        );
+      }
+    }
+
     const lowercasePart = part.toLowerCase() as Element;
     const elementColor = ELEMENT_COLORS[lowercasePart];
 
-    // Then check for numbers
     if (/^\d+%?$/.test(part)) {
       return (
         <Text
@@ -256,7 +369,6 @@ function processTextSegment(
       );
     }
 
-    // Render element with color
     return elementColor ? (
       <Text
         as="span"
