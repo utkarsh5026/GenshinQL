@@ -1,21 +1,10 @@
-import {
-  Battery,
-  Crosshair,
-  Flame,
-  FlaskConical,
-  Heart,
-  Shield,
-  Sword,
-} from 'lucide-react';
 import React, { useMemo } from 'react';
 
 import { Text } from '@/components/ui/text';
 import { AbilityReference } from '@/components/utils/text/ability-reference';
-import { CachedImage } from '@/features/cache';
 import { useCharacterAbilityData } from '@/features/characters/stores';
 import type { AbilityReference as AbilityReferenceType } from '@/lib/abilityMatcher';
 import { segmentText } from '@/lib/abilityMatcher';
-import { useAttributesMap } from '@/stores/usePrimitivesStore';
 import type { Element } from '@/types';
 
 const ELEMENT_COLORS: Record<Element, string> = {
@@ -72,59 +61,22 @@ const STAT_COLORS: Record<string, string> = {
   'Elemental Mastery': 'var(--color-anemo-500)',
 };
 
-const STAT_ICONS: Record<string, React.ElementType> = {
-  'CRIT Rate': Crosshair,
-  'CRIT DMG': Flame,
-  ATK: Sword,
-  HP: Heart,
-  DEF: Shield,
-  'Energy Recharge': Battery,
-  'Elemental Mastery': FlaskConical,
-};
-
 interface StatTextProps {
   stat: string;
-  Icon: React.ElementType;
   color: string;
-  attributeUrlMap: Record<string, string>;
 }
 
-const StatText: React.FC<StatTextProps> = ({
-  stat,
-  Icon,
-  color,
-  attributeUrlMap,
-}) => {
-  const attributeUrl = attributeUrlMap[stat];
-
-  return (
-    <Text
-      as="span"
-      className="inline-flex items-center gap-1 opacity-90"
-      style={{ color }}
-      weight={'bold'}
-      color={'inherit'}
-    >
-      {stat}
-      {attributeUrl ? (
-        <CachedImage
-          src={attributeUrl}
-          alt={stat}
-          className="inline-block h-[0.8em] w-[0.8em]"
-          lazy={false}
-          showSkeleton={false}
-        />
-      ) : (
-        Icon && (
-          <Icon
-            className="inline-block h-[0.8em] w-[0.8em]"
-            aria-hidden="true"
-          />
-        )
-      )}
-    </Text>
-  );
-};
+const StatText: React.FC<StatTextProps> = ({ stat, color }) => (
+  <Text
+    as="span"
+    className="opacity-90"
+    style={{ color }}
+    weight={'bold'}
+    color={'inherit'}
+  >
+    {stat}
+  </Text>
+);
 
 const REACTION_NAMES = [
   'Lunar-Crystallize',
@@ -191,22 +143,17 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
   text,
   className = '',
 }) => {
-  const { attributeUrlMap } = useAttributesMap();
-
   const processedContent = useMemo(() => {
     const parts = text.split(TEXT_PATTERN).filter(Boolean);
 
     return parts.map((part, index) => {
       const statColor = STAT_COLORS[part];
-      const StatIcon = STAT_ICONS[part];
-      if (statColor && StatIcon) {
+      if (statColor) {
         return (
           <StatText
             key={`${index}-stat-${part}`}
             stat={part}
-            Icon={StatIcon}
             color={statColor}
-            attributeUrlMap={attributeUrlMap}
           />
         );
       }
@@ -250,7 +197,7 @@ export const TextProcessor: React.FC<TextProcessorProps> = ({
         <React.Fragment key={`${index}-text`}>{part}</React.Fragment>
       );
     });
-  }, [text, attributeUrlMap]);
+  }, [text]);
 
   return <div className={className}>{processedContent}</div>;
 };
@@ -278,14 +225,13 @@ export const TextProcessorWithAbilities: React.FC<
   className = '',
 }) => {
   const storeData = useCharacterAbilityData(characterName || '');
-  const { attributeUrlMap } = useAttributesMap();
 
   const abilityMap = propAbilityMap ?? storeData.abilityMap;
   const elementColor = propElementColor ?? storeData.elementColor;
 
   const processedContent = useMemo(() => {
     if (!abilityMap || abilityMap.size === 0) {
-      return processTextSegment(text, attributeUrlMap);
+      return processTextSegment(text);
     }
 
     const segments = segmentText(text, abilityMap);
@@ -303,12 +249,12 @@ export const TextProcessorWithAbilities: React.FC<
       } else {
         return (
           <React.Fragment key={`text-${segmentIndex}`}>
-            {processTextSegment(segment.content, attributeUrlMap)}
+            {processTextSegment(segment.content)}
           </React.Fragment>
         );
       }
     });
-  }, [text, abilityMap, elementColor, attributeUrlMap]);
+  }, [text, abilityMap, elementColor]);
 
   return <div className={className}>{processedContent}</div>;
 };
@@ -316,24 +262,14 @@ export const TextProcessorWithAbilities: React.FC<
 /**
  * Processes a text segment for stat terms, element keywords, and numbers
  */
-function processTextSegment(
-  text: string,
-  attributeUrlMap: Record<string, string>
-): React.ReactNode[] {
+function processTextSegment(text: string): React.ReactNode[] {
   const parts = text.split(TEXT_PATTERN).filter(Boolean);
 
   return parts.map((part, index) => {
     const statColor = STAT_COLORS[part];
-    const StatIcon = STAT_ICONS[part];
-    if (statColor && StatIcon) {
+    if (statColor) {
       return (
-        <StatText
-          key={`${index}-stat-${part}`}
-          stat={part}
-          Icon={StatIcon}
-          color={statColor}
-          attributeUrlMap={attributeUrlMap}
-        />
+        <StatText key={`${index}-stat-${part}`} stat={part} color={statColor} />
       );
     }
 
