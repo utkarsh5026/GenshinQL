@@ -11,6 +11,8 @@ export interface ScrollTabItem<T extends string = string> {
   icon?: React.ReactNode;
   /** URL of a small image rendered to the left of the label */
   imageUrl?: string;
+  /** CSS class applied to the image when this tab is active (e.g. from a CSS module) */
+  animationClass?: string;
 }
 
 interface ScrollTabsProps<T extends string = string> {
@@ -121,7 +123,12 @@ export function ScrollTabs<T extends string = string>({
                     <img
                       src={item.imageUrl}
                       alt=""
-                      className="h-5 w-5 shrink-0 rounded-full object-cover"
+                      className={cn(
+                        'h-8 w-8 shrink-0 object-contain transition-[filter] duration-300',
+                        isActive && item.animationClass,
+                        isActive &&
+                          'drop-shadow-[0_0_8px_rgba(255,255,255,0.55)]'
+                      )}
                       aria-hidden
                     />
                   ) : item.icon ? (
