@@ -53,7 +53,7 @@ const DesktopAbilityReference: React.FC<AbilityReferenceProps> = ({
       <Tooltip>
         <TooltipTrigger asChild>
           <span className="inline-flex cursor-help items-center gap-0.5">
-            <Text as="span" weight="medium">
+            <Text as="span" weight="medium" className="opacity-90">
               {abilityName}
             </Text>
             <CachedImage

@@ -1,15 +1,30 @@
-import { lazy } from 'react';
+import { ComponentType, lazy } from 'react';
 import { Navigate, RouteObject } from 'react-router-dom';
 
-// Lazy load all route components for optimal bundle splitting
-const Home = lazy(() =>
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type PreloadableComponent<T extends ComponentType<any>> =
+  React.LazyExoticComponent<T> & {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    preload: () => Promise<any>;
+  };
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function lazyWithPreload<T extends ComponentType<any>>(
+  factory: () => Promise<{ default: T }>
+): PreloadableComponent<T> {
+  const Component = lazy(factory) as PreloadableComponent<T>;
+  Component.preload = factory;
+  return Component;
+}
+
+const Home = lazyWithPreload(() =>
   import(
     /* webpackChunkName: "route-home" */
     '@/features/home'
   ).then((module) => ({ default: module.Home }))
 );
 
-const TalentCalendar = lazy(
+const TalentCalendar = lazyWithPreload(
   () =>
     import(
       /* webpackChunkName: "route-talent-calendar" */
@@ -17,7 +32,7 @@ const TalentCalendar = lazy(
     )
 );
 
-const CharacterCardsWithFilters = lazy(
+const CharacterCardsWithFilters = lazyWithPreload(
   () =>
     import(
       /* webpackChunkName: "route-characters-table" */
@@ -25,14 +40,14 @@ const CharacterCardsWithFilters = lazy(
     )
 );
 
-const RoutinePlanner = lazy(() =>
+const RoutinePlanner = lazyWithPreload(() =>
   import(
     /* webpackChunkName: "route-routine-planner" */
     '@/features/routine-planner'
   ).then((module) => ({ default: module.RoutinePlanner }))
 );
 
-const CharacterDetail = lazy(
+const CharacterDetail = lazyWithPreload(
   () =>
     import(
       /* webpackChunkName: "route-character-detail" */
@@ -40,7 +55,7 @@ const CharacterDetail = lazy(
     )
 );
 
-const WeaponCalendar = lazy(
+const WeaponCalendar = lazyWithPreload(
   () =>
     import(
       /* webpackChunkName: "route-weapon-calendar" */
@@ -48,7 +63,7 @@ const WeaponCalendar = lazy(
     )
 );
 
-const WeaponsDetailed = lazy(
+const WeaponsDetailed = lazyWithPreload(
   () =>
     import(
       /* webpackChunkName: "route-weapons-grid" */
@@ -56,7 +71,7 @@ const WeaponsDetailed = lazy(
     )
 );
 
-const WeaponDetail = lazy(
+const WeaponDetail = lazyWithPreload(
   () =>
     import(
       /* webpackChunkName: "route-weapon-detail" */
@@ -64,14 +79,14 @@ const WeaponDetail = lazy(
     )
 );
 
-const TierList = lazy(() =>
+const TierList = lazyWithPreload(() =>
   import(
     /* webpackChunkName: "route-tierlist" */
     '@/features/tier-list'
   ).then((module) => ({ default: module.TierList }))
 );
 
-const GenshinGuesser = lazy(
+const GenshinGuesser = lazyWithPreload(
   () =>
     import(
       /* webpackChunkName: "route-guesser" */
@@ -80,26 +95,62 @@ const GenshinGuesser = lazy(
 );
 
 // Special handling for named exports
-const MemoryGame = lazy(() =>
+const MemoryGame = lazyWithPreload(() =>
   import(
     /* webpackChunkName: "route-memory-game" */
     '@/features/memory-game'
   ).then((module) => ({ default: module.MemoryGame }))
 );
 
-const LinkerGame = lazy(() =>
+const LinkerGame = lazyWithPreload(() =>
   import(
     /* webpackChunkName: "route-linker-game" */
     '@/features/linker-game'
   ).then((module) => ({ default: module.LinkerGame }))
 );
 
-const VersionPage = lazy(() =>
+const VersionPage = lazyWithPreload(() =>
   import(
     /* webpackChunkName: "route-version" */
     '@/features/version-management'
   ).then((module) => ({ default: module.VersionPage }))
 );
+
+/**
+ * Preload all routes in the background
+ * You can call this explicitly or let it run automatically
+ */
+export const preloadAllRoutes = () => {
+  const preloads = [
+    Home.preload,
+    TalentCalendar.preload,
+    CharacterCardsWithFilters.preload,
+    RoutinePlanner.preload,
+    CharacterDetail.preload,
+    WeaponCalendar.preload,
+    WeaponsDetailed.preload,
+    WeaponDetail.preload,
+    TierList.preload,
+    GenshinGuesser.preload,
+    MemoryGame.preload,
+    LinkerGame.preload,
+    VersionPage.preload,
+  ];
+
+  if (typeof window !== 'undefined') {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(() => {
+        preloads.forEach((preload) => preload());
+      });
+    } else {
+      setTimeout(() => {
+        preloads.forEach((preload) => preload());
+      }, 2000);
+    }
+  }
+};
+
+preloadAllRoutes();
 
 export const routes: RouteObject[] = [
   {

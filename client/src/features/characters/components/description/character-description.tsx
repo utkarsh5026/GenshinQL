@@ -8,6 +8,7 @@ import { useCharacterAbilitiesStore } from '../../stores';
 import { CharacterDetailed, CharacterMenuItem } from '../../types';
 import { BuildsDetailed } from './builds/builds-detailed';
 import ElementalBurstShowcase from './character-burst-showcase';
+import styles from './character-description.module.css';
 import { CharacterStatsCompact } from './character-info';
 import { CharacterConstellations, CharacterPassives } from './constellations';
 import { MobileProfileHeader, ProfileHeader } from './profile-header';
@@ -27,13 +28,14 @@ const menuItems: CharacterMenuItem[] = [
   'Builds',
 ] as const;
 
-const menuItemMobileLabels: Record<CharacterMenuItem, string> = {
-  Builds: 'Builds',
-  Constellations: 'Const.',
-  Passives: 'Passives',
-  Profile: 'Profile',
-  Routine: 'Routine',
-  Talents: 'Talents',
+/** Maps each tab to its unique CSS animation class from the CSS module */
+const TAB_ANIMATION_MAP: Record<CharacterMenuItem, string> = {
+  Profile: styles.stickerProfile,
+  Talents: styles.stickerTalents,
+  Constellations: styles.stickerConstellations,
+  Passives: styles.stickerPassives,
+  Routine: styles.stickerRoutine,
+  Builds: styles.stickerBuilds,
 };
 
 /**
@@ -97,11 +99,15 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
 
   const scrollTabItems = useMemo<ScrollTabItem<CharacterMenuItem>[]>(
     () =>
-      menuItems.map((item) => ({
+      menuItems.map((item, i) => ({
         id: item,
-        label: menuItemMobileLabels[item],
+        label: item,
+        imageUrl: character?.stickers?.length
+          ? character.stickers[i % character.stickers.length]
+          : undefined,
+        animationClass: TAB_ANIMATION_MAP[item],
       })),
-    []
+    [character]
   );
 
   useEffect(() => {
@@ -144,8 +150,11 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
 
           {/* Desktop: Vertical sidebar nav */}
           <nav className="hidden lg:flex lg:flex-col gap-1.5 mt-2">
-            {menuItems.map((item) => {
+            {menuItems.map((item, i) => {
               const isActive = selectedMenuItem === item;
+              const stickerUrl = character.stickers?.length
+                ? character.stickers[i % character.stickers.length]
+                : undefined;
               return (
                 <button
                   onClick={() => setSelectedMenuItem(item)}
@@ -171,7 +180,17 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
                       className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-4 rounded-r-full ${elementClasses.indicator}`}
                     />
                   )}
-                  {item}
+                  <span className="relative z-10 flex items-center gap-2">
+                    {stickerUrl && (
+                      <img
+                        src={stickerUrl}
+                        alt=""
+                        aria-hidden
+                        className={`${styles.sticker} ${isActive ? `${TAB_ANIMATION_MAP[item]} ${styles.stickerActive}` : ''}`}
+                      />
+                    )}
+                    {item}
+                  </span>
                 </button>
               );
             })}

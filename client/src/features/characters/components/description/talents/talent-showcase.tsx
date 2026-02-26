@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp, Clock, Zap } from 'lucide-react';
+import { Clock, Zap } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
 import { Heading, Text } from '@/components/ui/text';
@@ -61,10 +61,6 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
   elementColor,
   characterName,
 }) => {
-  const [currentAnimationIndex, setCurrentAnimationIndex] = useState(0);
-  const [showScaling, setShowScaling] = useState(false);
-
-  const currentAnimation = animations[currentAnimationIndex];
   const tags = useMemo(
     () => extractConstellationTags(talent.description),
     [talent.description]
@@ -80,13 +76,13 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
     >
       {/* Header */}
       <div
-        className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 p-3 sm:p-4"
+        className="flex items-center flex-wrap gap-3 sm:gap-4 p-4 sm:p-5 md:p-6"
         style={{
           background: `linear-gradient(135deg, ${elementColor}15 0%, transparent 60%)`,
         }}
       >
         <div
-          className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl p-1.5 sm:p-2 shrink-0"
+          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg sm:rounded-xl p-1.5 sm:p-2 shrink-0"
           style={{
             background: `linear-gradient(135deg, ${elementColor}25, ${elementColor}10)`,
             boxShadow: `0 0 16px ${elementColor}20`,
@@ -104,7 +100,7 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
             weight="medium"
             uppercase
             color="muted"
-            className="text-[10px] sm:text-xs tracking-wider mb-0.5"
+            className="text-[11px] sm:text-xs tracking-wider mb-0.5 sm:mb-1"
           >
             {talent.talentType}
           </Text>
@@ -112,13 +108,13 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
             level={4}
             weight="bold"
             truncate
-            className="text-sm sm:text-base md:text-lg"
+            className="text-base sm:text-lg md:text-xl"
           >
             {talent.talentName}
           </Heading>
           {/* Tags */}
           {tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-1.5 sm:mt-2">
+            <div className="flex flex-wrap gap-1.5 mt-2 sm:mt-2.5">
               {tags.map((tagId) => (
                 <AbilityTag key={tagId} tagId={tagId} size="xs" />
               ))}
@@ -148,55 +144,12 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
         </div>
       </div>
 
-      {/* Content: Animation + Description */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+      {/* Content: Animation + Description — stacked vertically */}
+      <div className="flex flex-col">
         {/* Animation Section */}
-        <div className="bg-midnight-900/40 p-3 sm:p-4">
+        <div className="bg-midnight-900/40 p-4 sm:p-5 md:p-6">
           {animations.length > 0 ? (
-            <div className="space-y-2 sm:space-y-3">
-              {/* Main Animation */}
-              <div className="rounded-md sm:rounded-lg overflow-hidden border border-midnight-600/30">
-                <AnimatedCover
-                  animation={currentAnimation}
-                  fallbackUrl={currentAnimation?.imageUrl}
-                />
-              </div>
-
-              {/* Animation Thumbnails */}
-              {animations.length > 1 && (
-                <div className="flex gap-1.5 sm:gap-2 overflow-x-auto scrollbar-hide pb-1">
-                  {animations.map((anim, index) => (
-                    <button
-                      key={anim.imageUrl || index}
-                      onClick={() => setCurrentAnimationIndex(index)}
-                      className={`shrink-0 w-16 h-10 sm:w-20 sm:h-12 rounded-sm sm:rounded-md overflow-hidden border-2 transition-all duration-200 ${
-                        index === currentAnimationIndex
-                          ? 'border-celestial-400 shadow-lg'
-                          : 'border-midnight-600/40 hover:border-starlight-500/50 opacity-70 hover:opacity-100'
-                      }`}
-                    >
-                      <img
-                        src={anim.imageUrl}
-                        alt={anim.caption || `Animation ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
-              )}
-
-              {/* Animation Caption */}
-              {currentAnimation?.caption && (
-                <Text
-                  as="p"
-                  color="muted"
-                  align="center"
-                  className="text-[11px] sm:text-xs"
-                >
-                  {currentAnimation.caption}
-                </Text>
-              )}
-            </div>
+            <Animations animations={animations} />
           ) : (
             <Text
               as="div"
@@ -208,46 +161,91 @@ const TalentShowcaseCard: React.FC<TalentShowcaseCardProps> = ({
           )}
         </div>
 
-        {/* Description Section */}
-        <div className="p-3 sm:p-4 md:p-5 bg-midnight-800/20 flex flex-col">
-          <div className="flex-1 overflow-auto max-h-75 scrollbar-hide">
-            <div className="text-xs sm:text-sm text-starlight-300 leading-relaxed">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="p-4 sm:p-5 md:p-6">
+            <Text
+              as="span"
+              weight="semibold"
+              uppercase
+              className="text-xs sm:text-sm text-starlight-300 tracking-wider mb-3 sm:mb-4 block"
+            >
+              Description
+            </Text>
+            <div className="text-sm sm:text-base text-starlight-300 leading-relaxed">
               <AbilitiesListSplitter
                 text={talent.description}
                 characterName={characterName}
               />
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Scaling Table (Expandable) */}
-      <div className="border-t border-midnight-600/30">
-        <button
-          onClick={() => setShowScaling(!showScaling)}
-          className="w-full flex items-center justify-between p-3 sm:p-4 hover:bg-midnight-700/30 transition-colors"
-        >
-          <Text
-            as="span"
-            weight="semibold"
-            uppercase
-            className="text-xs sm:text-sm text-starlight-300 tracking-wider"
-          >
-            Talent Scaling
-          </Text>
-          {showScaling ? (
-            <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
-          ) : (
-            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
-          )}
-        </button>
-
-        {showScaling && (
-          <div className="px-3 sm:px-4 md:px-6 pb-3 sm:pb-4">
+          {/* Scaling Table */}
+          <div className="p-4 sm:p-5 md:p-6 bg-midnight-800/10 border-t lg:border-t-0 border-midnight-600/20">
+            <Text
+              as="span"
+              weight="semibold"
+              uppercase
+              className="text-xs sm:text-sm text-starlight-300 tracking-wider mb-3 sm:mb-4 block"
+            >
+              Talent Scaling
+            </Text>
             <TalentScalingTable talent={talent} elementColor={elementColor} />
           </div>
-        )}
+        </div>
       </div>
+    </div>
+  );
+};
+
+const Animations: React.FC<{ animations: AnimationMedia[] }> = ({
+  animations,
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentAnimation = animations[currentIndex];
+
+  return (
+    <div className="space-y-3 sm:space-y-4 max-w-xl mx-auto">
+      {/* Main Animation */}
+      <div className="rounded-lg sm:rounded-xl overflow-hidden border border-midnight-600/30">
+        <AnimatedCover
+          animation={currentAnimation}
+          fallbackUrl={currentAnimation?.imageUrl}
+        />
+      </div>
+
+      {animations.length > 1 && (
+        <div className="flex gap-2 sm:gap-2.5 overflow-x-auto scrollbar-hide pb-1">
+          {animations.map((anim, index) => (
+            <button
+              key={anim.imageUrl || index}
+              onClick={() => setCurrentIndex(index)}
+              className={`shrink-0 w-20 h-12 sm:w-24 sm:h-14 rounded-md sm:rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                index === currentIndex
+                  ? 'border-celestial-400 shadow-lg'
+                  : 'border-midnight-600/40 hover:border-starlight-500/50 opacity-70 hover:opacity-100'
+              }`}
+            >
+              <img
+                src={anim.imageUrl}
+                alt={anim.caption || `Animation ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Caption */}
+      {currentAnimation?.caption && (
+        <Text
+          as="p"
+          color="muted"
+          align="center"
+          className="text-[11px] sm:text-xs"
+        >
+          {currentAnimation.caption}
+        </Text>
+      )}
     </div>
   );
 };
