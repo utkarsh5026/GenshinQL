@@ -225,7 +225,7 @@ const Animations: React.FC<{ animations: AnimationMedia[] }> = ({
                   : 'border-midnight-600/40 hover:border-starlight-500/50 opacity-70 hover:opacity-100'
               }`}
             >
-              <img
+              <CachedImage
                 src={anim.imageUrl}
                 alt={anim.caption || `Animation ${index + 1}`}
                 className="w-full h-full object-cover"

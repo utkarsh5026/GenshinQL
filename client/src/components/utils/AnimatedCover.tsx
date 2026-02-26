@@ -2,6 +2,7 @@ import { Loader2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 import { CachedImage } from '@/features/cache';
+import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
 import { AnimationMedia } from '@/types';
 import { addListeners } from '@/utils/listener';
 
@@ -18,7 +19,6 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
 }) => {
   const [loadedVideoUrl, setLoadedVideoUrl] = useState<string | null>(null);
   const [isBuffering, setIsBuffering] = useState(false);
-  const [isInView, setIsInView] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const generationRef = useRef(0);
@@ -27,24 +27,19 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
   const isVideoReady =
     loadedVideoUrl !== null && loadedVideoUrl === animation?.videoUrl;
 
+  /** Track whether the component is visible in the viewport */
+  const isInView = useSharedIntersectionObserver(
+    containerRef as React.RefObject<Element>,
+    { threshold: 0.25 }
+  );
+
   /**
-   *  Track whether the component is visible in the viewport
+   * Mirror isInView into a ref so video event callbacks can read it
+   * without capturing a stale closure value.
    */
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        isInViewRef.current = entry.isIntersecting;
-        setIsInView(entry.isIntersecting);
-      },
-      { threshold: 0.25 }
-    );
-
-    observer.observe(container);
-    return () => observer.disconnect();
-  }, []);
+    isInViewRef.current = isInView;
+  }, [isInView]);
 
   /**
    * Play or pause whenever visibility or ready-state changes
@@ -154,7 +149,7 @@ export const AnimatedCover: React.FC<AnimatedCoverProps> = ({
                 loop
                 muted
                 playsInline
-                preload="auto"
+                preload="none"
               />
 
               {isBuffering && isVideoReady && (
