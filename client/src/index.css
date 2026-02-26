@@ -3,7 +3,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: 'Source Code Pro', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Noto Sans Mono', system-ui, -apple-system, sans-serif;
 
   /* Base theme colors */
   --color-background: oklch(100% 0 0);
