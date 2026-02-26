@@ -566,35 +566,37 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
   return (
     <Sheet open={isOpen} onOpenChange={onOpenChange}>
       <SheetContent side="left" className="w-72 p-0">
-        <nav className="py-4 overflow-y-auto h-full">
-          {/* Version item */}
-          <SidebarVersionItem
-            isActive={isRouteActive(versionItem.route)}
-            isExpanded={true}
-            onClick={close}
-          />
+        <div className="relative h-full">
+          <div className={styles.sidebarBg} aria-hidden="true" />
+          <nav className="py-4 overflow-y-auto h-full relative z-10">
+            <SidebarVersionItem
+              isActive={isRouteActive(versionItem.route)}
+              isExpanded={true}
+              onClick={close}
+            />
 
-          {navSections.map((section) => (
-            <div key={section.id}>
-              <SectionHeader label={section.label} />
-              {section.items.map((item) => (
-                <SidebarNavItem
-                  key={item.route}
-                  item={item}
-                  isActive={isRouteActive(item.route)}
-                  isExpanded={true}
-                  onClick={close}
-                />
-              ))}
-            </div>
-          ))}
+            {navSections.map((section) => (
+              <div key={section.id}>
+                <SectionHeader label={section.label} />
+                {section.items.map((item) => (
+                  <SidebarNavItem
+                    key={item.route}
+                    item={item}
+                    isActive={isRouteActive(item.route)}
+                    isExpanded={true}
+                    onClick={close}
+                  />
+                ))}
+              </div>
+            ))}
 
-          <SidebarRecentsSection
-            recents={recents}
-            isExpanded={true}
-            onItemClick={close}
-          />
-        </nav>
+            <SidebarRecentsSection
+              recents={recents}
+              isExpanded={true}
+              onItemClick={close}
+            />
+          </nav>
+        </div>
       </SheetContent>
     </Sheet>
   );
