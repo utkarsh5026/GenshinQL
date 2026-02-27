@@ -1,3 +1,4 @@
+import { Reorder } from 'framer-motion';
 import {
   Copy,
   Eye,
@@ -22,8 +23,8 @@ import {
   useTeamBuilderStore,
   useTeams,
 } from '../stores';
-import type { Team } from '../types';
-import { CharacterSlotCard } from './character-slot';
+import type { Team, TeamCharacterSlot } from '../types';
+import { CharacterSlotCard } from './character-slot/character-slot';
 import { TeamPreviewDialog } from './preview/preview-dialog';
 import { RotationEditor } from './rotation-editor';
 
@@ -201,8 +202,15 @@ export const TeamBuilderPage: React.FC = () => {
     updateTeamName,
     setCharacterSlot,
     setWeaponSlot,
+    setRefinementSlot,
     setArtifactSlot,
     setRolesSlot,
+    setConstellationSlot,
+    setLevelSlot,
+    setNotesSlot,
+    setMainStatsSlot,
+    setSubstatsSlot,
+    reorderSlots,
     clearSlot,
     setRotation,
   } = useTeamBuilderStore();
@@ -333,13 +341,20 @@ export const TeamBuilderPage: React.FC = () => {
                 <Sword className="w-4 h-4 text-muted-foreground" />
                 <span className="text-sm font-semibold">Characters</span>
                 <span className="text-xs text-muted-foreground/60">
-                  Click a slot to assign a character
+                  Drag ≡ to reorder · click a slot to assign
                 </span>
               </div>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <Reorder.Group
+                axis="y"
+                values={[...activeTeam.slots]}
+                onReorder={(newOrder) =>
+                  reorderSlots(activeTeam.id, newOrder as Team['slots'])
+                }
+                className="flex flex-col gap-3"
+              >
                 {activeTeam.slots.map((slot, slotIndex) => (
                   <CharacterSlotCard
-                    key={slotIndex}
+                    key={slot.id ?? slotIndex}
                     slot={slot}
                     slotIndex={slotIndex}
                     teamId={activeTeam.id}
@@ -351,16 +366,34 @@ export const TeamBuilderPage: React.FC = () => {
                     onSetWeapon={(w) =>
                       setWeaponSlot(activeTeam.id, slotIndex, w)
                     }
+                    onSetRefinement={(r) =>
+                      setRefinementSlot(activeTeam.id, slotIndex, r)
+                    }
                     onSetArtifacts={(a) =>
                       setArtifactSlot(activeTeam.id, slotIndex, a)
                     }
                     onSetRoles={(roles) =>
                       setRolesSlot(activeTeam.id, slotIndex, roles)
                     }
+                    onSetConstellation={(c) =>
+                      setConstellationSlot(activeTeam.id, slotIndex, c)
+                    }
+                    onSetLevel={(l) =>
+                      setLevelSlot(activeTeam.id, slotIndex, l)
+                    }
+                    onSetNotes={(n) =>
+                      setNotesSlot(activeTeam.id, slotIndex, n)
+                    }
+                    onSetMainStats={(ms: TeamCharacterSlot['mainStats']) =>
+                      setMainStatsSlot(activeTeam.id, slotIndex, ms)
+                    }
+                    onSetSubstats={(ss) =>
+                      setSubstatsSlot(activeTeam.id, slotIndex, ss)
+                    }
                     onClearSlot={() => clearSlot(activeTeam.id, slotIndex)}
                   />
                 ))}
-              </div>
+              </Reorder.Group>
             </div>
 
             <Separator />
