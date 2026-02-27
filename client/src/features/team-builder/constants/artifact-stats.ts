@@ -28,16 +28,30 @@ export const CIRCLET_MAIN_STATS: string[] = [
   'Healing Bonus%',
 ];
 
-/** Common substat options for artifact configuration */
+/** Priority order for substat display — lower value = higher priority. */
+export const SUBSTAT_PRIORITY: Record<string, number> = {
+  'CRIT Rate%': 0,
+  'CRIT DMG%': 1,
+  'ATK%': 2,
+  ATK: 3,
+  EM: 4,
+  'ER%': 5,
+  'HP%': 6,
+  HP: 7,
+  'DEF%': 8,
+  DEF: 9,
+};
+
+/** Common substat options for artifact configuration, ordered by priority. */
 export const SUBSTAT_OPTIONS: string[] = [
-  'ATK%',
-  'ATK',
-  'DEF%',
-  'DEF',
-  'HP%',
-  'HP',
-  'ER%',
-  'EM',
   'CRIT Rate%',
   'CRIT DMG%',
+  'ATK%',
+  'ATK',
+  'EM',
+  'ER%',
+  'HP%',
+  'HP',
+  'DEF%',
+  'DEF',
 ];

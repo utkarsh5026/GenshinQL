@@ -10,6 +10,7 @@ import { getElementHexColor } from '@/lib/game-colors';
 import { cn } from '@/lib/utils';
 import type { Character } from '@/types';
 
+import { SUBSTAT_PRIORITY } from '../../constants';
 import type {
   ArtifactConfig,
   CharacterRole,
@@ -43,7 +44,7 @@ interface CharacterSlotCardProps {
 type EditSection = 'weapon' | 'artifacts' | 'roles' | 'notes' | null;
 
 /** Quick-select level presets */
-const LEVEL_PRESETS = [20, 40, 60, 70, 80, 90];
+const LEVEL_PRESETS = [20, 40, 60, 70, 80, 90, 100];
 
 /** Ordered main-stat chip definitions for the collapsed artifact summary. */
 const MAIN_STAT_CHIPS: Array<{
@@ -61,7 +62,7 @@ const optionButtonClass = (isActive: boolean) =>
     'w-7 py-1 text-xs rounded-md font-semibold transition-all',
     isActive
       ? 'bg-primary text-primary-foreground'
-      : 'bg-accent/40 hover:bg-accent/70 text-muted-foreground'
+      : 'bg-surface-300 hover:bg-midnight-700 text-muted-foreground'
   );
 
 /** ── InlinePanelHeader ────────────────────────────────────────────────────
@@ -123,6 +124,28 @@ const RolesPanel: React.FC<RolesPanelProps> = ({
   </div>
 );
 
+interface SubstatChipProps {
+  stat: string;
+  showSeparator: boolean;
+}
+
+const SubstatChip: React.FC<SubstatChipProps> = ({ stat, showSeparator }) => (
+  <Reorder.Item
+    value={stat}
+    className="flex items-center cursor-grab active:cursor-grabbing touch-none select-none"
+  >
+    <span className="text-[9px] px-1.5 py-0.5 rounded bg-primary/15 border border-primary/30 text-primary/80 flex items-center gap-0.5">
+      <GripVertical className="w-2.5 h-2.5 text-primary/30 shrink-0" />
+      {stat}
+    </span>
+    {showSeparator && (
+      <span className="text-[8px] text-muted-foreground/40 font-semibold mx-1 pointer-events-none">
+        &gt;&gt;
+      </span>
+    )}
+  </Reorder.Item>
+);
+
 export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   slot,
   slotIndex,
@@ -175,11 +198,15 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   };
 
   const toggleSubstat = (stat: string) => {
-    onSetSubstats(
-      substats.includes(stat)
-        ? substats.filter((s) => s !== stat)
-        : [...substats, stat]
-    );
+    if (substats.includes(stat)) {
+      onSetSubstats(substats.filter((s) => s !== stat));
+    } else {
+      onSetSubstats(
+        [...substats, stat].sort(
+          (a, b) => (SUBSTAT_PRIORITY[a] ?? 99) - (SUBSTAT_PRIORITY[b] ?? 99)
+        )
+      );
+    }
   };
 
   const hasMainStats = mainStats.sands || mainStats.goblet || mainStats.circlet;
@@ -202,7 +229,7 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
         >
           {/* Drag handle */}
           <div
-            className="absolute top-2 right-2 z-10 w-6 h-6 rounded-md bg-border/20 hover:bg-border/40 flex items-center justify-center cursor-grab active:cursor-grabbing transition-all"
+            className="absolute top-2 right-2 z-10 w-6 h-6 rounded-md bg-midnight-800/50 hover:bg-midnight-700/70 flex items-center justify-center cursor-grab active:cursor-grabbing transition-all"
             title="Drag to reorder"
           >
             <GripVertical className="w-3 h-3 text-muted-foreground/50" />
@@ -210,12 +237,12 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
           <button
             onClick={() => setPickerOpen(true)}
             className="
-              group w-full h-full rounded-2xl border-2 border-dashed border-border/40
-              bg-accent/10 hover:bg-accent/20 hover:border-primary/40
+              group w-full h-full rounded-2xl border-2 border-dashed border-midnight-700/50
+              bg-midnight-900/60 hover:bg-midnight-800/60 hover:border-primary/40
               transition-all duration-200 flex flex-row items-center justify-center gap-3
             "
           >
-            <div className="w-10 h-10 rounded-xl bg-accent/40 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-200">
+            <div className="w-10 h-10 rounded-xl bg-surface-300 flex items-center justify-center group-hover:bg-celestial-900/60 transition-all duration-200">
               <Plus className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             </div>
             <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
@@ -304,21 +331,21 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
                 <input
                   type="number"
                   min={1}
-                  max={90}
+                  max={100}
                   value={level}
                   onChange={(e) =>
                     onSetLevel(
                       Math.min(90, Math.max(1, Number(e.target.value)))
                     )
                   }
-                  className="w-full px-2 py-1 text-xs bg-accent/40 border border-border/40 rounded-md text-center focus:outline-none focus:border-primary/60"
+                  className="w-full px-2 py-1 text-xs bg-midnight-800/80 border border-midnight-700/60 rounded-md text-center focus:outline-none focus:border-primary/60"
                 />
               </SlotPopover>
             </div>
           </div>
 
           {/* ── RIGHT: Content ──────────────────────────────────── */}
-          <div className="flex-1 p-3 min-w-0 bg-background/95 space-y-1.5">
+          <div className="flex-1 p-3 min-w-0 bg-surface-200 space-y-1.5">
             {/* Row 1: Name + action buttons */}
             <div className="flex items-start justify-between gap-2">
               <p
@@ -330,21 +357,21 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
               <div className="flex gap-1 shrink-0">
                 <div
                   onPointerDown={(e) => controls.start(e)}
-                  className="w-6 h-6 rounded-md bg-accent/40 hover:bg-accent/70 flex items-center justify-center transition-all cursor-grab active:cursor-grabbing"
+                  className="w-6 h-6 rounded-md bg-surface-300 hover:bg-midnight-700 flex items-center justify-center transition-all cursor-grab active:cursor-grabbing"
                   title="Drag to reorder"
                 >
                   <GripVertical className="w-3 h-3 text-muted-foreground" />
                 </div>
                 <button
                   onClick={() => setPickerOpen(true)}
-                  className="w-6 h-6 rounded-md bg-accent/40 hover:bg-accent/70 flex items-center justify-center transition-all"
+                  className="w-6 h-6 rounded-md bg-surface-300 hover:bg-midnight-700 flex items-center justify-center transition-all"
                   title="Change character"
                 >
                   <Pencil className="w-3 h-3 text-muted-foreground" />
                 </button>
                 <button
                   onClick={onClearSlot}
-                  className="w-6 h-6 rounded-md bg-accent/40 hover:bg-red-900/60 flex items-center justify-center transition-all"
+                  className="w-6 h-6 rounded-md bg-surface-300 hover:bg-red-900/60 flex items-center justify-center transition-all"
                   title="Clear slot"
                 >
                   <X className="w-3 h-3 text-muted-foreground" />
@@ -358,7 +385,7 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
             {/* Row 3: Weapon | Artifacts (two-column grid) */}
             <div className="grid grid-cols-2 gap-2">
               {/* Weapon */}
-              <div className="rounded-lg bg-accent/30 hover:bg-accent/50 border border-border/30 hover:border-border/60 transition-all min-w-0">
+              <div className="rounded-lg bg-midnight-800/80 hover:bg-surface-300/70 border border-midnight-700/50 hover:border-midnight-600/80 transition-all min-w-0">
                 {weapon ? (
                   <div className="flex items-center gap-2 px-2 py-1.5 min-w-0">
                     <button
@@ -414,7 +441,7 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
                 onClick={() =>
                   editing === 'artifacts' ? setEditing(null) : openArtifacts()
                 }
-                className="flex items-start px-2 py-1.5 rounded-lg bg-accent/30 hover:bg-accent/50 border border-border/30 hover:border-border/60 transition-all text-left min-w-0"
+                className="flex items-start px-2 py-1.5 rounded-lg bg-midnight-800/80 hover:bg-surface-300/70 border border-midnight-700/50 hover:border-midnight-600/80 transition-all text-left min-w-0"
               >
                 {artifacts ? (
                   <ArtifactDisplay
@@ -436,7 +463,7 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
                   mainStats[key] ? (
                     <span
                       key={key}
-                      className="text-[9px] px-1.5 py-0.5 rounded bg-accent/60 text-muted-foreground"
+                      className="text-[9px] px-1.5 py-0.5 rounded bg-midnight-700 text-midnight-300"
                     >
                       {prefix}: {mainStats[key]}
                     </span>
@@ -445,24 +472,28 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
               </div>
             )}
 
-            {/* Substat chips (collapsed view) */}
+            {/* Substat chips (collapsed view) — drag to reorder priority */}
             {artifacts && substats.length > 0 && editing !== 'artifacts' && (
-              <div className="flex flex-wrap gap-1">
-                {substats.map((s) => (
-                  <span
+              <Reorder.Group
+                axis="x"
+                values={substats}
+                onReorder={onSetSubstats}
+                className="flex flex-wrap items-center gap-0.5"
+              >
+                {substats.map((s, i) => (
+                  <SubstatChip
                     key={s}
-                    className="text-[9px] px-1.5 py-0.5 rounded bg-primary/15 border border-primary/30 text-primary/80"
-                  >
-                    {s}
-                  </span>
+                    stat={s}
+                    showSeparator={i < substats.length - 1}
+                  />
                 ))}
-              </div>
+              </Reorder.Group>
             )}
 
             {/* Notes row */}
             <button
               onClick={() => toggleEditing('notes')}
-              className="w-full flex items-start px-2 py-1.5 rounded-lg bg-accent/20 hover:bg-accent/40 transition-all text-left border border-dashed border-border/20 hover:border-border/40"
+              className="w-full flex items-start px-2 py-1.5 rounded-lg bg-midnight-900/60 hover:bg-midnight-800/60 transition-all text-left border border-dashed border-midnight-800/50 hover:border-midnight-700/70"
             >
               {notes ? (
                 <span className="text-xs text-foreground/60 wrap-break-word min-w-0 w-full">
@@ -494,7 +525,7 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
                   onClose={() => setEditing(null)}
                 />
                 <textarea
-                  className="w-full px-2 py-1.5 text-xs bg-accent/40 border border-border/40 rounded-md resize-none focus:outline-none focus:border-primary/60"
+                  className="w-full px-2 py-1.5 text-xs bg-midnight-800/80 border border-midnight-700/60 rounded-md resize-none focus:outline-none focus:border-primary/60"
                   rows={3}
                   maxLength={120}
                   value={notes}

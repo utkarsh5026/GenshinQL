@@ -37,6 +37,11 @@ interface TeamBuilderState {
     slotIndex: number,
     weapon: WeaponSummary | null
   ) => void;
+  setRefinementSlot: (
+    teamId: string,
+    slotIndex: number,
+    refinement: number
+  ) => void;
   setArtifactSlot: (
     teamId: string,
     slotIndex: number,
@@ -47,13 +52,28 @@ interface TeamBuilderState {
     slotIndex: number,
     roles: CharacterRole[]
   ) => void;
+  setConstellationSlot: (
+    teamId: string,
+    slotIndex: number,
+    constellation: number
+  ) => void;
+  setLevelSlot: (teamId: string, slotIndex: number, level: number) => void;
+  setNotesSlot: (teamId: string, slotIndex: number, notes: string) => void;
+  setMainStatsSlot: (
+    teamId: string,
+    slotIndex: number,
+    mainStats: TeamCharacterSlot['mainStats']
+  ) => void;
+  setSubstatsSlot: (
+    teamId: string,
+    slotIndex: number,
+    substats: string[]
+  ) => void;
+  reorderSlots: (teamId: string, newSlots: Team['slots']) => void;
   clearSlot: (teamId: string, slotIndex: number) => void;
 
-  // Rotation
   setRotation: (teamId: string, rotation: string) => void;
 }
-
-// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 const generateId = () =>
   `team-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
@@ -74,16 +94,12 @@ const updateTeamById = (
   updater: (team: Team) => Team
 ): Team[] => teams.map((t) => (t.id === teamId ? updater(t) : t));
 
-// ─── Store ────────────────────────────────────────────────────────────────────
-
 export const useTeamBuilderStore = create<TeamBuilderState>()(
   devtools(
     persist(
       (set, get) => ({
         teams: [],
         activeTeamId: null,
-
-        // ── Team management ────────────────────────────────────────────────
 
         createTeam: () => {
           const id = generateId();
@@ -134,16 +150,14 @@ export const useTeamBuilderStore = create<TeamBuilderState>()(
           }));
         },
 
-        // ── Slot management ────────────────────────────────────────────────
-
         setCharacterSlot: (teamId, slotIndex, character) => {
           set((state) => ({
             teams: updateTeamById(state.teams, teamId, (t) =>
               updateSlot(t, slotIndex, (slot) => ({
                 ...slot,
                 character,
-                // Reset weapon if character changes (weapon type may differ)
                 weapon: character ? slot.weapon : null,
+                weaponRefinement: character ? slot.weaponRefinement : 1,
               }))
             ),
           }));
@@ -152,7 +166,22 @@ export const useTeamBuilderStore = create<TeamBuilderState>()(
         setWeaponSlot: (teamId, slotIndex, weapon) => {
           set((state) => ({
             teams: updateTeamById(state.teams, teamId, (t) =>
-              updateSlot(t, slotIndex, (slot) => ({ ...slot, weapon }))
+              updateSlot(t, slotIndex, (slot) => ({
+                ...slot,
+                weapon,
+                weaponRefinement: weapon ? slot.weaponRefinement : 1,
+              }))
+            ),
+          }));
+        },
+
+        setRefinementSlot: (teamId, slotIndex, refinement) => {
+          set((state) => ({
+            teams: updateTeamById(state.teams, teamId, (t) =>
+              updateSlot(t, slotIndex, (slot) => ({
+                ...slot,
+                weaponRefinement: refinement,
+              }))
             ),
           }));
         },
@@ -170,6 +199,56 @@ export const useTeamBuilderStore = create<TeamBuilderState>()(
             teams: updateTeamById(state.teams, teamId, (t) =>
               updateSlot(t, slotIndex, (slot) => ({ ...slot, roles }))
             ),
+          }));
+        },
+
+        setConstellationSlot: (teamId, slotIndex, constellation) => {
+          set((state) => ({
+            teams: updateTeamById(state.teams, teamId, (t) =>
+              updateSlot(t, slotIndex, (slot) => ({ ...slot, constellation }))
+            ),
+          }));
+        },
+
+        setLevelSlot: (teamId, slotIndex, level) => {
+          set((state) => ({
+            teams: updateTeamById(state.teams, teamId, (t) =>
+              updateSlot(t, slotIndex, (slot) => ({ ...slot, level }))
+            ),
+          }));
+        },
+
+        setNotesSlot: (teamId, slotIndex, notes) => {
+          set((state) => ({
+            teams: updateTeamById(state.teams, teamId, (t) =>
+              updateSlot(t, slotIndex, (slot) => ({ ...slot, notes }))
+            ),
+          }));
+        },
+
+        setMainStatsSlot: (teamId, slotIndex, mainStats) => {
+          set((state) => ({
+            teams: updateTeamById(state.teams, teamId, (t) =>
+              updateSlot(t, slotIndex, (slot) => ({ ...slot, mainStats }))
+            ),
+          }));
+        },
+
+        setSubstatsSlot: (teamId, slotIndex, substats) => {
+          set((state) => ({
+            teams: updateTeamById(state.teams, teamId, (t) =>
+              updateSlot(t, slotIndex, (slot) => ({ ...slot, substats }))
+            ),
+          }));
+        },
+
+        reorderSlots: (teamId, newSlots) => {
+          set((state) => ({
+            teams: updateTeamById(state.teams, teamId, (t) => ({
+              ...t,
+              slots: newSlots,
+              updatedAt: Date.now(),
+            })),
           }));
         },
 

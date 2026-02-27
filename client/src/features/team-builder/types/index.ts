@@ -24,10 +24,24 @@ export type ArtifactConfig =
     };
 
 export interface TeamCharacterSlot {
+  /** Stable UUID for Framer Motion Reorder key — persisted with the slot */
+  id: string;
   character: Character | null;
   weapon: WeaponSummary | null;
+  /** Weapon refinement rank: 1–5 */
+  weaponRefinement: number;
   artifacts: ArtifactConfig | null;
   roles: CharacterRole[];
+  /** Constellation level: 0–6 */
+  constellation: number;
+  /** Character level: 1–90 */
+  level: number;
+  /** Free-text note for rotation/role context */
+  notes: string;
+  /** Artifact main stat selections for Sands, Goblet, Circlet */
+  mainStats: { sands: string; goblet: string; circlet: string };
+  /** Selected artifact substats */
+  substats: string[];
 }
 
 export interface Team {
@@ -45,10 +59,17 @@ export interface Team {
 }
 
 export const createEmptySlot = (): TeamCharacterSlot => ({
+  id: crypto.randomUUID(),
   character: null,
   weapon: null,
+  weaponRefinement: 1,
   artifacts: null,
   roles: [],
+  constellation: 0,
+  level: 90,
+  notes: '',
+  mainStats: { sands: '', goblet: '', circlet: '' },
+  substats: [],
 });
 
 export const createEmptyTeam = (id: string): Team => ({
