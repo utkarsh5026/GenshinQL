@@ -24,8 +24,8 @@ import {
 } from '../stores';
 import type { Team } from '../types';
 import { CharacterSlotCard } from './character-slot';
+import { TeamPreviewDialog } from './preview/preview-dialog';
 import { RotationEditor } from './rotation-editor';
-import { TeamPreviewDialog } from './TeamPreviewDialog';
 
 const TeamNameInput: React.FC<{
   name: string;
