@@ -3,7 +3,7 @@ import { Reorder, useDragControls } from 'framer-motion';
 import { GripVertical, Pencil, Plus, X } from 'lucide-react';
 import React, { useState } from 'react';
 
-import { CachedImage } from '@/features/cache';
+import { ElementBadge } from '@/components/ui/genshin-game-icons';
 import { useFetchArtifactLinks } from '@/features/characters/stores';
 import type { WeaponSummary } from '@/features/weapons';
 import { getElementHexColor } from '@/lib/game-colors';
@@ -16,11 +16,11 @@ import type {
   CharacterRole,
   TeamCharacterSlot,
 } from '../../types';
-import { ArtifactDisplay, ArtifactsPanel } from '../artifact-picker';
 import { CharacterPickerDialog } from '../character-picker';
 import { RoleBadges, RoleBadgeSelector } from '../role-selector';
-import { WeaponPickerDialog } from '../weapon-picker';
+import { ArtifactDisplay, ArtifactsPanel } from './artifact-picker';
 import { SlotPopover } from './slot-popover';
+import { WeaponSelector } from './weapon-selector';
 
 interface CharacterSlotCardProps {
   slot: TeamCharacterSlot;
@@ -164,7 +164,6 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   onClearSlot,
 }) => {
   const [pickerOpen, setPickerOpen] = useState(false);
-  const [weaponPickerOpen, setWeaponPickerOpen] = useState(false);
   const [editing, setEditing] = useState<EditSection>(null);
   const fetchArtifactLinks = useFetchArtifactLinks();
   const controls = useDragControls();
@@ -253,7 +252,7 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
       ) : (
         /** ── Filled slot — horizontal layout ────────────────── */
         <div
-          className="relative rounded-2xl overflow-hidden border border-border/40 flex flex-row"
+          className="relative rounded-2xl overflow-hidden border-4 border-border/40 flex flex-row"
           style={{ borderColor: `${elementColor}40` }}
         >
           {/* ── LEFT: Portrait ──────────────────────────────────── */}
@@ -275,14 +274,9 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
             {/* Element icon */}
             <div className="absolute top-2 left-2 z-10">
               {character.elementUrl && (
-                <CachedImage
-                  src={character.elementUrl}
-                  alt={character.element}
-                  width={18}
-                  height={18}
-                  className="w-4.5 h-4.5 object-contain drop-shadow-lg"
-                  skeletonShape="rounded"
-                  skeletonSize="sm"
+                <ElementBadge
+                  name={character.element}
+                  url={character.elementUrl}
                 />
               )}
             </div>
@@ -385,56 +379,14 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
             {/* Row 3: Weapon | Artifacts (two-column grid) */}
             <div className="grid grid-cols-2 gap-2">
               {/* Weapon */}
-              <div className="rounded-lg bg-midnight-800/80 hover:bg-surface-300/70 border border-midnight-700/50 hover:border-midnight-600/80 transition-all min-w-0">
-                {weapon ? (
-                  <div className="flex items-center gap-2 px-2 py-1.5 min-w-0">
-                    <button
-                      onClick={() => setWeaponPickerOpen(true)}
-                      className="flex items-center gap-2 flex-1 min-w-0 text-left"
-                    >
-                      <img
-                        src={weapon.iconUrl}
-                        alt={weapon.name}
-                        className="w-6 h-6 object-contain shrink-0"
-                      />
-                      <span className="text-xs font-medium wrap-break-word min-w-0">
-                        {weapon.name}
-                      </span>
-                    </button>
-                    <SlotPopover
-                      label={`R${weaponRefinement}`}
-                      title="Refinement"
-                      side="top"
-                      contentClassName="w-auto"
-                      triggerClassName="shrink-0"
-                    >
-                      <div className="flex gap-1">
-                        {[1, 2, 3, 4, 5].map((r) => (
-                          <PopoverPrimitive.Close key={r} asChild>
-                            <button
-                              onClick={() => onSetRefinement(r)}
-                              className={optionButtonClass(
-                                weaponRefinement === r
-                              )}
-                            >
-                              R{r}
-                            </button>
-                          </PopoverPrimitive.Close>
-                        ))}
-                      </div>
-                    </SlotPopover>
-                  </div>
-                ) : (
-                  <button
-                    onClick={() => setWeaponPickerOpen(true)}
-                    className="flex w-full items-center px-2 py-1.5 text-left"
-                  >
-                    <span className="text-xs text-muted-foreground">
-                      Add weapon...
-                    </span>
-                  </button>
-                )}
-              </div>
+              <WeaponSelector
+                weapon={weapon}
+                weaponTypeFilter={character.weaponType}
+                weapons={weapons}
+                weaponRefinement={weaponRefinement}
+                onSetWeapon={onSetWeapon}
+                onSetRefinement={onSetRefinement}
+              />
 
               {/* Artifacts */}
               <button
@@ -561,16 +513,6 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
         selectedCharacters={allSlots.map((s) => s.character)}
         onSelect={onSetCharacter}
       />
-      {character && (
-        <WeaponPickerDialog
-          open={weaponPickerOpen}
-          onOpenChange={setWeaponPickerOpen}
-          weaponTypeFilter={character.weaponType}
-          currentWeapon={weapon}
-          onSelect={onSetWeapon}
-          weapons={weapons}
-        />
-      )}
     </Reorder.Item>
   );
 };

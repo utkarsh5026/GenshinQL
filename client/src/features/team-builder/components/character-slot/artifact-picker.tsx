@@ -24,8 +24,8 @@ import {
   GOBLET_MAIN_STATS,
   SANDS_MAIN_STATS,
   SUBSTAT_OPTIONS,
-} from '../constants';
-import type { ArtifactConfig } from '../types';
+} from '../../constants';
+import type { ArtifactConfig } from '../../types';
 
 interface ArtifactPickerPanelProps {
   current: ArtifactConfig | null;
