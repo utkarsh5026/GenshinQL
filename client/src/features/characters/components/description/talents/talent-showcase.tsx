@@ -8,8 +8,8 @@ import { AbilitiesListSplitter } from '@/components/utils';
 import { CachedImage } from '@/features/cache';
 import { useCharacterTalents } from '@/features/characters/hooks';
 import { extractConstellationTags } from '@/features/characters/utils/ability-tags';
+import { getElementHexColor } from '@/lib/game-colors';
 import { AnimationMedia } from '@/types';
-import { decideColor } from '@/utils/color';
 
 import type { CharacterDetailed, Talent } from '../../../types';
 import { TalentScalingTable } from './scaling-table';
@@ -25,7 +25,7 @@ interface TalentShowcaseProps {
  */
 const TalentShowcase: React.FC<TalentShowcaseProps> = ({ character }) => {
   const { mainTalents } = useCharacterTalents(character);
-  const elementColor = decideColor(character.element);
+  const elementColor = getElementHexColor(character.element);
 
   return (
     <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">

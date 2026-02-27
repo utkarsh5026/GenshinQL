@@ -1,3 +1,18 @@
+/**
+ * Weapon rarity color utilities.
+ * Base palettes sourced from `@/lib/game-colors` — only weapon-card-specific
+ * composite configs live here.
+ */
+
+import {
+  getRarityActiveClasses,
+  getRarityEntry,
+  getRarityHexColor,
+  RARITY_COLORS,
+} from '@/lib/game-colors';
+
+export { getRarityHexColor };
+
 export const rarityColorMap: Record<
   number,
   {
@@ -9,39 +24,39 @@ export const rarityColorMap: Record<
   }
 > = {
   5: {
-    border: 'border-legendary-600/30',
-    text: 'text-legendary-500',
+    border: RARITY_COLORS[5].borderSoft,
+    text: RARITY_COLORS[5].textStrong,
     divider: 'border-legendary-600/20',
-    avatarBorder: 'border-legendary-500',
-    background: 'bg-legendary-500/10',
+    avatarBorder: RARITY_COLORS[5].border,
+    background: RARITY_COLORS[5].bg,
   },
   4: {
-    border: 'border-epic-600/30',
-    text: 'text-epic-500',
+    border: RARITY_COLORS[4].borderSoft,
+    text: RARITY_COLORS[4].textStrong,
     divider: 'border-epic-600/20',
-    avatarBorder: 'border-epic-500',
-    background: 'bg-epic-500/10',
+    avatarBorder: RARITY_COLORS[4].border,
+    background: RARITY_COLORS[4].bg,
   },
   3: {
-    border: 'border-rare-600/30',
-    text: 'text-rare-500',
+    border: RARITY_COLORS[3].borderSoft,
+    text: RARITY_COLORS[3].textStrong,
     divider: 'border-rare-600/20',
-    avatarBorder: 'border-rare-500',
-    background: 'bg-rare-500/10',
+    avatarBorder: RARITY_COLORS[3].border,
+    background: RARITY_COLORS[3].bg,
   },
   2: {
-    border: 'border-uncommon-600/30',
-    text: 'text-uncommon-500',
+    border: RARITY_COLORS[2].borderSoft,
+    text: RARITY_COLORS[2].textStrong,
     divider: 'border-uncommon-600/20',
-    avatarBorder: 'border-uncommon-500',
-    background: 'bg-uncommon-500/10',
+    avatarBorder: RARITY_COLORS[2].border,
+    background: RARITY_COLORS[2].bg,
   },
   1: {
-    border: 'border-common-600/30',
-    text: 'text-common-500',
+    border: RARITY_COLORS[1].borderSoft,
+    text: RARITY_COLORS[1].textStrong,
     divider: 'border-common-600/20',
-    avatarBorder: 'border-common-500',
-    background: 'bg-common-500/10',
+    avatarBorder: RARITY_COLORS[1].border,
+    background: RARITY_COLORS[1].bg,
   },
 } as const;
 
@@ -50,8 +65,8 @@ export function getRarityColor(rarity: number) {
 }
 
 /**
- * Comprehensive rarity styling config for premium weapon cards
- * Uses full color palette (50-900 shades) with gradients
+ * Comprehensive rarity styling config for premium weapon cards.
+ * Uses full color palette (50-900 shades) with gradients.
  */
 export interface RarityStyleConfig {
   container: string;
@@ -68,7 +83,6 @@ export interface RarityStyleConfig {
 
 export const rarityStyleMap: Record<number, RarityStyleConfig> = {
   5: {
-    // LEGENDARY - Gold accent, clean
     container:
       'border-l-4 border-legendary-500 bg-surface-50 dark:bg-surface-200 shadow-md',
     avatarBorder: 'border-2 border-legendary-500/60 rounded-lg',
@@ -82,7 +96,6 @@ export const rarityStyleMap: Record<number, RarityStyleConfig> = {
     hoverClass: 'legendary',
   },
   4: {
-    // EPIC - Purple accent
     container:
       'border-l-4 border-epic-500 bg-surface-50 dark:bg-surface-200 shadow-md',
     avatarBorder: 'border-2 border-epic-500/60 rounded-lg',
@@ -96,7 +109,6 @@ export const rarityStyleMap: Record<number, RarityStyleConfig> = {
     hoverClass: 'epic',
   },
   3: {
-    // RARE - Blue accent
     container:
       'border-l-4 border-rare-500 bg-surface-50 dark:bg-surface-200 shadow',
     avatarBorder: 'border-2 border-rare-500/60 rounded-lg',
@@ -110,7 +122,6 @@ export const rarityStyleMap: Record<number, RarityStyleConfig> = {
     hoverClass: 'rare',
   },
   2: {
-    // UNCOMMON - Green accent
     container:
       'border-l-4 border-uncommon-500 bg-surface-50 dark:bg-surface-200 shadow-sm',
     avatarBorder: 'border border-uncommon-500/50 rounded-lg',
@@ -124,7 +135,6 @@ export const rarityStyleMap: Record<number, RarityStyleConfig> = {
     hoverClass: 'uncommon',
   },
   1: {
-    // COMMON - Gray, minimal
     container:
       'border-l-4 border-common-400 bg-surface-50 dark:bg-surface-200 shadow-sm',
     avatarBorder: 'border border-common-400/50 rounded-lg',
@@ -144,54 +154,18 @@ export function getRarityStyles(rarity: number): RarityStyleConfig {
 }
 
 /**
- * Returns rarity-specific Tailwind classes for menu items based on weapon rarity
- * Mirrors the pattern used in character-description.tsx for elements
+ * Returns rarity-specific active-state classes for menu item rows.
+ * Delegates to `getRarityActiveClasses` from `@/lib/game-colors`.
  */
 export function getRarityClasses(rarity: number): {
   active: string;
   indicator: string;
 } {
-  const rarityClassMap: Record<number, { active: string; indicator: string }> =
-    {
-      5: {
-        active:
-          'bg-linear-to-r from-legendary-500/20 via-legendary-400/15 to-transparent text-legendary-300 border-legendary-500/40',
-        indicator: 'bg-legendary-400',
-      },
-      4: {
-        active:
-          'bg-linear-to-r from-epic-500/20 via-epic-400/15 to-transparent text-epic-300 border-epic-500/40',
-        indicator: 'bg-epic-400',
-      },
-      3: {
-        active:
-          'bg-linear-to-r from-rare-500/20 via-rare-400/15 to-transparent text-rare-300 border-rare-500/40',
-        indicator: 'bg-rare-400',
-      },
-      2: {
-        active:
-          'bg-linear-to-r from-uncommon-500/20 via-uncommon-400/15 to-transparent text-uncommon-300 border-uncommon-500/40',
-        indicator: 'bg-uncommon-400',
-      },
-      1: {
-        active:
-          'bg-linear-to-r from-common-500/20 via-common-400/15 to-transparent text-common-300 border-common-500/40',
-        indicator: 'bg-common-400',
-      },
-    };
-  return rarityClassMap[rarity] || rarityClassMap[1];
+  return getRarityActiveClasses(rarity);
 }
 
 /**
- * Returns the primary hex color for a rarity level (for inline styles like boxShadow)
+ * Returns the primary hex color for a rarity level (for inline styles).
+ * Re-exported from `@/lib/game-colors` for backward compat.
  */
-export function getRarityHexColor(rarity: number): string {
-  const hexMap: Record<number, string> = {
-    5: '#D4A84B', // legendary gold
-    4: '#A855F7', // epic purple
-    3: '#3B82F6', // rare blue
-    2: '#22C55E', // uncommon green
-    1: '#9CA3AF', // common gray
-  };
-  return hexMap[rarity] || hexMap[1];
-}
+export { getRarityEntry };
