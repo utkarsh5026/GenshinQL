@@ -12,6 +12,7 @@ import {
   Shield,
   Sparkles,
   Swords,
+  Users2,
   Waypoints,
 } from 'lucide-react';
 import React, { useMemo } from 'react';
@@ -74,6 +75,12 @@ const navSections: NavSection[] = [
         label: 'Routine',
         icon: ScrollText,
         iconColor: 'oklch(60% 0.24 300)',
+      },
+      {
+        route: '/teams',
+        label: 'Teams',
+        icon: Users2,
+        iconColor: 'oklch(62% 0.18 165)',
       },
     ],
   },
