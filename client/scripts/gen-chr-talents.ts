@@ -11,13 +11,32 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-const CHARS_DIR = join(import.meta.dir, '..', 'client', 'public', 'characters');
-const OUTPUT_FILE = join(import.meta.dir, '..', 'client', 'public', 'chrTalents.json');
+const CHARS_DIR = join(
+  import.meta.dirname,
+  '..',
+  'client',
+  'public',
+  'characters'
+);
+const OUTPUT_FILE = join(
+  import.meta.dirname,
+  '..',
+  'client',
+  'public',
+  'chrTalents.json'
+);
 
-const TALENT_TYPES = ['Normal Attack', 'Elemental Skill', 'Elemental Burst'] as const;
+const TALENT_TYPES = [
+  'Normal Attack',
+  'Elemental Skill',
+  'Elemental Burst',
+] as const;
 
 type TalentIconEntry = { name: string; iconUrl: string };
-type CharTalentsMap = Record<string, [TalentIconEntry, TalentIconEntry, TalentIconEntry]>;
+type CharTalentsMap = Record<
+  string,
+  [TalentIconEntry, TalentIconEntry, TalentIconEntry]
+>;
 
 const result: CharTalentsMap = {};
 
@@ -31,7 +50,11 @@ for (const file of files.sort()) {
   const raw = await readFile(join(CHARS_DIR, file), 'utf8');
   const data = JSON.parse(raw) as {
     name: string;
-    talents?: Array<{ talentName: string; talentIcon: string; talentType: string }>;
+    talents?: Array<{
+      talentName: string;
+      talentIcon: string;
+      talentType: string;
+    }>;
   };
 
   if (!data.name || !Array.isArray(data.talents)) {
