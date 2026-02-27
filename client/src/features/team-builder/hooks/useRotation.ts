@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import type {
   RotationAbility,
-  RotationStep,
+  RotationSegment,
   TeamCharacterSlot,
 } from '../types';
 import { parseSteps, serializeSteps } from '../utils';
@@ -19,20 +19,29 @@ interface UseRotationOptions {
 }
 
 interface UseRotationReturn {
-  steps: RotationStep[];
+  segments: RotationSegment[];
   selectedCharName: string | null;
   filledSlots: (TeamCharacterSlot & {
     character: NonNullable<TeamCharacterSlot['character']>;
   })[];
   serializedLength: number;
   handleSelectChar: (name: string) => void;
-  handleAddStep: (ability: RotationAbility) => void;
-  handleRemoveStep: (index: number) => void;
-  handleNoteChange: (index: number, note: string) => void;
+  handleAddAbility: (ability: RotationAbility) => void;
+  handleAddAbilityToSegment: (
+    segmentId: string,
+    ability: RotationAbility
+  ) => void;
+  handleRemoveAbilityFromSegment: (
+    segmentId: string,
+    abilityIndex: number
+  ) => void;
+  handleRemoveSegment: (segmentId: string) => void;
+  handleNoteChange: (segmentId: string, note: string) => void;
+  handleReorderSegments: (newSegments: RotationSegment[]) => void;
   handleReset: () => void;
 }
 
-/** Manages rotation step state and all associated handlers for the rotation editor. */
+/** Manages rotation segment state and all associated handlers for the rotation editor. */
 export function useRotation({
   value,
   onChange,
@@ -61,7 +70,7 @@ export function useRotation({
     [filledSlots]
   );
 
-  const [steps, setSteps] = useState<RotationStep[]>(() =>
+  const [segments, setSegments] = useState<RotationSegment[]>(() =>
     parseSteps(value, validNames, iconUrlMap)
   );
   const [selectedCharName, setSelectedCharName] = useState<string | null>(null);
@@ -72,14 +81,14 @@ export function useRotation({
       isMounted.current = true;
       return;
     }
-    onChange(serializeSteps(steps));
+    onChange(serializeSteps(segments));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [steps]);
+  }, [segments]);
 
-  /** Reset steps when the parent clears the value externally. */
+  /** Reset segments when the parent clears the value externally. */
   useEffect(() => {
-    if (value === '' && steps.length > 0) {
-      setSteps([]);
+    if (value === '' && segments.length > 0) {
+      setSegments([]);
       setSelectedCharName(null);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -89,48 +98,111 @@ export function useRotation({
     setSelectedCharName((prev) => (prev === name ? null : name));
   }, []);
 
-  const handleAddStep = useCallback(
+  /**
+   * If the last segment belongs to the selected character, append the ability there.
+   * Otherwise start a new segment for the selected character.
+   */
+  const handleAddAbility = useCallback(
     (ability: RotationAbility) => {
       if (!selectedCharName) return;
       const iconUrl = iconUrlMap[selectedCharName] ?? '';
-      setSteps((prev) => [
-        ...prev,
-        {
-          characterName: selectedCharName,
-          characterIconUrl: iconUrl,
-          ability,
-          note: '',
-        },
-      ]);
-      setSelectedCharName(null);
+      setSegments((prev) => {
+        const last = prev[prev.length - 1];
+        if (last?.characterName === selectedCharName) {
+          return prev.map((s, i) =>
+            i === prev.length - 1
+              ? { ...s, abilities: [...s.abilities, ability] }
+              : s
+          );
+        }
+        return [
+          ...prev,
+          {
+            id: crypto.randomUUID(),
+            characterName: selectedCharName,
+            characterIconUrl: iconUrl,
+            abilities: [ability],
+            note: '',
+          },
+        ];
+      });
     },
     [selectedCharName, iconUrlMap]
   );
 
-  const handleRemoveStep = useCallback((index: number) => {
-    setSteps((prev) => prev.filter((_, i) => i !== index));
+  /** Append an ability to any existing segment (inline card [+] button). */
+  const handleAddAbilityToSegment = useCallback(
+    (segmentId: string, ability: RotationAbility) => {
+      setSegments((prev) =>
+        prev.map((s) =>
+          s.id === segmentId
+            ? { ...s, abilities: [...s.abilities, ability] }
+            : s
+        )
+      );
+    },
+    []
+  );
+
+  /** Remove a single ability from a segment by index. Removes the segment if it becomes empty. */
+  const handleRemoveAbilityFromSegment = useCallback(
+    (segmentId: string, abilityIndex: number) => {
+      setSegments((prev) => {
+        const updated = prev
+          .map((s) =>
+            s.id === segmentId
+              ? {
+                  ...s,
+                  abilities: s.abilities.filter((_, i) => i !== abilityIndex),
+                }
+              : s
+          )
+          .filter((s) => s.abilities.length > 0);
+        return updated;
+      });
+    },
+    []
+  );
+
+  const handleRemoveSegment = useCallback((segmentId: string) => {
+    setSegments((prev) => prev.filter((s) => s.id !== segmentId));
   }, []);
 
-  const handleNoteChange = useCallback((index: number, note: string) => {
-    setSteps((prev) => prev.map((s, i) => (i === index ? { ...s, note } : s)));
+  const handleNoteChange = useCallback((segmentId: string, note: string) => {
+    setSegments((prev) =>
+      prev.map((s) => (s.id === segmentId ? { ...s, note } : s))
+    );
   }, []);
+
+  const handleReorderSegments = useCallback(
+    (newSegments: RotationSegment[]) => {
+      setSegments(newSegments);
+    },
+    []
+  );
 
   const handleReset = useCallback(() => {
-    setSteps([]);
+    setSegments([]);
     setSelectedCharName(null);
   }, []);
 
-  const serializedLength = useMemo(() => serializeSteps(steps).length, [steps]);
+  const serializedLength = useMemo(
+    () => serializeSteps(segments).length,
+    [segments]
+  );
 
   return {
-    steps,
+    segments,
     selectedCharName,
     filledSlots,
     serializedLength,
     handleSelectChar,
-    handleAddStep,
-    handleRemoveStep,
+    handleAddAbility,
+    handleAddAbilityToSegment,
+    handleRemoveAbilityFromSegment,
+    handleRemoveSegment,
     handleNoteChange,
+    handleReorderSegments,
     handleReset,
   };
 }

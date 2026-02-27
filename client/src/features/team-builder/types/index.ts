@@ -67,9 +67,20 @@ export const createEmptyTeam = (id: string): Team => ({
 
 export type RotationAbility = 'E' | 'Q' | 'NA' | 'CA';
 
-export interface RotationStep {
+export type TalentIconEntry = { name: string; iconUrl: string };
+
+/** Indexed as [Normal Attack, Elemental Skill, Elemental Burst] */
+export type CharTalentsMap = Record<
+  string,
+  [TalentIconEntry, TalentIconEntry, TalentIconEntry]
+>;
+
+export interface RotationSegment {
+  /** Stable UI-only identifier for Framer Motion Reorder — never serialized */
+  id: string;
   characterName: string;
   characterIconUrl: string;
-  ability: RotationAbility;
+  /** Ordered sequence of abilities for this character's turn, e.g. ['E','CA','Q'] */
+  abilities: RotationAbility[];
   note: string;
 }
