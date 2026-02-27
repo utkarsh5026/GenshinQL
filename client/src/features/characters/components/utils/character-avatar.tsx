@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
+import { RarityStars } from '@/components/ui/genshin-game-icons';
 import {
   HoverCard,
   HoverCardContent,
@@ -104,17 +105,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
     xl: 24,
   };
 
-  // Rarity star text size scales with avatar
-  const rarityStarSizeMap: Record<AvatarSize, string> = {
-    xs: 'text-[8px]',
-    sm: 'text-[9px]',
-    md: 'text-[10px]',
-    lg: 'text-xs',
-    xl: 'text-sm',
-  };
-
   const rarityNum = Number.parseInt(rarity, 10);
-  const starColor = rarityNum === 5 ? 'text-amber-400' : 'text-violet-400';
 
   const avatarElement = (
     <div className="relative inline-block">
@@ -149,19 +140,23 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
     </div>
   );
 
-  // Rarity stars — row of ★ above the avatar
+  /** Maps AvatarSize to the GameIconSize scale used by RarityStars */
+  const rarityStarSizeMap: Record<AvatarSize, 'xs' | 'sm'> = {
+    xs: 'xs',
+    sm: 'xs',
+    md: 'xs',
+    lg: 'sm',
+    xl: 'sm',
+  };
+
+  /** Rarity stars — row of ★ above the avatar */
   const rarityStars =
     showRarity && rarityNum > 0 ? (
-      <div className="flex items-center justify-center gap-0.5 leading-none">
-        {Array.from({ length: Math.min(rarityNum, 5) }).map((_, i) => (
-          <span
-            key={i}
-            className={cn(starColor, rarityStarSizeMap[size], 'drop-shadow-sm')}
-          >
-            ★
-          </span>
-        ))}
-      </div>
+      <RarityStars
+        rarity={rarityNum}
+        size={rarityStarSizeMap[size]}
+        className="justify-center"
+      />
     ) : null;
 
   const nameLabel =

@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import {
+  ElementBadge,
+  NationBadge,
+  WeaponTypeBadge,
+} from '@/components/ui/genshin-game-icons';
+import {
   Table,
   TableBody,
   TableCell,
@@ -17,25 +22,6 @@ import type { Character } from '../../types';
 interface CharacterTableProps {
   characters: Character[];
 }
-
-interface IconBadgeProps {
-  src: string;
-  alt: string;
-  label: string;
-}
-
-const IconBadge: React.FC<IconBadgeProps> = ({ src, alt, label }) => (
-  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-muted/40 border border-border/40 rounded-full">
-    <CachedImage
-      src={src}
-      alt={alt}
-      width={20}
-      height={20}
-      className="w-5 h-5 shrink-0"
-    />
-    <span className="text-xs font-medium text-muted-foreground">{label}</span>
-  </div>
-);
 
 const CharacterTable: React.FC<CharacterTableProps> = ({ characters }) => {
   return (
@@ -100,24 +86,24 @@ const CharacterTableRow: React.FC<CharacterTableRowProps> = React.memo(
           </Link>
         </TableCell>
         <TableCell className="text-center py-3">
-          <IconBadge
-            src={character.elementUrl}
-            alt={character.element}
-            label={character.element}
+          <ElementBadge
+            name={character.element}
+            url={character.elementUrl}
+            size="md"
           />
         </TableCell>
         <TableCell className="text-center py-3">
-          <IconBadge
-            src={character.weaponUrl}
-            alt={character.weaponType}
-            label={character.weaponType}
+          <WeaponTypeBadge
+            name={character.weaponType}
+            url={character.weaponUrl}
+            size="md"
           />
         </TableCell>
         <TableCell className="text-center py-3">
-          <IconBadge
-            src={character.regionUrl}
-            alt={character.region}
-            label={character.region}
+          <NationBadge
+            name={character.region}
+            url={character.regionUrl}
+            size="md"
           />
         </TableCell>
         <TableCell className="text-center py-3">
