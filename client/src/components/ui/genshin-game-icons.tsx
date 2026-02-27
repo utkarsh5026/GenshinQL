@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { CachedImage } from '@/features/cache';
+import { ELEMENT_COLORS, RARITY_COLORS } from '@/lib/game-colors';
 import { cn } from '@/lib/utils';
 
 /** Size variant for Genshin game icon badge components */
@@ -45,45 +46,6 @@ const SIZE_MAP: Record<GameIconSize, SizeConfig> = {
   },
 };
 
-/**
- * Element-specific badge color classes using the custom OKLCH Tailwind tokens.
- * Keyed by lowercase element name. Full static strings required — Tailwind 4
- * scans for complete class names and does not support template literal classes.
- */
-const ELEMENT_BADGE_CLASSES: Record<
-  string,
-  { container: string; text: string }
-> = {
-  pyro: {
-    container: 'bg-pyro-900/30 border border-pyro-500/30',
-    text: 'text-pyro-300',
-  },
-  hydro: {
-    container: 'bg-hydro-900/30 border border-hydro-500/30',
-    text: 'text-hydro-300',
-  },
-  anemo: {
-    container: 'bg-anemo-900/30 border border-anemo-500/30',
-    text: 'text-anemo-300',
-  },
-  electro: {
-    container: 'bg-electro-900/30 border border-electro-500/30',
-    text: 'text-electro-300',
-  },
-  cryo: {
-    container: 'bg-cryo-900/30 border border-cryo-500/30',
-    text: 'text-cryo-300',
-  },
-  geo: {
-    container: 'bg-geo-900/30 border border-geo-500/30',
-    text: 'text-geo-300',
-  },
-  dendro: {
-    container: 'bg-dendro-900/30 border border-dendro-500/30',
-    text: 'text-dendro-300',
-  },
-};
-
 const ELEMENT_BADGE_FALLBACK: { container: string; text: string } = {
   container: 'bg-midnight-800/30 border border-midnight-600/40',
   text: 'text-muted-foreground',
@@ -92,24 +54,6 @@ const ELEMENT_BADGE_FALLBACK: { container: string; text: string } = {
 const NEUTRAL_BADGE = {
   container: 'bg-muted/60 border border-border/40',
   text: 'text-muted-foreground',
-};
-
-/**
- * Rarity star colors using the custom legendary/epic/rare/uncommon/common
- * OKLCH Tailwind tokens. Keyed by rarity integer (1–5).
- */
-const RARITY_STAR_CLASSES: Record<number, { color: string; glow: string }> = {
-  5: {
-    color: 'text-legendary-400',
-    glow: 'drop-shadow-[0_0_4px_rgba(212,168,75,0.7)]',
-  },
-  4: {
-    color: 'text-epic-400',
-    glow: 'drop-shadow-[0_0_4px_rgba(168,85,247,0.7)]',
-  },
-  3: { color: 'text-rare-400', glow: '' },
-  2: { color: 'text-uncommon-400', glow: '' },
-  1: { color: 'text-common-400', glow: '' },
 };
 
 const RARITY_STAR_SIZE_CLASS: Record<GameIconSize, string> = {
@@ -150,7 +94,11 @@ export const ElementBadge: React.FC<ElementBadgeProps> = ({
 }) => {
   const sizeConfig = SIZE_MAP[size];
   const elementKey = name.toLowerCase();
-  const colors = ELEMENT_BADGE_CLASSES[elementKey] ?? ELEMENT_BADGE_FALLBACK;
+  const elementEntry =
+    ELEMENT_COLORS[elementKey as keyof typeof ELEMENT_COLORS];
+  const colors = elementEntry
+    ? { container: elementEntry.badgeContainer, text: elementEntry.text }
+    : ELEMENT_BADGE_FALLBACK;
 
   return (
     <div
@@ -333,7 +281,9 @@ export const RarityStars: React.FC<RarityStarsProps> = ({
     Math.max(Number.parseInt(String(rarity), 10) || 0, 0),
     5
   );
-  const starConfig = RARITY_STAR_CLASSES[rarityNum] ?? RARITY_STAR_CLASSES[1];
+  const rarityEntry =
+    RARITY_COLORS[rarityNum as keyof typeof RARITY_COLORS] ?? RARITY_COLORS[1];
+  const starConfig = { color: rarityEntry.text, glow: rarityEntry.starGlow };
   const sizeClass = RARITY_STAR_SIZE_CLASS[size];
 
   return (
