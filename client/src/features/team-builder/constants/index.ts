@@ -1,6 +1,8 @@
 /* Export all constants from team-builder feature */
 import type { CharacterRole } from '../types';
 
+export * from './artifact-stats';
+
 export const ALL_ROLES: CharacterRole[] = [
   'DPS',
   'Sub DPS',
