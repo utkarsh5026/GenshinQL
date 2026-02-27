@@ -351,7 +351,6 @@ const GameOverContent: React.FC<GameOverContentProps> = ({
           <AnimatedCover
             animation={selectedCharacter.partyJoin}
             fallbackUrl={selectedCharacter.iconUrl}
-            muted
           />
         </Avatar>
       </motion.div>

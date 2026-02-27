@@ -1,5 +1,7 @@
-import { ChevronRight } from 'lucide-react';
-import React, { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
 
 import { Avatar } from '@/components/ui/avatar';
 import { Heading, Text } from '@/components/ui/text';
@@ -9,6 +11,7 @@ import { useTalentCharMap } from '@/features/calendar/stores/useTalentBooksStore
 import { getCurrentDayName } from '@/features/home/utils';
 import type { AnimationMedia, CharacterDetailed } from '@/types';
 
+import { useCharacters } from '../../stores';
 import CharacterAvatar from '../utils/character-avatar';
 
 interface ProfileHeaderProps {
@@ -93,6 +96,47 @@ interface MobileProfileHeaderProps {
   elementColor: string;
 }
 
+interface StatColumnProps {
+  iconSrc: string;
+  iconAlt: string;
+  value: string;
+  label: string;
+  valueStyle?: React.CSSProperties;
+}
+
+const StatColumn: React.FC<StatColumnProps> = ({
+  iconSrc,
+  iconAlt,
+  value,
+  label,
+  valueStyle,
+}) => (
+  <div className="flex flex-col items-center gap-1 flex-1 px-2">
+    <CachedImage
+      src={iconSrc}
+      alt={iconAlt}
+      className="w-5 h-5 object-contain"
+    />
+    <Text
+      as="span"
+      size="sm"
+      weight="semibold"
+      leading="tight"
+      style={valueStyle}
+    >
+      {value}
+    </Text>
+    <Text
+      as="span"
+      color="muted"
+      uppercase
+      className="text-[10px] tracking-wide"
+    >
+      {label}
+    </Text>
+  </div>
+);
+
 export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
   character,
   elementColor,
@@ -100,6 +144,25 @@ export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
   const talentCharMap = useTalentCharMap();
   const talentBook = talentCharMap[character.name];
   const today = getCurrentDayName();
+  const navigate = useNavigate();
+  const characters = useCharacters();
+
+  const { prevChar, nextChar } = useMemo(() => {
+    const sorted = [...characters].sort((a, b) => a.name.localeCompare(b.name));
+    const idx = sorted.findIndex((c) => c.name === character.name);
+    return {
+      prevChar: idx > 0 ? sorted[idx - 1] : null,
+      nextChar: idx < sorted.length - 1 ? sorted[idx + 1] : null,
+    };
+  }, [characters, character.name]);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => nextChar && navigate(`/characters/${nextChar.name}`),
+    onSwipedRight: () => prevChar && navigate(`/characters/${prevChar.name}`),
+    preventScrollOnSwipe: true,
+    trackTouch: true,
+    trackMouse: false,
+  });
 
   const isFarmableToday =
     today === 'Sunday' ||
@@ -116,7 +179,7 @@ export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
   const rarityColor = rarityNum === 5 ? '#f59e0b' : '#a78bfa';
 
   return (
-    <div className="lg:hidden flex flex-col">
+    <div className="lg:hidden flex flex-col" {...swipeHandlers}>
       {/* Namecard cover */}
       <div
         className="relative w-full h-28 overflow-hidden"
@@ -127,6 +190,18 @@ export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
         }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-midnight-950/95" />
+
+        {prevChar && (
+          <div className="absolute left-2 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-starlight-400/70 pointer-events-none">
+            <ChevronLeft className="w-4 h-4 shrink-0" />
+          </div>
+        )}
+
+        {nextChar && (
+          <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-starlight-400/70 pointer-events-none">
+            <ChevronRight className="w-4 h-4 shrink-0" />
+          </div>
+        )}
       </div>
 
       {/* Avatar + info */}
@@ -157,71 +232,25 @@ export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
         </Text>
 
         <div className="flex items-stretch divide-x divide-border/60 mt-4 w-full max-w-xs">
-          {/* Nation */}
-          <div className="flex flex-col items-center gap-1 flex-1 px-2">
-            <CachedImage
-              src={character.regionUrl}
-              alt={character.region}
-              className="w-5 h-5 object-contain"
-            />
-            <Text as="span" size="sm" weight="semibold" leading="tight">
-              {character.region}
-            </Text>
-            <Text
-              as="span"
-              color="muted"
-              uppercase
-              className="text-[10px] tracking-wide"
-            >
-              Nation
-            </Text>
-          </div>
-
-          {/* Weapon */}
-          <div className="flex flex-col items-center gap-1 flex-1 px-2">
-            <CachedImage
-              src={character.weaponUrl}
-              alt={character.weaponType}
-              className="w-5 h-5 object-contain"
-            />
-            <Text as="span" size="sm" weight="semibold" leading="tight">
-              {character.weaponType}
-            </Text>
-            <Text
-              as="span"
-              color="muted"
-              uppercase
-              className="text-[10px] tracking-wide"
-            >
-              Weapon
-            </Text>
-          </div>
-
-          {/* Talent Days */}
-          <div className="flex flex-col items-center gap-1 flex-1 px-2">
-            <CachedImage
-              src={character.elementUrl}
-              alt={character.element}
-              className="w-5 h-5 object-contain"
-            />
-            <Text
-              as="span"
-              size="sm"
-              weight="semibold"
-              leading="tight"
-              style={{ color: isFarmableToday ? '#4ade80' : elementColor }}
-            >
-              {talentDays}
-            </Text>
-            <Text
-              as="span"
-              color="muted"
-              uppercase
-              className="text-[10px] tracking-wide"
-            >
-              Talents
-            </Text>
-          </div>
+          <StatColumn
+            iconSrc={character.regionUrl}
+            iconAlt={character.region}
+            value={character.region}
+            label="Nation"
+          />
+          <StatColumn
+            iconSrc={character.weaponUrl}
+            iconAlt={character.weaponType}
+            value={character.weaponType}
+            label="Weapon"
+          />
+          <StatColumn
+            iconSrc={talentCharMap[character.name].philosophyUrl}
+            iconAlt={character.element}
+            value={talentDays}
+            label="Talents"
+            valueStyle={{ color: isFarmableToday ? '#4ade80' : elementColor }}
+          />
         </div>
       </div>
     </div>
