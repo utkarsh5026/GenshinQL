@@ -40,13 +40,19 @@ export const useArtifactLinksStore = create<ArtifactLinksState>()(
               cacheKey: 'artifact-links',
               version: 1,
               onUpdate: (freshData) => {
-                set({ artifactLinks: freshData });
+                set({
+                  artifactLinks: [...freshData].sort((a, b) =>
+                    a.name.localeCompare(b.name)
+                  ),
+                });
               },
             }
           );
 
           set({
-            artifactLinks: result.data,
+            artifactLinks: [...result.data].sort((a, b) =>
+              a.name.localeCompare(b.name)
+            ),
             loading: false,
           });
         } catch (err) {
