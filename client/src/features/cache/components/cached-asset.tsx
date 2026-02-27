@@ -60,7 +60,10 @@ export const CachedImage: React.FC<CachedImageProps> = ({
     return (
       <div
         ref={containerRef}
-        className={cn('relative', skeletonClassName)}
+        className={cn(
+          'relative flex items-center justify-center',
+          skeletonClassName
+        )}
         style={style}
       >
         <ImageSkeleton
@@ -76,7 +79,7 @@ export const CachedImage: React.FC<CachedImageProps> = ({
   return (
     <div ref={containerRef} className="relative inline-block" style={style}>
       {shouldShowSkeleton && (
-        <div className="absolute inset-0 z-10">
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
           <ImageSkeleton
             size={skeletonSize}
             shape={skeletonShape}
@@ -137,7 +140,15 @@ export const CachedVideo: React.FC<CachedVideoProps> = ({
 
   if (lazy && showSkeleton && isLoading) {
     return (
-      <ImageSkeleton className={skeletonClassName || className} style={style} />
+      <div
+        className={cn(
+          'flex items-center justify-center',
+          skeletonClassName || className
+        )}
+        style={style}
+      >
+        <ImageSkeleton />
+      </div>
     );
   }
 
@@ -162,9 +173,9 @@ interface ImageSkeletonProps {
 }
 
 const sizeMap = {
-  sm: { dimension: 'w-5 h-5', icon: 10 },
-  md: { dimension: 'w-10 h-10', icon: 16 },
-  lg: { dimension: 'w-16 h-16', icon: 24 },
+  sm: { icon: 10 },
+  md: { icon: 16 },
+  lg: { icon: 24 },
 };
 
 const shapeMap = {
@@ -179,13 +190,12 @@ export const ImageSkeleton: React.FC<ImageSkeletonProps> = ({
   className,
   style,
 }) => {
-  const { dimension, icon } = sizeMap[size];
+  const { icon } = sizeMap[size];
 
   return (
     <div
       className={cn(
-        'flex items-center justify-center bg-midnight-800/60',
-        dimension,
+        'flex h-full w-full items-center justify-center bg-midnight-800/60',
         shapeMap[shape],
         className
       )}
