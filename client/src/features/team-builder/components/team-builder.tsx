@@ -10,6 +10,7 @@ import {
 import React, { useEffect, useState } from 'react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { GenshinButton } from '@/components/ui/genshin-button';
 import { Separator } from '@/components/ui/separator';
 import { useCharactersStore } from '@/features/characters/stores';
 import { useWeapons, useWeaponsStore } from '@/features/weapons';
@@ -180,13 +181,9 @@ const EmptyTeamsState: React.FC<{ onCreate: () => void }> = ({ onCreate }) => (
         Create your first team composition to get started.
       </p>
     </div>
-    <button
-      onClick={onCreate}
-      className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-all hover:scale-105"
-    >
-      <Plus className="w-4 h-4" />
+    <GenshinButton onClick={onCreate} leftIcon={<Plus className="w-4 h-4" />}>
       Create Team
-    </button>
+    </GenshinButton>
   </div>
 );
 
@@ -232,13 +229,14 @@ export const TeamBuilderPage: React.FC = () => {
               {teams.length}
             </span>
           </div>
-          <button
+          <GenshinButton
             onClick={createTeam}
-            className="w-7 h-7 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground flex items-center justify-center transition-all hover:scale-105"
+            size="icon"
+            variant="outline"
             title="Create new team"
           >
             <Plus className="w-4 h-4" />
-          </button>
+          </GenshinButton>
         </div>
 
         {/* Team list */}
@@ -284,20 +282,21 @@ export const TeamBuilderPage: React.FC = () => {
 
               <div className="flex items-center gap-2 shrink-0">
                 {/* Mobile: create team */}
-                <button
+                <GenshinButton
                   onClick={createTeam}
-                  className="md:hidden flex items-center gap-1.5 px-3 py-2 rounded-xl border border-border/50 text-sm font-semibold hover:bg-accent/60 transition-all"
+                  variant="outline"
+                  size="sm"
+                  leftIcon={<Plus className="w-4 h-4" />}
+                  className="md:hidden"
                 >
-                  <Plus className="w-4 h-4" />
                   New
-                </button>
-                <button
+                </GenshinButton>
+                <GenshinButton
                   onClick={() => setPreviewOpen(true)}
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-all hover:scale-105 shadow-md"
+                  leftIcon={<Eye className="w-4 h-4" />}
                 >
-                  <Eye className="w-4 h-4" />
                   Preview Team
-                </button>
+                </GenshinButton>
               </div>
             </div>
 
