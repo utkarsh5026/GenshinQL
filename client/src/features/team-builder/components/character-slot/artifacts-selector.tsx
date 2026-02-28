@@ -19,11 +19,88 @@ import type { ArtifactConfig } from '../../types';
 
 type ArtifactMode = '4pc' | '2+2pc';
 
-/** ── ArtifactSelector ────────────────────────────────────────────────────────
- *  Self-contained popover for picking an artifact set (4pc or 2+2pc).
- *  Mirrors the WeaponSelector pattern: trigger shows current selection,
- *  popover contains search + list. Owns all transient UI state.
- */
+const SEARCH_INPUT_CLASS =
+  'bg-accent/40 border-border/50 rounded-lg text-xs placeholder:text-muted-foreground/60';
+
+/** Compact row button for a single artifact set option in 2+2pc lists. */
+const ArtifactRow: React.FC<{
+  artifact: ArtifactLink;
+  isSelected: boolean;
+  onSelect: (a: ArtifactLink) => void;
+}> = ({ artifact, isSelected, onSelect }) => (
+  <button
+    onClick={() => onSelect(artifact)}
+    className={cn(
+      'w-full flex items-center gap-2 px-2 py-1.5 rounded-md border text-left transition-all',
+      isSelected
+        ? 'bg-primary/10 border-primary/30'
+        : 'border-transparent bg-accent/20 hover:border-border/40 hover:bg-accent/40'
+    )}
+  >
+    {artifact.flowerIconUrl && (
+      <CachedImage
+        src={artifact.flowerIconUrl}
+        alt=""
+        className="w-5 h-5 object-contain shrink-0"
+        showSkeleton={false}
+      />
+    )}
+    <p className="flex-1 text-xs truncate">{artifact.name}</p>
+    {isSelected && (
+      <span className="text-[10px] font-bold text-primary shrink-0">✓</span>
+    )}
+  </button>
+);
+
+/** Label + search input + scrollable list for one slot in 2+2pc mode. */
+const SetSearchPanel: React.FC<{
+  label: string;
+  selectedName: string | undefined;
+  search: string;
+  onSearchChange: (v: string) => void;
+  artifacts: ArtifactLink[];
+  onSelect: (a: ArtifactLink) => void;
+  containerClassName: string;
+  listClassName: string;
+}> = ({
+  label,
+  selectedName,
+  search,
+  onSearchChange,
+  artifacts,
+  onSelect,
+  containerClassName,
+  listClassName,
+}) => (
+  <div className={containerClassName}>
+    <p className="text-[9px] font-semibold text-muted-foreground/60 uppercase tracking-wide mb-1">
+      {label}
+      {selectedName && (
+        <span className="ml-1 text-primary/70 normal-case">
+          — {selectedName}
+        </span>
+      )}
+    </p>
+    <AppInput
+      placeholder={`Search ${label}...`}
+      value={search}
+      onChange={(e) => onSearchChange(e.target.value)}
+      onClear={() => onSearchChange('')}
+      className={SEARCH_INPUT_CLASS}
+    />
+    <div className={cn('mt-1 overflow-y-auto space-y-0.5', listClassName)}>
+      {artifacts.map((a) => (
+        <ArtifactRow
+          key={a.name}
+          artifact={a}
+          isSelected={selectedName === a.name}
+          onSelect={onSelect}
+        />
+      ))}
+    </div>
+  </div>
+);
+
 export interface ArtifactSelectorProps {
   artifacts: ArtifactConfig | null;
   onSetArtifacts: (a: ArtifactConfig | null) => void;
@@ -81,28 +158,27 @@ export const ArtifactSelector: React.FC<ArtifactSelectorProps> = ({
     setSearch('');
   };
 
-  const handleSelectA = (a: ArtifactLink) => {
+  const handleSelectSlot = (slot: 'A' | 'B', a: ArtifactLink) => {
     const prev = artifacts?.mode === '2+2pc' ? artifacts : null;
-    onSetArtifacts({
-      mode: '2+2pc',
-      setA: a.name,
-      setAIconUrl: a.flowerIconUrl,
-      setB: prev?.setB ?? '',
-      setBIconUrl: prev?.setBIconUrl,
-    });
-    setSearch('');
-  };
-
-  const handleSelectB = (a: ArtifactLink) => {
-    const prev = artifacts?.mode === '2+2pc' ? artifacts : null;
-    onSetArtifacts({
-      mode: '2+2pc',
-      setA: prev?.setA ?? '',
-      setAIconUrl: prev?.setAIconUrl,
-      setB: a.name,
-      setBIconUrl: a.flowerIconUrl,
-    });
-    setSearchB('');
+    onSetArtifacts(
+      slot === 'A'
+        ? {
+            mode: '2+2pc',
+            setA: a.name,
+            setAIconUrl: a.flowerIconUrl,
+            setB: prev?.setB ?? '',
+            setBIconUrl: prev?.setBIconUrl,
+          }
+        : {
+            mode: '2+2pc',
+            setA: prev?.setA ?? '',
+            setAIconUrl: prev?.setAIconUrl,
+            setB: a.name,
+            setBIconUrl: a.flowerIconUrl,
+          }
+    );
+    if (slot === 'A') setSearch('');
+    else setSearchB('');
   };
 
   const selected4pc = artifacts?.mode === '4pc' ? artifacts.set : undefined;
@@ -136,13 +212,6 @@ export const ArtifactSelector: React.FC<ArtifactSelectorProps> = ({
           align="start"
           sideOffset={6}
           className="w-[min(320px,calc(100vw-2rem))] p-0 flex flex-col overflow-hidden max-h-[60svh]"
-          onOpenAutoFocus={(e) => {
-            e.preventDefault();
-            const input = (e.currentTarget as HTMLElement).querySelector(
-              'input'
-            );
-            input?.focus();
-          }}
         >
           {/* Header */}
           <div className="flex items-center gap-2 px-3 pt-3 pb-2 border-b border-border/30">
@@ -185,7 +254,7 @@ export const ArtifactSelector: React.FC<ArtifactSelectorProps> = ({
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   onClear={() => setSearch('')}
-                  className="bg-accent/40 border-border/50 rounded-lg text-xs placeholder:text-muted-foreground/60"
+                  className={SEARCH_INPUT_CLASS}
                 />
               </div>
               {/* Set list */}
@@ -235,107 +304,26 @@ export const ArtifactSelector: React.FC<ArtifactSelectorProps> = ({
             </>
           ) : (
             <>
-              {/* Set A search */}
-              <div className="px-3 pt-2 pb-1">
-                <p className="text-[9px] font-semibold text-muted-foreground/60 uppercase tracking-wide mb-1">
-                  Set A
-                  {selectedAName && (
-                    <span className="ml-1 text-primary/70 normal-case">
-                      — {selectedAName}
-                    </span>
-                  )}
-                </p>
-                <AppInput
-                  placeholder="Search Set A..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  onClear={() => setSearch('')}
-                  className="bg-accent/40 border-border/50 rounded-lg text-xs placeholder:text-muted-foreground/60"
-                />
-                <div className="mt-1 max-h-28 overflow-y-auto space-y-0.5">
-                  {filteredA.map((a) => {
-                    const isSelected = selectedAName === a.name;
-                    return (
-                      <button
-                        key={a.name}
-                        onClick={() => handleSelectA(a)}
-                        className={cn(
-                          'w-full flex items-center gap-2 px-2 py-1.5 rounded-md border text-left transition-all',
-                          isSelected
-                            ? 'bg-primary/10 border-primary/30'
-                            : 'border-transparent bg-accent/20 hover:border-border/40 hover:bg-accent/40'
-                        )}
-                      >
-                        {a.flowerIconUrl && (
-                          <CachedImage
-                            src={a.flowerIconUrl}
-                            alt=""
-                            className="w-5 h-5 object-contain shrink-0"
-                            showSkeleton={false}
-                          />
-                        )}
-                        <p className="flex-1 text-xs truncate">{a.name}</p>
-                        {isSelected && (
-                          <span className="text-[10px] font-bold text-primary shrink-0">
-                            ✓
-                          </span>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Set B search */}
-              <div className="px-3 pt-2 pb-3 border-t border-border/20 flex-1 overflow-hidden flex flex-col">
-                <p className="text-[9px] font-semibold text-muted-foreground/60 uppercase tracking-wide mb-1">
-                  Set B
-                  {selectedBName && (
-                    <span className="ml-1 text-primary/70 normal-case">
-                      — {selectedBName}
-                    </span>
-                  )}
-                </p>
-                <AppInput
-                  placeholder="Search Set B..."
-                  value={searchB}
-                  onChange={(e) => setSearchB(e.target.value)}
-                  onClear={() => setSearchB('')}
-                  className="bg-accent/40 border-border/50 rounded-lg text-xs placeholder:text-muted-foreground/60"
-                />
-                <div className="mt-1 flex-1 overflow-y-auto space-y-0.5">
-                  {filteredB.map((a) => {
-                    const isSelected = selectedBName === a.name;
-                    return (
-                      <button
-                        key={a.name}
-                        onClick={() => handleSelectB(a)}
-                        className={cn(
-                          'w-full flex items-center gap-2 px-2 py-1.5 rounded-md border text-left transition-all',
-                          isSelected
-                            ? 'bg-primary/10 border-primary/30'
-                            : 'border-transparent bg-accent/20 hover:border-border/40 hover:bg-accent/40'
-                        )}
-                      >
-                        {a.flowerIconUrl && (
-                          <CachedImage
-                            src={a.flowerIconUrl}
-                            alt=""
-                            className="w-5 h-5 object-contain shrink-0"
-                            showSkeleton={false}
-                          />
-                        )}
-                        <p className="flex-1 text-xs truncate">{a.name}</p>
-                        {isSelected && (
-                          <span className="text-[10px] font-bold text-primary shrink-0">
-                            ✓
-                          </span>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
+              <SetSearchPanel
+                label="Set A"
+                selectedName={selectedAName}
+                search={search}
+                onSearchChange={setSearch}
+                artifacts={filteredA}
+                onSelect={(a) => handleSelectSlot('A', a)}
+                containerClassName="px-3 pt-2 pb-1"
+                listClassName="max-h-28"
+              />
+              <SetSearchPanel
+                label="Set B"
+                selectedName={selectedBName}
+                search={searchB}
+                onSearchChange={setSearchB}
+                artifacts={filteredB}
+                onSelect={(a) => handleSelectSlot('B', a)}
+                containerClassName="px-3 pt-2 pb-3 border-t border-border/20 flex-1 overflow-hidden flex flex-col"
+                listClassName="flex-1"
+              />
             </>
           )}
         </PopoverContent>
@@ -344,64 +332,62 @@ export const ArtifactSelector: React.FC<ArtifactSelectorProps> = ({
   );
 };
 
-/** ── ArtifactDisplay ─────────────────────────────────────────────────────────
- *  Read-only collapsed view of the selected artifact configuration.
- *  Used as the trigger content inside ArtifactSelector.
- */
 export const ArtifactDisplay: React.FC<{
   config: ArtifactConfig;
   className?: string;
 }> = ({ config, className = '' }) => {
   if (config.mode === '4pc') {
     return (
-      <div className={`flex items-center gap-1.5 ${className}`}>
-        {config.setIconUrl && (
-          <CachedImage
-            src={config.setIconUrl}
-            alt=""
-            className="w-6 h-6 object-contain shrink-0"
-            showSkeleton={false}
-          />
-        )}
-        <span className="text-xs wrap-break-word min-w-0 leading-tight">
-          {config.set}
-        </span>
-        <span className="text-[10px] text-muted-foreground font-semibold shrink-0">
-          4pc
-        </span>
+      <div className={className}>
+        <ArtifactSetRow
+          iconUrl={config.setIconUrl}
+          name={config.set}
+          pieces="4pc"
+          iconSize="md"
+        />
       </div>
     );
   }
   return (
     <div className={`space-y-0.5 ${className}`}>
-      <div className="flex items-center gap-1.5">
-        {config.setAIconUrl && (
-          <CachedImage
-            src={config.setAIconUrl}
-            alt=""
-            className="w-5 h-5 object-contain shrink-0"
-            showSkeleton={false}
-          />
-        )}
-        <span className="text-[11px] wrap-break-word min-w-0 leading-tight">
-          {config.setA}
-        </span>
-        <span className="text-[10px] text-muted-foreground shrink-0">2pc</span>
-      </div>
-      <div className="flex items-center gap-1.5">
-        {config.setBIconUrl && (
-          <CachedImage
-            src={config.setBIconUrl}
-            alt=""
-            className="w-5 h-5 object-contain shrink-0"
-            showSkeleton={false}
-          />
-        )}
-        <span className="text-[11px] wrap-break-word min-w-0 leading-tight">
-          {config.setB}
-        </span>
-        <span className="text-[10px] text-muted-foreground shrink-0">2pc</span>
-      </div>
+      <ArtifactSetRow
+        iconUrl={config.setAIconUrl}
+        name={config.setA}
+        pieces="2pc"
+      />
+      <ArtifactSetRow
+        iconUrl={config.setBIconUrl}
+        name={config.setB}
+        pieces="2pc"
+      />
+    </div>
+  );
+};
+
+const ArtifactSetRow: React.FC<{
+  iconUrl: string | undefined;
+  name: string;
+  pieces: '2pc' | '4pc';
+  iconSize?: 'sm' | 'md';
+}> = ({ iconUrl, name, pieces, iconSize = 'sm' }) => {
+  const imgCls = iconSize === 'md' ? 'w-6 h-6' : 'w-5 h-5';
+  const nameCls = iconSize === 'md' ? 'text-xs' : 'text-[11px]';
+  return (
+    <div className="flex items-center gap-1.5">
+      {iconUrl && (
+        <CachedImage
+          src={iconUrl}
+          alt=""
+          className={`${imgCls} object-contain shrink-0`}
+          showSkeleton={false}
+        />
+      )}
+      <span className={`${nameCls} wrap-break-word min-w-0 leading-tight`}>
+        {name}
+      </span>
+      <span className="text-[10px] text-muted-foreground font-semibold shrink-0">
+        {pieces}
+      </span>
     </div>
   );
 };
