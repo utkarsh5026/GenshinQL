@@ -21,7 +21,8 @@ import {
   type AvatarSize,
   BADGE_POSITION_CLASSES,
   type BadgePosition,
-  getRarityBgClass,
+  getRarityBorderClass,
+  getRarityGradientClass,
   type NamePosition,
 } from '@/utils/avatar-utils';
 
@@ -85,9 +86,12 @@ const WeaponAvatar: React.FC<WeaponAvatarProps> = ({
   const { name, iconUrl, rarity } = weapon;
 
   const finalAvatarClassName = cn(
-    'rounded-full',
+    'rounded-full flex items-center justify-center shrink-0 relative overflow-hidden group-hover:brightness-110 transition-all duration-300',
     AVATAR_SIZE_CLASSES[size],
-    getRarityBgClass(rarity),
+    getRarityBorderClass(rarity),
+    getRarityGradientClass(rarity),
+    // Add inner glow for glass effect
+    'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_2px_6px_rgba(255,255,255,0.4)] after:pointer-events-none after:transition-opacity after:duration-300 group-hover:after:opacity-100 after:opacity-70',
     avatarClassName
   );
 
@@ -96,13 +100,16 @@ const WeaponAvatar: React.FC<WeaponAvatarProps> = ({
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <div>
+            <div className={finalAvatarClassName}>
               <CachedImage
                 src={iconUrl}
                 alt={name}
                 showSkeleton={showSkeleton}
                 skeletonShape="circle"
-                className={cn(finalAvatarClassName, imageClassName)}
+                className={cn(
+                  'w-full h-full rounded-full object-cover p-1',
+                  imageClassName
+                )}
               />
             </div>
           </TooltipTrigger>
@@ -135,7 +142,7 @@ const WeaponAvatar: React.FC<WeaponAvatarProps> = ({
   const containerElement = (
     <div
       className={cn(
-        'flex flex-col gap-1',
+        'group flex flex-col gap-1 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:drop-shadow-xl z-0 hover:z-10',
         onClick || interactive ? 'cursor-pointer' : '',
         className
       )}

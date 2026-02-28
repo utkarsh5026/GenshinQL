@@ -560,5 +560,6 @@
         "rotation": "Collei EQ → Xingqiu EQ → Kuki E → Sucrose on-field"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "DPS"]
 }

@@ -3,7 +3,7 @@ import { devtools } from 'zustand/middleware';
 
 import type { AbilityReference } from '@/lib/abilityMatcher';
 import { extractAbilityNames } from '@/lib/abilityMatcher';
-import { decideColor } from '@/utils/color';
+import { getElementHexColor } from '@/lib/game-colors';
 
 import type { Talent } from '../types';
 
@@ -43,7 +43,7 @@ export const useCharacterAbilitiesStore = create<CharacterAbilitiesState>()(
 
       setCharacterAbilities: (name, talents, element) => {
         const abilityMap = extractAbilityNames(talents);
-        const elementColor = decideColor(element);
+        const elementColor = getElementHexColor(element);
 
         set(
           (state) => {

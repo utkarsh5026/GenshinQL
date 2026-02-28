@@ -5,39 +5,39 @@
 @theme {
   --font-sans: 'Noto Sans Mono', system-ui, -apple-system, sans-serif;
 
-  /* Base theme colors */
-  --color-background: oklch(100% 0 0);
-  --color-foreground: oklch(24.03% 0 0);
-  --color-card: oklch(100% 0 0);
-  --color-card-foreground: oklch(24.03% 0 0);
-  --color-popover: oklch(100% 0 0);
-  --color-popover-foreground: oklch(24.03% 0 0);
-  --color-primary: oklch(31.19% 0 0);
-  --color-primary-foreground: oklch(98.18% 0 0);
-  --color-secondary: oklch(96.22% 0 0);
-  --color-secondary-foreground: oklch(31.19% 0 0);
-  --color-muted: oklch(96.22% 0 0);
-  --color-muted-foreground: oklch(54.42% 0 0);
-  --color-accent: oklch(96.22% 0 0);
-  --color-accent-foreground: oklch(31.19% 0 0);
-  --color-destructive: oklch(62.82% 0.227 29.23);
-  --color-destructive-foreground: oklch(98.18% 0 0);
-  --color-border: oklch(90.43% 0 0);
-  --color-input: oklch(90.43% 0 0);
-  --color-ring: oklch(24.03% 0 0);
+  /* Base theme colors — Coal (matches dark mode) */
+  --color-background: oklch(13% 0 0);
+  --color-foreground: oklch(88% 0 0);
+  --color-card: oklch(17% 0 0);
+  --color-card-foreground: oklch(88% 0 0);
+  --color-popover: oklch(15% 0 0);
+  --color-popover-foreground: oklch(88% 0 0);
+  --color-primary: oklch(75% 0.15 85);
+  --color-primary-foreground: oklch(15% 0.02 85);
+  --color-secondary: oklch(21% 0 0);
+  --color-secondary-foreground: oklch(88% 0 0);
+  --color-muted: oklch(21% 0 0);
+  --color-muted-foreground: oklch(60% 0 0);
+  --color-accent: oklch(24% 0 0);
+  --color-accent-foreground: oklch(88% 0 0);
+  --color-destructive: oklch(55% 0.22 25);
+  --color-destructive-foreground: oklch(95% 0 0);
+  --color-border: oklch(26% 0 0);
+  --color-input: oklch(26% 0 0);
+  --color-ring: oklch(75% 0.15 85);
 
   /* Custom Celestia Midnight Colors - Light Mode (subtle versions) */
-  --color-midnight-50: oklch(98% 0.01 260);
-  --color-midnight-100: oklch(95% 0.015 260);
-  --color-midnight-200: oklch(85% 0.02 260);
-  --color-midnight-300: oklch(70% 0.025 260);
-  --color-midnight-400: oklch(55% 0.03 260);
-  --color-midnight-500: oklch(40% 0.035 260);
-  --color-midnight-600: oklch(28% 0.03 260);
-  --color-midnight-700: oklch(22% 0.025 260);
-  --color-midnight-800: oklch(16% 0.025 260);
-  --color-midnight-900: oklch(12% 0.02 260);
-  --color-midnight-950: oklch(8% 0.02 260);
+  --color-midnight-50: oklch(98% 0 0);
+  --color-midnight-100: oklch(95% 0 0);
+  --color-midnight-200: oklch(85% 0 0);
+  --color-midnight-300: oklch(70% 0 0);
+  --color-midnight-400: oklch(55% 0 0);
+  --color-midnight-500: oklch(40% 0 0);
+  --color-midnight-600: oklch(28% 0 0);
+  --color-midnight-700: oklch(22% 0 0);
+  --color-midnight-800: oklch(16% 0 0);
+  --color-midnight-900: oklch(12% 0 0);
+  --color-midnight-950: oklch(8% 0 0);
 
   --color-celestial-50: oklch(98% 0.05 85);
   --color-celestial-100: oklch(95% 0.08 85);
@@ -268,34 +268,36 @@
     font-family: var(--font-sans);
   }
 
-  /* Celestia Midnight Theme - Inspired by Teyvat's night sky */
+  /* Coal Theme - Neutral charcoal inspired by Cursor editor */
   .dark {
     /* Base theme colors */
-    --color-background: oklch(12% 0.02 260); /* Deep midnight blue-black */
-    --color-foreground: oklch(95% 0.01 260); /* Soft white with blue tint */
-    --color-card: oklch(16% 0.025 260); /* Slightly lighter midnight */
-    --color-card-foreground: oklch(95% 0.01 260);
-    --color-popover: oklch(14% 0.02 260); /* Popover background */
-    --color-popover-foreground: oklch(95% 0.01 260);
+    --color-background: oklch(13% 0 0); /* Coal black */
+    --color-foreground: oklch(88% 0 0); /* Off-white — readable without glare */
+    --color-card: oklch(17% 0 0); /* Slightly raised panel */
+    --color-card-foreground: oklch(88% 0 0);
+    --color-popover: oklch(15% 0 0); /* Popover sits between bg and card */
+    --color-popover-foreground: oklch(88% 0 0);
     --color-primary: oklch(75% 0.15 85); /* Celestial gold */
-    --color-primary-foreground: oklch(15% 0.02 85); /* Dark on gold */
-    --color-secondary: oklch(22% 0.03 260); /* Midnight secondary */
-    --color-secondary-foreground: oklch(95% 0.01 260);
-    --color-muted: oklch(22% 0.025 260); /* Muted midnight */
-    --color-muted-foreground: oklch(65% 0.02 260); /* Muted text */
-    --color-accent: oklch(25% 0.04 260); /* Blue-tinted accent bg */
-    --color-accent-foreground: oklch(95% 0.01 260);
+    --color-primary-foreground: oklch(15% 0.02 85);
+    --color-secondary: oklch(21% 0 0); /* Neutral secondary surface */
+    --color-secondary-foreground: oklch(88% 0 0);
+    --color-muted: oklch(21% 0 0); /* Same level as secondary */
+    --color-muted-foreground: oklch(
+      60% 0 0
+    ); /* Readable placeholder / label text */
+    --color-accent: oklch(24% 0 0); /* Hover / highlight surface */
+    --color-accent-foreground: oklch(88% 0 0);
     --color-destructive: oklch(55% 0.22 25); /* Deep red */
     --color-destructive-foreground: oklch(95% 0 0);
-    --color-border: oklch(28% 0.03 260); /* Subtle blue-gray border */
-    --color-input: oklch(28% 0.03 260);
+    --color-border: oklch(26% 0 0); /* Subtle neutral divider */
+    --color-input: oklch(26% 0 0);
     --color-ring: oklch(75% 0.15 85); /* Gold focus ring */
 
-    /* Dark mode surface elevations - inverted scale */
-    --color-surface-50: oklch(8% 0.02 260); /* Deepest */
-    --color-surface-100: oklch(12% 0.02 260); /* Deep (bg level) */
-    --color-surface-200: oklch(16% 0.025 260); /* Card level */
-    --color-surface-300: oklch(20% 0.03 260); /* Elevated */
+    /* Dark mode surface elevations - neutral coal scale */
+    --color-surface-50: oklch(9% 0 0); /* Deepest — behind everything */
+    --color-surface-100: oklch(13% 0 0); /* Base bg level */
+    --color-surface-200: oklch(17% 0 0); /* Card level */
+    --color-surface-300: oklch(22% 0 0); /* Elevated / hover */
   }
 }
 
@@ -313,26 +315,26 @@ body {
 }
 
 :root {
-  --sidebar: hsl(0 0% 98%);
-  --sidebar-foreground: hsl(240 5.3% 26.1%);
-  --sidebar-primary: hsl(240 5.9% 10%);
-  --sidebar-primary-foreground: hsl(0 0% 98%);
-  --sidebar-accent: hsl(240 4.8% 95.9%);
-  --sidebar-accent-foreground: hsl(240 5.9% 10%);
-  --sidebar-border: hsl(220 13% 91%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --sidebar: oklch(10% 0 0);
+  --sidebar-foreground: oklch(85% 0 0);
+  --sidebar-primary: oklch(75% 0.15 85);
+  --sidebar-primary-foreground: oklch(15% 0.02 85);
+  --sidebar-accent: oklch(19% 0 0);
+  --sidebar-accent-foreground: oklch(88% 0 0);
+  --sidebar-border: oklch(23% 0 0);
+  --sidebar-ring: oklch(70% 0.12 85);
 }
 
-/* Celestia Midnight Sidebar */
+/* Coal Sidebar */
 .dark {
-  --sidebar: oklch(10% 0.025 260); /* Deeper than main bg */
-  --sidebar-foreground: oklch(90% 0.01 260);
-  --sidebar-primary: oklch(75% 0.15 85); /* Celestial gold */
+  --sidebar: oklch(10% 0 0); /* Deeper coal — sidebar sits behind content */
+  --sidebar-foreground: oklch(85% 0 0);
+  --sidebar-primary: oklch(75% 0.15 85);
   --sidebar-primary-foreground: oklch(15% 0.02 85);
-  --sidebar-accent: oklch(18% 0.03 260);
-  --sidebar-accent-foreground: oklch(95% 0.01 260);
-  --sidebar-border: oklch(25% 0.03 260);
-  --sidebar-ring: oklch(70% 0.12 85); /* Subtle gold ring */
+  --sidebar-accent: oklch(19% 0 0);
+  --sidebar-accent-foreground: oklch(88% 0 0);
+  --sidebar-border: oklch(23% 0 0);
+  --sidebar-ring: oklch(70% 0.12 85);
 }
 
 @theme inline {

@@ -870,8 +870,6 @@ export async function scrapeCharacterRoles(): Promise<void> {
     await driver.get(ROLE_URL);
     await driver.sleep(2000);
 
-    // Step 1: Scrape role definitions from "List of Character Roles" table
-    logger.info('Scraping role definitions...');
     const roleDefinitions: CharacterRole[] = [];
 
     try {
@@ -887,7 +885,6 @@ export async function scrapeCharacterRoles(): Promise<void> {
           const cells = await row.findElements(By.css('td'));
           if (cells.length < 2) continue;
 
-          // First cell has the icon
           const iconImg = await cells[0].findElement(By.css('img'));
           let iconUrl = await iconImg.getAttribute('data-src');
           if (!iconUrl) {
@@ -895,7 +892,6 @@ export async function scrapeCharacterRoles(): Promise<void> {
           }
           iconUrl = iconUrl?.split('/revision/')[0] || '';
 
-          // Second cell has the role name
           const roleName = (await cells[1].getText()).trim();
 
           if (roleName && iconUrl) {
@@ -912,23 +908,31 @@ export async function scrapeCharacterRoles(): Promise<void> {
       logger.error('Error scraping role definitions:', error);
     }
 
-    // Step 2: Scrape character-role mappings from "Characters by Role" table
     logger.info('Scraping character role assignments...');
     const characterRolesMap = new Map<string, string[]>();
 
     try {
-      const charactersTable = await getTableFromHeading(
-        driver,
-        'Characters by Role',
-        'h2'
+      const charactersByRoleXPath =
+        "//h2[*[@id='Characters_by_Role'] or normalize-space(.)='Characters by Role']/following::table[1]";
+      await driver.wait(
+        until.elementLocated(By.xpath(charactersByRoleXPath)),
+        TIME_TO_WAIT_FOR_ELEMENT_MS
+      );
+      const charactersTable = await driver.findElement(
+        By.xpath(charactersByRoleXPath)
       );
 
-      // Get header to determine role column indices
-      const headerRow = await charactersTable.findElement(By.css('thead tr'));
+      let headerRow: WebElement;
+      try {
+        headerRow = await charactersTable.findElement(By.css('thead tr'));
+      } catch {
+        headerRow = await charactersTable.findElement(
+          By.css('tbody tr:first-child')
+        );
+      }
       const headerCells = await headerRow.findElements(By.css('th'));
       const roleHeaders: string[] = [];
 
-      // Skip first 2 columns (character name and element)
       for (let i = 2; i < headerCells.length; i++) {
         const headerText = (await headerCells[i].getText()).trim();
         roleHeaders.push(headerText);
@@ -936,7 +940,6 @@ export async function scrapeCharacterRoles(): Promise<void> {
 
       logger.debug(`Role columns: ${roleHeaders.join(', ')}`);
 
-      // Parse character rows
       const characterRows = await charactersTable.findElements(
         By.css('tbody tr')
       );
@@ -946,12 +949,23 @@ export async function scrapeCharacterRoles(): Promise<void> {
           const cells = await row.findElements(By.css('td'));
           if (cells.length < 3) continue;
 
-          // Get character name from first cell
           const characterCell = cells[0];
           const characterLink = await characterCell.findElement(By.css('a'));
-          const characterName = (await characterLink.getText()).trim();
+          let characterName = (await characterLink.getText()).trim();
+          if (!characterName) {
+            characterName = (
+              (await characterLink.getAttribute('title')) ?? ''
+            ).trim();
+          }
+          if (!characterName) {
+            try {
+              const img = await characterCell.findElement(By.css('img'));
+              characterName = ((await img.getAttribute('alt')) ?? '').trim();
+            } catch {
+              /** no img found */
+            }
+          }
 
-          // Skip Traveler characters
           if (
             characterName.toLowerCase().includes('traveler') ||
             characterName.toLowerCase().includes('aloy')
@@ -960,13 +974,11 @@ export async function scrapeCharacterRoles(): Promise<void> {
             continue;
           }
 
-          // Check role columns (skip element column at index 1)
           const roles: string[] = [];
           for (let i = 2; i < cells.length && i - 2 < roleHeaders.length; i++) {
             const cell = cells[i];
             const cellHtml = await cell.getAttribute('innerHTML');
 
-            // Check for checkmark (✔) or "check-yes" class
             if (
               cellHtml.includes('check-yes') ||
               cellHtml.includes('✔') ||
@@ -996,7 +1008,6 @@ export async function scrapeCharacterRoles(): Promise<void> {
   const { roleDefinitions, characterRolesMap } =
     await withWebDriver(scrapeRoles);
 
-  // Step 3: Update primitives.json with role definitions
   logger.info('Updating primitives.json with role definitions...');
   try {
     const primitives = await loadFromPublic<Primitives>('primitives');
@@ -1009,11 +1020,9 @@ export async function scrapeCharacterRoles(): Promise<void> {
     logger.error('Error updating primitives.json:', error);
   }
 
-  // Step 4: Update individual character files and characters.json
   logger.info('Updating character files with roles...');
   const detailedDir = path.join(PUBLIC_DIR, 'characters');
 
-  // Update individual character files
   for (const [characterName, roles] of characterRolesMap) {
     const fileName = parseCharacterName(characterName);
     const filePath = path.join(detailedDir, `${fileName}.json`);
@@ -1033,11 +1042,22 @@ export async function scrapeCharacterRoles(): Promise<void> {
 
   logger.info('Updating characters.json with roles...');
   try {
-    const characters =
-      await loadFromPublic<BaseCharacterSchema[]>(CHARACTERS_FILE_NAME);
+    /** characters.json uses the optimized index-based format, not a plain array */
+    const data = await loadFromPublic<{
+      elements: string[];
+      regions: string[];
+      weaponTypes: string[];
+      rarities: number[];
+      modelTypes: string[];
+      characters: Array<{
+        name: string;
+        roles?: string[];
+        [key: string]: unknown;
+      }>;
+    }>(CHARACTERS_FILE_NAME);
 
-    if (characters) {
-      const updatedCharacters = characters.map((char) => {
+    if (data && Array.isArray(data.characters)) {
+      data.characters = data.characters.map((char) => {
         const roles = characterRolesMap.get(char.name);
         if (roles) {
           return { ...char, roles };
@@ -1045,7 +1065,7 @@ export async function scrapeCharacterRoles(): Promise<void> {
         return char;
       });
 
-      await saveToPublic(updatedCharacters, CHARACTERS_FILE_NAME);
+      await saveToPublic(data, CHARACTERS_FILE_NAME);
       logger.success('Updated characters.json with roles');
     }
   } catch (error) {
@@ -1076,7 +1096,6 @@ export async function optimizeCharactersJson(): Promise<void> {
     const originalSize = JSON.stringify(characters).length;
     logger.info(`Original size: ${(originalSize / 1024).toFixed(2)} KB`);
 
-    // Step 1: Extract unique values for all indexable fields
     const elements = [...new Set(characters.map((c) => c.element))].sort();
     const regions = [...new Set(characters.map((c) => c.region))].sort();
     const weaponTypes = [
@@ -1102,7 +1121,6 @@ export async function optimizeCharactersJson(): Promise<void> {
       `  - Model Types: ${modelTypes.length} unique values (${modelTypes.join(', ')})`
     );
 
-    // Step 2: Validate that all characters can be correctly indexed
     let validationErrors = 0;
     for (const char of characters) {
       const elementIdx = elements.indexOf(char.element);
@@ -1144,9 +1162,7 @@ export async function optimizeCharactersJson(): Promise<void> {
 
     logger.success('Validation passed! All values can be indexed.');
 
-    // Step 3: Transform characters to indexed format
     const optimizedCharacters = characters.map((char) => {
-      // Create new object with indexed fields, excluding URL fields
       const fieldsToExclude = new Set([
         'element',
         'region',

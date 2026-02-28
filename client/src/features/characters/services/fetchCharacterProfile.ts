@@ -262,7 +262,7 @@ function enrichCharacterWithUrls<
 }
 
 function lookupUrl(
-  primKey: keyof Primitives,
+  primKey: keyof Omit<Primitives, 'roles'>,
   name: string,
   primitives: Primitives
 ): string {

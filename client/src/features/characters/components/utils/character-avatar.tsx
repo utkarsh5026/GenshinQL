@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
+import { RarityStars } from '@/components/ui/genshin-game-icons';
 import {
   HoverCard,
   HoverCardContent,
@@ -17,6 +18,7 @@ import {
   BADGE_POSITION_CLASSES,
   type BadgePosition,
   getRarityBorderClass,
+  getRarityGradientClass,
   type NamePosition,
 } from '@/utils/avatar-utils';
 
@@ -84,16 +86,20 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
   const finalAvatarClassName = cn(
     AVATAR_SIZE_CLASSES[size],
     getRarityBorderClass(rarity),
+    getRarityGradientClass(rarity),
+    'relative overflow-hidden group-hover:brightness-110 transition-all duration-300',
+    // Add inner glow for glass effect
+    'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_2px_6px_rgba(255,255,255,0.4)] after:pointer-events-none after:transition-opacity after:duration-300 group-hover:after:opacity-100 after:opacity-70',
     avatarClassName
   );
 
-  // Element badge size scales with avatar
+  // Element badge size scales with avatar — responsive mobile → desktop
   const elementBadgeSizeMap: Record<AvatarSize, string> = {
-    xs: 'w-3.5 h-3.5',
-    sm: 'w-4 h-4',
-    md: 'w-5 h-5',
-    lg: 'w-6 h-6',
-    xl: 'w-7 h-7',
+    xs: 'w-3 h-3 sm:w-3.5 sm:h-3.5',
+    sm: 'w-3.5 h-3.5 sm:w-4 sm:h-4',
+    md: 'w-4 h-4 sm:w-5 sm:h-5',
+    lg: 'w-5 h-5 sm:w-6 sm:h-6',
+    xl: 'w-6 h-6 sm:w-7 sm:h-7',
   };
 
   const elementIconSizeMap: Record<AvatarSize, number> = {
@@ -104,17 +110,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
     xl: 24,
   };
 
-  // Rarity star text size scales with avatar
-  const rarityStarSizeMap: Record<AvatarSize, string> = {
-    xs: 'text-[8px]',
-    sm: 'text-[9px]',
-    md: 'text-[10px]',
-    lg: 'text-xs',
-    xl: 'text-sm',
-  };
-
   const rarityNum = Number.parseInt(rarity, 10);
-  const starColor = rarityNum === 5 ? 'text-amber-400' : 'text-violet-400';
 
   const avatarElement = (
     <div className="relative inline-block">
@@ -133,7 +129,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
       {showElement && elementUrl && (
         <div
           className={cn(
-            'absolute -bottom-0.5 -right-0.5 rounded-full ring-2 ring-background flex items-center justify-center bg-background/90',
+            'absolute -bottom-1 -right-1 rounded-full ring-2 ring-background/80 shadow-md shadow-black/40 flex items-center justify-center bg-background/90 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12',
             elementBadgeSizeMap[size]
           )}
         >
@@ -142,26 +138,30 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
             alt={character.element}
             width={elementIconSizeMap[size]}
             height={elementIconSizeMap[size]}
-            className="rounded-full"
+            className="rounded-full drop-shadow-sm"
           />
         </div>
       )}
     </div>
   );
 
-  // Rarity stars — row of ★ above the avatar
+  /** Maps AvatarSize to the GameIconSize scale used by RarityStars */
+  const rarityStarSizeMap: Record<AvatarSize, 'xs' | 'sm'> = {
+    xs: 'xs',
+    sm: 'xs',
+    md: 'xs',
+    lg: 'sm',
+    xl: 'sm',
+  };
+
+  /** Rarity stars — row of ★ above the avatar */
   const rarityStars =
     showRarity && rarityNum > 0 ? (
-      <div className="flex items-center justify-center gap-0.5 leading-none">
-        {Array.from({ length: Math.min(rarityNum, 5) }).map((_, i) => (
-          <span
-            key={i}
-            className={cn(starColor, rarityStarSizeMap[size], 'drop-shadow-sm')}
-          >
-            ★
-          </span>
-        ))}
-      </div>
+      <RarityStars
+        rarity={rarityNum}
+        size={rarityStarSizeMap[size]}
+        className="justify-center"
+      />
     ) : null;
 
   const nameLabel =
@@ -169,7 +169,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
       <p
         className={cn(
           AVATAR_TEXT_CLASSES[size],
-          'font-thin text-foreground/80 text-center line-clamp-1',
+          ' text-foreground/80 text-center line-clamp-1',
           nameClassName
         )}
       >
@@ -180,7 +180,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
   const containerElement = (
     <div
       className={cn(
-        'flex flex-col items-center gap-1',
+        'group flex flex-col items-center gap-1 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:drop-shadow-xl z-0 hover:z-10',
         onClick || interactive ? 'cursor-pointer' : '',
         className
       )}

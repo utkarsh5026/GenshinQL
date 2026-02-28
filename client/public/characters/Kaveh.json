@@ -588,5 +588,6 @@
         "rotation": "Nilou EQ → Nahida E → Kokomi E → Kaveh Q → on-field combo"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

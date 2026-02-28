@@ -549,5 +549,6 @@
         "rotation": "Zhongli hE → Albedo E → Gorou EQ → Itto Q combo"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "Support"]
 }

@@ -1,3 +1,4 @@
 /* Export all components from characters feature */
 import CharacterDetail from './description/character-detail';
-export { CharacterDetail };
+import CharacterAvatar from './utils/character-avatar';
+export { CharacterAvatar, CharacterDetail };

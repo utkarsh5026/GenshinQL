@@ -550,5 +550,6 @@
         "rotation": "Nahida E → Fischl E → Kazuha tEP Q → Keqing combo"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "DPS"]
 }

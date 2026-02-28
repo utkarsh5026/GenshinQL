@@ -521,5 +521,6 @@
         }
       ]
     }
-  ]
+  ],
+  "roles": ["Off-Field", "DPS", "Support"]
 }

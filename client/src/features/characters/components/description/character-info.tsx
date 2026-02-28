@@ -2,6 +2,12 @@ import { ArrowRight } from 'lucide-react';
 import React, { useEffect, useMemo } from 'react';
 
 import { Badge } from '@/components/ui/badge';
+import {
+  ElementBadge,
+  NationBadge,
+  RarityStars,
+  WeaponTypeBadge,
+} from '@/components/ui/genshin-game-icons';
 import { Heading, Text } from '@/components/ui/text';
 import { CachedImage } from '@/features/cache';
 import { useTalentCharMap } from '@/features/calendar/stores/useTalentBooksStore';
@@ -57,12 +63,6 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   </div>
 );
 
-/** Generates star string for rarity display */
-const getRarityStars = (rarity: string) => {
-  const numStars = Number.parseInt(rarity) || 5;
-  return '★'.repeat(numStars);
-};
-
 /** Base badge styling constant */
 const BASE_BADGE_CLASSES =
   'px-2.5 py-1 text-xs text-foreground font-medium rounded-full border bg-midnight-800/30 border-midnight-600/40 hover:bg-card';
@@ -74,25 +74,6 @@ interface SimpleBadgeProps {
 
 const SimpleBadge: React.FC<SimpleBadgeProps> = ({ text, className = '' }) => (
   <Badge className={`${BASE_BADGE_CLASSES} ${className}`}>{text}</Badge>
-);
-
-interface IconBadgeProps {
-  icon?: string;
-  alt: string;
-  text: string;
-  style?: React.CSSProperties;
-}
-
-const IconBadge: React.FC<IconBadgeProps> = ({ icon, alt, text, style }) => (
-  <Badge
-    className={`inline-flex items-center gap-1.5 ${BASE_BADGE_CLASSES}`}
-    style={style}
-  >
-    {icon && (
-      <CachedImage src={icon} alt={alt} className="w-3 h-3 object-contain" />
-    )}
-    <span>{text}</span>
-  </Badge>
 );
 
 /** Farming Badge Component - Shows talent material availability */
@@ -323,76 +304,123 @@ export const CharacterStatsCompact: React.FC<CharacterStatsCompactProps> = ({
   const talentBook = talentCharMap[character.name];
 
   return (
-    <div className="space-y-4">
-      {/* Stats and Farming Section */}
+    <div className="space-y-6">
+      {/* Character Info Section */}
       <div>
         <SectionHeader title="Character Info" elementColor={elementColor} />
-        <div className="space-y-3">
-          {/* Stats Badges Row */}
-          <div className="flex flex-wrap gap-2">
-            {/* Rarity Badge */}
-            <SimpleBadge
-              text={getRarityStars(character.rarity)}
-              className="text-celestial-400"
+
+        <div className="space-y-5">
+          {/* Rarity */}
+          <div className="flex flex-col gap-1.5">
+            <Text
+              as="span"
+              size="xs"
+              className="text-muted-foreground uppercase tracking-wider"
+            >
+              Rarity
+            </Text>
+            <RarityStars
+              rarity={character.rarity}
+              showGlow
+              size="md"
+              className="self-start"
             />
-
-            {/* Element Badge */}
-            <IconBadge
-              icon={elementIcon || character.elementUrl}
-              alt={character.element}
-              text={character.element}
-              style={{ borderColor: `${elementColor}40`, color: elementColor }}
-            />
-
-            {/* Weapon Badge */}
-            <IconBadge
-              icon={weaponIcon || character.weaponUrl}
-              alt={character.weaponType}
-              text={character.weaponType}
-            />
-
-            {/* Region Badge */}
-            <IconBadge
-              icon={regionIcon || character.regionUrl}
-              alt={character.region}
-              text={character.region}
-            />
-
-            {/* Model Type Badge */}
-            <SimpleBadge text={character.modelType} />
-
-            {/* Version Badge */}
-            {character.version && (
-              <SimpleBadge text={`v${character.version}`} />
-            )}
-
-            {/* Farming Badge */}
-            <FarmingBadge talentBook={talentBook} currentDay={currentDay} />
           </div>
 
-          {/* Compact Build Display - Integrated */}
-          {character.buildGuide && (
-            <div className="pt-2 border-t border-midnight-600/30">
-              <div className="flex items-center gap-2 mb-2">
-                <Text
-                  as="span"
-                  size="xs"
-                  weight="medium"
-                  className="text-starlight-400"
-                >
-                  Recommended Build
-                </Text>
-              </div>
-              <CompactBuildDisplay
-                characterName={character.name}
-                elementColor={elementColor}
-                onNavigate={onNavigate}
-                buildData={character.buildGuide}
+          {/* Element & Weapon */}
+          <div className="flex flex-col gap-1.5">
+            <Text
+              as="span"
+              size="xs"
+              className="text-muted-foreground uppercase tracking-wider"
+            >
+              Element &amp; Weapon
+            </Text>
+            <div className="flex flex-wrap gap-2">
+              <ElementBadge
+                name={character.element}
+                url={elementIcon ?? character.elementUrl}
+                size="md"
               />
+              <WeaponTypeBadge
+                name={character.weaponType}
+                url={weaponIcon ?? character.weaponUrl}
+                size="md"
+              />
+            </div>
+          </div>
+
+          {/* Origin & Model */}
+          <div className="flex flex-col gap-1.5">
+            <Text
+              as="span"
+              size="xs"
+              className="text-muted-foreground uppercase tracking-wider"
+            >
+              Origin &amp; Model
+            </Text>
+            <div className="flex flex-wrap gap-2">
+              <NationBadge
+                name={character.region}
+                url={regionIcon ?? character.regionUrl}
+                size="md"
+              />
+              <SimpleBadge text={character.modelType} />
+              {character.version && (
+                <SimpleBadge text={`v${character.version}`} />
+              )}
+            </div>
+          </div>
+
+          {/* Farming Availability */}
+          {talentBook && (
+            <div className="flex flex-col gap-1.5">
+              <Text
+                as="span"
+                size="xs"
+                className="text-muted-foreground uppercase tracking-wider"
+              >
+                Talent Materials
+              </Text>
+              <FarmingBadge talentBook={talentBook} currentDay={currentDay} />
             </div>
           )}
         </div>
       </div>
+
+      {/* Recommended Build Section */}
+      {character.buildGuide && (
+        <div
+          className="rounded-lg p-4 border border-midnight-600/40 bg-midnight-800/20"
+          style={{ borderColor: `${elementColor}20` }}
+        >
+          <div className="flex items-center gap-2 mb-4">
+            <Text
+              as="span"
+              size="xs"
+              weight="semibold"
+              uppercase
+              className="tracking-wider text-starlight-300"
+            >
+              Recommended Build
+            </Text>
+            <div
+              className="flex-1 h-px"
+              style={{
+                background: elementColor
+                  ? `linear-gradient(to right, ${elementColor}30, transparent)`
+                  : 'linear-gradient(to right, rgba(255,255,255,0.08), transparent)',
+              }}
+            />
+          </div>
+          <CompactBuildDisplay
+            characterName={character.name}
+            elementColor={elementColor}
+            onNavigate={onNavigate}
+            buildData={character.buildGuide}
+          />
+        </div>
+      )}
     </div>
   );
 };

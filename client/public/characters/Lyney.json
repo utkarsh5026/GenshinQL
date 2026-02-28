@@ -680,5 +680,6 @@
         "rotation": "Zhongli hE → Bennett EQ → Xiangling E → Lyney charged shots"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

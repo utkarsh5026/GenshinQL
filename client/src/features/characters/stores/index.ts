@@ -3,8 +3,17 @@ export {
   useArtifactLinks,
   useArtifactLinksError,
   useArtifactLinksLoading,
+  useArtifactLinksStore,
+  useDetailedArtifactByName,
+  useDetailedArtifactsError,
+  useDetailedArtifactsList,
+  useDetailedArtifactsLoading,
+  useDetailedArtifactsMap,
+  useDetailedArtifactsStore,
   useFetchArtifactLinks,
+  useFetchDetailedArtifacts,
   useResetArtifactLinks,
+  useResetDetailedArtifacts,
 } from './useArtifactStore';
 export type { CharacterAbilityData } from './useCharacterAbilitiesStore';
 export {

@@ -1,11 +1,17 @@
 import { create } from 'zustand';
 
 import { fetchWithCache } from '@/features/cache';
-import type { PrimitiveItem, Primitives } from '@/types';
+import type {
+  AttributeName,
+  PrimitiveItem,
+  Primitives,
+  RegionName,
+  RoleItem,
+} from '@/types';
 
 /**
  * State interface for the primitives store.
- * Manages loading and storage of game primitives (elements, regions, weapon types).
+ * Manages loading and storage of game primitives (elements, regions, weapon types, roles).
  */
 interface PrimitivesState {
   /** The cached primitives data */
@@ -49,16 +55,14 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
     set({
       primitives: {
         ...primitives,
-        regions: primitives.regions.map((reg) => {
-          return {
-            ...reg,
-            name: reg.name.split('-').join(''),
-          };
-        }),
+        regions: primitives.regions.map((reg) => ({
+          ...reg,
+          name: reg.name.split('-').join('') as RegionName,
+        })),
         attributes:
           primitives.attributes?.map((attr) => ({
             ...attr,
-            name: attr.name.replace('%', ''), // "HP%" -> "HP", "DEF%" -> "DEF"
+            name: attr.name.replace('%', '') as AttributeName, // "HP%" -> "HP", "DEF%" -> "DEF"
           })) || [],
       },
       loading: false,
@@ -142,14 +146,21 @@ export const useAttributes = () =>
     ({ primitives }) => primitives?.attributes || EMPTY_ATTRIBUTES
   );
 
+/**
+ * Hook to get the roles array from primitives.
+ * @returns Array of role primitives or empty array if not loaded
+ */
+export const useRoles = () =>
+  usePrimitivesStore(({ primitives }) => primitives?.roles || EMPTY_ROLES);
+
 // WeakMap cache for attribute URL maps (stable references)
 const attributeUrlMapCache = new WeakMap<
-  readonly PrimitiveItem[],
+  readonly PrimitiveItem<AttributeName>[],
   Record<string, string>
 >();
 
 function createAttributeUrlMap(
-  attributes: readonly PrimitiveItem[]
+  attributes: readonly PrimitiveItem<AttributeName>[]
 ): Record<string, string> {
   const cached = attributeUrlMapCache.get(attributes);
   if (cached) return cached;
@@ -179,3 +190,4 @@ const EMPTY_ELEMENTS: Primitives['elements'] = [] as const;
 const EMPTY_REGIONS: Primitives['regions'] = [] as const;
 const EMPTY_WEAPON_TYPES: Primitives['weaponTypes'] = [] as const;
 const EMPTY_ATTRIBUTES: Primitives['attributes'] = [] as const;
+const EMPTY_ROLES: RoleItem[] = [] as const;

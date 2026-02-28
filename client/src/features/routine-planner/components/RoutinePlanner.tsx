@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
+import { AppInput } from '@/components/ui/app-input';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -24,7 +25,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
 import { CachedImage } from '@/features/cache';
 import { cn } from '@/lib/utils';
 import {
@@ -92,7 +92,12 @@ const AddTrackingDialog: React.FC<AddTrackingDialogProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg max-h-[80vh] overflow-hidden flex flex-col">
+      <DialogContent
+        className="max-w-lg max-h-[80vh] overflow-hidden flex flex-col"
+        onOpenAutoFocus={(e) => {
+          if (navigator.maxTouchPoints > 0) e.preventDefault();
+        }}
+      >
         <DialogHeader>
           <DialogTitle>Add Character to Planner</DialogTitle>
           <DialogDescription>
@@ -101,10 +106,11 @@ const AddTrackingDialog: React.FC<AddTrackingDialogProps> = ({
         </DialogHeader>
 
         <div className="space-y-3 mb-4">
-          <Input
+          <AppInput
             placeholder="Search characters..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            onClear={() => setSearch('')}
           />
           <div className="flex gap-2">
             {(['building', 'farming', 'wishlist'] as TrackingReason[]).map(

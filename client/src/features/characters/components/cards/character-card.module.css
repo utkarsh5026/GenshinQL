@@ -9,46 +9,6 @@
   will-change: transform;
 }
 
-/* Card hover with GPU acceleration */
-.cardHover {
-  position: relative;
-  transform: translate3d(0, 0, 0);
-  will-change: transform, box-shadow;
-  transition:
-    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    outline-color 0.3s ease;
-}
-
-.cardHover:hover {
-  transform: translate3d(0, -4px, 0) scale(1.02);
-  box-shadow:
-    0 20px 40px -8px rgba(0, 0, 0, 0.25),
-    0 10px 15px -5px rgba(0, 0, 0, 0.15);
-}
-
-@media (min-width: 768px) {
-  .cardHover:hover {
-    transform: translate3d(0, -6px, 0) scale(1.03);
-  }
-}
-
-/* Pseudo-element for hover glow effect */
-.cardHover::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-/* Only animate element icons on card hover for performance */
-.cardHover:hover .elementIcon {
-  transform: scale(1.08);
-}
-
 /* ─── Rarity glow treatments ─── */
 
 .fiveStarGlow {
@@ -59,106 +19,6 @@
 .fourStarGlow {
   outline: 1px solid rgba(167, 139, 250, 0.35);
   box-shadow: 0 4px 24px rgba(167, 139, 250, 0.1);
-}
-
-/* ─── Element icon animations on hover ─── */
-
-.cardHover:hover .anemo {
-  animation: float 2s ease-in-out;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -3px, 0);
-  }
-}
-
-.cardHover:hover .pyro {
-  animation: flicker 1.5s ease-in-out;
-}
-
-@keyframes flicker {
-  0%,
-  100% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.15);
-  }
-}
-
-.cardHover:hover .hydro {
-  animation: wave 2s ease-in-out;
-}
-
-@keyframes wave {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.03);
-  }
-}
-
-.cardHover:hover .electro {
-  animation: pulse 1s ease-in-out;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.2);
-  }
-}
-
-.cardHover:hover .cryo {
-  animation: shimmer 2s ease-in-out;
-}
-
-@keyframes shimmer {
-  0%,
-  100% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.15);
-  }
-}
-
-.cardHover:hover .geo {
-  animation: solidPulse 2s ease-in-out;
-}
-
-@keyframes solidPulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-}
-
-.cardHover:hover .dendro {
-  animation: bloom 2s ease-in-out;
-}
-
-@keyframes bloom {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
 }
 
 /* ─── Element-specific hover glows ─── */
@@ -200,6 +60,16 @@
 
 /* ─── Namecard banner ─── */
 
+/** Soft element-color bleed from the namecard into the card body */
+.namecardAmbient {
+  top: 76px;
+  height: 68px;
+  opacity: 0.14;
+  filter: blur(14px) saturate(1.5);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
 /* Namecard image with GPU acceleration */
 .namecardImage {
   width: 100%;
@@ -209,11 +79,6 @@
   opacity: 0.75;
   transform: translate3d(0, 0, 0);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Subtle zoom on card hover */
-.cardHover:hover .namecardImage {
-  transform: translate3d(0, 0, 0) scale(1.07);
 }
 
 .anemoTint {
@@ -310,8 +175,6 @@
     animation: none !important;
   }
 
-  .cardHover,
-  .cardHover::before,
   .elementIcon,
   .namecardImage {
     transition: none;

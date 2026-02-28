@@ -5,7 +5,7 @@ import { Avatar, AvatarImage } from '@/components/ui/avatar';
 import { Heading, Text } from '@/components/ui/text';
 import { ItemNavigation } from '@/components/utils';
 import { useAddRecent } from '@/features/command-palette/stores/useRecentsStore';
-import { decideColor } from '@/utils/color';
+import { getElementHexColor } from '@/lib/game-colors';
 
 import {
   useCharacterMap,
@@ -47,7 +47,7 @@ const CharacterDetail = () => {
     return <Navigate to="/talents" replace />;
   }
 
-  const elementColor = decideColor(profile.element);
+  const elementColor = getElementHexColor(profile.element);
 
   return (
     <div className="flex flex-col lg:h-full gap-3">
@@ -81,7 +81,7 @@ const CharacterLoadingState: React.FC<CharacterLoadingStateProps> = ({
     );
   }
 
-  const elementColor = decideColor(character.element);
+  const elementColor = getElementHexColor(character.element);
 
   return (
     <div

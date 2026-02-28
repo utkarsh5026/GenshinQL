@@ -51,16 +51,60 @@ export type Day =
   | 'Saturday'
   | 'Sunday';
 
-export type PrimitiveItem = {
-  name: string;
+export type ElementName =
+  | 'Anemo'
+  | 'Cryo'
+  | 'Dendro'
+  | 'Electro'
+  | 'Geo'
+  | 'Hydro'
+  | 'Pyro';
+export type RegionName =
+  | 'Fontaine'
+  | 'Inazuma'
+  | 'Liyue'
+  | 'Mondstadt'
+  | 'Natlan'
+  | 'Nod-Krai'
+  | 'Snezhnaya'
+  | 'Sumeru';
+export type WeaponTypeName =
+  | 'Bow'
+  | 'Catalyst'
+  | 'Claymore'
+  | 'Polearm'
+  | 'Sword';
+export type AttributeName =
+  | 'ATK'
+  | 'CRIT DMG'
+  | 'CRIT Rate'
+  | 'DEF'
+  | 'Elemental Mastery'
+  | 'Energy Recharge'
+  | 'HP';
+export type RoleName =
+  | 'On-Field'
+  | 'Off-Field'
+  | 'DPS'
+  | 'Support'
+  | 'Survivability';
+
+export type PrimitiveItem<TName extends string = string> = {
+  name: TName;
   url: string;
 };
 
+export type RoleItem = {
+  name: RoleName;
+  iconUrl: string;
+};
+
 export type Primitives = {
-  elements: PrimitiveItem[];
-  regions: PrimitiveItem[];
-  weaponTypes: PrimitiveItem[];
-  attributes: PrimitiveItem[];
+  elements: PrimitiveItem<ElementName>[];
+  regions: PrimitiveItem<RegionName>[];
+  weaponTypes: PrimitiveItem<WeaponTypeName>[];
+  attributes: PrimitiveItem<AttributeName>[];
+  roles: RoleItem[];
 };
 
 export type CharacterMenuItem =

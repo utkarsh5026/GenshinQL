@@ -506,5 +506,6 @@
         }
       ]
     }
-  ]
+  ],
+  "roles": ["Off-Field", "Support"]
 }

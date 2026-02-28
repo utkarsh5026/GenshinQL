@@ -1,13 +1,13 @@
-import { Star } from 'lucide-react';
 import React from 'react';
 
+import { RarityStars } from '@/components/ui/genshin-game-icons';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { getElementColor } from '@/lib/elementColors';
-import { getRarityBorderClass, getRarityStarColor } from '@/lib/rarityColors';
+import { CachedImage } from '@/features/cache';
+import { getRarityBorderClass } from '@/lib/rarityColors';
 import type { Character } from '@/types';
 
 interface EnhancedCharacterCardProps {
@@ -27,20 +27,12 @@ const elementBadgeSizes = {
   lg: 'h-6 w-6',
 };
 
-const starSizes = {
-  sm: 'h-2 w-2',
-  md: 'h-2.5 w-2.5',
-  lg: 'h-3 w-3',
-};
-
 export const EnhancedCharacterCard: React.FC<EnhancedCharacterCardProps> = ({
   character,
   size = 'md',
 }) => {
   const rarity = parseInt(character.rarity);
   const rarityBorderClass = getRarityBorderClass(rarity);
-  const rarityStarColor = getRarityStarColor(rarity);
-  const elementColor = getElementColor(character.element);
 
   return (
     <Tooltip>
@@ -64,39 +56,22 @@ export const EnhancedCharacterCard: React.FC<EnhancedCharacterCardProps> = ({
           />
 
           {/* Rarity Stars Overlay (Top) */}
-          <div
-            className="
-              absolute top-0 left-0 right-0
-              bg-gradient-to-b from-black/70 via-black/30 to-transparent
-              px-1 py-0.5
-              flex items-center justify-center gap-0.5
-            "
-          >
-            {Array.from({ length: rarity }).map((_, index) => (
-              <Star
-                key={index}
-                className={`${starSizes[size]} ${rarityStarColor} fill-current`}
-              />
-            ))}
+          <div className="absolute top-0 left-0 right-0 bg-linear-to-b from-black/70 via-black/30 to-transparent px-1 py-0.5 flex items-center justify-center">
+            <RarityStars rarity={rarity} size="xs" />
           </div>
 
           {/* Element Badge Overlay (Bottom-Right) */}
           <div
-            className={`
-              absolute -bottom-0.5 -right-0.5
-              ${elementBadgeSizes[size]}
-              rounded-full
-              border-2 border-background
-              bg-${elementColor}
-              flex items-center justify-center
-              shadow-lg
-            `}
-            style={{ backgroundColor: `var(--${elementColor})` }}
+            className={`absolute -bottom-0.5 -right-0.5 ${elementBadgeSizes[size]} rounded-full border-2 border-background bg-background/80 flex items-center justify-center shadow-lg`}
           >
-            <img
+            <CachedImage
               src={character.elementUrl}
               alt={character.element}
-              className="h-full w-full p-0.5"
+              width={20}
+              height={20}
+              className="h-full w-full p-0.5 object-contain"
+              skeletonShape="circle"
+              skeletonSize="sm"
             />
           </div>
         </div>

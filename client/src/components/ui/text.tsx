@@ -5,17 +5,17 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 
 /**
- * Font sizes are mobile-first with 3-step responsive scaling:
- * default (mobile) → sm: 640px (tablet) → md: 768px (desktop)
+ * Font sizes are mobile-first with 4-step responsive scaling:
+ * default (mobile) → sm: 640px (tablet) → md: 768px (desktop) → lg: 1024px (wide)
  *
  * xs   11px → 12px
  * sm   12px → 13px → 14px
  * base 14px → 15px → 16px
  * lg   16px → 17px → 18px
  * xl   18px → 19px → 20px
- * 2xl  20px → 22px → 24px
- * 3xl  24px → 27px → 30px
- * 4xl  30px → 33px → 36px
+ * 2xl  20px → 22px → 24px → 26px
+ * 3xl  24px → 27px → 30px → 34px
+ * 4xl  30px → 33px → 36px → 44px (text-5xl)
  */
 const SIZE_VARIANTS = {
   xs: 'text-[11px] sm:text-xs',
@@ -23,9 +23,9 @@ const SIZE_VARIANTS = {
   base: 'text-sm sm:text-[15px] md:text-base',
   lg: 'text-base sm:text-[17px] md:text-lg',
   xl: 'text-lg sm:text-[19px] md:text-xl',
-  '2xl': 'text-xl sm:text-[22px] md:text-2xl',
-  '3xl': 'text-2xl sm:text-[27px] md:text-3xl',
-  '4xl': 'text-3xl sm:text-[33px] md:text-4xl',
+  '2xl': 'text-xl sm:text-[22px] md:text-2xl lg:text-[26px]',
+  '3xl': 'text-2xl sm:text-[27px] md:text-3xl lg:text-[34px]',
+  '4xl': 'text-3xl sm:text-[33px] md:text-4xl lg:text-5xl',
 } as const;
 
 const COLOR_VARIANTS = {
@@ -69,15 +69,28 @@ const WRAP_VARIANTS = {
 /**
  * Controls max line length for readability.
  * The typographic sweet spot is 45–75 characters per line.
+ * Values scale up slightly on wider screens.
  *
- * narrow  45ch — dense UI labels, sidebars
- * normal  65ch — body paragraphs, articles
- * wide    80ch — wider content areas
+ * narrow  40ch → 45ch — dense UI labels, sidebars
+ * normal  55ch → 65ch → 75ch — body paragraphs, articles
+ * wide    70ch → 80ch → 90ch — wider content areas
  */
 const MEASURE_VARIANTS = {
-  narrow: 'max-w-[45ch]',
-  normal: 'max-w-[65ch]',
-  wide: 'max-w-[80ch]',
+  narrow: 'max-w-[40ch] md:max-w-[45ch]',
+  normal: 'max-w-[55ch] md:max-w-[65ch] lg:max-w-[75ch]',
+  wide: 'max-w-[70ch] md:max-w-[80ch] lg:max-w-[90ch]',
+} as const;
+
+/**
+ * Letter-spacing (tracking) independent of the `uppercase` flag.
+ */
+const TRACKING_VARIANTS = {
+  tighter: 'tracking-tighter',
+  tight: 'tracking-tight',
+  normal: 'tracking-normal',
+  wide: 'tracking-wide',
+  wider: 'tracking-wider',
+  widest: 'tracking-widest',
 } as const;
 
 /**
@@ -119,6 +132,7 @@ const textVariants = cva('font-sans m-0 antialiased text-pretty', {
     weight: WEIGHT_VARIANTS,
     align: ALIGN_VARIANTS,
     leading: LEADING_VARIANTS,
+    tracking: TRACKING_VARIANTS,
     wrap: WRAP_VARIANTS,
     measure: MEASURE_VARIANTS,
     truncate: {
@@ -160,6 +174,8 @@ export interface TextProps
    * Omit for no constraint (default).
    */
   measure?: keyof typeof MEASURE_VARIANTS;
+  /** Controls letter-spacing independently of `uppercase`. */
+  tracking?: keyof typeof TRACKING_VARIANTS;
 }
 
 const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
@@ -173,6 +189,7 @@ const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
       leading,
       measure,
       size = 'base',
+      tracking,
       truncate,
       uppercase,
       weight = 'normal',
@@ -192,6 +209,7 @@ const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
             leading: resolvedLeading,
             measure,
             size,
+            tracking,
             truncate,
             uppercase,
             weight,
@@ -232,6 +250,7 @@ const headingVariants = cva(
       weight: WEIGHT_VARIANTS,
       align: ALIGN_VARIANTS,
       leading: LEADING_VARIANTS,
+      tracking: TRACKING_VARIANTS,
       wrap: WRAP_VARIANTS,
       measure: MEASURE_VARIANTS,
       truncate: {
@@ -251,7 +270,11 @@ const headingVariants = cva(
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 type TextSize = NonNullable<VariantProps<typeof textVariants>['size']>;
 
-/** Default visual size for each heading level when `size` prop is not provided. */
+/**
+ * Default visual size for each heading level when `size` prop is not provided.
+ * Uses the SIZE_VARIANTS which already encode mobile-first responsive scaling,
+ * so h1 on mobile gets text-3xl (30px) scaling up to text-5xl (44px) on lg:.
+ */
 const HEADING_SIZE_DEFAULTS: Record<HeadingLevel, TextSize> = {
   1: '4xl',
   2: '3xl',
@@ -276,6 +299,8 @@ export interface HeadingProps
    * Omit for no constraint (default).
    */
   measure?: keyof typeof MEASURE_VARIANTS;
+  /** Controls letter-spacing independently of `uppercase`. */
+  tracking?: keyof typeof TRACKING_VARIANTS;
 }
 
 const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
@@ -289,6 +314,7 @@ const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
       level = 2,
       measure,
       size,
+      tracking,
       truncate,
       uppercase,
       weight = 'semibold',
@@ -312,6 +338,7 @@ const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
             leading,
             measure,
             size: resolvedSize,
+            tracking,
             truncate,
             uppercase,
             weight,

@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 import { Card } from '@/components/ui/card';
 import { ScrollTabItem, ScrollTabs } from '@/components/ui/scroll-tabs';
-import { decideColor } from '@/utils/color';
+import { ELEMENT_COLORS, getElementHexColor } from '@/lib/game-colors';
 
 import { useCharacterAbilitiesStore } from '../../stores';
 import { CharacterDetailed, CharacterMenuItem } from '../../types';
@@ -38,57 +38,21 @@ const TAB_ANIMATION_MAP: Record<CharacterMenuItem, string> = {
   Builds: styles.stickerBuilds,
 };
 
-/**
- * Returns element-specific Tailwind classes for menu items based on character element
- */
+/** Returns element-specific Tailwind classes for menu item active states. */
 function getElementClasses(element: string) {
-  const elementLower = element.toLowerCase();
-  const elementClassMap: Record<string, { active: string; indicator: string }> =
-    {
-      anemo: {
-        active:
-          'bg-linear-to-r from-anemo-500/20 via-anemo-400/15 to-transparent text-anemo-300 border-anemo-500/40',
-        indicator: 'bg-anemo-400',
-      },
-      pyro: {
-        active:
-          'bg-linear-to-r from-pyro-500/20 via-pyro-400/15 to-transparent text-pyro-300 border-pyro-500/40',
-        indicator: 'bg-pyro-400',
-      },
-      hydro: {
-        active:
-          'bg-linear-to-r from-hydro-500/20 via-hydro-400/15 to-transparent text-hydro-300 border-hydro-500/40',
-        indicator: 'bg-hydro-400',
-      },
-      electro: {
-        active:
-          'bg-linear-to-r from-electro-500/20 via-electro-400/15 to-transparent text-electro-300 border-electro-500/40',
-        indicator: 'bg-electro-400',
-      },
-      cryo: {
-        active:
-          'bg-linear-to-r from-cryo-500/20 via-cryo-400/15 to-transparent text-cryo-300 border-cryo-500/40',
-        indicator: 'bg-cryo-400',
-      },
-      geo: {
-        active:
-          'bg-linear-to-r from-geo-500/20 via-geo-400/15 to-transparent text-geo-300 border-geo-500/40',
-        indicator: 'bg-geo-400',
-      },
-      dendro: {
-        active:
-          'bg-linear-to-r from-dendro-500/20 via-dendro-400/15 to-transparent text-dendro-300 border-dendro-500/40',
-        indicator: 'bg-dendro-400',
-      },
-    };
-
-  return (
-    elementClassMap[elementLower] || {
+  const entry =
+    ELEMENT_COLORS[element.toLowerCase() as keyof typeof ELEMENT_COLORS];
+  if (!entry) {
+    return {
       active:
         'bg-linear-to-r from-celestial-500/20 via-celestial-400/15 to-transparent text-celestial-300 border-celestial-500/40',
       indicator: 'bg-celestial-400',
-    }
-  );
+    };
+  }
+  return {
+    active: `bg-linear-to-r ${entry.gradientFrom} ${entry.text} ${entry.border}`,
+    indicator: entry.indicator,
+  };
 }
 
 const CharacterDescription: React.FC<CharacterDetailedProps> = ({
@@ -124,7 +88,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
       </div>
     );
 
-  const elementColor = decideColor(character.element);
+  const elementColor = getElementHexColor(character.element);
   const elementClasses = getElementClasses(character.element);
 
   return (
@@ -140,6 +104,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
               idleOne={character.screenAnimation?.idleOne}
               idleTwo={character.screenAnimation?.idleTwo}
               fallbackCoverUrl={character.imageUrls.nameCard}
+              roles={character.roles}
             />
           </div>
 
@@ -275,7 +240,7 @@ const ProfileContent: React.FC<ProfileContentProps> = ({
   character,
   onNavigate,
 }) => {
-  const elementColor = decideColor(character.element);
+  const elementColor = getElementHexColor(character.element);
 
   return (
     <div className="space-y-4 md:space-y-8">

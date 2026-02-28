@@ -544,5 +544,6 @@
         "rotation": "Zhongli hE → Bennett EQ → Amber EQ → Ganyu charged shots"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "DPS"]
 }

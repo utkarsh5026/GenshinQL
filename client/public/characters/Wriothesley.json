@@ -586,5 +586,6 @@
         "rotation": "Bennett EQ → Kazuha tEP Q → Xiangling EQ → Wriothesley E punch combo"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

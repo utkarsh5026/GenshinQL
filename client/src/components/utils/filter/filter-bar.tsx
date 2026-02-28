@@ -1,10 +1,10 @@
-import { Filter, Search } from 'lucide-react';
+import { Filter } from 'lucide-react';
 import React from 'react';
 
+import { AppInput } from '@/components/ui/app-input';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
 import {
   Popover,
   PopoverContent,
@@ -135,15 +135,13 @@ const FilterBar: React.FC<FilterBarProps> = ({
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 p-3 sm:p-4">
         {/* Search - full width on mobile */}
         <div className="flex-1 w-full sm:w-auto">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <Input
-              placeholder="Search characters..."
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              className="pl-10 h-9 sm:h-10"
-            />
-          </div>
+          <AppInput
+            placeholder="Search characters..."
+            value={searchQuery}
+            onChange={(e) => onSearchChange(e.target.value)}
+            onClear={() => onSearchChange('')}
+            className="h-9 sm:h-10"
+          />
         </div>
 
         {/* Filter button - full width on mobile */}

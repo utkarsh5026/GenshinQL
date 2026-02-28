@@ -642,5 +642,6 @@
         "rotation": "Zhongli hE → Nahida E → Fischl E → Alhaitham E → combo"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

@@ -116,6 +116,13 @@ const VersionPage = lazyWithPreload(() =>
   ).then((module) => ({ default: module.VersionPage }))
 );
 
+const TeamBuilder = lazyWithPreload(() =>
+  import(
+    /* webpackChunkName: "route-team-builder" */
+    '@/features/team-builder'
+  ).then((module) => ({ default: module.TeamBuilderPage }))
+);
+
 /**
  * Preload all routes in the background
  * You can call this explicitly or let it run automatically
@@ -135,6 +142,7 @@ export const preloadAllRoutes = () => {
     MemoryGame.preload,
     LinkerGame.preload,
     VersionPage.preload,
+    TeamBuilder.preload,
   ];
 
   if (typeof window !== 'undefined') {
@@ -204,6 +212,10 @@ export const routes: RouteObject[] = [
   {
     path: '/version',
     element: <VersionPage />,
+  },
+  {
+    path: '/teams',
+    element: <TeamBuilder />,
   },
   {
     path: '*',

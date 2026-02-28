@@ -609,5 +609,6 @@
         "rotation": "Nilou EQ → Yaoyao EQ → Xingqiu EQ → Nahida E → on-field"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "DPS", "Support"]
 }

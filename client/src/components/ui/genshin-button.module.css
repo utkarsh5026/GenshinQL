@@ -1,0 +1,319 @@
+/* ─────────────────────────────────────────────
+   Base
+───────────────────────────────────────────── */
+.base {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  user-select: none;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition:
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    transform 0.1s ease,
+    opacity 0.2s ease;
+  text-decoration: none;
+}
+
+.base:disabled,
+.base[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.base:focus-visible {
+  outline: 2px solid var(--color-legendary-400);
+  outline-offset: 2px;
+}
+
+/* ─────────────────────────────────────────────
+   Shimmer Sweep
+───────────────────────────────────────────── */
+.shimmer {
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 55%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    oklch(100% 0 0 / 0.22) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 1;
+  will-change: left;
+}
+
+@keyframes shimmerSweep {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 150%;
+  }
+}
+
+.base:hover:not(:disabled) .shimmer {
+  animation: shimmerSweep 0.7s ease forwards;
+}
+
+/* ─────────────────────────────────────────────
+   Corner Ornaments
+   SVG: rotated square (diamond) at each corner
+───────────────────────────────────────────── */
+.corners {
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect x='2' y='2' width='4' height='4' transform='rotate(45 4 4)' fill='%23d4aa70' opacity='0.85'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect x='2' y='2' width='4' height='4' transform='rotate(45 4 4)' fill='%23d4aa70' opacity='0.85'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect x='2' y='2' width='4' height='4' transform='rotate(45 4 4)' fill='%23d4aa70' opacity='0.85'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect x='2' y='2' width='4' height='4' transform='rotate(45 4 4)' fill='%23d4aa70' opacity='0.85'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position:
+    3px 3px,
+    calc(100% - 3px) 3px,
+    3px calc(100% - 3px),
+    calc(100% - 3px) calc(100% - 3px);
+  background-size: 8px 8px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Outline variant — lighter diamonds */
+.outline .corners {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect x='2' y='2' width='4' height='4' transform='rotate(45 4 4)' fill='%23d4aa70' opacity='0.5'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect x='2' y='2' width='4' height='4' transform='rotate(45 4 4)' fill='%23d4aa70' opacity='0.5'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect x='2' y='2' width='4' height='4' transform='rotate(45 4 4)' fill='%23d4aa70' opacity='0.5'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect x='2' y='2' width='4' height='4' transform='rotate(45 4 4)' fill='%23d4aa70' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* ─────────────────────────────────────────────
+   Content (sits above shimmer + corners)
+───────────────────────────────────────────── */
+.content {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.content svg {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────
+   GOLD Variant (Primary)
+───────────────────────────────────────────── */
+.gold {
+  background: linear-gradient(
+    180deg,
+    var(--color-legendary-300) 0%,
+    var(--color-legendary-500) 55%,
+    var(--color-legendary-700) 100%
+  );
+  color: var(--color-legendary-900);
+  border: 1px solid var(--color-legendary-600);
+  box-shadow:
+    inset 0 1px 0 oklch(95% 0.06 85 / 0.55),
+    0 2px 8px oklch(55% 0.12 85 / 0.3);
+  text-shadow: 0 1px 0 oklch(92% 0.08 85 / 0.4);
+}
+
+.gold:hover:not(:disabled) {
+  background: linear-gradient(
+    180deg,
+    var(--color-legendary-200) 0%,
+    var(--color-legendary-400) 55%,
+    var(--color-legendary-600) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 oklch(98% 0.04 85 / 0.7),
+    0 4px 20px oklch(65% 0.16 85 / 0.5);
+}
+
+.gold:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 1px 0 oklch(90% 0.08 85 / 0.3),
+    0 1px 4px oklch(55% 0.12 85 / 0.25);
+}
+
+/* ─────────────────────────────────────────────
+   OUTLINE Variant
+───────────────────────────────────────────── */
+.outline {
+  background: transparent;
+  color: var(--color-legendary-500);
+  border: 1.5px solid var(--color-legendary-500);
+}
+
+.outline:hover:not(:disabled) {
+  background: oklch(65% 0.14 85 / 0.1);
+  border-color: var(--color-legendary-400);
+  color: var(--color-legendary-400);
+  box-shadow: 0 0 12px oklch(65% 0.14 85 / 0.25);
+}
+
+.outline:active:not(:disabled) {
+  transform: translateY(1px);
+  background: oklch(65% 0.14 85 / 0.07);
+}
+
+/* ─────────────────────────────────────────────
+   GHOST Variant
+───────────────────────────────────────────── */
+.ghost {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--color-muted-foreground);
+}
+
+.ghost:hover:not(:disabled) {
+  background: oklch(65% 0.14 85 / 0.08);
+  color: var(--color-legendary-500);
+}
+
+.ghost:active:not(:disabled) {
+  transform: translateY(1px);
+  background: oklch(65% 0.14 85 / 0.12);
+}
+
+/* ─────────────────────────────────────────────
+   DANGER Variant
+───────────────────────────────────────────── */
+.danger {
+  background: linear-gradient(
+    180deg,
+    var(--color-pyro-400) 0%,
+    var(--color-pyro-600) 100%
+  );
+  color: oklch(98% 0 0);
+  border: 1px solid var(--color-pyro-700);
+  box-shadow:
+    inset 0 1px 0 oklch(90% 0 0 / 0.2),
+    0 2px 8px oklch(60% 0.24 25 / 0.25);
+}
+
+.danger:hover:not(:disabled) {
+  background: linear-gradient(
+    180deg,
+    var(--color-pyro-300) 0%,
+    var(--color-pyro-500) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 oklch(95% 0 0 / 0.3),
+    0 4px 16px oklch(60% 0.24 25 / 0.4);
+}
+
+.danger:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 1px 0 oklch(85% 0 0 / 0.2),
+    0 1px 4px oklch(60% 0.24 25 / 0.25);
+}
+
+/* ─────────────────────────────────────────────
+   SECONDARY Variant
+───────────────────────────────────────────── */
+.secondary {
+  background: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+  border: 1px solid var(--color-border);
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--color-accent);
+  border-color: var(--color-legendary-700);
+}
+
+.secondary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* ─────────────────────────────────────────────
+   Sizes
+───────────────────────────────────────────── */
+.sm {
+  height: 2rem;
+  padding: 0 0.75rem;
+  font-size: 0.8125rem;
+  border-radius: 3px;
+}
+
+.sm .content {
+  gap: 0.375rem;
+}
+
+.sm .content svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.sm .corners {
+  background-size: 6px 6px;
+}
+
+.md {
+  height: 2.5rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+}
+
+.lg {
+  height: 3rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  letter-spacing: 0.05em;
+}
+
+.lg .content {
+  gap: 0.625rem;
+}
+
+.lg .content svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.lg .corners {
+  background-size: 10px 10px;
+}
+
+.icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
+}
+
+.icon .content svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}

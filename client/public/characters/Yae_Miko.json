@@ -616,5 +616,6 @@
         "rotation": "Kazuha tEP Q → Fischl E → Yae EEE → Nahida E → on-field → Yae Q"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "DPS"]
 }

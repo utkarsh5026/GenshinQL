@@ -1,0 +1,1486 @@
+{
+  "Aino": [
+    {
+      "name": "Bish-Bash-Bosh Repair",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Claymore_Hydro.png"
+    },
+    {
+      "name": "Musecatcher",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Talent_Musecatcher.png"
+    },
+    {
+      "name": "Precision Hydronic Cooler",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Talent_Precision_Hydronic_Cooler.png"
+    }
+  ],
+  "Albedo": [
+    {
+      "name": "Favonius Bladework - Weiss",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Sword_Geo.png"
+    },
+    {
+      "name": "Abiogenesis: Solar Isotoma",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_Abiogenesis_Solar_Isotoma.png"
+    },
+    {
+      "name": "Rite of Progeniture: Tectonic Tide",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Rite_of_Progeniture_Tectonic_Tide.png"
+    }
+  ],
+  "Alhaitham": [
+    {
+      "name": "Abductive Reasoning",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Sword_Dendro.png"
+    },
+    {
+      "name": "Universality: An Elaboration on Form",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Talent_Universality_An_Elaboration_on_Form.png"
+    },
+    {
+      "name": "Particular Field: Fetters of Phenomena",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/08/Talent_Particular_Field_Fetters_of_Phenomena.png"
+    }
+  ],
+  "Amber": [
+    {
+      "name": "Sharpshooter",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Bow_Pyro.png"
+    },
+    {
+      "name": "Explosive Puppet",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Talent_Explosive_Puppet.png"
+    },
+    {
+      "name": "Fiery Rain",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Talent_Fiery_Rain.png"
+    }
+  ],
+  "Arataki Itto": [
+    {
+      "name": "Fight Club Legend",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Claymore_Geo.png"
+    },
+    {
+      "name": "Masatsu Zetsugi: Akaushi Burst!",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Masatsu_Zetsugi_Akaushi_Burst%21.png"
+    },
+    {
+      "name": "Royal Descent: Behold, Itto the Evil!",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/50/Talent_Royal_Descent_Behold%2C_Itto_the_Evil%21.png"
+    }
+  ],
+  "Arlecchino": [
+    {
+      "name": "Invitation to a Beheading",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png"
+    },
+    {
+      "name": "All Is Ash",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Talent_All_Is_Ash.png"
+    },
+    {
+      "name": "Balemoon Rising",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Talent_Balemoon_Rising.png"
+    }
+  ],
+  "Baizhu": [
+    {
+      "name": "The Classics of Acupuncture",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Catalyst_Dendro.png"
+    },
+    {
+      "name": "Universal Diagnosis",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Talent_Universal_Diagnosis.png"
+    },
+    {
+      "name": "Holistic Revivification",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Talent_Holistic_Revivification.png"
+    }
+  ],
+  "Barbara": [
+    {
+      "name": "Whisper of Water",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png"
+    },
+    {
+      "name": "Let the Show Begin♪",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Talent_Let_the_Show_Begin%E2%99%AA.png"
+    },
+    {
+      "name": "Shining Miracle♪",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Talent_Shining_Miracle%E2%99%AA.png"
+    }
+  ],
+  "Beidou": [
+    {
+      "name": "Oceanborne",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Claymore_Electro.png"
+    },
+    {
+      "name": "Tidecaller",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Talent_Tidecaller.png"
+    },
+    {
+      "name": "Stormbreaker",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Stormbreaker.png"
+    }
+  ],
+  "Bennett": [
+    {
+      "name": "Strike of Fortune",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Sword_Pyro.png"
+    },
+    {
+      "name": "Passion Overload",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Passion_Overload.png"
+    },
+    {
+      "name": "Fantastic Voyage",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Fantastic_Voyage.png"
+    }
+  ],
+  "Candace": [
+    {
+      "name": "Gleaming Spear - Guardian Stance",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Polearm_Hydro.png"
+    },
+    {
+      "name": "Sacred Rite: Heron's Sanctum",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Sacred_Rite_Heron%27s_Sanctum.png"
+    },
+    {
+      "name": "Sacred Rite: Wagtail's Tide",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Talent_Sacred_Rite_Wagtail%27s_Tide.png"
+    }
+  ],
+  "Charlotte": [
+    {
+      "name": "Cool-Color Capture",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Catalyst_Cryo.png"
+    },
+    {
+      "name": "Framing: Freezing Point Composition",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Talent_Framing_Freezing_Point_Composition.png"
+    },
+    {
+      "name": "Still Photo: Comprehensive Confirmation",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Talent_Still_Photo_Comprehensive_Confirmation.png"
+    }
+  ],
+  "Chasca": [
+    {
+      "name": "Phantom Feather Flurry",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Bow_Anemo.png"
+    },
+    {
+      "name": "Spirit Reins, Shadow Hunt",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Talent_Spirit_Reins%2C_Shadow_Hunt.png"
+    },
+    {
+      "name": "Soul Reaper's Fatal Round",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Talent_Soul_Reaper%27s_Fatal_Round.png"
+    }
+  ],
+  "Chevreuse": [
+    {
+      "name": "Line Bayonet Thrust EX",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png"
+    },
+    {
+      "name": "Short-Range Rapid Interdiction Fire",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Talent_Short-Range_Rapid_Interdiction_Fire.png"
+    },
+    {
+      "name": "Ring of Bursting Grenades",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Ring_of_Bursting_Grenades.png"
+    }
+  ],
+  "Chiori": [
+    {
+      "name": "Weaving Blade",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Sword_Geo.png"
+    },
+    {
+      "name": "Fluttering Hasode",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Talent_Fluttering_Hasode.png"
+    },
+    {
+      "name": "Hiyoku: Twin Blades",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Talent_Hiyoku_Twin_Blades.png"
+    }
+  ],
+  "Chongyun": [
+    {
+      "name": "Demonbane",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Claymore_Cryo.png"
+    },
+    {
+      "name": "Spirit Blade: Chonghua's Layered Frost",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Talent_Spirit_Blade_Chonghua%27s_Layered_Frost.png"
+    },
+    {
+      "name": "Spirit Blade: Cloud-Parting Star",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Spirit_Blade_Cloud-Parting_Star.png"
+    }
+  ],
+  "Citlali": [
+    {
+      "name": "Shadow-Stealing Spirit Vessel",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Catalyst_Cryo.png"
+    },
+    {
+      "name": "Dawnfrost Darkstar",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Talent_Dawnfrost_Darkstar.png"
+    },
+    {
+      "name": "Edict of Entwined Splendor",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Talent_Edict_of_Entwined_Splendor.png"
+    }
+  ],
+  "Clorinde": [
+    {
+      "name": "Oath of Hunting Shadows",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Sword_Electro.png"
+    },
+    {
+      "name": "Hunter's Vigil",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Talent_Hunter%27s_Vigil.png"
+    },
+    {
+      "name": "Last Lightfall",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Talent_Last_Lightfall.png"
+    }
+  ],
+  "Collei": [
+    {
+      "name": "Supplicant's Bowmanship",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Bow_Dendro.png"
+    },
+    {
+      "name": "Floral Brush",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Talent_Floral_Brush.png"
+    },
+    {
+      "name": "Trump-Card Kitty",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Trump-Card_Kitty.png"
+    }
+  ],
+  "Columbina": [
+    {
+      "name": "Moondew Cascade",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png"
+    },
+    {
+      "name": "Eternal Tides",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Eternal_Tides.png"
+    },
+    {
+      "name": "Moonlit Melancholy",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Talent_Moonlit_Melancholy.png"
+    }
+  ],
+  "Cyno": [
+    {
+      "name": "Invoker's Spear",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png"
+    },
+    {
+      "name": "Secret Rite: Chasmic Soulfarer",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e3/Talent_Secret_Rite_Chasmic_Soulfarer.png"
+    },
+    {
+      "name": "Sacred Rite: Wolf's Swiftness",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Sacred_Rite_Wolf%27s_Swiftness.png"
+    }
+  ],
+  "Dahlia": [
+    {
+      "name": "Favonius Bladework - Ritual",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png"
+    },
+    {
+      "name": "Immersive Ordinance",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Talent_Immersive_Ordinance.png"
+    },
+    {
+      "name": "Radiant Psalter",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Radiant_Psalter.png"
+    }
+  ],
+  "Dehya": [
+    {
+      "name": "Sandstorm Assault",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png"
+    },
+    {
+      "name": "Molten Inferno",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Talent_Molten_Inferno.png"
+    },
+    {
+      "name": "Leonine Bite",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/12/Talent_Leonine_Bite.png"
+    }
+  ],
+  "Diluc": [
+    {
+      "name": "Tempered Sword",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png"
+    },
+    {
+      "name": "Searing Onslaught",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Talent_Searing_Onslaught.png"
+    },
+    {
+      "name": "Dawn",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Talent_Dawn.png"
+    }
+  ],
+  "Diona": [
+    {
+      "name": "Kätzlein Style",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Bow_Cryo.png"
+    },
+    {
+      "name": "Icy Paws",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Talent_Icy_Paws.png"
+    },
+    {
+      "name": "Signature Mix",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Talent_Signature_Mix.png"
+    }
+  ],
+  "Dori": [
+    {
+      "name": "Marvelous Sword-Dance (Modified)",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Claymore_Electro.png"
+    },
+    {
+      "name": "Spirit-Warding Lamp: Troubleshooter Cannon",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Talent_Spirit-Warding_Lamp_Troubleshooter_Cannon.png"
+    },
+    {
+      "name": "Alcazarzaray's Exactitude",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Talent_Alcazarzaray%27s_Exactitude.png"
+    }
+  ],
+  "Durin": [
+    {
+      "name": "Radiant Wingslash",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Sword_Pyro.png"
+    },
+    {
+      "name": "Binary Form: Convergence and Division",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2e/Talent_Binary_Form_Convergence_and_Division.png"
+    },
+    {
+      "name": "Principle of Purity: As the Light Shifts",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Talent_Principle_of_Purity_As_the_Light_Shifts.png"
+    }
+  ],
+  "Emilie": [
+    {
+      "name": "Shadow-Hunting Spear (Custom)",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Polearm_Dendro.png"
+    },
+    {
+      "name": "Fragrance Extraction",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/18/Talent_Fragrance_Extraction.png"
+    },
+    {
+      "name": "Aromatic Explication",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Aromatic_Explication.png"
+    }
+  ],
+  "Escoffier": [
+    {
+      "name": "Kitchen Skills",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Polearm_Cryo.png"
+    },
+    {
+      "name": "Low-Temperature Cooking",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Low-Temperature_Cooking.png"
+    },
+    {
+      "name": "Scoring Cuts",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Talent_Scoring_Cuts.png"
+    }
+  ],
+  "Eula": [
+    {
+      "name": "Favonius Bladework - Edel",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Claymore_Cryo.png"
+    },
+    {
+      "name": "Icetide Vortex",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ae/Talent_Icetide_Vortex.png"
+    },
+    {
+      "name": "Glacial Illumination",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/af/Talent_Glacial_Illumination.png"
+    }
+  ],
+  "Faruzan": [
+    {
+      "name": "Parthian Shot",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Bow_Anemo.png"
+    },
+    {
+      "name": "Wind Realm of Nasamjnin",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Talent_Wind_Realm_of_Nasamjnin.png"
+    },
+    {
+      "name": "The Wind's Secret Ways",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fc/Talent_The_Wind%27s_Secret_Ways.png"
+    }
+  ],
+  "Fischl": [
+    {
+      "name": "Bolts of Downfall",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Bow_Electro.png"
+    },
+    {
+      "name": "Nightrider",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Talent_Nightrider.png"
+    },
+    {
+      "name": "Midnight Phantasmagoria",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Talent_Midnight_Phantasmagoria.png"
+    }
+  ],
+  "Flins": [
+    {
+      "name": "Pocztowy Demonspear",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png"
+    },
+    {
+      "name": "Ancient Rite: Arcane Light",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Ancient_Rite_Arcane_Light.png"
+    },
+    {
+      "name": "Ancient Ritual: Cometh the Night",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Talent_Ancient_Ritual_Cometh_the_Night.png"
+    }
+  ],
+  "Freminet": [
+    {
+      "name": "Flowing Eddies",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Claymore_Cryo.png"
+    },
+    {
+      "name": "Pressurized Floe",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Pressurized_Floe.png"
+    },
+    {
+      "name": "Shadowhunter's Ambush",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Talent_Shadowhunter%27s_Ambush.png"
+    }
+  ],
+  "Furina": [
+    {
+      "name": "Soloist's Solicitation",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png"
+    },
+    {
+      "name": "Salon Solitaire",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Talent_Salon_Solitaire.png"
+    },
+    {
+      "name": "Let the People Rejoice",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Let_the_People_Rejoice.png"
+    }
+  ],
+  "Gaming": [
+    {
+      "name": "Stellar Rend",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png"
+    },
+    {
+      "name": "Bestial Ascent",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Talent_Bestial_Ascent.png"
+    },
+    {
+      "name": "Suanni's Gilded Dance",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/15/Talent_Suanni%27s_Gilded_Dance.png"
+    }
+  ],
+  "Ganyu": [
+    {
+      "name": "Liutian Archery",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Bow_Cryo.png"
+    },
+    {
+      "name": "Trail of the Qilin",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d1/Talent_Trail_of_the_Qilin.png"
+    },
+    {
+      "name": "Celestial Shower",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Celestial_Shower.png"
+    }
+  ],
+  "Gorou": [
+    {
+      "name": "Ripping Fang Fletching",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Bow_Geo.png"
+    },
+    {
+      "name": "Inuzaka All-Round Defense",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Talent_Inuzaka_All-Round_Defense.png"
+    },
+    {
+      "name": "Juuga: Forward Unto Victory",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Juuga_Forward_Unto_Victory.png"
+    }
+  ],
+  "Hu Tao": [
+    {
+      "name": "Secret Spear of Wangsheng",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png"
+    },
+    {
+      "name": "Guide to Afterlife",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Guide_to_Afterlife.png"
+    },
+    {
+      "name": "Spirit Soother",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Talent_Spirit_Soother.png"
+    }
+  ],
+  "Iansan": [
+    {
+      "name": "Weighted Spike",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png"
+    },
+    {
+      "name": "Thunderbolt Rush",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Talent_Thunderbolt_Rush.png"
+    },
+    {
+      "name": "The Three Principles of Power",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_The_Three_Principles_of_Power.png"
+    }
+  ],
+  "Ifa": [
+    {
+      "name": "Rite of Dispelling Winds",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png"
+    },
+    {
+      "name": "Airborne Disease Prevention",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Airborne_Disease_Prevention.png"
+    },
+    {
+      "name": "Compound Sedation Field",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Compound_Sedation_Field.png"
+    }
+  ],
+  "Ineffa": [
+    {
+      "name": "Cyclonic Duster",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png"
+    },
+    {
+      "name": "Cleaning Mode: Carrier Frequency",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Cleaning_Mode_Carrier_Frequency.png"
+    },
+    {
+      "name": "Supreme Instruction: Cyclonic Exterminator",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Talent_Supreme_Instruction_Cyclonic_Exterminator.png"
+    }
+  ],
+  "Jahoda": [
+    {
+      "name": "Strike While the Arrow's Hot",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Bow_Anemo.png"
+    },
+    {
+      "name": "Savvy Strategy: Splitting the Spoils",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Talent_Savvy_Strategy_Splitting_the_Spoils.png"
+    },
+    {
+      "name": "Hidden Aces: Seven Tools of the Hunter",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Talent_Hidden_Aces_Seven_Tools_of_the_Hunter.png"
+    }
+  ],
+  "Jean": [
+    {
+      "name": "Favonius Bladework",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png"
+    },
+    {
+      "name": "Gale Blade",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/24/Talent_Gale_Blade.png"
+    },
+    {
+      "name": "Dandelion Breeze",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Talent_Dandelion_Breeze.png"
+    }
+  ],
+  "Kachina": [
+    {
+      "name": "Cragbiter",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Polearm_Geo.png"
+    },
+    {
+      "name": "Go, Go Turbo Twirly!",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Talent_Go%2C_Go_Turbo_Twirly%21.png"
+    },
+    {
+      "name": "Time to Get Serious!",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Talent_Time_to_Get_Serious%21.png"
+    }
+  ],
+  "Kaedehara Kazuha": [
+    {
+      "name": "Garyuu Bladework",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png"
+    },
+    {
+      "name": "Chihayaburu",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Talent_Chihayaburu.png"
+    },
+    {
+      "name": "Kazuha Slash",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Kazuha_Slash.png"
+    }
+  ],
+  "Kaeya": [
+    {
+      "name": "Ceremonial Bladework",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png"
+    },
+    {
+      "name": "Frostgnaw",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Talent_Frostgnaw.png"
+    },
+    {
+      "name": "Glacial Waltz",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Talent_Glacial_Waltz.png"
+    }
+  ],
+  "Kamisato Ayaka": [
+    {
+      "name": "Kamisato Art: Kabuki",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png"
+    },
+    {
+      "name": "Kamisato Art: Hyouka",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Talent_Kamisato_Art_Hyouka.png"
+    },
+    {
+      "name": "Kamisato Art: Soumetsu",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/11/Talent_Kamisato_Art_Soumetsu.png"
+    }
+  ],
+  "Kamisato Ayato": [
+    {
+      "name": "Kamisato Art: Marobashi",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png"
+    },
+    {
+      "name": "Kamisato Art: Kyouka",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Kamisato_Art_Kyouka.png"
+    },
+    {
+      "name": "Kamisato Art: Suiyuu",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Kamisato_Art_Suiyuu.png"
+    }
+  ],
+  "Kaveh": [
+    {
+      "name": "Schematic Setup",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Claymore_Dendro.png"
+    },
+    {
+      "name": "Artistic Ingenuity",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Talent_Artistic_Ingenuity.png"
+    },
+    {
+      "name": "Painted Dome",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Painted_Dome.png"
+    }
+  ],
+  "Keqing": [
+    {
+      "name": "Yunlai Swordsmanship",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Talent_Yunlai_Swordsmanship.png"
+    },
+    {
+      "name": "Stellar Restoration",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Stellar_Restoration.png"
+    },
+    {
+      "name": "Starward Sword",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Starward_Sword.png"
+    }
+  ],
+  "Kinich": [
+    {
+      "name": "Nightsun Style",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Claymore_Dendro.png"
+    },
+    {
+      "name": "Canopy Hunter: Riding High",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/21/Talent_Canopy_Hunter_Riding_High.png"
+    },
+    {
+      "name": "Hail to the Almighty Dragonlord",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Hail_to_the_Almighty_Dragonlord.png"
+    }
+  ],
+  "Kirara": [
+    {
+      "name": "Boxcutter",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Sword_Dendro.png"
+    },
+    {
+      "name": "Meow-teor Kick",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Talent_Meow-teor_Kick.png"
+    },
+    {
+      "name": "Secret Art: Surprise Dispatch",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Secret_Art_Surprise_Dispatch.png"
+    }
+  ],
+  "Klee": [
+    {
+      "name": "Kaboom!",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Catalyst_Pyro.png"
+    },
+    {
+      "name": "Jumpy Dumpty",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Jumpy_Dumpty.png"
+    },
+    {
+      "name": "Sparks 'n' Splash",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Sparks_%27n%27_Splash.png"
+    }
+  ],
+  "Kujou Sara": [
+    {
+      "name": "Tengu Bowmanship",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Bow_Electro.png"
+    },
+    {
+      "name": "Tengu Stormcall",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Talent_Tengu_Stormcall.png"
+    },
+    {
+      "name": "Subjugation: Koukou Sendou",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Subjugation_Koukou_Sendou.png"
+    }
+  ],
+  "Kuki Shinobu": [
+    {
+      "name": "Shinobu's Shadowsword",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b8/Sword_Electro.png"
+    },
+    {
+      "name": "Sanctifying Ring",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Talent_Sanctifying_Ring.png"
+    },
+    {
+      "name": "Gyoei Narukami Kariyama Rite",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Gyoei_Narukami_Kariyama_Rite.png"
+    }
+  ],
+  "Lan Yan": [
+    {
+      "name": "Black Pheasant Strides on Water",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png"
+    },
+    {
+      "name": "Swallow-Wisp Pinion Dance",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Talent_Swallow-Wisp_Pinion_Dance.png"
+    },
+    {
+      "name": "Lustrous Moonrise",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Talent_Lustrous_Moonrise.png"
+    }
+  ],
+  "Lauma": [
+    {
+      "name": "Peregrination of Linnunrata",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Catalyst_Dendro.png"
+    },
+    {
+      "name": "Runo: Dawnless Rest of Karsikko",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Talent_Runo_Dawnless_Rest_of_Karsikko.png"
+    },
+    {
+      "name": "Runo: All Hearts Become the Beating Moon",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Runo_All_Hearts_Become_the_Beating_Moon.png"
+    }
+  ],
+  "Layla": [
+    {
+      "name": "Sword of the Radiant Path",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png"
+    },
+    {
+      "name": "Nights of Formal Focus",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Talent_Nights_of_Formal_Focus.png"
+    },
+    {
+      "name": "Dream of the Star-Stream Shaker",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Talent_Dream_of_the_Star-Stream_Shaker.png"
+    }
+  ],
+  "Lisa": [
+    {
+      "name": "Lightning Touch",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Catalyst_Electro.png"
+    },
+    {
+      "name": "Violet Arc",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c8/Talent_Violet_Arc.png"
+    },
+    {
+      "name": "Lightning Rose",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Talent_Lightning_Rose.png"
+    }
+  ],
+  "Lynette": [
+    {
+      "name": "Rapid Ritesword",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png"
+    },
+    {
+      "name": "Enigmatic Feint",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Enigmatic_Feint.png"
+    },
+    {
+      "name": "Magic Trick: Astonishing Shift",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Talent_Magic_Trick_Astonishing_Shift.png"
+    }
+  ],
+  "Lyney": [
+    {
+      "name": "Card Force Translocation",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Bow_Pyro.png"
+    },
+    {
+      "name": "Bewildering Lights",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Talent_Bewildering_Lights.png"
+    },
+    {
+      "name": "Wondrous Trick: Miracle Parade",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Talent_Wondrous_Trick_Miracle_Parade.png"
+    }
+  ],
+  "Mavuika": [
+    {
+      "name": "Flames Weave Life",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png"
+    },
+    {
+      "name": "The Named Moment",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Talent_The_Named_Moment.png"
+    },
+    {
+      "name": "Hour of Burning Skies",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Hour_of_Burning_Skies.png"
+    }
+  ],
+  "Mika": [
+    {
+      "name": "Spear of Favonius - Arrow's Passage",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Polearm_Cryo.png"
+    },
+    {
+      "name": "Starfrost Swirl",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Talent_Starfrost_Swirl.png"
+    },
+    {
+      "name": "Skyfeather Song",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7a/Talent_Skyfeather_Song.png"
+    }
+  ],
+  "Mona": [
+    {
+      "name": "Ripple of Fate",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png"
+    },
+    {
+      "name": "Mirror Reflection of Doom",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/45/Talent_Mirror_Reflection_of_Doom.png"
+    },
+    {
+      "name": "Stellaris Phantasm",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Talent_Stellaris_Phantasm.png"
+    }
+  ],
+  "Mualani": [
+    {
+      "name": "Cooling Treatment",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png"
+    },
+    {
+      "name": "Surfshark Wavebreaker",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Surfshark_Wavebreaker.png"
+    },
+    {
+      "name": "Boomsharka-laka",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Talent_Boomsharka-laka.png"
+    }
+  ],
+  "Nahida": [
+    {
+      "name": "Akara",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Catalyst_Dendro.png"
+    },
+    {
+      "name": "All Schemes to Know",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Talent_All_Schemes_to_Know.png"
+    },
+    {
+      "name": "Illusory Heart",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Talent_Illusory_Heart.png"
+    }
+  ],
+  "Navia": [
+    {
+      "name": "Blunt Refusal",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Claymore_Geo.png"
+    },
+    {
+      "name": "Ceremonial Crystalshot",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Talent_Ceremonial_Crystalshot.png"
+    },
+    {
+      "name": "As the Sunlit Sky's Singing Salute",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Talent_As_the_Sunlit_Sky%27s_Singing_Salute.png"
+    }
+  ],
+  "Nefer": [
+    {
+      "name": "Striking Serpent",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Catalyst_Dendro.png"
+    },
+    {
+      "name": "Senet Strategy: Dance of a Thousand Nights",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Talent_Senet_Strategy_Dance_of_a_Thousand_Nights.png"
+    },
+    {
+      "name": "Sacred Vow: True Eye's Phantasm",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Talent_Sacred_Vow_True_Eye%27s_Phantasm.png"
+    }
+  ],
+  "Neuvillette": [
+    {
+      "name": "As Water Seeks Equilibrium",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png"
+    },
+    {
+      "name": "O Tears, I Shall Repay",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Talent_O_Tears%2C_I_Shall_Repay.png"
+    },
+    {
+      "name": "O Tides, I Have Returned",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Talent_O_Tides%2C_I_Have_Returned.png"
+    }
+  ],
+  "Nilou": [
+    {
+      "name": "Dance of Samser",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png"
+    },
+    {
+      "name": "Dance of Haftkarsvar",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Talent_Dance_of_Haftkarsvar.png"
+    },
+    {
+      "name": "Dance of Abzendegi: Distant Dreams, Listening Spring",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Talent_Dance_of_Abzendegi_Distant_Dreams%2C_Listening_Spring.png"
+    }
+  ],
+  "Ningguang": [
+    {
+      "name": "Sparkling Scatter",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Catalyst_Geo.png"
+    },
+    {
+      "name": "Jade Screen",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Talent_Jade_Screen.png"
+    },
+    {
+      "name": "Starshatter",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Talent_Starshatter.png"
+    }
+  ],
+  "Noelle": [
+    {
+      "name": "Favonius Bladework - Maid",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/65/Claymore_Geo.png"
+    },
+    {
+      "name": "Breastplate",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5a/Talent_Breastplate.png"
+    },
+    {
+      "name": "Sweeping Time",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_Sweeping_Time.png"
+    }
+  ],
+  "Ororon": [
+    {
+      "name": "Spiritvessel Snapshot",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Bow_Electro.png"
+    },
+    {
+      "name": "Night's Sling",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Talent_Night%27s_Sling.png"
+    },
+    {
+      "name": "Dark Voices Echo",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Talent_Dark_Voices_Echo.png"
+    }
+  ],
+  "Qiqi": [
+    {
+      "name": "Ancient Sword Art",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png"
+    },
+    {
+      "name": "Adeptus Art: Herald of Frost",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Talent_Adeptus_Art_Herald_of_Frost.png"
+    },
+    {
+      "name": "Adeptus Art: Preserver of Fortune",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7c/Talent_Adeptus_Art_Preserver_of_Fortune.png"
+    }
+  ],
+  "Raiden Shogun": [
+    {
+      "name": "Origin",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Polearm_Electro.png"
+    },
+    {
+      "name": "Transcendence: Baleful Omen",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3c/Talent_Transcendence_Baleful_Omen.png"
+    },
+    {
+      "name": "Secret Art: Musou Shinsetsu",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Talent_Secret_Art_Musou_Shinsetsu.png"
+    }
+  ],
+  "Razor": [
+    {
+      "name": "Steel Fang",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Claymore_Electro.png"
+    },
+    {
+      "name": "Claw and Thunder",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Claw_and_Thunder.png"
+    },
+    {
+      "name": "Lightning Fang",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Talent_Lightning_Fang.png"
+    }
+  ],
+  "Rosaria": [
+    {
+      "name": "Spear of the Church",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Polearm_Cryo.png"
+    },
+    {
+      "name": "Ravaging Confession",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ce/Talent_Ravaging_Confession.png"
+    },
+    {
+      "name": "Rites of Termination",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Talent_Rites_of_Termination.png"
+    }
+  ],
+  "Sangonomiya Kokomi": [
+    {
+      "name": "The Shape of Water",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Catalyst_Hydro.png"
+    },
+    {
+      "name": "Kurage's Oath",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Talent_Kurage%27s_Oath.png"
+    },
+    {
+      "name": "Nereid's Ascension",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Talent_Nereid%27s_Ascension.png"
+    }
+  ],
+  "Sayu": [
+    {
+      "name": "Shuumatsuban Ninja Blade",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c7/Claymore_Anemo.png"
+    },
+    {
+      "name": "Yoohoo Art: Fuuin Dash",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Talent_Yoohoo_Art_Fuuin_Dash.png"
+    },
+    {
+      "name": "Yoohoo Art: Mujina Flurry",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Talent_Yoohoo_Art_Mujina_Flurry.png"
+    }
+  ],
+  "Sethos": [
+    {
+      "name": "Royal Reed Archery",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Bow_Electro.png"
+    },
+    {
+      "name": "Ancient Rite: The Thundering Sands",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Talent_Ancient_Rite_The_Thundering_Sands.png"
+    },
+    {
+      "name": "Secret Rite: Twilight Shadowpiercer",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Talent_Secret_Rite_Twilight_Shadowpiercer.png"
+    }
+  ],
+  "Shenhe": [
+    {
+      "name": "Dawnstar Piercer",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Polearm_Cryo.png"
+    },
+    {
+      "name": "Spring Spirit Summoning",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Talent_Spring_Spirit_Summoning.png"
+    },
+    {
+      "name": "Divine Maiden's Deliverance",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Talent_Divine_Maiden%27s_Deliverance.png"
+    }
+  ],
+  "Shikanoin Heizou": [
+    {
+      "name": "Fudou Style Martial Arts",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png"
+    },
+    {
+      "name": "Heartstopper Strike",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Talent_Heartstopper_Strike.png"
+    },
+    {
+      "name": "Windmuster Kick",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Talent_Windmuster_Kick.png"
+    }
+  ],
+  "Sigewinne": [
+    {
+      "name": "Targeted Treatment",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Bow_Hydro.png"
+    },
+    {
+      "name": "Rebound Hydrotherapy",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Talent_Rebound_Hydrotherapy.png"
+    },
+    {
+      "name": "Super Saturated Syringing",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Talent_Super_Saturated_Syringing.png"
+    }
+  ],
+  "Skirk": [
+    {
+      "name": "Havoc: Sunder",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Sword_Cryo.png"
+    },
+    {
+      "name": "Havoc: Warp",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Talent_Havoc_Warp.png"
+    },
+    {
+      "name": "Havoc: Ruin",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Talent_Havoc_Ruin.png"
+    }
+  ],
+  "Sucrose": [
+    {
+      "name": "Wind Spirit Creation",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png"
+    },
+    {
+      "name": "Astable Anemohypostasis Creation - 6308",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Talent_Astable_Anemohypostasis_Creation_-_6308.png"
+    },
+    {
+      "name": "Forbidden Creation - Isomer 75 / Type II",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/4/4d/Talent_Forbidden_Creation_-_Isomer_75_Type_II.png"
+    }
+  ],
+  "Tartaglia": [
+    {
+      "name": "Cutting Torrent",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Bow_Hydro.png"
+    },
+    {
+      "name": "Foul Legacy: Raging Tide",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Talent_Foul_Legacy_Raging_Tide.png"
+    },
+    {
+      "name": "Havoc: Obliteration",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Havoc_Obliteration.png"
+    }
+  ],
+  "Thoma": [
+    {
+      "name": "Swiftshatter Spear",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png"
+    },
+    {
+      "name": "Blazing Blessing",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Talent_Blazing_Blessing.png"
+    },
+    {
+      "name": "Crimson Ooyoroi",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e4/Talent_Crimson_Ooyoroi.png"
+    }
+  ],
+  "Tighnari": [
+    {
+      "name": "Khanda Barrier-Buster",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Bow_Dendro.png"
+    },
+    {
+      "name": "Vijnana-Phala Mine",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f9/Talent_Vijnana-Phala_Mine.png"
+    },
+    {
+      "name": "Fashioner's Tanglevine Shaft",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/30/Talent_Fashioner%27s_Tanglevine_Shaft.png"
+    }
+  ],
+  "Varesa": [
+    {
+      "name": "By the Horns",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Catalyst_Electro.png"
+    },
+    {
+      "name": "Riding the Night-Rainbow",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b3/Talent_Riding_the_Night-Rainbow.png"
+    },
+    {
+      "name": "Guardian Vent!",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Talent_Guardian_Vent%21.png"
+    }
+  ],
+  "Venti": [
+    {
+      "name": "Divine Marksmanship",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5b/Bow_Anemo.png"
+    },
+    {
+      "name": "Skyward Sonnet",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Talent_Skyward_Sonnet.png"
+    },
+    {
+      "name": "Wind's Grand Ode",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Talent_Wind%27s_Grand_Ode.png"
+    }
+  ],
+  "Wanderer": [
+    {
+      "name": "Yuuban Meigen",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png"
+    },
+    {
+      "name": "Hanega: Song of the Wind",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Talent_Hanega_Song_of_the_Wind.png"
+    },
+    {
+      "name": "Kyougen: Five Ceremonial Plays",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Talent_Kyougen_Five_Ceremonial_Plays.png"
+    }
+  ],
+  "Wriothesley": [
+    {
+      "name": "Forceful Fists of Frost",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Catalyst_Cryo.png"
+    },
+    {
+      "name": "Icefang Rush",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Talent_Icefang_Rush.png"
+    },
+    {
+      "name": "Darkgold Wolfbite",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Talent_Darkgold_Wolfbite.png"
+    }
+  ],
+  "Xiangling": [
+    {
+      "name": "Dough-Fu",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Polearm_Pyro.png"
+    },
+    {
+      "name": "Guoba Attack",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Talent_Guoba_Attack.png"
+    },
+    {
+      "name": "Pyronado",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Talent_Pyronado.png"
+    }
+  ],
+  "Xianyun": [
+    {
+      "name": "Word of Wind and Flower",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Catalyst_Anemo.png"
+    },
+    {
+      "name": "White Clouds at Dawn",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Talent_White_Clouds_at_Dawn.png"
+    },
+    {
+      "name": "Stars Gather at Dusk",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Talent_Stars_Gather_at_Dusk.png"
+    }
+  ],
+  "Xiao": [
+    {
+      "name": "Whirlwind Thrust",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Polearm_Anemo.png"
+    },
+    {
+      "name": "Lemniscatic Wind Cycling",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/d/da/Talent_Lemniscatic_Wind_Cycling.png"
+    },
+    {
+      "name": "Bane of All Evil",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Talent_Bane_of_All_Evil.png"
+    }
+  ],
+  "Xilonen": [
+    {
+      "name": "Ehecatl's Roar",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Sword_Geo.png"
+    },
+    {
+      "name": "Yohual's Scratch",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Talent_Yohual%27s_Scratch.png"
+    },
+    {
+      "name": "Ocelotlicue Point!",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Talent_Ocelotlicue_Point%21.png"
+    }
+  ],
+  "Xingqiu": [
+    {
+      "name": "Guhua Style",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Sword_Hydro.png"
+    },
+    {
+      "name": "Guhua Sword: Fatal Rainscreen",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Talent_Guhua_Sword_Fatal_Rainscreen.png"
+    },
+    {
+      "name": "Guhua Sword: Raincutter",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Talent_Guhua_Sword_Raincutter.png"
+    }
+  ],
+  "Xinyan": [
+    {
+      "name": "Dance on Fire",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Claymore_Pyro.png"
+    },
+    {
+      "name": "Sweeping Fervor",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/85/Talent_Sweeping_Fervor.png"
+    },
+    {
+      "name": "Riff Revolution",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Talent_Riff_Revolution.png"
+    }
+  ],
+  "Yae Miko": [
+    {
+      "name": "Spiritfox Sin-Eater",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Catalyst_Electro.png"
+    },
+    {
+      "name": "Yakan Evocation: Sesshou Sakura",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Yakan_Evocation_Sesshou_Sakura.png"
+    },
+    {
+      "name": "Great Secret Art: Tenko Kenshin",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Great_Secret_Art_Tenko_Kenshin.png"
+    }
+  ],
+  "Yanfei": [
+    {
+      "name": "Seal of Approval",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/8/80/Catalyst_Pyro.png"
+    },
+    {
+      "name": "Signed Edict",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Talent_Signed_Edict.png"
+    },
+    {
+      "name": "Done Deal",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Talent_Done_Deal.png"
+    }
+  ],
+  "Yaoyao": [
+    {
+      "name": "Toss 'N' Turn Spear",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Polearm_Dendro.png"
+    },
+    {
+      "name": "Raphanus Sky Cluster",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Talent_Raphanus_Sky_Cluster.png"
+    },
+    {
+      "name": "Moonjade Descent",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Talent_Moonjade_Descent.png"
+    }
+  ],
+  "Yelan": [
+    {
+      "name": "Stealthy Bowshot",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/62/Bow_Hydro.png"
+    },
+    {
+      "name": "Lingering Lifeline",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Lingering_Lifeline.png"
+    },
+    {
+      "name": "Depth-Clarion Dice",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Talent_Depth-Clarion_Dice.png"
+    }
+  ],
+  "Yoimiya": [
+    {
+      "name": "Firework Flare-Up",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Bow_Pyro.png"
+    },
+    {
+      "name": "Niwabi Fire-Dance",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Talent_Niwabi_Fire-Dance.png"
+    },
+    {
+      "name": "Ryuukin Saxifrage",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Talent_Ryuukin_Saxifrage.png"
+    }
+  ],
+  "Yun Jin": [
+    {
+      "name": "Cloud-Grazing Strike",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Polearm_Geo.png"
+    },
+    {
+      "name": "Opening Flourish",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/92/Talent_Opening_Flourish.png"
+    },
+    {
+      "name": "Cliffbreaker's Banner",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/59/Talent_Cliffbreaker%27s_Banner.png"
+    }
+  ],
+  "Zhongli": [
+    {
+      "name": "Rain of Stone",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/99/Polearm_Geo.png"
+    },
+    {
+      "name": "Dominus Lapidis",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Talent_Dominus_Lapidis.png"
+    },
+    {
+      "name": "Planet Befall",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Talent_Planet_Befall.png"
+    }
+  ]
+}

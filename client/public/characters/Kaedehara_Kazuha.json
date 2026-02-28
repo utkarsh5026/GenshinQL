@@ -735,5 +735,6 @@
         "rotation": "Zhongli hE → Furina EQ → Kazuha tEP Q → Neuvillette charged attacks"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "Support"]
 }

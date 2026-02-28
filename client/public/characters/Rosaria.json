@@ -550,5 +550,6 @@
         "rotation": "Bennett EQ → Kazuha tEP Q → Xiangling EQ → Rosaria EQ → E"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "DPS"]
 }

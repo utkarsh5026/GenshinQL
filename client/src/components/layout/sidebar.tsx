@@ -12,6 +12,7 @@ import {
   Shield,
   Sparkles,
   Swords,
+  Users2,
   Waypoints,
 } from 'lucide-react';
 import React, { useMemo } from 'react';
@@ -26,6 +27,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { CachedImage } from '@/features/cache';
 import { useRecents } from '@/features/command-palette/stores/useRecentsStore';
 import type { RecentItem } from '@/features/command-palette/types';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -74,6 +76,12 @@ const navSections: NavSection[] = [
         label: 'Routine',
         icon: ScrollText,
         iconColor: 'oklch(60% 0.24 300)',
+      },
+      {
+        route: '/teams',
+        label: 'Teams',
+        icon: Users2,
+        iconColor: 'oklch(62% 0.18 165)',
       },
     ],
   },
@@ -165,7 +173,7 @@ const SidebarNavItem: React.FC<SidebarNavItemProps> = ({
       className={`
         ${styles.navItem}
         relative flex items-center gap-3
-        px-2.5 py-2 rounded-xl mx-2 my-0.5
+        px-2.5 py-1 rounded-xl mx-2 my-0
         transition-all duration-200 group/navitem cursor-pointer
         ${isActive ? '' : 'hover:bg-white/3'}
       `}
@@ -257,7 +265,7 @@ const SidebarVersionItem: React.FC<SidebarVersionItemProps> = ({
       onClick={onClick}
       className={`
         relative flex items-center gap-3
-        px-3 py-2.5 rounded-lg mx-2 my-0.5
+        px-3 py-1.5 rounded-lg mx-2 my-0
         transition-all duration-300
         cursor-pointer border
         ${isActive ? 'border-amber-500/40' : 'border-amber-500/20 hover:border-amber-500/40'}
@@ -345,7 +353,7 @@ const SidebarRecentItem: React.FC<SidebarRecentItemProps> = ({
       onClick={onClick}
       className={`
         relative flex items-center gap-3
-        px-3 py-2 rounded-lg mx-2 my-0.5
+        px-3 py-2 rounded-lg mx-2 my-0
         transition-all duration-200
         cursor-pointer
         hover:bg-accent/50 text-muted-foreground hover:text-foreground
@@ -390,7 +398,7 @@ const SidebarRecentItem: React.FC<SidebarRecentItemProps> = ({
 // ─── Section Header ───────────────────────────────────────────────────────────
 
 const SectionHeader: React.FC<{ label: string }> = ({ label }) => (
-  <div className="flex items-center gap-2 px-4 pt-4 pb-1">
+  <div className="flex items-center gap-2 px-4 pt-2 pb-0.5">
     <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-[0.18em]">
       ◆ {label}
     </span>
@@ -424,10 +432,10 @@ const SidebarRecentsSection: React.FC<SidebarRecentsSectionProps> = ({
   if (filteredRecents.length === 0) return null;
 
   return (
-    <div className="mt-1">
+    <div className="mt-0">
       <Separator className="mx-3 my-2" />
       {isExpanded && (
-        <div className="flex items-center gap-2 px-5 pb-1 pt-2">
+        <div className="flex items-center gap-2 px-5 pb-0.5 pt-1">
           <Clock className="w-3 h-3 text-muted-foreground/60" />
           <span className="text-[10px] font-semibold text-muted-foreground/60 uppercase tracking-widest">
             Recent
@@ -501,10 +509,27 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
       {/* Subtle dot-grid background pattern */}
       <div className={styles.sidebarBg} aria-hidden="true" />
 
-      {/* Top bar with pin toggle */}
-      <div
-        className={`flex items-center py-3 px-3 relative z-10 ${isPinned ? 'justify-end' : 'justify-center'}`}
-      >
+      {/* Top bar with logo + pin toggle */}
+      <div className="flex items-center py-3 px-3 relative z-10 gap-2">
+        {/* Logo + App name */}
+        <div
+          className={`flex items-center gap-2 flex-1 min-w-0 ${!isPinned ? 'justify-center' : ''}`}
+        >
+          <CachedImage
+            src="/favicon-32x32.png"
+            alt="GenshinQL logo"
+            className={`w-6 h-6 shrink-0 rounded-md ${styles.brandLogoIdle}`}
+            showSkeleton={false}
+          />
+          {isPinned && (
+            <span
+              className={`text-sm font-bold tracking-tight text-foreground/90 whitespace-nowrap truncate ${styles.brandText}`}
+            >
+              Genshin<span className="text-amber-400">QL</span>
+            </span>
+          )}
+        </div>
+        {/* Pin toggle */}
         <TooltipProvider>
           <PinToggle isPinned={isPinned} onToggle={togglePin} />
         </TooltipProvider>
@@ -513,7 +538,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
       <Separator className="mx-3 mb-1 relative z-10" />
 
       {/* Navigation */}
-      <nav className="flex-1 py-2 overflow-y-auto overflow-x-hidden">
+      <nav className="flex-1 py-1 overflow-y-auto overflow-x-hidden">
         <TooltipProvider>
           {/* Version item at top */}
           <SidebarVersionItem
@@ -568,7 +593,21 @@ const MobileSidebar: React.FC<MobileSidebarProps> = ({
       <SheetContent side="left" className="w-72 p-0">
         <div className="relative h-full">
           <div className={styles.sidebarBg} aria-hidden="true" />
-          <nav className="py-4 overflow-y-auto h-full relative z-10">
+          <nav className="py-2 overflow-y-auto h-full relative z-10">
+            {/* Logo + App name header */}
+            <div className="flex items-center gap-2.5 px-4 py-3 mb-1">
+              <CachedImage
+                src="/favicon-32x32.png"
+                alt="GenshinQL logo"
+                className={`w-6 h-6 rounded-md shrink-0 ${styles.brandLogoIdle}`}
+                showSkeleton={false}
+              />
+              <span
+                className={`text-sm font-bold tracking-tight text-foreground/90 ${styles.brandText}`}
+              >
+                Genshin<span className="text-amber-400">QL</span>
+              </span>
+            </div>
             <SidebarVersionItem
               isActive={isRouteActive(versionItem.route)}
               isExpanded={true}

@@ -730,5 +730,6 @@
         "rotation": "Rosaria EQ → Xingqiu EQ → Kazuha tEP Q → Skirk E combo"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

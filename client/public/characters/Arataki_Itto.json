@@ -593,5 +593,6 @@
         "rotation": "Zhongli hE → Albedo E → Gorou EQ → Itto Q → charged attack combo"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

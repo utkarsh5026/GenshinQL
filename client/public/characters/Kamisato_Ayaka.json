@@ -654,5 +654,6 @@
         "rotation": "Diona EQ → Mona EQ → Venti EQ → Ayaka dash EQ"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }
