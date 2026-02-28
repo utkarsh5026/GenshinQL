@@ -1,16 +1,15 @@
 import * as PopoverPrimitive from '@radix-ui/react-popover';
 import { Reorder, useDragControls } from 'framer-motion';
 import { GripVertical, Pencil, Plus, X } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { ElementBadge } from '@/components/ui/genshin-game-icons';
-import { useFetchArtifactLinks } from '@/features/characters/stores';
+import { useFetchDetailedArtifacts } from '@/features/characters';
 import type { WeaponSummary } from '@/features/weapons';
 import { getElementHexColor } from '@/lib/game-colors';
 import { cn } from '@/lib/utils';
 import type { Character } from '@/types';
 
-import { SUBSTAT_PRIORITY } from '../../constants';
 import type {
   ArtifactConfig,
   CharacterRole,
@@ -18,7 +17,8 @@ import type {
 } from '../../types';
 import { CharacterPickerDialog } from '../character-picker';
 import { RoleBadges, RoleBadgeSelector } from '../role-selector';
-import { ArtifactDisplay, ArtifactsPanel } from './artifact-picker';
+import { ArtifactStats } from './artifact-stats';
+import { ArtifactSelector } from './artifacts-selector';
 import { SlotPopover } from './slot-popover';
 import { WeaponSelector } from './weapon-selector';
 
@@ -41,20 +41,10 @@ interface CharacterSlotCardProps {
   onClearSlot: () => void;
 }
 
-type EditSection = 'weapon' | 'artifacts' | 'roles' | 'notes' | null;
+type EditSection = 'roles' | 'notes' | null;
 
 /** Quick-select level presets */
 const LEVEL_PRESETS = [20, 40, 60, 70, 80, 90, 100];
-
-/** Ordered main-stat chip definitions for the collapsed artifact summary. */
-const MAIN_STAT_CHIPS: Array<{
-  prefix: string;
-  key: 'sands' | 'goblet' | 'circlet';
-}> = [
-  { prefix: 'S', key: 'sands' },
-  { prefix: 'G', key: 'goblet' },
-  { prefix: 'C', key: 'circlet' },
-];
 
 /** Class names for a quick-select option button based on active state. */
 const optionButtonClass = (isActive: boolean) =>
@@ -124,28 +114,6 @@ const RolesPanel: React.FC<RolesPanelProps> = ({
   </div>
 );
 
-interface SubstatChipProps {
-  stat: string;
-  showSeparator: boolean;
-}
-
-const SubstatChip: React.FC<SubstatChipProps> = ({ stat, showSeparator }) => (
-  <Reorder.Item
-    value={stat}
-    className="flex items-center cursor-grab active:cursor-grabbing touch-none select-none"
-  >
-    <span className="text-[9px] px-1.5 py-0.5 rounded bg-primary/15 border border-primary/30 text-primary/80 flex items-center gap-0.5">
-      <GripVertical className="w-2.5 h-2.5 text-primary/30 shrink-0" />
-      {stat}
-    </span>
-    {showSeparator && (
-      <span className="text-[8px] text-muted-foreground/40 font-semibold mx-1 pointer-events-none">
-        &gt;&gt;
-      </span>
-    )}
-  </Reorder.Item>
-);
-
 export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   slot,
   slotIndex,
@@ -165,7 +133,6 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
 }) => {
   const [pickerOpen, setPickerOpen] = useState(false);
   const [editing, setEditing] = useState<EditSection>(null);
-  const fetchArtifactLinks = useFetchArtifactLinks();
   const controls = useDragControls();
 
   const { character, weapon, artifacts, roles } = slot;
@@ -175,40 +142,16 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   const level = slot.level ?? 90;
   const weaponRefinement = slot.weaponRefinement ?? 1;
   const notes = slot.notes ?? '';
-  const mainStats = slot.mainStats ?? { sands: '', goblet: '', circlet: '' };
+  const mainStats = slot.mainStats ?? { sands: [], goblet: [], circlet: [] };
   const substats = slot.substats ?? [];
+
+  const fetchDetailed = useFetchDetailedArtifacts();
+  useEffect(() => {
+    fetchDetailed();
+  }, [fetchDetailed]);
 
   const toggleEditing = (section: EditSection) =>
     setEditing((prev) => (prev === section ? null : section));
-
-  const openArtifacts = () => {
-    fetchArtifactLinks();
-    setEditing('artifacts');
-  };
-
-  const toggleMainStat = (
-    key: 'sands' | 'goblet' | 'circlet',
-    value: string
-  ) => {
-    onSetMainStats({
-      ...mainStats,
-      [key]: mainStats[key] === value ? '' : value,
-    });
-  };
-
-  const toggleSubstat = (stat: string) => {
-    if (substats.includes(stat)) {
-      onSetSubstats(substats.filter((s) => s !== stat));
-    } else {
-      onSetSubstats(
-        [...substats, stat].sort(
-          (a, b) => (SUBSTAT_PRIORITY[a] ?? 99) - (SUBSTAT_PRIORITY[b] ?? 99)
-        )
-      );
-    }
-  };
-
-  const hasMainStats = mainStats.sands || mainStats.goblet || mainStats.circlet;
 
   return (
     <Reorder.Item
@@ -388,58 +331,22 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
                 onSetRefinement={onSetRefinement}
               />
 
-              {/* Artifacts */}
-              <button
-                onClick={() =>
-                  editing === 'artifacts' ? setEditing(null) : openArtifacts()
-                }
-                className="flex items-start px-2 py-1.5 rounded-lg bg-midnight-800/80 hover:bg-surface-300/70 border border-midnight-700/50 hover:border-midnight-600/80 transition-all text-left min-w-0"
-              >
-                {artifacts ? (
-                  <ArtifactDisplay
-                    config={artifacts}
-                    className="min-w-0 flex-1"
-                  />
-                ) : (
-                  <span className="text-xs text-muted-foreground">
-                    Add artifacts...
-                  </span>
-                )}
-              </button>
+              {/* Artifacts — self-contained popover */}
+              <ArtifactSelector
+                artifacts={artifacts}
+                onSetArtifacts={onSetArtifacts}
+              />
             </div>
 
-            {/* Main stat chips (collapsed view) */}
-            {artifacts && hasMainStats && editing !== 'artifacts' && (
-              <div className="flex flex-wrap gap-1">
-                {MAIN_STAT_CHIPS.map(({ prefix, key }) =>
-                  mainStats[key] ? (
-                    <span
-                      key={key}
-                      className="text-[9px] px-1.5 py-0.5 rounded bg-midnight-700 text-midnight-300"
-                    >
-                      {prefix}: {mainStats[key]}
-                    </span>
-                  ) : null
-                )}
-              </div>
-            )}
-
-            {/* Substat chips (collapsed view) — drag to reorder priority */}
-            {artifacts && substats.length > 0 && editing !== 'artifacts' && (
-              <Reorder.Group
-                axis="x"
-                values={substats}
-                onReorder={onSetSubstats}
-                className="flex flex-wrap items-center gap-0.5"
-              >
-                {substats.map((s, i) => (
-                  <SubstatChip
-                    key={s}
-                    stat={s}
-                    showSeparator={i < substats.length - 1}
-                  />
-                ))}
-              </Reorder.Group>
+            {/* Row 4: Main-stat selectors + substat toggles + priority chips */}
+            {artifacts && (
+              <ArtifactStats
+                mainStats={mainStats}
+                artifacts={artifacts}
+                substats={substats}
+                onSetMainStats={onSetMainStats}
+                onSetSubstats={onSetSubstats}
+              />
             )}
 
             {/* Notes row */}
@@ -457,8 +364,6 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
                 </span>
               )}
             </button>
-
-            {/* ── Inline edit panels ───────────────────────────── */}
 
             {/* Roles panel */}
             {editing === 'roles' && (
@@ -488,19 +393,6 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
                   {notes.length}/120
                 </p>
               </div>
-            )}
-
-            {/* Artifacts panel (set picker + main stats + substats) */}
-            {editing === 'artifacts' && (
-              <ArtifactsPanel
-                artifacts={artifacts}
-                mainStats={mainStats}
-                substats={substats}
-                onSetArtifacts={onSetArtifacts}
-                onToggleMainStat={toggleMainStat}
-                onToggleSubstat={toggleSubstat}
-                onClose={() => setEditing(null)}
-              />
             )}
           </div>
         </div>
