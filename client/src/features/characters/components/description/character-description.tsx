@@ -104,6 +104,7 @@ const CharacterDescription: React.FC<CharacterDetailedProps> = ({
               idleOne={character.screenAnimation?.idleOne}
               idleTwo={character.screenAnimation?.idleTwo}
               fallbackCoverUrl={character.imageUrls.nameCard}
+              roles={character.roles}
             />
           </div>
 

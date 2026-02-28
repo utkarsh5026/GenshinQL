@@ -7,6 +7,7 @@ import {
   ElementBadge,
   NationBadge,
   RarityStars,
+  RoleBadges,
   WeaponTypeBadge,
 } from '@/components/ui/genshin-game-icons';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -263,6 +264,11 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
           <Text size="xs" color="muted" align="center">
             {character.modelType} · v{character.version}
           </Text>
+
+          {/* Role badges */}
+          {character.roles && character.roles.length > 0 && (
+            <RoleBadges roles={character.roles} />
+          )}
         </CardContent>
       </Card>
     </Link>

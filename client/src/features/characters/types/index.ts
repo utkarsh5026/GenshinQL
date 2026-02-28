@@ -43,6 +43,8 @@ export type Character = {
   partyJoin?: AnimationMedia;
   /** Sticker image URLs from stickers.json, populated at runtime via cross-store subscription */
   stickers?: string[];
+  /** Character roles (e.g. "DPS", "Support", "On-Field") from characters.json */
+  roles?: string[];
 };
 
 export type GalleryRaw = {

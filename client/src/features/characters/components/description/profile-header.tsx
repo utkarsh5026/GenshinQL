@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 
 import { Avatar } from '@/components/ui/avatar';
+import { RoleBadges } from '@/components/ui/genshin-game-icons';
 import { Heading, Text } from '@/components/ui/text';
 import { AnimatedCover } from '@/components/utils';
 import { CachedImage } from '@/features/cache/components/cached-asset';
@@ -20,6 +21,7 @@ interface ProfileHeaderProps {
   idleOne?: AnimationMedia;
   idleTwo?: AnimationMedia;
   fallbackCoverUrl?: string;
+  roles?: string[];
 }
 
 export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
@@ -28,6 +30,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   idleOne,
   idleTwo,
   fallbackCoverUrl,
+  roles,
 }) => {
   const [currentAnimation, setCurrentAnimation] = useState<'one' | 'two'>(
     'one'
@@ -86,6 +89,9 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
           {name}
         </Heading>
         <div className="mt-1.5 w-12 h-0.5 mx-auto bg-linear-to-r from-transparent via-celestial-500/60 to-transparent rounded-full" />
+        {roles && roles.length > 0 && (
+          <RoleBadges roles={roles} className="mt-2 justify-center" />
+        )}
       </div>
     </div>
   );
@@ -230,6 +236,9 @@ export const MobileProfileHeader: React.FC<MobileProfileHeaderProps> = ({
         >
           {rarityStars}
         </Text>
+        {character.roles && character.roles.length > 0 && (
+          <RoleBadges roles={character.roles} className="mt-2" />
+        )}
 
         <div className="flex items-stretch divide-x divide-border/60 mt-4 w-full max-w-xs">
           <StatColumn

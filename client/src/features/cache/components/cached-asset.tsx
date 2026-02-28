@@ -17,6 +17,7 @@ interface CachedImageProps extends Omit<
   skeletonClassName?: string;
   skeletonShape?: 'circle' | 'rounded' | 'square';
   skeletonSize?: 'sm' | 'md' | 'lg';
+  wrapperClassName?: string;
 }
 
 /**
@@ -34,6 +35,7 @@ export const CachedImage: React.FC<CachedImageProps> = ({
   skeletonClassName,
   skeletonShape = 'circle',
   skeletonSize = 'md',
+  wrapperClassName,
   className,
   style,
   ...props
@@ -77,7 +79,11 @@ export const CachedImage: React.FC<CachedImageProps> = ({
   }
 
   return (
-    <div ref={containerRef} className="relative inline-block" style={style}>
+    <div
+      ref={containerRef}
+      className={cn('relative inline-block', wrapperClassName)}
+      style={style}
+    >
       {shouldShowSkeleton && (
         <div className="absolute inset-0 z-10 flex items-center justify-center">
           <ImageSkeleton
