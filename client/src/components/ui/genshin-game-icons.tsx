@@ -3,6 +3,7 @@ import React from 'react';
 import { CachedImage } from '@/features/cache';
 import { ELEMENT_COLORS, RARITY_COLORS } from '@/lib/game-colors';
 import { cn } from '@/lib/utils';
+import { useRoles } from '@/stores/usePrimitivesStore';
 
 /** Size variant for Genshin game icon badge components */
 export type GameIconSize = 'xs' | 'sm' | 'md' | 'lg';
@@ -321,6 +322,51 @@ interface CharacterBadgesProps {
   /** Extra classes merged onto the wrapper. */
   className?: string;
 }
+
+interface RoleBadgesProps {
+  /** List of role name strings to display (e.g. ["Main DPS", "Sub DPS"]). */
+  roles: string[];
+  /** Extra classes merged onto the wrapper. */
+  className?: string;
+}
+
+/**
+ * Renders a row of role pill badges for a character.
+ * Each badge shows an optional role icon (via CachedImage) and the role name.
+ * Role metadata (icon URL) is resolved from the primitives store.
+ */
+export const RoleBadges: React.FC<RoleBadgesProps> = ({ roles, className }) => {
+  const roleItems = useRoles();
+
+  return (
+    <div
+      className={cn('flex flex-wrap justify-center gap-1 mt-1.5', className)}
+    >
+      {roles.map((role) => {
+        const roleItem = roleItems.find((r) => r.name === role);
+        return (
+          <span
+            key={role}
+            className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-medium bg-surface-300/60 text-muted-foreground border border-white/5"
+          >
+            {roleItem?.iconUrl && (
+              <CachedImage
+                src={roleItem.iconUrl}
+                alt=""
+                width={10}
+                height={10}
+                className="w-2.5 h-2.5 object-contain opacity-80"
+                skeletonShape="rounded"
+                skeletonSize="sm"
+              />
+            )}
+            {role}
+          </span>
+        );
+      })}
+    </div>
+  );
+};
 
 /**
  * Convenience composite that renders ElementBadge, WeaponTypeBadge, and
