@@ -11,8 +11,14 @@ import {
 } from 'lucide-react';
 import React from 'react';
 
-import { ALL_ROLES, ROLE_COLORS } from '../constants';
-import type { CharacterRole } from '../types';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
+
+import { ALL_ROLES, ROLE_COLORS } from '../../constants';
+import type { CharacterRole } from '../../types';
 
 const ROLE_ICONS: Record<CharacterRole, LucideIcon> = {
   Buffer: TrendingUp,
@@ -24,6 +30,41 @@ const ROLE_ICONS: Record<CharacterRole, LucideIcon> = {
   'Sub DPS': Crosshair,
   Support: Sparkles,
 };
+
+interface RoleSelectorProps {
+  roles: CharacterRole[];
+  onChange: (roles: CharacterRole[]) => void;
+}
+
+export const RoleSelector: React.FC<RoleSelectorProps> = ({
+  roles,
+  onChange,
+}) => (
+  <Popover>
+    <PopoverTrigger asChild>
+      <button className="w-full text-left">
+        {roles.length > 0 ? (
+          <RoleBadges roles={roles} size="sm" />
+        ) : (
+          <span className="text-xs text-muted-foreground/60 px-0.5">
+            Add roles...
+          </span>
+        )}
+      </button>
+    </PopoverTrigger>
+    <PopoverContent
+      side="bottom"
+      align="start"
+      sideOffset={4}
+      className="w-auto p-2"
+    >
+      <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide mb-2">
+        Roles
+      </p>
+      <RoleBadgeSelector selected={roles} onChange={onChange} />
+    </PopoverContent>
+  </Popover>
+);
 
 interface RoleBadgeSelectorProps {
   selected: CharacterRole[];
@@ -43,7 +84,7 @@ export const RoleBadgeSelector: React.FC<RoleBadgeSelectorProps> = ({
   };
 
   return (
-    <div className="flex flex-wrap gap-1.5">
+    <div className="flex flex-col flex-wrap gap-1.5">
       {ALL_ROLES.map((role) => {
         const isSelected = selected.includes(role);
         const color = ROLE_COLORS[role];

@@ -16,9 +16,9 @@ import type {
   TeamCharacterSlot,
 } from '../../types';
 import { CharacterPickerDialog } from '../character-picker';
-import { RoleBadges, RoleBadgeSelector } from '../role-selector';
 import { ArtifactStats } from './artifact-stats';
 import { ArtifactSelector } from './artifacts-selector';
+import { RoleSelector } from './role-selector';
 import { SlotPopover } from './slot-popover';
 import { WeaponSelector } from './weapon-selector';
 
@@ -41,7 +41,7 @@ interface CharacterSlotCardProps {
   onClearSlot: () => void;
 }
 
-type EditSection = 'roles' | 'notes' | null;
+type EditSection = 'notes' | null;
 
 /** Quick-select level presets */
 const LEVEL_PRESETS = [20, 40, 60, 70, 80, 90, 100];
@@ -56,7 +56,7 @@ const optionButtonClass = (isActive: boolean) =>
   );
 
 /** ── InlinePanelHeader ────────────────────────────────────────────────────
- *  Shared header row used by every inline edit panel (Roles, Notes, …).
+ *  Header row used by inline edit panels (Notes, …).
  */
 interface InlinePanelHeaderProps {
   label: string;
@@ -77,40 +77,6 @@ const InlinePanelHeader: React.FC<InlinePanelHeaderProps> = ({
     >
       <X className="w-3.5 h-3.5" />
     </button>
-  </div>
-);
-
-interface RolesRowProps {
-  roles: CharacterRole[];
-  onClick: () => void;
-}
-
-const RolesRow: React.FC<RolesRowProps> = ({ roles, onClick }) => (
-  <button onClick={onClick} className="w-full text-left">
-    {roles.length > 0 ? (
-      <RoleBadges roles={roles} size="sm" />
-    ) : (
-      <span className="text-xs text-muted-foreground/60 px-0.5">
-        Add roles...
-      </span>
-    )}
-  </button>
-);
-
-interface RolesPanelProps {
-  roles: CharacterRole[];
-  onSetRoles: (roles: CharacterRole[]) => void;
-  onClose: () => void;
-}
-
-const RolesPanel: React.FC<RolesPanelProps> = ({
-  roles,
-  onSetRoles,
-  onClose,
-}) => (
-  <div className="pt-1 border-t border-border/30">
-    <InlinePanelHeader label="Roles" onClose={onClose} />
-    <RoleBadgeSelector selected={roles} onChange={onSetRoles} />
   </div>
 );
 
@@ -195,7 +161,7 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
       ) : (
         /** ── Filled slot — horizontal layout ────────────────── */
         <div
-          className="relative rounded-2xl overflow-hidden border-4 border-border/40 flex flex-row"
+          className="relative rounded-2xl overflow-hidden border-none border-border/40 flex flex-row"
           style={{ borderColor: `${elementColor}40` }}
         >
           {/* ── LEFT: Portrait ──────────────────────────────────── */}
@@ -317,7 +283,7 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
             </div>
 
             {/* Row 2: Roles */}
-            <RolesRow roles={roles} onClick={() => toggleEditing('roles')} />
+            <RoleSelector roles={roles} onChange={onSetRoles} />
 
             {/* Row 3: Weapon | Artifacts (two-column grid) */}
             <div className="grid grid-cols-2 gap-2">
@@ -364,15 +330,6 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
                 </span>
               )}
             </button>
-
-            {/* Roles panel */}
-            {editing === 'roles' && (
-              <RolesPanel
-                roles={roles}
-                onSetRoles={onSetRoles}
-                onClose={() => setEditing(null)}
-              />
-            )}
 
             {/* Notes panel */}
             {editing === 'notes' && (
