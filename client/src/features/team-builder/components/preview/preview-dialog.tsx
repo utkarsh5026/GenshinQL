@@ -34,9 +34,11 @@ export const TeamPreviewDialog: React.FC<TeamPreviewDialogProps> = ({
       const canvas = await html2canvas(cardRef.current, {
         scale: 2,
         useCORS: true,
-        allowTaint: true,
-        backgroundColor: null,
+        allowTaint: false,
+        backgroundColor: '#0a0d14',
         logging: false,
+        windowWidth: 960,
+        windowHeight: cardRef.current.scrollHeight,
       });
       return canvas;
     } finally {
@@ -50,7 +52,9 @@ export const TeamPreviewDialog: React.FC<TeamPreviewDialogProps> = ({
     const link = document.createElement('a');
     link.download = `${team.name.replace(/\s+/g, '_')}_team.png`;
     link.href = canvas.toDataURL('image/png');
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   const handleCopyToClipboard = async () => {
