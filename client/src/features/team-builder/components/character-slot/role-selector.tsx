@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import React from 'react';
 
+import { GenshinChip } from '@/components/ui/genshin-chip';
 import {
   Popover,
   PopoverContent,
@@ -84,37 +85,31 @@ export const RoleBadgeSelector: React.FC<RoleBadgeSelectorProps> = ({
   };
 
   return (
-    <div className="flex flex-col flex-wrap gap-1.5">
+    <div className="flex flex-col gap-1.5">
       {ALL_ROLES.map((role) => {
         const isSelected = selected.includes(role);
         const color = ROLE_COLORS[role];
         const Icon = ROLE_ICONS[role];
         return (
-          <button
+          <GenshinChip
             key={role}
+            variant={isSelected ? 'solid' : 'ghost'}
+            selected={isSelected}
             onClick={() => toggle(role)}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 hover:scale-105 active:scale-95"
+            leftIcon={
+              <Icon
+                style={{ height: '11px', width: '11px' }}
+                className="shrink-0"
+              />
+            }
             style={
               isSelected
-                ? {
-                    color,
-                    borderColor: `${color}90`,
-                    background: `${color}22`,
-                    boxShadow: `0 0 10px ${color}40, 0 0 20px ${color}20, inset 0 0 8px ${color}10`,
-                  }
-                : {
-                    color: 'var(--muted-foreground)',
-                    borderColor: 'var(--border)',
-                    background: 'transparent',
-                  }
+                ? { color, borderColor: `${color}90`, background: `${color}22` }
+                : { color: undefined }
             }
           >
-            <Icon
-              className="shrink-0"
-              style={{ height: '11px', width: '11px' }}
-            />
             {role}
-          </button>
+          </GenshinChip>
         );
       })}
     </div>
@@ -131,30 +126,32 @@ export const RoleBadges: React.FC<RoleBadgesProps> = ({
   size = 'sm',
 }) => {
   if (roles.length === 0) return null;
-  const px = size === 'sm' ? 'px-1.5 py-0.5' : 'px-2.5 py-1';
-  const text = size === 'sm' ? 'text-[9px]' : 'text-xs';
-  const iconPx = size === 'sm' ? 8 : 11;
   return (
     <div className="flex flex-wrap gap-1">
       {roles.map((role) => {
         const color = ROLE_COLORS[role];
         const Icon = ROLE_ICONS[role];
+        const iconPx = size === 'sm' ? 8 : 11;
         return (
-          <span
+          <GenshinChip
             key={role}
-            className={`inline-flex items-center gap-1 ${px} ${text} font-semibold rounded-full border`}
+            variant="solid"
+            selected
+            leftIcon={
+              <Icon
+                style={{ height: `${iconPx}px`, width: `${iconPx}px` }}
+                className="shrink-0"
+              />
+            }
+            className={size === 'sm' ? 'text-[9px] px-1.5 py-0.5' : ''}
             style={{
               color,
               borderColor: `${color}60`,
               background: `${color}20`,
             }}
           >
-            <Icon
-              className="shrink-0"
-              style={{ height: `${iconPx}px`, width: `${iconPx}px` }}
-            />
             {role}
-          </span>
+          </GenshinChip>
         );
       })}
     </div>
