@@ -72,7 +72,7 @@ export const TeamPreviewDialog: React.FC<TeamPreviewDialogProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-255 max-h-[90vh] flex flex-col p-0 overflow-hidden bg-background/98">
+      <DialogContent className="w-[98vw] max-w-5xl max-h-[90vh] flex flex-col p-0 overflow-hidden bg-background/98">
         <DialogHeader className="px-5 pt-5 pb-0 flex-row items-center justify-between">
           <DialogTitle className="flex items-center gap-2 text-lg font-bold">
             <Image className="w-4 h-4 text-muted-foreground" />
@@ -98,15 +98,27 @@ export const TeamPreviewDialog: React.FC<TeamPreviewDialogProps> = ({
           </div>
         </DialogHeader>
 
-        {/* Scrollable preview area */}
-        <div className="flex-1 overflow-auto p-5">
+        {/* Scrollable preview area — scales the 960px card to fit the dialog */}
+        <div className="flex-1 overflow-auto p-3 sm:p-5">
           <div className="overflow-x-auto">
-            {/* Scale the 960px card to fit */}
             <div
+              className="origin-top-left"
               style={{
-                transform: 'scale(0.85)',
-                transformOrigin: 'top left',
+                /* On mobile the dialog is ≈98vw; on desktop cap at max-w-5xl (960px). */
+                /* We use a JS-free CSS zoom trick: the wrapper is the full dialog width,  */
+                /* and the inner card scales to fill it proportionally.                    */
                 width: '960px',
+                transform: 'scale(var(--preview-scale, 1))',
+              }}
+              ref={(el) => {
+                if (!el) return;
+                const parent = el.parentElement;
+                if (!parent) return;
+                const scale = Math.min(1, parent.clientWidth / 960);
+                el.style.transform = `scale(${scale})`;
+                el.style.transformOrigin = 'top left';
+                // Shrink the container so it doesn't leave a gap below
+                el.parentElement!.style.height = `${el.offsetHeight * scale}px`;
               }}
             >
               <TeamPreviewCard ref={cardRef} team={team} />
