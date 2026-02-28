@@ -38,8 +38,8 @@ export interface TeamCharacterSlot {
   level: number;
   /** Free-text note for rotation/role context */
   notes: string;
-  /** Artifact main stat selections for Sands, Goblet, Circlet */
-  mainStats: { sands: string; goblet: string; circlet: string };
+  /** Artifact main stat selections for Sands, Goblet, Circlet — multi-select arrays */
+  mainStats: { sands: string[]; goblet: string[]; circlet: string[] };
   /** Selected artifact substats */
   substats: string[];
 }
@@ -68,7 +68,7 @@ export const createEmptySlot = (): TeamCharacterSlot => ({
   constellation: 0,
   level: 90,
   notes: '',
-  mainStats: { sands: '', goblet: '', circlet: '' },
+  mainStats: { sands: [], goblet: [], circlet: [] },
   substats: [],
 });
 

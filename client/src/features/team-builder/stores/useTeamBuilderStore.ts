@@ -270,7 +270,48 @@ export const useTeamBuilderStore = create<TeamBuilderState>()(
           }));
         },
       }),
-      { name: 'genshinql-teams' }
+      {
+        name: 'genshinql-teams',
+        version: 2,
+        migrate: (persisted: unknown, version: number) => {
+          if (version < 2) {
+            /** Migrate mainStats from `{ sands: string }` → `{ sands: string[] }` */
+            const state = persisted as {
+              teams?: Array<{
+                slots: Array<{
+                  mainStats: {
+                    sands: unknown;
+                    goblet: unknown;
+                    circlet: unknown;
+                  };
+                }>;
+              }>;
+            };
+            state.teams?.forEach((team) =>
+              team.slots.forEach((slot) => {
+                const ms = slot.mainStats as {
+                  sands: unknown;
+                  goblet: unknown;
+                  circlet: unknown;
+                };
+                slot.mainStats = {
+                  sands:
+                    typeof ms?.sands === 'string' && ms.sands ? [ms.sands] : [],
+                  goblet:
+                    typeof ms?.goblet === 'string' && ms.goblet
+                      ? [ms.goblet]
+                      : [],
+                  circlet:
+                    typeof ms?.circlet === 'string' && ms.circlet
+                      ? [ms.circlet]
+                      : [],
+                };
+              })
+            );
+          }
+          return persisted as TeamBuilderState;
+        },
+      }
     ),
     { name: 'TeamBuilderStore' }
   )
