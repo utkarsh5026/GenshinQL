@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 
+import { Badge } from '@/components/ui/badge';
 import { GenshinChip } from '@/components/ui/genshin-chip';
+import { ElementBadge } from '@/components/ui/genshin-game-icons';
 import { useStickerStore } from '@/stores/useStickerStore';
 
 import { ROLE_COLORS } from '../../constants';
@@ -28,21 +30,44 @@ const STAT_LABEL: Record<string, string> = {
 
 const Divider = () => <div className="h-px -mx-3.5 bg-white/6" />;
 
-export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
-  slot,
+const MainStatRow: React.FC<{ label: string; values: string[] }> = ({
+  label,
+  values,
+}) => (
+  <div className="flex items-center gap-2">
+    <span className="text-[9px] text-white/30 font-bold tracking-[0.06em] uppercase w-12 shrink-0">
+      {label}
+    </span>
+    <div className="flex flex-wrap gap-1">
+      {values.map((s) => (
+        <GenshinChip
+          key={s}
+          variant="outline"
+          className="text-[10px] py-0.5 px-2"
+        >
+          {s}
+        </GenshinChip>
+      ))}
+    </div>
+  </div>
+);
+
+interface StickerSelectorProps {
+  charStickers: string[];
+  elColor: string;
+  selectedSticker: string | null;
+  onSelect: (url: string | null) => void;
+}
+
+const StickerSelector: React.FC<StickerSelectorProps> = ({
+  charStickers,
+  elColor,
+  selectedSticker,
+  onSelect,
 }) => {
-  const c = slot.character;
-  const [selectedSticker, setSelectedSticker] = useState<string | null>(null);
   const [pickerOpen, setPickerOpen] = useState(false);
   const pickerRef = useRef<HTMLDivElement>(null);
 
-  const { stickersByCharacter, fetchStickers } = useStickerStore();
-
-  useEffect(() => {
-    fetchStickers();
-  }, [fetchStickers]);
-
-  // Close picker on outside click
   useEffect(() => {
     if (!pickerOpen) return;
     const handler = (e: MouseEvent) => {
@@ -54,9 +79,97 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
     return () => document.removeEventListener('mousedown', handler);
   }, [pickerOpen]);
 
+  if (charStickers.length === 0) return null;
+
+  return (
+    <div
+      ref={pickerRef}
+      data-html2canvas-ignore="true"
+      className="absolute bottom-2.5 right-2.5 flex flex-col items-end gap-1 z-20"
+    >
+      {/* Reset button — only shown when a sticker is active */}
+      {selectedSticker && (
+        <button
+          title="Back to original"
+          onClick={() => onSelect(null)}
+          className="flex items-center gap-0.75 text-[9px] font-bold text-white/70 bg-black/55 border border-white/18 rounded-[5px] px-1.75 py-0.75 cursor-pointer tracking-[0.04em] backdrop-blur-sm"
+        >
+          ✕ Reset
+        </button>
+      )}
+
+      {/* Sticker picker toggle */}
+      <button
+        title="Choose sticker"
+        onClick={() => setPickerOpen((v) => !v)}
+        className="flex items-center gap-0.75 text-[9px] font-bold rounded-[5px] px-1.75 py-0.75 cursor-pointer tracking-[0.04em] backdrop-blur-sm"
+        style={{
+          color: elColor,
+          background: `${elColor}18`,
+          border: `1px solid ${elColor}45`,
+        }}
+      >
+        🎴 Sticker
+      </button>
+
+      {/* Sticker grid dropdown */}
+      {pickerOpen && (
+        <div
+          className="absolute bottom-[calc(100%+6px)] right-0 w-45 max-h-50 overflow-y-auto rounded-[10px] p-2 grid grid-cols-3 gap-1.5 backdrop-blur-xl z-30"
+          style={{
+            background: 'rgba(10,13,20,0.95)',
+            border: `1px solid ${elColor}44`,
+            boxShadow: `0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px ${elColor}22`,
+          }}
+        >
+          {charStickers.map((url, idx) => (
+            <button
+              key={idx}
+              title={`Sticker ${idx + 1}`}
+              onClick={() => {
+                onSelect(url);
+                setPickerOpen(false);
+              }}
+              className="rounded-[7px] p-1 flex items-center justify-center cursor-pointer transition-[border-color,background] duration-150"
+              style={{
+                background:
+                  selectedSticker === url
+                    ? `${elColor}30`
+                    : 'rgba(255,255,255,0.04)',
+                border:
+                  selectedSticker === url
+                    ? `1.5px solid ${elColor}`
+                    : '1.5px solid rgba(255,255,255,0.08)',
+              }}
+            >
+              <img
+                src={url}
+                alt={`sticker-${idx}`}
+                className="w-10.5 h-10.5 object-contain"
+              />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
+  slot,
+}) => {
+  const c = slot.character;
+  const [selectedSticker, setSelectedSticker] = useState<string | null>(null);
+
+  const { stickersByCharacter, fetchStickers } = useStickerStore();
+
+  useEffect(() => {
+    fetchStickers();
+  }, [fetchStickers]);
+
   if (!c) {
     return (
-      <div className="flex items-center justify-center min-h-80 rounded-xl border border-dashed border-white/10 bg-white/[0.02] text-[13px] text-white/15 tracking-[0.05em]">
+      <div className="flex items-center justify-center min-h-80 rounded-xl border border-dashed border-white/10 bg-white/2 text-[13px] text-white/15 tracking-[0.05em]">
         Empty
       </div>
     );
@@ -77,25 +190,9 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
   const notes = slot.notes ?? '';
 
   const hasMainStats =
-    (Array.isArray(mainStats.sands)
-      ? mainStats.sands.length > 0
-      : !!mainStats.sands) ||
-    (Array.isArray(mainStats.goblet)
-      ? mainStats.goblet.length > 0
-      : !!mainStats.goblet) ||
-    (Array.isArray(mainStats.circlet)
-      ? mainStats.circlet.length > 0
-      : !!mainStats.circlet);
-
-  const sandsVal = Array.isArray(mainStats.sands)
-    ? mainStats.sands.join(', ')
-    : mainStats.sands;
-  const gobletVal = Array.isArray(mainStats.goblet)
-    ? mainStats.goblet.join(', ')
-    : mainStats.goblet;
-  const circletVal = Array.isArray(mainStats.circlet)
-    ? mainStats.circlet.join(', ')
-    : mainStats.circlet;
+    mainStats.sands.length > 0 ||
+    mainStats.goblet.length > 0 ||
+    mainStats.circlet.length > 0;
 
   return (
     <div
@@ -108,7 +205,7 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
     >
       {/* ── Namecard / Portrait Banner ───────────────── */}
       <div
-        className="relative h-[200px] overflow-hidden"
+        className="relative h-50 overflow-hidden"
         style={{
           background: `linear-gradient(135deg, ${elColor}18 0%, #0a0d14 80%)`,
         }}
@@ -150,36 +247,25 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
 
         {/* Element pill — top left */}
         {c.elementUrl && (
-          <div
-            className="absolute top-2.5 left-2.5 flex items-center gap-[5px] rounded-[20px] px-2 py-[3px] pl-1"
-            style={{
-              background: `${elColor}22`,
-              border: `1px solid ${elColor}55`,
-            }}
-          >
-            <img
-              src={c.elementUrl}
-              alt={c.element}
-              crossOrigin="anonymous"
-              className="h-4 w-4 object-contain"
-              style={{ filter: `drop-shadow(0 0 4px ${elColor}80)` }}
-            />
-            <span
-              className="text-[10px] font-bold capitalize tracking-[0.04em]"
-              style={{ color: elColor }}
-            >
-              {c.element}
-            </span>
-          </div>
+          <ElementBadge
+            name={c.element}
+            url={c.elementUrl}
+            size="xs"
+            className="absolute top-2.5 left-2.5"
+          />
         )}
 
         {/* Lv + Constellation — top right */}
         <div className="absolute top-2.5 right-2.5 flex flex-col items-end gap-1">
-          <span className="text-[11px] font-extrabold text-white/85 bg-black/50 rounded-md px-[7px] py-0.5 tracking-[0.03em]">
+          <Badge
+            variant="outline"
+            className="text-[11px] font-extrabold text-white/85 bg-black/50 rounded-md px-1.75 py-0.5 tracking-[0.03em] border-transparent"
+          >
             Lv.{level}
-          </span>
-          <span
-            className="text-[11px] font-extrabold rounded-md px-[7px] py-0.5 tracking-[0.03em]"
+          </Badge>
+          <Badge
+            variant="outline"
+            className="text-[11px] font-extrabold rounded-md px-1.75 py-0.5 tracking-[0.03em]"
             style={{
               color: elColor,
               background: `${elColor}22`,
@@ -187,7 +273,7 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
             }}
           >
             C{constellation}
-          </span>
+          </Badge>
         </div>
 
         {/* Name + roles — bottom left of banner */}
@@ -205,8 +291,9 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
               {slot.roles.map((role) => {
                 const rc = ROLE_COLORS[role];
                 return (
-                  <span
+                  <Badge
                     key={role}
+                    variant="outline"
                     className="text-[9px] font-bold uppercase tracking-[0.06em] rounded-sm px-1.5 py-0.5"
                     style={{
                       color: rc,
@@ -215,7 +302,7 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
                     }}
                   >
                     {role}
-                  </span>
+                  </Badge>
                 );
               })}
             </div>
@@ -223,88 +310,22 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
         </div>
 
         {/* Sticker picker button + reset — bottom right of banner */}
-        <div
-          ref={pickerRef}
-          data-html2canvas-ignore="true"
-          className="absolute bottom-2.5 right-2.5 flex flex-col items-end gap-1 z-20"
-        >
-          {/* Reset button — only shown when a sticker is active */}
-          {selectedSticker && (
-            <button
-              title="Back to original"
-              onClick={() => setSelectedSticker(null)}
-              className="flex items-center gap-[3px] text-[9px] font-bold text-white/70 bg-black/55 border border-white/18 rounded-[5px] px-[7px] py-[3px] cursor-pointer tracking-[0.04em] backdrop-blur-sm"
-            >
-              ✕ Reset
-            </button>
-          )}
-
-          {/* Sticker picker toggle */}
-          {charStickers.length > 0 && (
-            <button
-              title="Choose sticker"
-              onClick={() => setPickerOpen((v) => !v)}
-              className="flex items-center gap-[3px] text-[9px] font-bold rounded-[5px] px-[7px] py-0.75 cursor-pointer tracking-[0.04em] backdrop-blur-sm"
-              style={{
-                color: elColor,
-                background: `${elColor}18`,
-                border: `1px solid ${elColor}45`,
-              }}
-            >
-              🎴 Sticker
-            </button>
-          )}
-
-          {/* Sticker grid dropdown */}
-          {pickerOpen && charStickers.length > 0 && (
-            <div
-              className="absolute bottom-[calc(100%+6px)] right-0 w-45 max-h-[200px] overflow-y-auto rounded-[10px] p-2 grid grid-cols-3 gap-1.5 backdrop-blur-xl z-30"
-              style={{
-                background: 'rgba(10,13,20,0.95)',
-                border: `1px solid ${elColor}44`,
-                boxShadow: `0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px ${elColor}22`,
-              }}
-            >
-              {charStickers.map((url, idx) => (
-                <button
-                  key={idx}
-                  title={`Sticker ${idx + 1}`}
-                  onClick={() => {
-                    setSelectedSticker(url);
-                    setPickerOpen(false);
-                  }}
-                  className="rounded-[7px] p-1 flex items-center justify-center cursor-pointer transition-[border-color,background] duration-150"
-                  style={{
-                    background:
-                      selectedSticker === url
-                        ? `${elColor}30`
-                        : 'rgba(255,255,255,0.04)',
-                    border:
-                      selectedSticker === url
-                        ? `1.5px solid ${elColor}`
-                        : '1.5px solid rgba(255,255,255,0.08)',
-                  }}
-                >
-                  <img
-                    src={url}
-                    alt={`sticker-${idx}`}
-                    className="w-[42px] h-[42px] object-contain"
-                  />
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
+        <StickerSelector
+          charStickers={charStickers}
+          elColor={elColor}
+          selectedSticker={selectedSticker}
+          onSelect={setSelectedSticker}
+        />
       </div>
 
       {/* ── Info Section ──────────────────────────────── */}
-      <div className="flex flex-col gap-2.5 p-[14px]">
+      <div className="flex flex-col gap-2.5 p-3.5">
         {/* Weapon */}
         {slot.weapon && (
           <>
             <div className="flex items-center gap-2">
               <div
-                className="w-8 h-8 rounded-[6px] flex items-center justify-center shrink-0"
+                className="w-8 h-8 rounded-md flex items-center justify-center shrink-0"
                 style={{
                   background: `${elColor}15`,
                   border: `1px solid ${elColor}30`,
@@ -325,8 +346,9 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
                   Refinement {refinement}
                 </div>
               </div>
-              <span
-                className="text-[11px] font-extrabold rounded-[5px] px-[7px] py-0.5 shrink-0"
+              <Badge
+                variant="outline"
+                className="text-[11px] font-extrabold rounded-[5px] px-1.75 py-0.5 shrink-0"
                 style={{
                   color: elColor,
                   background: `${elColor}18`,
@@ -334,7 +356,7 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
                 }}
               >
                 R{refinement}
-              </span>
+              </Badge>
             </div>
             <Divider />
           </>
@@ -352,68 +374,23 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
         {hasMainStats && (
           <>
             <div className="flex flex-col gap-1.5">
-              {sandsVal && (
-                <div className="flex items-center gap-2">
-                  <span className="text-[9px] text-white/30 font-bold tracking-[0.06em] uppercase w-12 shrink-0">
-                    {STAT_LABEL.sands}
-                  </span>
-                  <div className="flex flex-wrap gap-1">
-                    {(Array.isArray(mainStats.sands)
-                      ? mainStats.sands
-                      : [mainStats.sands]
-                    ).map((s) => (
-                      <GenshinChip
-                        key={s}
-                        variant="outline"
-                        className="text-[10px] py-px px-2"
-                      >
-                        {s}
-                      </GenshinChip>
-                    ))}
-                  </div>
-                </div>
+              {mainStats.sands.length > 0 && (
+                <MainStatRow
+                  label={STAT_LABEL.sands}
+                  values={mainStats.sands}
+                />
               )}
-              {gobletVal && (
-                <div className="flex items-center gap-2">
-                  <span className="text-[9px] text-white/30 font-bold tracking-[0.06em] uppercase w-12 shrink-0">
-                    {STAT_LABEL.goblet}
-                  </span>
-                  <div className="flex flex-wrap gap-1">
-                    {(Array.isArray(mainStats.goblet)
-                      ? mainStats.goblet
-                      : [mainStats.goblet]
-                    ).map((s) => (
-                      <GenshinChip
-                        key={s}
-                        variant="outline"
-                        className="text-[10px] py-px px-2"
-                      >
-                        {s}
-                      </GenshinChip>
-                    ))}
-                  </div>
-                </div>
+              {mainStats.goblet.length > 0 && (
+                <MainStatRow
+                  label={STAT_LABEL.goblet}
+                  values={mainStats.goblet}
+                />
               )}
-              {circletVal && (
-                <div className="flex items-center gap-2">
-                  <span className="text-[9px] text-white/30 font-bold tracking-[0.06em] uppercase w-12 shrink-0">
-                    {STAT_LABEL.circlet}
-                  </span>
-                  <div className="flex flex-wrap gap-1">
-                    {(Array.isArray(mainStats.circlet)
-                      ? mainStats.circlet
-                      : [mainStats.circlet]
-                    ).map((s) => (
-                      <GenshinChip
-                        key={s}
-                        variant="outline"
-                        className="text-[10px] py-px px-2"
-                      >
-                        {s}
-                      </GenshinChip>
-                    ))}
-                  </div>
-                </div>
+              {mainStats.circlet.length > 0 && (
+                <MainStatRow
+                  label={STAT_LABEL.circlet}
+                  values={mainStats.circlet}
+                />
               )}
             </div>
             {substats.length > 0 && <Divider />}
@@ -424,8 +401,9 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
         {substats.length > 0 && (
           <div className="flex flex-wrap gap-1">
             {substats.map((s) => (
-              <span
+              <Badge
                 key={s}
+                variant="outline"
                 className="text-[10px] font-semibold rounded-sm px-1.75 py-0.5"
                 style={{
                   color: elColor,
@@ -434,7 +412,7 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
                 }}
               >
                 {s}
-              </span>
+              </Badge>
             ))}
           </div>
         )}
@@ -452,6 +430,26 @@ export const CharacterCard: React.FC<{ slot: TeamCharacterSlot }> = ({
     </div>
   );
 };
+
+const ArtifactSetRow: React.FC<{ iconUrl?: string; name: string }> = ({
+  iconUrl,
+  name,
+}) => (
+  <div className="flex items-center gap-1.5">
+    {iconUrl && (
+      <img
+        src={iconUrl}
+        crossOrigin="anonymous"
+        alt=""
+        className="h-3.5 w-3.5 object-contain shrink-0"
+      />
+    )}
+    <span className="flex-1 text-[11px] text-white/55 overflow-hidden text-ellipsis whitespace-nowrap">
+      {name}
+    </span>
+    <span className="text-[10px] text-white/25 shrink-0">2pc</span>
+  </div>
+);
 
 const ArtifactRow: React.FC<{ artifacts: ArtifactConfig }> = ({
   artifacts,
@@ -476,34 +474,8 @@ const ArtifactRow: React.FC<{ artifacts: ArtifactConfig }> = ({
   }
   return (
     <div className="flex flex-col gap-0.75">
-      <div className="flex items-center gap-1.5">
-        {artifacts.setAIconUrl && (
-          <img
-            src={artifacts.setAIconUrl}
-            crossOrigin="anonymous"
-            alt=""
-            className="h-3.5 w-3.5 object-contain shrink-0"
-          />
-        )}
-        <span className="flex-1 text-[11px] text-white/55 overflow-hidden text-ellipsis whitespace-nowrap">
-          {artifacts.setA}
-        </span>
-        <span className="text-[10px] text-white/25 shrink-0">2pc</span>
-      </div>
-      <div className="flex items-center gap-1.5">
-        {artifacts.setBIconUrl && (
-          <img
-            src={artifacts.setBIconUrl}
-            crossOrigin="anonymous"
-            alt=""
-            className="h-3.5 w-3.5 object-contain shrink-0"
-          />
-        )}
-        <span className="flex-1 text-[11px] text-white/55 overflow-hidden text-ellipsis whitespace-nowrap">
-          {artifacts.setB}
-        </span>
-        <span className="text-[10px] text-white/25 shrink-0">2pc</span>
-      </div>
+      <ArtifactSetRow iconUrl={artifacts.setAIconUrl} name={artifacts.setA} />
+      <ArtifactSetRow iconUrl={artifacts.setBIconUrl} name={artifacts.setB} />
     </div>
   );
 };
