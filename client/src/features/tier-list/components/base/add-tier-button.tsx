@@ -1,6 +1,7 @@
 import { Plus } from 'lucide-react';
 import React, { useState } from 'react';
 
+import { AppInput } from '@/components/ui/app-input';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -107,7 +108,13 @@ export const AddTierButton: React.FC<AddTierButtonProps> = ({
         </Button>
       </PopoverTrigger>
 
-      <PopoverContent className="w-80" align="center">
+      <PopoverContent
+        className="w-80"
+        align="center"
+        onOpenAutoFocus={(e) => {
+          if (navigator.maxTouchPoints > 0) e.preventDefault();
+        }}
+      >
         <div className="space-y-4">
           <div>
             <h4 className="font-semibold mb-3">Create New Tier</h4>
@@ -118,8 +125,9 @@ export const AddTierButton: React.FC<AddTierButtonProps> = ({
             <label htmlFor="tier-name" className="text-sm font-medium">
               Tier Name
             </label>
-            <Input
+            <AppInput
               id="tier-name"
+              leftIcon={false}
               value={tierName}
               onChange={(e) => {
                 setTierName(e.target.value);

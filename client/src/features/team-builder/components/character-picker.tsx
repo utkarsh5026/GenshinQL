@@ -1,6 +1,6 @@
-import { Search, X } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
+import { AppInput } from '@/components/ui/app-input';
 import {
   Dialog,
   DialogContent,
@@ -68,7 +68,12 @@ export const CharacterPickerDialog: React.FC<CharacterPickerDialogProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[80vh] flex flex-col p-0 overflow-hidden">
+      <DialogContent
+        className="max-w-2xl max-h-[80vh] flex flex-col p-0 overflow-hidden"
+        onOpenAutoFocus={(e) => {
+          if (navigator.maxTouchPoints > 0) e.preventDefault();
+        }}
+      >
         <DialogHeader className="px-5 pt-5 pb-0">
           <DialogTitle className="text-lg font-bold">
             Select Character
@@ -76,23 +81,15 @@ export const CharacterPickerDialog: React.FC<CharacterPickerDialogProps> = ({
         </DialogHeader>
 
         {/* Search */}
-        <div className="relative px-5 pt-3">
-          <Search className="absolute left-8 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-          <input
-            className="w-full bg-accent/40 border border-border/50 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary/50 placeholder:text-muted-foreground/60"
+        <div className="px-5 pt-3">
+          <AppInput
             placeholder="Search characters..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            onClear={() => setSearch('')}
             autoFocus
+            className="bg-accent/40 border-border/50 rounded-lg py-2 text-sm focus-visible:ring-1 focus-visible:ring-primary/50 placeholder:text-muted-foreground/60"
           />
-          {search && (
-            <button
-              className="absolute right-8 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-              onClick={() => setSearch('')}
-            >
-              <X className="w-4 h-4" />
-            </button>
-          )}
         </div>
 
         {/* Element filter */}

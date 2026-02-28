@@ -2,6 +2,7 @@ import { Frown, Search, X } from 'lucide-react';
 import React, { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { AppInput } from '@/components/ui/app-input';
 import { ListSplitter } from '@/components/utils';
 import { CachedImage } from '@/features/cache';
 import { useSharedIntersectionObserver } from '@/hooks/useSharedIntersectionObserver';
@@ -151,25 +152,14 @@ const WeaponsDetailedGrid: React.FC<WeaponsDetailedGridProps> = ({
     <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-6">
       {/* Search Bar - Primary Action */}
       <div className="flex justify-center">
-        <div className="relative w-full max-w-3xl">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search weapons by name..."
-            className="w-full px-4 py-3 sm:py-3.5 pl-11 sm:pl-12 pr-10 text-base rounded-xl border border-input bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all shadow-sm hover:shadow-md"
-          />
-          <Search className="absolute left-3.5 sm:left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" />
-          {searchTerm && (
-            <button
-              onClick={() => setSearchTerm('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors p-1.5 rounded-md hover:bg-accent"
-              aria-label="Clear search"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-        </div>
+        <AppInput
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search weapons by name..."
+          onClear={() => setSearchTerm('')}
+          wrapperClassName="w-full max-w-3xl"
+          className="py-3 sm:py-3.5 text-base rounded-xl bg-card shadow-sm hover:shadow-md"
+        />
       </div>
 
       {/* Active Filters Display */}

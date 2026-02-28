@@ -2,6 +2,7 @@ import * as PopoverPrimitive from '@radix-ui/react-popover';
 import { X } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
+import { AppInput } from '@/components/ui/app-input';
 import { RarityStars } from '@/components/ui/genshin-game-icons';
 import {
   Popover,
@@ -186,21 +187,14 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
           </div>
 
           {/* Search */}
-          <div className="relative px-3 pt-2.5 pb-1.5">
-            <input
-              className="w-full bg-accent/40 border border-border/50 rounded-lg px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-primary/50 placeholder:text-muted-foreground/60 pr-7"
+          <div className="px-3 pt-2.5 pb-1.5">
+            <AppInput
               placeholder="Search weapons..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              onClear={() => setSearch('')}
+              className="bg-accent/40 border-border/50 rounded-lg text-xs placeholder:text-muted-foreground/60"
             />
-            {search && (
-              <button
-                className="absolute right-5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                onClick={() => setSearch('')}
-              >
-                <X className="w-3 h-3" />
-              </button>
-            )}
           </div>
 
           {/* Rarity filter */}

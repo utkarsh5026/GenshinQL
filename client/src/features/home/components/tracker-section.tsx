@@ -2,6 +2,7 @@ import { Bookmark, Plus, Sword, User, X } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { AppInput } from '@/components/ui/app-input';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -18,7 +19,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CachedImage } from '@/features/cache';
 import { cn } from '@/lib/utils';
@@ -155,7 +155,12 @@ const AddTrackingDialog: React.FC<AddTrackingDialogProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg max-h-[80vh] overflow-hidden flex flex-col">
+      <DialogContent
+        className="max-w-lg max-h-[80vh] overflow-hidden flex flex-col"
+        onOpenAutoFocus={(e) => {
+          if (navigator.maxTouchPoints > 0) e.preventDefault();
+        }}
+      >
         <DialogHeader>
           <DialogTitle>Add to Tracker</DialogTitle>
           <DialogDescription>
@@ -164,10 +169,11 @@ const AddTrackingDialog: React.FC<AddTrackingDialogProps> = ({
         </DialogHeader>
 
         <div className="space-y-3 mb-4">
-          <Input
+          <AppInput
             placeholder="Search..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            onClear={() => setSearch('')}
           />
           <div className="flex gap-2">
             {(['building', 'farming', 'wishlist'] as TrackingReason[]).map(

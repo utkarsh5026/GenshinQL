@@ -1,6 +1,7 @@
 import { Gem, X } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
+import { AppInput } from '@/components/ui/app-input';
 import {
   Popover,
   PopoverContent,
@@ -178,21 +179,14 @@ export const ArtifactSelector: React.FC<ArtifactSelectorProps> = ({
           {mode === '4pc' ? (
             <>
               {/* Search */}
-              <div className="relative px-3 pt-2 pb-1.5">
-                <input
-                  className="w-full bg-accent/40 border border-border/50 rounded-lg px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-primary/50 placeholder:text-muted-foreground/60 pr-7"
+              <div className="px-3 pt-2 pb-1.5">
+                <AppInput
                   placeholder="Search artifact sets..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
+                  onClear={() => setSearch('')}
+                  className="bg-accent/40 border-border/50 rounded-lg text-xs placeholder:text-muted-foreground/60"
                 />
-                {search && (
-                  <button
-                    className="absolute right-5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                    onClick={() => setSearch('')}
-                  >
-                    <X className="w-3 h-3" />
-                  </button>
-                )}
               </div>
               {/* Set list */}
               <div className="flex-1 overflow-y-auto px-3 pb-3 space-y-1">
@@ -251,22 +245,13 @@ export const ArtifactSelector: React.FC<ArtifactSelectorProps> = ({
                     </span>
                   )}
                 </p>
-                <div className="relative">
-                  <input
-                    className="w-full bg-accent/40 border border-border/50 rounded-lg px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-primary/50 placeholder:text-muted-foreground/60 pr-7"
-                    placeholder="Search Set A..."
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                  />
-                  {search && (
-                    <button
-                      className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                      onClick={() => setSearch('')}
-                    >
-                      <X className="w-3 h-3" />
-                    </button>
-                  )}
-                </div>
+                <AppInput
+                  placeholder="Search Set A..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  onClear={() => setSearch('')}
+                  className="bg-accent/40 border-border/50 rounded-lg text-xs placeholder:text-muted-foreground/60"
+                />
                 <div className="mt-1 max-h-28 overflow-y-auto space-y-0.5">
                   {filteredA.map((a) => {
                     const isSelected = selectedAName === a.name;
@@ -311,22 +296,13 @@ export const ArtifactSelector: React.FC<ArtifactSelectorProps> = ({
                     </span>
                   )}
                 </p>
-                <div className="relative">
-                  <input
-                    className="w-full bg-accent/40 border border-border/50 rounded-lg px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-primary/50 placeholder:text-muted-foreground/60 pr-7"
-                    placeholder="Search Set B..."
-                    value={searchB}
-                    onChange={(e) => setSearchB(e.target.value)}
-                  />
-                  {searchB && (
-                    <button
-                      className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                      onClick={() => setSearchB('')}
-                    >
-                      <X className="w-3 h-3" />
-                    </button>
-                  )}
-                </div>
+                <AppInput
+                  placeholder="Search Set B..."
+                  value={searchB}
+                  onChange={(e) => setSearchB(e.target.value)}
+                  onClear={() => setSearchB('')}
+                  className="bg-accent/40 border-border/50 rounded-lg text-xs placeholder:text-muted-foreground/60"
+                />
                 <div className="mt-1 flex-1 overflow-y-auto space-y-0.5">
                   {filteredB.map((a) => {
                     const isSelected = selectedBName === a.name;

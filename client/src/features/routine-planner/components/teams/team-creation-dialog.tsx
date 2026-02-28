@@ -1,6 +1,7 @@
 import { Flame, Shield, Sparkles, Star, Swords } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
+import { AppInput } from '@/components/ui/app-input';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -9,7 +10,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import {
   Select,
@@ -111,7 +111,12 @@ export const TeamCreationDialog: React.FC<TeamCreationDialogProps> = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[85vh] overflow-hidden flex flex-col">
+      <DialogContent
+        className="max-w-2xl max-h-[85vh] overflow-hidden flex flex-col"
+        onOpenAutoFocus={(e) => {
+          if (navigator.maxTouchPoints > 0) e.preventDefault();
+        }}
+      >
         <DialogHeader>
           <DialogTitle>Create Team</DialogTitle>
           <DialogDescription>
@@ -124,8 +129,9 @@ export const TeamCreationDialog: React.FC<TeamCreationDialogProps> = ({
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="team-name">Team Name</Label>
-              <Input
+              <AppInput
                 id="team-name"
+                leftIcon={false}
                 placeholder="e.g., Hyperbloom Core"
                 value={teamName}
                 onChange={(e) => setTeamName(e.target.value)}
@@ -154,10 +160,11 @@ export const TeamCreationDialog: React.FC<TeamCreationDialogProps> = ({
           {/* Character Search */}
           <div className="space-y-2">
             <Label>Select Characters</Label>
-            <Input
+            <AppInput
               placeholder="Search characters..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              onClear={() => setSearch('')}
             />
           </div>
 
