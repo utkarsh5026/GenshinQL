@@ -18,6 +18,7 @@ import {
   BADGE_POSITION_CLASSES,
   type BadgePosition,
   getRarityBorderClass,
+  getRarityGradientClass,
   type NamePosition,
 } from '@/utils/avatar-utils';
 
@@ -85,6 +86,10 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
   const finalAvatarClassName = cn(
     AVATAR_SIZE_CLASSES[size],
     getRarityBorderClass(rarity),
+    getRarityGradientClass(rarity),
+    'relative overflow-hidden group-hover:brightness-110 transition-all duration-300',
+    // Add inner glow for glass effect
+    'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_2px_6px_rgba(255,255,255,0.4)] after:pointer-events-none after:transition-opacity after:duration-300 group-hover:after:opacity-100 after:opacity-70',
     avatarClassName
   );
 
@@ -124,7 +129,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
       {showElement && elementUrl && (
         <div
           className={cn(
-            'absolute -bottom-0.5 -right-0.5 rounded-full ring-2 ring-background flex items-center justify-center bg-background/90',
+            'absolute -bottom-1 -right-1 rounded-full ring-2 ring-background/80 shadow-md shadow-black/40 flex items-center justify-center bg-background/90 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12',
             elementBadgeSizeMap[size]
           )}
         >
@@ -133,7 +138,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
             alt={character.element}
             width={elementIconSizeMap[size]}
             height={elementIconSizeMap[size]}
-            className="rounded-full"
+            className="rounded-full drop-shadow-sm"
           />
         </div>
       )}
@@ -175,7 +180,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
   const containerElement = (
     <div
       className={cn(
-        'flex flex-col items-center gap-1',
+        'group flex flex-col items-center gap-1 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:drop-shadow-xl z-0 hover:z-10',
         onClick || interactive ? 'cursor-pointer' : '',
         className
       )}
