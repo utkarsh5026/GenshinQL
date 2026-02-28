@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { GenshinChip } from '@/components/ui/genshin-chip';
 import { ElementBadge } from '@/components/ui/genshin-game-icons';
+import { GenshinImage } from '@/components/ui/genshin-image';
 import { useStickerStore } from '@/stores/useStickerStore';
 
 import { ROLE_COLORS } from '../../constants';
@@ -142,10 +143,12 @@ const StickerSelector: React.FC<StickerSelectorProps> = ({
                     : '1.5px solid rgba(255,255,255,0.08)',
               }}
             >
-              <img
+              <GenshinImage
                 src={url}
                 alt={`sticker-${idx}`}
-                className="w-10.5 h-10.5 object-contain"
+                shape="square"
+                wrapperClassName="w-10.5 h-10.5"
+                className="object-contain"
               />
             </button>
           ))}
