@@ -846,5 +846,6 @@
         "rotation": "Bennett EQ → Sara EQ → Kazuha tEP Q → Raiden Q"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS", "Support"]
 }

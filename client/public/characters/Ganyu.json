@@ -635,5 +635,6 @@
         "rotation": "Kokomi E → Shenhe EQ → Venti EQ → Ganyu EQ → charged shots"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

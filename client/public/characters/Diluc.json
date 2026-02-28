@@ -537,5 +537,6 @@
         "rotation": "Bennett EQ → Xianyun EQ → Furina EQ → Diluc plunge combo"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

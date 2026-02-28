@@ -483,5 +483,6 @@
         "rotation": "Zhongli hE → Bennett EQ → Xiangling EQ → Ningguang E → Q → charged attacks"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

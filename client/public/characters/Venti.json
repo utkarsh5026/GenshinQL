@@ -657,5 +657,6 @@
         "rotation": "Diona EQ → Mona EQ → Venti EQ → Ganyu EQ → charged shots"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "DPS", "Support"]
 }

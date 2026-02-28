@@ -679,5 +679,6 @@
         "rotation": "Diona EQ → Fischl E → Beidou EQ → Eula E → Q → combo"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

@@ -714,5 +714,6 @@
         "rotation": "Bennett EQ → Xingqiu EQ → Fischl E → Freminet E → diving combo"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

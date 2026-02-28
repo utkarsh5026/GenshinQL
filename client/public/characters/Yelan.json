@@ -658,5 +658,6 @@
         "rotation": "Zhongli hE → Bennett E → Yelan EQ → Arlecchino E combo"
       }
     ]
-  }
+  },
+  "roles": ["Off-Field", "DPS"]
 }

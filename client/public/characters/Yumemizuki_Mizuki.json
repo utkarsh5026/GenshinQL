@@ -199,5 +199,6 @@
         }
       ]
     }
-  ]
+  ],
+  "roles": ["On-Field", "DPS", "Surviv­ability"]
 }

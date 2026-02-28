@@ -682,5 +682,6 @@
         "rotation": "Diona EQ → Ayato Q → Venti EQ → Ganyu EQ → charged shots"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

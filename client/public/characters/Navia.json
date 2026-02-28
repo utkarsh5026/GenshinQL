@@ -624,5 +624,6 @@
         "rotation": "Bennett EQ → Furina EQ → Chiori E → Navia E → charged attack"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

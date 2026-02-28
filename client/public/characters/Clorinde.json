@@ -617,5 +617,6 @@
         "rotation": "Zhongli hE → Nahida E → Fischl E → Clorinde E combo"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

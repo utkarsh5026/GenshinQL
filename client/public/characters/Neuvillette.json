@@ -619,5 +619,6 @@
         "rotation": "Zhongli hE → Xilonen E → Furina EQ → Neuvillette E → Charged Attack spam"
       }
     ]
-  }
+  },
+  "roles": ["On-Field", "DPS"]
 }

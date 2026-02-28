@@ -114,5 +114,27 @@
       "name": "HP",
       "url": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Icon_Attribute_Health.png"
     }
+  ],
+  "roles": [
+    {
+      "name": "On-Field",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Character_Role_On-Field.png"
+    },
+    {
+      "name": "Off-Field",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Character_Role_Off-Field.png"
+    },
+    {
+      "name": "DPS",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/5/5c/Character_Role_DPS.png"
+    },
+    {
+      "name": "Support",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Character_Role_Support.png"
+    },
+    {
+      "name": "Survivability",
+      "iconUrl": "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Character_Role_Survivability.png"
+    }
   ]
 }
