@@ -10,18 +10,6 @@ import {
 } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 
-const ELEMENT_ORDER = [
-  'Pyro',
-  'Hydro',
-  'Anemo',
-  'Electro',
-  'Cryo',
-  'Geo',
-  'Dendro',
-];
-
-import { AppInput } from '@/components/ui/app-input';
-import { Card } from '@/components/ui/card';
 import { ElementBadge } from '@/components/ui/genshin-game-icons';
 import { CharacterAvatar } from '@/features/characters';
 import { useCharacters } from '@/features/characters/stores';
@@ -34,10 +22,10 @@ import { cn } from '@/lib/utils';
 import { useElements } from '@/stores';
 import type { Character } from '@/types';
 
-import { ELEMENTAL_RESONANCES } from '../constants';
-import type { CharacterRole } from '../types';
-import type { CharacterGroup } from '../utils/computeCharacterGroups';
-import { computeCharacterGroups } from '../utils/computeCharacterGroups';
+import { ELEMENTAL_RESONANCES } from '../../constants';
+import type { CharacterRole } from '../../types';
+import { computeCharacterGroups } from '../../utils/computeCharacterGroups';
+import { InlineCharacterPicker } from './character-picker';
 
 /** ─── Step definitions ──────────────────────────────────────────────────── */
 
@@ -160,222 +148,6 @@ const ResonanceBadge: React.FC<{
     </span>
   </motion.div>
 );
-
-/** ─── Card wrapper for a character group section ────────────────────────── */
-
-const SectionCard: React.FC<{
-  label: string;
-  element?: string;
-  elementUrl?: string;
-  count: number;
-  children: React.ReactNode;
-}> = ({ label, element, elementUrl, count, children }) => (
-  <Card className="border-border/30 bg-accent/20 overflow-hidden">
-    <div className="flex items-center gap-2 px-3 py-2 border-b border-border/20">
-      {element && elementUrl && (
-        <ElementBadge
-          name={element}
-          url={elementUrl}
-          size="xs"
-          showLabel={false}
-        />
-      )}
-      <span
-        className={cn(
-          'text-xs font-semibold',
-          element ? getElementTextClass(element) : 'text-muted-foreground'
-        )}
-      >
-        {label}
-      </span>
-      <span className="text-[10px] text-muted-foreground/50">({count})</span>
-    </div>
-    <div className="p-2">{children}</div>
-  </Card>
-);
-
-/** ─── Element-subdivided character grid ────────────────────────────────── */
-
-const ElementGroupedGrid: React.FC<{
-  characters: Character[];
-  elementUrlMap: Record<string, string>;
-  selectedNames: Set<string>;
-  onSelect: (c: Character) => void;
-}> = ({ characters, elementUrlMap, selectedNames, onSelect }) => {
-  const subgroups = useMemo(() => {
-    const map = new Map<string, Character[]>();
-    for (const c of characters) {
-      if (!map.has(c.element)) map.set(c.element, []);
-      map.get(c.element)!.push(c);
-    }
-    return [...map.keys()]
-      .sort((a, b) => {
-        const ia = ELEMENT_ORDER.indexOf(a);
-        const ib = ELEMENT_ORDER.indexOf(b);
-        if (ia === -1 && ib === -1) return a.localeCompare(b);
-        if (ia === -1) return 1;
-        if (ib === -1) return -1;
-        return ia - ib;
-      })
-      .map((el) => ({ element: el, chars: map.get(el)! }));
-  }, [characters]);
-
-  return (
-    <div className="flex flex-col gap-2">
-      {subgroups.map(({ element, chars }) => (
-        <div key={element}>
-          <div className="flex items-center gap-1.5 mb-1 px-1">
-            <ElementBadge
-              name={element}
-              url={elementUrlMap[element.toLowerCase()] ?? ''}
-              size="xs"
-            />
-          </div>
-          <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 gap-1.5 sm:gap-2">
-            {chars.map((c) => {
-              const isSelected = selectedNames.has(c.name);
-              return (
-                <div key={c.name} className="relative flex justify-center">
-                  <CharacterAvatar
-                    characterName={c.name}
-                    size="md"
-                    showElement
-                    onClick={isSelected ? () => {} : () => onSelect(c)}
-                    className={
-                      isSelected ? 'opacity-40 cursor-not-allowed' : undefined
-                    }
-                  />
-                  {isSelected && (
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <span className="text-[9px] font-bold text-white/80 bg-black/50 px-1 rounded">
-                        In Team
-                      </span>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-/** ─── Character picker grid with sections ───────────────────────────────── */
-
-interface InlinePickerProps {
-  groups: CharacterGroup[];
-  elementUrlMap: Record<string, string>;
-  selectedCharacters: (Character | null)[];
-  onSelect: (c: Character) => void;
-}
-
-const InlineCharacterPicker: React.FC<InlinePickerProps> = ({
-  groups,
-  elementUrlMap,
-  selectedCharacters,
-  onSelect,
-}) => {
-  const [search, setSearch] = useState('');
-
-  const selectedNames = useMemo(
-    () => new Set(selectedCharacters.filter(Boolean).map((c) => c!.name)),
-    [selectedCharacters]
-  );
-
-  /** Apply search filter to each group */
-  const filteredGroups = useMemo(() => {
-    return groups
-      .map((group) => ({
-        ...group,
-        characters: group.characters.filter((c) =>
-          c.name.toLowerCase().includes(search.toLowerCase().trim())
-        ),
-      }))
-      .filter((group) => group.characters.length > 0);
-  }, [groups, search]);
-
-  const totalCount = useMemo(
-    () => filteredGroups.reduce((sum, g) => sum + g.characters.length, 0),
-    [filteredGroups]
-  );
-
-  return (
-    <div className="flex flex-col gap-3 min-h-0">
-      {/** Search */}
-      <AppInput
-        placeholder="Search characters..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        onClear={() => setSearch('')}
-        autoFocus
-        className="bg-accent/40 border-border/50 rounded-lg py-2 text-sm focus-visible:ring-1 focus-visible:ring-primary/50 placeholder:text-muted-foreground/60"
-      />
-
-      {/** Sectioned character cards */}
-      <div className="flex-1 overflow-y-auto flex flex-col gap-2">
-        {filteredGroups.map((group) => (
-          <SectionCard
-            key={group.id}
-            label={group.label}
-            element={group.element}
-            elementUrl={
-              group.element
-                ? elementUrlMap[group.element.toLowerCase()]
-                : undefined
-            }
-            count={group.characters.length}
-          >
-            {group.id === 'recommended' || group.id === 'other' ? (
-              <ElementGroupedGrid
-                characters={group.characters}
-                elementUrlMap={elementUrlMap}
-                selectedNames={selectedNames}
-                onSelect={onSelect}
-              />
-            ) : (
-              <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 gap-1.5 sm:gap-2">
-                {group.characters.map((c) => {
-                  const isSelected = selectedNames.has(c.name);
-                  return (
-                    <div key={c.name} className="relative flex justify-center">
-                      <CharacterAvatar
-                        characterName={c.name}
-                        size="md"
-                        showElement
-                        onClick={isSelected ? () => {} : () => onSelect(c)}
-                        className={
-                          isSelected
-                            ? 'opacity-40 cursor-not-allowed'
-                            : undefined
-                        }
-                      />
-                      {isSelected && (
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                          <span className="text-[9px] font-bold text-white/80 bg-black/50 px-1 rounded">
-                            In Team
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </SectionCard>
-        ))}
-        {totalCount === 0 && (
-          <div className="flex flex-col items-center justify-center py-10 text-muted-foreground">
-            <span className="text-sm">No characters found</span>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-
-/** ─── Main inline panel ─────────────────────────────────────────────────── */
 
 interface QuickCreatePanelProps {
   /** Called when user completes or skips the wizard. Receives the 4 selected characters (null = skipped). */
@@ -503,6 +275,36 @@ export const QuickCreatePanel: React.FC<QuickCreatePanelProps> = ({
         </button>
       </div>
 
+      {/** ── Navigation actions (Back / Skip / Finish) ── */}
+      <div className="flex items-center justify-between px-5 pt-2 pb-0 shrink-0">
+        <div className="flex items-center gap-2">
+          {step > 0 && (
+            <button
+              onClick={handleBack}
+              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              Back
+            </button>
+          )}
+        </div>
+
+        <div className="flex items-center gap-3">
+          <button
+            onClick={handleBlank}
+            className="text-xs text-muted-foreground/60 hover:text-muted-foreground transition-colors underline underline-offset-2"
+          >
+            Create Blank Team
+          </button>
+          <button
+            onClick={handleSkip}
+            className="text-xs font-medium text-primary/70 hover:text-primary transition-colors px-3 py-1.5 rounded-lg hover:bg-primary/10"
+          >
+            {step < STEPS.length - 1 ? 'Skip →' : 'Finish →'}
+          </button>
+        </div>
+      </div>
+
       {/** ── Step progress pills ── */}
       <div className="flex items-end gap-2 sm:gap-3 px-5 pt-4 pb-0 shrink-0">
         {STEPS.map((s, i) => (
@@ -600,36 +402,6 @@ export const QuickCreatePanel: React.FC<QuickCreatePanelProps> = ({
             />
           </motion.div>
         </AnimatePresence>
-      </div>
-
-      {/** ── Footer actions ── */}
-      <div className="flex items-center justify-between px-5 py-3 border-t border-border/30 bg-background/50 shrink-0">
-        <div className="flex items-center gap-2">
-          {step > 0 && (
-            <button
-              onClick={handleBack}
-              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              Back
-            </button>
-          )}
-        </div>
-
-        <div className="flex items-center gap-3">
-          <button
-            onClick={handleBlank}
-            className="text-xs text-muted-foreground/60 hover:text-muted-foreground transition-colors underline underline-offset-2"
-          >
-            Create Blank Team
-          </button>
-          <button
-            onClick={handleSkip}
-            className="text-xs font-medium text-primary/70 hover:text-primary transition-colors px-3 py-1.5 rounded-lg hover:bg-primary/10"
-          >
-            {step < STEPS.length - 1 ? 'Skip →' : 'Finish →'}
-          </button>
-        </div>
       </div>
     </div>
   );

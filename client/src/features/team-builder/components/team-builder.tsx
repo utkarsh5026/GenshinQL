@@ -27,8 +27,8 @@ import {
 import type { Team, TeamCharacterSlot } from '../types';
 import { CharacterSlotCard } from './character-slot/character-slot';
 import { TeamPreviewDialog } from './preview/preview-dialog';
-import { QuickCreatePanel } from './quick-create-dialog';
 import { RotationEditor } from './rotation-editor';
+import { QuickCreatePanel } from './team-quick-create/quick-create-dialog';
 
 const TeamNameInput: React.FC<{
   name: string;
