@@ -231,10 +231,12 @@ export const ArtifactStats: React.FC<ArtifactStatsProps> = ({
           return (
             <GenshinChip
               key={opt}
-              rarity={isSelected ? 5 : undefined}
-              variant={isSelected ? 'solid' : 'ghost'}
+              variant={isSelected ? 'outline' : 'ghost'}
               selected={isSelected}
               onClick={() => toggleSubstat(opt)}
+              leftIcon={
+                <StatIcon stat={opt} className="w-3 h-3 shrink-0 opacity-70" />
+              }
             >
               {opt}
             </GenshinChip>
@@ -244,38 +246,46 @@ export const ArtifactStats: React.FC<ArtifactStatsProps> = ({
 
       {/* Draggable substat priority chips */}
       {substats.length > 0 && (
-        <Reorder.Group
-          axis="x"
-          values={substats}
-          onReorder={onSetSubstats}
-          className="flex flex-wrap items-center gap-1"
-        >
-          {substats.map((s, i) => (
-            <Reorder.Item
-              key={s}
-              value={s}
-              className="flex items-center cursor-grab active:cursor-grabbing touch-none"
-            >
-              <GenshinChip
-                rarity={5}
-                variant="solid"
-                selected
-                leftIcon={
-                  <>
-                    <GripVertical className="w-2.5 h-2.5 opacity-40 shrink-0" />
-                  </>
-                }
+        <div className="space-y-1.5">
+          <p className="text-[9px] font-semibold text-muted-foreground/60 uppercase tracking-widest">
+            Priority — drag to reorder
+          </p>
+          <Reorder.Group
+            axis="x"
+            values={substats}
+            onReorder={onSetSubstats}
+            className="flex flex-wrap items-center gap-1"
+          >
+            {substats.map((s, i) => (
+              <Reorder.Item
+                key={s}
+                value={s}
+                className="flex items-center cursor-grab active:cursor-grabbing touch-none"
               >
-                {s}
-              </GenshinChip>
-              {i < substats.length - 1 && (
-                <span className="text-[8px] text-muted-foreground/40 font-semibold mx-1 pointer-events-none">
-                  &gt;&gt;
-                </span>
-              )}
-            </Reorder.Item>
-          ))}
-        </Reorder.Group>
+                <GenshinChip
+                  variant="outline"
+                  selected
+                  leftIcon={
+                    <>
+                      <GripVertical className="w-2.5 h-2.5 opacity-40 shrink-0" />
+                      <StatIcon
+                        stat={s}
+                        className="w-3 h-3 shrink-0 opacity-70"
+                      />
+                    </>
+                  }
+                >
+                  {s}
+                </GenshinChip>
+                {i < substats.length - 1 && (
+                  <span className="text-[8px] text-muted-foreground/40 font-semibold mx-1 pointer-events-none">
+                    &gt;&gt;
+                  </span>
+                )}
+              </Reorder.Item>
+            ))}
+          </Reorder.Group>
+        </div>
       )}
     </div>
   );
