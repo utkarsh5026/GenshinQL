@@ -22,7 +22,7 @@ import { cn } from '@/lib/utils';
 import { AnimationMedia } from '@/types';
 
 import { Character } from '../../types';
-import styles from './CharacterCard.module.css';
+import styles from './character-card.module.css';
 
 interface CharacterMediaAvatarProps {
   media: AnimationMedia;
@@ -163,11 +163,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   return (
     <Link to={`/characters/${character.name}`} className="block no-underline">
       <Card
-        className={cn(
-          'cursor-pointer overflow-hidden relative',
-          styles[elementClasses.glow],
-          rarityClasses.cardGlow
-        )}
+        className={cn('cursor-pointer overflow-hidden relative border-none')}
       >
         {/* Namecard Banner */}
         <div className="absolute inset-x-0 top-0 h-32.5 overflow-hidden z-0 pointer-events-none">
@@ -185,12 +181,21 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
                   if (container) container.style.display = 'none';
                 }}
               />
-              <div className="absolute inset-0 pointer-events-none bg-linear-to-b from-transparent via-black/20 to-black/65" />
+              <div className="absolute inset-0 pointer-events-none bg-linear-to-b from-transparent from-10% via-black/25 via-55% to-black/80" />
             </>
           ) : (
             <div className={cn('w-full h-full', elementTintClass)} />
           )}
         </div>
+
+        {/* Ambient element-color bleed — namecard into card body */}
+        <div
+          className={cn(
+            'absolute inset-x-0 pointer-events-none z-1',
+            styles.namecardAmbient,
+            elementTintClass
+          )}
+        />
 
         <div className="absolute top-22.5 left-1/2 -translate-x-1/2 z-2">
           <div className={`rounded-full ${rarityClasses.avatarRing}`}>
