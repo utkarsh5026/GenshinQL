@@ -56,11 +56,17 @@ export type PrimitiveItem = {
   url: string;
 };
 
+export type RoleItem = {
+  name: string;
+  iconUrl: string;
+};
+
 export type Primitives = {
   elements: PrimitiveItem[];
   regions: PrimitiveItem[];
   weaponTypes: PrimitiveItem[];
   attributes: PrimitiveItem[];
+  roles: RoleItem[];
 };
 
 export type CharacterMenuItem =
