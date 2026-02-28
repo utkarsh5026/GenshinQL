@@ -122,3 +122,65 @@
 .navItem:nth-child(10) {
   animation-delay: 0.29s;
 }
+
+/* ─── Brand Logo Pop-in ───────────────────────────────────────────────────────
+   Logo scales + fades in from slightly small on mount.
+─────────────────────────────────────────────────────────────────────────── */
+@keyframes logoPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7) rotate(-8deg);
+  }
+  70% {
+    transform: scale(1.08) rotate(2deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.brandLogo {
+  animation: logoPopIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* ─── Brand Logo Idle Breathe ─────────────────────────────────────────────────
+   After mount, the logo gently pulses its drop-shadow — looks alive.
+─────────────────────────────────────────────────────────────────────────── */
+@keyframes logoBreathe {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 7px rgba(251, 191, 36, 0.45));
+    transform: scale(1.05);
+  }
+}
+
+.brandLogoIdle {
+  animation:
+    logoPopIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+    logoBreathe 4s ease-in-out 0.5s infinite;
+}
+
+/* ─── Brand Text Slide-in ─────────────────────────────────────────────────────
+   App name fades in from left while expanding — reveals alongside logo.
+─────────────────────────────────────────────────────────────────────────── */
+@keyframes brandTextIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+    letter-spacing: -0.05em;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    letter-spacing: -0.025em;
+  }
+}
+
+.brandText {
+  animation: brandTextIn 0.35s ease-out 0.12s both;
+}
