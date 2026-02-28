@@ -144,7 +144,6 @@ export const ArtifactStats: React.FC<ArtifactStatsProps> = ({
         {PIECE_POPOVERS.map(({ key, label, Icon, options }) => {
           const selected = mainStats[key];
           const hasSelection = selected.length > 0;
-          const triggerLabel = hasSelection ? selected.join(' / ') : 'Any';
           return (
             <div key={key} className="flex items-center gap-2">
               {/* Label */}
@@ -156,22 +155,39 @@ export const ArtifactStats: React.FC<ArtifactStatsProps> = ({
               {/* Trigger */}
               <Popover>
                 <PopoverTrigger asChild>
-                  <GenshinChip
+                  <button
                     title={`Set ${label} main stat`}
-                    variant={hasSelection ? 'solid' : 'ghost'}
-                    rarity={hasSelection ? 5 : undefined}
-                    selected={hasSelection}
-                    leftIcon={
-                      <PieceIcon
-                        artifacts={artifacts}
-                        pieceKey={key}
-                        FallbackIcon={Icon}
-                      />
-                    }
-                    className="bg-transparent text-muted-foreground border-border"
+                    className="flex flex-wrap gap-1 cursor-pointer min-w-0"
                   >
-                    {triggerLabel}
-                  </GenshinChip>
+                    {hasSelection ? (
+                      selected.map((stat) => (
+                        <GenshinChip
+                          key={stat}
+                          variant="outline"
+                          selected
+                          leftIcon={<StatIcon stat={stat} />}
+                          className="pointer-events-none"
+                        >
+                          {stat}
+                        </GenshinChip>
+                      ))
+                    ) : (
+                      <GenshinChip
+                        variant="ghost"
+                        selected={false}
+                        leftIcon={
+                          <PieceIcon
+                            artifacts={artifacts}
+                            pieceKey={key}
+                            FallbackIcon={Icon}
+                          />
+                        }
+                        className="pointer-events-none text-muted-foreground border-border"
+                      >
+                        Any
+                      </GenshinChip>
+                    )}
+                  </button>
                 </PopoverTrigger>
                 <PopoverContent
                   side="bottom"
