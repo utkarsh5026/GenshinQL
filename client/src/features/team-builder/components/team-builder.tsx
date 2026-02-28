@@ -11,6 +11,7 @@ import {
 import React, { useEffect, useState } from 'react';
 
 import { GenshinButton } from '@/components/ui/genshin-button';
+import { GenshinChip } from '@/components/ui/genshin-chip';
 import { Separator } from '@/components/ui/separator';
 import { CharacterAvatar } from '@/features/characters';
 import { useCharactersStore } from '@/features/characters/stores';
@@ -26,6 +27,7 @@ import {
 import type { Team, TeamCharacterSlot } from '../types';
 import { CharacterSlotCard } from './character-slot/character-slot';
 import { TeamPreviewDialog } from './preview/preview-dialog';
+import { QuickCreateDialog } from './quick-create-dialog';
 import { RotationEditor } from './rotation-editor';
 
 const TeamNameInput: React.FC<{
@@ -181,7 +183,7 @@ const EmptyTeamsState: React.FC<{ onCreate: () => void }> = ({ onCreate }) => (
       </p>
     </div>
     <GenshinButton onClick={onCreate} leftIcon={<Plus className="w-4 h-4" />}>
-      Create Team
+      Quick Create Team
     </GenshinButton>
   </div>
 );
@@ -214,6 +216,31 @@ export const TeamBuilderPage: React.FC = () => {
   } = useTeamBuilderStore();
 
   const [previewOpen, setPreviewOpen] = useState(false);
+  const [quickCreateOpen, setQuickCreateOpen] = useState(false);
+
+  const handleQuickCreate = (chars: (import('@/types').Character | null)[]) => {
+    // Create the blank team first
+    createTeam();
+    // After createTeam, the new team becomes active — use a microtask to let state settle
+    setTimeout(() => {
+      const { activeTeamId, setCharacterSlot, setRolesSlot } =
+        useTeamBuilderStore.getState();
+      const newTeamId = activeTeamId;
+      if (!newTeamId) return;
+      const roleMap: Array<import('../types').CharacterRole> = [
+        'DPS',
+        'Sub DPS',
+        'Support',
+        'Support',
+      ];
+      chars.forEach((char, idx) => {
+        if (char) {
+          setCharacterSlot(newTeamId, idx, char);
+          setRolesSlot(newTeamId, idx, [roleMap[idx]]);
+        }
+      });
+    }, 0);
+  };
   const { fetchCharacters } = useCharactersStore();
   const { fetchWeapons } = useWeaponsStore();
 
@@ -236,7 +263,7 @@ export const TeamBuilderPage: React.FC = () => {
             </span>
           </div>
           <GenshinButton
-            onClick={createTeam}
+            onClick={() => setQuickCreateOpen(true)}
             size="icon"
             variant="outline"
             title="Create new team"
@@ -271,11 +298,11 @@ export const TeamBuilderPage: React.FC = () => {
       {/* ── Main editor area ── */}
       <div className="flex-1 flex flex-col overflow-y-auto">
         {!activeTeam ? (
-          <EmptyTeamsState onCreate={createTeam} />
+          <EmptyTeamsState onCreate={() => setQuickCreateOpen(true)} />
         ) : (
-          <div className="p-6 space-y-6 max-w-5xl mx-auto w-full">
+          <div className="p-3 sm:p-6 space-y-4 sm:space-y-6 max-w-5xl mx-auto w-full">
             {/* Page header */}
-            <div className="flex items-start justify-between gap-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">
                   ◆ Team Builder
@@ -289,7 +316,7 @@ export const TeamBuilderPage: React.FC = () => {
               <div className="flex items-center gap-2 shrink-0">
                 {/* Mobile: create team */}
                 <GenshinButton
-                  onClick={createTeam}
+                  onClick={() => setQuickCreateOpen(true)}
                   variant="outline"
                   size="sm"
                   leftIcon={<Plus className="w-4 h-4" />}
@@ -301,7 +328,8 @@ export const TeamBuilderPage: React.FC = () => {
                   onClick={() => setPreviewOpen(true)}
                   leftIcon={<Eye className="w-4 h-4" />}
                 >
-                  Preview Team
+                  <span className="hidden sm:inline">Preview Team</span>
+                  <span className="sm:hidden">Preview</span>
                 </GenshinButton>
               </div>
             </div>
@@ -312,24 +340,24 @@ export const TeamBuilderPage: React.FC = () => {
             <div className="md:hidden">
               <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
                 {teams.map((t) => (
-                  <button
+                  <GenshinChip
                     key={t.id}
                     onClick={() => setActiveTeam(t.id)}
-                    className={`shrink-0 px-3 py-1.5 rounded-full text-sm font-semibold border transition-all ${
-                      t.id === activeTeamId
-                        ? 'border-primary/60 bg-primary/20 text-primary'
-                        : 'border-border/40 bg-accent/20 text-muted-foreground'
-                    }`}
+                    variant={t.id === activeTeamId ? 'solid' : 'outline'}
+                    selected={t.id === activeTeamId}
+                    className="shrink-0 rounded-full px-3 py-1 text-sm"
                   >
                     {t.name}
-                  </button>
+                  </GenshinChip>
                 ))}
-                <button
-                  onClick={createTeam}
-                  className="shrink-0 px-3 py-1.5 rounded-full text-sm font-semibold border border-dashed border-border/40 text-muted-foreground hover:text-foreground"
+                <GenshinChip
+                  onClick={() => setQuickCreateOpen(true)}
+                  variant="ghost"
+                  leftIcon={<Plus className="w-3 h-3" />}
+                  className="shrink-0 rounded-full px-3 py-1 text-sm border border-dashed border-border/40"
                 >
-                  + New
-                </button>
+                  New
+                </GenshinChip>
               </div>
             </div>
 
@@ -338,7 +366,7 @@ export const TeamBuilderPage: React.FC = () => {
               <div className="flex items-center gap-2 mb-4">
                 <Sword className="w-4 h-4 text-muted-foreground" />
                 <span className="text-sm font-semibold">Characters</span>
-                <span className="text-xs text-muted-foreground/60">
+                <span className="hidden sm:inline text-xs text-muted-foreground/60">
                   Drag ≡ to reorder · click a slot to assign
                 </span>
               </div>
@@ -414,6 +442,17 @@ export const TeamBuilderPage: React.FC = () => {
           team={activeTeam}
         />
       )}
+
+      {/* Quick-create dialog */}
+      <QuickCreateDialog
+        open={quickCreateOpen}
+        onOpenChange={setQuickCreateOpen}
+        onConfirm={(chars) => {
+          setQuickCreateOpen(false);
+          handleQuickCreate(chars);
+        }}
+        onCreateBlank={createTeam}
+      />
     </div>
   );
 };
