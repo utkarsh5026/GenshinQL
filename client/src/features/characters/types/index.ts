@@ -133,6 +133,47 @@ export type Constellation = {
   level: number;
 };
 
+/* ──────────────────────────────── Detailed Artifact types ────────────────── */
+
+/** The five possible artifact slot types in Genshin Impact. */
+export type ArtifactPieceType =
+  | 'flower'
+  | 'plume'
+  | 'sands'
+  | 'goblet'
+  | 'circlet';
+
+/** A single piece (slot) of an artifact set. */
+export type ArtifactPiece = {
+  /** Slot identifier – flower / plume / sands / goblet / circlet */
+  type: ArtifactPieceType;
+  /** Display name of this individual piece */
+  name: string;
+  /** Remote icon URL (wiki CDN) */
+  iconUrl: string;
+};
+
+/** Full data for one artifact set as stored in artifacts-detailed.json. */
+export type DetailedArtifact = {
+  /** Set name (matches the top-level JSON key) */
+  name: string;
+  /** All pieces that belong to this set (1–5 entries) */
+  pieces: ArtifactPiece[];
+  /** Convenience accessors by slot – undefined when that piece is absent */
+  flower?: ArtifactPiece;
+  plume?: ArtifactPiece;
+  sands?: ArtifactPiece;
+  goblet?: ArtifactPiece;
+  circlet?: ArtifactPiece;
+  /** 2-piece set bonus description (empty string when not applicable) */
+  twoPieceBonus: string;
+  /** 4-piece set bonus description (empty string when not applicable) */
+  fourPieceBonus: string;
+};
+
+/** A map from artifact set name → DetailedArtifact, built at fetch time. */
+export type DetailedArtifactsMap = ReadonlyMap<string, DetailedArtifact>;
+
 /* Character build types */
 export type {
   ArtifactBuild,
