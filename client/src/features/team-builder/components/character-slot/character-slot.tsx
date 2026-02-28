@@ -1,7 +1,8 @@
 import { Reorder, useDragControls } from 'framer-motion';
-import { GripVertical, Plus, X } from 'lucide-react';
+import { GripVertical, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
+import { Textarea } from '@/components/ui/textarea';
 import { useFetchDetailedArtifacts } from '@/features/characters';
 import type { WeaponSummary } from '@/features/weapons';
 import { getElementHexColor } from '@/lib/game-colors';
@@ -38,33 +39,6 @@ interface CharacterSlotCardProps {
   onClearSlot: () => void;
 }
 
-type EditSection = 'notes' | null;
-
-/** ── InlinePanelHeader ────────────────────────────────────────────────────
- *  Header row used by inline edit panels (Notes, …).
- */
-interface InlinePanelHeaderProps {
-  label: string;
-  onClose: () => void;
-}
-
-const InlinePanelHeader: React.FC<InlinePanelHeaderProps> = ({
-  label,
-  onClose,
-}) => (
-  <div className="flex items-center justify-between mb-2">
-    <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">
-      {label}
-    </span>
-    <button
-      onClick={onClose}
-      className="text-muted-foreground hover:text-foreground"
-    >
-      <X className="w-3.5 h-3.5" />
-    </button>
-  </div>
-);
-
 export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   slot,
   slotIndex,
@@ -83,7 +57,6 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   onClearSlot,
 }) => {
   const [pickerOpen, setPickerOpen] = useState(false);
-  const [editing, setEditing] = useState<EditSection>(null);
   const controls = useDragControls();
 
   const { character, weapon, artifacts, roles } = slot;
@@ -100,9 +73,6 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   useEffect(() => {
     fetchDetailed();
   }, [fetchDetailed]);
-
-  const toggleEditing = (section: EditSection) =>
-    setEditing((prev) => (prev === section ? null : section));
 
   return (
     <Reorder.Item
@@ -136,12 +106,12 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
           />
 
           {/* ── BOTTOM: Settings panel (full width) ── */}
-          <div className="p-3 bg-surface-200 space-y-1.5">
+          <div className="p-4 bg-surface-200 space-y-3">
             {/* Roles */}
             <RoleSelector roles={roles} onChange={onSetRoles} />
 
             {/* Weapon | Artifacts (two-column grid) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <WeaponSelector
                 weapon={weapon}
                 weaponTypeFilter={character.weaponType}
@@ -167,42 +137,16 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
               />
             )}
 
-            {/* Notes row */}
-            <button
-              onClick={() => toggleEditing('notes')}
-              className="w-full flex items-start px-2 py-1.5 rounded-lg bg-midnight-900/60 hover:bg-midnight-800/60 transition-all text-left border border-dashed border-midnight-800/50 hover:border-midnight-700/70"
-            >
-              {notes ? (
-                <span className="text-xs text-foreground/60 wrap-break-word min-w-0 w-full">
-                  {notes}
-                </span>
-              ) : (
-                <span className="text-xs text-muted-foreground/50">
-                  Add notes...
-                </span>
-              )}
-            </button>
-
-            {/* Notes panel */}
-            {editing === 'notes' && (
-              <div className="pt-1 border-t border-border/30">
-                <InlinePanelHeader
-                  label="Notes"
-                  onClose={() => setEditing(null)}
-                />
-                <textarea
-                  className="w-full px-2 py-1.5 text-xs bg-midnight-800/80 border border-midnight-700/60 rounded-md resize-none focus:outline-none focus:border-primary/60"
-                  rows={3}
-                  maxLength={120}
-                  value={notes}
-                  onChange={(e) => onSetNotes(e.target.value)}
-                  placeholder="e.g. On-field DPS, use Q first..."
-                />
-                <p className="text-[9px] text-muted-foreground/50 text-right">
-                  {notes.length}/120
-                </p>
-              </div>
-            )}
+            {/* Notes */}
+            <Textarea
+              value={notes}
+              onChange={(e) => onSetNotes(e.target.value)}
+              placeholder="Add notes..."
+              maxLength={120}
+              rows={2}
+              tabIndex={-1}
+              className="text-xs resize-none bg-midnight-900/60 border-dashed border-midnight-800/50 placeholder:text-muted-foreground/40 focus-visible:ring-0 focus-visible:border-primary/40"
+            />
           </div>
         </div>
       )}
