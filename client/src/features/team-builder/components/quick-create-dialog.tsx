@@ -20,13 +20,21 @@ import { ElementBadge } from '@/components/ui/genshin-game-icons';
 import { ELEMENTS } from '@/constants';
 import { CharacterAvatar } from '@/features/characters';
 import { useCharacters } from '@/features/characters/stores';
+import {
+  getElementBgClass,
+  getElementBorderClass,
+  getElementTextClass,
+} from '@/lib/game-colors';
 import { cn } from '@/lib/utils';
 import { useElements } from '@/stores';
 import type { Character } from '@/types';
 
+import { ELEMENTAL_RESONANCES } from '../constants';
 import type { CharacterRole } from '../types';
+import type { CharacterGroup } from '../utils/computeCharacterGroups';
+import { computeCharacterGroups } from '../utils/computeCharacterGroups';
 
-// ─── Step definitions ────────────────────────────────────────────────────────
+/** ─── Step definitions ──────────────────────────────────────────────────── */
 
 interface StepDef {
   role: CharacterRole;
@@ -74,7 +82,7 @@ const STEPS: StepDef[] = [
 
 const ELEMENT_FILTERS = ['All', ...ELEMENTS] as const;
 
-// ─── Mini selected-character pill ────────────────────────────────────────────
+/** ─── Mini selected-character pill ──────────────────────────────────────── */
 
 const SelectedPill: React.FC<{
   step: StepDef;
@@ -124,49 +132,111 @@ const SelectedPill: React.FC<{
   </div>
 );
 
-// ─── Character picker grid (inline, not a sub-dialog) ────────────────────────
+/** ─── Resonance badge ───────────────────────────────────────────────────── */
+
+const ResonanceBadge: React.FC<{
+  element: string;
+  elementUrl: string;
+  description: string;
+}> = ({ element, elementUrl, description }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0, scale: 0.9 }}
+    transition={{ duration: 0.2 }}
+    className={cn(
+      'flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-medium border',
+      getElementBgClass(element),
+      getElementBorderClass(element),
+      getElementTextClass(element)
+    )}
+  >
+    <ElementBadge name={element} url={elementUrl} size="xs" showLabel={false} />
+    <span>
+      {element} Resonance: {description}
+    </span>
+  </motion.div>
+);
+
+/** ─── Section header for character groups ────────────────────────────────── */
+
+const SectionHeader: React.FC<{
+  label: string;
+  element?: string;
+  elementUrl?: string;
+  count: number;
+}> = ({ label, element, elementUrl, count }) => (
+  <div className="flex items-center gap-2 py-2 mt-3 first:mt-0">
+    {element && elementUrl && (
+      <ElementBadge
+        name={element}
+        url={elementUrl}
+        size="xs"
+        showLabel={false}
+      />
+    )}
+    <span
+      className={cn(
+        'text-xs font-semibold',
+        element ? getElementTextClass(element) : 'text-muted-foreground'
+      )}
+    >
+      {label}
+    </span>
+    <span className="text-[10px] text-muted-foreground/50">({count})</span>
+    <div className="flex-1 h-px bg-border/30" />
+  </div>
+);
+
+/** ─── Character picker grid with sections ───────────────────────────────── */
 
 interface InlinePickerProps {
+  groups: CharacterGroup[];
+  elementUrlMap: Record<string, string>;
   selectedCharacters: (Character | null)[];
   onSelect: (c: Character) => void;
 }
 
 const InlineCharacterPicker: React.FC<InlinePickerProps> = ({
+  groups,
+  elementUrlMap,
   selectedCharacters,
   onSelect,
 }) => {
   const [search, setSearch] = useState('');
   const [elementFilter, setElementFilter] = useState<string>('All');
-  const characters = useCharacters();
-  const elements = useElements();
 
-  const elementUrlMap = useMemo(() => {
-    const map: Record<string, string> = {};
-    elements.forEach((el) => {
-      map[el.name.toLowerCase()] = el.url;
-    });
-    return map;
-  }, [elements]);
-
-  const selectedNames = new Set(
-    selectedCharacters.filter(Boolean).map((c) => c!.name)
+  const selectedNames = useMemo(
+    () => new Set(selectedCharacters.filter(Boolean).map((c) => c!.name)),
+    [selectedCharacters]
   );
 
-  const filtered = useMemo(() => {
-    return characters.filter((c) => {
-      const matchSearch = c.name
-        .toLowerCase()
-        .includes(search.toLowerCase().trim());
-      const matchElement =
-        elementFilter === 'All' ||
-        c.element.toLowerCase() === elementFilter.toLowerCase();
-      return matchSearch && matchElement;
-    });
-  }, [characters, search, elementFilter]);
+  /** Apply search + element filter to each group */
+  const filteredGroups = useMemo(() => {
+    return groups
+      .map((group) => ({
+        ...group,
+        characters: group.characters.filter((c) => {
+          const matchSearch = c.name
+            .toLowerCase()
+            .includes(search.toLowerCase().trim());
+          const matchElement =
+            elementFilter === 'All' ||
+            c.element.toLowerCase() === elementFilter.toLowerCase();
+          return matchSearch && matchElement;
+        }),
+      }))
+      .filter((group) => group.characters.length > 0);
+  }, [groups, search, elementFilter]);
+
+  const totalCount = useMemo(
+    () => filteredGroups.reduce((sum, g) => sum + g.characters.length, 0),
+    [filteredGroups]
+  );
 
   return (
     <div className="flex flex-col gap-3 min-h-0">
-      {/* Search */}
+      {/** Search */}
       <AppInput
         placeholder="Search characters..."
         value={search}
@@ -176,7 +246,7 @@ const InlineCharacterPicker: React.FC<InlinePickerProps> = ({
         className="bg-accent/40 border-border/50 rounded-lg py-2 text-sm focus-visible:ring-1 focus-visible:ring-primary/50 placeholder:text-muted-foreground/60"
       />
 
-      {/* Element filters */}
+      {/** Element filters */}
       <div className="flex gap-1.5 overflow-x-auto scrollbar-hide pb-0.5">
         {ELEMENT_FILTERS.map((el) => {
           if (el === 'All') {
@@ -215,34 +285,48 @@ const InlineCharacterPicker: React.FC<InlinePickerProps> = ({
         })}
       </div>
 
-      {/* Character grid */}
+      {/** Sectioned character grid */}
       <div className="flex-1 overflow-y-auto">
-        <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-2 pb-2">
-          {filtered.map((c) => {
-            const isSelected = selectedNames.has(c.name);
-            return (
-              <div key={c.name} className="relative">
-                <CharacterAvatar
-                  characterName={c.name}
-                  size="lg"
-                  showElement
-                  onClick={isSelected ? () => {} : () => onSelect(c)}
-                  className={
-                    isSelected ? 'opacity-40 cursor-not-allowed' : undefined
-                  }
-                />
-                {isSelected && (
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <span className="text-[9px] font-bold text-white/80 bg-black/50 px-1 rounded">
-                      In Team
-                    </span>
+        {filteredGroups.map((group) => (
+          <div key={group.id}>
+            <SectionHeader
+              label={group.label}
+              element={group.element}
+              elementUrl={
+                group.element
+                  ? elementUrlMap[group.element.toLowerCase()]
+                  : undefined
+              }
+              count={group.characters.length}
+            />
+            <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-2 pb-2">
+              {group.characters.map((c) => {
+                const isSelected = selectedNames.has(c.name);
+                return (
+                  <div key={c.name} className="relative">
+                    <CharacterAvatar
+                      characterName={c.name}
+                      size="lg"
+                      showElement
+                      onClick={isSelected ? () => {} : () => onSelect(c)}
+                      className={
+                        isSelected ? 'opacity-40 cursor-not-allowed' : undefined
+                      }
+                    />
+                    {isSelected && (
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <span className="text-[9px] font-bold text-white/80 bg-black/50 px-1 rounded">
+                          In Team
+                        </span>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-        {filtered.length === 0 && (
+                );
+              })}
+            </div>
+          </div>
+        ))}
+        {totalCount === 0 && (
           <div className="flex flex-col items-center justify-center py-10 text-muted-foreground">
             <span className="text-sm">No characters found</span>
           </div>
@@ -252,7 +336,7 @@ const InlineCharacterPicker: React.FC<InlinePickerProps> = ({
   );
 };
 
-// ─── Main dialog ─────────────────────────────────────────────────────────────
+/** ─── Main dialog ───────────────────────────────────────────────────────── */
 
 interface QuickCreateDialogProps {
   open: boolean;
@@ -277,7 +361,47 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
     null,
   ]);
 
+  const characters = useCharacters();
+  const elements = useElements();
   const currentStep = STEPS[step];
+
+  /** Build element → URL lookup (lifted from InlineCharacterPicker for shared use) */
+  const elementUrlMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    elements.forEach((el) => {
+      map[el.name.toLowerCase()] = el.url;
+    });
+    return map;
+  }, [elements]);
+
+  /** Compute smart character groups based on current step and selections */
+  const groups = useMemo(
+    () => computeCharacterGroups(step, selections, characters),
+    [step, selections, characters]
+  );
+
+  /** Detect active elemental resonances from current selections */
+  const activeResonances = useMemo(() => {
+    const elementCounts: Record<string, number> = {};
+    selections.filter(Boolean).forEach((c) => {
+      const el = c!.element;
+      elementCounts[el] = (elementCounts[el] || 0) + 1;
+    });
+    return Object.entries(elementCounts)
+      .filter(([, count]) => count >= 2)
+      .map(([element]) => ({
+        element,
+        resonance: ELEMENTAL_RESONANCES[element],
+      }))
+      .filter(
+        (
+          r
+        ): r is {
+          element: string;
+          resonance: (typeof ELEMENTAL_RESONANCES)[string];
+        } => r.resonance !== undefined
+      );
+  }, [selections]);
 
   const handleSelect = (c: Character) => {
     const updated = [...selections];
@@ -287,7 +411,6 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
     if (step < STEPS.length - 1) {
       setStep((s) => s + 1);
     } else {
-      // Last step — confirm
       finishCreate(updated);
     }
   };
@@ -306,7 +429,6 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
 
   const finishCreate = (chars: (Character | null)[]) => {
     onConfirm(chars);
-    // Reset state for next open
     setTimeout(() => {
       setStep(0);
       setSelections([null, null, null, null]);
@@ -330,7 +452,7 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
           if (navigator.maxTouchPoints > 0) e.preventDefault();
         }}
       >
-        {/* ── Header ── */}
+        {/** ── Header ── */}
         <DialogHeader className="px-5 pt-5 pb-0 shrink-0">
           <DialogTitle className="text-base font-bold flex items-center gap-2">
             <span className="text-muted-foreground font-normal text-sm">
@@ -343,7 +465,7 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
           </DialogTitle>
         </DialogHeader>
 
-        {/* ── Step progress pills ── */}
+        {/** ── Step progress pills ── */}
         <div className="flex items-end gap-3 px-5 pt-3 pb-0 shrink-0">
           {STEPS.map((s, i) => (
             <SelectedPill
@@ -356,7 +478,28 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
           ))}
         </div>
 
-        {/* ── Progress bar ── */}
+        {/** ── Resonance badges ── */}
+        <AnimatePresence>
+          {activeResonances.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="flex flex-wrap gap-1.5 px-5 pt-2 shrink-0"
+            >
+              {activeResonances.map(({ element, resonance }) => (
+                <ResonanceBadge
+                  key={element}
+                  element={element}
+                  elementUrl={elementUrlMap[element.toLowerCase()] ?? ''}
+                  description={resonance.description}
+                />
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/** ── Progress bar ── */}
         <div className="h-px bg-border/30 mx-5 mt-3 mb-0 shrink-0 rounded-full overflow-hidden">
           <motion.div
             className="h-full bg-primary rounded-full"
@@ -366,7 +509,7 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
           />
         </div>
 
-        {/* ── Current step header ── */}
+        {/** ── Current step header ── */}
         <AnimatePresence mode="wait">
           <motion.div
             key={step}
@@ -400,7 +543,7 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
           </motion.div>
         </AnimatePresence>
 
-        {/* ── Character picker ── */}
+        {/** ── Character picker ── */}
         <div className="flex-1 overflow-hidden px-5 pt-3 pb-0 min-h-0">
           <AnimatePresence mode="wait">
             <motion.div
@@ -412,6 +555,8 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
               className="h-full flex flex-col min-h-0"
             >
               <InlineCharacterPicker
+                groups={groups}
+                elementUrlMap={elementUrlMap}
                 selectedCharacters={selections}
                 onSelect={handleSelect}
               />
@@ -419,7 +564,7 @@ export const QuickCreateDialog: React.FC<QuickCreateDialogProps> = ({
           </AnimatePresence>
         </div>
 
-        {/* ── Footer actions ── */}
+        {/** ── Footer actions ── */}
         <div className="flex items-center justify-between px-5 py-3 border-t border-border/30 bg-background/50 shrink-0">
           <div className="flex items-center gap-2">
             {step > 0 && (

@@ -1,5 +1,8 @@
 /* Export all utilities from team-builder feature */
 
+export type { CharacterGroup } from './computeCharacterGroups';
+export { computeCharacterGroups } from './computeCharacterGroups';
+
 import type { RotationAbility, RotationSegment } from '../types';
 
 /**
