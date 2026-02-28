@@ -10,9 +10,9 @@ import {
 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { GenshinButton } from '@/components/ui/genshin-button';
 import { Separator } from '@/components/ui/separator';
+import { CharacterAvatar } from '@/features/characters';
 import { useCharactersStore } from '@/features/characters/stores';
 import { useWeapons, useWeaponsStore } from '@/features/weapons';
 import type { Character } from '@/types';
@@ -91,7 +91,7 @@ const TeamCard: React.FC<{
     <div
       className={`
         group relative rounded-xl border p-3 cursor-pointer transition-all duration-200
-        ${isActive ? 'border-primary/50 bg-primary/8' : 'border-border/30 bg-accent/20 hover:border-border/60 hover:bg-accent/40'}
+        ${isActive ? 'border-primary/50' : 'border-border/30 bg-accent/20 hover:border-border/60 hover:bg-accent/40'}
       `}
       onClick={onSelect}
     >
@@ -105,15 +105,13 @@ const TeamCard: React.FC<{
           <div className="flex gap-1 mt-1.5">
             {team.slots.map((slot, i) =>
               slot.character ? (
-                <Avatar key={i} className="w-7 h-7 ring-1 ring-border/40">
-                  <AvatarImage
-                    src={slot.character.iconUrl}
-                    alt={slot.character.name}
-                  />
-                  <AvatarFallback className="text-[9px]">
-                    {slot.character.name.slice(0, 2)}
-                  </AvatarFallback>
-                </Avatar>
+                <CharacterAvatar
+                  key={i}
+                  characterName={slot.character.name}
+                  size="xs"
+                  showName={false}
+                  interactive={false}
+                />
               ) : (
                 <div
                   key={i}

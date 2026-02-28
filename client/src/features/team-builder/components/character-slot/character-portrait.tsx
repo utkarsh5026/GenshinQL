@@ -2,8 +2,8 @@ import * as PopoverPrimitive from '@radix-ui/react-popover';
 import { GripVertical, Pencil, X } from 'lucide-react';
 import React from 'react';
 
-import { ElementBadge } from '@/components/ui/genshin-game-icons';
 import { CachedImage } from '@/features/cache';
+import CharacterAvatar from '@/features/characters/components/utils/character-avatar';
 import { cn } from '@/lib/utils';
 import type { Character } from '@/types';
 
@@ -82,30 +82,19 @@ export const CharacterPortrait: React.FC<CharacterPortraitProps> = ({
 
       {/* ── Left side: Avatar + Character info ── */}
       <div className="absolute inset-0 flex items-center gap-3 px-3 z-10">
-        {/* Circular character avatar */}
-        <div
-          className="shrink-0 w-16 h-16 rounded-full overflow-hidden border-2 shadow-lg"
-          style={{
-            borderColor: `${elementColor}90`,
-            boxShadow: `0 0 12px ${elementColor}40`,
-          }}
-        >
-          <img
-            src={character.iconUrl}
-            alt={character.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {/* Character avatar with rarity & element */}
+        <CharacterAvatar
+          characterName={character.name}
+          size="md"
+          showName={false}
+          showRarity
+          showElement
+          interactive={false}
+        />
 
-        {/* Name + Element + badges */}
+        {/* Name + badges */}
         <div className="flex flex-col gap-1 min-w-0">
           <div className="flex items-center gap-1.5">
-            {character.elementUrl && (
-              <ElementBadge
-                name={character.element}
-                url={character.elementUrl}
-              />
-            )}
             <p
               className="font-bold text-sm text-white truncate drop-shadow-md"
               style={{ textShadow: `0 0 10px ${elementColor}80` }}
