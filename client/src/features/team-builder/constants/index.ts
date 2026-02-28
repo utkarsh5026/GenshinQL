@@ -2,6 +2,7 @@
 import type { CharacterRole } from '../types';
 
 export * from './artifact-stats';
+export * from './elemental-reactions';
 
 export const ALL_ROLES: CharacterRole[] = [
   'DPS',
