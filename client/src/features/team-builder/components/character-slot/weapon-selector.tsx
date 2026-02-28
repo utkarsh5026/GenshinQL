@@ -102,23 +102,20 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
     <div className="rounded-lg bg-midnight-800/80 hover:bg-surface-300/70 border border-midnight-700/50 hover:border-midnight-600/80 transition-all min-w-0">
       <Popover open={open} onOpenChange={handleOpenChange}>
         {weapon ? (
-          <div className="flex items-center gap-2 px-2 py-1.5 min-w-0">
+          <div className="flex items-center gap-1.5 px-2 py-1.5 min-w-0">
             <PopoverTrigger asChild>
-              <button className="flex items-center gap-2 flex-1 min-w-0 text-left">
+              <button className="flex items-center gap-1.5 flex-1 min-w-0 text-left">
                 <img
                   src={weapon.iconUrl}
                   alt={weapon.name}
-                  className="w-7 h-7 object-contain shrink-0"
+                  className="w-6 h-6 object-contain shrink-0"
                 />
                 <div className="flex-1 min-w-0">
-                  <p className="text-xs font-medium truncate leading-tight">
+                  <p className="text-[11px] font-medium truncate leading-tight">
                     {weapon.name}
                   </p>
                   <p className="text-[10px] text-muted-foreground truncate leading-tight">
                     {Math.round(weapon.attack)} ATK
-                    {weapon.subStat && weapon.subStat !== 'None'
-                      ? ` · ${weapon.subStat}`
-                      : ''}
                   </p>
                 </div>
               </button>
@@ -128,7 +125,7 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
               title="Refinement"
               side="top"
               contentClassName="w-auto"
-              triggerClassName="shrink-0"
+              triggerClassName="shrink-0 text-[10px]"
             >
               <div className="flex gap-1">
                 {[1, 2, 3, 4, 5].map((r) => (
@@ -158,7 +155,7 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
           side="bottom"
           align="start"
           sideOffset={6}
-          className="w-80 p-0 flex flex-col overflow-hidden max-h-105"
+          className="w-[min(320px,calc(100vw-2rem))] p-0 flex flex-col overflow-hidden max-h-[60svh]"
           onOpenAutoFocus={(e) => {
             e.preventDefault();
             const input = (e.currentTarget as HTMLElement).querySelector(

@@ -1,5 +1,5 @@
 import { Reorder, useDragControls } from 'framer-motion';
-import { GripVertical, Pencil, Plus, X } from 'lucide-react';
+import { GripVertical, Plus, X } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
 import { useFetchDetailedArtifacts } from '@/features/characters';
@@ -119,9 +119,10 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
         />
       ) : (
         <div
-          className="relative rounded-2xl overflow-hidden border-none border-border/40 flex flex-row"
+          className="relative rounded-2xl overflow-hidden border-none border-border/40 flex flex-col"
           style={{ borderColor: `${elementColor}40` }}
         >
+          {/* ── TOP: Namecard banner with avatar ── */}
           <CharacterPortrait
             character={character}
             elementColor={elementColor}
@@ -129,49 +130,18 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
             level={level}
             onSetConstellation={onSetConstellation}
             onSetLevel={onSetLevel}
+            onPickerOpen={() => setPickerOpen(true)}
+            onClearSlot={onClearSlot}
+            dragControls={controls}
           />
 
-          {/* ── RIGHT: Content ──────────────────────────────────── */}
-          <div className="flex-1 p-3 min-w-0 bg-surface-200 space-y-1.5">
-            {/* Row 1: Name + action buttons */}
-            <div className="flex items-start justify-between gap-2">
-              <p
-                className="font-bold text-sm wrap-break-word min-w-0 flex-1 leading-tight"
-                style={{ textShadow: `0 0 8px ${elementColor}80` }}
-              >
-                {character.name}
-              </p>
-              <div className="flex gap-1 shrink-0">
-                <div
-                  onPointerDown={(e) => controls.start(e)}
-                  className="w-6 h-6 rounded-md bg-surface-300 hover:bg-midnight-700 flex items-center justify-center transition-all cursor-grab active:cursor-grabbing"
-                  title="Drag to reorder"
-                >
-                  <GripVertical className="w-3 h-3 text-muted-foreground" />
-                </div>
-                <button
-                  onClick={() => setPickerOpen(true)}
-                  className="w-6 h-6 rounded-md bg-surface-300 hover:bg-midnight-700 flex items-center justify-center transition-all"
-                  title="Change character"
-                >
-                  <Pencil className="w-3 h-3 text-muted-foreground" />
-                </button>
-                <button
-                  onClick={onClearSlot}
-                  className="w-6 h-6 rounded-md bg-surface-300 hover:bg-red-900/60 flex items-center justify-center transition-all"
-                  title="Clear slot"
-                >
-                  <X className="w-3 h-3 text-muted-foreground" />
-                </button>
-              </div>
-            </div>
-
-            {/* Row 2: Roles */}
+          {/* ── BOTTOM: Settings panel (full width) ── */}
+          <div className="p-3 bg-surface-200 space-y-1.5">
+            {/* Roles */}
             <RoleSelector roles={roles} onChange={onSetRoles} />
 
-            {/* Row 3: Weapon | Artifacts (two-column grid) */}
-            <div className="grid grid-cols-2 gap-2">
-              {/* Weapon */}
+            {/* Weapon | Artifacts (two-column grid) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <WeaponSelector
                 weapon={weapon}
                 weaponTypeFilter={character.weaponType}
@@ -180,15 +150,13 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
                 onSetWeapon={onSetWeapon}
                 onSetRefinement={onSetRefinement}
               />
-
-              {/* Artifacts — self-contained popover */}
               <ArtifactSelector
                 artifacts={artifacts}
                 onSetArtifacts={onSetArtifacts}
               />
             </div>
 
-            {/* Row 4: Main-stat selectors + substat toggles + priority chips */}
+            {/* Main-stat selectors + substat toggles + priority chips */}
             {artifacts && (
               <ArtifactStats
                 mainStats={mainStats}

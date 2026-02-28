@@ -134,7 +134,7 @@ export const ArtifactSelector: React.FC<ArtifactSelectorProps> = ({
           side="bottom"
           align="start"
           sideOffset={6}
-          className="w-80 p-0 flex flex-col overflow-hidden max-h-104"
+          className="w-[min(320px,calc(100vw-2rem))] p-0 flex flex-col overflow-hidden max-h-[60svh]"
           onOpenAutoFocus={(e) => {
             e.preventDefault();
             const input = (e.currentTarget as HTMLElement).querySelector(
@@ -378,51 +378,53 @@ export const ArtifactDisplay: React.FC<{
 }> = ({ config, className = '' }) => {
   if (config.mode === '4pc') {
     return (
-      <div className={`flex items-center gap-2 ${className}`}>
+      <div className={`flex items-center gap-1.5 ${className}`}>
         {config.setIconUrl && (
           <CachedImage
             src={config.setIconUrl}
             alt=""
-            className="w-7 h-7 object-contain shrink-0"
+            className="w-6 h-6 object-contain shrink-0"
             showSkeleton={false}
           />
         )}
-        <span className="text-sm wrap-break-word min-w-0">{config.set}</span>
-        <span className="text-[11px] text-muted-foreground font-semibold shrink-0">
-          (4pc)
+        <span className="text-xs wrap-break-word min-w-0 leading-tight">
+          {config.set}
+        </span>
+        <span className="text-[10px] text-muted-foreground font-semibold shrink-0">
+          4pc
         </span>
       </div>
     );
   }
   return (
-    <div className={`space-y-1 ${className}`}>
-      <div className="flex items-center gap-2">
+    <div className={`space-y-0.5 ${className}`}>
+      <div className="flex items-center gap-1.5">
         {config.setAIconUrl && (
           <CachedImage
             src={config.setAIconUrl}
             alt=""
-            className="w-6 h-6 object-contain shrink-0"
+            className="w-5 h-5 object-contain shrink-0"
             showSkeleton={false}
           />
         )}
-        <span className="text-xs wrap-break-word min-w-0">{config.setA}</span>
-        <span className="text-[10px] text-muted-foreground shrink-0">
-          (2pc)
+        <span className="text-[11px] wrap-break-word min-w-0 leading-tight">
+          {config.setA}
         </span>
+        <span className="text-[10px] text-muted-foreground shrink-0">2pc</span>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1.5">
         {config.setBIconUrl && (
           <CachedImage
             src={config.setBIconUrl}
             alt=""
-            className="w-6 h-6 object-contain shrink-0"
+            className="w-5 h-5 object-contain shrink-0"
             showSkeleton={false}
           />
         )}
-        <span className="text-xs wrap-break-word min-w-0">{config.setB}</span>
-        <span className="text-[10px] text-muted-foreground shrink-0">
-          (2pc)
+        <span className="text-[11px] wrap-break-word min-w-0 leading-tight">
+          {config.setB}
         </span>
+        <span className="text-[10px] text-muted-foreground shrink-0">2pc</span>
       </div>
     </div>
   );
