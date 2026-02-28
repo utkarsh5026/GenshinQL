@@ -2,6 +2,7 @@ import { Reorder } from 'framer-motion';
 import { Crown, GripVertical, Timer, Wine } from 'lucide-react';
 import React from 'react';
 
+import { GenshinChip } from '@/components/ui/genshin-chip';
 import {
   Popover,
   PopoverContent,
@@ -9,7 +10,6 @@ import {
 } from '@/components/ui/popover';
 import { CachedImage } from '@/features/cache';
 import { useDetailedArtifactsMap } from '@/features/characters';
-import { cn } from '@/lib/utils';
 
 import {
   CIRCLET_MAIN_STATS,
@@ -19,10 +19,8 @@ import {
   SUBSTAT_PRIORITY,
 } from '../../constants';
 import type { ArtifactConfig, TeamCharacterSlot } from '../../types';
+import { StatIcon } from './stat-icon';
 
-/**
- * Piece-type popover definitions for Sands / Goblet / Circlet main stat selection.
- */
 const PIECE_POPOVERS: Array<{
   key: 'sands' | 'goblet' | 'circlet';
   label: string;
@@ -138,85 +136,92 @@ export const ArtifactStats: React.FC<ArtifactStatsProps> = ({
   };
 
   return (
-    <div className="space-y-1.5">
-      {/* Main stat selectors (Sands / Goblet / Circlet) */}
-      <div className="flex gap-1.5">
+    <div className="space-y-4">
+      <p className="text-[9px] font-semibold text-muted-foreground/60 uppercase tracking-widest">
+        Main Stats
+      </p>
+      <div className="flex flex-col gap-2">
         {PIECE_POPOVERS.map(({ key, label, Icon, options }) => {
           const selected = mainStats[key];
           const hasSelection = selected.length > 0;
-          const triggerLabel = hasSelection
-            ? selected.slice(0, 2).join(' · ') +
-              (selected.length > 2 ? ` +${selected.length - 2}` : '')
-            : label;
+          const triggerLabel = hasSelection ? selected.join(' / ') : 'Any';
           return (
-            <Popover key={key}>
-              <PopoverTrigger asChild>
-                <button
-                  title={`Set ${label} main stat`}
-                  className={cn(
-                    'flex items-center gap-1 px-2 py-1 text-[10px] font-medium rounded-md border transition-all',
-                    'bg-accent/30 border-border/40 text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                  )}
+            <div key={key} className="flex items-center gap-2">
+              {/* Label */}
+              <span className="flex items-center gap-1 text-[10px] text-muted-foreground/70 w-14 shrink-0">
+                <Icon className="w-3 h-3 shrink-0" />
+                {label}
+              </span>
+
+              {/* Trigger */}
+              <Popover>
+                <PopoverTrigger asChild>
+                  <GenshinChip
+                    title={`Set ${label} main stat`}
+                    variant={hasSelection ? 'solid' : 'ghost'}
+                    rarity={hasSelection ? 5 : undefined}
+                    selected={hasSelection}
+                    leftIcon={
+                      <PieceIcon
+                        artifacts={artifacts}
+                        pieceKey={key}
+                        FallbackIcon={Icon}
+                      />
+                    }
+                    className="bg-transparent text-muted-foreground border-border"
+                  >
+                    {triggerLabel}
+                  </GenshinChip>
+                </PopoverTrigger>
+                <PopoverContent
+                  side="bottom"
+                  align="start"
+                  sideOffset={4}
+                  className="w-auto p-2"
                 >
-                  <PieceIcon
-                    artifacts={artifacts}
-                    pieceKey={key}
-                    FallbackIcon={Icon}
-                  />
-                  <span>{triggerLabel}</span>
-                </button>
-              </PopoverTrigger>
-              <PopoverContent
-                side="bottom"
-                align="start"
-                sideOffset={4}
-                className="w-auto p-2"
-              >
-                <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide mb-2">
-                  {label} Main Stat
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {options.map((opt) => {
-                    const isActive = selected.includes(opt);
-                    return (
-                      <button
-                        key={opt}
-                        onClick={() => toggleMainStat(key, opt)}
-                        className={cn(
-                          'px-2 py-1 text-[10px] rounded-md font-medium transition-all border',
-                          isActive
-                            ? 'bg-primary/20 border-primary/60 text-primary'
-                            : 'bg-accent/40 border-border/30 hover:bg-accent/70 text-muted-foreground hover:text-foreground'
-                        )}
-                      >
-                        {opt}
-                      </button>
-                    );
-                  })}
-                </div>
-              </PopoverContent>
-            </Popover>
+                  <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide mb-2">
+                    {label} Main Stat
+                  </p>
+                  <div className="flex flex-col flex-wrap gap-1.5 max-w-50">
+                    {options.map((opt) => {
+                      const isActive = selected.includes(opt);
+                      return (
+                        <GenshinChip
+                          key={opt}
+                          rarity={isActive ? 5 : undefined}
+                          variant={isActive ? 'solid' : 'ghost'}
+                          selected={isActive}
+                          onClick={() => toggleMainStat(key, opt)}
+                          leftIcon={<StatIcon stat={opt} />}
+                        >
+                          {opt}
+                        </GenshinChip>
+                      );
+                    })}
+                  </div>
+                </PopoverContent>
+              </Popover>
+            </div>
           );
         })}
       </div>
 
-      {/* Substat toggle buttons */}
-      <div className="flex flex-wrap gap-1">
+      <p className="text-[9px] font-semibold text-muted-foreground/60 uppercase tracking-widest">
+        Substats
+      </p>
+      <div className="flex flex-wrap gap-1.5">
         {SUBSTAT_OPTIONS.map((opt) => {
           const isSelected = substats.includes(opt);
           return (
-            <button
+            <GenshinChip
               key={opt}
+              rarity={isSelected ? 5 : undefined}
+              variant={isSelected ? 'solid' : 'ghost'}
+              selected={isSelected}
               onClick={() => toggleSubstat(opt)}
-              className={cn(
-                'px-1.5 py-0.5 text-[9px] rounded font-medium transition-all border',
-                isSelected
-                  ? 'bg-primary/20 border-primary/60 text-primary'
-                  : 'bg-accent/40 border-border/30 hover:bg-accent/70 text-muted-foreground'
-              )}
             >
               {opt}
-            </button>
+            </GenshinChip>
           );
         })}
       </div>
@@ -227,18 +232,26 @@ export const ArtifactStats: React.FC<ArtifactStatsProps> = ({
           axis="x"
           values={substats}
           onReorder={onSetSubstats}
-          className="flex flex-wrap items-center gap-0.5"
+          className="flex flex-wrap items-center gap-1"
         >
           {substats.map((s, i) => (
             <Reorder.Item
               key={s}
               value={s}
-              className="flex items-center cursor-grab active:cursor-grabbing touch-none select-none"
+              className="flex items-center cursor-grab active:cursor-grabbing touch-none"
             >
-              <span className="text-[9px] px-1.5 py-0.5 rounded bg-primary/15 border border-primary/30 text-primary/80 flex items-center gap-0.5">
-                <GripVertical className="w-2.5 h-2.5 text-primary/30 shrink-0" />
+              <GenshinChip
+                rarity={5}
+                variant="solid"
+                selected
+                leftIcon={
+                  <>
+                    <GripVertical className="w-2.5 h-2.5 opacity-40 shrink-0" />
+                  </>
+                }
+              >
                 {s}
-              </span>
+              </GenshinChip>
               {i < substats.length - 1 && (
                 <span className="text-[8px] text-muted-foreground/40 font-semibold mx-1 pointer-events-none">
                   &gt;&gt;
