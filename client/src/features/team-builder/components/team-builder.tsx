@@ -27,7 +27,7 @@ import {
 import type { Team, TeamCharacterSlot } from '../types';
 import { CharacterSlotCard } from './character-slot/character-slot';
 import { TeamPreviewDialog } from './preview/preview-dialog';
-import { QuickCreateDialog } from './quick-create-dialog';
+import { QuickCreatePanel } from './quick-create-dialog';
 import { RotationEditor } from './rotation-editor';
 
 const TeamNameInput: React.FC<{
@@ -298,7 +298,23 @@ export const TeamBuilderPage: React.FC = () => {
       {/* ── Main editor area ── */}
       <div className="flex-1 flex flex-col overflow-y-auto">
         {!activeTeam ? (
-          <EmptyTeamsState onCreate={() => setQuickCreateOpen(true)} />
+          quickCreateOpen ? (
+            <div className="flex-1 p-6 flex flex-col max-w-2xl w-full mx-auto">
+              <QuickCreatePanel
+                onConfirm={(chars) => {
+                  setQuickCreateOpen(false);
+                  handleQuickCreate(chars);
+                }}
+                onCreateBlank={() => {
+                  setQuickCreateOpen(false);
+                  createTeam();
+                }}
+                onCancel={() => setQuickCreateOpen(false)}
+              />
+            </div>
+          ) : (
+            <EmptyTeamsState onCreate={() => setQuickCreateOpen(true)} />
+          )
         ) : (
           <div className="p-3 sm:p-6 space-y-4 sm:space-y-6 max-w-5xl mx-auto w-full">
             {/* Page header */}
@@ -361,66 +377,80 @@ export const TeamBuilderPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Character slots grid */}
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Sword className="w-4 h-4 text-muted-foreground" />
-                <span className="text-sm font-semibold">Characters</span>
-                <span className="hidden sm:inline text-xs text-muted-foreground/60">
-                  Drag ≡ to reorder · click a slot to assign
-                </span>
+            {/* Character slots grid or quick-create panel */}
+            {quickCreateOpen ? (
+              <QuickCreatePanel
+                onConfirm={(chars) => {
+                  setQuickCreateOpen(false);
+                  handleQuickCreate(chars);
+                }}
+                onCreateBlank={() => {
+                  setQuickCreateOpen(false);
+                  createTeam();
+                }}
+                onCancel={() => setQuickCreateOpen(false)}
+              />
+            ) : (
+              <div>
+                <div className="flex items-center gap-2 mb-4">
+                  <Sword className="w-4 h-4 text-muted-foreground" />
+                  <span className="text-sm font-semibold">Characters</span>
+                  <span className="hidden sm:inline text-xs text-muted-foreground/60">
+                    Drag ≡ to reorder · click a slot to assign
+                  </span>
+                </div>
+                <Reorder.Group
+                  axis="y"
+                  values={[...activeTeam.slots]}
+                  onReorder={(newOrder) =>
+                    reorderSlots(activeTeam.id, newOrder as Team['slots'])
+                  }
+                  className="flex flex-col gap-3"
+                >
+                  {activeTeam.slots.map((slot, slotIndex) => (
+                    <CharacterSlotCard
+                      key={slot.id ?? slotIndex}
+                      slot={slot}
+                      slotIndex={slotIndex}
+                      teamId={activeTeam.id}
+                      allSlots={activeTeam.slots}
+                      weapons={weapons}
+                      onSetCharacter={(c) =>
+                        setCharacterSlot(activeTeam.id, slotIndex, c)
+                      }
+                      onSetWeapon={(w) =>
+                        setWeaponSlot(activeTeam.id, slotIndex, w)
+                      }
+                      onSetRefinement={(r) =>
+                        setRefinementSlot(activeTeam.id, slotIndex, r)
+                      }
+                      onSetArtifacts={(a) =>
+                        setArtifactSlot(activeTeam.id, slotIndex, a)
+                      }
+                      onSetRoles={(roles) =>
+                        setRolesSlot(activeTeam.id, slotIndex, roles)
+                      }
+                      onSetConstellation={(c) =>
+                        setConstellationSlot(activeTeam.id, slotIndex, c)
+                      }
+                      onSetLevel={(l) =>
+                        setLevelSlot(activeTeam.id, slotIndex, l)
+                      }
+                      onSetNotes={(n) =>
+                        setNotesSlot(activeTeam.id, slotIndex, n)
+                      }
+                      onSetMainStats={(ms: TeamCharacterSlot['mainStats']) =>
+                        setMainStatsSlot(activeTeam.id, slotIndex, ms)
+                      }
+                      onSetSubstats={(ss) =>
+                        setSubstatsSlot(activeTeam.id, slotIndex, ss)
+                      }
+                      onClearSlot={() => clearSlot(activeTeam.id, slotIndex)}
+                    />
+                  ))}
+                </Reorder.Group>
               </div>
-              <Reorder.Group
-                axis="y"
-                values={[...activeTeam.slots]}
-                onReorder={(newOrder) =>
-                  reorderSlots(activeTeam.id, newOrder as Team['slots'])
-                }
-                className="flex flex-col gap-3"
-              >
-                {activeTeam.slots.map((slot, slotIndex) => (
-                  <CharacterSlotCard
-                    key={slot.id ?? slotIndex}
-                    slot={slot}
-                    slotIndex={slotIndex}
-                    teamId={activeTeam.id}
-                    allSlots={activeTeam.slots}
-                    weapons={weapons}
-                    onSetCharacter={(c) =>
-                      setCharacterSlot(activeTeam.id, slotIndex, c)
-                    }
-                    onSetWeapon={(w) =>
-                      setWeaponSlot(activeTeam.id, slotIndex, w)
-                    }
-                    onSetRefinement={(r) =>
-                      setRefinementSlot(activeTeam.id, slotIndex, r)
-                    }
-                    onSetArtifacts={(a) =>
-                      setArtifactSlot(activeTeam.id, slotIndex, a)
-                    }
-                    onSetRoles={(roles) =>
-                      setRolesSlot(activeTeam.id, slotIndex, roles)
-                    }
-                    onSetConstellation={(c) =>
-                      setConstellationSlot(activeTeam.id, slotIndex, c)
-                    }
-                    onSetLevel={(l) =>
-                      setLevelSlot(activeTeam.id, slotIndex, l)
-                    }
-                    onSetNotes={(n) =>
-                      setNotesSlot(activeTeam.id, slotIndex, n)
-                    }
-                    onSetMainStats={(ms: TeamCharacterSlot['mainStats']) =>
-                      setMainStatsSlot(activeTeam.id, slotIndex, ms)
-                    }
-                    onSetSubstats={(ss) =>
-                      setSubstatsSlot(activeTeam.id, slotIndex, ss)
-                    }
-                    onClearSlot={() => clearSlot(activeTeam.id, slotIndex)}
-                  />
-                ))}
-              </Reorder.Group>
-            </div>
+            )}
 
             <Separator />
 
@@ -442,17 +472,6 @@ export const TeamBuilderPage: React.FC = () => {
           team={activeTeam}
         />
       )}
-
-      {/* Quick-create dialog */}
-      <QuickCreateDialog
-        open={quickCreateOpen}
-        onOpenChange={setQuickCreateOpen}
-        onConfirm={(chars) => {
-          setQuickCreateOpen(false);
-          handleQuickCreate(chars);
-        }}
-        onCreateBlank={createTeam}
-      />
     </div>
   );
 };

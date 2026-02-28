@@ -164,7 +164,7 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
       <p
         className={cn(
           AVATAR_TEXT_CLASSES[size],
-          'font-thin text-foreground/80 text-center line-clamp-1',
+          ' text-foreground/80 text-center line-clamp-1',
           nameClassName
         )}
       >
