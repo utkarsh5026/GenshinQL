@@ -5,6 +5,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
+import { Text } from '@/components/ui/text';
 import { cn } from '@/lib/utils';
 
 /** ── SlotPopover ───────────────────────────────────────────────────────────
@@ -42,18 +43,27 @@ export const SlotPopover: React.FC<SlotPopoverProps> = ({
         )}
         title={`Set ${title.toLowerCase()}`}
       >
-        {label}
+        <Text as="span" size="xs" weight="bold" color="inherit">
+          {label}
+        </Text>
       </button>
     </PopoverTrigger>
     <PopoverContent
       side={side}
       align={align}
       sideOffset={sideOffset}
-      className={cn('p-2', contentClassName)}
+      className={cn('p-2  backdrop-blur-xl', contentClassName)}
     >
-      <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide mb-2">
+      <Text
+        as="p"
+        size="xs"
+        weight="semibold"
+        color="muted"
+        uppercase
+        className="mb-2"
+      >
         {title}
-      </p>
+      </Text>
       {children}
     </PopoverContent>
   </Popover>

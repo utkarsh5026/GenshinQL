@@ -2,8 +2,10 @@ import * as PopoverPrimitive from '@radix-ui/react-popover';
 import { GripVertical, Pencil, X } from 'lucide-react';
 import React from 'react';
 
+import { Text } from '@/components/ui/text';
 import { CachedImage } from '@/features/cache';
 import CharacterAvatar from '@/features/characters/components/utils/character-avatar';
+import { useCharacterMap } from '@/features/characters/stores';
 import { cn } from '@/lib/utils';
 import type { Character } from '@/types';
 
@@ -28,9 +30,6 @@ interface CharacterPortraitProps {
   onSetLevel: (l: number) => void;
   onPickerOpen: () => void;
   onClearSlot: () => void;
-  dragControls: {
-    start: (e: React.PointerEvent) => void;
-  };
 }
 
 export const CharacterPortrait: React.FC<CharacterPortraitProps> = ({
@@ -42,9 +41,10 @@ export const CharacterPortrait: React.FC<CharacterPortraitProps> = ({
   onSetLevel,
   onPickerOpen,
   onClearSlot,
-  dragControls,
 }) => {
-  const hasNamecard = !!character.namecardURL;
+  const characterMap = useCharacterMap();
+  const liveCharacter = characterMap[character.name] ?? character;
+  const hasNamecard = !!liveCharacter.namecardURL;
 
   return (
     <div
@@ -59,12 +59,15 @@ export const CharacterPortrait: React.FC<CharacterPortraitProps> = ({
       {hasNamecard && (
         <>
           <CachedImage
-            src={character.namecardURL}
+            src={liveCharacter.namecardURL}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover"
+            wrapperClassName="absolute inset-0 w-full h-full"
+            className="w-full h-full object-cover"
+            showSkeleton={false}
             onError={(e) => {
-              const container = e.currentTarget.parentElement
-                ?.parentElement as HTMLElement;
+              const container = e.currentTarget.closest(
+                '.rounded-t-2xl'
+              ) as HTMLElement;
               if (container)
                 container.style.background = `linear-gradient(135deg, ${elementColor}30 0%, #0a0d14 70%)`;
             }}
@@ -95,12 +98,17 @@ export const CharacterPortrait: React.FC<CharacterPortraitProps> = ({
         {/* Name + badges */}
         <div className="flex flex-col gap-1 min-w-0">
           <div className="flex items-center gap-1.5">
-            <p
-              className="font-bold text-sm text-white truncate drop-shadow-md"
+            <Text
+              as="span"
+              size="sm"
+              weight="bold"
+              color="inherit"
+              truncate
+              className="text-white drop-shadow-md"
               style={{ textShadow: `0 0 10px ${elementColor}80` }}
             >
               {character.name}
-            </p>
+            </Text>
           </div>
 
           {/* Constellation + Level badges */}
@@ -163,7 +171,6 @@ export const CharacterPortrait: React.FC<CharacterPortraitProps> = ({
       {/* ── Right side: Action buttons ── */}
       <div className="absolute top-2 right-2 z-10 flex gap-1">
         <div
-          onPointerDown={(e) => dragControls.start(e)}
           className="w-6 h-6 rounded-md bg-black/40 backdrop-blur-sm hover:bg-black/60 flex items-center justify-center transition-all cursor-grab active:cursor-grabbing"
           title="Drag to reorder"
         >

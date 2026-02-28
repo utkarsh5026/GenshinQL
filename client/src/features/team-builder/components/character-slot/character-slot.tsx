@@ -1,4 +1,4 @@
-import { Reorder, useDragControls } from 'framer-motion';
+import { Reorder } from 'framer-motion';
 import { GripVertical, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
@@ -57,7 +57,6 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   onClearSlot,
 }) => {
   const [pickerOpen, setPickerOpen] = useState(false);
-  const controls = useDragControls();
 
   const { character, weapon, artifacts, roles } = slot;
   const elementColor = character ? getElementHexColor(character.element) : null;
@@ -77,14 +76,11 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
   return (
     <Reorder.Item
       value={slot}
-      dragListener={false}
-      dragControls={controls}
-      className="w-full"
+      className="w-full cursor-grab active:cursor-grabbing"
     >
       {!character ? (
         <EmptySlot
           slotIndex={slotIndex}
-          controls={controls}
           onPickerOpen={() => setPickerOpen(true)}
         />
       ) : (
@@ -102,11 +98,13 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
             onSetLevel={onSetLevel}
             onPickerOpen={() => setPickerOpen(true)}
             onClearSlot={onClearSlot}
-            dragControls={controls}
           />
 
           {/* ── BOTTOM: Settings panel (full width) ── */}
-          <div className="p-4 bg-surface-200 space-y-3">
+          <div
+            className="p-4 bg-surface-200 space-y-3"
+            onPointerDown={(e) => e.stopPropagation()}
+          >
             {/* Roles */}
             <RoleSelector roles={roles} onChange={onSetRoles} />
 
@@ -164,23 +162,12 @@ export const CharacterSlotCard: React.FC<CharacterSlotCardProps> = ({
 
 interface EmptySlotProps {
   slotIndex: number;
-  controls: ReturnType<typeof useDragControls>;
   onPickerOpen: () => void;
 }
 
-const EmptySlot: React.FC<EmptySlotProps> = ({
-  slotIndex,
-  controls,
-  onPickerOpen,
-}) => (
-  <div
-    className="relative h-20"
-    onPointerDown={(e) => {
-      e.stopPropagation();
-      controls.start(e);
-    }}
-  >
-    {/* Drag handle */}
+const EmptySlot: React.FC<EmptySlotProps> = ({ slotIndex, onPickerOpen }) => (
+  <div className="relative h-20">
+    {/* Drag handle (visual indicator) */}
     <div
       className="absolute top-2 right-2 z-10 w-6 h-6 rounded-md bg-midnight-800/50 hover:bg-midnight-700/70 flex items-center justify-center cursor-grab active:cursor-grabbing transition-all"
       title="Drag to reorder"
