@@ -1,7 +1,13 @@
 import { create } from 'zustand';
 
 import { fetchWithCache } from '@/features/cache';
-import type { PrimitiveItem, Primitives, RoleItem } from '@/types';
+import type {
+  AttributeName,
+  PrimitiveItem,
+  Primitives,
+  RegionName,
+  RoleItem,
+} from '@/types';
 
 /**
  * State interface for the primitives store.
@@ -49,16 +55,14 @@ export const usePrimitivesStore = create<PrimitivesState>()((set, get) => ({
     set({
       primitives: {
         ...primitives,
-        regions: primitives.regions.map((reg) => {
-          return {
-            ...reg,
-            name: reg.name.split('-').join(''),
-          };
-        }),
+        regions: primitives.regions.map((reg) => ({
+          ...reg,
+          name: reg.name.split('-').join('') as RegionName,
+        })),
         attributes:
           primitives.attributes?.map((attr) => ({
             ...attr,
-            name: attr.name.replace('%', ''), // "HP%" -> "HP", "DEF%" -> "DEF"
+            name: attr.name.replace('%', '') as AttributeName, // "HP%" -> "HP", "DEF%" -> "DEF"
           })) || [],
       },
       loading: false,
@@ -151,12 +155,12 @@ export const useRoles = () =>
 
 // WeakMap cache for attribute URL maps (stable references)
 const attributeUrlMapCache = new WeakMap<
-  readonly PrimitiveItem[],
+  readonly PrimitiveItem<AttributeName>[],
   Record<string, string>
 >();
 
 function createAttributeUrlMap(
-  attributes: readonly PrimitiveItem[]
+  attributes: readonly PrimitiveItem<AttributeName>[]
 ): Record<string, string> {
   const cached = attributeUrlMapCache.get(attributes);
   if (cached) return cached;
