@@ -11,18 +11,11 @@ import {
 } from '@/components/ui/popover';
 import { CachedImage } from '@/features/cache';
 import type { WeaponSummary } from '@/features/weapons';
+import { getRarityEntry } from '@/lib/game-colors';
 import { cn } from '@/lib/utils';
 import { useWeaponTypes } from '@/stores/usePrimitivesStore';
 
 import { SlotPopover } from './slot-popover';
-
-const RARITY_COLORS: Record<number, string> = {
-  5: 'bg-amber-500/10',
-  4: 'bg-violet-500/10',
-  3: 'bg-blue-500/10',
-  2: 'bg-green-500/10',
-  1: 'bg-gray-400/10',
-};
 
 /** Class names for a quick-select option button based on active state. */
 const optionButtonClass = (isActive: boolean) =>
@@ -33,13 +26,78 @@ const optionButtonClass = (isActive: boolean) =>
       : 'bg-surface-300 hover:bg-midnight-700 text-muted-foreground'
   );
 
-/** ── WeaponSelector ──────────────────────────────────────────────────────────
- *  Inline weapon display row with a contextual popover picker and a
- *  refinement sub-popover. Owns all transient UI state (open, search, filter).
- */
+interface WeaponInfoProps {
+  weapon: WeaponSummary;
+  variant: 'compact' | 'full';
+  isSelected?: boolean;
+}
+
+const WeaponInfo: React.FC<WeaponInfoProps> = ({
+  weapon,
+  variant,
+  isSelected,
+}) => {
+  const isCompact = variant === 'compact';
+
+  return (
+    <>
+      {isCompact ? (
+        <CachedImage
+          src={weapon.iconUrl}
+          alt={weapon.name}
+          className="w-6 h-6 object-contain shrink-0"
+          showSkeleton={false}
+        />
+      ) : (
+        <div
+          className={cn(
+            'w-8 h-8 rounded-md overflow-hidden shrink-0',
+            getRarityEntry(weapon.rarity).bg
+          )}
+        >
+          <CachedImage
+            src={weapon.iconUrl}
+            alt={weapon.name}
+            className="w-full h-full object-cover"
+            lazy
+            skeletonShape="rounded"
+            skeletonSize="sm"
+          />
+        </div>
+      )}
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-1.5">
+          <p
+            className={cn(
+              'truncate',
+              isCompact
+                ? 'text-[11px] font-medium leading-tight'
+                : 'text-xs font-semibold'
+            )}
+          >
+            {weapon.name}
+          </p>
+          {!isCompact && <RarityStars rarity={weapon.rarity} size="xs" />}
+        </div>
+        <p
+          className={cn(
+            'text-[10px] text-muted-foreground truncate',
+            isCompact && 'leading-tight'
+          )}
+        >
+          {!isCompact && `${weapon.subStat} · `}
+          {Math.round(weapon.attack)} ATK
+        </p>
+      </div>
+      {isSelected && (
+        <span className="text-[10px] font-bold text-primary shrink-0">✓</span>
+      )}
+    </>
+  );
+};
+
 export interface WeaponSelectorProps {
   weapon: WeaponSummary | null;
-  /** Character's weapon type used to pre-filter the picker list. */
   weaponTypeFilter?: string;
   weapons: WeaponSummary[];
   weaponRefinement: number;
@@ -84,19 +142,20 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
     [weapons, search, weaponTypeFilter, rarityFilter]
   );
 
+  const resetFilters = () => {
+    setSearch('');
+    setRarityFilter('All');
+  };
+
   const handleOpenChange = (o: boolean) => {
     setOpen(o);
-    if (!o) {
-      setSearch('');
-      setRarityFilter('All');
-    }
+    if (!o) resetFilters();
   };
 
   const handleSelect = (w: WeaponSummary) => {
     onSetWeapon(w);
     setOpen(false);
-    setSearch('');
-    setRarityFilter('All');
+    resetFilters();
   };
 
   return (
@@ -106,19 +165,7 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
           <div className="flex items-center gap-1.5 px-2 py-1.5 min-w-0">
             <PopoverTrigger asChild>
               <button className="flex items-center gap-1.5 flex-1 min-w-0 text-left">
-                <img
-                  src={weapon.iconUrl}
-                  alt={weapon.name}
-                  className="w-6 h-6 object-contain shrink-0"
-                />
-                <div className="flex-1 min-w-0">
-                  <p className="text-[11px] font-medium truncate leading-tight">
-                    {weapon.name}
-                  </p>
-                  <p className="text-[10px] text-muted-foreground truncate leading-tight">
-                    {Math.round(weapon.attack)} ATK
-                  </p>
-                </div>
+                <WeaponInfo weapon={weapon} variant="compact" />
               </button>
             </PopoverTrigger>
             <SlotPopover
@@ -157,13 +204,6 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
           align="start"
           sideOffset={6}
           className="w-[min(320px,calc(100vw-2rem))] p-0 flex flex-col overflow-hidden max-h-[60svh]"
-          onOpenAutoFocus={(e) => {
-            e.preventDefault();
-            const input = (e.currentTarget as HTMLElement).querySelector(
-              'input'
-            );
-            input?.focus();
-          }}
         >
           {/* Popover header */}
           <div className="flex items-center gap-2 px-3 pt-3 pb-2 border-b border-border/30">
@@ -208,7 +248,7 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
                   rarityFilter === r
                     ? r === 'All'
                       ? 'border-primary/60 bg-primary/20 text-primary'
-                      : `${RARITY_COLORS[r]} text-foreground border-border/40`
+                      : `${getRarityEntry(r).bg} text-foreground border-border/40`
                     : 'border-border/40 bg-accent/30 text-muted-foreground hover:text-foreground'
                 )}
               >
@@ -228,39 +268,15 @@ export const WeaponSelector: React.FC<WeaponSelectorProps> = ({
                   className={cn(
                     'w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg border text-left transition-all duration-150 hover:scale-[1.01]',
                     isSelected
-                      ? `${RARITY_COLORS[w.rarity] ?? ''} border-primary/30`
+                      ? `${getRarityEntry(w.rarity).bg} border-primary/30`
                       : 'border-border/30 bg-accent/20 hover:border-border/60 hover:bg-accent/40'
                   )}
                 >
-                  <div
-                    className={cn(
-                      'w-8 h-8 rounded-md overflow-hidden shrink-0',
-                      RARITY_COLORS[w.rarity] ?? ''
-                    )}
-                  >
-                    <CachedImage
-                      src={w.iconUrl}
-                      alt={w.name}
-                      className="w-full h-full object-cover"
-                      lazy
-                      skeletonShape="rounded"
-                      skeletonSize="sm"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-1.5">
-                      <p className="text-xs font-semibold truncate">{w.name}</p>
-                      <RarityStars rarity={w.rarity} size="xs" />
-                    </div>
-                    <p className="text-[10px] text-muted-foreground truncate">
-                      {w.subStat} · {Math.round(w.attack)} ATK
-                    </p>
-                  </div>
-                  {isSelected && (
-                    <span className="text-[10px] font-bold text-primary shrink-0">
-                      ✓
-                    </span>
-                  )}
+                  <WeaponInfo
+                    weapon={w}
+                    variant="full"
+                    isSelected={isSelected}
+                  />
                 </button>
               );
             })}
