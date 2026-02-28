@@ -93,13 +93,13 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
     avatarClassName
   );
 
-  // Element badge size scales with avatar
+  // Element badge size scales with avatar — responsive mobile → desktop
   const elementBadgeSizeMap: Record<AvatarSize, string> = {
-    xs: 'w-3.5 h-3.5',
-    sm: 'w-4 h-4',
-    md: 'w-5 h-5',
-    lg: 'w-6 h-6',
-    xl: 'w-7 h-7',
+    xs: 'w-3 h-3 sm:w-3.5 sm:h-3.5',
+    sm: 'w-3.5 h-3.5 sm:w-4 sm:h-4',
+    md: 'w-4 h-4 sm:w-5 sm:h-5',
+    lg: 'w-5 h-5 sm:w-6 sm:h-6',
+    xl: 'w-6 h-6 sm:w-7 sm:h-7',
   };
 
   const elementIconSizeMap: Record<AvatarSize, number> = {
