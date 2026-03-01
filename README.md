@@ -1,204 +1,231 @@
+<div align="center">
+
+<img src="./images/all-characters.jpg" alt="GenshinQL — Character Browser" width="100%" style="border-radius: 12px;" />
+
+<br />
+<br />
+
 # GenshinQL
 
-[![CI](https://github.com/username/genshinql/actions/workflows/ci.yml/badge.svg)](https://github.com/username/genshinql/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/username/genshinql/actions/workflows/codeql.yml/badge.svg)](https://github.com/username/genshinql/actions/workflows/codeql.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+**A comprehensive Genshin Impact hub** — browse characters & weapons, plan farming schedules,
+<br />build tier lists, and challenge yourself with Genshin mini-games.
 
-A comprehensive Genshin Impact information hub built with React, TypeScript, and Vite. Browse characters, weapons, talent schedules, build tier lists, and play the Genshindle guessing game!
+<br />
+
+[![CI](https://github.com/utkarsh5026/GenshinQL/actions/workflows/ci.yml/badge.svg)](https://github.com/utkarsh5026/GenshinQL/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/utkarsh5026/GenshinQL/actions/workflows/codeql.yml/badge.svg)](https://github.com/utkarsh5026/GenshinQL/actions/workflows/codeql.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![React](https://img.shields.io/badge/React_18-20232A?logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript_5.9-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite_7-646CFF?logo=vite&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?logo=tailwindcss&logoColor=white)
+![Bun](https://img.shields.io/badge/Bun-FBF0DF?logo=bun&logoColor=black)
+
+</div>
+
+---
 
 ## ✨ Features
 
-- **Character Database** - Detailed information on all Genshin Impact characters
-- **Weapon Catalog** - Complete weapon database with stats and ascension materials
-- **Talent Schedule** - Daily talent book and weapon material farming calendar
-- **Tier List Builder** - Create and customize your own tier lists
-- **Genshindle** - A Wordle-style guessing game for Genshin characters
-- **Responsive Design** - Works seamlessly on desktop and mobile
+|     | Feature                | Description                                                            |
+| :-: | :--------------------- | :--------------------------------------------------------------------- |
+| 🧙  | **Character Database** | Full profiles — talents, constellations, passives, and ascension paths |
+| ⚔️  | **Weapon Catalog**     | Complete stats, refinements, and material farming routes               |
+| 📅  | **Farming Calendar**   | Daily talent-book and weapon-material schedule by day of week          |
+| 🏆  | **Tier List Builder**  | Drag-and-drop tier list creator with shareable layouts                 |
+| 🎮  | **Genshindle**         | Wordle-style character guessing game                                   |
+| 🃏  | **Memory Game**        | Card-matching game with Genshin character art                          |
+| 🔗  | **Linker Game**        | Connect characters by shared traits                                    |
+| 📋  | **Routine Planner**    | Build and track your daily resin & farming routine                     |
+
+---
+
+## 🖼️ Screenshots
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./images/weapons-detailed.png" alt="Weapon Detail View" />
+      <br /><b>Weapon Detail</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="./images/character-talents.png" alt="Character Talents" />
+      <br /><b>Character Talents</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./images/character-attacks.png" alt="Character Attacks" />
+      <br /><b>Character Attacks</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="./images/character-constellations.png" alt="Character Constellations" />
+      <br /><b>Constellations</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./images/character-talent-schedule.png" alt="Talent Schedule" />
+      <br /><b>Talent Farming Calendar</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="./images/weapon-schedule.png" alt="Weapon Schedule" />
+      <br /><b>Weapon Farming Calendar</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./images/character-tier-list.png" alt="Tier List Builder" />
+      <br /><b>Tier List Builder</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="./images/character-single-routine.png" alt="Character Routine" />
+      <br /><b>Routine Planner</b>
+    </td>
+  </tr>
+</table>
+
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- **Bun** - Fast all-in-one JavaScript runtime and package manager
+- **[Bun](https://bun.sh/)** — fast all-in-one JavaScript runtime & package manager
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/username/genshinql.git
-cd genshinql/client
+# Clone the repo
+git clone https://github.com/utkarsh5026/GenshinQL.git
+cd GenshinQL/client
 
 # Install dependencies
 bun install
 
-# Start development server
+# Start dev server → http://localhost:5173
 bun run dev
 ```
-
-The application will be available at [http://localhost:5173](http://localhost:5173)
-
-## 🛠️ Technology Stack
-
-### Core Technologies
-
-- **[React 18](https://react.dev/)** - UI library
-- **[TypeScript 5.6](https://www.typescriptlang.org/)** - Type-safe JavaScript
-- **[Bun](https://bun.sh/)** - Fast all-in-one JavaScript runtime
-- **[Vite 5.4](https://vitejs.dev/)** - Fast build tool and dev server
-- **[React Router v7](https://reactrouter.com/)** - Client-side routing
-
-### State Management
-
-- **[Zustand 5.0](https://zustand-demo.pmnd.rs/)** - Lightweight state management
-
-### Styling
-
-- **[Tailwind CSS 3.4](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[Radix UI](https://www.radix-ui.com/)** - Accessible component primitives
-- **[shadcn/ui](https://ui.shadcn.com/)** - Beautiful, accessible components
-- **[Framer Motion 11](https://www.framer.com/motion/)** - Animation library
-
-### Infrastructure
-
-- **[Cloudflare R2](https://www.cloudflare.com/products/r2/)** - Asset storage and CDN
-- **[Vercel](https://vercel.com/)** - Deployment platform
-- **[Selenium WebDriver](https://www.selenium.dev/)** - Web scraping for data collection
-
-## 📚 Documentation
-
-- **[Contributing Guide](./CONTRIBUTING.md)** - How to contribute to this project
-- **[Development Guide](./DEVELOPMENT.md)** - Architecture and development patterns
-- **[CI/CD Documentation](./CI_CD.md)** - Continuous integration and deployment
-
-## 💻 Development
-
-### Available Scripts
-
-**Development:**
-
-- `bun run dev` - Start development server
-- `bun run build` - Build for production
-- `bun run preview` - Preview production build
-
-**Code Quality:**
-
-- `bun run lint` - Run ESLint
-- `bun run lint:fix` - Fix ESLint issues automatically
-- `bun run format` - Format code with Prettier
-- `bun run format:check` - Check code formatting
-- `bun run validate` - Run lint + format + type check
-- `bun run ci:check` - Run all CI checks locally
-
-**Analysis:**
-
-- `bun run build:analyze` - Analyze bundle size with visualizer
-
-### Scraping Scripts
-
-**Data Collection:**
-
-- `bun run scrape:all` - Scrape all data (characters, weapons, talents, gallery)
-- `bun run scrape:characters` - Scrape character data only
-- `bun run scrape:weapons` - Scrape weapon data only
-- `bun run scrape:talents` - Scrape talent schedules only
-- `bun run scrape:gallery` - Scrape character gallery media only
-- `bun run consolidate` - Consolidate scraped data into JSON files
-- `bun run generate-primitives` - Generate game constants (elements, regions, etc.)
-
-**Validation:**
-
-- `bun run check-characters` - Validate character data completeness
-- `bun run check-gallery` - Validate gallery media coverage
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
-
-### Quick Contribution Steps
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run `npm run ci:check` to validate
-5. Commit with conventional commits (`feat: add amazing feature`)
-6. Push to your fork (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
-
-### Development Setup
-
-```bash
-# Install dependencies
-bun install
-
-# Install pre-commit hooks
-bun run prepare
-cd client
-bun x husky init
-
-# Start coding!
-bun run dev
-```
-
-## 📸 Screenshots
-
-### Weapons Detailed
-
-![Weapons-Detailed](./images/weapons-detailed.png)
-
-### Character Attacks
-
-![Character-Attacks](./images/character-attacks.png)
-
-### Character Constellations
-
-![Character-Constellations](./images/character-constellations.png)
-
-### Character Passives
-
-![Character-Passives](./images/character-passives.png)
-
-### Character Routine
-
-![Character-Single-Routine](./images/character-single-routine.png)
-
-### Character Table
-
-![Character-table](./images/character-table.png)
-
-### Characters Talent Schedule
-
-![Character-talent-Schedule](./images/character-talent-schedule.png)
-
-### Character Talents
-
-![Character-talents](./images/character-talents.png)
-
-### Weapon Calendar
-
-![Weapon-Schedule](./images/weapon-schedule.png)
-
-### Character Tier List Builder
-
-![Character-Tier-List](./images/character-tier-list.png)
-
-## 🔮 Future Additions
-
-- Integrating with Enka Network for live player data
-- Guides section for character builds and team compositions
-- Artifacts, materials, and boss drops with detailed recommendations
-- Advanced character build calculator
-- Team composition optimizer
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Genshin Impact game data from [Genshin Impact Wiki](https://genshin-impact.fandom.com/)
-- Character and weapon icons from official Genshin Impact assets
-- Community for feedback and contributions
 
 ---
 
+## 🛠️ Tech Stack
+
+<table>
+  <tr>
+    <th>Layer</th>
+    <th>Technology</th>
+  </tr>
+  <tr>
+    <td><b>UI</b></td>
+    <td>
+      <a href="https://react.dev/">React 18</a> ·
+      <a href="https://reactrouter.com/">React Router v7</a> ·
+      <a href="https://www.framer.com/motion/">Framer Motion 12</a>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Language</b></td>
+    <td><a href="https://www.typescriptlang.org/">TypeScript 5.9</a> (strict mode)</td>
+  </tr>
+  <tr>
+    <td><b>Build</b></td>
+    <td><a href="https://vitejs.dev/">Vite 7</a> · <a href="https://bun.sh/">Bun</a></td>
+  </tr>
+  <tr>
+    <td><b>State</b></td>
+    <td><a href="https://zustand-demo.pmnd.rs/">Zustand 5</a></td>
+  </tr>
+  <tr>
+    <td><b>Styling</b></td>
+    <td>
+      <a href="https://tailwindcss.com/">Tailwind CSS 4</a> ·
+      <a href="https://ui.shadcn.com/">shadcn/ui</a> ·
+      <a href="https://www.radix-ui.com/">Radix UI</a>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Data</b></td>
+    <td>Static JSON · IndexedDB (stale-while-revalidate cache) · <a href="https://www.selenium.dev/">Selenium</a> scrapers</td>
+  </tr>
+  <tr>
+    <td><b>Infra</b></td>
+    <td>
+      <a href="https://www.cloudflare.com/products/r2/">Cloudflare R2</a> (media CDN) ·
+      <a href="https://vercel.com/">Vercel</a> (hosting)
+    </td>
+  </tr>
+</table>
+
+> **No backend.** All data is served from static JSON files under `client/public/` and cached client-side in IndexedDB.
+
+---
+
+## 💻 Development
+
+### Scripts
+
+```bash
+# Development
+bun run dev           # Start Vite dev server (localhost:5173)
+bun run build         # Type-check + production build
+bun run preview       # Preview production build locally
+
+# Code quality
+bun run validate      # lint + format:check + tsc --noEmit  (run before pushing)
+bun run lint:fix      # Auto-fix ESLint issues
+bun run format        # Format code with Prettier
+
+# Analysis
+bun run build:analyze # Bundle size visualizer
+```
+
+### Data Scraping
+
+```bash
+bun run scrape:all          # Scrape all game data
+bun run scrape:characters   # Characters only
+bun run scrape:weapons      # Weapons only
+bun run scrape:talents      # Talent schedules only
+bun run scrape:gallery      # Character gallery media only
+bun run consolidate         # Merge scraped data into JSON files
+bun run generate-primitives # Regenerate game constants
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please check the [Development Guide](./DEVELOPMENT.md) for architecture details.
+
+1. Fork the repository
+2. Create a feature branch — `git checkout -b feat/amazing-feature`
+3. Make your changes and run `bun run validate`
+4. Commit using [Conventional Commits](https://www.conventionalcommits.org/) — `feat: add amazing feature`
+5. Push and open a Pull Request
+
+---
+
+## 🔮 Roadmap
+
+- [ ] Enka Network integration for live player data
+- [ ] Character build guides and team composition recommendations
+- [ ] Artifact, material, and boss-drop reference with build suggestions
+- [ ] Advanced character build calculator
+- [ ] Team composition optimizer
+
+---
+
+## 📝 License
+
+Licensed under the [MIT License](./LICENSE).
+
+---
+
+<div align="center">
+
 Made with ❤️ for the Genshin Impact community
+
+[![GitHub stars](https://img.shields.io/github/stars/utkarsh5026/GenshinQL?style=social)](https://github.com/utkarsh5026/GenshinQL)
+
+</div>
